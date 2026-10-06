@@ -5,7 +5,7 @@
   "description": "Find learning apps for your class or your child: lernapps.net/apps/",
   "scripts": {
     "dev": "npm run build && (eleventy --serve --quiet & unocss \"_site/**/*.html\" --out-file _site/uno.css --watch; wait)",
-    "build": "eleventy && unocss \"_site/**/*.html\" --out-file _site/uno.css --minify",
+    "build": "rm -rf _site && eleventy && unocss \"_site/**/*.html\" --out-file _site/uno.css --minify",
     "check": "node scripts/check.mjs"
   },
   "license": "MIT",
