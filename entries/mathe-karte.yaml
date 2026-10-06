@@ -1,0 +1,44 @@
+# One file per app. Keys are identifiers (English), values are what people read (German, plain language).
+# Format: src/llms.njk (served as /apps/llms.txt). What an app contains is its own business: the
+# trainers of the Mathe-Karte are topics of this one entry, each with a deep link.
+title: Mathe-Karte
+subject: Mathematik
+grades: [8]
+summary: >-
+  Mathe selbst ausprobieren und üben: Prozentrechnung, binomische Formeln und
+  Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung, ein Bild, beliebig
+  viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test. Eine Karte
+  zeigt, welche Themen schon dabei sind.
+url: https://lernapps.net/mathe-karte/
+topics:
+  - { title: "Prozent: Grundwert, Prozentwert und Prozentsatz erkennen", path: prozent/grundbegriffe.html }
+  - { title: "Prozent: Prozentsatz berechnen", path: prozent/prozentsatz.html }
+  - { title: "Prozent: Prozentwert berechnen", path: prozent/prozentwert.html }
+  - { title: "Prozent: Grundwert berechnen", path: prozent/grundwert.html }
+  - { title: "Prozent: Zunahme und Abnahme", path: prozent/veraenderung.html }
+  - { title: "Prozent: Zwei Werte vergleichen", path: prozent/vergleich.html }
+  - { title: "Prozent: Sachaufgaben übersetzen", path: prozent/sachaufgaben.html }
+  - { title: "Binomische Formeln: Zwei Klammern multiplizieren", path: binom/klammern-multiplizieren.html }
+  - { title: "Binomische Formeln: Erste binomische Formel", path: binom/erste-binomische.html }
+  - { title: "Binomische Formeln: Zweite binomische Formel", path: binom/zweite-binomische.html }
+  - { title: "Binomische Formeln: Dritte binomische Formel", path: binom/dritte-binomische.html }
+  - { title: "Binomische Formeln: Rückwärts (faktorisieren)", path: binom/binome-rueckwaerts.html }
+  - { title: "Binomische Formeln: Geschickt rechnen", path: binom/geschickt-rechnen.html }
+  - { title: "Wahrscheinlichkeit: Die Laplace-Formel anwenden", path: zufall/laplace.html }
+  - { title: "Wahrscheinlichkeit: Ein Baumdiagramm zeichnen", path: zufall/baumdiagramm.html }
+  - { title: "Wahrscheinlichkeit: Erste Pfadregel (multiplizieren)", path: zufall/pfadregel-1.html }
+  - { title: "Wahrscheinlichkeit: Die Gegenwahrscheinlichkeit berechnen", path: zufall/gegenereignis.html }
+  - { title: "Wahrscheinlichkeit: Ziehen ohne Zurücklegen", path: zufall/ohne-zuruecklegen.html }
+  - { title: "Wahrscheinlichkeit: Zweite Pfadregel (addieren)", path: zufall/pfadregel-2.html }
+  - { title: "Wahrscheinlichkeit: Als Produkt, Summe oder Potenz angeben", path: zufall/ergebnisformen.html }
+  - { title: "Wahrscheinlichkeit: „Genau einmal“ und „mindestens einmal“", path: zufall/pfade-uebersetzen.html }
+keywords: [Prozentrechnung, Rabatt, Zinsen, Binom, Termumformung, Algebra, Stochastik, Zufall, Würfel]
+creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
+source: https://github.com/lernapps/mathe-karte
+fitness:
+  account: false
+  install: false
+  storage: device      # none | device | server
+  thirdParty: on-click # none | on-click | yes
+  thirdPartyNote: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
+  checked: false       # true once lernapps/tooling#1 has checked it

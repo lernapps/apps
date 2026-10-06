@@ -1,0 +1,130 @@
+---
+pagination:
+  data: catalog.apps
+  size: 1
+  alias: app
+permalink: "/{{ app.id }}/index.html"
+layout: base.njk
+scripts: [kopieren.js, app.js]
+eleventyComputed:
+  title: "{{ de.app.title(app.title) }}"
+  description: "{{ app.summary }}"
+---
+{#-
+  One page per app, in the order of the steps of x-app-in-minutes (D7):
+    what it is            → s-finding (the result of t-find-app)
+    may I use it?         → s-fitness-clarity, t-confirm-fitness
+    bring it to class     → t-bring-app (open, link, QR code)
+    did it help?          → s-giving-back, t-thank-creator-adult, t-give-feedback
+  Referral links (?welle=<code>) show the "I'll have a look" step (D8 a-platform-convinces).
+  Counting needs site.counter; without it, wave banner and thanks stay hidden (assets/app.js).
+-#}
+{%- set A = de.app %}
+{%- import "components.njk" as c with context %}
+
+{# ── Referral wave (hidden until app.js finds ?welle= and a counter) ── #}
+<div class="bg-blue-600 text-white" data-wave hidden>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+    <p class="m-0 flex-1 min-w-[16rem]">{{ A.wave.text }}</p>
+    <button type="button" class="btn btn-light" data-count="anschauen" data-done="{{ A.wave.done }}">{{ A.wave.button }}</button>
+  </div>
+</div>
+
+{# ── What it is ── #}
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-10">
+    <a href="{{ '/' | url }}" class="text-sm text-slate-400 hover:text-white">← {{ A.back }}</a>
+    <p class="m-0 mt-4 text-slate-400">{{ app.subject }} · {{ app.grades | gradeLabel }}</p>
+    <h1 class="m-0 mt-1 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ app.title }}</h1>
+    <p class="m-0 mt-3 text-lg text-slate-200 max-w-2xl">{{ app.summary }}</p>
+    <p class="m-0 mt-2 text-sm text-slate-400">{{ A.by }} {{ app.creator.name }}</p>
+    <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+      <a href="{{ app.url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-open>{{ A.open }} ↗</a>
+      <span class="text-sm text-slate-400">{{ A.openHint }}</span>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 grid gap-6 mt-8 md:grid-cols-2">
+
+  {# ── May I use it? ── #}
+  <section class="panel" aria-labelledby="eignung">
+    <h2 id="eignung" class="panel-title">{{ A.fitness.headline }}</h2>
+    {{ c.fitness(app) }}
+  </section>
+
+  {# ── Bring it to class ── #}
+  <section class="panel" aria-labelledby="klasse">
+    <h2 id="klasse" class="panel-title">{{ A.bring.headline }}</h2>
+    {{ c.copyField("link", A.bring.linkLabel, app.url, A.bring.copy, A.bring.copied) }}
+    <div class="mt-4 flex items-center gap-4">
+      <div class="qr shrink-0" role="img" aria-label="{{ A.bring.qrAlt(app.title) }}">{{ app.qr | safe }}</div>
+      <p class="m-0 text-sm text-slate-600">{{ A.bring.qrLabel }}</p>
+    </div>
+    <ul class="mt-4 mb-0 pl-5 list-disc text-sm text-slate-700 flex flex-col gap-1">
+      {%- for tip in A.bring.tips %}<li>{{ tip }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  {# ── Topics with deep links ── #}
+  {%- if app.topics.length %}
+  <section class="panel md:col-span-2" aria-labelledby="themen">
+    <h2 id="themen" class="panel-title">{{ A.topics.headline }}</h2>
+    <p class="m-0 text-sm text-slate-600">{{ A.topics.body }}</p>
+    <ul class="list-none p-0 m-0 mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+      {%- for t in app.topics %}
+      <li><a href="{{ t.url }}" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">{{ t.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+
+  {# ── Did it help? (hidden until app.js finds a counter: "steps aside quietly") ── #}
+  <section id="danke" class="panel panel-thanks md:col-span-2" aria-labelledby="danke-titel" data-thanks data-app="{{ app.id }}" data-counter="{{ site.counter }}" hidden>
+    <h2 id="danke-titel" class="panel-title">{{ A.thanks.headline }}</h2>
+    <p class="m-0 text-slate-700 max-w-2xl">{{ A.thanks.body(app.creator.name) }}</p>
+    <div class="mt-4" data-count-group>
+      <button type="button" class="btn btn-primary btn-lg" data-count="danke" data-done="{{ A.thanks.thanked }}">♥ {{ A.thanks.thank }}</button>
+    </div>
+    <div class="mt-6 grid gap-6 sm:grid-cols-2">
+      <div>
+        <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.usedHeadline }}</h3>
+        {{ c.countButtons(A.thanks.used) }}
+      </div>
+      <div>
+        <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.feedbackHeadline }}</h3>
+        {{ c.countButtons(A.thanks.feedback) }}
+      </div>
+    </div>
+    <p class="m-0 mt-2 text-sm font-semibold text-green-700" role="status" data-recorded data-text="{{ A.thanks.recorded }}"></p>
+    <p class="m-0 mt-4 text-sm text-slate-500">{{ A.thanks.privacy }} <a href="/privacy/" class="underline underline-offset-2">{{ A.thanks.privacyLink }}</a></p>
+  </section>
+
+  {# ── Open totals (data/totals.json) ── #}
+  {%- if app.totals %}
+  <section class="panel md:col-span-2" aria-labelledby="gezaehlt">
+    <h2 id="gezaehlt" class="panel-title">{{ A.totals.headline }}</h2>
+    <ul class="list-none p-0 m-0 flex flex-wrap gap-x-6 gap-y-1">
+      {%- if app.totals.danke %}<li>{{ A.totals.thanks(app.totals.danke) }}</li>{% endif %}
+      {%- if app.totals["genutzt-unterricht"] %}<li>{{ A.totals.class(app.totals["genutzt-unterricht"]) }}</li>{% endif %}
+      {%- if app.totals["genutzt-zuhause"] %}<li>{{ A.totals.home(app.totals["genutzt-zuhause"]) }}</li>{% endif %}
+    </ul>
+  </section>
+  {%- endif %}
+
+  {# ── Who built it ── #}
+  <section class="panel md:col-span-2" aria-labelledby="gebaut">
+    <h2 id="gebaut" class="panel-title">{{ A.creator.headline }}</h2>
+    <p class="m-0">
+      {%- if app.creator.url %}<a href="{{ app.creator.url }}" class="text-blue-700 underline underline-offset-2">{{ app.creator.name }}</a>{% else %}{{ app.creator.name }}{% endif %}
+      {%- if app.source %} · <a href="{{ app.source }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.source }}</a>{% endif %}
+    </p>
+    <p class="m-0 mt-3 text-slate-600">{{ A.creator.own }} <a href="{{ '/eintragen/' | url }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.ownLink }}</a></p>
+  </section>
+</div>
+
+{# Gentle reminder after coming back from the app's tab (app.js); never shown twice. #}
+<div class="reminder" data-reminder hidden>
+  <p class="m-0">{{ A.thanks.reminder }}</p>
+  <a href="#danke" class="btn btn-light">{{ A.thanks.reminderLink }}</a>
+</div>
