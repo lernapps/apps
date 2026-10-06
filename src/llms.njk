@@ -1,0 +1,62 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# lernapps.net/apps – für KI-Assistenten
+
+lernapps.net/apps hilft Lehrkräften und Eltern, kleine Lern-Apps zu finden, die sofort laufen:
+kostenlos, ohne Anmeldung, ohne Installation, ohne heimliche Datensammlung.
+Startseite: {{ site.origin }}{{ '/' | url }}
+
+## Apps
+
+{% for app in catalog.apps -%}
+### {{ app.title }} ({{ app.subject }}, {{ app.grades | gradeLabel }})
+
+{{ app.summary }}
+- Seite auf lernapps.net: {{ site.origin }}{{ ('/' + app.id + '/') | url }}
+- App: {{ app.url }}
+{%- for t in app.topics %}
+- Thema „{{ t.title }}“: {{ t.url }}
+{%- endfor %}
+
+{% endfor -%}
+## Eine App eintragen
+
+Ein Mensch hat dich gebeten, seine Lern-App einzutragen? So geht es.
+
+1. Prüf die Bedingungen. Trag die App nur ein, wenn alle erfüllt sind:
+{%- for item in de.list.criteria.items %}
+   - {{ item }}
+{%- endfor %}
+   Prüf das an der App selbst, nicht nur an ihrer Beschreibung. Ist eine Bedingung nicht erfüllt,
+   sag dem Menschen, welche, und hilf ihm, sie zu erfüllen.
+2. Schreib eine Datei `entries/<id>.yaml` im Repository {{ site.repo }}.
+   `<id>` ist der Name der App in Kleinbuchstaben mit Bindestrichen, z. B. `bruch-trainer`.
+   Texte auf Deutsch in einfacher Sprache: kurze Sätze, aktiv, ohne Fachjargon.
+   Vorlage (Kommentare erklären die Felder):
+
+```yaml
+title: Bruch-Trainer                 # Name der App
+subject: Mathematik                  # Fach
+grades: [5, 6]                       # Klassen, für die sie passt
+summary: >-                          # 2–3 Sätze: Was tun die Lernenden?
+  Brüche selbst ausprobieren: kürzen, erweitern, vergleichen.
+  Mit Bildern und sofortiger Rückmeldung.
+url: https://example.org/bruch-trainer/   # Link zur App, https
+topics:                              # optional: einzelne Themen mit Pfad relativ zu url
+  - { title: "Brüche kürzen", path: kuerzen.html }
+keywords: [Bruch, Bruchrechnung]     # optional: weitere Suchwörter
+creator: { name: "Vorname Nachname", url: "https://github.com/…" }  # url optional
+source: https://github.com/…         # optional: Quellcode
+fitness:
+  account: false                     # muss false sein
+  install: false                     # muss false sein
+  storage: device                    # none | device (nur im Browser des Geräts)
+  thirdParty: none                   # none | on-click (fremde Server erst nach Klick)
+  thirdPartyNote: ""                 # bei on-click: welche Server, wann
+  checked: false                     # setzt lernapps.net nach der Prüfung
+```
+
+3. Schick die Datei als Pull Request an {{ site.repo }}. Der Build prüft den Eintrag automatisch.
+   Kein GitHub-Konto? Dann schick den Link zur App an {{ site.email }}.

@@ -1,0 +1,67 @@
+---
+permalink: /eintragen/index.html
+layout: base.njk
+scripts: [kopieren.js]
+eleventyComputed:
+  title: "{{ de.list.title }}"
+  description: "{{ de.list.description }}"
+---
+{#-
+  Eintragen: steps s-listing-help and t-list-app of x-list-and-hear-back (D7), channel ch-listing (D5):
+  a few fields, an automatic check (src/_data/catalog.js), help from the creator's AI assistant (llms.txt),
+  and the owner's personal help for the first listing (concierge, D8 mvp-first-draft).
+  "Was du zurückbekommst" is s-use-insight: thanks and feedback, counted openly, on the app's page.
+-#}
+{%- set L = de.list %}
+{%- import "components.njk" as c with context %}
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight whitespace-pre-line" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ L.headline }}</h1>
+    <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ L.lead }}</p>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
+  <section class="panel" id="bedingungen" aria-labelledby="bedingungen-titel">
+    <h2 id="bedingungen-titel" class="panel-title">{{ L.criteria.headline }}</h2>
+    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+      {%- for item in L.criteria.items %}<li class="check">{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="angaben">
+    <h2 id="angaben" class="panel-title">{{ L.fields.headline }}</h2>
+    <ol class="m-0 pl-5 list-decimal flex flex-col gap-2">
+      {%- for f in L.fields.items %}<li><strong>{{ f.label }}</strong> {{ f.hint }}</li>{% endfor %}
+    </ol>
+    <p class="m-0 mt-3 text-slate-600">{{ L.fields.optional }}</p>
+  </section>
+
+  <section aria-labelledby="wege">
+    <h2 id="wege" class="m-0 text-xl font-bold text-slate-900">{{ L.ways.headline }}</h2>
+    <div class="mt-3 grid gap-4 md:grid-cols-3">
+      <div class="panel flex flex-col">
+        <h3 class="m-0 text-lg font-bold">{{ L.ways.form.title }}</h3>
+        <p class="m-0 mt-2 text-slate-700 flex-1">{{ L.ways.form.body }}</p>
+        <a href="{{ site.repo }}/issues/new?template=app-eintragen.yml" class="btn btn-primary mt-4 self-start">{{ L.ways.form.button }}</a>
+      </div>
+      <div class="panel flex flex-col">
+        <h3 class="m-0 text-lg font-bold">{{ L.ways.agent.title }}</h3>
+        <p class="m-0 mt-2 text-slate-700">{{ L.ways.agent.body }}</p>
+        <div class="mt-3">
+          {{ c.copyField("auftrag", L.ways.agent.label, L.ways.agent.prompt(site.origin + ('/llms.txt' | url)), L.ways.agent.copy, L.ways.agent.copied, true) }}
+        </div>
+      </div>
+      <div class="panel flex flex-col">
+        <h3 class="m-0 text-lg font-bold">{{ L.ways.mail.title }}</h3>
+        <p class="m-0 mt-2 text-slate-700 flex-1">{{ L.ways.mail.body }}</p>
+        <a href="mailto:{{ site.email }}?subject={{ L.ways.mail.subject | urlencode }}" class="btn btn-secondary mt-4 self-start">{{ L.ways.mail.button }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="zurueck">
+    <h2 id="zurueck" class="panel-title">{{ L.back.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ L.back.body }}</p>
+  </section>
+</div>

@@ -1,0 +1,65 @@
+---
+permalink: /index.html
+layout: base.njk
+scripts: [finden.js]
+eleventyComputed:
+  title: "{{ de.find.title }}"
+  description: "{{ de.find.description }}"
+---
+{#-
+  Finden: steps s-finding and t-find-app of x-app-in-minutes and x-practice-tonight (D7).
+  Without JS all apps are listed. With JS (assets/finden.js) the form filters the list and shows the
+  topics that match, with a deep link into the app; the query is kept in the URL (?thema=…), so a search
+  can be shared. Nothing is stored in the browser.
+-#}
+{%- set F = de.find %}
+{%- import "components.njk" as c with context %}
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ F.headline }}</h1>
+    <p class="m-0 mt-3 text-lg text-slate-300">{{ F.lead }}</p>
+    <p class="m-0 mt-1 text-slate-400">{{ F.parents }}</p>
+
+    <form class="mt-8 grid gap-3 sm:grid-cols-[1fr_auto_auto] items-end" role="search" aria-label="{{ F.form.label }}" data-search-form hidden>
+      <div>
+        <label for="thema" class="block text-sm font-semibold text-slate-300">{{ F.form.query }}</label>
+        <input id="thema" name="thema" type="search" autocomplete="off" placeholder="{{ F.form.queryPlaceholder }}" class="field field-dark mt-1 w-full">
+      </div>
+      <div>
+        <label for="fach" class="block text-sm font-semibold text-slate-300">{{ F.form.subject }}</label>
+        <select id="fach" name="fach" class="field field-dark mt-1 w-full">
+          <option value="">{{ F.form.allSubjects }}</option>
+          {%- for s in catalog.subjects %}<option>{{ s }}</option>{% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="klasse" class="block text-sm font-semibold text-slate-300">{{ F.form.grade }}</label>
+        <select id="klasse" name="klasse" class="field field-dark mt-1 w-full">
+          <option value="">{{ F.form.allGrades }}</option>
+          {%- for g in catalog.grades %}<option value="{{ g }}">{{ g }}</option>{% endfor %}
+        </select>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
+  <p class="m-0 text-sm font-semibold text-slate-600" aria-live="polite" data-count
+     data-none="{{ F.count["none"] }}" data-one="{{ F.count.one }}" data-many="{{ F.count.many('{n}') }}">{{ F.count.many(catalog.apps.length) }}</p>
+
+  <ul class="list-none p-0 m-0 mt-3 grid gap-4" data-results>
+    {%- for app in catalog.apps %}
+    {{ c.appCard(app) }}
+    {%- endfor %}
+  </ul>
+
+  <div class="mt-4 p-5 rounded-xl border border-dashed border-slate-300" data-empty hidden>
+    <p class="m-0 font-semibold">{{ F.empty.headline }}</p>
+    <p class="m-0 mt-1 text-slate-700">{{ F.empty.body }} <a href="{{ '/eintragen/' | url }}" class="text-blue-700 underline underline-offset-2">{{ F.empty.link }}</a></p>
+  </div>
+
+  <section class="mt-12 p-5 rounded-xl bg-blue-50 border border-blue-100" aria-labelledby="vertrauen">
+    <h2 id="vertrauen" class="m-0 text-lg font-bold text-slate-900">{{ F.trust.headline }}</h2>
+    <p class="m-0 mt-2 text-slate-700">{{ F.trust.body }} <a href="{{ '/eintragen/#bedingungen' | url }}" class="text-blue-700 underline underline-offset-2">{{ F.trust.link }}</a></p>
+  </section>
+</div>

@@ -1,0 +1,82 @@
+{#-
+  Reusable parts of the pages, as Nunjucks macros. Import with
+    {% import "components.njk" as c with context %}
+  so that the macros see `de` and `site`. Hooks for the scripts are data-* attributes.
+-#}
+
+{#- A card in the list of apps. The search (assets/finden.js) reads data-search, data-subject and
+    data-grades, and shows the topics that match the query. -#}
+{% macro appCard(app) %}
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="{{ app.subject }}"
+    data-grades="{{ app.grades | join(' ') }}"
+    data-search="{{ [app.title, app.subject, app.summary, app.keywords | join(' '), app.creator.name] | join(' ') }}">
+  <a href="{{ ('/' + app.id + '/') | url }}" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="{{ de.find.cardLink(app.title) }}">
+    <p class="m-0 text-sm text-slate-500">{{ app.subject }} · {{ app.grades | gradeLabel }}</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">{{ app.title }}</h2>
+    <p class="m-0 mt-2 text-slate-700">{{ app.summary }}</p>
+    {{ fitnessChips(app) }}
+  </a>
+  {%- if app.topics.length %}
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">{{ de.find.matched }}</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      {%- for t in app.topics %}
+      <li data-topic data-search="{{ t.title }}" hidden><a href="{{ t.url }}" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">{{ t.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endif %}
+</li>
+{% endmacro %}
+
+{#- Short signal of fitness for use, for cards (D5 ch-fitness-signal). -#}
+{% macro fitnessChips(app) %}
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="{{ de.app.fitness.lead }}">
+  <li class="chip">✓ Ohne Anmeldung</li>
+  <li class="chip">✓ Ohne Installation</li>
+  <li class="chip">✓ Kostenlos</li>
+</ul>
+{% endmacro %}
+
+{#- Full signal of fitness for use, for the app page. -#}
+{% macro fitness(app) %}
+{%- set F = de.app.fitness %}
+<ul class="list-none p-0 m-0 flex flex-col gap-2">
+  <li class="check">{{ F.account }}</li>
+  <li class="check">{{ F.install }}</li>
+  <li class="check">{{ F.free }}</li>
+  <li class="check">{{ F.storage[app.fitness.storage] }}</li>
+  {%- if app.fitness.thirdParty == "none" %}
+  <li class="check">{{ F.thirdParty["none"] }}</li>
+  {%- else %}
+  <li class="check">{{ F.thirdParty["on-click"](app.fitness.thirdPartyNote) }}</li>
+  {%- endif %}
+</ul>
+<p class="m-0 mt-3 text-sm text-slate-500">{{ F.checked if app.fitness.checked else F.unchecked }}</p>
+{% endmacro %}
+
+{#- A read-only text with a copy button (assets/kopieren.js). Without JS the text can be selected. -#}
+{% macro copyField(id, label, value, button, done, multiline=false) %}
+<div data-copy>
+  <label for="{{ id }}" class="block text-sm font-semibold text-slate-700">{{ label }}</label>
+  <div class="mt-1 flex gap-2 {{ 'flex-col items-start' if multiline else 'flex-wrap' }}">
+    {%- if multiline %}
+    <textarea id="{{ id }}" readonly rows="5" class="field w-full">{{ value }}</textarea>
+    {%- else %}
+    <input id="{{ id }}" type="text" readonly value="{{ value }}" class="field flex-1 min-w-0">
+    {%- endif %}
+    <button type="button" class="btn btn-secondary" data-copy-button data-done="{{ done }}" hidden>{{ button }}</button>
+  </div>
+</div>
+{% endmacro %}
+
+{#- A group of one-click buttons that count an event (assets/app.js). -#}
+{% macro countButtons(items, cls="btn-secondary") %}
+<div class="flex flex-wrap gap-2" data-count-group>
+  {%- for item in items %}
+  <button type="button" class="btn {{ cls }}" data-count="{{ item.event }}">{{ item.label }}</button>
+  {%- endfor %}
+</div>
+{% endmacro %}

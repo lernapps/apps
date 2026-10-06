@@ -1,0 +1,28 @@
+# One file per app. Keys are identifiers (English), values are what people read (German, plain language).
+# Format: src/llms.njk (served as /apps/llms.txt).
+title: Prozent-Trainer
+subject: Mathematik
+grades: [8]
+summary: >-
+  Prozentrechnung selbst ausprobieren: Grundwert, Prozentwert und Prozentsatz,
+  Zunahme und Abnahme, Sachaufgaben. Zu jedem Thema gibt es eine Erklärung,
+  ein Bild, beliebig viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test.
+url: https://lernapps.net/mathe-karte/prozent/
+topics:
+  - { title: "Grundwert, Prozentwert und Prozentsatz erkennen", path: grundbegriffe.html }
+  - { title: "Prozentsatz berechnen", path: prozentsatz.html }
+  - { title: "Prozentwert berechnen", path: prozentwert.html }
+  - { title: "Grundwert berechnen", path: grundwert.html }
+  - { title: "Prozentuale Zunahme und Abnahme", path: veraenderung.html }
+  - { title: "Zwei Werte vergleichen", path: vergleich.html }
+  - { title: "Sachaufgaben übersetzen", path: sachaufgaben.html }
+keywords: [Prozent, Prozentrechnung, Rabatt, Zinsen]
+creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
+source: https://github.com/lernapps/mathe-karte
+fitness:
+  account: false
+  install: false
+  storage: device      # none | device | server
+  thirdParty: on-click # none | on-click | yes
+  thirdPartyNote: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
+  checked: false       # true once lernapps/tooling#1 has checked it

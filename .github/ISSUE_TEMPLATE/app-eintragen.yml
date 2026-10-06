@@ -1,0 +1,56 @@
+name: App eintragen
+description: Deine Lern-App soll auf lernapps.net/apps stehen.
+title: "App eintragen: "
+labels: [app-eintragen]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke! Drei Angaben genügen. Wir prüfen die App und tragen sie ein. Unvollständig ist in Ordnung, wir fragen nach.
+  - type: input
+    id: url
+    attributes:
+      label: Wo ist die App zu finden?
+      description: Der Link zur App.
+      placeholder: https://…
+    validations:
+      required: true
+  - type: textarea
+    id: was
+    attributes:
+      label: Was lernt man damit?
+      description: Zwei, drei Sätze. Was tun die Lernenden?
+    validations:
+      required: true
+  - type: input
+    id: fuer-wen
+    attributes:
+      label: Für wen ist sie?
+      description: Fach und Klasse.
+      placeholder: z. B. Mathematik, Klasse 5 und 6
+    validations:
+      required: true
+  - type: textarea
+    id: themen
+    attributes:
+      label: Einzelne Themen (wenn du magst)
+      description: Je Zeile ein Thema mit Link. Dann landen Suchende direkt an der richtigen Stelle.
+  - type: input
+    id: name
+    attributes:
+      label: Unter welchem Namen sollen wir dich nennen?
+      description: Ein Danke für die App geht an diesen Namen.
+  - type: checkboxes
+    id: bedingungen
+    attributes:
+      label: Bedingungen
+      description: Hier stehen nur Apps, die alle Bedingungen erfüllen.
+      options:
+        - label: Die App läuft im Browser, ohne Installation.
+          required: true
+        - label: Niemand braucht ein Konto.
+          required: true
+        - label: Sie ist kostenlos und ohne Werbung.
+          required: true
+        - label: Sie sammelt nichts heimlich. Fremde Server lädt sie höchstens nach einem Klick.
+          required: true
