@@ -48,9 +48,11 @@ Ein Mensch hat dich gebeten, seine Lern-App einzutragen? So geht es.
 2. Schreib eine Datei `entries/<id>.yaml` im Repository https://github.com/lernapps/apps.
    `<id>` ist der Name der App in Kleinbuchstaben mit Bindestrichen, z. B. `bruch-trainer`.
    Texte auf Deutsch in einfacher Sprache: kurze Sätze, aktiv, ohne Fachjargon.
+   Das Format ist als JSON Schema festgelegt: https://lernapps.net/apps/schemas/entry.v1.schema.json
    Vorlage (Kommentare erklären die Felder):
 
 ```yaml
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
 title: Bruch-Trainer                 # Name der App
 subject: Mathematik                  # Fach
 grades: [5, 6]                       # Klassen, für die sie passt
