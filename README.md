@@ -46,11 +46,23 @@ The counter itself is deferred. While `LERNAPPS_COUNTER_URL` is empty, the thank
 banner stay hidden; if the counter cannot be reached, they step aside quietly. Totals, once there, go to
 `data/totals.json` (`{"<id>": {"danke": 3, …}}`) and are shown on each app page.
 
+## Deploy and previews
+
+GitHub Pages serves the `gh-pages` branch (Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`).
+
+- `pages.yml`: every push to `main` builds, checks and publishes to the root of `gh-pages`,
+  served at <https://lernapps.net/apps/>.
+- `pr-preview.yml`: every pull request from this repository gets a preview at
+  `https://lernapps.net/apps/pr-preview/pr-<number>/`, linked in a comment on the pull request,
+  updated on every push and removed when the pull request closes. Previews are built with
+  `SITE_PATH_PREFIX=/apps/pr-preview/pr-<number>/` and `SITE_PREVIEW=1` (banner, `noindex`).
+
 ## Develop
 
 ```bash
 npm ci
 npm run dev        # http://localhost:8080/apps/
+SITE_PATH_PREFIX=/apps/pr-preview/pr-1/ SITE_PREVIEW=1 npm run build   # as a preview
 npm run build && npm run check
 LERNAPPS_COUNTER_URL=http://localhost:8099/count npm run build   # show the thanks block
 ```

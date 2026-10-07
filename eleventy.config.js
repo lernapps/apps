@@ -18,7 +18,8 @@ export default function (eleventyConfig) {
 
   return {
     dir: { input: "src", output: "_site" },
-    pathPrefix: "/apps/",
+    // /apps/ in production; /apps/pr-preview/pr-<number>/ for a pull request preview (pr-preview.yml).
+    pathPrefix: process.env.SITE_PATH_PREFIX ?? "/apps/",
     templateFormats: ["njk"],
     htmlTemplateEngine: "njk",
   };

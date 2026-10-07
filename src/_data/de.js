@@ -8,14 +8,16 @@ export default {
   meta: {
     siteName: "lernapps.net",
     skipLink: "Zum Inhalt springen",
+    preview: "Vorschau einer Änderung. Die echte Seite:",
   },
 
   nav: {
     ariaLabel: "Hauptnavigation",
     homeLabel: "lernapps.net – Startseite",
     links: [
-      { label: "Apps finden", href: "/apps/" },
-      { label: "App eintragen", href: "/apps/eintragen/" },
+      // path: a page of this site (gets the path prefix); href: elsewhere on lernapps.net
+      { label: "Apps finden", path: "/" },
+      { label: "App eintragen", path: "/eintragen/" },
       { label: "Über lernapps.net", href: "/" },
     ],
   },

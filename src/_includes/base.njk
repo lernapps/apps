@@ -13,7 +13,10 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
-  <link rel="canonical" href="{{ site.origin }}{{ page.url | url }}">
+  <link rel="canonical" href="{{ site.origin }}/apps{{ page.url }}">
+  {%- if site.preview %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -26,6 +29,9 @@
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
   <a href="#main-content" class="sr-only focus:not-sr-only focus:!fixed focus:top-2 focus:left-2 focus:z-50 focus:!px-4 focus:!py-2 focus:bg-white focus:text-blue-700 focus:font-semibold focus:rounded focus:shadow">{{ de.meta.skipLink }}</a>
 
+  {%- if site.preview %}
+  <p class="m-0 px-4 py-2 text-center text-sm bg-amber-300 text-slate-900">{{ de.meta.preview }} <a href="{{ site.origin }}/apps{{ page.url }}" class="underline">lernapps.net/apps{{ page.url }}</a></p>
+  {%- endif %}
   <header class="bg-slate-900 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-x-8">
       <a href="/" aria-label="{{ de.nav.homeLabel }}" class="flex items-end gap-[14px] py-4 leading-none font-semibold tracking-tight" style="font-size: 1.125rem;">
@@ -34,8 +40,8 @@
       <nav aria-label="{{ de.nav.ariaLabel }}" class="max-sm:w-full max-sm:pb-3">
         <ul class="flex flex-wrap gap-x-6 gap-y-1 list-none p-0 m-0 text-sm">
           {%- for link in de.nav.links %}
-          {%- set current = link.href == (page.url | url) %}
-          <li><a href="{{ link.href }}" class="py-2 inline-block {{ 'text-white font-semibold' if current else 'text-slate-300 hover:text-white' }}"{% if current %} aria-current="page"{% endif %}>{{ link.label }}</a></li>
+          {%- set current = link.path and link.path == page.url %}
+          <li><a href="{{ (link.path | url) if link.path else link.href }}" class="py-2 inline-block {{ 'text-white font-semibold' if current else 'text-slate-300 hover:text-white' }}"{% if current %} aria-current="page"{% endif %}>{{ link.label }}</a></li>
           {%- endfor %}
         </ul>
       </nav>
