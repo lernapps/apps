@@ -25,16 +25,19 @@ It replaces the narrower capability map in lernapps/map for this purpose.
 - Reusable parts: Nunjucks macros in `src/_includes/components.njk` (app card, fitness signal,
   copy field, count buttons), imported with `{% import "components.njk" as c with context %}`.
   The layout is `src/_includes/base.njk`. Shared with other repos later via a package in lernapps/tooling.
-- Entries: one YAML file per app in `entries/`. `src/_data/catalog.js` reads and checks them; a broken
-  entry fails the build. It also renders the QR code of each app at build time.
+- Entries: one YAML file per app in `entries/`. `src/_data/catalog.js` reads them and checks them against
+  the schema; a broken entry fails the build. It also renders the QR code of each app at build time.
+- Schema: `schemas/entry.js` (Zod) is the single source of the entry format. `npm run schema` writes
+  `schemas/entry.v1.schema.json`, published at <https://lernapps.net/apps/schemas/entry.v1.schema.json>
+  for editors and agents; `npm run check` fails if it is out of date.
 - `scripts/check.mjs` checks the output: no external resources, no broken links, privacy notice and
   imprint linked on every page.
 
 ## Entries
 
-The format is documented for people and agents in [`src/llms.njk`](src/llms.njk) (served as
-`/apps/llms.txt`). Conditions for listing are in `src/_data/de.js` (`list.criteria`) and enforced where
-possible in `src/_data/catalog.js`.
+The format is defined in [`schemas/entry.js`](schemas/entry.js) and explained for people and agents in
+[`src/llms.njk`](src/llms.njk) (served as `/apps/llms.txt`). Conditions for listing are in
+`src/_data/de.js` (`list.criteria`) and enforced by the schema where they can be.
 
 ## Counting thanks (deferred)
 
@@ -63,7 +66,8 @@ GitHub Pages serves the `gh-pages` branch (Settings → Pages → Deploy from a 
 npm ci
 npm run dev        # http://localhost:8080/apps/
 SITE_PATH_PREFIX=/apps/pr-preview/pr-1/ SITE_PREVIEW=1 npm run build   # as a preview
-npm run build && npm run check
+npm run build && npm run check   # schema in sync, output checked
+npm run schema                   # after changing schemas/entry.js
 LERNAPPS_COUNTER_URL=http://localhost:8099/count npm run build   # show the thanks block
 ```
 

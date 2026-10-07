@@ -31,7 +31,7 @@ jobs:
           node-version: 22
           cache: npm
       - if: github.event.action != 'closed'
-        run: npm ci && npm run build && node scripts/check.mjs _site
+        run: npm ci && npm run build && npm run check
       - uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9 # v1.8.1
         with:
           source-dir: _site
