@@ -14,8 +14,6 @@ first-draft MVP (D8 `mvp-first-draft`):
 | `/apps/eintragen/` list an app | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
 | `/apps/llms.txt` | the creator's AI assistant writes the entry | `ch-listing` |
 
-It replaces the narrower capability map in lernapps/map for this purpose.
-
 ## How it is built
 
 - Static pages with [Eleventy](https://www.11ty.dev/) and [UnoCSS](https://unocss.dev/), like the home page
