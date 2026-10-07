@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
 # One file per app. Keys are identifiers (English), values are what people read (German, plain language).
-# Format: src/llms.njk (served as /apps/llms.txt). What an app contains is its own business: the
-# trainers of the Mathe-Karte are topics of this one entry, each with a deep link.
+# Format: schemas/entry.js (JSON Schema: schemas/entry.v1.schema.json), explained in src/llms.njk.
+# What an app contains is its own business: the trainers of the Mathe-Karte are topics of this one
+# entry, each with a deep link.
 title: Mathe-Karte
 subject: Mathematik
 grades: [8]

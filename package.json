@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npm run build && (eleventy --serve --quiet & unocss \"_site/**/*.html\" --out-file _site/uno.css --watch; wait)",
     "build": "rm -rf _site && eleventy && unocss \"_site/**/*.html\" --out-file _site/uno.css --minify",
-    "check": "node scripts/check.mjs"
+    "schema": "node scripts/schema.mjs",
+    "check": "node scripts/schema.mjs --check && node scripts/check.mjs"
   },
   "license": "MIT",
   "devDependencies": {
@@ -15,6 +16,7 @@
     "@unocss/preset-typography": "66.10.5",
     "@unocss/preset-wind4": "66.10.5",
     "js-yaml": "5.4.3",
-    "qrcode": "1.5.4"
+    "qrcode": "1.5.4",
+    "zod": "4.6.5"
   }
 }

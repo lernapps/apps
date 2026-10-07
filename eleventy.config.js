@@ -5,6 +5,8 @@ import de from "./src/_data/de.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "schemas/entry.v1.schema.json": "schemas/entry.v1.schema.json" });
+  eleventyConfig.addWatchTarget("schemas/");
   eleventyConfig.addWatchTarget("entries/");
   eleventyConfig.setServerOptions({ watch: ["_site/uno.css"] });
 
