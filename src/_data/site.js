@@ -5,4 +5,6 @@ export default {
   repo: "https://github.com/lernapps/apps",
   email: "lernapps@beimir.net",
   counter: process.env.LERNAPPS_COUNTER_URL ?? "",
+  // Pull request previews (pr-preview.yml) set SITE_PATH_PREFIX and SITE_PREVIEW: banner, noindex.
+  preview: Boolean(process.env.SITE_PREVIEW),
 };

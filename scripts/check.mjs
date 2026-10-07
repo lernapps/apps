@@ -7,7 +7,8 @@ import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 
 const ROOT = resolve(process.argv[2] ?? "_site");
-const PREFIX = "/apps/"; // this repo is served at https://lernapps.net/apps/
+// This repo is served at https://lernapps.net/apps/; previews under /apps/pr-preview/pr-<number>/.
+const PREFIX = process.env.SITE_PATH_PREFIX ?? "/apps/";
 const OWN_ORIGIN = "https://lernapps.net/";
 const errors = [];
 
