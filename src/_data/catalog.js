@@ -1,7 +1,7 @@
 // Reads and checks the app entries in entries/*.yaml against schemas/entry.js. A broken entry fails the
 // build, so nothing unchecked gets published (platform design D5 ch-listing: "automatic check and
 // publication"). The format is explained in src/llms.njk, served to people and agents as /apps/llms.txt.
-import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { load } from "js-yaml";
 import QRCode from "qrcode";
@@ -33,9 +33,6 @@ export default async function () {
       qr: await QRCode.toString(entry.url, { type: "svg", margin: 0, errorCorrectionLevel: "M", color: { dark: "#0f172a", light: "#ffffff" } }),
     });
   }
-  // Open totals per app, fetched by a workflow once the counter exists; absent until then.
-  const totals = existsSync("data/totals.json") ? JSON.parse(readFileSync("data/totals.json", "utf8")) : {};
-  for (const app of apps) app.totals = totals[app.id] ?? null;
 
   apps.sort((a, b) => a.subject.localeCompare(b.subject, "de") || a.title.localeCompare(b.title, "de"));
   const subjects = [...new Set(apps.map((a) => a.subject))].sort((a, b) => a.localeCompare(b, "de"));

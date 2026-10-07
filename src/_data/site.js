@@ -1,10 +1,11 @@
-// Settings of the site. The counter for thanks and clicks is deferred (README.md, "Counting thanks"):
-// while LERNAPPS_COUNTER_URL is empty, the thanks block stays hidden ("steps aside quietly", D5 ch-feedback).
+// Settings of the site. Thanks and feedback go as prepared e-mails for the MVP (no server, no counter);
+// counting with one click comes later (README.md, "Thanks and feedback").
 export default {
   origin: "https://lernapps.net",
   repo: "https://github.com/lernapps/apps",
   email: "lernapps@beimir.net",
-  counter: process.env.LERNAPPS_COUNTER_URL ?? "",
+  thanksEmail: "Danke-lernapps@beimir.net",
+  feedbackEmail: "Feedback-lernapps@beimir.net",
   // Pull request previews (pr-preview.yml) set SITE_PATH_PREFIX and SITE_PREVIEW: banner, noindex.
   preview: Boolean(process.env.SITE_PREVIEW),
 };
