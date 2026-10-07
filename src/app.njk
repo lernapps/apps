@@ -16,19 +16,11 @@ eleventyComputed:
     may I use it?         → s-fitness-clarity, t-confirm-fitness
     bring it to class     → t-bring-app (open, link, QR code)
     did it help?          → s-giving-back, t-thank-creator-adult, t-give-feedback
-  Referral links (?welle=<code>) show the "I'll have a look" step (D8 a-platform-convinces).
-  Counting needs site.counter; without it, wave banner and thanks stay hidden (assets/app.js).
+  Thanks and feedback are prepared e-mails for the MVP (mailto, works without JS). A referral code
+  (?welle=<code>, D8 a-platform-convinces) is added to their body by assets/app.js.
 -#}
 {%- set A = de.app %}
 {%- import "components.njk" as c with context %}
-
-{# ── Referral wave (hidden until app.js finds ?welle= and a counter) ── #}
-<div class="bg-blue-600 text-white" data-wave hidden>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-    <p class="m-0 flex-1 min-w-[16rem]">{{ A.wave.text }}</p>
-    <button type="button" class="btn btn-light" data-count="anschauen" data-done="{{ A.wave.done }}">{{ A.wave.button }}</button>
-  </div>
-</div>
 
 {# ── What it is ── #}
 <section class="bg-slate-900 text-white">
@@ -79,38 +71,30 @@ eleventyComputed:
   </section>
   {%- endif %}
 
-  {# ── Did it help? (hidden until app.js finds a counter: "steps aside quietly") ── #}
-  <section id="danke" class="panel panel-thanks md:col-span-2" aria-labelledby="danke-titel" data-thanks data-app="{{ app.id }}" data-counter="{{ site.counter }}" hidden>
+  {# ── Did it help? ── #}
+  {%- set page = site.origin + (('/' + app.id + '/') | url) %}
+  <section id="danke" class="panel panel-thanks md:col-span-2" aria-labelledby="danke-titel" data-thanks data-wave-text="{{ A.mail.wave }}">
     <h2 id="danke-titel" class="panel-title">{{ A.thanks.headline }}</h2>
     <p class="m-0 text-slate-700 max-w-2xl">{{ A.thanks.body(app.creator.name) }}</p>
-    <div class="mt-4" data-count-group>
-      <button type="button" class="btn btn-primary btn-lg" data-count="danke" data-done="{{ A.thanks.thanked }}">♥ {{ A.thanks.thank }}</button>
+    <div class="mt-4">
+      {{ c.mailButtons(site.thanksEmail, A.mails.thanks(app.title, app.creator.name, page), "btn-primary btn-lg") }}
     </div>
+    <p class="m-0 mt-2 text-sm text-slate-600">{{ A.thanks.how }}</p>
     <div class="mt-6 grid gap-6 sm:grid-cols-2">
       <div>
         <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.usedHeadline }}</h3>
-        {{ c.countButtons(A.thanks.used) }}
+        {{ c.mailButtons(site.feedbackEmail, A.mails.used(app.title, page)) }}
       </div>
       <div>
         <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.feedbackHeadline }}</h3>
-        {{ c.countButtons(A.thanks.feedback) }}
+        {{ c.mailButtons(site.feedbackEmail, A.mails.feedback(app.title, page)) }}
       </div>
     </div>
-    <p class="m-0 mt-2 text-sm font-semibold text-green-700" role="status" data-recorded data-text="{{ A.thanks.recorded }}"></p>
-    <p class="m-0 mt-4 text-sm text-slate-500">{{ A.thanks.privacy }} <a href="/privacy/" class="underline underline-offset-2">{{ A.thanks.privacyLink }}</a></p>
+    <p class="m-0 mt-3 text-sm font-semibold text-green-700" role="status" data-opened data-text="{{ A.thanks.opened }}"></p>
+    {%- set N = A.thanks.noMail %}
+    <p class="m-0 mt-4 text-sm text-slate-500">{{ N.before }} <a href="mailto:{{ site.thanksEmail }}" class="underline underline-offset-2 whitespace-nowrap">{{ site.thanksEmail }}</a> {{ N.thanks }} {{ N.or }} <a href="mailto:{{ site.feedbackEmail }}" class="underline underline-offset-2 whitespace-nowrap">{{ site.feedbackEmail }}</a> {{ N.feedback }}</p>
+    <p class="m-0 mt-2 text-sm text-slate-500">{{ A.thanks.privacy }} <a href="/privacy/#de-danke" class="underline underline-offset-2">{{ A.thanks.privacyLink }}</a></p>
   </section>
-
-  {# ── Open totals (data/totals.json) ── #}
-  {%- if app.totals %}
-  <section class="panel md:col-span-2" aria-labelledby="gezaehlt">
-    <h2 id="gezaehlt" class="panel-title">{{ A.totals.headline }}</h2>
-    <ul class="list-none p-0 m-0 flex flex-wrap gap-x-6 gap-y-1">
-      {%- if app.totals.danke %}<li>{{ A.totals.thanks(app.totals.danke) }}</li>{% endif %}
-      {%- if app.totals["genutzt-unterricht"] %}<li>{{ A.totals.class(app.totals["genutzt-unterricht"]) }}</li>{% endif %}
-      {%- if app.totals["genutzt-zuhause"] %}<li>{{ A.totals.home(app.totals["genutzt-zuhause"]) }}</li>{% endif %}
-    </ul>
-  </section>
-  {%- endif %}
 
   {# ── Who built it ── #}
   <section class="panel md:col-span-2" aria-labelledby="gebaut">

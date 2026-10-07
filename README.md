@@ -10,7 +10,7 @@ first-draft MVP (D8 `mvp-first-draft`):
 | Page | Experience and steps (D7) | Channel (D5) |
 |---|---|---|
 | `/apps/` find | `x-app-in-minutes`, `x-practice-tonight`: `s-finding`, `t-find-app` | `ch-app-overview` |
-| `/apps/<id>/` app page | `x-app-in-minutes`: `s-fitness-clarity`, `t-confirm-fitness`, `t-bring-app`, `s-giving-back`, `t-thank-creator-adult`, `t-give-feedback`; referral wave (`?welle=`) | `ch-fitness-signal`, `ch-collections`, `ch-feedback` |
+| `/apps/<id>/` app page | `x-app-in-minutes`: `s-fitness-clarity`, `t-confirm-fitness`, `t-bring-app`, `s-giving-back`, `t-thank-creator-adult`, `t-give-feedback`, referral code (`?welle=`) in the e-mails | `ch-fitness-signal`, `ch-collections`, `ch-feedback` (prepared e-mails for now) |
 | `/apps/eintragen/` list an app | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
 | `/apps/llms.txt` | the creator's AI assistant writes the entry | `ch-listing` |
 
@@ -20,7 +20,7 @@ It replaces the narrower capability map in lernapps/map for this purpose.
 
 - Static pages with [Eleventy](https://www.11ty.dev/) and [UnoCSS](https://unocss.dev/), like the home page
   (lernapps.github.io). Every page is readable without JavaScript; small scripts in `src/assets/` add
-  the search, copy buttons and the thanks clicks.
+  the search, copy buttons and the referral code in the e-mails.
 - Texts: all in `src/_data/de.js`, plain German (ISO 24495-1), "du". Templates contain no copy.
 - Reusable parts: Nunjucks macros in `src/_includes/components.njk` (app card, fitness signal,
   copy field, count buttons), imported with `{% import "components.njk" as c with context %}`.
@@ -39,15 +39,16 @@ The format is defined in [`schemas/entry.js`](schemas/entry.js) and explained fo
 [`src/llms.njk`](src/llms.njk) (served as `/apps/llms.txt`). Conditions for listing are in
 `src/_data/de.js` (`list.criteria`) and enforced by the schema where they can be.
 
-## Counting thanks (deferred)
+## Thanks and feedback
 
-The app page has one-click buttons for thanks, use (in class, at home), structured feedback, and
-"I'll have a look" for referral links. They POST `{"app", "event", "welle"?}` as `text/plain` to the URL
-in `LERNAPPS_COUNTER_URL` at build time. No cookies, no browser storage, no identifier.
+For the MVP, thanks and feedback are prepared e-mails (`mailto:`), so no server is needed and the links
+work without JavaScript: "Danke sagen" writes to `Danke-lernapps@beimir.net`, use and feedback to
+`Feedback-lernapps@beimir.net` (`src/_data/site.js`). Subject and body are prepared per app
+(`src/_data/de.js`, `app.mail`); the body says that this is only to test whether thanks arrive, and that
+thanks will be counted with one click later. A referral code (`?welle=<code>`) is added to the body by
+`src/assets/app.js`. Nothing is stored in the browser.
 
-The counter itself is deferred. While `LERNAPPS_COUNTER_URL` is empty, the thanks block and the referral
-banner stay hidden; if the counter cannot be reached, they step aside quietly. Totals, once there, go to
-`data/totals.json` (`{"<id>": {"danke": 3, …}}`) and are shown on each app page.
+Later, one click is counted openly as a total, without e-mail (platform design D5 `ch-feedback`).
 
 ## Deploy and previews
 
@@ -68,7 +69,6 @@ npm run dev        # http://localhost:8080/apps/
 SITE_PATH_PREFIX=/apps/pr-preview/pr-1/ SITE_PREVIEW=1 npm run build   # as a preview
 npm run build && npm run check   # schema in sync, output checked
 npm run schema                   # after changing schemas/entry.js
-LERNAPPS_COUNTER_URL=http://localhost:8099/count npm run build   # show the thanks block
 ```
 
 ## License

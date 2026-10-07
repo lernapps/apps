@@ -4,7 +4,7 @@
 //   x-practice-tonight    a parent, the evening before a test: find, start right away, thank
 //   x-list-and-hear-back  a creator: list the app in minutes, hear that it helped
 // Language: plain German (ISO 24495-1): short sentences, active voice, no jargon, "du".
-export default {
+const de = {
   meta: {
     siteName: "lernapps.net",
     skipLink: "Zum Inhalt springen",
@@ -117,46 +117,52 @@ export default {
       ],
     },
 
-    // Shown only when someone came through a referral link (?welle=…) and the counter is set.
-    wave: {
-      text: "Jemand hat dir diese App empfohlen. Schau sie dir in Ruhe an.",
-      button: "Ich gucke mir das an",
-      done: "Schön! Viel Erfolg damit.",
-    },
-
-    // The thank-you is a step of its own in every journey (D7). Explained right where the click happens.
+    // The thank-you is a step of its own in every journey (D7). For the MVP it goes as a prepared e-mail
+    // (mailto, no server); counting with one click comes later. Explained right where the click happens.
     thanks: {
       headline: "Hat die App geholfen?",
       body: (creator) =>
         `lernapps.net ist kostenlos. Dein Danke geht an ${creator}. Es zeigt, dass die App hilft. Und es hält lernapps.net am Leben.`,
+      how: "Ein Klick öffnet dein E-Mail-Programm mit einer fertigen Nachricht. Du musst sie nur noch abschicken.",
       thank: "Danke sagen",
-      thanked: "Dein Danke ist angekommen.",
       usedHeadline: "Wo hast du sie genutzt?",
       used: [
-        { event: "genutzt-unterricht", label: "Im Unterricht" },
-        { event: "genutzt-zuhause", label: "Zu Hause" },
+        { key: "unterricht", label: "Im Unterricht" },
+        { key: "zuhause", label: "Zu Hause" },
       ],
       feedbackHeadline: "Wie lief es?",
       feedback: [
-        { event: "feedback-gut", label: "Hat gut gepasst" },
-        { event: "feedback-zu-schwer", label: "War zu schwer" },
-        { event: "feedback-zu-leicht", label: "War zu leicht" },
-        { event: "feedback-technik", label: "Hat technisch gehakt" },
+        { key: "gut", label: "Hat gut gepasst" },
+        { key: "zu-schwer", label: "War zu schwer" },
+        { key: "zu-leicht", label: "War zu leicht" },
+        { key: "technik", label: "Hat technisch gehakt" },
       ],
-      recorded: "Danke für deine Rückmeldung.",
+      opened: "Danke! Schick die E-Mail ab, dann kommt sie an.",
+      noMail: { before: "Kein E-Mail-Programm? Schreib einfach an", thanks: "(Danke)", or: "oder", feedback: "(Rückmeldung)." },
       privacy:
-        "Wir zählen nur deinen Klick, als Summe. Wir speichern nichts über dich, auch nicht in deinem Browser.",
+        "Bis wir Klicks zählen, kommt dein Danke als E-Mail bei uns an. Dabei sehen wir deine E-Mail-Adresse. Wir nutzen sie nur dafür.",
       privacyLink: "Mehr dazu",
       reminder: "Zurück aus der App? Sag Danke, wenn sie geholfen hat.",
       reminderLink: "Zum Danke",
     },
 
-    // Open totals (data/totals.json), shown when present.
-    totals: {
-      headline: "Bisher gezählt",
-      thanks: (n) => `${n} × Danke`,
-      class: (n) => `${n} × im Unterricht genutzt`,
-      home: (n) => `${n} × zu Hause genutzt`,
+    // The prepared e-mails. The note says why it is an e-mail for now (D8 a-thanks-arrive-unexplained:
+    // the platform explains the thanks itself, nobody else does).
+    mail: {
+      thanksSubject: (app) => `Danke für „${app}“`,
+      thanksBody: (app, creator, page) =>
+        `Danke für „${app}“!\n\n(Hier kannst du noch etwas dazuschreiben. Du musst aber nicht.)\n\n` +
+        `App: ${page}\n\n` +
+        `– Hinweis von lernapps.net –\nSpäter sagst du Danke mit einem Klick, ganz ohne E-Mail. Wir zählen es dann nur als Summe. ` +
+        `Diese E-Mail hilft uns jetzt nur zu testen, ob das Danke ankommt. Wir geben dein Danke an ${creator} weiter.`,
+      usedSubject: (app, where) => `Genutzt: ${where} – „${app}“`,
+      feedbackSubject: (app, label) => `Rückmeldung zu „${app}“: ${label}`,
+      feedbackBody: (line, page) =>
+        `${line}\n\n(Wenn du magst: Was genau? Du musst aber nichts dazuschreiben.)\n\n` +
+        `App: ${page}\n\n` +
+        `– Hinweis von lernapps.net –\nSpäter gibst du Rückmeldung mit einem Klick, ganz ohne E-Mail. ` +
+        `Diese E-Mail hilft uns jetzt nur zu testen, ob Rückmeldungen ankommen.`,
+      wave: "Empfehlung:", // + the referral code, added by assets/app.js
     },
 
     creator: {
@@ -221,7 +227,22 @@ export default {
     back: {
       headline: "Was du zurückbekommst",
       body:
-        "Jedes Danke und jede Rückmeldung zu deiner App zählen wir offen, als Summe. Du siehst sie auf der Seite deiner App. Wer geklickt hat, wissen wir nicht. Und wir wollen es auch nicht wissen.",
+        "Jedes Danke und jede Rückmeldung zu deiner App geben wir an dich weiter. Später zählen wir sie offen, als Summe, auf der Seite deiner App. Wer geklickt hat, wissen wir dann nicht. Und wir wollen es auch nicht wissen.",
     },
   },
 };
+
+// The prepared e-mails of the app page, one per button: { label, subject, body }.
+const T = de.app.thanks;
+const M = de.app.mail;
+de.app.mails = {
+  thanks: (app, creator, page) => [
+    { label: `♥ ${T.thank}`, subject: M.thanksSubject(app), body: M.thanksBody(app, creator, page) },
+  ],
+  used: (app, page) =>
+    T.used.map((u) => ({ label: u.label, subject: M.usedSubject(app, u.label), body: M.feedbackBody(M.usedSubject(app, u.label), page) })),
+  feedback: (app, page) =>
+    T.feedback.map((f) => ({ label: f.label, subject: M.feedbackSubject(app, f.label), body: M.feedbackBody(M.feedbackSubject(app, f.label), page) })),
+};
+
+export default de;

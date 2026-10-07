@@ -18,6 +18,11 @@ export default function (eleventyConfig) {
     return de.grades.range(g[0], g[g.length - 1]);
   });
 
+  // A mailto link with subject and body (thanks and feedback for the MVP).
+  eleventyConfig.addFilter("mailto", (address, subject, body) =>
+    `mailto:${address}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+  );
+
   return {
     dir: { input: "src", output: "_site" },
     // /apps/ in production; /apps/pr-preview/pr-<number>/ for a pull request preview (pr-preview.yml).

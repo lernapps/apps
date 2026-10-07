@@ -72,11 +72,12 @@
 </div>
 {% endmacro %}
 
-{#- A group of one-click buttons that count an event (assets/app.js). -#}
-{% macro countButtons(items, cls="btn-secondary") %}
-<div class="flex flex-wrap gap-2" data-count-group>
+{#- Links that open a prepared e-mail (thanks and feedback for the MVP; assets/app.js adds the referral
+    wave). items: [{ label, subject, body }], built in de.js (app.mails). -#}
+{% macro mailButtons(address, items, cls="btn-secondary") %}
+<div class="flex flex-wrap gap-2">
   {%- for item in items %}
-  <button type="button" class="btn {{ cls }}" data-count="{{ item.event }}">{{ item.label }}</button>
+  <a href="{{ address | mailto(item.subject, item.body) }}" class="btn {{ cls }}" data-mail>{{ item.label }}</a>
   {%- endfor %}
 </div>
 {% endmacro %}
