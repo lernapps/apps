@@ -7,11 +7,12 @@
     "dev": "npm run build && (eleventy --serve --quiet & unocss \"_site/**/*.html\" --out-file _site/uno.css --watch; wait)",
     "build": "rm -rf _site && eleventy && unocss \"_site/**/*.html\" --out-file _site/uno.css --minify",
     "schema": "node scripts/schema.mjs",
-    "check": "node scripts/schema.mjs --check && node scripts/check.mjs"
+    "check": "node scripts/schema.mjs --check && lernapps-check --site /apps/"
   },
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
+    "@lernapps/site": "github:lernapps/lernapps.github.io#e21bed64d8e0149ad4f3aae819c1cec52036250a",
     "@unocss/cli": "66.10.5",
     "@unocss/preset-typography": "66.10.5",
     "@unocss/preset-wind4": "66.10.5",
