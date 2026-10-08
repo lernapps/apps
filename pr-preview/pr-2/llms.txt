@@ -1,0 +1,78 @@
+# lernapps.net/apps – für KI-Assistenten
+
+lernapps.net/apps hilft Lehrkräften und Eltern, kleine Lern-Apps zu finden, die sofort laufen:
+kostenlos, ohne Anmeldung, ohne Installation, ohne heimliche Datensammlung.
+Startseite: https://lernapps.net/apps/pr-preview/pr-2/
+
+## Apps
+
+### Mathe-Karte (Mathematik, Klasse 8)
+
+Mathe selbst ausprobieren und üben: Prozentrechnung, binomische Formeln und Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung, ein Bild, beliebig viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test. Eine Karte zeigt, welche Themen schon dabei sind.
+- Seite auf lernapps.net: https://lernapps.net/apps/pr-preview/pr-2/mathe-karte/
+- App: https://lernapps.net/mathe-karte/
+- Thema „Prozent: Grundwert, Prozentwert und Prozentsatz erkennen“: https://lernapps.net/mathe-karte/prozent/grundbegriffe.html
+- Thema „Prozent: Prozentsatz berechnen“: https://lernapps.net/mathe-karte/prozent/prozentsatz.html
+- Thema „Prozent: Prozentwert berechnen“: https://lernapps.net/mathe-karte/prozent/prozentwert.html
+- Thema „Prozent: Grundwert berechnen“: https://lernapps.net/mathe-karte/prozent/grundwert.html
+- Thema „Prozent: Zunahme und Abnahme“: https://lernapps.net/mathe-karte/prozent/veraenderung.html
+- Thema „Prozent: Zwei Werte vergleichen“: https://lernapps.net/mathe-karte/prozent/vergleich.html
+- Thema „Prozent: Sachaufgaben übersetzen“: https://lernapps.net/mathe-karte/prozent/sachaufgaben.html
+- Thema „Binomische Formeln: Zwei Klammern multiplizieren“: https://lernapps.net/mathe-karte/binom/klammern-multiplizieren.html
+- Thema „Binomische Formeln: Erste binomische Formel“: https://lernapps.net/mathe-karte/binom/erste-binomische.html
+- Thema „Binomische Formeln: Zweite binomische Formel“: https://lernapps.net/mathe-karte/binom/zweite-binomische.html
+- Thema „Binomische Formeln: Dritte binomische Formel“: https://lernapps.net/mathe-karte/binom/dritte-binomische.html
+- Thema „Binomische Formeln: Rückwärts (faktorisieren)“: https://lernapps.net/mathe-karte/binom/binome-rueckwaerts.html
+- Thema „Binomische Formeln: Geschickt rechnen“: https://lernapps.net/mathe-karte/binom/geschickt-rechnen.html
+- Thema „Wahrscheinlichkeit: Die Laplace-Formel anwenden“: https://lernapps.net/mathe-karte/zufall/laplace.html
+- Thema „Wahrscheinlichkeit: Ein Baumdiagramm zeichnen“: https://lernapps.net/mathe-karte/zufall/baumdiagramm.html
+- Thema „Wahrscheinlichkeit: Erste Pfadregel (multiplizieren)“: https://lernapps.net/mathe-karte/zufall/pfadregel-1.html
+- Thema „Wahrscheinlichkeit: Die Gegenwahrscheinlichkeit berechnen“: https://lernapps.net/mathe-karte/zufall/gegenereignis.html
+- Thema „Wahrscheinlichkeit: Ziehen ohne Zurücklegen“: https://lernapps.net/mathe-karte/zufall/ohne-zuruecklegen.html
+- Thema „Wahrscheinlichkeit: Zweite Pfadregel (addieren)“: https://lernapps.net/mathe-karte/zufall/pfadregel-2.html
+- Thema „Wahrscheinlichkeit: Als Produkt, Summe oder Potenz angeben“: https://lernapps.net/mathe-karte/zufall/ergebnisformen.html
+- Thema „Wahrscheinlichkeit: „Genau einmal“ und „mindestens einmal““: https://lernapps.net/mathe-karte/zufall/pfade-uebersetzen.html
+
+## Eine App eintragen
+
+Ein Mensch hat dich gebeten, seine Lern-App einzutragen? So geht es.
+
+1. Prüf die Bedingungen. Trag die App nur ein, wenn alle erfüllt sind:
+   - Die App läuft im Browser, ohne Installation.
+   - Niemand braucht ein Konto.
+   - Sie ist kostenlos und ohne Werbung.
+   - Sie sammelt nichts heimlich: keine Analyse-Dienste, keine Werbe-Netzwerke. Fremde Server lädt sie höchstens nach einem Klick, zum Beispiel für ein Video.
+   - Lernende tun darin selbst etwas: ausprobieren, üben, entscheiden.
+   Prüf das an der App selbst, nicht nur an ihrer Beschreibung. Ist eine Bedingung nicht erfüllt,
+   sag dem Menschen, welche, und hilf ihm, sie zu erfüllen.
+2. Schreib eine Datei `entries/<id>.yaml` im Repository https://github.com/lernapps/apps.
+   `<id>` ist der Name der App in Kleinbuchstaben mit Bindestrichen, z. B. `bruch-trainer`.
+   Texte auf Deutsch in einfacher Sprache: kurze Sätze, aktiv, ohne Fachjargon.
+   Das Format ist als JSON Schema festgelegt: https://lernapps.net/apps/pr-preview/pr-2/schemas/entry.v1.schema.json
+   Vorlage (Kommentare erklären die Felder):
+
+```yaml
+# yaml-language-server: $schema=https://lernapps.net/apps/pr-preview/pr-2/schemas/entry.v1.schema.json
+title: Bruch-Trainer                 # Name der App
+subject: Mathematik                  # Fach
+grades: [5, 6]                       # Klassen, für die sie passt
+summary: >-                          # 2–3 Sätze: Was tun die Lernenden?
+  Brüche selbst ausprobieren: kürzen, erweitern, vergleichen.
+  Mit Bildern und sofortiger Rückmeldung.
+url: https://example.org/bruch-trainer/   # Link zur App, https
+topics:                              # optional: einzelne Themen mit Pfad relativ zu url
+  - { title: "Brüche kürzen", path: kuerzen.html }
+keywords: [Bruch, Bruchrechnung]     # optional: weitere Suchwörter
+creator: { name: "Vorname Nachname", url: "https://github.com/…" }  # url optional
+source: https://github.com/…         # optional: Quellcode
+fitness:
+  account: false                     # muss false sein
+  install: false                     # muss false sein
+  storage: device                    # none | device (nur im Browser des Geräts)
+  thirdParty: none                   # none | on-click (fremde Server erst nach Klick)
+  thirdPartyNote: ""                 # bei on-click: welche Server, wann
+  checked: false                     # setzt lernapps.net nach der Prüfung
+```
+
+3. Schick die Datei als Pull Request an https://github.com/lernapps/apps. Der Build prüft den Eintrag automatisch.
+   Kein GitHub-Konto? Dann schick den Link zur App an lernapps@beimir.net.
