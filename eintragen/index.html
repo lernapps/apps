@@ -8,28 +8,22 @@
   <meta name="description" content="Du hast eine Lern-App gebaut? Trag sie in wenigen Minuten auf lernapps.net ein. Dann finden andere sie, und du erfährst, wenn sie geholfen hat.">
   <link rel="canonical" href="https://lernapps.net/apps/eintragen/">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/apps/lernapps-tokens.css">
+<link rel="stylesheet" href="/apps/lernapps-frame.css">
   <link rel="stylesheet" href="/apps/uno.css">
   <link rel="stylesheet" href="/apps/assets/apps.css">
   <script src="/apps/assets/kopieren.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:!fixed focus:top-2 focus:left-2 focus:z-50 focus:!px-4 focus:!py-2 focus:bg-white focus:text-blue-700 focus:font-semibold focus:rounded focus:shadow">Zum Inhalt springen</a>
-  <header class="bg-slate-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-x-8">
-      <a href="/" aria-label="lernapps.net – Startseite" class="flex items-end gap-[14px] py-4 leading-none font-semibold tracking-tight" style="font-size: 1.125rem;">
-        <img src="/brand/mark-plain.svg" alt="" style="height: 1.25em; margin-bottom: -.12em;"><span>lernapps<span class="text-blue-400">.net</span></span>
-      </a>
-      <nav aria-label="Hauptnavigation" class="max-sm:w-full max-sm:pb-3">
-        <ul class="flex flex-wrap gap-x-6 gap-y-1 list-none p-0 m-0 text-sm">
-          <li><a href="/apps/" class="py-2 inline-block text-slate-300 hover:text-white">Apps finden</a></li>
-          <li><a href="/apps/eintragen/" class="py-2 inline-block text-white font-semibold" aria-current="page">App eintragen</a></li>
-          <li><a href="/" class="py-2 inline-block text-slate-300 hover:text-white">Über lernapps.net</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <a class="la-skip" href="#main-content">Zum Inhalt springen</a>
+<header class="la-header">
+  <div class="la-header__inner">
+    <a class="la-brand" href="/" aria-label="lernapps.net – Startseite"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
+    <nav class="la-nav" aria-label="Hauptnavigation"><ul><li><a href="/apps/">Apps finden</a></li><li><a href="/apps/eintragen/" aria-current="page">App eintragen</a></li><li><a href="/docs/">So ist es gedacht</a></li><li><a href="https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md" rel="noopener">Mitmachen</a></li></ul></nav>
+  </div>
+</header>
 
   <main id="main-content" tabindex="-1" class="flex-1 outline-none">
     
@@ -94,16 +88,11 @@ Trag sie ein.</h1>
 
   </main>
 
-  <footer class="bg-slate-900 text-slate-300 text-sm mt-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-4">
-      <p class="m-0">lernapps.net ist kostenlos und ohne Werbung. Es lebt von deinem Danke.</p>
-      <ul class="flex flex-wrap gap-x-6 gap-y-2 list-none p-0 m-0">
-        <li><a href="/privacy/" class="text-slate-300 hover:text-white underline underline-offset-2">Datenschutz</a></li>
-        <li><a href="/imprint/" class="text-slate-300 hover:text-white underline underline-offset-2">Impressum</a></li>
-        <li><a href="/docs/platform-design/" class="text-slate-300 hover:text-white underline underline-offset-2">Wie lernapps.net gedacht ist</a></li>
-        <li><a href="https://github.com/lernapps/apps" class="text-slate-300 hover:text-white underline underline-offset-2">Quellcode</a></li>
-      </ul>
-    </div>
-  </footer>
+  <footer class="la-footer">
+  <div class="la-footer__inner">
+    <p>lernapps.net ist kostenlos und ohne Werbung. Es lebt von deinem Danke.</p>
+    <nav aria-label="Fußzeile"><ul><li><a href="/privacy/">Datenschutz</a></li><li><a href="/imprint/">Impressum</a></li><li><a href="/docs/platform-design/">Plattform-Design</a></li><li><a href="https://github.com/lernapps/apps">Quellcode</a></li></ul></nav>
+  </div>
+</footer>
 </body>
 </html>
