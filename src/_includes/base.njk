@@ -1,6 +1,6 @@
 {#-
-  Layout of every page: header in the look of the home page (lernapps.net), light content for
-  reading and the projector, footer with privacy notice and imprint (required on every page).
+  Layout of every page: the shared header and footer of all lernapps.net sites (@lernapps/site, from
+  lernapps.github.io), light content for reading and the projector.
   Front matter: title, description; optional: scripts (files in /assets/).
   Links to the home site (/, /privacy/, /docs/…) are root-relative on purpose: same origin, other repo.
 -#}
@@ -17,9 +17,7 @@
   {%- if site.preview %}
   <meta name="robots" content="noindex">
   {%- endif %}
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  {% laHead %}
   <link rel="stylesheet" href="{{ '/uno.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/apps.css' | url }}">
   {%- for script in scripts %}
@@ -27,40 +25,12 @@
   {%- endfor %}
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:!fixed focus:top-2 focus:left-2 focus:z-50 focus:!px-4 focus:!py-2 focus:bg-white focus:text-blue-700 focus:font-semibold focus:rounded focus:shadow">{{ de.meta.skipLink }}</a>
-
-  {%- if site.preview %}
-  <p class="m-0 px-4 py-2 text-center text-sm bg-amber-300 text-slate-900">{{ de.meta.preview }} <a href="{{ site.origin }}/apps{{ page.url }}" class="underline">lernapps.net/apps{{ page.url }}</a></p>
-  {%- endif %}
-  <header class="bg-slate-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-x-8">
-      <a href="/" aria-label="{{ de.nav.homeLabel }}" class="flex items-end gap-[14px] py-4 leading-none font-semibold tracking-tight" style="font-size: 1.125rem;">
-        <img src="/brand/mark-plain.svg" alt="" style="height: 1.25em; margin-bottom: -.12em;"><span>lernapps<span class="text-blue-400">.net</span></span>
-      </a>
-      <nav aria-label="{{ de.nav.ariaLabel }}" class="max-sm:w-full max-sm:pb-3">
-        <ul class="flex flex-wrap gap-x-6 gap-y-1 list-none p-0 m-0 text-sm">
-          {%- for link in de.nav.links %}
-          {%- set current = link.path and link.path == page.url %}
-          <li><a href="{{ (link.path | url) if link.path else link.href }}" class="py-2 inline-block {{ 'text-white font-semibold' if current else 'text-slate-300 hover:text-white' }}"{% if current %} aria-current="page"{% endif %}>{{ link.label }}</a></li>
-          {%- endfor %}
-        </ul>
-      </nav>
-    </div>
-  </header>
+  {% laHeader page.url %}
 
   <main id="main-content" tabindex="-1" class="flex-1 outline-none">
     {{ content | safe }}
   </main>
 
-  <footer class="bg-slate-900 text-slate-300 text-sm mt-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-4">
-      <p class="m-0">{{ de.footer.free }}</p>
-      <ul class="flex flex-wrap gap-x-6 gap-y-2 list-none p-0 m-0">
-        {%- for link in de.footer.links %}
-        <li><a href="{{ link.href }}" class="text-slate-300 hover:text-white underline underline-offset-2">{{ link.label }}</a></li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </footer>
+  {% laFooter %}
 </body>
 </html>
