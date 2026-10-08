@@ -7,29 +7,6 @@
 const de = {
   meta: {
     siteName: "lernapps.net",
-    skipLink: "Zum Inhalt springen",
-    preview: "Vorschau einer Änderung. Die echte Seite:",
-  },
-
-  nav: {
-    ariaLabel: "Hauptnavigation",
-    homeLabel: "lernapps.net – Startseite",
-    links: [
-      // path: a page of this site (gets the path prefix); href: elsewhere on lernapps.net
-      { label: "Apps finden", path: "/" },
-      { label: "App eintragen", path: "/eintragen/" },
-      { label: "Über lernapps.net", href: "/" },
-    ],
-  },
-
-  footer: {
-    free: "lernapps.net ist kostenlos und ohne Werbung. Es lebt von deinem Danke.",
-    links: [
-      { label: "Datenschutz", href: "/privacy/" },
-      { label: "Impressum", href: "/imprint/" },
-      { label: "Wie lernapps.net gedacht ist", href: "/docs/platform-design/" },
-      { label: "Quellcode", href: "https://github.com/lernapps/apps" },
-    ],
   },
 
   // Words for the data of an entry.
