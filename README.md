@@ -22,14 +22,17 @@ first-draft MVP (D8 `mvp-first-draft`):
 - Texts: all in `src/_data/de.js`, plain German (ISO 24495-1), "du". Templates contain no copy.
 - Reusable parts: Nunjucks macros in `src/_includes/components.njk` (app card, fitness signal,
   copy field, count buttons), imported with `{% import "components.njk" as c with context %}`.
-  The layout is `src/_includes/base.njk`. Shared with other repos later via a package in lernapps/tooling.
+  The layout is `src/_includes/base.njk`.
+- Header, footer and design tokens are those of every lernapps.net site: the package `@lernapps/site`
+  ([`chrome/`](https://github.com/lernapps/lernapps.github.io/tree/main/chrome) in lernapps.github.io),
+  installed from git; Renovate keeps it on the latest commit of its `main`.
 - Entries: one YAML file per app in `entries/`. `src/_data/catalog.js` reads them and checks them against
   the schema; a broken entry fails the build. It also renders the QR code of each app at build time.
 - Schema: `schemas/entry.js` (Zod) is the single source of the entry format. `npm run schema` writes
   `schemas/entry.v1.schema.json`, published at <https://lernapps.net/apps/schemas/entry.v1.schema.json>
   for editors and agents; `npm run check` fails if it is out of date.
-- `scripts/check.mjs` checks the output: no external resources, no broken links, privacy notice and
-  imprint linked on every page.
+- `npm run check` runs `lernapps-check` from the same package on the output: no external resources, no
+  broken links, privacy notice and imprint linked on every page.
 
 ## Entries
 
@@ -53,7 +56,8 @@ Later, one click is counted openly as a total, without e-mail (platform design D
 GitHub Pages serves the `gh-pages` branch (Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`).
 
 - `pages.yml`: every push to `main` builds, checks and publishes to the root of `gh-pages`,
-  served at <https://lernapps.net/apps/>.
+  served at <https://lernapps.net/apps/>. The steps are the shared site actions of
+  [lernapps/tooling](https://github.com/lernapps/tooling), the same for every site.
 - `pr-preview.yml`: every pull request from this repository gets a preview at
   `https://lernapps.net/apps/pr-preview/pr-<number>/`, linked in a comment on the pull request,
   updated on every push and removed when the pull request closes. Previews are built with
