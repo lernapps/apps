@@ -24,7 +24,7 @@ first-draft MVP (D8 `mvp-first-draft`):
   copy field, count buttons), imported with `{% import "components.njk" as c with context %}`.
   The layout is `src/_includes/base.njk`.
 - Header, footer and design tokens are those of every lernapps.net site: the package `@lernapps/site`
-  ([`chrome/`](https://github.com/lernapps/lernapps.github.io/tree/main/chrome) in lernapps.github.io),
+  ([`site-frame/`](https://github.com/lernapps/lernapps.github.io/tree/main/site-frame) in lernapps.github.io),
   installed from git; Renovate keeps it on the latest commit of its `main`.
 - Entries: one YAML file per app in `entries/`. `src/_data/catalog.js` reads them and checks them against
   the schema; a broken entry fails the build. It also renders the QR code of each app at build time.
