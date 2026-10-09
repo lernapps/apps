@@ -1,0 +1,49 @@
+name: Listing
+
+# The listing validation (lernapps/tooling, docs/arc42 ch. 5 "Listing validation"): every pull request that adds or
+# changes an entry checks each such entry against its deployed app, with the same command a creator's assistant runs
+# in its clone: `npm run --silent listing -- entries/<id>.yaml ...` (scripts/listing.mjs, `lernapps check --entry` of
+# @lernapps/tooling). The reports go up as the artifact `listing`; listing-comment.yml comments them on the pull request.
+#
+# Fork safe: this runs the pull request's code, so it has a read-only token and no secrets, and writes nothing to
+# GitHub but its artifact. The comment is posted by listing-comment.yml, which runs from main and reads the artifact as
+# data.
+on:
+  pull_request:
+    paths: ["entries/**"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: listing-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2 # the merge commit and its first parent, the base
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check the added and changed entries
+        run: |
+          mapfile -t entries < <(git diff --name-only --diff-filter=AMR HEAD^1 HEAD -- 'entries/*.yaml')
+          if [ "${#entries[@]}" -eq 0 ]; then
+            echo "No entry added or changed."
+            exit 0
+          fi
+          npm run --silent listing -- --out listing "${entries[@]}"
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: listing
+          path: listing/
+          if-no-files-found: ignore
+          retention-days: 7

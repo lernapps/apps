@@ -1,0 +1,79 @@
+name: Listing comment
+
+# Posts the listing results comment on the pull request that Listing (listing.yml) checked: one comment, found by its
+# marker `<!-- lernapps-listing -->` and updated in place on every run. A failing check creates or updates it; a
+# passing check updates it to say so, and creates none.
+#
+# Fork safe: a workflow_run workflow runs from main with a token that may write comments, so it never runs code of the
+# pull request. It checks out main, installs main's dependencies without install scripts, and reads the artifact of
+# the run as data: scripts/listing-comment.mjs (from main) checks every value and puts it in code blocks. The pull
+# request is found by the head commit GitHub reports for the run, not by anything in the artifact.
+on:
+  workflow_run:
+    workflows: [Listing]
+    types: [completed]
+
+permissions: {}
+
+jobs:
+  comment:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure')
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read # the artifact of the run
+      pull-requests: write # the comment
+    concurrency:
+      group: listing-comment-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true # no artifact: the run checked no entry, or broke before its report
+        with:
+          name: listing
+          path: listing
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Comment on the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          # The open pull request whose head is the checked commit; none when it has moved on since (a newer run comments).
+          pr=$(gh api --paginate "repos/$REPO/pulls?state=open&per_page=100" \
+            --jq '.[] | select(.head.sha == env.HEAD_SHA) | .number' | head -n 1)
+          if [ -z "$pr" ]; then
+            echo "No open pull request has $HEAD_SHA as its head: nothing to comment."
+            exit 0
+          fi
+          if [ ! -d listing ] && [ "$CONCLUSION" = success ]; then
+            echo "The run checked no entry: nothing to comment."
+            exit 0
+          fi
+          state=0
+          node scripts/listing-comment.mjs listing --run-url "$RUN_URL" > body.md || state=$?
+          if [ "$state" -gt 1 ]; then exit "$state"; fi
+          comment=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- lernapps-listing -->"))) | .id' \
+            | head -n 1)
+          if [ -n "$comment" ]; then
+            gh api --method PATCH "repos/$REPO/issues/comments/$comment" -F body=@body.md > /dev/null
+            echo "Updated the comment on #$pr."
+          elif [ "$state" -eq 1 ]; then
+            gh api --method POST "repos/$REPO/issues/$pr/comments" -F body=@body.md > /dev/null
+            echo "Commented on #$pr."
+          else
+            echo "Passed, and no earlier comment to update."
+          fi
