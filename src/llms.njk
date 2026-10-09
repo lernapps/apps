@@ -60,5 +60,20 @@ fitness:
   checked: false                     # setzt lernapps.net nach der Prüfung
 ```
 
-3. Schick die Datei als Pull Request an {{ site.repo }}. Der Build prüft den Eintrag automatisch.
+3. Prüf den Eintrag gegen die veröffentlichte App, bevor du ihn schickst. In einem Klon von {{ site.repo }}:
+
+```sh
+npm ci
+npm run --silent listing -- entries/<id>.yaml
+```
+
+   Die Prüfung öffnet die App unter `url` wie Lernende, ohne Klick, und vergleicht den Eintrag mit ihr:
+   Die `url` und jedes Thema lassen sich öffnen, die Fitness-Werte stimmen mit den gemessenen überein, und die App
+   hält die Regeln von lernapps.net ein. Sie gibt einen Bericht aus; jeder Befund nennt die Regel, wo er ist, was
+   gefunden wurde, die Behebung und den Link zur Regel. Behebe jeden Fehler in der App oder im Eintrag und prüf neu.
+   Eine Änderung an der App wirkt erst, wenn sie veröffentlicht ist. `fitness.checked` bleibt `false`.
+4. Schick die Datei als Pull Request an {{ site.repo }}. Dort läuft dieselbe Prüfung bei jedem Push.
+   Findet sie einen Fehler, schreibt sie den Bericht als Kommentar in den Pull Request, derselbe Text wie bei dir.
+   Behebe die Fehler und pushe: Die Prüfung läuft neu und ändert den Kommentar, bis er „bestanden“ sagt.
+   Dann prüft lernapps.net den Rest im Review und entscheidet über den Eintrag.
    Kein GitHub-Konto? Dann schick den Link zur App an {{ site.email }}.
