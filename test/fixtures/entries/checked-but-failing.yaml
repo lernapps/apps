@@ -1,0 +1,18 @@
+# A listing pull request's entry, as a creator's assistant writes it (format: schemas/entry.js).
+# The test serves a fixture app on 127.0.0.1 and puts its address in place of {{url}}.
+title: Bruch-Trainer
+subject: Mathematik
+grades: [6]
+summary: >-
+  Brüche selbst kürzen. Mit Aufgaben und sofortiger Rückmeldung.
+url: "{{url}}"
+topics:
+  - { title: "Brüche kürzen", path: kuerzen/ }
+  - { title: "Brüche erweitern", path: erweitern/ }
+creator: { name: "Lernapps Test" }
+fitness:
+  account: false
+  install: false
+  storage: none
+  thirdParty: none
+  checked: true
