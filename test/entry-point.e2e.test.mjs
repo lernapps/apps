@@ -1,7 +1,7 @@
-// The creator's entry point as a creator and their assistant meet it: the page /apps/eintragen/ and /apps/llms.txt,
-// built from this repo.
+// The creator's entry points as a creator and their assistant meet them: /apps/build/ (build an app), /apps/enter/
+// (list it) and /apps/llms.txt, built from this repo.
 //   - every link on them resolves: links into this site against the build, every other link on the web;
-//   - the command the page gives to start an app, taken from the built page, run in an empty folder for every
+//   - the command /apps/build/ gives to start an app, taken from the built page, run in an empty folder for every
 //     archetype of the tooling it names, gives an app that passes `lernapps check`, the check of its git hooks and CI.
 // Needs the network (github.com, codeload.github.com, the npm registry, lernapps.net). Behind a proxy, Node's fetch
 // uses it with NODE_USE_ENV_PROXY=1.
@@ -49,6 +49,7 @@ after(() => rmSync(temp, { recursive: true, force: true }));
 
 const out = join(temp, "site");
 let page = "";
+let enter = "";
 let llms = "";
 
 before(async () => {
@@ -56,7 +57,8 @@ before(async () => {
   const { SITE_PATH_PREFIX: _prefix, SITE_PREVIEW: _preview, ...env } = process.env;
   await ok(join(repo, "node_modules/.bin/eleventy"), ["--quiet", "--output", out], repo, env);
   await ok(join(repo, "node_modules/.bin/unocss"), [`${out}/**/*.html`, "--out-file", join(out, "uno.css")], repo);
-  page = readFileSync(join(out, "eintragen", "index.html"), "utf8");
+  page = readFileSync(join(out, "build", "index.html"), "utf8");
+  enter = readFileSync(join(out, "enter", "index.html"), "utf8");
   llms = readFileSync(join(out, "llms.txt"), "utf8");
 });
 
@@ -95,13 +97,21 @@ async function brokenLinks(urls) {
 
 const LINKS = { timeout: 180_000 };
 
-describe("the creator's entry point", () => {
-  test("every link on /apps/eintragen/ resolves", LINKS, async () => {
-    const hrefs = [...page.matchAll(/\bhref="([^"]*)"/g)]
-      .map((m) => m[1].replaceAll("&amp;", "&"))
-      .filter((href) => href !== "" && !href.startsWith("#") && !href.startsWith("mailto:"));
-    assert.ok(hrefs.length > 0);
-    assert.deepEqual(await brokenLinks(hrefs), []);
+/** The links of a page that lead somewhere else: no anchors on the page itself, no e-mail. */
+const hrefs = (html) =>
+  [...html.matchAll(/\bhref="([^"]*)"/g)]
+    .map((m) => m[1].replaceAll("&amp;", "&"))
+    .filter((href) => href !== "" && !href.startsWith("#") && !href.startsWith("mailto:"));
+
+describe("the creator's entry points", () => {
+  test("every link on /apps/build/ resolves", LINKS, async () => {
+    assert.ok(hrefs(page).length > 0);
+    assert.deepEqual(await brokenLinks(hrefs(page)), []);
+  });
+
+  test("every link on /apps/enter/ resolves", LINKS, async () => {
+    assert.ok(hrefs(enter).length > 0);
+    assert.deepEqual(await brokenLinks(hrefs(enter)), []);
   });
 
   test("every link in /apps/llms.txt resolves", LINKS, async () => {
@@ -110,17 +120,22 @@ describe("the creator's entry point", () => {
     assert.deepEqual(await brokenLinks(links), []);
   });
 
-  test("the page and llms.txt link the skill lernapps-app as the quick path, and lead on to listing", () => {
+  test("building links the skill lernapps-app as the quick path and leads on to listing; listing leads back", () => {
     for (const text of [page, llms]) {
       assert.match(text, /skills\/lernapps-app\/SKILL\.md/);
       assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
     }
-    assert.match(page, /href="#eintragen"/, "the page leads on from building to listing");
-    assert.ok(llms.indexOf("## Eine App bauen") < llms.indexOf("## Eine App eintragen"));
+    assert.match(page, /href="\/apps\/enter\/"/, "/apps/build/ leads on to listing");
+    assert.match(enter, /href="\/apps\/build\/"/, "/apps/enter/ leads to building for those without an app");
+    const build = llms.indexOf("## Eine App bauen");
+    const list = llms.indexOf("## Eine App eintragen");
+    assert.ok(build >= 0 && build < list, "llms.txt has building, then listing");
+    assert.ok(llms.slice(build, list).includes("https://lernapps.net/apps/build/"));
+    assert.ok(llms.slice(list).includes("https://lernapps.net/apps/enter/"));
   });
 });
 
-/** The command to start an app, as the built page shows it: the one `<code>` that runs `npx … create`. */
+/** The command to start an app, as the built page /apps/build/ shows it: the one `<code>` that runs `npx … create`. */
 function startCommand() {
   const commands = new Set(
     [...page.matchAll(/<code\b[^>]*>([\s\S]*?)<\/code>/g)].map((m) => decode(m[1]).trim()).filter((c) => /^npx .* create /.test(c)),
@@ -129,7 +144,7 @@ function startCommand() {
   return [...commands][0];
 }
 
-describe("the command the entry point gives to start an app", () => {
+describe("the command /apps/build/ gives to start an app", () => {
   test("is the same in the prompt the creator copies and in llms.txt", () => {
     const command = startCommand();
     const prompt = decode(page.match(/<textarea\b[^>]*id="bauen-auftrag"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? "");

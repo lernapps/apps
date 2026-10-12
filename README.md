@@ -2,6 +2,9 @@
 
 Find learning apps for your class or your child: <https://lernapps.net/apps/>.
 
+This repo explains building and listing an app, and provides the apps themselves: the catalog. Helping builders get
+their apps out is the responsibility of [lernapps/tooling](https://github.com/lernapps/tooling).
+
 This is the application of the platform lernapps.net. It implements the experiences of the
 [platform design](https://lernapps.net/docs/platform-design/) (agents: skill
 [`skills/pdt`](https://github.com/lernapps/docs/tree/main/skills/pdt) in lernapps/docs) for the
@@ -11,7 +14,8 @@ first-draft MVP (D8 `mvp-first-draft`):
 |---|---|---|
 | `/apps/` find | `x-app-in-minutes`, `x-practice-tonight`: `s-finding`, `t-find-app` | `ch-app-overview` |
 | `/apps/<id>/` app page | `x-app-in-minutes`: `s-fitness-clarity`, `t-confirm-fitness`, `t-bring-app`, `s-giving-back`, `t-thank-creator-adult`, `t-give-feedback`, referral code (`?welle=`) in the e-mails | `ch-fitness-signal`, `ch-collections`, `ch-feedback` (prepared e-mails for now) |
-| `/apps/eintragen/` build and list an app: the creator's entry point | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
+| `/apps/build/` build an app with an AI assistant: the creator's entry point | `x-list-and-hear-back`: `s-listing-help` | `ch-listing` |
+| `/apps/enter/` list a published app | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
 | `/apps/llms.txt` | the creator's AI assistant builds the app (quick path: the skill `lernapps-app` of lernapps/tooling) and writes the entry | `ch-listing` |
 
 ## How it is built

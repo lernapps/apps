@@ -103,7 +103,7 @@ eleventyComputed:
       {%- if app.creator.url %}<a href="{{ app.creator.url }}" class="text-blue-700 underline underline-offset-2">{{ app.creator.name }}</a>{% else %}{{ app.creator.name }}{% endif %}
       {%- if app.source %} · <a href="{{ app.source }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.source }}</a>{% endif %}
     </p>
-    <p class="m-0 mt-3 text-slate-600">{{ A.creator.own }} <a href="{{ '/eintragen/' | url }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.ownLink }}</a></p>
+    <p class="m-0 mt-3 text-slate-600">{{ A.creator.own }} <a href="{{ '/enter/' | url }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.ownLink }}</a></p>
   </section>
 </div>
 

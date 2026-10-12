@@ -7,7 +7,7 @@ export default {
   thanksEmail: "Danke-lernapps@beimir.net",
   feedbackEmail: "Feedback-lernapps@beimir.net",
   // Building an app with the tooling (lernapps/tooling): its guide for assistants, the skill that is the quick path,
-  // and the command that starts an app. The page /eintragen/ and llms.txt show them; test/entry-point.e2e.test.mjs
+  // and the command that starts an app. The page /build/ and llms.txt show them; test/entry-point.e2e.test.mjs
   // runs the command from the built page.
   tooling: {
     llms: "https://lernapps.net/tooling/llms.txt",
