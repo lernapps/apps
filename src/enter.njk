@@ -1,5 +1,5 @@
 ---
-permalink: /eintragen/index.html
+permalink: /enter/index.html
 layout: base.njk
 scripts: [kopieren.js]
 eleventyComputed:
@@ -10,6 +10,7 @@ eleventyComputed:
   Eintragen: steps s-listing-help and t-list-app of x-list-and-hear-back (D7), channel ch-listing (D5):
   a few fields, an automatic check (src/_data/catalog.js), help from the creator's AI assistant (llms.txt),
   and the owner's personal help for the first listing (concierge, D8 mvp-first-draft).
+  Building an app comes first, on its own page (/build/, build.njk); this page lists an app that is published.
   "Was du zurückbekommst" is s-use-insight: thanks and feedback, counted openly, on the app's page.
 -#}
 {%- set L = de.list %}
@@ -18,6 +19,7 @@ eleventyComputed:
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight whitespace-pre-line" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ L.headline }}</h1>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ L.lead }}</p>
+    <p class="m-0 mt-3 text-slate-300">{{ L.noApp }} <a href="{{ '/build/' | url }}" class="text-white underline underline-offset-2">{{ L.noAppLink }}</a></p>
   </div>
 </section>
 
@@ -43,7 +45,7 @@ eleventyComputed:
       <div class="panel flex flex-col">
         <h3 class="m-0 text-lg font-bold">{{ L.ways.form.title }}</h3>
         <p class="m-0 mt-2 text-slate-700 flex-1">{{ L.ways.form.body }}</p>
-        <a href="{{ site.repo }}/issues/new?template=app-eintragen.yml" class="btn btn-primary mt-4 self-start">{{ L.ways.form.button }}</a>
+        <a href="{{ site.repo }}/issues/new?template=app-enter.yml" class="btn btn-primary mt-4 self-start">{{ L.ways.form.button }}</a>
       </div>
       <div class="panel flex flex-col">
         <h3 class="m-0 text-lg font-bold">{{ L.ways.agent.title }}</h3>

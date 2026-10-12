@@ -23,7 +23,9 @@ jobs:
     steps:
       - uses: lernapps/tooling/actions/site-check@7df62b2acd3297f0d3798fde24ffd2d87a440bc4 # main
 
-  test: # the end-to-end tests of the listing validation (npm test): fixture entries against a fixture app
+  # The end-to-end tests (npm test): the listing validation on fixture entries against a fixture app, and the
+  # creator's entry point (its links resolve, its command to start an app gives an app that passes lernapps check).
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
