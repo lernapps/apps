@@ -53,6 +53,15 @@ where it runs: [`scripts/listing.mjs`](scripts/listing.mjs), [`scripts/listing-c
 and the workflows [`listing.yml`](.github/workflows/listing.yml) and
 [`listing-comment.yml`](.github/workflows/listing-comment.yml).
 
+## Review (maintainers)
+
+On a listing pull request, a maintainer can start the review of lernapps/tooling (`review/prompt.md`) with a comment
+`/review` (the head of the app repo's default branch) or `/review <full commit id>`. It builds the app, runs the
+checks and, when they pass, lets the review agent judge the rest; the verdict comes as one comment on the pull
+request, replaced on every `/review`. The review decides nothing: the owner decides on the listing. How it works and
+why it is safe with an app from outside: [`review.yml`](.github/workflows/review.yml),
+[`scripts/review-input.mjs`](scripts/review-input.mjs) and [`scripts/review-comment.mjs`](scripts/review-comment.mjs).
+
 ## Thanks and feedback
 
 For the MVP, thanks and feedback are prepared e-mails (`mailto:`), so no server is needed and the links
@@ -84,7 +93,7 @@ npm run dev        # http://localhost:8080/apps/
 SITE_PATH_PREFIX=/apps/pr-preview/pr-1/ SITE_PREVIEW=1 npm run build   # as a preview
 npm run build && npm run check   # schema in sync, output checked
 npm run schema                   # after changing schemas/entry.js
-npm test                         # end-to-end tests: listing validation, creator's entry point (network)
+npm test                         # end-to-end tests: listing validation, review, creator's entry point (network)
 npm run --silent listing -- entries/mathe-karte.yaml   # check an entry against its deployed app
 ```
 
