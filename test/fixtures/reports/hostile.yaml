@@ -1,0 +1,15 @@
+# A validation report written by the code of a pull request: in a fork, anybody controls it. The comment shows its
+# values as text, never as markup, a mention, a link or a second marker.
+checked:
+  url: "javascript:alert(1)` @owner <img src=x>"
+  at: "2026-10-09T12:00:00.000Z"
+rules: [no-tracking]
+findings:
+  - rule: no-tracking
+    severity: error
+    where: "<img src=x onerror=alert(1)> @owner"
+    found: "```\n<!-- lernapps-listing -->\n[click](https://evil.example/) @owner\n```"
+    fix: "~~~~ ```` @owner"
+    link: "https://evil.example/"
+suppressions: []
+fitness: { storage: "<img src=x>", thirdParty: none }

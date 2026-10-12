@@ -40,6 +40,15 @@ The format is defined in [`schemas/entry.js`](schemas/entry.js) and explained fo
 [`src/llms.njk`](src/llms.njk) (served as `/apps/llms.txt`). Conditions for listing are in
 `src/_data/de.js` (`list.criteria`) and enforced by the schema where they can be.
 
+## Listing validation
+
+A pull request that adds or changes an entry is checked against the deployed app, and the result is commented on
+the pull request for the creator's assistant (lernapps/tooling, architecture chapter 5, "Listing validation"). The
+same command runs in CI and in a clone: `npm run --silent listing -- entries/<id>.yaml`. How it works is described
+where it runs: [`scripts/listing.mjs`](scripts/listing.mjs), [`scripts/listing-comment.mjs`](scripts/listing-comment.mjs)
+and the workflows [`listing.yml`](.github/workflows/listing.yml) and
+[`listing-comment.yml`](.github/workflows/listing-comment.yml).
+
 ## Thanks and feedback
 
 For the MVP, thanks and feedback are prepared e-mails (`mailto:`), so no server is needed and the links
@@ -71,6 +80,8 @@ npm run dev        # http://localhost:8080/apps/
 SITE_PATH_PREFIX=/apps/pr-preview/pr-1/ SITE_PREVIEW=1 npm run build   # as a preview
 npm run build && npm run check   # schema in sync, output checked
 npm run schema                   # after changing schemas/entry.js
+npm test                         # end-to-end tests of the listing validation
+npm run --silent listing -- entries/mathe-karte.yaml   # check an entry against its deployed app
 ```
 
 ## License
