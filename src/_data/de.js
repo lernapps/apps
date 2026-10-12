@@ -155,10 +155,23 @@ const de = {
   list: {
     title: "App eintragen · lernapps.net",
     description:
-      "Du hast eine Lern-App gebaut? Trag sie in wenigen Minuten auf lernapps.net ein. Dann finden andere sie, und du erfährst, wenn sie geholfen hat.",
-    headline: "Du hast eine Lern-App gebaut?\nTrag sie ein.",
+      "Bau eine Lern-App mit deinem KI-Assistenten und trag sie in wenigen Minuten auf lernapps.net ein. Dann finden andere sie, und du erfährst, wenn sie geholfen hat.",
+    headline: "Bau eine Lern-App.\nTrag sie ein.",
     lead:
-      "Das dauert ein paar Minuten. Danach finden Lehrkräfte und Eltern deine App. Und du erfährst, wenn sie geholfen hat.",
+      "Dein KI-Assistent baut sie mit dir. Eintragen dauert ein paar Minuten. Danach finden Lehrkräfte und Eltern deine App. Und du erfährst, wenn sie geholfen hat.",
+    build: {
+      headline: "Noch keine App? Bau sie mit deinem KI-Assistenten",
+      body: "Programmieren musst du nicht. Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf. Sag ihm:",
+      label: "Auftrag für deinen Assistenten",
+      prompt: (llms, command) =>
+        `Bau mit mir eine Lern-App für lernapps.net. Lies zuerst ${llms} und folge dem Schnellweg. Frag mich, was die App lehren soll, und schreib mit mir den Plan. Erst wenn ich den Plan bestätigt habe, leg die App so an: ${command}`,
+      copy: "Auftrag kopieren",
+      copied: "Kopiert",
+      command: "Mit diesem Befehl legt dein Assistent die App an. Das Werkzeug dafür lädt er selbst.",
+      skill: "Der Schnellweg für Assistenten ist der Skill",
+      next: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App liegt dann bei dir, zum Beispiel auf GitHub Pages. Zum Schluss trägt er sie hier ein, wenn du zustimmst.",
+      nextLink: "So trägst du sie ein",
+    },
     criteria: {
       headline: "Was wir aufnehmen",
       items: [

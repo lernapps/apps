@@ -27,6 +27,22 @@ Startseite: {{ site.origin }}{{ '/' | url }}
 {%- endfor %}
 
 {% endfor -%}
+## Eine App bauen
+
+Ein Mensch möchte mit dir eine Lern-App bauen? Der Schnellweg ist der Skill
+[lernapps-app]({{ site.tooling.skillRaw }}).
+Lade ihn (`npx skills add lernapps/tooling`) und folge dem Plan, den er nennt. Der Plan fragt zuerst, was die App
+lehren soll, und nennt jeden Befehl, wenn er dran ist. Erst nach dem bestätigten Plan legst du die App an, ohne das
+Tooling vorher zu installieren:
+
+```sh
+{{ site.tooling.create | safe }}
+```
+
+Befehle, Skills, Regeln und Schemas: [Tooling]({{ site.tooling.llms }}).
+Die App liegt an ihrer eigenen Adresse, meist auf GitHub Pages ihres Repositorys; der Katalog verlinkt sie.
+Ist sie veröffentlicht, trag sie ein, wie der nächste Abschnitt sagt.
+
 ## Eine App eintragen
 
 Ein Mensch hat dich gebeten, seine Lern-App einzutragen? So geht es.
