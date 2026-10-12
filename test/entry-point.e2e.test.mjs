@@ -133,6 +133,22 @@ describe("the creator's entry points", () => {
     assert.ok(llms.slice(build, list).includes("https://lernapps.net/apps/build/"));
     assert.ok(llms.slice(list).includes("https://lernapps.net/apps/enter/"));
   });
+
+  test("listing promotes the skill lernapps-listing; e-mail only as the fallback at the end", () => {
+    const skill = /skills\/lernapps-listing\/SKILL\.md/;
+    const first = enter.search(skill);
+    assert.ok(first >= 0, "/apps/enter/ links the skill lernapps-listing");
+    const prompt = decode(enter.match(/<textarea\b[^>]*id="auftrag"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? "");
+    assert.match(prompt, /lernapps-listing/, "the prompt to copy names the skill");
+    const mails = [...enter.matchAll(/mailto:/g)];
+    assert.equal(mails.length, 1, "one mailto on /apps/enter/");
+    assert.ok(first < mails[0].index, "the skill comes before the e-mail");
+    const fallback = enter.match(/<[^>]*\bid="notfalls"[^>]*>[\s\S]*?<\/section>/)?.[0] ?? "";
+    assert.match(fallback, /mailto:/, "the mailto is in the fallback");
+    assert.ok(enter.indexOf('id="notfalls"') > enter.indexOf('id="wege"'), "the fallback comes after the ways");
+    const list = llms.slice(llms.indexOf("## Eine App eintragen"));
+    assert.match(list, /\]\(https:\/\/raw\.githubusercontent\.com\/lernapps\/tooling\/main\/skills\/lernapps-listing\/SKILL\.md\)/);
+  });
 });
 
 /** The command to start an app, as the built page /apps/build/ shows it: the one `<code>` that runs `npx … create`. */
