@@ -8,6 +8,8 @@ name: Listing
 # Fork safe: this runs the pull request's code, so it has a read-only token and no secrets, and writes nothing to
 # GitHub but its artifact. The comment is posted by listing-comment.yml, which runs from main and reads the artifact as
 # data.
+#
+# The review agent does not run here: the owner starts it on a pull request whose check passed.
 on:
   pull_request:
     paths: ["entries/**"]
