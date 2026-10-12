@@ -175,7 +175,7 @@ const de = {
       body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",
       criteria: "Von Anfang an hält sie ein, was wir für den Katalog verlangen:",
       criteriaLink: "die Bedingungen",
-      enter: "Ist sie veröffentlicht, trägst du sie auf lernapps.net ein. Dann finden Lehrkräfte und Eltern sie.",
+      enter: "Ist sie veröffentlicht, trägt dein Assistent sie mit dem Skill lernapps-listing auf lernapps.net ein. Dann finden Lehrkräfte und Eltern sie.",
       enterLink: "So trägst du eine App ein",
     },
   },
@@ -209,26 +209,31 @@ const de = {
       ],
       optional: "Wenn du magst: einzelne Themen mit eigenem Link. Dann landen Suchende direkt an der richtigen Stelle.",
     },
+    // The ways, in this order: the assistant with the skill lernapps-listing (site.tooling.listing) is the way;
+    // the issue form for those without such an assistant; the e-mail only as the fallback.
     ways: {
       headline: "So trägst du sie ein",
-      form: {
-        title: "Mit dem Formular",
-        body: "Füll das Formular auf GitHub aus. Dafür brauchst du ein GitHub-Konto.",
-        button: "Zum Formular",
-      },
       agent: {
         title: "Mit deinem KI-Assistenten",
-        body: "Gib deinem Assistenten diesen Auftrag. Er prüft die Bedingungen und schreibt den Eintrag für dich.",
-        prompt: (url) =>
-          `Lies ${url} und trag meine Lern-App dort ein. Prüf zuerst, ob sie die Bedingungen erfüllt. Hier ist der Link zu meiner App: `,
+        body:
+          "So geht es am schnellsten. Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf, und ein GitHub-Konto. Kopier diesen Auftrag und gib ihn ihm.",
+        prompt: (skill, install) =>
+          `Trag meine Lern-App auf lernapps.net ein. Nutz dazu den Skill lernapps-listing (${skill}, laden mit ${install}) und folge ihm. Prüf zuerst, ob die App die Bedingungen erfüllt. Hier ist der Link zu meiner App: `,
         label: "Auftrag für deinen Assistenten",
         copy: "Auftrag kopieren",
         copied: "Kopiert",
+        skill: "Dein Assistent folgt dem Skill",
+      },
+      form: {
+        title: "Ohne Assistenten: mit dem Formular",
+        body: "Füll das Formular auf GitHub aus. Wir prüfen die App und tragen sie für dich ein. Dafür brauchst du ein GitHub-Konto.",
+        button: "Zum Formular",
       },
       mail: {
-        title: "Per E-Mail",
-        body: "Schick uns einfach den Link. Oliver hilft dir beim ersten Eintrag.",
-        button: "E-Mail schreiben",
+        title: "Klappt nichts davon?",
+        before: "Dann schick uns den Link zu deiner App",
+        link: "per E-Mail",
+        after: "Oliver hilft dir beim ersten Eintrag.",
         subject: "Meine App für lernapps.net",
       },
     },
