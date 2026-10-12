@@ -42,35 +42,12 @@ The format is defined in [`schemas/entry.js`](schemas/entry.js) and explained fo
 
 ## Listing validation
 
-A pull request that adds or changes an entry is checked against the deployed app (lernapps/tooling, architecture
-chapter 5, "Listing validation"). One command does it, the same in CI and in a creator's clone:
-
-```bash
-npm run --silent listing -- entries/<id>.yaml   # prints the comment; exit code 1 when a check fails
-```
-
-`scripts/listing.mjs` runs `lernapps check --entry <file>` of `@lernapps/tooling` for each entry: the checks of the
-built app on its `url` (Chromium, installed on the first run), the `url` and every topic link resolve, the fitness
-values match the measured ones. One rule is the catalog's own: `fitness.checked: true` only while the check passes.
-It writes one validation report per entry to `node_modules/.cache/lernapps/listing/` (or `--out <dir>`) and prints
-the listing results comment from them (`scripts/listing-comment.mjs`), written for the creator's assistant: per
-finding the rule, where, what was found, the fix and the rule's link, and how to run the check locally.
-
-- `listing.yml`, on pull requests that change `entries/`: runs that command on the added and changed entries and
-  uploads the reports as the artifact `listing`. It runs the pull request's code, so it has a read-only token and
-  no secrets.
-- `listing-comment.yml`, on `workflow_run` of Listing: runs from `main`, never the pull request's code. It finds the
-  open pull request by the run's head commit, renders the comment from the artifact with main's
-  `scripts/listing-comment.mjs`, which treats the reports as data (values in code blocks, links built from rule
-  ids), and posts it as one comment, found by the marker `<!-- lernapps-listing -->` and updated in place: on
-  failure, and to say "bestanden" once the check passes again.
-- The review agent is not run here: the owner starts it on a pull request that passed (lernapps/tooling, "The review").
-
-`@lernapps/tooling` is a development dependency pinned to a commit of its `main`, kept current by Renovate like
-`@lernapps/site`. `npm test` runs the end-to-end tests (`test/`, job `test` in `pages.yml`): the command on fixture
-entries against a fixture app served on 127.0.0.1, the comment of the broken topic compared with
-`test/fixtures/comments/`, and a report with markup, mentions and a second marker rendered as plain text.
-`UPDATE_GOLDEN=1 npm test` writes the golden comments after an intended change.
+A pull request that adds or changes an entry is checked against the deployed app, and the result is commented on
+the pull request for the creator's assistant (lernapps/tooling, architecture chapter 5, "Listing validation"). The
+same command runs in CI and in a clone: `npm run --silent listing -- entries/<id>.yaml`. How it works is described
+where it runs: [`scripts/listing.mjs`](scripts/listing.mjs), [`scripts/listing-comment.mjs`](scripts/listing-comment.mjs)
+and the workflows [`listing.yml`](.github/workflows/listing.yml) and
+[`listing-comment.yml`](.github/workflows/listing-comment.yml).
 
 ## Thanks and feedback
 
