@@ -2,11 +2,16 @@
 // of a listing pull request, written for the creator's assistant. scripts/listing.mjs prints it after a check;
 // .github/workflows/listing-comment.yml posts it on the pull request, rendered by this file from main.
 //
-//   node scripts/listing-comment.mjs <dir> [--run-url <url>]
+//   node scripts/listing-comment.mjs <dir> [--run-url <url>] [--report-url <url>]
 //
 // <dir> holds one validation report per entry, <id>.yaml (schema:
 // https://lernapps.net/tooling/schemas/validation-report.v1.schema.json). Prints the comment. Exit code 0 when every
 // report passes, 1 when one fails or none can be read, 2 on wrong usage.
+//
+// Every finding is a task (`- [ ]`), grouped by rule. Only a comment too long for GitHub is cut off, and then says so:
+// it shows the same number of findings of every rule, counts every rule, and links the full report, the artifact
+// `listing` of the run (--report-url, its address; else --run-url, the run). The workflow rewrites the comment on
+// every run, so ticked boxes start empty again.
 //
 // The reports come from the code of the pull request, which anybody controls in a fork: they are data. Ids and enums
 // are checked against their patterns, links are built from the rule id, and every other value stands in a fenced
@@ -23,7 +28,10 @@ const ID = /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 const ENTRY_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const SEVERITIES = ["error", "warning", "hint"];
 const MAX_VALUE = 2000;
-const MAX_FINDINGS = 50;
+// GitHub takes a comment of at most 65,536 characters; the comment stays below, with room to spare, counted in bytes.
+const MAX_COMMENT = 60_000;
+const RUN_URL = /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/actions\/runs\/\d+$/;
+const ARTIFACT_URL = /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/actions\/runs\/\d+\/artifacts\/\d+$/;
 const MAX_REPORT = 1024 * 1024;
 
 const LABEL = { error: ["Fehler", "Fehler"], warning: ["Warnung", "Warnungen"], hint: ["Hinweis", "Hinweise"] };
@@ -85,7 +93,30 @@ function readFile(file) {
   }
 }
 
-function renderEntry(id, report) {
+/** "14 Fehler" or "2 Fehler, 1 Warnung": the findings counted by severity. */
+const tallyOf = (findings) =>
+  SEVERITIES.map((severity) => [severity, findings.filter((f) => f.severity === severity).length])
+    .filter(([, n]) => n > 0)
+    .map(([severity, n]) => count(n, severity))
+    .join(", ");
+
+/** The findings of a report grouped by rule, in the order the rules first appear (the report sorts by rule). */
+function byRule(findings) {
+  const groups = new Map();
+  for (const finding of findings) {
+    if (!groups.has(finding.rule)) groups.set(finding.rule, []);
+    groups.get(finding.rule).push(finding);
+  }
+  return [...groups];
+}
+
+const ruleLink = (rule) => `[\`${rule}\`](${RULE_PAGE}${rule})`;
+
+/**
+ * One entry: its verdict, what was checked, and its findings, one task each, grouped by rule. `perRule` is how many
+ * findings of each rule are shown (all, unless the comment is cut off to fit GitHub).
+ */
+function renderEntry(id, report, perRule = Infinity) {
   const file = `entries/${id}.yaml`;
   if (report === undefined) {
     return [`### ${file}: nicht bestanden`, "", "Der Prüfbericht ist nicht lesbar. Führ die Prüfung selbst aus (unten)."].join("\n");
@@ -101,18 +132,36 @@ function renderEntry(id, report) {
   }
   facts.push(field("Regeln", `${report.rules} geprüft`));
   const lines = [`### ${file}: ${verdict}`, "", codeBlock(facts)];
-  const shown = report.findings.slice(0, MAX_FINDINGS);
-  shown.forEach((finding, index) => {
-    lines.push(
-      "",
-      `${index + 1}. Regel \`${finding.rule}\` (${finding.severity}): ${RULE_PAGE}${finding.rule}`,
-      codeBlock([field("Wo", finding.where), field("Gefunden", finding.found), field("Behebung", finding.fix)], "   "),
-    );
-  });
-  if (report.findings.length > shown.length) {
-    lines.push("", `… und ${report.findings.length - shown.length} weitere Befunde: Führ die Prüfung selbst aus (unten).`);
+  const groups = byRule(report.findings);
+  const cut = groups.some(([, findings]) => findings.length > perRule);
+  if (cut) {
+    // Every rule with its count, also those whose findings are cut off.
+    lines.push("", "| Regel | Befunde | gezeigt |", "| --- | --- | --- |");
+    for (const [rule, findings] of groups) lines.push(`| ${ruleLink(rule)} | ${tallyOf(findings)} | ${Math.min(findings.length, perRule)} |`);
+  }
+  for (const [rule, findings] of groups) {
+    const shown = findings.slice(0, perRule);
+    lines.push("", `#### Regel ${ruleLink(rule)}: ${tallyOf(findings)}${cut ? `, ${shown.length} davon gezeigt` : ""}`, "");
+    for (const finding of shown) {
+      lines.push(
+        `- [ ] ${ruleLink(rule)} (${finding.severity})`,
+        codeBlock([field("Wo", finding.where), field("Gefunden", finding.found), field("Behebung", finding.fix)], "  "),
+      );
+    }
+    if (findings.length > shown.length) {
+      lines.push("", `… und ${findings.length - shown.length} weitere Befunde dieser Regel: im vollständigen Prüfbericht (oben verlinkt).`);
+    }
   }
   return lines.join("\n");
+}
+
+/** Where the full reports are, for a comment that is cut off: the artifact of the run, the run, or a run of one's own. */
+function fullReport({ runUrl, reportUrl }) {
+  if (reportUrl !== undefined) {
+    return `Der vollständige Prüfbericht: das Artefakt \`listing\` dieses Laufs, ${reportUrl}${runUrl ? `\nDer Lauf: ${runUrl}` : ""}`;
+  }
+  if (runUrl !== undefined) return `Der vollständige Prüfbericht: das Artefakt \`listing\` des Laufs ${runUrl} (unten auf der Seite, unter „Artifacts“).`;
+  return "Die vollständigen Prüfberichte (YAML) schreibt die Prüfung, wenn du sie selbst ausführst (unten).";
 }
 
 function localRun(ids) {
@@ -132,19 +181,20 @@ function localRun(ids) {
 }
 
 /** The comment for the reports in `dir`; `passed` is false when a report fails or none can be read. */
-export function render(dir, { runUrl } = {}) {
+export function render(dir, links = {}) {
+  const runUrl = typeof links.runUrl === "string" && RUN_URL.test(links.runUrl) ? links.runUrl : undefined;
+  const reportUrl = typeof links.reportUrl === "string" && ARTIFACT_URL.test(links.reportUrl) ? links.reportUrl : undefined;
   const files = existsSync(dir) ? readdirSync(dir).filter((name) => name.endsWith(".yaml")) : [];
   const ids = files
     .map((name) => name.slice(0, -".yaml".length))
     .filter((id) => ENTRY_ID.test(id))
     .sort();
   if (ids.length === 0) {
-    const run = typeof runUrl === "string" && /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/actions\/runs\/\d+$/.test(runUrl) ? runUrl : undefined;
     const text = [
       MARKER,
       "## Prüfung des Eintrags: nicht fertig geworden",
       "",
-      "Die Prüfung hat keinen Prüfbericht geschrieben." + (run ? ` Ihr Protokoll: ${run}` : ""),
+      "Die Prüfung hat keinen Prüfbericht geschrieben." + (runUrl ? ` Ihr Protokoll: ${runUrl}` : ""),
       "Prüf, ob jede geänderte Datei in `entries/` gültiges YAML mit einer `url` ist, und führ die Prüfung selbst aus:",
       "",
       "```sh",
@@ -170,23 +220,52 @@ export function render(dir, { runUrl } = {}) {
         `## Prüfung des Eintrags: nicht bestanden`,
         "",
         "Die Prüfung hat die App geöffnet, wie Lernende sie öffnen, ohne Klick, und den Eintrag mit ihr verglichen: Links, Themen, Fitness-Werte und die Regeln von lernapps.net.",
-        "Behebe jeden Fehler unten, in der App oder im Eintrag. Jeder Befund nennt die Regel, wo er ist, was gefunden wurde, die Behebung und den Link zur Regel.",
+        "Behebe jeden Fehler unten, in der App oder im Eintrag. Jeder Befund steht als Aufgabe in der Liste, nach Regel geordnet: die Regel mit ihrem Link, wo er ist, was gefunden wurde und die Behebung.",
         "Dann pushe auf den Branch dieses Pull Requests: Die Prüfung läuft neu und ändert diesen Kommentar.",
         "Eine Änderung an der App wirkt erst, wenn sie veröffentlicht ist: Die Prüfung öffnet die App unter ihrer `url`.",
       ];
-  const text = [MARKER, ...intro, "", ...reports.flatMap(([id, report]) => [renderEntry(id, report), ""]), localRun(ids), ""].join("\n");
-  return { text, passed };
+  const comment = (perRule, notice = []) =>
+    [MARKER, ...intro, "", ...notice, ...reports.flatMap(([id, report]) => [renderEntry(id, report, perRule), ""]), localRun(ids), ""].join("\n");
+  const full = comment(Infinity);
+  if (Buffer.byteLength(full) <= MAX_COMMENT) return { text: full, passed };
+
+  // Too long for one comment: as many findings of each rule as fit, the same number for every rule, and the rest
+  // counted and linked. The largest such number by bisection; 0 still shows every rule with its count.
+  const findings = reports.flatMap(([, report]) => report?.findings ?? []);
+  const shownWith = (perRule) =>
+    reports.flatMap(([, report]) => byRule(report?.findings ?? [])).reduce((sum, [, group]) => sum + Math.min(group.length, perRule), 0);
+  const cutOff = (perRule) =>
+    comment(perRule, [
+      `> **Gekürzt:** Dieser Kommentar zeigt ${shownWith(perRule)} von ${findings.length} Befunden, weil ein Kommentar auf GitHub höchstens 65.536 Zeichen fassen kann.`,
+      "> Jede Regel steht unten mit der Zahl ihrer Befunde und wie viele davon gezeigt sind.",
+      ...fullReport({ runUrl, reportUrl })
+        .split("\n")
+        .map((line) => `> ${line}`),
+      "",
+    ]);
+  let low = 0;
+  let high = Math.max(...reports.flatMap(([, report]) => byRule(report?.findings ?? []).map(([, group]) => group.length)));
+  while (low < high) {
+    const middle = Math.ceil((low + high) / 2);
+    if (Buffer.byteLength(cutOff(middle)) <= MAX_COMMENT) low = middle;
+    else high = middle - 1;
+  }
+  return { text: cutOff(low), passed };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
-  const at = args.indexOf("--run-url");
-  const runUrl = at >= 0 ? args.splice(at, 2)[1] : undefined;
+  const option = (name) => {
+    const at = args.indexOf(name);
+    return at >= 0 ? args.splice(at, 2)[1] : undefined;
+  };
+  const runUrl = option("--run-url");
+  const reportUrl = option("--report-url");
   if (args.length !== 1 || args[0].startsWith("-")) {
-    process.stderr.write("Usage: node scripts/listing-comment.mjs <dir> [--run-url <url>]\n");
+    process.stderr.write("Usage: node scripts/listing-comment.mjs <dir> [--run-url <url>] [--report-url <url>]\n");
     process.exit(2);
   }
-  const { text, passed } = render(args[0], { runUrl });
+  const { text, passed } = render(args[0], { runUrl, reportUrl });
   process.stdout.write(text);
   process.exitCode = passed ? 0 : 1;
 }

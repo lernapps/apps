@@ -9,6 +9,7 @@ import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { after, before, describe, test } from "node:test";
 import assert from "node:assert/strict";
+import { dump } from "js-yaml";
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fixtures = join(repo, "test", "fixtures");
@@ -88,6 +89,33 @@ function outsideCodeBlocks(markdown) {
     else if (fence === undefined) kept.push(line);
   }
   return kept.join("\n");
+}
+
+/**
+ * A folder with one validation report, `bruch-trainer.yaml`, as a run writes it: `counts` findings per rule, in rule
+ * order, each naming its rule and number; `found` makes them as long as needed.
+ */
+function report(name, counts, found = "") {
+  const dir = mkdtempSync(join(temp, `${name}-`));
+  const findings = Object.entries(counts).flatMap(([rule, n]) =>
+    Array.from({ length: n }, (_, index) => ({
+      rule,
+      severity: "error",
+      where: `entries/bruch-trainer.yaml: ${rule} ${index + 1}`,
+      found: `finding ${index + 1} of ${rule} ${found}`.trim(),
+      fix: `Fix ${rule}`,
+      link: `https://lernapps.net/tooling/rules/#${rule}`,
+    })),
+  );
+  const value = {
+    checked: { url: "https://example.org/bruch-trainer/", at: "2026-10-09T12:00:00.000Z" },
+    rules: Object.keys(counts),
+    findings,
+    suppressions: [],
+    fitness: { storage: "none", thirdParty: "none" },
+  };
+  writeFileSync(join(dir, "bruch-trainer.yaml"), dump(value, { lineWidth: -1 }));
+  return dir;
 }
 
 const SLOW = { timeout: 180_000 };
@@ -184,6 +212,57 @@ describe("the comment from the reports of a run", () => {
     assert.match(text, /<img src=x onerror=alert\(1\)> @owner/, "the values are shown as they are");
     assert.match(markup, /https:\/\/lernapps\.net\/tooling\/rules\/#no-tracking/, "the link is built from the rule id");
     assert.doesNotMatch(text, /Not An Entry/, "a report file that names no entry is left out");
+  });
+
+  test("lists every finding as a task, grouped by rule, so that no rule goes unseen", async () => {
+    // 64 findings in rule order: past the old cap of 50, every finding of usable-at-360px was missing.
+    const dir = report("many", { "entry-links-resolve": 30, "no-tracking": 15, "safe-links": 5, "usable-at-360px": 14 });
+    const result = await comment(dir);
+    assert.equal(result.code, 1, result.stderr);
+    const text = result.stdout;
+    assert.equal(text.match(/^- \[ \] /gm)?.length, 64, "one checkbox per finding");
+    for (const [rule, n] of [["entry-links-resolve", 30], ["no-tracking", 15], ["safe-links", 5], ["usable-at-360px", 14]]) {
+      assert.match(text, new RegExp(`^#### Regel \\[\`${rule}\`\\]\\(https://lernapps\\.net/tooling/rules/#${rule}\\): ${n} Fehler$`, "m"));
+      assert.equal(text.match(new RegExp(`^- \\[ \\] \\[\`${rule}\`\\]\\(https://lernapps\\.net/tooling/rules/#${rule}\\) \\(error\\)$`, "gm"))?.length, n);
+    }
+    assert.match(text, /Wo: +entries\/bruch-trainer\.yaml: usable-at-360px 14\n/, "the last finding of the last rule");
+    assert.doesNotMatch(text, /weitere Befunde|Gekürzt/);
+    golden("many-findings.md", text);
+  });
+
+  test("too long for one GitHub comment cuts off explicitly, counts every rule and links the full report", async () => {
+    const counts = { "entry-links-resolve": 150, "no-tracking": 3, "usable-at-360px": 120 };
+    const dir = report("huge", counts, "x".repeat(400));
+    const artifact = "https://github.com/lernapps/apps/actions/runs/1/artifacts/2";
+    const result = await comment(dir, "--run-url", "https://github.com/lernapps/apps/actions/runs/1", "--report-url", artifact);
+    assert.equal(result.code, 1, result.stderr);
+    const text = result.stdout;
+    assert.ok(Buffer.byteLength(text) <= 60_000, `${Buffer.byteLength(text)} bytes: fits a GitHub comment with margin`);
+    assert.match(text, /^> \*\*Gekürzt:\*\* Dieser Kommentar zeigt (\d+) von 273 Befunden/m);
+    assert.ok(text.includes(`Der vollständige Prüfbericht: das Artefakt \`listing\` dieses Laufs, ${artifact}`));
+    const shown = text.match(/^- \[ \] /gm)?.length ?? 0;
+    assert.ok(shown > 0 && shown < 273, `${shown} findings shown`);
+    assert.equal(Number(text.match(/zeigt (\d+) von 273/)[1]), shown, "the cutoff says how many are shown");
+    let total = 0;
+    for (const [rule, n] of Object.entries(counts)) {
+      const row = text.match(new RegExp(`^\\| \\[\`${rule}\`\\]\\(https://lernapps\\.net/tooling/rules/#${rule}\\) \\| ${n} Fehler \\| (\\d+) \\|$`, "m"));
+      assert.ok(row, `the overview lists ${rule} with its count`);
+      const listed = text.match(new RegExp(`^- \\[ \\] \\[\`${rule}\`\\]`, "gm"))?.length ?? 0;
+      assert.equal(Number(row[1]), listed, `the overview says how many of ${rule} are shown`);
+      assert.ok(listed > 0, `${rule} shows at least one finding`);
+      assert.match(text, new RegExp(`^#### Regel \\[\`${rule}\`\\]\\(https://lernapps\\.net/tooling/rules/#${rule}\\): ${n} Fehler, ${listed} davon gezeigt$`, "m"));
+      if (listed < n) assert.ok(text.includes(`… und ${n - listed} weitere Befunde dieser Regel: im vollständigen Prüfbericht (oben verlinkt).`));
+      total += listed;
+    }
+    assert.equal(total, shown);
+    assert.equal(text.match(/^- \[ \] \[`no-tracking`\]/gm)?.length, 3, "a small rule is shown whole");
+
+    // Without the artifact's address it links the run; without either, the reports of a run of one's own.
+    const run = await comment(dir, "--run-url", "https://github.com/lernapps/apps/actions/runs/1", "--report-url", "https://evil.example/");
+    assert.match(run.stdout, /Der vollständige Prüfbericht: das Artefakt `listing` des Laufs https:\/\/github\.com\/lernapps\/apps\/actions\/runs\/1/);
+    assert.doesNotMatch(run.stdout, /evil/);
+    const local = await comment(dir);
+    assert.match(local.stdout, /Die vollständigen Prüfberichte \(YAML\) schreibt die Prüfung, wenn du sie selbst ausführst \(unten\)/);
   });
 
   test("without reports says that the check did not finish and links the run", async () => {
