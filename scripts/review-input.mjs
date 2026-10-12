@@ -92,6 +92,7 @@ if (
 ) {
   process.exit(1);
 }
+// Before any code of the app runs: after the build, no git command runs in the clone (the build can change .git/config).
 writeFileSync(join(out, "history.txt"), git(["log", "-n", "50", "--format=commit %H%nDate:   %cs%n%n%w(0,4,4)%B"]) ?? "");
 
 /** Runs npm in the app's repo: on this machine, or in a container of the image --container names. */
