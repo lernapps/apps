@@ -11,8 +11,8 @@ first-draft MVP (D8 `mvp-first-draft`):
 |---|---|---|
 | `/apps/` find | `x-app-in-minutes`, `x-practice-tonight`: `s-finding`, `t-find-app` | `ch-app-overview` |
 | `/apps/<id>/` app page | `x-app-in-minutes`: `s-fitness-clarity`, `t-confirm-fitness`, `t-bring-app`, `s-giving-back`, `t-thank-creator-adult`, `t-give-feedback`, referral code (`?welle=`) in the e-mails | `ch-fitness-signal`, `ch-collections`, `ch-feedback` (prepared e-mails for now) |
-| `/apps/eintragen/` list an app | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
-| `/apps/llms.txt` | the creator's AI assistant writes the entry | `ch-listing` |
+| `/apps/eintragen/` build and list an app: the creator's entry point | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
+| `/apps/llms.txt` | the creator's AI assistant builds the app (quick path: the skill `lernapps-app` of lernapps/tooling) and writes the entry | `ch-listing` |
 
 ## How it is built
 
@@ -80,7 +80,7 @@ npm run dev        # http://localhost:8080/apps/
 SITE_PATH_PREFIX=/apps/pr-preview/pr-1/ SITE_PREVIEW=1 npm run build   # as a preview
 npm run build && npm run check   # schema in sync, output checked
 npm run schema                   # after changing schemas/entry.js
-npm test                         # end-to-end tests of the listing validation
+npm test                         # end-to-end tests: listing validation, creator's entry point (network)
 npm run --silent listing -- entries/mathe-karte.yaml   # check an entry against its deployed app
 ```
 
