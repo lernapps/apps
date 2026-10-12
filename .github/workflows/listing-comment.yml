@@ -8,6 +8,9 @@ name: Listing comment
 # pull request. It checks out main, installs main's dependencies without install scripts, and reads the artifact of
 # the run as data: scripts/listing-comment.mjs (from main) checks every value and puts it in code blocks. The pull
 # request is found by the head commit GitHub reports for the run, not by anything in the artifact.
+#
+# The comment lists every finding as a task (`- [ ]`). Rewritten on every run, its boxes start empty again. Only when
+# it would be too long for GitHub it is cut off, says so, and links the artifact as the full report.
 on:
   workflow_run:
     workflows: [Listing]
@@ -50,6 +53,7 @@ jobs:
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
           CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
           # The open pull request whose head is the checked commit; none when it has moved on since (a newer run comments).
           pr=$(gh api --paginate "repos/$REPO/pulls?state=open&per_page=100" \
@@ -62,8 +66,14 @@ jobs:
             echo "The run checked no entry: nothing to comment."
             exit 0
           fi
+          # The artifact's address, which a comment too long for GitHub links as the full report; else it links the run.
+          report_url=
+          if [ -d listing ]; then
+            artifact=$(gh api "repos/$REPO/actions/runs/$RUN_ID/artifacts?name=listing" --jq '.artifacts[0].id // empty' || true)
+            if [ -n "$artifact" ]; then report_url="$RUN_URL/artifacts/$artifact"; fi
+          fi
           state=0
-          node scripts/listing-comment.mjs listing --run-url "$RUN_URL" > body.md || state=$?
+          node scripts/listing-comment.mjs listing --run-url "$RUN_URL" ${report_url:+--report-url "$report_url"} > body.md || state=$?
           if [ "$state" -gt 1 ]; then exit "$state"; fi
           comment=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
             --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- lernapps-listing -->"))) | .id' \
