@@ -37,7 +37,7 @@ const de = {
     matched: "Passt zu deiner Suche:",
     empty: {
       headline: "Dazu gibt es hier noch keine App.",
-      body: "lernapps.net fängt gerade erst an. Kennst du eine passende App, oder hast du selbst eine gebaut?",
+      body: "lernapps.net fängt gerade erst an. Kennst du eine passende App, oder hast du selbst eine veröffentlicht?",
       link: "App eintragen",
     },
     trust: {
@@ -145,23 +145,23 @@ const de = {
     creator: {
       headline: "Wer die App gebaut hat",
       source: "Quellcode ansehen",
-      own: "Du hast selbst eine Lern-App gebaut?",
+      own: "Du hast selbst eine Lern-App veröffentlicht?",
       ownLink: "Trag sie ein",
     },
     back: "Alle Apps",
   },
 
-  // ── Eintragen (x-list-and-hear-back: s-listing-help, t-list-app, s-use-insight) ──────
-  list: {
-    title: "App eintragen · lernapps.net",
+  // ── Bauen: the creator's entry point to building an app with the tooling (site.tooling) ──────
+  build: {
+    title: "App bauen · lernapps.net",
     description:
-      "Bau eine Lern-App mit deinem KI-Assistenten und trag sie in wenigen Minuten auf lernapps.net ein. Dann finden andere sie, und du erfährst, wenn sie geholfen hat.",
-    headline: "Bau eine Lern-App.\nTrag sie ein.",
+      "Bau eine Lern-App mit deinem KI-Assistenten, auch ohne Programmierkenntnisse. Er plant mit dir, baut die App und prüft sie.",
+    headline: "Bau eine Lern-App\nmit deinem KI-Assistenten.",
     lead:
-      "Dein KI-Assistent baut sie mit dir. Eintragen dauert ein paar Minuten. Danach finden Lehrkräfte und Eltern deine App. Und du erfährst, wenn sie geholfen hat.",
-    build: {
-      headline: "Noch keine App? Bau sie mit deinem KI-Assistenten",
-      body: "Programmieren musst du nicht. Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf. Sag ihm:",
+      "Programmieren musst du nicht. Du sagst, was die App lehren soll. Dein Assistent plant mit dir, baut die App und prüft sie.",
+    start: {
+      headline: "Sag deinem Assistenten:",
+      body: "Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf. Kopier diesen Auftrag und gib ihn ihm.",
       label: "Auftrag für deinen Assistenten",
       prompt: (llms, command) =>
         `Bau mit mir eine Lern-App für lernapps.net. Lies zuerst ${llms} und folge dem Schnellweg. Frag mich, was die App lehren soll, und schreib mit mir den Plan. Erst wenn ich den Plan bestätigt habe, leg die App so an: ${command}`,
@@ -169,9 +169,27 @@ const de = {
       copied: "Kopiert",
       command: "Mit diesem Befehl legt dein Assistent die App an. Das Werkzeug dafür lädt er selbst.",
       skill: "Der Schnellweg für Assistenten ist der Skill",
-      next: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App liegt dann bei dir, zum Beispiel auf GitHub Pages. Zum Schluss trägt er sie hier ein, wenn du zustimmst.",
-      nextLink: "So trägst du sie ein",
     },
+    next: {
+      headline: "Wie es weitergeht",
+      body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",
+      criteria: "Von Anfang an hält sie ein, was wir für den Katalog verlangen:",
+      criteriaLink: "die Bedingungen",
+      enter: "Ist sie veröffentlicht, trägst du sie auf lernapps.net ein. Dann finden Lehrkräfte und Eltern sie.",
+      enterLink: "So trägst du eine App ein",
+    },
+  },
+
+  // ── Eintragen (x-list-and-hear-back: s-listing-help, t-list-app, s-use-insight) ──────
+  list: {
+    title: "App eintragen · lernapps.net",
+    description:
+      "Deine Lern-App ist veröffentlicht? Trag sie in wenigen Minuten auf lernapps.net ein. Dann finden andere sie, und du erfährst, wenn sie geholfen hat.",
+    headline: "Deine Lern-App ist veröffentlicht?\nTrag sie ein.",
+    lead:
+      "Das dauert ein paar Minuten. Danach finden Lehrkräfte und Eltern deine App. Und du erfährst, wenn sie geholfen hat.",
+    noApp: "Noch keine App?",
+    noAppLink: "So baust du eine mit deinem KI-Assistenten",
     criteria: {
       headline: "Was wir aufnehmen",
       items: [
