@@ -1,8 +1,8 @@
 name: Listing comment
 
 # Posts the listing results comment on the pull request that Listing (listing.yml) checked: one comment, found by its
-# marker `<!-- lernapps-listing -->` and updated in place on every run. A failing check creates or updates it; a
-# passing check updates it to say so, and creates none.
+# marker `<!-- lernapps-listing -->` and updated in place on every run. Every check that checked an entry creates it
+# or updates it, failing or passing: a passing check's comment says "bestanden", so the creator's assistant can see it.
 #
 # Fork safe: a workflow_run workflow runs from main with a token that may write comments, so it never runs code of the
 # pull request. It checks out main, installs main's dependencies without install scripts, and reads the artifact of
@@ -81,9 +81,7 @@ jobs:
           if [ -n "$comment" ]; then
             gh api --method PATCH "repos/$REPO/issues/comments/$comment" -F body=@body.md > /dev/null
             echo "Updated the comment on #$pr."
-          elif [ "$state" -eq 1 ]; then
+          else
             gh api --method POST "repos/$REPO/issues/$pr/comments" -F body=@body.md > /dev/null
             echo "Commented on #$pr."
-          else
-            echo "Passed, and no earlier comment to update."
           fi

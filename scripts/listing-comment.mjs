@@ -8,6 +8,7 @@
 // https://lernapps.net/tooling/schemas/validation-report.v1.schema.json). Prints the comment. Exit code 0 when every
 // report passes, 1 when one fails or none can be read, 2 on wrong usage.
 //
+// A passing check gets a short comment: "bestanden", what was checked and measured, and any warnings or hints.
 // Every finding is a task (`- [ ]`), grouped by rule. Only a comment too long for GitHub is cut off, and then says so:
 // it shows the same number of findings of every rule, counts every rule, and links the full report, the artifact
 // `listing` of the run (--report-url, its address; else --run-url, the run). The workflow rewrites the comment on
@@ -215,6 +216,7 @@ export function render(dir, links = {}) {
         "",
         "Die Prüfung hat die App geöffnet, wie Lernende sie öffnen, ohne Klick, und den Eintrag mit ihr verglichen: Links, Themen, Fitness-Werte und die Regeln von lernapps.net. Sie findet keinen Fehler.",
         "Als Nächstes prüft lernapps.net den Rest im Review und entscheidet über den Eintrag. Du musst nichts tun.",
+        "Die Prüfung läuft bei jedem Push neu und ändert diesen Kommentar.",
       ]
     : [
         `## Prüfung des Eintrags: nicht bestanden`,
@@ -225,7 +227,8 @@ export function render(dir, links = {}) {
         "Eine Änderung an der App wirkt erst, wenn sie veröffentlicht ist: Die Prüfung öffnet die App unter ihrer `url`.",
       ];
   const comment = (perRule, notice = []) =>
-    [MARKER, ...intro, "", ...notice, ...reports.flatMap(([id, report]) => [renderEntry(id, report, perRule), ""]), localRun(ids), ""].join("\n");
+    // A passing comment stays short: nothing to fix, so no instructions for running the check oneself.
+    [MARKER, ...intro, "", ...notice, ...reports.flatMap(([id, report]) => [renderEntry(id, report, perRule), ""]), ...(passed ? [] : [localRun(ids), ""])].join("\n");
   const full = comment(Infinity);
   if (Buffer.byteLength(full) <= MAX_COMMENT) return { text: full, passed };
 
