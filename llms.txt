@@ -58,7 +58,10 @@ Ist sie veröffentlicht, trag sie ein, wie der nächste Abschnitt sagt.
 
 ## Eine App eintragen
 
-Ein Mensch hat dich gebeten, seine veröffentlichte Lern-App einzutragen? So geht es.
+Ein Mensch hat dich gebeten, seine veröffentlichte Lern-App einzutragen? Der Weg ist der Skill
+[lernapps-listing](https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-listing/SKILL.md).
+Lade ihn (`npx skills add lernapps/tooling`) und folge ihm. Er führt dich durch die Schritte unten und sagt dir, wie du
+den Kommentar der Prüfung im Pull Request liest.
 Die Seite für Menschen: [App eintragen](https://lernapps.net/apps/enter/).
 
 1. Prüf die Bedingungen. Trag die App nur ein, wenn alle erfüllt sind:
@@ -114,4 +117,7 @@ npm run --silent listing -- entries/<id>.yaml
    Findet sie einen Fehler, schreibt sie den Bericht als Kommentar in den Pull Request, derselbe Text wie bei dir.
    Behebe die Fehler und pushe: Die Prüfung läuft neu und ändert den Kommentar, bis er „bestanden“ sagt.
    Dann prüft lernapps.net den Rest im Review und entscheidet über den Eintrag.
-   Kein GitHub-Konto? Dann schick den Link zur App an lernapps@beimir.net.
+
+Kannst du keinen Pull Request öffnen? Dann gib dem Menschen das
+[Formular](https://github.com/lernapps/apps/issues/new?template=app-enter.yml) (braucht ein GitHub-Konto);
+lernapps.net trägt die App dann ein. Klappt nichts davon, schick den Link zur App an lernapps@beimir.net.
