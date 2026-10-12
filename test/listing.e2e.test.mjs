@@ -3,13 +3,13 @@
 // 127.0.0.1, and the comment the workflow posts, rendered from the reports that command wrote.
 import { spawn } from "node:child_process";
 import { createServer } from "node:http";
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { chmodSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { after, before, describe, test } from "node:test";
 import assert from "node:assert/strict";
-import { dump } from "js-yaml";
+import { dump, load } from "js-yaml";
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fixtures = join(repo, "test", "fixtures");
@@ -95,7 +95,7 @@ function outsideCodeBlocks(markdown) {
  * A folder with one validation report, `bruch-trainer.yaml`, as a run writes it: `counts` findings per rule, in rule
  * order, each naming its rule and number; `found` makes them as long as needed.
  */
-function report(name, counts, found = "") {
+function report(name, counts, found = "", rules = Object.keys(counts)) {
   const dir = mkdtempSync(join(temp, `${name}-`));
   const findings = Object.entries(counts).flatMap(([rule, n]) =>
     Array.from({ length: n }, (_, index) => ({
@@ -109,7 +109,7 @@ function report(name, counts, found = "") {
   );
   const value = {
     checked: { url: "https://example.org/bruch-trainer/", at: "2026-10-09T12:00:00.000Z" },
-    rules: Object.keys(counts),
+    rules,
     findings,
     suppressions: [],
     fitness: { storage: "none", thirdParty: "none" },
@@ -214,6 +214,20 @@ describe("the comment from the reports of a run", () => {
     assert.doesNotMatch(text, /Not An Entry/, "a report file that names no entry is left out");
   });
 
+  test("that passes is short: says bestanden, with the checked address, time and measured values", async () => {
+    const dir = report("passed", {}, "", ["entry-links-resolve", "entry-fitness-matches", "no-tracking"]);
+    const result = await comment(dir, "--run-url", "https://github.com/lernapps/apps/actions/runs/1");
+    assert.equal(result.code, 0, result.stderr);
+    const text = result.stdout;
+    assert.match(text, /^<!-- lernapps-listing -->\n## Prüfung des Eintrags: bestanden\n/);
+    assert.match(text, /^### entries\/bruch-trainer\.yaml: bestanden$/m);
+    assert.match(text, /Geprüft: +https:\/\/example\.org\/bruch-trainer\/ \(2026-10-09T12:00:00\.000Z\)/);
+    assert.match(text, /Gemessen: +fitness\.storage none, fitness\.thirdParty none \(ohne Klick\)/);
+    assert.match(text, /Regeln: +3 geprüft/);
+    assert.doesNotMatch(text, /nicht bestanden|- \[ \]|Selbst prüfen/, "nothing to fix, nothing to run");
+    golden("passed.md", text);
+  });
+
   test("lists every finding as a task, grouped by rule, so that no rule goes unseen", async () => {
     // 64 findings in rule order: past the old cap of 50, every finding of usable-at-360px was missing.
     const dir = report("many", { "entry-links-resolve": 30, "no-tracking": 15, "safe-links": 5, "usable-at-360px": 14 });
@@ -271,5 +285,101 @@ describe("the comment from the reports of a run", () => {
     assert.equal(result.code, 1);
     assert.match(result.stdout, /^<!-- lernapps-listing -->\n/);
     assert.match(result.stdout, /https:\/\/github\.com\/lernapps\/apps\/actions\/runs\/1/);
+  });
+});
+
+/**
+ * The step of listing-comment.yml that comments, run as GitHub runs it (bash -e -o pipefail) in a checkout of its own,
+ * with `gh` replaced by a stub: it answers with the open pull request #13, the artifact and, when `existing` is set,
+ * an earlier comment of the workflow, and records every call. The reports of the run are in `listing/`, if any.
+ */
+async function commentStep({ reports, conclusion, existing }) {
+  const workflow = load(readFileSync(join(repo, ".github", "workflows", "listing-comment.yml"), "utf8"));
+  const step = workflow.jobs.comment.steps.find((s) => s.name === "Comment on the pull request");
+  const dir = mkdtempSync(join(temp, "step-"));
+  // main's scripts, as checked out; its dependencies, as installed (a linked script would not run as the main module).
+  cpSync(join(repo, "scripts"), join(dir, "scripts"), { recursive: true });
+  symlinkSync(join(repo, "node_modules"), join(dir, "node_modules"));
+  if (reports) cpSync(reports, join(dir, "listing"), { recursive: true });
+  const bin = join(dir, "bin");
+  mkdirSync(bin);
+  writeFileSync(
+    join(bin, "gh"),
+    [
+      "#!/usr/bin/env bash",
+      'printf "%s\\n" "$*" >> "$GH_LOG"',
+      'case "$*" in',
+      '  *"--method PATCH"*|*"--method POST"*) for arg; do case "$arg" in body=@*) cat "${arg#body=@}" > "$GH_BODY";; esac; done ;;',
+      '  *"/pulls?"*) echo 13 ;;',
+      '  *"/artifacts?"*) echo 7 ;;',
+      '  *"/comments?"*) if [ -n "$GH_EXISTING" ]; then echo "$GH_EXISTING"; fi ;;',
+      "esac",
+      "",
+    ].join("\n"),
+  );
+  chmodSync(join(bin, "gh"), 0o755);
+  const log = join(dir, "gh.log");
+  const body = join(dir, "posted.md");
+  writeFileSync(log, "");
+  const env = {
+    ...process.env,
+    PATH: `${bin}:${process.env.PATH}`,
+    GH_LOG: log,
+    GH_BODY: body,
+    GH_EXISTING: existing ?? "",
+    GH_TOKEN: "test",
+    REPO: "lernapps/apps",
+    HEAD_SHA: "0123456789abcdef0123456789abcdef01234567",
+    CONCLUSION: conclusion,
+    RUN_URL: "https://github.com/lernapps/apps/actions/runs/1",
+    RUN_ID: "1",
+  };
+  const result = await new Promise((done, fail) => {
+    const child = spawn("bash", ["--noprofile", "--norc", "-e", "-o", "pipefail", "-c", step.run], { cwd: dir, env });
+    let output = "";
+    child.stdout.on("data", (chunk) => (output += chunk));
+    child.stderr.on("data", (chunk) => (output += chunk));
+    child.on("error", fail);
+    child.on("close", (code) => done({ code, output }));
+  });
+  const calls = readFileSync(log, "utf8").split("\n").filter(Boolean);
+  return { ...result, calls, body: existsSync(body) ? readFileSync(body, "utf8") : undefined };
+}
+
+describe("the workflow step that comments on the pull request", () => {
+  const writes = (calls) => calls.filter((call) => /--method (POST|PATCH)/.test(call));
+
+  test("creates the comment for a passing check when there is none", async () => {
+    const reports = report("step-passed", {}, "", ["entry-links-resolve"]);
+    const result = await commentStep({ reports, conclusion: "success" });
+    assert.equal(result.code, 0, result.output);
+    assert.deepEqual(writes(result.calls), ["api --method POST repos/lernapps/apps/issues/13/comments -F body=@body.md"]);
+    assert.match(result.body, /^<!-- lernapps-listing -->\n## Prüfung des Eintrags: bestanden\n/);
+    assert.equal(result.body, (await comment(reports, "--run-url", "https://github.com/lernapps/apps/actions/runs/1")).stdout);
+  });
+
+  test("updates its one comment in place for a passing check", async () => {
+    const reports = report("step-passed-again", {}, "", ["entry-links-resolve"]);
+    const result = await commentStep({ reports, conclusion: "success", existing: "42" });
+    assert.equal(result.code, 0, result.output);
+    assert.deepEqual(writes(result.calls), ["api --method PATCH repos/lernapps/apps/issues/comments/42 -F body=@body.md"]);
+    assert.match(result.body, /bestanden/);
+    assert.doesNotMatch(result.body, /nicht bestanden/);
+  });
+
+  test("creates the comment for a failing check when there is none, and updates it when there is", async () => {
+    const reports = report("step-failed", { "entry-links-resolve": 1 });
+    const created = await commentStep({ reports, conclusion: "failure" });
+    assert.equal(created.code, 0, created.output);
+    assert.deepEqual(writes(created.calls), ["api --method POST repos/lernapps/apps/issues/13/comments -F body=@body.md"]);
+    assert.match(created.body, /^## Prüfung des Eintrags: nicht bestanden$/m);
+    const updated = await commentStep({ reports, conclusion: "failure", existing: "42" });
+    assert.deepEqual(writes(updated.calls), ["api --method PATCH repos/lernapps/apps/issues/comments/42 -F body=@body.md"]);
+  });
+
+  test("comments nothing when the run checked no entry", async () => {
+    const result = await commentStep({ conclusion: "success" });
+    assert.equal(result.code, 0, result.output);
+    assert.deepEqual(writes(result.calls), []);
   });
 });
