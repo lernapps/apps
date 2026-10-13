@@ -117,7 +117,7 @@ npm run --silent listing -- entries/<id>.yaml
    Sie schreibt ihr Ergebnis als einen Kommentar in den Pull Request, derselbe Text wie bei dir, und ändert ihn
    bei jedem Lauf. Er beginnt mit „Prüfung des Eintrags: bestanden“ oder „Prüfung des Eintrags: nicht bestanden“.
    Sagt er „nicht bestanden“, behebe die Fehler und pushe: Die Prüfung läuft neu, bis er „bestanden“ sagt.
-   Dann prüft lernapps.net den Rest im Review und entscheidet über den Eintrag.
+   Dann entscheidet lernapps.net über den Eintrag. Vorher kann lernapps.net die App in einem Review genauer ansehen.
 
 Kannst du keinen Pull Request öffnen? Dann gib dem Menschen das
 [Formular](https://github.com/lernapps/apps/issues/new?template=app-enter.yml) (braucht ein GitHub-Konto);
