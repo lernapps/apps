@@ -41,13 +41,13 @@
       <div>
         <label for="fach" class="block text-sm font-semibold text-slate-300">Fach</label>
         <select id="fach" name="fach" class="field field-dark mt-1 w-full">
-          <option value="">Alle Fächer</option><option>Mathematik</option>
+          <option value="">Alle Fächer</option><option>Erdkunde</option><option>Mathematik</option>
         </select>
       </div>
       <div>
         <label for="klasse" class="block text-sm font-semibold text-slate-300">Klasse</label>
         <select id="klasse" name="klasse" class="field field-dark mt-1 w-full">
-          <option value="">Alle Klassen</option><option value="8">8</option>
+          <option value="">Alle Klassen</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
         </select>
       </div>
     </form>
@@ -56,9 +56,40 @@
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
   <p class="m-0 text-sm font-semibold text-slate-600" aria-live="polite" data-count
-     data-none="Keine App gefunden" data-one="1 App" data-many="{n} Apps">1 Apps</p>
+     data-none="Keine App gefunden" data-one="1 App" data-many="{n} Apps">2 Apps</p>
 
   <ul class="list-none p-0 m-0 mt-3 grid gap-4" data-results>
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Erdkunde"
+    data-grades="5 6 7 8 9 10"
+    data-search="Naturwunder-Quiz Erdkunde Im Quiz beantworten Schülerinnen und Schüler Fragen zu Naturwundern der Erde: Gebirge und Vulkane, Wasserfälle, Wüsten, Höhlen, Küsten und Riffe auf allen Kontinenten. Nach jeder Antwort lesen sie kurz zu jeder Möglichkeit und können im Wikipedia-Artikel weiterlesen. Naturwunder Geografie Erdkunde Quiz Kontinente Welterbe Vulkane Wüsten Wasserfälle Oliver">
+  <a href="/apps/naturwunder-quiz/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="Mehr zu Naturwunder-Quiz">
+    <p class="m-0 text-sm text-slate-500">Erdkunde · Klasse 5 bis 10</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">Naturwunder-Quiz</h2>
+    <p class="m-0 mt-2 text-slate-700">Im Quiz beantworten Schülerinnen und Schüler Fragen zu Naturwundern der Erde: Gebirge und Vulkane, Wasserfälle, Wüsten, Höhlen, Küsten und Riffe auf allen Kontinenten. Nach jeder Antwort lesen sie kurz zu jeder Möglichkeit und können im Wikipedia-Artikel weiterlesen.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="Das Wichtigste auf einen Blick:">
+  <li class="chip">✓ Ohne Anmeldung</li>
+  <li class="chip">✓ Ohne Installation</li>
+  <li class="chip">✓ Kostenlos</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Passt zu deiner Suche:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Gebirge und Vulkane" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-everest-hoehe" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Gebirge und Vulkane</a></li>
+      <li data-topic data-search="Wasserfälle, Flüsse und Seen" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-baikalsee" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Wasserfälle, Flüsse und Seen</a></li>
+      <li data-topic data-search="Wüsten" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-atacama" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Wüsten</a></li>
+      <li data-topic data-search="Höhlen und Schluchten" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-hoehlen-rekorde" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Höhlen und Schluchten</a></li>
+      <li data-topic data-search="Küsten, Inseln und Riffe" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-great-barrier-reef" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Küsten, Inseln und Riffe</a></li>
+      <li data-topic data-search="Naturwunder nach Kontinenten" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-kontinente-zuordnen" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Naturwunder nach Kontinenten</a></li>
+    </ul>
+  </div>
+</li>
+
     
 <li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
     data-app
