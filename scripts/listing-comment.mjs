@@ -39,7 +39,7 @@ const LABEL = { error: ["Fehler", "Fehler"], warning: ["Warnung", "Warnungen"], 
 const count = (n, severity) => `${n} ${LABEL[severity][n === 1 ? 0 : 1]}`;
 
 /** A value of the report as plain text on one or more lines, without control characters, cut to a sane length. */
-function plain(value) {
+export function plain(value) {
   const text = String(value ?? "")
     .replace(/\r\n?/g, "\n")
     .replace(/[\u0000-\u0008\u000b-\u001f\u007f]/g, "");
@@ -47,7 +47,7 @@ function plain(value) {
 }
 
 /** Lines in a fenced code block, indented for a list item; the fence is longer than any backtick run inside. */
-function codeBlock(lines, indent = "") {
+export function codeBlock(lines, indent = "") {
   const body = lines.join("\n");
   const longest = Math.max(0, ...(body.match(/`+/g) ?? []).map((run) => run.length));
   const fence = "`".repeat(Math.max(3, longest + 1));
@@ -55,7 +55,7 @@ function codeBlock(lines, indent = "") {
 }
 
 /** Label and value, aligned; continuation lines of a value are indented under its first line. */
-const field = (label, value) => `${`${label}:`.padEnd(11)}${plain(value).split("\n").join(`\n${" ".repeat(11)}`)}`;
+export const field = (label, value) => `${`${label}:`.padEnd(11)}${plain(value).split("\n").join(`\n${" ".repeat(11)}`)}`;
 
 /** A report read as data: what the comment needs, or undefined when it does not have the shape of a report. */
 function readReport(text) {
@@ -215,7 +215,7 @@ export function render(dir, links = {}) {
         `## Prüfung des Eintrags: bestanden`,
         "",
         "Die Prüfung hat die App geöffnet, wie Lernende sie öffnen, ohne Klick, und den Eintrag mit ihr verglichen: Links, Themen, Fitness-Werte und die Regeln von lernapps.net. Sie findet keinen Fehler.",
-        "Als Nächstes prüft lernapps.net den Rest im Review und entscheidet über den Eintrag. Du musst nichts tun.",
+        "Als Nächstes entscheidet lernapps.net über den Eintrag. Vorher kann lernapps.net die App in einem Review genauer ansehen. Du musst nichts tun.",
         "Die Prüfung läuft bei jedem Push neu und ändert diesen Kommentar.",
       ]
     : [

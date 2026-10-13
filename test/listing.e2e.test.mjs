@@ -157,6 +157,7 @@ describe("a listing pull request", () => {
     assert.match(result.stdout, /^<!-- lernapps-listing -->\n/);
     assert.match(result.stdout, /bestanden/);
     assert.doesNotMatch(result.stdout, /nicht bestanden/);
+    assert.match(result.stdout, /kann lernapps\.net die App in einem Review genauer ansehen/, "a review may follow; none is promised");
     golden("fixed-topic.md", normal(result.stdout, app.url));
     const posted = await comment(result.reports);
     assert.equal(posted.code, 0);
