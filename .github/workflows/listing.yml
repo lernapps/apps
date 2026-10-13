@@ -9,7 +9,7 @@ name: Listing
 # GitHub but its artifact. The comment is posted by listing-comment.yml, which runs from main and reads the artifact as
 # data.
 #
-# The review agent does not run here: the owner starts it on a pull request whose check passed.
+# The review agent does not run here: the owner starts it on a pull request whose check passed (`/review`, review.yml).
 on:
   pull_request:
     paths: ["entries/**"]
