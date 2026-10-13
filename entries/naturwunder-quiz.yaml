@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Naturwunder-Quiz
+subject: Erdkunde
+grades: [5, 6, 7, 8, 9, 10]
+summary: >-
+  Im Quiz beantworten Schülerinnen und Schüler Fragen zu Naturwundern der Erde: Gebirge und Vulkane, Wasserfälle,
+  Wüsten, Höhlen, Küsten und Riffe auf allen Kontinenten. Nach jeder Antwort lesen sie kurz zu jeder Möglichkeit
+  und können im Wikipedia-Artikel weiterlesen.
+url: https://lernapps.net/naturwunder-quiz/
+topics:
+  - title: Gebirge und Vulkane
+    path: "#frage-everest-hoehe"
+  - title: Wasserfälle, Flüsse und Seen
+    path: "#frage-baikalsee"
+  - title: Wüsten
+    path: "#frage-atacama"
+  - title: Höhlen und Schluchten
+    path: "#frage-hoehlen-rekorde"
+  - title: Küsten, Inseln und Riffe
+    path: "#frage-great-barrier-reef"
+  - title: Naturwunder nach Kontinenten
+    path: "#frage-kontinente-zuordnen"
+keywords: [Naturwunder, Geografie, Erdkunde, Quiz, Kontinente, Welterbe, Vulkane, Wüsten, Wasserfälle]
+creator:
+  name: Oliver
+  url: https://github.com/mrsimpson
+source: https://github.com/lernapps/naturwunder-quiz
+fitness:
+  account: false
+  install: false
+  storage: none
+  thirdParty: none
+  checked: false
