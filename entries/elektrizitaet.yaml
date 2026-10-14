@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Elektrizität
+subject: Physik
+grades: [5, 6]
+summary: >-
+  Lernende erklären sich Schritt für Schritt, wie ein Stromkreis funktioniert, welche Stoffe den Strom leiten und wie
+  sich Reihen- und Parallelschaltung unterscheiden. Auf jeder Seite üben sie, und im Bau-Editor setzen sie Lampen und
+  Schalter auf ein Schaltbrett. Die App gibt es auf Deutsch und Englisch.
+url: https://lernapps.net/elektrizitaet/
+topics:
+  - title: Der einfache Stromkreis
+    path: stromkreis/einfacher-stromkreis/
+  - title: Leiter und Nichtleiter
+    path: stromkreis/leiter-nichtleiter/
+  - title: Schalter und Schaltzeichen
+    path: schaltungen/schalter-schaltzeichen/
+  - title: Reihenschaltung
+    path: schaltungen/reihenschaltung/
+  - title: Parallelschaltung
+    path: schaltungen/parallelschaltung/
+  - title: Bau-Editor
+    path: schaltungen/bau-editor/
+  - title: Wirkungen des elektrischen Stroms
+    path: alltag/wirkungen/
+  - title: Sicher mit Strom umgehen
+    path: alltag/sicherheit/
+keywords: [Stromkreis, Leiter, Nichtleiter, Schalter, Reihenschaltung, Parallelschaltung, Schaltplan, Kurzschluss, Elektrizität]
+creator:
+  name: Oliver
+  url: https://github.com/mrsimpson
+source: https://github.com/lernapps/elektrizitaet
+fitness:
+  account: false
+  install: false
+  storage: none
+  thirdParty: none
+  checked: false
