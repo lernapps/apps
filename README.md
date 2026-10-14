@@ -101,7 +101,7 @@ npm run --silent listing -- entries/mathe-karte.yaml   # check an entry against 
 `node_modules/.cache/lernapps/`. **pre-commit:** no whitespace errors or conflict markers, the staged JavaScript,
 JSON and YAML parse, the schema is in sync. **pre-push:** the change scope of the pushed commits (the classifier of
 lernapps/tooling, at the commit the workflows pin): nothing for only the plan (`.vibe/**`); otherwise
-`npm run build && npm run check`, and on a change of code also the offline end-to-end tests (listing validation,
+`npm run build && npm run check`, and on a change of code also the offline tests (listing validation, link classification,
 review). CI runs the rest: the creator's entry point (network) and the review build in its container (Docker).
 
 ## License

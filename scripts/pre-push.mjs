@@ -30,7 +30,7 @@ export const TOOLING_REF = "83068d515bf04bfd83a98648a09297da97cdc85f";
  * in the workflow's container (it needs a Docker daemon).
  */
 export const TESTS = {
-  files: ["test/listing.e2e.test.mjs", "test/review.e2e.test.mjs", "test/pre-push.test.mjs"],
+  files: ["test/listing.e2e.test.mjs", "test/review.e2e.test.mjs", "test/pre-push.test.mjs", "test/links.test.mjs"],
   skip: "built in the container the workflow names",
 };
 
