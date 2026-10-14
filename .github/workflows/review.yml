@@ -143,7 +143,7 @@ jobs:
         with:
           name: review-input
           path: review-input/
-          include-hidden-files: true # app/.vibe/plan.md
+          include-hidden-files: true # app/.vibe/plan.md, app/.agents/skills/app-content/SKILL.md
           if-no-files-found: ignore
           retention-days: 7
 
@@ -227,7 +227,8 @@ jobs:
             - the app's repo: ${{ needs.input.outputs.repo }}, and the commit to review: ${{ needs.input.outputs.commit }}
               (`reviewed.commit` and `reviewed.repo`; `reviewed.listing` is the pull request);
             - `review.json`: what was prepared; its `bundle` is the bundle's directory below `app/`;
-            - `app/`: the app's files at that commit: the bundle, `.vibe/plan.md`, `package.json` and the lock file;
+            - `app/`: the app's files at that commit: the bundle, `.vibe/plan.md`, the content guide
+              `.agents/skills/app-content/SKILL.md`, `package.json` and the lock file;
             - `report.yaml`: the validation report of the bundle; it has no error. Write `report: report.yaml`;
             - `entries/${{ needs.input.outputs.entry }}.yaml`: the entry of the pull request;
             - `history.txt`: the `git log` of the commit; `rules.yaml`: the output of `npm run --silent rules`.

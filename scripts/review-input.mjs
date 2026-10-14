@@ -14,7 +14,8 @@
 //   entries/<id>.yaml   the entry
 //   report.yaml         the validation report of the bundle (state ready)
 //   history.txt         `git log` of the commit: ids, dates and messages
-//   app/                the bundle where the build wrote it (app/dist/...), .vibe/plan.md, package.json, lock file
+//   app/                the bundle where the build wrote it (app/dist/...), .vibe/plan.md, the content guide
+//                       .agents/skills/app-content/SKILL.md, package.json, lock file
 //   build.log           the end of the build's output (state build-failed)
 //
 // The app's code is untrusted: this runs it, so the workflow runs this in a job with a read-only token and no secrets,
@@ -159,7 +160,7 @@ if (meta.bundle === ".") {
   cpSync(app, target, { recursive: true, filter: files });
 } else {
   cpSync(join(app, meta.bundle), join(target, meta.bundle), { recursive: true, filter: files });
-  for (const file of [".vibe/plan.md", "package.json", ...LOCKS]) {
+  for (const file of [".vibe/plan.md", ".agents/skills/app-content/SKILL.md", "package.json", ...LOCKS]) {
     const source = join(app, file);
     if (existsSync(source) && files(source)) {
       mkdirSync(dirname(join(target, file)), { recursive: true });
