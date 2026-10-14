@@ -23,9 +23,9 @@ concurrency:
 
 jobs:
   changes:
-    uses: lernapps/tooling/.github/workflows/changes.yml@141ca8b78c27b78d8c2cddc06d0bfe25daad811f # main
+    uses: lernapps/tooling/.github/workflows/changes.yml@83068d515bf04bfd83a98648a09297da97cdc85f # main
     with:
-      tooling-ref: 141ca8b78c27b78d8c2cddc06d0bfe25daad811f # the commit of @lernapps/tooling in package.json, and TOOLING_REF of the pre-push hook
+      tooling-ref: 83068d515bf04bfd83a98648a09297da97cdc85f # the commit of @lernapps/tooling in package.json, and TOOLING_REF of the pre-push hook
 
   build: # builds and checks the site
     needs: changes
