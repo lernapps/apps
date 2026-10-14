@@ -152,6 +152,7 @@ describe("the review input", () => {
       "package.json": JSON.stringify({ name: "bruch-trainer", private: true, scripts: { build: "node build.mjs" } }),
       "package-lock.json": LOCK,
       ".vibe/plan.md": PLAN,
+      ".agents/skills/app-content/SKILL.md": "# Content guide of this app\n",
     });
     const out = join(temp, "built-input");
     const result = await reviewInput(["--repo", source.dir, "--commit", source.commit, "--out", out, entry(app.url)]);
@@ -163,6 +164,7 @@ describe("the review input", () => {
     assert.ok(existsSync(join(out, "app", "dist", "kuerzen", "index.html")), "the bundle, below the app's repo");
     assert.ok(existsSync(join(out, "app", "package.json")));
     assert.ok(existsSync(join(out, "app", "package-lock.json")));
+    assert.ok(existsSync(join(out, "app", ".agents", "skills", "app-content", "SKILL.md")), "the content guide");
     assert.ok(!existsSync(join(out, "app", "src")), "only the bundle, not the sources");
     assert.deepEqual(load(readFileSync(join(out, "report.yaml"), "utf8")).checked, { bundle: "app/dist" });
   });
