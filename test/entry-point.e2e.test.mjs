@@ -1,17 +1,21 @@
 // The creator's entry points as a creator and their assistant meet them: /apps/build/ (build an app), /apps/enter/
 // (list it) and /apps/llms.txt, built from this repo.
-//   - every link on them resolves: links into this site against the build, every other link on the web;
+//   - every link on them resolves: links into this site against the build, every other link on the web (test/links.mjs:
+//     our own hosts strict, an outside host's passing 5xx or 429 retried, then only a note);
 //   - the command /apps/build/ gives to start an app, taken from the built page, run in an empty folder for every
 //     archetype of the tooling it names, gives an app that passes `lernapps check`, the check of its git hooks and CI.
+//     The archetypes run at the same time, each in its own folder and on its own preview port.
 // Needs the network (github.com, codeload.github.com, the npm registry, lernapps.net). Behind a proxy, Node's fetch
 // uses it with NODE_USE_ENV_PROXY=1.
 import { spawn } from "node:child_process";
 import { mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { createServer } from "node:net";
+import { availableParallelism, tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { after, before, describe, test } from "node:test";
 import assert from "node:assert/strict";
+import { fetchLink } from "./links.mjs";
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "/apps/";
@@ -62,35 +66,28 @@ before(async () => {
   llms = readFileSync(join(out, "llms.txt"), "utf8");
 });
 
-/** Whether a link resolves: into this site against the build, anything else on the web, after redirects. */
+/** Whether a link resolves: into this site against the build, anything else on the web (fetchLink). */
 async function resolves(url) {
   const own = url.startsWith(SITE) ? url : url.startsWith(`${ORIGIN}${SITE}`) ? url.slice(ORIGIN.length) : undefined;
   if (own !== undefined) {
     const path = decodeURIComponent(new URL(own, ORIGIN).pathname).slice(SITE.length);
     try {
       readFileSync(join(out, path.endsWith("/") || path === "" ? join(path, "index.html") : path));
-      return "ok";
+      return { result: "ok" };
     } catch {
-      return "not in the build";
+      return { result: "broken", why: "not in the build" };
     }
   }
-  const target = new URL(url, ORIGIN);
-  try {
-    const response = await fetch(target, { redirect: "follow", signal: AbortSignal.timeout(30_000) });
-    await response.body?.cancel();
-    // A page that needs a GitHub account, such as a new issue from a form, sends a visitor to its sign-in page.
-    if (response.url.startsWith("https://github.com/login?")) return "ok";
-    return response.ok ? "ok" : `answers ${response.status}`;
-  } catch (error) {
-    return `cannot be fetched (${error.cause?.code ?? error.message})`;
-  }
+  return fetchLink(new URL(url, ORIGIN).href);
 }
 
-async function brokenLinks(urls) {
+/** The broken links; a note (an outside host that kept answering 5xx or 429) goes to the test's output. */
+async function brokenLinks(t, urls) {
   const broken = [];
   for (const url of new Set(urls)) {
-    const result = await resolves(url);
-    if (result !== "ok") broken.push(`${url} ${result}`);
+    const { result, why } = await resolves(url);
+    if (result === "broken") broken.push(`${url} ${why}`);
+    if (result === "note") t.diagnostic(`note: ${url} ${why}`);
   }
   return broken;
 }
@@ -104,20 +101,20 @@ const hrefs = (html) =>
     .filter((href) => href !== "" && !href.startsWith("#") && !href.startsWith("mailto:"));
 
 describe("the creator's entry points", () => {
-  test("every link on /apps/build/ resolves", LINKS, async () => {
+  test("every link on /apps/build/ resolves", LINKS, async (t) => {
     assert.ok(hrefs(page).length > 0);
-    assert.deepEqual(await brokenLinks(hrefs(page)), []);
+    assert.deepEqual(await brokenLinks(t, hrefs(page)), []);
   });
 
-  test("every link on /apps/enter/ resolves", LINKS, async () => {
+  test("every link on /apps/enter/ resolves", LINKS, async (t) => {
     assert.ok(hrefs(enter).length > 0);
-    assert.deepEqual(await brokenLinks(hrefs(enter)), []);
+    assert.deepEqual(await brokenLinks(t, hrefs(enter)), []);
   });
 
-  test("every link in /apps/llms.txt resolves", LINKS, async () => {
+  test("every link in /apps/llms.txt resolves", LINKS, async (t) => {
     const links = [...llms.matchAll(/\]\((https:\/\/[^)\s]+)\)/g)].map((m) => m[1]);
     assert.ok(links.length > 0);
-    assert.deepEqual(await brokenLinks(links), []);
+    assert.deepEqual(await brokenLinks(t, links), []);
   });
 
   test("building links the skill lernapps-app as the quick path and leads on to listing; listing leads back", () => {
@@ -151,6 +148,20 @@ describe("the creator's entry points", () => {
   });
 });
 
+/** Ports nobody listens on now, all different: each server stays open until every port is chosen. */
+async function freePorts(count) {
+  const servers = await Promise.all(
+    Array.from({ length: count }, () => new Promise((done, fail) => {
+      const server = createServer();
+      server.on("error", fail);
+      server.listen(0, "127.0.0.1", () => done(server));
+    })),
+  );
+  const ports = servers.map((server) => server.address().port);
+  await Promise.all(servers.map((server) => new Promise((done) => server.close(done))));
+  return ports;
+}
+
 /** The command to start an app, as the built page /apps/build/ shows it: the one `<code>` that runs `npx … create`. */
 function startCommand() {
   const commands = new Set(
@@ -180,7 +191,12 @@ describe("the command /apps/build/ gives to start an app", () => {
     const archetypes = manifest.appTemplates.archetypes;
     assert.ok(archetypes.length > 0);
 
-    for (const archetype of archetypes) {
+    // At the same time: each archetype in its own folder, with its own preview port (the tooling's Playwright
+    // configuration takes LERNAPPS_PREVIEW_PORT), and a share of the cores for its Playwright workers.
+    const ports = await freePorts(archetypes.length);
+    const workers = String(Math.max(1, Math.floor((availableParallelism() * 0.75) / archetypes.length)));
+    await Promise.all(archetypes.map(async (archetype, index) => {
+      const env = { ...process.env, LERNAPPS_PREVIEW_PORT: String(ports[index]), LERNAPPS_PLAYWRIGHT_WORKERS: workers };
       const app = join(temp, `app-${archetype}`);
       mkdirSync(app);
       // Optional arguments ([<dir>]) are left out: the app is written into the current folder.
@@ -189,12 +205,12 @@ describe("the command /apps/build/ gives to start an app", () => {
         .filter((word) => !/^\[.*\]$/.test(word))
         .map((word) => (word === "<archetype>" ? archetype : word));
       assert.ok(!args.some((word) => word.includes("<")), `no placeholder left but the archetype: ${command}`);
-      await ok("npx", args, app);
+      await ok("npx", args, app, env);
       // What the plan says next: git init, npm install (installs the hooks), then the check of hooks and CI.
-      await ok("git", ["init", "--quiet", "--initial-branch=main"], app);
-      await ok("npm", ["install", "--no-audit", "--no-fund"], app);
-      const checked = await ok("npx", ["--no", "--", "lernapps", "check"], app);
-      assert.match(checked, /lernapps check: ok/);
-    }
+      await ok("git", ["init", "--quiet", "--initial-branch=main"], app, env);
+      await ok("npm", ["install", "--no-audit", "--no-fund"], app, env);
+      const checked = await ok("npx", ["--no", "--", "lernapps", "check"], app, env);
+      assert.match(checked, /lernapps check: ok/, `${archetype}: ${checked}`);
+    }));
   });
 });
