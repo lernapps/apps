@@ -34,7 +34,7 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository &&
       (github.event.action == 'closed' || needs.changes.outputs.site == 'true')
     steps:
-      - uses: lernapps/tooling/actions/site-preview@7df62b2acd3297f0d3798fde24ffd2d87a440bc4 # main
+      - uses: lernapps/tooling/actions/site-preview@9b9a34c25af4fa397b64f5e01b1640245a1d3726 # main
         with:
           site: /apps/
 
