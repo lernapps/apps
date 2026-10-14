@@ -21,7 +21,7 @@ jobs:
   site: # required status check (builds and checks the site)
     runs-on: ubuntu-latest
     steps:
-      - uses: lernapps/tooling/actions/site-check@141ca8b78c27b78d8c2cddc06d0bfe25daad811f # main
+      - uses: lernapps/tooling/actions/site-check@c8ed53fa1c8103765c20ab5d2acfd7604deec4a2 # main
 
   # The end-to-end tests (npm test): the listing validation on fixture entries against a fixture app, and the
   # creator's entry point (its links resolve, its command to start an app gives an app that passes lernapps check).
@@ -45,4 +45,4 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lernapps/tooling/actions/site-deploy@141ca8b78c27b78d8c2cddc06d0bfe25daad811f # main
+      - uses: lernapps/tooling/actions/site-deploy@c8ed53fa1c8103765c20ab5d2acfd7604deec4a2 # main
