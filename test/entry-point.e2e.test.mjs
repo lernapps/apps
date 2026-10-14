@@ -4,7 +4,7 @@
 //     our own hosts strict, an outside host's passing 5xx or 429 retried, then only a note);
 //   - the command /apps/build/ gives to start an app, taken from the built page, run in an empty folder for every
 //     archetype of the tooling it names, gives an app that passes `lernapps check`, the check of its git hooks and CI.
-//     The archetypes run at the same time, each in its own folder and on its own preview port.
+//     The archetypes' installs and checks run at the same time, each in its own folder and on its own preview port.
 // Needs the network (github.com, codeload.github.com, the npm registry, lernapps.net). Behind a proxy, Node's fetch
 // uses it with NODE_USE_ENV_PROXY=1.
 import { spawn } from "node:child_process";
@@ -191,12 +191,14 @@ describe("the command /apps/build/ gives to start an app", () => {
     const archetypes = manifest.appTemplates.archetypes;
     assert.ok(archetypes.length > 0);
 
-    // At the same time: each archetype in its own folder, with its own preview port (the tooling's Playwright
-    // configuration takes LERNAPPS_PREVIEW_PORT), and a share of the cores for its Playwright workers.
-    const ports = await freePorts(archetypes.length);
-    const workers = String(Math.max(1, Math.floor((availableParallelism() * 0.75) / archetypes.length)));
-    await Promise.all(archetypes.map(async (archetype, index) => {
-      const env = { ...process.env, LERNAPPS_PREVIEW_PORT: String(ports[index]), LERNAPPS_PLAYWRIGHT_WORKERS: workers };
+    // Each archetype in its own folder. The command first, one archetype after the other: npx installs the tooling
+    // into one shared folder of its cache (~/.npm/_npx/<hash>), and two installs into it at the same time leave a
+    // half-installed tree to one of them (CI saw playwright-core missing). Then, at the same time, what takes long:
+    // git init, npm install (separate folders; npm's cache is safe for that), and `lernapps check`, each on its own
+    // preview port (the tooling's Playwright configuration takes LERNAPPS_PREVIEW_PORT) with a share of the cores
+    // for its Playwright workers.
+    const apps = [];
+    for (const archetype of archetypes) {
       const app = join(temp, `app-${archetype}`);
       mkdirSync(app);
       // Optional arguments ([<dir>]) are left out: the app is written into the current folder.
@@ -205,7 +207,13 @@ describe("the command /apps/build/ gives to start an app", () => {
         .filter((word) => !/^\[.*\]$/.test(word))
         .map((word) => (word === "<archetype>" ? archetype : word));
       assert.ok(!args.some((word) => word.includes("<")), `no placeholder left but the archetype: ${command}`);
-      await ok("npx", args, app, env);
+      await ok("npx", args, app);
+      apps.push({ archetype, app });
+    }
+    const ports = await freePorts(apps.length);
+    const workers = String(Math.max(1, Math.floor((availableParallelism() * 0.75) / apps.length)));
+    await Promise.all(apps.map(async ({ archetype, app }, index) => {
+      const env = { ...process.env, LERNAPPS_PREVIEW_PORT: String(ports[index]), LERNAPPS_PLAYWRIGHT_WORKERS: workers };
       // What the plan says next: git init, npm install (installs the hooks), then the check of hooks and CI.
       await ok("git", ["init", "--quiet", "--initial-branch=main"], app, env);
       await ok("npm", ["install", "--no-audit", "--no-fund"], app, env);
