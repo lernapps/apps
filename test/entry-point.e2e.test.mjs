@@ -2,13 +2,13 @@
 // (list it) and /apps/llms.txt, built from this repo.
 //   - every link on them resolves: links into this site against the build, every other link on the web (test/links.mjs:
 //     our own hosts strict, an outside host's passing 5xx or 429 retried, then only a note);
-//   - the command /apps/build/ gives to start an app, taken from the built page, run in an empty folder for every
-//     archetype of the tooling it names, gives an app that passes `lernapps check`, the check of its git hooks and CI.
+//   - the command /apps/build/ gives to start an app, taken from the built page, run in a folder with nothing but the
+//     confirmed plan (the plan template of the same tooling) for every archetype of the tooling it names, gives an app that passes `lernapps check`, the check of its git hooks and CI.
 //     The archetypes' installs and checks run at the same time, each in its own folder and on its own preview port.
 // Needs the network (github.com, codeload.github.com, the npm registry, lernapps.net). Behind a proxy, Node's fetch
 // uses it with NODE_USE_ENV_PROXY=1.
 import { spawn } from "node:child_process";
-import { mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { createServer } from "node:net";
 import { availableParallelism, tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
@@ -179,7 +179,7 @@ describe("the command /apps/build/ gives to start an app", () => {
     assert.ok(llms.includes(command), `llms.txt contains ${command}`);
   });
 
-  test("run in an empty folder, gives an app that passes lernapps check, for every archetype", { timeout: 20 * 60_000 }, async () => {
+  test("run in a folder with the confirmed plan, gives an app that passes lernapps check, for every archetype", { timeout: 20 * 60_000 }, async () => {
     const command = startCommand();
     const words = command.split(/\s+/);
     assert.equal(words[0], "npx");
@@ -190,6 +190,11 @@ describe("the command /apps/build/ gives to start an app", () => {
     const manifest = await fetch(`https://raw.githubusercontent.com/${project}/${ref}/package.json`).then((r) => r.json());
     const archetypes = manifest.appTemplates.archetypes;
     assert.ok(archetypes.length > 0);
+    // The command creates the app from the plan the creator confirmed: the plan template of the same ref, kept where
+    // it says ("Keep it at <path>"), worked through Explore and Plan (here: its archetype set, in the phase code).
+    const template = await fetch(`https://raw.githubusercontent.com/${project}/${ref}/guidance/plan-template.md`).then((r) => r.text());
+    const keep = /Keep it at (\.vibe\/\S+\.md)\./.exec(template)?.[1]?.replace("<short name>", "first-version");
+    assert.ok(keep, "the plan template says where to keep it");
 
     // Each archetype in its own folder. The command first, one archetype after the other: npx installs the tooling
     // into one shared folder of its cache (~/.npm/_npx/<hash>), and two installs into it at the same time leave a
@@ -200,7 +205,9 @@ describe("the command /apps/build/ gives to start an app", () => {
     const apps = [];
     for (const archetype of archetypes) {
       const app = join(temp, `app-${archetype}`);
-      mkdirSync(app);
+      mkdirSync(dirname(join(app, keep)), { recursive: true });
+      const plan = template.replace(/^archetype: null$/m, `archetype: ${archetype}`).replace(/^phase: explore$/m, "phase: code");
+      writeFileSync(join(app, keep), plan);
       // Optional arguments ([<dir>]) are left out: the app is written into the current folder.
       const args = words
         .slice(1)
