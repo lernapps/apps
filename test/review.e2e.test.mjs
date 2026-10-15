@@ -7,7 +7,7 @@
 // The agent itself runs in the workflow only; here a recorded verdict stands in for it.
 import { spawn, spawnSync } from "node:child_process";
 import { createServer } from "node:http";
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -78,12 +78,13 @@ function outsideCodeBlocks(markdown) {
 }
 
 /** A git repo of an app in a folder of its own, from `files` (path → content), with one commit. */
-function appRepo(name, files) {
+function appRepo(name, files, links = {}) {
   const dir = mkdtempSync(join(temp, `${name}-`));
   for (const [path, content] of Object.entries(files)) {
     mkdirSync(dirname(join(dir, path)), { recursive: true });
     writeFileSync(join(dir, path), content);
   }
+  for (const [path, target] of Object.entries(links)) symlinkSync(target, join(dir, path));
   const git = (...args) => {
     const result = spawnSync("git", args, { cwd: dir, encoding: "utf8" });
     assert.equal(result.status, 0, result.stderr);
@@ -151,9 +152,10 @@ describe("the review input", () => {
       "build.mjs": build,
       "package.json": JSON.stringify({ name: "bruch-trainer", private: true, scripts: { build: "node build.mjs" } }),
       "package-lock.json": LOCK,
-      ".vibe/plan.md": PLAN,
+      ".vibe/plans/01-erste-version.md": PLAN,
+      ".vibe/plans/02-mehr-aufgaben.md": PLAN.replace("# Plan", "# Increment"),
       ".agents/skills/app-content/SKILL.md": "# Content guide of this app\n",
-    });
+    }, { ".vibe/plans/03-link.md": "../../package.json" });
     const out = join(temp, "built-input");
     const result = await reviewInput(["--repo", source.dir, "--commit", source.commit, "--out", out, entry(app.url)]);
     assert.equal(result.code, 0, result.stdout + result.stderr);
@@ -165,6 +167,9 @@ describe("the review input", () => {
     assert.ok(existsSync(join(out, "app", "package.json")));
     assert.ok(existsSync(join(out, "app", "package-lock.json")));
     assert.ok(existsSync(join(out, "app", ".agents", "skills", "app-content", "SKILL.md")), "the content guide");
+    // every plan, one per piece of work, as regular files: never a symbolic link
+    assert.deepEqual(readdirSync(join(out, "app", ".vibe", "plans")).sort(), ["01-erste-version.md", "02-mehr-aufgaben.md"]);
+    assert.equal(readFileSync(join(out, "app", ".vibe", "plans", "02-mehr-aufgaben.md"), "utf8"), PLAN.replace("# Plan", "# Increment"));
     assert.ok(!existsSync(join(out, "app", "src")), "only the bundle, not the sources");
     assert.deepEqual(load(readFileSync(join(out, "report.yaml"), "utf8")).checked, { bundle: "app/dist" });
   });
