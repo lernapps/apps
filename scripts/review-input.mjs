@@ -14,7 +14,8 @@
 //   entries/<id>.yaml   the entry
 //   report.yaml         the validation report of the bundle (state ready)
 //   history.txt         `git log` of the commit: ids, dates and messages
-//   app/                the bundle where the build wrote it (app/dist/...), .vibe/plan.md, the content guide
+//   app/                the bundle where the build wrote it (app/dist/...), the plans .vibe/plans/ (one per piece of
+//                       work, regular files only) and an older app's .vibe/plan.md, the content guide
 //                       .agents/skills/app-content/SKILL.md, package.json, lock file
 //   build.log           the end of the build's output (state build-failed)
 //
@@ -160,9 +161,17 @@ if (meta.bundle === ".") {
   cpSync(app, target, { recursive: true, filter: files });
 } else {
   cpSync(join(app, meta.bundle), join(target, meta.bundle), { recursive: true, filter: files });
-  for (const file of [".vibe/plan.md", ".agents/skills/app-content/SKILL.md", "package.json", ...LOCKS]) {
+  // the plans, one per piece of work (.vibe/plans/<NN>-<short name>.md), and an older app's single plan
+  const plans = join(app, ".vibe", "plans");
+  const planFiles =
+    existsSync(plans) && lstatSync(plans).isDirectory()
+      ? readdirSync(plans)
+          .filter((name) => lstatSync(join(plans, name)).isFile())
+          .map((name) => `.vibe/plans/${name}`)
+      : [];
+  for (const file of [".vibe/plan.md", ...planFiles, ".agents/skills/app-content/SKILL.md", "package.json", ...LOCKS]) {
     const source = join(app, file);
-    if (existsSync(source) && files(source)) {
+    if (existsSync(source) && files(source) && lstatSync(source).isFile()) {
       mkdirSync(dirname(join(target, file)), { recursive: true });
       copyFileSync(source, join(target, file));
     }
