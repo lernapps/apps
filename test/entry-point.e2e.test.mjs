@@ -193,7 +193,7 @@ describe("the command /apps/build/ gives to start an app", () => {
     // The command creates the app from the plan the creator confirmed: the plan template of the same ref, kept where
     // it says ("Keep it at <path>"), worked through Explore and Plan (here: its archetype set, in the phase code).
     const template = await fetch(`https://raw.githubusercontent.com/${project}/${ref}/guidance/plan-template.md`).then((r) => r.text());
-    const keep = /Keep it at (\.vibe\/\S+\.md)\./.exec(template)?.[1]?.replace("<short name>", "first-version");
+    const keep = /Keep it at (\.vibe\/.+?\.md)\./.exec(template)?.[1]?.replace("<short name>", "first-version");
     assert.ok(keep, "the plan template says where to keep it");
 
     // Each archetype in its own folder. The command first, one archetype after the other: npx installs the tooling
