@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Elektrizität
+subject: Physik
+grades: [5, 6, 7, 8]
+summary: >-
+  Lernende erklären sich Schritt für Schritt, wie ein Stromkreis funktioniert, welche Stoffe den Strom leiten und wie
+  sich Reihen- und Parallelschaltung unterscheiden. In Klasse 7 und 8 kommen Stromstärke, Spannung, Widerstand und das
+  ohmsche Gesetz dazu. Auf jeder Seite üben sie an einem Stromkreis, in dem man den Strom laufen sieht, bauen
+  Schaltungen und messen. Die App gibt es auf Deutsch und Englisch.
+url: https://lernapps.net/elektrizitaet/
+topics:
+  - title: Der einfache Stromkreis
+    path: stromkreis/einfacher-stromkreis/
+  - title: Leiter und Nichtleiter
+    path: stromkreis/leiter-nichtleiter/
+  - title: Schalter und Schaltzeichen
+    path: schaltungen/schalter-schaltzeichen/
+  - title: Reihenschaltung
+    path: schaltungen/reihenschaltung/
+  - title: Parallelschaltung
+    path: schaltungen/parallelschaltung/
+  - title: Die Stromstärke
+    path: groessen/stromstaerke/
+  - title: Die Spannung
+    path: groessen/spannung/
+  - title: Der Widerstand
+    path: groessen/widerstand/
+  - title: Das ohmsche Gesetz
+    path: groessen/ohmsches-gesetz/
+  - title: Reihenschaltung mit Messgeräten
+    path: schaltungen-messen/reihenschaltung/
+  - title: Parallelschaltung mit Messgeräten
+    path: schaltungen-messen/parallelschaltung/
+  - title: Wirkungen des elektrischen Stroms
+    path: alltag/wirkungen/
+  - title: Sicher mit Strom umgehen
+    path: alltag/sicherheit/
+keywords: [Stromkreis, Leiter, Nichtleiter, Schalter, Reihenschaltung, Parallelschaltung, Schaltplan, Kurzschluss, Elektrizität, Stromstärke, Spannung, Widerstand, ohmsches Gesetz, Gleichstrom, Amperemeter, Voltmeter]
+creator:
+  name: Oliver
+  url: https://github.com/mrsimpson
+source: https://github.com/lernapps/elektrizitaet
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
