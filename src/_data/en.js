@@ -166,6 +166,11 @@ const en = {
       command: "With this command, your assistant creates the app. It downloads the tool for it by itself.",
       skill: "The quick path for assistants is the skill",
     },
+    tools: {
+      headline: "What lernapps.net provides for you to build",
+      body: "Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.",
+      link: "Go to the build tools",
+    },
     next: {
       headline: "What happens next",
       body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages.",
