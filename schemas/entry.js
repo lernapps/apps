@@ -41,6 +41,17 @@ export const Entry = z
       })
       .describe("Who built the app"),
     source: https.optional().describe("Source code"),
+    limits: z
+      .string()
+      .trim()
+      .min(1)
+      .optional()
+      .describe(
+        "Only when the app deviates from a rule of the platform because its idea needs it: WCAG 2.1 AA or usable at 360 px wide. " +
+          "Say in plain German what the app does not offer, and why, e.g. \"Nicht mit Screenreader bedienbar; auf dem Handy nicht sinnvoll, weil eine Tastatur nötig ist.\" " +
+          "Shown to teachers and parents on the app's page in the catalog. With it, lernapps check reports the findings of these rules as warnings instead of errors. " +
+          "Leave it out when the app meets the rules.",
+      ),
     fitness: z
       .strictObject({
         account: z.literal(false).describe("Nobody needs an account (required)"),
