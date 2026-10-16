@@ -78,6 +78,8 @@ const de = {
       unchecked:
         "Das sind die Angaben der App. Eine automatische Prüfung bauen wir gerade.",
       checked: "lernapps.net hat diese Angaben automatisch geprüft.",
+      // The entry's limits: what the app does not offer of the platform's rules (WCAG 2.1 AA, usable at 360 px).
+      limits: "Das bietet die App nicht:",
     },
 
     bring: {
