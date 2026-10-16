@@ -12,6 +12,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/apps/lernapps-tokens.css">
 <link rel="stylesheet" href="/apps/lernapps-frame.css">
+<link rel="alternate" hreflang="de" href="/apps/build/">
+<link rel="alternate" hreflang="en" href="/apps/en/build/">
   <link rel="stylesheet" href="/apps/uno.css">
   <link rel="stylesheet" href="/apps/assets/apps.css">
   <script src="/apps/assets/kopieren.js" defer></script>
@@ -21,7 +23,7 @@
 <header class="la-header">
   <div class="la-header__inner">
     <a class="la-brand" href="/" aria-label="lernapps.net – Startseite"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
-    <nav class="la-nav" aria-label="Hauptnavigation"><ul><li><a href="/apps/">Apps finden</a></li><li><a href="/apps/build/" aria-current="page">App bauen</a></li><li><a href="/apps/enter/">App eintragen</a></li><li><a href="/docs/">So ist es gedacht</a></li><li><a href="https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md" rel="noopener">Mitmachen</a></li></ul></nav>
+    <nav class="la-nav" aria-label="Hauptnavigation"><ul><li><a href="/apps/">Apps finden</a></li><li><a href="/apps/build/" aria-current="page">App bauen</a></li><li><a href="/apps/enter/">App eintragen</a></li><li><a href="/docs/">So ist es gedacht</a></li><li><a href="https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md" rel="noopener">Mitmachen</a></li><li class="la-lang"><a href="/apps/en/build/" hreflang="en" lang="en" aria-label="Language: English">English</a></li></ul></nav>
   </div>
 </header>
 
@@ -53,6 +55,12 @@ mit deinem KI-Assistenten.</h1>
     <p class="m-0 mt-3 text-slate-700">Mit diesem Befehl legt dein Assistent die App an. Das Werkzeug dafür lädt er selbst.</p>
     <pre class="m-0 mt-1 p-3 rounded bg-slate-100 text-sm overflow-x-auto"><code>npx --yes github:lernapps/tooling#main create --archetype &lt;archetype&gt;</code></pre>
     <p class="m-0 mt-3 text-slate-700">Der Schnellweg für Assistenten ist der Skill <a href="https://github.com/lernapps/tooling/blob/main/skills/lernapps-app/SKILL.md" class="text-blue-700 underline underline-offset-2">lernapps-app</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="werkzeuge">
+    <h2 id="werkzeuge" class="panel-title">Was lernapps.net dir zum Bauen bereitstellt</h2>
+    <p class="m-0 text-slate-700">Anleitungen, Vorlagen für die Apps und Prüfungen, mit denen du leichter und schneller eine App baust, die auch andere gut nutzen können. Dein Assistent nutzt sie von selbst. Du kannst sie auch selbst nachlesen.</p>
+    <a href="/tooling/" class="btn btn-secondary mt-4 self-start" hreflang="en" lang="en">Zu den Bauhilfen (auf Englisch)</a>
   </section>
 
   <section class="panel" aria-labelledby="weiter">

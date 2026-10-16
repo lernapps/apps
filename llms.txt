@@ -96,16 +96,14 @@ den Kommentar der Prüfung im Pull Request liest.
 Die Seite für Menschen: [App eintragen](https://lernapps.net/apps/enter/).
 
 1. Prüf die Bedingungen. Trag die App nur ein, wenn alle erfüllt sind:
-   - Die App läuft im Browser, ohne Installation.
-   - Niemand braucht ein Konto.
-   - Sie ist kostenlos und ohne Werbung.
-   - Sie sammelt nichts heimlich: keine Analyse-Dienste, keine Werbe-Netzwerke. Fremde Server lädt sie höchstens nach einem Klick, zum Beispiel für ein Video.
-   - Lernende tun darin selbst etwas: ausprobieren, üben, entscheiden.
    Prüf das an der App selbst, nicht nur an ihrer Beschreibung. Ist eine Bedingung nicht erfüllt,
    sag dem Menschen, welche, und hilf ihm, sie zu erfüllen.
 2. Schreib eine Datei `entries/<id>.yaml` im Repository https://github.com/lernapps/apps.
    `<id>` ist der Name der App in Kleinbuchstaben mit Bindestrichen, z. B. `bruch-trainer`.
    Texte auf Deutsch in einfacher Sprache: kurze Sätze, aktiv, ohne Fachjargon.
+   Die Seiten gibt es auch auf Englisch (https://lernapps.net/apps/en/). Jeder Text (`title`, `subject`, `summary`,
+   `topics[].title`, `keywords`, `fitness.thirdPartyNote`) darf statt eines Strings eine Übersetzung als Map haben:
+   `{ de: "…", en: "…" }`. Deutsch ist Pflicht; ohne englischen Text zeigt die englische Seite den deutschen.
    Das Format ist als JSON Schema festgelegt: https://lernapps.net/apps/schemas/entry.v1.schema.json
    Vorlage (Kommentare erklären die Felder):
 
