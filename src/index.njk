@@ -1,10 +1,14 @@
 ---
-permalink: /index.html
+pagination:
+  data: languages
+  size: 1
+  alias: pageLanguage
+permalink: "/{{ pageLanguage.root }}index.html"
 layout: base.njk
 scripts: [finden.js]
 eleventyComputed:
-  title: "{{ de.find.title }}"
-  description: "{{ de.find.description }}"
+  title: "{{ t.find.title }}"
+  description: "{{ t.find.description }}"
 ---
 {#-
   Finden: steps s-finding and t-find-app of x-app-in-minutes and x-practice-tonight (D7).
@@ -12,7 +16,7 @@ eleventyComputed:
   topics that match, with a deep link into the app; the query is kept in the URL (?thema=…), so a search
   can be shared. Nothing is stored in the browser.
 -#}
-{%- set F = de.find %}
+{%- set F = t.find %}
 {%- import "components.njk" as c with context %}
 <section class="bg-slate-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
@@ -29,7 +33,7 @@ eleventyComputed:
         <label for="fach" class="block text-sm font-semibold text-slate-300">{{ F.form.subject }}</label>
         <select id="fach" name="fach" class="field field-dark mt-1 w-full">
           <option value="">{{ F.form.allSubjects }}</option>
-          {%- for s in catalog.subjects %}<option>{{ s }}</option>{% endfor %}
+          {%- for s in catalog.subjects %}<option value="{{ s | tx("de") }}"{{ s | fallbackLang(lang) | safe }}>{{ s | tx(lang) }}</option>{% endfor %}
         </select>
       </div>
       <div>
@@ -55,11 +59,11 @@ eleventyComputed:
 
   <div class="mt-4 p-5 rounded-xl border border-dashed border-slate-300" data-empty hidden>
     <p class="m-0 font-semibold">{{ F.empty.headline }}</p>
-    <p class="m-0 mt-1 text-slate-700">{{ F.empty.body }} <a href="{{ '/enter/' | url }}" class="text-blue-700 underline underline-offset-2">{{ F.empty.link }}</a></p>
+    <p class="m-0 mt-1 text-slate-700">{{ F.empty.body }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ F.empty.link }}</a></p>
   </div>
 
   <section class="mt-12 p-5 rounded-xl bg-blue-50 border border-blue-100" aria-labelledby="vertrauen">
     <h2 id="vertrauen" class="m-0 text-lg font-bold text-slate-900">{{ F.trust.headline }}</h2>
-    <p class="m-0 mt-2 text-slate-700">{{ F.trust.body }} <a href="{{ '/enter/#bedingungen' | url }}" class="text-blue-700 underline underline-offset-2">{{ F.trust.link }}</a></p>
+    <p class="m-0 mt-2 text-slate-700">{{ F.trust.body }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ F.trust.link }}</a></p>
   </section>
 </div>

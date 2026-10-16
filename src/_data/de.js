@@ -47,6 +47,7 @@ const de = {
       link: "Was wir genau verlangen",
     },
     cardLink: (title) => `Mehr zu ${title}`,
+    chips: ["Ohne Anmeldung", "Ohne Installation", "Kostenlos"],
   },
 
   // ── App-Seite (x-app-in-minutes: s-fitness-clarity … t-thank-creator-adult, t-give-feedback) ──
@@ -119,6 +120,7 @@ const de = {
       privacy:
         "Bis wir Klicks zählen, kommt dein Danke als E-Mail bei uns an. Dabei sehen wir deine E-Mail-Adresse. Wir nutzen sie nur dafür.",
       privacyLink: "Mehr dazu",
+      privacyHref: "/privacy/#de-danke",
       reminder: "Zurück aus der App? Sag Danke, wenn sie geholfen hat.",
       reminderLink: "Zum Danke",
     },
@@ -246,16 +248,19 @@ const de = {
 };
 
 // The prepared e-mails of the app page, one per button: { label, subject, body }.
-const T = de.app.thanks;
-const M = de.app.mail;
-de.app.mails = {
-  thanks: (app, creator, page) => [
-    { label: `♥ ${T.thank}`, subject: M.thanksSubject(app), body: M.thanksBody(app, creator, page) },
-  ],
-  used: (app, page) =>
-    T.used.map((u) => ({ label: u.label, subject: M.usedSubject(app, u.label), body: M.feedbackBody(M.usedSubject(app, u.label), page) })),
-  feedback: (app, page) =>
-    T.feedback.map((f) => ({ label: f.label, subject: M.feedbackSubject(app, f.label), body: M.feedbackBody(M.feedbackSubject(app, f.label), page) })),
-};
+export function addMails(texts) {
+  const T = texts.app.thanks;
+  const M = texts.app.mail;
+  texts.app.mails = {
+    thanks: (app, creator, page) => [
+      { label: `♥ ${T.thank}`, subject: M.thanksSubject(app), body: M.thanksBody(app, creator, page) },
+    ],
+    used: (app, page) =>
+      T.used.map((u) => ({ label: u.label, subject: M.usedSubject(app, u.label), body: M.feedbackBody(M.usedSubject(app, u.label), page) })),
+    feedback: (app, page) =>
+      T.feedback.map((f) => ({ label: f.label, subject: M.feedbackSubject(app, f.label), body: M.feedbackBody(M.feedbackSubject(app, f.label), page) })),
+  };
+}
+addMails(de);
 
 export default de;
