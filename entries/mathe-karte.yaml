@@ -1,55 +1,40 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
-# One file per app. Keys are identifiers (English), values are what people read (German, plain language; a text may be a map by language: { de: …, en: … }).
+# One file per app. Keys are identifiers (English), values are what people read (German, plain language).
 # Format: schemas/entry.js (JSON Schema: schemas/entry.v1.schema.json), explained in src/llms.njk.
 # What an app contains is its own business: the trainers of the Mathe-Karte are topics of this one
 # entry, each with a deep link.
 title: Mathe-Karte
-subject: { de: Mathematik, en: Mathematics }
+subject: Mathematik
 grades: [8]
-summary:
-  de: >-
-    Mathe selbst ausprobieren und üben: Prozentrechnung, binomische Formeln und
-    Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung, ein Bild, beliebig
-    viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test. Eine Karte
-    zeigt, welche Themen schon dabei sind.
-  en: >-
-    Try out and practise maths yourself: percentages, binomial formulas and
-    probability. Every topic has an explanation, a picture, as many exercises as
-    you like with instant feedback, and a short test. A map shows which topics
-    are already there.
+summary: >-
+  Mathe selbst ausprobieren und üben: Prozentrechnung, binomische Formeln und
+  Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung, ein Bild, beliebig
+  viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test. Eine Karte
+  zeigt, welche Themen schon dabei sind.
 url: https://lernapps.net/mathe-karte/
 topics:
-  - { title: { de: "Prozent: Grundwert, Prozentwert und Prozentsatz erkennen", en: "Percent: recognise base value, percentage value and percentage rate" }, path: prozent/grundbegriffe.html }
-  - { title: { de: "Prozent: Prozentsatz berechnen", en: "Percent: calculate the percentage rate" }, path: prozent/prozentsatz.html }
-  - { title: { de: "Prozent: Prozentwert berechnen", en: "Percent: calculate the percentage value" }, path: prozent/prozentwert.html }
-  - { title: { de: "Prozent: Grundwert berechnen", en: "Percent: calculate the base value" }, path: prozent/grundwert.html }
-  - { title: { de: "Prozent: Zunahme und Abnahme", en: "Percent: increase and decrease" }, path: prozent/veraenderung.html }
-  - { title: { de: "Prozent: Zwei Werte vergleichen", en: "Percent: compare two values" }, path: prozent/vergleich.html }
-  - { title: { de: "Prozent: Sachaufgaben übersetzen", en: "Percent: translate word problems" }, path: prozent/sachaufgaben.html }
-  - { title: { de: "Binomische Formeln: Zwei Klammern multiplizieren", en: "Binomial formulas: multiply two brackets" }, path: binom/klammern-multiplizieren.html }
-  - { title: { de: "Binomische Formeln: Erste binomische Formel", en: "Binomial formulas: the first binomial formula" }, path: binom/erste-binomische.html }
-  - { title: { de: "Binomische Formeln: Zweite binomische Formel", en: "Binomial formulas: the second binomial formula" }, path: binom/zweite-binomische.html }
-  - { title: { de: "Binomische Formeln: Dritte binomische Formel", en: "Binomial formulas: the third binomial formula" }, path: binom/dritte-binomische.html }
-  - { title: { de: "Binomische Formeln: Rückwärts (faktorisieren)", en: "Binomial formulas: backwards (factorising)" }, path: binom/binome-rueckwaerts.html }
-  - { title: { de: "Binomische Formeln: Geschickt rechnen", en: "Binomial formulas: calculate cleverly" }, path: binom/geschickt-rechnen.html }
-  - { title: { de: "Wahrscheinlichkeit: Die Laplace-Formel anwenden", en: "Probability: apply the Laplace formula" }, path: zufall/laplace.html }
-  - { title: { de: "Wahrscheinlichkeit: Ein Baumdiagramm zeichnen", en: "Probability: draw a tree diagram" }, path: zufall/baumdiagramm.html }
-  - { title: { de: "Wahrscheinlichkeit: Erste Pfadregel (multiplizieren)", en: "Probability: first path rule (multiply)" }, path: zufall/pfadregel-1.html }
-  - { title: { de: "Wahrscheinlichkeit: Die Gegenwahrscheinlichkeit berechnen", en: "Probability: calculate the complementary probability" }, path: zufall/gegenereignis.html }
-  - { title: { de: "Wahrscheinlichkeit: Ziehen ohne Zurücklegen", en: "Probability: drawing without replacement" }, path: zufall/ohne-zuruecklegen.html }
-  - { title: { de: "Wahrscheinlichkeit: Zweite Pfadregel (addieren)", en: "Probability: second path rule (add)" }, path: zufall/pfadregel-2.html }
-  - { title: { de: "Wahrscheinlichkeit: Als Produkt, Summe oder Potenz angeben", en: "Probability: give the result as a product, sum or power" }, path: zufall/ergebnisformen.html }
-  - { title: { de: "Wahrscheinlichkeit: „Genau einmal“ und „mindestens einmal“", en: "Probability: “exactly once” and “at least once”" }, path: zufall/pfade-uebersetzen.html }
-keywords:
-  - { de: Prozentrechnung, en: percentages }
-  - { de: Rabatt, en: discount }
-  - { de: Zinsen, en: interest }
-  - { de: Binom, en: binomial }
-  - { de: Termumformung, en: rearranging expressions }
-  - { de: Algebra, en: algebra }
-  - { de: Stochastik, en: probability and statistics }
-  - { de: Zufall, en: chance }
-  - { de: Würfel, en: dice }
+  - { title: "Prozent: Grundwert, Prozentwert und Prozentsatz erkennen", path: prozent/grundbegriffe.html }
+  - { title: "Prozent: Prozentsatz berechnen", path: prozent/prozentsatz.html }
+  - { title: "Prozent: Prozentwert berechnen", path: prozent/prozentwert.html }
+  - { title: "Prozent: Grundwert berechnen", path: prozent/grundwert.html }
+  - { title: "Prozent: Zunahme und Abnahme", path: prozent/veraenderung.html }
+  - { title: "Prozent: Zwei Werte vergleichen", path: prozent/vergleich.html }
+  - { title: "Prozent: Sachaufgaben übersetzen", path: prozent/sachaufgaben.html }
+  - { title: "Binomische Formeln: Zwei Klammern multiplizieren", path: binom/klammern-multiplizieren.html }
+  - { title: "Binomische Formeln: Erste binomische Formel", path: binom/erste-binomische.html }
+  - { title: "Binomische Formeln: Zweite binomische Formel", path: binom/zweite-binomische.html }
+  - { title: "Binomische Formeln: Dritte binomische Formel", path: binom/dritte-binomische.html }
+  - { title: "Binomische Formeln: Rückwärts (faktorisieren)", path: binom/binome-rueckwaerts.html }
+  - { title: "Binomische Formeln: Geschickt rechnen", path: binom/geschickt-rechnen.html }
+  - { title: "Wahrscheinlichkeit: Die Laplace-Formel anwenden", path: zufall/laplace.html }
+  - { title: "Wahrscheinlichkeit: Ein Baumdiagramm zeichnen", path: zufall/baumdiagramm.html }
+  - { title: "Wahrscheinlichkeit: Erste Pfadregel (multiplizieren)", path: zufall/pfadregel-1.html }
+  - { title: "Wahrscheinlichkeit: Die Gegenwahrscheinlichkeit berechnen", path: zufall/gegenereignis.html }
+  - { title: "Wahrscheinlichkeit: Ziehen ohne Zurücklegen", path: zufall/ohne-zuruecklegen.html }
+  - { title: "Wahrscheinlichkeit: Zweite Pfadregel (addieren)", path: zufall/pfadregel-2.html }
+  - { title: "Wahrscheinlichkeit: Als Produkt, Summe oder Potenz angeben", path: zufall/ergebnisformen.html }
+  - { title: "Wahrscheinlichkeit: „Genau einmal“ und „mindestens einmal“", path: zufall/pfade-uebersetzen.html }
+keywords: [Prozentrechnung, Rabatt, Zinsen, Binom, Termumformung, Algebra, Stochastik, Zufall, Würfel]
 creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
 source: https://github.com/lernapps/mathe-karte
 fitness:
@@ -57,7 +42,5 @@ fitness:
   install: false
   storage: device      # none | device | server
   thirdParty: on-click # none | on-click | yes
-  thirdPartyNote:
-    de: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
-    en: Only when someone starts an explainer video does it load from YouTube.
+  thirdPartyNote: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
   checked: false       # true once lernapps/tooling#1 has checked it
