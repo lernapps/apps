@@ -54,6 +54,9 @@
   <li class="check">{{ F.thirdParty["on-click"](app.fitness.thirdPartyNote) }}</li>
   {%- endif %}
 </ul>
+{%- if app.limits %}
+<p class="m-0 mt-3"><strong>{{ F.limits }}</strong> {{ app.limits }}</p>
+{%- endif %}
 <p class="m-0 mt-3 text-sm text-slate-500">{{ F.checked if app.fitness.checked else F.unchecked }}</p>
 {% endmacro %}
 
