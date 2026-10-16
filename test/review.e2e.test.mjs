@@ -174,7 +174,9 @@ describe("the review input", () => {
     assert.deepEqual(load(readFileSync(join(out, "report.yaml"), "utf8")).checked, { bundle: "app/dist" });
   });
 
-  test("built in the container the workflow names: the same bundle", SLOW, async () => {
+  // Needs a running Docker daemon (and the network to pull the image); a machine without one skips it, CI has one.
+  const docker = spawnSync("docker", ["info"], { stdio: "ignore" }).status === 0;
+  test("built in the container the workflow names: the same bundle", { ...SLOW, skip: !docker && "no Docker daemon" }, async () => {
     // The image of the workflow's job `input`, pinned there by its digest.
     const image = readFileSync(join(repo, ".github", "workflows", "review.yml"), "utf8").match(/BUILD_IMAGE: (node:[\w.-]+@sha256:[0-9a-f]{64})/)?.[1];
     assert.ok(image, "review.yml pins the build image by digest");
