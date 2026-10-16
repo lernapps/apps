@@ -1,7 +1,7 @@
 {#-
   Reusable parts of the pages, as Nunjucks macros. Import with
     {% import "components.njk" as c with context %}
-  so that the macros see `de` and `site`. Hooks for the scripts are data-* attributes.
+  so that the macros see `t`, `lang` and `site`. Hooks for the scripts are data-* attributes.
 -#}
 
 {#- A card in the list of apps. The search (assets/finden.js) reads data-search, data-subject and
@@ -9,21 +9,21 @@
 {% macro appCard(app) %}
 <li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
     data-app
-    data-subject="{{ app.subject }}"
+    data-subject="{{ app.subject | tx("de") }}"
     data-grades="{{ app.grades | join(' ') }}"
-    data-search="{{ [app.title, app.subject, app.summary, app.keywords | join(' '), app.creator.name] | join(' ') }}">
-  <a href="{{ ('/' + app.id + '/') | url }}" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="{{ de.find.cardLink(app.title) }}">
-    <p class="m-0 text-sm text-slate-500">{{ app.subject }} · {{ app.grades | gradeLabel }}</p>
-    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">{{ app.title }}</h2>
-    <p class="m-0 mt-2 text-slate-700">{{ app.summary }}</p>
+    data-search="{{ [app.title | tx(lang), app.subject | tx(lang), app.summary | tx(lang), app.keywords | txAll(lang) | join(' '), app.creator.name] | join(' ') }}">
+  <a href="{{ ('/' + app.id + '/') | inLang(lang) | url }}" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="{{ t.find.cardLink(app.title | tx(lang)) }}">
+    <p class="m-0 text-sm text-slate-500"><span{{ app.subject | fallbackLang(lang) | safe }}>{{ app.subject | tx(lang) }}</span> · {{ app.grades | gradeLabel(lang) }}</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900"{{ app.title | fallbackLang(lang) | safe }}>{{ app.title | tx(lang) }}</h2>
+    <p class="m-0 mt-2 text-slate-700"{{ app.summary | fallbackLang(lang) | safe }}>{{ app.summary | tx(lang) }}</p>
     {{ fitnessChips(app) }}
   </a>
   {%- if app.topics.length %}
   <div class="px-5 pb-5 -mt-2" data-topics hidden>
-    <p class="m-0 text-sm font-semibold text-slate-600">{{ de.find.matched }}</p>
+    <p class="m-0 text-sm font-semibold text-slate-600">{{ t.find.matched }}</p>
     <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
-      {%- for t in app.topics %}
-      <li data-topic data-search="{{ t.title }}" hidden><a href="{{ t.url }}" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">{{ t.title }}</a></li>
+      {%- for topic in app.topics %}
+      <li data-topic data-search="{{ topic.title | tx(lang) }}" hidden><a href="{{ topic.url }}" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2"{{ topic.title | fallbackLang(lang) | safe }}>{{ topic.title | tx(lang) }}</a></li>
       {%- endfor %}
     </ul>
   </div>
@@ -33,16 +33,16 @@
 
 {#- Short signal of fitness for use, for cards (D5 ch-fitness-signal). -#}
 {% macro fitnessChips(app) %}
-<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="{{ de.app.fitness.lead }}">
-  <li class="chip">✓ Ohne Anmeldung</li>
-  <li class="chip">✓ Ohne Installation</li>
-  <li class="chip">✓ Kostenlos</li>
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="{{ t.app.fitness.lead }}">
+  {%- for chip in t.find.chips %}
+  <li class="chip">✓ {{ chip }}</li>
+  {%- endfor %}
 </ul>
 {% endmacro %}
 
 {#- Full signal of fitness for use, for the app page. -#}
 {% macro fitness(app) %}
-{%- set F = de.app.fitness %}
+{%- set F = t.app.fitness %}
 <ul class="list-none p-0 m-0 flex flex-col gap-2">
   <li class="check">{{ F.account }}</li>
   <li class="check">{{ F.install }}</li>
@@ -51,7 +51,7 @@
   {%- if app.fitness.thirdParty == "none" %}
   <li class="check">{{ F.thirdParty["none"] }}</li>
   {%- else %}
-  <li class="check">{{ F.thirdParty["on-click"](app.fitness.thirdPartyNote) }}</li>
+  <li class="check">{{ F.thirdParty["on-click"](app.fitness.thirdPartyNote | tx(lang)) }}</li>
   {%- endif %}
 </ul>
 <p class="m-0 mt-3 text-sm text-slate-500">{{ F.checked if app.fitness.checked else F.unchecked }}</p>
@@ -73,7 +73,7 @@
 {% endmacro %}
 
 {#- Links that open a prepared e-mail (thanks and feedback for the MVP; assets/app.js adds the referral
-    wave). items: [{ label, subject, body }], built in de.js (app.mails). -#}
+    wave). items: [{ label, subject, body }], built in de.js and en.js (app.mails). -#}
 {% macro mailButtons(address, items, cls="btn-secondary") %}
 <div class="flex flex-wrap gap-2">
   {%- for item in items %}

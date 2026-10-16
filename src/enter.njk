@@ -1,10 +1,14 @@
 ---
-permalink: /enter/index.html
+pagination:
+  data: languages
+  size: 1
+  alias: pageLanguage
+permalink: "/{{ pageLanguage.root }}enter/index.html"
 layout: base.njk
 scripts: [kopieren.js]
 eleventyComputed:
-  title: "{{ de.list.title }}"
-  description: "{{ de.list.description }}"
+  title: "{{ t.list.title }}"
+  description: "{{ t.list.description }}"
 ---
 {#-
   Eintragen: steps s-listing-help and t-list-app of x-list-and-hear-back (D7), channel ch-listing (D5):
@@ -14,13 +18,13 @@ eleventyComputed:
   Building an app comes first, on its own page (/build/, build.njk); this page lists an app that is published.
   "Was du zurückbekommst" is s-use-insight: thanks and feedback, counted openly, on the app's page.
 -#}
-{%- set L = de.list %}
+{%- set L = t.list %}
 {%- import "components.njk" as c with context %}
 <section class="bg-slate-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight whitespace-pre-line" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ L.headline }}</h1>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ L.lead }}</p>
-    <p class="m-0 mt-3 text-slate-300">{{ L.noApp }} <a href="{{ '/build/' | url }}" class="text-white underline underline-offset-2">{{ L.noAppLink }}</a></p>
+    <p class="m-0 mt-3 text-slate-300">{{ L.noApp }} <a href="{{ '/build/' | inLang(lang) | url }}" class="text-white underline underline-offset-2">{{ L.noAppLink }}</a></p>
   </div>
 </section>
 
