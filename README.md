@@ -23,14 +23,20 @@ first-draft MVP (D8 `mvp-first-draft`):
 - Static pages with [Eleventy](https://www.11ty.dev/) and [UnoCSS](https://unocss.dev/), like the home page
   (lernapps.github.io). Every page is readable without JavaScript; small scripts in `src/assets/` add
   the search, copy buttons and the referral code in the e-mails.
-- Texts: all in `src/_data/de.js`, plain German (ISO 24495-1), "du". Templates contain no copy.
+- Texts: all in `src/_data/de.js`, plain German (ISO 24495-1), "du", and its English translation `src/_data/en.js`
+  (same structure). Templates contain no copy and read the texts of the page's language (`t`, `lang`, set per page by
+  `src/src.11tydata.js` from the address). German is at the root (`/apps/…`), English below `/apps/en/…`, the same
+  address within each tree; every page is built once per language (pagination over `src/_data/languages.js`), and the
+  header of the shared site frame links the two. Links between pages go through the filters `inLang` and `url`.
 - Reusable parts: Nunjucks macros in `src/_includes/components.njk` (app card, fitness signal,
   copy field, count buttons), imported with `{% import "components.njk" as c with context %}`.
   The layout is `src/_includes/base.njk`.
 - Header, footer and design tokens are those of every lernapps.net site: the package `@lernapps/site`
   ([`site-frame/`](https://github.com/lernapps/lernapps.github.io/tree/main/site-frame) in lernapps.github.io),
   installed from git; Renovate keeps it on the latest commit of its `main`.
-- Entries: one YAML file per app in `entries/`. `src/_data/catalog.js` reads them and checks them against
+- Entries: one YAML file per app in `entries/`. A text of an entry (`title`, `subject`, `summary`, `topics[].title`,
+  `keywords`, `fitness.thirdPartyNote`) is a plain string (German) or a map by language, `{ de: …, en: … }`; German is
+  required. An English page shows the German text, marked `lang="de"`, where there is no translation. `src/_data/catalog.js` reads them and checks them against
   the schema; a broken entry fails the build. It also renders the QR code of each app at build time.
 - Schema: `schemas/entry.js` (Zod) is the single source of the entry format. `npm run schema` writes
   `schemas/entry.v1.schema.json`, published at <https://lernapps.net/apps/schemas/entry.v1.schema.json>

@@ -30,13 +30,18 @@ function usage(message) {
   process.exit(2);
 }
 
-/** The message of an uncaught error in Node's output: its first line after Node's own header. */
+const BROWSER_NOTICE = /^lernapps check: (Playwright's Chromium is not installed|no usable Chromium)/;
+
+/**
+ * The message of an uncaught error in Node's output: its first line after Node's own header. The notices of the
+ * browser start (`lernapps check` says which Chromium it uses when Playwright's own is missing) are not the error.
+ */
 const crash = (stderr) =>
   stderr
     .replace(/\u001b\[[0-9;]*m/g, "")
     .split("\n")
     .map((line) => line.trim())
-    .find((line) => line !== "" && line !== "^" && !line.startsWith("node:internal") && !line.startsWith("triggerUncaughtException"));
+    .find((line) => line !== "" && line !== "^" && !BROWSER_NOTICE.test(line) && !line.startsWith("node:internal") && !line.startsWith("triggerUncaughtException"));
 
 /** The report of one entry: from `lernapps check`, or one finding when the check could not run. */
 function check(file, out) {

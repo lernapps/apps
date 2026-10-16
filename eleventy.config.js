@@ -4,7 +4,9 @@
 // Header, footer and the deploy check are shared by every lernapps.net site (@lernapps/site, from
 // lernapps.github.io; Renovate keeps it current).
 import siteFrame from "@lernapps/site/eleventy";
-import de from "./src/_data/de.js";
+import languages from "./src/_data/languages.js";
+
+const textsOf = (lang) => (languages.find((l) => l.code === lang) ?? languages[0]).t;
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(siteFrame, { site: "/apps/", source: "https://github.com/lernapps/apps" });
@@ -14,13 +16,26 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("entries/");
   eleventyConfig.setServerOptions({ watch: ["_site/uno.css"] });
 
-  // "Klasse 8", "Klasse 7 und 8", "Klasse 5 bis 7"
-  eleventyConfig.addFilter("gradeLabel", (grades) => {
+  // "Klasse 8", "Klasse 7 und 8", "Klasse 5 bis 7"; "Grade 8", "Grades 7 and 8", "Grades 5 to 7"
+  eleventyConfig.addFilter("gradeLabel", (grades, lang = "de") => {
+    const { grades: words } = textsOf(lang);
     const g = [...grades].sort((a, b) => a - b);
-    if (g.length === 1) return de.grades.one(g[0]);
-    if (g.length === 2 && g[1] === g[0] + 1) return de.grades.two(g[0], g[1]);
-    return de.grades.range(g[0], g[g.length - 1]);
+    if (g.length === 1) return words.one(g[0]);
+    if (g.length === 2 && g[1] === g[0] + 1) return words.two(g[0], g[1]);
+    return words.range(g[0], g[g.length - 1]);
   });
+
+  // A text of an entry in a language: a plain string is German, a map has the languages it has. A language
+  // without a translation shows the German text.
+  const tx = (text, lang = "de") => (typeof text === "string" ? text : (text[lang] ?? text.de));
+  eleventyConfig.addFilter("tx", tx);
+  eleventyConfig.addFilter("txAll", (list, lang = "de") => list.map((text) => tx(text, lang)));
+  // ' lang="de"' for a text that is shown in German on a page in another language, else nothing.
+  eleventyConfig.addFilter("fallbackLang", (text, lang = "de") =>
+    lang !== "de" && (typeof text === "string" || !(lang in text)) ? ' lang="de"' : "",
+  );
+  // The address of a page in a language: "/enter/" → "/en/enter/" (then the filter "url" adds the prefix).
+  eleventyConfig.addFilter("inLang", (path, lang = "de") => (lang === "de" ? path : `/${lang}${path}`));
 
   // A mailto link with subject and body (thanks and feedback for the MVP).
   eleventyConfig.addFilter("mailto", (address, subject, body) =>

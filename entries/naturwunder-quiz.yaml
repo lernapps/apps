@@ -1,26 +1,40 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
 title: Naturwunder-Quiz
-subject: Erdkunde
+subject: { de: Erdkunde, en: Geography }
 grades: [5, 6, 7, 8, 9, 10]
-summary: >-
-  Im Quiz beantworten Schülerinnen und Schüler Fragen zu Naturwundern der Erde: Gebirge und Vulkane, Wasserfälle,
-  Wüsten, Höhlen, Küsten und Riffe auf allen Kontinenten. Nach jeder Antwort lesen sie kurz zu jeder Möglichkeit
-  und können im Wikipedia-Artikel weiterlesen.
+summary:
+  de: >-
+    Im Quiz beantworten Schülerinnen und Schüler Fragen zu Naturwundern der Erde: Gebirge und Vulkane, Wasserfälle,
+    Wüsten, Höhlen, Küsten und Riffe auf allen Kontinenten. Nach jeder Antwort lesen sie kurz zu jeder Möglichkeit
+    und können im Wikipedia-Artikel weiterlesen.
+  en: >-
+    In the quiz, students answer questions about natural wonders of the Earth: mountains and volcanoes, waterfalls,
+    deserts, caves, coasts and reefs on all continents. After each answer, they read a short note on every option
+    and can read on in the Wikipedia article.
 url: https://lernapps.net/naturwunder-quiz/
 topics:
-  - title: Gebirge und Vulkane
+  - title: { de: "Gebirge und Vulkane", en: "Mountains and volcanoes" }
     path: "#frage-everest-hoehe"
-  - title: Wasserfälle, Flüsse und Seen
+  - title: { de: "Wasserfälle, Flüsse und Seen", en: "Waterfalls, rivers and lakes" }
     path: "#frage-baikalsee"
-  - title: Wüsten
+  - title: { de: "Wüsten", en: "Deserts" }
     path: "#frage-atacama"
-  - title: Höhlen und Schluchten
+  - title: { de: "Höhlen und Schluchten", en: "Caves and gorges" }
     path: "#frage-hoehlen-rekorde"
-  - title: Küsten, Inseln und Riffe
+  - title: { de: "Küsten, Inseln und Riffe", en: "Coasts, islands and reefs" }
     path: "#frage-great-barrier-reef"
-  - title: Naturwunder nach Kontinenten
+  - title: { de: "Naturwunder nach Kontinenten", en: "Natural wonders by continent" }
     path: "#frage-kontinente-zuordnen"
-keywords: [Naturwunder, Geografie, Erdkunde, Quiz, Kontinente, Welterbe, Vulkane, Wüsten, Wasserfälle]
+keywords:
+  - { de: Naturwunder, en: natural wonders }
+  - { de: Geografie, en: geography }
+  - { de: Erdkunde, en: geography }
+  - { de: Quiz, en: quiz }
+  - { de: Kontinente, en: continents }
+  - { de: Welterbe, en: world heritage }
+  - { de: Vulkane, en: volcanoes }
+  - { de: Wüsten, en: deserts }
+  - { de: Wasserfälle, en: waterfalls }
 creator:
   name: Oliver
   url: https://github.com/mrsimpson

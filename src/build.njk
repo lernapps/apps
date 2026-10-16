@@ -1,17 +1,21 @@
 ---
-permalink: /build/index.html
+pagination:
+  data: languages
+  size: 1
+  alias: pageLanguage
+permalink: "/{{ pageLanguage.root }}build/index.html"
 layout: base.njk
 scripts: [kopieren.js]
 eleventyComputed:
-  title: "{{ de.build.title }}"
-  description: "{{ de.build.description }}"
+  title: "{{ t.build.title }}"
+  description: "{{ t.build.description }}"
 ---
 {#-
   Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
   to give the assistant, the command that starts the app, the skill as the quick path, then on to listing (/enter/).
   test/entry-point.e2e.test.mjs runs the command from the built page.
 -#}
-{%- set B = de.build %}
+{%- set B = t.build %}
 {%- import "components.njk" as c with context %}
 <section class="bg-slate-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
@@ -32,11 +36,17 @@ eleventyComputed:
     <p class="m-0 mt-3 text-slate-700">{{ B.start.skill }} <a href="{{ site.tooling.skill }}" class="text-blue-700 underline underline-offset-2">lernapps-app</a>.</p>
   </section>
 
+  <section class="panel" aria-labelledby="werkzeuge">
+    <h2 id="werkzeuge" class="panel-title">{{ B.tools.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ B.tools.body }}</p>
+    <a href="{{ site.tooling.home }}" class="btn btn-secondary mt-4 self-start"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}" lang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.link }}</a>
+  </section>
+
   <section class="panel" aria-labelledby="weiter">
     <h2 id="weiter" class="panel-title">{{ B.next.headline }}</h2>
     <p class="m-0 text-slate-700">{{ B.next.body }}</p>
-    <p class="m-0 mt-3 text-slate-700">{{ B.next.criteria }} <a href="{{ '/enter/#bedingungen' | url }}" class="text-blue-700 underline underline-offset-2">{{ B.next.criteriaLink }}</a>.</p>
+    <p class="m-0 mt-3 text-slate-700">{{ B.next.criteria }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.next.criteriaLink }}</a>.</p>
     <p class="m-0 mt-3 text-slate-700">{{ B.next.enter }}</p>
-    <a href="{{ '/enter/' | url }}" class="btn btn-primary mt-4 self-start">{{ B.next.enterLink }}</a>
+    <a href="{{ '/enter/' | inLang(lang) | url }}" class="btn btn-primary mt-4 self-start">{{ B.next.enterLink }}</a>
   </section>
 </div>
