@@ -1,41 +1,63 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
-title: Elektrizität
-subject: Physik
+title: { de: Elektrizität, en: Electricity }
+subject: { de: Physik, en: Physics }
 grades: [5, 6, 7, 8]
-summary: >-
-  Lernende erklären sich Schritt für Schritt, wie ein Stromkreis funktioniert, welche Stoffe den Strom leiten und wie
-  sich Reihen- und Parallelschaltung unterscheiden. In Klasse 7 und 8 kommen Stromstärke, Spannung, Widerstand und das
-  ohmsche Gesetz dazu. Auf jeder Seite üben sie an einem Stromkreis, in dem man den Strom laufen sieht, bauen
-  Schaltungen und messen. Die App gibt es auf Deutsch und Englisch.
+summary:
+  de: >-
+    Lernende erklären sich Schritt für Schritt, wie ein Stromkreis funktioniert, welche Stoffe den Strom leiten und wie
+    sich Reihen- und Parallelschaltung unterscheiden. In Klasse 7 und 8 kommen Stromstärke, Spannung, Widerstand und das
+    ohmsche Gesetz dazu. Auf jeder Seite üben sie an einem Stromkreis, in dem man den Strom laufen sieht, bauen
+    Schaltungen und messen. Die App gibt es auf Deutsch und Englisch.
+  en: >-
+    Learners work out step by step how a circuit works, which materials conduct electricity and how series and
+    parallel circuits differ. In grades 7 and 8, current, voltage, resistance and Ohm's law follow. On every page they
+    practise with a circuit in which you can see the current flow, build circuits and measure. The app is available in
+    German and English.
 url: https://lernapps.net/elektrizitaet/
 topics:
-  - title: Der einfache Stromkreis
+  - title: { de: "Der einfache Stromkreis", en: "The simple circuit" }
     path: stromkreis/einfacher-stromkreis/
-  - title: Leiter und Nichtleiter
+  - title: { de: "Leiter und Nichtleiter", en: "Conductors and insulators" }
     path: stromkreis/leiter-nichtleiter/
-  - title: Schalter und Schaltzeichen
+  - title: { de: "Schalter und Schaltzeichen", en: "Switches and circuit symbols" }
     path: schaltungen/schalter-schaltzeichen/
-  - title: Reihenschaltung
+  - title: { de: "Reihenschaltung", en: "Series circuit" }
     path: schaltungen/reihenschaltung/
-  - title: Parallelschaltung
+  - title: { de: "Parallelschaltung", en: "Parallel circuit" }
     path: schaltungen/parallelschaltung/
-  - title: Die Stromstärke
+  - title: { de: "Die Stromstärke", en: "Current" }
     path: groessen/stromstaerke/
-  - title: Die Spannung
+  - title: { de: "Die Spannung", en: "Voltage" }
     path: groessen/spannung/
-  - title: Der Widerstand
+  - title: { de: "Der Widerstand", en: "Resistance" }
     path: groessen/widerstand/
-  - title: Das ohmsche Gesetz
+  - title: { de: "Das ohmsche Gesetz", en: "Ohm's law" }
     path: groessen/ohmsches-gesetz/
-  - title: Reihenschaltung mit Messgeräten
+  - title: { de: "Reihenschaltung mit Messgeräten", en: "Series circuit with meters" }
     path: schaltungen-messen/reihenschaltung/
-  - title: Parallelschaltung mit Messgeräten
+  - title: { de: "Parallelschaltung mit Messgeräten", en: "Parallel circuit with meters" }
     path: schaltungen-messen/parallelschaltung/
-  - title: Wirkungen des elektrischen Stroms
+  - title: { de: "Wirkungen des elektrischen Stroms", en: "Effects of electric current" }
     path: alltag/wirkungen/
-  - title: Sicher mit Strom umgehen
+  - title: { de: "Sicher mit Strom umgehen", en: "Handling electricity safely" }
     path: alltag/sicherheit/
-keywords: [Stromkreis, Leiter, Nichtleiter, Schalter, Reihenschaltung, Parallelschaltung, Schaltplan, Kurzschluss, Elektrizität, Stromstärke, Spannung, Widerstand, ohmsches Gesetz, Gleichstrom, Amperemeter, Voltmeter]
+keywords:
+  - { de: Stromkreis, en: circuit }
+  - { de: Leiter, en: conductor }
+  - { de: Nichtleiter, en: insulator }
+  - { de: Schalter, en: switch }
+  - { de: Reihenschaltung, en: series circuit }
+  - { de: Parallelschaltung, en: parallel circuit }
+  - { de: Schaltplan, en: circuit diagram }
+  - { de: Kurzschluss, en: short circuit }
+  - { de: Elektrizität, en: electricity }
+  - { de: Stromstärke, en: current }
+  - { de: Spannung, en: voltage }
+  - { de: Widerstand, en: resistance }
+  - { de: ohmsches Gesetz, en: Ohm's law }
+  - { de: Gleichstrom, en: direct current }
+  - { de: Amperemeter, en: ammeter }
+  - { de: Voltmeter, en: voltmeter }
 creator:
   name: Oliver
   url: https://github.com/mrsimpson

@@ -6,14 +6,60 @@
   "type": "object",
   "properties": {
     "title": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Name of the app"
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "properties": {
+            "de": {
+              "type": "string",
+              "minLength": 1,
+              "description": "German"
+            },
+            "en": {
+              "description": "English",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "de"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Name of the app, or a map by language { de, en }"
     },
     "subject": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Subject, in German, e.g. Mathematik"
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "properties": {
+            "de": {
+              "type": "string",
+              "minLength": 1,
+              "description": "German"
+            },
+            "en": {
+              "description": "English",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "de"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Subject, in German (or a map by language), e.g. Mathematik"
     },
     "grades": {
       "minItems": 1,
@@ -26,9 +72,32 @@
       "description": "Grades the app fits, e.g. [5, 6]"
     },
     "summary": {
-      "type": "string",
-      "minLength": 1,
-      "description": "2–3 sentences in plain German: what do learners do?"
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "properties": {
+            "de": {
+              "type": "string",
+              "minLength": 1,
+              "description": "German"
+            },
+            "en": {
+              "description": "English",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "de"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "2–3 sentences in plain German (or a map by language): what do learners do?"
     },
     "url": {
       "type": "string",
@@ -42,9 +111,32 @@
         "type": "object",
         "properties": {
           "title": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Topic, in German"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "de": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "German"
+                  },
+                  "en": {
+                    "description": "English",
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "de"
+                ],
+                "additionalProperties": false
+              }
+            ],
+            "description": "Topic, in German (or a map by language)"
           },
           "path": {
             "type": "string",
@@ -63,8 +155,31 @@
       "description": "More words people search for",
       "type": "array",
       "items": {
-        "type": "string",
-        "minLength": 1
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "object",
+            "properties": {
+              "de": {
+                "type": "string",
+                "minLength": 1,
+                "description": "German"
+              },
+              "en": {
+                "description": "English",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "de"
+            ],
+            "additionalProperties": false
+          }
+        ]
       }
     },
     "creator": {
@@ -122,7 +237,31 @@
         },
         "thirdPartyNote": {
           "description": "For on-click: which servers, and when",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "properties": {
+                "de": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "German"
+                },
+                "en": {
+                  "description": "English",
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "de"
+              ],
+              "additionalProperties": false
+            }
+          ]
         },
         "checked": {
           "type": "boolean",

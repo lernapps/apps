@@ -11,6 +11,7 @@ export default {
   // runs the command from the built page. Listing a published app: the skill lernapps-listing, the way /enter/ and
   // llms.txt promote; `skills` is the command that installs both skills.
   tooling: {
+    home: "/tooling/",
     llms: "https://lernapps.net/tooling/llms.txt",
     skill: "https://github.com/lernapps/tooling/blob/main/skills/lernapps-app/SKILL.md",
     skillRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-app/SKILL.md",

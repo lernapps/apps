@@ -6,7 +6,7 @@
 -#}
 {%- import "components.njk" as c with context -%}
 <!doctype html>
-<html lang="de">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
   {%- if site.preview %}
   <meta name="robots" content="noindex">
   {%- endif %}
-  {% laHead %}
+  {% laHead page.url %}
   <link rel="stylesheet" href="{{ '/uno.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/apps.css' | url }}">
   {%- for script in scripts %}
@@ -31,6 +31,6 @@
     {{ content | safe }}
   </main>
 
-  {% laFooter %}
+  {% laFooter page.url %}
 </body>
 </html>

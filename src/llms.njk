@@ -17,13 +17,13 @@ Startseite: {{ site.origin }}{{ '/' | url }}
 ## Apps
 
 {% for app in catalog.apps -%}
-### {{ app.title }} ({{ app.subject }}, {{ app.grades | gradeLabel }})
+### {{ app.title | tx("de") }} ({{ app.subject | tx("de") }}, {{ app.grades | gradeLabel("de") }})
 
-{{ app.summary }}
+{{ app.summary | tx("de") }}
 - Seite auf lernapps.net: {{ site.origin }}{{ ('/' + app.id + '/') | url }}
 - App: {{ app.url }}
 {%- for t in app.topics %}
-- Thema „{{ t.title }}“: {{ t.url }}
+- Thema „{{ t.title | tx("de") }}“: {{ t.url }}
 {%- endfor %}
 
 {% endfor -%}
@@ -61,6 +61,9 @@ Die Seite für Menschen: [App eintragen]({{ site.origin }}{{ '/enter/' | url }})
 2. Schreib eine Datei `entries/<id>.yaml` im Repository {{ site.repo }}.
    `<id>` ist der Name der App in Kleinbuchstaben mit Bindestrichen, z. B. `bruch-trainer`.
    Texte auf Deutsch in einfacher Sprache: kurze Sätze, aktiv, ohne Fachjargon.
+   Die Seiten gibt es auch auf Englisch ({{ site.origin }}{{ '/en/' | url }}). Jeder Text (`title`, `subject`, `summary`,
+   `topics[].title`, `keywords`, `fitness.thirdPartyNote`) darf statt eines Strings eine Übersetzung als Map haben:
+   `{ de: "…", en: "…" }`. Deutsch ist Pflicht; ohne englischen Text zeigt die englische Seite den deutschen.
    Das Format ist als JSON Schema festgelegt: {{ site.origin }}{{ '/schemas/entry.v1.schema.json' | url }}
    Vorlage (Kommentare erklären die Felder):
 

@@ -6,11 +6,13 @@ import { join } from "node:path";
 import { load } from "js-yaml";
 import QRCode from "qrcode";
 import { Entry } from "../../schemas/entry.js";
+import languages from "./languages.js";
 
 const DIR = "entries";
 function check(id, raw) {
   const errors = [];
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) errors.push("file name must be kebab-case: <id>.yaml");
+  if (id === "en") errors.push("the id \"en\" is taken by the English pages");
   const result = Entry.safeParse(raw);
   if (!result.success) {
     for (const issue of result.error.issues) errors.push(`${issue.path.join(".") || "(entry)"}: ${issue.message}`);
@@ -34,8 +36,14 @@ export default async function () {
     });
   }
 
-  apps.sort((a, b) => a.subject.localeCompare(b.subject, "de") || a.title.localeCompare(b.title, "de"));
-  const subjects = [...new Set(apps.map((a) => a.subject))].sort((a, b) => a.localeCompare(b, "de"));
+  // Order and filter keys are German; the pages show the text of their language (filter "tx" in eleventy.config.js).
+  const de = (text) => (typeof text === "string" ? text : text.de);
+  apps.sort((a, b) => de(a.subject).localeCompare(de(b.subject), "de") || de(a.title).localeCompare(de(b.title), "de"));
+  const subjects = [...new Set(apps.map((a) => a.subject))]
+    .filter((s, i, all) => all.findIndex((o) => de(o) === de(s)) === i)
+    .sort((a, b) => de(a).localeCompare(de(b), "de"));
   const grades = [...new Set(apps.flatMap((a) => a.grades))].sort((a, b) => a - b);
-  return { apps, subjects, grades };
+  // One page per app and language, for the pagination of src/app.njk.
+  const pages = apps.flatMap((app) => languages.map((l) => ({ app, l })));
+  return { apps, subjects, grades, pages };
 }

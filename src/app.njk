@@ -1,14 +1,14 @@
 ---
 pagination:
-  data: catalog.apps
+  data: catalog.pages
   size: 1
-  alias: app
-permalink: "/{{ app.id }}/index.html"
+  alias: appPage
+permalink: "/{{ appPage.l.root }}{{ appPage.app.id }}/index.html"
 layout: base.njk
 scripts: [kopieren.js, app.js]
 eleventyComputed:
-  title: "{{ de.app.title(app.title) }}"
-  description: "{{ app.summary }}"
+  title: "{{ t.app.title(appPage.app.title | tx(lang)) }}"
+  description: "{{ appPage.app.summary | tx(lang) }}"
 ---
 {#-
   One page per app, in the order of the steps of x-app-in-minutes (D7):
@@ -19,16 +19,17 @@ eleventyComputed:
   Thanks and feedback are prepared e-mails for the MVP (mailto, works without JS). A referral code
   (?welle=<code>, D8 a-platform-convinces) is added to their body by assets/app.js.
 -#}
-{%- set A = de.app %}
+{%- set A = t.app %}
+{%- set app = appPage.app %}
 {%- import "components.njk" as c with context %}
 
 {# ── What it is ── #}
 <section class="bg-slate-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-10">
-    <a href="{{ '/' | url }}" class="text-sm text-slate-400 hover:text-white">← {{ A.back }}</a>
-    <p class="m-0 mt-4 text-slate-400">{{ app.subject }} · {{ app.grades | gradeLabel }}</p>
-    <h1 class="m-0 mt-1 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ app.title }}</h1>
-    <p class="m-0 mt-3 text-lg text-slate-200 max-w-2xl">{{ app.summary }}</p>
+    <a href="{{ '/' | inLang(lang) | url }}" class="text-sm text-slate-400 hover:text-white">← {{ A.back }}</a>
+    <p class="m-0 mt-4 text-slate-400"><span{{ app.subject | fallbackLang(lang) | safe }}>{{ app.subject | tx(lang) }}</span> · {{ app.grades | gradeLabel(lang) }}</p>
+    <h1 class="m-0 mt-1 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);"{{ app.title | fallbackLang(lang) | safe }}>{{ app.title | tx(lang) }}</h1>
+    <p class="m-0 mt-3 text-lg text-slate-200 max-w-2xl"{{ app.summary | fallbackLang(lang) | safe }}>{{ app.summary | tx(lang) }}</p>
     <p class="m-0 mt-2 text-sm text-slate-400">{{ A.by }} {{ app.creator.name }}</p>
     <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
       <a href="{{ app.url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-open>{{ A.open }} ↗</a>
@@ -50,7 +51,7 @@ eleventyComputed:
     <h2 id="klasse" class="panel-title">{{ A.bring.headline }}</h2>
     {{ c.copyField("link", A.bring.linkLabel, app.url, A.bring.copy, A.bring.copied) }}
     <div class="mt-4 flex items-center gap-4">
-      <div class="qr shrink-0" role="img" aria-label="{{ A.bring.qrAlt(app.title) }}">{{ app.qr | safe }}</div>
+      <div class="qr shrink-0" role="img" aria-label="{{ A.bring.qrAlt(app.title | tx(lang)) }}">{{ app.qr | safe }}</div>
       <p class="m-0 text-sm text-slate-600">{{ A.bring.qrLabel }}</p>
     </div>
     <ul class="mt-4 mb-0 pl-5 list-disc text-sm text-slate-700 flex flex-col gap-1">
@@ -64,36 +65,36 @@ eleventyComputed:
     <h2 id="themen" class="panel-title">{{ A.topics.headline }}</h2>
     <p class="m-0 text-sm text-slate-600">{{ A.topics.body }}</p>
     <ul class="list-none p-0 m-0 mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
-      {%- for t in app.topics %}
-      <li><a href="{{ t.url }}" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">{{ t.title }}</a></li>
+      {%- for topic in app.topics %}
+      <li><a href="{{ topic.url }}" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2"{{ topic.title | fallbackLang(lang) | safe }}>{{ topic.title | tx(lang) }}</a></li>
       {%- endfor %}
     </ul>
   </section>
   {%- endif %}
 
   {# ── Did it help? ── #}
-  {%- set page = site.origin + (('/' + app.id + '/') | url) %}
+  {%- set pageUrl = site.origin + (('/' + app.id + '/') | inLang(lang) | url) %}
   <section id="danke" class="panel panel-thanks md:col-span-2" aria-labelledby="danke-titel" data-thanks data-wave-text="{{ A.mail.wave }}">
     <h2 id="danke-titel" class="panel-title">{{ A.thanks.headline }}</h2>
     <p class="m-0 text-slate-700 max-w-2xl">{{ A.thanks.body(app.creator.name) }}</p>
     <div class="mt-4">
-      {{ c.mailButtons(site.thanksEmail, A.mails.thanks(app.title, app.creator.name, page), "btn-primary btn-lg") }}
+      {{ c.mailButtons(site.thanksEmail, A.mails.thanks(app.title | tx(lang), app.creator.name, pageUrl), "btn-primary btn-lg") }}
     </div>
     <p class="m-0 mt-2 text-sm text-slate-600">{{ A.thanks.how }}</p>
     <div class="mt-6 grid gap-6 sm:grid-cols-2">
       <div>
         <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.usedHeadline }}</h3>
-        {{ c.mailButtons(site.feedbackEmail, A.mails.used(app.title, page)) }}
+        {{ c.mailButtons(site.feedbackEmail, A.mails.used(app.title | tx(lang), pageUrl)) }}
       </div>
       <div>
         <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.feedbackHeadline }}</h3>
-        {{ c.mailButtons(site.feedbackEmail, A.mails.feedback(app.title, page)) }}
+        {{ c.mailButtons(site.feedbackEmail, A.mails.feedback(app.title | tx(lang), pageUrl)) }}
       </div>
     </div>
     <p class="m-0 mt-3 text-sm font-semibold text-green-700" role="status" data-opened data-text="{{ A.thanks.opened }}"></p>
     {%- set N = A.thanks.noMail %}
     <p class="m-0 mt-4 text-sm text-slate-500">{{ N.before }} <a href="mailto:{{ site.thanksEmail }}" class="underline underline-offset-2 whitespace-nowrap">{{ site.thanksEmail }}</a> {{ N.thanks }} {{ N.or }} <a href="mailto:{{ site.feedbackEmail }}" class="underline underline-offset-2 whitespace-nowrap">{{ site.feedbackEmail }}</a> {{ N.feedback }}</p>
-    <p class="m-0 mt-2 text-sm text-slate-500">{{ A.thanks.privacy }} <a href="/privacy/#de-danke" class="underline underline-offset-2">{{ A.thanks.privacyLink }}</a></p>
+    <p class="m-0 mt-2 text-sm text-slate-500">{{ A.thanks.privacy }} <a href="{{ A.thanks.privacyHref }}" class="underline underline-offset-2">{{ A.thanks.privacyLink }}</a></p>
   </section>
 
   {# ── Who built it ── #}
@@ -103,7 +104,7 @@ eleventyComputed:
       {%- if app.creator.url %}<a href="{{ app.creator.url }}" class="text-blue-700 underline underline-offset-2">{{ app.creator.name }}</a>{% else %}{{ app.creator.name }}{% endif %}
       {%- if app.source %} · <a href="{{ app.source }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.source }}</a>{% endif %}
     </p>
-    <p class="m-0 mt-3 text-slate-600">{{ A.creator.own }} <a href="{{ '/enter/' | url }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.ownLink }}</a></p>
+    <p class="m-0 mt-3 text-slate-600">{{ A.creator.own }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ A.creator.ownLink }}</a></p>
   </section>
 </div>
 
