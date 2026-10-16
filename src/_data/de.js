@@ -172,6 +172,12 @@ const de = {
       command: "Mit diesem Befehl legt dein Assistent die App an. Das Werkzeug dafür lädt er selbst.",
       skill: "Der Schnellweg für Assistenten ist der Skill",
     },
+    tools: {
+      headline: "Was lernapps.net dir zum Bauen bereitstellt",
+      body: "Anleitungen, Vorlagen für die Apps und Prüfungen, mit denen du leichter und schneller eine App baust, die auch andere gut nutzen können. Dein Assistent nutzt sie von selbst. Du kannst sie auch selbst nachlesen.",
+      link: "Zu den Bauhilfen (auf Englisch)",
+      linkLang: "en",
+    },
     next: {
       headline: "Wie es weitergeht",
       body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",
