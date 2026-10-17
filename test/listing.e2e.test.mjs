@@ -186,9 +186,21 @@ describe("a listing pull request", () => {
     await new Promise((done) => gone.server.close(done));
     const result = await listing("fixed-topic", gone.url);
     assert.equal(result.code, 1, result.stdout + result.stderr);
-    assert.match(result.stdout, /#checks-pass/);
+    assert.match(result.stdout, /#app-checkable/);
+    assert.doesNotMatch(result.stdout, /#checks-pass/);
     assert.match(result.stdout, /lernapps check stopped: .*ERR_CONNECTION_REFUSED/);
-    assert.match(result.stdout, /Make sure the app opens at the entry's url in a browser/);
+    assert.match(result.stdout, /Make the app open at the entry's url in a browser/);
+  });
+
+  test("whose entry has no url fails on the entry, not on the app", SLOW, async () => {
+    const dir = mkdtempSync(join(temp, "no-url-"));
+    mkdirSync(join(dir, "entries"));
+    writeFileSync(join(dir, "entries", "bruch-trainer.yaml"), "title: Bruch-Trainer\n");
+    const result = await run("node", [join(repo, "scripts", "listing.mjs"), "--out", "listing", "entries/bruch-trainer.yaml"], dir);
+    assert.equal(result.code, 1, result.stdout + result.stderr);
+    assert.match(result.stdout, /#entry-from-schema/);
+    assert.doesNotMatch(result.stdout, /#app-checkable|#checks-pass/);
+    assert.match(result.stdout, /lernapps check cannot read the entry: .*has no url/);
   });
 
   test("that says checked: true passes when the check passes", SLOW, async () => {
