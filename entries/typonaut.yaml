@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Typonaut
+subject: { de: Informatik, en: Computer Science }
+grades: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+summary:
+  de: >-
+    Lerne das Zehnfingersystem auf einer Reise durch den Weltraum. Wörter fliegen in einem Bogen über den Bildschirm;
+    tippst du sie richtig ab, zerfallen sie zu Sternenstaub. Kapitel für Kapitel kommen neue Tasten dazu, von der
+    Grundreihe bis zur ganzen Tastatur, mit deutscher oder englischer Tastatur.
+  en: >-
+    Learn touch typing on a journey through space. Words fly across the screen in an arc; type them correctly and they
+    turn into stardust. Chapter by chapter new keys are added, from the home row to the whole keyboard, with a German or
+    an English keyboard.
+url: https://mrsimpson.github.io/typonaut/
+topics:
+  - title: { de: "Deutsch mit deutscher Tastatur (QWERTZ)", en: "German with a German keyboard (QWERTZ)" }
+    path: app/#de
+  - title: { de: "Englisch mit englischer Tastatur (QWERTY)", en: "English with an English keyboard (QWERTY)" }
+    path: app/#en
+keywords:
+  - { de: Zehnfingersystem, en: touch typing }
+  - { de: Tastaturschreiben, en: keyboarding }
+  - { de: Tippen lernen, en: learn to type }
+  - { de: Schreibtraining, en: typing practice }
+  - { de: Tastatur, en: keyboard }
+  - { de: Spiel, en: game }
+creator: { name: Oliver, url: "https://github.com/mrsimpson" }
+source: https://github.com/mrsimpson/typonaut
+limits:
+  de: >-
+    Nicht mit Screenreader bedienbar und nicht für das Handy gedacht: Die App braucht eine richtige Tastatur, und die
+    Wörter fliegen von allein auf das Raumschiff zu.
+  en: >-
+    Not usable with a screen reader and not meant for phones: the app needs a real keyboard, and the words fly towards
+    the spaceship on their own.
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
