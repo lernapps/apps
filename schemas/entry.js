@@ -17,6 +17,15 @@ const Text = z.union([
   }),
 ]);
 
+// The same, for a text that is trimmed and may not be blank (the limits).
+const TrimmedText = z.union([
+  z.string().trim().min(1),
+  z.strictObject({
+    de: z.string().trim().min(1).describe("German"),
+    en: z.string().trim().min(1).optional().describe("English"),
+  }),
+]);
+
 export const Entry = z
   .object({
     title: Text.describe("Name of the app, or a map by language { de, en }"),
@@ -41,11 +50,7 @@ export const Entry = z
       })
       .describe("Who built the app"),
     source: https.optional().describe("Source code"),
-    limits: z
-      .string()
-      .trim()
-      .min(1)
-      .optional()
+    limits: TrimmedText.optional()
       .describe(
         "Only when the app deviates from a rule of the platform because its idea needs it: WCAG 2.1 AA or usable at 360 px wide. " +
           "Say in plain German what the app does not offer, and why, e.g. \"Nicht mit Screenreader bedienbar; auf dem Handy nicht sinnvoll, weil eine Tastatur nötig ist.\" " +
