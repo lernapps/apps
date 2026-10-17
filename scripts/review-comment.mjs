@@ -3,12 +3,15 @@
 // marker `<!-- lernapps-review -->` and rewritten on every `/review`.
 //
 //   node scripts/review-comment.mjs <dir> [--run-url <url>] [--commit <id>] [--problem <code>]
+//                                   [--ref main|HEAD|commit] [--default-branch <name>]
 //
 // <dir> holds the review input (scripts/review-input.mjs: review.json, report.yaml, build.log) and what the review job
 // wrote: verdict.yaml, and the output and exit code of tooling's verdict check (`npm run --silent verdict`) in
 // verdict-check.txt and verdict-check.status. --commit is the commit the workflow asked to review; a verdict for
 // another one is not valid. --problem names why the pull request cannot be reviewed (PROBLEMS below); the comment
-// then says only that. Prints the comment. Exit code 0 when it shows a valid verdict, 1 for any other comment, 2 on
+// then says only that. --ref says which ref the commit was read from: the head of `main` (a plain `/review`), the
+// head of the default branch (HEAD, when the repo has no `main`) or the commit the maintainer named; the comment says
+// it. --default-branch is the app repo's default branch; the comment warns when it is not `main`. Prints the comment. Exit code 0 when it shows a valid verdict, 1 for any other comment, 2 on
 // wrong usage.
 //
 // The comment shows, in this order of precedence: a problem; a review input that is missing or says the build failed;
@@ -32,6 +35,12 @@ const COMMIT = /^[0-9a-f]{40}$/;
 const REPO = /^https:\/\/github\.com\/[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/;
 const ENTRY = /^entries\/[a-z0-9]+(-[a-z0-9]+)*\.yaml$/;
 const RUN_URL = /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/actions\/runs\/\d+$/;
+const BRANCH = /^[A-Za-z0-9._/-]{1,100}$/;
+const REFS = {
+  main: "der Kopf von `main`",
+  HEAD: "der Kopf des Standard-Branchs, denn das Repo hat kein `main`",
+  commit: "der im Kommentar genannte Commit",
+};
 const SEVERITIES = ["error", "warning", "hint"];
 const ARCHETYPES = ["explainer", "interactive", "quiz"];
 const ARTIFACTS = ["skill", "lint rule", "check", "rubric item"];
@@ -49,7 +58,7 @@ export const PROBLEMS = {
   "no-entry": "Dieser Pull Request ändert keinen Eintrag in `entries/`.",
   "many-entries": "Dieser Pull Request ändert mehr als einen Eintrag. Das Review beurteilt genau einen Eintrag pro Pull Request.",
   "no-source": "Der Eintrag nennt in `source` kein Repo auf GitHub (`https://github.com/<owner>/<repo>`). Das Review braucht den Quellcode der App.",
-  "no-commit": "Der Commit lässt sich im Repo der App nicht finden, oder das Repo hat keinen Commit auf seinem Standard-Branch.",
+  "no-commit": "Der Commit lässt sich im Repo der App nicht finden, oder das Repo hat weder `main` noch einen Commit auf seinem Standard-Branch.",
 };
 
 const LABEL = { error: ["Fehler", "Fehler"], warning: ["Warnung", "Warnungen"], hint: ["Hinweis", "Hinweise"] };
@@ -120,16 +129,26 @@ function renderFinding(item) {
 }
 
 /** The lines that say what was reviewed: the commit, the repo and the entry, from values checked against patterns. */
-function reviewed(commit, meta) {
+function reviewed(commit, meta, ref) {
   const repo = typeof meta?.repo === "string" && REPO.test(meta.repo) ? ` von ${meta.repo}` : "";
   const entry = typeof meta?.entry === "string" && ENTRY.test(meta.entry) ? `, Eintrag \`${meta.entry}\`` : "";
-  return commit ? `Commit \`${commit}\`${repo}${entry}.` : `Commit unbekannt${repo}${entry}.`;
+  const read = Object.hasOwn(REFS, ref ?? "") ? ` Gelesen: ${REFS[ref]}.` : "";
+  return (commit ? `Commit \`${commit}\`${repo}${entry}.` : `Commit unbekannt${repo}${entry}.`) + read;
 }
+
+/** The warning when the app repo's default branch is not main, from a name checked against its pattern. */
+const defaultBranchWarning = (branch) =>
+  typeof branch === "string" && BRANCH.test(branch) && branch !== "main"
+    ? [
+        `> **Warnung:** Der Standard-Branch des Repos der App ist \`${branch}\`, nicht \`main\`. Veröffentlicht wird nur \`main\`, und neue Pull Requests und Updates gehen an den Standard-Branch. Ändern: Settings → General → Default branch → main.`,
+        "",
+      ]
+    : [];
 
 const again = (runUrl) =>
   [
     "---",
-    "Ein Maintainer startet das Review mit dem Kommentar `/review` (der Standard-Branch des Repos der App) oder `/review <commit>`; es ersetzt diesen Kommentar.",
+    "Ein Maintainer startet das Review mit dem Kommentar `/review` (der Kopf von `main` im Repo der App, ohne `main` der des Standard-Branchs) oder `/review <commit>`; es ersetzt diesen Kommentar.",
     ...(runUrl ? [`Der Lauf: ${runUrl}`] : []),
   ].join("\n");
 
@@ -140,8 +159,9 @@ export function render(dir, options = {}) {
   const runUrl = typeof options.runUrl === "string" && RUN_URL.test(options.runUrl) ? options.runUrl : undefined;
   const meta = object(parse(read(dir, "review.json")));
   const commit = [options.commit, meta?.commit].find((value) => typeof value === "string" && COMMIT.test(value));
+  const warning = defaultBranchWarning(options.defaultBranch);
   const done = (title, lines, valid = false) => ({
-    text: redact([MARKER, `## Review: ${title}`, "", ...lines, "", again(runUrl), ""].join("\n")),
+    text: redact([MARKER, `## Review: ${title}`, "", ...warning, ...lines, "", again(runUrl), ""].join("\n")),
     valid,
   });
 
@@ -153,7 +173,7 @@ export function render(dir, options = {}) {
   }
   if (meta.state === "clone-failed" || meta.state === "no-bundle") {
     return done("Vorbereitung nicht fertig", [
-      reviewed(commit, meta),
+      reviewed(commit, meta, options.ref),
       meta.state === "clone-failed"
         ? "Das Repo der App lässt sich nicht klonen, oder es hat diesen Commit nicht."
         : "Der Build hat kein Bundle geschrieben: keine `index.html` in `dist/` oder `_site/` (ohne Build: im Repo).",
@@ -162,7 +182,7 @@ export function render(dir, options = {}) {
   if (meta.state === "build-failed") {
     const log = read(dir, "build.log");
     return done("die App lässt sich nicht bauen", [
-      reviewed(commit, meta),
+      reviewed(commit, meta, options.ref),
       "`npm ci && npm run build` schlägt fehl. Ohne Bundle gibt es kein Review.",
       ...(log ? ["Das Ende der Ausgabe:", "", codeBlock([tail(clean(log).trimEnd(), MAX_LOG)])] : []),
     ]);
@@ -172,13 +192,13 @@ export function render(dir, options = {}) {
   const report = object(parse(read(dir, "report.yaml")));
   const findings = Array.isArray(report?.findings) ? report.findings.map(object).filter(Boolean) : undefined;
   if (findings === undefined) {
-    return done("Vorbereitung nicht fertig", [reviewed(commit, meta), "Der Prüfbericht von `lernapps check` fehlt oder ist nicht lesbar."]);
+    return done("Vorbereitung nicht fertig", [reviewed(commit, meta, options.ref), "Der Prüfbericht von `lernapps check` fehlt oder ist nicht lesbar."]);
   }
   const errors = findings.filter((f) => f.severity === "error");
   if (errors.length > 0) {
     const shown = errors.slice(0, MAX_ERRORS);
     return done("die Prüfungen schlagen fehl", [
-      reviewed(commit, meta),
+      reviewed(commit, meta, options.ref),
       `Der Prüfbericht von \`lernapps check\` hat ${count(errors.length, "error")}. Das Review-Verfahren hört dann auf: kein Urteil (\`review/prompt.md\` von lernapps/tooling, Schritt 2.1).`,
       "",
       ...shown.map((f) =>
@@ -193,7 +213,7 @@ export function render(dir, options = {}) {
 
   const yaml = read(dir, "verdict.yaml");
   if (yaml === undefined) {
-    return done("kein Urteil", [reviewed(commit, meta), `Der Review-Agent hat kein Urteil geschrieben.${runUrl ? ` Das Protokoll: ${runUrl}` : ""}`]);
+    return done("kein Urteil", [reviewed(commit, meta, options.ref), `Der Review-Agent hat kein Urteil geschrieben.${runUrl ? ` Das Protokoll: ${runUrl}` : ""}`]);
   }
   const verdict = object(parse(yaml));
   const status = read(dir, "verdict-check.status")?.trim();
@@ -210,7 +230,7 @@ export function render(dir, options = {}) {
   }
   if (problems.length > 0) {
     return done("Urteil ungültig", [
-      reviewed(commit, meta),
+      reviewed(commit, meta, options.ref),
       "Das Urteil des Review-Agenten besteht die Prüfung gegen `review/verdict.v1.schema.json` von lernapps/tooling nicht (`npm run --silent verdict`):",
       "",
       codeBlock(problems),
@@ -224,7 +244,7 @@ export function render(dir, options = {}) {
   const archetype = ARCHETYPES.includes(verdict.archetype) ? verdict.archetype : verdict.archetype === null ? "keiner (kein Plan)" : "unbekannt";
   const rules = Array.isArray(verdict.rules) ? verdict.rules.filter((rule) => typeof rule === "string" && ID.test(rule)).length : 0;
   const head = [
-    reviewed(commit, meta),
+    reviewed(commit, meta, options.ref),
     "",
     `Der Review-Agent hat die App nach dem Review-Verfahren von lernapps/tooling beurteilt (\`review/prompt.md\`, die Rubrik \`review/rubric.md\` und die des Archetyps), ausgehend vom Prüfbericht, der keinen Fehler hat. ${DECIDES_NOTHING}`,
     "",
@@ -270,15 +290,19 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const runUrl = option("--run-url");
   const commit = option("--commit");
   const problem = option("--problem");
+  const ref = option("--ref");
+  const defaultBranch = option("--default-branch");
   const usage = (message) => {
-    process.stderr.write(`review-comment: ${message}\nUsage: node scripts/review-comment.mjs <dir> [--run-url <url>] [--commit <id>] [--problem <code>]\n`);
+    process.stderr.write(`review-comment: ${message}\nUsage: node scripts/review-comment.mjs <dir> [--run-url <url>] [--commit <id>] [--problem <code>] [--ref main|HEAD|commit] [--default-branch <name>]\n`);
     process.exit(2);
   };
   if (args.length !== 1 || args[0].startsWith("-")) usage("name one directory");
   if (problem !== undefined && !Object.hasOwn(PROBLEMS, problem)) usage(`unknown problem: ${problem}`);
   if (commit !== undefined && !COMMIT.test(commit)) usage(`--commit ${commit}: the full id of a commit`);
+  if (ref !== undefined && !Object.hasOwn(REFS, ref)) usage(`--ref ${ref}: main, HEAD or commit`);
+  if (defaultBranch !== undefined && defaultBranch !== "" && !BRANCH.test(defaultBranch)) usage(`--default-branch ${defaultBranch}: a branch name`);
   if (!existsSync(args[0])) usage(`${args[0]}: no such directory`);
-  const { text, valid } = render(args[0], { runUrl, commit, problem });
+  const { text, valid } = render(args[0], { runUrl, commit, problem, ref, defaultBranch });
   process.stdout.write(text);
   process.exitCode = valid ? 0 : 1;
 }
