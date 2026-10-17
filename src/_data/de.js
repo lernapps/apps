@@ -182,7 +182,10 @@ const de = {
     },
     free: {
       headline: "Lieber frei bauen?",
-      body: "Du kannst deine App auch ohne unsere Vorlagen bauen: von Hand, mit einem anderen Framework oder mit Werkzeugen wie Lovable oder bolt.new. Gib dem Werkzeug dann den Skill lernapps-app mit, zum Beispiel als Wissen für das Projekt. Er beschreibt, was jede App auf lernapps.net einhält. Wichtig sind",
+      body: "Du kannst deine App auch ohne unsere Vorlagen bauen: von Hand, mit einem anderen Framework oder mit Werkzeugen wie Lovable oder bolt.new. Gib dem Werkzeug dann",
+      rulesLink: "die Regeln von lernapps.net (auf Englisch)",
+      rulesLang: "en",
+      rules: "mit, zum Beispiel als Wissen für das Projekt. Sie gelten für jede App, egal womit sie gebaut ist. Wichtig sind",
       criteriaLink: "die Bedingungen",
       check: "Wenn du die App einträgst, prüfen wir die veröffentlichte App genauso wie jede andere.",
     },

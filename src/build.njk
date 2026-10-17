@@ -45,7 +45,7 @@ eleventyComputed:
 
   <section class="panel" aria-labelledby="frei">
     <h2 id="frei" class="panel-title">{{ B.free.headline }}</h2>
-    <p class="m-0 text-slate-700">{{ B.free.body }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.free.criteriaLink }}</a>. {{ B.free.check }}</p>
+    <p class="m-0 text-slate-700">{{ B.free.body }} <a href="{{ site.tooling.platformRules }}" class="text-blue-700 underline underline-offset-2"{% if B.free.rulesLang %} hreflang="{{ B.free.rulesLang }}"{% endif %}>{{ B.free.rulesLink }}</a> {{ B.free.rules }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.free.criteriaLink }}</a>. {{ B.free.check }}</p>
   </section>
 
   <section class="panel" aria-labelledby="weiter">
