@@ -62,7 +62,8 @@ and the workflows [`listing.yml`](.github/workflows/listing.yml) and
 ## Review (maintainers)
 
 On a listing pull request, a maintainer can start the review of lernapps/tooling (`review/prompt.md`) with a comment
-`/review` (the head of the app repo's default branch) or `/review <full commit id>`. It builds the app, runs the
+`/review` (the head of the app repo's `main`, else of its default branch) or `/review <full commit id>`; the comment
+says which ref was read and warns when the default branch is not `main`. It builds the app, runs the
 checks and, when they pass, lets the review agent judge the rest; the verdict comes as one comment on the pull
 request, replaced on every `/review`. The review decides nothing: the owner decides on the listing. How it works and
 why it is safe with an app from outside: [`review.yml`](.github/workflows/review.yml),

@@ -179,6 +179,8 @@ const de = {
       body: "Anleitungen, Vorlagen für die Apps und Prüfungen, mit denen du leichter und schneller eine App baust, die auch andere gut nutzen können. Dein Assistent nutzt sie von selbst. Du kannst sie auch selbst nachlesen.",
       link: "Zu den Bauhilfen (auf Englisch)",
       linkLang: "en",
+      github: "Deine App wird über GitHub veröffentlicht: kostenlos, öffentlich und unter deiner eigenen Adresse. GitHub musst du nicht kennen. Die Werkzeuge erledigen das meiste, und dein Assistent sagt dir, wenn du etwas klicken musst.",
+      githubLink: "Was GitHub ist und wofür wir es nutzen (auf Englisch)",
     },
     free: {
       headline: "Lieber frei bauen?",

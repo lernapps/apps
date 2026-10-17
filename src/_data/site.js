@@ -21,6 +21,9 @@ export default {
     listing: "https://github.com/lernapps/tooling/blob/main/skills/lernapps-listing/SKILL.md",
     listingRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-listing/SKILL.md",
     skills: "npx skills add lernapps/tooling",
+    // GitHub explained for creators (/build/), and the skill for GitHub access and the fork path (llms.txt)
+    github: "/tooling/github/",
+    githubRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-github/SKILL.md",
   },
   // Pull request previews (pr-preview.yml) set SITE_PATH_PREFIX and SITE_PREVIEW: banner, noindex.
   preview: Boolean(process.env.SITE_PREVIEW),
