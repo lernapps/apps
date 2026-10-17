@@ -55,7 +55,7 @@
   {%- endif %}
 </ul>
 {%- if app.limits %}
-<p class="m-0 mt-3"><strong>{{ F.limits }}</strong> {{ app.limits }}</p>
+<p class="m-0 mt-3"><strong>{{ F.limits }}</strong> {% if app.limits | fallbackLang(lang) %}<span lang="de">{{ app.limits | tx(lang) }}</span>{% else %}{{ app.limits | tx(lang) }}{% endif %}</p>
 {%- endif %}
 <p class="m-0 mt-3 text-sm text-slate-500">{{ F.checked if app.fitness.checked else F.unchecked }}</p>
 {% endmacro %}
