@@ -85,5 +85,5 @@ at: '2026-10-09'
 </details>
 
 ---
-Ein Maintainer startet das Review mit dem Kommentar `/review` (der Standard-Branch des Repos der App) oder `/review <commit>`; es ersetzt diesen Kommentar.
+Ein Maintainer startet das Review mit dem Kommentar `/review` (der Kopf von `main` im Repo der App, ohne `main` der des Standard-Branchs) oder `/review <commit>`; es ersetzt diesen Kommentar.
 Der Lauf: https://github.com/lernapps/apps/actions/runs/1

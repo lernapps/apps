@@ -170,6 +170,8 @@ const en = {
       headline: "What lernapps.net provides for you to build",
       body: "Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.",
       link: "Go to the build tools",
+      github: "Your app is published through GitHub: free, public and at your own address. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something.",
+      githubLink: "What GitHub is and what we use it for",
     },
     free: {
       headline: "Rather build freely?",
