@@ -1,8 +1,9 @@
 name: Review
 
 # The review of a listing pull request (lernapps/tooling review/prompt.md), started by a maintainer: a comment whose
-# first line is `/review` (the head of the app repo's default branch) or `/review <full commit id>`, on a pull request
-# that adds or changes one entry. The verdict goes into one comment on the pull request, found by its marker
+# first line is `/review` (the head of the app repo's `main`; without `main`, the head of its default branch) or
+# `/review <full commit id>`, on a pull request that adds or changes one entry. The comment says which ref was read,
+# and warns when the app repo's default branch is not `main` (only `main` is published). The verdict goes into one comment on the pull request, found by its marker
 # `<!-- lernapps-review -->` and rewritten on every review. The review decides nothing and changes nothing: the owner
 # decides on the listing.
 #
@@ -56,6 +57,8 @@ jobs:
       entry: ${{ steps.request.outputs.entry }}
       repo: ${{ steps.request.outputs.repo }}
       commit: ${{ steps.request.outputs.commit }}
+      ref: ${{ steps.request.outputs.ref }}
+      default-branch: ${{ steps.request.outputs.default-branch }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -120,12 +123,25 @@ jobs:
           source=${source%/}
           source=${source%.git}
           if [[ ! "$source" =~ ^https://github\.com/[A-Za-z0-9-]+/[A-Za-z0-9._-]+$ ]]; then problem no-source; fi
-          if [ -z "$commit" ]; then commit=$(git ls-remote "$source" HEAD | cut -f1 || true); fi
+          # The default branch and the heads of HEAD and main, in one request.
+          heads=$(git ls-remote --symref "$source" HEAD refs/heads/main || true)
+          default=$(sed -n 's|^ref: refs/heads/\([A-Za-z0-9._/-]*\)\tHEAD$|\1|p' <<< "$heads" | head -n 1)
+          ref=commit
+          if [ -z "$commit" ]; then
+            ref=main
+            commit=$(awk -F'\t' '$2 == "refs/heads/main" && $1 ~ /^[0-9a-f]+$/ { print $1 }' <<< "$heads")
+            if [ -z "$commit" ]; then
+              ref=HEAD
+              commit=$(awk -F'\t' '$2 == "HEAD" && $1 ~ /^[0-9a-f]+$/ { print $1 }' <<< "$heads")
+            fi
+          fi
           if [[ ! "$commit" =~ ^[0-9a-f]{40}$ ]]; then problem no-commit; fi
-          echo "Review of entries/$id.yaml: $source at $commit"
+          echo "Review of entries/$id.yaml: $source at $commit (ref: $ref; default branch: ${default:-unknown})"
           say entry "$id"
           say repo "$source"
           say commit "$commit"
+          say ref "$ref"
+          say default-branch "$default"
       # From here on the app's code runs (in the container); nothing below sets an output of this job.
       - name: Build the app and run the checks
         id: prepare
@@ -309,10 +325,12 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           COMMIT: ${{ needs.input.outputs.commit }}
           PROBLEM: ${{ needs.input.outputs.problem }}
+          REF: ${{ needs.input.outputs.ref }}
+          DEFAULT_BRANCH: ${{ needs.input.outputs.default-branch }}
         run: |
           mkdir -p review
           state=0
-          node scripts/review-comment.mjs review --run-url "$RUN_URL" ${COMMIT:+--commit "$COMMIT"} ${PROBLEM:+--problem "$PROBLEM"} > body.md || state=$?
+          node scripts/review-comment.mjs review --run-url "$RUN_URL" ${COMMIT:+--commit "$COMMIT"} ${PROBLEM:+--problem "$PROBLEM"} ${REF:+--ref "$REF"} ${DEFAULT_BRANCH:+--default-branch "$DEFAULT_BRANCH"} > body.md || state=$?
           if [ "$state" -gt 1 ]; then exit "$state"; fi
           comment=$(gh api --paginate "repos/$REPO/issues/$PR/comments?per_page=100" \
             --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- lernapps-review -->"))) | .id' \

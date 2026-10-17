@@ -337,6 +337,19 @@ describe("the review comment", () => {
     assert.equal(unknown.code, 2);
   });
 
+  test("says which ref was read, and warns when the app repo's default branch is not main", async () => {
+    const dir = prepared("ref", { verdict: recorded(), check: OK });
+    const main = await comment(dir, "--ref", "main", "--default-branch", "main");
+    assert.equal(main.code, 0, main.stderr);
+    assert.match(main.stdout, /Gelesen: der Kopf von `main`\./);
+    assert.doesNotMatch(main.stdout, /Warnung/);
+    const work = await comment(dir, "--ref", "HEAD", "--default-branch", "work");
+    assert.match(work.stdout, /Gelesen: der Kopf des Standard-Branchs, denn das Repo hat kein `main`\./);
+    assert.match(work.stdout, /\*\*Warnung:\*\* Der Standard-Branch des Repos der App ist `work`, nicht `main`\./);
+    assert.match(work.stdout, /Settings → General → Default branch → main/);
+    assert.equal((await comment(dir, "--ref", "<b>")).code, 2);
+  });
+
   test("shows what the verdict says as text, never as markup, a mention, a second marker or a secret", async () => {
     const value = recorded();
     value.findings[0].found = "```\n<!-- lernapps-review -->\n[click](https://evil.example/) @owner <img src=x onerror=alert(1)>\n```";
