@@ -171,6 +171,12 @@ const en = {
       body: "Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.",
       link: "Go to the build tools",
     },
+    free: {
+      headline: "Rather build freely?",
+      body: "You can also build your app without our templates: by hand, with another framework or with tools such as Lovable or bolt.new. Then give the tool the skill lernapps-app, for example as knowledge for the project. It describes what every app on lernapps.net keeps to. What counts are",
+      criteriaLink: "the conditions",
+      check: "When you list the app, we check the published app just like any other.",
+    },
     next: {
       headline: "What happens next",
       body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages.",
