@@ -122,6 +122,7 @@ describe("the creator's entry points", () => {
       assert.match(text, /skills\/lernapps-app\/SKILL\.md/);
       assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
     }
+    assert.match(page, /skills\/lernapps-app\/references\/platform-rules\.md/, "free builders get the platform rules");
     assert.match(page, /href="\/apps\/enter\/"/, "/apps/build/ leads on to listing");
     assert.match(enter, /href="\/apps\/build\/"/, "/apps/enter/ leads to building for those without an app");
     const build = llms.indexOf("## Eine App bauen");
