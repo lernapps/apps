@@ -193,7 +193,9 @@ jobs:
           find "$DIR" -type l -delete
           find "$DIR" \( -name CLAUDE.md -o -name CLAUDE.local.md -o -name AGENTS.md -o -name .claude -o -name .mcp.json \
             -o -name .claude.json -o -name .ignore -o -name .rgignore \) -prune -exec rm -rf {} +
-          npm run --silent rules > "$DIR/rules.yaml"
+          # The rules in scope for the app: the listing rules, the tooling rules when its package.json lists
+          # @lernapps/tooling, the rules of its plan's archetype (tooling docs/arc42 ch. 8, "Rule catalog").
+          npm run --silent rules -- --app "$DIR/app" > "$DIR/rules.yaml"
           # The agent runs on a prepared input of the commit whose checks report no error (review/prompt.md, 2.1).
           # shellcheck disable=SC2016 # JavaScript, not shell
           node --input-type=module -e '
@@ -232,7 +234,8 @@ jobs:
               `.agents/skills/app-content/SKILL.md`, `package.json` and the lock file;
             - `report.yaml`: the validation report of the bundle; it has no error. Write `report: report.yaml`;
             - `entries/${{ needs.input.outputs.entry }}.yaml`: the entry of the pull request;
-            - `history.txt`: the `git log` of the commit; `rules.yaml`: the output of `npm run --silent rules`.
+            - `history.txt`: the `git log` of the commit; `rules.yaml`: the output of
+              `npm run --silent rules -- --app app`, the rules in scope for the app; judge only those.
 
             Write the verdict to `${{ steps.dirs.outputs.dir }}/verdict.yaml`, and write nothing else. You have Read,
             Glob and Grep, and Write for that one file; no shell and no network. After you, the workflow checks the
