@@ -173,7 +173,9 @@ const en = {
     },
     free: {
       headline: "Rather build freely?",
-      body: "You can also build your app without our templates: by hand, with another framework or with tools such as Lovable or bolt.new. Then give the tool the skill lernapps-app, for example as knowledge for the project. It describes what every app on lernapps.net keeps to. What counts are",
+      body: "You can also build your app without our templates: by hand, with another framework or with tools such as Lovable or bolt.new. Then add",
+      rulesLink: "the rules of lernapps.net",
+      rules: "to the tool, for example as knowledge for the project. They hold for every app, whatever it is built with. What counts are",
       criteriaLink: "the conditions",
       check: "When you list the app, we check the published app just like any other.",
     },
