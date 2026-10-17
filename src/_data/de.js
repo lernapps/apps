@@ -180,6 +180,12 @@ const de = {
       link: "Zu den Bauhilfen (auf Englisch)",
       linkLang: "en",
     },
+    free: {
+      headline: "Lieber frei bauen?",
+      body: "Du kannst deine App auch ohne unsere Vorlagen bauen: von Hand, mit einem anderen Framework oder mit Werkzeugen wie Lovable oder bolt.new. Gib dem Werkzeug dann den Skill lernapps-app mit, zum Beispiel als Wissen für das Projekt. Er beschreibt, was jede App auf lernapps.net einhält. Wichtig sind",
+      criteriaLink: "die Bedingungen",
+      check: "Wenn du die App einträgst, prüfen wir die veröffentlichte App genauso wie jede andere.",
+    },
     next: {
       headline: "Wie es weitergeht",
       body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",

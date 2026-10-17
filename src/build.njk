@@ -12,7 +12,8 @@ eleventyComputed:
 ---
 {#-
   Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
-  to give the assistant, the command that starts the app, the skill as the quick path, then on to listing (/enter/).
+  to give the assistant, the command that starts the app, the skill as the quick path, building freely without the
+  templates (any framework, or tools such as Lovable or bolt.new), then on to listing (/enter/).
   test/entry-point.e2e.test.mjs runs the command from the built page.
 -#}
 {%- set B = t.build %}
@@ -40,6 +41,11 @@ eleventyComputed:
     <h2 id="werkzeuge" class="panel-title">{{ B.tools.headline }}</h2>
     <p class="m-0 text-slate-700">{{ B.tools.body }}</p>
     <a href="{{ site.tooling.home }}" class="btn btn-secondary mt-4 self-start"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}" lang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.link }}</a>
+  </section>
+
+  <section class="panel" aria-labelledby="frei">
+    <h2 id="frei" class="panel-title">{{ B.free.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ B.free.body }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.free.criteriaLink }}</a>. {{ B.free.check }}</p>
   </section>
 
   <section class="panel" aria-labelledby="weiter">
