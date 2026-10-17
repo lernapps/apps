@@ -58,17 +58,20 @@ function check(file, out) {
   const why = usage
     ? (result.stderr.split("\n\n")[0] ?? "").replace(/^lernapps: /, "").trim()
     : (result.error?.message ?? crash(result.stderr) ?? `exit code ${result.status}`).trim();
+  // An entry that cannot be read is the entry's fault (entry-from-schema); a check that stopped means the app could
+  // not be checked at all (app-checkable).
+  const rule = usage ? "entry-from-schema" : "app-checkable";
   return {
     checked: { directory: process.cwd() },
-    rules: ["checks-pass"],
+    rules: [rule],
     findings: [
       finding(
-        "checks-pass",
+        rule,
         file,
         usage ? `lernapps check cannot read the entry: ${why}` : `lernapps check stopped: ${why}`,
         usage
           ? "Make the entry valid YAML with a url (format: https://lernapps.net/apps/schemas/entry.v1.schema.json), then check again"
-          : "Make sure the app opens at the entry's url in a browser, then check again. If it stops again, open an issue in lernapps/tooling with this message",
+          : "Make the app open at the entry's url in a browser, then check again. If the app opens but the check stops again, open an issue in lernapps/tooling with this message",
       ),
     ],
     suppressions: [],
