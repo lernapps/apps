@@ -187,15 +187,15 @@ if (!((check.status === 0 || check.status === 1) && existsSync(join(out, "report
   const why = (check.error?.message ?? check.stderr.trim().split("\n").at(-1) ?? `exit code ${check.status}`).trim() || `exit code ${check.status}`;
   const report = {
     checked: { bundle },
-    rules: ["checks-pass"],
+    rules: ["app-checkable"],
     findings: [
       {
-        rule: "checks-pass",
+        rule: "app-checkable",
         severity: "error",
         where: `lernapps check ${bundle} --entry ${meta.entry}`,
         found: `lernapps check stopped: ${why}`,
-        fix: "Run lernapps check on the built app; if it stops again, open an issue in lernapps/tooling with this message",
-        link: "https://lernapps.net/tooling/rules/#checks-pass",
+        fix: "Make the built app open from its index.html in a browser, then run lernapps check on it; if the app opens but the check stops again, open an issue in lernapps/tooling with this message",
+        link: "https://lernapps.net/tooling/rules/#app-checkable",
       },
     ],
     suppressions: [],
