@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Build an app · lernapps.net</title>
+  <meta name="description" content="Build a learning app with your AI assistant, even without programming skills. It plans with you, builds the app and checks it.">
+  <link rel="canonical" href="https://lernapps.net/apps/en/build/">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/apps/pr-preview/pr-44/lernapps-tokens.css">
+<link rel="stylesheet" href="/apps/pr-preview/pr-44/lernapps-frame.css">
+<link rel="alternate" hreflang="en" href="/apps/pr-preview/pr-44/en/build/">
+<link rel="alternate" hreflang="de" href="/apps/pr-preview/pr-44/build/">
+  <link rel="stylesheet" href="/apps/pr-preview/pr-44/uno.css">
+  <link rel="stylesheet" href="/apps/pr-preview/pr-44/assets/apps.css">
+  <script src="/apps/pr-preview/pr-44/assets/kopieren.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
+  <a class="la-skip" href="#main-content">Skip to content</a>
+<p class="la-preview">Preview of a change. The real page: <a href="https://lernapps.net/apps/en/build/">lernapps.net/apps/en/build/</a></p><header class="la-header">
+  <div class="la-header__inner">
+    <a class="la-brand" href="/en/" aria-label="lernapps.net – home page"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
+    <nav class="la-nav" aria-label="Main navigation"><ul><li><a href="/apps/pr-preview/pr-44/en/">Find apps</a></li><li><a href="/apps/pr-preview/pr-44/en/build/" aria-current="page">Build an app</a></li><li><a href="/apps/pr-preview/pr-44/en/enter/">List an app</a></li><li><a href="/docs/en/">How it is meant</a></li><li><a href="https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md" rel="noopener">Get involved</a></li><li class="la-lang"><a href="/apps/pr-preview/pr-44/build/" hreflang="de" lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav>
+  </div>
+</header>
+
+  <main id="main-content" tabindex="-1" class="flex-1 outline-none">
+    
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight whitespace-pre-line" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">Build a learning app
+with your AI assistant.</h1>
+    <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">You don&#39;t have to program. You say what the app should teach. Your assistant plans with you, builds the app and checks it.</p>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
+  <section class="panel min-w-0" aria-labelledby="start">
+    <h2 id="start" class="panel-title">Tell your assistant:</h2>
+    <p class="m-0 text-slate-700">You need an AI assistant that may run commands on your computer. Copy this task and give it to the assistant.</p>
+    <div class="mt-3">
+      
+<div data-copy>
+  <label for="bauen-auftrag" class="block text-sm font-semibold text-slate-700">Task for your assistant</label>
+  <div class="mt-1 flex gap-2 flex-col items-start">
+    <textarea id="bauen-auftrag" readonly rows="5" class="field w-full">Build a learning app for lernapps.net with me. First read https://lernapps.net/tooling/llms.txt and follow the quick path. Ask me what the app should teach, and write the plan with me. Only when I have confirmed the plan, create the app like this: npx --yes github:lernapps/tooling#main create --archetype &lt;archetype&gt;</textarea>
+    <button type="button" class="btn btn-secondary" data-copy-button data-done="Copied" hidden>Copy task</button>
+  </div>
+</div>
+
+    </div>
+    <p class="m-0 mt-3 text-slate-700">With this command, your assistant creates the app. It downloads the tool for it by itself.</p>
+    <pre class="m-0 mt-1 p-3 rounded bg-slate-100 text-sm overflow-x-auto"><code>npx --yes github:lernapps/tooling#main create --archetype &lt;archetype&gt;</code></pre>
+    <p class="m-0 mt-3 text-slate-700">The quick path for assistants is the skill <a href="https://github.com/lernapps/tooling/blob/main/skills/lernapps-app/SKILL.md" class="text-blue-700 underline underline-offset-2">lernapps-app</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="werkzeuge">
+    <h2 id="werkzeuge" class="panel-title">What lernapps.net provides for you to build</h2>
+    <p class="m-0 text-slate-700">Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.</p>
+    <a href="/tooling/" class="btn btn-secondary mt-4 self-start">Go to the build tools</a>
+  </section>
+
+  <section class="panel" aria-labelledby="frei">
+    <h2 id="frei" class="panel-title">Rather build freely?</h2>
+    <p class="m-0 text-slate-700">You can also build your app without our templates: by hand, with another framework or with tools such as Lovable or bolt.new. Then add <a href="https://github.com/lernapps/tooling/blob/main/skills/lernapps-app/references/platform-rules.md" class="text-blue-700 underline underline-offset-2">the rules of lernapps.net</a> to the tool, for example as knowledge for the project. They hold for every app, whatever it is built with. What counts are <a href="/apps/pr-preview/pr-44/en/enter/#bedingungen" class="text-blue-700 underline underline-offset-2">the conditions</a>. When you list the app, we check the published app just like any other.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="weiter">
+    <h2 id="weiter" class="panel-title">What happens next</h2>
+    <p class="m-0 text-slate-700">Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages.</p>
+    <p class="m-0 mt-3 text-slate-700">From the start, it meets what we require for the catalog: <a href="/apps/pr-preview/pr-44/en/enter/#bedingungen" class="text-blue-700 underline underline-offset-2">the conditions</a>.</p>
+    <p class="m-0 mt-3 text-slate-700">Once it is published, your assistant lists it on lernapps.net with the skill lernapps-listing. Then teachers and parents can find it.</p>
+    <a href="/apps/pr-preview/pr-44/en/enter/" class="btn btn-primary mt-4 self-start">How to list an app</a>
+  </section>
+</div>
+
+  </main>
+
+  <footer class="la-footer">
+  <div class="la-footer__inner">
+    <p>lernapps.net is free and has no ads. It lives on your thanks.</p>
+    <nav aria-label="Footer"><ul><li><a href="/en/privacy/">Privacy</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/docs/platform-design/">Platform design</a></li><li><a href="https://github.com/lernapps/apps">Source code</a></li></ul></nav>
+  </div>
+</footer>
+</body>
+</html>
