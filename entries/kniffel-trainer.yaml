@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title:
+  de: Kniffel-Trainer
+  en: Yahtzee Trainer
+subject:
+  de: Mathematik
+  en: Mathematics
+grades: [7, 8]
+summary:
+  de: >-
+    Du spielst Kniffel und lernst dabei, Chancen als Bruch und Prozent zu bestimmen. Im Erklärmodus zeigt dir ein
+    Coach bei jedem Wurf die Chancen und einen Baum, wie sie entstehen. Im Spiel mit Joker rechnest du die Brüche
+    selbst, wenn du Hilfe willst. Beim reinen Spielen sammelst du Punkte für die Bestenliste.
+  en: >-
+    You play Yahtzee and learn to work out chances as fractions and percentages. In explain mode a coach shows you
+    the chances with every throw and a tree of how they come about. In the game with joker you work out the fractions
+    yourself when you want help. In the plain game you collect points for the high-score list.
+url: https://mrsimpson.github.io/kniffel-trainer/
+topics:
+  - title:
+      de: Erklärmodus mit Coach und Baum
+      en: Explain mode with coach and tree
+    path: app/#erklaeren
+  - title:
+      de: Spiel mit Joker
+      en: Game with joker
+    path: app/#joker
+  - title:
+      de: Reines Spiel mit Bestenliste
+      en: Plain game with high scores
+    path: app/#spielen
+keywords:
+  - Wahrscheinlichkeit
+  - Würfel
+  - Kniffel
+  - Yahtzee
+  - Chancen
+  - Brüche
+  - Prozent
+  - Baumdiagramm
+creator:
+  name: mrsimpson
+  url: https://github.com/mrsimpson
+source: https://github.com/mrsimpson/kniffel-trainer
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
