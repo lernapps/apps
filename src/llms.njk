@@ -14,19 +14,12 @@ Startseite: {{ site.origin }}{{ '/' | url }}
 - [Doku]({{ site.origin }}/docs/llms.txt): wie man die Doku liest: Vision, Organisation und Plattform-Design.
 - [Tooling]({{ site.origin }}/tooling/llms.txt): eine App bauen und prüfen: Befehle, Skills, Regeln, Schemas.
 
-## Apps
+## Apps finden
 
-{% for app in catalog.apps -%}
-### {{ app.title | tx("de") }} ({{ app.subject | tx("de") }}, {{ app.grades | gradeLabel("de") }})
+Den Katalog mit Suche nach Fach und Klasse gibt es auf der [Startseite]({{ site.origin }}{{ '/' | url }}).
+Jede App hat eine eigene Seite mit Beschreibung, Themen und Link zur App unter `{{ site.origin }}{{ '/' | url }}<id>/`.
+Die englische Fassung liegt unter [{{ site.origin }}{{ '/en/' | url }}]({{ site.origin }}{{ '/en/' | url }}).
 
-{{ app.summary | tx("de") }}
-- Seite auf lernapps.net: {{ site.origin }}{{ ('/' + app.id + '/') | url }}
-- App: {{ app.url }}
-{%- for t in app.topics %}
-- Thema „{{ t.title | tx("de") }}“: {{ t.url }}
-{%- endfor %}
-
-{% endfor -%}
 ## Eine App bauen
 
 Ein Mensch möchte mit dir eine Lern-App bauen? Die Seite für Menschen: [App bauen]({{ site.origin }}{{ '/build/' | url }}).
