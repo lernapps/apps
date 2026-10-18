@@ -14,108 +14,22 @@ Startseite: {{ site.origin }}{{ '/' | url }}
 - [Doku]({{ site.origin }}/docs/llms.txt): wie man die Doku liest: Vision, Organisation und Plattform-Design.
 - [Tooling]({{ site.origin }}/tooling/llms.txt): eine App bauen und prüfen: Befehle, Skills, Regeln, Schemas.
 
-## Apps
+## Apps finden
 
-{% for app in catalog.apps -%}
-### {{ app.title | tx("de") }} ({{ app.subject | tx("de") }}, {{ app.grades | gradeLabel("de") }})
+Den Katalog mit Suche nach Fach und Klasse gibt es auf der [Startseite]({{ site.origin }}{{ '/' | url }}).
+Jede App hat eine eigene Seite mit Beschreibung, Themen und Link zur App unter `{{ site.origin }}{{ '/' | url }}<id>/`.
+Die englische Fassung liegt unter [{{ site.origin }}{{ '/en/' | url }}]({{ site.origin }}{{ '/en/' | url }}).
 
-{{ app.summary | tx("de") }}
-- Seite auf lernapps.net: {{ site.origin }}{{ ('/' + app.id + '/') | url }}
-- App: {{ app.url }}
-{%- for t in app.topics %}
-- Thema „{{ t.title | tx("de") }}“: {{ t.url }}
-{%- endfor %}
-
-{% endfor -%}
 ## Eine App bauen
 
-Ein Mensch möchte mit dir eine Lern-App bauen? Die Seite für Menschen: [App bauen]({{ site.origin }}{{ '/build/' | url }}).
-Der Schnellweg ist der Skill
-[lernapps-app]({{ site.tooling.skillRaw }}).
-Lade ihn (`npx skills add lernapps/tooling`) und folge dem Plan, den er nennt. Der Plan fragt zuerst, was die App
-lehren soll, und nennt jeden Befehl, wenn er dran ist. Erst nach dem bestätigten Plan legst du die App an, ohne das
-Tooling vorher zu installieren:
-
-```sh
-{{ site.tooling.create | safe }}
-```
-
-Befehle, Skills, Regeln und Schemas: [Tooling]({{ site.tooling.llms }}).
-Die App liegt an ihrer eigenen Adresse, meist auf GitHub Pages ihres Repositorys; der Katalog verlinkt sie.
-Ist sie veröffentlicht, trag sie ein, wie der nächste Abschnitt sagt.
+Ein Mensch möchte mit dir eine Lern-App bauen? Folge der Seite [App bauen]({{ site.origin }}{{ '/build/' | url }}):
+Sie nennt den Schnellweg, den Skill und den Befehl, mit dem du die App anlegst.
+Ist die App veröffentlicht, trag sie ein, wie der nächste Abschnitt sagt.
 
 ## Eine App eintragen
 
-Ein Mensch hat dich gebeten, seine veröffentlichte Lern-App einzutragen? Der Weg ist der Skill
-[lernapps-listing]({{ site.tooling.listingRaw }}).
-Lade ihn (`{{ site.tooling.skills }}`) und folge ihm. Er führt dich durch die Schritte unten und sagt dir, wie du
-den Kommentar der Prüfung im Pull Request liest.
-Die Seite für Menschen: [App eintragen]({{ site.origin }}{{ '/enter/' | url }}).
-
-1. Prüf die Bedingungen. Trag die App nur ein, wenn alle erfüllt sind:
-{%- for item in de.list.criteria.items %}
-   - {{ item }}
-{%- endfor %}
-   Prüf das an der App selbst, nicht nur an ihrer Beschreibung. Ist eine Bedingung nicht erfüllt,
-   sag dem Menschen, welche, und hilf ihm, sie zu erfüllen.
-2. Schreib eine Datei `entries/<id>.yaml` im Repository {{ site.repo }}.
-   `<id>` ist der Name der App in Kleinbuchstaben mit Bindestrichen, z. B. `bruch-trainer`.
-   Texte auf Deutsch in einfacher Sprache: kurze Sätze, aktiv, ohne Fachjargon.
-   Die Seiten gibt es auch auf Englisch ({{ site.origin }}{{ '/en/' | url }}). Jeder Text (`title`, `subject`, `summary`,
-   `topics[].title`, `keywords`, `fitness.thirdPartyNote`) darf statt eines Strings eine Übersetzung als Map haben:
-   `{ de: "…", en: "…" }`. Deutsch ist Pflicht; ohne englischen Text zeigt die englische Seite den deutschen.
-   Das Format ist als JSON Schema festgelegt: {{ site.origin }}{{ '/schemas/entry.v1.schema.json' | url }}
-   Vorlage (Kommentare erklären die Felder):
-
-```yaml
-# yaml-language-server: $schema={{ site.origin }}{{ '/schemas/entry.v1.schema.json' | url }}
-title: Bruch-Trainer                 # Name der App
-subject: Mathematik                  # Fach
-grades: [5, 6]                       # Klassen, für die sie passt
-summary: >-                          # 2–3 Sätze: Was tun die Lernenden?
-  Brüche selbst ausprobieren: kürzen, erweitern, vergleichen.
-  Mit Bildern und sofortiger Rückmeldung.
-url: https://example.org/bruch-trainer/   # Link zur App, https
-topics:                              # optional: einzelne Themen mit Pfad relativ zu url
-  - { title: "Brüche kürzen", path: kuerzen.html }
-keywords: [Bruch, Bruchrechnung]     # optional: weitere Suchwörter
-creator: { name: "Vorname Nachname", url: "https://github.com/…" }  # url optional
-source: https://github.com/…         # optional: Quellcode
-limits: >-                           # optional: nur wenn die App von WCAG 2.1 AA oder 360 px abweicht,
-                                     # weil ihre Idee es braucht: was sie nicht bietet; sonst weglassen
-  Nicht mit Screenreader bedienbar; auf dem Handy nicht sinnvoll, weil eine Tastatur nötig ist.
-fitness:
-  account: false                     # muss false sein
-  install: false                     # muss false sein
-  storage: device                    # none | device (nur im Browser des Geräts)
-  thirdParty: none                   # none | on-click (fremde Server erst nach Klick)
-  thirdPartyNote: ""                 # bei on-click: welche Server, wann
-  checked: false                     # setzt lernapps.net nach der Prüfung
-```
-
-3. Prüf den Eintrag gegen die veröffentlichte App, bevor du ihn schickst. In einem Klon von {{ site.repo }}:
-
-```sh
-npm ci
-npm run --silent listing -- entries/<id>.yaml
-```
-
-   Die Prüfung öffnet die App unter `url` wie Lernende, ohne Klick, und vergleicht den Eintrag mit ihr:
-   Die `url` und jedes Thema lassen sich öffnen, die Fitness-Werte stimmen mit den gemessenen überein, und die App
-   hält die Regeln von lernapps.net ein. Sie gibt einen Bericht aus; jeder Befund nennt die Regel, wo er ist, was
-   gefunden wurde, die Behebung und den Link zur Regel. Behebe jeden Fehler in der App oder im Eintrag und prüf neu.
-   Eine Änderung an der App wirkt erst, wenn sie veröffentlicht ist. `fitness.checked` bleibt `false`.
-4. Schick die Datei als Pull Request an {{ site.repo }}, aus einem Fork: Forke {{ site.repo }}, pushe den Branch
-   `add-<id>` in deinen Fork und öffne den Pull Request von dort. Pushe nie einen Branch in {{ site.repo }} selbst,
-   auch wenn du es darfst. Ein Pull Request aus einem Fork bekommt keine Vorschau, nur den Kommentar der Prüfung.
-   Wie das mit `gh`, den GitHub-Werkzeugen deiner Umgebung oder über die REST-API geht, und was bei einer
-   Fehlermeldung von GitHub zu tun ist: der Skill [lernapps-github]({{ site.tooling.githubRaw }}).
-   Dort läuft dieselbe Prüfung bei jedem Push.
-   Sie schreibt ihr Ergebnis als einen Kommentar in den Pull Request, derselbe Text wie bei dir, und ändert ihn
-   bei jedem Lauf. Er beginnt mit „Prüfung des Eintrags: bestanden“ oder „Prüfung des Eintrags: nicht bestanden“.
-   Sagt er „nicht bestanden“, behebe die Fehler und pushe: Die Prüfung läuft neu, bis er „bestanden“ sagt.
-   Dann entscheidet lernapps.net über den Eintrag. Vorher kann lernapps.net die App in einem Review genauer ansehen.
-
-Kannst du keinen Pull Request öffnen? Dann gib dem Menschen das
-[Formular]({{ site.repo }}/issues/new?template=app-enter.yml) (braucht ein GitHub-Konto);
-lernapps.net trägt die App dann ein. Klappt nichts davon, schick den Link zur App an {{ site.email }}.
+Ein Mensch hat dich gebeten, seine veröffentlichte Lern-App einzutragen? Folge der Seite
+[App eintragen]({{ site.origin }}{{ '/enter/' | url }}). Der Weg ist der Skill
+[lernapps-listing]({{ site.tooling.listingRaw }}); laden kannst du ihn mit `{{ site.tooling.skills }}`.
+Kannst du keinen Pull Request öffnen, hilft das [Formular]({{ site.repo }}/issues/new?template=app-enter.yml);
+notfalls schick den Link zur App an {{ site.email }}.

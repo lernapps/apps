@@ -118,10 +118,8 @@ describe("the creator's entry points", () => {
   });
 
   test("building links the skill lernapps-app as the quick path and leads on to listing; listing leads back", () => {
-    for (const text of [page, llms]) {
-      assert.match(text, /skills\/lernapps-app\/SKILL\.md/);
-      assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
-    }
+    for (const text of [page, llms]) assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
+    assert.match(page, /skills\/lernapps-app\/SKILL\.md/);
     assert.match(page, /skills\/lernapps-app\/references\/platform-rules\.md/, "free builders get the platform rules");
     assert.match(page, /href="\/apps\/enter\/"/, "/apps/build/ leads on to listing");
     assert.match(enter, /href="\/apps\/build\/"/, "/apps/enter/ leads to building for those without an app");
@@ -173,11 +171,10 @@ function startCommand() {
 }
 
 describe("the command /apps/build/ gives to start an app", () => {
-  test("is the same in the prompt the creator copies and in llms.txt", () => {
+  test("is the same in the prompt the creator copies", () => {
     const command = startCommand();
     const prompt = decode(page.match(/<textarea\b[^>]*id="bauen-auftrag"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? "");
     assert.ok(prompt.includes(command), `the prompt to copy contains ${command}:\n${prompt}`);
-    assert.ok(llms.includes(command), `llms.txt contains ${command}`);
   });
 
   test("run in a folder with the confirmed plan, gives an app that passes lernapps check, for every archetype", { timeout: 20 * 60_000 }, async () => {
