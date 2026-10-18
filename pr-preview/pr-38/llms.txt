@@ -24,6 +24,14 @@ Im Quiz beantworten Schülerinnen und Schüler Fragen zu Naturwundern der Erde: 
 - Thema „Küsten, Inseln und Riffe“: https://lernapps.net/naturwunder-quiz/#frage-great-barrier-reef
 - Thema „Naturwunder nach Kontinenten“: https://lernapps.net/naturwunder-quiz/#frage-kontinente-zuordnen
 
+### Typonaut (Informatik, Klasse 3 bis 13)
+
+Lerne das Zehnfingersystem auf einer Reise durch den Weltraum. Wörter fliegen in einem Bogen über den Bildschirm; tippst du sie richtig ab, zerfallen sie zu Sternenstaub. Kapitel für Kapitel kommen neue Tasten dazu, von der Grundreihe bis zur ganzen Tastatur, mit deutscher oder englischer Tastatur.
+- Seite auf lernapps.net: https://lernapps.net/apps/pr-preview/pr-38/typonaut/
+- App: https://mrsimpson.github.io/typonaut/
+- Thema „Deutsch mit deutscher Tastatur (QWERTZ)“: https://mrsimpson.github.io/typonaut/app/#de
+- Thema „Englisch mit englischer Tastatur (QWERTY)“: https://mrsimpson.github.io/typonaut/app/#en
+
 ### Mathe-Karte (Mathematik, Klasse 8)
 
 Mathe selbst ausprobieren und üben: Prozentrechnung, binomische Formeln und Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung, ein Bild, beliebig viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test. Eine Karte zeigt, welche Themen schon dabei sind.
@@ -145,7 +153,12 @@ npm run --silent listing -- entries/<id>.yaml
    hält die Regeln von lernapps.net ein. Sie gibt einen Bericht aus; jeder Befund nennt die Regel, wo er ist, was
    gefunden wurde, die Behebung und den Link zur Regel. Behebe jeden Fehler in der App oder im Eintrag und prüf neu.
    Eine Änderung an der App wirkt erst, wenn sie veröffentlicht ist. `fitness.checked` bleibt `false`.
-4. Schick die Datei als Pull Request an https://github.com/lernapps/apps. Dort läuft dieselbe Prüfung bei jedem Push.
+4. Schick die Datei als Pull Request an https://github.com/lernapps/apps, aus einem Fork: Forke https://github.com/lernapps/apps, pushe den Branch
+   `add-<id>` in deinen Fork und öffne den Pull Request von dort. Pushe nie einen Branch in https://github.com/lernapps/apps selbst,
+   auch wenn du es darfst. Ein Pull Request aus einem Fork bekommt keine Vorschau, nur den Kommentar der Prüfung.
+   Wie das mit `gh`, den GitHub-Werkzeugen deiner Umgebung oder über die REST-API geht, und was bei einer
+   Fehlermeldung von GitHub zu tun ist: der Skill [lernapps-github](https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-github/SKILL.md).
+   Dort läuft dieselbe Prüfung bei jedem Push.
    Sie schreibt ihr Ergebnis als einen Kommentar in den Pull Request, derselbe Text wie bei dir, und ändert ihn
    bei jedem Lauf. Er beginnt mit „Prüfung des Eintrags: bestanden“ oder „Prüfung des Eintrags: nicht bestanden“.
    Sagt er „nicht bestanden“, behebe die Fehler und pushe: Die Prüfung läuft neu, bis er „bestanden“ sagt.
