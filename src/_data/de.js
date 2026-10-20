@@ -78,10 +78,6 @@ const de = {
       },
       unchecked:
         "Die App wurde geprüft: Bei der Aufnahme hat eine automatische Prüfung diese Angaben mit der App verglichen.",
-      // An app at its creator's own address: checked, but an external page (decision of the operator, 2026-10).
-      external: (host) =>
-        `Die App liegt auf einer externen Seite (${host}). Für den Datenschutz dort können wir keine Verantwortung übernehmen. Hast du Bedenken, frag den Anbieter, ob er die App unter lernapps.net hosten möchte.`,
-      externalAsk: "Zum Anbieter",
       checked: "lernapps.net hat diese Angaben automatisch geprüft.",
       // The entry's limits: what the app does not offer of the platform's rules (WCAG 2.1 AA, usable at 360 px).
       limits: "Das bietet die App nicht:",
@@ -130,7 +126,7 @@ const de = {
       opened: "Danke! Schick die E-Mail ab, dann kommt sie an.",
       noMail: { before: "Kein E-Mail-Programm? Schreib einfach an", thanks: "(Danke)", or: "oder", feedback: "(Rückmeldung)." },
       privacy:
-        "Bis wir Klicks zählen, kommt dein Danke als E-Mail bei uns an. Dabei sehen wir deine E-Mail-Adresse. Wir nutzen sie nur dafür.",
+        "Bis wir Klicks zählen, kommt dein Danke als E-Mail bei uns an. Dabei sehen wir deine E-Mail-Adresse. Wir nutzen sie nur dafür. Die Adressen liegen auf beimir.net, der Domain des Gründers.",
       privacyLink: "Mehr dazu",
       privacyHref: "/privacy/#de-danke",
       reminder: "Zurück aus der App? Sag Danke, wenn sie geholfen hat.",

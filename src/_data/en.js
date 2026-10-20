@@ -75,9 +75,6 @@ const en = {
         "on-click": (note) => `Third-party servers only after a click. ${note}`,
       },
       unchecked: "The app was checked: when it was listed, an automatic check compared these statements with the app.",
-      external: (host) =>
-        `The app is on an external site (${host}). We cannot take responsibility for privacy there. If you have concerns, ask the provider whether they would like to host the app on lernapps.net.`,
-      externalAsk: "To the provider",
       checked: "lernapps.net checked these statements automatically.",
     },
 
@@ -121,7 +118,7 @@ const en = {
       opened: "Thank you! Send the email and it arrives.",
       noMail: { before: "No email program? Just write to", thanks: "(thanks)", or: "or", feedback: "(feedback)." },
       privacy:
-        "Until we count clicks, your thanks reach us as an email. We see your email address then. We use it only for this.",
+        "Until we count clicks, your thanks reach us as an email. We see your email address then. We use it only for this. The addresses are on beimir.net, the founder's domain.",
       privacyLink: "More about this",
       privacyHref: "/privacy/#en-thanks",
       reminder: "Back from the app? Say thanks if it helped.",
