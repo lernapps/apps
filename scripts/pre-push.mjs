@@ -21,7 +21,7 @@ import { fileURLToPath } from "node:url";
  * run TypeScript below node_modules/, so not the installed @lernapps/tooling). The same commit as `tooling-ref` and
  * changes.yml@ in .github/workflows/ and the pin of @lernapps/tooling in package.json (test/pre-push.test.mjs).
  */
-export const TOOLING_REF = "260e5bbc2ade73b1355243d238e26539d1296a05";
+export const TOOLING_REF = "1618e1200db04b39fd4493fc4ed8d55d55a1ef76";
 
 /**
  * The end-to-end tests of a push of scope all: those that need no network and no Docker. Left to CI: the creator's
