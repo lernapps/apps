@@ -62,6 +62,11 @@ eleventyComputed:
     <p class="m-0 mt-1 text-slate-700">{{ F.empty.body }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ F.empty.link }}</a></p>
   </div>
 
+  <div class="mt-8 p-5 rounded-xl border border-slate-200 bg-white flex flex-wrap items-center gap-x-6 gap-y-3">
+    <p class="m-0 text-slate-700"><strong class="text-slate-900">{{ F.build.headline }}</strong> {{ F.build.body }}</p>
+    <a href="{{ '/build/' | inLang(lang) | url }}" class="btn btn-primary">{{ F.build.link }}</a>
+  </div>
+
   <section class="mt-12 p-5 rounded-xl bg-blue-50 border border-blue-100" aria-labelledby="vertrauen">
     <h2 id="vertrauen" class="m-0 text-lg font-bold text-slate-900">{{ F.trust.headline }}</h2>
     <p class="m-0 mt-2 text-slate-700">{{ F.trust.body }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ F.trust.link }}</a></p>

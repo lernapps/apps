@@ -38,6 +38,11 @@ const en = {
       body: "lernapps.net is just getting started. Do you know a fitting app, or did you publish one yourself?",
       link: "List an app",
     },
+    build: {
+      headline: "Nothing found?",
+      body: "Help yourself and build an app. With our tooling it is really easy.",
+      link: "Build an app",
+    },
     trust: {
       headline: "Which apps are listed here",
       body:
