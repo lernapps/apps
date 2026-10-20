@@ -13,17 +13,17 @@ export default {
   tooling: {
     home: "/tooling/",
     llms: "https://lernapps.net/tooling/llms.txt",
-    skill: "https://github.com/lernapps/tooling/blob/main/skills/lernapps-app/SKILL.md",
-    skillRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-app/SKILL.md",
+    skill: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-app/SKILL.md",
+    skillRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-app/SKILL.md",
     // the skill's platform rules: what every app keeps to, however it is built; /build/ gives them to free builders
-    platformRules: "https://github.com/lernapps/tooling/blob/main/skills/lernapps-app/references/platform-rules.md",
+    platformRules: "https://github.com/lernapps/tooling/blob/main/skills/tooling/lernapps-check/references/platform-rules.md",
     create: "npx --yes github:lernapps/tooling#main create --archetype <archetype>",
-    listing: "https://github.com/lernapps/tooling/blob/main/skills/lernapps-listing/SKILL.md",
-    listingRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-listing/SKILL.md",
+    listing: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-listing/SKILL.md",
+    listingRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-listing/SKILL.md",
     skills: "npx skills add lernapps/tooling",
     // GitHub explained for creators (/build/), and the skill for GitHub access and the fork path (llms.txt)
     github: "/tooling/github/",
-    githubRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-github/SKILL.md",
+    githubRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-github/SKILL.md",
   },
   // Pull request previews (pr-preview.yml) set SITE_PATH_PREFIX and SITE_PREVIEW: banner, noindex.
   preview: Boolean(process.env.SITE_PREVIEW),
