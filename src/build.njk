@@ -13,7 +13,7 @@ eleventyComputed:
 {#-
   Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
   to give the assistant, the command that starts the app, the skill as the quick path, building freely without the
-  templates (any framework, or tools such as Lovable or bolt.new), then on to listing (/enter/).
+  templates (any framework, or tools such as Lovable or bolt.new), then on to listing (/enter/), the section #eintragen, which the header's "App bauen" now stands for too.
   test/entry-point.e2e.test.mjs runs the command from the built page.
 -#}
 {%- set B = t.build %}
@@ -22,6 +22,7 @@ eleventyComputed:
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight whitespace-pre-line" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ B.headline }}</h1>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ B.lead }}</p>
+    <p class="m-0 mt-4 text-slate-300">{{ B.haveApp }} <a href="#eintragen" class="text-blue-300 underline underline-offset-2 hover:text-white">{{ B.haveAppLink }} ↓</a></p>
   </div>
 </section>
 
@@ -49,8 +50,8 @@ eleventyComputed:
     <p class="m-0 text-slate-700">{{ B.free.body }} <a href="{{ site.tooling.platformRules }}" class="text-blue-700 underline underline-offset-2"{% if B.free.rulesLang %} hreflang="{{ B.free.rulesLang }}"{% endif %}>{{ B.free.rulesLink }}</a> {{ B.free.rules }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.free.criteriaLink }}</a>. {{ B.free.check }}</p>
   </section>
 
-  <section class="panel" aria-labelledby="weiter">
-    <h2 id="weiter" class="panel-title">{{ B.next.headline }}</h2>
+  <section class="panel scroll-mt-16" aria-labelledby="eintragen">
+    <h2 id="eintragen" class="panel-title">{{ B.next.headline }}</h2>
     <p class="m-0 text-slate-700">{{ B.next.body }}</p>
     <p class="m-0 mt-3 text-slate-700">{{ B.next.criteria }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.next.criteriaLink }}</a>.</p>
     <p class="m-0 mt-3 text-slate-700">{{ B.next.enter }}</p>
