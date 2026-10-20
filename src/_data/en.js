@@ -38,6 +38,11 @@ const en = {
       body: "lernapps.net is just getting started. Do you know a fitting app, or did you publish one yourself?",
       link: "List an app",
     },
+    build: {
+      headline: "Nothing found?",
+      body: "Help yourself and build an app. With our tooling it is really easy.",
+      link: "Build an app",
+    },
     trust: {
       headline: "Which apps are listed here",
       body:
@@ -74,7 +79,7 @@ const en = {
         none: "No connection to third-party servers.",
         "on-click": (note) => `Third-party servers only after a click. ${note}`,
       },
-      unchecked: "These are the app's own statements. We are building an automatic check.",
+      unchecked: "The app was checked: when it was listed, an automatic check compared these statements with the app.",
       checked: "lernapps.net checked these statements automatically.",
     },
 
@@ -104,16 +109,21 @@ const en = {
         { key: "zuhause", label: "At home" },
       ],
       feedbackHeadline: "How did it go?",
+      issue: (creator) => `Do you have a GitHub account? Then write to ${creator} directly:`,
+      issueLink: "Open an issue",
+      issueTitle: (app) => `Feedback on “${app}”`,
+      issueBody: (page) => `App: ${page}\n\nWhat did you notice?\n`,
       feedback: [
         { key: "gut", label: "It fit well" },
         { key: "zu-schwer", label: "Was too hard" },
         { key: "zu-leicht", label: "Was too easy" },
         { key: "technik", label: "Had technical problems" },
+        { key: "fehler", label: "Mistake in the content" },
       ],
       opened: "Thank you! Send the email and it arrives.",
       noMail: { before: "No email program? Just write to", thanks: "(thanks)", or: "or", feedback: "(feedback)." },
       privacy:
-        "Until we count clicks, your thanks reach us as an email. We see your email address then. We use it only for this.",
+        "Until we count clicks, your thanks reach us as an email. We see your email address then. We use it only for this. The addresses are on beimir.net, the founder's domain.",
       privacyLink: "More about this",
       privacyHref: "/privacy/#en-thanks",
       reminder: "Back from the app? Say thanks if it helped.",
@@ -155,6 +165,8 @@ const en = {
     headline: "Build a learning app\nwith your AI assistant.",
     lead:
       "You don't have to program. You say what the app should teach. Your assistant plans with you, builds the app and checks it.",
+    haveApp: "Already have an app?",
+    haveAppLink: "Go straight to listing it",
     start: {
       headline: "Tell your assistant:",
       body: "You need an AI assistant that may run commands on your computer. Copy this task and give it to the assistant.",
@@ -182,7 +194,7 @@ const en = {
       check: "When you list the app, we check the published app just like any other.",
     },
     next: {
-      headline: "What happens next",
+      headline: "What happens next: listing the app",
       body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages.",
       criteria: "From the start, it meets what we require for the catalog:",
       criteriaLink: "the conditions",

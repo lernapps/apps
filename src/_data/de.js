@@ -40,6 +40,12 @@ const de = {
       body: "lernapps.net fängt gerade erst an. Kennst du eine passende App, oder hast du selbst eine veröffentlicht?",
       link: "App eintragen",
     },
+    // Under the results, always: whoever finds nothing can build the app themselves.
+    build: {
+      headline: "Nichts gefunden?",
+      body: "Hilf dir selbst und bau eine App. Mit unserem Tooling ist es ganz einfach.",
+      link: "Eine App bauen",
+    },
     trust: {
       headline: "Welche Apps hier stehen",
       body:
@@ -77,7 +83,7 @@ const de = {
         "on-click": (note) => `Fremde Server nur nach einem Klick. ${note}`,
       },
       unchecked:
-        "Das sind die Angaben der App. Eine automatische Prüfung bauen wir gerade.",
+        "Die App wurde geprüft: Bei der Aufnahme hat eine automatische Prüfung diese Angaben mit der App verglichen.",
       checked: "lernapps.net hat diese Angaben automatisch geprüft.",
       // The entry's limits: what the app does not offer of the platform's rules (WCAG 2.1 AA, usable at 360 px).
       limits: "Das bietet die App nicht:",
@@ -111,16 +117,22 @@ const de = {
         { key: "zuhause", label: "Zu Hause" },
       ],
       feedbackHeadline: "Wie lief es?",
+      // Feedback straight to the creator, as an issue in the app's repository (only for a source on GitHub).
+      issue: (creator) => `Du hast ein GitHub-Konto? Dann schreib es direkt an ${creator}:`,
+      issueLink: "Issue anlegen",
+      issueTitle: (app) => `Rückmeldung zu „${app}“`,
+      issueBody: (page) => `App: ${page}\n\nWas ist dir aufgefallen?\n`,
       feedback: [
         { key: "gut", label: "Hat gut gepasst" },
         { key: "zu-schwer", label: "War zu schwer" },
         { key: "zu-leicht", label: "War zu leicht" },
         { key: "technik", label: "Hat technisch gehakt" },
+        { key: "fehler", label: "Fehler im Inhalt" },
       ],
       opened: "Danke! Schick die E-Mail ab, dann kommt sie an.",
       noMail: { before: "Kein E-Mail-Programm? Schreib einfach an", thanks: "(Danke)", or: "oder", feedback: "(Rückmeldung)." },
       privacy:
-        "Bis wir Klicks zählen, kommt dein Danke als E-Mail bei uns an. Dabei sehen wir deine E-Mail-Adresse. Wir nutzen sie nur dafür.",
+        "Bis wir Klicks zählen, kommt dein Danke als E-Mail bei uns an. Dabei sehen wir deine E-Mail-Adresse. Wir nutzen sie nur dafür. Die Adressen liegen auf beimir.net, der Domain des Gründers.",
       privacyLink: "Mehr dazu",
       privacyHref: "/privacy/#de-danke",
       reminder: "Zurück aus der App? Sag Danke, wenn sie geholfen hat.",
@@ -163,6 +175,8 @@ const de = {
     headline: "Bau eine Lern-App\nmit deinem KI-Assistenten.",
     lead:
       "Programmieren musst du nicht. Du sagst, was die App lehren soll. Dein Assistent plant mit dir, baut die App und prüft sie.",
+    haveApp: "Du hast schon eine App?",
+    haveAppLink: "Direkt zum Eintragen",
     start: {
       headline: "Sag deinem Assistenten:",
       body: "Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf. Kopier diesen Auftrag und gib ihn ihm.",
@@ -192,7 +206,7 @@ const de = {
       check: "Wenn du die App einträgst, prüfen wir die veröffentlichte App genauso wie jede andere.",
     },
     next: {
-      headline: "Wie es weitergeht",
+      headline: "Wie es weitergeht: die App eintragen",
       body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",
       criteria: "Von Anfang an hält sie ein, was wir für den Katalog verlangen:",
       criteriaLink: "die Bedingungen",
