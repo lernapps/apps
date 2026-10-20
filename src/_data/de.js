@@ -40,6 +40,12 @@ const de = {
       body: "lernapps.net fängt gerade erst an. Kennst du eine passende App, oder hast du selbst eine veröffentlicht?",
       link: "App eintragen",
     },
+    // Under the results, always: whoever finds nothing can build the app themselves.
+    build: {
+      headline: "Nichts gefunden?",
+      body: "Hilf dir selbst und bau eine App. Mit unserem Tooling ist es ganz einfach.",
+      link: "Eine App bauen",
+    },
     trust: {
       headline: "Welche Apps hier stehen",
       body:
