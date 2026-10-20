@@ -109,6 +109,7 @@ const en = {
         { key: "zu-schwer", label: "Was too hard" },
         { key: "zu-leicht", label: "Was too easy" },
         { key: "technik", label: "Had technical problems" },
+        { key: "fehler", label: "Mistake in the content" },
       ],
       opened: "Thank you! Send the email and it arrives.",
       noMail: { before: "No email program? Just write to", thanks: "(thanks)", or: "or", feedback: "(feedback)." },

@@ -116,6 +116,7 @@ const de = {
         { key: "zu-schwer", label: "War zu schwer" },
         { key: "zu-leicht", label: "War zu leicht" },
         { key: "technik", label: "Hat technisch gehakt" },
+        { key: "fehler", label: "Fehler im Inhalt" },
       ],
       opened: "Danke! Schick die E-Mail ab, dann kommt sie an.",
       noMail: { before: "Kein E-Mail-Programm? Schreib einfach an", thanks: "(Danke)", or: "oder", feedback: "(Rückmeldung)." },
