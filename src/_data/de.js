@@ -77,7 +77,11 @@ const de = {
         "on-click": (note) => `Fremde Server nur nach einem Klick. ${note}`,
       },
       unchecked:
-        "Das sind die Angaben der App. Bei der Aufnahme vergleicht eine automatische Prüfung sie mit der App.",
+        "Die App wurde geprüft: Bei der Aufnahme hat eine automatische Prüfung diese Angaben mit der App verglichen.",
+      // An app at its creator's own address: checked, but an external page (decision of the operator, 2026-10).
+      external: (host) =>
+        `Die App liegt auf einer externen Seite (${host}). Für den Datenschutz dort können wir keine Verantwortung übernehmen. Hast du Bedenken, frag den Anbieter, ob er die App unter lernapps.net hosten möchte.`,
+      externalAsk: "Zum Anbieter",
       checked: "lernapps.net hat diese Angaben automatisch geprüft.",
       // The entry's limits: what the app does not offer of the platform's rules (WCAG 2.1 AA, usable at 360 px).
       limits: "Das bietet die App nicht:",
@@ -111,6 +115,11 @@ const de = {
         { key: "zuhause", label: "Zu Hause" },
       ],
       feedbackHeadline: "Wie lief es?",
+      // Feedback straight to the creator, as an issue in the app's repository (only for a source on GitHub).
+      issue: (creator) => `Du hast ein GitHub-Konto? Dann schreib es direkt an ${creator}:`,
+      issueLink: "Issue anlegen",
+      issueTitle: (app) => `Rückmeldung zu „${app}“`,
+      issueBody: (page) => `App: ${page}\n\nWas ist dir aufgefallen?\n`,
       feedback: [
         { key: "gut", label: "Hat gut gepasst" },
         { key: "zu-schwer", label: "War zu schwer" },

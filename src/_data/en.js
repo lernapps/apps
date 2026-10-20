@@ -74,7 +74,10 @@ const en = {
         none: "No connection to third-party servers.",
         "on-click": (note) => `Third-party servers only after a click. ${note}`,
       },
-      unchecked: "These are the app's own statements. When it is listed, an automatic check compares them with the app.",
+      unchecked: "The app was checked: when it was listed, an automatic check compared these statements with the app.",
+      external: (host) =>
+        `The app is on an external site (${host}). We cannot take responsibility for privacy there. If you have concerns, ask the provider whether they would like to host the app on lernapps.net.`,
+      externalAsk: "To the provider",
       checked: "lernapps.net checked these statements automatically.",
     },
 
@@ -104,6 +107,10 @@ const en = {
         { key: "zuhause", label: "At home" },
       ],
       feedbackHeadline: "How did it go?",
+      issue: (creator) => `Do you have a GitHub account? Then write to ${creator} directly:`,
+      issueLink: "Open an issue",
+      issueTitle: (app) => `Feedback on “${app}”`,
+      issueBody: (page) => `App: ${page}\n\nWhat did you notice?\n`,
       feedback: [
         { key: "gut", label: "It fit well" },
         { key: "zu-schwer", label: "Was too hard" },

@@ -89,6 +89,9 @@ eleventyComputed:
       <div>
         <h3 class="m-0 mb-2 text-base font-semibold">{{ A.thanks.feedbackHeadline }}</h3>
         {{ c.mailButtons(site.feedbackEmail, A.mails.feedback(app.title | tx(lang), pageUrl)) }}
+        {%- if app.source and app.source.startsWith("https://github.com/") %}
+        <p class="m-0 mt-3 text-sm text-slate-600">{{ A.thanks.issue(app.creator.name) }} <a href="{{ app.source | replace(r/\/$/, '') }}/issues/new?title={{ A.thanks.issueTitle(app.title | tx(lang)) | urlencode }}&amp;body={{ A.thanks.issueBody(pageUrl) | urlencode }}" class="underline underline-offset-2 whitespace-nowrap">{{ A.thanks.issueLink }}</a></p>
+        {%- endif %}
       </div>
     </div>
     <p class="m-0 mt-3 text-sm font-semibold text-green-700" role="status" data-opened data-text="{{ A.thanks.opened }}"></p>
