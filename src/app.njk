@@ -32,7 +32,7 @@ eleventyComputed:
     <p class="m-0 mt-3 text-lg text-slate-200 max-w-2xl"{{ app.summary | fallbackLang(lang) | safe }}>{{ app.summary | tx(lang) }}</p>
     <p class="m-0 mt-2 text-sm text-slate-400">{{ A.by }} {{ app.creator.name }}</p>
     <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
-      <a href="{{ app.url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-open>{{ A.open }} ↗</a>
+      <a href="{{ app.url }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-open data-la-count="app/{{ app.id }}">{{ A.open }} ↗</a>
       <span class="text-sm text-slate-400">{{ A.openHint }}</span>
     </div>
   </div>
