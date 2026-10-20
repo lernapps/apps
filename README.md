@@ -80,6 +80,14 @@ thanks will be counted with one click later. A referral code (`?welle=<code>`) i
 
 Later, one click is counted openly as a total, without e-mail (platform design D5 `ch-feedback`).
 
+## Usage counter
+
+To see whether the apps are used at all, the catalog's pages load the usage counter of the platform sites
+(`/lernapps-count.js`, served by [lernapps.github.io](https://github.com/lernapps/lernapps.github.io#usage-counter))
+in `src/_includes/base.njk`, never in a preview. It counts the visit of a page, and a click on "open app" as the
+event `app/<id>` (`data-la-count` in `src/app.njk`). Nothing is counted inside the apps: the counter is not part of
+the site frame, and `lernapps-check` fails an app that carries it.
+
 ## Deploy and previews
 
 GitHub Pages serves the `gh-pages` branch (Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`).
