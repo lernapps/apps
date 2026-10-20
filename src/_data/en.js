@@ -74,7 +74,7 @@ const en = {
         none: "No connection to third-party servers.",
         "on-click": (note) => `Third-party servers only after a click. ${note}`,
       },
-      unchecked: "These are the app's own statements. We are building an automatic check.",
+      unchecked: "These are the app's own statements. When it is listed, an automatic check compares them with the app.",
       checked: "lernapps.net checked these statements automatically.",
     },
 
@@ -155,6 +155,8 @@ const en = {
     headline: "Build a learning app\nwith your AI assistant.",
     lead:
       "You don't have to program. You say what the app should teach. Your assistant plans with you, builds the app and checks it.",
+    haveApp: "Already have an app?",
+    haveAppLink: "Go straight to listing it",
     start: {
       headline: "Tell your assistant:",
       body: "You need an AI assistant that may run commands on your computer. Copy this task and give it to the assistant.",
@@ -182,7 +184,7 @@ const en = {
       check: "When you list the app, we check the published app just like any other.",
     },
     next: {
-      headline: "What happens next",
+      headline: "What happens next: listing the app",
       body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages.",
       criteria: "From the start, it meets what we require for the catalog:",
       criteriaLink: "the conditions",

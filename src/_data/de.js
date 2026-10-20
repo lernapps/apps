@@ -77,7 +77,7 @@ const de = {
         "on-click": (note) => `Fremde Server nur nach einem Klick. ${note}`,
       },
       unchecked:
-        "Das sind die Angaben der App. Eine automatische Prüfung bauen wir gerade.",
+        "Das sind die Angaben der App. Bei der Aufnahme vergleicht eine automatische Prüfung sie mit der App.",
       checked: "lernapps.net hat diese Angaben automatisch geprüft.",
       // The entry's limits: what the app does not offer of the platform's rules (WCAG 2.1 AA, usable at 360 px).
       limits: "Das bietet die App nicht:",
@@ -163,6 +163,8 @@ const de = {
     headline: "Bau eine Lern-App\nmit deinem KI-Assistenten.",
     lead:
       "Programmieren musst du nicht. Du sagst, was die App lehren soll. Dein Assistent plant mit dir, baut die App und prüft sie.",
+    haveApp: "Du hast schon eine App?",
+    haveAppLink: "Direkt zum Eintragen",
     start: {
       headline: "Sag deinem Assistenten:",
       body: "Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf. Kopier diesen Auftrag und gib ihn ihm.",
@@ -192,7 +194,7 @@ const de = {
       check: "Wenn du die App einträgst, prüfen wir die veröffentlichte App genauso wie jede andere.",
     },
     next: {
-      headline: "Wie es weitergeht",
+      headline: "Wie es weitergeht: die App eintragen",
       body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",
       criteria: "Von Anfang an hält sie ein, was wir für den Katalog verlangen:",
       criteriaLink: "die Bedingungen",
