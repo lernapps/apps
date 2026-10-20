@@ -57,7 +57,7 @@ npm run --silent listing -- entries/<id>.yaml
    `add-<id>` in deinen Fork und öffne den Pull Request von dort. Pushe nie einen Branch in https://github.com/lernapps/apps selbst,
    auch wenn du es darfst. Ein Pull Request aus einem Fork bekommt keine Vorschau, nur den Kommentar der Prüfung.
    Wie das mit `gh`, den GitHub-Werkzeugen deiner Umgebung oder über die REST-API geht, und was bei einer
-   Fehlermeldung von GitHub zu tun ist: der Skill [lernapps-github](https://raw.githubusercontent.com/lernapps/tooling/main/skills/lernapps-github/SKILL.md).
+   Fehlermeldung von GitHub zu tun ist: der Skill [lernapps-github](https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-github/SKILL.md).
    Dort läuft dieselbe Prüfung bei jedem Push.
    Sie schreibt ihr Ergebnis als einen Kommentar in den Pull Request, derselbe Text wie bei dir, und ändert ihn
    bei jedem Lauf. Er beginnt mit „Prüfung des Eintrags: bestanden“ oder „Prüfung des Eintrags: nicht bestanden“.
