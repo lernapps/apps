@@ -119,8 +119,8 @@ describe("the creator's entry points", () => {
 
   test("building links the skill lernapps-app as the quick path and leads on to listing; listing leads back", () => {
     for (const text of [page, llms]) assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
-    assert.match(page, /skills\/lernapps-app\/SKILL\.md/);
-    assert.match(page, /skills\/lernapps-app\/references\/platform-rules\.md/, "free builders get the platform rules");
+    assert.match(page, /skills\/process\/lernapps-app\/SKILL\.md/);
+    assert.match(page, /skills\/tooling\/lernapps-check\/references\/platform-rules\.md/, "free builders get the platform rules");
     assert.match(page, /href="\/apps\/enter\/"/, "/apps/build/ leads on to listing");
     assert.match(enter, /href="\/apps\/build\/"/, "/apps/enter/ leads to building for those without an app");
     const build = llms.indexOf("## Eine App bauen");
@@ -131,7 +131,7 @@ describe("the creator's entry points", () => {
   });
 
   test("listing promotes the skill lernapps-listing; e-mail only as the fallback at the end", () => {
-    const skill = /skills\/lernapps-listing\/SKILL\.md/;
+    const skill = /skills\/process\/lernapps-listing\/SKILL\.md/;
     const first = enter.search(skill);
     assert.ok(first >= 0, "/apps/enter/ links the skill lernapps-listing");
     const prompt = decode(enter.match(/<textarea\b[^>]*id="auftrag"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? "");
@@ -143,7 +143,7 @@ describe("the creator's entry points", () => {
     assert.match(fallback, /mailto:/, "the mailto is in the fallback");
     assert.ok(enter.indexOf('id="notfalls"') > enter.indexOf('id="wege"'), "the fallback comes after the ways");
     const list = llms.slice(llms.indexOf("## Eine App eintragen"));
-    assert.match(list, /\]\(https:\/\/raw\.githubusercontent\.com\/lernapps\/tooling\/main\/skills\/lernapps-listing\/SKILL\.md\)/);
+    assert.match(list, /\]\(https:\/\/raw\.githubusercontent\.com\/lernapps\/tooling\/main\/skills\/process\/lernapps-listing\/SKILL\.md\)/);
   });
 });
 
@@ -189,9 +189,11 @@ describe("the command /apps/build/ gives to start an app", () => {
     const archetypes = manifest.appTemplates.archetypes;
     assert.ok(archetypes.length > 0);
     // The command creates the app from the plan the creator confirmed: the plan template of the same ref, kept where
-    // it says ("Keep it at <path>"), worked through Explore and Plan (here: its archetype set, in the phase code).
+    // it says ("Path: `<path>`", formerly "Keep it at <path>."), worked through Explore and Plan (here: its archetype
+    // set, in the phase code).
     const template = await fetch(`https://raw.githubusercontent.com/${project}/${ref}/guidance/plan-template.md`).then((r) => r.text());
-    const keep = /Keep it at (\.vibe\/.+?\.md)\./.exec(template)?.[1]?.replace("<short name>", "first-version");
+    const path = /Path: `(\.vibe\/[^`]+\.md)`|Keep it at (\.vibe\/.+?\.md)\./.exec(template);
+    const keep = (path?.[1] ?? path?.[2])?.replace("<short name>", "first-version");
     assert.ok(keep, "the plan template says where to keep it");
 
     // Each archetype in its own folder. The command first, one archetype after the other: npx installs the tooling
