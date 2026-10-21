@@ -23,9 +23,8 @@ No exception for the apps in the organisation: they get an entry `commit` and a 
 ### KD-03: The copy is the bundle built from the entry's pinned commit (2026-10-21)
 The entry gets a required field `commit` (full id). The copy is built from that commit with `scripts/review-input.mjs` (the review's build: clone, `npm ci && npm run build` or the repo as its own bundle, in a container, without secrets) and checked with `lernapps check <bundle> --entry`. What is served is what was checked, not what happens to be at the creator's address. `url` stays the creator's address, which the listing check of a pull request opens.
 
-### KD-04: Copies built in apps, published by the root site (2026-10-21)
-- apps, on a push to `main` that changes `entries/*.yaml`: a job without secrets and with a read-only token builds the changed entries in a container; a job with `contents: write` (normal `GITHUB_TOKEN`, runs no app code) writes the bundles to the branch `copies` of lernapps/apps, one directory per id; a deleted entry removes its directory.
-- lernapps.github.io: its Pages deploy checks out `apps@copies` and puts each directory under `_site/<id>/` after the site's own build and check, so home page and copies go online together.
+### KD-04: Four steps from an entry to its copy (2026-10-21)
+The steps are described under "Steps" below: build the app, push it into its subdirectory of `gh-pages`, start it automatically, take over the apps already listed. This replaces the earlier idea of a branch `copies` in lernapps/apps that the root site's deploy pulls in: the copy goes straight into the `gh-pages` branch that serves `lernapps.net/<id>/`, and GitHub Pages publishes it on that push.
 
 ### KD-05: An app touches only its own data (2026-10-20, lernapps/tooling branch feat/own-data-only)
 All copies share the origin lernapps.net with each other and the platform. Rule `own-data-only`, scope listing, severity error: keys, databases and caches named `lernapps:<id>:`, `<id>` the catalog id.
@@ -33,10 +32,43 @@ All copies share the origin lernapps.net with each other and the platform. Rule 
 ### KD-06: Relative paths are a condition for listing (2026-10-21)
 Checked: all seven listed apps reference their files relatively (`./assets/…`); apps built with the tooling use `base: "./"` (archetypes/shared/preset.ts). The check of the copy at its new path catches an app with fixed paths; no separate rule.
 
+## Steps
+
+### 1. Build the app
+- Where: a workflow in lernapps/apps (`publish.yml`), job `build`: no secrets, a read-only token, the build in a container (`BUILD_IMAGE` as in review.yml).
+- What: for each added or changed entry, `scripts/review-input.mjs --repo <source> --commit <commit> --container <image>`: clone at the pinned commit, `npm ci && npm run build` (or the repo as its own bundle), `lernapps check <bundle> --entry`.
+- Result: the bundle as an artifact (`copy-<id>`), without symbolic links, `.git`, `node_modules` and top-level dotfiles; only when the check reports no error. An entry whose build or check fails is not published, its copy stays as it was, and the run fails visibly.
+- Needs: the required fields `source` (a GitHub repo) and `commit` (a full id) in `schemas/entry.js`; review.yml reviews the entry's `commit` by default.
+
+### 2. Push into its subdirectory of `gh-pages`
+- Where: job `publish` in the same workflow; it downloads the artifacts and runs no app code.
+- What: writes each bundle to `<id>/` of the `gh-pages` branch of lernapps/lernapps.github.io (the root site that serves `lernapps.net/<id>/`), replacing that directory only, in one commit "copy of `<source>@<commit>`". A deleted entry removes its directory. GitHub Pages publishes the branch on that push: no extra deploy needed.
+- Then: `lernapps check https://lernapps.net/<id>/ --entry` against the copy (job `verify`), after Pages has deployed.
+- Needs:
+  - A credential that may push to lernapps.github.io: a GitHub App of the organisation with only *Contents: write* on that repo (preferred: no person, no expiry), or a fine-grained token. Only the job `publish` gets it.
+  - tooling's `site-deploy` must keep the copies when the home page deploys: today it only keeps `pr-preview/` (`clean-exclude`). Proposal: `publish` maintains a list of the copies in `gh-pages` (e.g. `copies.txt`, one id per line), and `site-deploy` takes `clean-exclude` from it.
+  - Reserved ids: no copy may overwrite a path of the home page (`en/`, `assets/`, …) or a repo served below lernapps.net (`apps`, `docs`, `tooling`, …); the listing validation rejects them.
+
+### 3. Start it automatically
+- First listing: the merge of the listing pull request (push to `main` changing `entries/*.yaml`) starts `publish.yml`.
+- Update: a scheduled workflow in lernapps/apps compares each entry's `commit` with the head of `main` of its `source` and opens (or updates) one pull request per app that sets the new `commit`; the listing check runs on it as on every entry change. Merged automatically when the check is green, unless the licence or the source repo changed (open question 2); its merge starts `publish.yml` like a listing.
+- Delisting: a merged pull request that deletes the entry starts `publish.yml`, which removes the copy.
+- By hand: `workflow_dispatch` with an id rebuilds one copy, e.g. after a failed run.
+
+### 4. The apps already listed
+| App | Source | Address today | What changes |
+|---|---|---|---|
+| anorganische-chemie, elektrizitaet, naturwunder-quiz | lernapps | `lernapps.net/<id>/` from its own repo's Pages | Copy at the same address; then switch off the repo's Pages and its publish workflow, so the root site serves `/<id>/` (to verify: a repo's Pages shadows the root site's path) |
+| mathe-karte | lernapps | `lernapps.net/mathe-karte/` | As above; before that: keys with the prefix `lernapps:mathe-karte:`, migrating the old ones (`own-data-only`), and a licence file (none found) |
+| kniffel-trainer, textcheck, typonaut | mrsimpson | `mrsimpson.github.io/<id>/` | New address `lernapps.net/<id>/` in the catalog; the creator's address stays as it is |
+- Each entry gets `commit` (the current head of `main`) in one pull request; its merge builds and publishes all seven copies.
+- Order for the four apps of the organisation: copy published and checked, then their Pages switched off, so the address never breaks.
+- The licences: six apps are MIT, but their copyright line names "Claude", not the creator; to fix in the app repos (the creator holds the rights). mathe-karte has no licence file.
+
 ## Notes
 
 ### Open questions (decide in Explore)
-1. **Trigger of the root site's deploy.** A workflow's `GITHUB_TOKEN` only works in its own repo, so apps cannot start the deploy of lernapps.github.io without a credential. Options: (a) a GitHub App of the organisation with only *Actions: write* on lernapps.github.io; a small job in apps that runs no app code mints a short-lived token and runs `gh workflow run`. (b) a fine-grained personal access token (bound to a person, expires). (c) no credential: a scheduled workflow in lernapps.github.io compares the head of `apps@copies` with the deployed one, every 15 minutes (up to 15 minutes delay; GitHub pauses schedules after 60 days without activity).
+1. **Credential for the push to lernapps.github.io (step 2).** A workflow's `GITHUB_TOKEN` only works in its own repo. Options: (a) a GitHub App of the organisation with only *Contents: write* on lernapps.github.io; only the job `publish` mints a short-lived token from it. (b) a fine-grained personal access token (bound to a person, expires). Without any credential only polling is left (a scheduled workflow in lernapps.github.io that fetches built copies, up to 15 minutes late), which needs the copies stored in lernapps/apps first.
 2. **Updates: review or automatic?** Every update of an app goes the same way (new `commit` by pull request, check, merge, build, deploy). Proposal: an update is merged automatically when the listing check is green; a review only for a first listing and when the licence or the source repo changes; a scheduled workflow opens the update pull request when the creator's `main` moves. With that, the trigger matters, so option (a).
 
 ### Facts found
@@ -51,11 +83,14 @@ Checked: all seven listed apps reference their files relatively (`./assets/…`)
 - The need is stated: lernapps/apps#58, lernapps/docs KD-21.
 
 ### Tasks
-- [ ] Decide the trigger of the root site's deploy (open question 1)
+- [ ] Decide the credential for the push to lernapps.github.io (open question 1)
 - [ ] Decide the update policy (open question 2)
 - [ ] Verify that a project repo's Pages shadows the root site's `/<id>/`, and what happens when it is switched off
 - [ ] Build all seven apps at their current commits with `review-input.mjs` and check the bundles (sizes, relative paths)
 - [ ] List the reserved ids (paths of the root site, repos served below lernapps.net)
+- [ ] Check how `site-deploy` (JamesIves/github-pages-deploy-action) can take `clean-exclude` from a list in `gh-pages`
+- [ ] Ask the creators to fix the copyright line of their licence; mathe-karte needs a licence file
+- [x] Steps recorded: build, push into `gh-pages/<id>/`, automatic start, apps already listed (KD-04, "Steps")
 
 ### Completed
 - [x] Created development plan file
@@ -66,6 +101,7 @@ Checked: all seven listed apps reference their files relatively (`./assets/…`)
 ## Plan
 ### Phase Entrance Criteria
 - Open questions 1 and 2 are decided.
+- The steps (section "Steps") are agreed.
 - The shadowing of `/<id>/` by project repos is verified.
 - All seven apps build at a pinned commit.
 
