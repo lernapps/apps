@@ -1,6 +1,6 @@
 // Checks the copies where lernapps.net serves them (publish.yml, job `verify`): waits until
-// https://lernapps.net/copies.txt lists each built copy at its commit (GitHub Pages has deployed it), then runs
-// `lernapps check --entry` on the entry with its `url` set to https://lernapps.net/<id>/.
+// https://lernapps.net/apps/start/copies.txt lists each built copy at its commit (GitHub Pages has deployed it), then
+// runs `lernapps check --entry` on the entry with its `url` set to https://lernapps.net/apps/start/<id>/.
 //
 //   node scripts/verify-copies.mjs <plan json> [--origin <url>] [--wait <seconds>]
 //
@@ -20,7 +20,7 @@ const option = (name, fallback) => {
   const at = args.indexOf(name);
   return at < 0 ? fallback : args.splice(at, 2)[1];
 };
-const origin = option("--origin", "https://lernapps.net");
+const origin = option("--origin", "https://lernapps.net/apps/start");
 const wait = Number(option("--wait", "600"));
 if (args.length !== 1 || !Number.isFinite(wait)) {
   process.stderr.write("Usage: node scripts/verify-copies.mjs <plan json> [--origin <url>] [--wait <seconds>]\n");
