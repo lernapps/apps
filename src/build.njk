@@ -13,7 +13,8 @@ eleventyComputed:
 {#-
   Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
   to give the assistant, the command that starts the app, the skill as the quick path, building freely without the
-  templates (any framework, or tools such as Lovable or bolt.new), then on to listing (/enter/), the section #eintragen, which the header's "App bauen" now stands for too.
+  templates (any framework, or tools such as Lovable or bolt.new), publishing (#veroeffentlichen: the app stays the
+  creator's, lernapps.net serves a copy and carries the regulatory part, KD-21), then on to listing (/enter/), the section #eintragen, which the header's "App bauen" now stands for too.
   test/entry-point.e2e.test.mjs runs the command from the built page.
 -#}
 {%- set B = t.build %}
@@ -43,6 +44,15 @@ eleventyComputed:
     <p class="m-0 text-slate-700">{{ B.tools.body }}</p>
     <p class="m-0 mt-3 text-slate-700">{{ B.tools.github }} <a href="{{ site.tooling.github }}" class="text-blue-700 underline underline-offset-2"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.githubLink }}</a>.</p>
     <a href="{{ site.tooling.home }}" class="btn btn-secondary mt-4 self-start"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}" lang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.link }}</a>
+  </section>
+
+  <section class="panel scroll-mt-16" aria-labelledby="veroeffentlichen">
+    <h2 id="veroeffentlichen" class="panel-title">{{ B.publish.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ B.publish.intro }}</p>
+    <ul class="list-none p-0 m-0 mt-3 flex flex-col gap-2">
+      {%- for item in B.publish.items %}<li class="check"><strong>{{ item.title }}</strong> {{ item.body }}</li>{% endfor %}
+    </ul>
+    <p class="m-0 mt-3 text-slate-700">{{ B.publish.licence }}</p>
   </section>
 
   <section class="panel" aria-labelledby="frei">

@@ -193,8 +193,32 @@ const de = {
       body: "Anleitungen, Vorlagen für die Apps und Prüfungen, mit denen du leichter und schneller eine App baust, die auch andere gut nutzen können. Dein Assistent nutzt sie von selbst. Du kannst sie auch selbst nachlesen.",
       link: "Zu den Bauhilfen (auf Englisch)",
       linkLang: "en",
-      github: "Deine App wird über GitHub veröffentlicht: kostenlos, öffentlich und unter deiner eigenen Adresse. Steht sie im Katalog, liefert lernapps.net eine Kopie unter lernapps.net aus. GitHub musst du nicht kennen. Die Werkzeuge erledigen das meiste, und dein Assistent sagt dir, wenn du etwas klicken musst.",
+      github: "Deine App wird über GitHub veröffentlicht: kostenlos, öffentlich und unter deiner eigenen Adresse. GitHub musst du nicht kennen. Die Werkzeuge erledigen das meiste, und dein Assistent sagt dir, wenn du etwas klicken musst.",
       githubLink: "Was GitHub ist und wofür wir es nutzen (auf Englisch)",
+    },
+    publish: {
+      headline: "Veröffentlichen: deine App bleibt deine",
+      intro:
+        "Dein Assistent veröffentlicht die App unter deiner eigenen Adresse, zum Beispiel auf GitHub Pages. Steht sie im Katalog, liefert lernapps.net zusätzlich eine Kopie aus, unter lernapps.net/apps/start/ und dem Namen deiner App. Diese Kopie öffnen Lernende.",
+      items: [
+        {
+          title: "Wir nehmen dir nichts weg.",
+          body: "Repository, Lizenz und deine Adresse bleiben bei dir. Du bleibst die Urheberin oder der Urheber, und der Katalog verlinkt dein Repository als Quellcode.",
+        },
+        {
+          title: "Wir nehmen dir das Regulatorische ab.",
+          body: "Schulen fragen, wer eine App betreibt und was mit den Daten geschieht. Für die Kopie antwortet lernapps.net: ein Anbieter, eine Datenschutzerklärung, ein Impressum. Und die Adresse bleibt, auch wenn deine App einmal umzieht.",
+        },
+        {
+          title: "Die Kopie ist deine App.",
+          body: "Wir bauen sie aus genau dem Stand, den du veröffentlicht hast, und prüfen sie, bevor Lernende sie sehen. Wir ändern nichts daran.",
+        },
+        {
+          title: "Neue Versionen kommen von selbst.",
+          body: "Veröffentlichst du eine neue Version, übernimmt lernapps.net sie in der Regel innerhalb einer Stunde. Updates der Werkzeuge gehen allein durch; geänderte Inhalte sehen wir uns vorher an.",
+        },
+      ],
+      licence: "Dafür braucht deine App eine Lizenz, die Kopien erlaubt, zum Beispiel MIT. Die Vorlagen bringen sie mit.",
     },
     free: {
       headline: "Lieber frei bauen?",
@@ -207,7 +231,7 @@ const de = {
     },
     next: {
       headline: "Wie es weitergeht: die App eintragen",
-      body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages. Im Katalog liefert lernapps.net eine Kopie aus, unter einer Adresse und einer Datenschutzerklärung. Du bleibst die Urheberin oder der Urheber.",
+      body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir, und sie liegt an deiner eigenen Adresse.",
       criteria: "Von Anfang an hält sie ein, was wir für den Katalog verlangen:",
       criteriaLink: "die Bedingungen",
       enter: "Ist sie veröffentlicht, trägt dein Assistent sie mit dem Skill lernapps-listing auf lernapps.net ein. Dann finden Lehrkräfte und Eltern sie.",
