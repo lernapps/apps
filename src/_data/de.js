@@ -193,7 +193,7 @@ const de = {
       body: "Anleitungen, Vorlagen für die Apps und Prüfungen, mit denen du leichter und schneller eine App baust, die auch andere gut nutzen können. Dein Assistent nutzt sie von selbst. Du kannst sie auch selbst nachlesen.",
       link: "Zu den Bauhilfen (auf Englisch)",
       linkLang: "en",
-      github: "Deine App wird über GitHub veröffentlicht: kostenlos, öffentlich und unter deiner eigenen Adresse. GitHub musst du nicht kennen. Die Werkzeuge erledigen das meiste, und dein Assistent sagt dir, wenn du etwas klicken musst.",
+      github: "Deine App wird über GitHub veröffentlicht: kostenlos, öffentlich und unter deiner eigenen Adresse. Steht sie im Katalog, liefert lernapps.net eine Kopie unter lernapps.net aus. GitHub musst du nicht kennen. Die Werkzeuge erledigen das meiste, und dein Assistent sagt dir, wenn du etwas klicken musst.",
       githubLink: "Was GitHub ist und wofür wir es nutzen (auf Englisch)",
     },
     free: {
@@ -207,7 +207,7 @@ const de = {
     },
     next: {
       headline: "Wie es weitergeht: die App eintragen",
-      body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages.",
+      body: "Dein Assistent führt dich durch einen Plan: fragen, planen, bauen, prüfen, veröffentlichen. Die App gehört dir und liegt an deiner eigenen Adresse, zum Beispiel auf GitHub Pages. Im Katalog liefert lernapps.net eine Kopie aus, unter einer Adresse und einer Datenschutzerklärung. Du bleibst die Urheberin oder der Urheber.",
       criteria: "Von Anfang an hält sie ein, was wir für den Katalog verlangen:",
       criteriaLink: "die Bedingungen",
       enter: "Ist sie veröffentlicht, trägt dein Assistent sie mit dem Skill lernapps-listing auf lernapps.net ein. Dann finden Lehrkräfte und Eltern sie.",
@@ -233,6 +233,7 @@ const de = {
         "Sie ist kostenlos und ohne Werbung.",
         "Sie sammelt nichts heimlich: keine Analyse-Dienste, keine Werbe-Netzwerke. Fremde Server lädt sie höchstens nach einem Klick, zum Beispiel für ein Video.",
         "Lernende tun darin selbst etwas: ausprobieren, üben, entscheiden.",
+        "Ihre Lizenz erlaubt eine Kopie (zum Beispiel MIT oder Apache 2.0 für den Code, CC BY 4.0 für Inhalte): lernapps.net liefert die App unter lernapps.net aus. Du bleibst die Urheberin oder der Urheber.",
       ],
     },
     fields: {

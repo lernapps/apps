@@ -181,16 +181,16 @@ One pull request per repo, merged in this order; each repo's checks and tests pa
 - The user approved the plan.
 
 ### Tasks
-- [ ] A2 tooling: `site-deploy` keeps the copies listed in `copies.txt`
-- [ ] A3 tooling: arc42 `dec-copies-served`, skill texts
+- [x] A2 tooling: `site-deploy` keeps the copies listed in `copies.txt` (lernapps/tooling branch `feat/copies-served`)
+- [x] A3 tooling: arc42 `dec-copies-served`, skill texts (same branch)
 - [ ] B1 lernapps.github.io: new tooling commit
-- [ ] C1 apps: `source` and `commit` required in the entry format
-- [ ] C2 apps: reserved ids and commit check in the listing validation
-- [ ] C3 apps: `/review` defaults to the entry's commit
-- [ ] C4 apps: `publish.yml`
-- [ ] C5 apps: catalog links live copies
-- [ ] C6 apps: `update.yml` and `scripts/update-kind.mjs`
-- [ ] C7 apps: texts
+- [x] C1 apps: `source` and `commit` required in the entry format; the seven entries pinned to the head of `main` (2026-10-21)
+- [x] C2 apps: reserved ids in the catalog's build and the listing validation (`schemas/reserved.js`, a fixed list). Whether the commit exists is not checked there: the review and the build of the copy read it
+- [x] C3 apps: `/review` defaults to the entry's commit
+- [x] C4 apps: `publish.yml` with `scripts/publish-plan.mjs`, `copy-bundle.mjs`, `publish-copies.mjs`, `verify-copies.mjs`
+- [x] C5 apps: catalog links live copies (`copies.txt`)
+- [x] C6 apps: `update.yml`, `scripts/update-plan.mjs` and `update-kind.mjs` (a lock file entry counts as fine when it comes from registry.npmjs.org with an integrity)
+- [x] C7 apps: texts, the licence as a condition for listing, README
 - [ ] D owner settings: auto-merge, ruleset
 
 ### Completed

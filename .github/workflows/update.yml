@@ -1,0 +1,103 @@
+name: Update
+
+# Opens the update pull requests of the listed apps (plan .vibe/development-plan-feat-serve-copies.md, step 3, KD-10):
+# daily, and by hand for one id. Per entry whose source's `main` moved past the entry's `commit`, one pull request
+# `update/<id>` that sets the new commit; the listing check runs on it as on every entry change, and its merge
+# publishes the new copy (publish.yml).
+#
+# An update is merged without a review only when everything that changed in the app is the version of an existing npm
+# dependency (scripts/update-kind.mjs): the pull request then gets auto-merge, which merges once the required checks
+# pass. Anything else gets the label `review` and a comment naming what changed; a person reviews and merges it.
+#
+# The pull request is opened with a token of the organisation's GitHub App (environment `publish`, KD-07): one opened
+# with this workflow's GITHUB_TOKEN would start no workflow, so the listing check would not run. No job runs code of an
+# app: the app repos are read with git only.
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Only this entry (empty: every entry)"
+        required: false
+
+permissions: {}
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment: publish
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: app
+        with:
+          app-id: ${{ vars.PUBLISHER_APP_ID }}
+          private-key: ${{ secrets.PUBLISHER_PRIVATE_KEY }}
+          owner: lernapps
+          repositories: apps
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          token: ${{ steps.app.outputs.token }}
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Open or update the pull requests
+        env:
+          ID: ${{ inputs.id }}
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          SLUG: ${{ steps.app.outputs.app-slug }}
+        run: |
+          set -euo pipefail
+          updates=$(node scripts/update-plan.mjs ${ID:+"$ID"})
+          echo "$updates" | jq .
+          user_id=$(gh api "/users/${SLUG}%5Bbot%5D" --jq .id)
+          git config user.name "${SLUG}[bot]"
+          git config user.email "${user_id}+${SLUG}[bot]@users.noreply.github.com"
+          gh label create review --color d93f0b --description "An update that needs a person's review" --force >/dev/null
+          jq -c '.[]' <<< "$updates" | while read -r update; do
+            id=$(jq -r .id <<< "$update")
+            to=$(jq -r .to <<< "$update")
+            from=$(jq -r .from <<< "$update")
+            source=$(jq -r .source <<< "$update")
+            kind=$(jq -r .kind <<< "$update")
+            [[ "$id" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ && "$to" =~ ^[0-9a-f]{40}$ ]] || { echo "skipped: $update"; continue; }
+            branch="update/$id"
+            git checkout --quiet -B "$branch" origin/main
+            sed -i -E "s/^commit: [0-9a-f]{40}$/commit: $to/" "entries/$id.yaml"
+            git add "entries/$id.yaml"
+            git commit --quiet -m "Update $id to ${to::7}" -m "$source/compare/$from...$to"
+            git push --quiet --force origin "$branch"
+            if [ "$kind" = dependencies ]; then
+              body="Updates **$id** to \`$to\` ([changes]($source/compare/$from...$to)).
+
+          Only versions of existing npm dependencies changed: merged automatically once the checks pass."
+            else
+              body="Updates **$id** to \`$to\` ([changes]($source/compare/$from...$to)).
+
+          Needs a review before the merge:
+          $(jq -r '.reasons[] | "- " + .' <<< "$update")"
+            fi
+            number=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+            if [ -z "$number" ]; then
+              gh pr create --base main --head "$branch" --title "Update $id to ${to::7}" --body "$body"
+              number=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+            else
+              gh pr edit "$number" --title "Update $id to ${to::7}" --body "$body"
+            fi
+            if [ "$kind" = dependencies ]; then
+              gh pr edit "$number" --remove-label review >/dev/null 2>&1 || true
+              gh pr merge "$number" --auto --squash
+            else
+              gh pr merge "$number" --disable-auto >/dev/null 2>&1 || true
+              gh pr edit "$number" --add-label review
+            fi
+          done

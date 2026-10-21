@@ -182,7 +182,7 @@ const en = {
       headline: "What lernapps.net provides for you to build",
       body: "Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.",
       link: "Go to the build tools",
-      github: "Your app is published through GitHub: free, public and at your own address. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something.",
+      github: "Your app is published through GitHub: free, public and at your own address. Once it is in the catalog, lernapps.net serves a copy at lernapps.net. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something.",
       githubLink: "What GitHub is and what we use it for",
     },
     free: {
@@ -195,7 +195,7 @@ const en = {
     },
     next: {
       headline: "What happens next: listing the app",
-      body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages.",
+      body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages. In the catalog, lernapps.net serves a copy, under one address and one privacy notice. You stay its author.",
       criteria: "From the start, it meets what we require for the catalog:",
       criteriaLink: "the conditions",
       enter: "Once it is published, your assistant lists it on lernapps.net with the skill lernapps-listing. Then teachers and parents can find it.",
@@ -221,6 +221,7 @@ const en = {
         "It is free and has no ads.",
         "It collects nothing in secret: no analytics services, no ad networks. At most it loads third-party servers after a click, for example for a video.",
         "Learners do something themselves: try out, practise, decide.",
+        "Its licence allows a copy (for example MIT or Apache 2.0 for the code, CC BY 4.0 for content): lernapps.net serves the app at lernapps.net. You stay its author.",
       ],
     },
     fields: {
