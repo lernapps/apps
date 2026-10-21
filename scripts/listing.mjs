@@ -15,6 +15,7 @@ import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { dump, load } from "js-yaml";
 import { render } from "./listing-comment.mjs";
+import { reserved } from "../schemas/reserved.js";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const LERNAPPS = join(root, "node_modules", ".bin", "lernapps");
@@ -100,6 +101,23 @@ function checkedFromPassing(file, report) {
   if (!report.rules.includes("entry-fitness-matches")) report.rules = [...report.rules, "entry-fitness-matches"].sort();
 }
 
+/** The catalog's own rule: the id is free at lernapps.net/<id>/ (schemas/reserved.js). */
+function freeId(file, report) {
+  let source;
+  try {
+    source = load(readFileSync(file, "utf8"))?.source;
+  } catch {
+    return;
+  }
+  const taken = reserved(basename(file, ".yaml"), source);
+  if (!taken) return;
+  report.findings.push(
+    finding("entry-from-schema", file, `${taken}; lernapps.net serves the app at that address`, "Rename the entry to another id, entries/<id>.yaml"),
+  );
+  report.findings.sort(byPlace);
+  if (!report.rules.includes("entry-from-schema")) report.rules = [...report.rules, "entry-from-schema"].sort();
+}
+
 const args = process.argv.slice(2);
 let out = CACHE;
 const at = args.indexOf("--out");
@@ -120,6 +138,7 @@ mkdirSync(out, { recursive: true });
 for (const file of args) {
   const report = check(file, out);
   checkedFromPassing(file, report);
+  freeId(file, report);
   writeFileSync(join(out, `${basename(file, ".yaml")}.yaml`), dump(report, { lineWidth: -1, noRefs: true }));
 }
 

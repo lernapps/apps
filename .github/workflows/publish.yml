@@ -1,0 +1,184 @@
+name: Publish
+
+# Publishes the copy of every listed app that lernapps.net serves at https://lernapps.net/<id>/ (lernapps/docs KD-21;
+# plan .vibe/development-plan-feat-serve-copies.md, steps 1 and 2): the app built from the `commit` its entry names.
+# Runs on a push to main that adds, changes or deletes an entry (a merged listing or update pull request), and by
+# hand for one id. An entry whose text alone changed is not built again.
+#
+# The app's code is untrusted, so no job holds both it and a credential:
+#   - plan: reads which copies to build and remove (scripts/publish-plan.mjs).
+#   - build: no secret, a read-only token. Builds each app at its commit in a container and runs its checks
+#     (scripts/review-input.mjs, as the review does); only a bundle whose checks report no error goes up as the
+#     artifact copy-<id> (scripts/copy-bundle.mjs). One app's failure does not stop the others; the run fails.
+#   - publish: the environment `publish` with the organisation's GitHub App (KD-07), runs no code of an app. A token
+#     limited to lernapps/lernapps.github.io; puts the copies into its gh-pages branch, one directory per id, and keeps
+#     copies.txt (scripts/publish-copies.mjs). GitHub Pages deploys that push; tooling's site deploy action leaves the
+#     copies alone. Then starts pages.yml here, so the catalog links the new copies.
+#   - verify: waits until lernapps.net serves each copy, then checks it there (scripts/verify-copies.mjs).
+on:
+  push:
+    branches: [main]
+    paths: ["entries/**"]
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "The id of the entry whose copy is built and published again"
+        required: true
+
+permissions: {}
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      plan: ${{ steps.plan.outputs.plan }}
+      build: ${{ steps.plan.outputs.build }}
+      any: ${{ steps.plan.outputs.any }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # the commit before the push
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: plan
+        env:
+          ID: ${{ inputs.id }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -n "$ID" ]; then plan=$(node scripts/publish-plan.mjs --id "$ID"); else plan=$(node scripts/publish-plan.mjs --before "$BEFORE"); fi
+          echo "$plan"
+          echo "plan=$plan" >> "$GITHUB_OUTPUT"
+          echo "build=$(jq -c .build <<< "$plan")" >> "$GITHUB_OUTPUT"
+          echo "any=$(jq '(.build | length) + (.remove | length) > 0' <<< "$plan")" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: plan
+    if: needs.plan.outputs.build != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJSON(needs.plan.outputs.build) }}
+    env:
+      # The container the app is built in, as in review.yml. Renovate bumps it.
+      BUILD_IMAGE: node:22.23.2-bookworm@sha256:dd5847a04b0deee391fa145f1f4c6d214196668b6bcc7988ebed67249f226844
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # From here on the app's code runs (in the container).
+      - name: Build the app at its commit and check it
+        env:
+          ID: ${{ matrix.app.id }}
+          APP_REPO: ${{ matrix.app.source }}
+          COMMIT: ${{ matrix.app.commit }}
+        run: |
+          node scripts/review-input.mjs --repo "$APP_REPO" --commit "$COMMIT" --out "$RUNNER_TEMP/input" \
+            --container "$BUILD_IMAGE" "entries/$ID.yaml"
+          node scripts/copy-bundle.mjs "$RUNNER_TEMP/input" "$RUNNER_TEMP/copy/$ID"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: copy-${{ matrix.app.id }}
+          path: ${{ runner.temp }}/copy/
+          include-hidden-files: true # files of the bundle itself, e.g. .nojekyll
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [plan, build]
+    # also when one app's build failed: the others are published, the run stays red
+    if: always() && needs.plan.result == 'success' && needs.plan.outputs.any == 'true' && needs.build.result != 'cancelled'
+    runs-on: ubuntu-latest
+    environment: publish
+    permissions:
+      actions: write # starts pages.yml
+      contents: read
+    outputs:
+      published: ${{ steps.push.outputs.published }}
+    steps:
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: app
+        with:
+          app-id: ${{ vars.PUBLISHER_APP_ID }}
+          private-key: ${{ secrets.PUBLISHER_PRIVATE_KEY }}
+          owner: lernapps
+          repositories: lernapps.github.io
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: apps
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: lernapps/lernapps.github.io
+          ref: gh-pages
+          path: site
+          token: ${{ steps.app.outputs.token }}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          pattern: copy-*
+          merge-multiple: true
+          path: copies
+      - name: Put the copies into gh-pages and push
+        id: push
+        env:
+          PLAN: ${{ needs.plan.outputs.plan }}
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          SLUG: ${{ steps.app.outputs.app-slug }}
+        run: |
+          mkdir -p copies
+          node apps/scripts/publish-copies.mjs site copies "$PLAN"
+          # the copies that were built, for the job verify
+          built=$(find copies -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | jq -Rsc 'split("\n") | map(select(. != ""))')
+          echo "published=$(jq -c --argjson built "$built" '{build: [.build[] | select(.id as $id | $built | index($id))], remove: []}' <<< "$PLAN")" >> "$GITHUB_OUTPUT"
+          cd site
+          git add -A
+          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+          id=$(gh api "/users/${SLUG}%5Bbot%5D" --jq .id)
+          git -c user.name="${SLUG}[bot]" -c user.email="${id}+${SLUG}[bot]@users.noreply.github.com" \
+            commit --quiet -m "Copies of listed apps (lernapps/apps ${GITHUB_SHA::7})" \
+            -m "$(jq -r '.build[] | "copy of \(.source) at \(.commit) → \(.id)/"' <<< "$PLAN")" \
+            -m "$(jq -r '.remove[] | "removed \(.)/"' <<< "$PLAN")"
+          git push --quiet origin gh-pages
+      - name: Build the catalog again, so it links the new copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+
+  verify:
+    needs: [plan, publish]
+    if: always() && needs.publish.result == 'success' && fromJSON(needs.publish.outputs.published || '{"build":[]}').build[0] != null
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check each copy where lernapps.net serves it
+        env:
+          PUBLISHED: ${{ needs.publish.outputs.published }}
+        run: node scripts/verify-copies.mjs "$PUBLISHED"

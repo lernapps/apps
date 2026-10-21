@@ -3,15 +3,15 @@
 // marker `<!-- lernapps-review -->` and rewritten on every `/review`.
 //
 //   node scripts/review-comment.mjs <dir> [--run-url <url>] [--commit <id>] [--problem <code>]
-//                                   [--ref main|HEAD|commit] [--default-branch <name>]
+//                                   [--ref entry|main|HEAD|commit] [--default-branch <name>]
 //
 // <dir> holds the review input (scripts/review-input.mjs: review.json, report.yaml, build.log) and what the review job
 // wrote: verdict.yaml, and the output and exit code of tooling's verdict check (`npm run --silent verdict`) in
 // verdict-check.txt and verdict-check.status. --commit is the commit the workflow asked to review; a verdict for
 // another one is not valid. --problem names why the pull request cannot be reviewed (PROBLEMS below); the comment
-// then says only that. --ref says which ref the commit was read from: the head of `main` (a plain `/review`), the
-// head of the default branch (HEAD, when the repo has no `main`) or the commit the maintainer named; the comment says
-// it. --default-branch is the app repo's default branch; the comment warns when it is not `main`. Prints the comment. Exit code 0 when it shows a valid verdict, 1 for any other comment, 2 on
+// then says only that. --ref says which ref the commit was read from: the entry's `commit` (a plain `/review`; what
+// lernapps.net builds and serves), the head of `main` or of the default branch (HEAD, when the repo has no `main`)
+// for an entry without one, or the commit the maintainer named; the comment says it. --default-branch is the app repo's default branch; the comment warns when it is not `main`. Prints the comment. Exit code 0 when it shows a valid verdict, 1 for any other comment, 2 on
 // wrong usage.
 //
 // The comment shows, in this order of precedence: a problem; a review input that is missing or says the build failed;
@@ -37,6 +37,7 @@ const ENTRY = /^entries\/[a-z0-9]+(-[a-z0-9]+)*\.yaml$/;
 const RUN_URL = /^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/actions\/runs\/\d+$/;
 const BRANCH = /^[A-Za-z0-9._/-]{1,100}$/;
 const REFS = {
+  entry: "der Commit im Eintrag (`commit`), den lernapps.net baut und ausliefert",
   main: "der Kopf von `main`",
   HEAD: "der Kopf des Standard-Branchs, denn das Repo hat kein `main`",
   commit: "der im Kommentar genannte Commit",
@@ -293,13 +294,13 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const ref = option("--ref");
   const defaultBranch = option("--default-branch");
   const usage = (message) => {
-    process.stderr.write(`review-comment: ${message}\nUsage: node scripts/review-comment.mjs <dir> [--run-url <url>] [--commit <id>] [--problem <code>] [--ref main|HEAD|commit] [--default-branch <name>]\n`);
+    process.stderr.write(`review-comment: ${message}\nUsage: node scripts/review-comment.mjs <dir> [--run-url <url>] [--commit <id>] [--problem <code>] [--ref entry|main|HEAD|commit] [--default-branch <name>]\n`);
     process.exit(2);
   };
   if (args.length !== 1 || args[0].startsWith("-")) usage("name one directory");
   if (problem !== undefined && !Object.hasOwn(PROBLEMS, problem)) usage(`unknown problem: ${problem}`);
   if (commit !== undefined && !COMMIT.test(commit)) usage(`--commit ${commit}: the full id of a commit`);
-  if (ref !== undefined && !Object.hasOwn(REFS, ref)) usage(`--ref ${ref}: main, HEAD or commit`);
+  if (ref !== undefined && !Object.hasOwn(REFS, ref)) usage(`--ref ${ref}: entry, main, HEAD or commit`);
   if (defaultBranch !== undefined && defaultBranch !== "" && !BRANCH.test(defaultBranch)) usage(`--default-branch ${defaultBranch}: a branch name`);
   if (!existsSync(args[0])) usage(`${args[0]}: no such directory`);
   const { text, valid } = render(args[0], { runUrl, commit, problem, ref, defaultBranch });

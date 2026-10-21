@@ -32,7 +32,7 @@ export const Entry = z
     subject: Text.describe("Subject, in German (or a map by language), e.g. Mathematik"),
     grades: z.array(z.int().min(1).max(13)).min(1).describe("Grades the app fits, e.g. [5, 6]"),
     summary: Text.describe("2–3 sentences in plain German (or a map by language): what do learners do?"),
-    url: https.describe("Link to the app"),
+    url: https.describe("Link to the app at the creator's own address, where the listing check opens it"),
     topics: z
       .array(
         z.strictObject({
@@ -49,7 +49,17 @@ export const Entry = z
         url: https.optional(),
       })
       .describe("Who built the app"),
-    source: https.optional().describe("Source code"),
+    source: z
+      .string()
+      .regex(/^https:\/\/github\.com\/[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/, "a repository on GitHub: https://github.com/<owner>/<repo>")
+      .describe("Source code: the app's repository on GitHub, https://github.com/<owner>/<repo>. lernapps.net builds its copy of the app from it"),
+    commit: z
+      .string()
+      .regex(/^[0-9a-f]{40}$/, "the full id of a commit: 40 characters 0-9 and a-f")
+      .describe(
+        "The full id of the commit of source that lernapps.net builds and serves at https://lernapps.net/<id>/. " +
+          "A new commit is an update of the app",
+      ),
     limits: TrimmedText.optional()
       .describe(
         "Only when the app deviates from a rule of the platform because its idea needs it: WCAG 2.1 AA or usable at 360 px wide. " +
