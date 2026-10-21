@@ -1,8 +1,8 @@
 name: Review
 
 # The review of a listing pull request (lernapps/tooling review/prompt.md), started by a maintainer: a comment whose
-# first line is `/review` (the head of the app repo's `main`; without `main`, the head of its default branch) or
-# `/review <full commit id>`, on a pull request that adds or changes one entry. The comment says which ref was read,
+# first line is `/review` (the entry's `commit`, which lernapps.net builds and serves; for an entry without one, the
+# head of the app repo's `main`, without `main` the head of its default branch) or `/review <full commit id>`, on a pull request that adds or changes one entry. The comment says which ref was read,
 # and warns when the app repo's default branch is not `main` (only `main` is published). The verdict goes into one comment on the pull request, found by its marker
 # `<!-- lernapps-review -->` and rewritten on every review. The review decides nothing and changes nothing: the owner
 # decides on the listing.
@@ -113,13 +113,16 @@ jobs:
           git fetch --quiet --no-tags --depth=1 origin "refs/pull/$PR/head"
           mkdir -p "$RUNNER_TEMP/review/entries"
           git show "FETCH_HEAD:${entries[0]}" > "$RUNNER_TEMP/review/entries/$id.yaml"
-          source=$(node --input-type=module -e '
+          read -r source pinned < <(node --input-type=module -e '
             import { readFileSync } from "node:fs";
             import { load } from "js-yaml";
-            let source;
-            try { source = load(readFileSync(process.argv[1], "utf8"))?.source; } catch {}
-            process.stdout.write(typeof source === "string" ? source : "");
+            let entry;
+            try { entry = load(readFileSync(process.argv[1], "utf8")); } catch {}
+            const text = (value) => (typeof value === "string" && /^\S+$/.test(value) ? value : "-");
+            process.stdout.write(`${text(entry?.source)} ${text(entry?.commit)}\n`);
           ' "$RUNNER_TEMP/review/entries/$id.yaml")
+          [ "$source" = "-" ] && source=
+          [[ "$pinned" =~ ^[0-9a-f]{40}$ ]] || pinned=
           source=${source%/}
           source=${source%.git}
           if [[ ! "$source" =~ ^https://github\.com/[A-Za-z0-9-]+/[A-Za-z0-9._-]+$ ]]; then problem no-source; fi
@@ -127,6 +130,10 @@ jobs:
           heads=$(git ls-remote --symref "$source" HEAD refs/heads/main || true)
           default=$(sed -n 's|^ref: refs/heads/\([A-Za-z0-9._/-]*\)\tHEAD$|\1|p' <<< "$heads" | head -n 1)
           ref=commit
+          if [ -z "$commit" ] && [ -n "$pinned" ]; then
+            ref=entry
+            commit=$pinned
+          fi
           if [ -z "$commit" ]; then
             ref=main
             commit=$(awk -F'\t' '$2 == "refs/heads/main" && $1 ~ /^[0-9a-f]+$/ { print $1 }' <<< "$heads")

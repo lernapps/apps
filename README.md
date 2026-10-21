@@ -62,7 +62,7 @@ and the workflows [`listing.yml`](.github/workflows/listing.yml) and
 ## Review (maintainers)
 
 On a listing pull request, a maintainer can start the review of lernapps/tooling (`review/prompt.md`) with a comment
-`/review` (the head of the app repo's `main`, else of its default branch) or `/review <full commit id>`; the comment
+`/review` (the entry's `commit`, which lernapps.net builds and serves) or `/review <full commit id>`; the comment
 says which ref was read and warns when the default branch is not `main`. It builds the app, runs the
 checks and, when they pass, lets the review agent judge the rest; the verdict comes as one comment on the pull
 request, replaced on every `/review`. The review decides nothing: the owner decides on the listing. How it works and
@@ -87,6 +87,21 @@ To see whether the apps are used at all, the catalog's pages load the usage coun
 in `src/_includes/base.njk`, never in a preview. It counts the visit of a page, and a click on "open app" as the
 event `app/<id>` (`data-la-count` in `src/app.njk`). Nothing is counted inside the apps: the counter is not part of
 the site frame, and `lernapps-check` fails an app that carries it.
+
+## The copies of the listed apps
+
+lernapps.net serves a copy of every listed app at `https://lernapps.net/<id>/`, built from the `commit` its entry
+names (`source`, `commit`; lernapps/docs KD-21, plan [`.vibe/development-plan-feat-serve-copies.md`](.vibe/development-plan-feat-serve-copies.md)):
+
+- [`publish.yml`](.github/workflows/publish.yml): a push to `main` that adds, changes or deletes an entry builds the
+  app at its commit in a container without secrets, checks it, and pushes the copy into `<id>/` of the root site's
+  `gh-pages` (lernapps/lernapps.github.io) with a token of the organisation's GitHub App (environment `publish`);
+  `copies.txt` there lists the live copies. Then it checks each copy where it is served and builds the catalog again.
+- The catalog links an app's copy only when `copies.txt` lists it at the entry's commit, otherwise the entry's `url`.
+- [`update.yml`](.github/workflows/update.yml): daily, a pull request `update/<id>` for each app whose `main` moved.
+  It merges by itself only when nothing but versions of existing npm dependencies changed
+  ([`scripts/update-kind.mjs`](scripts/update-kind.mjs)); anything else gets the label `review`.
+- An id may not be a path of the home page or another repo of the organisation ([`schemas/reserved.js`](schemas/reserved.js)).
 
 ## Deploy and previews
 
