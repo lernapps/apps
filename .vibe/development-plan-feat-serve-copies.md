@@ -100,6 +100,11 @@ The GitHub docs do not say whether a project repo's Pages or a folder of the roo
 5. If `gh-pages` of lernapps.github.io has a branch protection or ruleset: allow the app to bypass it.
 In the workflows, `actions/create-github-app-token` mints a token valid for one hour, limited per job with `repositories:` (e.g. only `lernapps.github.io` for `publish`).
 
+### Found while coding (2026-10-21)
+- The listing check of a pull request opens the app at the entry's `url` (the creator's address), not the build of `commit`. For an update pull request, auto-merge therefore waits for the check of the creator's deployed app; the build of the commit is checked in `publish.yml` before it is published. A commit that fails there is not published, the old copy stays, and the run is red. A later improvement: check the build of `commit` in the listing check as well.
+- `gh pr merge --auto` needs "Allow auto-merge" and a required check on `main` (task D); without them `update.yml` fails at the first dependency update.
+- Merge order: tooling (`feat/own-data-only`, `feat/copies-served`) → lernapps.github.io pins that tooling commit (B1) → apps (`feat/serve-copies`). Merging apps first would publish copies that the next home page deploy removes.
+
 ### Facts found
 - review.yml today reviews the head of the app repo's `main` or `/review <commit>`; with the pinned commit it should default to the entry's `commit`.
 - tooling's `site-deploy` replaces `gh-pages` and only keeps `pr-preview/` (`clean-exclude`); it must also keep the copies (step 2).
