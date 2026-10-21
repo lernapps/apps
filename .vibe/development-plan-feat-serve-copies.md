@@ -44,7 +44,13 @@ Once the copies are live, the copyright lines of the licences are fixed in the a
 ### KD-10: An update is merged automatically only when it changes nothing but versions of existing npm dependencies (2026-10-21)
 - **Decision**: The update pull request (new `commit`) is merged automatically only if, between the entry's old and new commit of the app repo, every change is the version of a dependency that already exists in a `package.json` (`dependencies`, `devDependencies`, `peerDependencies`, `optionalDependencies`), and the listing check is green. Anything else needs a review and a merge by hand: any other file, an added or removed dependency, scripts, the licence (also for our own apps).
 - **Consequence**: Renovate's updates in the app repos arrive in the copies without anyone's hand; content, code and licence changes always get a human look.
-- **To confirm**: a version bump also changes the lock file (`package-lock.json`). Proposal: allowed when it changes only entries of the bumped packages and their dependencies, and every `resolved` points to `https://registry.npmjs.org/`; otherwise no automatic merge.
+- **Lock files** (confirmed 2026-10-21): a version bump also changes `package-lock.json`. Allowed when it changes only entries of the bumped packages and their dependencies, and every `resolved` points to `https://registry.npmjs.org/`; otherwise no automatic merge.
+
+### KD-11: Reserved ids (2026-10-21)
+An id may not be a top-level path of the root site (today in `gh-pages`: `about`, `brand`, `en`, `features`, `imprint`, `join`, `privacy`, `pr-preview`, and its files) nor the name of a repo of the organisation (`apps`, `docs`, `tooling`, `app-templates`, `pflanzen`, `map`, `.github`, `lernapps.github.io`, …), unless that repo is the entry's own `source` (as for `elektrizitaet`). The listing validation checks the first against a list in lernapps/apps and the second against the organisation's repos.
+
+### KD-12: Shadowing by a repo's own Pages is no blocker (2026-10-21)
+The GitHub docs do not say whether a project repo's Pages or a folder of the root site wins at `/<id>/` ([user, organization and project pages](https://docs.github.com/enterprise/2.10/user/articles/user-organization-and-project-pages)). Either way the address never breaks: the copy is published first, then the repo's Pages is switched off. Verified during the rollout of the first app of the organisation: which one answers before and after the switch.
 
 ## Steps
 
@@ -106,12 +112,12 @@ In the workflows, `actions/create-github-app-token` mints a token valid for one 
 - The need is stated: lernapps/apps#58, lernapps/docs KD-21.
 
 ### Tasks
-- [ ] Owner sets up the GitHub App (section "GitHub App setup")
-- [ ] Confirm the lock file rule of KD-10
-- [ ] Verify that a project repo's Pages shadows the root site's `/<id>/`, and what happens when it is switched off
-- [ ] Build all seven apps at their current commits with `review-input.mjs` and check the bundles (sizes, relative paths)
-- [ ] List the reserved ids (paths of the root site, repos served below lernapps.net)
-- [ ] Check how `site-deploy` (JamesIves/github-pages-deploy-action) can take `clean-exclude` from a list in `gh-pages`
+- [x] Owner set up the GitHub App with `PUBLISHER_APP_ID` and `PUBLISHER_PRIVATE_KEY` in the environment `publish` (2026-10-21)
+- [x] Lock file rule of KD-10 confirmed
+- [x] Shadowing: not documented, no blocker (KD-12)
+- [x] The test build of the seven apps happens in the workflow, in its container, not locally (user, 2026-10-21)
+- [x] Reserved ids listed (KD-11)
+- [x] `site-deploy`: `clean-exclude` of JamesIves/github-pages-deploy-action takes several patterns, one per line; the action can read them from `copies.txt` in `gh-pages` before it deploys
 - [x] Steps recorded: build, push into `gh-pages/<id>/`, automatic start, apps already listed (KD-04, "Steps")
 
 ### Completed
@@ -125,13 +131,46 @@ In the workflows, `actions/create-github-app-token` mints a token valid for one 
 
 ## Plan
 ### Phase Entrance Criteria
-- The GitHub App is set up, or its setup is scheduled.
+- The GitHub App is set up.
 - The steps (section "Steps") are agreed.
-- The shadowing of `/<id>/` by project repos is verified.
-- All seven apps build at a pinned commit.
+- Open points of Explore are decided (KD-07 to KD-12).
 
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [x] Break the work down per repo and order it (below, and as tasks of Code)
+- [ ] User approves the plan
+
+### Implementation strategy
+One pull request per repo, merged in this order; each repo's checks and tests pass before its merge.
+
+**A. lernapps/tooling** (before anything is published)
+1. Rule `own-data-only` (branch `feat/own-data-only`, done).
+2. `actions/site-deploy`: before deploying, read `copies.txt` from the target's `gh-pages` (if any) and add every id in it to `clean-exclude`, besides `pr-preview/`; a home page deploy then never removes a copy.
+3. arc42: decision `dec-copies-served` (lernapps.net serves a copy of every listed app at `lernapps.net/<id>/`, built from the entry's commit) supersedes `dec-app-own-hosting` (status superseded); ch. 3 and 7 (deployment) accordingly; `app-publish` stays the creator's own publishing. Skill texts: `platform-rules.md` ("The app lives at its own address") and `lernapps-app/SKILL.md`.
+
+**B. lernapps/lernapps.github.io**
+1. Pin the tooling commit with the new `site-deploy` (Renovate or by hand). Nothing else: the copies arrive by push.
+
+**C. lernapps/apps**
+1. Entry format (`schemas/entry.js`, `npm run schema`): `source` required, a GitHub repo URL; `commit` required, a full commit id. `src/llms.njk`, the guidance texts and the test fixtures accordingly.
+2. Listing validation (`scripts/listing.mjs`): reserved ids (KD-11: `reserved-ids.txt` for the root site's paths; the organisation's repos from the API, except the entry's own `source`); `commit` exists in `source`.
+3. `review.yml`: `/review` without a commit reviews the entry's `commit`.
+4. `publish.yml` (push to `main` changing `entries/*.yaml`, and `workflow_dispatch` with an id):
+   - `plan`: the added, changed and deleted entries (diff to the previous commit; by hand: one id).
+   - `build` (matrix, no secrets, `contents: read`): `review-input.mjs` at the entry's commit in the container; fails when the build or the check fails; uploads only the bundle (`copy-<id>`), without top-level dotfiles.
+   - `publish` (environment `publish`, runs no app code): a token of the GitHub App for `lernapps.github.io` only; checks out its `gh-pages`, replaces `<id>/` with the bundle, removes `<id>/` of deleted entries, keeps `copies.txt` (`<id> <commit>` per line) in step, one commit "copy of `<source>@<commit>`", pushes.
+   - `verify`: waits for the Pages deployment of lernapps.github.io, then `lernapps check https://lernapps.net/<id>/ --entry`.
+   - At the end: starts `pages.yml` of lernapps/apps (`gh workflow run`, `GITHUB_TOKEN` with `actions: write`), so the catalog links the new copies.
+5. Catalog (`src/_data/catalog.js`): reads `https://lernapps.net/copies.txt` at build time; an app listed there at its entry's `commit` links (button, topics, QR code) to `https://lernapps.net/<id>/`, any other app to its `url` as today. So the catalog never links a copy that is not live, e.g. mathe-karte while its copy fails (KD-08).
+6. `update.yml` (schedule, daily, and `workflow_dispatch`): per entry, the head of `main` of `source`; when it differs from `commit`, opens or updates the pull request `update/<id>` with a token of the GitHub App for `apps`. `scripts/update-kind.mjs` compares the two commits (KD-10): only versions of existing npm dependencies (and their lock file, every `resolved` on registry.npmjs.org) → `gh pr merge --auto`; else the label `review` and a comment naming the changed files.
+7. Texts (`src/_data/de.js`, `en.js`, README): the app is served by lernapps.net, the creator stays the author; no more "at your own address".
+
+**D. Owner settings** (once)
+- lernapps/apps: "Allow auto-merge" on; a ruleset for `main` that requires the check `listing` (auto-merge waits for it).
+
+**E. Rollout**
+1. One pull request in lernapps/apps that adds `source` and `commit` (the current head of `main`) to all seven entries; its merge publishes six copies; mathe-karte fails as expected and keeps its own address in the catalog (KD-08).
+2. The first app of the organisation: check which address answers before and after its Pages is switched off (KD-12); then the other two; their publish workflows switched off.
+3. Licences (KD-09): fix the copyright lines in the six app repos, add a licence file to mathe-karte; each arrives as an update pull request that is not merged automatically; reviewed, merged, published; checked that the copy changed.
 
 ### Completed
 *None yet*
@@ -142,7 +181,17 @@ In the workflows, `actions/create-github-app-token` mints a token valid for one 
 - The user approved the plan.
 
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [ ] A2 tooling: `site-deploy` keeps the copies listed in `copies.txt`
+- [ ] A3 tooling: arc42 `dec-copies-served`, skill texts
+- [ ] B1 lernapps.github.io: new tooling commit
+- [ ] C1 apps: `source` and `commit` required in the entry format
+- [ ] C2 apps: reserved ids and commit check in the listing validation
+- [ ] C3 apps: `/review` defaults to the entry's commit
+- [ ] C4 apps: `publish.yml`
+- [ ] C5 apps: catalog links live copies
+- [ ] C6 apps: `update.yml` and `scripts/update-kind.mjs`
+- [ ] C7 apps: texts
+- [ ] D owner settings: auto-merge, ruleset
 
 ### Completed
 *None yet*
