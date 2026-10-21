@@ -1,21 +1,22 @@
 // What publish.yml builds and removes (plan .vibe/development-plan-feat-serve-copies.md, steps 1 to 3): the copies
-// lernapps.net serves at https://lernapps.net/<id>/.
+// lernapps.net serves at https://lernapps.net/apps/start/<id>/.
 //
 //   node scripts/publish-plan.mjs --before <commit>   the entries a push to main added or changed in `source` or
 //                                                    `commit` (build), and those it deleted (remove)
 //   node scripts/publish-plan.mjs --id <id>           one entry, built again (workflow_dispatch)
+//   node scripts/publish-plan.mjs --all               every entry, built again (workflow_dispatch without an id)
 //
 // Prints one JSON object: { "build": [{ "id", "source", "commit" }], "remove": ["<id>"] }. An entry whose text alone
 // changed is not built again: its copy is the same. Exit code 2 on wrong usage.
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { load } from "js-yaml";
 
 const ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const FILE = /^entries\/([a-z0-9]+(?:-[a-z0-9]+)*)\.yaml$/;
 
 function usage(message) {
-  process.stderr.write(`publish-plan: ${message}\nUsage: node scripts/publish-plan.mjs --before <commit> | --id <id>\n`);
+  process.stderr.write(`publish-plan: ${message}\nUsage: node scripts/publish-plan.mjs --before <commit> | --id <id> | --all\n`);
   process.exit(2);
 }
 
@@ -43,6 +44,11 @@ if (option === "--id") {
   const now = pinned(readFileSync(file, "utf8"));
   if (!now) usage(`${file}: no source and commit`);
   plan.build.push({ id: value, ...now });
+} else if (option === "--all") {
+  for (const file of readdirSync("entries").filter((name) => FILE.test(`entries/${name}`)).sort()) {
+    const now = pinned(readFileSync(`entries/${file}`, "utf8"));
+    if (now) plan.build.push({ id: file.replace(/\.yaml$/, ""), ...now });
+  }
 } else if (option === "--before") {
   if (!/^[0-9a-f]{7,40}$/.test(value ?? "")) usage(`--before ${value}: a commit id`);
   // a push that created the branch has no commit before it: compare with the first parent instead
@@ -63,6 +69,6 @@ if (option === "--id") {
     if (old?.source !== now.source || old?.commit !== now.commit) plan.build.push({ id, ...now });
   }
 } else {
-  usage("name --before <commit> or --id <id>");
+  usage("name --before <commit>, --id <id> or --all");
 }
 process.stdout.write(`${JSON.stringify(plan)}\n`);

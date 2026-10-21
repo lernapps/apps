@@ -101,18 +101,12 @@ function checkedFromPassing(file, report) {
   if (!report.rules.includes("entry-fitness-matches")) report.rules = [...report.rules, "entry-fitness-matches"].sort();
 }
 
-/** The catalog's own rule: the id is free at lernapps.net/<id>/ (schemas/reserved.js). */
+/** The catalog's own rule: the id is not another path of the catalog (schemas/reserved.js). */
 function freeId(file, report) {
-  let source;
-  try {
-    source = load(readFileSync(file, "utf8"))?.source;
-  } catch {
-    return;
-  }
-  const taken = reserved(basename(file, ".yaml"), source);
+  const taken = reserved(basename(file, ".yaml"));
   if (!taken) return;
   report.findings.push(
-    finding("entry-from-schema", file, `${taken}; lernapps.net serves the app at that address`, "Rename the entry to another id, entries/<id>.yaml"),
+    finding("entry-from-schema", file, taken, "Rename the entry to another id, entries/<id>.yaml"),
   );
   report.findings.sort(byPlace);
   if (!report.rules.includes("entry-from-schema")) report.rules = [...report.rules, "entry-from-schema"].sort();

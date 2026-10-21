@@ -90,18 +90,18 @@ the site frame, and `lernapps-check` fails an app that carries it.
 
 ## The copies of the listed apps
 
-lernapps.net serves a copy of every listed app at `https://lernapps.net/<id>/`, built from the `commit` its entry
+lernapps.net serves a copy of every listed app at `https://lernapps.net/apps/start/<id>/`, built from the `commit` its entry
 names (`source`, `commit`; lernapps/docs KD-21, plan [`.vibe/development-plan-feat-serve-copies.md`](.vibe/development-plan-feat-serve-copies.md)):
 
 - [`publish.yml`](.github/workflows/publish.yml): a push to `main` that adds, changes or deletes an entry builds the
-  app at its commit in a container without secrets, checks it, and pushes the copy into `<id>/` of the root site's
-  `gh-pages` (lernapps/lernapps.github.io) with a token of the organisation's GitHub App (environment `publish`);
-  `copies.txt` there lists the live copies. Then it checks each copy where it is served and builds the catalog again.
+  app at its commit in a container without secrets, checks it, and pushes the copy into `start/<id>/` of this repo's
+  `gh-pages`; `start/copies.txt` lists the live copies, and `pages.yml` leaves `start/` alone (`keep` of tooling's
+  site deploy action). Then it checks each copy where it is served and builds the catalog again.
 - The catalog links an app's copy only when `copies.txt` lists it at the entry's commit, otherwise the entry's `url`.
 - [`update.yml`](.github/workflows/update.yml): daily, a pull request `update/<id>` for each app whose `main` moved.
   It merges by itself only when nothing but versions of existing npm dependencies changed
   ([`scripts/update-kind.mjs`](scripts/update-kind.mjs)); anything else gets the label `review`.
-- An id may not be a path of the home page or another repo of the organisation ([`schemas/reserved.js`](schemas/reserved.js)).
+- An id may not be another path of the catalog, e.g. `start` or `en` ([`schemas/reserved.js`](schemas/reserved.js)).
 
 ## Deploy and previews
 

@@ -1,13 +1,12 @@
-// Puts the copies into a checkout of the root site's `gh-pages` (publish.yml, job `publish`): lernapps.net serves each
-// at https://lernapps.net/<id>/. Runs no code of an app; the copies are files.
+// Puts the copies into `start/` of a checkout of this repo's `gh-pages` (publish.yml, job `publish`): lernapps.net
+// serves each at https://lernapps.net/apps/start/<id>/. Runs no code of an app; the copies are files.
 //
 //   node scripts/publish-copies.mjs <site dir> <copies dir> <plan json>
 //
 // <copies dir> holds one directory per built copy (<id>/), <plan json> is the output of scripts/publish-plan.mjs.
 // For each built copy it replaces <site dir>/<id>/; for each removed entry it deletes <site dir>/<id>/; it keeps
-// <site dir>/copies.txt, one "<id> <commit>" per line, sorted: the list the site deploy action of lernapps/tooling
-// leaves alone, and the catalog reads to link only copies that are live. A copy in the plan without a directory in
-// <copies dir> (its build failed) stays as it was. Prints what it did; exit code 2 on wrong usage.
+// <site dir>/copies.txt, one "<id> <commit>" per line, sorted: the list the catalog reads to link only copies that
+// are live. A copy in the plan without a directory in <copies dir> (its build failed) stays as it was. Prints what it did; exit code 2 on wrong usage.
 import { cpSync, existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 

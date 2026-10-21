@@ -57,7 +57,7 @@ export const Entry = z
       .string()
       .regex(/^[0-9a-f]{40}$/, "the full id of a commit: 40 characters 0-9 and a-f")
       .describe(
-        "The full id of the commit of source that lernapps.net builds and serves at https://lernapps.net/<id>/. " +
+        "The full id of the commit of source that lernapps.net builds and serves at https://lernapps.net/apps/start/<id>/. " +
           "A new commit is an update of the app",
       ),
     limits: TrimmedText.optional()

@@ -2,8 +2,8 @@
 // build, so nothing unchecked gets published (platform design D5 ch-listing: "automatic check and
 // publication"). The format is explained in src/llms.njk, served to people and agents as /apps/llms.txt.
 //
-// lernapps.net serves a copy of every listed app at https://lernapps.net/<id>/ (publish.yml). The catalog links an
-// app's copy (button, link, topics, QR code) only when copies.txt of the root site lists it at its entry's commit, so
+// lernapps.net serves a copy of every listed app at https://lernapps.net/apps/start/<id>/ (publish.yml). The catalog
+// links an app's copy (button, link, topics, QR code) only when start/copies.txt lists it at its entry's commit, so
 // it never links a copy that is not live; otherwise it links the entry's url. LERNAPPS_COPIES names another list (a
 // URL or a file, for the tests); without network the catalog links the entries' urls.
 import { readFileSync, readdirSync } from "node:fs";
@@ -16,7 +16,8 @@ import languages from "./languages.js";
 import site from "./site.js";
 
 const DIR = "entries";
-const COPIES = process.env.LERNAPPS_COPIES ?? `${site.origin}/copies.txt`;
+const START = `${site.origin}/apps/start`;
+const COPIES = process.env.LERNAPPS_COPIES ?? `${START}/copies.txt`;
 
 /** id → commit of the copies lernapps.net serves; empty when the list cannot be read. */
 async function liveCopies() {
@@ -36,8 +37,7 @@ async function liveCopies() {
 function check(id, raw) {
   const errors = [];
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) errors.push("file name must be kebab-case: <id>.yaml");
-  if (id === "en") errors.push("the id \"en\" is taken by the English pages");
-  const taken = reserved(id, raw?.source);
+  const taken = reserved(id);
   if (taken) errors.push(`${taken}: choose another id`);
   const result = Entry.safeParse(raw);
   if (!result.success) {
@@ -53,7 +53,7 @@ export default async function () {
   for (const file of readdirSync(DIR).filter((f) => f.endsWith(".yaml")).sort()) {
     const id = file.replace(/\.yaml$/, "");
     const entry = check(id, load(readFileSync(join(DIR, file), "utf8")));
-    const copy = live.get(id) === entry.commit ? `${site.origin}/${id}/` : undefined;
+    const copy = live.get(id) === entry.commit ? `${START}/${id}/` : undefined;
     const url = copy ?? entry.url;
     const base = url.endsWith("/") ? url : url + "/";
     apps.push({
