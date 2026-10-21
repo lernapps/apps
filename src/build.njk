@@ -13,8 +13,9 @@ eleventyComputed:
 {#-
   Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
   to give the assistant, the command that starts the app, the skill as the quick path, building freely without the
-  templates (any framework, or tools such as Lovable or bolt.new), publishing (#veroeffentlichen: the app stays the
-  creator's, lernapps.net serves a copy and carries the regulatory part, KD-21), then on to listing (/enter/), the section #eintragen, which the header's "App bauen" now stands for too.
+  templates (any framework, or tools such as Lovable or bolt.new), then the step out into the world: publishing it on
+  lernapps.net (/enter/, a prominent link with a rocket, the section #eintragen, which the header's "App bauen" now
+  stands for too); this page is about building only.
   test/entry-point.e2e.test.mjs runs the command from the built page.
 -#}
 {%- set B = t.build %}
@@ -46,25 +47,26 @@ eleventyComputed:
     <a href="{{ site.tooling.home }}" class="btn btn-secondary mt-4 self-start"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}" lang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.link }}</a>
   </section>
 
-  <section class="panel scroll-mt-16" aria-labelledby="veroeffentlichen">
-    <h2 id="veroeffentlichen" class="panel-title">{{ B.publish.headline }}</h2>
-    <p class="m-0 text-slate-700">{{ B.publish.intro }}</p>
-    <ul class="list-none p-0 m-0 mt-3 flex flex-col gap-2">
-      {%- for item in B.publish.items %}<li class="check"><strong>{{ item.title }}</strong> {{ item.body }}</li>{% endfor %}
-    </ul>
-    <p class="m-0 mt-3 text-slate-700">{{ B.publish.licence }}</p>
-  </section>
-
   <section class="panel" aria-labelledby="frei">
     <h2 id="frei" class="panel-title">{{ B.free.headline }}</h2>
     <p class="m-0 text-slate-700">{{ B.free.body }} <a href="{{ site.tooling.platformRules }}" class="text-blue-700 underline underline-offset-2"{% if B.free.rulesLang %} hreflang="{{ B.free.rulesLang }}"{% endif %}>{{ B.free.rulesLink }}</a> {{ B.free.rules }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.free.criteriaLink }}</a>. {{ B.free.check }}</p>
   </section>
 
-  <section class="panel scroll-mt-16" aria-labelledby="eintragen">
-    <h2 id="eintragen" class="panel-title">{{ B.next.headline }}</h2>
-    <p class="m-0 text-slate-700">{{ B.next.body }}</p>
-    <p class="m-0 mt-3 text-slate-700">{{ B.next.criteria }} <a href="{{ '/enter/#bedingungen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ B.next.criteriaLink }}</a>.</p>
-    <p class="m-0 mt-3 text-slate-700">{{ B.next.enter }}</p>
-    <a href="{{ '/enter/' | inLang(lang) | url }}" class="btn btn-primary mt-4 self-start">{{ B.next.enterLink }}</a>
+  <section class="scroll-mt-16 rounded-xl bg-slate-900 text-white p-6 sm:p-8 flex flex-col sm:flex-row gap-5 sm:items-center" aria-labelledby="eintragen">
+    <svg class="shrink-0 w-16 h-16 sm:w-24 sm:h-24" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+      <circle cx="10" cy="14" r="1.5" fill="#bfdbfe"/><circle cx="54" cy="52" r="1.5" fill="#bfdbfe"/><circle cx="50" cy="8" r="1" fill="#bfdbfe"/><circle cx="8" cy="44" r="1" fill="#bfdbfe"/>
+      <g transform="rotate(45 32 32)">
+        <path d="M26 46 L32 60 L38 46 Z" fill="#f59e0b"/>
+        <path d="M29 46 L32 54 L35 46 Z" fill="#fde68a"/>
+        <path d="M22 34 L13 46 L22 45 Z M42 34 L51 46 L42 45 Z" fill="#60a5fa"/>
+        <path d="M32 4 C40 12 43 22 43 33 L43 46 L21 46 L21 33 C21 22 24 12 32 4 Z" fill="#2563eb" stroke="#93c5fd" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="32" cy="24" r="5" fill="#0f172a" stroke="#bfdbfe" stroke-width="2"/>
+      </g>
+    </svg>
+    <div class="min-w-0">
+      <h2 id="eintragen" class="m-0 text-xl sm:text-2xl font-bold">{{ B.next.headline }}</h2>
+      <p class="m-0 mt-2 text-slate-300 text-lg">{{ B.next.body }}</p>
+      <a href="{{ '/enter/' | inLang(lang) | url }}" class="btn btn-light btn-lg mt-4">{{ B.next.enterLink }} <span aria-hidden="true">→</span></a>
+    </div>
   </section>
 </div>

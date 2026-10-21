@@ -16,7 +16,8 @@ eleventyComputed:
   lernapps-listing (site.tooling.listing, which follows llms.txt); the issue form for those without one; the owner's
   personal help by e-mail (concierge, D8 mvp-first-draft) only as the fallback, the one mailto of the page.
   Building an app comes first, on its own page (/build/, build.njk); this page lists an app that is published.
-  "So läuft das Eintragen ab" shows the listing as steps, coloured by who acts (KD-21: the copy, linked with the repo).
+  "So läuft das Eintragen ab" shows the listing as steps, coloured by who acts; "Deine App bleibt deine" (#deine-app)
+  says why lernapps.net serves a copy: the app stays the creator's, lernapps.net carries the regulatory part (KD-21).
   "Was du zurückbekommst" is s-use-insight: thanks and feedback, counted openly, on the app's page.
 -#}
 {%- set L = t.list %}
@@ -56,7 +57,15 @@ eleventyComputed:
       </li>
       {%- endfor %}
     </ol>
-    <p class="m-0 mt-4 text-slate-700">{{ L.flow.after }} <a href="{{ '/build/#veroeffentlichen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ L.flow.afterLink }}</a>.</p>
+    <p class="m-0 mt-4 text-slate-700">{{ L.flow.after }} <a href="#deine-app" class="text-blue-700 underline underline-offset-2">{{ L.flow.afterLink }}</a>.</p>
+  </section>
+
+  <section class="panel scroll-mt-16" aria-labelledby="deine-app">
+    <h2 id="deine-app" class="panel-title">{{ L.own.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ L.own.intro }}</p>
+    <ul class="list-none p-0 m-0 mt-3 flex flex-col gap-2">
+      {%- for item in L.own.items %}<li class="check"><strong>{{ item.title }}</strong> {{ item.body }}</li>{% endfor %}
+    </ul>
   </section>
 
   <section aria-labelledby="wege">
