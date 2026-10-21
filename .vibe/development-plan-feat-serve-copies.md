@@ -52,6 +52,12 @@ An id may not be a top-level path of the root site (today in `gh-pages`: `about`
 ### KD-12: Shadowing by a repo's own Pages is no blocker (2026-10-21)
 The GitHub docs do not say whether a project repo's Pages or a folder of the root site wins at `/<id>/` ([user, organization and project pages](https://docs.github.com/enterprise/2.10/user/articles/user-organization-and-project-pages)). Either way the address never breaks: the copy is published first, then the repo's Pages is switched off. Verified during the rollout of the first app of the organisation: which one answers before and after the switch.
 
+### KD-13: The copies move to `lernapps.net/apps/start/<id>/` (2026-10-21, supersedes KD-01, KD-11, KD-12 and step 2's push into the root site)
+The rollout showed two things: a repo of the organisation keeps its path `lernapps.net/<id>/` even with its own Pages switched off (the root site's copy answered 404, so anorganische-chemie, elektrizitaet and naturwunder-quiz were unreachable until their Pages was switched on again), and those repos need their own Pages anyway for the previews of their pull requests.
+- **Decision** (user): a reserved sub-path of the app overview's site, `lernapps.net/apps/start/<id>/`. The copies live in the `gh-pages` branch of lernapps/apps, directory `start/`, with `start/copies.txt`; `publish.yml` pushes there with the workflow's own `GITHUB_TOKEN`, so the GitHub App is no longer needed for publishing (still for the update pull requests). tooling's `site-deploy` gets an input `keep` (here `start/`), and no longer reads a list of copies from the root site.
+- **Consequences**: the app repos keep their Pages (their own address and their previews); no clash with the names of repos; the reserved ids are only the top-level paths of the app overview's site (`start`, `en`, `build`, `enter`, `schemas`, `assets`, `pr-preview`, …); the address is longer than `/<id>/`, but has "app" only in the domain and the catalog's path.
+- **Cleanup done**: the six copies and `copies.txt` removed from the root site's `gh-pages` (lernapps.github.io a7f6059); the catalog built again so it links the creators' addresses until the new copies are live.
+
 ## Steps
 
 ### 1. Build the app
