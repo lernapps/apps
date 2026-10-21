@@ -1,20 +1,27 @@
 name: Update
 
 # Opens the update pull requests of the listed apps (plan .vibe/development-plan-feat-serve-copies.md, step 3, KD-10):
-# daily, and by hand for one id. Per entry whose source's `main` moved past the entry's `commit`, one pull request
-# `update/<id>` that sets the new commit; the listing check runs on it as on every entry change, and its merge
-# publishes the new copy (publish.yml).
+# every 30 minutes, and by hand (Actions → Update → Run workflow, for one id or all). Per entry whose source's `main`
+# moved past the entry's `commit`, once the app's address serves the new commit, one pull request `update/<id>` that
+# sets it; a newer push moves the same pull request. The listing check runs on it as on every entry change, and its
+# merge publishes the new copy (publish.yml).
 #
-# An update is merged without a review only when everything that changed in the app is the version of an existing npm
-# dependency (scripts/update-kind.mjs): the pull request then gets auto-merge, which merges once the required checks
-# pass. Anything else gets the label `review` and a comment naming what changed; a person reviews and merges it.
+# An update is merged without a review when what changed is no more than what `lernapps update` makes of the entry's
+# commit, plus versions of existing npm dependencies and text (*.md outside src/ and public/): scripts/update-replay.mjs
+# replays the update with the tooling the new commit pins and compares. The pull request then gets auto-merge, which
+# merges once the required checks pass. Anything else gets the label `review` and a comment naming what changed; a
+# person reviews and merges it.
 #
-# The pull request is opened with a token of the organisation's GitHub App (environment `publish`, KD-07): one opened
-# with this workflow's GITHUB_TOKEN would start no workflow, so the listing check would not run. No job runs code of an
-# app: the app repos are read with git only.
+# No job holds both an app's files and a credential:
+#   - plan: which entries have a new commit that is served (scripts/update-plan.mjs); git ls-remote and HTTP only.
+#   - classify: per update, no secret, a read-only token. Replays `lernapps update` on the entry's commit (the app's
+#     dependencies are installed without their scripts) and uploads the verdict as the artifact verdict-<id>.
+#   - pull-requests: runs no code of an app. Opens the pull requests with a token of the organisation's GitHub App
+#     (environment `publish`, KD-07): one opened with this workflow's GITHUB_TOKEN would start no workflow, so the
+#     listing check would not run.
 on:
   schedule:
-    - cron: "23 4 * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       id:
@@ -28,7 +35,70 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update:
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      updates: ${{ steps.plan.outputs.updates }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - id: plan
+        env:
+          ID: ${{ inputs.id }}
+        run: |
+          updates=$(node scripts/update-plan.mjs ${ID:+"$ID"})
+          echo "$updates" | jq .
+          echo "updates=$updates" >> "$GITHUB_OUTPUT"
+
+  classify:
+    needs: plan
+    if: needs.plan.outputs.updates != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        update: ${{ fromJSON(needs.plan.outputs.updates) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Replay lernapps update and compare
+        env:
+          ID: ${{ matrix.update.id }}
+          SOURCE: ${{ matrix.update.source }}
+          FROM: ${{ matrix.update.from }}
+          TO: ${{ matrix.update.to }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/verdict"
+          node scripts/update-replay.mjs "$ID" "$SOURCE" "$FROM" "$TO" > "$RUNNER_TEMP/verdict/$ID.json"
+          jq . "$RUNNER_TEMP/verdict/$ID.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: verdict-${{ matrix.update.id }}
+          path: ${{ runner.temp }}/verdict/
+          if-no-files-found: error
+          retention-days: 7
+
+  pull-requests:
+    needs: classify
+    # also when one update could not be classified: the others get their pull request
+    if: always() && needs.classify.result != 'skipped' && needs.classify.result != 'cancelled'
     runs-on: ubuntu-latest
     environment: publish
     permissions:
@@ -45,19 +115,18 @@ jobs:
         with:
           ref: main
           token: ${{ steps.app.outputs.token }}
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci --ignore-scripts
+          pattern: verdict-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/verdicts
       - name: Open or update the pull requests
         env:
-          ID: ${{ inputs.id }}
           GH_TOKEN: ${{ steps.app.outputs.token }}
           SLUG: ${{ steps.app.outputs.app-slug }}
         run: |
           set -euo pipefail
-          updates=$(node scripts/update-plan.mjs ${ID:+"$ID"})
+          updates=$(jq -s . "$RUNNER_TEMP"/verdicts/*.json)
           echo "$updates" | jq .
           user_id=$(gh api "/users/${SLUG}%5Bbot%5D" --jq .id)
           git config user.name "${SLUG}[bot]"
@@ -76,10 +145,10 @@ jobs:
             git add "entries/$id.yaml"
             git commit --quiet -m "Update $id to ${to::7}" -m "$source/compare/$from...$to"
             git push --quiet --force origin "$branch"
-            if [ "$kind" = dependencies ]; then
+            if [ "$kind" = auto ]; then
               body="Updates **$id** to \`$to\` ([changes]($source/compare/$from...$to)).
 
-          Only versions of existing npm dependencies changed: merged automatically once the checks pass."
+          No more changed than what \`lernapps update\` makes of the old commit, versions of npm dependencies and text: merged automatically once the checks pass."
             else
               body="Updates **$id** to \`$to\` ([changes]($source/compare/$from...$to)).
 
@@ -93,7 +162,7 @@ jobs:
             else
               gh pr edit "$number" --title "Update $id to ${to::7}" --body "$body"
             fi
-            if [ "$kind" = dependencies ]; then
+            if [ "$kind" = auto ]; then
               gh pr edit "$number" --remove-label review >/dev/null 2>&1 || true
               gh pr merge "$number" --auto --squash
             else

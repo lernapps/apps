@@ -41,7 +41,7 @@ test("a lock file may change only packages that come from the npm registry", () 
   ]);
 });
 
-test("between two commits of an app: only dependency versions → dependencies; a licence change → review", () => {
+test("between two commits of an app: dependency versions or text → auto; a licence change → review", () => {
   const dir = temp("app");
   const git = (...args) => spawnSync("git", ["-C", dir, "-c", "user.email=t@example.org", "-c", "user.name=t", ...args], { encoding: "utf8" });
   const head = () => git("rev-parse", "HEAD").stdout.trim();
@@ -56,8 +56,42 @@ test("between two commits of an app: only dependency versions → dependencies; 
   const bumped = head();
   writeFileSync(join(dir, "LICENSE"), "MIT License\nCopyright (c) 2026 Jane Doe\n");
   git("commit", "--quiet", "-am", "c");
-  assert.deepEqual(updateKind(dir, first, bumped), { kind: "dependencies", reasons: [] });
+  assert.deepEqual(updateKind(dir, first, bumped), { kind: "auto", reasons: [] });
   assert.deepEqual(updateKind(dir, bumped, head()), { kind: "review", reasons: ["LICENSE: changed"] });
+  const licensed = head();
+  mkdirSync(join(dir, "docs"));
+  writeFileSync(join(dir, "README.md"), "# a\n");
+  writeFileSync(join(dir, "docs", "plan.md"), "plan\n");
+  git("add", "-A");
+  git("commit", "--quiet", "-m", "d");
+  assert.deepEqual(updateKind(dir, licensed, head()), { kind: "auto", reasons: [] });
+  const text = head();
+  mkdirSync(join(dir, "src"));
+  writeFileSync(join(dir, "src", "seite.md"), "shipped\n");
+  git("add", "-A");
+  git("commit", "--quiet", "-m", "e");
+  assert.deepEqual(updateKind(dir, text, head()), { kind: "review", reasons: ["src/seite.md: added"] });
+});
+
+test("the base of an update can be a tree: what lernapps update made of the old commit is no difference", () => {
+  const dir = temp("app");
+  const git = (...args) => spawnSync("git", ["-C", dir, "-c", "user.email=t@example.org", "-c", "user.name=t", ...args], { encoding: "utf8" });
+  git("init", "--quiet");
+  writeFileSync(join(dir, "package.json"), JSON.stringify({ name: "a", devDependencies: { "@lernapps/tooling": "github:lernapps/tooling#1" } }));
+  git("add", "-A");
+  git("commit", "--quiet", "-m", "a");
+  // what `lernapps update` leaves in the working tree of the old commit
+  writeFileSync(join(dir, "package.json"), JSON.stringify({ name: "a", devDependencies: { "@lernapps/tooling": "github:lernapps/tooling#2" } }));
+  mkdirSync(join(dir, ".github"));
+  writeFileSync(join(dir, ".github", "pages.yml"), "uses: lernapps/tooling/actions/app-publish@2\n");
+  git("add", "-A");
+  const tree = git("write-tree").stdout.trim();
+  git("commit", "--quiet", "-m", "b");
+  const updated = git("rev-parse", "HEAD").stdout.trim();
+  assert.deepEqual(updateKind(dir, tree, updated), { kind: "auto", reasons: [] });
+  writeFileSync(join(dir, ".github", "pages.yml"), "uses: lernapps/tooling/actions/app-publish@2\nrun: curl x\n");
+  git("commit", "--quiet", "-am", "c");
+  assert.deepEqual(updateKind(dir, tree, git("rev-parse", "HEAD").stdout.trim()), { kind: "review", reasons: [".github/pages.yml: changed"] });
 });
 
 test("a push builds every entry whose copy is missing or at another commit, and removes copies without an entry", () => {
