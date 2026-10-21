@@ -39,10 +39,22 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --ignore-scripts
+      # A re-run keeps the run's id and adds an artifact of the same name: take the newest, the one of this attempt.
+      - name: Find the report of the newest attempt
+        id: artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          id=$(gh api "repos/$REPO/actions/runs/$RUN_ID/artifacts" \
+            --jq '[.artifacts[] | select(.name == "listing" and (.expired | not))] | sort_by(.created_at) | last | .id // empty')
+          echo "id=$id" >> "$GITHUB_OUTPUT"
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        if: steps.artifact.outputs.id != ''
         continue-on-error: true # no artifact: the run checked no entry, or broke before its report
         with:
-          name: listing
+          artifact-ids: ${{ steps.artifact.outputs.id }}
           path: listing
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
@@ -53,7 +65,7 @@ jobs:
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
           CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
-          RUN_ID: ${{ github.event.workflow_run.id }}
+          ARTIFACT_ID: ${{ steps.artifact.outputs.id }}
         run: |
           # The open pull request whose head is the checked commit; none when it has moved on since (a newer run comments).
           pr=$(gh api --paginate "repos/$REPO/pulls?state=open&per_page=100" \
@@ -68,10 +80,7 @@ jobs:
           fi
           # The artifact's address, which a comment too long for GitHub links as the full report; else it links the run.
           report_url=
-          if [ -d listing ]; then
-            artifact=$(gh api "repos/$REPO/actions/runs/$RUN_ID/artifacts?name=listing" --jq '.artifacts[0].id // empty' || true)
-            if [ -n "$artifact" ]; then report_url="$RUN_URL/artifacts/$artifact"; fi
-          fi
+          if [ -d listing ] && [ -n "$ARTIFACT_ID" ]; then report_url="$RUN_URL/artifacts/$ARTIFACT_ID"; fi
           state=0
           node scripts/listing-comment.mjs listing --run-url "$RUN_URL" ${report_url:+--report-url "$report_url"} > body.md || state=$?
           if [ "$state" -gt 1 ]; then exit "$state"; fi
