@@ -182,7 +182,7 @@ const en = {
       headline: "What lernapps.net provides for you to build",
       body: "Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.",
       link: "Go to the build tools",
-      github: "Your app is published through GitHub: free, public and at your own address. Once it is in the catalog, lernapps.net serves a copy at lernapps.net. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something.",
+      github: "Your app is published through GitHub: free, public and at your own address. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something.",
       githubLink: "What GitHub is and what we use it for",
     },
     free: {
@@ -194,12 +194,9 @@ const en = {
       check: "When you list the app, we check the published app just like any other.",
     },
     next: {
-      headline: "What happens next: listing the app",
-      body: "Your assistant guides you through a plan: ask, plan, build, check, publish. The app belongs to you and lives at your own address, for example on GitHub Pages. In the catalog, lernapps.net serves a copy, under one address and one privacy notice. You stay its author.",
-      criteria: "From the start, it meets what we require for the catalog:",
-      criteriaLink: "the conditions",
-      enter: "Once it is published, your assistant lists it on lernapps.net with the skill lernapps-listing. Then teachers and parents can find it.",
-      enterLink: "How to list an app",
+      headline: "And then: out into the world",
+      body: "Your app can be really good software for you. But if you want the world to hear about it, you have to publish it!",
+      enterLink: "How to publish your app",
     },
   },
 
@@ -232,6 +229,41 @@ const en = {
         { label: "Where can it be found?", hint: "The link to the app." },
       ],
       optional: "If you like: single topics with their own link. Then people searching land right at the right place.",
+    },
+    flow: {
+      headline: "How listing works",
+      steps: [
+        { who: "you", label: "You & assistant", title: "You propose the app", body: "Your assistant opens a pull request with the three details." },
+        { who: "auto", label: "automatic", title: "The check opens your app", body: "At your address, the way learners open it. If something is missing, it says so in the pull request, and your assistant fixes it." },
+        { who: "team", label: "lernapps.net", title: "We take a look", body: "If everything fits, we add the app." },
+        { who: "auto", label: "automatic", title: "The copy is made", body: "From exactly your version, checked once more, on lernapps.net." },
+        { who: "team", label: "lernapps.net", title: "Others find it", body: "The catalog links the copy and your repository as the source code." },
+      ],
+      after: "After that, lernapps.net takes over new versions by itself.",
+      afterLink: "Why there is a copy",
+    },
+    own: {
+      headline: "Your app stays yours",
+      intro:
+        "Your app stays at your own address, for example on GitHub Pages. Once it is in the catalog, lernapps.net also serves a copy, at lernapps.net/apps/start/ and your app's name. Learners open that copy.",
+      items: [
+        {
+          title: "We take nothing away from you.",
+          body: "The repository, the licence and your address stay with you. You stay the author, and the catalog links your repository as the source code.",
+        },
+        {
+          title: "We take the regulatory part off your hands.",
+          body: "Schools ask who runs an app and what happens to the data. For the copy, lernapps.net answers: one provider, one privacy notice, one imprint. And the address stays, even if your app moves one day.",
+        },
+        {
+          title: "The copy is your app.",
+          body: "We build it from exactly the version you published and check it before learners see it. We change nothing in it.",
+        },
+        {
+          title: "New versions arrive by themselves.",
+          body: "When you publish a new version, lernapps.net usually takes it over within an hour. Updates of the tools go through by themselves; we look at changed content first.",
+        },
+      ],
     },
     ways: {
       headline: "How to list it",
