@@ -10,5 +10,5 @@ Die Prüfung läuft bei jedem Push neu und ändert diesen Kommentar.
 ```text
 Geprüft:   https://example.org/bruch-trainer/ (2026-10-09T12:00:00.000Z)
 Gemessen:  fitness.storage none, fitness.thirdParty none (ohne Klick)
-Regeln:    8 geprüft
+Regeln:    9 geprüft
 ```
