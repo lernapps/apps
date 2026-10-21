@@ -55,6 +55,7 @@ jobs:
         continue-on-error: true # no artifact: the run checked no entry, or broke before its report
         with:
           artifact-ids: ${{ steps.artifact.outputs.id }}
+          merge-multiple: true # by id, the files would land in listing/listing/
           path: listing
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
