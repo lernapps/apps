@@ -227,3 +227,5 @@ One pull request per repo, merged in this order; each repo's checks and tests pa
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
+
+- [ ] Bug (2026-10-21): six update PRs merged in a row; the concurrency group cancelled the four waiting publish runs, and the last one built only its own push's diff (`--before`), so four copies stayed old. Fix: `publish-plan.mjs --live` compares the entries with the served `start/copies.txt`, so each run catches up on everything. Side effect: an entry whose copy never builds (mathe-karte) is retried, and the run goes red, on every push until it is fixed or delisted.
