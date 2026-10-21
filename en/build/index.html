@@ -14,17 +14,34 @@
 <link rel="stylesheet" href="/apps/lernapps-frame.css">
 <link rel="alternate" hreflang="en" href="/apps/en/build/">
 <link rel="alternate" hreflang="de" href="/apps/build/">
+<script>(() => {
+  const key = "lernapps-lang", here = "en", pages = {"de":"/apps/build/"};
+  const known = ["de","en"];
+  const browser = (navigator.languages || [navigator.language]).map((l) => String(l).slice(0, 2).toLowerCase()).find((l) => known.includes(l));
+  let chosen = null;
+  try { chosen = localStorage.getItem(key); } catch {}
+  const wanted = known.includes(chosen) ? chosen : browser;
+  if (wanted && wanted !== here && pages[wanted] && !/bot|crawl|spider|slurp/i.test(navigator.userAgent)) {
+    location.replace(pages[wanted] + location.search + location.hash);
+    return;
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-la-lang]");
+    if (!a) return;
+    try { a.dataset.laLang === browser ? localStorage.removeItem(key) : localStorage.setItem(key, a.dataset.laLang); } catch {}
+  });
+})();</script>
   <script src="/lernapps-count.js" defer></script>
   <link rel="stylesheet" href="/apps/uno.css">
   <link rel="stylesheet" href="/apps/assets/apps.css">
   <script src="/apps/assets/kopieren.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
-  <a class="la-skip" href="#main-content">Skip to content</a>
-<header class="la-header">
+  <a class="la-skip" href="#main-content" lang="en">Skip to content</a>
+<header class="la-header" lang="en">
   <div class="la-header__inner">
     <a class="la-brand" href="/en/" aria-label="lernapps.net – home page"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
-    <nav class="la-nav" aria-label="Main navigation"><ul><li><a href="/apps/en/">Find apps</a></li><li><a href="/apps/en/build/" aria-current="page">Build an app</a></li><li><a href="/tooling/">Tooling</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">That's why</a></li><li><a href="/en/join/">Get involved</a></li><li class="la-lang"><a href="/apps/build/" hreflang="de" lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav>
+    <nav class="la-nav" aria-label="Main navigation"><ul><li><a href="/apps/en/">Find apps</a></li><li><a href="/apps/en/build/" aria-current="page">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">That's why</a></li><li><a href="/en/join/">Get involved</a></li><li class="la-lang"><a href="/apps/build/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav>
   </div>
 </header>
 
@@ -62,8 +79,8 @@ with your AI assistant.</h1>
   <section class="panel" aria-labelledby="werkzeuge">
     <h2 id="werkzeuge" class="panel-title">What lernapps.net provides for you to build</h2>
     <p class="m-0 text-slate-700">Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.</p>
-    <p class="m-0 mt-3 text-slate-700">Your app is published through GitHub: free, public and at your own address. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something. <a href="/tooling/github/" class="text-blue-700 underline underline-offset-2">What GitHub is and what we use it for</a>.</p>
-    <a href="/tooling/" class="btn btn-secondary mt-4 self-start">Go to the build tools</a>
+    <p class="m-0 mt-3 text-slate-700">Your app is published through GitHub: free, public and at your own address. You do not need to know GitHub. The tools do most of it, and your assistant tells you when you need to click something. <a href="/tooling/en/github/" class="text-blue-700 underline underline-offset-2">What GitHub is and what we use it for</a>.</p>
+    <a href="/tooling/en/" class="btn btn-secondary mt-4 self-start">Go to the build tools</a>
   </section>
 
   <section class="panel" aria-labelledby="frei">
@@ -92,10 +109,10 @@ with your AI assistant.</h1>
 
   </main>
 
-  <footer class="la-footer">
+  <footer class="la-footer" lang="en">
   <div class="la-footer__inner">
     <p>lernapps.net is free and has no ads. It lives on your thanks.</p>
-    <nav aria-label="Footer"><ul><li><a href="/en/privacy/">Privacy</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/docs/platform-design/">Platform design</a></li><li><a href="https://github.com/lernapps/apps">Source code</a></li></ul></nav>
+    <nav aria-label="Footer"><ul><li><a href="/en/privacy/">Privacy</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/docs/en/platform-design/">Platform design</a></li><li><a href="https://github.com/lernapps/apps">Source code</a></li></ul></nav>
   </div>
 </footer>
 </body>

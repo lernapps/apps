@@ -14,17 +14,34 @@
 <link rel="stylesheet" href="/apps/lernapps-frame.css">
 <link rel="alternate" hreflang="de" href="/apps/">
 <link rel="alternate" hreflang="en" href="/apps/en/">
+<script>(() => {
+  const key = "lernapps-lang", here = "de", pages = {"en":"/apps/en/"};
+  const known = ["de","en"];
+  const browser = (navigator.languages || [navigator.language]).map((l) => String(l).slice(0, 2).toLowerCase()).find((l) => known.includes(l));
+  let chosen = null;
+  try { chosen = localStorage.getItem(key); } catch {}
+  const wanted = known.includes(chosen) ? chosen : browser;
+  if (wanted && wanted !== here && pages[wanted] && !/bot|crawl|spider|slurp/i.test(navigator.userAgent)) {
+    location.replace(pages[wanted] + location.search + location.hash);
+    return;
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-la-lang]");
+    if (!a) return;
+    try { a.dataset.laLang === browser ? localStorage.removeItem(key) : localStorage.setItem(key, a.dataset.laLang); } catch {}
+  });
+})();</script>
   <script src="/lernapps-count.js" defer></script>
   <link rel="stylesheet" href="/apps/uno.css">
   <link rel="stylesheet" href="/apps/assets/apps.css">
   <script src="/apps/assets/finden.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
-  <a class="la-skip" href="#main-content">Zum Inhalt springen</a>
-<header class="la-header">
+  <a class="la-skip" href="#main-content" lang="de">Zum Inhalt springen</a>
+<header class="la-header" lang="de">
   <div class="la-header__inner">
     <a class="la-brand" href="/" aria-label="lernapps.net – Startseite"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
-    <nav class="la-nav" aria-label="Hauptnavigation"><ul><li><a href="/apps/" aria-current="page">Apps finden</a></li><li><a href="/apps/build/">App bauen</a></li><li><a href="/tooling/">Tooling</a></li><li><a href="/features/">Features</a></li><li><a href="/docs/">Darum!</a></li><li><a href="/join/">Mitmachen</a></li><li class="la-lang"><a href="/apps/en/" hreflang="en" lang="en" aria-label="Language: English">English</a></li></ul></nav>
+    <nav class="la-nav" aria-label="Hauptnavigation"><ul><li><a href="/apps/" aria-current="page">Apps finden</a></li><li><a href="/apps/build/">App bauen</a></li><li><a href="/tooling/">Tooling</a></li><li><a href="/features/">Features</a></li><li><a href="/docs/">Darum!</a></li><li><a href="/join/">Mitmachen</a></li><li class="la-lang"><a href="/apps/en/" hreflang="en" lang="en" data-la-lang="en" aria-label="Language: English">English</a></li></ul></nav>
   </div>
 </header>
 
@@ -139,12 +156,12 @@
   <div class="px-5 pb-5 -mt-2" data-topics hidden>
     <p class="m-0 text-sm font-semibold text-slate-600">Passt zu deiner Suche:</p>
     <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
-      <li data-topic data-search="Gebirge und Vulkane" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-everest-hoehe" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Gebirge und Vulkane</a></li>
-      <li data-topic data-search="Wasserfälle, Flüsse und Seen" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-baikalsee" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Wasserfälle, Flüsse und Seen</a></li>
-      <li data-topic data-search="Wüsten" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-atacama" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Wüsten</a></li>
-      <li data-topic data-search="Höhlen und Schluchten" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-hoehlen-rekorde" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Höhlen und Schluchten</a></li>
-      <li data-topic data-search="Küsten, Inseln und Riffe" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-great-barrier-reef" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Küsten, Inseln und Riffe</a></li>
-      <li data-topic data-search="Naturwunder nach Kontinenten" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-kontinente-zuordnen" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Naturwunder nach Kontinenten</a></li>
+      <li data-topic data-search="Gebirge und Vulkane" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-everest-hoehe" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Gebirge und Vulkane</a></li>
+      <li data-topic data-search="Wasserfälle, Flüsse und Seen" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-baikalsee" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Wasserfälle, Flüsse und Seen</a></li>
+      <li data-topic data-search="Wüsten" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-atacama" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Wüsten</a></li>
+      <li data-topic data-search="Höhlen und Schluchten" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-hoehlen-rekorde" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Höhlen und Schluchten</a></li>
+      <li data-topic data-search="Küsten, Inseln und Riffe" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-great-barrier-reef" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Küsten, Inseln und Riffe</a></li>
+      <li data-topic data-search="Naturwunder nach Kontinenten" hidden><a href="https://lernapps.net/naturwunder-quiz/#frage-kontinente-zuordnen" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Naturwunder nach Kontinenten</a></li>
     </ul>
   </div>
 </li>
@@ -308,7 +325,7 @@
 
   </main>
 
-  <footer class="la-footer">
+  <footer class="la-footer" lang="de">
   <div class="la-footer__inner">
     <p>lernapps.net ist kostenlos und ohne Werbung. Es lebt von deinem Danke.</p>
     <nav aria-label="Fußzeile"><ul><li><a href="/privacy/">Datenschutz</a></li><li><a href="/imprint/">Impressum</a></li><li><a href="/docs/platform-design/">Plattform-Design</a></li><li><a href="https://github.com/lernapps/apps">Quellcode</a></li></ul></nav>
