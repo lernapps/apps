@@ -1,19 +1,19 @@
 name: Publish
 
-# Publishes the copy of every listed app that lernapps.net serves at https://lernapps.net/<id>/ (lernapps/docs KD-21;
-# plan .vibe/development-plan-feat-serve-copies.md, steps 1 and 2): the app built from the `commit` its entry names.
+# Publishes the copy of every listed app that lernapps.net serves at https://lernapps.net/apps/start/<id>/
+# (lernapps/docs KD-21; plan .vibe/development-plan-feat-serve-copies.md, steps 1 and 2, KD-13): the app built from the `commit` its entry names.
 # Runs on a push to main that adds, changes or deletes an entry (a merged listing or update pull request), and by
-# hand for one id. An entry whose text alone changed is not built again.
+# hand for one id or for all. An entry whose text alone changed is not built again.
 #
 # The app's code is untrusted, so no job holds both it and a credential:
 #   - plan: reads which copies to build and remove (scripts/publish-plan.mjs).
 #   - build: no secret, a read-only token. Builds each app at its commit in a container and runs its checks
 #     (scripts/review-input.mjs, as the review does); only a bundle whose checks report no error goes up as the
 #     artifact copy-<id> (scripts/copy-bundle.mjs). One app's failure does not stop the others; the run fails.
-#   - publish: the environment `publish` with the organisation's GitHub App (KD-07), runs no code of an app. A token
-#     limited to lernapps/lernapps.github.io; puts the copies into its gh-pages branch, one directory per id, and keeps
-#     copies.txt (scripts/publish-copies.mjs). GitHub Pages deploys that push; tooling's site deploy action leaves the
-#     copies alone. Then starts pages.yml here, so the catalog links the new copies.
+#   - publish: runs no code of an app; may write to this repo. Puts the copies into start/ of this repo's gh-pages, one
+#     directory per id, and keeps start/copies.txt (scripts/publish-copies.mjs). GitHub Pages deploys that push;
+#     pages.yml leaves start/ alone (`keep` of tooling's site deploy action). Then starts pages.yml, so the catalog
+#     links the new copies.
 #   - verify: waits until lernapps.net serves each copy, then checks it there (scripts/verify-copies.mjs).
 on:
   push:
@@ -22,8 +22,8 @@ on:
   workflow_dispatch:
     inputs:
       id:
-        description: "The id of the entry whose copy is built and published again"
-        required: true
+        description: "The id of the entry whose copy is built and published again (empty: every entry)"
+        required: false
 
 permissions: {}
 
@@ -55,7 +55,11 @@ jobs:
           ID: ${{ inputs.id }}
           BEFORE: ${{ github.event.before }}
         run: |
-          if [ -n "$ID" ]; then plan=$(node scripts/publish-plan.mjs --id "$ID"); else plan=$(node scripts/publish-plan.mjs --before "$BEFORE"); fi
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            if [ -n "$ID" ]; then plan=$(node scripts/publish-plan.mjs --id "$ID"); else plan=$(node scripts/publish-plan.mjs --all); fi
+          else
+            plan=$(node scripts/publish-plan.mjs --before "$BEFORE")
+          fi
           echo "$plan"
           echo "plan=$plan" >> "$GITHUB_OUTPUT"
           echo "build=$(jq -c .build <<< "$plan")" >> "$GITHUB_OUTPUT"
@@ -107,30 +111,23 @@ jobs:
     # also when one app's build failed: the others are published, the run stays red
     if: always() && needs.plan.result == 'success' && needs.plan.outputs.any == 'true' && needs.build.result != 'cancelled'
     runs-on: ubuntu-latest
-    environment: publish
     permissions:
       actions: write # starts pages.yml
-      contents: read
+      contents: write # pushes to gh-pages
+    concurrency:
+      group: gh-pages # one writer of gh-pages from this workflow at a time
+      cancel-in-progress: false
     outputs:
       published: ${{ steps.push.outputs.published }}
     steps:
-      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        id: app
-        with:
-          app-id: ${{ vars.PUBLISHER_APP_ID }}
-          private-key: ${{ secrets.PUBLISHER_PRIVATE_KEY }}
-          owner: lernapps
-          repositories: lernapps.github.io
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: apps
           persist-credentials: false
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: lernapps/lernapps.github.io
           ref: gh-pages
           path: site
-          token: ${{ steps.app.outputs.token }}
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: copy-*
@@ -140,23 +137,29 @@ jobs:
         id: push
         env:
           PLAN: ${{ needs.plan.outputs.plan }}
-          GH_TOKEN: ${{ steps.app.outputs.token }}
-          SLUG: ${{ steps.app.outputs.app-slug }}
         run: |
-          mkdir -p copies
-          node apps/scripts/publish-copies.mjs site copies "$PLAN"
+          mkdir -p copies site/start
           # the copies that were built, for the job verify
           built=$(find copies -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | jq -Rsc 'split("\n") | map(select(. != ""))')
           echo "published=$(jq -c --argjson built "$built" '{build: [.build[] | select(.id as $id | $built | index($id))], remove: []}' <<< "$PLAN")" >> "$GITHUB_OUTPUT"
           cd site
-          git add -A
-          if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
-          id=$(gh api "/users/${SLUG}%5Bbot%5D" --jq .id)
-          git -c user.name="${SLUG}[bot]" -c user.email="${id}+${SLUG}[bot]@users.noreply.github.com" \
-            commit --quiet -m "Copies of listed apps (lernapps/apps ${GITHUB_SHA::7})" \
-            -m "$(jq -r '.build[] | "copy of \(.source) at \(.commit) → \(.id)/"' <<< "$PLAN")" \
-            -m "$(jq -r '.remove[] | "removed \(.)/"' <<< "$PLAN")"
-          git push --quiet origin gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # pages.yml may push to gh-pages at the same time: put the copies onto its newest commit, at most three times
+          for attempt in 1 2 3; do
+            git fetch --quiet origin gh-pages
+            git reset --quiet --hard origin/gh-pages
+            node ../apps/scripts/publish-copies.mjs start ../copies "$PLAN"
+            git add -A start
+            if git diff --cached --quiet; then echo "Nothing changed."; exit 0; fi
+            git commit --quiet -m "Copies of listed apps (lernapps/apps ${GITHUB_SHA::7})" \
+              -m "$(jq -r '.build[] | "copy of \(.source) at \(.commit) → start/\(.id)/"' <<< "$PLAN")" \
+              -m "$(jq -r '.remove[] | "removed start/\(.)/"' <<< "$PLAN")"
+            if git push --quiet origin gh-pages; then exit 0; fi
+            echo "gh-pages moved; trying again"
+            sleep 5
+          done
+          exit 1
       - name: Build the catalog again, so it links the new copies
         env:
           GH_TOKEN: ${{ github.token }}

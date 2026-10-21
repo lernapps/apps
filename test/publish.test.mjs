@@ -94,16 +94,16 @@ test("the catalog links an app's copy only when copies.txt lists it at the entry
   const { default: catalog } = await import(`../src/_data/catalog.js?copies=${Date.now()}`);
   const { apps } = await catalog();
   const byId = Object.fromEntries(apps.map((app) => [app.id, app]));
-  assert.equal(byId["kniffel-trainer"].url, "https://lernapps.net/kniffel-trainer/");
+  assert.equal(byId["kniffel-trainer"].url, "https://lernapps.net/apps/start/kniffel-trainer/");
   assert.equal(byId["kniffel-trainer"].home, "https://mrsimpson.github.io/kniffel-trainer/");
   assert.equal(byId.typonaut.url, "https://mrsimpson.github.io/typonaut/");
   delete process.env.LERNAPPS_COPIES;
 });
 
-test("an id that is a path of the home page or another repo of the organisation is reserved", async () => {
+test("an id that is another path of the catalog is reserved", async () => {
   const { reserved } = await import("../schemas/reserved.js");
-  assert.match(reserved("privacy", "https://github.com/x/privacy"), /path of the home page/);
-  assert.match(reserved("tooling", "https://github.com/x/tooling"), /repo lernapps\/tooling/);
-  assert.equal(reserved("elektrizitaet", "https://github.com/lernapps/elektrizitaet"), undefined);
-  assert.equal(reserved("bruch-trainer", "https://github.com/x/bruch-trainer"), undefined);
+  assert.match(reserved("start"), /lernapps\.net\/apps\/start\//);
+  assert.match(reserved("en"), /path/);
+  assert.equal(reserved("elektrizitaet"), undefined);
+  assert.equal(reserved("bruch-trainer"), undefined);
 });

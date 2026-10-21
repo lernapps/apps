@@ -11,7 +11,7 @@ Eine Änderung an der App wirkt erst, wenn sie veröffentlicht ist: Die Prüfung
 ```text
 Geprüft:   https://example.org/bruch-trainer/ (2026-10-09T12:00:00.000Z)
 Gemessen:  fitness.storage none, fitness.thirdParty none (ohne Klick)
-Regeln:    8 geprüft
+Regeln:    9 geprüft
 ```
 
 #### Regel [`entry-links-resolve`](https://lernapps.net/tooling/rules/#entry-links-resolve): 1 Fehler
