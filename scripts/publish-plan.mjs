@@ -1,14 +1,16 @@
 // What publish.yml builds and removes (plan .vibe/development-plan-feat-serve-copies.md, steps 1 to 3): the copies
 // lernapps.net serves at https://lernapps.net/apps/start/<id>/.
 //
-//   node scripts/publish-plan.mjs --before <commit>   the entries a push to main added or changed in `source` or
-//                                                    `commit` (build), and those it deleted (remove)
+//   node scripts/publish-plan.mjs --live <copies.txt>  the entries whose copy is missing or at another commit than
+//                                                     copies.txt lists (build), and the copies without an entry
+//                                                     (remove)
 //   node scripts/publish-plan.mjs --id <id>           one entry, built again (workflow_dispatch)
 //   node scripts/publish-plan.mjs --all               every entry, built again (workflow_dispatch without an id)
 //
-// Prints one JSON object: { "build": [{ "id", "source", "commit" }], "remove": ["<id>"] }. An entry whose text alone
-// changed is not built again: its copy is the same. Exit code 2 on wrong usage.
-import { spawnSync } from "node:child_process";
+// Prints one JSON object: { "build": [{ "id", "source", "commit" }], "remove": ["<id>"] }. --live compares the entries
+// with what is served, not with the push before: a run that was cancelled (a newer push waits in the same concurrency
+// group) or a copy whose build failed is caught up by the next run. An entry whose text alone changed is not built
+// again: its copy is the same. Exit code 2 on wrong usage.
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { load } from "js-yaml";
 
@@ -16,13 +18,11 @@ const ID = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const FILE = /^entries\/([a-z0-9]+(?:-[a-z0-9]+)*)\.yaml$/;
 
 function usage(message) {
-  process.stderr.write(`publish-plan: ${message}\nUsage: node scripts/publish-plan.mjs --before <commit> | --id <id> | --all\n`);
+  process.stderr.write(`publish-plan: ${message}\nUsage: node scripts/publish-plan.mjs --live <copies.txt> | --id <id> | --all\n`);
   process.exit(2);
 }
 
-const git = (...args) => spawnSync("git", args, { encoding: "utf8" });
-
-/** The entry's source and commit, from a file or from `git show <ref>:<file>`; undefined when there is none. */
+/** The entry's source and commit; undefined when there is none. */
 function pinned(text) {
   let entry;
   try {
@@ -49,26 +49,24 @@ if (option === "--id") {
     const now = pinned(readFileSync(`entries/${file}`, "utf8"));
     if (now) plan.build.push({ id: file.replace(/\.yaml$/, ""), ...now });
   }
-} else if (option === "--before") {
-  if (!/^[0-9a-f]{7,40}$/.test(value ?? "")) usage(`--before ${value}: a commit id`);
-  // a push that created the branch has no commit before it: compare with the first parent instead
-  const before = git("cat-file", "-e", `${value}^{commit}`).status === 0 ? value : "HEAD^1";
-  const diff = git("diff", "--name-status", "--no-renames", before, "HEAD", "--", "entries/");
-  if (diff.status !== 0) usage(`git diff ${before} HEAD: ${diff.stderr.trim()}`);
-  for (const line of diff.stdout.split("\n").filter(Boolean)) {
-    const [status, file] = line.split("\t");
-    const id = FILE.exec(file)?.[1];
-    if (!id) continue;
-    if (status === "D") {
-      plan.remove.push(id);
-      continue;
-    }
-    const now = pinned(readFileSync(file, "utf8"));
-    if (!now) continue; // the catalog's build rejects an entry without them
-    const old = status === "A" ? undefined : pinned(git("show", `${before}:${file}`).stdout);
-    if (old?.source !== now.source || old?.commit !== now.commit) plan.build.push({ id, ...now });
+} else if (option === "--live") {
+  if (!value) usage("--live: the path of copies.txt (an empty file when there is none yet)");
+  /** id → commit, as copies.txt lists them. */
+  const live = new Map(
+    (existsSync(value) ? readFileSync(value, "utf8") : "")
+      .split("\n")
+      .map((line) => line.trim().split(/\s+/))
+      .filter(([id, commit]) => ID.test(id ?? "") && /^[0-9a-f]{40}$/.test(commit ?? "")),
+  );
+  const ids = new Set();
+  for (const file of readdirSync("entries").filter((name) => FILE.test(`entries/${name}`)).sort()) {
+    const id = file.replace(/\.yaml$/, "");
+    ids.add(id);
+    const now = pinned(readFileSync(`entries/${file}`, "utf8"));
+    if (now && live.get(id) !== now.commit) plan.build.push({ id, ...now }); // the catalog's build rejects an entry without them
   }
+  plan.remove.push(...[...live.keys()].filter((id) => !ids.has(id)).sort());
 } else {
-  usage("name --before <commit>, --id <id> or --all");
+  usage("name --live <copies.txt>, --id <id> or --all");
 }
 process.stdout.write(`${JSON.stringify(plan)}\n`);

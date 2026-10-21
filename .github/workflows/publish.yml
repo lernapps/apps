@@ -3,7 +3,9 @@ name: Publish
 # Publishes the copy of every listed app that lernapps.net serves at https://lernapps.net/apps/start/<id>/
 # (lernapps/docs KD-21; plan .vibe/development-plan-feat-serve-copies.md, steps 1 and 2, KD-13): the app built from the `commit` its entry names.
 # Runs on a push to main that adds, changes or deletes an entry (a merged listing or update pull request), and by
-# hand for one id or for all. An entry whose text alone changed is not built again.
+# hand for one id or for all. On a push it builds every entry whose copy is missing or at another commit than the served
+# start/copies.txt, not only what that push changed: several merges in a row cancel the runs waiting in between
+# (concurrency), and the last one catches up. An entry whose text alone changed is not built again.
 #
 # The app's code is untrusted, so no job holds both it and a credential:
 #   - plan: reads which copies to build and remove (scripts/publish-plan.mjs).
@@ -43,7 +45,6 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0 # the commit before the push
           persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
@@ -53,12 +54,13 @@ jobs:
       - id: plan
         env:
           ID: ${{ inputs.id }}
-          BEFORE: ${{ github.event.before }}
         run: |
           if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
             if [ -n "$ID" ]; then plan=$(node scripts/publish-plan.mjs --id "$ID"); else plan=$(node scripts/publish-plan.mjs --all); fi
           else
-            plan=$(node scripts/publish-plan.mjs --before "$BEFORE")
+            # the copies gh-pages holds now; none when the branch or the file does not exist yet
+            git fetch --quiet --depth=1 origin gh-pages && git show FETCH_HEAD:start/copies.txt > "$RUNNER_TEMP/copies.txt" || : > "$RUNNER_TEMP/copies.txt"
+            plan=$(node scripts/publish-plan.mjs --live "$RUNNER_TEMP/copies.txt")
           fi
           echo "$plan"
           echo "plan=$plan" >> "$GITHUB_OUTPUT"

@@ -60,6 +60,27 @@ test("between two commits of an app: only dependency versions → dependencies; 
   assert.deepEqual(updateKind(dir, bumped, head()), { kind: "review", reasons: ["LICENSE: changed"] });
 });
 
+test("a push builds every entry whose copy is missing or at another commit, and removes copies without an entry", () => {
+  // several merges in a row cancel the publish runs waiting in between: the last one has to catch up on all of them
+  const dir = temp("repo");
+  mkdirSync(join(dir, "entries"));
+  const entry = (id, commit) => writeFileSync(join(dir, "entries", `${id}.yaml`), `source: https://github.com/x/${id}\ncommit: ${commit}\n`);
+  entry("gleich", COMMIT);
+  entry("neu", COMMIT);
+  entry("weiter", OTHER);
+  const list = join(dir, "copies.txt");
+  writeFileSync(list, `gleich ${COMMIT}\nweiter ${COMMIT}\nweg ${COMMIT}\n`);
+  const run = spawnSync("node", [join(process.cwd(), "scripts/publish-plan.mjs"), "--live", list], { cwd: dir, encoding: "utf8" });
+  assert.equal(run.status, 0, run.stderr);
+  assert.deepEqual(JSON.parse(run.stdout), {
+    build: [
+      { id: "neu", source: "https://github.com/x/neu", commit: COMMIT },
+      { id: "weiter", source: "https://github.com/x/weiter", commit: OTHER },
+    ],
+    remove: ["weg"],
+  });
+});
+
 test("the copies go into their directories of gh-pages, and copies.txt lists them at their commits", () => {
   const site = temp("site");
   const copies = temp("copies");
