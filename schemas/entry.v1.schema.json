@@ -102,7 +102,7 @@
     "url": {
       "type": "string",
       "format": "uri",
-      "description": "Link to the app"
+      "description": "Link to the app at the creator's own address, where the listing check opens it"
     },
     "topics": {
       "description": "Single topics with a deep link into the app",
@@ -202,9 +202,14 @@
       "description": "Who built the app"
     },
     "source": {
-      "description": "Source code",
       "type": "string",
-      "format": "uri"
+      "pattern": "^https:\\/\\/github\\.com\\/[A-Za-z0-9-]+\\/[A-Za-z0-9._-]+$",
+      "description": "Source code: the app's repository on GitHub, https://github.com/<owner>/<repo>. lernapps.net builds its copy of the app from it"
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "description": "The full id of the commit of source that lernapps.net builds and serves at https://lernapps.net/<id>/. A new commit is an update of the app"
     },
     "limits": {
       "description": "Only when the app deviates from a rule of the platform because its idea needs it: WCAG 2.1 AA or usable at 360 px wide. Say in plain German what the app does not offer, and why, e.g. \"Nicht mit Screenreader bedienbar; auf dem Handy nicht sinnvoll, weil eine Tastatur nötig ist.\" Shown to teachers and parents on the app's page in the catalog. With it, lernapps check reports the findings of these rules as warnings instead of errors. Leave it out when the app meets the rules.",
@@ -314,6 +319,8 @@
     "summary",
     "url",
     "creator",
+    "source",
+    "commit",
     "fitness"
   ],
   "additionalProperties": false
