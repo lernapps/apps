@@ -209,7 +209,7 @@
     "commit": {
       "type": "string",
       "pattern": "^[0-9a-f]{40}$",
-      "description": "The full id of the commit of source that lernapps.net builds and serves at https://lernapps.net/<id>/. A new commit is an update of the app"
+      "description": "The full id of the commit of source that lernapps.net builds and serves at https://lernapps.net/apps/start/<id>/. A new commit is an update of the app"
     },
     "limits": {
       "description": "Only when the app deviates from a rule of the platform because its idea needs it: WCAG 2.1 AA or usable at 360 px wide. Say in plain German what the app does not offer, and why, e.g. \"Nicht mit Screenreader bedienbar; auf dem Handy nicht sinnvoll, weil eine Tastatur nötig ist.\" Shown to teachers and parents on the app's page in the catalog. With it, lernapps check reports the findings of these rules as warnings instead of errors. Leave it out when the app meets the rules.",
