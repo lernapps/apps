@@ -4,6 +4,7 @@
 // Header, footer and the deploy check are shared by every lernapps.net site (@lernapps/site, from
 // lernapps.github.io; Renovate keeps it current).
 import siteFrame from "@lernapps/site/eleventy";
+import { pathIn } from "@lernapps/site/frame";
 import languages from "./src/_data/languages.js";
 
 const textsOf = (lang) => (languages.find((l) => l.code === lang) ?? languages[0]).t;
@@ -36,6 +37,9 @@ export default function (eleventyConfig) {
   );
   // The address of a page in a language: "/enter/" → "/en/enter/" (then the filter "url" adds the prefix).
   eleventyConfig.addFilter("inLang", (path, lang = "de") => (lang === "de" ? path : `/${lang}${path}`));
+  // The address of a page of another site in a language: "/tooling/github/" → "/tooling/en/github/" (pathIn of the
+  // site frame: a site without a tree in that language keeps the address).
+  eleventyConfig.addFilter("otherSiteIn", (path, lang = "de") => pathIn(path, lang));
 
   // A mailto link with subject and body (thanks and feedback for the MVP).
   eleventyConfig.addFilter("mailto", (address, subject, body) =>

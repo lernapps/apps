@@ -41,8 +41,8 @@ eleventyComputed:
   <section class="panel" aria-labelledby="werkzeuge">
     <h2 id="werkzeuge" class="panel-title">{{ B.tools.headline }}</h2>
     <p class="m-0 text-slate-700">{{ B.tools.body }}</p>
-    <p class="m-0 mt-3 text-slate-700">{{ B.tools.github }} <a href="{{ site.tooling.github }}" class="text-blue-700 underline underline-offset-2"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.githubLink }}</a>.</p>
-    <a href="{{ site.tooling.home }}" class="btn btn-secondary mt-4 self-start"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}" lang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.link }}</a>
+    <p class="m-0 mt-3 text-slate-700">{{ B.tools.github }} <a href="{{ site.tooling.github | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.githubLink }}</a>.</p>
+    <a href="{{ site.tooling.home | otherSiteIn(pageLanguage.code) }}" class="btn btn-secondary mt-4 self-start"{% if B.tools.linkLang %} hreflang="{{ B.tools.linkLang }}" lang="{{ B.tools.linkLang }}"{% endif %}>{{ B.tools.link }}</a>
   </section>
 
   <section class="panel" aria-labelledby="frei">
