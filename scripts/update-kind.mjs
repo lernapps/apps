@@ -1,12 +1,16 @@
 // Whether an update of an app may be merged without a review (plan .vibe/development-plan-feat-serve-copies.md, KD-10):
-// only when everything that changed between the entry's commit and the new one is the version of an npm dependency
-// that already exists in a package.json, and the lock file moved with it. Anything else needs a review: any other file,
-// an added or removed dependency, scripts, the licence. Reads files with git only; runs no code of the app.
+// only when everything that differs between the base and the new commit is
+//   - text: a Markdown file (*.md) outside src/ and public/, which the app does not ship;
+//   - the version of an npm dependency that already exists in a package.json, with the lock file moved with it to
+//     packages from the npm registry.
+// The base is the entry's commit, or the tree `lernapps update` makes of it (scripts/update-replay.mjs): then what the
+// update did is no difference either. Anything else needs a review: any other file, an added or removed dependency,
+// scripts, the licence. Reads files with git only; runs no code of the app.
 //
-//   node scripts/update-kind.mjs <app repo dir> <old commit> <new commit>
+//   node scripts/update-kind.mjs <app repo dir> <base commit or tree> <new commit>
 //
-// Prints one JSON object { "kind": "dependencies" | "review", "reasons": [...] }: the reasons name what needs the
-// review. Exit code 0 either way, 2 on wrong usage.
+// Prints one JSON object { "kind": "auto" | "review", "reasons": [...] }: the reasons name what needs the review. Exit
+// code 0 either way, 2 on wrong usage.
 import { spawnSync } from "node:child_process";
 import { basename } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -53,7 +57,10 @@ export function lockChanges(file, before, after) {
   return reasons;
 }
 
-/** The kind of the update from `older` to `newer` in the git repo at `dir`. */
+/** Whether a file is text the app does not ship: Markdown outside src/ and public/. */
+export const isText = (file) => file.endsWith(".md") && !/^(src|public)\//.test(file);
+
+/** The kind of the update from `older` (a commit or a tree) to `newer` in the git repo at `dir`. */
 export function updateKind(dir, older, newer) {
   const git = (...args) => spawnSync("git", ["-C", dir, ...args], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
   const json = (commit, file) => {
@@ -68,9 +75,9 @@ export function updateKind(dir, older, newer) {
   const diff = git("diff", "--name-status", "--no-renames", older, newer);
   if (diff.status !== 0) return { kind: "review", reasons: [`git diff ${older} ${newer}: ${diff.stderr.trim()}`] };
   const reasons = [];
-  let packages = 0;
   for (const line of diff.stdout.split("\n").filter(Boolean)) {
     const [status, file] = line.split("\t");
+    if (isText(file)) continue;
     const name = basename(file);
     if (status !== "M" || (name !== "package.json" && name !== "package-lock.json")) {
       reasons.push(`${file}: ${{ A: "added", D: "deleted" }[status] ?? "changed"}`);
@@ -83,20 +90,18 @@ export function updateKind(dir, older, newer) {
       continue;
     }
     if (name === "package.json") {
-      packages++;
       reasons.push(...packageChanges(file, before, after));
     } else {
       reasons.push(...lockChanges(file, before, after));
     }
   }
-  if (reasons.length === 0 && packages === 0) reasons.push("no package.json changed");
-  return { kind: reasons.length === 0 ? "dependencies" : "review", reasons };
+  return { kind: reasons.length === 0 ? "auto" : "review", reasons };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const [dir, older, newer] = process.argv.slice(2);
   if (!dir || !older || !newer) {
-    process.stderr.write("Usage: node scripts/update-kind.mjs <app repo dir> <old commit> <new commit>\n");
+    process.stderr.write("Usage: node scripts/update-kind.mjs <app repo dir> <base commit or tree> <new commit>\n");
     process.exit(2);
   }
   process.stdout.write(`${JSON.stringify(updateKind(dir, older, newer))}\n`);
