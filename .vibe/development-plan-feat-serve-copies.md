@@ -111,6 +111,11 @@ In the workflows, `actions/create-github-app-token` mints a token valid for one 
 - `gh pr merge --auto` needs "Allow auto-merge" and a required check on `main` (task D); without them `update.yml` fails at the first dependency update.
 - Merge order: tooling (`feat/own-data-only`, `feat/copies-served`) → lernapps.github.io pins that tooling commit (B1) → apps (`feat/serve-copies`). Merging apps first would publish copies that the next home page deploy removes.
 
+### Found in the first update (elektrizitaet, apps#68, 2026-10-21)
+- The update pull request was opened while the creator's own deploy of the new commit was still running, so the listing check opened the old app at the entry's `url` and failed. A re-run after the deploy passed. To fix: `update.yml` opens a pull request only when the creator's address already serves the new commit, or the listing check builds `commit` itself like `publish.yml`.
+- `listing-comment.yml` took the first artifact of a re-run run, so the comment kept the old result; it now takes the newest (fix/listing-comment-rerun).
+- The child session that fixed elektrizitaet could not merge its pull request nor message this session (its permission classifier: "Merge Without Review", "Auto-Mode Bypass"); the coordinating session merged it.
+
 ### Facts found
 - review.yml today reviews the head of the app repo's `main` or `/review <commit>`; with the pinned commit it should default to the entry's `commit`.
 - tooling's `site-deploy` replaces `gh-pages` and only keeps `pr-preview/` (`clean-exclude`); it must also keep the copies (step 2).
