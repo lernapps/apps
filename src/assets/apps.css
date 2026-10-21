@@ -35,3 +35,17 @@ textarea.field { resize: vertical; font-size: .875rem; }
 .reminder[hidden] { display: none; }
 
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* The listing as steps (enter.njk): vertical on a phone, a row from 48rem; the colour says who acts. */
+.flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; counter-reset: flow; }
+.flow-step { position: relative; padding-left: 2.75rem; counter-increment: flow; overflow-wrap: anywhere; --flow: #64748b; --flow-bg: #f1f5f9; --flow-fg: #334155; }
+.flow-step[data-who="you"] { --flow: #2563eb; --flow-bg: #dbeafe; --flow-fg: #1e3a8a; }
+.flow-step[data-who="team"] { --flow: #059669; --flow-bg: #d1fae5; --flow-fg: #065f46; }
+.flow-step::before { content: counter(flow); position: absolute; left: 0; top: 0; z-index: 1; width: 2rem; height: 2rem; border-radius: 999px; display: grid; place-items: center; font-weight: 700; background: #fff; color: var(--flow); border: 2px solid var(--flow); }
+.flow-step:not(:last-child)::after { content: ""; position: absolute; left: calc(1rem - 1px); top: 2rem; bottom: -1.25rem; width: 2px; background: #cbd5e1; }
+.flow-who { display: inline-block; font-size: .75rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; background: var(--flow-bg); color: var(--flow-fg); }
+@media (min-width: 48rem) {
+  .flow { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+  .flow-step { padding-left: 0; padding-top: 2.75rem; }
+  .flow-step:not(:last-child)::after { left: 2rem; right: -1rem; top: calc(1rem - 1px); bottom: auto; width: auto; height: 2px; }
+}
