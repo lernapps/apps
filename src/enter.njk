@@ -16,6 +16,7 @@ eleventyComputed:
   lernapps-listing (site.tooling.listing, which follows llms.txt); the issue form for those without one; the owner's
   personal help by e-mail (concierge, D8 mvp-first-draft) only as the fallback, the one mailto of the page.
   Building an app comes first, on its own page (/build/, build.njk); this page lists an app that is published.
+  "So läuft das Eintragen ab" shows the listing as steps, coloured by who acts (KD-21: the copy, linked with the repo).
   "Was du zurückbekommst" is s-use-insight: thanks and feedback, counted openly, on the app's page.
 -#}
 {%- set L = t.list %}
@@ -42,6 +43,20 @@ eleventyComputed:
       {%- for f in L.fields.items %}<li><strong>{{ f.label }}</strong> {{ f.hint }}</li>{% endfor %}
     </ol>
     <p class="m-0 mt-3 text-slate-600">{{ L.fields.optional }}</p>
+  </section>
+
+  <section class="panel" aria-labelledby="ablauf">
+    <h2 id="ablauf" class="panel-title">{{ L.flow.headline }}</h2>
+    <ol class="flow">
+      {%- for s in L.flow.steps %}
+      <li class="flow-step" data-who="{{ s.who }}">
+        <span class="flow-who">{{ s.label }}</span>
+        <h3 class="m-0 mt-1 text-base font-bold text-slate-900">{{ s.title }}</h3>
+        <p class="m-0 mt-1 text-sm text-slate-700">{{ s.body }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+    <p class="m-0 mt-4 text-slate-700">{{ L.flow.after }} <a href="{{ '/build/#veroeffentlichen' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ L.flow.afterLink }}</a>.</p>
   </section>
 
   <section aria-labelledby="wege">

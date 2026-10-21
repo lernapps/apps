@@ -257,6 +257,18 @@ const en = {
       ],
       optional: "If you like: single topics with their own link. Then people searching land right at the right place.",
     },
+    flow: {
+      headline: "How listing works",
+      steps: [
+        { who: "you", label: "You & assistant", title: "You propose the app", body: "Your assistant opens a pull request with the three details." },
+        { who: "auto", label: "automatic", title: "The check opens your app", body: "At your address, the way learners open it. If something is missing, it says so in the pull request, and your assistant fixes it." },
+        { who: "team", label: "lernapps.net", title: "We take a look", body: "If everything fits, we add the app." },
+        { who: "auto", label: "automatic", title: "The copy is made", body: "From exactly your version, checked once more, on lernapps.net." },
+        { who: "team", label: "lernapps.net", title: "Others find it", body: "The catalog links the copy and your repository as the source code." },
+      ],
+      after: "After that, lernapps.net takes over new versions by itself.",
+      afterLink: "Why there is a copy",
+    },
     ways: {
       headline: "How to list it",
       agent: {

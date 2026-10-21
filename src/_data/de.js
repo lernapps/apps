@@ -271,6 +271,18 @@ const de = {
     },
     // The ways, in this order: the assistant with the skill lernapps-listing (site.tooling.listing) is the way;
     // the issue form for those without such an assistant; the e-mail only as the fallback.
+    flow: {
+      headline: "So läuft das Eintragen ab",
+      steps: [
+        { who: "you", label: "Du & dein Assistent", title: "Ihr schlagt die App vor", body: "Dein Assistent öffnet einen Pull Request mit den drei Angaben." },
+        { who: "auto", label: "automatisch", title: "Die Prüfung öffnet deine App", body: "An deiner Adresse, so wie Lernende sie öffnen. Fehlt etwas, steht es im Pull Request, und dein Assistent bessert nach." },
+        { who: "team", label: "lernapps.net", title: "Wir sehen sie uns an", body: "Passt alles, nehmen wir die App auf." },
+        { who: "auto", label: "automatisch", title: "Die Kopie entsteht", body: "Aus genau deinem Stand, noch einmal geprüft, auf lernapps.net." },
+        { who: "team", label: "lernapps.net", title: "Andere finden sie", body: "Der Katalog verlinkt die Kopie und dein Repository als Quellcode." },
+      ],
+      after: "Neue Versionen übernimmt lernapps.net danach von selbst.",
+      afterLink: "Warum es eine Kopie gibt",
+    },
     ways: {
       headline: "So trägst du sie ein",
       agent: {
