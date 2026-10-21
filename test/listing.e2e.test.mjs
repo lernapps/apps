@@ -303,7 +303,7 @@ describe("the comment from the reports of a run", () => {
 
 /**
  * The step of listing-comment.yml that comments, run as GitHub runs it (bash -e -o pipefail) in a checkout of its own,
- * with `gh` replaced by a stub: it answers with the open pull request #13, the artifact and, when `existing` is set,
+ * with `gh` replaced by a stub: it answers with the open pull request #13 and, when `existing` is set,
  * an earlier comment of the workflow, and records every call. The reports of the run are in `listing/`, if any.
  */
 async function commentStep({ reports, conclusion, existing }) {
@@ -324,7 +324,6 @@ async function commentStep({ reports, conclusion, existing }) {
       'case "$*" in',
       '  *"--method PATCH"*|*"--method POST"*) for arg; do case "$arg" in body=@*) cat "${arg#body=@}" > "$GH_BODY";; esac; done ;;',
       '  *"/pulls?"*) echo 13 ;;',
-      '  *"/artifacts?"*) echo 7 ;;',
       '  *"/comments?"*) if [ -n "$GH_EXISTING" ]; then echo "$GH_EXISTING"; fi ;;',
       "esac",
       "",
@@ -346,6 +345,7 @@ async function commentStep({ reports, conclusion, existing }) {
     CONCLUSION: conclusion,
     RUN_URL: "https://github.com/lernapps/apps/actions/runs/1",
     RUN_ID: "1",
+    ARTIFACT_ID: "7", // the newest artifact of the run, from the step before
   };
   const result = await new Promise((done, fail) => {
     const child = spawn("bash", ["--noprofile", "--norc", "-e", "-o", "pipefail", "-c", step.run], { cwd: dir, env });
