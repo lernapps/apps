@@ -178,6 +178,11 @@ const en = {
       command: "With this command, your assistant creates the app. It downloads the tool for it by itself.",
       skill: "The quick path for assistants is the skill",
     },
+    which: {
+      headline: "Which assistant?",
+      body: "Any assistant works if it can use skills and change files. We build with Claude Code ourselves. Even a very cheap model already builds good apps. But what counts most is what you know about your subject and your learners.",
+      link: "Which assistants we use",
+    },
     tools: {
       headline: "What lernapps.net provides for you to build",
       body: "Guides, templates for the apps and checks that help you build, easier and faster, an app that others can use well too. Your assistant uses them by itself. You can also read them yourself.",

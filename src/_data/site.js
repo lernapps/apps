@@ -21,6 +21,8 @@ export default {
     listing: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-listing/SKILL.md",
     listingRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-listing/SKILL.md",
     skills: "npx skills add lernapps/tooling",
+    // which assistant to build with, the setups we use and three apps a budget model built (/build/)
+    assistants: "/tooling/assistants/",
     // GitHub explained for creators (/build/), and the skill for GitHub access and the fork path (llms.txt)
     github: "/tooling/github/",
     githubRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-github/SKILL.md",
