@@ -12,7 +12,8 @@ eleventyComputed:
 ---
 {#-
   Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
-  to give the assistant, the command that starts the app, the skill as the quick path, building freely without the
+  to give the assistant, the command that starts the app, the skill as the quick path, a short box on which assistant
+  to use (the page /tooling/assistants/), building freely without the
   templates (any framework, or tools such as Lovable or bolt.new), then the step out into the world: publishing it on
   lernapps.net (/enter/, a prominent link with a rocket, the section #eintragen, which the header's "App bauen" now
   stands for too); this page is about building only.
@@ -38,6 +39,11 @@ eleventyComputed:
     <p class="m-0 mt-3 text-slate-700">{{ B.start.command }}</p>
     <pre class="m-0 mt-1 p-3 rounded bg-slate-100 text-sm overflow-x-auto"><code>{{ site.tooling.create }}</code></pre>
     <p class="m-0 mt-3 text-slate-700">{{ B.start.skill }} <a href="{{ site.tooling.skill }}" class="text-blue-700 underline underline-offset-2">lernapps-app</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="assistent">
+    <h2 id="assistent" class="panel-title">{{ B.which.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ B.which.body }} <a href="{{ site.tooling.assistants | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2"{% if B.which.linkLang %} hreflang="{{ B.which.linkLang }}"{% endif %}>{{ B.which.link }}</a>.</p>
   </section>
 
   <section class="panel" aria-labelledby="werkzeuge">

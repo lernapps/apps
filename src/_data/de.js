@@ -188,6 +188,12 @@ const de = {
       command: "Mit diesem Befehl legt dein Assistent die App an. Das Werkzeug dafür lädt er selbst.",
       skill: "Der Schnellweg für Assistenten ist der Skill",
     },
+    which: {
+      headline: "Welcher Assistent?",
+      body: "Jeder Assistent geht, der Skills nutzen und Dateien ändern kann. Wir bauen selbst mit Claude Code. Auch ein sehr günstiges Modell baut schon gute Apps. Am meisten zählt aber, was du über dein Fach und deine Lernenden weißt.",
+      link: "Welche Assistenten wir nutzen (auf Englisch)",
+      linkLang: "en",
+    },
     tools: {
       headline: "Was lernapps.net dir zum Bauen bereitstellt",
       body: "Anleitungen, Vorlagen für die Apps und Prüfungen, mit denen du leichter und schneller eine App baust, die auch andere gut nutzen können. Dein Assistent nutzt sie von selbst. Du kannst sie auch selbst nachlesen.",
