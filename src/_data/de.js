@@ -1,7 +1,7 @@
 // All texts of lernapps.net/apps/ (German). Templates contain no copy of their own.
 // The pages follow the experiences of the platform design (https://lernapps.net/docs/platform-design/, D7):
-//   x-app-in-minutes      a teacher, minutes before a lesson: find, see it may be used, bring it to class, thank
-//   x-practice-tonight    a parent, the evening before a test: find, start right away, thank
+//   x-app-in-minutes      a teacher taking over a class at short notice: find, see it may be used, bring it to class, thank
+//   x-child-struggles     a parent whose child struggles with a topic: find, start right away, come back, thank
 //   x-list-and-hear-back  a creator: list the app in minutes, hear that it helped
 // Language: plain German (ISO 24495-1): short sentences, active voice, no jargon, "du".
 const de = {
@@ -16,7 +16,7 @@ const de = {
     range: (a, b) => `Klasse ${a} bis ${b}`,
   },
 
-  // ── Finden (x-app-in-minutes, x-practice-tonight: s-finding, t-find-app) ─────────────
+  // ── Finden (x-app-in-minutes, x-child-struggles: s-finding, t-find-app) ─────────────
   find: {
     title: "Lern-Apps finden · lernapps.net",
     description:
