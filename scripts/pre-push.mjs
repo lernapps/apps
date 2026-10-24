@@ -108,13 +108,19 @@ export function classifier() {
   return existsSync(main) ? main : undefined;
 }
 
+/**
+ * The environment of the steps: without git's GIT_* variables. A hook gets GIT_DIR and others; a step that runs git in
+ * a folder of its own, like the end-to-end tests' `git init`, would otherwise act on this repository.
+ */
+const STEP_ENV = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.startsWith("GIT_")));
+
 /** Runs the steps one after the other, their output into the log; the step that failed and its exit code. */
 function runLogged(cwd, log) {
   return (all) => {
     for (const [name, [program, ...args]] of all) {
       writeFileSync(log, `$ ${[program, ...args].join(" ")}\n`, { flag: "a" });
       // stdin ignored: a step never sees git's lines
-      const result = spawnSync(program, args, { cwd, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], maxBuffer: 256 * 1024 * 1024 });
+      const result = spawnSync(program, args, { cwd, env: STEP_ENV, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], maxBuffer: 256 * 1024 * 1024 });
       writeFileSync(log, `${result.stdout ?? ""}${result.stderr ?? ""}${result.error ? `${result.error.message}\n` : ""}`, { flag: "a" });
       if (result.status !== 0) return { name, code: result.status ?? 1 };
     }
