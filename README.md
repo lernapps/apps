@@ -12,7 +12,7 @@ first-draft MVP (D8 `mvp-first-draft`):
 
 | Page | Experience and steps (D7) | Channel (D5) |
 |---|---|---|
-| `/apps/` find | `x-app-in-minutes`, `x-practice-tonight`: `s-finding`, `t-find-app` | `ch-app-overview` |
+| `/apps/` find | `x-app-in-minutes`, `x-child-struggles`: `s-finding`, `t-find-app` | `ch-app-overview` |
 | `/apps/<id>/` app page | `x-app-in-minutes`: `s-fitness-clarity`, `t-confirm-fitness`, `t-bring-app`, `s-giving-back`, `t-thank-creator-adult`, `t-give-feedback`, referral code (`?welle=`) in the e-mails | `ch-fitness-signal`, `ch-collections`, `ch-feedback` (prepared e-mails for now) |
 | `/apps/build/` build an app with an AI assistant: the creator's entry point | `x-list-and-hear-back`: `s-listing-help` | `ch-listing` |
 | `/apps/enter/` list a published app: the creator's assistant with the skill `lernapps-listing`, the issue form without one, e-mail as the fallback | `x-list-and-hear-back`: `s-listing-help`, `t-list-app`, `s-use-insight` | `ch-listing` |
