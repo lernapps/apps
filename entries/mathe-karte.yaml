@@ -8,36 +8,35 @@ subject: Mathematik
 grades: [8]
 summary: >-
   Mathe selbst ausprobieren und üben: Prozentrechnung, binomische Formeln und
-  Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung, ein Bild, beliebig
-  viele Aufgaben mit sofortiger Rückmeldung und einen kurzen Test. Eine Karte
-  zeigt, welche Themen schon dabei sind.
+  Wahrscheinlichkeit. Zu jedem Thema gibt es eine Erklärung mit Bildern und
+  Videos und beliebig viele Aufgaben mit sofortiger Rückmeldung.
 url: https://lernapps.net/mathe-karte/
 topics:
-  - { title: "Prozent: Grundwert, Prozentwert und Prozentsatz erkennen", path: prozent/grundbegriffe.html }
-  - { title: "Prozent: Prozentsatz berechnen", path: prozent/prozentsatz.html }
-  - { title: "Prozent: Prozentwert berechnen", path: prozent/prozentwert.html }
-  - { title: "Prozent: Grundwert berechnen", path: prozent/grundwert.html }
-  - { title: "Prozent: Zunahme und Abnahme", path: prozent/veraenderung.html }
-  - { title: "Prozent: Zwei Werte vergleichen", path: prozent/vergleich.html }
-  - { title: "Prozent: Sachaufgaben übersetzen", path: prozent/sachaufgaben.html }
-  - { title: "Binomische Formeln: Zwei Klammern multiplizieren", path: binom/klammern-multiplizieren.html }
-  - { title: "Binomische Formeln: Erste binomische Formel", path: binom/erste-binomische.html }
-  - { title: "Binomische Formeln: Zweite binomische Formel", path: binom/zweite-binomische.html }
-  - { title: "Binomische Formeln: Dritte binomische Formel", path: binom/dritte-binomische.html }
-  - { title: "Binomische Formeln: Rückwärts (faktorisieren)", path: binom/binome-rueckwaerts.html }
-  - { title: "Binomische Formeln: Geschickt rechnen", path: binom/geschickt-rechnen.html }
-  - { title: "Wahrscheinlichkeit: Die Laplace-Formel anwenden", path: zufall/laplace.html }
-  - { title: "Wahrscheinlichkeit: Ein Baumdiagramm zeichnen", path: zufall/baumdiagramm.html }
-  - { title: "Wahrscheinlichkeit: Erste Pfadregel (multiplizieren)", path: zufall/pfadregel-1.html }
-  - { title: "Wahrscheinlichkeit: Die Gegenwahrscheinlichkeit berechnen", path: zufall/gegenereignis.html }
-  - { title: "Wahrscheinlichkeit: Ziehen ohne Zurücklegen", path: zufall/ohne-zuruecklegen.html }
-  - { title: "Wahrscheinlichkeit: Zweite Pfadregel (addieren)", path: zufall/pfadregel-2.html }
-  - { title: "Wahrscheinlichkeit: Als Produkt, Summe oder Potenz angeben", path: zufall/ergebnisformen.html }
-  - { title: "Wahrscheinlichkeit: „Genau einmal“ und „mindestens einmal“", path: zufall/pfade-uebersetzen.html }
+  - { title: "Prozent: Grundwert, Prozentwert und Prozentsatz erkennen", path: prozent/grundbegriffe/ }
+  - { title: "Prozent: Prozentsatz berechnen", path: prozent/prozentsatz/ }
+  - { title: "Prozent: Prozentwert berechnen", path: prozent/prozentwert/ }
+  - { title: "Prozent: Grundwert berechnen", path: prozent/grundwert/ }
+  - { title: "Prozent: Zunahme und Abnahme", path: prozent/veraenderung/ }
+  - { title: "Prozent: Zwei Werte vergleichen", path: prozent/vergleich/ }
+  - { title: "Prozent: Sachaufgaben übersetzen", path: prozent/sachaufgaben/ }
+  - { title: "Binomische Formeln: Zwei Klammern multiplizieren", path: binom/klammern-multiplizieren/ }
+  - { title: "Binomische Formeln: Erste binomische Formel", path: binom/erste-binomische/ }
+  - { title: "Binomische Formeln: Zweite binomische Formel", path: binom/zweite-binomische/ }
+  - { title: "Binomische Formeln: Dritte binomische Formel", path: binom/dritte-binomische/ }
+  - { title: "Binomische Formeln: Rückwärts (faktorisieren)", path: binom/binome-rueckwaerts/ }
+  - { title: "Binomische Formeln: Geschickt rechnen", path: binom/geschickt-rechnen/ }
+  - { title: "Wahrscheinlichkeit: Die Laplace-Formel anwenden", path: zufall/laplace/ }
+  - { title: "Wahrscheinlichkeit: Ein Baumdiagramm zeichnen", path: zufall/baumdiagramm/ }
+  - { title: "Wahrscheinlichkeit: Erste Pfadregel (multiplizieren)", path: zufall/pfadregel-1/ }
+  - { title: "Wahrscheinlichkeit: Die Gegenwahrscheinlichkeit berechnen", path: zufall/gegenereignis/ }
+  - { title: "Wahrscheinlichkeit: Ziehen ohne Zurücklegen", path: zufall/ohne-zuruecklegen/ }
+  - { title: "Wahrscheinlichkeit: Zweite Pfadregel (addieren)", path: zufall/pfadregel-2/ }
+  - { title: "Wahrscheinlichkeit: Als Produkt, Summe oder Potenz angeben", path: zufall/ergebnisformen/ }
+  - { title: "Wahrscheinlichkeit: „Genau einmal“ und „mindestens einmal“", path: zufall/pfade-uebersetzen/ }
 keywords: [Prozentrechnung, Rabatt, Zinsen, Binom, Termumformung, Algebra, Stochastik, Zufall, Würfel]
 creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
 source: https://github.com/lernapps/mathe-karte
-commit: 04d4e435ffdbba56089664a039867a92893919a6
+commit: e8b36c4cc821a975ae57bde58cd207fc3f10e091
 fitness:
   account: false
   install: false
