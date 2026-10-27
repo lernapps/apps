@@ -13,6 +13,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(siteFrame, { site: "/apps/", source: "https://github.com/lernapps/apps" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "schemas/entry.v1.schema.json": "schemas/entry.v1.schema.json" });
+  // Without .nojekyll at the root of gh-pages, Pages runs Jekyll over the whole branch, the copies in start/ too: a
+  // "{{" in one of their Markdown files (the tutor page of an explainer) fails the build, and nothing is deployed.
+  eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
   eleventyConfig.addWatchTarget("schemas/");
   eleventyConfig.addWatchTarget("entries/");
   eleventyConfig.setServerOptions({ watch: ["_site/uno.css"] });
