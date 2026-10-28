@@ -16,7 +16,7 @@ export default {
     skill: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-app/SKILL.md",
     skillRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-app/SKILL.md",
     // the skill's platform rules: what every app keeps to, however it is built; /build/ gives them to free builders
-    platformRules: "https://github.com/lernapps/tooling/blob/main/skills/tooling/lernapps-check/references/platform-rules.md",
+    platformRules: "https://github.com/lernapps/tooling/blob/main/skills/tooling/lernapps-cli/references/platform-rules.md",
     create: "npx --yes github:lernapps/tooling#main create --archetype <archetype>",
     listing: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-listing/SKILL.md",
     listingRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-listing/SKILL.md",

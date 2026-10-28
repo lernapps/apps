@@ -120,7 +120,7 @@ describe("the creator's entry points", () => {
   test("building links the skill lernapps-app as the quick path and leads on to listing; listing leads back", () => {
     for (const text of [page, llms]) assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
     assert.match(page, /skills\/process\/lernapps-app\/SKILL\.md/);
-    assert.match(page, /skills\/tooling\/lernapps-check\/references\/platform-rules\.md/, "free builders get the platform rules");
+    assert.match(page, /skills\/tooling\/lernapps-cli\/references\/platform-rules\.md/, "free builders get the platform rules");
     assert.match(page, /href="\/apps\/enter\/"/, "/apps/build/ leads on to listing");
     assert.match(enter, /href="\/apps\/build\/"/, "/apps/enter/ leads to building for those without an app");
     const build = llms.indexOf("## Eine App bauen");
