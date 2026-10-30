@@ -16,7 +16,10 @@ export const STATUS = {
   unchanged: { text: "pull request already up to date", person: false },
   declined: { text: "pull request closed by a person for this update: left alone", person: false },
   "not-installed": { text: "the GitHub App lernapps-updater is not installed on this repo", person: true },
-  "no-auto-merge": { text: "pull request opened, but auto-merge is not possible: allow auto-merge and protect main with the app check", person: true },
+  merged: { text: "pull request merged after a green check", person: false },
+  "check-failed": { text: "the app's check is red on the pull request, or did not finish: a person or an assistant fixes it there", person: true },
+  "no-checks": { text: "no check ran on the pull request: the app's workflow must run on pull requests", person: true },
+  "merge-failed": { text: "the pull request could not be merged: see the log of the run", person: true },
   "update-failed": { text: "lernapps update failed: see the log of the run", person: true },
   error: { text: "no result: see the log of the run", person: false },
 };
@@ -37,7 +40,7 @@ export function issueBody(results, run) {
 
 ${lines.join("\n")}
 
-How to fix: the owner installs the GitHub App \`lernapps-updater\` on the app's repo, allows auto-merge there and protects \`main\` with the app check as a required check.
+How to fix: the owner installs the GitHub App \`lernapps-updater\` on the app's repo.
 `;
 }
 

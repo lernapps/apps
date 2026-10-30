@@ -3,9 +3,10 @@ name: Upgrade
 # Moves the listed apps to the pins of the lernapps tooling (issue lernapps/tooling#163): every day, and by hand
 # (Actions → Upgrade → Run workflow, for one `source`, e.g. https://github.com/mrsimpson/mental-math, or for every
 # entry). For each app it runs `npx github:lernapps/tooling#main update` on the app's `main`, as the apps' owners do by
-# hand. When that changes something, the app gets a pull request `lernapps/update` and auto-merge: the app's own
-# workflow runs `lernapps check` on it, and the pull request merges only when the check is green. A red check leaves
-# the pull request open for a person or an assistant. Nothing changed: nothing happens.
+# hand. When that changes something, the app gets a pull request `lernapps/update`: the app's own workflow runs
+# `lernapps check` on it, and the pull request merges only when the check is green: by auto-merge where the app's main
+# requires a check, otherwise this workflow waits for the check and merges. A red check leaves the pull request open
+# for a person or an assistant. Nothing changed: nothing happens.
 #
 # This is not update.yml: that one follows an app's new commit into the catalog entry, this one makes the commit.
 #
@@ -104,6 +105,7 @@ jobs:
     if: always() && needs.plan.result == 'success' && needs.plan.outputs.apps != '[]'
     runs-on: ubuntu-latest
     environment: updater
+    timeout-minutes: 45
     permissions:
       contents: read
     strategy:
@@ -206,11 +208,30 @@ jobs:
           pull=""
           if [ -n "$number" ]; then
             pull="https://github.com/$OWNER/$REPO/pull/$number"
-            if ! gh pr merge "$number" --auto --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
-              status=no-auto-merge
-              echo "::warning title=${OWNER}/${REPO}::auto-merge is not possible: allow auto-merge and protect main with the app check as a required check"
+            if gh pr merge "$number" --auto --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body" 2>/dev/null; then
+              : # auto-merge is on: it merges when the required checks pass
+            else
+              # no auto-merge or no required check on main: wait for the app's own check, then merge when it is green
+              for _ in $(seq 1 18); do
+                [ -n "$(gh pr checks "$number" 2>/dev/null)" ] && break
+                sleep 10
+              done
+              if [ -z "$(gh pr checks "$number" 2>/dev/null)" ]; then
+                status=no-checks
+              elif timeout 30m gh pr checks "$number" --watch --interval 30 >/dev/null; then
+                if gh pr merge "$number" --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
+                  status=merged
+                else
+                  status=merge-failed
+                fi
+              else
+                status=check-failed
+              fi
             fi
           fi
+          case "$status" in
+            no-checks | merge-failed | check-failed) echo "::warning title=${OWNER}/${REPO}::${status}: see ${pull}" ;;
+          esac
           jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" --arg status "$status" --arg pull "$pull" \
             '{id: $id, source: $source, owner: $owner, repo: $repo, status: $status, pull: $pull}' > "$RUNNER_TEMP/res/result.json"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

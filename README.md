@@ -103,7 +103,7 @@ names (`source`, `commit`; lernapps/docs KD-21, plan [`.vibe/development-plan-fe
   ([`scripts/update-kind.mjs`](scripts/update-kind.mjs)); anything else gets the label `review`.
 - [`upgrade.yml`](.github/workflows/upgrade.yml): daily, or by hand for one `source`, moves each listed app to the pins of the
   tooling: it runs `lernapps update` on the app's `main` and opens the pull request `lernapps/update` in the app with the
-  GitHub App `lernapps-updater`, with auto-merge once the app's own check is green. An app without the updater installed
+  GitHub App `lernapps-updater`; it merges once the app's own check is green (auto-merge where `main` requires a check, otherwise the workflow waits for the check). An app without the updater installed
   is skipped and listed in the issue "Listed apps the updater cannot move". The owner installs the App on the app's repo.
 - An id may not be another path of the catalog, e.g. `start` or `en` ([`schemas/reserved.js`](schemas/reserved.js)).
 

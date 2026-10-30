@@ -51,7 +51,7 @@ test("the commit message has the sections of the apps' history and takes the key
 
 test("the report lists the apps that need a person, and nothing when none does", () => {
   const app = (id, status, owner = "lernapps") => ({ id, owner, repo: id, source: `https://github.com/${owner}/${id}`, status });
-  const results = [app("a", "opened"), app("b", "not-installed", "mrsimpson"), app("c", "no-auto-merge"), app("d", "uptodate")];
+  const results = [app("a", "opened"), app("b", "not-installed", "mrsimpson"), app("c", "check-failed"), app("d", "uptodate")];
   const issue = issueBody(results, "https://example.org/run");
   assert.ok(issue.includes("mrsimpson/b") && issue.includes("lernapps/c"));
   assert.ok(!issue.includes("lernapps/a") && !issue.includes("lernapps/d"));
