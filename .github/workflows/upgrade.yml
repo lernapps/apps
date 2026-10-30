@@ -4,9 +4,9 @@ name: Upgrade
 # (Actions → Upgrade → Run workflow, for one `source`, e.g. https://github.com/mrsimpson/mental-math, or for every
 # entry). For each app it runs `npx github:lernapps/tooling#main update` on the app's `main`, as the apps' owners do by
 # hand. When that changes something, the app gets a pull request `lernapps/update`: the app's own workflow runs
-# `lernapps check` on it, and the pull request merges only when the check is green: by auto-merge where the app's main
-# requires a check, otherwise this workflow waits for the check and merges. A red check leaves the pull request open
-# for a person or an assistant. Nothing changed: nothing happens.
+# `lernapps check` on it. This workflow waits for that check and merges the pull request when it is green (no
+# auto-merge: it merges at once where main requires no check). A red or missing check leaves the pull request open for
+# a person or an assistant. Nothing changed: nothing happens.
 #
 # This is not update.yml: that one follows an app's new commit into the catalog entry, this one makes the commit.
 #
@@ -208,25 +208,22 @@ jobs:
           pull=""
           if [ -n "$number" ]; then
             pull="https://github.com/$OWNER/$REPO/pull/$number"
-            if gh pr merge "$number" --auto --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body" 2>/dev/null; then
-              : # auto-merge is on: it merges when the required checks pass
-            else
-              # no auto-merge or no required check on main: wait for the app's own check, then merge when it is green
-              for _ in $(seq 1 18); do
-                [ -n "$(gh pr checks "$number" 2>/dev/null)" ] && break
-                sleep 10
-              done
-              if [ -z "$(gh pr checks "$number" 2>/dev/null)" ]; then
-                status=no-checks
-              elif timeout 30m gh pr checks "$number" --watch --interval 30 >/dev/null; then
-                if gh pr merge "$number" --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
-                  status=merged
-                else
-                  status=merge-failed
-                fi
+            # wait for the app's own check, then merge when it is green: gh pr merge --auto merges at once where main
+            # requires no check, so it would skip the gate
+            for _ in $(seq 1 18); do
+              [ -n "$(gh pr checks "$number" 2>/dev/null)" ] && break
+              sleep 10
+            done
+            if [ -z "$(gh pr checks "$number" 2>/dev/null)" ]; then
+              status=no-checks
+            elif timeout 30m gh pr checks "$number" --watch --interval 30 >/dev/null; then
+              if gh pr merge "$number" --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
+                status=merged
               else
-                status=check-failed
+                status=merge-failed
               fi
+            else
+              status=check-failed
             fi
           fi
           case "$status" in

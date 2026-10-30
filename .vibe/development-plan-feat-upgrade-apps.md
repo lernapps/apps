@@ -2,7 +2,7 @@
 
 Goal: the listed apps follow the pins of the tooling without a person. Decision of the issue: option C, a workflow of
 this catalog (`.github/workflows/upgrade.yml`) opens the update pull request in each app with the GitHub App
-`lernapps-updater`; the app's own check is the gate; auto-merge merges where `main` requires a check, otherwise the workflow waits for the check and merges (no branch protection needed).
+`lernapps-updater`; the app's own check is the gate: the workflow waits for it and merges when it is green. No auto-merge (it merges at once where `main` requires no check: seen on mrsimpson/mental-math#4), and no branch protection needed.
 
 ## Done
 
