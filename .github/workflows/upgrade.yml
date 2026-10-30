@@ -1,0 +1,283 @@
+name: Upgrade
+
+# Moves the listed apps to the pins of the lernapps tooling (issue lernapps/tooling#163): every day, and by hand
+# (Actions → Upgrade → Run workflow, for one `source`, e.g. https://github.com/mrsimpson/mental-math, or for every
+# entry). For each app it runs `npx github:lernapps/tooling#main update` on the app's `main`, as the apps' owners do by
+# hand. When that changes something, the app gets a pull request `lernapps/update`: the app's own workflow runs
+# `lernapps check` on it, and the pull request merges only when the check is green: by auto-merge where the app's main
+# requires a check, otherwise this workflow waits for the check and merges. A red check leaves the pull request open
+# for a person or an assistant. Nothing changed: nothing happens.
+#
+# This is not update.yml: that one follows an app's new commit into the catalog entry, this one makes the commit.
+#
+# No job holds both an app's code and a credential (the same split as update.yml):
+#   - plan: reads the entries; no secret.
+#   - update: per app, no secret. Clones the app and runs `lernapps update`, which runs the app's install scripts, then
+#     uploads the change as a patch and `lernapps update`'s output as the artifact update-<id>.
+#   - pull-request: per app, environment `updater`. Runs no code of the app: applies the patch, pushes the branch and
+#     opens the pull request with a token of the GitHub App lernapps-updater (not GITHUB_TOKEN: a pull request opened
+#     with that starts no workflow, so the app's check would not run). The token is made for this one repo; where the
+#     App is not installed, there is no token, a warning, and the app waits for its owner.
+#   - report: a table for the job summary, and, in the daily run, one issue that lists the apps that need a person.
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Only this app, e.g. https://github.com/mrsimpson/mental-math (empty: every entry)"
+        required: false
+
+permissions: {}
+
+concurrency:
+  group: upgrade
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      apps: ${{ steps.plan.outputs.apps }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - id: plan
+        env:
+          SOURCE: ${{ inputs.source }}
+        run: |
+          apps=$(node scripts/upgrade-plan.mjs ${SOURCE:+"$SOURCE"})
+          echo "$apps" | jq .
+          echo "apps=$apps" >> "$GITHUB_OUTPUT"
+
+  update:
+    needs: plan
+    if: needs.plan.outputs.apps != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJSON(needs.plan.outputs.apps) }}
+    steps:
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Clone the app and run lernapps update
+        env:
+          ID: ${{ matrix.app.id }}
+          SOURCE: ${{ matrix.app.source }}
+          OWNER: ${{ matrix.app.owner }}
+          REPO: ${{ matrix.app.repo }}
+        run: |
+          set -uo pipefail
+          mkdir -p out
+          git clone --quiet --branch main "$SOURCE" app
+          cd app
+          if npx --yes github:lernapps/tooling#main update > ../out/update.log 2>&1; then status=changed; else status=update-failed; fi
+          cat ../out/update.log
+          git add -A
+          if [ "$status" = changed ] && git diff --cached --quiet; then status=uptodate; fi
+          if [ "$status" = changed ]; then git diff --cached --binary > ../out/patch; fi
+          jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" --arg status "$status" \
+            '{id: $id, source: $source, owner: $owner, repo: $repo, status: $status}' > ../out/result.json
+          cat ../out/result.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: update-${{ matrix.app.id }}
+          path: out/
+          if-no-files-found: error
+          retention-days: 7
+
+  pull-request:
+    needs: [plan, update]
+    # also when one app could not be updated: the others get their pull request
+    if: always() && needs.plan.result == 'success' && needs.plan.outputs.apps != '[]'
+    runs-on: ubuntu-latest
+    environment: updater
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJSON(needs.plan.outputs.apps) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          path: catalog
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: update-${{ matrix.app.id }}
+          path: ${{ runner.temp }}/in
+      - name: What the update made
+        id: update
+        env:
+          ID: ${{ matrix.app.id }}
+          SOURCE: ${{ matrix.app.source }}
+          OWNER: ${{ matrix.app.owner }}
+          REPO: ${{ matrix.app.repo }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/res"
+          if [ -f "$RUNNER_TEMP/in/result.json" ]; then
+            status=$(jq -r .status "$RUNNER_TEMP/in/result.json")
+          else
+            status=error
+          fi
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" --arg status "$status" \
+            '{id: $id, source: $source, owner: $owner, repo: $repo, status: $status}' > "$RUNNER_TEMP/res/result.json"
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: app
+        if: steps.update.outputs.status == 'changed'
+        continue-on-error: true
+        with:
+          app-id: ${{ vars.UPDATER_APP_ID }}
+          private-key: ${{ secrets.UPDATER_PRIVATE_KEY }}
+          owner: ${{ matrix.app.owner }}
+          repositories: ${{ matrix.app.repo }}
+      - name: Not installed
+        if: steps.update.outputs.status == 'changed' && steps.app.outcome != 'success'
+        env:
+          ID: ${{ matrix.app.id }}
+          SOURCE: ${{ matrix.app.source }}
+          OWNER: ${{ matrix.app.owner }}
+          REPO: ${{ matrix.app.repo }}
+        run: |
+          echo "::warning title=${OWNER}/${REPO}::the GitHub App lernapps-updater is not installed on this repo (or it has no access): it gets no updates until its owner installs it"
+          jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" \
+            '{id: $id, source: $source, owner: $owner, repo: $repo, status: "not-installed"}' > "$RUNNER_TEMP/res/result.json"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: steps.update.outputs.status == 'changed' && steps.app.outcome == 'success'
+        with:
+          repository: ${{ matrix.app.owner }}/${{ matrix.app.repo }}
+          ref: main
+          token: ${{ steps.app.outputs.token }}
+          path: app
+      - name: Pull request
+        if: steps.update.outputs.status == 'changed' && steps.app.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          GH_REPO: ${{ matrix.app.owner }}/${{ matrix.app.repo }}
+          SLUG: ${{ steps.app.outputs.app-slug }}
+          ID: ${{ matrix.app.id }}
+          SOURCE: ${{ matrix.app.source }}
+          OWNER: ${{ matrix.app.owner }}
+          REPO: ${{ matrix.app.repo }}
+        run: |
+          set -euo pipefail
+          in="$RUNNER_TEMP/in"
+          node catalog/scripts/upgrade-message.mjs "$in/update.log" "$RUNNER_TEMP/title" "$RUNNER_TEMP/body"
+          { cat "$RUNNER_TEMP/title"; echo; cat "$RUNNER_TEMP/body"; } > "$RUNNER_TEMP/message"
+          user_id=$(gh api "/users/${SLUG}%5Bbot%5D" --jq .id)
+          cd app
+          git config user.name "${SLUG}[bot]"
+          git config user.email "${user_id}+${SLUG}[bot]@users.noreply.github.com"
+          branch=lernapps/update
+          have=0
+          if git fetch --quiet --depth=1 origin "refs/heads/$branch"; then have=1; fi
+          git checkout --quiet -B "$branch"
+          git apply --index "$in/patch"
+          git commit --quiet -F "$RUNNER_TEMP/message"
+          number=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+          status=opened
+          if [ "$have" = 1 ] && git diff --quiet FETCH_HEAD HEAD; then
+            # the branch already holds this very update: no new push (it would start the app's check again)
+            if [ -n "$number" ]; then status=unchanged; else status=declined; fi
+          else
+            git push --quiet --force origin "$branch"
+            if [ -z "$number" ]; then
+              gh pr create --base main --head "$branch" --title "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"
+              number=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+            else
+              gh pr edit "$number" --title "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"
+            fi
+          fi
+          pull=""
+          if [ -n "$number" ]; then
+            pull="https://github.com/$OWNER/$REPO/pull/$number"
+            if gh pr merge "$number" --auto --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body" 2>/dev/null; then
+              : # auto-merge is on: it merges when the required checks pass
+            else
+              # no auto-merge or no required check on main: wait for the app's own check, then merge when it is green
+              for _ in $(seq 1 18); do
+                [ -n "$(gh pr checks "$number" 2>/dev/null)" ] && break
+                sleep 10
+              done
+              if [ -z "$(gh pr checks "$number" 2>/dev/null)" ]; then
+                status=no-checks
+              elif timeout 30m gh pr checks "$number" --watch --interval 30 >/dev/null; then
+                if gh pr merge "$number" --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
+                  status=merged
+                else
+                  status=merge-failed
+                fi
+              else
+                status=check-failed
+              fi
+            fi
+          fi
+          case "$status" in
+            no-checks | merge-failed | check-failed) echo "::warning title=${OWNER}/${REPO}::${status}: see ${pull}" ;;
+          esac
+          jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" --arg status "$status" --arg pull "$pull" \
+            '{id: $id, source: $source, owner: $owner, repo: $repo, status: $status, pull: $pull}' > "$RUNNER_TEMP/res/result.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: result-${{ matrix.app.id }}
+          path: ${{ runner.temp }}/res/
+          if-no-files-found: error
+          retention-days: 7
+
+  report:
+    needs: [plan, pull-request]
+    if: always() && needs.plan.result == 'success' && needs.plan.outputs.apps != '[]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          pattern: result-*
+          path: ${{ runner.temp }}/results
+      - name: Summary and the collecting issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SOURCE: ${{ inputs.source }}
+        run: |
+          set -euo pipefail
+          node scripts/upgrade-report.mjs "$RUNNER_TEMP/results" "$RUNNER_TEMP/summary.md" "$RUNNER_TEMP/issue.md"
+          cat "$RUNNER_TEMP/summary.md" >> "$GITHUB_STEP_SUMMARY"
+          # only a run for every entry knows the whole list
+          [ -z "$SOURCE" ] || exit 0
+          title="Listed apps the updater cannot move"
+          number=$(gh issue list --label updater --state open --json number --jq '.[0].number // empty')
+          if [ -s "$RUNNER_TEMP/issue.md" ]; then
+            if [ -n "$number" ]; then
+              gh issue edit "$number" --body-file "$RUNNER_TEMP/issue.md"
+            else
+              gh label create updater --color fbca04 --description "Apps the updater cannot move on its own" --force >/dev/null
+              gh issue create --title "$title" --label updater --body-file "$RUNNER_TEMP/issue.md"
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --comment "Every listed app is reached by the updater."
+          fi
