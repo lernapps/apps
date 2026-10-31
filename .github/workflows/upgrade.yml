@@ -219,6 +219,9 @@ jobs:
             elif timeout 30m gh pr checks "$number" --watch --interval 30 >/dev/null; then
               if gh pr merge "$number" --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
                 status=merged
+              elif gh pr merge "$number" --auto --squash --subject "$(cat "$RUNNER_TEMP/title")" --body-file "$RUNNER_TEMP/body"; then
+                # the merge rules of main ask for more than a green check (a review): it merges once they are met
+                status=waiting
               else
                 status=merge-failed
               fi
@@ -227,7 +230,7 @@ jobs:
             fi
           fi
           case "$status" in
-            no-checks | merge-failed | check-failed) echo "::warning title=${OWNER}/${REPO}::${status}: see ${pull}" ;;
+            no-checks | merge-failed | check-failed | waiting) echo "::warning title=${OWNER}/${REPO}::${status}: see ${pull}" ;;
           esac
           jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" --arg status "$status" --arg pull "$pull" \
             '{id: $id, source: $source, owner: $owner, repo: $repo, status: $status, pull: $pull}' > "$RUNNER_TEMP/res/result.json"
@@ -243,13 +246,20 @@ jobs:
     needs: [plan, pull-request]
     if: always() && needs.plan.result == 'success' && needs.plan.outputs.apps != '[]'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: read
       issues: write
+      actions: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           pattern: result-*
@@ -278,3 +288,18 @@ jobs:
           elif [ -n "$number" ]; then
             gh issue close "$number" --comment "Every listed app is reached by the updater."
           fi
+      - name: Start the update of the catalog entries
+        # A merged app publishes after its push to main; update.yml follows a new commit once the app's address serves it
+        # (scripts/update-plan.mjs). Wait for that, at most 15 minutes, then start it instead of waiting for its schedule.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          grep -l '"status": "merged"' "$RUNNER_TEMP"/results/*/result.json > /dev/null 2>&1 || { echo "no app was merged: nothing to follow"; exit 0; }
+          for _ in $(seq 1 15); do
+            node scripts/update-plan.mjs > /dev/null 2> "$RUNNER_TEMP/plan.err" || true
+            grep -q "next run" "$RUNNER_TEMP/plan.err" || break
+            sleep 60
+          done
+          gh workflow run update.yml
