@@ -51,12 +51,13 @@ test("the commit message has the sections of the apps' history and takes the key
 
 test("the report lists the apps that need a person, and nothing when none does", () => {
   const app = (id, status, owner = "lernapps") => ({ id, owner, repo: id, source: `https://github.com/${owner}/${id}`, status });
-  const results = [app("a", "opened"), app("b", "not-installed", "mrsimpson"), app("c", "check-failed"), app("d", "uptodate")];
+  const results = [app("a", "opened"), app("b", "not-installed", "mrsimpson"), app("c", "check-failed"), app("d", "uptodate"), { ...app("e", "waiting"), pull: "https://github.com/lernapps/e/pull/1" }];
   const issue = issueBody(results, "https://example.org/run");
   assert.ok(issue.includes("mrsimpson/b") && issue.includes("lernapps/c"));
+  assert.ok(issue.includes("[pull request](https://github.com/lernapps/e/pull/1)"));
   assert.ok(!issue.includes("lernapps/a") && !issue.includes("lernapps/d"));
   assert.equal(issueBody([app("a", "opened"), app("d", "uptodate")], "run"), "");
-  assert.ok(summary(results).split("\n").filter((line) => line.startsWith("| ")).length === 5);
+  assert.ok(summary(results).split("\n").filter((line) => line.startsWith("| ")).length === 6);
 });
 
 test("the workflow keeps its split: no secret near an app's code, the token only for the one repo", () => {

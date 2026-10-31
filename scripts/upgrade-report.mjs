@@ -19,6 +19,7 @@ export const STATUS = {
   merged: { text: "pull request merged after a green check", person: false },
   "check-failed": { text: "the app's check is red on the pull request, or did not finish: a person or an assistant fixes it there", person: true },
   "no-checks": { text: "no check ran on the pull request: the app's workflow must run on pull requests", person: true },
+  waiting: { text: "the pull request waits for the merge rules of main (a review?): it merges once they are met", person: true },
   "merge-failed": { text: "the pull request could not be merged: see the log of the run", person: true },
   "update-failed": { text: "lernapps update failed: see the log of the run", person: true },
   error: { text: "no result: see the log of the run", person: false },
@@ -35,12 +36,14 @@ export function summary(results) {
 export function issueBody(results, run) {
   const open = results.filter((r) => STATUS[r.status]?.person);
   if (open.length === 0) return "";
-  const lines = open.map((r) => `- [${r.owner}/${r.repo}](${r.source}): ${STATUS[r.status].text}`);
+  const lines = open.map(
+    (r) => `- [${r.owner}/${r.repo}](${r.source}): ${STATUS[r.status].text}${r.pull ? ` ([pull request](${r.pull}))` : ""}`,
+  );
   return `The daily upgrade (${run}) could not move these listed apps on its own. This issue is rewritten by every run and closed when the list is empty.
 
 ${lines.join("\n")}
 
-How to fix: the owner installs the GitHub App \`lernapps-updater\` on the app's repo.
+Where the App is not installed: the owner installs the GitHub App \`lernapps-updater\` on the app's repo. Where a pull request is linked: a check is red there, or the merge rules of \`main\` want a review.
 `;
 }
 
