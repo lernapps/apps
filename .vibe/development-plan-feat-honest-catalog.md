@@ -15,6 +15,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - `find.empty` verweist nur auf „App eintragen“, nicht auf „Bauen“.
 - `find.build` nutzt Fachsprache („Tooling“) und verspricht „ganz einfach“.
 - Keine Stelle sagt, wer hinter lernapps.net steht.
+- Mockup 3b (kompakte Zeile unter der Trefferzahl bei gesetztem Filter) als Alternative zum Kasten zwischen den Treffern gezeigt; Entscheidung offen. Empfehlung: 3b, weil es nicht wie Werbung wirkt, nicht springt und die Eilige nicht unterbricht.
 - Mockups: https://claude.ai/artifact/2HghwbCaHCy9A2EcBgvG49 (1 Klassen 1–13, 2 kein Treffer, 3 Kasten + „Wer dahintersteht“, 4 Bauen mit Suche im Auftrag, 5 Variante bauen = später)
 - Offen: Stimmt „Wir verdienen nichts an dir“? Anzahl je Klasse in der Auswahl?
 - Offen: Belegbare Zeitangabe fürs Bauen („an einem Abend“?) – beim Nutzer erfragen.
