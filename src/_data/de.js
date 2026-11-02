@@ -200,13 +200,6 @@ const de = {
         { who: "la", title: "lernapps.net bringt mit", body: "Vorlagen, Regeln und Prüfungen, damit die App gut wird. Und den Weg, sie mit anderen zu teilen." },
       ],
     },
-    cases: {
-      headline: "Wofür du bauen kannst",
-      items: [
-        { title: "Für die nächste Arbeit", body: "Eine Übung genau zu dem Stoff, der am Freitag drankommt. Mit den Aufgabenarten, die dein Kind aus dem Unterricht kennt." },
-        { title: "Für deinen Lehrplan", body: "Mehrere Apps für eine ganze Unterrichtsreihe. In deiner Reihenfolge, mit deinen Beispielen." },
-      ],
-    },
     haveApp: "Du hast schon eine App?",
     haveAppLink: "Direkt zum Eintragen",
     start: {
@@ -218,8 +211,9 @@ const de = {
         `Bau mit mir eine Lern-App für lernapps.net${search}. Lies zuerst ${llms} und folge dem Schnellweg: Starte die App in einem neuen, leeren Ordner mit ${command} (für <name> ein kurzer Name ohne Leerzeichen). Frag mich dann, was die App lehren soll, und schreib mit mir den Plan. Erst wenn ich den Plan bestätigt habe, legst du die App an, wie der Plan es sagt.`,
       copy: "Auftrag kopieren",
       copied: "Kopiert",
-      command: "Mit diesem Befehl startet dein Assistent die App: Er schreibt den Plan und legt die Skills ab. Das Werkzeug dafür lädt er selbst aus der npm-Registry.",
-      skill: "Der Schnellweg für Assistenten ist der Skill",
+      // Building is for the catalog; whoever wants to practise for a test with their own material goes to /practice/.
+      practice: "Du willst für eine Arbeit mit deinem eigenen Material üben?",
+      practiceLink: "Dann schau bei Üben",
     },
     which: {
       headline: "Welcher Assistent?",

@@ -9,6 +9,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - Ablauf: epcc. Erste Phase liefert Mockups zur Abstimmung, noch kein Code.
 - Position der Einladung: Mockup 3b. Bei gesetztem Filter oder Eingabe mit Treffern eine Zeile unter der Trefferzahl („Nichts Passendes dabei? Bau dir selbst eine →“, Link mit Thema und Klasse). Der ausführliche Kasten bleibt am Ende der Liste. Kein Treffer: Kasten aus Mockup 2. Verworfen: Kasten zwischen den Treffern (wirkt wie Werbung, unterbricht, springt).
 - Umfang: Mockups 1, 2, 3 (Texte), 3b und 4. Mockup 5 (Variante bauen) später als eigenes Feature.
+- Rückmeldung zum PR (Seite „Bauen“): Zielgruppe sind Menschen, die für den Katalog bauen. Anlässe-Kästen („nächste Arbeit“, „Lehrplan“) entfernt; „Wer was mitbringt“ ohne Kästen; npx-Befehl und Skill-Hinweis unter dem Auftrag entfernt (Schnellweg steht in llms.txt, der Befehl bleibt im Auftrag); unter dem Kopieren Hinweis auf /practice/ („Üben“) für Üben mit eigenem Material. Test `entry-point.e2e` liest den Befehl jetzt aus dem Auftrag.
 - Texte wie in den Mockups (vom Nutzer bestätigt). Keine Zeitangabe. „Wir verdienen nichts an dir“ bleibt.
 - Die Erklärung steht dort, wo jemand nichts findet (leeres Suchergebnis), nicht als Banner auf jeder Seite und nicht im Abschnitt „Darfst du sie einsetzen?“ (x-app-in-minutes: Lehrkraft unter Zeitdruck).
 
@@ -91,6 +92,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - [x] Aufräumen: keine Debug-Ausgaben, keine TODOs im Diff
 - [x] Dokumentation: README (Tabelle der Seiten), Kommentare in `index.njk`, `build.njk`, `finden.js`, `bauen.js`
 - [x] Pull Request öffnen (Nutzer möchte die Vorschau ansehen)
+- [x] Rückmeldung zur Seite „Bauen“ umgesetzt
 - [ ] Commits zusammenfassen: beim Mergen mit „Squash and merge“ (Force-Push ist in dieser Sitzung nicht erlaubt)
 
 ### Completed

@@ -184,13 +184,6 @@ const en = {
         { who: "la", title: "lernapps.net brings", body: "Templates, rules and checks, so that the app turns out well. And the way to share it with others." },
       ],
     },
-    cases: {
-      headline: "What you can build for",
-      items: [
-        { title: "For the next test", body: "An exercise on exactly the content that comes up on Friday. With the kinds of tasks your child knows from class." },
-        { title: "For your curriculum", body: "Several apps for a whole teaching unit. In your order, with your examples." },
-      ],
-    },
     haveApp: "Already have an app?",
     haveAppLink: "Go straight to listing it",
     start: {
@@ -201,8 +194,8 @@ const en = {
         `Build a learning app for lernapps.net with me${search}. First read ${llms} and follow the quick path: start the app in a new, empty folder with ${command} (for <name> a short name without spaces). Then ask me what the app should teach, and write the plan with me. Only when I have confirmed the plan, create the app as the plan says.`,
       copy: "Copy task",
       copied: "Copied",
-      command: "With this command, your assistant starts the app: it writes the plan and puts the skills in place. It downloads the tool for it from the npm registry by itself.",
-      skill: "The quick path for assistants is the skill",
+      practice: "Want to practise for a test with your own material?",
+      practiceLink: "Then have a look at Practise",
     },
     which: {
       headline: "Which assistant?",

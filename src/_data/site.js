@@ -8,7 +8,7 @@ export default {
   feedbackEmail: "Feedback-lernapps@beimir.net",
   // Building an app with the tooling (lernapps/tooling, the npm package @lernapps/tooling): its guide for assistants,
   // the skill that is the quick path, and the command that starts an app (`init`: the plan template and the skills,
-  // from the registry). The page /build/ and llms.txt show them; test/entry-point.e2e.test.mjs runs the command from
+  // from the registry). The prompt on /build/ and llms.txt show them; test/entry-point.e2e.test.mjs runs the command from
   // the built page. Listing a published app: the skill lernapps-listing, the way /enter/ and
   // llms.txt promote; `skills` is the command that installs both skills.
   tooling: {

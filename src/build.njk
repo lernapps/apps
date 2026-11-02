@@ -11,8 +11,10 @@ eleventyComputed:
   description: "{{ t.build.description }}"
 ---
 {#-
-  Bauen: the creator's entry point to building an app with the tooling of lernapps.net (site.tooling): the prompt
-  to give the assistant, the command that starts the app, the skill as the quick path, a short box on which assistant
+  Bauen: the creator's entry point to building an app for the catalog with the tooling of lernapps.net
+  (site.tooling): the prompt to give the assistant (it contains the command that starts the app; the quick path the
+  assistant reads in llms.txt, so the page shows no command of its own), a pointer to /practice/ for those who
+  only want to practise with their own material, a short box on which assistant
   to use (the page /tooling/assistants/), building freely without the
   templates (any framework, or tools such as Lovable or bolt.new), then the step out into the world: publishing it on
   lernapps.net (/enter/, a prominent link with a rocket, the section #eintragen, which the header's "App bauen" now
@@ -20,7 +22,7 @@ eleventyComputed:
   test/entry-point.e2e.test.mjs runs the command from the built page.
   Coming from a search on the find page (?thema=&fach=&klasse=), assets/bauen.js puts the search into a line under the
   lead and into the task for the assistant. Without it, or without JS, the page is the same for everyone.
-  Who brings what (build.give) and what to build for (build.cases) make building feel doable for non-programmers.
+  Who brings what (build.give) makes building feel doable for non-programmers.
 -#}
 {%- set B = t.build %}
 {%- import "components.njk" as c with context %}
@@ -37,18 +39,9 @@ eleventyComputed:
 <div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
   <section aria-labelledby="mitbringen">
     <h2 id="mitbringen" class="sr-only">{{ B.give.headline }}</h2>
-    <ul class="list-none p-0 m-0 grid gap-3 sm:grid-cols-3">
+    <ul class="list-none p-0 m-0 grid gap-4 sm:grid-cols-3">
       {%- for item in B.give.items %}
-      <li class="give rounded-xl p-4" data-who="{{ item.who }}"><strong class="block text-xs uppercase tracking-wider">{{ item.title }}</strong><span class="block mt-1">{{ item.body }}</span></li>
-      {%- endfor %}
-    </ul>
-  </section>
-
-  <section aria-labelledby="wofuer">
-    <h2 id="wofuer" class="sr-only">{{ B.cases.headline }}</h2>
-    <ul class="list-none p-0 m-0 grid gap-3 sm:grid-cols-2">
-      {%- for item in B.cases.items %}
-      <li class="panel"><h3 class="m-0 text-lg font-bold text-slate-900">{{ item.title }}</h3><p class="m-0 mt-1 text-slate-700">{{ item.body }}</p></li>
+      <li class="give" data-who="{{ item.who }}"><strong class="block text-xs uppercase tracking-wider">{{ item.title }}</strong><span class="block mt-1 text-slate-700">{{ item.body }}</span></li>
       {%- endfor %}
     </ul>
   </section>
@@ -61,9 +54,7 @@ eleventyComputed:
       {{ c.copyField("bauen-auftrag", B.start.label, B.start.prompt(site.tooling.llms, site.tooling.init), B.start.copy, B.start.copied, true) }}
       </div>
     </div>
-    <p class="m-0 mt-3 text-slate-700">{{ B.start.command }}</p>
-    <pre class="m-0 mt-1 p-3 rounded bg-slate-100 text-sm overflow-x-auto"><code>{{ site.tooling.init }}</code></pre>
-    <p class="m-0 mt-3 text-slate-700">{{ B.start.skill }} <a href="{{ site.tooling.skill }}" class="text-blue-700 underline underline-offset-2">lernapps-app</a>.</p>
+    <p class="m-0 mt-3 text-sm text-slate-600">{{ B.start.practice }} <a href="{{ '/practice/' | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2">{{ B.start.practiceLink }} <span aria-hidden="true">→</span></a></p>
   </section>
 
   <section class="panel" aria-labelledby="assistent">

@@ -165,9 +165,9 @@ async function freePorts(count) {
 
 /** The command to start an app, as the built page /apps/build/ shows it: the one `<code>` that runs `npx … init`. */
 function startCommand() {
-  const commands = new Set(
-    [...page.matchAll(/<code\b[^>]*>([\s\S]*?)<\/code>/g)].map((m) => decode(m[1]).trim()).filter((c) => /^npx .* init /.test(c)),
-  );
+  // The page shows the command only inside the prompt to copy (the quick path is in llms.txt).
+  const prompt = decode(page.match(/<textarea\b[^>]*id="bauen-auftrag"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? "");
+  const commands = new Set([...prompt.matchAll(/npx [^\s]+ [^\s]+ init <name>/g)].map((m) => m[0]));
   assert.equal(commands.size, 1, `one command to start an app on the page, found: ${[...commands].join(" | ")}`);
   return [...commands][0];
 }
