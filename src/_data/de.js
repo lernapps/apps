@@ -275,7 +275,7 @@ const de = {
       ],
       optional: "Wenn du magst: einzelne Themen mit eigenem Link. Dann landen Suchende direkt an der richtigen Stelle.",
     },
-    // The ways, in this order: the assistant with the skill lernapps-listing (site.tooling.listing) is the way;
+    // The ways, in this order: the assistant with the skill lernapps-listing (named in the prompt, site.tooling.listingRaw) is the way;
     // the issue form for those without such an assistant; the e-mail only as the fallback.
     flow: {
       headline: "So läuft das Eintragen ab",
@@ -323,7 +323,6 @@ const de = {
         label: "Auftrag für deinen Assistenten",
         copy: "Auftrag kopieren",
         copied: "Kopiert",
-        skill: "Dein Assistent folgt dem Skill",
       },
       form: {
         title: "Ohne Assistenten: mit dem Formular",

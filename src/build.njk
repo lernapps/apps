@@ -32,7 +32,7 @@ eleventyComputed:
     <p class="m-0 mt-3 text-lg text-white font-semibold max-w-2xl" data-searched="{{ B.searched }}"
        data-topic="{{ t.find.searched.topic }}" data-subject="{{ t.find.searched.subject }}" data-grade="{{ t.find.searched.grade }}" hidden></p>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ B.lead }}</p>
-    <p class="m-0 mt-4 text-slate-300">{{ B.haveApp }} <a href="#eintragen" class="text-blue-300 underline underline-offset-2 hover:text-white">{{ B.haveAppLink }} ↓</a></p>
+    <p class="m-0 mt-4 text-slate-300">{{ B.haveApp }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-300 underline underline-offset-2 hover:text-white">{{ B.haveAppLink }} <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 

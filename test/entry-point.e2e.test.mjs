@@ -119,9 +119,8 @@ describe("the creator's entry points", () => {
     assert.deepEqual(await brokenLinks(t, links), []);
   });
 
-  test("building links the skill lernapps-app as the quick path and leads on to listing; listing leads back", () => {
+  test("building points the assistant to the tooling's llms.txt (the quick path) and leads on to listing; listing leads back", () => {
     for (const text of [page, llms]) assert.match(text, /lernapps\.net\/tooling\/llms\.txt/);
-    assert.match(page, /skills\/process\/lernapps-app\/SKILL\.md/);
     assert.match(page, /skills\/tooling\/lernapps-cli\/references\/platform-rules\.md/, "free builders get the platform rules");
     assert.match(page, /href="\/apps\/enter\/"/, "/apps/build/ leads on to listing");
     assert.match(enter, /href="\/apps\/build\/"/, "/apps/enter/ leads to building for those without an app");
@@ -135,7 +134,7 @@ describe("the creator's entry points", () => {
   test("listing promotes the skill lernapps-listing; e-mail only as the fallback at the end", () => {
     const skill = /skills\/process\/lernapps-listing\/SKILL\.md/;
     const first = enter.search(skill);
-    assert.ok(first >= 0, "/apps/enter/ links the skill lernapps-listing");
+    assert.ok(first >= 0, "/apps/enter/ gives the skill lernapps-listing (in the prompt)");
     const prompt = decode(enter.match(/<textarea\b[^>]*id="auftrag"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? "");
     assert.match(prompt, /lernapps-listing/, "the prompt to copy names the skill");
     const mails = [...enter.matchAll(/mailto:/g)];

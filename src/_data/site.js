@@ -14,7 +14,6 @@ export default {
   tooling: {
     home: "/tooling/",
     llms: "https://lernapps.net/tooling/llms.txt",
-    skill: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-app/SKILL.md",
     skillRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-app/SKILL.md",
     // the skill's platform rules: what every app keeps to, however it is built; /build/ gives them to free builders
     platformRules: "https://github.com/lernapps/tooling/blob/main/skills/tooling/lernapps-cli/references/platform-rules.md",

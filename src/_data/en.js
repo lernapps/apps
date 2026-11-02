@@ -300,7 +300,6 @@ const en = {
         label: "Task for your assistant",
         copy: "Copy task",
         copied: "Copied",
-        skill: "Your assistant follows the skill",
       },
       form: {
         title: "Without an assistant: with the form",
