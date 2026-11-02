@@ -79,7 +79,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - [x] 6 Englische Texte vollständig
 - [x] 7 Dunkler Modus geprüft
 - [x] 8 README ergänzt
-- [ ] Test `test/find.e2e.test.mjs`; `npm run build`, `npm run check`, `npm test` grün
+- [x] Test `test/find.e2e.test.mjs`; `npm run build`, `npm run check`, `npm test` grün
 
 ### Completed
 *None yet*
