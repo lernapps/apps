@@ -39,16 +39,16 @@ const en = {
       headlineSearched: "There is no app {suche} yet. Not yet.",
       body: [
         "There is no company and no editorial team behind lernapps.net. Every app here was built by a person who cares about good digital education. That is why a lot is still missing, and some grades hardly appear.",
-        "The good news: your AI assistant already knows the subject matter. You know what your child or your class needs right now. Together you build the app. You don't have to program.",
+        "The good news: your AI assistant already knows the subject matter. You know what learners in this grade need. Together you build the app, and then everyone finds it here. You don't have to program.",
       ],
       build: "Build an app yourself",
-      enter: "Do you know a fitting app?",
-      enterLink: "List it.",
     },
+    practice: "Only want to practise for a test with your own material?",
+    practiceLink: "Then have a look at Practise",
     hint: { text: "Nothing that fits?", link: "Build one yourself" },
     build: {
       headline: "Nothing that fits?",
-      body: "No editorial team writes here; people like you build the apps. What is missing, you can build yourself: an exercise for exactly the next test, or apps for a whole teaching unit.",
+      body: "No editorial team writes here; people like you build the apps. What is missing, you can build yourself. Then everyone else who looks for it finds it too.",
       link: "Build an app yourself",
     },
     trust: {
@@ -175,7 +175,7 @@ const en = {
     headline: "Build a learning app\nwith your AI assistant.",
     lead:
       "You don't have to program. You say what the app should teach. Your assistant plans with you, builds the app and checks it.",
-    searched: "Looking for something {suche}? Then build it.",
+    searched: "Looking for something {suche}? Then build it, for you and everyone who looks for it.",
     give: {
       headline: "Who brings what",
       items: [

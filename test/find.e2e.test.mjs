@@ -127,6 +127,8 @@ describe("the find page invites to build", () => {
     );
     const href = await page.getAttribute("[data-empty] a[data-build-link]", "href");
     assert.equal(new URL(href).searchParams.get("thema"), "Bruchrechnung");
+    assert.equal(await page.locator('[data-empty] a[href="/practice/"]').count(), 1, "points to practising with one's own material");
+    assert.equal(await page.locator('[data-empty] a[href$="/enter/"]').count(), 0, "no listing link: building is the way");
     await page.close();
   });
 
@@ -140,7 +142,7 @@ describe("the find page invites to build", () => {
 describe("the build page takes the search", () => {
   test("into a line under the lead and into the task", async () => {
     const page = await open("build/?thema=Bruchrechnung&fach=Mathematik&klasse=3");
-    assert.equal(await page.textContent("[data-searched]"), "Du suchst etwas zu „Bruchrechnung“ in Mathematik für Klasse 3? Dann bau es dir.");
+    assert.equal(await page.textContent("[data-searched]"), "Du suchst etwas zu „Bruchrechnung“ in Mathematik für Klasse 3? Dann bau es, für dich und alle, die danach suchen.");
     const task = await page.inputValue("#bauen-auftrag");
     assert.match(task, /^Bau mit mir eine Lern-App für lernapps\.net zu „Bruchrechnung“ in Mathematik für Klasse 3\. Lies zuerst /);
     await page.close();

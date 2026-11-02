@@ -11,6 +11,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - Umfang: Mockups 1, 2, 3 (Texte), 3b und 4. Mockup 5 (Variante bauen) später als eigenes Feature.
 - Rückmeldung zum PR (Seite „Bauen“): Zielgruppe sind Menschen, die für den Katalog bauen. Anlässe-Kästen („nächste Arbeit“, „Lehrplan“) entfernt; „Wer was mitbringt“ ohne Kästen; npx-Befehl und Skill-Hinweis unter dem Auftrag entfernt (Schnellweg steht in llms.txt, der Befehl bleibt im Auftrag); unter dem Kopieren Hinweis auf /practice/ („Üben“) für Üben mit eigenem Material. Test `entry-point.e2e` liest den Befehl jetzt aus dem Auftrag.
 - Rückmeldung 2: „Direkt zum Eintragen“ verlinkt /enter/ statt nach unten zu springen. Auf /enter/ kommen die Wege vor „Deine App bleibt deine“ (der Notfall-Weg per E-Mail bleibt direkt bei den Wegen). Der Skill wird den Menschen nicht genannt (Detail für den Assistenten, steht nur im Auftrag); ungenutztes `site.tooling.skill` entfernt. Tests in `entry-point.e2e` angepasst (Skill-Link auf /build/ wurde schon in Rückmeldung 1 entfernt und brach den Test; der Pre-Push-Hook führt ihn nicht aus).
+- Rückmeldung 3 (Seite „Finden“): Bauen heißt Bauen für den Katalog. Kasten am Ende und Kasten „kein Treffer“ ohne „Übung für die nächste Arbeit“ bzw. „dein Kind“; beide mit Hinweis auf /practice/ („Üben“). Im Kasten „kein Treffer“ kein Link „Eintragen“ mehr (Nutzer: ohne). Seite „Bauen“: „Dann bau es, für dich und alle, die danach suchen.“
 - Texte wie in den Mockups (vom Nutzer bestätigt). Keine Zeitangabe. „Wir verdienen nichts an dir“ bleibt.
 - Die Erklärung steht dort, wo jemand nichts findet (leeres Suchergebnis), nicht als Banner auf jeder Seite und nicht im Abschnitt „Darfst du sie einsetzen?“ (x-app-in-minutes: Lehrkraft unter Zeitdruck).
 
@@ -95,6 +96,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - [x] Pull Request öffnen (Nutzer möchte die Vorschau ansehen)
 - [x] Rückmeldung zur Seite „Bauen“ umgesetzt
 - [x] Rückmeldung 2 (Eintragen) umgesetzt
+- [x] Rückmeldung 3 (Texte Finden) umgesetzt
 - [ ] Commits zusammenfassen: beim Mergen mit „Squash and merge“ (Force-Push ist in dieser Sitzung nicht erlaubt)
 
 ### Completed

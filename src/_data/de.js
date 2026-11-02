@@ -44,18 +44,19 @@ const de = {
       headlineSearched: "{suche} gibt es noch keine App. Noch nicht.",
       body: [
         "Hinter lernapps.net steht keine Firma und keine Redaktion. Jede App hier hat ein Mensch gebaut, dem gute digitale Bildung wichtig ist. Darum fehlt noch vieles, und manche Klassen kommen kaum vor.",
-        "Das Gute daran: Den Stoff kennt dein KI-Assistent schon. Du weißt, was dein Kind oder deine Klasse gerade braucht. Zusammen baut ihr die App. Programmieren musst du dafür nicht.",
+        "Das Gute daran: Den Stoff kennt dein KI-Assistent schon. Du weißt, was Lernende in dieser Klasse brauchen. Zusammen baut ihr die App, und dann findet sie hier jede und jeder. Programmieren musst du dafür nicht.",
       ],
       build: "Selbst eine App bauen",
-      enter: "Du kennst eine passende App?",
-      enterLink: "Trag sie ein.",
     },
+    // Building is for the catalog; whoever only wants to practise for a test with their own material goes to /practice/.
+    practice: "Du willst nur für eine Arbeit mit deinem eigenen Material üben?",
+    practiceLink: "Dann schau bei Üben",
     // With a search and matches: one line under the count, always on the first screen.
     hint: { text: "Nichts Passendes dabei?", link: "Bau dir selbst eine" },
     // Under the results, always: whoever finds nothing fitting can build the app themselves.
     build: {
       headline: "Nichts Passendes dabei?",
-      body: "Hier schreibt keine Redaktion, hier bauen Menschen wie du. Was fehlt, kannst du selbst bauen: eine Übung genau für die nächste Arbeit oder Apps für eine ganze Unterrichtsreihe.",
+      body: "Hier schreibt keine Redaktion, hier bauen Menschen wie du. Was fehlt, kannst du selbst bauen. Dann finden es auch alle anderen, die danach suchen.",
       link: "Selbst eine App bauen",
     },
     trust: {
@@ -190,7 +191,7 @@ const de = {
     lead:
       "Programmieren musst du nicht. Du sagst, was die App lehren soll. Dein Assistent plant mit dir, baut die App und prüft sie.",
     // Coming from a search (?thema=&fach=&klasse=, assets/bauen.js): {suche} are the words of find.searched.
-    searched: "Du suchst etwas {suche}? Dann bau es dir.",
+    searched: "Du suchst etwas {suche}? Dann bau es, für dich und alle, die danach suchen.",
     // Who brings what: so that building feels doable, without promising too much.
     give: {
       headline: "Wer was mitbringt",

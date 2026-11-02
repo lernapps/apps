@@ -17,7 +17,7 @@ eleventyComputed:
   can be shared. Nothing is stored in the browser.
   The invitation to build an app yourself (find.hint, find.empty, find.build): with a search and matches one line under
   the count, so it is on the first screen; without a match the box that says honestly why so much is missing; under
-  the results always. Its links ([data-build-link]) carry the search to /build/ (set by finden.js).
+  the results always; both boxes point to /practice/ for those who only want to practise. Its links ([data-build-link]) carry the search to /build/ (set by finden.js).
 -#}
 {%- set F = t.find %}
 {%- import "components.njk" as c with context %}
@@ -71,13 +71,14 @@ eleventyComputed:
     {%- endfor %}
     <div class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-3">
       <a href="{{ '/build/' | inLang(lang) | url }}" class="btn btn-primary" data-build-link>{{ F.empty.build }}</a>
-      <p class="m-0 text-slate-700">{{ F.empty.enter }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ F.empty.enterLink }}</a></p>
     </div>
+    <p class="m-0 mt-1 text-sm text-slate-600">{{ F.practice }} <a href="{{ '/practice/' | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2">{{ F.practiceLink }} <span aria-hidden="true">→</span></a></p>
   </div>
 
   <div class="mt-8 p-5 rounded-xl border border-slate-200 bg-white flex flex-wrap items-center gap-x-6 gap-y-3" data-build>
     <p class="m-0 text-slate-700 flex-1 min-w-0 basis-80"><strong class="text-slate-900">{{ F.build.headline }}</strong> {{ F.build.body }}</p>
     <a href="{{ '/build/' | inLang(lang) | url }}" class="btn btn-primary" data-build-link>{{ F.build.link }}</a>
+    <p class="m-0 basis-full text-sm text-slate-600">{{ F.practice }} <a href="{{ '/practice/' | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2">{{ F.practiceLink }} <span aria-hidden="true">→</span></a></p>
   </div>
 
   <section class="mt-12 p-5 rounded-xl bg-blue-50 border border-blue-100" aria-labelledby="vertrauen">
