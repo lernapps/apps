@@ -88,7 +88,10 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 ### Phase Entrance Criteria
 - Umsetzung fertig, `npm test` und `npm run check` grün.
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [x] Aufräumen: keine Debug-Ausgaben, keine TODOs im Diff
+- [x] Dokumentation: README (Tabelle der Seiten), Kommentare in `index.njk`, `build.njk`, `finden.js`, `bauen.js`
+- [x] Pull Request öffnen (Nutzer möchte die Vorschau ansehen)
+- [ ] Commits zusammenfassen: beim Mergen mit „Squash and merge“ (Force-Push ist in dieser Sitzung nicht erlaubt)
 
 ### Completed
 *None yet*
