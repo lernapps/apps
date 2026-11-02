@@ -7,6 +7,7 @@
 Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapps.net bauen Menschen, denen digitale Bildung wichtig ist. Es gibt kein Unternehmen und keine Redaktion, darum fehlen Inhalte. Wer nichts findet, kann mit KI und unseren Bauhilfen selbst eine App bauen, für eine Prüfung oder einen ganzen Lehrplan, auch ohne Technikwissen.
 ## Key Decisions
 - Ablauf: epcc. Erste Phase liefert Mockups zur Abstimmung, noch kein Code.
+- Kasten „Nichts gefunden?“ erscheint, sobald ein Filter gesetzt oder etwas eingegeben ist, auch bei Treffern: hinter dem letzten Treffer, der ganz auf den ersten Bildschirm passt (mind. 1, höchstens 3 davor). Ohne Suche und ohne JavaScript: am Ende der Liste. Kein Treffer: Kasten aus Mockup 2. Umsetzung in `src/assets/finden.js` (Kasten verschieben, neu berechnen bei Eingabe und Größenänderung); Kasten außerhalb der Ergebnisliste, damit Screenreader ihn nicht als App zählen.
 - Die Erklärung steht dort, wo jemand nichts findet (leeres Suchergebnis), nicht als Banner auf jeder Seite und nicht im Abschnitt „Darfst du sie einsetzen?“ (x-app-in-minutes: Lehrkraft unter Zeitdruck).
 
 ## Notes
