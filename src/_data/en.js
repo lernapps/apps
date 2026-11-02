@@ -33,21 +33,31 @@ const en = {
     },
     count: { none: "No app found", one: "1 app", many: (n) => `${n} apps` },
     matched: "Matches your search:",
+    searched: { topic: "on “{v}”", subject: "in {v}", grade: "for grade {v}" },
     empty: {
-      headline: "There is no app for this yet.",
-      body: "lernapps.net is just getting started. Do you know a fitting app, or did you publish one yourself?",
-      link: "List an app",
+      headline: "There is no app for this yet. Not yet.",
+      headlineSearched: "There is no app {suche} yet. Not yet.",
+      body: [
+        "There is no company and no editorial team behind lernapps.net. Every app here was built by a person who cares about good digital education. That is why a lot is still missing, and some grades hardly appear.",
+        "The good news: your AI assistant already knows the subject matter. You know what your child or your class needs right now. Together you build the app. You don't have to program.",
+      ],
+      build: "Build an app yourself",
+      enter: "Do you know a fitting app?",
+      enterLink: "List it.",
     },
+    hint: { text: "Nothing that fits?", link: "Build one yourself" },
     build: {
-      headline: "Nothing found?",
-      body: "Help yourself and build an app. With our tooling it is really easy.",
-      link: "Build an app",
+      headline: "Nothing that fits?",
+      body: "No editorial team writes here; people like you build the apps. What is missing, you can build yourself: an exercise for exactly the next test, or apps for a whole teaching unit.",
+      link: "Build an app yourself",
     },
     trust: {
       headline: "Which apps are listed here",
       body:
         "Only apps that run in the browser, without sign-up and without installation. They are free, have no ads and collect nothing in secret. So you can use them without a long check.",
       link: "What exactly we require",
+      whoHeadline: "Who is behind lernapps.net",
+      who: "Not a company, but people who care about digital education. Teachers, parents and others build the apps and offer them here to everyone. We earn nothing from you or your data. That is why there are no ads and no accounts here.",
     },
     cardLink: (title) => `More about ${title}`,
     chips: ["No sign-up", "No installation", "Free"],
@@ -165,14 +175,30 @@ const en = {
     headline: "Build a learning app\nwith your AI assistant.",
     lead:
       "You don't have to program. You say what the app should teach. Your assistant plans with you, builds the app and checks it.",
+    searched: "Looking for something {suche}? Then build it.",
+    give: {
+      headline: "Who brings what",
+      items: [
+        { who: "you", title: "You bring", body: "What your learners need: which content is coming up, where they struggle, which examples they know." },
+        { who: "ki", title: "The AI brings", body: "The subject knowledge and the programming. It plans with you, builds the app and checks it." },
+        { who: "la", title: "lernapps.net brings", body: "Templates, rules and checks, so that the app turns out well. And the way to share it with others." },
+      ],
+    },
+    cases: {
+      headline: "What you can build for",
+      items: [
+        { title: "For the next test", body: "An exercise on exactly the content that comes up on Friday. With the kinds of tasks your child knows from class." },
+        { title: "For your curriculum", body: "Several apps for a whole teaching unit. In your order, with your examples." },
+      ],
+    },
     haveApp: "Already have an app?",
     haveAppLink: "Go straight to listing it",
     start: {
       headline: "Tell your assistant:",
       body: "You need an AI assistant that may run commands on your computer. Copy this task and give it to the assistant.",
       label: "Task for your assistant",
-      prompt: (llms, command) =>
-        `Build a learning app for lernapps.net with me. First read ${llms} and follow the quick path: start the app in a new, empty folder with ${command} (for <name> a short name without spaces). Then ask me what the app should teach, and write the plan with me. Only when I have confirmed the plan, create the app as the plan says.`,
+      prompt: (llms, command, search = "") =>
+        `Build a learning app for lernapps.net with me${search}. First read ${llms} and follow the quick path: start the app in a new, empty folder with ${command} (for <name> a short name without spaces). Then ask me what the app should teach, and write the plan with me. Only when I have confirmed the plan, create the app as the plan says.`,
       copy: "Copy task",
       copied: "Copied",
       command: "With this command, your assistant starts the app: it writes the plan and puts the skills in place. It downloads the tool for it from the npm registry by itself.",

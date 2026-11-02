@@ -35,22 +35,36 @@ const de = {
     },
     count: { none: "Keine App gefunden", one: "1 App", many: (n) => `${n} Apps` },
     matched: "Passt zu deiner Suche:",
+    // What was searched, in words, for the box without a match and the page /build/. Filled in by the scripts
+    // (assets/finden.js, assets/bauen.js); {v} is the value. Parts that are not set are left out.
+    searched: { topic: "zu „{v}“", subject: "in {v}", grade: "für Klasse {v}" },
+    // No match: say honestly why so much is missing, and show the way to build it (x-child-struggles, s-finding).
     empty: {
-      headline: "Dazu gibt es hier noch keine App.",
-      body: "lernapps.net fängt gerade erst an. Kennst du eine passende App, oder hast du selbst eine veröffentlicht?",
-      link: "App eintragen",
+      headline: "Dazu gibt es noch keine App. Noch nicht.",
+      headlineSearched: "{suche} gibt es noch keine App. Noch nicht.",
+      body: [
+        "Hinter lernapps.net steht keine Firma und keine Redaktion. Jede App hier hat ein Mensch gebaut, dem gute digitale Bildung wichtig ist. Darum fehlt noch vieles, und manche Klassen kommen kaum vor.",
+        "Das Gute daran: Den Stoff kennt dein KI-Assistent schon. Du weißt, was dein Kind oder deine Klasse gerade braucht. Zusammen baut ihr die App. Programmieren musst du dafür nicht.",
+      ],
+      build: "Selbst eine App bauen",
+      enter: "Du kennst eine passende App?",
+      enterLink: "Trag sie ein.",
     },
-    // Under the results, always: whoever finds nothing can build the app themselves.
+    // With a search and matches: one line under the count, always on the first screen.
+    hint: { text: "Nichts Passendes dabei?", link: "Bau dir selbst eine" },
+    // Under the results, always: whoever finds nothing fitting can build the app themselves.
     build: {
-      headline: "Nichts gefunden?",
-      body: "Hilf dir selbst und bau eine App. Mit unserem Tooling ist es ganz einfach.",
-      link: "Eine App bauen",
+      headline: "Nichts Passendes dabei?",
+      body: "Hier schreibt keine Redaktion, hier bauen Menschen wie du. Was fehlt, kannst du selbst bauen: eine Übung genau für die nächste Arbeit oder Apps für eine ganze Unterrichtsreihe.",
+      link: "Selbst eine App bauen",
     },
     trust: {
       headline: "Welche Apps hier stehen",
       body:
         "Hier stehen nur Apps, die im Browser laufen, ohne Anmeldung und ohne Installation. Sie sind kostenlos, ohne Werbung und sammeln nichts heimlich. Darum kannst du sie einsetzen, ohne lange zu prüfen.",
       link: "Was wir genau verlangen",
+      whoHeadline: "Wer hinter lernapps.net steht",
+      who: "Kein Unternehmen, sondern Menschen, denen digitale Bildung wichtig ist. Lehrkräfte, Eltern und andere bauen die Apps und stellen sie hier allen zur Verfügung. Wir verdienen nichts an dir und deinen Daten. Darum gibt es hier keine Werbung und kein Konto.",
     },
     cardLink: (title) => `Mehr zu ${title}`,
     chips: ["Ohne Anmeldung", "Ohne Installation", "Kostenlos"],
@@ -175,14 +189,33 @@ const de = {
     headline: "Bau eine Lern-App\nmit deinem KI-Assistenten.",
     lead:
       "Programmieren musst du nicht. Du sagst, was die App lehren soll. Dein Assistent plant mit dir, baut die App und prüft sie.",
+    // Coming from a search (?thema=&fach=&klasse=, assets/bauen.js): {suche} are the words of find.searched.
+    searched: "Du suchst etwas {suche}? Dann bau es dir.",
+    // Who brings what: so that building feels doable, without promising too much.
+    give: {
+      headline: "Wer was mitbringt",
+      items: [
+        { who: "you", title: "Du bringst mit", body: "Was deine Lernenden brauchen: welcher Stoff drankommt, wo es hakt, welche Beispiele sie kennen." },
+        { who: "ki", title: "Die KI bringt mit", body: "Das Fachwissen und das Programmieren. Sie plant mit dir, baut die App und prüft sie." },
+        { who: "la", title: "lernapps.net bringt mit", body: "Vorlagen, Regeln und Prüfungen, damit die App gut wird. Und den Weg, sie mit anderen zu teilen." },
+      ],
+    },
+    cases: {
+      headline: "Wofür du bauen kannst",
+      items: [
+        { title: "Für die nächste Arbeit", body: "Eine Übung genau zu dem Stoff, der am Freitag drankommt. Mit den Aufgabenarten, die dein Kind aus dem Unterricht kennt." },
+        { title: "Für deinen Lehrplan", body: "Mehrere Apps für eine ganze Unterrichtsreihe. In deiner Reihenfolge, mit deinen Beispielen." },
+      ],
+    },
     haveApp: "Du hast schon eine App?",
     haveAppLink: "Direkt zum Eintragen",
     start: {
       headline: "Sag deinem Assistenten:",
       body: "Du brauchst einen KI-Assistenten, der auf deinem Rechner Befehle ausführen darf. Kopier diesen Auftrag und gib ihn ihm.",
       label: "Auftrag für deinen Assistenten",
-      prompt: (llms, command) =>
-        `Bau mit mir eine Lern-App für lernapps.net. Lies zuerst ${llms} und folge dem Schnellweg: Starte die App in einem neuen, leeren Ordner mit ${command} (für <name> ein kurzer Name ohne Leerzeichen). Frag mich dann, was die App lehren soll, und schreib mit mir den Plan. Erst wenn ich den Plan bestätigt habe, legst du die App an, wie der Plan es sagt.`,
+      // search: "" or " {suche}" (filled in by assets/bauen.js).
+      prompt: (llms, command, search = "") =>
+        `Bau mit mir eine Lern-App für lernapps.net${search}. Lies zuerst ${llms} und folge dem Schnellweg: Starte die App in einem neuen, leeren Ordner mit ${command} (für <name> ein kurzer Name ohne Leerzeichen). Frag mich dann, was die App lehren soll, und schreib mit mir den Plan. Erst wenn ich den Plan bestätigt habe, legst du die App an, wie der Plan es sagt.`,
       copy: "Auftrag kopieren",
       copied: "Kopiert",
       command: "Mit diesem Befehl startet dein Assistent die App: Er schreibt den Plan und legt die Skills ab. Das Werkzeug dafür lädt er selbst aus der npm-Registry.",

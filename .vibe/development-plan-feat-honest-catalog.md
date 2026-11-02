@@ -13,6 +13,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - Die Erklärung steht dort, wo jemand nichts findet (leeres Suchergebnis), nicht als Banner auf jeder Seite und nicht im Abschnitt „Darfst du sie einsetzen?“ (x-app-in-minutes: Lehrkraft unter Zeitdruck).
 
 ## Notes
+- Umsetzung: Ohne Treffer wird der Kasten am Ende ausgeblendet (sonst doppelt). Die Zeile hat keinen Trennpunkt, weil sie auf dem Handy umbricht. Ersetzungen mit Werten aus der Adresse nutzen Funktionen (`replace(x, () => v)`), damit `$&` u. Ä. nicht als Muster wirken. Der Browser-Test setzt die Sprache des Browsers, weil der Seitenrahmen sonst auf Englisch umleitet; er sucht Chromium über `CHROMIUM_PATH`, `/opt/pw-browsers/chromium`, Google Chrome (CI: ubuntu-latest) oder den Browser von Playwright.
 - Klassen-Auswahl zeigt nur Klassen mit Apps (`src/_data/catalog.js:77`): Lücken sind unsichtbar.
 - `find.empty` verweist nur auf „App eintragen“, nicht auf „Bauen“.
 - `find.build` nutzt Fachsprache („Tooling“) und verspricht „ganz einfach“.
@@ -38,7 +39,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - [x] Einordnung ins Plattform-Design festhalten
 - [x] Umsetzung je Mockup planen (Dateien, Texte, Verhalten, Randfälle)
 - [x] Prüfungen planen
-- [ ] Plan vom Nutzer bestätigen lassen
+- [x] Plan vom Nutzer bestätigen lassen
 
 ### Einordnung ins Plattform-Design
 - Betrifft die Erfahrungen `x-app-in-minutes` und `x-child-struggles` im Schritt `s-finding` (Seite „Finden“) und verbindet sie mit dem Einstieg der Bauenden (Seite „Bauen“, `x-list-and-hear-back`, `s-listing-help`). Kein neuer Kanal, keine neue Seite.
@@ -70,14 +71,14 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 ### Phase Entrance Criteria
 - Der Plan nennt Dateien, Texte (de/en) und Prüfungen (`npm run check`, Tests).
 ### Tasks
-- [ ] 1 Klassen 1–13 (`catalog.js`)
-- [ ] 2 Kasten „kein Treffer“ (`de.js`, `en.js`, `index.njk`, `finden.js`)
-- [ ] 3 Kasten am Ende und „Wer dahintersteht“ (`de.js`, `en.js`, `index.njk`)
-- [ ] 4 Kompakte Zeile (`index.njk`, `finden.js`, Texte)
-- [ ] 5 Seite „Bauen“: Suche im Auftrag, neue Abschnitte (`build.njk`, `bauen.js`, Texte)
-- [ ] 6 Englische Texte vollständig
-- [ ] 7 Dunkler Modus geprüft
-- [ ] 8 README ergänzt
+- [x] 1 Klassen 1–13 (`catalog.js`)
+- [x] 2 Kasten „kein Treffer“ (`de.js`, `en.js`, `index.njk`, `finden.js`)
+- [x] 3 Kasten am Ende und „Wer dahintersteht“ (`de.js`, `en.js`, `index.njk`)
+- [x] 4 Kompakte Zeile (`index.njk`, `finden.js`, Texte)
+- [x] 5 Seite „Bauen“: Suche im Auftrag, neue Abschnitte (`build.njk`, `bauen.js`, Texte)
+- [x] 6 Englische Texte vollständig
+- [x] 7 Dunkler Modus geprüft
+- [x] 8 README ergänzt
 - [ ] Test `test/find.e2e.test.mjs`; `npm run build`, `npm run check`, `npm test` grün
 
 ### Completed
