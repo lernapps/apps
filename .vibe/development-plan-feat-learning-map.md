@@ -371,11 +371,11 @@ Ids say the step; tasks of one step run in order, steps as in the Plan's strateg
   for other apps
 
 **G. Move the explainers** (after C, E, F)
-- [ ] G1 elektrizitaet (Physik), anorganische-chemie (Chemie), musik (Musik): v2 with strand and competencies per page;
+- [x] G1 elektrizitaet (Physik), anorganische-chemie (Chemie), musik (Musik): v2 with strand and competencies per page;
   new `commit` in their entries
 - [x] G2 mathe-karte stays on format 1 and is not on the map (user, 2026-11-03)
 
-- [ ] H1 Split mathe-karte into mathe-arithmetik (prozent), mathe-algebra (binom), mathe-stochastik (zufall), format 2,
+- [x] H1 Split mathe-karte into mathe-arithmetik (prozent), mathe-algebra (binom), mathe-stochastik (zufall), format 2,
   on the pinned app-templates commit of step C; learners' progress and old addresses are ignored (no users yet, user
   2026-11-03)
 
