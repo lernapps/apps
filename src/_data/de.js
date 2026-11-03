@@ -349,7 +349,7 @@ const de = {
   // Quelle. ──────────────────────────────────────────────────────────────────────────────────────────────
   map: {
     name: "Lernlandkarte",
-    // the start page, under the search
+    // the start page, under the results
     home: {
       text: "Was gibt es in deinem Fach zu lernen, und welche App übt es schon?",
       link: "Zur Lernlandkarte",
