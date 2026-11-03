@@ -14,7 +14,8 @@ export default async function () {
   for (const app of apps) {
     const competencies = [...(app.competencies ?? []), ...(app.pages ?? []).flatMap((p) => p.competencies ?? [])];
     if (!app.strand && !competencies.length) continue;
-    for (const e of checkApp(subjects, { strand: app.strand, competencies }).errors) errors.push(`${app.id}: ${e}`);
+    const recaps = (app.pages ?? []).map((p) => p.recap).filter(Boolean);
+    for (const e of checkApp(subjects, { strand: app.strand, competencies, recaps }).errors) errors.push(`${app.id}: ${e}`);
   }
   if (errors.length) throw new Error(`apps and the learning map:\n  - ${errors.join("\n  - ")}`);
 

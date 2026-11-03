@@ -107,7 +107,7 @@ A page, `src/<chapter>/<page>.yaml`:
 
 ```yaml
 title: Laplace-Formel
-competency: laplace                                # one id of the app's strand (KD-24)
+competencies: [laplace]                            # ids of the app's strand; as a rule one (KD-24)
 blocks: […]
 ```
 
@@ -115,9 +115,29 @@ blocks: […]
 |---|---|---|
 | `format` | `app.yaml` | `2`, required in format 2 |
 | `strand` | `app.yaml` | required: `<subject>/<strand>` (two ids) or `none` |
-| `competency` | every page | when `strand` is not `none`: required, exactly one id; a Baustein may have several pages. When `none`: not allowed |
+| `competencies` | every page | when `strand` is not `none`: required, at least one id; as a rule one (several give a hint of `lernapps check`, `one-competency-per-page`); a competency may have several pages. When `none`: not allowed |
 
 The app cannot know the vocabulary (the subject's ids); the catalog checks the ids when the app is listed (step F).
+
+### A recap page
+
+A competency may require one of another strand (`requires` crosses strands, KD-25). The app does not practise it (one
+app, one strand), but it may repeat it on a recap page (KD-26):
+
+```yaml
+title: Gewichtskraft – kurz wiederholt
+recap: physik/gewichtskraft-berechnen              # "<subject>/<competency>", of another strand than the app's
+blocks: [...]                                      # descriptive blocks only: no exercise
+```
+
+| Rule | Checked by |
+|---|---|
+| A page has either `competencies` or `recap`, never both | explainer schema v2 |
+| A recap page has no exercise; `topic-has-exercises` does not apply to it | explainer schema v2, build |
+| The link to the competency's page on the map is written by the runtime, so it cannot be missing | runtime |
+| The recapped competency exists and belongs to another strand than the app's | `lernapps check` (warning), listing (error) |
+
+A recap page counts as nothing on the map and is left out of the self-assessment.
 
 ### The page list: `lernapps-pages.json`
 
@@ -129,13 +149,14 @@ catalog reads it instead of hand-written topics (KD-13).
   "format": 1,
   "strand": "mathematik/stochastik",
   "pages": [
-    { "path": "zufall/laplace/", "title": { "de": "Laplace-Formel" }, "competency": "laplace" }
+    { "path": "zufall/laplace/", "title": { "de": "Laplace-Formel" }, "competencies": ["laplace"] }
   ]
 }
 ```
 
 `path` is relative to the app's root, as a link in the app; `title` is the page's title as text (string or by language);
-pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competency`.
+pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competencies`. A recap
+page has `"recap": "<subject>/<competency>"` instead of `competencies`.
 
 ## 4. A catalog entry: `entries/<id>.yaml` (lernapps/apps)
 
@@ -149,7 +170,7 @@ competencies: [laplace, baumdiagramm]              # only for apps that are not 
 | Field | Rule |
 |---|---|
 | `strand` | optional; `<subject>/<strand>` of an existing subject |
-| `competencies` | optional, ids of the strand; requires `strand`; not for an explainer, whose pages name their competency in `lernapps-pages.json` |
+| `competencies` | optional, ids of the strand; requires `strand`; not for an explainer, whose pages name their competencies in `lernapps-pages.json` |
 | `topics` | stays, for apps that are not explainers; for a format-2 explainer the catalog takes its pages from `lernapps-pages.json` |
 
 Checks of the listing (rule `entry-learning-map`, an error): every id exists; every competency of an app belongs to the

@@ -138,6 +138,7 @@ async function learningMap(file, report) {
   }
   let strand = entry.strand;
   let competencies = entry.competencies ?? [];
+  let recaps = [];
   if (pages && pages.format === 1 && Array.isArray(pages.pages)) {
     if (entry.competencies) {
       add("error", `${file}: competencies`, "the app is an explainer of format 2: its pages name their competencies", "Remove competencies from the entry");
@@ -147,6 +148,7 @@ async function learningMap(file, report) {
     }
     strand = pages.strand;
     competencies = [...new Set(pages.pages.flatMap((p) => p.competencies ?? []))];
+    recaps = [...new Set(pages.pages.map((p) => p.recap).filter(Boolean))];
   }
   if ((!strand || strand === "none") && competencies.length === 0) return;
   let subjects;
@@ -156,7 +158,7 @@ async function learningMap(file, report) {
     add("error", "map/", `the learning map of the catalog is broken: ${error.message}`, "Fix the files in map/ (lernapps/apps)");
     return;
   }
-  const { errors, hints } = checkApp(subjects, { strand, competencies });
+  const { errors, hints } = checkApp(subjects, { strand, competencies, recaps });
   const fixError = "Use a strand and competency ids of https://lernapps.net/apps/map/ ; a missing competency is proposed to lernapps/apps (map/<subject>.yaml)";
   for (const e of errors) add("error", file, e, fixError);
   // With a strand, an app practises only the competencies of that strand (KD-19): another strand is an error too.
