@@ -479,8 +479,8 @@ Ids say the step; tasks of one step run in order, steps as in the Plan's strateg
   reaktionsgleichungen; chapter vorwissen with four recap pages), lernapps/anorganische-chemie#15 (symbole-formeln in a new chapter
   formeln). Open: both pages of chemie-reaktionen name two competencies (hint one-competency-per-page); `lernapps update` from a
   branch build pins tooling ^0.0.0, so skills were synced by hand (as in test run 1, F3).
-- [ ] I12 Findings of the test runs as issues: lernapps/tooling#251, lernapps/app-templates#131; each fixed by its own session on
-  the branch claude/vibrant-faraday-5qg8eu (PRs #250, #128). #131 fixed in a64cac3; #251 in progress.
+- [x] I12 Findings of the test runs as issues: lernapps/tooling#251, lernapps/app-templates#131; each fixed by its own session on
+  the branch claude/vibrant-faraday-5qg8eu (PRs #250, #128). #131 fixed in a64cac3, #251 in b79e418 (issues close with the merges).
 - [ ] I11 Issue lernapps/app-templates#130 (bundle the map, links "Das brauchst du vorher") – later
 
 ### Completed
