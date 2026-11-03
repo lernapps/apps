@@ -180,6 +180,12 @@ another strand (checked by `lernapps check` and the listing); it counts as nothi
 `prerequisites-linked` (hint) in `lernapps check`: a prerequisite of another strand without a recap page or a link.
 Later (lernapps/app-templates#130) the runtime shows "Das brauchst du vorher" from the bundled map by itself.
 
+### KD-27: A recap page for any prerequisite the app does not practise (2026-11-03, user, variant C)
+Refines KD-26: a recap may repeat a competency of any strand, also of the app's own, as long as the app does not
+practise it on a page of its own (that is an error). Found in test run 2: prerequisites of the own strand outside the
+app's scope (`energie-und-joule`) had no clean way. `prerequisites-linked` covers every prerequisite the app does not
+practise.
+
 ## Notes
 
 ### Mockup

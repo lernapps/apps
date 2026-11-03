@@ -121,12 +121,12 @@ The app cannot know the vocabulary (the subject's ids); the catalog checks the i
 
 ### A recap page
 
-A competency may require one of another strand (`requires` crosses strands, KD-25). The app does not practise it (one
-app, one strand), but it may repeat it on a recap page (KD-26):
+A competency may require one the app does not practise: of another strand (`requires` crosses strands, KD-25), or of
+its own strand outside the app's scope. The app may repeat it on a recap page (KD-26):
 
 ```yaml
 title: Gewichtskraft – kurz wiederholt
-recap: physik/gewichtskraft-berechnen              # "<subject>/<competency>", of another strand than the app's
+recap: physik/gewichtskraft-berechnen              # "<subject>/<competency>", one the app does not practise
 blocks: [...]                                      # descriptive blocks only: no exercise
 ```
 
@@ -135,7 +135,7 @@ blocks: [...]                                      # descriptive blocks only: no
 | A page has either `competencies` or `recap`, never both | explainer schema v2 |
 | A recap page has no exercise; `topic-has-exercises` does not apply to it | explainer schema v2, build |
 | The link to the competency's page on the map is written by the runtime, so it cannot be missing | runtime |
-| The recapped competency exists and belongs to another strand than the app's | `lernapps check` (warning), listing (error) |
+| The recapped competency exists, and the app does not practise it on a page of its own | `lernapps check` (warning), listing (error) |
 
 A recap page counts as nothing on the map and is left out of the self-assessment.
 
