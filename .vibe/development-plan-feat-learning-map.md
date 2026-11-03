@@ -204,7 +204,15 @@ Competency: `id` (stable), `iCan` text, `gradeBand` (required). Placement: `grad
 
 ### Open points
 - Who maintains a subject model, and who decides on changes.
-- The split of mathe-karte into three apps (step H): names, the old address, learners' progress.
+- The split of mathe-karte (step H): decided (user, 2026-11-03): repos mathe-arithmetik, mathe-algebra,
+  mathe-stochastik; mathe-karte stays as it is, on format 1, not on the map.
+- musik spans several strands of the Hessian curriculum (best fit `parameter`, 6 of 29 links): format 2 with
+  `strand: none` until the owner decides (split, or one strand).
+- anorganische-chemie: strand `chemie/stoffe-und-teilchen`; its two reaction pages practise competencies of
+  `chemische-reaktion` (a listing hint).
+- Grade bands of Physik and Chemie are common practice, not checked against a curriculum; Mathematik's bands follow
+  the first Hessian grade, which puts some broad nodes low (`potenzen`, `terme-variable` at 5-6).
+- lernapps/docs: the assumption `a-gaps-guide-creators` had to name an MVP; it names `mvp-first-draft`.
 
 ## Explore
 ### Phase Entrance Criteria
@@ -233,8 +241,8 @@ Competency: `id` (stable), `iCan` text, `gradeBand` (required). Placement: `grad
 ### Tasks
 - [x] Order of the work and what runs in parallel (below)
 - [x] Break each step into the tasks of Code, including the map pages after the mockup (KD-15, Code tasks)
-- [ ] User decides KD-15 (static pages per view and Lehrplan)
-- [ ] User approves the plan
+- [x] User decides KD-15 (static pages per view and Lehrplan): "sieht gut aus" (2026-11-03)
+- [x] User approves the plan (2026-11-03), to be worked on autonomously overnight
 
 ### Implementation strategy
 Step 0 first; then A to E in parallel; F and G at the end. One pull request per repo.
@@ -285,87 +293,91 @@ to v2 with `strand: none`.
 Ids say the step; tasks of one step run in order, steps as in the Plan's strategy.
 
 **0. The contract** (lernapps/apps, this branch; the user decides before A–E start)
-- [ ] 0.1 `docs/learning-map-contract.md`: the files (KD-09), every field with type and rule (KD-10), the explainer v2
+- [x] 0.1 `docs/learning-map-contract.md`: the files (KD-09), every field with type and rule (KD-10), the explainer v2
   fields (KD-11), the entry's `strand` and `competencies`, and the page list an explainer's build writes
   (`lernapps-pages.json`: path, title, competencies per page)
-- [ ] 0.2 Examples in it: an excerpt of `map/mathematik.yaml`, of `he-gymnasium.yaml`, an explainer `app.yaml` and page,
+- [x] 0.2 Examples in it: an excerpt of `map/mathematik.yaml`, of `he-gymnasium.yaml`, an explainer `app.yaml` and page,
   an entry of a quiz with `competencies`
 
 **A. lernapps/docs** (pull request; repo added to the session first)
-- [ ] A1 pdt42: service "see which app is still missing" for `e-creators` via `ch-app-overview`; assumption
+- [x] A1 pdt42: service "see which app is still missing" for `e-creators` via `ch-app-overview`; assumption
   "creators build for a visible gap" (`mvp`: none yet, or the next one); `npx pdt42 … validate`
-- [ ] A2 arc42: interface `if-learning-map` of `bb-catalog` (pages and JSON under `lernapps.net/apps/map/`,
+- [x] A2 arc42: interface `if-learning-map` of `bb-catalog` (pages and JSON under `lernapps.net/apps/map/`,
   `x-realises: ch-app-overview`); decisions "the learning map belongs to the catalog" (KD-09) and "one app, one strand"
   (KD-07); `if-archetypes` names the explainer v2 contract; glossary (KD-02, KD-10); risk to `qg-operable-by-one`;
   `npx arc42 … validate`
 
 **B. lernapps/apps: model, data, entry**
-- [ ] B1 `schemas/map.js` (Zod): `Subject` (source, strands with competencies nested), `Curriculum` (placements);
+- [x] B1 `schemas/map.js` (Zod): `Subject` (source, strands with competencies nested), `Curriculum` (placements);
   `npm run schema` writes `subject.v1.schema.json` and `curriculum.v1.schema.json`; `npm run check` fails when stale
-- [ ] B2 `src/_data/map.js`: reads `map/*.yaml` and `map/*/curricula/*.yaml`, checks them, and checks across files:
+- [x] B2 `src/_data/map.js`: reads `map/*.yaml` and `map/*/curricula/*.yaml`, checks them, and checks across files:
   unique ids per subject, every `requires` and `placement.competency` exists, no cycles in `requires`, at most one
   placement per competency and curriculum; a broken file fails the build (like `catalog.js`)
-- [ ] B3 Computed per subject: coverage per competency (which apps, which pages), per strand (covered of total), per
+- [x] B3 Computed per subject: coverage per competency (which apps, which pages), per strand (covered of total), per
   curriculum (placed of total); the rows of KD-06 for each curriculum
-- [ ] B4 `map/mathematik.yaml` from the old map (`8b229e9`): the 85 nodes moved to the five Sachgebiete (KD-03),
+- [x] B4 `map/mathematik.yaml` from the old map (`8b229e9`): the 85 nodes moved to the five Sachgebiete (KD-03),
   `iCan` texts, `gradeBand`, `requires` where the old data or the explainer's pages say so; `source`: KMK 2022
-- [ ] B5 `map/mathematik/curricula/he-gymnasium.yaml` from the old Hessen table (grades per competency; Einheiten as a
+- [x] B5 `map/mathematik/curricula/he-gymnasium.yaml` from the old Hessen table (grades per competency; Einheiten as a
   comment or a field `unit`, decided in 0.1)
-- [ ] B6 Entry (`schemas/entry.js`): `strand` (`{ subject, strand }` or `none`) and `competencies` (ids) for apps that
+- [x] B6 Entry (`schemas/entry.js`): `strand` (`{ subject, strand }` or `none`) and `competencies` (ids) for apps that
   are not explainers; tests and fixtures; `src/llms.njk` explains both
-- [ ] B7 JSON of the map at `/apps/map/<subject>.json` (model, curricula, coverage) for assistants and the tooling;
+- [x] B7 JSON of the map at `/apps/map/<subject>.json` (model, curricula, coverage) for assistants and the tooling;
   linked from `llms.txt`
 
 **B. lernapps/apps: the map pages, after the mockup** (KD-15)
-- [ ] B8 Subject view `/apps/map/<subject>/` and `/<subject>/<curriculum>/`: grid strands × rows (Richtstufe, or the
+- [x] B8 Subject view `/apps/map/<subject>/` and `/<subject>/<curriculum>/`: grid strands × rows (Richtstufe, or the
   rows of KD-06 with striped default rows and "noch ohne Klasse"); per strand "x von y Bausteinen geübt" with a bar;
   a Baustein covered (filled) or a gap (dashed), "wieder in Klasse …"; box "So liest du die Karte" linking the terms;
   the Lehrplan drop-down (all 16 Länder, not captured ones disabled) with the sentence that explains the current view;
   the grid scrolls sideways in its own box at phone width
-- [ ] B9 Script `src/assets/map.js`: navigate on drop-down change; "Nur Lücken zeigen"; open a Baustein as `<dialog>`
+- [x] B9 Script `src/assets/map.js`: navigate on drop-down change; "Nur Lücken zeigen"; open a Baustein as `<dialog>`
   (strand, Richtstufe, the chosen Lehrplan's grades or "noch nicht zugeordnet", requires, practised in, link to its
   page), closed by its button, Escape or the backdrop; focus back on the Baustein
-- [ ] B10 Baustein page `/apps/map/<subject>/c/<id>/`: "Ich kann …", strand, source; Lernweg (requires, required by,
+- [x] B10 Baustein page `/apps/map/<subject>/c/<id>/`: "Ich kann …", strand, source; Lernweg (requires, required by,
   also from other strands); table "Wann ist er dran?" (Richtstufe and every curriculum, "noch nicht erfasst"); apps
   and pages that practise it; link "Baue eine App für diesen Strang" to `/apps/build/`
-- [ ] B11 Strand page `/apps/map/<subject>/<strand>/`: Bausteine grouped by Richtstufe, no arrows; apps of the strand
+- [x] B11 Strand page `/apps/map/<subject>/<strand>/`: Bausteine grouped by Richtstufe, no arrows; apps of the strand
   as bars over the Richtstufen they cover, gaps dashed; the box "Eine App für diesen Strang bauen"
-- [ ] B12 Terms page `/apps/map/`: the model as a diagram (HTML and CSS, nodes are links); definitions on the same
+- [x] B12 Terms page `/apps/map/`: the model as a diagram (HTML and CSS, nodes are links); definitions on the same
   page, opened as `<dialog>` by the script; the three rules; the list of subjects with a map
-- [ ] B13 Texts in `de.js` and `en.js` (plain German, ISO 24495-1); macros in `components.njk` (Baustein chip, strand
+- [x] B13 Texts in `de.js` and `en.js` (plain German, ISO 24495-1); macros in `components.njk` (Baustein chip, strand
   head, dialog); the pages in both languages; links from the start page and from an app's page (its strand and
   Bausteine)
-- [ ] B14 Tests: the loader's checks (fixtures with a broken id, a cycle, a double placement), the rows of KD-06, the
+- [x] B14 Tests: the loader's checks (fixtures with a broken id, a cycle, a double placement), the rows of KD-06, the
   coverage; `npm run check` (`lernapps-check`: links, no external resources) over the new pages; a browser test of
   the dialog and the drop-down with the keyboard
 
 **C. lernapps/app-templates** (pull request; repo added to the session first)
-- [ ] C1 `explainer.v2.schema.json`: `strand` required in `app.yaml` (`{ subject, strand }` or `none`); `competencies`
+- [x] C1 `explainer.v2.schema.json`: `strand` required in `app.yaml` (`{ subject, strand }` or `none`); `competencies`
   (ids, at least one) required on every page when `strand` is set; v1 stays for old pins
-- [ ] C2 Build and validation: v2 checks in `validate.ts`; the build writes `lernapps-pages.json` (KD-13)
-- [ ] C3 The scaffold writes v2; docs (arc42 of the explainer), the skill `lernapps-explainer` and its tests
+- [x] C2 Build and validation: v2 checks in `validate.ts`; the build writes `lernapps-pages.json` (KD-13)
+- [x] C3 The scaffold writes v2; docs (arc42 of the explainer), the skill `lernapps-explainer` and its tests
 
 **D. lernapps/tooling** (pull request; repo added to the session first)
-- [ ] D1 `lernapps-content-research` and `lernapps-explainer-design`: in Explore, pick the subject's strand and its
+- [x] D1 `lernapps-content-research` and `lernapps-explainer-design`: in Explore, pick the subject's strand and its
   Bausteine from `/apps/map/<subject>.json`; a missing Baustein is proposed to the catalog, not invented in the app
-- [ ] D2 `lernapps-listing` and the plan templates: name strand and competencies; `lernapps update` moves an explainer
+- [x] D2 `lernapps-listing` and the plan templates: name strand and competencies; `lernapps update` moves an explainer
   to v2 with `strand: none` when it has none
 
 **E. Subject models** (lernapps/apps, after B1–B2; three independent pieces)
-- [ ] E1 `map/physik.yaml`: strands from the five areas of the 2024 MSA standards
-- [ ] E2 `map/chemie.yaml`: strands from the three areas of the 2024 MSA standards
-- [ ] E3 `map/musik.yaml`: source the Kerncurriculum Musik Hessen (KD-17)
+- [x] E1 `map/physik.yaml`: strands from the five areas of the 2024 MSA standards
+- [x] E2 `map/chemie.yaml`: strands from the three areas of the 2024 MSA standards
+- [x] E3 `map/musik.yaml`: source the Kerncurriculum Musik Hessen (KD-17)
 
 **F. Listing check** (lernapps/apps, after B and C)
-- [ ] F1 `scripts/listing.mjs`: for an explainer, read `lernapps-pages.json` from the build of `commit`; every id
+- [x] F1 `scripts/listing.mjs`: for an explainer, read `lernapps-pages.json` from the build of `commit`; every id
   exists; all competencies belong to the app's strand (else a hint); an entry's `competencies` only for non-explainers
-- [ ] F2 The catalog takes an explainer's pages from `lernapps-pages.json` instead of `topics` (KD-13); `topics` stays
+- [x] F2 The catalog takes an explainer's pages from `lernapps-pages.json` instead of `topics` (KD-13); `topics` stays
   for other apps
 
 **G. Move the explainers** (after C, E, F)
 - [ ] G1 elektrizitaet (Physik), anorganische-chemie (Chemie), musik (Musik): v2 with strand and competencies per page;
   new `commit` in their entries
-- [ ] G2 mathe-karte: v2 with `strand: none` (KD-07)
+- [x] G2 mathe-karte stays on format 1 and is not on the map (user, 2026-11-03)
+
+- [ ] H1 Split mathe-karte into mathe-arithmetik (prozent), mathe-algebra (binom), mathe-stochastik (zufall), format 2,
+  on the pinned app-templates commit of step C; learners' progress and old addresses are ignored (no users yet, user
+  2026-11-03)
 
 ### Completed
 *None yet*
