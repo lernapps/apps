@@ -123,6 +123,19 @@ time, like the app pages:
 - Nothing is stored and nothing is counted beyond the site frame's page totals; the Lehrplan is in the address
   (`ch-app-overview`: "Tailored to the visitor without accounts").
 
+### KD-16: No target number of Bausteine; the source's areas set the size (2026-11-03, user)
+The old map's "40–70 per subject" was a magic number. A subject model follows the areas and contents its source
+gives (KMK standards or the like); the old map's 85 nodes are taken over as they are (B4), only moved to the strands.
+
+### KD-17: Musik is based on the Hessian curriculum (2026-11-03, user)
+No KMK standards exist for Musik; its subject model takes the Kerncurriculum Musik Hessen as its source (E3).
+
+### KD-18: Access and parallel work (2026-11-03, user)
+- Repos of the organisation lernapps and of the account mrsimpson may be added to the session; branches and pull
+  requests may be opened there, and merged when they change only metadata. Branch name everywhere:
+  `claude/vibrant-faraday-5qg8eu`.
+- Work runs in parallel wherever it can (A–E, E1–E3), with sub-agents.
+
 ## Notes
 
 ### Mockup
@@ -190,10 +203,8 @@ Competency: `id` (stable), `iCan` text, `gradeBand` (required). Placement: `grad
   owner cannot maintain models and 16 curricula (`risk-one-owner`, `qg-operable-by-one`); mitigated by KD-06.
 
 ### Open points
-- A rule for the size of a Baustein: those a Lehrplan names in many grades may be too coarse (target 40–70 per
-  subject in Sek I; the old map has 85).
 - Who maintains a subject model, and who decides on changes.
-- The split of mathe-karte into three apps: its own piece of work.
+- The split of mathe-karte into three apps (step H): names, the old address, learners' progress.
 
 ## Explore
 ### Phase Entrance Criteria
@@ -343,7 +354,7 @@ Ids say the step; tasks of one step run in order, steps as in the Plan's strateg
 **E. Subject models** (lernapps/apps, after B1–B2; three independent pieces)
 - [ ] E1 `map/physik.yaml`: strands from the five areas of the 2024 MSA standards
 - [ ] E2 `map/chemie.yaml`: strands from the three areas of the 2024 MSA standards
-- [ ] E3 `map/musik.yaml`: source to be found (no KMK standards; a Land's curriculum)
+- [ ] E3 `map/musik.yaml`: source the Kerncurriculum Musik Hessen (KD-17)
 
 **F. Listing check** (lernapps/apps, after B and C)
 - [ ] F1 `scripts/listing.mjs`: for an explainer, read `lernapps-pages.json` from the build of `commit`; every id
