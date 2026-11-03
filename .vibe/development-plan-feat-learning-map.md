@@ -173,7 +173,9 @@ not practise it; it assumes it and points to it.
 
 ### KD-26: Recap pages for prerequisites of other strands (2026-11-03, user)
 A page with `recap: <subject>/<competency>` instead of `competencies`: descriptive blocks only, no exercise; the
-runtime writes the link to the competency's page on the map, so it cannot be missing; the recapped competency is of
+runtime writes the link to the competency's page on the map, so it cannot be missing; the link always leads to the
+map, never directly into another app (the app knows no other apps; several or none may practise the competency; the
+map stays current and lists them with deep links); the recapped competency is of
 another strand (checked by `lernapps check` and the listing); it counts as nothing on the map. Rule
 `prerequisites-linked` (hint) in `lernapps check`: a prerequisite of another strand without a recap page or a link.
 Later (lernapps/app-templates#130) the runtime shows "Das brauchst du vorher" from the bundled map by itself.
