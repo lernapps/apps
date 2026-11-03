@@ -1,7 +1,7 @@
 // The learning map for the pages: the subjects of map/ (checked by lib/map.js; a broken file fails the build), which
 // apps of the catalog practise which competency, and one entry per page the map has (src/map-*.njk paginate over them).
 import { loadMap, checkApp, coverage, rows, placedCount } from "../../lib/map.js";
-import { LANDS } from "../../schemas/map.js";
+import { LANDS, GRADE_BANDS } from "../../schemas/map.js";
 import catalog from "./catalog.js";
 import languages from "./languages.js";
 
@@ -32,13 +32,34 @@ export default async function () {
     const byId = new Map(competencies.map((c) => [c.id, c]));
     const strands = subject.strands.map((s) => {
       const list = s.competencies.map((id) => byId.get(id));
+      const strandApps = appsOf.filter((a) => a.strand === `${subject.id}/${s.id}`);
+      // The strand page: its competencies by grade band, and each app as a bar from the first to the last band it
+      // practises (indices into GRADE_BANDS); a band no app practises is a gap.
+      const bands = GRADE_BANDS.map((band) => ({ band, competencies: list.filter((c) => c.gradeBand === band).map((c) => c.id) }));
+      const bars = strandApps
+        .map((app) => {
+          const mine = list.filter((c) => c.practisedBy.some((p) => p.app.id === app.id));
+          const at = mine.map((c) => GRADE_BANDS.indexOf(c.gradeBand));
+          return { app, count: mine.length, from: Math.min(...at), to: Math.max(...at) };
+        })
+        .filter((bar) => bar.count > 0);
+      const gaps = GRADE_BANDS.map((_, i) => i).filter((i) => !bars.some((b) => b.from <= i && i <= b.to));
       return {
         ...s,
         total: list.length,
         covered: list.filter((c) => c.practisedBy.length).length,
-        apps: appsOf.filter((a) => a.strand === `${subject.id}/${s.id}`),
+        apps: strandApps,
+        bands,
+        bars,
+        gaps,
       };
     });
+    // A strand and a curriculum share the address /map/<subject>/<id>/, and c/ holds the competencies.
+    for (const s of strands) {
+      if (s.id === "c" || subject.curricula.some((cu) => cu.id === s.id)) {
+        throw new Error(`learning map: ${subject.id}: the strand ${s.id} has the address of a curriculum or of c/; rename one`);
+      }
+    }
     const curricula = subject.curricula.map((cu) => ({
       id: cu.id,
       land: cu.land,
@@ -102,5 +123,16 @@ export default async function () {
     },
   }));
 
-  return { subjects: views, subjectPages, strandPages, competencyPages, json, termsPages: languages };
+  // What the page of an app shows of the map: its strand and the competencies it practises.
+  const byApp = {};
+  for (const s of views) {
+    for (const strand of s.strands) {
+      for (const app of strand.apps) {
+        const ids = s.competencies.filter((c) => c.practisedBy.some((p) => p.app.id === app.id)).map((c) => c.id);
+        byApp[app.id] = { subject: s.id, strand: strand.id, competencies: ids };
+      }
+    }
+  }
+
+  return { subjects: views, subjectPages, strandPages, competencyPages, json, termsPages: languages, byApp };
 }

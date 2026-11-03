@@ -48,6 +48,17 @@ export default function (eleventyConfig) {
   // site frame: a site without a tree in that language keeps the address).
   eleventyConfig.addFilter("otherSiteIn", (path, lang = "de") => pathIn(path, lang));
 
+  // The learning map (src/map*.njk): an item of a list by its id (a subject, strand, competency or curriculum).
+  eleventyConfig.addFilter("byId", (list, id) => list.find((item) => item.id === id));
+  // The short name of a competency in the grid: its "Ich kann …" without "Ich kann" and the full stop,
+  // "Ich kann den Prozentwert berechnen." → "Den Prozentwert berechnen".
+  eleventyConfig.addFilter("canLabel", (text, lang = "de") => {
+    const short = tx(text, lang).replace(/^(Ich kann|I can)\s+/, "").replace(/\.$/, "");
+    return short.charAt(0).toUpperCase() + short.slice(1);
+  });
+  // A grade band as people write it: "7-8" → "7/8".
+  eleventyConfig.addFilter("band", (band) => String(band).replace("-", "/"));
+
   // A mailto link with subject and body (thanks and feedback for the MVP).
   eleventyConfig.addFilter("mailto", (address, subject, body) =>
     `mailto:${address}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
