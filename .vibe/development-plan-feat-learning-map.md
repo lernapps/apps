@@ -475,7 +475,10 @@ Ids say the step; tasks of one step run in order, steps as in the Plan's strateg
 - [x] I8 Tooling fixes from test run 2: depend on the format-2 app-templates; `file:` in the test map variable; `init`
   packs a local build and installs app-templates; variant C in the checks; docs gaps
 - [x] I9 Test run 3 (Chemie)
-- [ ] I10 Split anorganische-chemie (KD-20): needs a repo from the owner
+- [ ] I10 Split anorganische-chemie (KD-20): repo lernapps/chemie-reaktionen exists (main "chore: start"); the pages reaktionen and
+  reaktionsgleichungen move there (strand chemie/chemische-reaktion); symbole-formeln stays (stoffe-und-teilchen). In progress.
+- [ ] I12 Findings of the test runs as issues: lernapps/tooling#251, lernapps/app-templates#131; each fixed by its own session on
+  the branch claude/vibrant-faraday-5qg8eu (PRs #250, #128). In progress.
 - [ ] I11 Issue lernapps/app-templates#130 (bundle the map, links "Das brauchst du vorher") – later
 
 ### Completed
