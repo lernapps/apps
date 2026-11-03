@@ -1,0 +1,353 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/subject.v1.schema.json
+name: { de: Mathematik, en: Mathematics }
+source:
+  title: KMK-Bildungsstandards Mathematik, ESA und MSA (2022)
+  url: https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/2022_06_23-Bista-ESA-MSA-Mathe.pdf
+strands:
+  - id: arithmetik
+    name: { de: Arithmetik, en: Arithmetic }
+    competencies:
+      - id: natuerliche-zahlen
+        iCan: "Ich kann natürliche Zahlen im Stellenwertsystem lesen, schreiben und darstellen."
+        gradeBand: "5-6"
+      - id: zahlen-vergleichen-ordnen
+        iCan: "Ich kann Zahlen vergleichen und der Größe nach ordnen, auch Brüche, negative Zahlen und Wurzeln."
+        gradeBand: "5-6"
+        requires: [natuerliche-zahlen]
+      - id: runden
+        iCan: "Ich kann Zahlen und Größen sinnvoll runden und die Genauigkeit zur Aufgabe passend wählen."
+        gradeBand: "5-6"
+        requires: [natuerliche-zahlen]
+      - id: teilbarkeit
+        iCan: "Ich kann Teiler und Vielfache bestimmen, Teilbarkeitsregeln anwenden und ggT und kgV berechnen."
+        gradeBand: "5-6"
+        requires: [grundrechenarten-rechengesetze]
+      - id: zahldarstellungen
+        iCan: "Ich kann Zahlen am Zahlenstrahl, in Diagrammen und in verschiedenen Schreibweisen darstellen."
+        gradeBand: "5-6"
+        requires: [natuerliche-zahlen]
+      - id: brueche-begriff
+        iCan: "Ich kann Brüche als Teil eines Ganzen deuten, darstellen sowie kürzen und erweitern."
+        gradeBand: "5-6"
+        requires: [natuerliche-zahlen]
+      - id: dezimalbrueche
+        iCan: "Ich kann Brüche in Dezimalbrüche umwandeln und erklären, ob sie abbrechen oder sich wiederholen."
+        gradeBand: "5-6"
+        requires: [brueche-begriff]
+      - id: rationale-zahlen
+        iCan: "Ich kann mit negativen Zahlen, Gegenzahlen und Beträgen umgehen und sie an Beispielen wie Temperatur erklären."
+        gradeBand: "7-8"
+        requires: [natuerliche-zahlen]
+      - id: reelle-zahlen
+        iCan: "Ich kann Quadratwurzeln erklären, erkenne irrationale Zahlen und nutze die Zahl Pi am Kreis."
+        gradeBand: "9-10"
+        requires: [rationale-zahlen, potenzen]
+      - id: grundrechenarten-rechengesetze
+        iCan: "Ich kann die vier Grundrechenarten sicher ausführen und Rechengesetze für vorteilhaftes Rechnen nutzen."
+        gradeBand: "5-6"
+        requires: [natuerliche-zahlen]
+      - id: bruchrechnung-grundaufgaben
+        iCan: "Ich kann mit Brüchen und Dezimalbrüchen rechnen und Bruchteil, Ganzes und Anteil bestimmen."
+        gradeBand: "5-6"
+        requires: [brueche-begriff, teilbarkeit]
+      - id: rechnen-rational-reell
+        iCan: "Ich kann mit negativen Zahlen und Wurzeln rechnen und dabei Vorzeichen- und Klammerregeln beachten."
+        gradeBand: "7-8"
+        requires: [rationale-zahlen, bruchrechnung-grundaufgaben]
+      - id: prozentrechnung
+        iCan: "Ich kann Prozentangaben verstehen und in Alltagssituationen sachgerecht nutzen."
+        gradeBand: "7-8"
+        requires: [brueche-begriff]
+      - id: prozent-grundbegriffe
+        iCan: "Ich kann Prozent als Hundertstel deuten und in einer Aufgabe Grundwert, Prozentwert und Prozentsatz erkennen."
+        gradeBand: "5-6"
+        requires: [brueche-begriff]
+      - id: prozent-prozentwert
+        iCan: "Ich kann den Prozentwert aus Grundwert und Prozentsatz berechnen."
+        gradeBand: "7-8"
+        requires: [prozent-grundbegriffe]
+      - id: prozent-prozentsatz
+        iCan: "Ich kann den Prozentsatz aus Prozentwert und Grundwert berechnen."
+        gradeBand: "7-8"
+        requires: [prozent-grundbegriffe]
+      - id: prozent-grundwert
+        iCan: "Ich kann den Grundwert aus Prozentwert und Prozentsatz berechnen."
+        gradeBand: "7-8"
+        requires: [prozent-grundbegriffe]
+      - id: prozent-veraenderung
+        iCan: "Ich kann neue und alte Werte nach einer prozentualen Zunahme oder Abnahme berechnen."
+        gradeBand: "7-8"
+        requires: [prozent-prozentwert]
+      - id: prozent-vergleich
+        iCan: "Ich kann angeben, um wie viel Prozent ein Wert größer oder kleiner als ein anderer ist."
+        gradeBand: "7-8"
+        requires: [prozent-prozentsatz]
+      - id: prozent-sachaufgaben
+        iCan: "Ich kann Sachaufgaben zur Prozentrechnung in eine Gleichung oder einen Dreisatz übersetzen und lösen."
+        gradeBand: "7-8"
+        requires: [prozent-prozentwert, prozent-prozentsatz, prozent-grundwert]
+      - id: prozent-von-prozenten
+        iCan: "Ich kann Prozentpunkte und Prozente unterscheiden und mehrere prozentuale Änderungen verknüpfen."
+        gradeBand: "7-8"
+        requires: [prozent-veraenderung]
+      - id: zinsrechnung
+        iCan: "Ich kann Jahres-, Monats- und Tageszinsen sowie Zinseszinsen berechnen."
+        gradeBand: "7-8"
+        requires: [prozent-prozentwert, prozent-prozentsatz, prozent-grundwert]
+      - id: groessenvorstellungen-schaetzen
+        iCan: "Ich kann Größen schätzen und Ergebnisse mit einem Überschlag auf Sinn prüfen."
+        gradeBand: "5-6"
+      - id: umrechnung-groessen
+        iCan: "Ich kann Größen in andere Einheiten umrechnen und passende Einheiten wählen."
+        gradeBand: "5-6"
+        requires: [groessenvorstellungen-schaetzen]
+      - id: messen-laenge-masse-geld-zeit
+        iCan: "Ich kann Länge, Masse, Geld und Zeit messen und damit in Sachaufgaben rechnen."
+        gradeBand: "5-6"
+        requires: [groessenvorstellungen-schaetzen]
+  - id: algebra
+    name: { de: Algebra, en: Algebra }
+    competencies:
+      - id: terme-variable
+        iCan: "Ich kann Terme mit Variablen aufstellen, umformen und auf Wertgleichheit prüfen."
+        gradeBand: "5-6"
+        requires: [grundrechenarten-rechengesetze]
+      - id: klammern-binome
+        iCan: "Ich kann Klammern auflösen und die binomischen Formeln vorwärts und rückwärts anwenden."
+        gradeBand: "7-8"
+        requires: [terme-variable]
+      - id: potenzen
+        iCan: "Ich kann Potenzen und Wurzeln berechnen und die Potenzgesetze anwenden."
+        gradeBand: "5-6"
+        requires: [grundrechenarten-rechengesetze]
+      - id: lineare-gleichungen
+        iCan: "Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen."
+        gradeBand: "5-6"
+        requires: [terme-variable]
+      - id: ungleichungen
+        iCan: "Ich kann lineare Ungleichungen lösen und die Lösungsmenge auf der Zahlengeraden zeigen."
+        gradeBand: "7-8"
+        requires: [lineare-gleichungen]
+      - id: lineare-gleichungssysteme
+        iCan: "Ich kann Gleichungssysteme mit zwei Gleichungen und zwei Variablen zeichnerisch und rechnerisch lösen."
+        gradeBand: "9-10"
+        requires: [lineare-gleichungen, lineare-funktionen]
+      - id: quadratische-gleichungen
+        iCan: "Ich kann quadratische Gleichungen mit passenden Verfahren lösen und die Anzahl der Lösungen bestimmen."
+        gradeBand: "9-10"
+        requires: [klammern-binome, lineare-gleichungen]
+      - id: logarithmen
+        iCan: "Ich kann den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache Exponentialgleichungen lösen."
+        gradeBand: "9-10"
+        requires: [potenzen, exponentialfunktionen]
+  - id: funktionen
+    name: { de: Funktionen, en: Functions }
+    competencies:
+      - id: zuordnungen
+        iCan: "Ich kann Zuordnungen zwischen Größen in Tabellen, Schaubildern und mit Worten darstellen und beschreiben."
+        gradeBand: "5-6"
+      - id: proportional-antiproportional
+        iCan: "Ich kann proportionale und antiproportionale Zuordnungen erkennen, unterscheiden und darstellen."
+        gradeBand: "7-8"
+        requires: [zuordnungen]
+      - id: dreisatz
+        iCan: "Ich kann Sachaufgaben mit dem Dreisatz lösen."
+        gradeBand: "7-8"
+        requires: [proportional-antiproportional]
+      - id: nichtproportionale-zusammenhaenge
+        iCan: "Ich kann Zusammenhänge erkennen und darstellen, die weder proportional noch linear sind."
+        gradeBand: "7-8"
+        requires: [zuordnungen]
+      - id: lineare-funktionen
+        iCan: "Ich kann lineare Funktionen mit Gleichung, Tabelle und Graph beschreiben und Steigung und Achsenabschnitt deuten."
+        gradeBand: "7-8"
+        requires: [proportional-antiproportional, koordinatensystem]
+      - id: funktionen-darstellung
+        iCan: "Ich kann zwischen Funktionsgleichung, Wertetabelle und Graph wechseln."
+        gradeBand: "7-8"
+        requires: [zuordnungen, koordinatensystem]
+      - id: quadratische-funktionen
+        iCan: "Ich kann quadratische Funktionen und ihre Parabeln beschreiben, zeichnen und auf Sachprobleme anwenden."
+        gradeBand: "9-10"
+        requires: [lineare-funktionen, funktionen-darstellung]
+      - id: potenzfunktionen
+        iCan: "Ich kann einfache Potenz- und Wurzelfunktionen mit ihren Graphen beschreiben."
+        gradeBand: "9-10"
+        requires: [potenzen, funktionen-darstellung]
+      - id: exponentialfunktionen
+        iCan: "Ich kann Wachstum und Zerfall mit Exponentialfunktionen beschreiben und Modelle beurteilen."
+        gradeBand: "9-10"
+        requires: [prozent-veraenderung, potenzen]
+      - id: sinusfunktion
+        iCan: "Ich kann Sinus- und Kosinusfunktion mit ihren Eigenschaften beschreiben und für periodische Vorgänge nutzen."
+        gradeBand: "9-10"
+        requires: [trigonometrie, funktionen-darstellung]
+  - id: geometrie
+    name: { de: Geometrie, en: Geometry }
+    competencies:
+      - id: grundfiguren-eben
+        iCan: "Ich kann ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben."
+        gradeBand: "5-6"
+      - id: vierecke-grundfiguren
+        iCan: "Ich kann besondere Vierecke und den Kreis mit ihren Eigenschaften beschreiben."
+        gradeBand: "7-8"
+        requires: [grundfiguren-eben]
+      - id: haus-der-vierecke
+        iCan: "Ich kann Vierecke nach ihren Eigenschaften im Haus der Vierecke ordnen und begründen."
+        gradeBand: "7-8"
+        requires: [vierecke-grundfiguren, symmetrie]
+      - id: konstruktionen
+        iCan: "Ich kann Figuren mit Geodreieck, Zirkel oder Geometriesoftware zeichnen und konstruieren."
+        gradeBand: "5-6"
+        requires: [grundfiguren-eben, parallel-senkrecht-abstand]
+      - id: symmetrie
+        iCan: "Ich kann Achsen-, Punkt- und Drehsymmetrie bei Figuren erkennen und nutzen."
+        gradeBand: "5-6"
+        requires: [grundfiguren-eben]
+      - id: koordinatensystem
+        iCan: "Ich kann Punkte und Figuren im Koordinatensystem eintragen und ablesen."
+        gradeBand: "5-6"
+        requires: [zahldarstellungen]
+      - id: grundkoerper-quader-wuerfel
+        iCan: "Ich kann Quader, Würfel und zusammengesetzte Körper erkennen und beschreiben."
+        gradeBand: "5-6"
+        requires: [grundfiguren-eben]
+      - id: grundkoerper-prisma-zylinder
+        iCan: "Ich kann Prisma und Zylinder erkennen und von anderen Körpern unterscheiden."
+        gradeBand: "7-8"
+        requires: [grundkoerper-quader-wuerfel]
+      - id: grundkoerper-pyramide-kegel-kugel
+        iCan: "Ich kann Pyramide, Kegel und Kugel beschreiben und Körper aus dem Alltag in Grundkörper zerlegen."
+        gradeBand: "9-10"
+        requires: [grundkoerper-prisma-zylinder]
+      - id: netze-schraegbilder-modelle
+        iCan: "Ich kann Netze, Schrägbilder und Modelle von Körpern zeichnen oder bauen."
+        gradeBand: "5-6"
+        requires: [grundkoerper-quader-wuerfel]
+      - id: parallel-senkrecht-abstand
+        iCan: "Ich kann parallele und senkrechte Geraden zeichnen und Abstände messen."
+        gradeBand: "5-6"
+      - id: bewegungen-figuren
+        iCan: "Ich kann Figuren spiegeln, verschieben und drehen und die Bildfigur bestimmen."
+        gradeBand: "5-6"
+        requires: [symmetrie, koordinatensystem]
+      - id: kongruenz
+        iCan: "Ich kann erkennen und begründen, dass Figuren deckungsgleich sind, und die Kongruenzsätze für Dreiecke anwenden."
+        gradeBand: "7-8"
+        requires: [bewegungen-figuren, konstruktionen]
+      - id: satz-des-pythagoras
+        iCan: "Ich kann mit dem Satz des Pythagoras und seiner Umkehrung Streckenlängen berechnen und rechte Winkel prüfen."
+        gradeBand: "9-10"
+        requires: [reelle-zahlen, flaeche-umfang-quadrat-rechteck]
+      - id: satz-des-thales
+        iCan: "Ich kann den Satz des Thales erklären und bei Konstruktionen anwenden."
+        gradeBand: "7-8"
+        requires: [winkelsaetze, konstruktionen]
+      - id: aehnlichkeit-strahlensaetze
+        iCan: "Ich kann Figuren maßstabsgetreu vergrößern und mit den Strahlensätzen Streckenlängen berechnen."
+        gradeBand: "9-10"
+        requires: [kongruenz, proportional-antiproportional]
+      - id: trigonometrie
+        iCan: "Ich kann mit Sinus, Kosinus und Tangens Seiten und Winkel in Dreiecken berechnen."
+        gradeBand: "9-10"
+        requires: [satz-des-pythagoras, aehnlichkeit-strahlensaetze]
+      - id: winkel-messen
+        iCan: "Ich kann Winkel messen, zeichnen und nach ihrer Größe einteilen."
+        gradeBand: "5-6"
+        requires: [grundfiguren-eben]
+      - id: winkelsaetze
+        iCan: "Ich kann mit Winkelsätzen und dem Winkelsummensatz fehlende Winkel berechnen."
+        gradeBand: "7-8"
+        requires: [winkel-messen]
+      - id: zusammengesetzte-figuren
+        iCan: "Ich kann Flächeninhalt und Umfang zusammengesetzter Figuren durch Zerlegen berechnen."
+        gradeBand: "5-6"
+        requires: [flaeche-umfang-quadrat-rechteck, grundfiguren-eben]
+      - id: flaeche-umfang-quadrat-rechteck
+        iCan: "Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berechnen."
+        gradeBand: "5-6"
+        requires: [grundfiguren-eben, umrechnung-groessen]
+      - id: flaeche-umfang-dreieck-viereck-kreis
+        iCan: "Ich kann Flächeninhalt und Umfang von Dreieck, besonderen Vierecken und Kreis berechnen."
+        gradeBand: "7-8"
+        requires: [flaeche-umfang-quadrat-rechteck, vierecke-grundfiguren]
+      - id: volumen-oberflaeche-quader-wuerfel
+        iCan: "Ich kann Volumen und Oberflächeninhalt von Quader und Würfel berechnen."
+        gradeBand: "5-6"
+        requires: [flaeche-umfang-quadrat-rechteck, grundkoerper-quader-wuerfel]
+      - id: volumen-oberflaeche-prisma
+        iCan: "Ich kann Volumen und Oberflächeninhalt von Prismen berechnen."
+        gradeBand: "7-8"
+        requires: [volumen-oberflaeche-quader-wuerfel, flaeche-umfang-dreieck-viereck-kreis]
+      - id: volumen-oberflaeche-pyramide-kegel-zylinder-kugel
+        iCan: "Ich kann Volumen und Oberflächeninhalt von Zylinder, Pyramide, Kegel und Kugel berechnen."
+        gradeBand: "9-10"
+        requires: [volumen-oberflaeche-prisma, satz-des-pythagoras]
+      - id: berechnungen-dreiecke-vielecke
+        iCan: "Ich kann Streckenlängen und Winkel in Dreiecken und Vielecken mit Pythagoras, Ähnlichkeit und Trigonometrie berechnen."
+        gradeBand: "9-10"
+        requires: [satz-des-pythagoras, aehnlichkeit-strahlensaetze, trigonometrie]
+  - id: stochastik
+    name: { de: Stochastik, en: Probability and statistics }
+    competencies:
+      - id: zufallserscheinungen
+        iCan: "Ich kann Zufallserscheinungen im Alltag erkennen und Zufallsversuche mit ihren Ergebnissen beschreiben."
+        gradeBand: "5-6"
+      - id: haeufigkeiten
+        iCan: "Ich kann absolute und relative Häufigkeiten bestimmen und als Schätzwerte für Wahrscheinlichkeiten deuten."
+        gradeBand: "5-6"
+        requires: [zufallserscheinungen]
+      - id: wahrscheinlichkeitsbegriff
+        iCan: "Ich kann erklären, was Wahrscheinlichkeit bedeutet, und Wahrscheinlichkeiten auf einer Skala von 0 bis 1 einordnen."
+        gradeBand: "5-6"
+        requires: [haeufigkeiten]
+      - id: wahrscheinlichkeit
+        iCan: "Ich kann Wahrscheinlichkeiten bei ein-, zwei- und mehrstufigen Zufallsexperimenten bestimmen."
+        gradeBand: "7-8"
+        requires: [wahrscheinlichkeitsbegriff]
+      - id: zufall-laplace
+        iCan: "Ich kann Wahrscheinlichkeiten mit der Laplace-Formel berechnen: günstige durch mögliche Ergebnisse."
+        gradeBand: "7-8"
+        requires: [wahrscheinlichkeitsbegriff]
+      - id: zufall-gegenereignis
+        iCan: "Ich kann die Wahrscheinlichkeit über das Gegenereignis mit 1 minus P(E) berechnen."
+        gradeBand: "7-8"
+        requires: [zufall-laplace]
+      - id: zufall-baumdiagramm
+        iCan: "Ich kann ein mehrstufiges Zufallsexperiment als Baumdiagramm oder Vierfeldertafel darstellen."
+        gradeBand: "7-8"
+        requires: [zufall-laplace]
+      - id: zufall-pfadregel-1
+        iCan: "Ich kann die Wahrscheinlichkeit eines Pfades berechnen, indem ich die Zweigwahrscheinlichkeiten multipliziere."
+        gradeBand: "7-8"
+        requires: [zufall-baumdiagramm]
+      - id: zufall-ohne-zuruecklegen
+        iCan: "Ich kann Ziehen mit und ohne Zurücklegen unterscheiden und die Zweigwahrscheinlichkeiten anpassen."
+        gradeBand: "7-8"
+        requires: [zufall-pfadregel-1]
+      - id: zufall-pfadregel-2
+        iCan: "Ich kann die Wahrscheinlichkeit eines Ereignisses berechnen, indem ich die Wahrscheinlichkeiten seiner Pfade addiere."
+        gradeBand: "7-8"
+        requires: [zufall-pfadregel-1]
+      - id: zufall-ergebnisform
+        iCan: "Ich kann Wahrscheinlichkeiten als Bruch, Dezimalzahl, Prozentangabe oder Rechenterm angeben und zwischen den Formen wechseln."
+        gradeBand: "7-8"
+        requires: [zufall-laplace, prozent-grundbegriffe]
+      - id: zufall-ereignis-uebersetzen
+        iCan: "Ich kann Ereignisse wie genau einmal oder mindestens einmal in die passenden Pfade eines Baumdiagramms übersetzen."
+        gradeBand: "7-8"
+        requires: [zufall-baumdiagramm, zufall-pfadregel-2]
+      - id: simulationen
+        iCan: "Ich kann einfache Zufallsversuche mit Zufallszahlen und Tabellenkalkulation simulieren und auswerten."
+        gradeBand: "7-8"
+        requires: [haeufigkeiten]
+      - id: umfragen-erhebungen
+        iCan: "Ich kann eine einfache Umfrage planen, durchführen und auswerten und beurteilen, wie aussagekräftig sie ist."
+        gradeBand: "5-6"
+      - id: daten-darstellen
+        iCan: "Ich kann Daten in Tabellen und Diagrammen darstellen und die Darstellung begründen."
+        gradeBand: "5-6"
+      - id: kenngroessen-lage-streumasse
+        iCan: "Ich kann Mittelwert, Median, Spannweite und weitere Kenngrößen von Daten bestimmen und deuten."
+        gradeBand: "5-6"
+        requires: [daten-darstellen]
