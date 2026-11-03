@@ -288,7 +288,15 @@ skill it reads (first run: asked the parent for them); the parent plays the crea
    `file:` not accepted by the test variable); `init` does not install app-templates and links the local build
    (playwright missing); prerequisites of the own strand had no rule (→ KD-27); docs gaps (inline records only text,
    data field names lower-case, `bar` only parts, "README of each archetype in question").
-3. Planned: Chemie, "Reaktionsgleichungen aufstellen", two competencies, after the fixes of run 2.
+3. Chemie, Reaktionsgleichungen (session_016NmpwbGeqWRN1B1tRhdz9u), after tooling 35c6089: strand
+   chemie/chemische-reaktion, `wortgleichung` + `reaktionsgleichung-aufstellen`; recap pages for
+   `formeln-von-verbindungen` (other strand) and `massenerhaltung` (own strand, KD-27); links for the two others;
+   one chapter after the creator's question (rule then moved into the research task, tooling d3d2a35); `init` and
+   `create` worked (format 2); `lernapps check` WITH the map: `prerequisites-linked` hinted a missing link, then ok
+   (15 rules). A contradiction README vs. skills on recap pages was found and fixed (app-templates 38c63dc).
+   Remaining small findings (not about the map): the app-content skeleton heading "Rules learned from mistakes" is
+   named nowhere; `\ce{}` with record placeholders in `generated` loses subscripts; `init` in an existing repo does
+   not create `work`; `scope` fields only in rules.md.
 
 ## Explore
 ### Phase Entrance Criteria
@@ -464,9 +472,9 @@ Ids say the step; tasks of one step run in order, steps as in the Plan's strateg
   `prerequisites-linked` (tooling f165ac6); contract and catalog checks (apps 23c7fe1)
 - [x] I6 Formulas `\sin`, Greek letters; `generated` sin/cos/tan in degrees, sqrt, pow; `_gitignore` for git installs (app-templates e5a1195)
 - [x] I7 Variant C: a recap for any prerequisite the app does not practise (KD-27, apps 5e57b8e)
-- [ ] I8 Tooling fixes from test run 2: depend on the format-2 app-templates; `file:` in the test map variable; `init`
+- [x] I8 Tooling fixes from test run 2: depend on the format-2 app-templates; `file:` in the test map variable; `init`
   packs a local build and installs app-templates; variant C in the checks; docs gaps
-- [ ] I9 Test run 3 (Chemie)
+- [x] I9 Test run 3 (Chemie)
 - [ ] I10 Split anorganische-chemie (KD-20): needs a repo from the owner
 - [ ] I11 Issue lernapps/app-templates#130 (bundle the map, links "Das brauchst du vorher") – later
 
