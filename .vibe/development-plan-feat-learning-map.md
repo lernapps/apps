@@ -171,6 +171,33 @@ learns in 1–2 lessons. Assumed (not yet answered): Musik with 9 strands rather
 - `lernapps check` loads the subject's map (`/apps/map/<subject>.json`) and reports unknown ids or another strand
   before the push (a tooling rule: advice, never blocks the listing); the listing stays the net.
 
+### KD-19: Three stages for the map's rules (2026-11-03, user)
+- Scoping: the assistant checks the subject's map and recommends a strand if one fits; `strand: none` is allowed and
+  the app is listed normally, only not on the map (refines KD-07).
+- With a strand, the app practises only the competencies of that strand and invents none; missing ones are proposed to
+  the catalog. The listing rule `entry-learning-map` makes an unknown id and a competency of another strand an error.
+- The content of a page matches the "Ich kann …" of its competencies: judged in the review.
+
+### KD-20: anorganische-chemie is split strictly by strand (2026-11-03, user)
+Its two pages on reactions go to an app of the strand `chemie/chemische-reaktion` (repo still to be created).
+
+### KD-21: Links across explainers later, via the map (2026-11-03, user)
+lernapps/app-templates#130: bundle the subject YAML with the explainer, validate ids locally, link across apps.
+
+### KD-22: What a review judges is a hint (2026-11-03, user)
+`content-matches-competencies` and `strand-from-map` are hints; only programmatic checks are errors.
+
+### KD-23: Fine granularity from the research; the proposals are adopted (2026-11-03, user)
+Each subject model was reworked from the KMK standards and at least three Länder curricula (reports in the session's
+scratchpad, summarised in the pull request): Mathematik 127, Physik 108, Chemie 75, Musik 187 competencies; Musik in
+nine strands. The ids used by apps stay, except two of musik's unbacked ones (the app has `strand: none`).
+
+### KD-24: One page per competency as a rule; early advice in `lernapps check` (2026-11-03, user)
+- As a rule one page per competency; several pages for a large one are fine; several competencies on one page are
+  advised against: a hint of `lernapps check` (`one-competency-per-page`), not a schema rule.
+- `lernapps check` fetches the subject's map and warns about unknown ids or another strand (`competencies-on-map`)
+  before the listing; without network it says it could not check.
+
 ## Notes
 
 ### Mockup

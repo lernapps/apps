@@ -116,8 +116,8 @@ function freeId(file, report) {
 /**
  * The catalog's own rule entry-learning-map (docs/learning-map-contract.md, section 4): the strand and the competencies
  * an app names exist on the learning map, and they belong to one strand. An explainer of format 2 says them in
- * lernapps-pages.json beside its index.html; another app in its entry. A competency of another strand is a hint (one
- * app, one strand), an unknown one an error.
+ * lernapps-pages.json beside its index.html; another app in its entry. An unknown competency and one of another strand
+ * are errors (KD-19); an app without a strand is listed, only not on the map.
  */
 async function learningMap(file, report) {
   let entry;
@@ -159,7 +159,8 @@ async function learningMap(file, report) {
   const { errors, hints } = checkApp(subjects, { strand, competencies });
   const fixError = "Use a strand and competency ids of https://lernapps.net/apps/map/ ; a missing competency is proposed to lernapps/apps (map/<subject>.yaml)";
   for (const e of errors) add("error", file, e, fixError);
-  for (const h of hints) add("hint", file, h, "Keep the app in one strand, or move these pages to an app of their strand");
+  // With a strand, an app practises only the competencies of that strand (KD-19): another strand is an error too.
+  for (const h of hints) add("error", file, h, "Keep the app in its strand: move these pages to an app of their strand, or give the app strand: none");
   report.findings.sort(byPlace);
   if (report.findings.some((f) => f.rule === "entry-learning-map") && !report.rules.includes("entry-learning-map")) {
     report.rules = [...report.rules, "entry-learning-map"].sort();
