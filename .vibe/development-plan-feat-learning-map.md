@@ -259,10 +259,36 @@ Competency: `id` (stable), `iCan` text, `gradeBand` (required). Placement: `grad
 - musik spans several strands of the Hessian curriculum (best fit `parameter`, 6 of 29 links): format 2 with
   `strand: none` until the owner decides (split, or one strand).
 - anorganische-chemie: strand `chemie/stoffe-und-teilchen`; its two reaction pages practise competencies of
-  `chemische-reaktion` (a listing hint).
-- Grade bands of Physik and Chemie are common practice, not checked against a curriculum; Mathematik's bands follow
-  the first Hessian grade, which puts some broad nodes low (`potenzen`, `terme-variable` at 5-6).
+  `chemische-reaktion`, which is now a listing ERROR (KD-19): the split (KD-20) needs a new repo from the owner
+  (proposed name `chemie-reaktionen`); `reaktionen/symbole-formeln` moves to a chapter of strand 1.
+- Grade bands: since the research (KD-23) all four subjects take bands from the majority of three Länder curricula;
+  NRW grades are read from example school plans; Hessian texts are 2011–2016; Musik's KC is a draft.
 - lernapps/docs: the assumption `a-gaps-guide-creators` had to name an MVP; it names `mvp-first-draft`.
+- `strand-from-map` judges only apps built with the tooling (scope tooling); scope `listing` would include freely
+  built apps (still a hint): owner to decide.
+- `prerequisites-linked` does not check that a recap page stands before the page that needs it (guidance only).
+- Open questions of the research (reports `research-<subject>/report.md` in the session scratchpad): Physik sixth
+  strand "Wärmelehre"; Chemie organic block and the size of strand 1 (46); Musik 9 strands vs. one "Musiklehre";
+  Mathematik thinly backed splits.
+
+### Test runs of the guidance (2026-11-03, up to four, user)
+Each run: a fresh session (model of a lower tier) builds a small explainer locally, without GitHub; it announces every
+skill it reads (first run: asked the parent for them); the parent plays the creator and logs what it reads
+(`test-*-log.md` in the session scratchpad).
+1. Trigonometrie (session_016Nmpwa1mNLrTq25wxKSnFa): strand mathematik/geometrie, `trigonometrie` +
+   `sinus-kosinussatz`, format 2, one page each; build and check green. Findings and fixes: tooling AGENTS.md misled
+   an app builder (fixed: one line points to guidance/AGENTS.md); chapters of competencies that build on each other
+   applied only when asked (fixed: research checkpoint says the map decides the structure, no curriculum search);
+   skill named schema v1, no `\sin`/Greek in formulas, no trig/sqrt in `generated`, build/screenshot folders differ,
+   `create` output, `init` from a local build (all fixed in app-templates e5a1195/4fdc214 and tooling f165ac6).
+2. Physik, Lage- und Bewegungsenergie (session_016NmpwaDbGcPWzYDmQJbwxS): strand physik/energie,
+   `lageenergie-berechnen` + `bewegungsenergie-berechnen`; recap pages for `gewichtskraft-berechnen` and
+   `geschwindigkeit-berechnen` (mechanik), unprompted; build and check green. Findings: `create` writes a FORMAT-1
+   scaffold (tooling depends on app-templates 0.2.1); the map checks never ran (no local server allowed in its sandbox,
+   `file:` not accepted by the test variable); `init` does not install app-templates and links the local build
+   (playwright missing); prerequisites of the own strand had no rule (→ KD-27); docs gaps (inline records only text,
+   data field names lower-case, `bar` only parts, "README of each archetype in question").
+3. Planned: Chemie, "Reaktionsgleichungen aufstellen", two competencies, after the fixes of run 2.
 
 ## Explore
 ### Phase Entrance Criteria
@@ -428,6 +454,21 @@ Ids say the step; tasks of one step run in order, steps as in the Plan's strateg
 - [x] H1 Split mathe-karte into mathe-arithmetik (prozent), mathe-algebra (binom), mathe-stochastik (zufall), format 2,
   on the pinned app-templates commit of step C; learners' progress and old addresses are ignored (no users yet, user
   2026-11-03)
+
+**I. After the owner's review (2026-11-03)**
+- [x] I1 Strand recommended, not required; another strand an error (KD-19); review findings hints (KD-22): apps, docs, tooling
+- [x] I2 Subject models from the research (KD-23); Hessen curriculum re-placed for Mathematik (123 of 127)
+- [x] I3 Rules `strand-from-map`, `content-matches-competencies`, `one-competency-per-page`, `competencies-on-map` (tooling 5e583ff)
+- [x] I4 Chapter rule at the checkpoints; tooling AGENTS.md points app builders to guidance/AGENTS.md (tooling e3aca0a)
+- [x] I5 Recap pages (KD-26): schema, runtime, link to the map, no exercises (app-templates e5a1195, 4fdc214); guidance and
+  `prerequisites-linked` (tooling f165ac6); contract and catalog checks (apps 23c7fe1)
+- [x] I6 Formulas `\sin`, Greek letters; `generated` sin/cos/tan in degrees, sqrt, pow; `_gitignore` for git installs (app-templates e5a1195)
+- [x] I7 Variant C: a recap for any prerequisite the app does not practise (KD-27, apps 5e57b8e)
+- [ ] I8 Tooling fixes from test run 2: depend on the format-2 app-templates; `file:` in the test map variable; `init`
+  packs a local build and installs app-templates; variant C in the checks; docs gaps
+- [ ] I9 Test run 3 (Chemie)
+- [ ] I10 Split anorganische-chemie (KD-20): needs a repo from the owner
+- [ ] I11 Issue lernapps/app-templates#130 (bundle the map, links "Das brauchst du vorher") – later
 
 ### Completed
 *None yet*
