@@ -136,6 +136,41 @@ No KMK standards exist for Musik; its subject model takes the Kerncurriculum Mus
   `claude/vibrant-faraday-5qg8eu`.
 - Work runs in parallel wherever it can (A–E, E1–E3), with sub-agents.
 
+### KD-19: Three stages: recommended, checked, reviewed (2026-11-03, user)
+- Scoping: the assistant looks at the map first and **recommends** a strand; the creator decides. An app without a
+  strand (`none`) is listed like any other, only not on the map. Not every explainer belongs to a subject or strand.
+- With a strand, an app practises only Bausteine of that strand and invents none: an unknown id or one of another
+  strand is an error of the listing (`entry-learning-map`). It need not cover the whole strand.
+- Whether the content fits its Bausteine is judged by the review agent (`content-matches-competencies`).
+- Supersedes the strict reading of KD-07 ("one strand per app" applies only to apps on the map).
+
+### KD-20: anorganische-chemie is split strictly by strand (2026-11-03, user)
+Its two pages on reactions (`reaktionen/reaktionen`, `reaktionen/reaktionsgleichungen`) go to an app of their own for
+`chemie/chemische-reaktion`; `reaktionen/symbole-formeln` belongs to `stoffe-und-teilchen`. Needs a new repo.
+
+### KD-21: Cross references between explainers follow "requires", later (2026-11-03, user)
+Bundling the subject YAML with the explainer, to validate ids locally and link across apps, is a later step:
+lernapps/app-templates#130.
+
+### KD-22: What a review judges is a hint (2026-11-03, user)
+Rules judged by the review agent are hints, never errors: `content-matches-competencies`, `strand-from-map`. Only
+programs decide errors.
+
+### KD-23: Fine granularity; the researched subject models are adopted (2026-11-03, user)
+Four research agents checked strands and Bausteine against the KMK standards and three or more Länder curricula
+(reports in the session's scratchpad, `research-<subject>/`). Adopted as proposed: Mathematik 127 Bausteine (5 strands),
+Physik 108 (5), Chemie 75 (3, organic block kept), Musik 187 (9 strands, Hessen-based). One Baustein = what a learner
+learns in 1–2 lessons. Assumed (not yet answered): Musik with 9 strands rather than one "Musiklehre"; no strand
+"Wärmelehre" in Physik.
+
+### KD-24: At most one Baustein per page; the creator knows the structure at scoping (2026-11-03, user)
+- A page practises exactly one Baustein (with a strand); a Baustein may have several pages. The field on a page is
+  `competency: <id>`, no list.
+- `lernapps-explainer-design`: as a rule one page per Baustein, several for a large one; chapters group Bausteine
+  that build on each other, ordered by "requires".
+- `lernapps check` loads the subject's map (`/apps/map/<subject>.json`) and reports unknown ids or another strand
+  before the push (a tooling rule: advice, never blocks the listing); the listing stays the net.
+
 ## Notes
 
 ### Mockup

@@ -107,7 +107,7 @@ A page, `src/<chapter>/<page>.yaml`:
 
 ```yaml
 title: Laplace-Formel
-competencies: [laplace]                            # ids of the app's subject
+competency: laplace                                # one id of the app's strand (KD-24)
 blocks: […]
 ```
 
@@ -115,7 +115,7 @@ blocks: […]
 |---|---|---|
 | `format` | `app.yaml` | `2`, required in format 2 |
 | `strand` | `app.yaml` | required: `<subject>/<strand>` (two ids) or `none` |
-| `competencies` | every page | when `strand` is not `none`: required, at least one id. When `none`: not allowed |
+| `competency` | every page | when `strand` is not `none`: required, exactly one id; a Baustein may have several pages. When `none`: not allowed |
 
 The app cannot know the vocabulary (the subject's ids); the catalog checks the ids when the app is listed (step F).
 
@@ -129,13 +129,13 @@ catalog reads it instead of hand-written topics (KD-13).
   "format": 1,
   "strand": "mathematik/stochastik",
   "pages": [
-    { "path": "zufall/laplace/", "title": { "de": "Laplace-Formel" }, "competencies": ["laplace"] }
+    { "path": "zufall/laplace/", "title": { "de": "Laplace-Formel" }, "competency": "laplace" }
   ]
 }
 ```
 
 `path` is relative to the app's root, as a link in the app; `title` is the page's title as text (string or by language);
-pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competencies`.
+pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competency`.
 
 ## 4. A catalog entry: `entries/<id>.yaml` (lernapps/apps)
 
@@ -149,11 +149,11 @@ competencies: [laplace, baumdiagramm]              # only for apps that are not 
 | Field | Rule |
 |---|---|
 | `strand` | optional; `<subject>/<strand>` of an existing subject |
-| `competencies` | optional, ids of the strand's subject; requires `strand`; not for an explainer, whose competencies come from `lernapps-pages.json` |
+| `competencies` | optional, ids of the strand; requires `strand`; not for an explainer, whose pages name their competency in `lernapps-pages.json` |
 | `topics` | stays, for apps that are not explainers; for a format-2 explainer the catalog takes its pages from `lernapps-pages.json` |
 
-Checks of the listing (step F): every id exists; every competency of an app belongs to the app's strand (a hint, not an
-error); an explainer's `strand` in the entry, if given, equals the one in `lernapps-pages.json`.
+Checks of the listing (rule `entry-learning-map`, an error): every id exists; every competency of an app belongs to the
+app's strand (KD-19); an explainer's `strand` in the entry, if given, equals the one in `lernapps-pages.json`.
 
 ## 5. The map as data: `/apps/map/<subject>.json` (lernapps/apps)
 
