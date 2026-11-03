@@ -97,7 +97,7 @@ Besucherinnen und Besuchern charmant und ehrlich erklären: Die Apps auf lernapp
 - [x] Rückmeldung zur Seite „Bauen“ umgesetzt
 - [x] Rückmeldung 2 (Eintragen) umgesetzt
 - [x] Rückmeldung 3 (Texte Finden) umgesetzt
-- [ ] Commits zusammenfassen: beim Mergen mit „Squash and merge“ (Force-Push ist in dieser Sitzung nicht erlaubt)
+- [x] Commits zusammenfassen: beim Mergen mit „Squash and merge“ (Force-Push ist in dieser Sitzung nicht erlaubt); CI grün, vom Nutzer freigegeben
 
 ### Completed
 *None yet*
