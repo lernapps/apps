@@ -25,6 +25,10 @@ Inhaltsbereiche, die Hessen, Bayern und NRW teilen. Teil der Reihe „alle Sek-I
   verstehen“). Gilt ebenso für die parallel entstehende Karte Katholische Religion.
 - Gleichstand bei der Richtstufe: früheste der gleichauf liegenden Stufen, die nicht vor einer Voraussetzung liegt.
 
+- Nacharbeit (Nutzer/in, 2026-11-07): gleicher Inhalt in zwei Fächern bleibt in beiden, mit Querverweis. 85 Bausteine
+  verweisen jetzt mit `# Siehe auch: katholische-religion/<id>` auf die Karte Katholische Religion (Gegenrichtung zu #207).
+  Strang-ids entsprechen schon der Ontologie im Skill.
+
 ## Notes
 - Vorbilder: `map/physik.yaml` (Kommentar je Baustein), `map/musik.yaml` (Fach ohne KMK-Standards).
 - Rohdaten und Generator im Scratchpad (`gen-evangelische-religion/data.py`, `gen.py`), nicht im Repository.
