@@ -21,7 +21,8 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
 - **Strands:** the KMK areas as they are. Split or merge one only with a reason in the report; a strand needs at least
   as many competencies as one app can cover in several school years.
 - **A competency** belongs in the map if the KMK names it, or two of the three Länder do, or it is a prerequisite of
-  one of those. Fine-grained: one competency is what one page of an app can teach. `iCan` starts with "Ich kann",
+  one of those. Fine-grained: one competency is what one page of an app can teach. The size of the map follows from
+  that, there is no target number: never merge competencies to keep a map small; split one when it teaches better. `iCan` starts with "Ich kann",
   plain German; the id is stable once published.
 - **gradeBand:** vote per Land; two of three decide, with three different votes the middle one.
 - **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles.
