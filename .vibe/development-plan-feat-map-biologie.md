@@ -124,6 +124,7 @@ ev. Religion, kath. Religion, Ethik.
 - [x] Diff geprüft: nur `map/biologie.yaml`, Recherche und Plan; keine Modellbezeichnung, keine Debug-Reste
 - [x] Offene Punkte für den PR gesammelt (Recherche Abschnitt 4)
 - [x] Commit auf `feat/map-biologie` (conventional, Body mit Intent / Key changes) und Push
+- [x] Pull Request #199 angelegt; vor dem Merge squashen
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
