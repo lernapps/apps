@@ -8,9 +8,10 @@
 #        LP = Lehrplan Erdkunde, gymnasialer Bildungsgang (G9), Jahrgangsstufen 5, 6.1, 6.2, 8, 9.
 #   BY = LehrplanPLUS Gymnasium Bayern, Geographie Geo5, Geo7, Geo10 (Lernbereiche LB); Geo11 liegt nach Jg 10.
 #   NW = Kernlehrplan Erdkunde Sek I Gymnasium NRW (2019): Stufe 1 = bis Ende Erprobungsstufe (IF1-IF3, 5-6),
-#        Stufe 2 = bis Ende Sek I (IF4-IF10, Stimme "7-10"). SiLP = NRW-Umsetzungsbeispiel, nur Hinweis.
-# Stimmen HE/BY/NW -> Richtstufe. Gleichstand: requires, dann SiLP-Hinweis, dann die frühere Stufe; liegen die Stimmen
-# 5-6 und 9-10 auseinander, die mittlere. Genaue Titel, Ausgaben und URLs: .vibe/research-erdkunde.md.
+#        Stufe 2 = bis Ende Sek I (IF4-IF10, Stimme "7-10"). Das NRW-Umsetzungsbeispiel (SiLP) stimmt nicht mit.
+# Stimmen HE/BY/NW -> Richtstufe. Gleichstand: die frühere Stufe, außer requires erzwingt die spätere; liegen die
+# Stimmen 5-6 und 9-10 auseinander oder sind alle drei verschieden, die mittlere.
+# Genaue Titel, Ausgaben und URLs: .vibe/research-erdkunde.md.
 name: { de: Erdkunde, en: Geography }              # the file name is the subject's id: erdkunde
 source:
   title: Deutsche Gesellschaft für Geographie (DGfG), Bildungsstandards im Fach Geographie für den Mittleren Schulabschluss, 10. Auflage 2020
@@ -150,7 +151,7 @@ strands:
         gradeBand: "7-8"
         requires: [thematische-karte]
       # SCHWACH BELEGT. DG O5 S15; HE KC Kap. 6 (kognitive Karten/mental maps); BY –; NW Stufe 2 UK5 (von Raumwahrnehmungen geleitete Setzung von Themen). Hinweis: NW nennt die Wahrnehmung, nicht die Kopfkarte.
-      # Stimmen 5-10/–/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht, kein SiLP-Hinweis; nach der Regel die frühere Stufe)
+      # Stimmen 5-10/–/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: mental-maps
         iCan: "Ich kann an Kopfkarten (Mental Maps) zeigen, dass Menschen denselben Raum verschieden wahrnehmen."
         gradeBand: "7-8"
@@ -182,16 +183,16 @@ strands:
         gradeBand: "7-8"
         requires: [tag-und-nacht]
       # DG F1 S2; HE LP 8 (Zenit, Polarkreise, Wendekreise); BY Geo10 LB3 (globale Strahlungsverhältnisse, Sonneneinstrahlung); NW IF5 (Beleuchtungszonen, Temperaturzonen).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: beleuchtungszonen
         iCan: "Ich kann Wendekreise und Polarkreise erklären und die Beleuchtungszonen der Erde unterscheiden."
         gradeBand: "7-8"
         requires: [jahreszeiten, gradnetz]
       # DG F1 S1 (Aufbau); HE KC Erde als Planet (Aufbau der Erde); BY Geo5 LB2 (Schalenbau); NW IF4 (Schalenbau der Erde).
-      # Stimmen 5-10/5-6/7-10 -> 7-8 (Gleichstand 5-6/7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 5-10/5-6/7-10 -> 5-6 (Gleichstand 5-6/7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: schalenbau
         iCan: "Ich kann den Schalenbau der Erde mit Kruste, Mantel und Kern beschreiben."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [gestalt-der-erde]
       # DG F2 S5 (Lageveränderung der Platten); HE LP 8 (Plattentektonik); BY Geo7 LB3 (Plattengrenzen); NW IF4 (Plattentektonik).
       # Stimmen 7-8/7-8/7-10 -> 7-8 (Mehrheit)
@@ -327,7 +328,7 @@ strands:
         gradeBand: "7-8"
         requires: [seeklima-landklima, topographie-europa]
       # DG O1 S2; F2 S6; HE LP 8 (Klima- und Vegetationszonen, zonale Anordnung); BY Geo10 LB3 (Klima- und Vegetationszonen der Erde im Überblick); NW IF5 (Zusammenhang solare Einstrahlung und Klimazonen).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: klimazonen-der-erde
         iCan: "Ich kann die Klimazonen der Erde von den Tropen bis zu den Polen nennen und mit der Sonneneinstrahlung erklären."
         gradeBand: "7-8"
@@ -339,37 +340,37 @@ strands:
         gradeBand: "7-8"
         requires: [klimazonen-europas, boden]
       # DG O1 S2; HE LP 8 (Klima- und Vegetationszonen und ihre Abweichungen); BY Geo10 LB3, LB6, LB7 (Verlauf der Klima- und Vegetationszonen); NW IF6 (Landschaftszonen der Erde).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: landschaftszonen-der-erde
         iCan: "Ich kann die Landschaftszonen der Erde auf einer Karte zeigen und ihre Vegetation beschreiben, auch wo sie von der zonalen Anordnung abweichen."
         gradeBand: "7-8"
         requires: [klimazonen-der-erde, klima-boden-vegetation]
       # DG F2 S8; HE LP 8 (Passatkreislauf); BY Geo10 LB3 (Modell der Passatzirkulation); NW IF5 (planetarische Zirkulation).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: passatkreislauf
         iCan: "Ich kann mit dem Passatkreislauf erklären, warum es am Äquator fast täglich regnet und an den Wendekreisen große Wüsten liegen."
         gradeBand: "7-8"
         requires: [luftdruck-und-wind, beleuchtungszonen]
       # SCHWACH BELEGT. DG F2 S8; HE LP 8 (Passatkreislauf, Klima- und Vegetationszonen); BY Geo10 LB3 (Zenitalregen, jahreszeitliche Verlagerung, hygrische Jahreszeiten); NW IF6 (naturräumliche Bedingungen in den Tropen). Hinweis: die Verlagerung der Passatzirkulation nennt nur BY ausdrücklich.
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: regenzeit-trockenzeit
         iCan: "Ich kann erklären, warum es in den wechselfeuchten Tropen eine Regenzeit und eine Trockenzeit gibt."
         gradeBand: "7-8"
         requires: [passatkreislauf]
       # DG F2 S8 (Ökosystem tropischer Regenwald); HE LP 8 (Problembereich tropischer Regenwald); BY Geo10 LB3 (Merkmale tropischer Ökosysteme: Regenwald); NW IF6 (Tropen).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: tropischer-regenwald
         iCan: "Ich kann das Ökosystem tropischer Regenwald mit seinem Stockwerkbau und seinem kurzen Nährstoffkreislauf beschreiben."
         gradeBand: "7-8"
         requires: [landschaftszonen-der-erde]
       # DG F2 S8; HE LP 8 (Klima- und Vegetationszonen; Raumbeispiel Sahelzone); BY Geo10 LB3 (Merkmale der Savannen); NW IF6 (Tropen).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: savanne
         iCan: "Ich kann Feucht-, Trocken- und Dornsavanne unterscheiden und mit der Länge der Regenzeit erklären."
         gradeBand: "7-8"
         requires: [regenzeit-trockenzeit]
       # DG F2 S8; HE LP 8 (Klima- und Vegetationszonen); BY Geo10 LB3 (Merkmale der Wüsten); NW IF6 (Subtropen).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: wueste
         iCan: "Ich kann erklären, wie Wüsten an den Wendekreisen entstehen und wie Pflanzen und Tiere an die Trockenheit angepasst sind."
         gradeBand: "7-8"
@@ -386,12 +387,14 @@ strands:
         iCan: "Ich kann den natürlichen Treibhauseffekt erklären und wie der Mensch ihn durch Treibhausgase verstärkt."
         gradeBand: "9-10"
         requires: [klimazonen-der-erde]
+      # Siehe auch: biologie/klimawandel (Biologie: Treibhauseffekt und Folgen für Lebewesen).
       # DG F4 S18; HE –; BY Geo10 LB4 (extraterrestrische und terrestrische Antriebskräfte, wissenschaftliche Erkenntnisse); NW IF5 (natürliche und anthropogen bedingte Klimaveränderungen).
       # Stimmen –/9-10/7-10 -> 9-10 (Mehrheit)
       - id: klimawandel-ursachen
         iCan: "Ich kann natürliche und vom Menschen verursachte Gründe für Klimaänderungen unterscheiden und mit Messdaten belegen."
         gradeBand: "9-10"
         requires: [treibhauseffekt]
+      # Siehe auch: biologie/klimawandel (Biologie: Treibhauseffekt und Folgen für Lebewesen).
       # DG F4 S18, S21; HE –; BY Geo10 LB4 (Folgen, regionale Unterschiede); Geo7 LB3 (Folgen in Europa); NW IF5 (Meeresspiegelanstieg, Wetterextreme; regionale Auswirkungen). Hinweis: BY nennt Folgen in Europa schon in Geo7; die Stimme zählt für Geo10, wo die Ursachen behandelt werden.
       # Stimmen –/9-10/7-10 -> 9-10 (Mehrheit)
       - id: klimawandel-folgen
@@ -468,7 +471,7 @@ strands:
         gradeBand: "7-8"
         requires: [naturfaktoren-landwirtschaft, klimazonen-europas]
       # DG F4 S18 (Bodenversalzung); HE LP 8 (Versalzung, Grundwasserabsenkung); BY Geo10 LB5 (Degradation von Nutzflächen); NW IF6 (Bodenversalzung).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: bodenversalzung
         iCan: "Ich kann erklären, wie falsche Bewässerung zur Versalzung von Böden führt."
         gradeBand: "7-8"
@@ -492,7 +495,7 @@ strands:
         gradeBand: "7-8"
         requires: [subsistenz-und-markt]
       # DG F4 S17; HE LP 8 (Brandrodungswanderfeldbau); BY Geo10 LB3 (landwirtschaftliche Nutzungsformen im Regenwald); NW IF6 (Subsistenzwirtschaft).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: wanderfeldbau
         iCan: "Ich kann den Brandrodungswanderfeldbau beschreiben und erklären, warum er nur mit wenigen Menschen nachhaltig ist."
         gradeBand: "7-8"
@@ -504,7 +507,7 @@ strands:
         gradeBand: "9-10"
         requires: [tropischer-regenwald, subsistenz-und-markt]
       # DG F4 S18 (Rodung); HE LP 8 (Raubbau, Bevölkerungsdruck); BY Geo10 LB7 (Amazonien: Ursachen und Folgen der Abholzung); NW IF6 (Regenwaldzerstörung).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: regenwaldzerstoerung
         iCan: "Ich kann Ursachen und Folgen der Abholzung des tropischen Regenwaldes erklären."
         gradeBand: "7-8"
@@ -522,7 +525,7 @@ strands:
         gradeBand: "7-8"
         requires: [exogene-kraefte, boden]
       # DG F4 S19 (Desertifikation); HE LP 8 (Desertifikation, Raumbeispiel Sahelzone); BY Geo10 LB6 (Desertifikation in der Sahelzone); NW IF6 (Desertifikation).
-      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: desertifikation
         iCan: "Ich kann am Beispiel der Sahelzone erklären, wie Überweidung, Abholzung und Dürren zur Desertifikation führen, und Gegenmaßnahmen nennen."
         gradeBand: "7-8"
@@ -753,22 +756,22 @@ strands:
         gradeBand: "7-8"
         requires: [thematische-karte, klimazonen-der-erde]
       # DG F3 S10 (Vorhersagen zu Bevölkerungsverteilungen); HE KC Mensch/Gesellschaft (demographische Entwicklung); BY –; NW IF8 (Bevölkerungswachstum, Geburten-, Sterbe-, Wachstumsrate, Prognose).
-      # Stimmen 5-10/–/7-10 -> 9-10 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 5-10/–/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: bevoelkerungswachstum
         iCan: "Ich kann beschreiben, wie die Weltbevölkerung wächst, und das Wachstum mit Geburtenrate und Sterberate erklären."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [bevoelkerungsverteilung]
       # SCHWACH BELEGT. DG F3 S10; HE KC Mensch/Gesellschaft (demographische Entwicklung); BY –; NW IF8 (Altersstruktur). Hinweis: HE nennt nur allgemein die demographische Entwicklung; BY erst Geo11 (Pyramidendiagramme).
-      # Stimmen 5-10/–/7-10 -> 9-10 (Gleichstand 7-8/9-10; requires entscheidet nicht; NRW-Umsetzungsbeispiel (SiLP) als Hinweis)
+      # Stimmen 5-10/–/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: altersstruktur
         iCan: "Ich kann eine Bevölkerungspyramide lesen und daraus Schlüsse für die Zukunft eines Landes ziehen."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [bevoelkerungswachstum]
       # DG F4 S21 (Tragfähigkeit der Erde); HE LP 8 (Bevölkerungsdruck; Überbevölkerung?); BY –; NW IF7, IF8 (Tragfähigkeit, Ernährungssicherung).
-      # Stimmen 7-8/–/7-10 -> 9-10 (Mehrheit 7-8; requires bevoelkerungswachstum (9-10) verlangt 9-10)
+      # Stimmen 7-8/–/7-10 -> 7-8 (Mehrheit)
       - id: tragfaehigkeit
         iCan: "Ich kann erklären, was Tragfähigkeit eines Raumes bedeutet und warum Hunger oft andere Ursachen hat als zu wenig Nahrung."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [bevoelkerungswachstum, naturfaktoren-landwirtschaft]
       # DG F3 S14 (Migration); HE KC Mensch/Gesellschaft (Migration); BY Geo7 LB4, LB5 (Arbeitsmigration in und nach Europa); Geo10 LB5 (Ursachen von Migration); NW IF8 (Migration: Ursachen, Push- und Pull-Faktoren).
       # Stimmen 5-10/7-8/7-10 -> 7-8 (Mehrheit)

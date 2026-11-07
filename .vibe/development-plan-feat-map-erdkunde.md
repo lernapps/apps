@@ -19,8 +19,16 @@ Lehrplan G9 Hessen, LehrplanPLUS Bayern Geographie, KLP NRW Erdkunde G9. Teil de
   `wirtschaft`, `siedlung`, `entwicklung`.
 - Zählweise: KC Hessen nur „Ende 9/10“ → Spanne 5-10; LP Hessen G9 mit Jahrgängen (5, 6, 8, 9); BY Geo5/7/10
   (Geo11 nach Jg 10 zählt nicht); NW Stufe 1 = 5-6, Stufe 2 = 7-10.
-- Gleichstand: requires, dann SiLP-Hinweis (NRW-Umsetzungsbeispiel), dann die frühere Stufe; Stimmen 5-6 und 9-10
-  oder drei verschiedene → die mittlere.
+- Gleichstand (erste Fassung): requires, dann SiLP-Hinweis (NRW-Umsetzungsbeispiel), dann die frühere Stufe; Stimmen
+  5-6 und 9-10 oder drei verschiedene → die mittlere.
+- Nacharbeit nach der Sichtung aller Karten (Nutzer/in, 2026-11-07, verbindlich): Gleichstand → die frühere Stufe,
+  außer requires erzwingt die spätere; das SiLP stimmt nie mit und entscheidet nie. Neu abgestimmt: die 15 bisher
+  über das SiLP entschiedenen Bausteine. Geändert: `schalenbau` 7-8 → 5-6; `bevoelkerungswachstum`, `altersstruktur`
+  9-10 → 7-8; daraus `tragfaehigkeit` 9-10 → 7-8 (Mehrheit, die Begründung über requires entfällt). Die übrigen 12
+  bleiben 7-8, nur mit neuer Begründung.
+- Nacharbeit: Querverweis `# Siehe auch: biologie/klimawandel` über `klimawandel-ursachen` und `klimawandel-folgen`
+  (Biologie verweist zurück). Regel 2 (Fremdsprachen) gilt nicht; gemeinsame Strang-ids betreffen Erdkunde nicht.
+  Ids bleiben.
 
 ## Notes
 - Vorbilder: `map/physik.yaml` (Kommentare), `map/musik.yaml` (Fach ohne KMK-Standards).
@@ -58,7 +66,7 @@ Lehrplan G9 Hessen, LehrplanPLUS Bayern Geographie, KLP NRW Erdkunde G9. Teil de
 
 ### Completed
 - [x] 128 Bausteine: orientierung 23, erde 19, klima 24, landwirtschaft 18, wirtschaft 15, siedlung 13,
-      entwicklung 16 (51 × 5-6, 53 × 7-8, 24 × 9-10; 7 schwach belegt)
+      entwicklung 16 (51 × 5-6, 53 × 7-8, 24 × 9-10; 7 schwach belegt); nach der Nacharbeit 52 × 5-6, 55 × 7-8, 21 × 9-10
 - [x] `map/erdkunde.yaml` erzeugt; `.vibe/research-erdkunde.md` erzeugt
 - [x] `npm run build` (Seite `_site/map/erdkunde/` entsteht) und `npm test` laufen durch
 
@@ -71,6 +79,9 @@ Lehrplan G9 Hessen, LehrplanPLUS Bayern Geographie, KLP NRW Erdkunde G9. Teil de
 ### Completed
 - [x] Ein Commit `feat(map): the learning map Erdkunde`, Push nach `origin/feat/map-erdkunde`
 - [x] Bericht für den PR im Scratchpad (`reports/erdkunde.md`)
+- [x] Nacharbeit: Gleichstände ohne SiLP neu abgestimmt, Kommentare angepasst, Querverweis Biologie; `npm run build`
+      und `npm test` laufen durch; Commit `fix(map): Erdkunde after the review of all maps`, Push
+- [x] Abschnitt „Nacharbeit“ für den PR im Scratchpad (`reports/erdkunde-update.md`)
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
