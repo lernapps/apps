@@ -16,6 +16,10 @@ ev. Religion, kath. Religion, Ethik.
 - Architektur: Ein neues Fach ist nur eine neue Datei `map/<fach>.yaml`; `lib/map.js` lädt alle Dateien in `map/`.
   Kein Code, kein neues Konzept, also keine Änderung an Plattform-Design oder arc42-Doku.
 - Kein Lehrplan (`curricula/`) im ersten Schritt, wie bei Physik, Chemie und Musik.
+- Umfang (Nutzer/in, 2026-11-07): keine Zielgröße. Maßstab ist, den Inhalt möglichst gut lehren zu können. Regel im
+  Skill `map-research` ergänzt. Folge für Biologie: Die Zusammenlegungen aus Recherche 3.3, die nur der Größe dienten,
+  werden wieder getrennt, wo zwei Seiten besser lehren.
+- Verhalten (`tierkommunikation`, `verhalten-und-lernen`) kommt in den Strang `umwelt` (Nutzer/in; HE und BY nennen es).
 
 ## Notes
 - Vorbild: `map/physik.yaml` (Kopfkommentar mit Quellenkürzeln, ein Kommentar je Baustein).
