@@ -738,6 +738,7 @@ strands:
         iCan: "Ich kann wichtige Orte der Stadt Rom wie Forum, Kapitol, Kolosseum und Circus Maximus nennen und ihre Aufgabe erklären."
         gradeBand: "5-6"
       # HE 7 3.1 Privates und öffentliches Leben (Familie); BY L6 LB3 (Familie, Namensgebung); NW St1 IF1 Gesellschaft (römische Familie); KC 7.1 Römischer Alltag und Privatleben (Familia Romana). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit)
+      # Siehe auch: geschichte/roemische-familie
       - id: roemische-familie
         iCan: "Ich kann die römische familia mit pater familias, Frau, Kindern und Sklaven beschreiben und mit Familien heute vergleichen."
         gradeBand: "5-6"
@@ -776,6 +777,7 @@ strands:
         gradeBand: "7-8"
         requires: [roemische-goetter]
       # HE 7 3.5 Antike Mythologie (Gründungssage Roms); BY L6 LB3 (Gründungsmythos: Aeneas, Romulus und Remus); NW St1 IF1 Staat und Politik (Frühgeschichte); Mythos (griechisch-römische Mythen). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit)
+      # Siehe auch: geschichte/gruendungssage-roms
       - id: gruendungsmythos
         iCan: "Ich kann die Sage von Aeneas sowie von Romulus und Remus erzählen und erklären, was sie für das Selbstbild der Römer bedeutet."
         gradeBand: "5-6"
@@ -791,11 +793,13 @@ strands:
         gradeBand: "7-8"
         requires: [roemische-goetter]
       # HE 7 3.3 Gestalten der Geschichte (Könige); BY L6 LB3 (Königszeit, Vertreibung des Tarquinius Superbus, frühe Republik); NW St1 IF1 Staat und Politik (Frühgeschichte, Republik). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit)
+      # Siehe auch: geschichte/roemische-republik
       - id: koenigszeit-und-republik
         iCan: "Ich kann erzählen, wie Rom nach der Sage von Königen regiert wurde und warum die Römer die Republik gründeten."
         gradeBand: "5-6"
         requires: [gruendungsmythos]
       # HE 7 3.2 Staat und Gesellschaft (Stände; cursus honorum); BY L6 LB3 (Senat und Senatoren, Volksversammlung und Volkstribunat); L7 (römische „Mischverfassung“); NW St1 IF1 (grundlegende Strukturen der römischen Gesellschaft und Politik darstellen); KC 7.1 Kulturkompetenz (Grundelemente der Verfassung Roms). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit)
+      # Siehe auch: geschichte/roemische-republik
       - id: senat-und-magistrate
         iCan: "Ich kann die Aufgaben von Senat, Volksversammlung, Konsuln und Volkstribunen in der Republik erklären."
         gradeBand: "5-6"
@@ -821,11 +825,13 @@ strands:
         gradeBand: "7-8"
         requires: [cursus-honorum]
       # HE 7 3.3 Gestalten der Geschichte (Kaiser); 10 (pax Romana); BY L7 LB3 (Augusteische Zeit, Restaurationsbestrebungen, pax Augusta); NW St2 IF1 Staat und Politik (Republik und Prinzipat). Stimmen HE/BY/NW 5-6 | 5-6 | 7-8/9-10 -> 5-6 (Mehrheit; Klumpen verteilt: Rang 22/36 im Strang -> 7-8). Richtstufe 7-8
+      # Siehe auch: geschichte/caesar-und-augustus
       - id: augustus-und-prinzipat
         iCan: "Ich kann erklären, wie Augustus die Herrschaft eines Einzelnen (Prinzipat) begründete und was die pax Augusta war."
         gradeBand: "7-8"
         requires: [ende-der-republik]
       # HE 9 3.2 Staat und Gesellschaft (Rom und die Christen); BY L8 LB3 (frühe, mittlere und späte Kaiserzeit; Aufkommen und Verbreitung des Christentums); KC 7.1 Mythologie und Religion (christliche Religion). Stimmen HE/BY/NW 7-8 | 7-8 | – -> 7-8 (Mehrheit; Klumpen verteilt: Rang 28/36 im Strang -> 9-10). Richtstufe 9-10. NW nennt das Christentum nicht
+      # Siehe auch: geschichte/christen-im-roemischen-reich
       - id: kaiserzeit-und-christentum
         iCan: "Ich kann Grundzüge der Kaiserzeit beschreiben und erklären, wie sich das Christentum im Römischen Reich ausbreitete."
         gradeBand: "9-10"
@@ -836,11 +842,13 @@ strands:
         gradeBand: "9-10"
         requires: [kaiserzeit-und-christentum]
       # HE 7 3.2 Staat und Gesellschaft (Leben in den Provinzen); BY L7 LB3 (Ausdehnung des Imperium Romanum; provincia, Verwaltungsstrukturen); NW St1 IF1 privates und öffentliches Leben (Provinzen); KC 7.1 Geographie, Geschichte und politisches Leben (Provinzen). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit; Klumpen verteilt: Rang 20/36 im Strang -> 7-8). Richtstufe 7-8
+      # Siehe auch: geschichte/expansion-roms, geschichte/romanisierung
       - id: provinzen-und-imperium
         iCan: "Ich kann die Ausdehnung des Imperium Romanum auf einer Karte zeigen und erklären, wie Rom seine Provinzen verwaltete."
         gradeBand: "7-8"
         requires: [punische-kriege]
       # HE 7 3.7 Spuren der Römer in Hessen und Deutschland (Limes, Saalburg, römische Städte); BY L8 LB3 (Limes; Römer und Germanen in der Kaiserzeit). Stimmen HE/BY/NW 5-6 | 7-8 | – -> 5-6 (Gleichstand 5-6/7-8, ohne Bindung durch requires: frühere Stufe; Klumpen verteilt: Rang 24/36 im Strang -> 7-8). Richtstufe 7-8. NW nennt nur allgemein die Provinzen
+      # Siehe auch: geschichte/limes
       - id: roemer-in-germanien
         iCan: "Ich kann Spuren der Römer in Deutschland nennen, zum Beispiel den Limes und römische Städte, und das Verhältnis von Römern und Germanen beschreiben."
         gradeBand: "7-8"
