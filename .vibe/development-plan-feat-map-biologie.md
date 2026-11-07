@@ -61,17 +61,48 @@ ev. Religion, kath. Religion, Ethik.
 - Quellen sind gelesen, Stränge und Kandidaten für Bausteine sind notiert.
 
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [ ] Freigabe des Plans durch die Nutzerin / den Nutzer
 
 ### Completed
-*None yet*
+- [x] Strategie festgelegt (siehe unten)
+
+### Strategy
+1. **Daten:** Die Rohdaten der Recherche (`gen/data.py`, je Baustein Fundstellen und Stimmen) sind die Quelle; ein
+   Skript erzeugt daraus `map/biologie.yaml`. Generator bleibt im Scratchpad, nicht im Repository (es gibt keinen
+   Generator für andere Fächer). Die Recherche liegt als `.vibe/research-biologie.md` bei.
+2. **Trennen** (Recherche 3.3; je Teil eine eigene App-Seite, Fundstellen je Teil aus der Recherche):
+   Skelett | Gelenke · Energiebedarf | ausgewogene Ernährung · Nährstoffe | Nährstoffnachweise · Blut | Herz und
+   Kreislauf · Nervenzelle | Synapse · Hormone | Hormon- und Nervensystem vergleichen · Blutzuckerregulation | Diabetes ·
+   spezifische Abwehr | Allergie · Infektionskrankheiten | Hygiene · Geschlechtsorgane | Menstruationszyklus ·
+   Befruchtung | Schwangerschaft und Geburt · Artbegriff | Artbildung · natürliches System | Stammbaum ·
+   Proteinbiosynthese | Gen-Merkmal-Beziehung · Karyogramm | Trisomie 21 | Pränataldiagnostik · Wirbellose | Insekten ·
+   Züchtung | Nutztierhaltung · angeborenes Verhalten | Konditionierung · Bakterienzelle | Vermehrung der Bakterien ·
+   Enzyme | Enzymaktivität (Temperatur, pH). Nicht getrennt: Fotosynthese mit ihrer Bedeutung (eine Seite).
+3. **Richtstufe neu abstimmen** nach der Regel im Skill („7-10“ zählt für beide Stufen; Gleichstand über `requires`);
+   jeder Teil bekommt eigene Stimmen. Overrides der Recherche nur behalten, wo die Regel keine Mehrheit ergibt.
+4. **requires prüfen:** nur direkte Voraussetzungen; nach dem Trennen die Kanten auf den passenden Teil setzen
+   (z. B. `synapse` → `nervenzelle`; `diabetes` → `blutzuckerregulation`).
+5. **Datei schreiben** im Stil von `map/physik.yaml`: Kopfkommentar mit Quellenkürzeln (KMK, HE, BY, NW), je Baustein
+   ein Kommentar mit Fundstellen und Abstimmung, „schwach belegt“ markiert; `name` und Strang-Namen `{ de, en }`.
+6. **Prüfen:** Skript `check.py` (ids, „Ich kann“, requires, Richtstufen, Zyklen), dann `npm run build`, `npm test`;
+   Fachseite `/map/biologie/` im Build ansehen.
+7. **Bericht** für den Pull Request: Quellen, Entscheidungen, offene Punkte (aus der Recherche, aktualisiert).
+
+### Risks
+- Bayern entscheidet faktisch 7-8 gegen 9-10; im Bericht offen benennen.
+- Sensible Themen (sexuelle Vielfalt, Schwangerschaftsabbruch) stehen verbindlich in allen drei Ländern und kommen
+  in die Karte; ob eine App sie behandelt, ist eine spätere Entscheidung.
 
 ## Code
 ### Entrance Criteria
 - Stränge, Bausteinliste und Richtstufen sind abgestimmt.
 
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [ ] Bausteine trennen (Strategie 2) in den Rohdaten
+- [ ] Richtstufen neu abstimmen, requires anpassen (Strategie 3, 4)
+- [ ] `map/biologie.yaml` erzeugen (Strategie 5)
+- [ ] Prüfen: check.py, `npm run build`, `npm test`, Fachseite ansehen (Strategie 6)
+- [ ] Bericht für den Pull Request (Strategie 7)
 
 ### Completed
 *None yet*
