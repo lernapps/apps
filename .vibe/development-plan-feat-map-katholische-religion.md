@@ -15,6 +15,11 @@ Bischofskonferenz; Länder: Hessen, Bayern, NRW. Teil der Reihe aus `feat/map-bi
 - Quelle: DBK Nr. 116 (24.06.2025) statt Nr. 78 (2004), weil sie die Fassung 2004 fortschreibt (neueste Fassung).
   Die Länderpläne folgen noch 2004; Fundstellen nennen beide.
 - Stränge = die sechs Bereiche der DBK 2025; NRW IF6 und IF7 zusammen im Strang `religionen`.
+- Nacharbeit (Nutzer/in nach Sichtung aller Karten, 2026-11-07): Strang-ids nach der Ontologie der Religionslehren
+  (`mensch`, `gott`, `bibel`, `jesus-christus`, `kirche`, `religionen`, `ethik`), deutsche Namen nach DBK bleiben.
+  Neuer Strang `ethik` („Ethik und Verantwortung“): alle drei Länder nennen Inhalte zum Handeln (HE Mensch und Welt,
+  BY KR9 LB1/KR10 LB1, NW IF1); zehn Bausteine aus `mensch` verschoben. Gleichstand → frühere Stufe (geprüft, 18 Fälle).
+  Baustein-ids bleiben; 86 Kommentare `# Siehe auch: evangelische-religion/<id>`.
 - Sprache neutral: Wissen über Glauben und Praxis, kein Bekenntnis (Abstimmung mit Evangelischer Religion).
 - Gleichstand ohne zwingendes requires: die frühere Stufe (Recherche 4.3).
 - Kein Lehrplan (`curricula/`): HE und NW nennen nur Doppelstufen bzw. Spannen.
@@ -67,6 +72,9 @@ Bischofskonferenz; Länder: Hessen, Bayern, NRW. Teil der Reihe aus `feat/map-bi
 - [x] Diff geprüft: nur Karte, Recherche und Plan; keine Modellbezeichnung
 - [x] Commit auf `feat/map-katholische-religion` und Push
 - [x] Bericht für den PR im Scratchpad (`reports/katholische-religion.md`)
+- [x] Nacharbeit: Strang-ids umbenannt, Strang `ethik` angelegt, Gleichstände geprüft, Querverweise auf Evangelische
+      Religion; Recherche und Karte neu erzeugt; `npm run build` und `npm test`; Commit und Push;
+      Abschnitt „Nacharbeit“ (`reports/katholische-religion-update.md`)
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
