@@ -14,10 +14,18 @@ Sek-I-Fächer (Pilot: `feat/map-biologie`), ein Fach je Branch.
 - Es gibt keine KMK-Bildungsstandards Latein, auch nicht für das Abitur (nur EPA 1980/2005). `source` ist die
   KMK-Vereinbarung über das Latinum (2005), der gemeinsame Bezug der Länder.
 - Basis ist Latein als 2. Fremdsprache: HE Lehrplan G9 (Jg 7–10) mit KC 2011, BY LehrplanPLUS (L2 Jg 6–8, Latein 9/10),
-  NW KLP 2019 Kap. 2.2 (Stufe 1 = 7-8, Stufe 2 = 9-10).
+  NW KLP 2019 Kap. 2.2 (zwei Stufen ohne Jahrgang).
 - Stränge: `wortschatz`, `formenlehre`, `satzlehre`, `texte`, `antike-kultur` (gemeinsame Inhaltsbereiche der Länder
   und der Latinum-Vereinbarung).
 - Gleichstand: früheste der gleich starken Stufen, die `requires` erlaubt.
+- Nacharbeit nach der Sichtung aller Karten (Nutzer/in, 2026-11-07, verbindlich):
+  - Richtstufe = Drittel des Lehrgangs (Regel 2): HE L2 ab Jg 7 (n = 4), BY L2 ab Jg 6 (n = 5), NW L2 ab Jg 7 mit
+    Stufe 1 = Lernjahre 1–2 (5-6/7-8) und Stufe 2 = Lernjahre 3–4 (7-8/9-10); KC Spracherwerb = Lernjahre 1–3,
+    Latinum = Lernjahr 4. Das SiLP stimmt nicht mit. Gleichstand → frühere Stufe, außer `requires` erzwingt die spätere.
+  - Klumpen: Nach den Stimmen lägen 107 von 176 in 5-6; `wortschatz`, `formenlehre`, `satzlehre` und `antike-kultur`
+    hätten mehr als die Hälfte in einer Stufe. Diese Stränge sind entlang `requires` in Drittel geteilt (Reihenfolge:
+    requires, Stufe der Stimmen, Median der Lage im Lehrgang, Datei). Ergebnis 61 / 55 / 60.
+  - Strang-ids geprüft: genau die Ontologie für alte Sprachen; keine Umbenennung nötig. Baustein-ids unverändert.
 
 ## Notes
 - Vorbilder: `map/physik.yaml`, `map/musik.yaml`; Format: `docs/learning-map-contract.md`.
@@ -65,6 +73,10 @@ Sek-I-Fächer (Pilot: `feat/map-biologie`), ein Fach je Branch.
 ### Completed
 - [x] Ein Commit mit `map/latein.yaml` und `.vibe/`; Push auf `feat/map-latein`
 - [x] Bericht für den PR im Scratchpad (`reports/latein.md`)
+- [x] Nacharbeit: Richtstufen nach Regel 2 neu berechnet, Klumpen in Drittel verteilt, Kommentare und Recherche
+      nachgezogen, Strang-ids gegen die Ontologie geprüft; `npm run build` und `npm test` laufen durch
+- [x] Nacharbeit: neuer Commit und Push auf `feat/map-latein`; Abschnitt „Nacharbeit“ im Scratchpad
+      (`reports/latein-update.md`)
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
