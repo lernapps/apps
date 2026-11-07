@@ -12,8 +12,11 @@
 #   NW  = Kernlehrplan Englisch Sek I Gymnasium NRW (G9, Heft 3417, 2019): EPS = bis Ende der Erprobungsstufe (Jg 6),
 #         S1 = bis Ende der ersten Stufe (Jg 8), S2 = bis Ende der zweiten Stufe (Jg 10); S. = Seite des Hefts.
 # Stimmen HE/BY/NW: HE und BY nach Jahrgang, NW nach Stufe (EPS 5-6, S1 7-8, S2 9-10); "5-10" = in mehreren Jahrgängen
-# genannt, zählt für jede Stufe. Zwei von drei entscheiden; bei drei verschiedenen die mittlere; bei zwei verschiedenen
-# Stimmen ohne dritte die spätere ("festgelegt"). SCHWACH = weniger als zwei Länder oder ein Land nur allgemein.
+# genannt, zählt für jede Stufe. Zwei von drei entscheiden; bei drei verschiedenen die mittlere; bei Gleichstand die
+# frühere, außer requires erzwingt die spätere. SCHWACH = weniger als zwei Länder oder ein Land nur allgemein.
+# Fremdsprache: Die Richtstufe ist die Stufe im Lehrgang. Englisch beginnt in HE, BY und NW in Jg 5 (6 Lernjahre bis
+# Jg 10), die drei Teile des Lehrgangs sind also die Jahrgangsstufen 5-6, 7-8, 9-10. Hielte eine Stufe mehr als die
+# Hälfte eines Strangs, ist sie entlang requires verteilt ("verteilt", mit Grund).
 # Genaue Titel, Ausgaben und URLs: .vibe/research-englisch.md.
 name: { de: Englisch, en: English }                # the file name is the subject's id: englisch
 source:
@@ -174,10 +177,10 @@ strands:
         iCan: "Ich kann im simple past mit did Fragen stellen und mit didn’t verneinen."
         gradeBand: "5-6"
         requires: [simple-past, simple-present-fragen]
-      # HE6 3.3 (past progressive, Kontrastierung mit simple past); BY E6 1.2 (past tense progressive); NW S1 S. 26 (past progressive) | 5-6/5-6/7-8 → 5-6 (Mehrheit)
+      # HE6 3.3 (past progressive, Kontrastierung mit simple past); BY E6 1.2 (past tense progressive); NW S1 S. 26 (past progressive) | 5-6/5-6/7-8 → 5-6 (Mehrheit) → 7-8 (verteilt: NW erst in S1; HE6 und BY E6 im 2. Lernjahr; setzt simple past und present progressive voraus, kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: past-progressive
         iCan: "Ich kann im past progressive sagen, was gerade im Gang war, als etwas anderes passierte (I was reading when …)."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [simple-past, present-progressive]
       # HE5 3.3 (be going to); BY E6 1.2 (going-to-future); NW EPS (going to-future) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: going-to
@@ -198,10 +201,10 @@ strands:
         iCan: "Ich kann im present perfect sagen, was schon passiert ist, auch mit ever, never, already und yet."
         gradeBand: "5-6"
         requires: [unregelmaessige-verben]
-      # HE6 3.3 (Kontrastierung mit dem simple past); BY E6 1.2; E7 5 (kontrastive Betrachtung der Tempora); NW EPS (simple past, present perfect) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # HE6 3.3 (Kontrastierung mit dem simple past); BY E6 1.2; E7 5 (kontrastive Betrachtung der Tempora); NW EPS (simple past, present perfect) | 5-6/5-6/5-6 → 5-6 (Mehrheit) → 7-8 (verteilt: Ende der Kette simple past → present perfect → Vergleich; HE6 und BY E6/E7 im 2. Lernjahr oder später; kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: present-perfect-oder-simple-past
         iCan: "Ich kann entscheiden, ob ich present perfect oder simple past brauche, und Signalwörter dafür nutzen."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [present-perfect, simple-past]
       # HE6 3.3 (Ausdruck der Dauer; since und for); BY E7 1.2 (present perfect simple / progressive); NW S1 S. 26 (Dauer ausdrücken) | 5-6/7-8/7-8 → 7-8 (Mehrheit)
       - id: since-for
@@ -228,20 +231,20 @@ strands:
         iCan: "Ich kann mit present progressive und simple present über feste Verabredungen und Fahrpläne in der Zukunft sprechen."
         gradeBand: "7-8"
         requires: [will-oder-going-to]
-      # HE8 3.3 (future II); BY –; NW S2 S. 34 (will-future progressive, will-future perfect) | 7-8/–/9-10 → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE8 3.3 (future II); BY –; NW S2 S. 34 (will-future progressive, will-future perfect) | 7-8/–/9-10 → 7-8 (Gleichstand: die frühere)
       - id: future-progressive-perfect
         iCan: "Ich kann mit „will be doing“ und „will have done“ über Abläufe und Ergebnisse in der Zukunft sprechen."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [will-future, present-perfect]
       # HE9 3.3 (past perfect progressive); BY –; NW S2 S. 34 (tense and aspect) | 9-10/–/9-10 → 9-10 (Mehrheit)
       - id: past-perfect-progressive
         iCan: "Ich kann im past perfect progressive ausdrücken, wie lange etwas vor einem Zeitpunkt in der Vergangenheit schon andauerte."
         gradeBand: "9-10"
         requires: [past-perfect, present-perfect-progressive]
-      # HE9 3.3 (dynamic and stative verbs); BY –; NW S1 S. 26 (dynamic and stative verbs) | 9-10/–/7-8 → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE9 3.3 (dynamic and stative verbs); BY –; NW S1 S. 26 (dynamic and stative verbs) | 9-10/–/7-8 → 7-8 (Gleichstand: die frühere)
       - id: dynamic-stative
         iCan: "Ich kann Zustandsverben wie know, like und belong erkennen, die man meist nicht in der Verlaufsform verwendet."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [simple-oder-progressive]
       # KMK LG S. 19 (grammatische Strukturen hinreichend korrekt; ESA: Vermischung von Zeitformen als typischer Fehler); HE9, HE10 3.3 (Revision: Zeiten; simple form/progressive form); BY E9 1.2 (Übersicht Tempus/Aspekt; Übersicht Zukunft); E10 (Zeitenfolge); NW S2 S. 34 (tense and aspect) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: zeiten-ueberblick
@@ -253,10 +256,10 @@ strands:
         iCan: "Ich kann mit could, may, might und should Möglichkeiten, Vermutungen und Ratschläge ausdrücken."
         gradeBand: "5-6"
         requires: [can-must]
-      # HE6 3.3 (Ersatzformen: have to, be able (allowed) to); BY E6 1.2 (Ersatzformen); NW S1 S. 26 (substitutes for modal auxiliaries) | 5-6/5-6/7-8 → 5-6 (Mehrheit)
+      # HE6 3.3 (Ersatzformen: have to, be able (allowed) to); BY E6 1.2 (Ersatzformen); NW S1 S. 26 (substitutes for modal auxiliaries) | 5-6/5-6/7-8 → 5-6 (Mehrheit) → 7-8 (verteilt: NW erst in S1; HE6 und BY E6 im 2. Lernjahr; folgt auf can-must und will-future, kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: modale-ersatzformen
         iCan: "Ich kann die Ersatzformen have to, be able to und be allowed to verwenden, auch in anderen Zeiten."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [can-must, will-future]
       # HE –; BY E9 1.2 (Modalverben: would, used to); NW S2 S. 35 (used to, would) | –/9-10/9-10 → 9-10 (Mehrheit)
       - id: used-to
@@ -298,10 +301,10 @@ strands:
         iCan: "Ich kann nach Verben wie look, sound, feel und taste ein Adjektiv verwenden (It tastes good.)."
         gradeBand: "7-8"
         requires: [adjektiv-oder-adverb]
-      # HE –; BY E7 1.2 (Adverbien: Steigerung, Vergleich); NW EPS (adverbs; comparison) | –/7-8/5-6 → 7-8 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE –; BY E7 1.2 (Adverbien: Steigerung, Vergleich); NW EPS (adverbs; comparison) | –/7-8/5-6 → 5-6 (Gleichstand: die frühere)
       - id: adverbien-steigern
         iCan: "Ich kann Adverbien steigern und damit Handlungen vergleichen (She runs faster than I do.)."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [adverbien-art-und-weise, adjektive-steigern]
       # HE7 3.3 (grundlegende Stellungsregeln, z. B. nach dem 1. Hilfsverb); BY E7 1.2 (Stellung im Satz); E8 (Stellung, weitere Verwendungsmöglichkeiten); NW EPS (word order incl. adverbials of manner) | 7-8/7-8/5-6 → 7-8 (Mehrheit)
       - id: adverbien-stellung
@@ -357,10 +360,10 @@ strands:
       - id: relativsaetze
         iCan: "Ich kann notwendige Relativsätze mit who, which, that und whose bilden."
         gradeBand: "5-6"
-      # HE6 3.3 (contact clause); HE7 (auch mit Präpositionen); BY E6 1.2 (contact clauses); NW S1 S. 26 (contact clause) | 5-6/5-6/7-8 → 5-6 (Mehrheit)
+      # HE6 3.3 (contact clause); HE7 (auch mit Präpositionen); BY E6 1.2 (contact clauses); NW S1 S. 26 (contact clause) | 5-6/5-6/7-8 → 5-6 (Mehrheit) → 7-8 (verteilt: NW erst in S1; HE6 und BY E6, HE7 mit Präpositionen; folgt auf relativsaetze, kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: contact-clauses
         iCan: "Ich kann Relativsätze ohne Relativpronomen bilden, wenn das Pronomen Objekt ist (the book I read)."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [relativsaetze]
       # HE8 3.3 (Hinweis auf defining und non-defining clauses); BY E9 1.2 (Relativsätze: non-defining); NW S1 S. 26 (relative clauses (non-defining)) | 7-8/9-10/7-8 → 7-8 (Mehrheit)
       - id: relativsaetze-nicht-notwendig
@@ -372,10 +375,10 @@ strands:
         iCan: "Ich kann mit „which“ einen Relativsatz an einen ganzen Satz anschließen (He was late, which annoyed me.)."
         gradeBand: "9-10"
         requires: [relativsaetze-nicht-notwendig]
-      # HE6 3.3 (although; so that); BY E6 1.2 (although, so that, while); NW S1 S. 26 (contrast, concession); S2 (purpose) | 5-6/5-6/7-8 → 5-6 (Mehrheit)
+      # HE6 3.3 (although; so that); BY E6 1.2 (although, so that, while); NW S1 S. 26 (contrast, concession); S2 (purpose) | 5-6/5-6/7-8 → 5-6 (Mehrheit) → 7-8 (verteilt: NW erst in S1 und S2; HE6 und BY E6 im 2. Lernjahr; folgt auf konjunktionen, kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: konjunktionen-although
         iCan: "Ich kann Gegensätze und Absichten mit although, while, whereas und so that ausdrücken."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [konjunktionen]
       # HE7 3.3 (indirekte Rede ohne back shift); BY E7 5 Sprachreflexion (erste Einblicke in indirekte Aussagesätze); NW S1 S. 26 (reported speech) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: reported-speech
@@ -407,10 +410,10 @@ strands:
         iCan: "Ich kann das Passiv auch im present perfect, im will-future und mit Modalverben bilden (It has been sold. It can be done.)."
         gradeBand: "7-8"
         requires: [passiv, present-perfect, will-future]
-      # HE –; BY E8 1.2 (Verben mit zwei Objekten); NW S2 S. 34 (personal passive (verbs with two objects)) | –/7-8/9-10 → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben) Hinweis: BY nennt Verben mit zwei Objekten neben dem Passiv, aber nicht ausdrücklich das persönliche Passiv.
+      # HE –; BY E8 1.2 (Verben mit zwei Objekten); NW S2 S. 34 (personal passive (verbs with two objects)) | –/7-8/9-10 → 7-8 (Gleichstand: die frühere) Hinweis: BY nennt Verben mit zwei Objekten neben dem Passiv, aber nicht ausdrücklich das persönliche Passiv.
       - id: passiv-zwei-objekte
         iCan: "Ich kann bei Verben mit zwei Objekten das persönliche Passiv bilden (I was given a book.)."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [passiv-zeiten]
       # HE8 3.3 (Gerundium als Subjekt und Objekt); BY E8 1.2 (Gerund als Subjekt; avoid doing sth.); E5 Wortschatz (I like doing); NW S1 S. 26 (gerund) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: gerund
@@ -466,15 +469,15 @@ strands:
         iCan: "Ich kann entscheiden, wann ich „the“ weglasse, zum Beispiel bei allgemeinen Aussagen (Life is short.) und bei school, church oder bed."
         gradeBand: "7-8"
         requires: [artikel]
-      # KMK LG S. 19 (ESA: unzureichend markierte Subjekt-Verb-Kongruenz als typischer Fehler); HE9 3.3 (zählbare und nichtzählbare Nomen; Numeruskongruenz); BY E8 1.2 (Kongruenz); E5 Wortschatz (uncountables information, homework); NW – | 9-10/7-8/– → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # KMK LG S. 19 (ESA: unzureichend markierte Subjekt-Verb-Kongruenz als typischer Fehler); HE9 3.3 (zählbare und nichtzählbare Nomen; Numeruskongruenz); BY E8 1.2 (Kongruenz); E5 Wortschatz (uncountables information, homework); NW – | 9-10/7-8/– → 7-8 (Gleichstand: die frühere)
       - id: nomen-kongruenz
         iCan: "Ich kann bei Nomen wie news, information, advice und police das Verb richtig anpassen."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [simple-present, much-many]
-      # HE10 3.3 (Adjektive als Nomen); BY E8 1.2 (substantivierte Adjektive); NW – | 9-10/7-8/– → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE10 3.3 (Adjektive als Nomen); BY E8 1.2 (substantivierte Adjektive); NW – | 9-10/7-8/– → 7-8 (Gleichstand: die frühere)
       - id: substantivierte-adjektive
         iCan: "Ich kann Adjektive als Nomen für Gruppen von Menschen verwenden (the rich, the elderly)."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [adjektive, artikel]
 
   # KMK 2.1 Verfügen über sprachliche Mittel: Lexiko-Grammatik, Wortschatz (S. 18 f.)
@@ -530,10 +533,10 @@ strands:
       - id: freizeit-hobbys
         iCan: "Ich kann über meine Hobbys, Haustiere und meine Freizeit sprechen."
         gradeBand: "5-6"
-      # HE6 2.1 (Sport; TV); BY E6 1.2 (Sport, Musik); E6 5; NW EPS (Sport) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # HE6 2.1 (Sport; TV); BY E6 1.2 (Sport, Musik); E6 5; NW EPS (Sport) | 5-6/5-6/5-6 → 5-6 (Mehrheit) → 7-8 (verteilt: HE6 und BY E6 im 2. Lernjahr; folgt auf freizeit-hobbys und führt zu jugendkultur (9-10); 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: sport-musik
         iCan: "Ich kann über Sportarten, Musik und Fernsehen sprechen und sagen, was ich mag."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [freizeit-hobbys]
       # HE5 2.1 (Tagesablauf); BY E5 5 (Tages- und Jahresablauf); NW EPS (Alltag) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: tagesablauf
@@ -545,18 +548,18 @@ strands:
         iCan: "Ich kann Orte in der Stadt benennen und einen einfachen Weg beschreiben."
         gradeBand: "5-6"
         requires: [praepositionen-ort, imperativ]
-      # HE6 2.3 (Verkehrsmittel und Verkehrswege in und nach GB); BY E6 1.2 (Reisen); E6 5 (Bahnhof, Flughafen, Ticketschalter); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
+      # HE6 2.3 (Verkehrsmittel und Verkehrswege in und nach GB); BY E6 1.2 (Reisen); E6 5 (Bahnhof, Flughafen, Ticketschalter); NW – | 5-6/5-6/– → 5-6 (Mehrheit) → 7-8 (verteilt: HE6 und BY E6 im 2. Lernjahr, NW nennt es nicht; kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: reisen-verkehr
         iCan: "Ich kann Verkehrsmittel benennen und mich am Bahnhof oder Flughafen verständigen, zum Beispiel eine Fahrkarte kaufen."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
       # HE5 Aufgabengebiet Gesundheitserziehung (Arztbesuch); BY E6 1.2 (Gesundheit); E6 5 (Arzt/Apotheke); NW – | 5-6/5-6/– → 5-6 (Mehrheit) Hinweis: HE nennt den Arztbesuch nur unter den Aufgabengebieten.
       - id: gesundheit
         iCan: "Ich kann Körperteile und Beschwerden benennen und beim Arzt oder in der Apotheke sagen, was mir fehlt."
         gradeBand: "5-6"
-      # HE6 2.2 (Freundschaften und Beziehungen; bullying; Schlichtung von Streitigkeiten); HE8 (dating); BY –; NW S1 S. 28 (Leben in der peer group, Freundschaft) | 5-6/–/7-8 → 7-8 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE6 2.2 (Freundschaften und Beziehungen; bullying; Schlichtung von Streitigkeiten); HE8 (dating); BY –; NW S1 S. 28 (Leben in der peer group, Freundschaft) | 5-6/–/7-8 → 5-6 (Gleichstand: die frühere)
       - id: gefuehle-freundschaft
         iCan: "Ich kann über Gefühle, Freundschaft und Streit sprechen, auch über Mobbing."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
       # HE10 2.2 (Media and communication); BY E7 5 (Mediennutzung Jugendlicher: Möglichkeiten und Gefahren); NW EPS (analoge und digitale Medien); S1 | 9-10/7-8/5-6 → 7-8 (drei verschiedene Stimmen: die mittlere)
       - id: medien
         iCan: "Ich kann über Medien und soziale Netzwerke sprechen, auch über ihre Chancen und Gefahren."
@@ -597,10 +600,10 @@ strands:
       - id: umschreiben
         iCan: "Ich kann ein Wort, das mir fehlt, mit anderen Wörtern, Synonymen oder Gegenteilen umschreiben."
         gradeBand: "7-8"
-      # HE6 1.1.2 (Erschließen von Vokabular über die Wortfamilie); HE7, HE8; BY E5 4 (Wortfelder, Wortfamilien); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
+      # HE6 1.1.2 (Erschließen von Vokabular über die Wortfamilie); HE7, HE8; BY E5 4 (Wortfelder, Wortfamilien); NW – | 5-6/5-6/– → 5-6 (Mehrheit) → 7-8 (verteilt: HE nennt es in Jg 6, 7 und 8; das Erschließen über die Wortfamilie braucht einen Grundwortschatz; kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: wortfamilien
         iCan: "Ich kann Wörter einer Wortfamilie erkennen und mit Vor- und Nachsilben neue Wörter erschließen (help, helpful, helpless)."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
       # HE10 3.3 (phrasal verbs); BY E5, E6, E7 1.2 (erste/einfache phrasal verbs); E10 (grundlegende phrasal verbs); NW – | 9-10/5-10/– → 9-10 (Mehrheit) Hinweis: BY nennt phrasal verbs in Jg 5, 6, 7 und 10; gezählt als Spanne 5-10.
       - id: phrasal-verbs
         iCan: "Ich kann häufige phrasal verbs wie give up, look after und find out verstehen und verwenden."
@@ -613,10 +616,10 @@ strands:
       - id: be-ae-wortschatz
         iCan: "Ich kann wichtige Unterschiede zwischen britischem und amerikanischem Wortschatz nennen (flat – apartment)."
         gradeBand: "7-8"
-      # HE9 1.2 (keine Kontraktionen im formalen geschriebenen Englisch); BY E8 1.2 (formeller und informeller Wortschatz); E9 2 (Register); NW – | 9-10/7-8/– → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE9 1.2 (keine Kontraktionen im formalen geschriebenen Englisch); BY E8 1.2 (formeller und informeller Wortschatz); E9 2 (Register); NW – | 9-10/7-8/– → 7-8 (Gleichstand: die frühere)
       - id: formell-informell
         iCan: "Ich kann formelle und informelle Wörter und Wendungen unterscheiden und passend zur Situation wählen."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [kurzformen]
       # HE10 3.2 (Vokabular für Äußerungen über Sprache und Texte); BY E9 1.2 (für die Texterschließung und -interpretation notwendige Fachbegriffe); NW S2 S. 34 (Vokabular zur Textbesprechung) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: text-fachbegriffe
@@ -655,19 +658,19 @@ strands:
       - id: silent-letters
         iCan: "Ich kann stumme Buchstaben wie in knife, write und listen erkennen und die Wörter richtig sprechen und schreiben."
         gradeBand: "5-6"
-      # HE6 3.4 (von der Schreibung auf die Lautung schließen; Homonyme see/sea); BY E5 1.2 (Zusammenhänge von Lautung und Schreibung); NW EPS (typische Laut-Buchstaben-Verbindungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # HE6 3.4 (von der Schreibung auf die Lautung schließen; Homonyme see/sea); BY E5 1.2 (Zusammenhänge von Lautung und Schreibung); NW EPS (typische Laut-Buchstaben-Verbindungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit) → 7-8 (verteilt: HE6 (von der Schreibung auf die Lautung schließen); folgt auf vokale und führt zu be-ae-schreibung (7-8); 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: laut-buchstabe
         iCan: "Ich kann typische Buchstabenverbindungen wie ee, ea und igh lesen und gleich klingende Wörter wie see und sea unterscheiden."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [vokale]
       # HE5 3.1 (rising/falling intonation); BY E6 1.2 (korrekte Intonation, besonders bei Fragen); NW EPS (Intonation einfacher Aussagesätze, Fragen und Aufforderungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: intonation-fragen
         iCan: "Ich kann Aussagen, Fragen und Aufforderungen mit der passenden Satzmelodie sprechen (steigend oder fallend)."
         gradeBand: "5-6"
-      # HE6 3.1 (Intonationsmuster, z. B. question tags); HE8; BY E6 1.2 (Intonation, besonders bei Fragen; question tags); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
+      # HE6 3.1 (Intonationsmuster, z. B. question tags); HE8; BY E6 1.2 (Intonation, besonders bei Fragen; question tags); NW – | 5-6/5-6/– → 5-6 (Mehrheit) → 7-8 (verteilt: Ende der Kette question-tags → Intonation; HE6 und HE8, BY E6, NW nennt es nicht; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: intonation-question-tags
         iCan: "Ich kann an der Satzmelodie eines question tags erkennen und zeigen, ob ich wirklich frage oder nur Zustimmung erwarte."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [question-tags, intonation-fragen]
       # HE5 3.3 (Lang- und Kurzformen); BY E5 5 (short forms); NW EPS (short/long forms) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: kurzformen
@@ -688,7 +691,7 @@ strands:
         iCan: "Ich kann die Betonung eines Wortes erkennen und richtig setzen, auch bei Paaren wie ˈpresent – preˈsent."
         gradeBand: "7-8"
         requires: [lautschrift]
-      # HE6 3.1 (Silbenabschwächung); BY –; NW S1 S. 27 (Vokale in unbetonten Silben) | 5-6/–/7-8 → 7-8 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE6 3.1 (Silbenabschwächung); BY –; NW S1 S. 27 (Vokale in unbetonten Silben) | 5-6/–/7-8 → 7-8 (Gleichstand; requires erzwingt die spätere)
       - id: schwache-formen
         iCan: "Ich kann unbetonte Silben und Wörter wie and, to und of abgeschwächt sprechen."
         gradeBand: "7-8"
@@ -784,10 +787,10 @@ strands:
         iCan: "Ich kann die Bedeutung von Henry VIII und Elizabeth I für England beschreiben."
         gradeBand: "7-8"
         requires: [normannen-1066]
-      # HE7 2.3 (Great Britain: city); BY E5 5 (London: bedeutende Sehenswürdigkeiten); NW – | 7-8/5-6/– → 7-8 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben) Hinweis: HE nennt nur „city“, nicht London.
+      # HE7 2.3 (Great Britain: city); BY E5 5 (London: bedeutende Sehenswürdigkeiten); NW – | 7-8/5-6/– → 5-6 (Gleichstand: die frühere) Hinweis: HE nennt nur „city“, nicht London.
       - id: london-sehenswuerdigkeiten
         iCan: "Ich kann wichtige Sehenswürdigkeiten Londons nennen und beschreiben."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [britische-inseln]
       # HE7 2.3 (Great Britain: city); BY E8 5 (London: Vielfalt einer Großstadt, Rolle als wirtschaftliches und kulturelles Zentrum); NW S1 S. 28 (Lebenswirklichkeiten im Vereinigten Königreich) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: london-heute
@@ -852,10 +855,10 @@ strands:
       - id: stereotype
         iCan: "Ich kann Klischees und Vorurteile über Länder und Menschen erkennen und hinterfragen."
         gradeBand: "7-8"
-      # SCHWACH. HE9/10 fakultativ (Einbeziehung weiterer englischsprachiger Länder); BY E8 5 (Kanada: Geographie und Gesellschaft; Inuit/First People); NW S2 S. 36 (ein weiteres anglophones Land, Wahl offen) | –/7-8/9-10 → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # SCHWACH. HE9/10 fakultativ (Einbeziehung weiterer englischsprachiger Länder); BY E8 5 (Kanada: Geographie und Gesellschaft; Inuit/First People); NW S2 S. 36 (ein weiteres anglophones Land, Wahl offen) | –/7-8/9-10 → 7-8 (Gleichstand: die frühere)
       - id: kanada
         iCan: "Ich kann Kanada vorstellen: Geographie, zwei Amtssprachen und die First Nations und Inuit."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [usa-ueberblick]
       # SCHWACH. HE9/10 fakultativ (Einbeziehung weiterer englischsprachiger Länder); BY E9 5 (Australien: Geschichte, postkoloniale Entwicklungen, Commonwealth, Aborigines; Neuseeland); NW S2 S. 36 (ein weiteres anglophones Land, Wahl offen) | –/9-10/9-10 → 9-10 (Mehrheit)
       - id: australien
@@ -955,10 +958,10 @@ strands:
       - id: text-gliedern
         iCan: "Ich kann einen Text in Einleitung, Hauptteil und Schluss gliedern und Absätze bilden."
         gradeBand: "7-8"
-      # HE –; BY E7 3 (Beschreibung von Personen und Orten); NW EPS (Zieltexte: Beschreibungen) | –/7-8/5-6 → 7-8 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE –; BY E7 3 (Beschreibung von Personen und Orten); NW EPS (Zieltexte: Beschreibungen) | –/7-8/5-6 → 5-6 (Gleichstand: die frühere)
       - id: personen-orte-beschreiben
         iCan: "Ich kann in einem Text eine Person oder einen Ort anschaulich beschreiben."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [familie-personen, adjektive]
       # KMK SCHR S. 16 (MSA: kurze Berichte; Beschreibungen eines Ereignisses); HE7 1.1 (Textarten: Berichte); BY E7 3 (Artikel für Schülerzeitung; berichtende Texte); NW S1 S. 30 (Zieltexte: Erfahrungsberichte) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: bericht-artikel
@@ -980,10 +983,10 @@ strands:
         iCan: "Ich kann eine Geschichte aus der Sicht einer anderen Figur neu erzählen."
         gradeBand: "7-8"
         requires: [figuren-ort-handlung, nacherzaehlen]
-      # HE7 1.2 (Fortführen und Ergänzen von Texten; changing a story line); BY E6 3 (Fortsetzen einfacher Geschichten); E8; NW – | 7-8/5-6/– → 7-8 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE7 1.2 (Fortführen und Ergänzen von Texten; changing a story line); BY E6 3 (Fortsetzen einfacher Geschichten); E8; NW – | 7-8/5-6/– → 5-6 (Gleichstand: die frühere)
       - id: geschichte-fortsetzen
         iCan: "Ich kann eine Geschichte fortsetzen oder ein anderes Ende dafür schreiben."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [geschichte-erzaehlen]
       # KMK SCHR S. 16 (ESA: eigene Eindrücke und Meinungen äußern); HE9 1.2 (Anfänge einer Argumentationsstruktur); HE10 (begründete Stellungnahme); BY E8 3 (nehmen Stellung, legen ihre Meinung dar, belegen mit Argumenten bzw. Beispielen); NW S1 S. 30 (Zieltexte: Stellungnahmen) | 9-10/7-8/7-8 → 7-8 (Mehrheit)
       - id: meinung-begruenden
@@ -1024,10 +1027,10 @@ strands:
         iCan: "Ich kann mich auf ein Vorstellungsgespräch vorbereiten und typische Fragen beantworten."
         gradeBand: "9-10"
         requires: [bewerbung]
-      # HE –; BY E9 3 (Leserbrief); NW S1 S. 30 (Zieltexte: (Leser-)Briefe) | –/9-10/7-8 → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE –; BY E9 3 (Leserbrief); NW S1 S. 30 (Zieltexte: (Leser-)Briefe) | –/9-10/7-8 → 7-8 (Gleichstand: die frühere)
       - id: leserbrief
         iCan: "Ich kann einen Leserbrief schreiben, der sich auf einen Artikel bezieht."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [meinung-begruenden]
       # HE10 1.2 (Stellungnahmen und Argumentationen); BY E9 3 (begründete Stellungnahmen); E10 (argumentative Texte); NW S2 S. 38 (Zieltexte: Stellungnahmen) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: kommentar
@@ -1074,10 +1077,10 @@ strands:
         iCan: "Ich kann eine Figur charakterisieren und meine Aussagen mit Textstellen belegen."
         gradeBand: "9-10"
         requires: [personen-orte-beschreiben, figuren-ort-handlung]
-      # HE9 1.2 (Erkennen des setting); HE10 (Atmosphäre); BY E8 3 (Darstellung von Ort und Zeit); NW – | 9-10/7-8/– → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # HE9 1.2 (Erkennen des setting); HE10 (Atmosphäre); BY E8 3 (Darstellung von Ort und Zeit); NW – | 9-10/7-8/– → 7-8 (Gleichstand: die frühere)
       - id: setting-atmosphaere
         iCan: "Ich kann beschreiben, wo und wann eine Geschichte spielt und wie die Sprache eine Stimmung erzeugt."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [figuren-ort-handlung]
       # HE7, HE8 1.1 (Textarten: Gedichte); BY E9 3 (Gedicht und Song); E10; NW S2 S. 37 (Gedichte) | 7-8/9-10/9-10 → 9-10 (Mehrheit)
       - id: gedicht-analysieren
@@ -1094,8 +1097,8 @@ strands:
         iCan: "Ich kann filmische Mittel wie Kameraeinstellung, Schnitt und Musik erkennen und ihre Wirkung beschreiben."
         gradeBand: "9-10"
         requires: [figuren-ort-handlung]
-      # KMK TM S. 22 (Texte in ein anderes Genre überführen); HE –; BY E10 3 (Umwandeln in eine andere Textsorte); NW S1 S. 30 (produktionsorientierte Verfahren) | –/9-10/7-8 → 9-10 (festgelegt: keine Mehrheit (zwei verschiedene Stimmen): die spätere, damit beide Länder ihn bis dahin behandelt haben)
+      # KMK TM S. 22 (Texte in ein anderes Genre überführen); HE –; BY E10 3 (Umwandeln in eine andere Textsorte); NW S1 S. 30 (produktionsorientierte Verfahren) | –/9-10/7-8 → 7-8 (Gleichstand: die frühere)
       - id: textsorte-umwandeln
         iCan: "Ich kann einen Text in eine andere Textsorte umschreiben, zum Beispiel eine Geschichte in einen Zeitungsbericht."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [perspektive-wechseln, bericht-artikel]
