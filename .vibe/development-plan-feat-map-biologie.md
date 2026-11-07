@@ -58,7 +58,7 @@ ev. Religion, kath. Religion, Ethik.
 3. Mendel-Genetik fehlt in Bayern; Richtstufe 9-10 per Stichentscheid.
 4. Klimawandel nur KMK; 9-10 gesetzt (wegen `kohlenstoffkreislauf`).
 5. Verhalten (`tierkommunikation`, `verhalten-und-lernen`): weder KMK noch NRW; vorläufig in `umwelt`.
-6. 92 Bausteine leicht über dem Ziel 60–90; Kandidaten zum Zusammenlegen in der Recherche.
+6. ~~92 Bausteine leicht über dem Ziel 60–90~~ (überholt: keine Zielgröße; nach dem Trennen 113 Bausteine).
 
 ## Plan
 ### Entrance Criteria
@@ -102,24 +102,28 @@ ev. Religion, kath. Religion, Ethik.
 - Stränge, Bausteinliste und Richtstufen sind abgestimmt.
 
 ### Tasks
-- [ ] Bausteine trennen (Strategie 2) in den Rohdaten
-- [ ] Richtstufen neu abstimmen, requires anpassen (Strategie 3, 4)
-- [ ] `map/biologie.yaml` erzeugen (Strategie 5)
-- [ ] Prüfen: check.py, `npm run build`, `npm test`, Fachseite ansehen (Strategie 6)
-- [ ] Bericht für den Pull Request (Strategie 7)
 
 ### Completed
-*None yet*
+- [x] Bausteine trennen (Strategie 2) in den Rohdaten: 20 Zusammenlegungen getrennt (Karyogramm, Trisomie 21 und
+      Pränataldiagnostik in drei Teile); Fundstellen und Stimmen je Teil aus den Quellen in `src-bio`; 92 → 113
+- [x] Richtstufen neu abgestimmt, requires angepasst (Strategie 3, 4): Overrides bei Mendel-Genetik entfallen
+      (requires entscheidet); `klimawandel` 9-10 → 7-8 (Abstimmung), requires jetzt `fotosynthese-und-zellatmung`,
+      `nachhaltigkeit`; `hygiene` 5-6 (alle drei Länder in Stufe 1); einziger Override `enzymaktivitaet` (nur BY)
+- [x] `map/biologie.yaml` erzeugt (Strategie 5): zellen 19, vielfalt 34, mensch 43, umwelt 17
+- [x] Geprüft (Strategie 6): check.py OK, `npm run build` (Seite `/map/biologie/` mit 113 Bausteinseiten), `npm test`
+      (93 bestanden, 1 übersprungen, 0 Fehler)
+- [x] Bericht für den Pull Request (Strategie 7); `.vibe/research-biologie.md` auf Stand 2
 
 ## Commit
 ### Entrance Criteria
 - `map/biologie.yaml` ist fertig; `npm run build` und `npm test` laufen durch.
 
 ### Tasks
-- [ ] *To be added when this phase becomes active*
 
 ### Completed
-*None yet*
+- [x] Diff geprüft: nur `map/biologie.yaml`, Recherche und Plan; keine Modellbezeichnung, keine Debug-Reste
+- [x] Offene Punkte für den PR gesammelt (Recherche Abschnitt 4)
+- [x] Commit auf `feat/map-biologie` (conventional, Body mit Intent / Key changes) und Push
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
