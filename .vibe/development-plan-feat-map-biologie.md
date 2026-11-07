@@ -30,6 +30,12 @@ ev. Religion, kath. Religion, Ethik.
   ein Branch `feat/map-<fach>` von `main`, eigener Plan `.vibe/development-plan-feat-map-<fach>.md`, ein PR je Fach.
   Die neuen Regeln des Skills kommen mit diesem Branch; die anderen Branches folgen ihnen bereits.
 
+- Nacharbeit (Nutzer/in, 2026-11-07, nach den 15 PRs): Gleichstand → frühere Stufe, für alle Fächer; Fremdsprachen
+  nach Lernjahr-Dritteln statt Jahrgang (Sprachen beginnen als 1., 2. oder 3. Fremdsprache), Reihenfolge wichtig,
+  Stufen sollen nicht klumpen; Bausteine gegen die Aufnahmeregel bleiben, solange sie passen; gemeinsame Strang-ids
+  (Ontologie) im Skill; gleicher Inhalt in zwei Fächern bleibt in beiden, mit Querverweis `Siehe auch:` im
+  Kommentar (kein neues Feld im Vertrag, damit kein Code nötig ist).
+
 ## Notes
 - Vorbild: `map/physik.yaml` (Kopfkommentar mit Quellenkürzeln, ein Kommentar je Baustein).
 - Format: `docs/learning-map-contract.md`; Prüfung: `npm run build`, `npm test`.
