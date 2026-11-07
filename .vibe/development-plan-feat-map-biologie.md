@@ -26,6 +26,10 @@ ev. Religion, kath. Religion, Ethik.
   ihre logische Struktur. Regel im Skill ergänzt.
 - Verhalten (`tierkommunikation`, `verhalten-und-lernen`) kommt in den Strang `umwelt` (Nutzer/in; HE und BY nennen es).
 
+- Autonom (Nutzer/in, 2026-11-07): keine Stopps an Phasengrenzen. Die übrigen 14 Fächer laufen parallel, je Fach
+  ein Branch `feat/map-<fach>` von `main`, eigener Plan `.vibe/development-plan-feat-map-<fach>.md`, ein PR je Fach.
+  Die neuen Regeln des Skills kommen mit diesem Branch; die anderen Branches folgen ihnen bereits.
+
 ## Notes
 - Vorbild: `map/physik.yaml` (Kopfkommentar mit Quellenkürzeln, ein Kommentar je Baustein).
 - Format: `docs/learning-map-contract.md`; Prüfung: `npm run build`, `npm test`.
@@ -61,10 +65,10 @@ ev. Religion, kath. Religion, Ethik.
 - Quellen sind gelesen, Stränge und Kandidaten für Bausteine sind notiert.
 
 ### Tasks
-- [ ] Freigabe des Plans durch die Nutzerin / den Nutzer
 
 ### Completed
 - [x] Strategie festgelegt (siehe unten)
+- [x] Freigabe (2026-11-07): Nutzer/in erlaubt, alles autonom umzusetzen, für alle Fächer, bis zum PR
 
 ### Strategy
 1. **Daten:** Die Rohdaten der Recherche (`gen/data.py`, je Baustein Fundstellen und Stimmen) sind die Quelle; ein
