@@ -39,6 +39,10 @@ ev. Religion, kath. Religion, Ethik.
   gleichmäßige Drittel, Englisch/Französisch/Spanisch „keine Stufe über die Hälfte“). Kann später vereinheitlicht werden.
 - CI rot in allen PRs: Ursache außerhalb dieses Repos (`@lernapps/tooling` 0.6.3, `skills` mit `--frozen-lockfile`
   unter `CI=true`); nicht durch die Karten.
+- Querverweise (Nutzer/in, 2026-11-07, Variante B): Das Schema kennt keine Querverweise; bis alle Karten gemergt
+  sind, bleiben sie Kommentare `# Siehe auch:`. Danach eigener Branch: Feld `seeAlso: [<fach>/<id>]` am Baustein
+  (Schema subject.v1, Vertrag, `lib/map.js` prüft Ziele über Fächer, Gegenrichtung berechnet, Anzeige „Siehe auch“,
+  Skill, Tests) und alle Kommentare in einem Schritt umstellen.
 
 ## Notes
 - Vorbild: `map/physik.yaml` (Kopfkommentar mit Quellenkürzeln, ein Kommentar je Baustein).
