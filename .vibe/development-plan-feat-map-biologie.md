@@ -35,6 +35,10 @@ ev. Religion, kath. Religion, Ethik.
   Stufen sollen nicht klumpen; Bausteine gegen die Aufnahmeregel bleiben, solange sie passen; gemeinsame Strang-ids
   (Ontologie) im Skill; gleicher Inhalt in zwei Fächern bleibt in beiden, mit Querverweis `Siehe auch:` im
   Kommentar (kein neues Feld im Vertrag, damit kein Code nötig ist).
+- Verteilung der Fremdsprachen (Nutzer/in, 2026-11-07): so, wie sie jetzt ist, erst einmal in Ordnung (Latein
+  gleichmäßige Drittel, Englisch/Französisch/Spanisch „keine Stufe über die Hälfte“). Kann später vereinheitlicht werden.
+- CI rot in allen PRs: Ursache außerhalb dieses Repos (`@lernapps/tooling` 0.6.3, `skills` mit `--frozen-lockfile`
+  unter `CI=true`); nicht durch die Karten.
 
 ## Notes
 - Vorbild: `map/physik.yaml` (Kopfkommentar mit Quellenkürzeln, ein Kommentar je Baustein).
