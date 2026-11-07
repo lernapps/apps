@@ -178,11 +178,13 @@ strands:
         gradeBand: "5-6"
         requires: [polis]
       # HE LP 6.5 (1): Gründungssage Roms 753 v. Chr.; BY G6 LB5: Narrationen zur Gründung Roms, Mythos und Geschichtsschreibung. Stimmen HE/BY/NW 5-6/5-6/–: Mehrheit
+      # Siehe auch: latein/gruendungsmythos
       - id: gruendungssage-roms
         iCan: "Ich kann die Sage von der Gründung Roms erzählen und erklären, wie sich ein Mythos von einem Geschichtsbericht unterscheidet."
         gradeBand: "5-6"
         requires: [quelle-und-darstellung]
       # HE LP 6.5 (1): Grundzüge der republikanischen Ordnung; BY G6 LB5: römische Republik, Grundbegriffe Senat, Republik, Diktator; NW IF2 (Stufe 1): res publica. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # Siehe auch: latein/koenigszeit-und-republik, latein/senat-und-magistrate
       - id: roemische-republik
         iCan: "Ich kann den Aufbau der römischen Republik mit Senat, Konsuln und Volksversammlung beschreiben."
         gradeBand: "5-6"
@@ -193,11 +195,13 @@ strands:
         gradeBand: "5-6"
         requires: [roemische-republik]
       # HE LP 6.5 (1): altrömische Familie; BY G6 LB7: Struktur und Aufgaben der „familia“; NW IF2 (Stufe 1): römische Familie; UK Werte antiker Erziehung. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # Siehe auch: latein/roemische-familie
       - id: roemische-familie
         iCan: "Ich kann beschreiben, wie eine römische Familie (familia) aufgebaut war und welche Rolle Vater, Mutter, Kinder und Sklaven hatten."
         gradeBand: "5-6"
         requires: [roemische-republik]
       # HE LP 6.5 (2): Etappen der Ausdehnung; BY G6 LB5: Ausdehnung des Imperium Romanum in Etappen (Karte); NW IF2 (Stufe 1): römische Expansion; KC HE: Entwicklung zum Imperium Romanum. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # Siehe auch: latein/provinzen-und-imperium
       - id: expansion-roms
         iCan: "Ich kann beschreiben, wie Rom vom Stadtstaat zum Weltreich wurde, und die Etappen auf einer Karte zeigen."
         gradeBand: "5-6"
@@ -208,6 +212,7 @@ strands:
         gradeBand: "5-6"
         requires: [expansion-roms, patrizier-und-plebejer]
       # HE LP 6.5 (2): Herausbildung der Alleinherrschaft, Caesar 44 v. Chr., Augustus, Pax Augusta; BY G6 LB5: von der Republik zum Prinzipat, Zeitalter des Augustus; NW IF2 (Stufe 1): Herrschaft im Imperium Romanum. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # Siehe auch: latein/augustus-und-prinzipat
       - id: caesar-und-augustus
         iCan: "Ich kann erklären, wie Caesar und Augustus die Alleinherrschaft errichteten und wie aus der Republik das Kaisertum (Prinzipat) wurde."
         gradeBand: "5-6"
@@ -218,16 +223,19 @@ strands:
         gradeBand: "5-6"
         requires: [roemische-republik]
       # HE LP 6.5 (3): Romanisierung der Provinzen; BY G6 LB5: römische Herrschaft in den Provinzen, Bayern; Grundbegriffe Romanisierung, Provinz; NW IF2 (Stufe 1) UK: Einfluss des Imperium Romanum auf die eroberten Gebiete. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # Siehe auch: latein/provinzen-und-imperium
       - id: romanisierung
         iCan: "Ich kann erklären, wie die Römer das Leben in den Provinzen prägten (Romanisierung), auch im Gebiet des heutigen Deutschlands."
         gradeBand: "5-6"
         requires: [expansion-roms]
       # HE LP 6.5 (3): Rom und die Germanen, Limes, Schlacht im Teutoburger Wald; BY G6 LB5: Grundbegriff Limes; G7 LB4: Handel und Kulturkontakt am Limes; NW IF2 (Stufe 1): Bauwerke vergleichen (Große Mauer – Limes). Hinweis: BY: Grundbegriff in Jg 6, Vertiefung im Längsschnitt Jg 7; gezählt Jg 6. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # Siehe auch: latein/roemer-in-germanien
       - id: limes
         iCan: "Ich kann erklären, was der Limes war und wie Römer und Germanen an dieser Grenze zusammenlebten und Handel trieben."
         gradeBand: "5-6"
         requires: [romanisierung]
       # HE LP 6.5 (3): Christentum, Christenverfolgung, Konstantinische Wende; BY G6 LB5: Christen im Römischen Reich, Verfolgung, Staatsreligion. Stimmen HE/BY/NW 5-6/5-6/–: Mehrheit
+      # Siehe auch: latein/kaiserzeit-und-christentum
       - id: christen-im-roemischen-reich
         iCan: "Ich kann beschreiben, wie die Christen im Römischen Reich erst verfolgt wurden und das Christentum dann Staatsreligion wurde."
         gradeBand: "5-6"
