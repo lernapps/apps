@@ -22,11 +22,13 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
   as many competencies as one app can cover in several school years.
 - **A competency** belongs in the map if the KMK names it, or two of the three Länder do, or it is a prerequisite of
   one of those. Fine-grained: one competency is what one page of an app can teach. The size of the map follows from
-  that, there is no target number: never merge competencies to keep a map small; split one when it teaches better. `iCan` starts with "Ich kann",
-  plain German; the id is stable once published.
-- **gradeBand:** vote per Land; two of three decide, with three different votes the middle one.
+  that, there is no target number: never merge competencies to keep a map small; split one when it teaches better.
+  `iCan` starts with "Ich kann", plain German; the id is stable once published.
+- **gradeBand:** exactly one per competency. Vote per Land; two of three decide, with three different votes the middle
+  one. A Land that names only a span ("7-10") votes for each band in it; a tie is broken by `requires`.
 - **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles.
-- **A curriculum** places only what its document places (`grades`, `unit` as it names it). Leave the rest out; never
+- **A curriculum** is added only when its document names single grades; a plan that names only spans ("7-10") gets
+  none. It places only what its document places (`grades`, `unit` as it names it). Leave the rest out; never
   guess a grade.
 - **Ids used by apps** stay. A change of an id is a migration of every app that uses it.
 

@@ -19,6 +19,11 @@ ev. Religion, kath. Religion, Ethik.
 - Umfang (Nutzer/in, 2026-11-07): keine Zielgröße. Maßstab ist, den Inhalt möglichst gut lehren zu können. Regel im
   Skill `map-research` ergänzt. Folge für Biologie: Die Zusammenlegungen aus Recherche 3.3, die nur der Größe dienten,
   werden wieder getrennt, wo zwei Seiten besser lehren.
+- Richtstufe (Nutzer/in, 2026-11-07): fein zuordnen, genau eine je Baustein. Nennt ein Land nur „7-10“, zählt die
+  Stimme für 7-8 und 9-10; Gleichstand entscheidet die logische Struktur (`requires`). Gilt für alle neuen Karten;
+  Physik und Chemie bleiben unverändert. Regel im Skill ergänzt.
+- Lehrpläne: keine `curricula/` für Pläne, die nur Doppelstufen nennen (HE, NW). Vorerst geht es nur um Inhalte und
+  ihre logische Struktur. Regel im Skill ergänzt.
 - Verhalten (`tierkommunikation`, `verhalten-und-lernen`) kommt in den Strang `umwelt` (Nutzer/in; HE und BY nennen es).
 
 ## Notes
@@ -28,7 +33,6 @@ ev. Religion, kath. Religion, Ethik.
 
 ## Explore
 ### Tasks
-- [ ] Offene Punkte mit der Nutzerin / dem Nutzer klären (siehe unten)
 
 ### Completed
 - [x] Created development plan file
@@ -39,6 +43,8 @@ ev. Religion, kath. Religion, Ethik.
 - [x] Stränge = die vier KMK-Inhaltsbereiche: `zellen`, `vielfalt`, `mensch`, `umwelt`
 - [x] 92 Bausteine mit Fundstellen, Stimmen und requires (Rohdaten: scratchpad `research-biologie.md`, `gen/data.py`)
       zellen 17, vielfalt 27, mensch 32, umwelt 16
+
+- [x] Offene Punkte geklärt (siehe Key Decisions)
 
 ### Findings / open points
 1. Zählweise Hessen (nur „5/6“ und „nach 9/10“) und NRW (nur Stufe 7–10): Recherche zählte „7-10“ als Stimme für beide;
