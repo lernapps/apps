@@ -24,14 +24,27 @@ ev. Religion, kath. Religion, Ethik.
 
 ## Explore
 ### Tasks
-- [ ] Quellen beschaffen und lesen: KMK Biologie MSA 2024; KC Hessen Biologie Sek I Gymnasium; LehrplanPLUS Bayern
-      Gymnasium (NT 5, Biologie 6–10); KLP NRW Biologie Sek I Gymnasium (2019)
-- [ ] Stränge festlegen (KMK-Basiskonzepte bzw. Inhaltsfelder) mit Begründung
-- [ ] Bausteine mit Quellen, Richtstufe (Abstimmung 2 von 3), requires sammeln
+- [ ] Offene Punkte mit der Nutzerin / dem Nutzer klären (siehe unten)
 
 ### Completed
 - [x] Created development plan file
 - [x] Repository erkundet: vorhandene Fächer, Vertrag, Skill `map-research`
+- [x] Quellen gelesen: KMK Biologie MSA (13.06.2024); KC Hessen Biologie Gymnasium (2011); LehrplanPLUS Bayern
+      online (NT 5, NT 6, Biologie 8–10; PDF-Gesamtlehrplan derzeit nicht abrufbar); KLP NRW Biologie G9 Heft 3413
+      (2019, über lehrplannavigator.nrw.de)
+- [x] Stränge = die vier KMK-Inhaltsbereiche: `zellen`, `vielfalt`, `mensch`, `umwelt`
+- [x] 92 Bausteine mit Fundstellen, Stimmen und requires (Rohdaten: scratchpad `research-biologie.md`, `gen/data.py`)
+      zellen 17, vielfalt 27, mensch 32, umwelt 16
+
+### Findings / open points
+1. Zählweise Hessen (nur „5/6“ und „nach 9/10“) und NRW (nur Stufe 7–10): Recherche zählte „7-10“ als Stimme für beide;
+   Physik/Chemie zählen die zweite Stufe Hessens als 9-10. Betrifft 3 Bausteine.
+2. In 7–10 entscheidet praktisch Bayern die Reihenfolge (Bayern: Nerven/Hormone 8, Genetik/Evolution 9, Immun 10).
+   Strang `vielfalt` hat daher keinen Baustein in 7-8.
+3. Mendel-Genetik fehlt in Bayern; Richtstufe 9-10 per Stichentscheid.
+4. Klimawandel nur KMK; 9-10 gesetzt (wegen `kohlenstoffkreislauf`).
+5. Verhalten (`tierkommunikation`, `verhalten-und-lernen`): weder KMK noch NRW; vorläufig in `umwelt`.
+6. 92 Bausteine leicht über dem Ziel 60–90; Kandidaten zum Zusammenlegen in der Recherche.
 
 ## Plan
 ### Entrance Criteria
