@@ -17,14 +17,23 @@ Hessen (G9), Bayern (LehrplanPLUS) und NRW (KLP G9). Teil der Reihe „ein Fach 
 - Bezug: KMK-Bildungsstandards erste Fremdsprache (Englisch/Französisch), i. d. F. 22.06.2023, nur für die Struktur;
   die KMK nennt keine Spanisch-Inhalte, darum entscheiden die Länder (zwei von drei).
 - Gezählt: HE und NW Spanisch als 2. Fremdsprache (ab Jg 7), BY Spanisch als 3. Fremdsprache (ab Jg 8; in BY gibt es
-  in der Sek I keine andere Form). Keine Stufe 5-6.
-- Stränge wie in der Karte Englisch: `grammatik`, `wortschatz`, `aussprache` (Aussprache und Rechtschreibung),
-  `landeskunde` (Länder und Kulturen).
-- Gleichstand: frühere Stufe, außer ein `requires` liegt in der späteren.
+  in der Sek I keine andere Form).
+- Stränge nach der Ontologie der modernen Fremdsprachen: `grammatik`, `wortschatz`, `aussprache` (Aussprache und
+  Rechtschreibung), `landeskunde` (Länder und Kulturen), `texte` (Texte und Medien).
+- Gleichstand: frühere Stufe, außer ein `requires` liegt in der späteren. Ein Schulbeispiel (SiLP) stimmt nie mit.
+- Nacharbeit nach der Sichtung aller Karten (Nutzer/in, 2026-11-07):
+  - Richtstufe = Stufe im Lehrgang: Stimme → Lernjahr y, Teil ⌊3·(y − ½)/n⌋ + 1. HE ab Jg 7 (n = 4), BY ab Jg 8
+    (n = 3), NW ab Jg 7 (n = 4) mit zwei Stufen ohne Jahrgang (S1 = Lernjahre 1–2 → 5-6 und 7-8, S2 = 3–4 → 7-8 und
+    9-10). Vorher 0 / 93 / 60, jetzt 81 / 84 / 19.
+  - Klumpen (eine Stufe > Hälfte eines Strangs) in grammatik, wortschatz, aussprache: Bausteine entlang `requires`
+    verteilt, Grund im Kommentar. Neue requires: `satzmelodie` → `betonung`, `kleinschreibung` → `datum`.
+  - Strang `texte` neu (31 Bausteine): alle vier Quellen tragen Text- und Medienkompetenz (KMK 2.3, HE 1.1/1.2,
+    BY Lernbereich 3, NW TM). Bestehende ids bleiben.
 
 ## Notes
 - Quellen, Tabellen und offene Punkte: `.vibe/research-spanisch.md`.
-- Rohdaten und Generator im Scratchpad (`gen-spanisch/data.py`, `gen.py`), nicht im Repository.
+- Rohdaten und Generator im Scratchpad (`gen-spanisch/data.py`, `gen.py`; Nacharbeit `gen-spanisch2/`), nicht im
+  Repository.
 
 ## Explore
 ### Tasks
@@ -56,6 +65,11 @@ Hessen (G9), Bayern (LehrplanPLUS) und NRW (KLP G9). Teil der Reihe „ein Fach 
 - [x] 153 Bausteine: grammatik 83, wortschatz 32, aussprache 15, landeskunde 23 (93 × 7-8, 60 × 9-10)
 - [x] Skriptprüfung: ids, iCan, mindestens zwei Länder, requires vorhanden, keine spätere Richtstufe, keine Zyklen
 - [x] `npm run build` (Seite `_site/map/spanisch/` entsteht) und `npm test` laufen durch
+- [x] Nacharbeit: Richtstufen nach Lernjahr neu berechnet (Generator `gen-spanisch2/gen2.py`, `votes.py`), Klumpen
+      verteilt, Kommentare mit Stimmen und Begründung neu
+- [x] Nacharbeit: Strang-ids gegen die Ontologie geprüft; Strang `texte` mit 31 Bausteinen ergänzt
+- [x] Nacharbeit: `.vibe/research-spanisch.md` (Quellen, Tabellen, Entscheidungen 3.2/3.3, offene Punkte) nachgezogen
+- [x] Nacharbeit: `npm run build` und `npm test` laufen durch
 
 ## Commit
 ### Entrance Criteria
@@ -65,3 +79,4 @@ Hessen (G9), Bayern (LehrplanPLUS) und NRW (KLP G9). Teil der Reihe „ein Fach 
 
 ### Completed
 - [x] Ein Commit mit `.vibe`, Push nach `feat/map-spanisch`
+- [x] Nacharbeit: ein neuer Commit (kein amend), Push nach `feat/map-spanisch`
