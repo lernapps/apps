@@ -63,6 +63,15 @@ describe("the built pages", () => {
     assert.match(html, /\(Lücke, noch keine App\)/);
   });
 
+  test("a draft map says so loudly on every page of its subject, on its card and in its JSON", () => {
+    for (const path of ["map/physik/index.html", "map/physik/c/index.html", "map/physik/elektrizitaetslehre/index.html", "map/physik/c/einfacher-stromkreis/index.html", "map/mathematik/he-gymnasium/index.html"]) {
+      assert.match(read(path), /class="map-status map-status-draft"[^]*?Diese Karte ist nur eine Idee, um das Prinzip zu zeigen/, path);
+    }
+    assert.match(read("en/map/physik/index.html"), /This map is only an idea to show the principle/);
+    assert.match(read("map/index.html"), /map-status-tag-draft[^>]*>Entwurf</);
+    assert.equal(JSON.parse(read("map/physik.json")).status, "draft");
+  });
+
   test("the map by steps: one row per step, the competencies as links, the order linked from the subject", () => {
     const html = read("map/mathematik/c/index.html");
     const rows = [...html.matchAll(/<th scope="row">Stufe (\d+)/g)].map((m) => Number(m[1]));

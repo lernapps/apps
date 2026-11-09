@@ -1,0 +1,12 @@
+# A subject whose status claims more reviews than it has (feat/map-status): the load fails.
+name: { de: Fach, en: Subject }
+source:
+  title: Testquelle
+status: reviewed
+reviews:
+  - { date: 2026-11-01, role: "Lehrkraft Fach, Gymnasium, Hessen" }
+strands:
+  - id: alpha
+    name: Alpha
+    competencies:
+      - { id: a1, name: Eins, iCan: "Ich kann eins.", gradeBand: "5-6" }

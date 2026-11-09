@@ -334,6 +334,24 @@ const en = {
       strandLink: (strand) => `To the strand ${strand}`,
       practises: "It practises these building blocks:",
     },
+    status: {
+      label: { draft: "Draft", checked: "Checked", reviewed: "Reviewed" },
+      draft:
+        "This map is only an idea to show the principle. No teacher of the subject has checked it yet. Strands, building blocks and arrows may be wrong or missing.",
+      checked: (n) =>
+        `${n === 1 ? "One teacher" : `${n} teachers`} of the subject ${n === 1 ? "has" : "have"} looked through this map. It may still contain mistakes.`,
+      reviewed: (n) => `${n} teachers of the subject have looked through this map.`,
+      help: "Do you teach the subject? Look through the map and tell us what is missing or wrong:",
+      helpLink: "Help out",
+      helpNote: "(GitHub issue, needs a GitHub account)",
+      issueTitle: (subject) => `Learning map ${subject}: review`,
+      levels: "Each map says how far it has been checked:",
+      levelsList: [
+        "<b>Draft</b>: only an idea to show the principle. No teacher has checked it yet.",
+        "<b>Checked</b>: one teacher of the subject has looked through it.",
+        "<b>Reviewed</b>: several teachers of the subject have looked through it.",
+      ],
+    },
     breadcrumb: "Breadcrumb",
     grade: (label) => `Grade ${label}`,
     covered: "an app practises it",

@@ -161,3 +161,12 @@ test("the rows by step: one per step, each strand's competencies in the strand's
     ],
   );
 });
+
+test("the status of a map: draft by default in the files, checked with its review, reviewed needs two", () => {
+  assert.equal(subject.status, "draft");
+  assert.deepEqual(subject.reviews, []);
+  const [checked] = loadMap(fixture("status-checked"));
+  assert.equal(checked.status, "checked");
+  assert.deepEqual(checked.reviews, [{ date: "2026-11-01", role: "Lehrkraft Fach, Gymnasium, Hessen" }]);
+  assert.throws(() => loadMap(fixture("status-missing-review")), /status reviewed needs at least 2 reviews/);
+});

@@ -53,6 +53,41 @@
       "additionalProperties": false,
       "description": "Where the strands and competencies come from"
     },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "checked",
+        "reviewed"
+      ],
+      "description": "How far the strands, competencies and requires are reviewed (feat/map-status): draft (an idea to show the principle, reviewed by no teacher yet), checked (at least one teacher of the subject reviewed it), reviewed (several did). Shown on every page of the subject's map"
+    },
+    "reviews": {
+      "description": "The reviews behind the status: checked needs at least one, reviewed at least two",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+            "description": "When the review was done, YYYY-MM-DD"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Who reviewed, by role and never by name, e.g. \"Lehrkraft Französisch, Gymnasium, Hessen\""
+          }
+        },
+        "required": [
+          "date",
+          "role"
+        ],
+        "additionalProperties": false,
+        "description": "One review of the subject's model by a teacher of the subject"
+      }
+    },
     "explainerFocus": {
       "description": "What an app of the subject focuses on (KD-01 of lernapps/apps#226). strand (the default): an app stays in one strand, because the strands separate (Physik, Geschichte). competency: an app may practise competencies of several strands, because the strands are woven together (foreign languages, Deutsch); such an app names the subject instead of a strand, each page stays in one strand, and its prerequisites come first in the app",
       "type": "string",
@@ -208,6 +243,7 @@
   "required": [
     "name",
     "source",
+    "status",
     "strands"
   ],
   "additionalProperties": false

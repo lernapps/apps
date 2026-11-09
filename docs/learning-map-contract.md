@@ -28,6 +28,9 @@ name: { de: Mathematik, en: Mathematics }          # the file name is the subjec
 source:                                            # where strands and competencies come from (KD-03)
   title: KMK-Bildungsstandards Mathematik, ESA und MSA (2022)
   url: https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/2022_06_23-Bista-ESA-MSA-Mathe.pdf
+status: checked                                    # required: draft, checked or reviewed (feat/map-status)
+reviews:                                           # optional; checked needs one review, reviewed two
+  - { date: 2026-12-01, role: "Lehrkraft Mathematik, Gymnasium, Hessen" }   # by role, never by name
 strands:
   - id: stochastik
     name: { de: Stochastik, en: Probability and statistics }
@@ -50,6 +53,8 @@ strands:
 | `explainerFocus` | `strand` \| `competency` | optional, default `strand`; see below |
 | `source.title`, `source.url` | string, https URL | required; `url` optional when the source has none online |
 | `strands[]` | list, at least one | |
+| `status` | `"draft"` \| `"checked"` \| `"reviewed"` | required; how far teachers of the subject reviewed strands, competencies and `requires`: `draft` (an idea to show the principle, no review yet), `checked` (at least one review), `reviewed` (at least two). Every page of the subject's map shows it; a draft is marked loudly |
+| `reviews[]` | list of `{ date, role }` | optional; `date` YYYY-MM-DD, `role` who reviewed, by role and never by name (e.g. "Lehrkraft Physik, Gymnasium, Hessen"); `checked` needs one, `reviewed` two; a draft may have reviews |
 | `strands[].id` | id | unique in the subject |
 | `strands[].name` | text | required |
 | `strands[].competencies[]` | list, at least one | |
