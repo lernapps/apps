@@ -34,9 +34,10 @@ first-draft MVP (D8 `mvp-first-draft`):
 - Header, footer and design tokens are those of every lernapps.net site: the package `@lernapps/site`
   ([`site-frame/`](https://github.com/lernapps/lernapps.github.io/tree/main/site-frame) in lernapps.github.io),
   installed from git; Renovate keeps it on the latest commit of its `main`.
-- Entries: one YAML file per app in `entries/`. A text of an entry (`title`, `subject`, `summary`, `topics[].title`,
+- Entries: one YAML file per app in `entries/`. A text of an entry (`title`, `summary`, `topics[].title`,
   `keywords`, `fitness.thirdPartyNote`) is a plain string (German) or a map by language, `{ de: …, en: … }`; German is
-  required. An English page shows the German text, marked `lang="de"`, where there is no translation. `src/_data/catalog.js` reads them and checks them against
+  required. An English page shows the German text, marked `lang="de"`, where there is no translation. `subject` is the id
+  of a subject of the learning map (`map/<subject>.yaml`); the catalog shows its name from the map. `src/_data/catalog.js` reads them and checks them against
   the schema; a broken entry fails the build. It also renders the QR code of each app at build time.
 - Schema: `schemas/entry.js` (Zod) is the single source of the entry format. `npm run schema` writes
   `schemas/entry.v1.schema.json`, published at <https://lernapps.net/apps/schemas/entry.v1.schema.json>

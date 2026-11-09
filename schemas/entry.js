@@ -35,7 +35,10 @@ export const StrandRef = z
 export const Entry = z
   .object({
     title: Text.describe("Name of the app, or a map by language { de, en }"),
-    subject: Text.describe("Subject, in German (or a map by language), e.g. Mathematik"),
+    subject: Id.describe(
+      "The subject of the learning map the app belongs to, by its id, e.g. mathematik (https://lernapps.net/apps/map/). " +
+        "The catalog shows the subject's name from the map",
+    ),
     grades: z.array(z.int().min(1).max(13)).min(1).describe("Grades the app fits, e.g. [5, 6]"),
     summary: Text.describe("2–3 sentences in plain German (or a map by language): what do learners do?"),
     url: https.describe("Link to the app at the creator's own address, where the listing check opens it"),
@@ -58,8 +61,9 @@ export const Entry = z
       .min(1)
       .optional()
       .describe(
-        "Only for apps that are not explainers: the competencies of the strand's subject the app practises, by id. " +
-          "An explainer of format 2 names them on its pages",
+        "Only for apps that are not explainers: the competencies of the subject the app practises, by id. With a strand, " +
+          "only competencies of that strand; without, competencies of several strands, which the subject's map must allow " +
+          "(explainerFocus: competency). An explainer of format 2 names them on its pages",
       ),
     creator: z
       .strictObject({
@@ -105,8 +109,8 @@ export const Entry = z
     message: "fitness.thirdPartyNote: say which servers, and when",
     path: ["fitness", "thirdPartyNote"],
   })
-  .refine((e) => !e.competencies || e.strand, {
-    message: "competencies need a strand: say which strand of the learning map the app stays in",
+  .refine((e) => !e.strand || e.strand.startsWith(`${e.subject}/`), {
+    message: "the strand is one of the app's subject: <subject>/<strand>",
     path: ["strand"],
   });
 

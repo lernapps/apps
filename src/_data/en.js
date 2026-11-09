@@ -330,6 +330,7 @@ const en = {
     app: {
       headline: "On the learning map",
       strand: (strand, subject) => `This app stays in the strand ${strand} of ${subject}.`,
+      unit: (subject) => `This app practises building blocks of several strands of ${subject}:`,
       strandLink: (strand) => `To the strand ${strand}`,
       practises: "It practises these building blocks:",
     },

@@ -41,6 +41,15 @@ export const Subject = z
   .strictObject({
     name: Text.describe("Name of the subject, e.g. Mathematik; the file name is its id"),
     source: Source,
+    explainerFocus: z
+      .enum(["strand", "competency"])
+      .optional()
+      .describe(
+        "What an app of the subject focuses on (KD-01 of lernapps/apps#226). strand (the default): an app stays in one " +
+          "strand, because the strands separate (Physik, Geschichte). competency: an app may practise competencies of " +
+          "several strands, because the strands are woven together (foreign languages, Deutsch); such an app names the " +
+          "subject instead of a strand, each page stays in one strand, and its prerequisites come first in the app",
+      ),
     strands: z.array(Strand).min(1),
   })
   .describe("A subject of the learning map: map/<subject>.yaml");
