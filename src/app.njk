@@ -85,7 +85,7 @@ eleventyComputed:
     <p class="m-0 mt-3 text-sm font-semibold text-slate-600">{{ t.map.app.practises }}</p>
     <ul class="list-none p-0 m-0 mt-1 grid gap-x-6 gap-y-2 sm:grid-cols-2">
       {%- for id in onMap.competencies %}{% set comp = mapSubject.competencies | byId(id) %}
-      <li><a href="{{ ('/map/' + mapSubject.id + '/c/' + id + '/') | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ comp.iCan | canLabel(lang) }}</a></li>
+      <li><a href="{{ ('/map/' + mapSubject.id + '/c/' + id + '/') | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2"{{ comp.name | fallbackLang(lang) | safe }}>{{ comp.name | tx(lang) }}</a></li>
       {%- endfor %}
     </ul>
     {%- endif %}

@@ -1,10 +1,10 @@
 // Writes the published JSON Schemas from their Zod sources: schemas/entry.v1.schema.json (schemas/entry.js), and
-// schemas/subject.v1.schema.json and schemas/curriculum.v1.schema.json (schemas/map.js). With --check, fails if one is
+// schemas/subject.v1.schema.json, schemas/curriculum.v1.schema.json and schemas/vocabulary.v1.schema.json (schemas/map.js). With --check, fails if one is
 // out of date.
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { z } from "zod";
 import { Entry, SCHEMA_ID } from "../schemas/entry.js";
-import { Subject, Curriculum, SUBJECT_SCHEMA_ID, CURRICULUM_SCHEMA_ID } from "../schemas/map.js";
+import { Subject, Curriculum, Vocabulary, SUBJECT_SCHEMA_ID, CURRICULUM_SCHEMA_ID, VOCABULARY_SCHEMA_ID } from "../schemas/map.js";
 
 const SCHEMAS = [
   {
@@ -29,6 +29,14 @@ const SCHEMAS = [
     description:
       "A curriculum of the learning map https://lernapps.net/apps/map/. File: map/<subject>/curricula/<land>-<school type>.yaml in https://github.com/lernapps/apps",
     zod: Curriculum,
+  },
+  {
+    file: "schemas/vocabulary.v1.schema.json",
+    id: VOCABULARY_SCHEMA_ID,
+    title: "lernapps.net learning map: basic vocabulary",
+    description:
+      "The basic vocabulary of a language beside the learning map https://lernapps.net/apps/map/. File: map/<subject>/vocabulary/words.yaml in https://github.com/lernapps/apps",
+    zod: Vocabulary,
   },
 ];
 

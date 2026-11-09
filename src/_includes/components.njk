@@ -110,7 +110,7 @@
 {%- set covered = comp.practisedBy.length > 0 %}
 <li{% if covered %} data-covered{% endif %}>
   <a href="{{ mapUrl(subject.id + '/c/' + comp.id + '/') }}" class="map-chip {{ 'map-chip-covered' if covered else 'map-chip-gap' }}"{% if dialog %} data-opens="detail-{{ comp.id }}"{% endif %}>
-    <span{{ comp.iCan | fallbackLang(lang) | safe }}>{{ comp.iCan | canLabel(lang) }}</span>
+    <span{{ comp.name | fallbackLang(lang) | safe }}>{{ comp.name | tx(lang) }}</span>
     <span class="sr-only">({{ t.map.covered if covered else t.map.gap }})</span>
     {%- if again.length %}<span class="map-chip-note">{{ t.map.subject.again(again | join(", ")) }}</span>{% endif %}
   </a>
@@ -120,7 +120,7 @@
 {#- A link to a competency, with its strand when that is another strand than `strandId`. -#}
 {% macro mapCompetencyLink(subject, id, strandId) %}
 {%- set other = subject.competencies | byId(id) %}
-<a href="{{ mapUrl(subject.id + '/c/' + id + '/') }}" class="text-blue-700 underline underline-offset-2"><span{{ other.iCan | fallbackLang(lang) | safe }}>{{ other.iCan | canLabel(lang) }}</span></a>
+<a href="{{ mapUrl(subject.id + '/c/' + id + '/') }}" class="text-blue-700 underline underline-offset-2"><span{{ other.name | fallbackLang(lang) | safe }}>{{ other.name | tx(lang) }}</span></a>
 {%- if other.strand != strandId %}{% set s = subject.strands | byId(other.strand) %} <span class="text-slate-600">· {{ t.map.otherStrand(s.name | tx(lang)) }}</span>{% endif %}
 {% endmacro %}
 
@@ -144,7 +144,7 @@
 {%- set D = t.map.subject.details %}
 {%- set strand = subject.strands | byId(comp.strand) %}
 <template id="detail-{{ comp.id }}" data-kind="{{ D.kind(strand.name | tx(lang)) }}">
-  <p data-dialog-title{{ comp.iCan | fallbackLang(lang) | safe }}>{{ comp.iCan | canLabel(lang) }}</p>
+  <p data-dialog-title{{ comp.name | fallbackLang(lang) | safe }}>{{ comp.name | tx(lang) }}</p>
   <div data-dialog-body>
     <p class="m-0"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ comp.iCan | tx(lang) }}</p>
     <dl class="map-facts">

@@ -19,6 +19,7 @@ export const GRADE_BANDS = ["5-6", "7-8", "9-10"];
 const Competency = z
   .strictObject({
     id: Id.describe("Stable id, unique in the subject; never renamed once published"),
+    name: Text.describe("Short name of the competency, 2–5 words, e.g. Laplace-Formel; shown where it is listed"),
     iCan: Text.refine((t) => (typeof t === "string" ? t : t.de).startsWith("Ich kann"), {
       message: 'starts with "Ich kann"',
     }).describe('What a learner can do, in plain German: "Ich kann …"'),
@@ -71,3 +72,59 @@ export const Curriculum = z
 
 export const SUBJECT_SCHEMA_ID = "https://lernapps.net/apps/schemas/subject.v1.schema.json";
 export const CURRICULUM_SCHEMA_ID = "https://lernapps.net/apps/schemas/curriculum.v1.schema.json";
+
+// The basic vocabulary of a language beside the map (contract, section 6): map/<subject>/vocabulary/words.yaml, written
+// by scripts/vocabulary.mjs from a graded lexicon and map/<subject>/vocabulary/source.yaml (the lexicon, its corrections). It
+// says how far a word is (its CEFR level), not where it belongs: the words of a page follow from its exercises.
+export const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+
+const Lexicon = z
+  .strictObject({
+    title: z.string().min(1).describe("The lexicon, e.g. FLELex / Beacco (TreeTagger)"),
+    url: https.describe("Where to download it"),
+    licence: z.string().min(1).describe("Its licence, e.g. CC BY-NC-SA 4.0; the word list has the same"),
+    cite: z.array(z.string().min(1)).min(1).describe("How its authors ask to cite it"),
+  })
+  .describe("The graded lexicon the word list comes from");
+
+const Word = z
+  .strictObject({
+    word: z.string().min(1).describe("The lemma as the lexicon writes it, without article"),
+    pos: z.string().min(1).describe("Its part of speech as the lexicon tags it, e.g. NOM, VER, ADJ"),
+    level: z.enum(LEVELS).describe("Its CEFR level: from the lexicon, or from a correction"),
+    note: z.string().min(1).optional().describe("Why a correction added it or changed its level"),
+  })
+  .describe("A word of the basic vocabulary");
+
+export const Vocabulary = z
+  .strictObject({
+    language: z.string().regex(/^[a-z]{2,3}$/, "a language code, e.g. fr").describe("The language of the words"),
+    source: Lexicon,
+    levels: z.array(z.enum(LEVELS)).min(1).describe("The levels the list holds, e.g. [A1, A2]"),
+    words: z.array(Word).min(1).describe("The words, by level, then in the alphabet"),
+  })
+  .describe("The basic vocabulary of a language: map/<subject>/vocabulary/words.yaml");
+
+const Correction = z
+  .strictObject({
+    word: z.string().min(1),
+    pos: z.string().min(1),
+    level: z.enum(LEVELS).optional().describe("The level it gets; for add and level"),
+    reason: z.string().min(1).describe("Why: what children of the class need, what the lexicon misses"),
+  })
+  .describe("One correction of the lexicon");
+
+export const VocabularySource = z
+  .strictObject({
+    language: z.string().regex(/^[a-z]{2,3}$/, "a language code, e.g. fr").describe("The language of the words"),
+    source: Lexicon,
+    levels: z.array(z.enum(LEVELS)).min(1).describe("The levels the list takes from the lexicon, e.g. [A1, A2]"),
+    add: z.array(Correction).optional().describe("Words the lexicon lacks, with their level"),
+    level: z.array(Correction).optional().describe("Words of the lexicon with another level"),
+    remove: z.array(Correction).optional().describe("Words of the lexicon left out"),
+  })
+  .describe(
+    "Where a basic vocabulary comes from, with its corrections: map/<subject>/vocabulary/source.yaml, which scripts/vocabulary.mjs reads",
+  );
+
+export const VOCABULARY_SCHEMA_ID = "https://lernapps.net/apps/schemas/vocabulary.v1.schema.json";

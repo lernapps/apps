@@ -57,8 +57,8 @@ export default async function () {
     });
     // A strand and a curriculum share the address /map/<subject>/<id>/, and c/ holds the competencies.
     for (const s of strands) {
-      if (s.id === "c" || subject.curricula.some((cu) => cu.id === s.id)) {
-        throw new Error(`learning map: ${subject.id}: the strand ${s.id} has the address of a curriculum or of c/; rename one`);
+      if (s.id === "c" || s.id === "grundwortschatz" || subject.curricula.some((cu) => cu.id === s.id)) {
+        throw new Error(`learning map: ${subject.id}: the strand ${s.id} has the address of a curriculum, of c/ or of grundwortschatz/; rename one`);
       }
     }
     const curricula = subject.curricula.map((cu) => ({
@@ -79,6 +79,16 @@ export default async function () {
       competencies,
       curricula,
       rows: rows(subject),
+      // How many competencies an app practises (the cards of /map/, the filter of the subject page).
+      covered: competencies.filter((c) => c.practisedBy.length).length,
+      // The basic vocabulary of a language subject, by level (map/<subject>/vocabulary/), or none.
+      vocabulary: subject.vocabulary && {
+        ...subject.vocabulary,
+        byLevel: subject.vocabulary.levels.map((level) => ({
+          level,
+          words: subject.vocabulary.words.filter((w) => w.level === level),
+        })),
+      },
       // Every Land in the drop-down; one without a captured curriculum is shown, but cannot be chosen.
       lands: LANDS.map((land) => ({ land, curricula: curricula.filter((c) => c.land === land).map((c) => c.id) })),
     };
@@ -91,6 +101,7 @@ export default async function () {
   );
   const strandPages = each(views.flatMap((s) => s.strands.map((strand) => ({ subject: s, strand }))));
   const competencyPages = each(views.flatMap((s) => s.competencies.map((competency) => ({ subject: s, competency }))));
+  const vocabularyPages = each(views.filter((s) => s.vocabulary).map((subject) => ({ subject })));
 
   // The data an assistant reads at /apps/map/<subject>.json (contract, section 5).
   const json = views.map((s) => ({
@@ -106,6 +117,7 @@ export default async function () {
           const c = s.competencies.find((x) => x.id === id);
           return {
             id: c.id,
+            name: c.name,
             iCan: c.iCan,
             gradeBand: c.gradeBand,
             requires: c.requires,
@@ -121,6 +133,16 @@ export default async function () {
         source: c.source,
         placements: Object.values(c.placements),
       })),
+      ...(s.vocabulary
+        ? {
+            vocabulary: {
+              language: s.vocabulary.language,
+              source: s.vocabulary.source,
+              levels: s.vocabulary.levels,
+              words: s.vocabulary.words,
+            },
+          }
+        : {}),
     },
   }));
 
@@ -135,5 +157,5 @@ export default async function () {
     }
   }
 
-  return { subjects: views, subjectPages, strandPages, competencyPages, json, termsPages: languages, byApp };
+  return { subjects: views, subjectPages, strandPages, competencyPages, vocabularyPages, json, termsPages: languages, byApp };
 }

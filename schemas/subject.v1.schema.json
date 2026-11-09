@@ -102,6 +102,34 @@
                   "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
                   "description": "Stable id, unique in the subject; never renamed once published"
                 },
+                "name": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "de": {
+                          "type": "string",
+                          "minLength": 1,
+                          "description": "German"
+                        },
+                        "en": {
+                          "description": "English",
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "de"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ],
+                  "description": "Short name of the competency, 2–5 words, e.g. Laplace-Formel; shown where it is listed"
+                },
                 "iCan": {
                   "anyOf": [
                     {
@@ -150,6 +178,7 @@
               },
               "required": [
                 "id",
+                "name",
                 "iCan",
                 "gradeBand"
               ],

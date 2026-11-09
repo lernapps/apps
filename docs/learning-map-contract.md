@@ -33,10 +33,12 @@ strands:
     name: { de: Stochastik, en: Probability and statistics }
     competencies:
       - id: laplace
+        name: { de: Laplace-Formel, en: Laplace formula }  # required: a short name, 2–5 words
         iCan: { de: "Ich kann Wahrscheinlichkeiten mit der Laplace-Formel berechnen." }
         gradeBand: "7-8"                           # required: "5-6", "7-8" or "9-10" (KD-06)
         requires: [haeufigkeiten]                  # optional: ids in the same subject, any strand
       - id: baumdiagramm
+        name: { de: Baumdiagramm, en: Tree diagram }
         iCan: "Ich kann ein mehrstufiges Zufallsexperiment als Baumdiagramm darstellen."
         gradeBand: "7-8"
         requires: [laplace]
@@ -51,6 +53,7 @@ strands:
 | `strands[].name` | text | required |
 | `strands[].competencies[]` | list, at least one | |
 | `competencies[].id` | id | unique in the **subject** (not only in the strand) |
+| `competencies[].name` | text | required; a short name of 2–5 words, shown where the competency is listed or linked |
 | `competencies[].iCan` | text | required; starts with "Ich kann" |
 | `competencies[].gradeBand` | `"5-6"` \| `"7-8"` \| `"9-10"` | required |
 | `competencies[].requires` | list of ids | optional; each an id of this subject; no cycles; not itself |
@@ -90,7 +93,7 @@ The state of a curriculum ("places 42 of 85") is computed, never written down.
 
 ## 3. An explainer: format 2 (lernapps/app-templates)
 
-`explainer.v2.schema.json`. Format 1 stays valid for apps that do not move (mathe-karte, KD-07): they are not on the
+`explainer.v2.schema.json`. Format 1 stays valid for apps that do not move (KD-07): they are not on the
 map. An app is on format 2 when its `app.yaml` says so.
 
 `src/app.yaml`:
@@ -179,4 +182,23 @@ app's strand (KD-19); an explainer's `strand` in the entry, if given, equals the
 ## 5. The map as data: `/apps/map/<subject>.json` (lernapps/apps)
 
 For assistants and the tooling: the subject as in its YAML, plus `curricula` (id, land, schoolType, version, placements)
-and `coverage` (per competency: the apps and pages that practise it). Linked from `/apps/llms.txt`.
+and `coverage` (per competency: the apps and pages that practise it), and for a language with a basic vocabulary its
+`vocabulary` (section 6). Linked from `/apps/llms.txt`.
+
+## 6. The basic vocabulary of a language: `map/<subject>/vocabulary/` (lernapps/apps)
+
+A language subject may have a basic vocabulary beside its map: the words that come first, independent of any
+textbook, by CEFR level. It says how far a word is, not where it belongs: the words of a page follow from its
+exercises. No list per competency, no grade band per word, no meanings.
+
+| File | What it holds |
+|---|---|
+| `source.yaml` | language, graded lexicon (title, URL, licence, citations), levels taken, corrections (`add`, `level`, `remove`, each with a `reason`) |
+| `words.yaml` | the list, written by `scripts/vocabulary.mjs` from the lexicon and `source.yaml`: `{ word, pos, level, note? }` ([schema](https://lernapps.net/apps/schemas/vocabulary.v1.schema.json)) |
+| `LICENSE.md` | the lexicon's licence for both files, not the repository's |
+
+- The build checks `words.yaml` against `source.yaml`. The lexicon stays out of the repository.
+- Published at `/apps/map/<subject>/grundwortschatz/` and in the subject's JSON as `vocabulary`; linked from the
+  subject's map and the competencies of the strand `wortschatz`.
+- How a vocabulary is made: skill `map-vocabulary`. How apps use it: lernapps/tooling, skill
+  `lernapps-exercise-patterns`, `references/foreign-languages.md`.

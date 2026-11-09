@@ -1,0 +1,31 @@
+# The basic vocabulary of French (docs/learning-map-contract.md, section 6): which lexicon, which levels, and the
+# corrections for children's everyday life. scripts/vocabulary.mjs writes words.yaml from it and the lexicon.
+# Licence: CC BY-NC-SA 4.0, as FLELex (LICENSE.md in this folder).
+language: fr
+source:
+  title: "FLELex / Beacco with TreeTagger parts of speech (CEFRLex, CENTAL, UCLouvain)"
+  url: https://cental.uclouvain.be/cefrlex/flelex/download/
+  licence: CC BY-NC-SA 4.0
+  cite:
+    - "François, T., Gala, N., Watrin, P. & Fairon, C. (2014). FLELex: a graded lexical resource for French foreign learners. In Proceedings of the 9th International Conference on Language Resources and Evaluation (LREC 2014), Reykjavik, Iceland."
+    - "Pintard, A. & François, T. (2020). Combining expert knowledge with frequency information to infer CEFR levels for words. In Proceedings of the 1st Workshop on Tools and Resources to Empower People with REAding DIfficulties (READI), pp. 85-92."
+levels: [A1, A2]
+# FLELex counts words in textbooks for adults and young people; a few words of a child's school day come late there.
+# Each correction names its reason. FLELex writes oe for œ (oeuf, soeur): search it so before adding a word.
+level:
+  - word: trousse
+    pos: NOM
+    level: A1
+    reason: Federmäppchen, im Schulalltag vom ersten Tag an
+  - word: stylo
+    pos: NOM
+    level: A1
+    reason: Füller, Kuli, im Schulalltag vom ersten Tag an
+  - word: petit-déjeuner
+    pos: NOM
+    level: A1
+    reason: Frühstück, Teil des Tagesablaufs, den Kinder als Erstes beschreiben
+  - word: goûter
+    pos: NOM
+    level: A1
+    reason: der Nachmittagsimbiss französischer Kinder, Alltag und Landeskunde zugleich
