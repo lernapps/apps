@@ -108,13 +108,26 @@
     A link to its page; assets/map.js opens its details (template "detail-<id>") as a dialog instead. -#}
 {% macro mapChip(subject, comp, again=[], dialog=true) %}
 {%- set covered = comp.practisedBy.length > 0 %}
-<li{% if covered %} data-covered{% endif %}>
+<li{% if covered %} data-covered{% endif %} data-competency="{{ comp.id }}">
   <a href="{{ mapUrl(subject.id + '/c/' + comp.id + '/') }}" class="map-chip {{ 'map-chip-covered' if covered else 'map-chip-gap' }}"{% if dialog %} data-opens="detail-{{ comp.id }}"{% endif %}>
     <span{{ comp.name | fallbackLang(lang) | safe }}>{{ comp.name | tx(lang) }}</span>
     <span class="sr-only">({{ t.map.covered if covered else t.map.gap }})</span>
     {%- if again.length %}<span class="map-chip-note">{{ t.map.subject.again(again | join(", ")) }}</span>{% endif %}
   </a>
 </li>
+{% endmacro %}
+
+{#- The two orders of a subject's rows as links (feat/map-steps): by grade (/map/<subject>/) or by step of the chain
+    (/map/<subject>/c/). current: "grades" or "steps"; grades: the path of the grades view (a chosen curriculum stays). -#}
+{% macro mapOrder(subject, current, grades='') %}
+{%- set O = t.map.subject.order %}
+<nav aria-labelledby="ordnung-{{ subject.id }}" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-{{ subject.id }}" class="m-0 text-sm font-semibold text-slate-600">{{ O.label }}</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="{{ mapUrl(grades or (subject.id + '/')) }}" class="btn {{ 'btn-primary' if current == 'grades' else 'btn-secondary' }}"{% if current == 'grades' %} aria-current="page"{% endif %}>{{ O.grades }}</a></li>
+    <li><a href="{{ mapUrl(subject.id + '/c/') }}" class="btn {{ 'btn-primary' if current == 'steps' else 'btn-secondary' }}"{% if current == 'steps' %} aria-current="page"{% endif %}>{{ O.steps }}</a></li>
+  </ul>
+</nav>
 {% endmacro %}
 
 {#- A link to a competency, with its strand when that is another strand than `strandId`. -#}

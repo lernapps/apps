@@ -4,7 +4,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
-import { loadMap, checkApp, checkPages, coverage, rows, placedCount } from "../lib/map.js";
+import { loadMap, checkApp, checkPages, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../lib/map.js";
 
 const fixture = (name) => fileURLToPath(new URL(`fixtures/map/${name}`, import.meta.url));
 const [subject] = loadMap(fixture("ok"));
@@ -129,4 +129,35 @@ test("pages: one strand per page where strands are woven; a list without pages h
   assert.deepEqual(kinds(checkPages(subject, [{ competencies: ["a1", "b2"] }])), []);
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t1", "g2", "g1", "w1"] }], { ordered: false })), ["strands:0"]);
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["g1", "t1"] }], { ordered: false })).filter((k) => !k.startsWith("strands")), ["entry:w1", "gap:g2"]);
+});
+
+test("the step of a competency: 1 without prerequisite, else one below its deepest prerequisite", () => {
+  const [steps] = loadMap(fixture("steps"));
+  assert.deepEqual(Object.fromEntries(steps.steps), { s1: 1, s2: 2, s3: 3, s4: 4, t1: 1, t2: 3, t3: 1 });
+  assert.deepEqual(Object.fromEntries(subject.steps), { a1: 1, a2: 2, a3: 3, b1: 3, b2: 1 });
+});
+
+test("ancestors and descendants over several steps, grouped by step", () => {
+  const [steps] = loadMap(fixture("steps"));
+  assert.deepEqual([...ancestors(steps, "s4")].sort(), ["s1", "s2", "s3", "t1"]);
+  assert.deepEqual([...descendants(steps, "s1")].sort(), ["s2", "s3", "s4", "t2"]);
+  assert.deepEqual([...ancestors(steps, "t3")], []);
+  assert.deepEqual(byStep(steps, ["s3", "t1", "s1", "s2"]), [
+    { step: 1, ids: ["t1", "s1"] },
+    { step: 2, ids: ["s2"] },
+    { step: 3, ids: ["s3"] },
+  ]);
+});
+
+test("the rows by step: one per step, each strand's competencies in the strand's order", () => {
+  const [steps] = loadMap(fixture("steps"));
+  assert.deepEqual(
+    stepRows(steps).map((r) => [r.step, r.count, ...r.cells.map((c) => c.competencies.join(" "))]),
+    [
+      [1, 3, "s1", "t1 t3"],
+      [2, 1, "s2", ""],
+      [3, 2, "s3", "t2"],
+      [4, 1, "s4", ""],
+    ],
+  );
 });

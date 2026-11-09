@@ -43,6 +43,7 @@ describe("the built pages", () => {
         "map/mathematik/he-gymnasium/index.html",
         "map/mathematik/stochastik/index.html",
         "map/mathematik/c/zufall-laplace/index.html",
+        "map/mathematik/c/index.html",
         "map/physik/elektrizitaetslehre/index.html",
       ]) {
         assert.ok(existsSync(join(out, root, path)), `${root}${path}`);
@@ -60,6 +61,26 @@ describe("the built pages", () => {
     assert.match(html, /href="\/apps\/map\/physik\/c\/elektrische-ladung\/" class="map-chip map-chip-gap"/);
     assert.match(html, /\(eine App übt ihn\)/);
     assert.match(html, /\(Lücke, noch keine App\)/);
+  });
+
+  test("the map by steps: one row per step, the competencies as links, the order linked from the subject", () => {
+    const html = read("map/mathematik/c/index.html");
+    const rows = [...html.matchAll(/<th scope="row">Stufe (\d+)/g)].map((m) => Number(m[1]));
+    assert.deepEqual(rows, Array.from({ length: rows.length }, (_, i) => i + 1));
+    assert.ok(rows.length > 1);
+    assert.match(html, /href="\/apps\/map\/mathematik\/c\/zufall-laplace\/" class="map-chip/);
+    assert.match(html, /<script type="application\/json" id="map-steps-data">/);
+    assert.match(read("map/mathematik/index.html"), /href="\/apps\/map\/mathematik\/c\/"[^>]*>Nach Stufen der Kette/);
+    assert.match(read("en/map/mathematik/c/index.html"), /<th scope="row">Step 1/);
+  });
+
+  test("the page of a competency shows its chain: every ancestor by step, the direct descendants and how many follow", () => {
+    const page = read("map/mathematik/c/zufall-laplace/index.html");
+    assert.match(page, /Dieser Baustein · Stufe 7/);
+    assert.match(page, /href="\/apps\/map\/mathematik\/c\/wahrscheinlichkeitsbegriff\/"[^]*?<span class="map-direct">direkt<\/span>/);
+    assert.match(page, /href="\/apps\/map\/mathematik\/c\/vierfeldertafel\/"/);
+    assert.match(page, /Danach bauen noch \d+ Bausteine in \d+ weiteren Stufen? darauf auf\./);
+    assert.match(page, /href="\/apps\/map\/mathematik\/c\/#zufall-laplace"/);
   });
 
   test("the strand shows its app as a bar; the competency names the app and its page", () => {
@@ -164,6 +185,33 @@ describe("in the browser", () => {
     await page.keyboard.press("Enter");
     await dialog.getByRole("link", { name: "Alle Angaben zum Baustein" }).click();
     assert.match(page.url(), /\/map\/mathematik\/c\/zufall-laplace\/$/);
+    await page.context().close();
+  });
+
+  test("the map by steps: a click shows the chain with arrows and lists it; Escape ends it", async () => {
+    const page = await open("map/mathematik/c/");
+    const chain = page.locator("[data-map-chain]");
+    assert.equal(await chain.isVisible(), true);
+    await page.locator('li[data-competency="zufall-laplace"] > a').click();
+    assert.match(page.url(), /\/map\/mathematik\/c\/#zufall-laplace$/);
+    assert.ok((await page.locator("svg.map-arrows > path").count()) > 0);
+    assert.equal(await page.locator('li[data-competency="wahrscheinlichkeitsbegriff"]').getAttribute("data-before"), "");
+    assert.equal(await page.locator('li[data-competency="vierfeldertafel"]').getAttribute("data-after"), "");
+    assert.match(await chain.textContent(), /Stochastik · Stufe 7/);
+    assert.match(await chain.textContent(), /Baut auf · \d+/);
+    await chain.getByRole("button", { name: "wahrscheinlichkeitsbegriff" }).click();
+    assert.match(page.url(), /#wahrscheinlichkeitsbegriff$/);
+    await page.keyboard.press("Escape");
+    assert.equal(await page.locator("svg.map-arrows > path").count(), 0);
+    assert.match(await chain.textContent(), /Wähle einen Baustein/);
+    await page.context().close();
+  });
+
+  test("the map by steps without JavaScript: no chain beside it, a competency leads to its page", async () => {
+    const page = await open("map/mathematik/c/", { javaScriptEnabled: false });
+    assert.equal(await page.locator("[data-map-chain]").isVisible(), false);
+    await page.locator('li[data-competency="zufall-laplace"] > a').click();
+    assert.match(page.url(), /\/apps\/map\/mathematik\/c\/zufall-laplace\/$/);
     await page.context().close();
   });
 

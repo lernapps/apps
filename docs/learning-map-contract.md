@@ -61,6 +61,11 @@ strands:
 
 A competency is addressed across the platform as `<subject>/<competency>`, a strand as `<subject>/<strand>`.
 
+The **step** (Stufe) of a competency is not written in the file: it follows from `requires`. A competency without
+`requires` is in step 1, any other one step below its deepest prerequisite (1 + the longest path over `requires`).
+`lib/map.js` computes it (`steps`, with `ancestors`, `descendants` and `stepRows`); the map shows the subject by steps at
+`/apps/map/<subject>/c/` and the chain of a competency on its page. The JSON (section 5) does not carry it.
+
 ### The focus of a subject: `explainerFocus` (lernapps/apps#226)
 
 The subject decides whether its strands separate apps or are woven together.

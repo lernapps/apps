@@ -1,0 +1,19 @@
+# A subject for the steps of the chain (lib/map.js stepsOf): two starts (s1, t1), a competency on two paths of
+# different length (s4: over s3 it is in step 4, over t1 it would be in step 2), and one that stands alone (t3).
+name: { de: Fach, en: Subject }
+source:
+  title: Testquelle
+strands:
+  - id: s
+    name: S
+    competencies:
+      - { id: s1, name: s1, iCan: "Ich kann s1.", gradeBand: "5-6" }
+      - { id: s2, name: s2, iCan: "Ich kann s2.", gradeBand: "5-6", requires: [s1] }
+      - { id: s3, name: s3, iCan: "Ich kann s3.", gradeBand: "7-8", requires: [s2] }
+      - { id: s4, name: s4, iCan: "Ich kann s4.", gradeBand: "9-10", requires: [s3, t1] }
+  - id: t
+    name: T
+    competencies:
+      - { id: t1, name: t1, iCan: "Ich kann t1.", gradeBand: "5-6" }
+      - { id: t2, name: t2, iCan: "Ich kann t2.", gradeBand: "7-8", requires: [t1, s2] }
+      - { id: t3, name: t3, iCan: "Ich kann t3.", gradeBand: "9-10" }

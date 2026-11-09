@@ -1,6 +1,6 @@
 // The learning map for the pages: the subjects of map/ (checked by lib/map.js; a broken file fails the build), which
 // apps of the catalog practise which competency, and one entry per page the map has (src/map-*.njk paginate over them).
-import { loadMap, checkApp, coverage, rows, placedCount } from "../../lib/map.js";
+import { loadMap, checkApp, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../../lib/map.js";
 import { LANDS, GRADE_BANDS } from "../../schemas/map.js";
 import catalog from "./catalog.js";
 import languages from "./languages.js";
@@ -29,6 +29,9 @@ export default async function () {
       placements: subject.curricula
         .filter((cu) => cu.placements.has(c.id))
         .map((cu) => ({ curriculum: cu.id, ...cu.placements.get(c.id) })),
+      // The chain (feat/map-steps, KD-06, KD-09): every ancestor by step; the direct descendants by step, and how many
+      // more build on it over them, in how many further steps.
+      ...chain(subject, c),
     }));
     const byId = new Map(competencies.map((c) => [c.id, c]));
     const strands = subject.strands.map((s) => {
@@ -83,6 +86,8 @@ export default async function () {
       competencies,
       curricula,
       rows: rows(subject),
+      // The grid by steps of the chain (/map/<subject>/c/, feat/map-steps).
+      stepRows: stepRows(subject),
       // How many competencies an app practises (the cards of /map/, the filter of the subject page).
       covered: competencies.filter((c) => c.practisedBy.length).length,
       // The basic vocabulary of a language subject, by level (map/<subject>/vocabulary/), or none.
@@ -105,6 +110,7 @@ export default async function () {
   );
   const strandPages = each(views.flatMap((s) => s.strands.map((strand) => ({ subject: s, strand }))));
   const competencyPages = each(views.flatMap((s) => s.competencies.map((competency) => ({ subject: s, competency }))));
+  const stepsPages = each(views.map((subject) => ({ subject })));
   const vocabularyPages = each(views.filter((s) => s.vocabulary).map((subject) => ({ subject })));
 
   // The data an assistant reads at /apps/map/<subject>.json (contract, section 5).
@@ -166,5 +172,24 @@ export default async function () {
     }
   }
 
-  return { subjects: views, subjectPages, strandPages, competencyPages, vocabularyPages, json, termsPages: languages, byApp };
+  return { subjects: views, subjectPages, strandPages, competencyPages, stepsPages, vocabularyPages, json, termsPages: languages, byApp };
+}
+
+/** The chain of a competency for its page and the grid by steps. */
+function chain(subject, c) {
+  const step = subject.steps.get(c.id);
+  const before = ancestors(subject, c.id);
+  const after = descendants(subject, c.id);
+  const direct = subject.requiredBy.get(c.id);
+  const further = [...after].filter((id) => !direct.includes(id));
+  const order = [...subject.competencies.keys()];
+  const inOrder = (set) => order.filter((id) => set.has(id));
+  return {
+    step,
+    ancestorsByStep: byStep(subject, inOrder(before)),
+    ancestorCount: before.size,
+    childrenByStep: byStep(subject, inOrder(new Set(direct))),
+    furtherCount: further.length,
+    furtherSteps: new Set(further.map((id) => subject.steps.get(id))).size,
+  };
 }
