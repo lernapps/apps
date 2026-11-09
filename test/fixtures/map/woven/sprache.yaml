@@ -8,15 +8,15 @@ strands:
   - id: wortschatz
     name: Wortschatz
     competencies:
-      - { id: w1, iCan: "Ich kann Wörter.", gradeBand: "5-6" }
-      - { id: w2, iCan: "Ich kann mehr Wörter.", gradeBand: "5-6" }
+      - { id: w1, name: Baustein w1, iCan: "Ich kann Wörter.", gradeBand: "5-6" }
+      - { id: w2, name: Baustein w2, iCan: "Ich kann mehr Wörter.", gradeBand: "5-6" }
   - id: grammatik
     name: Grammatik
     competencies:
-      - { id: g1, iCan: "Ich kann Artikel.", gradeBand: "5-6", requires: [w1] }
-      - { id: g2, iCan: "Ich kann Mengen.", gradeBand: "7-8", requires: [g1] }
+      - { id: g1, name: Baustein g1, iCan: "Ich kann Artikel.", gradeBand: "5-6", requires: [w1] }
+      - { id: g2, name: Baustein g2, iCan: "Ich kann Mengen.", gradeBand: "7-8", requires: [g1] }
   - id: texte
     name: Texte
     competencies:
-      - { id: t1, iCan: "Ich kann einkaufen.", gradeBand: "7-8", requires: [g2] }
-      - { id: t2, iCan: "Ich kann erzählen.", gradeBand: "7-8", requires: [w2] }
+      - { id: t1, name: Baustein t1, iCan: "Ich kann einkaufen.", gradeBand: "7-8", requires: [g2] }
+      - { id: t2, name: Baustein t2, iCan: "Ich kann erzählen.", gradeBand: "7-8", requires: [w2] }
