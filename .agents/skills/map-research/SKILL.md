@@ -32,6 +32,7 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
   the course into three equal parts: year y of n goes to part ⌊3·(y − ½)/n⌋ + 1, part 1 → "5-6", 2 → "7-8",
   3 → "9-10". A stage without grades votes for every part it covers. What counts is the order and that the bands do
   not clump: if one band holds more than half of a strand, spread it along `requires` and give the reason.
+- **Basic vocabulary** of a language (which words come first, by CEFR level): skill `map-vocabulary`, not this one.
 - **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles.
 - **A curriculum** is added only when its document names single grades; a plan that names only spans ("7-10") gets
   none. It places only what its document places (`grades`, `unit` as it names it). Leave the rest out; never
