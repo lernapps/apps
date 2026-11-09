@@ -11,6 +11,7 @@ import { join } from "node:path";
 import { load } from "js-yaml";
 import QRCode from "qrcode";
 import { Entry } from "../../schemas/entry.js";
+import { loadMap } from "../../lib/map.js";
 import { reserved } from "../../schemas/reserved.js";
 import languages from "./languages.js";
 import site from "./site.js";
@@ -82,18 +83,29 @@ export default function () {
 async function build() {
   const apps = [];
   const live = await liveCopies();
+  // The subject of an entry is a subject of the learning map, by its id; the catalog shows its name from the map.
+  const subjectNames = new Map(loadMap().map((s) => [s.id, s.name]));
   for (const file of readdirSync(DIR).filter((f) => f.endsWith(".yaml")).sort()) {
     const id = file.replace(/\.yaml$/, "");
     const entry = check(id, load(readFileSync(join(DIR, file), "utf8")));
+    if (!subjectNames.has(entry.subject)) {
+      throw new Error(`entries/${id}.yaml:\n  - subject: the learning map has no subject ${entry.subject} (map/${entry.subject}.yaml)`);
+    }
     const copy = live.get(id) === entry.commit ? `${START}/${id}/` : undefined;
     const url = copy ?? entry.url;
     const base = url.endsWith("/") ? url : url + "/";
-    // A format-2 explainer says its strand and pages itself; they replace the hand-written topics (KD-13).
+    // A format-2 explainer says its strand (or, as a unit app, its subject) and pages itself; they replace the
+    // hand-written topics (KD-13).
     const own = await explainerPages(id, base);
     const pages = own?.pages.map((p) => ({ ...p, url: new URL(p.path, base).href }));
-    const strand = own ? (own.strand === "none" ? undefined : own.strand) : entry.strand;
+    const strand = own ? (own.strand === undefined || own.strand === "none" ? undefined : own.strand) : entry.strand;
+    if (own?.subject && own.subject !== entry.subject) {
+      throw new Error(`entries/${id}.yaml:\n  - subject: the entry says ${entry.subject}, the app's src/app.yaml says ${own.subject}`);
+    }
     apps.push({
       ...entry,
+      subject: subjectNames.get(entry.subject),
+      subjectId: entry.subject,
       url,
       home: entry.url,
       copy: copy !== undefined,

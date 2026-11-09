@@ -15,13 +15,13 @@ export default async function () {
     const competencies = [...(app.competencies ?? []), ...(app.pages ?? []).flatMap((p) => p.competencies ?? [])];
     if (!app.strand && !competencies.length) continue;
     const recaps = (app.pages ?? []).map((p) => p.recap).filter(Boolean);
-    for (const e of checkApp(subjects, { strand: app.strand, competencies, recaps }).errors) errors.push(`${app.id}: ${e}`);
+    for (const e of checkApp(subjects, { subject: app.subjectId, strand: app.strand, competencies, recaps }).errors) errors.push(`${app.id}: ${e}`);
   }
   if (errors.length) throw new Error(`apps and the learning map:\n  - ${errors.join("\n  - ")}`);
 
   const views = subjects.map((subject) => {
     const covered = coverage(subject, apps);
-    const appsOf = apps.filter((a) => a.strand?.startsWith(`${subject.id}/`));
+    const appsOf = apps.filter((a) => a.subjectId === subject.id);
     const competencies = [...subject.competencies.values()].map((c) => ({
       ...c,
       requiredBy: subject.requiredBy.get(c.id),
@@ -33,7 +33,10 @@ export default async function () {
     const byId = new Map(competencies.map((c) => [c.id, c]));
     const strands = subject.strands.map((s) => {
       const list = s.competencies.map((id) => byId.get(id));
-      const strandApps = appsOf.filter((a) => a.strand === `${subject.id}/${s.id}`);
+      // The strand's apps: its strand apps, and the unit apps of the subject that practise one of its competencies.
+      const strandApps = appsOf.filter(
+        (a) => a.strand === `${subject.id}/${s.id}` || (!a.strand && list.some((c) => c.practisedBy.some((p) => p.app.id === a.id))),
+      );
       // The strand page: its competencies by grade band, and each app as a bar from the first to the last band it
       // practises (indices into GRADE_BANDS); a band no app practises is a gap.
       const bands = GRADE_BANDS.map((band) => ({ band, competencies: list.filter((c) => c.gradeBand === band).map((c) => c.id) }));
@@ -75,6 +78,7 @@ export default async function () {
       id: subject.id,
       name: subject.name,
       source: subject.source,
+      explainerFocus: subject.explainerFocus,
       strands,
       competencies,
       curricula,
@@ -110,6 +114,7 @@ export default async function () {
       id: s.id,
       name: s.name,
       source: s.source,
+      explainerFocus: s.explainerFocus,
       strands: s.strands.map((st) => ({
         id: st.id,
         name: st.name,
@@ -145,14 +150,18 @@ export default async function () {
     },
   }));
 
-  // What the page of an app shows of the map: its strand and the competencies it practises.
+  // What the page of an app shows of the map: its strand (none for a unit app), the strands it practises and the
+  // competencies.
   const byApp = {};
   for (const s of views) {
-    for (const strand of s.strands) {
-      for (const app of strand.apps) {
-        const ids = s.competencies.filter((c) => c.practisedBy.some((p) => p.app.id === app.id)).map((c) => c.id);
-        byApp[app.id] = { subject: s.id, strand: strand.id, competencies: ids };
-      }
+    for (const app of apps.filter((a) => a.subjectId === s.id && (a.strand || a.pages?.some((p) => p.competencies?.length) || a.competencies))) {
+      const mine = s.competencies.filter((c) => c.practisedBy.some((p) => p.app.id === app.id));
+      byApp[app.id] = {
+        subject: s.id,
+        strand: app.strand?.split("/")[1],
+        strands: s.strands.filter((st) => mine.some((c) => c.strand === st.id)).map((st) => st.id),
+        competencies: mine.map((c) => c.id),
+      };
     }
   }
 

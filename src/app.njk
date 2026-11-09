@@ -76,11 +76,19 @@ eleventyComputed:
   {%- set onMap = map.byApp[app.id] %}
   {%- if onMap %}
   {%- set mapSubject = map.subjects | byId(onMap.subject) %}
-  {%- set mapStrand = mapSubject.strands | byId(onMap.strand) %}
   <section class="panel md:col-span-2" aria-labelledby="karte">
     <h2 id="karte" class="panel-title">{{ t.map.app.headline }}</h2>
+    {%- if onMap.strand %}
+    {%- set mapStrand = mapSubject.strands | byId(onMap.strand) %}
     <p class="m-0 text-slate-700">{{ t.map.app.strand(mapStrand.name | tx(lang), mapSubject.name | tx(lang)) }}
       <a href="{{ ('/map/' + mapSubject.id + '/' + mapStrand.id + '/') | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ t.map.app.strandLink(mapStrand.name | tx(lang)) }}</a></p>
+    {%- else %}
+    {# A unit app: competencies of several strands of a subject whose map allows it (lernapps/apps#226) #}
+    <p class="m-0 text-slate-700">{{ t.map.app.unit(mapSubject.name | tx(lang)) }}
+      {%- for id in onMap.strands %}{% set st = mapSubject.strands | byId(id) %}
+      <a href="{{ ('/map/' + mapSubject.id + '/' + st.id + '/') | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ st.name | tx(lang) }}</a>{% if not loop.last %},{% else %}.{% endif %}
+      {%- endfor %}</p>
+    {%- endif %}
     {%- if onMap.competencies.length %}
     <p class="m-0 mt-3 text-sm font-semibold text-slate-600">{{ t.map.app.practises }}</p>
     <ul class="list-none p-0 m-0 mt-1 grid gap-x-6 gap-y-2 sm:grid-cols-2">

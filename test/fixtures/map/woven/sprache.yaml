@@ -1,0 +1,22 @@
+# A subject whose strands are woven together (explainerFocus: competency), for the unit apps of lernapps/apps#226:
+# a chain w1 → g1 → g2 → t1 across strands, and w2 → t2 beside it.
+name: { de: Sprache, en: Language }
+source:
+  title: Testquelle
+explainerFocus: competency
+strands:
+  - id: wortschatz
+    name: Wortschatz
+    competencies:
+      - { id: w1, iCan: "Ich kann Wörter.", gradeBand: "5-6" }
+      - { id: w2, iCan: "Ich kann mehr Wörter.", gradeBand: "5-6" }
+  - id: grammatik
+    name: Grammatik
+    competencies:
+      - { id: g1, iCan: "Ich kann Artikel.", gradeBand: "5-6", requires: [w1] }
+      - { id: g2, iCan: "Ich kann Mengen.", gradeBand: "7-8", requires: [g1] }
+  - id: texte
+    name: Texte
+    competencies:
+      - { id: t1, iCan: "Ich kann einkaufen.", gradeBand: "7-8", requires: [g2] }
+      - { id: t2, iCan: "Ich kann erzählen.", gradeBand: "7-8", requires: [w2] }

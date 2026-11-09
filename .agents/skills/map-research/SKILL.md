@@ -33,7 +33,14 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
   3 → "9-10". A stage without grades votes for every part it covers. What counts is the order and that the bands do
   not clump: if one band holds more than half of a strand, spread it along `requires` and give the reason.
 - **Basic vocabulary** of a language (which words come first, by CEFR level): skill `map-vocabulary`, not this one.
-- **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles.
+- **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles. A unit
+  app across strands is checked against `requires` page by page, so a dependency teachers rely on (a verb group before
+  a grammar topic) must be in it.
+- **explainerFocus:** do the strands separate apps, or only illustrate the subject? `strand` (the default) when an
+  app can stay in one strand and still make sense (sciences, Mathematik, Geschichte: few `requires` across strands, or
+  only along time); `competency` when a real unit needs several strands at once (foreign languages, Deutsch: many
+  `requires` across strands, a theme needs words, grammar and texts). Give the reason in the report
+  (lernapps/apps#226).
 - **A curriculum** is added only when its document names single grades; a plan that names only spans ("7-10") gets
   none. It places only what its document places (`grades`, `unit` as it names it). Leave the rest out; never
   guess a grade.
