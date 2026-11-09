@@ -358,6 +358,7 @@ const de = {
     app: {
       headline: "Auf der Lernlandkarte",
       strand: (strand, subject) => `Diese App bleibt im Strang ${strand} des Fachs ${subject}.`,
+      unit: (subject) => `Diese App übt Bausteine aus mehreren Strängen des Fachs ${subject}:`,
       strandLink: (strand) => `Zum Strang ${strand}`,
       practises: "Sie übt diese Bausteine:",
     },

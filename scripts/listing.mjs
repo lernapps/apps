@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 import { dump, load } from "js-yaml";
 import { render } from "./listing-comment.mjs";
 import { reserved } from "../schemas/reserved.js";
-import { loadMap, checkApp } from "../lib/map.js";
+import { loadMap, checkApp, checkPages } from "../lib/map.js";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const LERNAPPS = join(root, "node_modules", ".bin", "lernapps");
@@ -114,10 +114,13 @@ function freeId(file, report) {
 }
 
 /**
- * The catalog's own rule entry-learning-map (docs/learning-map-contract.md, section 4): the strand and the competencies
- * an app names exist on the learning map, and they belong to one strand. An explainer of format 2 says them in
+ * The catalog's own rule entry-learning-map (docs/learning-map-contract.md, section 4): the subject, the strand and the
+ * competencies an app names exist on the learning map; a strand app stays in its strand, a unit app (no strand) only
+ * where the subject's map allows it (explainerFocus: competency). An explainer of format 2 says them in
  * lernapps-pages.json beside its index.html; another app in its entry. An unknown competency and one of another strand
- * are errors (KD-19); an app without a strand is listed, only not on the map.
+ * are errors (KD-19); an app without a strand and competencies is listed, only not on the map. Then the pages
+ * (lernapps/apps#226, KD-03a, KD-07): each page in one strand, and the prerequisites in the order of the app; stricter
+ * where the subject's explainerFocus is competency.
  */
 async function learningMap(file, report) {
   let entry;
@@ -139,16 +142,21 @@ async function learningMap(file, report) {
   let strand = entry.strand;
   let competencies = entry.competencies ?? [];
   let recaps = [];
+  let ordered;
   if (pages && pages.format === 1 && Array.isArray(pages.pages)) {
     if (entry.competencies) {
       add("error", `${file}: competencies`, "the app is an explainer of format 2: its pages name their competencies", "Remove competencies from the entry");
     }
+    if (pages.subject && pages.subject !== entry.subject) {
+      add("error", `${file}: subject`, `the entry says ${entry.subject}, the app's src/app.yaml says subject: ${pages.subject}`, "Make the subject of the entry and of src/app.yaml the same");
+    }
     if (entry.strand && entry.strand !== pages.strand) {
-      add("error", `${file}: strand`, `the entry says ${entry.strand}, the app's src/app.yaml says ${pages.strand}`, "Remove strand from the entry or make it match src/app.yaml");
+      add("error", `${file}: strand`, `the entry says ${entry.strand}, the app's src/app.yaml says ${pages.strand ?? `subject: ${pages.subject}`}`, "Remove strand from the entry or make it match src/app.yaml");
     }
     strand = pages.strand;
     competencies = [...new Set(pages.pages.flatMap((p) => p.competencies ?? []))];
     recaps = [...new Set(pages.pages.map((p) => p.recap).filter(Boolean))];
+    ordered = pages.pages;
   }
   if ((!strand || strand === "none") && competencies.length === 0) return;
   let subjects;
@@ -158,14 +166,55 @@ async function learningMap(file, report) {
     add("error", "map/", `the learning map of the catalog is broken: ${error.message}`, "Fix the files in map/ (lernapps/apps)");
     return;
   }
-  const { errors, hints } = checkApp(subjects, { strand, competencies, recaps });
-  const fixError = "Use a strand and competency ids of https://lernapps.net/apps/map/ ; a missing competency is proposed to lernapps/apps (map/<subject>.yaml)";
+  const { errors, hints } = checkApp(subjects, { subject: entry.subject, strand, competencies, recaps });
+  const fixError = "Use a subject, a strand and competency ids of https://lernapps.net/apps/map/ ; a missing competency is proposed to lernapps/apps (map/<subject>.yaml)";
   for (const e of errors) add("error", file, e, fixError);
   // With a strand, an app practises only the competencies of that strand (KD-19): another strand is an error too.
   for (const h of hints) add("error", file, h, "Keep the app in its strand: move these pages to an app of their strand, or give the app strand: none");
+  const subject = subjects.find((s) => s.id === entry.subject);
+  if (subject && !errors.length) await pageFindings(file, subject, ordered ?? [{ competencies }], ordered ? entry.url : undefined, add);
   report.findings.sort(byPlace);
   if (report.findings.some((f) => f.rule === "entry-learning-map") && !report.rules.includes("entry-learning-map")) {
     report.rules = [...report.rules, "entry-learning-map"].sort();
+  }
+}
+
+/**
+ * The findings on an app's pages (lib/map.js checkPages): with the subject's explainerFocus competency, a page across
+ * strands, a prerequisite out of order and one missing in the middle are errors, one at the entry a warning; with
+ * strand, all are warnings. A link in the page's text to the prerequisite's page on the map counts like a recap page
+ * (KD-04): the page is fetched only when it has a finding. Without `url` (no pages, a list in the entry) there is no
+ * order.
+ */
+async function pageFindings(file, subject, pages, url, add) {
+  const findings = checkPages(subject, pages, { ordered: Boolean(url) });
+  const strict = subject.explainerFocus === "competency";
+  const base = url && (url.endsWith("/") ? url : `${url}/`);
+  const texts = new Map();
+  const text = async (i) => {
+    if (!texts.has(i)) {
+      let html = "";
+      try {
+        const response = await fetch(new URL(pages[i].path, base), { signal: AbortSignal.timeout(15_000) });
+        if (response.ok) html = await response.text();
+      } catch {
+        // not reachable: the finding stands
+      }
+      texts.set(i, html);
+    }
+    return texts.get(i);
+  };
+  for (const f of findings) {
+    if (f.prerequisite && base && pages[f.page]?.path && (await text(f.page)).includes(`/apps/map/${subject.id}/c/${f.prerequisite}/`)) continue;
+    const where = pages[f.page]?.path ? `${file}: ${pages[f.page].path}` : file;
+    const severity = strict && f.kind !== "entry" ? "error" : "warning";
+    const fix = {
+      strands: "Split the page so that each page practises competencies of one strand",
+      order: "Put the page that practises the prerequisite before this page",
+      gap: `Practise ${f.prerequisite} on a page before this one, or repeat it there on a recap page (recap: ${subject.id}/${f.prerequisite})`,
+      entry: `Add a recap page before this one (recap: ${subject.id}/${f.prerequisite}), or link its page on the map in the text`,
+    }[f.kind];
+    add(severity, where, f.text, fix);
   }
 }
 

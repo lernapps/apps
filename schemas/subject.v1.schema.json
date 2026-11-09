@@ -53,6 +53,14 @@
       "additionalProperties": false,
       "description": "Where the strands and competencies come from"
     },
+    "explainerFocus": {
+      "description": "What an app of the subject focuses on (KD-01 of lernapps/apps#226). strand (the default): an app stays in one strand, because the strands separate (Physik, Geschichte). competency: an app may practise competencies of several strands, because the strands are woven together (foreign languages, Deutsch); such an app names the subject instead of a strand, each page stays in one strand, and its prerequisites come first in the app",
+      "type": "string",
+      "enum": [
+        "strand",
+        "competency"
+      ]
+    },
     "strands": {
       "minItems": 1,
       "type": "array",

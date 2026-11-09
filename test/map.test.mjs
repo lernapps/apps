@@ -4,7 +4,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
-import { loadMap, checkApp, coverage, rows, placedCount } from "../lib/map.js";
+import { loadMap, checkApp, checkPages, coverage, rows, placedCount } from "../lib/map.js";
 
 const fixture = (name) => fileURLToPath(new URL(`fixtures/map/${name}`, import.meta.url));
 const [subject] = loadMap(fixture("ok"));
@@ -74,10 +74,10 @@ test("with a curriculum: a competency in its first grade, the others as again; u
 
 test("coverage: the competencies of an app in the subject, with the pages that practise them", () => {
   const apps = [
-    { id: "explainer", strand: "fach/alpha", pages: [{ title: "Eins", competencies: ["a1"] }, { title: "Zwei", competencies: ["a1", "a2"] }] },
-    { id: "quiz", strand: "fach/beta", competencies: ["b2"] },
-    { id: "elsewhere", strand: "anderes/alpha", competencies: ["a3"] },
-    { id: "none" },
+    { id: "explainer", subjectId: "fach", strand: "fach/alpha", pages: [{ title: "Eins", competencies: ["a1"] }, { title: "Zwei", competencies: ["a1", "a2"] }] },
+    { id: "quiz", subjectId: "fach", strand: "fach/beta", competencies: ["b2"] },
+    { id: "elsewhere", subjectId: "anderes", strand: "anderes/alpha", competencies: ["a3"] },
+    { id: "none", subjectId: "fach" },
   ];
   const by = coverage(subject, apps);
   assert.deepEqual(by.get("a1").map((p) => [p.app.id, p.pages.map((pg) => pg.title)]), [["explainer", ["Eins", "Zwei"]]]);
@@ -94,5 +94,39 @@ test("an app: an unknown strand or competency is an error, a competency of anoth
   assert.match(checkApp(subjects, { strand: "nix/alpha" }).errors[0], /no subject nix/);
   assert.match(checkApp(subjects, { strand: "fach/alpha", competencies: ["zz"] }).errors[0], /competency zz: no competency of fach/);
   assert.match(checkApp(subjects, { strand: "fach/alpha", competencies: ["b1"] }).hints[0], /an app stays in one strand/);
-  assert.match(checkApp(subjects, { competencies: ["a1"] }).errors[0], /competencies need a strand/);
+  assert.match(checkApp(subjects, { competencies: ["a1"] }).errors[0], /competencies need a subject/);
+  assert.match(checkApp(subjects, { subject: "fach", strand: "andere/alpha" }).errors[0], /not a strand of the app's subject fach/);
+});
+
+const [woven] = loadMap(fixture("woven"));
+
+test("a subject without explainerFocus keeps an app in one strand; with competency, a unit app may cross strands", () => {
+  assert.equal(subject.explainerFocus, "strand");
+  assert.equal(woven.explainerFocus, "competency");
+  assert.match(checkApp([subject], { subject: "fach", competencies: ["a1", "b2"] }).errors[0], /keeps an app in one strand/);
+  assert.deepEqual(checkApp([woven], { subject: "sprache", competencies: ["w1", "g1", "t1"] }), { errors: [], hints: [] });
+  // a strand app in a woven subject still stays in its strand
+  assert.match(checkApp([woven], { subject: "sprache", strand: "sprache/wortschatz", competencies: ["g1"] }).hints[0], /an app stays in one strand/);
+});
+
+const kinds = (findings) => findings.map((f) => `${f.kind}:${f.prerequisite ?? f.page}`);
+
+test("pages: the prerequisites in order, a gap in the middle of the chain, the entry of the chain", () => {
+  // w1 → g1 → g2 → t1: practised in order, nothing to report
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["w1"] }, { competencies: ["g1"] }, { competencies: ["g2"] }, { competencies: ["t1"] }])), []);
+  // g2 missing between g1 and t1: a gap; w1 missing before g1: the entry
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["g1"] }, { competencies: ["t1"] }])), ["entry:w1", "gap:g2"]);
+  // practised, but after the page that needs it
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["w1"] }, { competencies: ["g2"] }, { competencies: ["g1"] }])), ["order:g1"]);
+  // a recap page before, or a link in the page's text, fills the entry; a recap after it is out of order
+  assert.deepEqual(kinds(checkPages(woven, [{ recap: "sprache/w2" }, { competencies: ["t2"] }])), []);
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t2"], linked: new Set(["w2"]) }])), []);
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t2"] }, { recap: "sprache/w2" }])), ["order:w2"]);
+});
+
+test("pages: one strand per page where strands are woven; a list without pages has no order", () => {
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["w1", "g1"] }])), ["strands:0"]);
+  assert.deepEqual(kinds(checkPages(subject, [{ competencies: ["a1", "b2"] }])), []);
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t1", "g2", "g1", "w1"] }], { ordered: false })), ["strands:0"]);
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["g1", "t1"] }], { ordered: false })).filter((k) => !k.startsWith("strands")), ["entry:w1", "gap:g2"]);
 });

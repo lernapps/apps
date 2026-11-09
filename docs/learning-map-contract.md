@@ -47,6 +47,7 @@ strands:
 | Field | Type | Rule |
 |---|---|---|
 | `name` | text | required |
+| `explainerFocus` | `strand` \| `competency` | optional, default `strand`; see below |
 | `source.title`, `source.url` | string, https URL | required; `url` optional when the source has none online |
 | `strands[]` | list, at least one | |
 | `strands[].id` | id | unique in the subject |
@@ -59,6 +60,32 @@ strands:
 | `competencies[].requires` | list of ids | optional; each an id of this subject; no cycles; not itself |
 
 A competency is addressed across the platform as `<subject>/<competency>`, a strand as `<subject>/<strand>`.
+
+### The focus of a subject: `explainerFocus` (lernapps/apps#226)
+
+The subject decides whether its strands separate apps or are woven together.
+
+| Value | Subjects | An app … |
+|---|---|---|
+| `strand` (default) | sciences, Mathematik, Geschichte, … | names one strand and practises only its competencies (a strand app) |
+| `competency` | Englisch, Französisch, Spanisch, Latein, Deutsch | either names one strand (a strand app, e.g. a vocabulary trainer), or names only the subject and practises competencies of several strands (a unit app, e.g. "Au restaurant") |
+
+For a unit app, three rules keep the method of a strand and the order of learning:
+
+1. **One strand per page.** Each page practises competencies of one strand (KD-07).
+2. **Prerequisites first.** Each direct prerequisite (`requires`) of a competency a page practises comes on an earlier
+   page: practised, or repeated on a recap page, or linked in the page's text to its page on the map (KD-03a, KD-04).
+3. **Gap and entry.** A prerequisite the app does not have is a *gap* when the app practises something it builds on
+   (it is missing in the middle of the app's chain), else an *entry* (the start of the chain; a recap page helps).
+
+| Finding | `explainerFocus: competency` | `explainerFocus: strand` |
+|---|---|---|
+| a page across strands | listing error, `lernapps check` warning | (cannot happen: one strand per app) |
+| a prerequisite out of order | listing error, `lernapps check` warning | listing warning, `lernapps check` hint |
+| a gap | listing error, `lernapps check` warning | listing warning, `lernapps check` hint |
+| an entry without recap or link | listing warning, `lernapps check` warning | listing warning, `lernapps check` hint |
+
+An app without pages (a list of competencies in its entry) has no order: only gap and entry apply.
 
 ## 2. A curriculum: `map/<subject>/curricula/<curriculum>.yaml` (lernapps/apps)
 
@@ -101,7 +128,8 @@ map. An app is on format 2 when its `app.yaml` says so.
 ```yaml
 # yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 format: 2                                          # required in format 2; absent means format 1
-strand: mathematik/stochastik                      # required: "<subject>/<strand>", or "none"
+strand: mathematik/stochastik                      # "<subject>/<strand>", or "none"; or, instead:
+# subject: franzoesisch                            # a unit app across the strands (lernapps/apps#226)
 title: Stochastik
 # … everything else as in format 1
 ```
@@ -117,8 +145,9 @@ blocks: […]
 | Field | Where | Rule |
 |---|---|---|
 | `format` | `app.yaml` | `2`, required in format 2 |
-| `strand` | `app.yaml` | required: `<subject>/<strand>` (two ids) or `none` |
-| `competencies` | every page | when `strand` is not `none`: required, at least one id; as a rule one (several give a hint of `lernapps check`, `one-competency-per-page`); a competency may have several pages. When `none`: not allowed |
+| `strand` | `app.yaml` | `<subject>/<strand>` (two ids) or `none`; exactly one of `strand` and `subject` (`oneOf`) |
+| `subject` | `app.yaml` | a subject id; only where the subject has `explainerFocus: competency` (checked by `lernapps check` and the listing, not by the schema, which does not know the map) |
+| `competencies` | every page | with `subject`, or when `strand` is not `none`: required, at least one id; as a rule one (several give a hint of `lernapps check`, `one-competency-per-page`); a competency may have several pages. When `none`: not allowed |
 
 The app cannot know the vocabulary (the subject's ids); the catalog checks the ids when the app is listed (step F).
 
@@ -158,30 +187,36 @@ catalog reads it instead of hand-written topics (KD-13).
 ```
 
 `path` is relative to the app's root, as a link in the app; `title` is the page's title as text (string or by language);
-pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competencies`. A recap
+pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competencies`. A unit
+app (`subject` in `src/app.yaml`, section 1) has `"subject": "<subject>"` instead of `"strand"`. A recap
 page has `"recap": "<subject>/<competency>"` instead of `competencies`.
 
 ## 4. A catalog entry: `entries/<id>.yaml` (lernapps/apps)
 
-Two new optional fields (KD-08):
+`subject` is the id of a subject of the map; the catalog shows its name from the map (lernapps/apps#226). Two
+optional fields place the app on the map (KD-08):
 
 ```yaml
+subject: mathematik                                # required: a subject of the map, by its id
 strand: mathematik/stochastik                      # "<subject>/<strand>"; leave out when the app has none
 competencies: [laplace, baumdiagramm]              # only for apps that are not explainers
 ```
 
 | Field | Rule |
 |---|---|
-| `strand` | optional; `<subject>/<strand>` of an existing subject |
-| `competencies` | optional, ids of the strand; requires `strand`; not for an explainer, whose pages name their competencies in `lernapps-pages.json` |
+| `subject` | required; the id of a subject of the map (`map/<subject>.yaml`) |
+| `strand` | optional; `<subject>/<strand>` of the entry's subject |
+| `competencies` | optional; not for an explainer, whose pages name their competencies in `lernapps-pages.json`. With `strand`, ids of that strand; without, ids of several strands, only where the subject has `explainerFocus: competency` (a unit app) |
 | `topics` | stays, for apps that are not explainers; for a format-2 explainer the catalog takes its pages from `lernapps-pages.json` |
 
 Checks of the listing (rule `entry-learning-map`, an error): every id exists; every competency of an app belongs to the
-app's strand (KD-19); an explainer's `strand` in the entry, if given, equals the one in `lernapps-pages.json`.
+app's strand (KD-19), or, for a unit app, the subject allows several strands; an explainer's `strand` in the entry, if
+given, equals the one in `lernapps-pages.json`, and its `subject` there equals the entry's. Then the pages, as section 1
+says under "The focus of a subject".
 
 ## 5. The map as data: `/apps/map/<subject>.json` (lernapps/apps)
 
-For assistants and the tooling: the subject as in its YAML, plus `curricula` (id, land, schoolType, version, placements)
+For assistants and the tooling: the subject as in its YAML (with `explainerFocus`, always given), plus `curricula` (id, land, schoolType, version, placements)
 and `coverage` (per competency: the apps and pages that practise it), and for a language with a basic vocabulary its
 `vocabulary` (section 6). Linked from `/apps/llms.txt`.
 

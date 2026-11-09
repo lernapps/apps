@@ -34,32 +34,9 @@
       "description": "Name of the app, or a map by language { de, en }"
     },
     "subject": {
-      "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1
-        },
-        {
-          "type": "object",
-          "properties": {
-            "de": {
-              "type": "string",
-              "minLength": 1,
-              "description": "German"
-            },
-            "en": {
-              "description": "English",
-              "type": "string",
-              "minLength": 1
-            }
-          },
-          "required": [
-            "de"
-          ],
-          "additionalProperties": false
-        }
-      ],
-      "description": "Subject, in German (or a map by language), e.g. Mathematik"
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "The subject of the learning map the app belongs to, by its id, e.g. mathematik (https://lernapps.net/apps/map/). The catalog shows the subject's name from the map"
     },
     "grades": {
       "minItems": 1,
@@ -188,7 +165,7 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*\\/[a-z0-9]+(-[a-z0-9]+)*$"
     },
     "competencies": {
-      "description": "Only for apps that are not explainers: the competencies of the strand's subject the app practises, by id. An explainer of format 2 names them on its pages",
+      "description": "Only for apps that are not explainers: the competencies of the subject the app practises, by id. With a strand, only competencies of that strand; without, competencies of several strands, which the subject's map must allow (explainerFocus: competency). An explainer of format 2 names them on its pages",
       "minItems": 1,
       "type": "array",
       "items": {
