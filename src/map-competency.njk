@@ -10,8 +10,8 @@ eleventyComputed:
   description: "{{ view.competency.iCan | tx(lang) }}"
 ---
 {#-
-  A competency (feat/learning-map, B10): "Ich kann …", strand and source; the learning path (what it requires and what
-  requires it, also across strands); when each captured curriculum places it ("Wann ist er dran?"); the apps and pages
+  A competency (feat/learning-map, B10): "Ich kann …", strand and source; its chain (feat/map-steps: every ancestor
+  and the direct descendants by step, also across strands); when each captured curriculum places it ("Wann ist er dran?"); the apps and pages
   that practise it, or that it is a gap.
 -#}
 {%- set K = t.map.competency %}
@@ -43,28 +43,46 @@ eleventyComputed:
     </dl>
   </div>
 
+  {#- The chain (feat/map-steps, KD-06, KD-09): every ancestor by step, the direct ones marked; the direct descendants
+      by step, and how many more build on it, with a link to the map by steps. #}
+  {%- set P = K.path %}
   <section class="panel" aria-labelledby="weg">
-    <h2 id="weg" class="panel-title">{{ K.path.headline }}</h2>
-    <div class="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start">
+    <h2 id="weg" class="panel-title">{{ P.headline }}</h2>
+    <p class="m-0 text-slate-600">{{ P.lead }}</p>
+    <div class="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start mt-3">
       <div>
-        <h3 class="m-0 text-sm font-semibold text-slate-600">{{ K.path.requires }}</h3>
-        {%- if comp.requires.length %}
-        <ul class="list-none p-0 m-0 mt-2 flex flex-col gap-2">{% for id in comp.requires %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}</li>{% endfor %}</ul>
-        {%- else %}<p class="m-0 mt-2 text-slate-600">{{ K.path.requiresNone }}</p>{% endif %}
+        <h3 class="m-0 text-sm font-semibold text-slate-600">{{ P.requires }}{% if comp.ancestorCount %} · {{ comp.ancestorCount }}{% endif %}</h3>
+        {%- if comp.ancestorsByStep.length %}
+        <dl class="map-chain-steps">
+          {%- for group in comp.ancestorsByStep %}
+          <dt>{{ P.step(group.step) }}</dt>
+          <dd><ul>{% for id in group.ids %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}{% if id in comp.requires %} <span class="map-direct">{{ P.direct }}</span>{% endif %}</li>{% endfor %}</ul></dd>
+          {%- endfor %}
+        </dl>
+        {%- else %}<p class="m-0 mt-2 text-slate-600">{{ P.requiresNone }}</p>{% endif %}
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div class="p-3 rounded-lg bg-blue-700 text-white">
-        <h3 class="m-0 text-sm font-semibold">{{ K.path.self }}</h3>
+        <h3 class="m-0 text-sm font-semibold">{{ P.self }} · {{ P.step(comp.step) }}</h3>
         <p class="m-0 mt-1 font-bold"{{ comp.name | fallbackLang(lang) | safe }}>{{ label }}</p>
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div>
-        <h3 class="m-0 text-sm font-semibold text-slate-600">{{ K.path.requiredBy }}</h3>
-        {%- if comp.requiredBy.length %}
-        <ul class="list-none p-0 m-0 mt-2 flex flex-col gap-2">{% for id in comp.requiredBy %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}</li>{% endfor %}</ul>
-        {%- else %}<p class="m-0 mt-2 text-slate-600">{{ K.path.requiredByNone }}</p>{% endif %}
+        <h3 class="m-0 text-sm font-semibold text-slate-600">{{ P.requiredBy }}</h3>
+        {%- if comp.childrenByStep.length %}
+        <dl class="map-chain-steps">
+          {%- for group in comp.childrenByStep %}
+          <dt>{{ P.step(group.step) }}</dt>
+          <dd><ul>{% for id in group.ids %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}</li>{% endfor %}</ul></dd>
+          {%- endfor %}
+        </dl>
+        {%- if comp.furtherCount %}
+        <p class="m-0 mt-3 text-slate-700">{{ P.further(comp.furtherCount, comp.furtherSteps) }}</p>
+        {%- endif %}
+        {%- else %}<p class="m-0 mt-2 text-slate-600">{{ P.requiredByNone }}</p>{% endif %}
       </div>
     </div>
+    <p class="m-0 mt-4"><a href="{{ c.mapUrl(subject.id + '/c/') | trim }}#{{ comp.id }}" class="text-blue-700 underline underline-offset-2">{{ P.furtherLink }}</a></p>
   </section>
 
   <section class="panel" aria-labelledby="wann">

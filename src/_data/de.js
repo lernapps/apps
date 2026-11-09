@@ -474,6 +474,13 @@ const de = {
           links: "Der Pfeil führt von einem Baustein zu einem anderen.",
         },
         {
+          id: "stufe",
+          title: "Stufe",
+          text: "Wie weit unten ein Baustein in der Kette „baut auf“ steht. Stufe 1 hat keine Voraussetzung. Sonst steht ein Baustein eine Stufe unter seiner tiefsten Voraussetzung. Die Stufe folgt nur aus den Pfeilen; sie sagt nichts über Klassen.",
+          example: "Prozentwert baut auf Brüchen (Stufe 2) und auf dem Dreisatz (Stufe 3) auf. Also steht er in Stufe 4.",
+          links: "Die Stufe ist keine Angabe des Bausteins, sie wird aus „baut auf“ berechnet. Im Bild hat sie kein eigenes Kästchen.",
+        },
+        {
           id: "richtstufe",
           title: "Richtstufe",
           text: "Ungefähr, in welchen zwei Schuljahren ein Baustein dran ist: Klasse 5/6, 7/8 oder 9/10. Jeder Baustein hat eine. Die Karte zeigt sie, wenn kein Lehrplan gewählt ist oder ein Lehrplan den Baustein nicht einordnet.",
@@ -553,6 +560,8 @@ const de = {
       legend: { covered: "Abgedeckt", gap: "Lücke" },
       filter: "Bausteine zeigen",
       corner: "Klasse ↓ · Strang →",
+      // the two orders of the rows: by grade (this page) or by step of the chain (/map/<subject>/c/)
+      order: { label: "Zeilen ordnen", grades: "Nach Klassen", steps: "Nach Stufen der Kette" },
       gridLabel: (subject) => `Lernlandkarte ${subject}: Bausteine nach Strang und Klasse`,
       noGrade: "noch ohne Klasse",
       count: (covered, total) => `${covered} von ${total} Bausteinen geübt`,
@@ -591,6 +600,36 @@ const de = {
     },
 
     // /map/<subject>/c/<competency>/
+    // /map/<subject>/c/: the grid by steps of the chain (feat/map-steps)
+    steps: {
+      title: (subject) => `Lernlandkarte ${subject} nach Stufen · lernapps.net`,
+      description: (subject) => `Was in ${subject} worauf aufbaut, Stufe für Stufe.`,
+      headline: (subject) => `Lernlandkarte ${subject} nach Stufen`,
+      lead: "Jede Zeile ist eine Stufe in der Kette „baut auf“. Ein Baustein steht eine Zeile unter seiner tiefsten Voraussetzung. Ganz oben stehen die Bausteine ohne Voraussetzung.",
+      corner: "Stufe ↓ · Strang →",
+      gridLabel: (subject) => `Lernlandkarte ${subject}: Bausteine nach Strang und Stufe`,
+      row: (step) => `Stufe ${step}`,
+      rowCount: (n) => (n === 1 ? "1 Baustein" : `${n} Bausteine`),
+      hint: "Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Stufe für Stufe.",
+      // the chain of the chosen competency, filled by assets/map-steps.js
+      chain: {
+        headline: "Die Kette",
+        empty: "Wähle einen Baustein in der Karte. Dann siehst du hier seine Kette.",
+        kind: (strand, step) => `${strand} · Stufe ${step}`,
+        before: "Baut auf",
+        after: "Darauf baut auf",
+        nothing: "keine",
+        page: "Zur Seite des Bausteins",
+        clear: "Auswahl aufheben",
+      },
+      howTo: [
+        { term: "Strang", id: "strang", where: "eine Spalte", text: "Ein Teilgebiet des Fachs, das sich über mehrere Schuljahre zieht." },
+        { term: "Baustein", id: "baustein", where: "ein Kästchen", text: "Eine Sache, die ein Kind lernen kann: „Ich kann …“." },
+        { term: "Stufe", id: "stufe", where: "eine Zeile", text: "Wie weit unten ein Baustein in der Kette „baut auf“ steht. Sie sagt nichts über Klassen." },
+        { term: "App", id: "app", where: "die Farbe", text: "Blau heißt abgedeckt: Eine App übt den Baustein. Gestrichelt heißt Lücke: Noch keine App übt ihn." },
+      ],
+    },
+
     competency: {
       quote: (text) => `„${text}“`,
       title: (name, subject) => `${name} · Lernlandkarte ${subject} · lernapps.net`,
@@ -599,12 +638,17 @@ const de = {
       source: "Quelle",
       richtstufe: "Richtstufe",
       path: {
-        headline: "Lernweg",
+        headline: "Die Kette",
+        lead: "Was du vorher brauchst und was danach kommt, Stufe für Stufe.",
         requires: "Baut auf",
+        direct: "direkt",
         self: "Dieser Baustein",
-        requiredBy: "Darauf bauen auf",
+        step: (step) => `Stufe ${step}`,
+        requiredBy: "Darauf baut direkt auf",
         requiresNone: "Er baut auf keinem anderen Baustein auf.",
         requiredByNone: "Noch baut kein Baustein darauf auf.",
+        further: (n, steps) => `Danach ${n === 1 ? "baut noch 1 Baustein" : `bauen noch ${n} Bausteine`} in ${steps === 1 ? "1 weiteren Stufe" : `${steps} weiteren Stufen`} darauf auf.`,
+        furtherLink: "Die ganze Kette in der Karte nach Stufen",
       },
       when: {
         headline: "Wann ist er dran?",

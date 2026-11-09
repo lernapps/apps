@@ -36,6 +36,8 @@ eleventyComputed:
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>{{ S.howTo.headline }}</a>
   </div>
 
+  {{ c.mapOrder(subject, 'grades', (subject.id + '/' + curriculum.id + '/') if curriculum else '') }}
+
   {#- What the map shows, in one row: which curriculum (links without JS; a drop-down with JS, map.js navigates on
       change; every Land is listed, one without a captured curriculum cannot be chosen), and which kind of competency
       (the legend; with JS buttons that show only that kind). #}

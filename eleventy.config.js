@@ -50,6 +50,23 @@ export default function (eleventyConfig) {
 
   // The learning map (src/map*.njk): an item of a list by its id (a subject, strand, competency or curriculum).
   eleventyConfig.addFilter("byId", (list, id) => list.find((item) => item.id === id));
+  // The data of a subject for the script of the map by steps (assets/map-steps.js), as JSON safe inside <script>:
+  // per strand its name, per competency its strand, requires, step, name and "Ich kann …" in the language.
+  eleventyConfig.addFilter("stepsData", (subject, lang = "de") => {
+    const strands = subject.strands.map((s) => s.id);
+    const data = {
+      strands: subject.strands.map((s) => tx(s.name, lang)),
+      competencies: subject.competencies.map((c) => ({
+        id: c.id,
+        strand: strands.indexOf(c.strand),
+        requires: c.requires,
+        step: c.step,
+        name: tx(c.name, lang),
+        iCan: tx(c.iCan, lang),
+      })),
+    };
+    return JSON.stringify(data).replace(/</g, "\\u003c");
+  });
   // A grade band as people write it: "7-8" → "7/8".
   eleventyConfig.addFilter("band", (band) => String(band).replace("-", "/"));
 
