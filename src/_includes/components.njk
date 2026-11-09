@@ -117,6 +117,21 @@
 </li>
 {% endmacro %}
 
+{#- How far teachers reviewed the subject's map (feat/map-status), at the top of each of its pages: a draft is marked
+    loudly, with a way to help; checked and reviewed say by how many teachers. -#}
+{% macro mapStatus(subject) %}
+{%- set St = t.map.status %}
+{%- set name = subject.name | tx(lang) %}
+{%- if subject.status == "draft" %}
+<aside class="map-status map-status-draft" aria-labelledby="status-{{ subject.id }}">
+  <p class="m-0"><strong id="status-{{ subject.id }}" class="map-status-tag map-status-tag-draft">{{ St.label.draft }}</strong> {{ St.draft }}</p>
+  <p class="m-0 mt-1">{{ St.help }} <a href="{{ site.repo }}/issues/new?title={{ St.issueTitle(name) | urlencode }}" class="underline underline-offset-2 font-semibold">{{ St.helpLink }}</a> <span class="map-status-note">{{ St.helpNote }}</span></p>
+</aside>
+{%- else %}
+<p class="map-status map-status-ok m-0"><strong class="map-status-tag map-status-tag-{{ subject.status }}">{{ St.label[subject.status] }}</strong> {{ St[subject.status](subject.reviews.length) }}</p>
+{%- endif %}
+{% endmacro %}
+
 {#- The two orders of a subject's rows as links (feat/map-steps): by grade (/map/<subject>/) or by step of the chain
     (/map/<subject>/c/). current: "grades" or "steps"; grades: the path of the grades view (a chosen curriculum stays). -#}
 {% macro mapOrder(subject, current, grades='') %}

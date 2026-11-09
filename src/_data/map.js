@@ -82,6 +82,9 @@ export default async function () {
       name: subject.name,
       source: subject.source,
       explainerFocus: subject.explainerFocus,
+      // How far teachers reviewed the model (feat/map-status); every page of the subject shows it.
+      status: subject.status,
+      reviews: subject.reviews,
       strands,
       competencies,
       curricula,
@@ -121,6 +124,8 @@ export default async function () {
       name: s.name,
       source: s.source,
       explainerFocus: s.explainerFocus,
+      status: s.status,
+      reviews: s.reviews,
       strands: s.strands.map((st) => ({
         id: st.id,
         name: st.name,

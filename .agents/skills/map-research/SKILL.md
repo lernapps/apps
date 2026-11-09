@@ -47,6 +47,9 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
 - **Shared strands:** related subjects use the same strand ids for the same area (see below); the name may differ.
 - **Same content in two subjects** (e.g. climate change in Biologie and Erdkunde): each keeps its own aspect; both
   name the other in the comment: `Siehe auch: <subject>/<id>`.
+- **status:** a new or reworked subject is `status: draft`, however good the sources: only teachers of the subject
+  raise it. After a teacher looked it through, add `reviews: [{ date, role }]` (role, never a name) and set `checked`;
+  with two or more, `reviewed` (feat/map-status).
 - **Ids used by apps** stay. A change of an id is a migration of every app that uses it.
 
 ## Shared strands (ontology)

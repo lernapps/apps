@@ -26,6 +26,7 @@ eleventyComputed:
     { label: subject.name | tx(lang), href: c.mapUrl(subject.id + '/') | trim, attrs: subject.name | fallbackLang(lang) },
     { label: name, attrs: strand.name | fallbackLang(lang) }
   ]) }}
+  {{ c.mapStatus(subject) }}
 
   <div class="flex flex-col gap-2 items-start">
     <a href="{{ c.mapUrl('') | trim }}#strang" class="text-sm text-blue-700 underline underline-offset-2">{{ T.whatIs }}</a>

@@ -38,10 +38,33 @@ const Strand = z
   })
   .describe("A strand (Strang): a part of the subject that runs over several school years and builds on itself");
 
+export const MAP_STATES = ["draft", "checked", "reviewed"];
+
+const Review = z
+  .strictObject({
+    date: z.iso.date().describe("When the review was done, YYYY-MM-DD"),
+    role: z
+      .string()
+      .min(1)
+      .describe('Who reviewed, by role and never by name, e.g. "Lehrkraft Französisch, Gymnasium, Hessen"'),
+  })
+  .describe("One review of the subject's model by a teacher of the subject");
+
 export const Subject = z
   .strictObject({
     name: Text.describe("Name of the subject, e.g. Mathematik; the file name is its id"),
     source: Source,
+    status: z
+      .enum(MAP_STATES)
+      .describe(
+        "How far the strands, competencies and requires are reviewed (feat/map-status): draft (an idea to show the " +
+          "principle, reviewed by no teacher yet), checked (at least one teacher of the subject reviewed it), reviewed " +
+          "(several did). Shown on every page of the subject's map",
+      ),
+    reviews: z
+      .array(Review)
+      .optional()
+      .describe("The reviews behind the status: checked needs at least one, reviewed at least two"),
     explainerFocus: z
       .enum(["strand", "competency"])
       .optional()

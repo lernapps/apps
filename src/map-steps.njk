@@ -30,6 +30,7 @@ eleventyComputed:
     { label: name, href: c.mapUrl(subject.id + '/') | trim, attrs: subject.name | fallbackLang(lang) },
     { label: S.order.steps }
   ]) }}
+  {{ c.mapStatus(subject) }}
 
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">{{ P.headline(name) }}</h1>

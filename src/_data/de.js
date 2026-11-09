@@ -363,6 +363,26 @@ const de = {
       practises: "Sie übt diese Bausteine:",
     },
     breadcrumb: "Brotkrumen",
+    // how far teachers reviewed a subject's map (feat/map-status), on every page of the subject and on /map/
+    status: {
+      label: { draft: "Entwurf", checked: "Geprüft", reviewed: "Begutachtet" },
+      draft:
+        "Diese Karte ist nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft des Fachs hat sie geprüft. Stränge, Bausteine und Pfeile können falsch sein oder fehlen.",
+      checked: (n) =>
+        `${n === 1 ? "Eine Lehrkraft" : `${n} Lehrkräfte`} des Fachs ${n === 1 ? "hat" : "haben"} diese Karte durchgesehen. Sie kann trotzdem Fehler enthalten.`,
+      reviewed: (n) => `${n} Lehrkräfte des Fachs haben diese Karte durchgesehen.`,
+      help: "Du unterrichtest das Fach? Sieh die Karte durch und sag uns, was fehlt oder falsch ist:",
+      helpLink: "Mithelfen",
+      helpNote: "(GitHub-Issue, braucht ein GitHub-Konto)",
+      issueTitle: (subject) => `Lernlandkarte ${subject}: Durchsicht`,
+      // /map/: what the labels of the cards mean
+      levels: "Jede Karte sagt, wie weit sie geprüft ist:",
+      levelsList: [
+        "<b>Entwurf</b>: nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft hat sie geprüft.",
+        "<b>Geprüft</b>: Eine Lehrkraft des Fachs hat sie durchgesehen.",
+        "<b>Begutachtet</b>: Mehrere Lehrkräfte des Fachs haben sie durchgesehen.",
+      ],
+    },
     grade: (label) => `Klasse ${label}`,
     covered: "eine App übt ihn",
     gap: "Lücke, noch keine App",

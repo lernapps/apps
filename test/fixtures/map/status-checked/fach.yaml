@@ -1,0 +1,12 @@
+# A subject a teacher has reviewed once (feat/map-status): status checked, the date unquoted as people write it.
+name: { de: Fach, en: Subject }
+source:
+  title: Testquelle
+status: checked
+reviews:
+  - { date: 2026-11-01, role: "Lehrkraft Fach, Gymnasium, Hessen" }
+strands:
+  - id: alpha
+    name: Alpha
+    competencies:
+      - { id: a1, name: Eins, iCan: "Ich kann eins.", gradeBand: "5-6" }

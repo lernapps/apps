@@ -36,6 +36,7 @@ eleventyComputed:
       {%- if s.covered and filled < 1 %}{% set filled = 1 %}{% endif %}
       <li>
         <a href="{{ c.mapUrl(s.id + '/') | trim }}" class="map-card">
+          <span class="map-status-tag map-status-tag-{{ s.status }} self-start">{{ t.map.status.label[s.status] }}</span>
           <b{{ s.name | fallbackLang(lang) | safe }}>{{ s.name | tx(lang) }}</b>
           <span class="map-mini" aria-hidden="true">{% for i in range(32) %}<i{% if i < filled %} class="map-mini-covered"{% endif %}></i>{% endfor %}</span>
           <span class="map-card-meta">{{ T.subjectInfo(s.strands.length, total) }}<br>{{ T.subjectCovered(s.covered) }}{% if s.curricula.length %} · {{ T.subjectCurricula(s.curricula.length) }}{% endif %}</span>
@@ -45,6 +46,10 @@ eleventyComputed:
       {%- endfor %}
     </ul>
     <p class="m-0 text-slate-600">{{ T.subjectsMore }}</p>
+    <div class="m-0 text-slate-700">
+      <p class="m-0">{{ t.map.status.levels }}</p>
+      <ul class="m-0 mt-1 pl-5 list-disc">{% for item in t.map.status.levelsList %}<li>{{ item | safe }}</li>{% endfor %}</ul>
+    </div>
   </section>
 
   <section aria-labelledby="apps" class="flex flex-col gap-4">
