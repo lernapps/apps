@@ -590,6 +590,32 @@ const en = {
       },
     },
 
+    vocabulary: {
+      title: (subject) => `Basic vocabulary ${subject} · learning map · lernapps.net`,
+      description: (subject) => `The words that come first in ${subject}, by level A1 and A2, independent of any textbook.`,
+      headline: (subject) => `Basic vocabulary ${subject}`,
+      lead: "These words come first, independent of any textbook. The level says how far a word is: A1 first, then A2. Which words a page needs follows from its exercises.",
+      principles: {
+        headline: "How an app uses the list",
+        items: [
+          "It starts from children's everyday life: family, friends, school, food, home, free time.",
+          "It does not get hard too early: short sentences in the present first, one new thing per exercise.",
+          "It assumes the words of the levels below and introduces each new word on the page with its meaning.",
+          "A word above the level or outside the list only when the situation needs it, explained where it appears.",
+        ],
+      },
+      count: (n) => `${n} words`,
+      levelHeadline: (level, n) => `Level ${level} · ${n} words`,
+      head: { word: "Word", pos: "Part of speech", note: "Note" },
+      corrected: "corrected",
+      source: "Source:",
+      licence: (licence) => `Licence of the list: ${licence}. The word list is derived from the source.`,
+      cite: "Please cite:",
+      link: "Basic vocabulary",
+      linkLead: "Which words come first:",
+      pos: { NOM: "noun", VER: "verb", ADJ: "adjective", ADV: "adverb", PRO: "pronoun", PRP: "preposition", KON: "conjunction", INT: "interjection", NUM: "numeral", "DET:ART": "article", "DET:POS": "possessive", "PRP:det": "preposition with article" },
+    },
+
     lands: {
       BW: "Baden-Württemberg",
       BY: "Bavaria",

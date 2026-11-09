@@ -119,7 +119,8 @@ eleventyComputed:
   <p class="m-0 text-sm text-slate-600">{{ S.source }}
     {% if subject.source.url %}<a href="{{ subject.source.url }}" class="text-blue-700 underline underline-offset-2" lang="de">{{ subject.source.title }}</a>{% else %}<span lang="de">{{ subject.source.title }}</span>{% endif %}
     {%- if curriculum %} · {% if curriculum.source.url %}<a href="{{ curriculum.source.url }}" class="text-blue-700 underline underline-offset-2" lang="de">{{ curriculum.source.title }}</a>{% else %}<span lang="de">{{ curriculum.source.title }}</span>{% endif %}{% endif %}
-    · <a href="{{ ('/map/' + subject.id + '.json') | url }}" class="text-blue-700 underline underline-offset-2">{{ S.json }}</a></p>
+    · <a href="{{ ('/map/' + subject.id + '.json') | url }}" class="text-blue-700 underline underline-offset-2">{{ S.json }}</a>
+    {%- if subject.vocabulary %} · <a href="{{ c.mapUrl(subject.id + '/grundwortschatz/') | trim }}" class="text-blue-700 underline underline-offset-2">{{ t.map.vocabulary.link }}</a>{% endif %}</p>
 
   {%- set curriculumName = (t.map.lands[curriculum.land] + ', ' + (curriculum.schoolType | tx(lang))) if curriculum else '' %}
   {#- The help: at the end of the page without JS, a dialog with JS (map.js hides it here). #}

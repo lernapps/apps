@@ -1,0 +1,118 @@
+{
+  "$id": "https://lernapps.net/apps/schemas/vocabulary.v1.schema.json",
+  "title": "lernapps.net learning map: basic vocabulary",
+  "description": "The basic vocabulary of a language: map/<subject>/vocabulary/words.yaml",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}$",
+      "description": "The language of the words"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The lexicon, e.g. FLELex / Beacco (TreeTagger)"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Where to download it"
+        },
+        "licence": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Its licence, e.g. CC BY-NC-SA 4.0; the word list has the same"
+        },
+        "cite": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "How its authors ask to cite it"
+        }
+      },
+      "required": [
+        "title",
+        "url",
+        "licence",
+        "cite"
+      ],
+      "additionalProperties": false,
+      "description": "The graded lexicon the word list comes from"
+    },
+    "levels": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "A1",
+          "A2",
+          "B1",
+          "B2",
+          "C1",
+          "C2"
+        ]
+      },
+      "description": "The levels the list holds, e.g. [A1, A2]"
+    },
+    "words": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The lemma as the lexicon writes it, without article"
+          },
+          "pos": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Its part of speech as the lexicon tags it, e.g. NOM, VER, ADJ"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "A1",
+              "A2",
+              "B1",
+              "B2",
+              "C1",
+              "C2"
+            ],
+            "description": "Its CEFR level: from the lexicon, or from a correction"
+          },
+          "note": {
+            "description": "Why a correction added it or changed its level",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "word",
+          "pos",
+          "level"
+        ],
+        "additionalProperties": false,
+        "description": "A word of the basic vocabulary"
+      },
+      "description": "The words, by level, then in the alphabet"
+    }
+  },
+  "required": [
+    "language",
+    "source",
+    "levels",
+    "words"
+  ],
+  "additionalProperties": false
+}

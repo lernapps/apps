@@ -628,6 +628,33 @@ const de = {
       },
     },
 
+    // /map/<subject>/grundwortschatz/: the basic vocabulary of a language (docs/learning-map-contract.md, section 6)
+    vocabulary: {
+      title: (subject) => `Grundwortschatz ${subject} · Lernlandkarte · lernapps.net`,
+      description: (subject) => `Die Wörter, die im Fach ${subject} zuerst dran sind, nach Stufe A1 und A2, unabhängig vom Lehrbuch.`,
+      headline: (subject) => `Grundwortschatz ${subject}`,
+      lead: "Diese Wörter sind zuerst dran, unabhängig vom Lehrbuch. Die Stufe sagt, wie weit ein Wort ist: A1 zuerst, dann A2. Welche Wörter eine Seite braucht, folgt aus ihren Übungen.",
+      principles: {
+        headline: "So nutzt eine App die Liste",
+        items: [
+          "Sie baut auf dem Alltag von Kindern auf: Familie, Freunde, Schule, Essen, Wohnen, Freizeit.",
+          "Sie wird nicht zu früh zu schwer: erst kurze Sätze im Präsens, eine neue Sache pro Übung.",
+          "Sie setzt die Wörter der Stufen darunter voraus und führt jedes neue Wort auf der Seite mit seiner Bedeutung ein.",
+          "Ein Wort über der Stufe oder außerhalb der Liste nimmt sie nur, wenn die Situation es braucht, und erklärt es dort.",
+        ],
+      },
+      count: (n) => `${n} Wörter`,
+      levelHeadline: (level, n) => `Stufe ${level} · ${n} Wörter`,
+      head: { word: "Wort", pos: "Wortart", note: "Anmerkung" },
+      corrected: "korrigiert",
+      source: "Quelle:",
+      licence: (licence) => `Lizenz der Liste: ${licence}. Die Wortliste ist aus der Quelle abgeleitet.`,
+      cite: "Bitte so zitieren:",
+      link: "Grundwortschatz",
+      linkLead: "Welche Wörter zuerst dran sind:",
+      pos: { NOM: "Nomen", VER: "Verb", ADJ: "Adjektiv", ADV: "Adverb", PRO: "Pronomen", PRP: "Präposition", KON: "Konjunktion", INT: "Ausruf", NUM: "Zahlwort", "DET:ART": "Artikel", "DET:POS": "Possessivbegleiter", "PRP:det": "Präposition mit Artikel" },
+    },
+
     // The Länder, by their code (schemas/map.js, LANDS).
     lands: {
       BW: "Baden-Württemberg",

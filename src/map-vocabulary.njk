@@ -1,0 +1,74 @@
+---
+pagination:
+  data: map.vocabularyPages
+  size: 1
+  alias: view
+permalink: "/{{ view.l.root }}map/{{ view.subject.id }}/grundwortschatz/index.html"
+layout: base.njk
+eleventyComputed:
+  title: "{{ t.map.vocabulary.title(view.subject.name | tx(lang)) }}"
+  description: "{{ t.map.vocabulary.description(view.subject.name | tx(lang)) }}"
+---
+{#-
+  The basic vocabulary of a language (docs/learning-map-contract.md, section 6): its words by CEFR level, how an app
+  uses the list, the corrections with their reasons, and the source with its licence and how to cite it. Without JS
+  complete: plain lists.
+-#}
+{%- set V = t.map.vocabulary %}
+{%- set subject = view.subject %}
+{%- set voc = subject.vocabulary %}
+{%- import "components.njk" as c with context %}
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-12 flex flex-col gap-8">
+  {{ c.breadcrumb([
+    { label: t.map.name, href: c.mapUrl('') | trim },
+    { label: subject.name | tx(lang), href: c.mapUrl(subject.id + '/') | trim, attrs: subject.name | fallbackLang(lang) },
+    { label: V.link }
+  ]) }}
+
+  <div class="flex flex-col gap-3 items-start">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.5rem, 4.5vw, 2.25rem);">{{ V.headline(subject.name | tx(lang)) }}</h1>
+    <p class="m-0 text-lg text-slate-700">{{ V.lead }}</p>
+    <p class="m-0 text-slate-600">{{ V.count(voc.words.length) }}</p>
+  </div>
+
+  <section class="panel" aria-labelledby="grundsaetze">
+    <h2 id="grundsaetze" class="panel-title">{{ V.principles.headline }}</h2>
+    <ul class="m-0 pl-5 list-disc flex flex-col gap-1">{% for item in V.principles.items %}<li>{{ item }}</li>{% endfor %}</ul>
+  </section>
+
+  {%- for group in voc.byLevel %}
+  <section class="panel" aria-labelledby="stufe-{{ group.level | lower }}">
+    <h2 id="stufe-{{ group.level | lower }}" class="panel-title">{{ V.levelHeadline(group.level, group.words.length) }}</h2>
+    <ul class="m-0 p-0 list-none columns-2 sm:columns-3 gap-6" lang="{{ voc.language }}">
+      {%- for w in group.words %}
+      <li class="break-inside-avoid py-0.5">{{ w.word }} <span class="text-sm text-slate-600" lang="{{ lang }}">{{ V.pos[w.pos] or w.pos }}{% if w.note %} · {{ V.corrected }}{% endif %}</span></li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+
+  {%- set corrected = voc.words | selectattr("note") %}
+  {%- if corrected.length %}
+  <section class="panel" aria-labelledby="korrekturen">
+    <h2 id="korrekturen" class="panel-title">{{ V.corrected | capitalize }}</h2>
+    <div class="map-scroll" role="region" aria-labelledby="korrekturen" tabindex="0">
+      <table class="map-table">
+        <thead><tr><th scope="col">{{ V.head.word }}</th><th scope="col">{{ V.head.pos }}</th><th scope="col">{{ V.head.note }}</th></tr></thead>
+        <tbody>
+          {%- for w in corrected %}
+          <tr><th scope="row" lang="{{ voc.language }}">{{ w.word }}</th><td>{{ V.pos[w.pos] or w.pos }}</td><td lang="de">{{ w.note }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="flex flex-col gap-2 text-sm text-slate-600" aria-label="{{ V.source }}">
+    <p class="m-0">{{ V.source }} <a href="{{ voc.source.url }}" class="text-blue-700 underline underline-offset-2" lang="en">{{ voc.source.title }}</a></p>
+    <p class="m-0">{{ V.licence(voc.source.licence) }}</p>
+    <p class="m-0">{{ V.cite }}</p>
+    <ul class="m-0 pl-5 list-disc" lang="en">{% for cite in voc.source.cite %}<li>{{ cite }}</li>{% endfor %}</ul>
+  </section>
+</div>

@@ -36,6 +36,9 @@ eleventyComputed:
     <dl class="map-facts w-full mt-2">
       <div><dt>{{ K.strand }}</dt><dd><a href="{{ c.mapUrl(subject.id + '/' + strand.id + '/') | trim }}" class="text-blue-700 underline underline-offset-2"{{ strand.name | fallbackLang(lang) | safe }}>{{ strand.name | tx(lang) }}</a></dd></div>
       <div><dt>{{ K.richtstufe }}</dt><dd>{{ t.map.grade(comp.gradeBand | band) }}</dd></div>
+      {%- if subject.vocabulary and comp.strand == "wortschatz" %}
+      <div><dt>{{ t.map.vocabulary.link }}</dt><dd>{{ t.map.vocabulary.linkLead }} <a href="{{ c.mapUrl(subject.id + '/grundwortschatz/') | trim }}" class="text-blue-700 underline underline-offset-2">{{ t.map.vocabulary.link }} {{ subject.name | tx(lang) }}</a></dd></div>
+      {%- endif %}
       <div><dt>{{ K.source }}</dt><dd lang="de">{% if subject.source.url %}<a href="{{ subject.source.url }}" class="text-blue-700 underline underline-offset-2">{{ subject.source.title }}</a>{% else %}{{ subject.source.title }}{% endif %}</dd></div>
     </dl>
   </div>
