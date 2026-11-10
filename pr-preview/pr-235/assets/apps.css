@@ -76,6 +76,8 @@ textarea.field { resize: vertical; font-size: .875rem; }
 .map-chip-gap { background: var(--la-bg, #fff); color: var(--la-text, #1e293b); border: 1.5px dashed var(--la-control, #64748b); }
 .map-chip-gap:hover { border-style: solid; }
 .map-chip-note { font-size: .75rem; opacity: .9; }
+.map-chip-tags { display: flex; flex-wrap: wrap; gap: .25rem; }
+.map-chip-alone { font-size: .75rem; line-height: 1.2; padding: 0 .375rem; border: 1px dashed currentColor; border-radius: .25rem; font-weight: 700; white-space: nowrap; }
 .map-chip-band { font-size: .75rem; line-height: 1.2; padding: 0 .375rem; border: 1px solid currentColor; border-radius: .25rem; opacity: .85; white-space: nowrap; }
 .map-swatch { display: inline-block; width: 1.75rem; height: 1.125rem; border-radius: .25rem; box-sizing: border-box; }
 .map-bar { display: block; height: 6px; border-radius: 3px; background: var(--la-border, #e2e8f0); overflow: hidden; }
