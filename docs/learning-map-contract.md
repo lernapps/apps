@@ -33,10 +33,12 @@ strands:
     name: { de: Stochastik, en: Probability and statistics }
     competencies:
       - id: laplace
+        name: { de: Laplace-Formel, en: Laplace formula }  # required: a short name, 2–5 words
         iCan: { de: "Ich kann Wahrscheinlichkeiten mit der Laplace-Formel berechnen." }
         gradeBand: "7-8"                           # required: "5-6", "7-8" or "9-10" (KD-06)
         requires: [haeufigkeiten]                  # optional: ids in the same subject, any strand
       - id: baumdiagramm
+        name: { de: Baumdiagramm, en: Tree diagram }
         iCan: "Ich kann ein mehrstufiges Zufallsexperiment als Baumdiagramm darstellen."
         gradeBand: "7-8"
         requires: [laplace]
@@ -52,6 +54,7 @@ strands:
 | `strands[].name` | text | required |
 | `strands[].competencies[]` | list, at least one | |
 | `competencies[].id` | id | unique in the **subject** (not only in the strand) |
+| `competencies[].name` | text | required; a short name of 2–5 words, shown where the competency is listed or linked |
 | `competencies[].iCan` | text | required; starts with "Ich kann" |
 | `competencies[].gradeBand` | `"5-6"` \| `"7-8"` \| `"9-10"` | required |
 | `competencies[].requires` | list of ids | optional; each an id of this subject; no cycles; not itself |

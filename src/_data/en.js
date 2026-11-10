@@ -356,7 +356,7 @@ const en = {
       apps: {
         headline: "The map and the apps",
         steps: [
-          "The map splits a subject into <b>building blocks</b>. Each is a sentence: “I can …”.",
+          "The map splits a subject into <b>building blocks</b>. Each has a short name and a sentence: “I can …”.",
           "Each app says which building blocks its pages practise.",
           "On the map, such a building block is <b>blue</b>. Dashed means: an app is still missing here.",
         ],
@@ -429,7 +429,7 @@ const en = {
         {
           id: "baustein",
           title: "Building block",
-          text: "One thing a child can learn, as a sentence “I can …”. Each building block belongs to exactly one strand.",
+          text: "One thing a child can learn, with a short name and a sentence “I can …”. Each building block belongs to exactly one strand.",
           example: "“I can calculate the percentage value.”",
           links: "A building block builds on other building blocks. A curriculum places it in grades. Pages of apps practise it.",
         },

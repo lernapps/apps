@@ -387,7 +387,7 @@ const de = {
       apps: {
         headline: "Karte und Apps",
         steps: [
-          "Die Karte zerlegt ein Fach in <b>Bausteine</b>. Jeder ist ein Satz: „Ich kann …“.",
+          "Die Karte zerlegt ein Fach in <b>Bausteine</b>. Jeder hat einen kurzen Namen und einen Satz: „Ich kann …“.",
           "Jede App sagt, welche Bausteine ihre Seiten üben.",
           "Auf der Karte ist ein Baustein dann <b>blau</b>. Gestrichelt heißt: Hier fehlt noch eine App.",
         ],
@@ -462,7 +462,7 @@ const de = {
         {
           id: "baustein",
           title: "Baustein",
-          text: "Eine Sache, die ein Kind lernen kann, als Satz „Ich kann …“. Jeder Baustein gehört zu genau einem Strang.",
+          text: "Eine Sache, die ein Kind lernen kann, mit einem kurzen Namen und einem Satz „Ich kann …“. Jeder Baustein gehört zu genau einem Strang.",
           example: "„Ich kann den Prozentwert berechnen.“",
           links: "Ein Baustein baut auf anderen Bausteinen auf. Ein Lehrplan ordnet ihn in Klassen ein. Seiten von Apps üben ihn.",
         },

@@ -122,6 +122,7 @@ export default async function () {
           const c = s.competencies.find((x) => x.id === id);
           return {
             id: c.id,
+            name: c.name,
             iCan: c.iCan,
             gradeBand: c.gradeBand,
             requires: c.requires,

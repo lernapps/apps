@@ -6,7 +6,7 @@ pagination:
 permalink: "/{{ view.l.root }}map/{{ view.subject.id }}/c/{{ view.competency.id }}/index.html"
 layout: base.njk
 eleventyComputed:
-  title: "{{ t.map.competency.title(view.competency.iCan | canLabel(lang), view.subject.name | tx(lang)) }}"
+  title: "{{ t.map.competency.title(view.competency.name | tx(lang), view.subject.name | tx(lang)) }}"
   description: "{{ view.competency.iCan | tx(lang) }}"
 ---
 {#-
@@ -18,7 +18,7 @@ eleventyComputed:
 {%- set subject = view.subject %}
 {%- set comp = view.competency %}
 {%- set strand = subject.strands | byId(comp.strand) %}
-{%- set label = comp.iCan | canLabel(lang) %}
+{%- set label = comp.name | tx(lang) %}
 {%- import "components.njk" as c with context %}
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-12 flex flex-col gap-8">
@@ -26,12 +26,12 @@ eleventyComputed:
     { label: t.map.name, href: c.mapUrl('') | trim },
     { label: subject.name | tx(lang), href: c.mapUrl(subject.id + '/') | trim, attrs: subject.name | fallbackLang(lang) },
     { label: strand.name | tx(lang), href: c.mapUrl(subject.id + '/' + strand.id + '/') | trim, attrs: strand.name | fallbackLang(lang) },
-    { label: label, attrs: comp.iCan | fallbackLang(lang) }
+    { label: label, attrs: comp.name | fallbackLang(lang) }
   ]) }}
 
   <div class="flex flex-col gap-3 items-start">
     <a href="{{ c.mapUrl('') | trim }}#baustein" class="text-sm text-blue-700 underline underline-offset-2">{{ K.whatIs }}</a>
-    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.5rem, 4.5vw, 2.25rem);"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ label }}</h1>
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.5rem, 4.5vw, 2.25rem);"{{ comp.name | fallbackLang(lang) | safe }}>{{ label }}</h1>
     <p class="m-0 text-lg text-slate-700"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ K.quote(comp.iCan | tx(lang)) }}</p>
     <dl class="map-facts w-full mt-2">
       <div><dt>{{ K.strand }}</dt><dd><a href="{{ c.mapUrl(subject.id + '/' + strand.id + '/') | trim }}" class="text-blue-700 underline underline-offset-2"{{ strand.name | fallbackLang(lang) | safe }}>{{ strand.name | tx(lang) }}</a></dd></div>
@@ -55,7 +55,7 @@ eleventyComputed:
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div class="p-3 rounded-lg bg-blue-700 text-white">
         <h3 class="m-0 text-sm font-semibold">{{ K.path.self }}</h3>
-        <p class="m-0 mt-1 font-bold"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ label }}</p>
+        <p class="m-0 mt-1 font-bold"{{ comp.name | fallbackLang(lang) | safe }}>{{ label }}</p>
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div>

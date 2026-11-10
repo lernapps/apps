@@ -19,6 +19,7 @@ export const GRADE_BANDS = ["5-6", "7-8", "9-10"];
 const Competency = z
   .strictObject({
     id: Id.describe("Stable id, unique in the subject; never renamed once published"),
+    name: Text.describe("Short name of the competency, 2–5 words, e.g. Laplace-Formel; shown where it is listed"),
     iCan: Text.refine((t) => (typeof t === "string" ? t : t.de).startsWith("Ich kann"), {
       message: 'starts with "Ich kann"',
     }).describe('What a learner can do, in plain German: "Ich kann …"'),

@@ -6,11 +6,11 @@ strands:
   - id: alpha
     name: Alpha
     competencies:
-      - { id: a1, iCan: "Ich kann eins.", gradeBand: "5-6" }
-      - { id: a2, iCan: "Ich kann zwei.", gradeBand: "7-8", requires: [a1] }
-      - { id: a3, iCan: "Ich kann drei.", gradeBand: "9-10", requires: [a2] }
+      - { id: a1, name: Baustein a1, iCan: "Ich kann eins.", gradeBand: "5-6" }
+      - { id: a2, name: Baustein a2, iCan: "Ich kann zwei.", gradeBand: "7-8", requires: [a1] }
+      - { id: a3, name: Baustein a3, iCan: "Ich kann drei.", gradeBand: "9-10", requires: [a2] }
   - id: beta
     name: Beta
     competencies:
-      - { id: b1, iCan: "Ich kann vier.", gradeBand: "5-6", requires: [a2] }
-      - { id: b2, iCan: "Ich kann fünf.", gradeBand: "7-8" }
+      - { id: b1, name: Baustein b1, iCan: "Ich kann vier.", gradeBand: "5-6", requires: [a2] }
+      - { id: b2, name: Baustein b2, iCan: "Ich kann fünf.", gradeBand: "7-8" }
