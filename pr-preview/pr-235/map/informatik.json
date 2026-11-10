@@ -117,8 +117,7 @@
           "iCan": "Ich kann erklären, wie Buchstaben und Zeichen mit einem Code wie ASCII oder Unicode als Binärzahlen gespeichert werden.",
           "gradeBand": "7-8",
           "requires": [
-            "bit-und-byte",
-            "binaersystem"
+            "bit-und-byte"
           ],
           "practisedBy": []
         },
@@ -209,7 +208,6 @@
           "iCan": "Ich kann gleichartige Daten in einem Feld (Array) speichern und über den Index auf einzelne Elemente zugreifen.",
           "gradeBand": "9-10",
           "requires": [
-            "datentypen",
             "variable"
           ],
           "practisedBy": []
@@ -249,7 +247,8 @@
           "iCan": "Ich kann den Aufbau eines Hypertexts aus Seiten und Verweisen beschreiben und einen einfachen Hypertext erstellen.",
           "gradeBand": "7-8",
           "requires": [
-            "graph"
+            "graph",
+            "urheberrecht"
           ],
           "practisedBy": []
         },
@@ -599,7 +598,6 @@
           "iCan": "Ich kann einen Algorithmus Schritt für Schritt von Hand ausführen und so sein Ergebnis ermitteln.",
           "gradeBand": "9-10",
           "requires": [
-            "verzweigung",
             "wiederholung-mit-bedingung"
           ],
           "practisedBy": []
@@ -613,7 +611,6 @@
           "iCan": "Ich kann einen Algorithmus als Struktogramm darstellen und ein Struktogramm lesen.",
           "gradeBand": "9-10",
           "requires": [
-            "verzweigung",
             "wiederholung-mit-bedingung"
           ],
           "practisedBy": []
@@ -627,7 +624,6 @@
           "iCan": "Ich kann einen Algorithmus als Programmablaufplan (PAP) darstellen und einen PAP lesen.",
           "gradeBand": "9-10",
           "requires": [
-            "verzweigung",
             "wiederholung-mit-bedingung"
           ],
           "practisedBy": []
@@ -641,7 +637,6 @@
           "iCan": "Ich kann einen Algorithmus in Pseudocode aufschreiben.",
           "gradeBand": "9-10",
           "requires": [
-            "verzweigung",
             "wiederholung-mit-bedingung"
           ],
           "practisedBy": []
@@ -683,7 +678,7 @@
           "iCan": "Ich kann in einem Programm Variablen anlegen, ihnen mit einer Wertzuweisung Werte geben und diese Werte ändern.",
           "gradeBand": "9-10",
           "requires": [
-            "sequenz",
+            "visuelle-programmierung",
             "datentypen"
           ],
           "practisedBy": []
@@ -1186,7 +1181,8 @@
           "iCan": "Ich kann Grundsätze des Datenschutzrechts nennen und beurteilen, ob personenbezogene Daten in einem Fall erhoben und genutzt werden dürfen.",
           "gradeBand": "9-10",
           "requires": [
-            "eigene-daten-schuetzen"
+            "eigene-daten-schuetzen",
+            "datenschutz-und-datensicherheit"
           ],
           "practisedBy": []
         },
