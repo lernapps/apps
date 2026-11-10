@@ -7,7 +7,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { load } from "js-yaml";
 import { appsOf } from "../scripts/upgrade-plan.mjs";
-import { body, keyChanges, TITLE } from "../scripts/upgrade-message.mjs";
+import { body, breaking, keyChanges, title, TITLE } from "../scripts/upgrade-message.mjs";
 import { issueBody, summary } from "../scripts/upgrade-report.mjs";
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -47,6 +47,18 @@ test("the commit message has the sections of the apps' history and takes the key
   assert.ok(TITLE.length < 72 && /^chore\(deps\): /.test(TITLE));
   assert.ok(body("").includes("the pins moved"));
   assert.ok(keyChanges(`lernapps update: ${"x".repeat(9000)}`).length < 4100);
+});
+
+test("what the app must change itself comes first, in its own section, and marks the title", () => {
+  const log = "lernapps update: breaking: tests import from `vite-plus/test`\nlernapps update: vite-plus: 1.0.0 → 1.4.0\n";
+  assert.equal(breaking(log), "- tests import from `vite-plus/test`");
+  assert.equal(keyChanges(log), "- vite-plus: 1.0.0 → 1.4.0");
+  const text = body(log);
+  assert.ok(text.startsWith("## Breaking changes"), text);
+  assert.ok(text.indexOf("## Breaking changes") < text.indexOf("## Intent"));
+  assert.equal(title(log), "chore(deps)!: update the lernapps tooling and runtime");
+  assert.equal(title("lernapps update: vite-plus: 1.0.0 → 1.4.0\n"), TITLE);
+  assert.ok(!body("lernapps update: x\n").includes("## Breaking changes"));
 });
 
 test("the report lists the apps that need a person, and nothing when none does", () => {
