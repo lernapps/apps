@@ -104,7 +104,8 @@
           "iCan": "Ich kann die Zellatmung als Wortgleichung angeben und erklären, wozu Zellen Sauerstoff und Nährstoffe brauchen.",
           "gradeBand": "5-6",
           "requires": [
-            "tierzelle-pflanzenzelle"
+            "tierzelle-pflanzenzelle",
+            "naehrstoffe"
           ],
           "practisedBy": []
         },
@@ -131,8 +132,7 @@
           "iCan": "Ich kann erklären, wie Zellen bei der Zellatmung Energie aus Glucose für Bewegung, Wachstum und Körperwärme bereitstellen.",
           "gradeBand": "9-10",
           "requires": [
-            "fotosynthese-und-zellatmung",
-            "naehrstoffe"
+            "fotosynthese-und-zellatmung"
           ],
           "practisedBy": []
         },
@@ -211,8 +211,7 @@
           "iCan": "Ich kann den Bau eines Virus beschreiben und erklären, warum sich Viren nur in Wirtszellen vermehren können.",
           "gradeBand": "9-10",
           "requires": [
-            "bakterienzelle",
-            "kennzeichen-des-lebendigen"
+            "bakterienzelle"
           ],
           "practisedBy": []
         },
@@ -298,7 +297,8 @@
           "iCan": "Ich kann an Beispielen erklären, wie der Körperbau von Fischen, Vögeln und Säugetieren an die Fortbewegung im Wasser, in der Luft oder an Land angepasst ist.",
           "gradeBand": "5-6",
           "requires": [
-            "wirbeltierklassen"
+            "wirbeltierklassen",
+            "skelett"
           ],
           "practisedBy": []
         },
@@ -573,8 +573,7 @@
           "iCan": "Ich kann aus abgestuften Ähnlichkeiten im Körperbau auf Verwandtschaft schließen und sie in einem Stammbaum darstellen.",
           "gradeBand": "9-10",
           "requires": [
-            "evolutionstheorie-darwin",
-            "wirbeltierklassen"
+            "evolutionstheorie-darwin"
           ],
           "practisedBy": []
         },
@@ -818,8 +817,7 @@
           "iCan": "Ich kann eine ausgewogene Mahlzeit zusammenstellen und begründen, warum sie gesund ist.",
           "gradeBand": "5-6",
           "requires": [
-            "energiebedarf",
-            "naehrstoffe"
+            "energiebedarf"
           ],
           "practisedBy": []
         },
@@ -951,7 +949,8 @@
           "iCan": "Ich kann den Bau einer Nervenzelle mit Zellkörper, Dendriten, Axon und Endknöpfchen beschreiben und erklären, wie sie Signale weiterleitet.",
           "gradeBand": "7-8",
           "requires": [
-            "reiz-reaktion"
+            "reiz-reaktion",
+            "tierzelle-pflanzenzelle"
           ],
           "practisedBy": []
         },
@@ -1315,7 +1314,9 @@
           },
           "iCan": "Ich kann an einem heimischen Ökosystem wie Wiese, Wald oder Gewässer beschreiben, was Lebensraum (Biotop) und Lebensgemeinschaft (Biozönose) sind.",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "arten-bestimmen"
+          ],
           "practisedBy": []
         },
         {
@@ -1393,7 +1394,6 @@
           "iCan": "Ich kann beschreiben, wie sich ein Ökosystem im Lauf der Zeit verändert (Sukzession), und natürliche von menschengemachten Veränderungen unterscheiden.",
           "gradeBand": "7-8",
           "requires": [
-            "oekosystem-grundbegriffe",
             "eingriffe-des-menschen"
           ],
           "practisedBy": []
@@ -1407,8 +1407,7 @@
           "iCan": "Ich kann erklären, was Biodiversität ist, warum sie gefährdet ist und wie Biotopschutz Arten schützt.",
           "gradeBand": "7-8",
           "requires": [
-            "eingriffe-des-menschen",
-            "arten-bestimmen"
+            "eingriffe-des-menschen"
           ],
           "practisedBy": []
         },
