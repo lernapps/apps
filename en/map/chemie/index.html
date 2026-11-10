@@ -60,10 +60,26 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-chemie">
+  <p class="m-0"><strong id="status-chemie" class="map-status-tag map-status-tag-draft">Draft</strong> This map is only an idea to show the principle. No teacher of the subject has checked it yet. Strands, building blocks and arrows may be wrong or missing.</p>
+  <p class="m-0 mt-1">Do you teach the subject? Look through the map and tell us what is missing or wrong: <a href="https://github.com/lernapps/apps/issues/new?title=Learning%20map%20Chemistry%3A%20review" class="underline underline-offset-2 font-semibold">Help out</a> <span class="map-status-note">(GitHub issue, needs a GitHub account)</span></p>
+</aside>
+
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Learning map Chemistry</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>How to read the map</a>
   </div>
+
+  
+<nav aria-labelledby="ordnung-chemie" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-chemie" class="m-0 text-sm font-semibold text-slate-600">Order the rows</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/en/map/chemie/" class="btn btn-primary" aria-current="page">By grade</a></li>
+    <li><a href="/apps/en/map/chemie/c/" class="btn btn-secondary">By step of the chain</a></li>
+  </ul>
+</nav>
+
   <div class="map-toolbar">
     <div data-map-when hidden>
       <label for="lehrplan" class="sr-only">What is taught when?</label>
@@ -140,7 +156,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="sicherheit-beim-experimentieren">
   <a href="/apps/en/map/chemie/c/sicherheit-beim-experimentieren/" class="map-chip map-chip-gap" data-opens="detail-sicherheit-beim-experimentieren">
     <span>Laboratory safety</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -148,7 +164,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="stoffeigenschaften-beschreiben">
   <a href="/apps/en/map/chemie/c/stoffeigenschaften-beschreiben/" class="map-chip map-chip-covered" data-opens="detail-stoffeigenschaften-beschreiben">
     <span>Properties of substances</span>
     <span class="sr-only">(an app practises it)</span>
@@ -156,7 +172,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="aggregatzustaende-beschreiben">
   <a href="/apps/en/map/chemie/c/aggregatzustaende-beschreiben/" class="map-chip map-chip-covered" data-opens="detail-aggregatzustaende-beschreiben">
     <span>States of matter and changes of state</span>
     <span class="sr-only">(an app practises it)</span>
@@ -164,7 +180,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="schmelz-und-siedetemperatur">
   <a href="/apps/en/map/chemie/c/schmelz-und-siedetemperatur/" class="map-chip map-chip-covered" data-opens="detail-schmelz-und-siedetemperatur">
     <span>Melting and boiling points</span>
     <span class="sr-only">(an app practises it)</span>
@@ -172,7 +188,7 @@
 </li>
 
               
-<li>
+<li data-competency="aggregatzustand-bei-aeusseren-bedingungen">
   <a href="/apps/en/map/chemie/c/aggregatzustand-bei-aeusseren-bedingungen/" class="map-chip map-chip-gap" data-opens="detail-aggregatzustand-bei-aeusseren-bedingungen">
     <span>Predicting the state of matter</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -180,7 +196,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="stoffe-erkennen-und-verwenden">
   <a href="/apps/en/map/chemie/c/stoffe-erkennen-und-verwenden/" class="map-chip map-chip-covered" data-opens="detail-stoffe-erkennen-und-verwenden">
     <span>Identifying and using substances</span>
     <span class="sr-only">(an app practises it)</span>
@@ -188,7 +204,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektrische-leitfaehigkeit">
   <a href="/apps/en/map/chemie/c/elektrische-leitfaehigkeit/" class="map-chip map-chip-gap" data-opens="detail-elektrische-leitfaehigkeit">
     <span>Electrical conductivity</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -196,7 +212,7 @@
 </li>
 
               
-<li>
+<li data-competency="loeslichkeit">
   <a href="/apps/en/map/chemie/c/loeslichkeit/" class="map-chip map-chip-gap" data-opens="detail-loeslichkeit">
     <span>Solubility in water</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -204,7 +220,7 @@
 </li>
 
               
-<li>
+<li data-competency="gasnachweise">
   <a href="/apps/en/map/chemie/c/gasnachweise/" class="map-chip map-chip-gap" data-opens="detail-gasnachweise">
     <span>Tests for gases</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -212,7 +228,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="reinstoffe-und-gemische">
   <a href="/apps/en/map/chemie/c/reinstoffe-und-gemische/" class="map-chip map-chip-covered" data-opens="detail-reinstoffe-und-gemische">
     <span>Pure substances and mixtures</span>
     <span class="sr-only">(an app practises it)</span>
@@ -220,7 +236,7 @@
 </li>
 
               
-<li>
+<li data-competency="gemische-trennen">
   <a href="/apps/en/map/chemie/c/gemische-trennen/" class="map-chip map-chip-gap" data-opens="detail-gemische-trennen">
     <span>Separating mixtures</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -228,7 +244,7 @@
 </li>
 
               
-<li>
+<li data-competency="elemente-und-verbindungen">
   <a href="/apps/en/map/chemie/c/elemente-und-verbindungen/" class="map-chip map-chip-gap" data-opens="detail-elemente-und-verbindungen">
     <span>Elements and compounds</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -236,7 +252,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="teilchenmodell">
   <a href="/apps/en/map/chemie/c/teilchenmodell/" class="map-chip map-chip-covered" data-opens="detail-teilchenmodell">
     <span>Particle model</span>
     <span class="sr-only">(an app practises it)</span>
@@ -244,7 +260,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="aggregatzustaende-mit-teilchenmodell">
   <a href="/apps/en/map/chemie/c/aggregatzustaende-mit-teilchenmodell/" class="map-chip map-chip-covered" data-opens="detail-aggregatzustaende-mit-teilchenmodell">
     <span>States of matter in the particle model</span>
     <span class="sr-only">(an app practises it)</span>
@@ -252,7 +268,7 @@
 </li>
 
               
-<li>
+<li data-competency="denkmodelle-und-sachmodelle">
   <a href="/apps/en/map/chemie/c/denkmodelle-und-sachmodelle/" class="map-chip map-chip-gap" data-opens="detail-denkmodelle-und-sachmodelle">
     <span>Conceptual and physical models</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -260,7 +276,7 @@
 </li>
 
               
-<li>
+<li data-competency="daltonsches-atommodell">
   <a href="/apps/en/map/chemie/c/daltonsches-atommodell/" class="map-chip map-chip-gap" data-opens="detail-daltonsches-atommodell">
     <span>Dalton&#39;s atomic model</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -268,7 +284,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="symbole-der-elemente">
   <a href="/apps/en/map/chemie/c/symbole-der-elemente/" class="map-chip map-chip-covered" data-opens="detail-symbole-der-elemente">
     <span>Element symbols</span>
     <span class="sr-only">(an app practises it)</span>
@@ -276,7 +292,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="formeln-von-verbindungen">
   <a href="/apps/en/map/chemie/c/formeln-von-verbindungen/" class="map-chip map-chip-covered" data-opens="detail-formeln-von-verbindungen">
     <span>Chemical formulas of compounds</span>
     <span class="sr-only">(an app practises it)</span>
@@ -284,7 +300,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="atombau-bausteine">
   <a href="/apps/en/map/chemie/c/atombau-bausteine/" class="map-chip map-chip-covered" data-opens="detail-atombau-bausteine">
     <span>Subatomic particles</span>
     <span class="sr-only">(an app practises it)</span>
@@ -292,7 +308,7 @@
 </li>
 
               
-<li>
+<li data-competency="atome-ionen-und-molekuele-unterscheiden">
   <a href="/apps/en/map/chemie/c/atome-ionen-und-molekuele-unterscheiden/" class="map-chip map-chip-gap" data-opens="detail-atome-ionen-und-molekuele-unterscheiden">
     <span>Atoms, ions and molecules</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -300,7 +316,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="periodensystem-lesen">
   <a href="/apps/en/map/chemie/c/periodensystem-lesen/" class="map-chip map-chip-covered" data-opens="detail-periodensystem-lesen">
     <span>Reading the periodic table</span>
     <span class="sr-only">(an app practises it)</span>
@@ -308,7 +324,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="metalle-und-nichtmetalle">
   <a href="/apps/en/map/chemie/c/metalle-und-nichtmetalle/" class="map-chip map-chip-covered" data-opens="detail-metalle-und-nichtmetalle">
     <span>Metals and non-metals</span>
     <span class="sr-only">(an app practises it)</span>
@@ -316,7 +332,7 @@
 </li>
 
               
-<li>
+<li data-competency="ionenbindung">
   <a href="/apps/en/map/chemie/c/ionenbindung/" class="map-chip map-chip-gap" data-opens="detail-ionenbindung">
     <span>Ionic bonding</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -324,7 +340,7 @@
 </li>
 
               
-<li>
+<li data-competency="ionengitter">
   <a href="/apps/en/map/chemie/c/ionengitter/" class="map-chip map-chip-gap" data-opens="detail-ionengitter">
     <span>Ionic lattices</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -332,7 +348,7 @@
 </li>
 
               
-<li>
+<li data-competency="metallbindung">
   <a href="/apps/en/map/chemie/c/metallbindung/" class="map-chip map-chip-gap" data-opens="detail-metallbindung">
     <span>Metallic bonding</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -344,7 +360,7 @@
           <td>
             <ul class="map-cell">
               
-<li data-covered>
+<li data-covered data-competency="kennzeichen-chemischer-reaktionen">
   <a href="/apps/en/map/chemie/c/kennzeichen-chemischer-reaktionen/" class="map-chip map-chip-covered" data-opens="detail-kennzeichen-chemischer-reaktionen">
     <span>Signs of a chemical reaction</span>
     <span class="sr-only">(an app practises it)</span>
@@ -352,7 +368,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="reaktion-oder-zustandsaenderung">
   <a href="/apps/en/map/chemie/c/reaktion-oder-zustandsaenderung/" class="map-chip map-chip-covered" data-opens="detail-reaktion-oder-zustandsaenderung">
     <span>Chemical or physical change</span>
     <span class="sr-only">(an app practises it)</span>
@@ -360,7 +376,7 @@
 </li>
 
               
-<li>
+<li data-competency="synthese-und-analyse">
   <a href="/apps/en/map/chemie/c/synthese-und-analyse/" class="map-chip map-chip-gap" data-opens="detail-synthese-und-analyse">
     <span>Synthesis and decomposition</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -368,7 +384,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="massenerhaltung">
   <a href="/apps/en/map/chemie/c/massenerhaltung/" class="map-chip map-chip-covered" data-opens="detail-massenerhaltung">
     <span>Law of conservation of mass</span>
     <span class="sr-only">(an app practises it)</span>
@@ -376,7 +392,7 @@
 </li>
 
               
-<li>
+<li data-competency="wortgleichung">
   <a href="/apps/en/map/chemie/c/wortgleichung/" class="map-chip map-chip-gap" data-opens="detail-wortgleichung">
     <span>Word equations</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -384,7 +400,7 @@
 </li>
 
               
-<li>
+<li data-competency="verbrennung">
   <a href="/apps/en/map/chemie/c/verbrennung/" class="map-chip map-chip-gap" data-opens="detail-verbrennung">
     <span>Combustion</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -392,7 +408,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="reaktionsgleichung-aufstellen">
   <a href="/apps/en/map/chemie/c/reaktionsgleichung-aufstellen/" class="map-chip map-chip-covered" data-opens="detail-reaktionsgleichung-aufstellen">
     <span>Balancing chemical equations</span>
     <span class="sr-only">(an app practises it)</span>
@@ -400,7 +416,7 @@
 </li>
 
               
-<li>
+<li data-competency="oxidation-und-reduktion">
   <a href="/apps/en/map/chemie/c/oxidation-und-reduktion/" class="map-chip map-chip-gap" data-opens="detail-oxidation-und-reduktion">
     <span>Oxidation and reduction</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -408,7 +424,7 @@
 </li>
 
               
-<li>
+<li data-competency="edle-und-unedle-metalle">
   <a href="/apps/en/map/chemie/c/edle-und-unedle-metalle/" class="map-chip map-chip-gap" data-opens="detail-edle-und-unedle-metalle">
     <span>Noble and base metals</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -420,7 +436,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="energieformen-unterscheiden">
   <a href="/apps/en/map/chemie/c/energieformen-unterscheiden/" class="map-chip map-chip-gap" data-opens="detail-energieformen-unterscheiden">
     <span>Forms of energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -428,7 +444,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieumwandlung-bei-reaktionen">
   <a href="/apps/en/map/chemie/c/energieumwandlung-bei-reaktionen/" class="map-chip map-chip-gap" data-opens="detail-energieumwandlung-bei-reaktionen">
     <span>Energy conversion in reactions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -436,7 +452,7 @@
 </li>
 
               
-<li>
+<li data-competency="exotherm-und-endotherm">
   <a href="/apps/en/map/chemie/c/exotherm-und-endotherm/" class="map-chip map-chip-gap" data-opens="detail-exotherm-und-endotherm">
     <span>Exothermic and endothermic reactions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -444,7 +460,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieerhaltung">
   <a href="/apps/en/map/chemie/c/energieerhaltung/" class="map-chip map-chip-gap" data-opens="detail-energieerhaltung">
     <span>Conservation of energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -452,7 +468,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieschema-lesen">
   <a href="/apps/en/map/chemie/c/energieschema-lesen/" class="map-chip map-chip-gap" data-opens="detail-energieschema-lesen">
     <span>Energy diagrams</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -460,7 +476,7 @@
 </li>
 
               
-<li>
+<li data-competency="aktivierungsenergie">
   <a href="/apps/en/map/chemie/c/aktivierungsenergie/" class="map-chip map-chip-gap" data-opens="detail-aktivierungsenergie">
     <span>Activation energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -475,7 +491,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="ph-wert-deuten">
   <a href="/apps/en/map/chemie/c/ph-wert-deuten/" class="map-chip map-chip-gap" data-opens="detail-ph-wert-deuten">
     <span>pH value and indicators</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -483,7 +499,7 @@
 </li>
 
               
-<li>
+<li data-competency="ionen-in-sauren-und-alkalischen-loesungen">
   <a href="/apps/en/map/chemie/c/ionen-in-sauren-und-alkalischen-loesungen/" class="map-chip map-chip-gap" data-opens="detail-ionen-in-sauren-und-alkalischen-loesungen">
     <span>Ions in acidic and alkaline solutions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -491,7 +507,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="ordnungszahl-und-massenzahl">
   <a href="/apps/en/map/chemie/c/ordnungszahl-und-massenzahl/" class="map-chip map-chip-covered" data-opens="detail-ordnungszahl-und-massenzahl">
     <span>Atomic number and mass number</span>
     <span class="sr-only">(an app practises it)</span>
@@ -499,7 +515,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="schalenmodell">
   <a href="/apps/en/map/chemie/c/schalenmodell/" class="map-chip map-chip-covered" data-opens="detail-schalenmodell">
     <span>Shell model</span>
     <span class="sr-only">(an app practises it)</span>
@@ -507,7 +523,7 @@
 </li>
 
               
-<li>
+<li data-competency="atommodell-mit-energiestufen">
   <a href="/apps/en/map/chemie/c/atommodell-mit-energiestufen/" class="map-chip map-chip-gap" data-opens="detail-atommodell-mit-energiestufen">
     <span>Energy level model</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -515,7 +531,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="hauptgruppen">
   <a href="/apps/en/map/chemie/c/hauptgruppen/" class="map-chip map-chip-covered" data-opens="detail-hauptgruppen">
     <span>Main groups</span>
     <span class="sr-only">(an app practises it)</span>
@@ -523,7 +539,7 @@
 </li>
 
               
-<li>
+<li data-competency="reaktionen-mit-atommodell-vorhersagen">
   <a href="/apps/en/map/chemie/c/reaktionen-mit-atommodell-vorhersagen/" class="map-chip map-chip-gap" data-opens="detail-reaktionen-mit-atommodell-vorhersagen">
     <span>Predicting reactivity from valence electrons</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -531,7 +547,7 @@
 </li>
 
               
-<li>
+<li data-competency="periodensystem-und-atombau">
   <a href="/apps/en/map/chemie/c/periodensystem-und-atombau/" class="map-chip map-chip-gap" data-opens="detail-periodensystem-und-atombau">
     <span>Periodic table and atomic structure</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -539,7 +555,7 @@
 </li>
 
               
-<li>
+<li data-competency="eigenschaften-im-periodensystem">
   <a href="/apps/en/map/chemie/c/eigenschaften-im-periodensystem/" class="map-chip map-chip-gap" data-opens="detail-eigenschaften-im-periodensystem">
     <span>Periodic trends</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -547,7 +563,7 @@
 </li>
 
               
-<li>
+<li data-competency="ionen-bilden">
   <a href="/apps/en/map/chemie/c/ionen-bilden/" class="map-chip map-chip-gap" data-opens="detail-ionen-bilden">
     <span>Formation of ions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -555,7 +571,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektronenpaarbindung">
   <a href="/apps/en/map/chemie/c/elektronenpaarbindung/" class="map-chip map-chip-gap" data-opens="detail-elektronenpaarbindung">
     <span>Covalent bonding</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -563,7 +579,7 @@
 </li>
 
               
-<li>
+<li data-competency="lewis-formeln">
   <a href="/apps/en/map/chemie/c/lewis-formeln/" class="map-chip map-chip-gap" data-opens="detail-lewis-formeln">
     <span>Lewis structures</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -571,7 +587,7 @@
 </li>
 
               
-<li>
+<li data-competency="bindungstypen-vergleichen">
   <a href="/apps/en/map/chemie/c/bindungstypen-vergleichen/" class="map-chip map-chip-gap" data-opens="detail-bindungstypen-vergleichen">
     <span>Comparing types of bonding</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -579,7 +595,7 @@
 </li>
 
               
-<li>
+<li data-competency="raeumliche-struktur-von-molekuelen">
   <a href="/apps/en/map/chemie/c/raeumliche-struktur-von-molekuelen/" class="map-chip map-chip-gap" data-opens="detail-raeumliche-struktur-von-molekuelen">
     <span>Molecular geometry</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -587,7 +603,7 @@
 </li>
 
               
-<li>
+<li data-competency="partialladungen-und-dipole">
   <a href="/apps/en/map/chemie/c/partialladungen-und-dipole/" class="map-chip map-chip-gap" data-opens="detail-partialladungen-und-dipole">
     <span>Partial charges and dipoles</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -595,7 +611,7 @@
 </li>
 
               
-<li>
+<li data-competency="wechselwirkungen-zwischen-teilchen">
   <a href="/apps/en/map/chemie/c/wechselwirkungen-zwischen-teilchen/" class="map-chip map-chip-gap" data-opens="detail-wechselwirkungen-zwischen-teilchen">
     <span>Intermolecular forces</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -603,7 +619,7 @@
 </li>
 
               
-<li>
+<li data-competency="struktur-und-eigenschaften-verbinden">
   <a href="/apps/en/map/chemie/c/struktur-und-eigenschaften-verbinden/" class="map-chip map-chip-gap" data-opens="detail-struktur-und-eigenschaften-verbinden">
     <span>Structure-property relationships</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -611,7 +627,7 @@
 </li>
 
               
-<li>
+<li data-competency="kohlenwasserstoffe-alkane">
   <a href="/apps/en/map/chemie/c/kohlenwasserstoffe-alkane/" class="map-chip map-chip-gap" data-opens="detail-kohlenwasserstoffe-alkane">
     <span>Alkanes</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -619,7 +635,7 @@
 </li>
 
               
-<li>
+<li data-competency="funktionelle-gruppen-und-stoffklassen">
   <a href="/apps/en/map/chemie/c/funktionelle-gruppen-und-stoffklassen/" class="map-chip map-chip-gap" data-opens="detail-funktionelle-gruppen-und-stoffklassen">
     <span>Functional groups and compound classes</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -627,7 +643,7 @@
 </li>
 
               
-<li>
+<li data-competency="eigenschaften-organischer-stoffe">
   <a href="/apps/en/map/chemie/c/eigenschaften-organischer-stoffe/" class="map-chip map-chip-gap" data-opens="detail-eigenschaften-organischer-stoffe">
     <span>Properties of organic compounds</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -635,7 +651,7 @@
 </li>
 
               
-<li>
+<li data-competency="kunststoffe">
   <a href="/apps/en/map/chemie/c/kunststoffe/" class="map-chip map-chip-gap" data-opens="detail-kunststoffe">
     <span>Plastics</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -647,7 +663,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="umkehrbarkeit-chemischer-reaktionen">
   <a href="/apps/en/map/chemie/c/umkehrbarkeit-chemischer-reaktionen/" class="map-chip map-chip-gap" data-opens="detail-umkehrbarkeit-chemischer-reaktionen">
     <span>Reversible reactions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -655,7 +671,7 @@
 </li>
 
               
-<li>
+<li data-competency="stoffmenge-und-molare-masse">
   <a href="/apps/en/map/chemie/c/stoffmenge-und-molare-masse/" class="map-chip map-chip-gap" data-opens="detail-stoffmenge-und-molare-masse">
     <span>Amount of substance and molar mass</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -663,7 +679,7 @@
 </li>
 
               
-<li>
+<li data-competency="stoechiometrische-berechnung">
   <a href="/apps/en/map/chemie/c/stoechiometrische-berechnung/" class="map-chip map-chip-gap" data-opens="detail-stoechiometrische-berechnung">
     <span>Stoichiometric calculations</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -671,7 +687,7 @@
 </li>
 
               
-<li>
+<li data-competency="konzentration-von-loesungen">
   <a href="/apps/en/map/chemie/c/konzentration-von-loesungen/" class="map-chip map-chip-gap" data-opens="detail-konzentration-von-loesungen">
     <span>Concentration of solutions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -679,7 +695,7 @@
 </li>
 
               
-<li>
+<li data-competency="redoxreaktion-als-elektronenuebergang">
   <a href="/apps/en/map/chemie/c/redoxreaktion-als-elektronenuebergang/" class="map-chip map-chip-gap" data-opens="detail-redoxreaktion-als-elektronenuebergang">
     <span>Redox as electron transfer</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -687,7 +703,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektrolyse">
   <a href="/apps/en/map/chemie/c/elektrolyse/" class="map-chip map-chip-gap" data-opens="detail-elektrolyse">
     <span>Electrolysis</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -695,7 +711,7 @@
 </li>
 
               
-<li>
+<li data-competency="saeure-base-reaktion">
   <a href="/apps/en/map/chemie/c/saeure-base-reaktion/" class="map-chip map-chip-gap" data-opens="detail-saeure-base-reaktion">
     <span>Acid-base reactions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -703,7 +719,7 @@
 </li>
 
               
-<li>
+<li data-competency="neutralisation">
   <a href="/apps/en/map/chemie/c/neutralisation/" class="map-chip map-chip-gap" data-opens="detail-neutralisation">
     <span>Neutralisation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -711,7 +727,7 @@
 </li>
 
               
-<li>
+<li data-competency="salze-loesen">
   <a href="/apps/en/map/chemie/c/salze-loesen/" class="map-chip map-chip-gap" data-opens="detail-salze-loesen">
     <span>Dissolving salts</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -719,7 +735,7 @@
 </li>
 
               
-<li>
+<li data-competency="temperatur-und-reaktionsgeschwindigkeit">
   <a href="/apps/en/map/chemie/c/temperatur-und-reaktionsgeschwindigkeit/" class="map-chip map-chip-gap" data-opens="detail-temperatur-und-reaktionsgeschwindigkeit">
     <span>Temperature and reaction rate</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -731,7 +747,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="energieaustausch-mit-der-umgebung">
   <a href="/apps/en/map/chemie/c/energieaustausch-mit-der-umgebung/" class="map-chip map-chip-gap" data-opens="detail-energieaustausch-mit-der-umgebung">
     <span>System and surroundings</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -739,7 +755,7 @@
 </li>
 
               
-<li>
+<li data-competency="katalysator">
   <a href="/apps/en/map/chemie/c/katalysator/" class="map-chip map-chip-gap" data-opens="detail-katalysator">
     <span>Catalysts</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -747,7 +763,7 @@
 </li>
 
               
-<li>
+<li data-competency="energie-beim-loesen-von-salzen">
   <a href="/apps/en/map/chemie/c/energie-beim-loesen-von-salzen/" class="map-chip map-chip-gap" data-opens="detail-energie-beim-loesen-von-salzen">
     <span>Enthalpy of solution</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -755,7 +771,7 @@
 </li>
 
               
-<li>
+<li data-competency="galvanisches-element">
   <a href="/apps/en/map/chemie/c/galvanisches-element/" class="map-chip map-chip-gap" data-opens="detail-galvanisches-element">
     <span>Galvanic cell</span>
     <span class="sr-only">(gap, no app yet)</span>

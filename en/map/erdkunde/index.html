@@ -60,10 +60,26 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-erdkunde">
+  <p class="m-0"><strong id="status-erdkunde" class="map-status-tag map-status-tag-draft">Draft</strong> This map is only an idea to show the principle. No teacher of the subject has checked it yet. Strands, building blocks and arrows may be wrong or missing.</p>
+  <p class="m-0 mt-1">Do you teach the subject? Look through the map and tell us what is missing or wrong: <a href="https://github.com/lernapps/apps/issues/new?title=Learning%20map%20Geography%3A%20review" class="underline underline-offset-2 font-semibold">Help out</a> <span class="map-status-note">(GitHub issue, needs a GitHub account)</span></p>
+</aside>
+
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Learning map Geography</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>How to read the map</a>
   </div>
+
+  
+<nav aria-labelledby="ordnung-erdkunde" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-erdkunde" class="m-0 text-sm font-semibold text-slate-600">Order the rows</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/en/map/erdkunde/" class="btn btn-primary" aria-current="page">By grade</a></li>
+    <li><a href="/apps/en/map/erdkunde/c/" class="btn btn-secondary">By step of the chain</a></li>
+  </ul>
+</nav>
+
   <div class="map-toolbar">
     <div data-map-when hidden>
       <label for="lehrplan" class="sr-only">What is taught when?</label>
@@ -151,7 +167,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="himmelsrichtungen">
   <a href="/apps/en/map/erdkunde/c/himmelsrichtungen/" class="map-chip map-chip-gap" data-opens="detail-himmelsrichtungen">
     <span>Cardinal directions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -159,7 +175,7 @@
 </li>
 
               
-<li>
+<li data-competency="globus-und-karte">
   <a href="/apps/en/map/erdkunde/c/globus-und-karte/" class="map-chip map-chip-gap" data-opens="detail-globus-und-karte">
     <span>Globe and map</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -167,7 +183,7 @@
 </li>
 
               
-<li>
+<li data-competency="legende">
   <a href="/apps/en/map/erdkunde/c/legende/" class="map-chip map-chip-gap" data-opens="detail-legende">
     <span>Map key</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -175,7 +191,7 @@
 </li>
 
               
-<li>
+<li data-competency="massstab">
   <a href="/apps/en/map/erdkunde/c/massstab/" class="map-chip map-chip-gap" data-opens="detail-massstab">
     <span>Map scale</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -183,7 +199,7 @@
 </li>
 
               
-<li>
+<li data-competency="hoehendarstellung">
   <a href="/apps/en/map/erdkunde/c/hoehendarstellung/" class="map-chip map-chip-gap" data-opens="detail-hoehendarstellung">
     <span>Showing relief on maps</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -191,7 +207,7 @@
 </li>
 
               
-<li>
+<li data-competency="hoehenprofil">
   <a href="/apps/en/map/erdkunde/c/hoehenprofil/" class="map-chip map-chip-gap" data-opens="detail-hoehenprofil">
     <span>Elevation profile</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -199,7 +215,7 @@
 </li>
 
               
-<li>
+<li data-competency="kartenarten">
   <a href="/apps/en/map/erdkunde/c/kartenarten/" class="map-chip map-chip-gap" data-opens="detail-kartenarten">
     <span>Types of maps</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -207,7 +223,7 @@
 </li>
 
               
-<li>
+<li data-competency="atlas">
   <a href="/apps/en/map/erdkunde/c/atlas/" class="map-chip map-chip-gap" data-opens="detail-atlas">
     <span>Using an atlas</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -215,7 +231,7 @@
 </li>
 
               
-<li>
+<li data-competency="kartenskizze">
   <a href="/apps/en/map/erdkunde/c/kartenskizze/" class="map-chip map-chip-gap" data-opens="detail-kartenskizze">
     <span>Sketch map</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -223,7 +239,7 @@
 </li>
 
               
-<li>
+<li data-competency="kartierung">
   <a href="/apps/en/map/erdkunde/c/kartierung/" class="map-chip map-chip-gap" data-opens="detail-kartierung">
     <span>Field mapping</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -231,7 +247,7 @@
 </li>
 
               
-<li>
+<li data-competency="standort-und-weg">
   <a href="/apps/en/map/erdkunde/c/standort-und-weg/" class="map-chip map-chip-gap" data-opens="detail-standort-und-weg">
     <span>Location and navigation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -239,7 +255,7 @@
 </li>
 
               
-<li>
+<li data-competency="kontinente-und-ozeane">
   <a href="/apps/en/map/erdkunde/c/kontinente-und-ozeane/" class="map-chip map-chip-gap" data-opens="detail-kontinente-und-ozeane">
     <span>Continents and oceans</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -247,7 +263,7 @@
 </li>
 
               
-<li>
+<li data-competency="bundeslaender">
   <a href="/apps/en/map/erdkunde/c/bundeslaender/" class="map-chip map-chip-gap" data-opens="detail-bundeslaender">
     <span>German states and capitals</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -255,7 +271,7 @@
 </li>
 
               
-<li>
+<li data-competency="grosslandschaften-deutschland">
   <a href="/apps/en/map/erdkunde/c/grosslandschaften-deutschland/" class="map-chip map-chip-gap" data-opens="detail-grosslandschaften-deutschland">
     <span>Major regions of Germany</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -263,7 +279,7 @@
 </li>
 
               
-<li>
+<li data-competency="topographie-europa">
   <a href="/apps/en/map/erdkunde/c/topographie-europa/" class="map-chip map-chip-gap" data-opens="detail-topographie-europa">
     <span>Topography of Europe</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -271,7 +287,7 @@
 </li>
 
               
-<li>
+<li data-competency="gradnetz">
   <a href="/apps/en/map/erdkunde/c/gradnetz/" class="map-chip map-chip-gap" data-opens="detail-gradnetz">
     <span>Latitude and longitude grid</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -279,7 +295,7 @@
 </li>
 
               
-<li>
+<li data-competency="koordinaten">
   <a href="/apps/en/map/erdkunde/c/koordinaten/" class="map-chip map-chip-gap" data-opens="detail-koordinaten">
     <span>Geographic coordinates</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -287,7 +303,7 @@
 </li>
 
               
-<li>
+<li data-competency="digitale-karten">
   <a href="/apps/en/map/erdkunde/c/digitale-karten/" class="map-chip map-chip-gap" data-opens="detail-digitale-karten">
     <span>Digital maps and satellite images</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -299,7 +315,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="sonnensystem">
   <a href="/apps/en/map/erdkunde/c/sonnensystem/" class="map-chip map-chip-gap" data-opens="detail-sonnensystem">
     <span>The solar system</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -307,7 +323,7 @@
 </li>
 
               
-<li>
+<li data-competency="gestalt-der-erde">
   <a href="/apps/en/map/erdkunde/c/gestalt-der-erde/" class="map-chip map-chip-gap" data-opens="detail-gestalt-der-erde">
     <span>Shape of the Earth</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -315,7 +331,7 @@
 </li>
 
               
-<li>
+<li data-competency="schalenbau">
   <a href="/apps/en/map/erdkunde/c/schalenbau/" class="map-chip map-chip-gap" data-opens="detail-schalenbau">
     <span>Structure of the Earth</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -323,7 +339,7 @@
 </li>
 
               
-<li>
+<li data-competency="exogene-kraefte">
   <a href="/apps/en/map/erdkunde/c/exogene-kraefte/" class="map-chip map-chip-gap" data-opens="detail-exogene-kraefte">
     <span>Exogenic processes</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -331,7 +347,7 @@
 </li>
 
               
-<li>
+<li data-competency="boden">
   <a href="/apps/en/map/erdkunde/c/boden/" class="map-chip map-chip-gap" data-opens="detail-boden">
     <span>Soil formation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -339,7 +355,7 @@
 </li>
 
               
-<li>
+<li data-competency="gezeiten-und-watt">
   <a href="/apps/en/map/erdkunde/c/gezeiten-und-watt/" class="map-chip map-chip-gap" data-opens="detail-gezeiten-und-watt">
     <span>Tides and the Wadden Sea</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -347,7 +363,7 @@
 </li>
 
               
-<li>
+<li data-competency="kuestenformen">
   <a href="/apps/en/map/erdkunde/c/kuestenformen/" class="map-chip map-chip-gap" data-opens="detail-kuestenformen">
     <span>Coastal landforms</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -355,7 +371,7 @@
 </li>
 
               
-<li>
+<li data-competency="kuestenschutz">
   <a href="/apps/en/map/erdkunde/c/kuestenschutz/" class="map-chip map-chip-gap" data-opens="detail-kuestenschutz">
     <span>Coastal protection</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -363,7 +379,7 @@
 </li>
 
               
-<li>
+<li data-competency="naturgefahren-alpen">
   <a href="/apps/en/map/erdkunde/c/naturgefahren-alpen/" class="map-chip map-chip-gap" data-opens="detail-naturgefahren-alpen">
     <span>Natural hazards in the Alps</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -375,7 +391,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="wetter-und-klima">
   <a href="/apps/en/map/erdkunde/c/wetter-und-klima/" class="map-chip map-chip-gap" data-opens="detail-wetter-und-klima">
     <span>Weather and climate</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -383,7 +399,7 @@
 </li>
 
               
-<li>
+<li data-competency="wetter-messen">
   <a href="/apps/en/map/erdkunde/c/wetter-messen/" class="map-chip map-chip-gap" data-opens="detail-wetter-messen">
     <span>Measuring weather</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -395,7 +411,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="naturfaktoren-landwirtschaft">
   <a href="/apps/en/map/erdkunde/c/naturfaktoren-landwirtschaft/" class="map-chip map-chip-gap" data-opens="detail-naturfaktoren-landwirtschaft">
     <span>Natural factors in farming</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -403,7 +419,7 @@
 </li>
 
               
-<li>
+<li data-competency="bauernhof">
   <a href="/apps/en/map/erdkunde/c/bauernhof/" class="map-chip map-chip-gap" data-opens="detail-bauernhof">
     <span>Types of farms</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -411,7 +427,7 @@
 </li>
 
               
-<li>
+<li data-competency="agrarraeume-deutschland">
   <a href="/apps/en/map/erdkunde/c/agrarraeume-deutschland/" class="map-chip map-chip-gap" data-opens="detail-agrarraeume-deutschland">
     <span>Agricultural regions of Germany</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -419,7 +435,7 @@
 </li>
 
               
-<li>
+<li data-competency="wandel-der-landwirtschaft">
   <a href="/apps/en/map/erdkunde/c/wandel-der-landwirtschaft/" class="map-chip map-chip-gap" data-opens="detail-wandel-der-landwirtschaft">
     <span>Changes in agriculture</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -427,7 +443,7 @@
 </li>
 
               
-<li>
+<li data-competency="oekologische-landwirtschaft">
   <a href="/apps/en/map/erdkunde/c/oekologische-landwirtschaft/" class="map-chip map-chip-gap" data-opens="detail-oekologische-landwirtschaft">
     <span>Organic farming</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -435,7 +451,7 @@
 </li>
 
               
-<li>
+<li data-competency="weg-der-lebensmittel">
   <a href="/apps/en/map/erdkunde/c/weg-der-lebensmittel/" class="map-chip map-chip-gap" data-opens="detail-weg-der-lebensmittel">
     <span>From farm to supermarket</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -443,7 +459,7 @@
 </li>
 
               
-<li>
+<li data-competency="regionale-lebensmittel">
   <a href="/apps/en/map/erdkunde/c/regionale-lebensmittel/" class="map-chip map-chip-gap" data-opens="detail-regionale-lebensmittel">
     <span>Local and imported food</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -455,7 +471,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="verkehr">
   <a href="/apps/en/map/erdkunde/c/verkehr/" class="map-chip map-chip-gap" data-opens="detail-verkehr">
     <span>Transport and transport networks</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -463,7 +479,7 @@
 </li>
 
               
-<li>
+<li data-competency="seehafen">
   <a href="/apps/en/map/erdkunde/c/seehafen/" class="map-chip map-chip-gap" data-opens="detail-seehafen">
     <span>Seaports</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -471,7 +487,7 @@
 </li>
 
               
-<li>
+<li data-competency="fischerei">
   <a href="/apps/en/map/erdkunde/c/fischerei/" class="map-chip map-chip-gap" data-opens="detail-fischerei">
     <span>Fishing and aquaculture</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -479,7 +495,7 @@
 </li>
 
               
-<li>
+<li data-competency="meeresschutz">
   <a href="/apps/en/map/erdkunde/c/meeresschutz/" class="map-chip map-chip-gap" data-opens="detail-meeresschutz">
     <span>Ocean protection</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -487,7 +503,7 @@
 </li>
 
               
-<li>
+<li data-competency="tourismus-voraussetzungen">
   <a href="/apps/en/map/erdkunde/c/tourismus-voraussetzungen/" class="map-chip map-chip-gap" data-opens="detail-tourismus-voraussetzungen">
     <span>Requirements for tourism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -495,7 +511,7 @@
 </li>
 
               
-<li>
+<li data-competency="tourismusformen">
   <a href="/apps/en/map/erdkunde/c/tourismusformen/" class="map-chip map-chip-gap" data-opens="detail-tourismusformen">
     <span>Types of tourism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -503,7 +519,7 @@
 </li>
 
               
-<li>
+<li data-competency="tourismus-folgen">
   <a href="/apps/en/map/erdkunde/c/tourismus-folgen/" class="map-chip map-chip-gap" data-opens="detail-tourismus-folgen">
     <span>Impacts of tourism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -511,7 +527,7 @@
 </li>
 
               
-<li>
+<li data-competency="nachhaltigkeit">
   <a href="/apps/en/map/erdkunde/c/nachhaltigkeit/" class="map-chip map-chip-gap" data-opens="detail-nachhaltigkeit">
     <span>Sustainability</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -523,7 +539,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="stadt-und-land">
   <a href="/apps/en/map/erdkunde/c/stadt-und-land/" class="map-chip map-chip-gap" data-opens="detail-stadt-und-land">
     <span>Town and village</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -531,7 +547,7 @@
 </li>
 
               
-<li>
+<li data-competency="daseinsgrundfunktionen">
   <a href="/apps/en/map/erdkunde/c/daseinsgrundfunktionen/" class="map-chip map-chip-gap" data-opens="detail-daseinsgrundfunktionen">
     <span>Basic human functions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -539,7 +555,7 @@
 </li>
 
               
-<li>
+<li data-competency="stadtviertel">
   <a href="/apps/en/map/erdkunde/c/stadtviertel/" class="map-chip map-chip-gap" data-opens="detail-stadtviertel">
     <span>Urban districts</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -547,7 +563,7 @@
 </li>
 
               
-<li>
+<li data-competency="stadt-umland">
   <a href="/apps/en/map/erdkunde/c/stadt-umland/" class="map-chip map-chip-gap" data-opens="detail-stadt-umland">
     <span>City and surrounding area</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -555,7 +571,7 @@
 </li>
 
               
-<li>
+<li data-competency="stadtentwicklung">
   <a href="/apps/en/map/erdkunde/c/stadtentwicklung/" class="map-chip map-chip-gap" data-opens="detail-stadtentwicklung">
     <span>Urban growth</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -563,7 +579,7 @@
 </li>
 
               
-<li>
+<li data-competency="suburbanisierung">
   <a href="/apps/en/map/erdkunde/c/suburbanisierung/" class="map-chip map-chip-gap" data-opens="detail-suburbanisierung">
     <span>Suburbanisation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -571,7 +587,7 @@
 </li>
 
               
-<li>
+<li data-competency="laendlicher-raum">
   <a href="/apps/en/map/erdkunde/c/laendlicher-raum/" class="map-chip map-chip-gap" data-opens="detail-laendlicher-raum">
     <span>Change in rural areas</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -579,7 +595,7 @@
 </li>
 
               
-<li>
+<li data-competency="verdichtungsraeume">
   <a href="/apps/en/map/erdkunde/c/verdichtungsraeume/" class="map-chip map-chip-gap" data-opens="detail-verdichtungsraeume">
     <span>Urban and rural areas</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -596,7 +612,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="lage-beschreiben">
   <a href="/apps/en/map/erdkunde/c/lage-beschreiben/" class="map-chip map-chip-gap" data-opens="detail-lage-beschreiben">
     <span>Describing location</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -604,7 +620,7 @@
 </li>
 
               
-<li>
+<li data-competency="thematische-karte">
   <a href="/apps/en/map/erdkunde/c/thematische-karte/" class="map-chip map-chip-gap" data-opens="detail-thematische-karte">
     <span>Analysing thematic maps</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -612,7 +628,7 @@
 </li>
 
               
-<li>
+<li data-competency="karten-sind-gemacht">
   <a href="/apps/en/map/erdkunde/c/karten-sind-gemacht/" class="map-chip map-chip-gap" data-opens="detail-karten-sind-gemacht">
     <span>Maps as constructions</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -620,7 +636,7 @@
 </li>
 
               
-<li>
+<li data-competency="mental-maps">
   <a href="/apps/en/map/erdkunde/c/mental-maps/" class="map-chip map-chip-gap" data-opens="detail-mental-maps">
     <span>Mental maps</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -632,7 +648,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="tag-und-nacht">
   <a href="/apps/en/map/erdkunde/c/tag-und-nacht/" class="map-chip map-chip-gap" data-opens="detail-tag-und-nacht">
     <span>Day and night</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -640,7 +656,7 @@
 </li>
 
               
-<li>
+<li data-competency="jahreszeiten">
   <a href="/apps/en/map/erdkunde/c/jahreszeiten/" class="map-chip map-chip-gap" data-opens="detail-jahreszeiten">
     <span>Seasons</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -648,7 +664,7 @@
 </li>
 
               
-<li>
+<li data-competency="beleuchtungszonen">
   <a href="/apps/en/map/erdkunde/c/beleuchtungszonen/" class="map-chip map-chip-gap" data-opens="detail-beleuchtungszonen">
     <span>Solar illumination zones</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -656,7 +672,7 @@
 </li>
 
               
-<li>
+<li data-competency="plattentektonik">
   <a href="/apps/en/map/erdkunde/c/plattentektonik/" class="map-chip map-chip-gap" data-opens="detail-plattentektonik">
     <span>Plate tectonics</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -664,7 +680,7 @@
 </li>
 
               
-<li>
+<li data-competency="plattengrenzen">
   <a href="/apps/en/map/erdkunde/c/plattengrenzen/" class="map-chip map-chip-gap" data-opens="detail-plattengrenzen">
     <span>Plate boundaries</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -672,7 +688,7 @@
 </li>
 
               
-<li>
+<li data-competency="vulkanismus">
   <a href="/apps/en/map/erdkunde/c/vulkanismus/" class="map-chip map-chip-gap" data-opens="detail-vulkanismus">
     <span>Volcanism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -680,7 +696,7 @@
 </li>
 
               
-<li>
+<li data-competency="erdbeben">
   <a href="/apps/en/map/erdkunde/c/erdbeben/" class="map-chip map-chip-gap" data-opens="detail-erdbeben">
     <span>Earthquakes and tsunamis</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -688,7 +704,7 @@
 </li>
 
               
-<li>
+<li data-competency="gebirgsbildung">
   <a href="/apps/en/map/erdkunde/c/gebirgsbildung/" class="map-chip map-chip-gap" data-opens="detail-gebirgsbildung">
     <span>Mountain building</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -696,7 +712,7 @@
 </li>
 
               
-<li>
+<li data-competency="leben-in-risikoraeumen">
   <a href="/apps/en/map/erdkunde/c/leben-in-risikoraeumen/" class="map-chip map-chip-gap" data-opens="detail-leben-in-risikoraeumen">
     <span>Living in hazard zones</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -704,7 +720,7 @@
 </li>
 
               
-<li>
+<li data-competency="katastrophenvorsorge">
   <a href="/apps/en/map/erdkunde/c/katastrophenvorsorge/" class="map-chip map-chip-gap" data-opens="detail-katastrophenvorsorge">
     <span>Disaster preparedness</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -716,7 +732,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="klimadiagramm-lesen">
   <a href="/apps/en/map/erdkunde/c/klimadiagramm-lesen/" class="map-chip map-chip-gap" data-opens="detail-klimadiagramm-lesen">
     <span>Reading a climate chart</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -724,7 +740,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimadiagramm-zeichnen">
   <a href="/apps/en/map/erdkunde/c/klimadiagramm-zeichnen/" class="map-chip map-chip-gap" data-opens="detail-klimadiagramm-zeichnen">
     <span>Drawing a climate chart</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -732,7 +748,7 @@
 </li>
 
               
-<li>
+<li data-competency="wasserkreislauf">
   <a href="/apps/en/map/erdkunde/c/wasserkreislauf/" class="map-chip map-chip-gap" data-opens="detail-wasserkreislauf">
     <span>Water cycle</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -740,7 +756,7 @@
 </li>
 
               
-<li>
+<li data-competency="luftdruck-und-wind">
   <a href="/apps/en/map/erdkunde/c/luftdruck-und-wind/" class="map-chip map-chip-gap" data-opens="detail-luftdruck-und-wind">
     <span>Air pressure and wind</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -748,7 +764,7 @@
 </li>
 
               
-<li>
+<li data-competency="steigungsregen-und-foehn">
   <a href="/apps/en/map/erdkunde/c/steigungsregen-und-foehn/" class="map-chip map-chip-gap" data-opens="detail-steigungsregen-und-foehn">
     <span>Orographic rain and foehn</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -756,7 +772,7 @@
 </li>
 
               
-<li>
+<li data-competency="seeklima-landklima">
   <a href="/apps/en/map/erdkunde/c/seeklima-landklima/" class="map-chip map-chip-gap" data-opens="detail-seeklima-landklima">
     <span>Maritime and continental climate</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -764,7 +780,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimazonen-europas">
   <a href="/apps/en/map/erdkunde/c/klimazonen-europas/" class="map-chip map-chip-gap" data-opens="detail-klimazonen-europas">
     <span>Climate and vegetation zones of Europe</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -772,7 +788,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimazonen-der-erde">
   <a href="/apps/en/map/erdkunde/c/klimazonen-der-erde/" class="map-chip map-chip-gap" data-opens="detail-klimazonen-der-erde">
     <span>Climate zones of the Earth</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -780,7 +796,7 @@
 </li>
 
               
-<li>
+<li data-competency="klima-boden-vegetation">
   <a href="/apps/en/map/erdkunde/c/klima-boden-vegetation/" class="map-chip map-chip-gap" data-opens="detail-klima-boden-vegetation">
     <span>Climate, soil and vegetation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -788,7 +804,7 @@
 </li>
 
               
-<li>
+<li data-competency="landschaftszonen-der-erde">
   <a href="/apps/en/map/erdkunde/c/landschaftszonen-der-erde/" class="map-chip map-chip-gap" data-opens="detail-landschaftszonen-der-erde">
     <span>Biomes of the Earth</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -796,7 +812,7 @@
 </li>
 
               
-<li>
+<li data-competency="passatkreislauf">
   <a href="/apps/en/map/erdkunde/c/passatkreislauf/" class="map-chip map-chip-gap" data-opens="detail-passatkreislauf">
     <span>Trade wind circulation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -804,7 +820,7 @@
 </li>
 
               
-<li>
+<li data-competency="regenzeit-trockenzeit">
   <a href="/apps/en/map/erdkunde/c/regenzeit-trockenzeit/" class="map-chip map-chip-gap" data-opens="detail-regenzeit-trockenzeit">
     <span>Rainy and dry seasons</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -812,7 +828,7 @@
 </li>
 
               
-<li>
+<li data-competency="tropischer-regenwald">
   <a href="/apps/en/map/erdkunde/c/tropischer-regenwald/" class="map-chip map-chip-gap" data-opens="detail-tropischer-regenwald">
     <span>Tropical rainforest</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -820,7 +836,7 @@
 </li>
 
               
-<li>
+<li data-competency="savanne">
   <a href="/apps/en/map/erdkunde/c/savanne/" class="map-chip map-chip-gap" data-opens="detail-savanne">
     <span>Savannas</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -828,7 +844,7 @@
 </li>
 
               
-<li>
+<li data-competency="wueste">
   <a href="/apps/en/map/erdkunde/c/wueste/" class="map-chip map-chip-gap" data-opens="detail-wueste">
     <span>Deserts</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -836,7 +852,7 @@
 </li>
 
               
-<li>
+<li data-competency="hoehenstufen">
   <a href="/apps/en/map/erdkunde/c/hoehenstufen/" class="map-chip map-chip-gap" data-opens="detail-hoehenstufen">
     <span>Altitudinal zones of vegetation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -848,7 +864,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="bewaesserung-und-gewaechshaus">
   <a href="/apps/en/map/erdkunde/c/bewaesserung-und-gewaechshaus/" class="map-chip map-chip-gap" data-opens="detail-bewaesserung-und-gewaechshaus">
     <span>Irrigation and greenhouses</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -856,7 +872,7 @@
 </li>
 
               
-<li>
+<li data-competency="bodenversalzung">
   <a href="/apps/en/map/erdkunde/c/bodenversalzung/" class="map-chip map-chip-gap" data-opens="detail-bodenversalzung">
     <span>Soil salinisation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -864,7 +880,7 @@
 </li>
 
               
-<li>
+<li data-competency="wassermangel">
   <a href="/apps/en/map/erdkunde/c/wassermangel/" class="map-chip map-chip-gap" data-opens="detail-wassermangel">
     <span>Water scarcity in drylands</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -872,7 +888,7 @@
 </li>
 
               
-<li>
+<li data-competency="subsistenz-und-markt">
   <a href="/apps/en/map/erdkunde/c/subsistenz-und-markt/" class="map-chip map-chip-gap" data-opens="detail-subsistenz-und-markt">
     <span>Subsistence and commercial farming</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -880,7 +896,7 @@
 </li>
 
               
-<li>
+<li data-competency="weidewirtschaft">
   <a href="/apps/en/map/erdkunde/c/weidewirtschaft/" class="map-chip map-chip-gap" data-opens="detail-weidewirtschaft">
     <span>Pastoralism and nomadism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -888,7 +904,7 @@
 </li>
 
               
-<li>
+<li data-competency="wanderfeldbau">
   <a href="/apps/en/map/erdkunde/c/wanderfeldbau/" class="map-chip map-chip-gap" data-opens="detail-wanderfeldbau">
     <span>Shifting cultivation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -896,7 +912,7 @@
 </li>
 
               
-<li>
+<li data-competency="regenwaldzerstoerung">
   <a href="/apps/en/map/erdkunde/c/regenwaldzerstoerung/" class="map-chip map-chip-gap" data-opens="detail-regenwaldzerstoerung">
     <span>Rainforest destruction</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -904,7 +920,7 @@
 </li>
 
               
-<li>
+<li data-competency="bodenerosion">
   <a href="/apps/en/map/erdkunde/c/bodenerosion/" class="map-chip map-chip-gap" data-opens="detail-bodenerosion">
     <span>Soil erosion</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -912,7 +928,7 @@
 </li>
 
               
-<li>
+<li data-competency="desertifikation">
   <a href="/apps/en/map/erdkunde/c/desertifikation/" class="map-chip map-chip-gap" data-opens="detail-desertifikation">
     <span>Desertification in the Sahel</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -924,7 +940,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="wirtschaftssektoren">
   <a href="/apps/en/map/erdkunde/c/wirtschaftssektoren/" class="map-chip map-chip-gap" data-opens="detail-wirtschaftssektoren">
     <span>Economic sectors</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -932,7 +948,7 @@
 </li>
 
               
-<li>
+<li data-competency="standortfaktoren">
   <a href="/apps/en/map/erdkunde/c/standortfaktoren/" class="map-chip map-chip-gap" data-opens="detail-standortfaktoren">
     <span>Location factors</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -940,7 +956,7 @@
 </li>
 
               
-<li>
+<li data-competency="strukturwandel">
   <a href="/apps/en/map/erdkunde/c/strukturwandel/" class="map-chip map-chip-gap" data-opens="detail-strukturwandel">
     <span>Structural change</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -948,7 +964,7 @@
 </li>
 
               
-<li>
+<li data-competency="dienstleistungen">
   <a href="/apps/en/map/erdkunde/c/dienstleistungen/" class="map-chip map-chip-gap" data-opens="detail-dienstleistungen">
     <span>Service sector locations</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -956,7 +972,7 @@
 </li>
 
               
-<li>
+<li data-competency="energietraeger">
   <a href="/apps/en/map/erdkunde/c/energietraeger/" class="map-chip map-chip-gap" data-opens="detail-energietraeger">
     <span>Energy sources</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -964,7 +980,7 @@
 </li>
 
               
-<li>
+<li data-competency="sanfter-tourismus">
   <a href="/apps/en/map/erdkunde/c/sanfter-tourismus/" class="map-chip map-chip-gap" data-opens="detail-sanfter-tourismus">
     <span>Sustainable tourism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -972,7 +988,7 @@
 </li>
 
               
-<li>
+<li data-competency="digitalisierung">
   <a href="/apps/en/map/erdkunde/c/digitalisierung/" class="map-chip map-chip-gap" data-opens="detail-digitalisierung">
     <span>Digitalisation and location</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -984,7 +1000,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="metropolen">
   <a href="/apps/en/map/erdkunde/c/metropolen/" class="map-chip map-chip-gap" data-opens="detail-metropolen">
     <span>Metropolises</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -992,7 +1008,7 @@
 </li>
 
               
-<li>
+<li data-competency="nachhaltige-stadt">
   <a href="/apps/en/map/erdkunde/c/nachhaltige-stadt/" class="map-chip map-chip-gap" data-opens="detail-nachhaltige-stadt">
     <span>Sustainable city</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1004,7 +1020,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="disparitaeten-europa">
   <a href="/apps/en/map/erdkunde/c/disparitaeten-europa/" class="map-chip map-chip-gap" data-opens="detail-disparitaeten-europa">
     <span>Regional disparities in Europe</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1012,7 +1028,7 @@
 </li>
 
               
-<li>
+<li data-competency="bevoelkerungsverteilung">
   <a href="/apps/en/map/erdkunde/c/bevoelkerungsverteilung/" class="map-chip map-chip-gap" data-opens="detail-bevoelkerungsverteilung">
     <span>Population distribution</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1020,7 +1036,7 @@
 </li>
 
               
-<li>
+<li data-competency="bevoelkerungswachstum">
   <a href="/apps/en/map/erdkunde/c/bevoelkerungswachstum/" class="map-chip map-chip-gap" data-opens="detail-bevoelkerungswachstum">
     <span>Population growth</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1028,7 +1044,7 @@
 </li>
 
               
-<li>
+<li data-competency="altersstruktur">
   <a href="/apps/en/map/erdkunde/c/altersstruktur/" class="map-chip map-chip-gap" data-opens="detail-altersstruktur">
     <span>Population pyramid</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1036,7 +1052,7 @@
 </li>
 
               
-<li>
+<li data-competency="tragfaehigkeit">
   <a href="/apps/en/map/erdkunde/c/tragfaehigkeit/" class="map-chip map-chip-gap" data-opens="detail-tragfaehigkeit">
     <span>Carrying capacity</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1044,7 +1060,7 @@
 </li>
 
               
-<li>
+<li data-competency="migration-ursachen">
   <a href="/apps/en/map/erdkunde/c/migration-ursachen/" class="map-chip map-chip-gap" data-opens="detail-migration-ursachen">
     <span>Causes of migration</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1052,7 +1068,7 @@
 </li>
 
               
-<li>
+<li data-competency="migration-folgen">
   <a href="/apps/en/map/erdkunde/c/migration-folgen/" class="map-chip map-chip-gap" data-opens="detail-migration-folgen">
     <span>Effects of migration</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1067,7 +1083,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="topographie-welt">
   <a href="/apps/en/map/erdkunde/c/topographie-welt/" class="map-chip map-chip-gap" data-opens="detail-topographie-welt">
     <span>World topography</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1081,7 +1097,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="treibhauseffekt">
   <a href="/apps/en/map/erdkunde/c/treibhauseffekt/" class="map-chip map-chip-gap" data-opens="detail-treibhauseffekt">
     <span>Greenhouse effect</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1089,7 +1105,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimawandel-ursachen">
   <a href="/apps/en/map/erdkunde/c/klimawandel-ursachen/" class="map-chip map-chip-gap" data-opens="detail-klimawandel-ursachen">
     <span>Causes of climate change</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1097,7 +1113,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimawandel-folgen">
   <a href="/apps/en/map/erdkunde/c/klimawandel-folgen/" class="map-chip map-chip-gap" data-opens="detail-klimawandel-folgen">
     <span>Effects of climate change</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1105,7 +1121,7 @@
 </li>
 
               
-<li>
+<li data-competency="tropischer-wirbelsturm">
   <a href="/apps/en/map/erdkunde/c/tropischer-wirbelsturm/" class="map-chip map-chip-gap" data-opens="detail-tropischer-wirbelsturm">
     <span>Tropical cyclones</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1113,7 +1129,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimaschutz">
   <a href="/apps/en/map/erdkunde/c/klimaschutz/" class="map-chip map-chip-gap" data-opens="detail-klimaschutz">
     <span>Climate protection</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1121,7 +1137,7 @@
 </li>
 
               
-<li>
+<li data-competency="klimaanpassung">
   <a href="/apps/en/map/erdkunde/c/klimaanpassung/" class="map-chip map-chip-gap" data-opens="detail-klimaanpassung">
     <span>Climate change adaptation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1133,7 +1149,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="plantagenwirtschaft">
   <a href="/apps/en/map/erdkunde/c/plantagenwirtschaft/" class="map-chip map-chip-gap" data-opens="detail-plantagenwirtschaft">
     <span>Plantation agriculture</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1141,7 +1157,7 @@
 </li>
 
               
-<li>
+<li data-competency="regenwald-nachhaltig-nutzen">
   <a href="/apps/en/map/erdkunde/c/regenwald-nachhaltig-nutzen/" class="map-chip map-chip-gap" data-opens="detail-regenwald-nachhaltig-nutzen">
     <span>Sustainable use of the rainforest</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1155,7 +1171,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="verstaedterung">
   <a href="/apps/en/map/erdkunde/c/verstaedterung/" class="map-chip map-chip-gap" data-opens="detail-verstaedterung">
     <span>Urbanisation and rural exodus</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1163,7 +1179,7 @@
 </li>
 
               
-<li>
+<li data-competency="megastaedte">
   <a href="/apps/en/map/erdkunde/c/megastaedte/" class="map-chip map-chip-gap" data-opens="detail-megastaedte">
     <span>Megacities</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1171,7 +1187,7 @@
 </li>
 
               
-<li>
+<li data-competency="marginalsiedlungen">
   <a href="/apps/en/map/erdkunde/c/marginalsiedlungen/" class="map-chip map-chip-gap" data-opens="detail-marginalsiedlungen">
     <span>Informal settlements and segregation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1183,7 +1199,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="entwicklungsindikatoren">
   <a href="/apps/en/map/erdkunde/c/entwicklungsindikatoren/" class="map-chip map-chip-gap" data-opens="detail-entwicklungsindikatoren">
     <span>Development indicators</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1191,7 +1207,7 @@
 </li>
 
               
-<li>
+<li data-competency="laendergruppen">
   <a href="/apps/en/map/erdkunde/c/laendergruppen/" class="map-chip map-chip-gap" data-opens="detail-laendergruppen">
     <span>Developing, emerging and developed countries</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1199,7 +1215,7 @@
 </li>
 
               
-<li>
+<li data-competency="begriffe-pruefen">
   <a href="/apps/en/map/erdkunde/c/begriffe-pruefen/" class="map-chip map-chip-gap" data-opens="detail-begriffe-pruefen">
     <span>Limits of development terms</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1207,7 +1223,7 @@
 </li>
 
               
-<li>
+<li data-competency="ursachen-ungleicher-entwicklung">
   <a href="/apps/en/map/erdkunde/c/ursachen-ungleicher-entwicklung/" class="map-chip map-chip-gap" data-opens="detail-ursachen-ungleicher-entwicklung">
     <span>Causes of uneven development</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1215,7 +1231,7 @@
 </li>
 
               
-<li>
+<li data-competency="welthandel">
   <a href="/apps/en/map/erdkunde/c/welthandel/" class="map-chip map-chip-gap" data-opens="detail-welthandel">
     <span>World trade and fair trade</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1223,7 +1239,7 @@
 </li>
 
               
-<li>
+<li data-competency="entwicklungszusammenarbeit">
   <a href="/apps/en/map/erdkunde/c/entwicklungszusammenarbeit/" class="map-chip map-chip-gap" data-opens="detail-entwicklungszusammenarbeit">
     <span>Development cooperation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1231,7 +1247,7 @@
 </li>
 
               
-<li>
+<li data-competency="ferntourismus">
   <a href="/apps/en/map/erdkunde/c/ferntourismus/" class="map-chip map-chip-gap" data-opens="detail-ferntourismus">
     <span>Long-haul tourism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1239,7 +1255,7 @@
 </li>
 
               
-<li>
+<li data-competency="globalisierung">
   <a href="/apps/en/map/erdkunde/c/globalisierung/" class="map-chip map-chip-gap" data-opens="detail-globalisierung">
     <span>Globalisation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1247,7 +1263,7 @@
 </li>
 
               
-<li>
+<li data-competency="weltweite-produktion">
   <a href="/apps/en/map/erdkunde/c/weltweite-produktion/" class="map-chip map-chip-gap" data-opens="detail-weltweite-produktion">
     <span>Global production</span>
     <span class="sr-only">(gap, no app yet)</span>

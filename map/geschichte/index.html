@@ -60,10 +60,26 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-geschichte">
+  <p class="m-0"><strong id="status-geschichte" class="map-status-tag map-status-tag-draft">Entwurf</strong> Diese Karte ist nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft des Fachs hat sie geprüft. Stränge, Bausteine und Pfeile können falsch sein oder fehlen.</p>
+  <p class="m-0 mt-1">Du unterrichtest das Fach? Sieh die Karte durch und sag uns, was fehlt oder falsch ist: <a href="https://github.com/lernapps/apps/issues/new?title=Lernlandkarte%20Geschichte%3A%20Durchsicht" class="underline underline-offset-2 font-semibold">Mithelfen</a> <span class="map-status-note">(GitHub-Issue, braucht ein GitHub-Konto)</span></p>
+</aside>
+
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Geschichte</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>So liest du die Karte</a>
   </div>
+
+  
+<nav aria-labelledby="ordnung-geschichte" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-geschichte" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/map/geschichte/" class="btn btn-primary" aria-current="page">Nach Klassen</a></li>
+    <li><a href="/apps/map/geschichte/c/" class="btn btn-secondary">Nach Stufen der Kette</a></li>
+  </ul>
+</nav>
+
   <div class="map-toolbar">
     <div data-map-when hidden>
       <label for="lehrplan" class="sr-only">Wann ist was dran?</label>
@@ -161,7 +177,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="was-ist-geschichte">
   <a href="/apps/map/geschichte/c/was-ist-geschichte/" class="map-chip map-chip-gap" data-opens="detail-was-ist-geschichte">
     <span>Vergangenheit, Gegenwart und Zukunft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -169,7 +185,7 @@
 </li>
 
               
-<li>
+<li data-competency="spuren-der-vergangenheit">
   <a href="/apps/map/geschichte/c/spuren-der-vergangenheit/" class="map-chip map-chip-gap" data-opens="detail-spuren-der-vergangenheit">
     <span>Spuren der Vergangenheit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -177,7 +193,7 @@
 </li>
 
               
-<li>
+<li data-competency="zeitrechnung">
   <a href="/apps/map/geschichte/c/zeitrechnung/" class="map-chip map-chip-gap" data-opens="detail-zeitrechnung">
     <span>Zeitrechnung vor und nach Christus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -185,7 +201,7 @@
 </li>
 
               
-<li>
+<li data-competency="jahrhunderte">
   <a href="/apps/map/geschichte/c/jahrhunderte/" class="map-chip map-chip-gap" data-opens="detail-jahrhunderte">
     <span>Jahrhunderte und Jahrtausende</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -193,7 +209,7 @@
 </li>
 
               
-<li>
+<li data-competency="zeitleiste">
   <a href="/apps/map/geschichte/c/zeitleiste/" class="map-chip map-chip-gap" data-opens="detail-zeitleiste">
     <span>Zeitleiste</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -201,7 +217,7 @@
 </li>
 
               
-<li>
+<li data-competency="epochen">
   <a href="/apps/map/geschichte/c/epochen/" class="map-chip map-chip-gap" data-opens="detail-epochen">
     <span>Epochen der Geschichte</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -209,7 +225,7 @@
 </li>
 
               
-<li>
+<li data-competency="quellenarten">
   <a href="/apps/map/geschichte/c/quellenarten/" class="map-chip map-chip-gap" data-opens="detail-quellenarten">
     <span>Arten historischer Quellen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -217,7 +233,7 @@
 </li>
 
               
-<li>
+<li data-competency="quelle-und-darstellung">
   <a href="/apps/map/geschichte/c/quelle-und-darstellung/" class="map-chip map-chip-gap" data-opens="detail-quelle-und-darstellung">
     <span>Quelle und Darstellung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -225,7 +241,7 @@
 </li>
 
               
-<li>
+<li data-competency="ueberrest-und-tradition">
   <a href="/apps/map/geschichte/c/ueberrest-und-tradition/" class="map-chip map-chip-gap" data-opens="detail-ueberrest-und-tradition">
     <span>Überrest und Tradition</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -233,7 +249,7 @@
 </li>
 
               
-<li>
+<li data-competency="archaeologie">
   <a href="/apps/map/geschichte/c/archaeologie/" class="map-chip map-chip-gap" data-opens="detail-archaeologie">
     <span>Archäologie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -245,7 +261,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="menschwerdung">
   <a href="/apps/map/geschichte/c/menschwerdung/" class="map-chip map-chip-gap" data-opens="detail-menschwerdung">
     <span>Menschwerdung und Ausbreitung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -253,7 +269,7 @@
 </li>
 
               
-<li>
+<li data-competency="altsteinzeit">
   <a href="/apps/map/geschichte/c/altsteinzeit/" class="map-chip map-chip-gap" data-opens="detail-altsteinzeit">
     <span>Altsteinzeit: Jäger und Sammler</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -261,7 +277,7 @@
 </li>
 
               
-<li>
+<li data-competency="feuer-und-werkzeuge">
   <a href="/apps/map/geschichte/c/feuer-und-werkzeuge/" class="map-chip map-chip-gap" data-opens="detail-feuer-und-werkzeuge">
     <span>Feuer und Werkzeuge</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -269,7 +285,7 @@
 </li>
 
               
-<li>
+<li data-competency="jungsteinzeit">
   <a href="/apps/map/geschichte/c/jungsteinzeit/" class="map-chip map-chip-gap" data-opens="detail-jungsteinzeit">
     <span>Jungsteinzeit: Bauern und Dörfer</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -277,7 +293,7 @@
 </li>
 
               
-<li>
+<li data-competency="neolithische-revolution">
   <a href="/apps/map/geschichte/c/neolithische-revolution/" class="map-chip map-chip-gap" data-opens="detail-neolithische-revolution">
     <span>Neolithische Revolution</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -285,7 +301,7 @@
 </li>
 
               
-<li>
+<li data-competency="nil-und-hochkultur">
   <a href="/apps/map/geschichte/c/nil-und-hochkultur/" class="map-chip map-chip-gap" data-opens="detail-nil-und-hochkultur">
     <span>Hochkultur am Nil</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -293,7 +309,7 @@
 </li>
 
               
-<li>
+<li data-competency="merkmale-hochkultur">
   <a href="/apps/map/geschichte/c/merkmale-hochkultur/" class="map-chip map-chip-gap" data-opens="detail-merkmale-hochkultur">
     <span>Merkmale einer Hochkultur</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -301,7 +317,7 @@
 </li>
 
               
-<li>
+<li data-competency="pharao-und-gesellschaft">
   <a href="/apps/map/geschichte/c/pharao-und-gesellschaft/" class="map-chip map-chip-gap" data-opens="detail-pharao-und-gesellschaft">
     <span>Pharao und ägyptische Gesellschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -309,7 +325,7 @@
 </li>
 
               
-<li>
+<li data-competency="monarchie">
   <a href="/apps/map/geschichte/c/monarchie/" class="map-chip map-chip-gap" data-opens="detail-monarchie">
     <span>Monarchie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -317,7 +333,7 @@
 </li>
 
               
-<li>
+<li data-competency="religion-aegypten">
   <a href="/apps/map/geschichte/c/religion-aegypten/" class="map-chip map-chip-gap" data-opens="detail-religion-aegypten">
     <span>Religion der Ägypter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -325,7 +341,7 @@
 </li>
 
               
-<li>
+<li data-competency="hieroglyphen">
   <a href="/apps/map/geschichte/c/hieroglyphen/" class="map-chip map-chip-gap" data-opens="detail-hieroglyphen">
     <span>Hieroglyphen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -333,7 +349,7 @@
 </li>
 
               
-<li>
+<li data-competency="leistungen-aegypten">
   <a href="/apps/map/geschichte/c/leistungen-aegypten/" class="map-chip map-chip-gap" data-opens="detail-leistungen-aegypten">
     <span>Leistungen der Ägypter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -345,7 +361,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="polis">
   <a href="/apps/map/geschichte/c/polis/" class="map-chip map-chip-gap" data-opens="detail-polis">
     <span>Griechische Poleis</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -353,7 +369,7 @@
 </li>
 
               
-<li>
+<li data-competency="griechische-kolonisation">
   <a href="/apps/map/geschichte/c/griechische-kolonisation/" class="map-chip map-chip-gap" data-opens="detail-griechische-kolonisation">
     <span>Griechische Kolonisation</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -361,7 +377,7 @@
 </li>
 
               
-<li>
+<li data-competency="goetter-und-olympia">
   <a href="/apps/map/geschichte/c/goetter-und-olympia/" class="map-chip map-chip-gap" data-opens="detail-goetter-und-olympia">
     <span>Griechische Götter und Olympia</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -369,7 +385,7 @@
 </li>
 
               
-<li>
+<li data-competency="attische-demokratie">
   <a href="/apps/map/geschichte/c/attische-demokratie/" class="map-chip map-chip-gap" data-opens="detail-attische-demokratie">
     <span>Attische Demokratie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -377,7 +393,7 @@
 </li>
 
               
-<li>
+<li data-competency="buerger-und-nichtbuerger">
   <a href="/apps/map/geschichte/c/buerger-und-nichtbuerger/" class="map-chip map-chip-gap" data-opens="detail-buerger-und-nichtbuerger">
     <span>Bürger und Nichtbürger in Athen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -385,7 +401,7 @@
 </li>
 
               
-<li>
+<li data-competency="demokratie-damals-heute">
   <a href="/apps/map/geschichte/c/demokratie-damals-heute/" class="map-chip map-chip-gap" data-opens="detail-demokratie-damals-heute">
     <span>Demokratie damals und heute</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -393,7 +409,7 @@
 </li>
 
               
-<li>
+<li data-competency="perserkriege">
   <a href="/apps/map/geschichte/c/perserkriege/" class="map-chip map-chip-gap" data-opens="detail-perserkriege">
     <span>Perserkriege</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -401,7 +417,7 @@
 </li>
 
               
-<li>
+<li data-competency="alexander-und-hellenismus">
   <a href="/apps/map/geschichte/c/alexander-und-hellenismus/" class="map-chip map-chip-gap" data-opens="detail-alexander-und-hellenismus">
     <span>Alexander der Große und Hellenismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -409,7 +425,7 @@
 </li>
 
               
-<li>
+<li data-competency="gruendungssage-roms">
   <a href="/apps/map/geschichte/c/gruendungssage-roms/" class="map-chip map-chip-gap" data-opens="detail-gruendungssage-roms">
     <span>Gründungssage Roms</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -417,7 +433,7 @@
 </li>
 
               
-<li>
+<li data-competency="roemische-republik">
   <a href="/apps/map/geschichte/c/roemische-republik/" class="map-chip map-chip-gap" data-opens="detail-roemische-republik">
     <span>Römische Republik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -425,7 +441,7 @@
 </li>
 
               
-<li>
+<li data-competency="patrizier-und-plebejer">
   <a href="/apps/map/geschichte/c/patrizier-und-plebejer/" class="map-chip map-chip-gap" data-opens="detail-patrizier-und-plebejer">
     <span>Patrizier und Plebejer</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -433,7 +449,7 @@
 </li>
 
               
-<li>
+<li data-competency="roemische-familie">
   <a href="/apps/map/geschichte/c/roemische-familie/" class="map-chip map-chip-gap" data-opens="detail-roemische-familie">
     <span>Römische Familie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -441,7 +457,7 @@
 </li>
 
               
-<li>
+<li data-competency="expansion-roms">
   <a href="/apps/map/geschichte/c/expansion-roms/" class="map-chip map-chip-gap" data-opens="detail-expansion-roms">
     <span>Expansion Roms</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -449,7 +465,7 @@
 </li>
 
               
-<li>
+<li data-competency="krise-der-republik">
   <a href="/apps/map/geschichte/c/krise-der-republik/" class="map-chip map-chip-gap" data-opens="detail-krise-der-republik">
     <span>Krise der Römischen Republik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -457,7 +473,7 @@
 </li>
 
               
-<li>
+<li data-competency="caesar-und-augustus">
   <a href="/apps/map/geschichte/c/caesar-und-augustus/" class="map-chip map-chip-gap" data-opens="detail-caesar-und-augustus">
     <span>Caesar, Augustus und Prinzipat</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -465,7 +481,7 @@
 </li>
 
               
-<li>
+<li data-competency="leben-in-rom">
   <a href="/apps/map/geschichte/c/leben-in-rom/" class="map-chip map-chip-gap" data-opens="detail-leben-in-rom">
     <span>Alltag im antiken Rom</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -473,7 +489,7 @@
 </li>
 
               
-<li>
+<li data-competency="romanisierung">
   <a href="/apps/map/geschichte/c/romanisierung/" class="map-chip map-chip-gap" data-opens="detail-romanisierung">
     <span>Romanisierung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -481,7 +497,7 @@
 </li>
 
               
-<li>
+<li data-competency="limes">
   <a href="/apps/map/geschichte/c/limes/" class="map-chip map-chip-gap" data-opens="detail-limes">
     <span>Limes: Römer und Germanen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -489,7 +505,7 @@
 </li>
 
               
-<li>
+<li data-competency="christen-im-roemischen-reich">
   <a href="/apps/map/geschichte/c/christen-im-roemischen-reich/" class="map-chip map-chip-gap" data-opens="detail-christen-im-roemischen-reich">
     <span>Christen im Römischen Reich</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -497,7 +513,7 @@
 </li>
 
               
-<li>
+<li data-competency="erbe-der-antike">
   <a href="/apps/map/geschichte/c/erbe-der-antike/" class="map-chip map-chip-gap" data-opens="detail-erbe-der-antike">
     <span>Erbe der Antike</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -509,7 +525,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="voelkerwanderung">
   <a href="/apps/map/geschichte/c/voelkerwanderung/" class="map-chip map-chip-gap" data-opens="detail-voelkerwanderung">
     <span>Völkerwanderung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -517,7 +533,7 @@
 </li>
 
               
-<li>
+<li data-competency="islam-ausbreitung">
   <a href="/apps/map/geschichte/c/islam-ausbreitung/" class="map-chip map-chip-gap" data-opens="detail-islam-ausbreitung">
     <span>Entstehung und Ausbreitung des Islam</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -525,7 +541,7 @@
 </li>
 
               
-<li>
+<li data-competency="drei-religionen">
   <a href="/apps/map/geschichte/c/drei-religionen/" class="map-chip map-chip-gap" data-opens="detail-drei-religionen">
     <span>Judentum, Christentum und Islam</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -533,7 +549,7 @@
 </li>
 
               
-<li>
+<li data-competency="dreiteilung-mittelmeerwelt">
   <a href="/apps/map/geschichte/c/dreiteilung-mittelmeerwelt/" class="map-chip map-chip-gap" data-opens="detail-dreiteilung-mittelmeerwelt">
     <span>Dreiteilung der Mittelmeerwelt</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -541,7 +557,7 @@
 </li>
 
               
-<li>
+<li data-competency="frankenreich">
   <a href="/apps/map/geschichte/c/frankenreich/" class="map-chip map-chip-gap" data-opens="detail-frankenreich">
     <span>Frankenreich</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -549,7 +565,7 @@
 </li>
 
               
-<li>
+<li data-competency="karl-der-grosse">
   <a href="/apps/map/geschichte/c/karl-der-grosse/" class="map-chip map-chip-gap" data-opens="detail-karl-der-grosse">
     <span>Herrschaft Karls des Großen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -557,7 +573,7 @@
 </li>
 
               
-<li>
+<li data-competency="kaiserkroenung-800">
   <a href="/apps/map/geschichte/c/kaiserkroenung-800/" class="map-chip map-chip-gap" data-opens="detail-kaiserkroenung-800">
     <span>Kaiserkrönung im Jahr 800</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -565,7 +581,7 @@
 </li>
 
               
-<li>
+<li data-competency="heiliges-roemisches-reich">
   <a href="/apps/map/geschichte/c/heiliges-roemisches-reich/" class="map-chip map-chip-gap" data-opens="detail-heiliges-roemisches-reich">
     <span>Entstehung des Heiligen Römischen Reiches</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -596,7 +612,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="koenigserhebung">
   <a href="/apps/map/geschichte/c/koenigserhebung/" class="map-chip map-chip-gap" data-opens="detail-koenigserhebung">
     <span>Königserhebung und Herrschaftszeichen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -604,7 +620,7 @@
 </li>
 
               
-<li>
+<li data-competency="staendegesellschaft">
   <a href="/apps/map/geschichte/c/staendegesellschaft/" class="map-chip map-chip-gap" data-opens="detail-staendegesellschaft">
     <span>Mittelalterliche Ständegesellschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -612,7 +628,7 @@
 </li>
 
               
-<li>
+<li data-competency="lehnswesen">
   <a href="/apps/map/geschichte/c/lehnswesen/" class="map-chip map-chip-gap" data-opens="detail-lehnswesen">
     <span>Lehnswesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -620,7 +636,7 @@
 </li>
 
               
-<li>
+<li data-competency="grundherrschaft">
   <a href="/apps/map/geschichte/c/grundherrschaft/" class="map-chip map-chip-gap" data-opens="detail-grundherrschaft">
     <span>Grundherrschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -628,7 +644,7 @@
 </li>
 
               
-<li>
+<li data-competency="ritter-und-burg">
   <a href="/apps/map/geschichte/c/ritter-und-burg/" class="map-chip map-chip-gap" data-opens="detail-ritter-und-burg">
     <span>Ritter und Burg</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -636,7 +652,7 @@
 </li>
 
               
-<li>
+<li data-competency="kloster">
   <a href="/apps/map/geschichte/c/kloster/" class="map-chip map-chip-gap" data-opens="detail-kloster">
     <span>Klosterleben im Mittelalter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -644,7 +660,7 @@
 </li>
 
               
-<li>
+<li data-competency="glaube-im-mittelalter">
   <a href="/apps/map/geschichte/c/glaube-im-mittelalter/" class="map-chip map-chip-gap" data-opens="detail-glaube-im-mittelalter">
     <span>Glaube und Kirche im Mittelalter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -652,7 +668,7 @@
 </li>
 
               
-<li>
+<li data-competency="investiturstreit">
   <a href="/apps/map/geschichte/c/investiturstreit/" class="map-chip map-chip-gap" data-opens="detail-investiturstreit">
     <span>Investiturstreit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -660,7 +676,7 @@
 </li>
 
               
-<li>
+<li data-competency="fuerstenmacht">
   <a href="/apps/map/geschichte/c/fuerstenmacht/" class="map-chip map-chip-gap" data-opens="detail-fuerstenmacht">
     <span>Aufstieg der Landesfürsten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -668,7 +684,7 @@
 </li>
 
               
-<li>
+<li data-competency="kurfuersten">
   <a href="/apps/map/geschichte/c/kurfuersten/" class="map-chip map-chip-gap" data-opens="detail-kurfuersten">
     <span>Kurfürsten und Goldene Bulle</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -676,7 +692,7 @@
 </li>
 
               
-<li>
+<li data-competency="stadtgruendung">
   <a href="/apps/map/geschichte/c/stadtgruendung/" class="map-chip map-chip-gap" data-opens="detail-stadtgruendung">
     <span>Stadtgründungen im Mittelalter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -684,7 +700,7 @@
 </li>
 
               
-<li>
+<li data-competency="stadtluft-macht-frei">
   <a href="/apps/map/geschichte/c/stadtluft-macht-frei/" class="map-chip map-chip-gap" data-opens="detail-stadtluft-macht-frei">
     <span>Stadtluft macht frei</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -692,7 +708,7 @@
 </li>
 
               
-<li>
+<li data-competency="stadtgesellschaft">
   <a href="/apps/map/geschichte/c/stadtgesellschaft/" class="map-chip map-chip-gap" data-opens="detail-stadtgesellschaft">
     <span>Mittelalterliche Stadtgesellschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -700,7 +716,7 @@
 </li>
 
               
-<li>
+<li data-competency="selbstverwaltung-der-stadt">
   <a href="/apps/map/geschichte/c/selbstverwaltung-der-stadt/" class="map-chip map-chip-gap" data-opens="detail-selbstverwaltung-der-stadt">
     <span>Städtische Selbstverwaltung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -708,7 +724,7 @@
 </li>
 
               
-<li>
+<li data-competency="juden-im-mittelalter">
   <a href="/apps/map/geschichte/c/juden-im-mittelalter/" class="map-chip map-chip-gap" data-opens="detail-juden-im-mittelalter">
     <span>Juden im Mittelalter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -716,7 +732,7 @@
 </li>
 
               
-<li>
+<li data-competency="kreuzzuege">
   <a href="/apps/map/geschichte/c/kreuzzuege/" class="map-chip map-chip-gap" data-opens="detail-kreuzzuege">
     <span>Kreuzzüge</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -724,7 +740,7 @@
 </li>
 
               
-<li>
+<li data-competency="kulturkontakt">
   <a href="/apps/map/geschichte/c/kulturkontakt/" class="map-chip map-chip-gap" data-opens="detail-kulturkontakt">
     <span>Kulturkontakt zwischen Christen und Muslimen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -732,7 +748,7 @@
 </li>
 
               
-<li>
+<li data-competency="hanse-und-fernhandel">
   <a href="/apps/map/geschichte/c/hanse-und-fernhandel/" class="map-chip map-chip-gap" data-opens="detail-hanse-und-fernhandel">
     <span>Hanse und Fernhandel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -740,7 +756,7 @@
 </li>
 
               
-<li>
+<li data-competency="handel-mit-asien-und-afrika">
   <a href="/apps/map/geschichte/c/handel-mit-asien-und-afrika/" class="map-chip map-chip-gap" data-opens="detail-handel-mit-asien-und-afrika">
     <span>Handelswege nach Asien und Afrika</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -748,7 +764,7 @@
 </li>
 
               
-<li>
+<li data-competency="pest">
   <a href="/apps/map/geschichte/c/pest/" class="map-chip map-chip-gap" data-opens="detail-pest">
     <span>Pest im 14. Jahrhundert</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -756,7 +772,7 @@
 </li>
 
               
-<li>
+<li data-competency="konstantinopel-1453">
   <a href="/apps/map/geschichte/c/konstantinopel-1453/" class="map-chip map-chip-gap" data-opens="detail-konstantinopel-1453">
     <span>Fall Konstantinopels 1453</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -768,7 +784,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="renaissance-und-humanismus">
   <a href="/apps/map/geschichte/c/renaissance-und-humanismus/" class="map-chip map-chip-gap" data-opens="detail-renaissance-und-humanismus">
     <span>Renaissance und Humanismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -776,7 +792,7 @@
 </li>
 
               
-<li>
+<li data-competency="kunst-und-wissenschaft-der-renaissance">
   <a href="/apps/map/geschichte/c/kunst-und-wissenschaft-der-renaissance/" class="map-chip map-chip-gap" data-opens="detail-kunst-und-wissenschaft-der-renaissance">
     <span>Kunst und Wissenschaft der Renaissance</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -784,7 +800,7 @@
 </li>
 
               
-<li>
+<li data-competency="buchdruck">
   <a href="/apps/map/geschichte/c/buchdruck/" class="map-chip map-chip-gap" data-opens="detail-buchdruck">
     <span>Gutenbergs Buchdruck</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -792,7 +808,7 @@
 </li>
 
               
-<li>
+<li data-competency="entdeckungsfahrten">
   <a href="/apps/map/geschichte/c/entdeckungsfahrten/" class="map-chip map-chip-gap" data-opens="detail-entdeckungsfahrten">
     <span>Entdeckungsfahrten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -800,7 +816,7 @@
 </li>
 
               
-<li>
+<li data-competency="eroberung-amerikas">
   <a href="/apps/map/geschichte/c/eroberung-amerikas/" class="map-chip map-chip-gap" data-opens="detail-eroberung-amerikas">
     <span>Eroberung Amerikas</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -808,7 +824,7 @@
 </li>
 
               
-<li>
+<li data-competency="welthandel">
   <a href="/apps/map/geschichte/c/welthandel/" class="map-chip map-chip-gap" data-opens="detail-welthandel">
     <span>Entstehung des Welthandels</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -816,7 +832,7 @@
 </li>
 
               
-<li>
+<li data-competency="fugger">
   <a href="/apps/map/geschichte/c/fugger/" class="map-chip map-chip-gap" data-opens="detail-fugger">
     <span>Die Fugger</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -824,7 +840,7 @@
 </li>
 
               
-<li>
+<li data-competency="kritik-an-der-kirche">
   <a href="/apps/map/geschichte/c/kritik-an-der-kirche/" class="map-chip map-chip-gap" data-opens="detail-kritik-an-der-kirche">
     <span>Kirchenkritik und Ablasshandel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -832,7 +848,7 @@
 </li>
 
               
-<li>
+<li data-competency="luther-und-reformation">
   <a href="/apps/map/geschichte/c/luther-und-reformation/" class="map-chip map-chip-gap" data-opens="detail-luther-und-reformation">
     <span>Luther und die Reformation</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -840,7 +856,7 @@
 </li>
 
               
-<li>
+<li data-competency="ausbreitung-der-reformation">
   <a href="/apps/map/geschichte/c/ausbreitung-der-reformation/" class="map-chip map-chip-gap" data-opens="detail-ausbreitung-der-reformation">
     <span>Ausbreitung der Reformation</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -848,7 +864,7 @@
 </li>
 
               
-<li>
+<li data-competency="bauernkrieg">
   <a href="/apps/map/geschichte/c/bauernkrieg/" class="map-chip map-chip-gap" data-opens="detail-bauernkrieg">
     <span>Bauernkrieg 1525</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -856,7 +872,7 @@
 </li>
 
               
-<li>
+<li data-competency="augsburger-religionsfriede">
   <a href="/apps/map/geschichte/c/augsburger-religionsfriede/" class="map-chip map-chip-gap" data-opens="detail-augsburger-religionsfriede">
     <span>Augsburger Religionsfriede</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -864,7 +880,7 @@
 </li>
 
               
-<li>
+<li data-competency="hexenverfolgung">
   <a href="/apps/map/geschichte/c/hexenverfolgung/" class="map-chip map-chip-gap" data-opens="detail-hexenverfolgung">
     <span>Hexenverfolgung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -872,7 +888,7 @@
 </li>
 
               
-<li>
+<li data-competency="dreissigjaehriger-krieg">
   <a href="/apps/map/geschichte/c/dreissigjaehriger-krieg/" class="map-chip map-chip-gap" data-opens="detail-dreissigjaehriger-krieg">
     <span>Ursachen des Dreißigjährigen Krieges</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -880,7 +896,7 @@
 </li>
 
               
-<li>
+<li data-competency="folgen-des-dreissigjaehrigen-krieges">
   <a href="/apps/map/geschichte/c/folgen-des-dreissigjaehrigen-krieges/" class="map-chip map-chip-gap" data-opens="detail-folgen-des-dreissigjaehrigen-krieges">
     <span>Folgen des Dreißigjährigen Krieges</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -888,7 +904,7 @@
 </li>
 
               
-<li>
+<li data-competency="westfaelischer-friede">
   <a href="/apps/map/geschichte/c/westfaelischer-friede/" class="map-chip map-chip-gap" data-opens="detail-westfaelischer-friede">
     <span>Westfälischer Friede</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -896,7 +912,7 @@
 </li>
 
               
-<li>
+<li data-competency="absolutismus">
   <a href="/apps/map/geschichte/c/absolutismus/" class="map-chip map-chip-gap" data-opens="detail-absolutismus">
     <span>Absolutismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -904,7 +920,7 @@
 </li>
 
               
-<li>
+<li data-competency="versailles-und-hof">
   <a href="/apps/map/geschichte/c/versailles-und-hof/" class="map-chip map-chip-gap" data-opens="detail-versailles-und-hof">
     <span>Versailles und Hofleben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -912,7 +928,7 @@
 </li>
 
               
-<li>
+<li data-competency="merkantilismus">
   <a href="/apps/map/geschichte/c/merkantilismus/" class="map-chip map-chip-gap" data-opens="detail-merkantilismus">
     <span>Merkantilismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -920,7 +936,7 @@
 </li>
 
               
-<li>
+<li data-competency="moderner-staat">
   <a href="/apps/map/geschichte/c/moderner-staat/" class="map-chip map-chip-gap" data-opens="detail-moderner-staat">
     <span>Anfänge des modernen Staates</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -928,7 +944,7 @@
 </li>
 
               
-<li>
+<li data-competency="absolutismus-in-deutschland">
   <a href="/apps/map/geschichte/c/absolutismus-in-deutschland/" class="map-chip map-chip-gap" data-opens="detail-absolutismus-in-deutschland">
     <span>Absolutismus in Deutschland</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -940,7 +956,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="aufklaerung">
   <a href="/apps/map/geschichte/c/aufklaerung/" class="map-chip map-chip-gap" data-opens="detail-aufklaerung">
     <span>Aufklärung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -948,7 +964,7 @@
 </li>
 
               
-<li>
+<li data-competency="gewaltenteilung">
   <a href="/apps/map/geschichte/c/gewaltenteilung/" class="map-chip map-chip-gap" data-opens="detail-gewaltenteilung">
     <span>Gewaltenteilung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -956,7 +972,7 @@
 </li>
 
               
-<li>
+<li data-competency="amerikanische-unabhaengigkeit">
   <a href="/apps/map/geschichte/c/amerikanische-unabhaengigkeit/" class="map-chip map-chip-gap" data-opens="detail-amerikanische-unabhaengigkeit">
     <span>Amerikanische Unabhängigkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -964,7 +980,7 @@
 </li>
 
               
-<li>
+<li data-competency="ursachen-der-franzoesischen-revolution">
   <a href="/apps/map/geschichte/c/ursachen-der-franzoesischen-revolution/" class="map-chip map-chip-gap" data-opens="detail-ursachen-der-franzoesischen-revolution">
     <span>Ursachen der Französischen Revolution</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -972,7 +988,7 @@
 </li>
 
               
-<li>
+<li data-competency="revolution-1789">
   <a href="/apps/map/geschichte/c/revolution-1789/" class="map-chip map-chip-gap" data-opens="detail-revolution-1789">
     <span>Revolution von 1789</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -980,7 +996,7 @@
 </li>
 
               
-<li>
+<li data-competency="menschenrechte-1789">
   <a href="/apps/map/geschichte/c/menschenrechte-1789/" class="map-chip map-chip-gap" data-opens="detail-menschenrechte-1789">
     <span>Erklärung der Menschenrechte 1789</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -988,7 +1004,7 @@
 </li>
 
               
-<li>
+<li data-competency="konstitutionelle-monarchie">
   <a href="/apps/map/geschichte/c/konstitutionelle-monarchie/" class="map-chip map-chip-gap" data-opens="detail-konstitutionelle-monarchie">
     <span>Konstitutionelle Monarchie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -996,7 +1012,7 @@
 </li>
 
               
-<li>
+<li data-competency="jakobinerherrschaft">
   <a href="/apps/map/geschichte/c/jakobinerherrschaft/" class="map-chip map-chip-gap" data-opens="detail-jakobinerherrschaft">
     <span>Jakobinerherrschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1004,7 +1020,7 @@
 </li>
 
               
-<li>
+<li data-competency="napoleon">
   <a href="/apps/map/geschichte/c/napoleon/" class="map-chip map-chip-gap" data-opens="detail-napoleon">
     <span>Napoleons Herrschaft über Europa</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1012,7 +1028,7 @@
 </li>
 
               
-<li>
+<li data-competency="ende-des-reiches-1806">
   <a href="/apps/map/geschichte/c/ende-des-reiches-1806/" class="map-chip map-chip-gap" data-opens="detail-ende-des-reiches-1806">
     <span>Ende des Alten Reiches 1806</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1020,7 +1036,7 @@
 </li>
 
               
-<li>
+<li data-competency="reformen-um-1800">
   <a href="/apps/map/geschichte/c/reformen-um-1800/" class="map-chip map-chip-gap" data-opens="detail-reformen-um-1800">
     <span>Reformen um 1800</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1028,7 +1044,7 @@
 </li>
 
               
-<li>
+<li data-competency="nationalbewegung">
   <a href="/apps/map/geschichte/c/nationalbewegung/" class="map-chip map-chip-gap" data-opens="detail-nationalbewegung">
     <span>Entstehung der Nationalbewegung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1036,7 +1052,7 @@
 </li>
 
               
-<li>
+<li data-competency="wiener-kongress">
   <a href="/apps/map/geschichte/c/wiener-kongress/" class="map-chip map-chip-gap" data-opens="detail-wiener-kongress">
     <span>Wiener Kongress</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1044,7 +1060,7 @@
 </li>
 
               
-<li>
+<li data-competency="liberalismus-und-nationalismus">
   <a href="/apps/map/geschichte/c/liberalismus-und-nationalismus/" class="map-chip map-chip-gap" data-opens="detail-liberalismus-und-nationalismus">
     <span>Liberalismus und Nationalismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1052,7 +1068,7 @@
 </li>
 
               
-<li>
+<li data-competency="restauration">
   <a href="/apps/map/geschichte/c/restauration/" class="map-chip map-chip-gap" data-opens="detail-restauration">
     <span>Restauration</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1060,7 +1076,7 @@
 </li>
 
               
-<li>
+<li data-competency="hambacher-fest">
   <a href="/apps/map/geschichte/c/hambacher-fest/" class="map-chip map-chip-gap" data-opens="detail-hambacher-fest">
     <span>Hambacher Fest</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1068,7 +1084,7 @@
 </li>
 
               
-<li>
+<li data-competency="revolution-1848">
   <a href="/apps/map/geschichte/c/revolution-1848/" class="map-chip map-chip-gap" data-opens="detail-revolution-1848">
     <span>Revolution von 1848/49</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1076,7 +1092,7 @@
 </li>
 
               
-<li>
+<li data-competency="paulskirche">
   <a href="/apps/map/geschichte/c/paulskirche/" class="map-chip map-chip-gap" data-opens="detail-paulskirche">
     <span>Paulskirchenparlament</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1084,7 +1100,7 @@
 </li>
 
               
-<li>
+<li data-competency="scheitern-1848">
   <a href="/apps/map/geschichte/c/scheitern-1848/" class="map-chip map-chip-gap" data-opens="detail-scheitern-1848">
     <span>Scheitern der Revolution 1848/49</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1092,7 +1108,7 @@
 </li>
 
               
-<li>
+<li data-competency="industrialisierung-england">
   <a href="/apps/map/geschichte/c/industrialisierung-england/" class="map-chip map-chip-gap" data-opens="detail-industrialisierung-england">
     <span>Industrialisierung in England</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1100,7 +1116,7 @@
 </li>
 
               
-<li>
+<li data-competency="dampfmaschine-und-eisenbahn">
   <a href="/apps/map/geschichte/c/dampfmaschine-und-eisenbahn/" class="map-chip map-chip-gap" data-opens="detail-dampfmaschine-und-eisenbahn">
     <span>Dampfmaschine und Eisenbahn</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1108,7 +1124,7 @@
 </li>
 
               
-<li>
+<li data-competency="industrialisierung-deutschland">
   <a href="/apps/map/geschichte/c/industrialisierung-deutschland/" class="map-chip map-chip-gap" data-opens="detail-industrialisierung-deutschland">
     <span>Industrialisierung in Deutschland</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1116,7 +1132,7 @@
 </li>
 
               
-<li>
+<li data-competency="fabrikarbeit">
   <a href="/apps/map/geschichte/c/fabrikarbeit/" class="map-chip map-chip-gap" data-opens="detail-fabrikarbeit">
     <span>Fabrikarbeit im 19. Jahrhundert</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1124,7 +1140,7 @@
 </li>
 
               
-<li>
+<li data-competency="verstaedterung">
   <a href="/apps/map/geschichte/c/verstaedterung/" class="map-chip map-chip-gap" data-opens="detail-verstaedterung">
     <span>Verstädterung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1132,7 +1148,7 @@
 </li>
 
               
-<li>
+<li data-competency="soziale-frage">
   <a href="/apps/map/geschichte/c/soziale-frage/" class="map-chip map-chip-gap" data-opens="detail-soziale-frage">
     <span>Soziale Frage</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1140,7 +1156,7 @@
 </li>
 
               
-<li>
+<li data-competency="antworten-auf-die-soziale-frage">
   <a href="/apps/map/geschichte/c/antworten-auf-die-soziale-frage/" class="map-chip map-chip-gap" data-opens="detail-antworten-auf-die-soziale-frage">
     <span>Antworten auf die Soziale Frage</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1148,7 +1164,7 @@
 </li>
 
               
-<li>
+<li data-competency="sozialismus-und-kommunismus">
   <a href="/apps/map/geschichte/c/sozialismus-und-kommunismus/" class="map-chip map-chip-gap" data-opens="detail-sozialismus-und-kommunismus">
     <span>Sozialismus und Kommunismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1156,7 +1172,7 @@
 </li>
 
               
-<li>
+<li data-competency="reichsgruendung-1871">
   <a href="/apps/map/geschichte/c/reichsgruendung-1871/" class="map-chip map-chip-gap" data-opens="detail-reichsgruendung-1871">
     <span>Reichsgründung 1871</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1164,7 +1180,7 @@
 </li>
 
               
-<li>
+<li data-competency="verfassung-des-kaiserreichs">
   <a href="/apps/map/geschichte/c/verfassung-des-kaiserreichs/" class="map-chip map-chip-gap" data-opens="detail-verfassung-des-kaiserreichs">
     <span>Verfassung des Kaiserreichs</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1172,7 +1188,7 @@
 </li>
 
               
-<li>
+<li data-competency="bismarcks-sozialpolitik">
   <a href="/apps/map/geschichte/c/bismarcks-sozialpolitik/" class="map-chip map-chip-gap" data-opens="detail-bismarcks-sozialpolitik">
     <span>Bismarcks Sozialpolitik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1180,7 +1196,7 @@
 </li>
 
               
-<li>
+<li data-competency="obrigkeitsstaat-und-militarismus">
   <a href="/apps/map/geschichte/c/obrigkeitsstaat-und-militarismus/" class="map-chip map-chip-gap" data-opens="detail-obrigkeitsstaat-und-militarismus">
     <span>Obrigkeitsstaat und Militarismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1188,7 +1204,7 @@
 </li>
 
               
-<li>
+<li data-competency="frauenbewegung">
   <a href="/apps/map/geschichte/c/frauenbewegung/" class="map-chip map-chip-gap" data-opens="detail-frauenbewegung">
     <span>Frauenbewegung im Kaiserreich</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1200,7 +1216,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="imperialismus">
   <a href="/apps/map/geschichte/c/imperialismus/" class="map-chip map-chip-gap" data-opens="detail-imperialismus">
     <span>Motive des Imperialismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1208,7 +1224,7 @@
 </li>
 
               
-<li>
+<li data-competency="aufteilung-afrikas">
   <a href="/apps/map/geschichte/c/aufteilung-afrikas/" class="map-chip map-chip-gap" data-opens="detail-aufteilung-afrikas">
     <span>Aufteilung Afrikas</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1216,7 +1232,7 @@
 </li>
 
               
-<li>
+<li data-competency="leben-in-den-kolonien">
   <a href="/apps/map/geschichte/c/leben-in-den-kolonien/" class="map-chip map-chip-gap" data-opens="detail-leben-in-den-kolonien">
     <span>Leben unter Kolonialherrschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1224,7 +1240,7 @@
 </li>
 
               
-<li>
+<li data-competency="buendnisse-und-wettruesten">
   <a href="/apps/map/geschichte/c/buendnisse-und-wettruesten/" class="map-chip map-chip-gap" data-opens="detail-buendnisse-und-wettruesten">
     <span>Bündnisse und Wettrüsten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1232,7 +1248,7 @@
 </li>
 
               
-<li>
+<li data-competency="julikrise-1914">
   <a href="/apps/map/geschichte/c/julikrise-1914/" class="map-chip map-chip-gap" data-opens="detail-julikrise-1914">
     <span>Julikrise 1914</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1240,7 +1256,7 @@
 </li>
 
               
-<li>
+<li data-competency="stellungskrieg">
   <a href="/apps/map/geschichte/c/stellungskrieg/" class="map-chip map-chip-gap" data-opens="detail-stellungskrieg">
     <span>Stellungskrieg und Materialschlacht</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1248,7 +1264,7 @@
 </li>
 
               
-<li>
+<li data-competency="krieg-und-zivilbevoelkerung">
   <a href="/apps/map/geschichte/c/krieg-und-zivilbevoelkerung/" class="map-chip map-chip-gap" data-opens="detail-krieg-und-zivilbevoelkerung">
     <span>Heimatfront im Ersten Weltkrieg</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1256,7 +1272,7 @@
 </li>
 
               
-<li>
+<li data-competency="russische-revolution">
   <a href="/apps/map/geschichte/c/russische-revolution/" class="map-chip map-chip-gap" data-opens="detail-russische-revolution">
     <span>Russische Revolution 1917</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1264,7 +1280,7 @@
 </li>
 
               
-<li>
+<li data-competency="epochenjahr-1917">
   <a href="/apps/map/geschichte/c/epochenjahr-1917/" class="map-chip map-chip-gap" data-opens="detail-epochenjahr-1917">
     <span>Epochenjahr 1917</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1272,7 +1288,7 @@
 </li>
 
               
-<li>
+<li data-competency="versailler-vertrag">
   <a href="/apps/map/geschichte/c/versailler-vertrag/" class="map-chip map-chip-gap" data-opens="detail-versailler-vertrag">
     <span>Versailler Vertrag</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1280,7 +1296,7 @@
 </li>
 
               
-<li>
+<li data-competency="neuordnung-europas-1919">
   <a href="/apps/map/geschichte/c/neuordnung-europas-1919/" class="map-chip map-chip-gap" data-opens="detail-neuordnung-europas-1919">
     <span>Neuordnung Europas 1919</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1288,7 +1304,7 @@
 </li>
 
               
-<li>
+<li data-competency="erinnerung-an-den-ersten-weltkrieg">
   <a href="/apps/map/geschichte/c/erinnerung-an-den-ersten-weltkrieg/" class="map-chip map-chip-gap" data-opens="detail-erinnerung-an-den-ersten-weltkrieg">
     <span>Erinnerung an den Ersten Weltkrieg</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1317,7 +1333,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="juden-im-19-jahrhundert">
   <a href="/apps/map/geschichte/c/juden-im-19-jahrhundert/" class="map-chip map-chip-gap" data-opens="detail-juden-im-19-jahrhundert">
     <span>Juden im 19. Jahrhundert</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1329,7 +1345,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="deutsche-kolonien">
   <a href="/apps/map/geschichte/c/deutsche-kolonien/" class="map-chip map-chip-gap" data-opens="detail-deutsche-kolonien">
     <span>Deutsche Kolonien</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1337,7 +1353,7 @@
 </li>
 
               
-<li>
+<li data-competency="novemberrevolution">
   <a href="/apps/map/geschichte/c/novemberrevolution/" class="map-chip map-chip-gap" data-opens="detail-novemberrevolution">
     <span>Novemberrevolution 1918</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1345,7 +1361,7 @@
 </li>
 
               
-<li>
+<li data-competency="raete-oder-parlament">
   <a href="/apps/map/geschichte/c/raete-oder-parlament/" class="map-chip map-chip-gap" data-opens="detail-raete-oder-parlament">
     <span>Rätesystem oder Parlament</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1353,7 +1369,7 @@
 </li>
 
               
-<li>
+<li data-competency="weimarer-verfassung">
   <a href="/apps/map/geschichte/c/weimarer-verfassung/" class="map-chip map-chip-gap" data-opens="detail-weimarer-verfassung">
     <span>Weimarer Reichsverfassung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1361,7 +1377,7 @@
 </li>
 
               
-<li>
+<li data-competency="frauenwahlrecht">
   <a href="/apps/map/geschichte/c/frauenwahlrecht/" class="map-chip map-chip-gap" data-opens="detail-frauenwahlrecht">
     <span>Frauenwahlrecht</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1369,7 +1385,7 @@
 </li>
 
               
-<li>
+<li data-competency="feinde-der-republik">
   <a href="/apps/map/geschichte/c/feinde-der-republik/" class="map-chip map-chip-gap" data-opens="detail-feinde-der-republik">
     <span>Feinde der Weimarer Republik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1377,7 +1393,7 @@
 </li>
 
               
-<li>
+<li data-competency="inflation-1923">
   <a href="/apps/map/geschichte/c/inflation-1923/" class="map-chip map-chip-gap" data-opens="detail-inflation-1923">
     <span>Inflation von 1923</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1385,7 +1401,7 @@
 </li>
 
               
-<li>
+<li data-competency="krisenjahr-1923">
   <a href="/apps/map/geschichte/c/krisenjahr-1923/" class="map-chip map-chip-gap" data-opens="detail-krisenjahr-1923">
     <span>Krisenjahr 1923</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1393,7 +1409,7 @@
 </li>
 
               
-<li>
+<li data-competency="stabilisierung">
   <a href="/apps/map/geschichte/c/stabilisierung/" class="map-chip map-chip-gap" data-opens="detail-stabilisierung">
     <span>Stabilisierung der Weimarer Republik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1401,7 +1417,7 @@
 </li>
 
               
-<li>
+<li data-competency="weltwirtschaftskrise">
   <a href="/apps/map/geschichte/c/weltwirtschaftskrise/" class="map-chip map-chip-gap" data-opens="detail-weltwirtschaftskrise">
     <span>Weltwirtschaftskrise</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1409,7 +1425,7 @@
 </li>
 
               
-<li>
+<li data-competency="praesidialkabinette">
   <a href="/apps/map/geschichte/c/praesidialkabinette/" class="map-chip map-chip-gap" data-opens="detail-praesidialkabinette">
     <span>Präsidialkabinette</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1417,7 +1433,7 @@
 </li>
 
               
-<li>
+<li data-competency="aufstieg-der-nsdap">
   <a href="/apps/map/geschichte/c/aufstieg-der-nsdap/" class="map-chip map-chip-gap" data-opens="detail-aufstieg-der-nsdap">
     <span>Aufstieg der NSDAP</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1425,7 +1441,7 @@
 </li>
 
               
-<li>
+<li data-competency="scheitern-von-weimar">
   <a href="/apps/map/geschichte/c/scheitern-von-weimar/" class="map-chip map-chip-gap" data-opens="detail-scheitern-von-weimar">
     <span>Scheitern der Weimarer Republik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1437,7 +1453,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="machtuebernahme-1933">
   <a href="/apps/map/geschichte/c/machtuebernahme-1933/" class="map-chip map-chip-gap" data-opens="detail-machtuebernahme-1933">
     <span>Machtübernahme 1933</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1445,7 +1461,7 @@
 </li>
 
               
-<li>
+<li data-competency="ns-ideologie">
   <a href="/apps/map/geschichte/c/ns-ideologie/" class="map-chip map-chip-gap" data-opens="detail-ns-ideologie">
     <span>NS-Ideologie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1453,7 +1469,7 @@
 </li>
 
               
-<li>
+<li data-competency="antisemitismus">
   <a href="/apps/map/geschichte/c/antisemitismus/" class="map-chip map-chip-gap" data-opens="detail-antisemitismus">
     <span>Antisemitismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1461,7 +1477,7 @@
 </li>
 
               
-<li>
+<li data-competency="ermaechtigungsgesetz">
   <a href="/apps/map/geschichte/c/ermaechtigungsgesetz/" class="map-chip map-chip-gap" data-opens="detail-ermaechtigungsgesetz">
     <span>Ermächtigungsgesetz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1469,7 +1485,7 @@
 </li>
 
               
-<li>
+<li data-competency="gleichschaltung">
   <a href="/apps/map/geschichte/c/gleichschaltung/" class="map-chip map-chip-gap" data-opens="detail-gleichschaltung">
     <span>Gleichschaltung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1477,7 +1493,7 @@
 </li>
 
               
-<li>
+<li data-competency="terror-und-verfolgung">
   <a href="/apps/map/geschichte/c/terror-und-verfolgung/" class="map-chip map-chip-gap" data-opens="detail-terror-und-verfolgung">
     <span>Terror gegen politische Gegner</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1485,7 +1501,7 @@
 </li>
 
               
-<li>
+<li data-competency="propaganda">
   <a href="/apps/map/geschichte/c/propaganda/" class="map-chip map-chip-gap" data-opens="detail-propaganda">
     <span>NS-Propaganda</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1493,7 +1509,7 @@
 </li>
 
               
-<li>
+<li data-competency="totalitaere-diktatur">
   <a href="/apps/map/geschichte/c/totalitaere-diktatur/" class="map-chip map-chip-gap" data-opens="detail-totalitaere-diktatur">
     <span>Totalitäre Diktatur</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1501,7 +1517,7 @@
 </li>
 
               
-<li>
+<li data-competency="alltag-im-ns-staat">
   <a href="/apps/map/geschichte/c/alltag-im-ns-staat/" class="map-chip map-chip-gap" data-opens="detail-alltag-im-ns-staat">
     <span>Alltag im NS-Staat</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1509,7 +1525,7 @@
 </li>
 
               
-<li>
+<li data-competency="entrechtung-der-juden">
   <a href="/apps/map/geschichte/c/entrechtung-der-juden/" class="map-chip map-chip-gap" data-opens="detail-entrechtung-der-juden">
     <span>Entrechtung der Juden</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1517,7 +1533,7 @@
 </li>
 
               
-<li>
+<li data-competency="novemberpogrom-1938">
   <a href="/apps/map/geschichte/c/novemberpogrom-1938/" class="map-chip map-chip-gap" data-opens="detail-novemberpogrom-1938">
     <span>Novemberpogrom 1938</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1525,7 +1541,7 @@
 </li>
 
               
-<li>
+<li data-competency="weitere-verfolgte">
   <a href="/apps/map/geschichte/c/weitere-verfolgte/" class="map-chip map-chip-gap" data-opens="detail-weitere-verfolgte">
     <span>Weitere verfolgte Gruppen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1533,7 +1549,7 @@
 </li>
 
               
-<li>
+<li data-competency="weg-in-den-krieg">
   <a href="/apps/map/geschichte/c/weg-in-den-krieg/" class="map-chip map-chip-gap" data-opens="detail-weg-in-den-krieg">
     <span>Weg in den Zweiten Weltkrieg</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1541,7 +1557,7 @@
 </li>
 
               
-<li>
+<li data-competency="zweiter-weltkrieg">
   <a href="/apps/map/geschichte/c/zweiter-weltkrieg/" class="map-chip map-chip-gap" data-opens="detail-zweiter-weltkrieg">
     <span>Verlauf des Zweiten Weltkriegs</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1549,7 +1565,7 @@
 </li>
 
               
-<li>
+<li data-competency="vernichtungskrieg">
   <a href="/apps/map/geschichte/c/vernichtungskrieg/" class="map-chip map-chip-gap" data-opens="detail-vernichtungskrieg">
     <span>Vernichtungskrieg im Osten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1557,7 +1573,7 @@
 </li>
 
               
-<li>
+<li data-competency="holocaust">
   <a href="/apps/map/geschichte/c/holocaust/" class="map-chip map-chip-gap" data-opens="detail-holocaust">
     <span>Holocaust</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1565,7 +1581,7 @@
 </li>
 
               
-<li>
+<li data-competency="widerstand">
   <a href="/apps/map/geschichte/c/widerstand/" class="map-chip map-chip-gap" data-opens="detail-widerstand">
     <span>Widerstand gegen den Nationalsozialismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1573,7 +1589,7 @@
 </li>
 
               
-<li>
+<li data-competency="krieg-im-pazifik">
   <a href="/apps/map/geschichte/c/krieg-im-pazifik/" class="map-chip map-chip-gap" data-opens="detail-krieg-im-pazifik">
     <span>Krieg im Pazifik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1581,7 +1597,7 @@
 </li>
 
               
-<li>
+<li data-competency="kriegsende-1945">
   <a href="/apps/map/geschichte/c/kriegsende-1945/" class="map-chip map-chip-gap" data-opens="detail-kriegsende-1945">
     <span>Kriegsende 1945</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1589,7 +1605,7 @@
 </li>
 
               
-<li>
+<li data-competency="flucht-und-vertreibung">
   <a href="/apps/map/geschichte/c/flucht-und-vertreibung/" class="map-chip map-chip-gap" data-opens="detail-flucht-und-vertreibung">
     <span>Flucht und Vertreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1597,7 +1613,7 @@
 </li>
 
               
-<li>
+<li data-competency="erinnerung-an-den-ns">
   <a href="/apps/map/geschichte/c/erinnerung-an-den-ns/" class="map-chip map-chip-gap" data-opens="detail-erinnerung-an-den-ns">
     <span>Erinnerung an die NS-Verbrechen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1609,7 +1625,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="potsdamer-konferenz">
   <a href="/apps/map/geschichte/c/potsdamer-konferenz/" class="map-chip map-chip-gap" data-opens="detail-potsdamer-konferenz">
     <span>Potsdamer Konferenz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1617,7 +1633,7 @@
 </li>
 
               
-<li>
+<li data-competency="entnazifizierung">
   <a href="/apps/map/geschichte/c/entnazifizierung/" class="map-chip map-chip-gap" data-opens="detail-entnazifizierung">
     <span>Entnazifizierung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1625,7 +1641,7 @@
 </li>
 
               
-<li>
+<li data-competency="nachkriegsalltag">
   <a href="/apps/map/geschichte/c/nachkriegsalltag/" class="map-chip map-chip-gap" data-opens="detail-nachkriegsalltag">
     <span>Alltag in der Nachkriegszeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1633,7 +1649,7 @@
 </li>
 
               
-<li>
+<li data-competency="kalter-krieg">
   <a href="/apps/map/geschichte/c/kalter-krieg/" class="map-chip map-chip-gap" data-opens="detail-kalter-krieg">
     <span>Entstehung des Kalten Krieges</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1641,7 +1657,7 @@
 </li>
 
               
-<li>
+<li data-competency="doppelte-staatsgruendung">
   <a href="/apps/map/geschichte/c/doppelte-staatsgruendung/" class="map-chip map-chip-gap" data-opens="detail-doppelte-staatsgruendung">
     <span>Doppelte Staatsgründung 1949</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1649,7 +1665,7 @@
 </li>
 
               
-<li>
+<li data-competency="grundgesetz">
   <a href="/apps/map/geschichte/c/grundgesetz/" class="map-chip map-chip-gap" data-opens="detail-grundgesetz">
     <span>Grundgesetz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1657,7 +1673,7 @@
 </li>
 
               
-<li>
+<li data-competency="nato-und-warschauer-pakt">
   <a href="/apps/map/geschichte/c/nato-und-warschauer-pakt/" class="map-chip map-chip-gap" data-opens="detail-nato-und-warschauer-pakt">
     <span>NATO und Warschauer Pakt</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1665,7 +1681,7 @@
 </li>
 
               
-<li>
+<li data-competency="marktwirtschaft-und-planwirtschaft">
   <a href="/apps/map/geschichte/c/marktwirtschaft-und-planwirtschaft/" class="map-chip map-chip-gap" data-opens="detail-marktwirtschaft-und-planwirtschaft">
     <span>Marktwirtschaft und Planwirtschaft</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1673,7 +1689,7 @@
 </li>
 
               
-<li>
+<li data-competency="wirtschaftswunder">
   <a href="/apps/map/geschichte/c/wirtschaftswunder/" class="map-chip map-chip-gap" data-opens="detail-wirtschaftswunder">
     <span>Wirtschaftswunder</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1681,7 +1697,7 @@
 </li>
 
               
-<li>
+<li data-competency="sed-diktatur">
   <a href="/apps/map/geschichte/c/sed-diktatur/" class="map-chip map-chip-gap" data-opens="detail-sed-diktatur">
     <span>SED-Diktatur</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1689,7 +1705,7 @@
 </li>
 
               
-<li>
+<li data-competency="aufstand-17-juni-1953">
   <a href="/apps/map/geschichte/c/aufstand-17-juni-1953/" class="map-chip map-chip-gap" data-opens="detail-aufstand-17-juni-1953">
     <span>Aufstand vom 17. Juni 1953</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1697,7 +1713,7 @@
 </li>
 
               
-<li>
+<li data-competency="mauerbau-1961">
   <a href="/apps/map/geschichte/c/mauerbau-1961/" class="map-chip map-chip-gap" data-opens="detail-mauerbau-1961">
     <span>Mauerbau 1961</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1705,7 +1721,7 @@
 </li>
 
               
-<li>
+<li data-competency="alltag-in-der-ddr">
   <a href="/apps/map/geschichte/c/alltag-in-der-ddr/" class="map-chip map-chip-gap" data-opens="detail-alltag-in-der-ddr">
     <span>Alltag in der DDR</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1713,7 +1729,7 @@
 </li>
 
               
-<li>
+<li data-competency="kuba-krise">
   <a href="/apps/map/geschichte/c/kuba-krise/" class="map-chip map-chip-gap" data-opens="detail-kuba-krise">
     <span>Kubakrise</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1721,7 +1737,7 @@
 </li>
 
               
-<li>
+<li data-competency="stellvertreterkrieg">
   <a href="/apps/map/geschichte/c/stellvertreterkrieg/" class="map-chip map-chip-gap" data-opens="detail-stellvertreterkrieg">
     <span>Stellvertreterkriege</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1729,7 +1745,7 @@
 </li>
 
               
-<li>
+<li data-competency="entspannungspolitik">
   <a href="/apps/map/geschichte/c/entspannungspolitik/" class="map-chip map-chip-gap" data-opens="detail-entspannungspolitik">
     <span>Entspannungspolitik und Ostverträge</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1737,7 +1753,7 @@
 </li>
 
               
-<li>
+<li data-competency="68er-bewegung">
   <a href="/apps/map/geschichte/c/68er-bewegung/" class="map-chip map-chip-gap" data-opens="detail-68er-bewegung">
     <span>68er-Bewegung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1745,7 +1761,7 @@
 </li>
 
               
-<li>
+<li data-competency="aufarbeitung-der-ns-zeit">
   <a href="/apps/map/geschichte/c/aufarbeitung-der-ns-zeit/" class="map-chip map-chip-gap" data-opens="detail-aufarbeitung-der-ns-zeit">
     <span>Umgang mit der NS-Vergangenheit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1753,7 +1769,7 @@
 </li>
 
               
-<li>
+<li data-competency="entkolonialisierung">
   <a href="/apps/map/geschichte/c/entkolonialisierung/" class="map-chip map-chip-gap" data-opens="detail-entkolonialisierung">
     <span>Entkolonialisierung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1761,7 +1777,7 @@
 </li>
 
               
-<li>
+<li data-competency="europaeische-einigung">
   <a href="/apps/map/geschichte/c/europaeische-einigung/" class="map-chip map-chip-gap" data-opens="detail-europaeische-einigung">
     <span>Europäische Einigung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1769,7 +1785,7 @@
 </li>
 
               
-<li>
+<li data-competency="umbruch-in-osteuropa">
   <a href="/apps/map/geschichte/c/umbruch-in-osteuropa/" class="map-chip map-chip-gap" data-opens="detail-umbruch-in-osteuropa">
     <span>Umbruch in Osteuropa</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1777,7 +1793,7 @@
 </li>
 
               
-<li>
+<li data-competency="friedliche-revolution">
   <a href="/apps/map/geschichte/c/friedliche-revolution/" class="map-chip map-chip-gap" data-opens="detail-friedliche-revolution">
     <span>Friedliche Revolution 1989</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1785,7 +1801,7 @@
 </li>
 
               
-<li>
+<li data-competency="wiedervereinigung">
   <a href="/apps/map/geschichte/c/wiedervereinigung/" class="map-chip map-chip-gap" data-opens="detail-wiedervereinigung">
     <span>Deutsche Wiedervereinigung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1793,7 +1809,7 @@
 </li>
 
               
-<li>
+<li data-competency="globalisierung">
   <a href="/apps/map/geschichte/c/globalisierung/" class="map-chip map-chip-gap" data-opens="detail-globalisierung">
     <span>Globalisierung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>

@@ -60,10 +60,26 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-physik">
+  <p class="m-0"><strong id="status-physik" class="map-status-tag map-status-tag-draft">Draft</strong> This map is only an idea to show the principle. No teacher of the subject has checked it yet. Strands, building blocks and arrows may be wrong or missing.</p>
+  <p class="m-0 mt-1">Do you teach the subject? Look through the map and tell us what is missing or wrong: <a href="https://github.com/lernapps/apps/issues/new?title=Learning%20map%20Physics%3A%20review" class="underline underline-offset-2 font-semibold">Help out</a> <span class="map-status-note">(GitHub issue, needs a GitHub account)</span></p>
+</aside>
+
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Learning map Physics</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>How to read the map</a>
   </div>
+
+  
+<nav aria-labelledby="ordnung-physik" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-physik" class="m-0 text-sm font-semibold text-slate-600">Order the rows</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/en/map/physik/" class="btn btn-primary" aria-current="page">By grade</a></li>
+    <li><a href="/apps/en/map/physik/c/" class="btn btn-secondary">By step of the chain</a></li>
+  </ul>
+</nav>
+
   <div class="map-toolbar">
     <div data-map-when hidden>
       <label for="lehrplan" class="sr-only">What is taught when?</label>
@@ -143,7 +159,7 @@
           <td>
             <ul class="map-cell">
               
-<li data-covered>
+<li data-covered data-competency="einfacher-stromkreis">
   <a href="/apps/en/map/physik/c/einfacher-stromkreis/" class="map-chip map-chip-covered" data-opens="detail-einfacher-stromkreis">
     <span>Simple circuit</span>
     <span class="sr-only">(an app practises it)</span>
@@ -151,7 +167,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="leiter-nichtleiter">
   <a href="/apps/en/map/physik/c/leiter-nichtleiter/" class="map-chip map-chip-covered" data-opens="detail-leiter-nichtleiter">
     <span>Conductors and insulators</span>
     <span class="sr-only">(an app practises it)</span>
@@ -159,7 +175,7 @@
 </li>
 
               
-<li>
+<li data-competency="spannungsquellen">
   <a href="/apps/en/map/physik/c/spannungsquellen/" class="map-chip map-chip-gap" data-opens="detail-spannungsquellen">
     <span>Voltage sources</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -167,7 +183,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="schalter">
   <a href="/apps/en/map/physik/c/schalter/" class="map-chip map-chip-covered" data-opens="detail-schalter">
     <span>Switches</span>
     <span class="sr-only">(an app practises it)</span>
@@ -175,7 +191,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="schaltzeichen">
   <a href="/apps/en/map/physik/c/schaltzeichen/" class="map-chip map-chip-covered" data-opens="detail-schaltzeichen">
     <span>Circuit symbols and diagrams</span>
     <span class="sr-only">(an app practises it)</span>
@@ -183,7 +199,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="reihenschaltung">
   <a href="/apps/en/map/physik/c/reihenschaltung/" class="map-chip map-chip-covered" data-opens="detail-reihenschaltung">
     <span>Series circuit</span>
     <span class="sr-only">(an app practises it)</span>
@@ -191,7 +207,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="parallelschaltung">
   <a href="/apps/en/map/physik/c/parallelschaltung/" class="map-chip map-chip-covered" data-opens="detail-parallelschaltung">
     <span>Parallel circuit</span>
     <span class="sr-only">(an app practises it)</span>
@@ -199,7 +215,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="waermewirkung-strom">
   <a href="/apps/en/map/physik/c/waermewirkung-strom/" class="map-chip map-chip-covered" data-opens="detail-waermewirkung-strom">
     <span>Heating effect of current</span>
     <span class="sr-only">(an app practises it)</span>
@@ -207,7 +223,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="lichtwirkung-strom">
   <a href="/apps/en/map/physik/c/lichtwirkung-strom/" class="map-chip map-chip-covered" data-opens="detail-lichtwirkung-strom">
     <span>Lighting effect of current</span>
     <span class="sr-only">(an app practises it)</span>
@@ -215,7 +231,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="gefahren-des-stroms">
   <a href="/apps/en/map/physik/c/gefahren-des-stroms/" class="map-chip map-chip-covered" data-opens="detail-gefahren-des-stroms">
     <span>Dangers of electricity</span>
     <span class="sr-only">(an app practises it)</span>
@@ -223,7 +239,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="sicher-mit-strom-umgehen">
   <a href="/apps/en/map/physik/c/sicher-mit-strom-umgehen/" class="map-chip map-chip-covered" data-opens="detail-sicher-mit-strom-umgehen">
     <span>Electrical safety</span>
     <span class="sr-only">(an app practises it)</span>
@@ -231,7 +247,7 @@
 </li>
 
               
-<li>
+<li data-competency="permanentmagnete">
   <a href="/apps/en/map/physik/c/permanentmagnete/" class="map-chip map-chip-gap" data-opens="detail-permanentmagnete">
     <span>Permanent magnets</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -239,7 +255,7 @@
 </li>
 
               
-<li>
+<li data-competency="elementarmagnete-modell">
   <a href="/apps/en/map/physik/c/elementarmagnete-modell/" class="map-chip map-chip-gap" data-opens="detail-elementarmagnete-modell">
     <span>Domain model of magnetism</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -247,7 +263,7 @@
 </li>
 
               
-<li>
+<li data-competency="magnetfeld-feldlinien">
   <a href="/apps/en/map/physik/c/magnetfeld-feldlinien/" class="map-chip map-chip-gap" data-opens="detail-magnetfeld-feldlinien">
     <span>Magnetic field lines</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -255,7 +271,7 @@
 </li>
 
               
-<li>
+<li data-competency="erdmagnetfeld-kompass">
   <a href="/apps/en/map/physik/c/erdmagnetfeld-kompass/" class="map-chip map-chip-gap" data-opens="detail-erdmagnetfeld-kompass">
     <span>Earth’s magnetic field and compass</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -267,7 +283,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="strecke-und-zeit-messen">
   <a href="/apps/en/map/physik/c/strecke-und-zeit-messen/" class="map-chip map-chip-gap" data-opens="detail-strecke-und-zeit-messen">
     <span>Measuring distance and time</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -275,7 +291,7 @@
 </li>
 
               
-<li>
+<li data-competency="masse">
   <a href="/apps/en/map/physik/c/masse/" class="map-chip map-chip-gap" data-opens="detail-masse">
     <span>Mass</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -287,7 +303,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="temperatur">
   <a href="/apps/en/map/physik/c/temperatur/" class="map-chip map-chip-gap" data-opens="detail-temperatur">
     <span>Measuring temperature</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -295,7 +311,7 @@
 </li>
 
               
-<li>
+<li data-competency="geradlinige-lichtausbreitung">
   <a href="/apps/en/map/physik/c/geradlinige-lichtausbreitung/" class="map-chip map-chip-gap" data-opens="detail-geradlinige-lichtausbreitung">
     <span>Rectilinear propagation of light</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -303,7 +319,7 @@
 </li>
 
               
-<li>
+<li data-competency="lichtquellen-und-sehen">
   <a href="/apps/en/map/physik/c/lichtquellen-und-sehen/" class="map-chip map-chip-gap" data-opens="detail-lichtquellen-und-sehen">
     <span>Light sources and seeing</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -311,7 +327,7 @@
 </li>
 
               
-<li>
+<li data-competency="schatten">
   <a href="/apps/en/map/physik/c/schatten/" class="map-chip map-chip-gap" data-opens="detail-schatten">
     <span>Shadows</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -319,7 +335,7 @@
 </li>
 
               
-<li>
+<li data-competency="streuung">
   <a href="/apps/en/map/physik/c/streuung/" class="map-chip map-chip-gap" data-opens="detail-streuung">
     <span>Scattering</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -336,7 +352,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="thermische-energie">
   <a href="/apps/en/map/physik/c/thermische-energie/" class="map-chip map-chip-gap" data-opens="detail-thermische-energie">
     <span>Thermal energy and temperature</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -348,7 +364,7 @@
           <td>
             <ul class="map-cell">
               
-<li data-covered>
+<li data-covered data-competency="magnetwirkung-strom">
   <a href="/apps/en/map/physik/c/magnetwirkung-strom/" class="map-chip map-chip-covered" data-opens="detail-magnetwirkung-strom">
     <span>Magnetic effect of current</span>
     <span class="sr-only">(an app practises it)</span>
@@ -356,7 +372,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="stromstaerke">
   <a href="/apps/en/map/physik/c/stromstaerke/" class="map-chip map-chip-covered" data-opens="detail-stromstaerke">
     <span>Electric current</span>
     <span class="sr-only">(an app practises it)</span>
@@ -364,7 +380,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="stromstaerke-messen">
   <a href="/apps/en/map/physik/c/stromstaerke-messen/" class="map-chip map-chip-covered" data-opens="detail-stromstaerke-messen">
     <span>Measuring current</span>
     <span class="sr-only">(an app practises it)</span>
@@ -372,7 +388,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="spannung">
   <a href="/apps/en/map/physik/c/spannung/" class="map-chip map-chip-covered" data-opens="detail-spannung">
     <span>Voltage</span>
     <span class="sr-only">(an app practises it)</span>
@@ -380,7 +396,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="spannung-messen">
   <a href="/apps/en/map/physik/c/spannung-messen/" class="map-chip map-chip-covered" data-opens="detail-spannung-messen">
     <span>Measuring voltage</span>
     <span class="sr-only">(an app practises it)</span>
@@ -392,7 +408,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="geschwindigkeit">
   <a href="/apps/en/map/physik/c/geschwindigkeit/" class="map-chip map-chip-gap" data-opens="detail-geschwindigkeit">
     <span>Speed</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -400,7 +416,7 @@
 </li>
 
               
-<li>
+<li data-competency="geschwindigkeit-berechnen">
   <a href="/apps/en/map/physik/c/geschwindigkeit-berechnen/" class="map-chip map-chip-gap" data-opens="detail-geschwindigkeit-berechnen">
     <span>Calculating speed</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -412,7 +428,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="mondphasen">
   <a href="/apps/en/map/physik/c/mondphasen/" class="map-chip map-chip-gap" data-opens="detail-mondphasen">
     <span>Phases of the Moon</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -420,7 +436,7 @@
 </li>
 
               
-<li>
+<li data-competency="finsternisse">
   <a href="/apps/en/map/physik/c/finsternisse/" class="map-chip map-chip-gap" data-opens="detail-finsternisse">
     <span>Solar and lunar eclipses</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -428,7 +444,7 @@
 </li>
 
               
-<li>
+<li data-competency="wahrnehmungsgrenzen">
   <a href="/apps/en/map/physik/c/wahrnehmungsgrenzen/" class="map-chip map-chip-gap" data-opens="detail-wahrnehmungsgrenzen">
     <span>Limits of perception</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -436,7 +452,7 @@
 </li>
 
               
-<li>
+<li data-competency="absorption-emission-transmission">
   <a href="/apps/en/map/physik/c/absorption-emission-transmission/" class="map-chip map-chip-gap" data-opens="detail-absorption-emission-transmission">
     <span>Absorption, emission, transmission</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -444,7 +460,7 @@
 </li>
 
               
-<li>
+<li data-competency="reflexion">
   <a href="/apps/en/map/physik/c/reflexion/" class="map-chip map-chip-gap" data-opens="detail-reflexion">
     <span>Reflection</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -452,7 +468,7 @@
 </li>
 
               
-<li>
+<li data-competency="brechung">
   <a href="/apps/en/map/physik/c/brechung/" class="map-chip map-chip-gap" data-opens="detail-brechung">
     <span>Refraction</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -460,7 +476,7 @@
 </li>
 
               
-<li>
+<li data-competency="totalreflexion-lichtleiter">
   <a href="/apps/en/map/physik/c/totalreflexion-lichtleiter/" class="map-chip map-chip-gap" data-opens="detail-totalreflexion-lichtleiter">
     <span>Total internal reflection and optical fibres</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -468,7 +484,7 @@
 </li>
 
               
-<li>
+<li data-competency="sammellinse-abbildung">
   <a href="/apps/en/map/physik/c/sammellinse-abbildung/" class="map-chip map-chip-gap" data-opens="detail-sammellinse-abbildung">
     <span>Image formation by a converging lens</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -476,7 +492,7 @@
 </li>
 
               
-<li>
+<li data-competency="auge-und-sehhilfen">
   <a href="/apps/en/map/physik/c/auge-und-sehhilfen/" class="map-chip map-chip-gap" data-opens="detail-auge-und-sehhilfen">
     <span>The eye and vision aids</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -484,7 +500,7 @@
 </li>
 
               
-<li>
+<li data-competency="farben-und-spektralzerlegung">
   <a href="/apps/en/map/physik/c/farben-und-spektralzerlegung/" class="map-chip map-chip-gap" data-opens="detail-farben-und-spektralzerlegung">
     <span>Colour and dispersion</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -501,7 +517,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="energieformen">
   <a href="/apps/en/map/physik/c/energieformen/" class="map-chip map-chip-gap" data-opens="detail-energieformen">
     <span>Forms of energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -509,7 +525,7 @@
 </li>
 
               
-<li>
+<li data-competency="energie-und-joule">
   <a href="/apps/en/map/physik/c/energie-und-joule/" class="map-chip map-chip-gap" data-opens="detail-energie-und-joule">
     <span>Energy and the joule</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -517,7 +533,7 @@
 </li>
 
               
-<li>
+<li data-competency="lageenergie-bewegungsenergie">
   <a href="/apps/en/map/physik/c/lageenergie-bewegungsenergie/" class="map-chip map-chip-gap" data-opens="detail-lageenergie-bewegungsenergie">
     <span>Potential and kinetic energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -525,7 +541,7 @@
 </li>
 
               
-<li>
+<li data-competency="lageenergie-berechnen">
   <a href="/apps/en/map/physik/c/lageenergie-berechnen/" class="map-chip map-chip-gap" data-opens="detail-lageenergie-berechnen">
     <span>Calculating potential energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -533,7 +549,7 @@
 </li>
 
               
-<li>
+<li data-competency="bewegungsenergie-berechnen">
   <a href="/apps/en/map/physik/c/bewegungsenergie-berechnen/" class="map-chip map-chip-gap" data-opens="detail-bewegungsenergie-berechnen">
     <span>Calculating kinetic energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -541,7 +557,7 @@
 </li>
 
               
-<li>
+<li data-competency="waermetransport">
   <a href="/apps/en/map/physik/c/waermetransport/" class="map-chip map-chip-gap" data-opens="detail-waermetransport">
     <span>Heat transfer</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -549,7 +565,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieumwandlung">
   <a href="/apps/en/map/physik/c/energieumwandlung/" class="map-chip map-chip-gap" data-opens="detail-energieumwandlung">
     <span>Energy conversion</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -557,7 +573,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieuebertragung">
   <a href="/apps/en/map/physik/c/energieuebertragung/" class="map-chip map-chip-gap" data-opens="detail-energieuebertragung">
     <span>Energy transfer</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -565,7 +581,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieerhaltung">
   <a href="/apps/en/map/physik/c/energieerhaltung/" class="map-chip map-chip-gap" data-opens="detail-energieerhaltung">
     <span>Conservation of energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -573,7 +589,7 @@
 </li>
 
               
-<li>
+<li data-competency="energieentwertung">
   <a href="/apps/en/map/physik/c/energieentwertung/" class="map-chip map-chip-gap" data-opens="detail-energieentwertung">
     <span>Energy dissipation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -581,7 +597,7 @@
 </li>
 
               
-<li>
+<li data-competency="energiebilanz">
   <a href="/apps/en/map/physik/c/energiebilanz/" class="map-chip map-chip-gap" data-opens="detail-energiebilanz">
     <span>Energy balance</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -589,7 +605,7 @@
 </li>
 
               
-<li>
+<li data-competency="leistung">
   <a href="/apps/en/map/physik/c/leistung/" class="map-chip map-chip-gap" data-opens="detail-leistung">
     <span>Power</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -597,7 +613,7 @@
 </li>
 
               
-<li>
+<li data-competency="leistung-berechnen">
   <a href="/apps/en/map/physik/c/leistung-berechnen/" class="map-chip map-chip-gap" data-opens="detail-leistung-berechnen">
     <span>Calculating power</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -605,7 +621,7 @@
 </li>
 
               
-<li>
+<li data-competency="wirkungsgrad">
   <a href="/apps/en/map/physik/c/wirkungsgrad/" class="map-chip map-chip-gap" data-opens="detail-wirkungsgrad">
     <span>Efficiency</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -613,7 +629,7 @@
 </li>
 
               
-<li>
+<li data-competency="energiespeicherung">
   <a href="/apps/en/map/physik/c/energiespeicherung/" class="map-chip map-chip-gap" data-opens="detail-energiespeicherung">
     <span>Energy storage</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -621,7 +637,7 @@
 </li>
 
               
-<li>
+<li data-competency="energiequellen">
   <a href="/apps/en/map/physik/c/energiequellen/" class="map-chip map-chip-gap" data-opens="detail-energiequellen">
     <span>Energy sources</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -629,7 +645,7 @@
 </li>
 
               
-<li>
+<li data-competency="kraftwerksarten">
   <a href="/apps/en/map/physik/c/kraftwerksarten/" class="map-chip map-chip-gap" data-opens="detail-kraftwerksarten">
     <span>Types of power station</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -637,7 +653,7 @@
 </li>
 
               
-<li>
+<li data-competency="nachhaltige-energieversorgung">
   <a href="/apps/en/map/physik/c/nachhaltige-energieversorgung/" class="map-chip map-chip-gap" data-opens="detail-nachhaltige-energieversorgung">
     <span>Sustainable energy supply</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -649,7 +665,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="elektrische-ladung">
   <a href="/apps/en/map/physik/c/elektrische-ladung/" class="map-chip map-chip-gap" data-opens="detail-elektrische-ladung">
     <span>Electric charge</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -657,7 +673,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektrostatische-phaenomene">
   <a href="/apps/en/map/physik/c/elektrostatische-phaenomene/" class="map-chip map-chip-gap" data-opens="detail-elektrostatische-phaenomene">
     <span>Electrostatic phenomena</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -665,7 +681,7 @@
 </li>
 
               
-<li>
+<li data-competency="strom-als-ladungstransport">
   <a href="/apps/en/map/physik/c/strom-als-ladungstransport/" class="map-chip map-chip-gap" data-opens="detail-strom-als-ladungstransport">
     <span>Current as flow of charge</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -673,7 +689,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="widerstand">
   <a href="/apps/en/map/physik/c/widerstand/" class="map-chip map-chip-covered" data-opens="detail-widerstand">
     <span>Electrical resistance</span>
     <span class="sr-only">(an app practises it)</span>
@@ -681,7 +697,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="widerstand-einflussgroessen">
   <a href="/apps/en/map/physik/c/widerstand-einflussgroessen/" class="map-chip map-chip-covered" data-opens="detail-widerstand-einflussgroessen">
     <span>Resistance of a wire</span>
     <span class="sr-only">(an app practises it)</span>
@@ -689,7 +705,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="ohmsches-gesetz">
   <a href="/apps/en/map/physik/c/ohmsches-gesetz/" class="map-chip map-chip-covered" data-opens="detail-ohmsches-gesetz">
     <span>Ohm’s law</span>
     <span class="sr-only">(an app practises it)</span>
@@ -697,7 +713,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="ohmsches-gesetz-rechnen">
   <a href="/apps/en/map/physik/c/ohmsches-gesetz-rechnen/" class="map-chip map-chip-covered" data-opens="detail-ohmsches-gesetz-rechnen">
     <span>Calculations with Ohm’s law</span>
     <span class="sr-only">(an app practises it)</span>
@@ -705,7 +721,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="reihenschaltung-groessen">
   <a href="/apps/en/map/physik/c/reihenschaltung-groessen/" class="map-chip map-chip-covered" data-opens="detail-reihenschaltung-groessen">
     <span>Current and voltage in series circuits</span>
     <span class="sr-only">(an app practises it)</span>
@@ -713,7 +729,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="parallelschaltung-groessen">
   <a href="/apps/en/map/physik/c/parallelschaltung-groessen/" class="map-chip map-chip-covered" data-opens="detail-parallelschaltung-groessen">
     <span>Current and voltage in parallel circuits</span>
     <span class="sr-only">(an app practises it)</span>
@@ -721,7 +737,7 @@
 </li>
 
               
-<li>
+<li data-competency="gesamtwiderstand">
   <a href="/apps/en/map/physik/c/gesamtwiderstand/" class="map-chip map-chip-gap" data-opens="detail-gesamtwiderstand">
     <span>Total resistance</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -729,7 +745,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektrische-leistung">
   <a href="/apps/en/map/physik/c/elektrische-leistung/" class="map-chip map-chip-gap" data-opens="detail-elektrische-leistung">
     <span>Electrical power</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -737,7 +753,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektrische-energie">
   <a href="/apps/en/map/physik/c/elektrische-energie/" class="map-chip map-chip-gap" data-opens="detail-elektrische-energie">
     <span>Electrical energy</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -745,7 +761,7 @@
 </li>
 
               
-<li>
+<li data-competency="hausinstallation-sicherungen">
   <a href="/apps/en/map/physik/c/hausinstallation-sicherungen/" class="map-chip map-chip-gap" data-opens="detail-hausinstallation-sicherungen">
     <span>Fuses in the home</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -753,7 +769,7 @@
 </li>
 
               
-<li>
+<li data-competency="magnetfeld-spule">
   <a href="/apps/en/map/physik/c/magnetfeld-spule/" class="map-chip map-chip-gap" data-opens="detail-magnetfeld-spule">
     <span>Magnetic field of a coil</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -761,7 +777,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektromotor">
   <a href="/apps/en/map/physik/c/elektromotor/" class="map-chip map-chip-gap" data-opens="detail-elektromotor">
     <span>Electric motor</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -769,7 +785,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektromagnetische-induktion">
   <a href="/apps/en/map/physik/c/elektromagnetische-induktion/" class="map-chip map-chip-gap" data-opens="detail-elektromagnetische-induktion">
     <span>Electromagnetic induction</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -777,7 +793,7 @@
 </li>
 
               
-<li>
+<li data-competency="generator">
   <a href="/apps/en/map/physik/c/generator/" class="map-chip map-chip-gap" data-opens="detail-generator">
     <span>Generator</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -785,7 +801,7 @@
 </li>
 
               
-<li>
+<li data-competency="transformator">
   <a href="/apps/en/map/physik/c/transformator/" class="map-chip map-chip-gap" data-opens="detail-transformator">
     <span>Transformer</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -793,7 +809,7 @@
 </li>
 
               
-<li>
+<li data-competency="stromversorgung">
   <a href="/apps/en/map/physik/c/stromversorgung/" class="map-chip map-chip-gap" data-opens="detail-stromversorgung">
     <span>Electricity supply</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -805,7 +821,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="geschwindigkeitsaenderung">
   <a href="/apps/en/map/physik/c/geschwindigkeitsaenderung/" class="map-chip map-chip-gap" data-opens="detail-geschwindigkeitsaenderung">
     <span>Changes in motion</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -813,7 +829,7 @@
 </li>
 
               
-<li>
+<li data-competency="bewegungsdiagramme">
   <a href="/apps/en/map/physik/c/bewegungsdiagramme/" class="map-chip map-chip-gap" data-opens="detail-bewegungsdiagramme">
     <span>Motion graphs</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -821,7 +837,7 @@
 </li>
 
               
-<li>
+<li data-competency="kraft-wirkungen">
   <a href="/apps/en/map/physik/c/kraft-wirkungen/" class="map-chip map-chip-gap" data-opens="detail-kraft-wirkungen">
     <span>Effects of forces</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -829,7 +845,7 @@
 </li>
 
               
-<li>
+<li data-competency="kraft-darstellen">
   <a href="/apps/en/map/physik/c/kraft-darstellen/" class="map-chip map-chip-gap" data-opens="detail-kraft-darstellen">
     <span>Representing and measuring forces</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -837,7 +853,7 @@
 </li>
 
               
-<li>
+<li data-competency="wechselwirkungsprinzip">
   <a href="/apps/en/map/physik/c/wechselwirkungsprinzip/" class="map-chip map-chip-gap" data-opens="detail-wechselwirkungsprinzip">
     <span>Newton’s third law</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -845,7 +861,7 @@
 </li>
 
               
-<li>
+<li data-competency="reibung">
   <a href="/apps/en/map/physik/c/reibung/" class="map-chip map-chip-gap" data-opens="detail-reibung">
     <span>Friction</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -853,7 +869,7 @@
 </li>
 
               
-<li>
+<li data-competency="kraefte-zusammensetzen">
   <a href="/apps/en/map/physik/c/kraefte-zusammensetzen/" class="map-chip map-chip-gap" data-opens="detail-kraefte-zusammensetzen">
     <span>Combining forces</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -861,7 +877,7 @@
 </li>
 
               
-<li>
+<li data-competency="kraft-aendert-geschwindigkeit">
   <a href="/apps/en/map/physik/c/kraft-aendert-geschwindigkeit/" class="map-chip map-chip-gap" data-opens="detail-kraft-aendert-geschwindigkeit">
     <span>Force and change in velocity</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -869,7 +885,7 @@
 </li>
 
               
-<li>
+<li data-competency="traegheitsprinzip">
   <a href="/apps/en/map/physik/c/traegheitsprinzip/" class="map-chip map-chip-gap" data-opens="detail-traegheitsprinzip">
     <span>Law of inertia</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -877,7 +893,7 @@
 </li>
 
               
-<li>
+<li data-competency="gewichtskraft">
   <a href="/apps/en/map/physik/c/gewichtskraft/" class="map-chip map-chip-gap" data-opens="detail-gewichtskraft">
     <span>Mass and weight</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -885,7 +901,7 @@
 </li>
 
               
-<li>
+<li data-competency="gewichtskraft-berechnen">
   <a href="/apps/en/map/physik/c/gewichtskraft-berechnen/" class="map-chip map-chip-gap" data-opens="detail-gewichtskraft-berechnen">
     <span>Calculating weight</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -897,7 +913,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="waermestrahlung">
   <a href="/apps/en/map/physik/c/waermestrahlung/" class="map-chip map-chip-gap" data-opens="detail-waermestrahlung">
     <span>Thermal radiation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -905,7 +921,7 @@
 </li>
 
               
-<li>
+<li data-competency="wellenlaenge">
   <a href="/apps/en/map/physik/c/wellenlaenge/" class="map-chip map-chip-gap" data-opens="detail-wellenlaenge">
     <span>Wavelength</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -913,7 +929,7 @@
 </li>
 
               
-<li>
+<li data-competency="elektromagnetisches-spektrum">
   <a href="/apps/en/map/physik/c/elektromagnetisches-spektrum/" class="map-chip map-chip-gap" data-opens="detail-elektromagnetisches-spektrum">
     <span>Electromagnetic spectrum</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -921,7 +937,7 @@
 </li>
 
               
-<li>
+<li data-competency="mobilfunkstrahlung-roentgenstrahlung">
   <a href="/apps/en/map/physik/c/mobilfunkstrahlung-roentgenstrahlung/" class="map-chip map-chip-gap" data-opens="detail-mobilfunkstrahlung-roentgenstrahlung">
     <span>Mobile phone radiation and X-rays</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -929,7 +945,7 @@
 </li>
 
               
-<li>
+<li data-competency="strahlungshaushalt-erde">
   <a href="/apps/en/map/physik/c/strahlungshaushalt-erde/" class="map-chip map-chip-gap" data-opens="detail-strahlungshaushalt-erde">
     <span>Earth’s radiation budget</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -937,7 +953,7 @@
 </li>
 
               
-<li>
+<li data-competency="treibhauseffekt">
   <a href="/apps/en/map/physik/c/treibhauseffekt/" class="map-chip map-chip-gap" data-opens="detail-treibhauseffekt">
     <span>Greenhouse effect</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -945,7 +961,7 @@
 </li>
 
               
-<li>
+<li data-competency="kippelemente">
   <a href="/apps/en/map/physik/c/kippelemente/" class="map-chip map-chip-gap" data-opens="detail-kippelemente">
     <span>Tipping points in the climate system</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -957,7 +973,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="atomaufbau">
   <a href="/apps/en/map/physik/c/atomaufbau/" class="map-chip map-chip-gap" data-opens="detail-atomaufbau">
     <span>Structure of the atom</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -965,7 +981,7 @@
 </li>
 
               
-<li>
+<li data-competency="radioaktivitaet">
   <a href="/apps/en/map/physik/c/radioaktivitaet/" class="map-chip map-chip-gap" data-opens="detail-radioaktivitaet">
     <span>Radioactivity</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -973,7 +989,7 @@
 </li>
 
               
-<li>
+<li data-competency="strahlungsarten">
   <a href="/apps/en/map/physik/c/strahlungsarten/" class="map-chip map-chip-gap" data-opens="detail-strahlungsarten">
     <span>Types of radiation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -981,7 +997,7 @@
 </li>
 
               
-<li>
+<li data-competency="aktivitaet-zaehlrate">
   <a href="/apps/en/map/physik/c/aktivitaet-zaehlrate/" class="map-chip map-chip-gap" data-opens="detail-aktivitaet-zaehlrate">
     <span>Activity and count rate</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -989,7 +1005,7 @@
 </li>
 
               
-<li>
+<li data-competency="spontanzerfall">
   <a href="/apps/en/map/physik/c/spontanzerfall/" class="map-chip map-chip-gap" data-opens="detail-spontanzerfall">
     <span>Random nuclear decay</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -997,7 +1013,7 @@
 </li>
 
               
-<li>
+<li data-competency="halbwertszeit">
   <a href="/apps/en/map/physik/c/halbwertszeit/" class="map-chip map-chip-gap" data-opens="detail-halbwertszeit">
     <span>Half-life</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1005,7 +1021,7 @@
 </li>
 
               
-<li>
+<li data-competency="halbwertszeit-rechnen">
   <a href="/apps/en/map/physik/c/halbwertszeit-rechnen/" class="map-chip map-chip-gap" data-opens="detail-halbwertszeit-rechnen">
     <span>Half-life calculations</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1013,7 +1029,7 @@
 </li>
 
               
-<li>
+<li data-competency="absorption-ionisierender-strahlung">
   <a href="/apps/en/map/physik/c/absorption-ionisierender-strahlung/" class="map-chip map-chip-gap" data-opens="detail-absorption-ionisierender-strahlung">
     <span>Shielding ionising radiation</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1021,7 +1037,7 @@
 </li>
 
               
-<li>
+<li data-competency="biologische-wirkung">
   <a href="/apps/en/map/physik/c/biologische-wirkung/" class="map-chip map-chip-gap" data-opens="detail-biologische-wirkung">
     <span>Biological effects and radiation protection</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1029,7 +1045,7 @@
 </li>
 
               
-<li>
+<li data-competency="medizinische-nutzung">
   <a href="/apps/en/map/physik/c/medizinische-nutzung/" class="map-chip map-chip-gap" data-opens="detail-medizinische-nutzung">
     <span>Radiation in medicine</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1037,7 +1053,7 @@
 </li>
 
               
-<li>
+<li data-competency="kernspaltung">
   <a href="/apps/en/map/physik/c/kernspaltung/" class="map-chip map-chip-gap" data-opens="detail-kernspaltung">
     <span>Nuclear fission</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1045,7 +1061,7 @@
 </li>
 
               
-<li>
+<li data-competency="kernfusion">
   <a href="/apps/en/map/physik/c/kernfusion/" class="map-chip map-chip-gap" data-opens="detail-kernfusion">
     <span>Nuclear fusion</span>
     <span class="sr-only">(gap, no app yet)</span>
@@ -1053,7 +1069,7 @@
 </li>
 
               
-<li>
+<li data-competency="lagerung-radioaktiver-abfaelle">
   <a href="/apps/en/map/physik/c/lagerung-radioaktiver-abfaelle/" class="map-chip map-chip-gap" data-opens="detail-lagerung-radioaktiver-abfaelle">
     <span>Storage of radioactive waste</span>
     <span class="sr-only">(gap, no app yet)</span>

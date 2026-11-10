@@ -60,10 +60,26 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-deutsch">
+  <p class="m-0"><strong id="status-deutsch" class="map-status-tag map-status-tag-draft">Entwurf</strong> Diese Karte ist nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft des Fachs hat sie geprüft. Stränge, Bausteine und Pfeile können falsch sein oder fehlen.</p>
+  <p class="m-0 mt-1">Du unterrichtest das Fach? Sieh die Karte durch und sag uns, was fehlt oder falsch ist: <a href="https://github.com/lernapps/apps/issues/new?title=Lernlandkarte%20Deutsch%3A%20Durchsicht" class="underline underline-offset-2 font-semibold">Mithelfen</a> <span class="map-status-note">(GitHub-Issue, braucht ein GitHub-Konto)</span></p>
+</aside>
+
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Deutsch</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>So liest du die Karte</a>
   </div>
+
+  
+<nav aria-labelledby="ordnung-deutsch" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-deutsch" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/map/deutsch/" class="btn btn-primary" aria-current="page">Nach Klassen</a></li>
+    <li><a href="/apps/map/deutsch/c/" class="btn btn-secondary">Nach Stufen der Kette</a></li>
+  </ul>
+</nav>
+
   <div class="map-toolbar">
     <div data-map-when hidden>
       <label for="lehrplan" class="sr-only">Wann ist was dran?</label>
@@ -141,7 +157,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="gespraechsregeln">
   <a href="/apps/map/deutsch/c/gespraechsregeln/" class="map-chip map-chip-gap" data-opens="detail-gespraechsregeln">
     <span>Gesprächsregeln</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -149,7 +165,7 @@
 </li>
 
               
-<li>
+<li data-competency="aktiv-zuhoeren">
   <a href="/apps/map/deutsch/c/aktiv-zuhoeren/" class="map-chip map-chip-gap" data-opens="detail-aktiv-zuhoeren">
     <span>Aktives Zuhören</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -157,7 +173,7 @@
 </li>
 
               
-<li>
+<li data-competency="mitschreiben">
   <a href="/apps/map/deutsch/c/mitschreiben/" class="map-chip map-chip-gap" data-opens="detail-mitschreiben">
     <span>Mitschreiben beim Zuhören</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -165,7 +181,7 @@
 </li>
 
               
-<li>
+<li data-competency="meinung-begruenden-muendlich">
   <a href="/apps/map/deutsch/c/meinung-begruenden-muendlich/" class="map-chip map-chip-gap" data-opens="detail-meinung-begruenden-muendlich">
     <span>Meinung mündlich begründen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -173,7 +189,7 @@
 </li>
 
               
-<li>
+<li data-competency="ueberzeugen-ueberreden">
   <a href="/apps/map/deutsch/c/ueberzeugen-ueberreden/" class="map-chip map-chip-gap" data-opens="detail-ueberzeugen-ueberreden">
     <span>Überzeugen und Überreden</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -181,7 +197,7 @@
 </li>
 
               
-<li>
+<li data-competency="konflikte-im-gespraech-loesen">
   <a href="/apps/map/deutsch/c/konflikte-im-gespraech-loesen/" class="map-chip map-chip-gap" data-opens="detail-konflikte-im-gespraech-loesen">
     <span>Konflikte im Gespräch lösen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -189,7 +205,7 @@
 </li>
 
               
-<li>
+<li data-competency="koerpersprache-und-stimme">
   <a href="/apps/map/deutsch/c/koerpersprache-und-stimme/" class="map-chip map-chip-gap" data-opens="detail-koerpersprache-und-stimme">
     <span>Körpersprache und Stimme</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -197,7 +213,7 @@
 </li>
 
               
-<li>
+<li data-competency="vorlesen-und-vortragen">
   <a href="/apps/map/deutsch/c/vorlesen-und-vortragen/" class="map-chip map-chip-gap" data-opens="detail-vorlesen-und-vortragen">
     <span>Vorlesen und Vortragen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -205,7 +221,7 @@
 </li>
 
               
-<li>
+<li data-competency="szenisch-spielen">
   <a href="/apps/map/deutsch/c/szenisch-spielen/" class="map-chip map-chip-gap" data-opens="detail-szenisch-spielen">
     <span>Szenisches Spielen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -213,7 +229,7 @@
 </li>
 
               
-<li>
+<li data-competency="buch-vorstellen">
   <a href="/apps/map/deutsch/c/buch-vorstellen/" class="map-chip map-chip-gap" data-opens="detail-buch-vorstellen">
     <span>Buchvorstellung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -221,7 +237,7 @@
 </li>
 
               
-<li>
+<li data-competency="kurzvortrag">
   <a href="/apps/map/deutsch/c/kurzvortrag/" class="map-chip map-chip-gap" data-opens="detail-kurzvortrag">
     <span>Kurzvortrag</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -229,7 +245,7 @@
 </li>
 
               
-<li>
+<li data-competency="feedback-geben">
   <a href="/apps/map/deutsch/c/feedback-geben/" class="map-chip map-chip-gap" data-opens="detail-feedback-geben">
     <span>Feedback geben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -241,7 +257,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="schreibziel-und-adressat">
   <a href="/apps/map/deutsch/c/schreibziel-und-adressat/" class="map-chip map-chip-gap" data-opens="detail-schreibziel-und-adressat">
     <span>Schreibziel und Adressat</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -249,7 +265,7 @@
 </li>
 
               
-<li>
+<li data-competency="schreibplan">
   <a href="/apps/map/deutsch/c/schreibplan/" class="map-chip map-chip-gap" data-opens="detail-schreibplan">
     <span>Schreibplan</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -257,7 +273,7 @@
 </li>
 
               
-<li>
+<li data-competency="texte-ueberarbeiten">
   <a href="/apps/map/deutsch/c/texte-ueberarbeiten/" class="map-chip map-chip-gap" data-opens="detail-texte-ueberarbeiten">
     <span>Texte überarbeiten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -265,7 +281,7 @@
 </li>
 
               
-<li>
+<li data-competency="textverarbeitung">
   <a href="/apps/map/deutsch/c/textverarbeitung/" class="map-chip map-chip-gap" data-opens="detail-textverarbeitung">
     <span>Textverarbeitung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -273,7 +289,7 @@
 </li>
 
               
-<li>
+<li data-competency="erzaehlung-aufbauen">
   <a href="/apps/map/deutsch/c/erzaehlung-aufbauen/" class="map-chip map-chip-gap" data-opens="detail-erzaehlung-aufbauen">
     <span>Aufbau einer Erzählung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -281,7 +297,7 @@
 </li>
 
               
-<li>
+<li data-competency="spannend-erzaehlen">
   <a href="/apps/map/deutsch/c/spannend-erzaehlen/" class="map-chip map-chip-gap" data-opens="detail-spannend-erzaehlen">
     <span>Spannend erzählen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -289,7 +305,7 @@
 </li>
 
               
-<li>
+<li data-competency="erzaehlen-nach-vorgaben">
   <a href="/apps/map/deutsch/c/erzaehlen-nach-vorgaben/" class="map-chip map-chip-gap" data-opens="detail-erzaehlen-nach-vorgaben">
     <span>Erzählen nach Vorgaben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -297,7 +313,7 @@
 </li>
 
               
-<li>
+<li data-competency="nacherzaehlen">
   <a href="/apps/map/deutsch/c/nacherzaehlen/" class="map-chip map-chip-gap" data-opens="detail-nacherzaehlen">
     <span>Nacherzählen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -305,7 +321,7 @@
 </li>
 
               
-<li>
+<li data-competency="nach-textmuster-schreiben">
   <a href="/apps/map/deutsch/c/nach-textmuster-schreiben/" class="map-chip map-chip-gap" data-opens="detail-nach-textmuster-schreiben">
     <span>Schreiben nach Textmuster</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -313,7 +329,7 @@
 </li>
 
               
-<li>
+<li data-competency="gedicht-schreiben">
   <a href="/apps/map/deutsch/c/gedicht-schreiben/" class="map-chip map-chip-gap" data-opens="detail-gedicht-schreiben">
     <span>Gedichte schreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -321,7 +337,7 @@
 </li>
 
               
-<li>
+<li data-competency="gegenstand-beschreiben">
   <a href="/apps/map/deutsch/c/gegenstand-beschreiben/" class="map-chip map-chip-gap" data-opens="detail-gegenstand-beschreiben">
     <span>Gegenstandsbeschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -329,7 +345,7 @@
 </li>
 
               
-<li>
+<li data-competency="personenbeschreibung">
   <a href="/apps/map/deutsch/c/personenbeschreibung/" class="map-chip map-chip-gap" data-opens="detail-personenbeschreibung">
     <span>Personenbeschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -337,7 +353,7 @@
 </li>
 
               
-<li>
+<li data-competency="wegbeschreibung">
   <a href="/apps/map/deutsch/c/wegbeschreibung/" class="map-chip map-chip-gap" data-opens="detail-wegbeschreibung">
     <span>Wegbeschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -345,7 +361,7 @@
 </li>
 
               
-<li>
+<li data-competency="vorgangsbeschreibung">
   <a href="/apps/map/deutsch/c/vorgangsbeschreibung/" class="map-chip map-chip-gap" data-opens="detail-vorgangsbeschreibung">
     <span>Vorgangsbeschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -353,7 +369,7 @@
 </li>
 
               
-<li>
+<li data-competency="bericht">
   <a href="/apps/map/deutsch/c/bericht/" class="map-chip map-chip-gap" data-opens="detail-bericht">
     <span>Bericht</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -361,7 +377,7 @@
 </li>
 
               
-<li>
+<li data-competency="schriftlich-stellung-nehmen">
   <a href="/apps/map/deutsch/c/schriftlich-stellung-nehmen/" class="map-chip map-chip-gap" data-opens="detail-schriftlich-stellung-nehmen">
     <span>Schriftliche Stellungnahme</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -369,7 +385,7 @@
 </li>
 
               
-<li>
+<li data-competency="silben-und-wortbausteine">
   <a href="/apps/map/deutsch/c/silben-und-wortbausteine/" class="map-chip map-chip-gap" data-opens="detail-silben-und-wortbausteine">
     <span>Silben und Wortbausteine</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -377,7 +393,7 @@
 </li>
 
               
-<li>
+<li data-competency="verlaengern-und-ableiten">
   <a href="/apps/map/deutsch/c/verlaengern-und-ableiten/" class="map-chip map-chip-gap" data-opens="detail-verlaengern-und-ableiten">
     <span>Verlängern und Ableiten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -385,7 +401,7 @@
 </li>
 
               
-<li>
+<li data-competency="dehnung">
   <a href="/apps/map/deutsch/c/dehnung/" class="map-chip map-chip-gap" data-opens="detail-dehnung">
     <span>Dehnung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -393,7 +409,7 @@
 </li>
 
               
-<li>
+<li data-competency="schaerfung">
   <a href="/apps/map/deutsch/c/schaerfung/" class="map-chip map-chip-gap" data-opens="detail-schaerfung">
     <span>Schärfung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -401,7 +417,7 @@
 </li>
 
               
-<li>
+<li data-competency="s-laute">
   <a href="/apps/map/deutsch/c/s-laute/" class="map-chip map-chip-gap" data-opens="detail-s-laute">
     <span>S-Laute: s, ss, ß</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -409,7 +425,7 @@
 </li>
 
               
-<li>
+<li data-competency="das-und-dass">
   <a href="/apps/map/deutsch/c/das-und-dass/" class="map-chip map-chip-gap" data-opens="detail-das-und-dass">
     <span>Das oder dass</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -417,7 +433,7 @@
 </li>
 
               
-<li>
+<li data-competency="grossschreibung">
   <a href="/apps/map/deutsch/c/grossschreibung/" class="map-chip map-chip-gap" data-opens="detail-grossschreibung">
     <span>Großschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -425,7 +441,7 @@
 </li>
 
               
-<li>
+<li data-competency="silbentrennung">
   <a href="/apps/map/deutsch/c/silbentrennung/" class="map-chip map-chip-gap" data-opens="detail-silbentrennung">
     <span>Silbentrennung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -433,7 +449,7 @@
 </li>
 
               
-<li>
+<li data-competency="im-woerterbuch-nachschlagen">
   <a href="/apps/map/deutsch/c/im-woerterbuch-nachschlagen/" class="map-chip map-chip-gap" data-opens="detail-im-woerterbuch-nachschlagen">
     <span>Im Wörterbuch nachschlagen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -441,7 +457,7 @@
 </li>
 
               
-<li>
+<li data-competency="alphabet-und-grundform">
   <a href="/apps/map/deutsch/c/alphabet-und-grundform/" class="map-chip map-chip-gap" data-opens="detail-alphabet-und-grundform">
     <span>Alphabet und Grundform</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -449,7 +465,7 @@
 </li>
 
               
-<li>
+<li data-competency="rechtschreibfehler-analysieren">
   <a href="/apps/map/deutsch/c/rechtschreibfehler-analysieren/" class="map-chip map-chip-gap" data-opens="detail-rechtschreibfehler-analysieren">
     <span>Fehleranalyse Rechtschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -457,7 +473,7 @@
 </li>
 
               
-<li>
+<li data-competency="satzschlusszeichen">
   <a href="/apps/map/deutsch/c/satzschlusszeichen/" class="map-chip map-chip-gap" data-opens="detail-satzschlusszeichen">
     <span>Satzschlusszeichen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -465,7 +481,7 @@
 </li>
 
               
-<li>
+<li data-competency="woertliche-rede-zeichensetzen">
   <a href="/apps/map/deutsch/c/woertliche-rede-zeichensetzen/" class="map-chip map-chip-gap" data-opens="detail-woertliche-rede-zeichensetzen">
     <span>Zeichensetzung bei wörtlicher Rede</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -473,7 +489,7 @@
 </li>
 
               
-<li>
+<li data-competency="komma-aufzaehlung">
   <a href="/apps/map/deutsch/c/komma-aufzaehlung/" class="map-chip map-chip-gap" data-opens="detail-komma-aufzaehlung">
     <span>Komma bei Aufzählungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -481,7 +497,7 @@
 </li>
 
               
-<li>
+<li data-competency="komma-satzreihe-satzgefuege">
   <a href="/apps/map/deutsch/c/komma-satzreihe-satzgefuege/" class="map-chip map-chip-gap" data-opens="detail-komma-satzreihe-satzgefuege">
     <span>Komma in Satzreihe und Satzgefüge</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -493,7 +509,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="lesetechniken">
   <a href="/apps/map/deutsch/c/lesetechniken/" class="map-chip map-chip-gap" data-opens="detail-lesetechniken">
     <span>Lesetechniken</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -501,7 +517,7 @@
 </li>
 
               
-<li>
+<li data-competency="lesen-vorbereiten">
   <a href="/apps/map/deutsch/c/lesen-vorbereiten/" class="map-chip map-chip-gap" data-opens="detail-lesen-vorbereiten">
     <span>Lesen vorbereiten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -509,7 +525,7 @@
 </li>
 
               
-<li>
+<li data-competency="markieren-und-gliedern">
   <a href="/apps/map/deutsch/c/markieren-und-gliedern/" class="map-chip map-chip-gap" data-opens="detail-markieren-und-gliedern">
     <span>Markieren und Gliedern</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -517,7 +533,7 @@
 </li>
 
               
-<li>
+<li data-competency="unbekannte-woerter-klaeren">
   <a href="/apps/map/deutsch/c/unbekannte-woerter-klaeren/" class="map-chip map-chip-gap" data-opens="detail-unbekannte-woerter-klaeren">
     <span>Unbekannte Wörter klären</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -525,7 +541,7 @@
 </li>
 
               
-<li>
+<li data-competency="kernaussagen-wiedergeben">
   <a href="/apps/map/deutsch/c/kernaussagen-wiedergeben/" class="map-chip map-chip-gap" data-opens="detail-kernaussagen-wiedergeben">
     <span>Kernaussagen wiedergeben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -533,7 +549,7 @@
 </li>
 
               
-<li>
+<li data-competency="fragen-an-den-text">
   <a href="/apps/map/deutsch/c/fragen-an-den-text/" class="map-chip map-chip-gap" data-opens="detail-fragen-an-den-text">
     <span>Fragen an den Text</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -541,7 +557,7 @@
 </li>
 
               
-<li>
+<li data-competency="lesetagebuch">
   <a href="/apps/map/deutsch/c/lesetagebuch/" class="map-chip map-chip-gap" data-opens="detail-lesetagebuch">
     <span>Lesetagebuch</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -553,7 +569,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="fiktion-und-wirklichkeit">
   <a href="/apps/map/deutsch/c/fiktion-und-wirklichkeit/" class="map-chip map-chip-gap" data-opens="detail-fiktion-und-wirklichkeit">
     <span>Fiktion und Wirklichkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -561,7 +577,7 @@
 </li>
 
               
-<li>
+<li data-competency="textfunktionen">
   <a href="/apps/map/deutsch/c/textfunktionen/" class="map-chip map-chip-gap" data-opens="detail-textfunktionen">
     <span>Textfunktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -569,7 +585,7 @@
 </li>
 
               
-<li>
+<li data-competency="epik-lyrik-dramatik">
   <a href="/apps/map/deutsch/c/epik-lyrik-dramatik/" class="map-chip map-chip-gap" data-opens="detail-epik-lyrik-dramatik">
     <span>Epik, Lyrik, Dramatik</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -577,7 +593,7 @@
 </li>
 
               
-<li>
+<li data-competency="handlung-erschliessen">
   <a href="/apps/map/deutsch/c/handlung-erschliessen/" class="map-chip map-chip-gap" data-opens="detail-handlung-erschliessen">
     <span>Handlung erschließen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -585,7 +601,7 @@
 </li>
 
               
-<li>
+<li data-competency="figuren-untersuchen">
   <a href="/apps/map/deutsch/c/figuren-untersuchen/" class="map-chip map-chip-gap" data-opens="detail-figuren-untersuchen">
     <span>Figuren untersuchen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -593,7 +609,7 @@
 </li>
 
               
-<li>
+<li data-competency="figurenverhalten-bewerten">
   <a href="/apps/map/deutsch/c/figurenverhalten-bewerten/" class="map-chip map-chip-gap" data-opens="detail-figurenverhalten-bewerten">
     <span>Figurenverhalten bewerten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -601,7 +617,7 @@
 </li>
 
               
-<li>
+<li data-competency="fortsetzen-und-umschreiben">
   <a href="/apps/map/deutsch/c/fortsetzen-und-umschreiben/" class="map-chip map-chip-gap" data-opens="detail-fortsetzen-und-umschreiben">
     <span>Fortsetzen und Umschreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -609,7 +625,7 @@
 </li>
 
               
-<li>
+<li data-competency="maerchen">
   <a href="/apps/map/deutsch/c/maerchen/" class="map-chip map-chip-gap" data-opens="detail-maerchen">
     <span>Märchen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -617,7 +633,7 @@
 </li>
 
               
-<li>
+<li data-competency="fabel">
   <a href="/apps/map/deutsch/c/fabel/" class="map-chip map-chip-gap" data-opens="detail-fabel">
     <span>Fabel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -625,7 +641,7 @@
 </li>
 
               
-<li>
+<li data-competency="sage">
   <a href="/apps/map/deutsch/c/sage/" class="map-chip map-chip-gap" data-opens="detail-sage">
     <span>Sage</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -633,7 +649,7 @@
 </li>
 
               
-<li>
+<li data-competency="jugendbuch-lesen">
   <a href="/apps/map/deutsch/c/jugendbuch-lesen/" class="map-chip map-chip-gap" data-opens="detail-jugendbuch-lesen">
     <span>Jugendbuch lesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -641,7 +657,7 @@
 </li>
 
               
-<li>
+<li data-competency="vers-strophe-reim">
   <a href="/apps/map/deutsch/c/vers-strophe-reim/" class="map-chip map-chip-gap" data-opens="detail-vers-strophe-reim">
     <span>Vers, Strophe, Reim</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -649,7 +665,7 @@
 </li>
 
               
-<li>
+<li data-competency="reimformen">
   <a href="/apps/map/deutsch/c/reimformen/" class="map-chip map-chip-gap" data-opens="detail-reimformen">
     <span>Reimformen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -657,7 +673,7 @@
 </li>
 
               
-<li>
+<li data-competency="vergleich-und-metapher">
   <a href="/apps/map/deutsch/c/vergleich-und-metapher/" class="map-chip map-chip-gap" data-opens="detail-vergleich-und-metapher">
     <span>Vergleich und Metapher</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -665,7 +681,7 @@
 </li>
 
               
-<li>
+<li data-competency="personifikation">
   <a href="/apps/map/deutsch/c/personifikation/" class="map-chip map-chip-gap" data-opens="detail-personifikation">
     <span>Personifikation</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -673,7 +689,7 @@
 </li>
 
               
-<li>
+<li data-competency="spielszene-untersuchen">
   <a href="/apps/map/deutsch/c/spielszene-untersuchen/" class="map-chip map-chip-gap" data-opens="detail-spielszene-untersuchen">
     <span>Spielszene untersuchen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -681,7 +697,7 @@
 </li>
 
               
-<li>
+<li data-competency="szene-schreiben">
   <a href="/apps/map/deutsch/c/szene-schreiben/" class="map-chip map-chip-gap" data-opens="detail-szene-schreiben">
     <span>Spielszene schreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -689,7 +705,7 @@
 </li>
 
               
-<li>
+<li data-competency="sachtext-aufbau">
   <a href="/apps/map/deutsch/c/sachtext-aufbau/" class="map-chip map-chip-gap" data-opens="detail-sachtext-aufbau">
     <span>Aufbau von Sachtexten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -697,7 +713,7 @@
 </li>
 
               
-<li>
+<li data-competency="diagramme-lesen">
   <a href="/apps/map/deutsch/c/diagramme-lesen/" class="map-chip map-chip-gap" data-opens="detail-diagramme-lesen">
     <span>Tabellen und Diagramme lesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -705,7 +721,7 @@
 </li>
 
               
-<li>
+<li data-competency="recherchieren">
   <a href="/apps/map/deutsch/c/recherchieren/" class="map-chip map-chip-gap" data-opens="detail-recherchieren">
     <span>Recherchieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -713,7 +729,7 @@
 </li>
 
               
-<li>
+<li data-competency="quellen-pruefen">
   <a href="/apps/map/deutsch/c/quellen-pruefen/" class="map-chip map-chip-gap" data-opens="detail-quellen-pruefen">
     <span>Quellen prüfen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -721,7 +737,7 @@
 </li>
 
               
-<li>
+<li data-competency="eigene-mediennutzung">
   <a href="/apps/map/deutsch/c/eigene-mediennutzung/" class="map-chip map-chip-gap" data-opens="detail-eigene-mediennutzung">
     <span>Eigene Mediennutzung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -729,7 +745,7 @@
 </li>
 
               
-<li>
+<li data-competency="hoerspiel">
   <a href="/apps/map/deutsch/c/hoerspiel/" class="map-chip map-chip-gap" data-opens="detail-hoerspiel">
     <span>Hörspiel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -737,7 +753,7 @@
 </li>
 
               
-<li>
+<li data-competency="comic-und-graphic-novel">
   <a href="/apps/map/deutsch/c/comic-und-graphic-novel/" class="map-chip map-chip-gap" data-opens="detail-comic-und-graphic-novel">
     <span>Comic und Graphic Novel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -749,7 +765,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="nomen-und-artikel">
   <a href="/apps/map/deutsch/c/nomen-und-artikel/" class="map-chip map-chip-gap" data-opens="detail-nomen-und-artikel">
     <span>Nomen und Artikel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -757,7 +773,7 @@
 </li>
 
               
-<li>
+<li data-competency="genus-und-numerus">
   <a href="/apps/map/deutsch/c/genus-und-numerus/" class="map-chip map-chip-gap" data-opens="detail-genus-und-numerus">
     <span>Genus und Numerus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -765,7 +781,7 @@
 </li>
 
               
-<li>
+<li data-competency="kasus">
   <a href="/apps/map/deutsch/c/kasus/" class="map-chip map-chip-gap" data-opens="detail-kasus">
     <span>Kasus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -773,7 +789,7 @@
 </li>
 
               
-<li>
+<li data-competency="verb-konjugieren">
   <a href="/apps/map/deutsch/c/verb-konjugieren/" class="map-chip map-chip-gap" data-opens="detail-verb-konjugieren">
     <span>Verben konjugieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -781,7 +797,7 @@
 </li>
 
               
-<li>
+<li data-competency="starke-und-schwache-verben">
   <a href="/apps/map/deutsch/c/starke-und-schwache-verben/" class="map-chip map-chip-gap" data-opens="detail-starke-und-schwache-verben">
     <span>Starke und schwache Verben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -789,7 +805,7 @@
 </li>
 
               
-<li>
+<li data-competency="tempus-praesens-praeteritum">
   <a href="/apps/map/deutsch/c/tempus-praesens-praeteritum/" class="map-chip map-chip-gap" data-opens="detail-tempus-praesens-praeteritum">
     <span>Präsens und Präteritum</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -797,7 +813,7 @@
 </li>
 
               
-<li>
+<li data-competency="tempus-perfekt-plusquamperfekt">
   <a href="/apps/map/deutsch/c/tempus-perfekt-plusquamperfekt/" class="map-chip map-chip-gap" data-opens="detail-tempus-perfekt-plusquamperfekt">
     <span>Perfekt und Plusquamperfekt</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -805,7 +821,7 @@
 </li>
 
               
-<li>
+<li data-competency="tempus-futur">
   <a href="/apps/map/deutsch/c/tempus-futur/" class="map-chip map-chip-gap" data-opens="detail-tempus-futur">
     <span>Futur I und II</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -813,7 +829,7 @@
 </li>
 
               
-<li>
+<li data-competency="zeitverhaeltnisse">
   <a href="/apps/map/deutsch/c/zeitverhaeltnisse/" class="map-chip map-chip-gap" data-opens="detail-zeitverhaeltnisse">
     <span>Zeitverhältnisse</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -821,7 +837,7 @@
 </li>
 
               
-<li>
+<li data-competency="adjektiv-und-steigerung">
   <a href="/apps/map/deutsch/c/adjektiv-und-steigerung/" class="map-chip map-chip-gap" data-opens="detail-adjektiv-und-steigerung">
     <span>Adjektive und Steigerung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -829,7 +845,7 @@
 </li>
 
               
-<li>
+<li data-competency="pronomen">
   <a href="/apps/map/deutsch/c/pronomen/" class="map-chip map-chip-gap" data-opens="detail-pronomen">
     <span>Pronomen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -837,7 +853,7 @@
 </li>
 
               
-<li>
+<li data-competency="praepositionen">
   <a href="/apps/map/deutsch/c/praepositionen/" class="map-chip map-chip-gap" data-opens="detail-praepositionen">
     <span>Präpositionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -845,7 +861,7 @@
 </li>
 
               
-<li>
+<li data-competency="adverb">
   <a href="/apps/map/deutsch/c/adverb/" class="map-chip map-chip-gap" data-opens="detail-adverb">
     <span>Adverbien</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -853,7 +869,7 @@
 </li>
 
               
-<li>
+<li data-competency="konjunktionen">
   <a href="/apps/map/deutsch/c/konjunktionen/" class="map-chip map-chip-gap" data-opens="detail-konjunktionen">
     <span>Konjunktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -861,7 +877,7 @@
 </li>
 
               
-<li>
+<li data-competency="satzarten">
   <a href="/apps/map/deutsch/c/satzarten/" class="map-chip map-chip-gap" data-opens="detail-satzarten">
     <span>Satzarten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -869,7 +885,7 @@
 </li>
 
               
-<li>
+<li data-competency="grammatische-proben">
   <a href="/apps/map/deutsch/c/grammatische-proben/" class="map-chip map-chip-gap" data-opens="detail-grammatische-proben">
     <span>Grammatische Proben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -877,7 +893,7 @@
 </li>
 
               
-<li>
+<li data-competency="subjekt-und-praedikat">
   <a href="/apps/map/deutsch/c/subjekt-und-praedikat/" class="map-chip map-chip-gap" data-opens="detail-subjekt-und-praedikat">
     <span>Subjekt und Prädikat</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -885,7 +901,7 @@
 </li>
 
               
-<li>
+<li data-competency="objekte">
   <a href="/apps/map/deutsch/c/objekte/" class="map-chip map-chip-gap" data-opens="detail-objekte">
     <span>Objekte</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -893,7 +909,7 @@
 </li>
 
               
-<li>
+<li data-competency="adverbiale">
   <a href="/apps/map/deutsch/c/adverbiale/" class="map-chip map-chip-gap" data-opens="detail-adverbiale">
     <span>Adverbiale Bestimmungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -901,7 +917,7 @@
 </li>
 
               
-<li>
+<li data-competency="attribut">
   <a href="/apps/map/deutsch/c/attribut/" class="map-chip map-chip-gap" data-opens="detail-attribut">
     <span>Attribute</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -909,7 +925,7 @@
 </li>
 
               
-<li>
+<li data-competency="hauptsatz-und-nebensatz">
   <a href="/apps/map/deutsch/c/hauptsatz-und-nebensatz/" class="map-chip map-chip-gap" data-opens="detail-hauptsatz-und-nebensatz">
     <span>Hauptsatz und Nebensatz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -917,7 +933,7 @@
 </li>
 
               
-<li>
+<li data-competency="satzreihe-und-satzgefuege">
   <a href="/apps/map/deutsch/c/satzreihe-und-satzgefuege/" class="map-chip map-chip-gap" data-opens="detail-satzreihe-und-satzgefuege">
     <span>Satzreihe und Satzgefüge</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -925,7 +941,7 @@
 </li>
 
               
-<li>
+<li data-competency="relativsatz">
   <a href="/apps/map/deutsch/c/relativsatz/" class="map-chip map-chip-gap" data-opens="detail-relativsatz">
     <span>Relativsatz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -933,7 +949,7 @@
 </li>
 
               
-<li>
+<li data-competency="zusammensetzung">
   <a href="/apps/map/deutsch/c/zusammensetzung/" class="map-chip map-chip-gap" data-opens="detail-zusammensetzung">
     <span>Zusammensetzung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -941,7 +957,7 @@
 </li>
 
               
-<li>
+<li data-competency="ableitung">
   <a href="/apps/map/deutsch/c/ableitung/" class="map-chip map-chip-gap" data-opens="detail-ableitung">
     <span>Ableitung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -949,7 +965,7 @@
 </li>
 
               
-<li>
+<li data-competency="wortfamilie">
   <a href="/apps/map/deutsch/c/wortfamilie/" class="map-chip map-chip-gap" data-opens="detail-wortfamilie">
     <span>Wortfamilie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -957,7 +973,7 @@
 </li>
 
               
-<li>
+<li data-competency="wortfeld-und-synonyme">
   <a href="/apps/map/deutsch/c/wortfeld-und-synonyme/" class="map-chip map-chip-gap" data-opens="detail-wortfeld-und-synonyme">
     <span>Wortfeld und Synonyme</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -965,7 +981,7 @@
 </li>
 
               
-<li>
+<li data-competency="mehrdeutige-woerter">
   <a href="/apps/map/deutsch/c/mehrdeutige-woerter/" class="map-chip map-chip-gap" data-opens="detail-mehrdeutige-woerter">
     <span>Mehrdeutige Wörter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -973,7 +989,7 @@
 </li>
 
               
-<li>
+<li data-competency="redewendungen">
   <a href="/apps/map/deutsch/c/redewendungen/" class="map-chip map-chip-gap" data-opens="detail-redewendungen">
     <span>Redewendungen und Sprichwörter</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -981,7 +997,7 @@
 </li>
 
               
-<li>
+<li data-competency="muendlich-und-schriftlich">
   <a href="/apps/map/deutsch/c/muendlich-und-schriftlich/" class="map-chip map-chip-gap" data-opens="detail-muendlich-und-schriftlich">
     <span>Gesprochene und geschriebene Sprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -989,7 +1005,7 @@
 </li>
 
               
-<li>
+<li data-competency="standard-und-bildungssprache">
   <a href="/apps/map/deutsch/c/standard-und-bildungssprache/" class="map-chip map-chip-gap" data-opens="detail-standard-und-bildungssprache">
     <span>Standard- und Bildungssprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -997,7 +1013,7 @@
 </li>
 
               
-<li>
+<li data-competency="sprachen-vergleichen">
   <a href="/apps/map/deutsch/c/sprachen-vergleichen/" class="map-chip map-chip-gap" data-opens="detail-sprachen-vergleichen">
     <span>Sprachen vergleichen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1012,7 +1028,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="referat">
   <a href="/apps/map/deutsch/c/referat/" class="map-chip map-chip-gap" data-opens="detail-referat">
     <span>Referat</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1020,7 +1036,7 @@
 </li>
 
               
-<li>
+<li data-competency="diskussion-fuehren">
   <a href="/apps/map/deutsch/c/diskussion-fuehren/" class="map-chip map-chip-gap" data-opens="detail-diskussion-fuehren">
     <span>Diskussion führen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1028,7 +1044,7 @@
 </li>
 
               
-<li>
+<li data-competency="interview">
   <a href="/apps/map/deutsch/c/interview/" class="map-chip map-chip-gap" data-opens="detail-interview">
     <span>Interview</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1040,7 +1056,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="schildern">
   <a href="/apps/map/deutsch/c/schildern/" class="map-chip map-chip-gap" data-opens="detail-schildern">
     <span>Schildern</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1048,7 +1064,7 @@
 </li>
 
               
-<li>
+<li data-competency="bildbeschreibung">
   <a href="/apps/map/deutsch/c/bildbeschreibung/" class="map-chip map-chip-gap" data-opens="detail-bildbeschreibung">
     <span>Bildbeschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1056,7 +1072,7 @@
 </li>
 
               
-<li>
+<li data-competency="informierender-text-aus-material">
   <a href="/apps/map/deutsch/c/informierender-text-aus-material/" class="map-chip map-chip-gap" data-opens="detail-informierender-text-aus-material">
     <span>Informierender Text aus Material</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1064,7 +1080,7 @@
 </li>
 
               
-<li>
+<li data-competency="basissatz">
   <a href="/apps/map/deutsch/c/basissatz/" class="map-chip map-chip-gap" data-opens="detail-basissatz">
     <span>Basissatz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1072,7 +1088,7 @@
 </li>
 
               
-<li>
+<li data-competency="inhaltsangabe">
   <a href="/apps/map/deutsch/c/inhaltsangabe/" class="map-chip map-chip-gap" data-opens="detail-inhaltsangabe">
     <span>Inhaltsangabe</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1080,7 +1096,7 @@
 </li>
 
               
-<li>
+<li data-competency="argument-aufbauen">
   <a href="/apps/map/deutsch/c/argument-aufbauen/" class="map-chip map-chip-gap" data-opens="detail-argument-aufbauen">
     <span>Aufbau eines Arguments</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1088,7 +1104,7 @@
 </li>
 
               
-<li>
+<li data-competency="argumente-ordnen">
   <a href="/apps/map/deutsch/c/argumente-ordnen/" class="map-chip map-chip-gap" data-opens="detail-argumente-ordnen">
     <span>Argumente ordnen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1096,7 +1112,7 @@
 </li>
 
               
-<li>
+<li data-competency="formeller-brief">
   <a href="/apps/map/deutsch/c/formeller-brief/" class="map-chip map-chip-gap" data-opens="detail-formeller-brief">
     <span>Sachlicher Brief und E-Mail</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1104,7 +1120,7 @@
 </li>
 
               
-<li>
+<li data-competency="leserbrief">
   <a href="/apps/map/deutsch/c/leserbrief/" class="map-chip map-chip-gap" data-opens="detail-leserbrief">
     <span>Leserbrief</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1112,7 +1128,7 @@
 </li>
 
               
-<li>
+<li data-competency="paraphrasieren">
   <a href="/apps/map/deutsch/c/paraphrasieren/" class="map-chip map-chip-gap" data-opens="detail-paraphrasieren">
     <span>Paraphrasieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1120,7 +1136,7 @@
 </li>
 
               
-<li>
+<li data-competency="nominalisierung-grossschreiben">
   <a href="/apps/map/deutsch/c/nominalisierung-grossschreiben/" class="map-chip map-chip-gap" data-opens="detail-nominalisierung-grossschreiben">
     <span>Großschreibung von Nominalisierungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1128,7 +1144,7 @@
 </li>
 
               
-<li>
+<li data-competency="getrennt-und-zusammen">
   <a href="/apps/map/deutsch/c/getrennt-und-zusammen/" class="map-chip map-chip-gap" data-opens="detail-getrennt-und-zusammen">
     <span>Getrennt- und Zusammenschreibung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1136,7 +1152,7 @@
 </li>
 
               
-<li>
+<li data-competency="fremdwoerter-schreiben">
   <a href="/apps/map/deutsch/c/fremdwoerter-schreiben/" class="map-chip map-chip-gap" data-opens="detail-fremdwoerter-schreiben">
     <span>Fremdwörter schreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1144,7 +1160,7 @@
 </li>
 
               
-<li>
+<li data-competency="komma-apposition">
   <a href="/apps/map/deutsch/c/komma-apposition/" class="map-chip map-chip-gap" data-opens="detail-komma-apposition">
     <span>Komma bei Einschüben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1152,7 +1168,7 @@
 </li>
 
               
-<li>
+<li data-competency="komma-infinitiv-partizip">
   <a href="/apps/map/deutsch/c/komma-infinitiv-partizip/" class="map-chip map-chip-gap" data-opens="detail-komma-infinitiv-partizip">
     <span>Komma bei Infinitiv- und Partizipgruppen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1164,7 +1180,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="textinhalt-visualisieren">
   <a href="/apps/map/deutsch/c/textinhalt-visualisieren/" class="map-chip map-chip-gap" data-opens="detail-textinhalt-visualisieren">
     <span>Textinhalt visualisieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1172,7 +1188,7 @@
 </li>
 
               
-<li>
+<li data-competency="zwischen-den-zeilen-lesen">
   <a href="/apps/map/deutsch/c/zwischen-den-zeilen-lesen/" class="map-chip map-chip-gap" data-opens="detail-zwischen-den-zeilen-lesen">
     <span>Zwischen den Zeilen lesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1180,7 +1196,7 @@
 </li>
 
               
-<li>
+<li data-competency="hypertexte-lesen">
   <a href="/apps/map/deutsch/c/hypertexte-lesen/" class="map-chip map-chip-gap" data-opens="detail-hypertexte-lesen">
     <span>Hypertexte lesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1188,7 +1204,7 @@
 </li>
 
               
-<li>
+<li data-competency="texte-vergleichend-lesen">
   <a href="/apps/map/deutsch/c/texte-vergleichend-lesen/" class="map-chip map-chip-gap" data-opens="detail-texte-vergleichend-lesen">
     <span>Vergleichendes Lesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1200,7 +1216,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="erzaehler-und-autor">
   <a href="/apps/map/deutsch/c/erzaehler-und-autor/" class="map-chip map-chip-gap" data-opens="detail-erzaehler-und-autor">
     <span>Erzähler und Autor</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1208,7 +1224,7 @@
 </li>
 
               
-<li>
+<li data-competency="erzaehlform">
   <a href="/apps/map/deutsch/c/erzaehlform/" class="map-chip map-chip-gap" data-opens="detail-erzaehlform">
     <span>Erzählform</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1216,7 +1232,7 @@
 </li>
 
               
-<li>
+<li data-competency="innerer-monolog">
   <a href="/apps/map/deutsch/c/innerer-monolog/" class="map-chip map-chip-gap" data-opens="detail-innerer-monolog">
     <span>Innerer Monolog</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1224,7 +1240,7 @@
 </li>
 
               
-<li>
+<li data-competency="figurenkonstellation">
   <a href="/apps/map/deutsch/c/figurenkonstellation/" class="map-chip map-chip-gap" data-opens="detail-figurenkonstellation">
     <span>Figurenkonstellation</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1232,7 +1248,7 @@
 </li>
 
               
-<li>
+<li data-competency="figur-charakterisieren">
   <a href="/apps/map/deutsch/c/figur-charakterisieren/" class="map-chip map-chip-gap" data-opens="detail-figur-charakterisieren">
     <span>Figurencharakterisierung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1240,7 +1256,7 @@
 </li>
 
               
-<li>
+<li data-competency="textbelege-angeben">
   <a href="/apps/map/deutsch/c/textbelege-angeben/" class="map-chip map-chip-gap" data-opens="detail-textbelege-angeben">
     <span>Textbelege</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1248,7 +1264,7 @@
 </li>
 
               
-<li>
+<li data-competency="kurzgeschichte">
   <a href="/apps/map/deutsch/c/kurzgeschichte/" class="map-chip map-chip-gap" data-opens="detail-kurzgeschichte">
     <span>Kurzgeschichte</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1256,7 +1272,7 @@
 </li>
 
               
-<li>
+<li data-competency="motiv-erkennen">
   <a href="/apps/map/deutsch/c/motiv-erkennen/" class="map-chip map-chip-gap" data-opens="detail-motiv-erkennen">
     <span>Motive erkennen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1264,7 +1280,7 @@
 </li>
 
               
-<li>
+<li data-competency="fiktionalitaetssignale">
   <a href="/apps/map/deutsch/c/fiktionalitaetssignale/" class="map-chip map-chip-gap" data-opens="detail-fiktionalitaetssignale">
     <span>Fiktionalitätssignale</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1272,7 +1288,7 @@
 </li>
 
               
-<li>
+<li data-competency="lyrisches-ich">
   <a href="/apps/map/deutsch/c/lyrisches-ich/" class="map-chip map-chip-gap" data-opens="detail-lyrisches-ich">
     <span>Lyrisches Ich</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1280,7 +1296,7 @@
 </li>
 
               
-<li>
+<li data-competency="ballade">
   <a href="/apps/map/deutsch/c/ballade/" class="map-chip map-chip-gap" data-opens="detail-ballade">
     <span>Ballade</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1288,7 +1304,7 @@
 </li>
 
               
-<li>
+<li data-competency="drama-aufbau">
   <a href="/apps/map/deutsch/c/drama-aufbau/" class="map-chip map-chip-gap" data-opens="detail-drama-aufbau">
     <span>Bauelemente des Dramas</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1296,7 +1312,7 @@
 </li>
 
               
-<li>
+<li data-competency="infografiken-auswerten">
   <a href="/apps/map/deutsch/c/infografiken-auswerten/" class="map-chip map-chip-gap" data-opens="detail-infografiken-auswerten">
     <span>Infografiken auswerten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1304,7 +1320,7 @@
 </li>
 
               
-<li>
+<li data-competency="nachricht-und-kommentar">
   <a href="/apps/map/deutsch/c/nachricht-und-kommentar/" class="map-chip map-chip-gap" data-opens="detail-nachricht-und-kommentar">
     <span>Nachricht und Kommentar</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1312,7 +1328,7 @@
 </li>
 
               
-<li>
+<li data-competency="reportage">
   <a href="/apps/map/deutsch/c/reportage/" class="map-chip map-chip-gap" data-opens="detail-reportage">
     <span>Reportage</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1320,7 +1336,7 @@
 </li>
 
               
-<li>
+<li data-competency="zeitung-aufbau">
   <a href="/apps/map/deutsch/c/zeitung-aufbau/" class="map-chip map-chip-gap" data-opens="detail-zeitung-aufbau">
     <span>Aufbau einer Zeitung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1328,7 +1344,7 @@
 </li>
 
               
-<li>
+<li data-competency="werbung-untersuchen">
   <a href="/apps/map/deutsch/c/werbung-untersuchen/" class="map-chip map-chip-gap" data-opens="detail-werbung-untersuchen">
     <span>Werbung untersuchen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1336,7 +1352,7 @@
 </li>
 
               
-<li>
+<li data-competency="privatsphaere-im-netz">
   <a href="/apps/map/deutsch/c/privatsphaere-im-netz/" class="map-chip map-chip-gap" data-opens="detail-privatsphaere-im-netz">
     <span>Privatsphäre im Netz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1344,7 +1360,7 @@
 </li>
 
               
-<li>
+<li data-competency="einstellungsgroessen-und-perspektive">
   <a href="/apps/map/deutsch/c/einstellungsgroessen-und-perspektive/" class="map-chip map-chip-gap" data-opens="detail-einstellungsgroessen-und-perspektive">
     <span>Einstellungsgrößen und Kameraperspektive</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1352,7 +1368,7 @@
 </li>
 
               
-<li>
+<li data-competency="schnitt-montage-ton">
   <a href="/apps/map/deutsch/c/schnitt-montage-ton/" class="map-chip map-chip-gap" data-opens="detail-schnitt-montage-ton">
     <span>Schnitt, Montage und Ton</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1360,7 +1376,7 @@
 </li>
 
               
-<li>
+<li data-competency="buch-und-film-vergleichen">
   <a href="/apps/map/deutsch/c/buch-und-film-vergleichen/" class="map-chip map-chip-gap" data-opens="detail-buch-und-film-vergleichen">
     <span>Buch und Verfilmung vergleichen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1372,7 +1388,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="aktiv-und-passiv">
   <a href="/apps/map/deutsch/c/aktiv-und-passiv/" class="map-chip map-chip-gap" data-opens="detail-aktiv-und-passiv">
     <span>Aktiv und Passiv</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1380,7 +1396,7 @@
 </li>
 
               
-<li>
+<li data-competency="modalverben">
   <a href="/apps/map/deutsch/c/modalverben/" class="map-chip map-chip-gap" data-opens="detail-modalverben">
     <span>Modalverben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1388,7 +1404,7 @@
 </li>
 
               
-<li>
+<li data-competency="konjunktiv-zwei">
   <a href="/apps/map/deutsch/c/konjunktiv-zwei/" class="map-chip map-chip-gap" data-opens="detail-konjunktiv-zwei">
     <span>Konjunktiv II</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1396,7 +1412,7 @@
 </li>
 
               
-<li>
+<li data-competency="indirekte-rede">
   <a href="/apps/map/deutsch/c/indirekte-rede/" class="map-chip map-chip-gap" data-opens="detail-indirekte-rede">
     <span>Indirekte Rede</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1404,7 +1420,7 @@
 </li>
 
               
-<li>
+<li data-competency="adverbialsaetze">
   <a href="/apps/map/deutsch/c/adverbialsaetze/" class="map-chip map-chip-gap" data-opens="detail-adverbialsaetze">
     <span>Adverbialsätze</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1412,7 +1428,7 @@
 </li>
 
               
-<li>
+<li data-competency="subjektsatz-und-objektsatz">
   <a href="/apps/map/deutsch/c/subjektsatz-und-objektsatz/" class="map-chip map-chip-gap" data-opens="detail-subjektsatz-und-objektsatz">
     <span>Subjekt- und Objektsatz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1420,7 +1436,7 @@
 </li>
 
               
-<li>
+<li data-competency="infinitiv-und-partizipgruppen">
   <a href="/apps/map/deutsch/c/infinitiv-und-partizipgruppen/" class="map-chip map-chip-gap" data-opens="detail-infinitiv-und-partizipgruppen">
     <span>Infinitiv- und Partizipgruppen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1428,7 +1444,7 @@
 </li>
 
               
-<li>
+<li data-competency="feldermodell">
   <a href="/apps/map/deutsch/c/feldermodell/" class="map-chip map-chip-gap" data-opens="detail-feldermodell">
     <span>Feldermodell</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1436,7 +1452,7 @@
 </li>
 
               
-<li>
+<li data-competency="erbwort-lehnwort-fremdwort">
   <a href="/apps/map/deutsch/c/erbwort-lehnwort-fremdwort/" class="map-chip map-chip-gap" data-opens="detail-erbwort-lehnwort-fremdwort">
     <span>Erbwort, Lehnwort, Fremdwort</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1444,7 +1460,7 @@
 </li>
 
               
-<li>
+<li data-competency="bedeutungswandel">
   <a href="/apps/map/deutsch/c/bedeutungswandel/" class="map-chip map-chip-gap" data-opens="detail-bedeutungswandel">
     <span>Bedeutungswandel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1452,7 +1468,7 @@
 </li>
 
               
-<li>
+<li data-competency="naehe-und-distanzsprache">
   <a href="/apps/map/deutsch/c/naehe-und-distanzsprache/" class="map-chip map-chip-gap" data-opens="detail-naehe-und-distanzsprache">
     <span>Nähe- und Distanzsprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1460,7 +1476,7 @@
 </li>
 
               
-<li>
+<li data-competency="sprachregister-waehlen">
   <a href="/apps/map/deutsch/c/sprachregister-waehlen/" class="map-chip map-chip-gap" data-opens="detail-sprachregister-waehlen">
     <span>Sprachregister wählen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1468,7 +1484,7 @@
 </li>
 
               
-<li>
+<li data-competency="jugendsprache">
   <a href="/apps/map/deutsch/c/jugendsprache/" class="map-chip map-chip-gap" data-opens="detail-jugendsprache">
     <span>Jugendsprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1476,7 +1492,7 @@
 </li>
 
               
-<li>
+<li data-competency="kommunikationsmodell">
   <a href="/apps/map/deutsch/c/kommunikationsmodell/" class="map-chip map-chip-gap" data-opens="detail-kommunikationsmodell">
     <span>Kommunikationsmodell</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1484,7 +1500,7 @@
 </li>
 
               
-<li>
+<li data-competency="netiquette">
   <a href="/apps/map/deutsch/c/netiquette/" class="map-chip map-chip-gap" data-opens="detail-netiquette">
     <span>Netiquette</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1492,7 +1508,7 @@
 </li>
 
               
-<li>
+<li data-competency="textzusammenhang">
   <a href="/apps/map/deutsch/c/textzusammenhang/" class="map-chip map-chip-gap" data-opens="detail-textzusammenhang">
     <span>Textzusammenhang</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1507,7 +1523,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="praesentation-mit-folien">
   <a href="/apps/map/deutsch/c/praesentation-mit-folien/" class="map-chip map-chip-gap" data-opens="detail-praesentation-mit-folien">
     <span>Präsentation mit Folien</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1515,7 +1531,7 @@
 </li>
 
               
-<li>
+<li data-competency="gespraech-leiten">
   <a href="/apps/map/deutsch/c/gespraech-leiten/" class="map-chip map-chip-gap" data-opens="detail-gespraech-leiten">
     <span>Diskussionsleitung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1523,7 +1539,7 @@
 </li>
 
               
-<li>
+<li data-competency="debatte">
   <a href="/apps/map/deutsch/c/debatte/" class="map-chip map-chip-gap" data-opens="detail-debatte">
     <span>Debatte</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1531,7 +1547,7 @@
 </li>
 
               
-<li>
+<li data-competency="bewerbungsgespraech">
   <a href="/apps/map/deutsch/c/bewerbungsgespraech/" class="map-chip map-chip-gap" data-opens="detail-bewerbungsgespraech">
     <span>Vorstellungsgespräch</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1543,7 +1559,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="sachtext-zusammenfassen">
   <a href="/apps/map/deutsch/c/sachtext-zusammenfassen/" class="map-chip map-chip-gap" data-opens="detail-sachtext-zusammenfassen">
     <span>Sachtext zusammenfassen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1551,7 +1567,7 @@
 </li>
 
               
-<li>
+<li data-competency="protokoll">
   <a href="/apps/map/deutsch/c/protokoll/" class="map-chip map-chip-gap" data-opens="detail-protokoll">
     <span>Protokoll</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1559,7 +1575,7 @@
 </li>
 
               
-<li>
+<li data-competency="exzerpt">
   <a href="/apps/map/deutsch/c/exzerpt/" class="map-chip map-chip-gap" data-opens="detail-exzerpt">
     <span>Exzerpt</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1567,7 +1583,7 @@
 </li>
 
               
-<li>
+<li data-competency="lineare-eroerterung">
   <a href="/apps/map/deutsch/c/lineare-eroerterung/" class="map-chip map-chip-gap" data-opens="detail-lineare-eroerterung">
     <span>Lineare Erörterung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1575,7 +1591,7 @@
 </li>
 
               
-<li>
+<li data-competency="gliederung-erstellen">
   <a href="/apps/map/deutsch/c/gliederung-erstellen/" class="map-chip map-chip-gap" data-opens="detail-gliederung-erstellen">
     <span>Gliederung erstellen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1583,7 +1599,7 @@
 </li>
 
               
-<li>
+<li data-competency="dialektische-eroerterung">
   <a href="/apps/map/deutsch/c/dialektische-eroerterung/" class="map-chip map-chip-gap" data-opens="detail-dialektische-eroerterung">
     <span>Dialektische Erörterung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1591,7 +1607,7 @@
 </li>
 
               
-<li>
+<li data-competency="materialgestuetzt-argumentieren">
   <a href="/apps/map/deutsch/c/materialgestuetzt-argumentieren/" class="map-chip map-chip-gap" data-opens="detail-materialgestuetzt-argumentieren">
     <span>Materialgestütztes Argumentieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1599,7 +1615,7 @@
 </li>
 
               
-<li>
+<li data-competency="kommentar-schreiben">
   <a href="/apps/map/deutsch/c/kommentar-schreiben/" class="map-chip map-chip-gap" data-opens="detail-kommentar-schreiben">
     <span>Kommentar schreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1607,7 +1623,7 @@
 </li>
 
               
-<li>
+<li data-competency="rezension">
   <a href="/apps/map/deutsch/c/rezension/" class="map-chip map-chip-gap" data-opens="detail-rezension">
     <span>Rezension</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1615,7 +1631,7 @@
 </li>
 
               
-<li>
+<li data-competency="lebenslauf">
   <a href="/apps/map/deutsch/c/lebenslauf/" class="map-chip map-chip-gap" data-opens="detail-lebenslauf">
     <span>Lebenslauf</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1623,7 +1639,7 @@
 </li>
 
               
-<li>
+<li data-competency="bewerbungsschreiben">
   <a href="/apps/map/deutsch/c/bewerbungsschreiben/" class="map-chip map-chip-gap" data-opens="detail-bewerbungsschreiben">
     <span>Bewerbungsschreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1631,7 +1647,7 @@
 </li>
 
               
-<li>
+<li data-competency="zitieren">
   <a href="/apps/map/deutsch/c/zitieren/" class="map-chip map-chip-gap" data-opens="detail-zitieren">
     <span>Zitieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1639,7 +1655,7 @@
 </li>
 
               
-<li>
+<li data-competency="quellen-angeben">
   <a href="/apps/map/deutsch/c/quellen-angeben/" class="map-chip map-chip-gap" data-opens="detail-quellen-angeben">
     <span>Quellenangaben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1647,7 +1663,7 @@
 </li>
 
               
-<li>
+<li data-competency="interpretation-schreiben">
   <a href="/apps/map/deutsch/c/interpretation-schreiben/" class="map-chip map-chip-gap" data-opens="detail-interpretation-schreiben">
     <span>Interpretation schreiben</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1655,7 +1671,7 @@
 </li>
 
               
-<li>
+<li data-competency="sachtextanalyse-schreiben">
   <a href="/apps/map/deutsch/c/sachtextanalyse-schreiben/" class="map-chip map-chip-gap" data-opens="detail-sachtextanalyse-schreiben">
     <span>Sachtextanalyse</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1669,7 +1685,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="erzaehlverhalten">
   <a href="/apps/map/deutsch/c/erzaehlverhalten/" class="map-chip map-chip-gap" data-opens="detail-erzaehlverhalten">
     <span>Erzählverhalten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1677,7 +1693,7 @@
 </li>
 
               
-<li>
+<li data-competency="erzaehlzeit-und-erzaehlte-zeit">
   <a href="/apps/map/deutsch/c/erzaehlzeit-und-erzaehlte-zeit/" class="map-chip map-chip-gap" data-opens="detail-erzaehlzeit-und-erzaehlte-zeit">
     <span>Erzählzeit und erzählte Zeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1685,7 +1701,7 @@
 </li>
 
               
-<li>
+<li data-competency="novelle">
   <a href="/apps/map/deutsch/c/novelle/" class="map-chip map-chip-gap" data-opens="detail-novelle">
     <span>Novelle</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1693,7 +1709,7 @@
 </li>
 
               
-<li>
+<li data-competency="deutungshypothese">
   <a href="/apps/map/deutsch/c/deutungshypothese/" class="map-chip map-chip-gap" data-opens="detail-deutungshypothese">
     <span>Deutungshypothese</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1701,7 +1717,7 @@
 </li>
 
               
-<li>
+<li data-competency="text-und-kontext">
   <a href="/apps/map/deutsch/c/text-und-kontext/" class="map-chip map-chip-gap" data-opens="detail-text-und-kontext">
     <span>Text und Kontext</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1709,7 +1725,7 @@
 </li>
 
               
-<li>
+<li data-competency="metrum">
   <a href="/apps/map/deutsch/c/metrum/" class="map-chip map-chip-gap" data-opens="detail-metrum">
     <span>Metrum</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1717,7 +1733,7 @@
 </li>
 
               
-<li>
+<li data-competency="symbol">
   <a href="/apps/map/deutsch/c/symbol/" class="map-chip map-chip-gap" data-opens="detail-symbol">
     <span>Symbol</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1725,7 +1741,7 @@
 </li>
 
               
-<li>
+<li data-competency="rhetorische-figuren">
   <a href="/apps/map/deutsch/c/rhetorische-figuren/" class="map-chip map-chip-gap" data-opens="detail-rhetorische-figuren">
     <span>Rhetorische Figuren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1733,7 +1749,7 @@
 </li>
 
               
-<li>
+<li data-competency="gedicht-form-und-inhalt">
   <a href="/apps/map/deutsch/c/gedicht-form-und-inhalt/" class="map-chip map-chip-gap" data-opens="detail-gedicht-form-und-inhalt">
     <span>Form und Inhalt im Gedicht</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1741,7 +1757,7 @@
 </li>
 
               
-<li>
+<li data-competency="gedichte-vergleichen">
   <a href="/apps/map/deutsch/c/gedichte-vergleichen/" class="map-chip map-chip-gap" data-opens="detail-gedichte-vergleichen">
     <span>Gedichtvergleich</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1749,7 +1765,7 @@
 </li>
 
               
-<li>
+<li data-competency="geschlossenes-drama">
   <a href="/apps/map/deutsch/c/geschlossenes-drama/" class="map-chip map-chip-gap" data-opens="detail-geschlossenes-drama">
     <span>Geschlossenes Drama</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1757,7 +1773,7 @@
 </li>
 
               
-<li>
+<li data-competency="dialog-analysieren">
   <a href="/apps/map/deutsch/c/dialog-analysieren/" class="map-chip map-chip-gap" data-opens="detail-dialog-analysieren">
     <span>Dramendialog analysieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1765,7 +1781,7 @@
 </li>
 
               
-<li>
+<li data-competency="argumentation-untersuchen">
   <a href="/apps/map/deutsch/c/argumentation-untersuchen/" class="map-chip map-chip-gap" data-opens="detail-argumentation-untersuchen">
     <span>Argumentation untersuchen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1773,7 +1789,7 @@
 </li>
 
               
-<li>
+<li data-competency="falschmeldungen-erkennen">
   <a href="/apps/map/deutsch/c/falschmeldungen-erkennen/" class="map-chip map-chip-gap" data-opens="detail-falschmeldungen-erkennen">
     <span>Falschmeldungen erkennen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1781,7 +1797,7 @@
 </li>
 
               
-<li>
+<li data-competency="algorithmen-und-soziale-medien">
   <a href="/apps/map/deutsch/c/algorithmen-und-soziale-medien/" class="map-chip map-chip-gap" data-opens="detail-algorithmen-und-soziale-medien">
     <span>Algorithmen und soziale Medien</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1793,7 +1809,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="nominalstil-und-verbalstil">
   <a href="/apps/map/deutsch/c/nominalstil-und-verbalstil/" class="map-chip map-chip-gap" data-opens="detail-nominalstil-und-verbalstil">
     <span>Nominalstil und Verbalstil</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1801,7 +1817,7 @@
 </li>
 
               
-<li>
+<li data-competency="sprachwandel">
   <a href="/apps/map/deutsch/c/sprachwandel/" class="map-chip map-chip-gap" data-opens="detail-sprachwandel">
     <span>Sprachwandel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1809,7 +1825,7 @@
 </li>
 
               
-<li>
+<li data-competency="dialekt">
   <a href="/apps/map/deutsch/c/dialekt/" class="map-chip map-chip-gap" data-opens="detail-dialekt">
     <span>Dialekt</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1817,7 +1833,7 @@
 </li>
 
               
-<li>
+<li data-competency="fachsprache">
   <a href="/apps/map/deutsch/c/fachsprache/" class="map-chip map-chip-gap" data-opens="detail-fachsprache">
     <span>Fachsprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1825,7 +1841,7 @@
 </li>
 
               
-<li>
+<li data-competency="sach-und-beziehungsebene">
   <a href="/apps/map/deutsch/c/sach-und-beziehungsebene/" class="map-chip map-chip-gap" data-opens="detail-sach-und-beziehungsebene">
     <span>Sach- und Beziehungsebene</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1833,7 +1849,7 @@
 </li>
 
               
-<li>
+<li data-competency="manipulation-durch-sprache">
   <a href="/apps/map/deutsch/c/manipulation-durch-sprache/" class="map-chip map-chip-gap" data-opens="detail-manipulation-durch-sprache">
     <span>Manipulation durch Sprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1841,7 +1857,7 @@
 </li>
 
               
-<li>
+<li data-competency="diskriminierende-sprache">
   <a href="/apps/map/deutsch/c/diskriminierende-sprache/" class="map-chip map-chip-gap" data-opens="detail-diskriminierende-sprache">
     <span>Diskriminierende Sprache</span>
     <span class="sr-only">(Lücke, noch keine App)</span>

@@ -63,6 +63,12 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-spanisch">
+  <p class="m-0"><strong id="status-spanisch" class="map-status-tag map-status-tag-draft">Entwurf</strong> Diese Karte ist nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft des Fachs hat sie geprüft. Stränge, Bausteine und Pfeile können falsch sein oder fehlen.</p>
+  <p class="m-0 mt-1">Du unterrichtest das Fach? Sieh die Karte durch und sag uns, was fehlt oder falsch ist: <a href="https://github.com/lernapps/apps/issues/new?title=Lernlandkarte%20Spanisch%3A%20Durchsicht" class="underline underline-offset-2 font-semibold">Mithelfen</a> <span class="map-status-note">(GitHub-Issue, braucht ein GitHub-Konto)</span></p>
+</aside>
+
 
   <div class="flex flex-col gap-3 items-start">
     <a href="/apps/map/#baustein" class="text-sm text-blue-700 underline underline-offset-2">Baustein · was ist das?</a>
@@ -74,26 +80,31 @@
       <div><dt>Quelle</dt><dd lang="de"><a href="https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2023/2023_06_22-Bista-ESA-MSA-ErsteFremdsprache.pdf" class="text-blue-700 underline underline-offset-2">KMK, Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss, Beschluss vom 15.10.2004 und vom 04.12.2003 i.d.F. vom 22.06.2023 (Struktur; Inhalte aus den Lehrplänen Hessen, Bayern und NRW)</a></dd></div>
     </dl>
   </div>
-
   <section class="panel" aria-labelledby="weg">
-    <h2 id="weg" class="panel-title">Lernweg</h2>
-    <div class="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start">
+    <h2 id="weg" class="panel-title">Die Kette</h2>
+    <p class="m-0 text-slate-600">Was du vorher brauchst und was danach kommt, Stufe für Stufe.</p>
+    <div class="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start mt-3">
       <div>
         <h3 class="m-0 text-sm font-semibold text-slate-600">Baut auf</h3><p class="m-0 mt-2 text-slate-600">Er baut auf keinem anderen Baustein auf.</p>
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div class="p-3 rounded-lg bg-blue-700 text-white">
-        <h3 class="m-0 text-sm font-semibold">Dieser Baustein</h3>
+        <h3 class="m-0 text-sm font-semibold">Dieser Baustein · Stufe 1</h3>
         <p class="m-0 mt-1 font-bold">Lieder und Gedichte</p>
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div>
-        <h3 class="m-0 text-sm font-semibold text-slate-600">Darauf bauen auf</h3>
-        <ul class="list-none p-0 m-0 mt-2 flex flex-col gap-2"><li>
+        <h3 class="m-0 text-sm font-semibold text-slate-600">Darauf baut direkt auf</h3>
+        <dl class="map-chain-steps">
+          <dt>Stufe 4</dt>
+          <dd><ul><li>
 <a href="/apps/map/spanisch/c/wirkung-eines-textes/" class="text-blue-700 underline underline-offset-2"><span>Wirkung eines Textes</span></a>
-</li></ul>
+</li></ul></dd>
+        </dl>
+        <p class="m-0 mt-3 text-slate-700">Danach baut noch 1 Baustein in 1 weiteren Stufe darauf auf.</p>
       </div>
     </div>
+    <p class="m-0 mt-4"><a href="/apps/map/spanisch/c/#lieder-und-gedichte" class="text-blue-700 underline underline-offset-2">Die ganze Kette in der Karte nach Stufen</a></p>
   </section>
 
   <section class="panel" aria-labelledby="wann">

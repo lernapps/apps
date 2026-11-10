@@ -60,10 +60,26 @@
   </ol>
 </nav>
 
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-mathematik">
+  <p class="m-0"><strong id="status-mathematik" class="map-status-tag map-status-tag-draft">Entwurf</strong> Diese Karte ist nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft des Fachs hat sie geprüft. Stränge, Bausteine und Pfeile können falsch sein oder fehlen.</p>
+  <p class="m-0 mt-1">Du unterrichtest das Fach? Sieh die Karte durch und sag uns, was fehlt oder falsch ist: <a href="https://github.com/lernapps/apps/issues/new?title=Lernlandkarte%20Mathematik%3A%20Durchsicht" class="underline underline-offset-2 font-semibold">Mithelfen</a> <span class="map-status-note">(GitHub-Issue, braucht ein GitHub-Konto)</span></p>
+</aside>
+
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Mathematik</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>So liest du die Karte</a>
   </div>
+
+  
+<nav aria-labelledby="ordnung-mathematik" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-mathematik" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/map/mathematik/he-gymnasium/" class="btn btn-primary" aria-current="page">Nach Klassen</a></li>
+    <li><a href="/apps/map/mathematik/c/" class="btn btn-secondary">Nach Stufen der Kette</a></li>
+  </ul>
+</nav>
+
   <div class="map-toolbar">
     <div data-map-when hidden>
       <label for="lehrplan" class="sr-only">Wann ist was dran?</label>
@@ -142,7 +158,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="natuerliche-zahlen">
   <a href="/apps/map/mathematik/c/natuerliche-zahlen/" class="map-chip map-chip-gap" data-opens="detail-natuerliche-zahlen">
     <span>Natürliche Zahlen im Stellenwertsystem</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -150,7 +166,7 @@
 </li>
 
               
-<li>
+<li data-competency="zahlen-vergleichen-ordnen">
   <a href="/apps/map/mathematik/c/zahlen-vergleichen-ordnen/" class="map-chip map-chip-gap" data-opens="detail-zahlen-vergleichen-ordnen">
     <span>Zahlen vergleichen und ordnen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -158,7 +174,7 @@
 </li>
 
               
-<li>
+<li data-competency="runden">
   <a href="/apps/map/mathematik/c/runden/" class="map-chip map-chip-gap" data-opens="detail-runden">
     <span>Runden</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6</span>
@@ -166,7 +182,7 @@
 </li>
 
               
-<li>
+<li data-competency="schriftliche-verfahren">
   <a href="/apps/map/mathematik/c/schriftliche-verfahren/" class="map-chip map-chip-gap" data-opens="detail-schriftliche-verfahren">
     <span>Schriftliche Rechenverfahren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -174,7 +190,7 @@
 </li>
 
               
-<li>
+<li data-competency="grundrechenarten-rechengesetze">
   <a href="/apps/map/mathematik/c/grundrechenarten-rechengesetze/" class="map-chip map-chip-gap" data-opens="detail-grundrechenarten-rechengesetze">
     <span>Vorrangregeln und Rechengesetze</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6</span>
@@ -182,7 +198,7 @@
 </li>
 
               
-<li>
+<li data-competency="ueberschlagen">
   <a href="/apps/map/mathematik/c/ueberschlagen/" class="map-chip map-chip-gap" data-opens="detail-ueberschlagen">
     <span>Überschlagsrechnung</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6, 7</span>
@@ -190,7 +206,7 @@
 </li>
 
               
-<li>
+<li data-competency="potenzen">
   <a href="/apps/map/mathematik/c/potenzen/" class="map-chip map-chip-gap" data-opens="detail-potenzen">
     <span>Potenzen und Zehnerpotenzen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -198,7 +214,7 @@
 </li>
 
               
-<li>
+<li data-competency="groessenvorstellungen-schaetzen">
   <a href="/apps/map/mathematik/c/groessenvorstellungen-schaetzen/" class="map-chip map-chip-gap" data-opens="detail-groessenvorstellungen-schaetzen">
     <span>Größen schätzen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -206,7 +222,7 @@
 </li>
 
               
-<li>
+<li data-competency="umrechnung-groessen">
   <a href="/apps/map/mathematik/c/umrechnung-groessen/" class="map-chip map-chip-gap" data-opens="detail-umrechnung-groessen">
     <span>Einheiten umrechnen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -214,7 +230,7 @@
 </li>
 
               
-<li>
+<li data-competency="messen-laenge-masse-geld-zeit">
   <a href="/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/" class="map-chip map-chip-gap" data-opens="detail-messen-laenge-masse-geld-zeit">
     <span>Länge, Masse, Geld und Zeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -226,7 +242,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="einfache-gleichungen">
   <a href="/apps/map/mathematik/c/einfache-gleichungen/" class="map-chip map-chip-gap" data-opens="detail-einfache-gleichungen">
     <span>Einfache Gleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -238,7 +254,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="zuordnungen">
   <a href="/apps/map/mathematik/c/zuordnungen/" class="map-chip map-chip-gap" data-opens="detail-zuordnungen">
     <span>Zuordnungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -250,7 +266,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="grundfiguren-eben">
   <a href="/apps/map/mathematik/c/grundfiguren-eben/" class="map-chip map-chip-gap" data-opens="detail-grundfiguren-eben">
     <span>Ebene Grundfiguren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -258,7 +274,7 @@
 </li>
 
               
-<li>
+<li data-competency="parallel-senkrecht-abstand">
   <a href="/apps/map/mathematik/c/parallel-senkrecht-abstand/" class="map-chip map-chip-gap" data-opens="detail-parallel-senkrecht-abstand">
     <span>Parallelen, Senkrechten und Abstand</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -266,7 +282,7 @@
 </li>
 
               
-<li>
+<li data-competency="koordinatensystem">
   <a href="/apps/map/mathematik/c/koordinatensystem/" class="map-chip map-chip-gap" data-opens="detail-koordinatensystem">
     <span>Koordinatensystem</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -274,7 +290,7 @@
 </li>
 
               
-<li>
+<li data-competency="symmetrie">
   <a href="/apps/map/mathematik/c/symmetrie/" class="map-chip map-chip-gap" data-opens="detail-symmetrie">
     <span>Symmetrie</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6, 8</span>
@@ -282,7 +298,7 @@
 </li>
 
               
-<li>
+<li data-competency="vierecke-grundfiguren">
   <a href="/apps/map/mathematik/c/vierecke-grundfiguren/" class="map-chip map-chip-gap" data-opens="detail-vierecke-grundfiguren">
     <span>Besondere Vierecke</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -290,7 +306,7 @@
 </li>
 
               
-<li>
+<li data-competency="konstruktionen">
   <a href="/apps/map/mathematik/c/konstruktionen/" class="map-chip map-chip-gap" data-opens="detail-konstruktionen">
     <span>Zeichnen und Konstruieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -298,7 +314,7 @@
 </li>
 
               
-<li>
+<li data-competency="grundkoerper-quader-wuerfel">
   <a href="/apps/map/mathematik/c/grundkoerper-quader-wuerfel/" class="map-chip map-chip-gap" data-opens="detail-grundkoerper-quader-wuerfel">
     <span>Quader und Würfel</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6</span>
@@ -306,7 +322,7 @@
 </li>
 
               
-<li>
+<li data-competency="netze-schraegbilder-modelle">
   <a href="/apps/map/mathematik/c/netze-schraegbilder-modelle/" class="map-chip map-chip-gap" data-opens="detail-netze-schraegbilder-modelle">
     <span>Netze und Schrägbilder: Quader, Würfel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -314,7 +330,7 @@
 </li>
 
               
-<li>
+<li data-competency="einheiten-flaeche-volumen">
   <a href="/apps/map/mathematik/c/einheiten-flaeche-volumen/" class="map-chip map-chip-gap" data-opens="detail-einheiten-flaeche-volumen">
     <span>Flächen- und Volumeneinheiten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -322,7 +338,7 @@
 </li>
 
               
-<li>
+<li data-competency="flaeche-umfang-quadrat-rechteck">
   <a href="/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/" class="map-chip map-chip-gap" data-opens="detail-flaeche-umfang-quadrat-rechteck">
     <span>Fläche und Umfang: Rechteck, Quadrat</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6</span>
@@ -330,7 +346,7 @@
 </li>
 
               
-<li>
+<li data-competency="volumen-oberflaeche-quader-wuerfel">
   <a href="/apps/map/mathematik/c/volumen-oberflaeche-quader-wuerfel/" class="map-chip map-chip-gap" data-opens="detail-volumen-oberflaeche-quader-wuerfel">
     <span>Volumen und Oberfläche: Quader, Würfel</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6</span>
@@ -342,7 +358,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="daten-darstellen">
   <a href="/apps/map/mathematik/c/daten-darstellen/" class="map-chip map-chip-gap" data-opens="detail-daten-darstellen">
     <span>Daten darstellen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7, 8, 9</span>
@@ -350,7 +366,7 @@
 </li>
 
               
-<li>
+<li data-competency="haeufigkeiten">
   <a href="/apps/map/mathematik/c/haeufigkeiten/" class="map-chip map-chip-gap" data-opens="detail-haeufigkeiten">
     <span>Absolute und relative Häufigkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 6</span>
@@ -358,7 +374,7 @@
 </li>
 
               
-<li>
+<li data-competency="zufallserscheinungen">
   <a href="/apps/map/mathematik/c/zufallserscheinungen/" class="map-chip map-chip-gap" data-opens="detail-zufallserscheinungen">
     <span>Zufallsversuche</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -375,7 +391,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="muster-zahlenfolgen">
   <a href="/apps/map/mathematik/c/muster-zahlenfolgen/" class="map-chip map-chip-gap" data-opens="detail-muster-zahlenfolgen">
     <span>Zahlenfolgen und Muster</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -387,7 +403,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="massstab">
   <a href="/apps/map/mathematik/c/massstab/" class="map-chip map-chip-gap" data-opens="detail-massstab">
     <span>Maßstab</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -406,7 +422,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="teilbarkeit">
   <a href="/apps/map/mathematik/c/teilbarkeit/" class="map-chip map-chip-gap" data-opens="detail-teilbarkeit">
     <span>Teiler, Vielfache und Teilbarkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -414,7 +430,7 @@
 </li>
 
               
-<li>
+<li data-competency="primfaktoren-ggt-kgv">
   <a href="/apps/map/mathematik/c/primfaktoren-ggt-kgv/" class="map-chip map-chip-gap" data-opens="detail-primfaktoren-ggt-kgv">
     <span>Primfaktoren, ggT und kgV</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -422,7 +438,7 @@
 </li>
 
               
-<li>
+<li data-competency="brueche-begriff">
   <a href="/apps/map/mathematik/c/brueche-begriff/" class="map-chip map-chip-gap" data-opens="detail-brueche-begriff">
     <span>Bruchbegriff</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -430,7 +446,7 @@
 </li>
 
               
-<li>
+<li data-competency="brueche-kuerzen-erweitern">
   <a href="/apps/map/mathematik/c/brueche-kuerzen-erweitern/" class="map-chip map-chip-gap" data-opens="detail-brueche-kuerzen-erweitern">
     <span>Brüche kürzen und erweitern</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -438,7 +454,7 @@
 </li>
 
               
-<li>
+<li data-competency="bruchrechnung-grundaufgaben">
   <a href="/apps/map/mathematik/c/bruchrechnung-grundaufgaben/" class="map-chip map-chip-gap" data-opens="detail-bruchrechnung-grundaufgaben">
     <span>Bruchteile und Anteile</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -446,7 +462,7 @@
 </li>
 
               
-<li>
+<li data-competency="brueche-addieren-subtrahieren">
   <a href="/apps/map/mathematik/c/brueche-addieren-subtrahieren/" class="map-chip map-chip-gap" data-opens="detail-brueche-addieren-subtrahieren">
     <span>Bruchrechnung: Addition und Subtraktion</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -454,7 +470,7 @@
 </li>
 
               
-<li>
+<li data-competency="brueche-multiplizieren-dividieren">
   <a href="/apps/map/mathematik/c/brueche-multiplizieren-dividieren/" class="map-chip map-chip-gap" data-opens="detail-brueche-multiplizieren-dividieren">
     <span>Bruchrechnung: Multiplikation und Division</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -462,7 +478,7 @@
 </li>
 
               
-<li>
+<li data-competency="dezimalbrueche">
   <a href="/apps/map/mathematik/c/dezimalbrueche/" class="map-chip map-chip-gap" data-opens="detail-dezimalbrueche">
     <span>Dezimalbrüche und Periode</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -470,7 +486,7 @@
 </li>
 
               
-<li>
+<li data-competency="dezimalbrueche-rechnen">
   <a href="/apps/map/mathematik/c/dezimalbrueche-rechnen/" class="map-chip map-chip-gap" data-opens="detail-dezimalbrueche-rechnen">
     <span>Rechnen mit Dezimalbrüchen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -486,7 +502,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="winkel-messen">
   <a href="/apps/map/mathematik/c/winkel-messen/" class="map-chip map-chip-gap" data-opens="detail-winkel-messen">
     <span>Winkel messen und zeichnen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -494,7 +510,7 @@
 </li>
 
               
-<li>
+<li data-competency="bewegungen-figuren">
   <a href="/apps/map/mathematik/c/bewegungen-figuren/" class="map-chip map-chip-gap" data-opens="detail-bewegungen-figuren">
     <span>Spiegeln, Verschieben, Drehen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -502,7 +518,7 @@
 </li>
 
               
-<li>
+<li data-competency="zusammengesetzte-figuren">
   <a href="/apps/map/mathematik/c/zusammengesetzte-figuren/" class="map-chip map-chip-gap" data-opens="detail-zusammengesetzte-figuren">
     <span>Zusammengesetzte Figuren</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -514,7 +530,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="mittelwert">
   <a href="/apps/map/mathematik/c/mittelwert/" class="map-chip map-chip-gap" data-opens="detail-mittelwert">
     <span>Arithmetisches Mittel</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 9</span>
@@ -522,7 +538,7 @@
 </li>
 
               
-<li>
+<li data-competency="wahrscheinlichkeitsbegriff">
   <a href="/apps/map/mathematik/c/wahrscheinlichkeitsbegriff/" class="map-chip map-chip-gap" data-opens="detail-wahrscheinlichkeitsbegriff">
     <span>Wahrscheinlichkeitsbegriff</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 7</span>
@@ -537,7 +553,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="rationale-zahlen">
   <a href="/apps/map/mathematik/c/rationale-zahlen/" class="map-chip map-chip-gap" data-opens="detail-rationale-zahlen">
     <span>Negative Zahlen und Betrag</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -545,7 +561,7 @@
 </li>
 
               
-<li>
+<li data-competency="rationale-zahlen-rechnen">
   <a href="/apps/map/mathematik/c/rationale-zahlen-rechnen/" class="map-chip map-chip-gap" data-opens="detail-rationale-zahlen-rechnen">
     <span>Rechnen mit negativen Zahlen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -553,7 +569,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-grundbegriffe">
   <a href="/apps/map/mathematik/c/prozent-grundbegriffe/" class="map-chip map-chip-covered" data-opens="detail-prozent-grundbegriffe">
     <span>Prozentrechnung: Grundbegriffe</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -561,7 +577,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-prozentwert">
   <a href="/apps/map/mathematik/c/prozent-prozentwert/" class="map-chip map-chip-covered" data-opens="detail-prozent-prozentwert">
     <span>Prozentwert berechnen</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -569,7 +585,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-prozentsatz">
   <a href="/apps/map/mathematik/c/prozent-prozentsatz/" class="map-chip map-chip-covered" data-opens="detail-prozent-prozentsatz">
     <span>Prozentsatz berechnen</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -577,7 +593,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-grundwert">
   <a href="/apps/map/mathematik/c/prozent-grundwert/" class="map-chip map-chip-covered" data-opens="detail-prozent-grundwert">
     <span>Grundwert berechnen</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -585,7 +601,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-veraenderung">
   <a href="/apps/map/mathematik/c/prozent-veraenderung/" class="map-chip map-chip-covered" data-opens="detail-prozent-veraenderung">
     <span>Prozentuale Zu- und Abnahme</span>
     <span class="sr-only">(eine App übt ihn)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -593,7 +609,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-vergleich">
   <a href="/apps/map/mathematik/c/prozent-vergleich/" class="map-chip map-chip-covered" data-opens="detail-prozent-vergleich">
     <span>Prozentualer Vergleich</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -601,7 +617,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="prozent-sachaufgaben">
   <a href="/apps/map/mathematik/c/prozent-sachaufgaben/" class="map-chip map-chip-covered" data-opens="detail-prozent-sachaufgaben">
     <span>Sachaufgaben zur Prozentrechnung</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -609,7 +625,7 @@
 </li>
 
               
-<li>
+<li data-competency="zinsrechnung">
   <a href="/apps/map/mathematik/c/zinsrechnung/" class="map-chip map-chip-gap" data-opens="detail-zinsrechnung">
     <span>Zinsrechnung</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -617,7 +633,7 @@
 </li>
 
               
-<li>
+<li data-competency="zinseszins">
   <a href="/apps/map/mathematik/c/zinseszins/" class="map-chip map-chip-gap" data-opens="detail-zinseszins">
     <span>Zinseszins</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -631,7 +647,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="dreisatz">
   <a href="/apps/map/mathematik/c/dreisatz/" class="map-chip map-chip-gap" data-opens="detail-dreisatz">
     <span>Dreisatz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -639,7 +655,7 @@
 </li>
 
               
-<li>
+<li data-competency="proportionale-zuordnungen">
   <a href="/apps/map/mathematik/c/proportionale-zuordnungen/" class="map-chip map-chip-gap" data-opens="detail-proportionale-zuordnungen">
     <span>Proportionale Zuordnungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -647,7 +663,7 @@
 </li>
 
               
-<li>
+<li data-competency="antiproportionale-zuordnungen">
   <a href="/apps/map/mathematik/c/antiproportionale-zuordnungen/" class="map-chip map-chip-gap" data-opens="detail-antiproportionale-zuordnungen">
     <span>Antiproportionale Zuordnungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -659,7 +675,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="winkelsaetze">
   <a href="/apps/map/mathematik/c/winkelsaetze/" class="map-chip map-chip-gap" data-opens="detail-winkelsaetze">
     <span>Winkelsätze</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -667,7 +683,7 @@
 </li>
 
               
-<li>
+<li data-competency="dreieckskonstruktion">
   <a href="/apps/map/mathematik/c/dreieckskonstruktion/" class="map-chip map-chip-gap" data-opens="detail-dreieckskonstruktion">
     <span>Dreieckskonstruktion</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -675,7 +691,7 @@
 </li>
 
               
-<li>
+<li data-competency="kongruenz">
   <a href="/apps/map/mathematik/c/kongruenz/" class="map-chip map-chip-gap" data-opens="detail-kongruenz">
     <span>Kongruenz</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -683,7 +699,7 @@
 </li>
 
               
-<li>
+<li data-competency="linien-im-dreieck">
   <a href="/apps/map/mathematik/c/linien-im-dreieck/" class="map-chip map-chip-gap" data-opens="detail-linien-im-dreieck">
     <span>Besondere Linien im Dreieck</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -691,7 +707,7 @@
 </li>
 
               
-<li>
+<li data-competency="flaeche-umfang-dreieck-viereck">
   <a href="/apps/map/mathematik/c/flaeche-umfang-dreieck-viereck/" class="map-chip map-chip-gap" data-opens="detail-flaeche-umfang-dreieck-viereck">
     <span>Fläche und Umfang: Dreieck, Viereck</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -703,7 +719,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="haeufigkeit-als-schaetzwert">
   <a href="/apps/map/mathematik/c/haeufigkeit-als-schaetzwert/" class="map-chip map-chip-gap" data-opens="detail-haeufigkeit-als-schaetzwert">
     <span>Relative Häufigkeit als Schätzwert</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -711,7 +727,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-laplace">
   <a href="/apps/map/mathematik/c/zufall-laplace/" class="map-chip map-chip-covered" data-opens="detail-zufall-laplace">
     <span>Laplace-Formel</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -719,7 +735,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-gegenereignis">
   <a href="/apps/map/mathematik/c/zufall-gegenereignis/" class="map-chip map-chip-covered" data-opens="detail-zufall-gegenereignis">
     <span>Gegenereignis</span>
     <span class="sr-only">(eine App übt ihn)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -727,7 +743,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-baumdiagramm">
   <a href="/apps/map/mathematik/c/zufall-baumdiagramm/" class="map-chip map-chip-covered" data-opens="detail-zufall-baumdiagramm">
     <span>Mehrstufige Zufallsexperimente</span>
     <span class="sr-only">(eine App übt ihn)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -735,7 +751,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-pfadregel-1">
   <a href="/apps/map/mathematik/c/zufall-pfadregel-1/" class="map-chip map-chip-covered" data-opens="detail-zufall-pfadregel-1">
     <span>Erste Pfadregel (Produktregel)</span>
     <span class="sr-only">(eine App übt ihn)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -743,7 +759,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-ohne-zuruecklegen">
   <a href="/apps/map/mathematik/c/zufall-ohne-zuruecklegen/" class="map-chip map-chip-covered" data-opens="detail-zufall-ohne-zuruecklegen">
     <span>Ziehen mit und ohne Zurücklegen</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -751,7 +767,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-pfadregel-2">
   <a href="/apps/map/mathematik/c/zufall-pfadregel-2/" class="map-chip map-chip-covered" data-opens="detail-zufall-pfadregel-2">
     <span>Zweite Pfadregel (Summenregel)</span>
     <span class="sr-only">(eine App übt ihn)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -759,7 +775,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-ergebnisform">
   <a href="/apps/map/mathematik/c/zufall-ergebnisform/" class="map-chip map-chip-covered" data-opens="detail-zufall-ergebnisform">
     <span>Darstellung von Wahrscheinlichkeiten</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -767,7 +783,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="zufall-ereignis-uebersetzen">
   <a href="/apps/map/mathematik/c/zufall-ereignis-uebersetzen/" class="map-chip map-chip-covered" data-opens="detail-zufall-ereignis-uebersetzen">
     <span>Ereignisse im Baumdiagramm</span>
     <span class="sr-only">(eine App übt ihn)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -775,7 +791,7 @@
 </li>
 
               
-<li>
+<li data-competency="boxplot">
   <a href="/apps/map/mathematik/c/boxplot/" class="map-chip map-chip-gap" data-opens="detail-boxplot">
     <span>Boxplot</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -783,7 +799,7 @@
 </li>
 
               
-<li>
+<li data-competency="vierfeldertafel">
   <a href="/apps/map/mathematik/c/vierfeldertafel/" class="map-chip map-chip-gap" data-opens="detail-vierfeldertafel">
     <span>Vierfeldertafel</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 8</span>
@@ -800,7 +816,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="bruchterme">
   <a href="/apps/map/mathematik/c/bruchterme/" class="map-chip map-chip-gap" data-opens="detail-bruchterme">
     <span>Bruchterme</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -821,7 +837,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="prozent-von-prozenten">
   <a href="/apps/map/mathematik/c/prozent-von-prozenten/" class="map-chip map-chip-gap" data-opens="detail-prozent-von-prozenten">
     <span>Prozentpunkte und mehrfache Änderungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -833,7 +849,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="terme-variable">
   <a href="/apps/map/mathematik/c/terme-variable/" class="map-chip map-chip-gap" data-opens="detail-terme-variable">
     <span>Terme mit Variablen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -841,7 +857,7 @@
 </li>
 
               
-<li>
+<li data-competency="terme-umformen">
   <a href="/apps/map/mathematik/c/terme-umformen/" class="map-chip map-chip-gap" data-opens="detail-terme-umformen">
     <span>Terme umformen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -849,7 +865,7 @@
 </li>
 
               
-<li data-covered>
+<li data-covered data-competency="klammern-binome">
   <a href="/apps/map/mathematik/c/klammern-binome/" class="map-chip map-chip-covered" data-opens="detail-klammern-binome">
     <span>Klammern und binomische Formeln</span>
     <span class="sr-only">(eine App übt ihn)</span>
@@ -857,7 +873,7 @@
 </li>
 
               
-<li>
+<li data-competency="lineare-gleichungen">
   <a href="/apps/map/mathematik/c/lineare-gleichungen/" class="map-chip map-chip-gap" data-opens="detail-lineare-gleichungen">
     <span>Lineare Gleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -865,7 +881,7 @@
 </li>
 
               
-<li>
+<li data-competency="gleichungen-aufstellen">
   <a href="/apps/map/mathematik/c/gleichungen-aufstellen/" class="map-chip map-chip-gap" data-opens="detail-gleichungen-aufstellen">
     <span>Gleichungen aufstellen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -873,7 +889,7 @@
 </li>
 
               
-<li>
+<li data-competency="formeln-umstellen">
   <a href="/apps/map/mathematik/c/formeln-umstellen/" class="map-chip map-chip-gap" data-opens="detail-formeln-umstellen">
     <span>Formeln umstellen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -881,7 +897,7 @@
 </li>
 
               
-<li>
+<li data-competency="ungleichungen">
   <a href="/apps/map/mathematik/c/ungleichungen/" class="map-chip map-chip-gap" data-opens="detail-ungleichungen">
     <span>Lineare Ungleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -893,7 +909,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="funktionsbegriff">
   <a href="/apps/map/mathematik/c/funktionsbegriff/" class="map-chip map-chip-gap" data-opens="detail-funktionsbegriff">
     <span>Funktionsbegriff</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -901,7 +917,7 @@
 </li>
 
               
-<li>
+<li data-competency="funktionen-darstellung">
   <a href="/apps/map/mathematik/c/funktionen-darstellung/" class="map-chip map-chip-gap" data-opens="detail-funktionen-darstellung">
     <span>Darstellungen von Funktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 9, 10</span>
@@ -909,7 +925,7 @@
 </li>
 
               
-<li>
+<li data-competency="lineare-funktionen">
   <a href="/apps/map/mathematik/c/lineare-funktionen/" class="map-chip map-chip-gap" data-opens="detail-lineare-funktionen">
     <span>Lineare Funktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -917,7 +933,7 @@
 </li>
 
               
-<li>
+<li data-competency="geradengleichungen">
   <a href="/apps/map/mathematik/c/geradengleichungen/" class="map-chip map-chip-gap" data-opens="detail-geradengleichungen">
     <span>Geradengleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -929,7 +945,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="haus-der-vierecke">
   <a href="/apps/map/mathematik/c/haus-der-vierecke/" class="map-chip map-chip-gap" data-opens="detail-haus-der-vierecke">
     <span>Haus der Vierecke</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -937,7 +953,7 @@
 </li>
 
               
-<li>
+<li data-competency="kreis-sehne-tangente">
   <a href="/apps/map/mathematik/c/kreis-sehne-tangente/" class="map-chip map-chip-gap" data-opens="detail-kreis-sehne-tangente">
     <span>Sehne, Sekante und Tangente</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -945,7 +961,7 @@
 </li>
 
               
-<li>
+<li data-competency="satz-des-thales">
   <a href="/apps/map/mathematik/c/satz-des-thales/" class="map-chip map-chip-gap" data-opens="detail-satz-des-thales">
     <span>Satz des Thales</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -953,7 +969,7 @@
 </li>
 
               
-<li>
+<li data-competency="grundkoerper-prisma-zylinder">
   <a href="/apps/map/mathematik/c/grundkoerper-prisma-zylinder/" class="map-chip map-chip-gap" data-opens="detail-grundkoerper-prisma-zylinder">
     <span>Prisma und Zylinder</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 9</span>
@@ -961,7 +977,7 @@
 </li>
 
               
-<li>
+<li data-competency="netze-schraegbilder-prisma-zylinder">
   <a href="/apps/map/mathematik/c/netze-schraegbilder-prisma-zylinder/" class="map-chip map-chip-gap" data-opens="detail-netze-schraegbilder-prisma-zylinder">
     <span>Netze und Schrägbilder: Prisma, Zylinder</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 9</span>
@@ -969,7 +985,7 @@
 </li>
 
               
-<li>
+<li data-competency="volumen-oberflaeche-prisma">
   <a href="/apps/map/mathematik/c/volumen-oberflaeche-prisma/" class="map-chip map-chip-gap" data-opens="detail-volumen-oberflaeche-prisma">
     <span>Volumen und Oberfläche: Prisma</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -981,7 +997,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="simulationen">
   <a href="/apps/map/mathematik/c/simulationen/" class="map-chip map-chip-gap" data-opens="detail-simulationen">
     <span>Simulationen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -996,7 +1012,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="quadratwurzeln">
   <a href="/apps/map/mathematik/c/quadratwurzeln/" class="map-chip map-chip-gap" data-opens="detail-quadratwurzeln">
     <span>Quadratwurzeln</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1004,7 +1020,7 @@
 </li>
 
               
-<li>
+<li data-competency="reelle-zahlen">
   <a href="/apps/map/mathematik/c/reelle-zahlen/" class="map-chip map-chip-gap" data-opens="detail-reelle-zahlen">
     <span>Reelle Zahlen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1012,7 +1028,7 @@
 </li>
 
               
-<li>
+<li data-competency="wurzelgesetze">
   <a href="/apps/map/mathematik/c/wurzelgesetze/" class="map-chip map-chip-gap" data-opens="detail-wurzelgesetze">
     <span>Wurzelgesetze</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1024,7 +1040,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="bruchgleichungen">
   <a href="/apps/map/mathematik/c/bruchgleichungen/" class="map-chip map-chip-gap" data-opens="detail-bruchgleichungen">
     <span>Bruchgleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1032,7 +1048,7 @@
 </li>
 
               
-<li>
+<li data-competency="lineare-gleichungssysteme">
   <a href="/apps/map/mathematik/c/lineare-gleichungssysteme/" class="map-chip map-chip-gap" data-opens="detail-lineare-gleichungssysteme">
     <span>Lineare Gleichungssysteme: grafisch</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1040,7 +1056,7 @@
 </li>
 
               
-<li>
+<li data-competency="lgs-rechnerisch">
   <a href="/apps/map/mathematik/c/lgs-rechnerisch/" class="map-chip map-chip-gap" data-opens="detail-lgs-rechnerisch">
     <span>Lineare Gleichungssysteme: rechnerisch</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1048,7 +1064,7 @@
 </li>
 
               
-<li>
+<li data-competency="quadratische-gleichungen-einfach">
   <a href="/apps/map/mathematik/c/quadratische-gleichungen-einfach/" class="map-chip map-chip-gap" data-opens="detail-quadratische-gleichungen-einfach">
     <span>Einfache quadratische Gleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1056,7 +1072,7 @@
 </li>
 
               
-<li>
+<li data-competency="quadratische-gleichungen">
   <a href="/apps/map/mathematik/c/quadratische-gleichungen/" class="map-chip map-chip-gap" data-opens="detail-quadratische-gleichungen">
     <span>Quadratische Gleichungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1068,7 +1084,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="quadratische-funktionen">
   <a href="/apps/map/mathematik/c/quadratische-funktionen/" class="map-chip map-chip-gap" data-opens="detail-quadratische-funktionen">
     <span>Quadratische Funktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1076,7 +1092,7 @@
 </li>
 
               
-<li>
+<li data-competency="quadratische-funktionen-anwenden">
   <a href="/apps/map/mathematik/c/quadratische-funktionen-anwenden/" class="map-chip map-chip-gap" data-opens="detail-quadratische-funktionen-anwenden">
     <span>Quadratische Funktionen anwenden</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1088,7 +1104,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="kreis-umfang-flaeche">
   <a href="/apps/map/mathematik/c/kreis-umfang-flaeche/" class="map-chip map-chip-gap" data-opens="detail-kreis-umfang-flaeche">
     <span>Kreisumfang und Kreisfläche</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1096,7 +1112,7 @@
 </li>
 
               
-<li>
+<li data-competency="aehnlichkeit">
   <a href="/apps/map/mathematik/c/aehnlichkeit/" class="map-chip map-chip-gap" data-opens="detail-aehnlichkeit">
     <span>Ähnlichkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1104,7 +1120,7 @@
 </li>
 
               
-<li>
+<li data-competency="strahlensaetze">
   <a href="/apps/map/mathematik/c/strahlensaetze/" class="map-chip map-chip-gap" data-opens="detail-strahlensaetze">
     <span>Strahlensätze</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1112,7 +1128,7 @@
 </li>
 
               
-<li>
+<li data-competency="satz-des-pythagoras">
   <a href="/apps/map/mathematik/c/satz-des-pythagoras/" class="map-chip map-chip-gap" data-opens="detail-satz-des-pythagoras">
     <span>Satz des Pythagoras</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1120,7 +1136,7 @@
 </li>
 
               
-<li>
+<li data-competency="volumen-oberflaeche-zylinder">
   <a href="/apps/map/mathematik/c/volumen-oberflaeche-zylinder/" class="map-chip map-chip-gap" data-opens="detail-volumen-oberflaeche-zylinder">
     <span>Volumen und Oberfläche: Zylinder</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1128,7 +1144,7 @@
 </li>
 
               
-<li>
+<li data-competency="berechnungen-dreiecke-vielecke">
   <a href="/apps/map/mathematik/c/berechnungen-dreiecke-vielecke/" class="map-chip map-chip-gap" data-opens="detail-berechnungen-dreiecke-vielecke">
     <span>Berechnungen an Dreiecken und Vielecken</span>
     <span class="sr-only">(Lücke, noch keine App)</span><span class="map-chip-note">wieder in Klasse 10</span>
@@ -1140,7 +1156,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="umfragen-erhebungen">
   <a href="/apps/map/mathematik/c/umfragen-erhebungen/" class="map-chip map-chip-gap" data-opens="detail-umfragen-erhebungen">
     <span>Umfragen durchführen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1148,7 +1164,7 @@
 </li>
 
               
-<li>
+<li data-competency="kenngroessen-lage-streumasse">
   <a href="/apps/map/mathematik/c/kenngroessen-lage-streumasse/" class="map-chip map-chip-gap" data-opens="detail-kenngroessen-lage-streumasse">
     <span>Median, Spannweite und Quartile</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1156,7 +1172,7 @@
 </li>
 
               
-<li>
+<li data-competency="daten-kritisch-lesen">
   <a href="/apps/map/mathematik/c/daten-kritisch-lesen/" class="map-chip map-chip-gap" data-opens="detail-daten-kritisch-lesen">
     <span>Diagramme kritisch lesen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1164,7 +1180,7 @@
 </li>
 
               
-<li>
+<li data-competency="stichproben-erhebungen-planen">
   <a href="/apps/map/mathematik/c/stichproben-erhebungen-planen/" class="map-chip map-chip-gap" data-opens="detail-stichproben-erhebungen-planen">
     <span>Stichproben und Erhebungen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1187,7 +1203,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="bedingte-wahrscheinlichkeit">
   <a href="/apps/map/mathematik/c/bedingte-wahrscheinlichkeit/" class="map-chip map-chip-gap" data-opens="detail-bedingte-wahrscheinlichkeit">
     <span>Bedingte Wahrscheinlichkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1204,7 +1220,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="potenzgesetze">
   <a href="/apps/map/mathematik/c/potenzgesetze/" class="map-chip map-chip-gap" data-opens="detail-potenzgesetze">
     <span>Potenzgesetze</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1212,7 +1228,7 @@
 </li>
 
               
-<li>
+<li data-competency="potenzen-ganzzahlige-exponenten">
   <a href="/apps/map/mathematik/c/potenzen-ganzzahlige-exponenten/" class="map-chip map-chip-gap" data-opens="detail-potenzen-ganzzahlige-exponenten">
     <span>Negative Exponenten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1220,7 +1236,7 @@
 </li>
 
               
-<li>
+<li data-competency="n-te-wurzeln">
   <a href="/apps/map/mathematik/c/n-te-wurzeln/" class="map-chip map-chip-gap" data-opens="detail-n-te-wurzeln">
     <span>N-te Wurzeln</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1228,7 +1244,7 @@
 </li>
 
               
-<li>
+<li data-competency="logarithmen">
   <a href="/apps/map/mathematik/c/logarithmen/" class="map-chip map-chip-gap" data-opens="detail-logarithmen">
     <span>Logarithmen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1240,7 +1256,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="potenzfunktionen">
   <a href="/apps/map/mathematik/c/potenzfunktionen/" class="map-chip map-chip-gap" data-opens="detail-potenzfunktionen">
     <span>Potenz- und Wurzelfunktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1248,7 +1264,7 @@
 </li>
 
               
-<li>
+<li data-competency="exponentialfunktionen">
   <a href="/apps/map/mathematik/c/exponentialfunktionen/" class="map-chip map-chip-gap" data-opens="detail-exponentialfunktionen">
     <span>Exponentialfunktionen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1256,7 +1272,7 @@
 </li>
 
               
-<li>
+<li data-competency="bogenmass">
   <a href="/apps/map/mathematik/c/bogenmass/" class="map-chip map-chip-gap" data-opens="detail-bogenmass">
     <span>Bogenmaß</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1264,7 +1280,7 @@
 </li>
 
               
-<li>
+<li data-competency="sinusfunktion">
   <a href="/apps/map/mathematik/c/sinusfunktion/" class="map-chip map-chip-gap" data-opens="detail-sinusfunktion">
     <span>Sinus- und Kosinusfunktion</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1276,7 +1292,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="trigonometrie">
   <a href="/apps/map/mathematik/c/trigonometrie/" class="map-chip map-chip-gap" data-opens="detail-trigonometrie">
     <span>Trigonometrie im rechtwinkligen Dreieck</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1284,7 +1300,7 @@
 </li>
 
               
-<li>
+<li data-competency="sinus-kosinussatz">
   <a href="/apps/map/mathematik/c/sinus-kosinussatz/" class="map-chip map-chip-gap" data-opens="detail-sinus-kosinussatz">
     <span>Sinussatz und Kosinussatz</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1292,7 +1308,7 @@
 </li>
 
               
-<li>
+<li data-competency="grundkoerper-pyramide-kegel-kugel">
   <a href="/apps/map/mathematik/c/grundkoerper-pyramide-kegel-kugel/" class="map-chip map-chip-gap" data-opens="detail-grundkoerper-pyramide-kegel-kugel">
     <span>Pyramide, Kegel und Kugel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1300,7 +1316,7 @@
 </li>
 
               
-<li>
+<li data-competency="netze-schraegbilder-pyramide-kegel">
   <a href="/apps/map/mathematik/c/netze-schraegbilder-pyramide-kegel/" class="map-chip map-chip-gap" data-opens="detail-netze-schraegbilder-pyramide-kegel">
     <span>Netze und Schrägbilder: Pyramide, Kegel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1308,7 +1324,7 @@
 </li>
 
               
-<li>
+<li data-competency="volumen-oberflaeche-pyramide-kegel-kugel">
   <a href="/apps/map/mathematik/c/volumen-oberflaeche-pyramide-kegel-kugel/" class="map-chip map-chip-gap" data-opens="detail-volumen-oberflaeche-pyramide-kegel-kugel">
     <span>Volumen und Oberfläche: Pyramide, Kegel, Kugel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
@@ -1320,7 +1336,7 @@
           <td>
             <ul class="map-cell">
               
-<li>
+<li data-competency="zaehlprinzip">
   <a href="/apps/map/mathematik/c/zaehlprinzip/" class="map-chip map-chip-gap" data-opens="detail-zaehlprinzip">
     <span>Zählprinzip</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
