@@ -8,6 +8,9 @@
     "title": "Deutsche Gesellschaft für Geographie (DGfG), Bildungsstandards im Fach Geographie für den Mittleren Schulabschluss, 10. Auflage 2020",
     "url": "https://fachportal.lernnetz.de/files/Inhalte%20der%20Unterrichtsf%C3%A4cher/Geographie/Download%20Center/Bildungsstandards%20SI%20Geographie%202020%20Web.pdf"
   },
+  "explainerFocus": "strand",
+  "status": "draft",
+  "reviews": [],
   "strands": [
     {
       "id": "orientierung",
@@ -18,6 +21,10 @@
       "competencies": [
         {
           "id": "himmelsrichtungen",
+          "name": {
+            "de": "Himmelsrichtungen",
+            "en": "Cardinal directions"
+          },
           "iCan": "Ich kann die Himmelsrichtungen bestimmen, auch mit einem Kompass und mit dem Stand der Sonne.",
           "gradeBand": "5-6",
           "requires": [],
@@ -25,6 +32,10 @@
         },
         {
           "id": "globus-und-karte",
+          "name": {
+            "de": "Globus und Karte",
+            "en": "Globe and map"
+          },
           "iCan": "Ich kann erklären, wie eine Karte die Erde verkleinert, vereinfacht und von oben zeigt, und Globus und Karte vergleichen.",
           "gradeBand": "5-6",
           "requires": [],
@@ -32,6 +43,10 @@
         },
         {
           "id": "legende",
+          "name": {
+            "de": "Kartenlegende",
+            "en": "Map key"
+          },
           "iCan": "Ich kann eine Karte mit Hilfe der Legende lesen und die Kartenzeichen deuten.",
           "gradeBand": "5-6",
           "requires": [
@@ -41,6 +56,10 @@
         },
         {
           "id": "massstab",
+          "name": {
+            "de": "Maßstab",
+            "en": "Map scale"
+          },
           "iCan": "Ich kann mit dem Maßstab einer Karte Entfernungen messen und berechnen.",
           "gradeBand": "5-6",
           "requires": [
@@ -50,6 +69,10 @@
         },
         {
           "id": "hoehendarstellung",
+          "name": {
+            "de": "Höhendarstellung auf Karten",
+            "en": "Showing relief on maps"
+          },
           "iCan": "Ich kann Höhen auf einer Karte an Höhenlinien und Höhenschichtfarben ablesen.",
           "gradeBand": "5-6",
           "requires": [
@@ -59,6 +82,10 @@
         },
         {
           "id": "hoehenprofil",
+          "name": {
+            "de": "Höhenprofil",
+            "en": "Elevation profile"
+          },
           "iCan": "Ich kann aus einer Karte ein einfaches Höhenprofil zeichnen.",
           "gradeBand": "5-6",
           "requires": [
@@ -69,6 +96,10 @@
         },
         {
           "id": "kartenarten",
+          "name": {
+            "de": "Kartenarten",
+            "en": "Types of maps"
+          },
           "iCan": "Ich kann physische, thematische und topografische Karten unterscheiden und für eine Frage die passende Karte wählen.",
           "gradeBand": "5-6",
           "requires": [
@@ -78,6 +109,10 @@
         },
         {
           "id": "atlas",
+          "name": {
+            "de": "Arbeit mit dem Atlas",
+            "en": "Using an atlas"
+          },
           "iCan": "Ich kann mit Inhaltsverzeichnis, Register und Planquadraten im Atlas einen Ort finden.",
           "gradeBand": "5-6",
           "requires": [
@@ -87,6 +122,10 @@
         },
         {
           "id": "kartenskizze",
+          "name": {
+            "de": "Kartenskizze",
+            "en": "Sketch map"
+          },
           "iCan": "Ich kann eine einfache Kartenskizze zeichnen, zum Beispiel von meinem Schulweg.",
           "gradeBand": "5-6",
           "requires": [
@@ -97,6 +136,10 @@
         },
         {
           "id": "kartierung",
+          "name": {
+            "de": "Kartierung",
+            "en": "Field mapping"
+          },
           "iCan": "Ich kann bei einem Gang durch den Ort kartieren, wie Gebäude und Flächen genutzt werden.",
           "gradeBand": "5-6",
           "requires": [
@@ -107,6 +150,10 @@
         },
         {
           "id": "standort-und-weg",
+          "name": {
+            "de": "Standort und Wegfindung",
+            "en": "Location and navigation"
+          },
           "iCan": "Ich kann mit einer Karte, Landmarken und einem Smartphone (GPS) meinen Standort bestimmen und einen Weg finden.",
           "gradeBand": "5-6",
           "requires": [
@@ -117,6 +164,10 @@
         },
         {
           "id": "kontinente-und-ozeane",
+          "name": {
+            "de": "Kontinente und Ozeane",
+            "en": "Continents and oceans"
+          },
           "iCan": "Ich kann die Kontinente und Ozeane benennen und auf dem Globus und der Weltkarte zeigen.",
           "gradeBand": "5-6",
           "requires": [
@@ -126,6 +177,10 @@
         },
         {
           "id": "bundeslaender",
+          "name": {
+            "de": "Bundesländer und Hauptstädte",
+            "en": "German states and capitals"
+          },
           "iCan": "Ich kann die Bundesländer und ihre Hauptstädte auf einer Karte zeigen.",
           "gradeBand": "5-6",
           "requires": [
@@ -135,6 +190,10 @@
         },
         {
           "id": "grosslandschaften-deutschland",
+          "name": {
+            "de": "Großlandschaften Deutschlands",
+            "en": "Major regions of Germany"
+          },
           "iCan": "Ich kann Deutschland in Norddeutsches Tiefland, Mittelgebirge, Alpenvorland und Alpen gliedern und die großen Flüsse zeigen.",
           "gradeBand": "5-6",
           "requires": [
@@ -144,6 +203,10 @@
         },
         {
           "id": "topographie-europa",
+          "name": {
+            "de": "Topographie Europas",
+            "en": "Topography of Europe"
+          },
           "iCan": "Ich kann Europa in Teilräume gliedern und seine Staaten, Hauptstädte, Gebirge, Flüsse und Meere auf einer Karte zeigen.",
           "gradeBand": "5-6",
           "requires": [
@@ -153,6 +216,10 @@
         },
         {
           "id": "topographie-welt",
+          "name": {
+            "de": "Topographie der Welt",
+            "en": "World topography"
+          },
           "iCan": "Ich kann wichtige Staaten, Gebirge, Flüsse und Wüsten der anderen Kontinente auf einer Karte zeigen.",
           "gradeBand": "9-10",
           "requires": [
@@ -162,6 +229,10 @@
         },
         {
           "id": "gradnetz",
+          "name": {
+            "de": "Gradnetz der Erde",
+            "en": "Latitude and longitude grid"
+          },
           "iCan": "Ich kann das Gradnetz der Erde mit Äquator, Nullmeridian, Breitenkreisen und Längenkreisen beschreiben.",
           "gradeBand": "5-6",
           "requires": [
@@ -171,6 +242,10 @@
         },
         {
           "id": "koordinaten",
+          "name": {
+            "de": "Geographische Koordinaten",
+            "en": "Geographic coordinates"
+          },
           "iCan": "Ich kann die Lage eines Ortes mit geographischer Breite und Länge angeben und einen Ort zu gegebenen Koordinaten finden.",
           "gradeBand": "5-6",
           "requires": [
@@ -181,6 +256,10 @@
         },
         {
           "id": "lage-beschreiben",
+          "name": {
+            "de": "Lagebeschreibung",
+            "en": "Describing location"
+          },
           "iCan": "Ich kann die Lage eines Ortes genau beschreiben: im Gradnetz, auf dem Kontinent und zu Flüssen, Gebirgen und Nachbarländern.",
           "gradeBand": "7-8",
           "requires": [
@@ -191,6 +270,10 @@
         },
         {
           "id": "thematische-karte",
+          "name": {
+            "de": "Thematische Karten auswerten",
+            "en": "Analysing thematic maps"
+          },
           "iCan": "Ich kann eine thematische Karte zu einer Frage auswerten, zum Beispiel zur Bevölkerungsdichte.",
           "gradeBand": "7-8",
           "requires": [
@@ -200,6 +283,10 @@
         },
         {
           "id": "digitale-karten",
+          "name": {
+            "de": "Digitale Karten und Satellitenbilder",
+            "en": "Digital maps and satellite images"
+          },
           "iCan": "Ich kann digitale Karten und Satellitenbilder nutzen, um Orte zu finden und Informationen abzulesen.",
           "gradeBand": "5-6",
           "requires": [
@@ -209,6 +296,10 @@
         },
         {
           "id": "karten-sind-gemacht",
+          "name": {
+            "de": "Karten als Konstruktion",
+            "en": "Maps as constructions"
+          },
           "iCan": "Ich kann an Beispielen zeigen, dass Karten die Welt immer aus einem Blickwinkel darstellen, etwa durch Kartennetz, Ausschnitt oder Farbwahl.",
           "gradeBand": "7-8",
           "requires": [
@@ -218,6 +309,10 @@
         },
         {
           "id": "mental-maps",
+          "name": {
+            "de": "Mental Maps",
+            "en": "Mental maps"
+          },
           "iCan": "Ich kann an Kopfkarten (Mental Maps) zeigen, dass Menschen denselben Raum verschieden wahrnehmen.",
           "gradeBand": "7-8",
           "requires": [
@@ -236,6 +331,10 @@
       "competencies": [
         {
           "id": "sonnensystem",
+          "name": {
+            "de": "Sonnensystem",
+            "en": "The solar system"
+          },
           "iCan": "Ich kann die Planeten unseres Sonnensystems ordnen und erklären, warum es Leben nur auf der Erde gibt.",
           "gradeBand": "5-6",
           "requires": [],
@@ -243,6 +342,10 @@
         },
         {
           "id": "gestalt-der-erde",
+          "name": {
+            "de": "Gestalt der Erde",
+            "en": "Shape of the Earth"
+          },
           "iCan": "Ich kann Form und Größe der Erde beschreiben und sagen, wie viel ihrer Oberfläche Land und wie viel Meer ist.",
           "gradeBand": "5-6",
           "requires": [
@@ -252,6 +355,10 @@
         },
         {
           "id": "tag-und-nacht",
+          "name": {
+            "de": "Tag und Nacht",
+            "en": "Day and night"
+          },
           "iCan": "Ich kann mit der Drehung der Erde um ihre Achse erklären, wie Tag und Nacht entstehen.",
           "gradeBand": "7-8",
           "requires": [
@@ -261,6 +368,10 @@
         },
         {
           "id": "jahreszeiten",
+          "name": {
+            "de": "Jahreszeiten",
+            "en": "Seasons"
+          },
           "iCan": "Ich kann mit der Neigung der Erdachse und dem Umlauf der Erde um die Sonne erklären, wie die Jahreszeiten entstehen.",
           "gradeBand": "7-8",
           "requires": [
@@ -270,6 +381,10 @@
         },
         {
           "id": "beleuchtungszonen",
+          "name": {
+            "de": "Beleuchtungszonen",
+            "en": "Solar illumination zones"
+          },
           "iCan": "Ich kann Wendekreise und Polarkreise erklären und die Beleuchtungszonen der Erde unterscheiden.",
           "gradeBand": "7-8",
           "requires": [
@@ -280,6 +395,10 @@
         },
         {
           "id": "schalenbau",
+          "name": {
+            "de": "Schalenbau der Erde",
+            "en": "Structure of the Earth"
+          },
           "iCan": "Ich kann den Schalenbau der Erde mit Kruste, Mantel und Kern beschreiben.",
           "gradeBand": "5-6",
           "requires": [
@@ -289,6 +408,10 @@
         },
         {
           "id": "plattentektonik",
+          "name": {
+            "de": "Plattentektonik",
+            "en": "Plate tectonics"
+          },
           "iCan": "Ich kann erklären, dass die Erdkruste aus Platten besteht, die sich langsam bewegen, und warum sich die Lage der Kontinente verändert hat.",
           "gradeBand": "7-8",
           "requires": [
@@ -298,6 +421,10 @@
         },
         {
           "id": "plattengrenzen",
+          "name": {
+            "de": "Plattengrenzen",
+            "en": "Plate boundaries"
+          },
           "iCan": "Ich kann an Plattengrenzen unterscheiden, ob Platten auseinanderdriften, aufeinander zustoßen und abtauchen (Subduktion) oder aneinander vorbeigleiten.",
           "gradeBand": "7-8",
           "requires": [
@@ -307,6 +434,10 @@
         },
         {
           "id": "vulkanismus",
+          "name": {
+            "de": "Vulkanismus",
+            "en": "Volcanism"
+          },
           "iCan": "Ich kann den Aufbau eines Vulkans beschreiben und erklären, warum es vor allem an Plattengrenzen Vulkane gibt.",
           "gradeBand": "7-8",
           "requires": [
@@ -316,6 +447,10 @@
         },
         {
           "id": "erdbeben",
+          "name": {
+            "de": "Erdbeben und Tsunamis",
+            "en": "Earthquakes and tsunamis"
+          },
           "iCan": "Ich kann erklären, wie Erdbeben und Seebeben entstehen, wie man ihre Stärke misst und wie ein Tsunami entsteht.",
           "gradeBand": "7-8",
           "requires": [
@@ -325,6 +460,10 @@
         },
         {
           "id": "gebirgsbildung",
+          "name": {
+            "de": "Gebirgsbildung",
+            "en": "Mountain building"
+          },
           "iCan": "Ich kann erklären, wie Faltengebirge wie die Alpen entstehen, wenn Platten zusammenstoßen.",
           "gradeBand": "7-8",
           "requires": [
@@ -334,6 +473,10 @@
         },
         {
           "id": "leben-in-risikoraeumen",
+          "name": {
+            "de": "Leben in Risikoräumen",
+            "en": "Living in hazard zones"
+          },
           "iCan": "Ich kann erklären, warum Menschen trotz der Gefahr an Vulkanen und in Erdbebengebieten leben, zum Beispiel wegen fruchtbarer Böden, Rohstoffen, Energie und Tourismus.",
           "gradeBand": "7-8",
           "requires": [
@@ -344,6 +487,10 @@
         },
         {
           "id": "katastrophenvorsorge",
+          "name": {
+            "de": "Katastrophenvorsorge",
+            "en": "Disaster preparedness"
+          },
           "iCan": "Ich kann Maßnahmen beschreiben, mit denen sich Menschen vor Erdbeben und Vulkanausbrüchen schützen, zum Beispiel Frühwarnung, Überwachung und erdbebensicheres Bauen.",
           "gradeBand": "7-8",
           "requires": [
@@ -353,6 +500,10 @@
         },
         {
           "id": "exogene-kraefte",
+          "name": {
+            "de": "Exogene Kräfte",
+            "en": "Exogenic processes"
+          },
           "iCan": "Ich kann erklären, wie Verwitterung, Abtragung und Ablagerung durch Wasser, Wind und Eis die Erdoberfläche formen.",
           "gradeBand": "5-6",
           "requires": [],
@@ -360,6 +511,10 @@
         },
         {
           "id": "boden",
+          "name": {
+            "de": "Bodenbildung",
+            "en": "Soil formation"
+          },
           "iCan": "Ich kann erklären, wie aus Gestein durch Verwitterung Boden entsteht und woran man einen fruchtbaren Boden erkennt.",
           "gradeBand": "5-6",
           "requires": [
@@ -369,6 +524,10 @@
         },
         {
           "id": "gezeiten-und-watt",
+          "name": {
+            "de": "Gezeiten und Wattenmeer",
+            "en": "Tides and the Wadden Sea"
+          },
           "iCan": "Ich kann Ebbe und Flut erklären und beschreiben, wie das Wattenmeer entsteht und warum es geschützt wird.",
           "gradeBand": "5-6",
           "requires": [
@@ -378,6 +537,10 @@
         },
         {
           "id": "kuestenformen",
+          "name": {
+            "de": "Küstenformen",
+            "en": "Coastal landforms"
+          },
           "iCan": "Ich kann Steilküste und Flachküste unterscheiden und erklären, wie Meer und Wind die Küste formen.",
           "gradeBand": "5-6",
           "requires": [
@@ -387,6 +550,10 @@
         },
         {
           "id": "kuestenschutz",
+          "name": {
+            "de": "Küstenschutz",
+            "en": "Coastal protection"
+          },
           "iCan": "Ich kann Maßnahmen des Küstenschutzes wie Deiche und Landgewinnung beschreiben.",
           "gradeBand": "5-6",
           "requires": [
@@ -397,6 +564,10 @@
         },
         {
           "id": "naturgefahren-alpen",
+          "name": {
+            "de": "Naturgefahren in den Alpen",
+            "en": "Natural hazards in the Alps"
+          },
           "iCan": "Ich kann Naturgefahren in den Alpen wie Lawinen, Muren und Hochwasser beschreiben und Schutzmaßnahmen wie den Bannwald nennen.",
           "gradeBand": "5-6",
           "requires": [
@@ -415,6 +586,10 @@
       "competencies": [
         {
           "id": "wetter-und-klima",
+          "name": {
+            "de": "Wetter und Klima",
+            "en": "Weather and climate"
+          },
           "iCan": "Ich kann Wetter und Klima unterscheiden und die Wetterelemente Temperatur, Niederschlag, Luftdruck und Wind nennen.",
           "gradeBand": "5-6",
           "requires": [],
@@ -422,6 +597,10 @@
         },
         {
           "id": "wetter-messen",
+          "name": {
+            "de": "Wetter messen",
+            "en": "Measuring weather"
+          },
           "iCan": "Ich kann Temperatur und Niederschlag messen, die Werte in eine Tabelle eintragen und als Diagramm darstellen.",
           "gradeBand": "5-6",
           "requires": [
@@ -431,6 +610,10 @@
         },
         {
           "id": "klimadiagramm-lesen",
+          "name": {
+            "de": "Klimadiagramm lesen",
+            "en": "Reading a climate chart"
+          },
           "iCan": "Ich kann ein Klimadiagramm lesen und damit das Klima eines Ortes beschreiben.",
           "gradeBand": "7-8",
           "requires": [
@@ -440,6 +623,10 @@
         },
         {
           "id": "klimadiagramm-zeichnen",
+          "name": {
+            "de": "Klimadiagramm zeichnen",
+            "en": "Drawing a climate chart"
+          },
           "iCan": "Ich kann aus einer Klimatabelle ein Klimadiagramm zeichnen.",
           "gradeBand": "7-8",
           "requires": [
@@ -449,6 +636,10 @@
         },
         {
           "id": "wasserkreislauf",
+          "name": {
+            "de": "Wasserkreislauf",
+            "en": "Water cycle"
+          },
           "iCan": "Ich kann den Wasserkreislauf mit Verdunstung, Kondensation, Niederschlag und Abfluss beschreiben.",
           "gradeBand": "7-8",
           "requires": [
@@ -458,6 +649,10 @@
         },
         {
           "id": "luftdruck-und-wind",
+          "name": {
+            "de": "Luftdruck und Wind",
+            "en": "Air pressure and wind"
+          },
           "iCan": "Ich kann erklären, wie durch Erwärmung Hoch- und Tiefdruckgebiete entstehen und warum der Wind vom Hoch zum Tief weht.",
           "gradeBand": "7-8",
           "requires": [
@@ -467,6 +662,10 @@
         },
         {
           "id": "steigungsregen-und-foehn",
+          "name": {
+            "de": "Steigungsregen und Föhn",
+            "en": "Orographic rain and foehn"
+          },
           "iCan": "Ich kann erklären, warum es auf der dem Wind zugewandten Seite eines Gebirges viel regnet und auf der anderen Seite ein warmer, trockener Fallwind (Föhn) weht.",
           "gradeBand": "7-8",
           "requires": [
@@ -477,6 +676,10 @@
         },
         {
           "id": "seeklima-landklima",
+          "name": {
+            "de": "Seeklima und Landklima",
+            "en": "Maritime and continental climate"
+          },
           "iCan": "Ich kann erklären, warum es in Westeuropa milde Winter und kühle Sommer gibt und im Osten kalte Winter und heiße Sommer, auch mit dem Golfstrom.",
           "gradeBand": "7-8",
           "requires": [
@@ -486,6 +689,10 @@
         },
         {
           "id": "klimazonen-europas",
+          "name": {
+            "de": "Klima- und Vegetationszonen Europas",
+            "en": "Climate and vegetation zones of Europe"
+          },
           "iCan": "Ich kann die Klima- und Vegetationszonen Europas nennen und auf einer Karte zeigen.",
           "gradeBand": "7-8",
           "requires": [
@@ -496,6 +703,10 @@
         },
         {
           "id": "klimazonen-der-erde",
+          "name": {
+            "de": "Klimazonen der Erde",
+            "en": "Climate zones of the Earth"
+          },
           "iCan": "Ich kann die Klimazonen der Erde von den Tropen bis zu den Polen nennen und mit der Sonneneinstrahlung erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -506,6 +717,10 @@
         },
         {
           "id": "klima-boden-vegetation",
+          "name": {
+            "de": "Klima, Boden und Vegetation",
+            "en": "Climate, soil and vegetation"
+          },
           "iCan": "Ich kann an einer Landschaftszone zeigen, wie Klima, Boden und Vegetation zusammenwirken.",
           "gradeBand": "7-8",
           "requires": [
@@ -516,6 +731,10 @@
         },
         {
           "id": "landschaftszonen-der-erde",
+          "name": {
+            "de": "Landschaftszonen der Erde",
+            "en": "Biomes of the Earth"
+          },
           "iCan": "Ich kann die Landschaftszonen der Erde auf einer Karte zeigen und ihre Vegetation beschreiben, auch wo sie von der zonalen Anordnung abweichen.",
           "gradeBand": "7-8",
           "requires": [
@@ -526,6 +745,10 @@
         },
         {
           "id": "passatkreislauf",
+          "name": {
+            "de": "Passatkreislauf",
+            "en": "Trade wind circulation"
+          },
           "iCan": "Ich kann mit dem Passatkreislauf erklären, warum es am Äquator fast täglich regnet und an den Wendekreisen große Wüsten liegen.",
           "gradeBand": "7-8",
           "requires": [
@@ -536,6 +759,10 @@
         },
         {
           "id": "regenzeit-trockenzeit",
+          "name": {
+            "de": "Regenzeit und Trockenzeit",
+            "en": "Rainy and dry seasons"
+          },
           "iCan": "Ich kann erklären, warum es in den wechselfeuchten Tropen eine Regenzeit und eine Trockenzeit gibt.",
           "gradeBand": "7-8",
           "requires": [
@@ -545,6 +772,10 @@
         },
         {
           "id": "tropischer-regenwald",
+          "name": {
+            "de": "Tropischer Regenwald",
+            "en": "Tropical rainforest"
+          },
           "iCan": "Ich kann das Ökosystem tropischer Regenwald mit seinem Stockwerkbau und seinem kurzen Nährstoffkreislauf beschreiben.",
           "gradeBand": "7-8",
           "requires": [
@@ -554,6 +785,10 @@
         },
         {
           "id": "savanne",
+          "name": {
+            "de": "Savannen",
+            "en": "Savannas"
+          },
           "iCan": "Ich kann Feucht-, Trocken- und Dornsavanne unterscheiden und mit der Länge der Regenzeit erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -563,6 +798,10 @@
         },
         {
           "id": "wueste",
+          "name": {
+            "de": "Wüsten",
+            "en": "Deserts"
+          },
           "iCan": "Ich kann erklären, wie Wüsten an den Wendekreisen entstehen und wie Pflanzen und Tiere an die Trockenheit angepasst sind.",
           "gradeBand": "7-8",
           "requires": [
@@ -572,6 +811,10 @@
         },
         {
           "id": "hoehenstufen",
+          "name": {
+            "de": "Höhenstufen der Vegetation",
+            "en": "Altitudinal zones of vegetation"
+          },
           "iCan": "Ich kann die Höhenstufen der Vegetation im Hochgebirge beschreiben und erklären, warum es mit zunehmender Höhe kälter wird.",
           "gradeBand": "7-8",
           "requires": [
@@ -582,6 +825,10 @@
         },
         {
           "id": "treibhauseffekt",
+          "name": {
+            "de": "Treibhauseffekt",
+            "en": "Greenhouse effect"
+          },
           "iCan": "Ich kann den natürlichen Treibhauseffekt erklären und wie der Mensch ihn durch Treibhausgase verstärkt.",
           "gradeBand": "9-10",
           "requires": [
@@ -591,6 +838,10 @@
         },
         {
           "id": "klimawandel-ursachen",
+          "name": {
+            "de": "Ursachen des Klimawandels",
+            "en": "Causes of climate change"
+          },
           "iCan": "Ich kann natürliche und vom Menschen verursachte Gründe für Klimaänderungen unterscheiden und mit Messdaten belegen.",
           "gradeBand": "9-10",
           "requires": [
@@ -600,6 +851,10 @@
         },
         {
           "id": "klimawandel-folgen",
+          "name": {
+            "de": "Folgen des Klimawandels",
+            "en": "Effects of climate change"
+          },
           "iCan": "Ich kann Folgen des Klimawandels wie Meeresspiegelanstieg, Dürren und Wetterextreme beschreiben und erklären, warum sie Regionen verschieden treffen.",
           "gradeBand": "9-10",
           "requires": [
@@ -609,6 +864,10 @@
         },
         {
           "id": "tropischer-wirbelsturm",
+          "name": {
+            "de": "Tropische Wirbelstürme",
+            "en": "Tropical cyclones"
+          },
           "iCan": "Ich kann erklären, wie ein tropischer Wirbelsturm entsteht und warum manche Regionen besonders verwundbar sind.",
           "gradeBand": "9-10",
           "requires": [
@@ -619,6 +878,10 @@
         },
         {
           "id": "klimaschutz",
+          "name": {
+            "de": "Klimaschutz",
+            "en": "Climate protection"
+          },
           "iCan": "Ich kann Maßnahmen zum Klimaschutz wie erneuerbare Energien beurteilen und begründen, was ich selbst beitragen kann.",
           "gradeBand": "9-10",
           "requires": [
@@ -629,6 +892,10 @@
         },
         {
           "id": "klimaanpassung",
+          "name": {
+            "de": "Anpassung an den Klimawandel",
+            "en": "Climate change adaptation"
+          },
           "iCan": "Ich kann Maßnahmen zur Anpassung an den Klimawandel beschreiben, zum Beispiel höhere Deiche oder mehr Grün gegen Hitze in der Stadt.",
           "gradeBand": "9-10",
           "requires": [
@@ -647,6 +914,10 @@
       "competencies": [
         {
           "id": "naturfaktoren-landwirtschaft",
+          "name": {
+            "de": "Naturfaktoren der Landwirtschaft",
+            "en": "Natural factors in farming"
+          },
           "iCan": "Ich kann erklären, wie Boden, Temperatur, Niederschlag und Relief bestimmen, was auf einem Feld wachsen kann.",
           "gradeBand": "5-6",
           "requires": [
@@ -657,6 +928,10 @@
         },
         {
           "id": "bauernhof",
+          "name": {
+            "de": "Landwirtschaftliche Betriebsformen",
+            "en": "Types of farms"
+          },
           "iCan": "Ich kann an einem Bauernhof Betriebsformen wie Ackerbau, Viehhaltung und Sonderkulturen unterscheiden.",
           "gradeBand": "5-6",
           "requires": [
@@ -666,6 +941,10 @@
         },
         {
           "id": "agrarraeume-deutschland",
+          "name": {
+            "de": "Agrarräume in Deutschland",
+            "en": "Agricultural regions of Germany"
+          },
           "iCan": "Ich kann Räume unterschiedlicher landwirtschaftlicher Nutzung in Deutschland auf einer Karte zeigen, zum Beispiel Börden, Grünland und Weinbau.",
           "gradeBand": "5-6",
           "requires": [
@@ -676,6 +955,10 @@
         },
         {
           "id": "wandel-der-landwirtschaft",
+          "name": {
+            "de": "Wandel der Landwirtschaft",
+            "en": "Changes in agriculture"
+          },
           "iCan": "Ich kann erklären, wie sich die Landwirtschaft durch Maschinen, Spezialisierung und Massentierhaltung verändert hat.",
           "gradeBand": "5-6",
           "requires": [
@@ -685,6 +968,10 @@
         },
         {
           "id": "oekologische-landwirtschaft",
+          "name": {
+            "de": "Ökologische Landwirtschaft",
+            "en": "Organic farming"
+          },
           "iCan": "Ich kann konventionelle und ökologische Landwirtschaft vergleichen.",
           "gradeBand": "5-6",
           "requires": [
@@ -694,6 +981,10 @@
         },
         {
           "id": "weg-der-lebensmittel",
+          "name": {
+            "de": "Weg der Lebensmittel",
+            "en": "From farm to supermarket"
+          },
           "iCan": "Ich kann den Weg eines Lebensmittels vom Feld über Verarbeitung, Transport und Handel bis in den Supermarkt beschreiben.",
           "gradeBand": "5-6",
           "requires": [
@@ -703,6 +994,10 @@
         },
         {
           "id": "regionale-lebensmittel",
+          "name": {
+            "de": "Regionale und importierte Lebensmittel",
+            "en": "Local and imported food"
+          },
           "iCan": "Ich kann regionale und importierte Lebensmittel nach Transportweg, Umweltwirkung und Preis vergleichen und begründet einkaufen.",
           "gradeBand": "5-6",
           "requires": [
@@ -713,6 +1008,10 @@
         },
         {
           "id": "bewaesserung-und-gewaechshaus",
+          "name": {
+            "de": "Bewässerung und Gewächshäuser",
+            "en": "Irrigation and greenhouses"
+          },
           "iCan": "Ich kann am Beispiel von Bewässerung und Gewächshäusern erklären, wie Menschen natürliche Grenzen der Landwirtschaft überwinden und welche Probleme dabei entstehen.",
           "gradeBand": "7-8",
           "requires": [
@@ -723,6 +1022,10 @@
         },
         {
           "id": "bodenversalzung",
+          "name": {
+            "de": "Bodenversalzung",
+            "en": "Soil salinisation"
+          },
           "iCan": "Ich kann erklären, wie falsche Bewässerung zur Versalzung von Böden führt.",
           "gradeBand": "7-8",
           "requires": [
@@ -732,6 +1035,10 @@
         },
         {
           "id": "wassermangel",
+          "name": {
+            "de": "Wassermangel in Trockenräumen",
+            "en": "Water scarcity in drylands"
+          },
           "iCan": "Ich kann Ursachen von Wassermangel in Trockenräumen erklären und Konflikte um Wasser beschreiben.",
           "gradeBand": "7-8",
           "requires": [
@@ -742,6 +1049,10 @@
         },
         {
           "id": "subsistenz-und-markt",
+          "name": {
+            "de": "Subsistenz- und Marktwirtschaft",
+            "en": "Subsistence and commercial farming"
+          },
           "iCan": "Ich kann Landwirtschaft für die eigene Versorgung (Subsistenz) und Landwirtschaft für den Markt unterscheiden.",
           "gradeBand": "7-8",
           "requires": [
@@ -751,6 +1062,10 @@
         },
         {
           "id": "weidewirtschaft",
+          "name": {
+            "de": "Weidewirtschaft und Nomadismus",
+            "en": "Pastoralism and nomadism"
+          },
           "iCan": "Ich kann extensive Weidewirtschaft und Nomadismus in Trockenräumen beschreiben und erklären, warum sie sich verändern.",
           "gradeBand": "7-8",
           "requires": [
@@ -760,6 +1075,10 @@
         },
         {
           "id": "wanderfeldbau",
+          "name": {
+            "de": "Brandrodungswanderfeldbau",
+            "en": "Shifting cultivation"
+          },
           "iCan": "Ich kann den Brandrodungswanderfeldbau beschreiben und erklären, warum er nur mit wenigen Menschen nachhaltig ist.",
           "gradeBand": "7-8",
           "requires": [
@@ -770,6 +1089,10 @@
         },
         {
           "id": "plantagenwirtschaft",
+          "name": {
+            "de": "Plantagenwirtschaft",
+            "en": "Plantation agriculture"
+          },
           "iCan": "Ich kann die Plantagenwirtschaft beschreiben und ihre Chancen und Probleme für ein tropisches Land beurteilen.",
           "gradeBand": "9-10",
           "requires": [
@@ -780,6 +1103,10 @@
         },
         {
           "id": "regenwaldzerstoerung",
+          "name": {
+            "de": "Zerstörung des Regenwaldes",
+            "en": "Rainforest destruction"
+          },
           "iCan": "Ich kann Ursachen und Folgen der Abholzung des tropischen Regenwaldes erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -789,6 +1116,10 @@
         },
         {
           "id": "regenwald-nachhaltig-nutzen",
+          "name": {
+            "de": "Nachhaltige Nutzung des Regenwaldes",
+            "en": "Sustainable use of the rainforest"
+          },
           "iCan": "Ich kann Beispiele beschreiben, wie man den Regenwald nachhaltig nutzen kann, etwa durch Agroforstwirtschaft.",
           "gradeBand": "9-10",
           "requires": [
@@ -799,6 +1130,10 @@
         },
         {
           "id": "bodenerosion",
+          "name": {
+            "de": "Bodenerosion",
+            "en": "Soil erosion"
+          },
           "iCan": "Ich kann erklären, wie Bodenerosion durch Wind und Wasser entsteht und wie man sie verhindern kann.",
           "gradeBand": "7-8",
           "requires": [
@@ -809,6 +1144,10 @@
         },
         {
           "id": "desertifikation",
+          "name": {
+            "de": "Desertifikation im Sahel",
+            "en": "Desertification in the Sahel"
+          },
           "iCan": "Ich kann am Beispiel der Sahelzone erklären, wie Überweidung, Abholzung und Dürren zur Desertifikation führen, und Gegenmaßnahmen nennen.",
           "gradeBand": "7-8",
           "requires": [
@@ -829,6 +1168,10 @@
       "competencies": [
         {
           "id": "wirtschaftssektoren",
+          "name": {
+            "de": "Wirtschaftssektoren",
+            "en": "Economic sectors"
+          },
           "iCan": "Ich kann Betriebe und Berufe dem primären, sekundären und tertiären Wirtschaftssektor zuordnen.",
           "gradeBand": "7-8",
           "requires": [],
@@ -836,6 +1179,10 @@
         },
         {
           "id": "standortfaktoren",
+          "name": {
+            "de": "Standortfaktoren",
+            "en": "Location factors"
+          },
           "iCan": "Ich kann erklären, warum sich ein Betrieb an einem bestimmten Ort ansiedelt, zum Beispiel wegen Rohstoffen, Arbeitskräften, Verkehrswegen oder Kunden.",
           "gradeBand": "7-8",
           "requires": [
@@ -845,6 +1192,10 @@
         },
         {
           "id": "strukturwandel",
+          "name": {
+            "de": "Strukturwandel",
+            "en": "Structural change"
+          },
           "iCan": "Ich kann am Beispiel eines alten Industriegebiets wie dem Ruhrgebiet erklären, warum Industrien schrumpfen und was an ihre Stelle tritt.",
           "gradeBand": "7-8",
           "requires": [
@@ -854,6 +1205,10 @@
         },
         {
           "id": "dienstleistungen",
+          "name": {
+            "de": "Standorte von Dienstleistungen",
+            "en": "Service sector locations"
+          },
           "iCan": "Ich kann Standorte des Dienstleistungssektors beschreiben, zum Beispiel Banken und Handel in der Innenstadt oder einen Flughafen.",
           "gradeBand": "7-8",
           "requires": [
@@ -863,6 +1218,10 @@
         },
         {
           "id": "energietraeger",
+          "name": {
+            "de": "Energieträger",
+            "en": "Energy sources"
+          },
           "iCan": "Ich kann fossile und erneuerbare Energieträger unterscheiden und erklären, warum fossile Rohstoffe begrenzt sind.",
           "gradeBand": "7-8",
           "requires": [],
@@ -870,6 +1229,10 @@
         },
         {
           "id": "verkehr",
+          "name": {
+            "de": "Verkehr und Verkehrsnetze",
+            "en": "Transport and transport networks"
+          },
           "iCan": "Ich kann Verkehrsmittel und Verkehrsnetze vergleichen und beschreiben, wie sie Räume verbinden und die Umwelt belasten.",
           "gradeBand": "5-6",
           "requires": [],
@@ -877,6 +1240,10 @@
         },
         {
           "id": "seehafen",
+          "name": {
+            "de": "Seehafen",
+            "en": "Seaports"
+          },
           "iCan": "Ich kann erklären, warum ein Seehafen eine Drehscheibe für Handel und Verkehr ist.",
           "gradeBand": "5-6",
           "requires": [
@@ -886,6 +1253,10 @@
         },
         {
           "id": "fischerei",
+          "name": {
+            "de": "Fischerei und Aquakultur",
+            "en": "Fishing and aquaculture"
+          },
           "iCan": "Ich kann beschreiben, wie Fischerei und Aquakultur das Meer nutzen, und erklären, warum Überfischung ein Problem ist.",
           "gradeBand": "5-6",
           "requires": [],
@@ -893,6 +1264,10 @@
         },
         {
           "id": "meeresschutz",
+          "name": {
+            "de": "Meeresschutz",
+            "en": "Ocean protection"
+          },
           "iCan": "Ich kann Ursachen der Meeresverschmutzung wie Plastikmüll nennen und Maßnahmen zum Schutz der Meere vorschlagen.",
           "gradeBand": "5-6",
           "requires": [
@@ -902,6 +1277,10 @@
         },
         {
           "id": "tourismus-voraussetzungen",
+          "name": {
+            "de": "Voraussetzungen für Tourismus",
+            "en": "Requirements for tourism"
+          },
           "iCan": "Ich kann erklären, welche Natur und welche Einrichtungen einen Ort an der Küste oder im Gebirge für Urlauber anziehend machen.",
           "gradeBand": "5-6",
           "requires": [
@@ -911,6 +1290,10 @@
         },
         {
           "id": "tourismusformen",
+          "name": {
+            "de": "Formen des Tourismus",
+            "en": "Types of tourism"
+          },
           "iCan": "Ich kann Formen des Tourismus wie Erholungs-, Städte- und Ökotourismus unterscheiden.",
           "gradeBand": "5-6",
           "requires": [
@@ -920,6 +1303,10 @@
         },
         {
           "id": "tourismus-folgen",
+          "name": {
+            "de": "Folgen des Tourismus",
+            "en": "Impacts of tourism"
+          },
           "iCan": "Ich kann beschreiben, wie der Tourismus einen Ort wirtschaftlich, sozial und für die Umwelt verändert.",
           "gradeBand": "5-6",
           "requires": [
@@ -929,6 +1316,10 @@
         },
         {
           "id": "nachhaltigkeit",
+          "name": {
+            "de": "Nachhaltigkeit",
+            "en": "Sustainability"
+          },
           "iCan": "Ich kann an einem Beispiel erklären, was nachhaltig heißt: Umwelt, Wirtschaft und Gesellschaft werden zugleich berücksichtigt.",
           "gradeBand": "5-6",
           "requires": [],
@@ -936,6 +1327,10 @@
         },
         {
           "id": "sanfter-tourismus",
+          "name": {
+            "de": "Sanfter Tourismus",
+            "en": "Sustainable tourism"
+          },
           "iCan": "Ich kann Merkmale des sanften Tourismus nennen und begründen, warum er Natur und Menschen eines Ortes schont.",
           "gradeBand": "7-8",
           "requires": [
@@ -946,6 +1341,10 @@
         },
         {
           "id": "digitalisierung",
+          "name": {
+            "de": "Digitalisierung und Standorte",
+            "en": "Digitalisation and location"
+          },
           "iCan": "Ich kann erklären, wie Onlinehandel und schnelles Internet Standorte, Arbeitsplätze und Verkehr verändern.",
           "gradeBand": "7-8",
           "requires": [
@@ -964,6 +1363,10 @@
       "competencies": [
         {
           "id": "stadt-und-land",
+          "name": {
+            "de": "Stadt und Dorf",
+            "en": "Town and village"
+          },
           "iCan": "Ich kann Stadt und Dorf an Bebauung, Größe und Einrichtungen unterscheiden.",
           "gradeBand": "5-6",
           "requires": [],
@@ -971,6 +1374,10 @@
         },
         {
           "id": "daseinsgrundfunktionen",
+          "name": {
+            "de": "Daseinsgrundfunktionen",
+            "en": "Basic human functions"
+          },
           "iCan": "Ich kann an meinem Wohnort zeigen, wo Menschen wohnen, arbeiten, einkaufen, lernen, sich erholen und unterwegs sind.",
           "gradeBand": "5-6",
           "requires": [
@@ -980,6 +1387,10 @@
         },
         {
           "id": "stadtviertel",
+          "name": {
+            "de": "Stadtviertel",
+            "en": "Urban districts"
+          },
           "iCan": "Ich kann eine Stadt in Viertel wie Innenstadt (City), Wohngebiete, Gewerbegebiete und Naherholungsgebiete gliedern.",
           "gradeBand": "5-6",
           "requires": [
@@ -989,6 +1400,10 @@
         },
         {
           "id": "stadt-umland",
+          "name": {
+            "de": "Stadt und Umland",
+            "en": "City and surrounding area"
+          },
           "iCan": "Ich kann erklären, warum Menschen zwischen Stadt und Umland pendeln, etwa zur Arbeit, zum Einkaufen oder in der Freizeit.",
           "gradeBand": "5-6",
           "requires": [
@@ -998,6 +1413,10 @@
         },
         {
           "id": "stadtentwicklung",
+          "name": {
+            "de": "Stadtentwicklung",
+            "en": "Urban growth"
+          },
           "iCan": "Ich kann an einem Beispiel beschreiben, wie eine Stadt von ihrem alten Kern aus gewachsen ist.",
           "gradeBand": "5-6",
           "requires": [
@@ -1007,6 +1426,10 @@
         },
         {
           "id": "suburbanisierung",
+          "name": {
+            "de": "Suburbanisierung",
+            "en": "Suburbanisation"
+          },
           "iCan": "Ich kann erklären, warum Menschen und Betriebe aus der Stadt ins Umland ziehen und welche Folgen das hat.",
           "gradeBand": "5-6",
           "requires": [
@@ -1016,6 +1439,10 @@
         },
         {
           "id": "laendlicher-raum",
+          "name": {
+            "de": "Wandel im ländlichen Raum",
+            "en": "Change in rural areas"
+          },
           "iCan": "Ich kann beschreiben, wie sich Dörfer verändern, zum Beispiel durch Zuzug, Abwanderung oder weniger Bauernhöfe.",
           "gradeBand": "5-6",
           "requires": [
@@ -1026,6 +1453,10 @@
         },
         {
           "id": "verdichtungsraeume",
+          "name": {
+            "de": "Verdichtungsräume und ländliche Räume",
+            "en": "Urban and rural areas"
+          },
           "iCan": "Ich kann Verdichtungsräume und ländliche Räume in Deutschland und Europa auf einer Karte zeigen.",
           "gradeBand": "5-6",
           "requires": [
@@ -1036,6 +1467,10 @@
         },
         {
           "id": "metropolen",
+          "name": {
+            "de": "Metropolen",
+            "en": "Metropolises"
+          },
           "iCan": "Ich kann Merkmale einer Metropole nennen und Herausforderungen wie Verkehr und Wohnungsmangel beschreiben.",
           "gradeBand": "7-8",
           "requires": [
@@ -1045,6 +1480,10 @@
         },
         {
           "id": "nachhaltige-stadt",
+          "name": {
+            "de": "Nachhaltige Stadt",
+            "en": "Sustainable city"
+          },
           "iCan": "Ich kann Maßnahmen für eine nachhaltige Stadt beurteilen, zum Beispiel beim Verkehr, beim Wohnen und bei Grünflächen.",
           "gradeBand": "7-8",
           "requires": [
@@ -1055,6 +1494,10 @@
         },
         {
           "id": "verstaedterung",
+          "name": {
+            "de": "Verstädterung und Landflucht",
+            "en": "Urbanisation and rural exodus"
+          },
           "iCan": "Ich kann erklären, warum weltweit immer mehr Menschen in Städten leben (Verstädterung, Landflucht).",
           "gradeBand": "9-10",
           "requires": [
@@ -1064,6 +1507,10 @@
         },
         {
           "id": "megastaedte",
+          "name": {
+            "de": "Megastädte",
+            "en": "Megacities"
+          },
           "iCan": "Ich kann Merkmale und Probleme von Megastädten in Entwicklungs- und Schwellenländern beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -1074,6 +1521,10 @@
         },
         {
           "id": "marginalsiedlungen",
+          "name": {
+            "de": "Marginalsiedlungen und Segregation",
+            "en": "Informal settlements and segregation"
+          },
           "iCan": "Ich kann erklären, wie in großen Städten arme und reiche Viertel getrennt entstehen, etwa Marginalsiedlungen und bewachte Wohnanlagen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1092,6 +1543,10 @@
       "competencies": [
         {
           "id": "entwicklungsindikatoren",
+          "name": {
+            "de": "Entwicklungsindikatoren",
+            "en": "Development indicators"
+          },
           "iCan": "Ich kann den Entwicklungsstand eines Landes mit Merkmalen wie Einkommen, Lebenserwartung und Bildung beschreiben, auch mit dem HDI.",
           "gradeBand": "9-10",
           "requires": [
@@ -1101,6 +1556,10 @@
         },
         {
           "id": "laendergruppen",
+          "name": {
+            "de": "Entwicklungs-, Schwellen- und Industrieländer",
+            "en": "Developing, emerging and developed countries"
+          },
           "iCan": "Ich kann Entwicklungs-, Schwellen- und Industrieländer unterscheiden und Beispiele auf einer Karte zeigen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1110,6 +1569,10 @@
         },
         {
           "id": "begriffe-pruefen",
+          "name": {
+            "de": "Grenzen von Entwicklungsbegriffen",
+            "en": "Limits of development terms"
+          },
           "iCan": "Ich kann begründen, warum Begriffe wie „Entwicklungsland“ und einzelne Indikatoren die Wirklichkeit nur zum Teil beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -1119,6 +1582,10 @@
         },
         {
           "id": "ursachen-ungleicher-entwicklung",
+          "name": {
+            "de": "Ursachen ungleicher Entwicklung",
+            "en": "Causes of uneven development"
+          },
           "iCan": "Ich kann Ursachen dafür erklären, dass sich Länder unterschiedlich entwickeln, zum Beispiel Naturraum, Rohstoffe, Infrastruktur, Bildung und Handel.",
           "gradeBand": "9-10",
           "requires": [
@@ -1128,6 +1595,10 @@
         },
         {
           "id": "welthandel",
+          "name": {
+            "de": "Welthandel und fairer Handel",
+            "en": "World trade and fair trade"
+          },
           "iCan": "Ich kann erklären, warum der Tausch von Rohstoffen gegen Industriewaren für viele ärmere Länder ungünstig ist, und fairen Handel beurteilen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1137,6 +1608,10 @@
         },
         {
           "id": "entwicklungszusammenarbeit",
+          "name": {
+            "de": "Entwicklungszusammenarbeit",
+            "en": "Development cooperation"
+          },
           "iCan": "Ich kann ein Projekt der Entwicklungszusammenarbeit beschreiben und beurteilen, ob es den Menschen dauerhaft hilft.",
           "gradeBand": "9-10",
           "requires": [
@@ -1147,6 +1622,10 @@
         },
         {
           "id": "ferntourismus",
+          "name": {
+            "de": "Ferntourismus",
+            "en": "Long-haul tourism"
+          },
           "iCan": "Ich kann Chancen und Risiken des Ferntourismus für ein Entwicklungsland beurteilen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1157,6 +1636,10 @@
         },
         {
           "id": "disparitaeten-europa",
+          "name": {
+            "de": "Disparitäten in Europa",
+            "en": "Regional disparities in Europe"
+          },
           "iCan": "Ich kann wirtschaftlich starke und schwache Räume in Europa unterscheiden und Maßnahmen nennen, die die Unterschiede verringern.",
           "gradeBand": "7-8",
           "requires": [
@@ -1167,6 +1650,10 @@
         },
         {
           "id": "bevoelkerungsverteilung",
+          "name": {
+            "de": "Bevölkerungsverteilung",
+            "en": "Population distribution"
+          },
           "iCan": "Ich kann die Verteilung der Bevölkerung auf der Erde beschreiben und erklären, warum manche Räume dicht und andere dünn besiedelt sind.",
           "gradeBand": "7-8",
           "requires": [
@@ -1177,6 +1664,10 @@
         },
         {
           "id": "bevoelkerungswachstum",
+          "name": {
+            "de": "Bevölkerungswachstum",
+            "en": "Population growth"
+          },
           "iCan": "Ich kann beschreiben, wie die Weltbevölkerung wächst, und das Wachstum mit Geburtenrate und Sterberate erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -1186,6 +1677,10 @@
         },
         {
           "id": "altersstruktur",
+          "name": {
+            "de": "Bevölkerungspyramide",
+            "en": "Population pyramid"
+          },
           "iCan": "Ich kann eine Bevölkerungspyramide lesen und daraus Schlüsse für die Zukunft eines Landes ziehen.",
           "gradeBand": "7-8",
           "requires": [
@@ -1195,6 +1690,10 @@
         },
         {
           "id": "tragfaehigkeit",
+          "name": {
+            "de": "Tragfähigkeit",
+            "en": "Carrying capacity"
+          },
           "iCan": "Ich kann erklären, was Tragfähigkeit eines Raumes bedeutet und warum Hunger oft andere Ursachen hat als zu wenig Nahrung.",
           "gradeBand": "7-8",
           "requires": [
@@ -1205,6 +1704,10 @@
         },
         {
           "id": "migration-ursachen",
+          "name": {
+            "de": "Ursachen von Migration",
+            "en": "Causes of migration"
+          },
           "iCan": "Ich kann Ursachen von Migration mit Push- und Pull-Faktoren erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -1214,6 +1717,10 @@
         },
         {
           "id": "migration-folgen",
+          "name": {
+            "de": "Folgen von Migration",
+            "en": "Effects of migration"
+          },
           "iCan": "Ich kann Folgen von Migration für die Herkunftsgebiete und die Zielgebiete beschreiben.",
           "gradeBand": "7-8",
           "requires": [
@@ -1223,6 +1730,10 @@
         },
         {
           "id": "globalisierung",
+          "name": {
+            "de": "Globalisierung",
+            "en": "Globalisation"
+          },
           "iCan": "Ich kann an Beispielen aus meinem Alltag erklären, was Globalisierung bedeutet.",
           "gradeBand": "9-10",
           "requires": [
@@ -1232,6 +1743,10 @@
         },
         {
           "id": "weltweite-produktion",
+          "name": {
+            "de": "Weltweite Produktion",
+            "en": "Global production"
+          },
           "iCan": "Ich kann am Beispiel eines Produkts und eines weltweit tätigen Konzerns zeigen, wie die Herstellung auf viele Länder verteilt ist.",
           "gradeBand": "9-10",
           "requires": [
