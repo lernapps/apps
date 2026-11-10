@@ -139,7 +139,9 @@
           },
           "iCan": "Ich kann Aufforderungen und Verbote mit dem Imperativ formulieren (Open the door. Don’t run.).",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "classroom-phrases"
+          ],
           "practisedBy": []
         },
         {
@@ -1516,7 +1518,9 @@
           },
           "iCan": "Ich kann über Erfindungen und technischen Fortschritt sprechen.",
           "gradeBand": "7-8",
-          "requires": [],
+          "requires": [
+            "passiv"
+          ],
           "practisedBy": []
         },
         {
@@ -1539,7 +1543,8 @@
           "iCan": "Ich kann über Konsum, Werbung und meine Rechte als Verbraucherin oder Verbraucher sprechen.",
           "gradeBand": "9-10",
           "requires": [
-            "kleidung-einkaufen"
+            "kleidung-einkaufen",
+            "umwelt"
           ],
           "practisedBy": []
         },
@@ -1627,7 +1632,9 @@
           },
           "iCan": "Ich kann häufige phrasal verbs wie give up, look after und find out verstehen und verwenden.",
           "gradeBand": "9-10",
-          "requires": [],
+          "requires": [
+            "praepositionen-ort"
+          ],
           "practisedBy": []
         },
         {
@@ -1639,6 +1646,20 @@
           "iCan": "Ich kann typische false friends wie become, chef und sensible richtig verwenden.",
           "gradeBand": "9-10",
           "requires": [],
+          "practisedBy": []
+        },
+        {
+          "id": "sprachvergleich",
+          "name": {
+            "de": "Sprachvergleich Deutsch–Englisch",
+            "en": "Comparing German and English"
+          },
+          "iCan": "Ich kann Englisch und Deutsch vergleichen und typische Unterschiede in Wortbildung, Wortstellung und Ausdruck erklären.",
+          "gradeBand": "9-10",
+          "requires": [
+            "phrasal-verbs",
+            "false-friends"
+          ],
           "practisedBy": []
         },
         {
