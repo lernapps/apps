@@ -8,6 +8,9 @@
     "title": "KMK, Weiterentwickelte Bildungsstandards in den Naturwissenschaften für das Fach Physik (MSA), Beschluss vom 16.12.2004 i.d.F. vom 13.06.2024",
     "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2024/2024_06_13-WeBiS_Physik_MSA.pdf"
   },
+  "explainerFocus": "strand",
+  "status": "draft",
+  "reviews": [],
   "strands": [
     {
       "id": "energie",
@@ -18,6 +21,10 @@
       "competencies": [
         {
           "id": "energieformen",
+          "name": {
+            "de": "Energieformen",
+            "en": "Forms of energy"
+          },
           "iCan": "Ich kann Bewegungsenergie, Lageenergie, elektrische Energie, thermische Energie und Strahlungsenergie unterscheiden und Beispiele nennen.",
           "gradeBand": "9-10",
           "requires": [],
@@ -25,6 +32,10 @@
         },
         {
           "id": "energie-und-joule",
+          "name": {
+            "de": "Energie und Joule",
+            "en": "Energy and the joule"
+          },
           "iCan": "Ich kann Energie als physikalische Größe mit der Einheit Joule beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -34,6 +45,10 @@
         },
         {
           "id": "lageenergie-bewegungsenergie",
+          "name": {
+            "de": "Lage- und Bewegungsenergie",
+            "en": "Potential and kinetic energy"
+          },
           "iCan": "Ich kann erklären, wovon Lageenergie und Bewegungsenergie abhängen.",
           "gradeBand": "9-10",
           "requires": [
@@ -43,6 +58,10 @@
         },
         {
           "id": "lageenergie-berechnen",
+          "name": {
+            "de": "Lageenergie berechnen",
+            "en": "Calculating potential energy"
+          },
           "iCan": "Ich kann die Lageenergie eines Körpers aus Masse und Höhe berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -54,6 +73,10 @@
         },
         {
           "id": "bewegungsenergie-berechnen",
+          "name": {
+            "de": "Bewegungsenergie berechnen",
+            "en": "Calculating kinetic energy"
+          },
           "iCan": "Ich kann die Bewegungsenergie eines Körpers aus Masse und Geschwindigkeit berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -65,6 +88,10 @@
         },
         {
           "id": "thermische-energie",
+          "name": {
+            "de": "Thermische Energie und Temperatur",
+            "en": "Thermal energy and temperature"
+          },
           "iCan": "Ich kann thermische Energie und Temperatur voneinander unterscheiden.",
           "gradeBand": "7-8",
           "requires": [
@@ -74,6 +101,10 @@
         },
         {
           "id": "waermetransport",
+          "name": {
+            "de": "Wärmetransport",
+            "en": "Heat transfer"
+          },
           "iCan": "Ich kann Wärmeleitung, Wärmemitführung (Konvektion) und Wärmestrahlung unterscheiden und Beispiele aus dem Alltag zuordnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -84,6 +115,10 @@
         },
         {
           "id": "energieumwandlung",
+          "name": {
+            "de": "Energieumwandlung",
+            "en": "Energy conversion"
+          },
           "iCan": "Ich kann Energieumwandlungen in Geräten und Vorgängen mit einem Energieflussdiagramm beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -93,6 +128,10 @@
         },
         {
           "id": "energieuebertragung",
+          "name": {
+            "de": "Energieübertragung",
+            "en": "Energy transfer"
+          },
           "iCan": "Ich kann beschreiben, wie Energie durch Arbeit, Wärme, Strahlung oder elektrischen Strom von einem Körper auf einen anderen übertragen wird.",
           "gradeBand": "9-10",
           "requires": [
@@ -102,6 +141,10 @@
         },
         {
           "id": "energieerhaltung",
+          "name": {
+            "de": "Energieerhaltung",
+            "en": "Conservation of energy"
+          },
           "iCan": "Ich kann mit dem Energieerhaltungssatz erklären, dass Energie nicht verloren geht, sondern nur umgewandelt oder übertragen wird.",
           "gradeBand": "9-10",
           "requires": [
@@ -112,6 +155,10 @@
         },
         {
           "id": "energieentwertung",
+          "name": {
+            "de": "Energieentwertung",
+            "en": "Energy dissipation"
+          },
           "iCan": "Ich kann erklären, warum bei Energieumwandlungen ein Teil der Energie als nicht nutzbare Wärme entwertet wird.",
           "gradeBand": "9-10",
           "requires": [
@@ -122,6 +169,10 @@
         },
         {
           "id": "energiebilanz",
+          "name": {
+            "de": "Energiebilanz",
+            "en": "Energy balance"
+          },
           "iCan": "Ich kann die Energiebilanz eines Vorgangs berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -134,6 +185,10 @@
         },
         {
           "id": "leistung",
+          "name": {
+            "de": "Leistung",
+            "en": "Power"
+          },
           "iCan": "Ich kann Leistung als Energie pro Zeit erklären und mit der Einheit Watt angeben.",
           "gradeBand": "9-10",
           "requires": [
@@ -143,6 +198,10 @@
         },
         {
           "id": "leistung-berechnen",
+          "name": {
+            "de": "Leistung berechnen",
+            "en": "Calculating power"
+          },
           "iCan": "Ich kann Leistung, Energie oder Zeit aus den anderen beiden Größen berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -152,6 +211,10 @@
         },
         {
           "id": "wirkungsgrad",
+          "name": {
+            "de": "Wirkungsgrad",
+            "en": "Efficiency"
+          },
           "iCan": "Ich kann den Wirkungsgrad eines Geräts berechnen und bewerten.",
           "gradeBand": "9-10",
           "requires": [
@@ -162,6 +225,10 @@
         },
         {
           "id": "energiespeicherung",
+          "name": {
+            "de": "Energiespeicherung",
+            "en": "Energy storage"
+          },
           "iCan": "Ich kann erklären, wie Energie gespeichert werden kann, und Speicher wie Pumpspeicher oder Akku vergleichen.",
           "gradeBand": "9-10",
           "requires": [
@@ -171,6 +238,10 @@
         },
         {
           "id": "energiequellen",
+          "name": {
+            "de": "Energiequellen",
+            "en": "Energy sources"
+          },
           "iCan": "Ich kann regenerative und erschöpfbare Energiequellen unterscheiden und Beispiele nennen.",
           "gradeBand": "9-10",
           "requires": [
@@ -180,6 +251,10 @@
         },
         {
           "id": "kraftwerksarten",
+          "name": {
+            "de": "Kraftwerksarten",
+            "en": "Types of power station"
+          },
           "iCan": "Ich kann die Energieumwandlungskette verschiedener Kraftwerksarten beschreiben und sie vergleichen.",
           "gradeBand": "9-10",
           "requires": [
@@ -190,6 +265,10 @@
         },
         {
           "id": "nachhaltige-energieversorgung",
+          "name": {
+            "de": "Nachhaltige Energieversorgung",
+            "en": "Sustainable energy supply"
+          },
           "iCan": "Ich kann Möglichkeiten einer nachhaltigen Energieversorgung vergleichen und bewerten.",
           "gradeBand": "9-10",
           "requires": [
@@ -211,6 +290,10 @@
       "competencies": [
         {
           "id": "einfacher-stromkreis",
+          "name": {
+            "de": "Einfacher Stromkreis",
+            "en": "Simple circuit"
+          },
           "iCan": "Ich kann einen einfachen Stromkreis aus Batterie, Lampe und Kabeln aufbauen und erklären, warum er geschlossen sein muss.",
           "gradeBand": "5-6",
           "requires": [],
@@ -226,6 +309,10 @@
         },
         {
           "id": "leiter-nichtleiter",
+          "name": {
+            "de": "Leiter und Nichtleiter",
+            "en": "Conductors and insulators"
+          },
           "iCan": "Ich kann Leiter und Nichtleiter unterscheiden und Beispiele nennen.",
           "gradeBand": "5-6",
           "requires": [
@@ -243,6 +330,10 @@
         },
         {
           "id": "spannungsquellen",
+          "name": {
+            "de": "Spannungsquellen",
+            "en": "Voltage sources"
+          },
           "iCan": "Ich kann Spannungsquellen wie Batterie, Netzgerät und Steckdose nennen und sagen, wofür sie sich eignen.",
           "gradeBand": "5-6",
           "requires": [
@@ -252,6 +343,10 @@
         },
         {
           "id": "schalter",
+          "name": {
+            "de": "Schalter",
+            "en": "Switches"
+          },
           "iCan": "Ich kann erklären, wie ein Schalter einen Stromkreis öffnet und schließt.",
           "gradeBand": "5-6",
           "requires": [
@@ -269,6 +364,10 @@
         },
         {
           "id": "schaltzeichen",
+          "name": {
+            "de": "Schaltzeichen und Schaltplan",
+            "en": "Circuit symbols and diagrams"
+          },
           "iCan": "Ich kann einen Stromkreis als Schaltplan mit Schaltzeichen zeichnen und einen Schaltplan lesen.",
           "gradeBand": "5-6",
           "requires": [
@@ -286,6 +385,10 @@
         },
         {
           "id": "reihenschaltung",
+          "name": {
+            "de": "Reihenschaltung",
+            "en": "Series circuit"
+          },
           "iCan": "Ich kann eine Reihenschaltung aufbauen und erklären, was passiert, wenn ein Bauteil ausfällt.",
           "gradeBand": "5-6",
           "requires": [
@@ -303,6 +406,10 @@
         },
         {
           "id": "parallelschaltung",
+          "name": {
+            "de": "Parallelschaltung",
+            "en": "Parallel circuit"
+          },
           "iCan": "Ich kann eine Parallelschaltung aufbauen und erklären, was passiert, wenn ein Zweig ausfällt.",
           "gradeBand": "5-6",
           "requires": [
@@ -320,6 +427,10 @@
         },
         {
           "id": "waermewirkung-strom",
+          "name": {
+            "de": "Wärmewirkung des Stroms",
+            "en": "Heating effect of current"
+          },
           "iCan": "Ich kann die Wärmewirkung des elektrischen Stroms an Beispielen erklären.",
           "gradeBand": "5-6",
           "requires": [
@@ -337,6 +448,10 @@
         },
         {
           "id": "lichtwirkung-strom",
+          "name": {
+            "de": "Lichtwirkung des Stroms",
+            "en": "Lighting effect of current"
+          },
           "iCan": "Ich kann die Lichtwirkung des elektrischen Stroms an Beispielen erklären.",
           "gradeBand": "5-6",
           "requires": [
@@ -354,6 +469,10 @@
         },
         {
           "id": "magnetwirkung-strom",
+          "name": {
+            "de": "Magnetwirkung des Stroms",
+            "en": "Magnetic effect of current"
+          },
           "iCan": "Ich kann die magnetische Wirkung des elektrischen Stroms an einem Elektromagneten erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -372,6 +491,10 @@
         },
         {
           "id": "gefahren-des-stroms",
+          "name": {
+            "de": "Gefahren des Stroms",
+            "en": "Dangers of electricity"
+          },
           "iCan": "Ich kann erklären, warum Strom aus der Steckdose gefährlich ist und Strom aus einer Batterie nicht.",
           "gradeBand": "5-6",
           "requires": [
@@ -389,6 +512,10 @@
         },
         {
           "id": "sicher-mit-strom-umgehen",
+          "name": {
+            "de": "Sicherer Umgang mit Strom",
+            "en": "Electrical safety"
+          },
           "iCan": "Ich kann Regeln für den sicheren Umgang mit Strom nennen und anwenden.",
           "gradeBand": "5-6",
           "requires": [
@@ -406,6 +533,10 @@
         },
         {
           "id": "elektrische-ladung",
+          "name": {
+            "de": "Elektrische Ladung",
+            "en": "Electric charge"
+          },
           "iCan": "Ich kann elektrische Ladung beschreiben und erklären, wie sich gleichartige und verschiedenartige Ladungen verhalten.",
           "gradeBand": "9-10",
           "requires": [
@@ -415,6 +546,10 @@
         },
         {
           "id": "elektrostatische-phaenomene",
+          "name": {
+            "de": "Elektrostatische Phänomene",
+            "en": "Electrostatic phenomena"
+          },
           "iCan": "Ich kann elektrostatische Phänomene aus dem Alltag wie Reibungselektrizität oder Blitze mit Ladungen erklären.",
           "gradeBand": "9-10",
           "requires": [
@@ -424,6 +559,10 @@
         },
         {
           "id": "stromstaerke",
+          "name": {
+            "de": "Stromstärke",
+            "en": "Electric current"
+          },
           "iCan": "Ich kann die Stromstärke als Maß dafür erklären, wie viel Strom fließt, und sie in Ampere angeben.",
           "gradeBand": "7-8",
           "requires": [
@@ -441,6 +580,10 @@
         },
         {
           "id": "strom-als-ladungstransport",
+          "name": {
+            "de": "Strom als Ladungstransport",
+            "en": "Current as flow of charge"
+          },
           "iCan": "Ich kann den elektrischen Strom als Transport von Ladungen mit einem Elektronenmodell erklären.",
           "gradeBand": "9-10",
           "requires": [
@@ -451,6 +594,10 @@
         },
         {
           "id": "stromstaerke-messen",
+          "name": {
+            "de": "Stromstärke messen",
+            "en": "Measuring current"
+          },
           "iCan": "Ich kann die Stromstärke mit einem Amperemeter richtig messen.",
           "gradeBand": "7-8",
           "requires": [
@@ -469,6 +616,10 @@
         },
         {
           "id": "spannung",
+          "name": {
+            "de": "Spannung",
+            "en": "Voltage"
+          },
           "iCan": "Ich kann die Spannung als Antrieb des Stroms erklären und sie in Volt angeben.",
           "gradeBand": "7-8",
           "requires": [
@@ -486,6 +637,10 @@
         },
         {
           "id": "spannung-messen",
+          "name": {
+            "de": "Spannung messen",
+            "en": "Measuring voltage"
+          },
           "iCan": "Ich kann die Spannung mit einem Voltmeter richtig messen.",
           "gradeBand": "7-8",
           "requires": [
@@ -504,6 +659,10 @@
         },
         {
           "id": "widerstand",
+          "name": {
+            "de": "Elektrischer Widerstand",
+            "en": "Electrical resistance"
+          },
           "iCan": "Ich kann den elektrischen Widerstand als Maß dafür erklären, wie stark ein Bauteil den Strom hemmt, und ihn in Ohm angeben.",
           "gradeBand": "9-10",
           "requires": [
@@ -523,6 +682,10 @@
         },
         {
           "id": "widerstand-einflussgroessen",
+          "name": {
+            "de": "Widerstand eines Drahtes",
+            "en": "Resistance of a wire"
+          },
           "iCan": "Ich kann erklären, wie der Widerstand eines Drahtes von Material, Länge und Dicke abhängt.",
           "gradeBand": "9-10",
           "requires": [
@@ -540,6 +703,10 @@
         },
         {
           "id": "ohmsches-gesetz",
+          "name": {
+            "de": "Ohmsches Gesetz",
+            "en": "Ohm’s law"
+          },
           "iCan": "Ich kann den Zusammenhang zwischen Spannung und Stromstärke in einem Diagramm darstellen und beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -559,6 +726,10 @@
         },
         {
           "id": "ohmsches-gesetz-rechnen",
+          "name": {
+            "de": "Rechnen mit dem ohmschen Gesetz",
+            "en": "Calculations with Ohm’s law"
+          },
           "iCan": "Ich kann mit dem ohmschen Gesetz R = U / I eine fehlende Größe berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -576,6 +747,10 @@
         },
         {
           "id": "reihenschaltung-groessen",
+          "name": {
+            "de": "Größen in der Reihenschaltung",
+            "en": "Current and voltage in series circuits"
+          },
           "iCan": "Ich kann in einer Reihenschaltung Stromstärke und Spannungen vorhersagen, berechnen und messen.",
           "gradeBand": "9-10",
           "requires": [
@@ -594,6 +769,10 @@
         },
         {
           "id": "parallelschaltung-groessen",
+          "name": {
+            "de": "Größen in der Parallelschaltung",
+            "en": "Current and voltage in parallel circuits"
+          },
           "iCan": "Ich kann in einer Parallelschaltung Stromstärken und Spannung vorhersagen, berechnen und messen.",
           "gradeBand": "9-10",
           "requires": [
@@ -612,6 +791,10 @@
         },
         {
           "id": "gesamtwiderstand",
+          "name": {
+            "de": "Gesamtwiderstand",
+            "en": "Total resistance"
+          },
           "iCan": "Ich kann den Gesamtwiderstand von Reihen- und Parallelschaltungen berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -622,6 +805,10 @@
         },
         {
           "id": "elektrische-leistung",
+          "name": {
+            "de": "Elektrische Leistung",
+            "en": "Electrical power"
+          },
           "iCan": "Ich kann die elektrische Leistung aus Spannung und Stromstärke berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -632,6 +819,10 @@
         },
         {
           "id": "elektrische-energie",
+          "name": {
+            "de": "Elektrische Energie",
+            "en": "Electrical energy"
+          },
           "iCan": "Ich kann die elektrische Energie eines Geräts aus Leistung und Zeit berechnen und in Kilowattstunden angeben.",
           "gradeBand": "9-10",
           "requires": [
@@ -641,6 +832,10 @@
         },
         {
           "id": "hausinstallation-sicherungen",
+          "name": {
+            "de": "Sicherungen im Haushalt",
+            "en": "Fuses in the home"
+          },
           "iCan": "Ich kann erklären, wie Sicherungen und Kurzschlussschutz in der Hausinstallation vor Überlastung schützen.",
           "gradeBand": "9-10",
           "requires": [
@@ -651,6 +846,10 @@
         },
         {
           "id": "permanentmagnete",
+          "name": {
+            "de": "Permanentmagnete",
+            "en": "Permanent magnets"
+          },
           "iCan": "Ich kann Eigenschaften von Permanentmagneten beschreiben: Pole, anziehende und abstoßende Kräfte, magnetisierbare Stoffe.",
           "gradeBand": "5-6",
           "requires": [],
@@ -658,6 +857,10 @@
         },
         {
           "id": "elementarmagnete-modell",
+          "name": {
+            "de": "Modell der Elementarmagnete",
+            "en": "Domain model of magnetism"
+          },
           "iCan": "Ich kann mit dem Modell der Elementarmagnete erklären, wie sich Stoffe magnetisieren lassen.",
           "gradeBand": "5-6",
           "requires": [
@@ -667,6 +870,10 @@
         },
         {
           "id": "magnetfeld-feldlinien",
+          "name": {
+            "de": "Magnetfeld und Feldlinien",
+            "en": "Magnetic field lines"
+          },
           "iCan": "Ich kann das Magnetfeld eines Stabmagneten mit Feldlinien zeichnen und lesen.",
           "gradeBand": "5-6",
           "requires": [
@@ -676,6 +883,10 @@
         },
         {
           "id": "erdmagnetfeld-kompass",
+          "name": {
+            "de": "Erdmagnetfeld und Kompass",
+            "en": "Earth’s magnetic field and compass"
+          },
           "iCan": "Ich kann erklären, wie ein Kompass mit dem Magnetfeld der Erde die Himmelsrichtung anzeigt.",
           "gradeBand": "5-6",
           "requires": [
@@ -685,6 +896,10 @@
         },
         {
           "id": "magnetfeld-spule",
+          "name": {
+            "de": "Magnetfeld einer Spule",
+            "en": "Magnetic field of a coil"
+          },
           "iCan": "Ich kann das Magnetfeld eines stromdurchflossenen Leiters und einer Spule mit Feldlinien darstellen.",
           "gradeBand": "9-10",
           "requires": [
@@ -695,6 +910,10 @@
         },
         {
           "id": "elektromotor",
+          "name": {
+            "de": "Elektromotor",
+            "en": "Electric motor"
+          },
           "iCan": "Ich kann erklären, wie ein Elektromotor mit der Kraft auf einen stromdurchflossenen Leiter im Magnetfeld arbeitet.",
           "gradeBand": "9-10",
           "requires": [
@@ -704,6 +923,10 @@
         },
         {
           "id": "elektromagnetische-induktion",
+          "name": {
+            "de": "Elektromagnetische Induktion",
+            "en": "Electromagnetic induction"
+          },
           "iCan": "Ich kann erklären, wie sich durch ein sich änderndes Magnetfeld in einer Spule eine Spannung erzeugen lässt.",
           "gradeBand": "9-10",
           "requires": [
@@ -714,6 +937,10 @@
         },
         {
           "id": "generator",
+          "name": {
+            "de": "Generator",
+            "en": "Generator"
+          },
           "iCan": "Ich kann erklären, wie ein Generator mit Induktion Wechselspannung erzeugt.",
           "gradeBand": "9-10",
           "requires": [
@@ -723,6 +950,10 @@
         },
         {
           "id": "transformator",
+          "name": {
+            "de": "Transformator",
+            "en": "Transformer"
+          },
           "iCan": "Ich kann erklären, wie ein Transformator Spannungen verändert, und die Spannungen berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -732,6 +963,10 @@
         },
         {
           "id": "stromversorgung",
+          "name": {
+            "de": "Stromversorgung",
+            "en": "Electricity supply"
+          },
           "iCan": "Ich kann den Weg des Stroms vom Kraftwerk bis zur Steckdose beschreiben und erklären, warum Strom mit hoher Spannung übertragen wird.",
           "gradeBand": "9-10",
           "requires": [
@@ -752,6 +987,10 @@
       "competencies": [
         {
           "id": "strecke-und-zeit-messen",
+          "name": {
+            "de": "Strecke und Zeit messen",
+            "en": "Measuring distance and time"
+          },
           "iCan": "Ich kann Strecken und Zeiten messen und in passenden Einheiten angeben.",
           "gradeBand": "5-6",
           "requires": [],
@@ -759,6 +998,10 @@
         },
         {
           "id": "geschwindigkeit",
+          "name": {
+            "de": "Geschwindigkeit",
+            "en": "Speed"
+          },
           "iCan": "Ich kann Geschwindigkeit als Strecke pro Zeit erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -768,6 +1011,10 @@
         },
         {
           "id": "geschwindigkeit-berechnen",
+          "name": {
+            "de": "Geschwindigkeit berechnen",
+            "en": "Calculating speed"
+          },
           "iCan": "Ich kann Geschwindigkeit, Strecke oder Zeit aus den anderen beiden Größen berechnen und Einheiten umrechnen.",
           "gradeBand": "7-8",
           "requires": [
@@ -777,6 +1024,10 @@
         },
         {
           "id": "geschwindigkeitsaenderung",
+          "name": {
+            "de": "Geschwindigkeitsänderung",
+            "en": "Changes in motion"
+          },
           "iCan": "Ich kann beschreiben, wann sich eine Bewegung beschleunigt, verlangsamt oder die Richtung ändert.",
           "gradeBand": "9-10",
           "requires": [
@@ -786,6 +1037,10 @@
         },
         {
           "id": "bewegungsdiagramme",
+          "name": {
+            "de": "Bewegungsdiagramme",
+            "en": "Motion graphs"
+          },
           "iCan": "Ich kann eine Bewegung in einem Weg-Zeit-Diagramm und einem Geschwindigkeit-Zeit-Diagramm darstellen und ablesen.",
           "gradeBand": "9-10",
           "requires": [
@@ -795,6 +1050,10 @@
         },
         {
           "id": "kraft-wirkungen",
+          "name": {
+            "de": "Wirkungen von Kräften",
+            "en": "Effects of forces"
+          },
           "iCan": "Ich kann erklären, dass eine Kraft einen Körper verformen oder seine Bewegung ändern kann.",
           "gradeBand": "9-10",
           "requires": [],
@@ -802,6 +1061,10 @@
         },
         {
           "id": "kraft-darstellen",
+          "name": {
+            "de": "Kraft darstellen und messen",
+            "en": "Representing and measuring forces"
+          },
           "iCan": "Ich kann eine Kraft mit Betrag und Richtung als Pfeil darstellen und mit einem Kraftmesser messen.",
           "gradeBand": "9-10",
           "requires": [
@@ -811,6 +1074,10 @@
         },
         {
           "id": "wechselwirkungsprinzip",
+          "name": {
+            "de": "Wechselwirkungsprinzip",
+            "en": "Newton’s third law"
+          },
           "iCan": "Ich kann Kraft und Gegenkraft zwischen zwei Körpern erkennen und an Beispielen beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -820,6 +1087,10 @@
         },
         {
           "id": "reibung",
+          "name": {
+            "de": "Reibung",
+            "en": "Friction"
+          },
           "iCan": "Ich kann Reibungskräfte erkennen und erklären, wie sie Bewegungen bremsen.",
           "gradeBand": "9-10",
           "requires": [
@@ -829,6 +1100,10 @@
         },
         {
           "id": "kraefte-zusammensetzen",
+          "name": {
+            "de": "Kräfte zusammensetzen",
+            "en": "Combining forces"
+          },
           "iCan": "Ich kann Kräfte auf einen Körper zeichnerisch zusammensetzen und das Kräftegleichgewicht erkennen.",
           "gradeBand": "9-10",
           "requires": [
@@ -838,6 +1113,10 @@
         },
         {
           "id": "kraft-aendert-geschwindigkeit",
+          "name": {
+            "de": "Kraft und Geschwindigkeitsänderung",
+            "en": "Force and change in velocity"
+          },
           "iCan": "Ich kann erklären, wie eine Kraft den Betrag und die Richtung der Geschwindigkeit ändert.",
           "gradeBand": "9-10",
           "requires": [
@@ -848,6 +1127,10 @@
         },
         {
           "id": "traegheitsprinzip",
+          "name": {
+            "de": "Trägheitsprinzip",
+            "en": "Law of inertia"
+          },
           "iCan": "Ich kann mit dem Trägheitsprinzip erklären, wie sich ein Körper bewegt, wenn keine Kraft oder ein Kräftegleichgewicht auf ihn wirkt.",
           "gradeBand": "9-10",
           "requires": [
@@ -858,6 +1141,10 @@
         },
         {
           "id": "masse",
+          "name": {
+            "de": "Masse",
+            "en": "Mass"
+          },
           "iCan": "Ich kann Masse als Eigenschaft eines Körpers erklären und mit einer Waage messen.",
           "gradeBand": "5-6",
           "requires": [],
@@ -865,6 +1152,10 @@
         },
         {
           "id": "gewichtskraft",
+          "name": {
+            "de": "Masse und Gewichtskraft",
+            "en": "Mass and weight"
+          },
           "iCan": "Ich kann Masse und Gewichtskraft unterscheiden und erklären, dass die Gewichtskraft vom Ort abhängt.",
           "gradeBand": "9-10",
           "requires": [
@@ -875,6 +1166,10 @@
         },
         {
           "id": "gewichtskraft-berechnen",
+          "name": {
+            "de": "Gewichtskraft berechnen",
+            "en": "Calculating weight"
+          },
           "iCan": "Ich kann die Gewichtskraft aus der Masse berechnen.",
           "gradeBand": "9-10",
           "requires": [
@@ -893,6 +1188,10 @@
       "competencies": [
         {
           "id": "temperatur",
+          "name": {
+            "de": "Temperatur messen",
+            "en": "Measuring temperature"
+          },
           "iCan": "Ich kann Temperaturen mit einem Thermometer messen und in Grad Celsius angeben.",
           "gradeBand": "5-6",
           "requires": [],
@@ -900,6 +1199,10 @@
         },
         {
           "id": "geradlinige-lichtausbreitung",
+          "name": {
+            "de": "Geradlinige Lichtausbreitung",
+            "en": "Rectilinear propagation of light"
+          },
           "iCan": "Ich kann erklären, dass sich Licht geradlinig ausbreitet, und Lichtstrahlen zeichnen.",
           "gradeBand": "5-6",
           "requires": [],
@@ -907,6 +1210,10 @@
         },
         {
           "id": "lichtquellen-und-sehen",
+          "name": {
+            "de": "Lichtquellen und Sehen",
+            "en": "Light sources and seeing"
+          },
           "iCan": "Ich kann Lichtquellen und beleuchtete Körper unterscheiden und erklären, wie wir etwas sehen.",
           "gradeBand": "5-6",
           "requires": [
@@ -916,6 +1223,10 @@
         },
         {
           "id": "schatten",
+          "name": {
+            "de": "Schatten",
+            "en": "Shadows"
+          },
           "iCan": "Ich kann Schatten mit der geradlinigen Ausbreitung des Lichts erklären und ihre Form vorhersagen.",
           "gradeBand": "5-6",
           "requires": [
@@ -925,6 +1236,10 @@
         },
         {
           "id": "mondphasen",
+          "name": {
+            "de": "Mondphasen",
+            "en": "Phases of the Moon"
+          },
           "iCan": "Ich kann die Mondphasen mit der Stellung von Sonne, Erde und Mond erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -934,6 +1249,10 @@
         },
         {
           "id": "finsternisse",
+          "name": {
+            "de": "Sonnen- und Mondfinsternis",
+            "en": "Solar and lunar eclipses"
+          },
           "iCan": "Ich kann Sonnenfinsternis und Mondfinsternis erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -943,6 +1262,10 @@
         },
         {
           "id": "wahrnehmungsgrenzen",
+          "name": {
+            "de": "Grenzen der Wahrnehmung",
+            "en": "Limits of perception"
+          },
           "iCan": "Ich kann erklären, welche Strahlung Lebewesen wahrnehmen und welche nur Sensoren erfassen, zum Beispiel Wärmestrahlung.",
           "gradeBand": "7-8",
           "requires": [
@@ -952,6 +1275,10 @@
         },
         {
           "id": "streuung",
+          "name": {
+            "de": "Streuung",
+            "en": "Scattering"
+          },
           "iCan": "Ich kann erklären, wie Licht an rauen Flächen und an Teilchen gestreut wird.",
           "gradeBand": "5-6",
           "requires": [
@@ -961,6 +1288,10 @@
         },
         {
           "id": "absorption-emission-transmission",
+          "name": {
+            "de": "Absorption, Emission, Transmission",
+            "en": "Absorption, emission, transmission"
+          },
           "iCan": "Ich kann Absorption, Emission und Transmission von Strahlung unterscheiden und an Beispielen erklären.",
           "gradeBand": "7-8",
           "requires": [
@@ -971,6 +1302,10 @@
         },
         {
           "id": "reflexion",
+          "name": {
+            "de": "Reflexion",
+            "en": "Reflection"
+          },
           "iCan": "Ich kann das Reflexionsgesetz anwenden und den Weg des Lichts an einem Spiegel zeichnen.",
           "gradeBand": "7-8",
           "requires": [
@@ -980,6 +1315,10 @@
         },
         {
           "id": "brechung",
+          "name": {
+            "de": "Brechung",
+            "en": "Refraction"
+          },
           "iCan": "Ich kann erklären und zeichnen, wie Licht beim Übergang in einen anderen durchsichtigen Stoff gebrochen wird.",
           "gradeBand": "7-8",
           "requires": [
@@ -989,6 +1328,10 @@
         },
         {
           "id": "totalreflexion-lichtleiter",
+          "name": {
+            "de": "Totalreflexion und Lichtleiter",
+            "en": "Total internal reflection and optical fibres"
+          },
           "iCan": "Ich kann erklären, wann Licht totalreflektiert wird und wie ein Lichtleiter funktioniert.",
           "gradeBand": "7-8",
           "requires": [
@@ -999,6 +1342,10 @@
         },
         {
           "id": "sammellinse-abbildung",
+          "name": {
+            "de": "Abbildung mit Sammellinse",
+            "en": "Image formation by a converging lens"
+          },
           "iCan": "Ich kann die Bildentstehung bei einer Sammellinse mit Strahlen konstruieren.",
           "gradeBand": "7-8",
           "requires": [
@@ -1008,6 +1355,10 @@
         },
         {
           "id": "auge-und-sehhilfen",
+          "name": {
+            "de": "Auge und Sehhilfen",
+            "en": "The eye and vision aids"
+          },
           "iCan": "Ich kann erklären, wie das Auge ein Bild erzeugt und wie Brillen Fehlsichtigkeit ausgleichen.",
           "gradeBand": "7-8",
           "requires": [
@@ -1017,6 +1368,10 @@
         },
         {
           "id": "farben-und-spektralzerlegung",
+          "name": {
+            "de": "Farben und Spektralzerlegung",
+            "en": "Colour and dispersion"
+          },
           "iCan": "Ich kann erklären, wie weißes Licht in Spektralfarben zerlegt wird und warum Gegenstände farbig aussehen.",
           "gradeBand": "7-8",
           "requires": [
@@ -1027,6 +1382,10 @@
         },
         {
           "id": "waermestrahlung",
+          "name": {
+            "de": "Wärmestrahlung",
+            "en": "Thermal radiation"
+          },
           "iCan": "Ich kann Wärmestrahlung beschreiben und erklären, wie sie mit der Temperatur eines Körpers zusammenhängt.",
           "gradeBand": "9-10",
           "requires": [
@@ -1038,6 +1397,10 @@
         },
         {
           "id": "wellenlaenge",
+          "name": {
+            "de": "Wellenlänge",
+            "en": "Wavelength"
+          },
           "iCan": "Ich kann Strahlung mit ihrer Wellenlänge beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -1047,6 +1410,10 @@
         },
         {
           "id": "elektromagnetisches-spektrum",
+          "name": {
+            "de": "Elektromagnetisches Spektrum",
+            "en": "Electromagnetic spectrum"
+          },
           "iCan": "Ich kann das elektromagnetische Spektrum nach der Wellenlänge ordnen: Mobilfunk, Wärmestrahlung, sichtbares Licht und Röntgenstrahlung.",
           "gradeBand": "9-10",
           "requires": [
@@ -1056,6 +1423,10 @@
         },
         {
           "id": "mobilfunkstrahlung-roentgenstrahlung",
+          "name": {
+            "de": "Mobilfunk- und Röntgenstrahlung",
+            "en": "Mobile phone radiation and X-rays"
+          },
           "iCan": "Ich kann Nutzen und Risiken von Mobilfunkstrahlung und Röntgenstrahlung vergleichen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1065,6 +1436,10 @@
         },
         {
           "id": "strahlungshaushalt-erde",
+          "name": {
+            "de": "Strahlungshaushalt der Erde",
+            "en": "Earth’s radiation budget"
+          },
           "iCan": "Ich kann den Strahlungshaushalt der Erde beschreiben, auch das Rückstrahlvermögen von Flächen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1075,6 +1450,10 @@
         },
         {
           "id": "treibhauseffekt",
+          "name": {
+            "de": "Treibhauseffekt",
+            "en": "Greenhouse effect"
+          },
           "iCan": "Ich kann den natürlichen und den menschengemachten Treibhauseffekt erklären.",
           "gradeBand": "9-10",
           "requires": [
@@ -1084,6 +1463,10 @@
         },
         {
           "id": "kippelemente",
+          "name": {
+            "de": "Kippelemente im Klimasystem",
+            "en": "Tipping points in the climate system"
+          },
           "iCan": "Ich kann erklären, was Kippelemente im Klimasystem sind, und ein Beispiel beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -1102,6 +1485,10 @@
       "competencies": [
         {
           "id": "atomaufbau",
+          "name": {
+            "de": "Aufbau des Atoms",
+            "en": "Structure of the atom"
+          },
           "iCan": "Ich kann den Aufbau eines Atoms aus Kern und Hülle beschreiben und Protonen, Neutronen und Elektronen unterscheiden.",
           "gradeBand": "9-10",
           "requires": [],
@@ -1109,6 +1496,10 @@
         },
         {
           "id": "radioaktivitaet",
+          "name": {
+            "de": "Radioaktivität",
+            "en": "Radioactivity"
+          },
           "iCan": "Ich kann erklären, was radioaktive Strahlung ist und wo sie vorkommt.",
           "gradeBand": "9-10",
           "requires": [
@@ -1118,6 +1509,10 @@
         },
         {
           "id": "strahlungsarten",
+          "name": {
+            "de": "Strahlungsarten",
+            "en": "Types of radiation"
+          },
           "iCan": "Ich kann Alpha-, Beta- und Gammastrahlung und Röntgenstrahlung nach ihren Eigenschaften unterscheiden.",
           "gradeBand": "9-10",
           "requires": [
@@ -1128,6 +1523,10 @@
         },
         {
           "id": "aktivitaet-zaehlrate",
+          "name": {
+            "de": "Aktivität und Zählrate",
+            "en": "Activity and count rate"
+          },
           "iCan": "Ich kann Aktivität und Zählrate unterscheiden und Zählraten mit einem Zählrohr deuten.",
           "gradeBand": "9-10",
           "requires": [
@@ -1137,6 +1536,10 @@
         },
         {
           "id": "spontanzerfall",
+          "name": {
+            "de": "Zufälliger Kernzerfall",
+            "en": "Random nuclear decay"
+          },
           "iCan": "Ich kann den Zerfall von Atomkernen als Zufallsprozess beschreiben.",
           "gradeBand": "9-10",
           "requires": [
@@ -1146,6 +1549,10 @@
         },
         {
           "id": "halbwertszeit",
+          "name": {
+            "de": "Halbwertszeit",
+            "en": "Half-life"
+          },
           "iCan": "Ich kann erklären, was die Halbwertszeit ist, und sie aus einem Zerfallsdiagramm ablesen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1156,6 +1563,10 @@
         },
         {
           "id": "halbwertszeit-rechnen",
+          "name": {
+            "de": "Rechnen mit der Halbwertszeit",
+            "en": "Half-life calculations"
+          },
           "iCan": "Ich kann mit der Halbwertszeit berechnen, wie viel einer radioaktiven Probe nach einer gegebenen Zeit übrig ist.",
           "gradeBand": "9-10",
           "requires": [
@@ -1165,6 +1576,10 @@
         },
         {
           "id": "absorption-ionisierender-strahlung",
+          "name": {
+            "de": "Abschirmung ionisierender Strahlung",
+            "en": "Shielding ionising radiation"
+          },
           "iCan": "Ich kann erklären, wie sich ionisierende Strahlung abschirmen lässt.",
           "gradeBand": "9-10",
           "requires": [
@@ -1174,6 +1589,10 @@
         },
         {
           "id": "biologische-wirkung",
+          "name": {
+            "de": "Biologische Wirkung und Strahlenschutz",
+            "en": "Biological effects and radiation protection"
+          },
           "iCan": "Ich kann die biologische Wirkung ionisierender Strahlung beschreiben und Regeln des Strahlenschutzes nennen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1183,6 +1602,10 @@
         },
         {
           "id": "medizinische-nutzung",
+          "name": {
+            "de": "Strahlung in der Medizin",
+            "en": "Radiation in medicine"
+          },
           "iCan": "Ich kann Nutzen und Risiken ionisierender Strahlung in der Medizin abwägen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1192,6 +1615,10 @@
         },
         {
           "id": "kernspaltung",
+          "name": {
+            "de": "Kernspaltung",
+            "en": "Nuclear fission"
+          },
           "iCan": "Ich kann die Kernspaltung beschreiben und erklären, wie ein Kernkraftwerk Energie gewinnt.",
           "gradeBand": "9-10",
           "requires": [
@@ -1203,6 +1630,10 @@
         },
         {
           "id": "kernfusion",
+          "name": {
+            "de": "Kernfusion",
+            "en": "Nuclear fusion"
+          },
           "iCan": "Ich kann die Kernfusion beschreiben und mit der Kernspaltung vergleichen.",
           "gradeBand": "9-10",
           "requires": [
@@ -1212,6 +1643,10 @@
         },
         {
           "id": "lagerung-radioaktiver-abfaelle",
+          "name": {
+            "de": "Lagerung radioaktiver Abfälle",
+            "en": "Storage of radioactive waste"
+          },
           "iCan": "Ich kann erklären, warum radioaktive Abfälle sicher gelagert werden müssen und welche Fragen dabei offen sind.",
           "gradeBand": "9-10",
           "requires": [

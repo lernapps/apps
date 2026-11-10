@@ -43,6 +43,9 @@ mit ihren Einordnungen):
 - [sport.json](https://lernapps.net/apps/pr-preview/pr-164/map/sport.json)
 
 Plant jemand mit dir eine App, wähle einen Strang und Bausteine daraus; eine App bleibt in einem Strang.
+Ausnahme: Hat ein Fach `explainerFocus: competency` (Fremdsprachen, Deutsch), darf eine Einheiten-App Bausteine
+mehrerer Stränge üben. Sie nennt dann das Fach statt eines Strangs; jede Seite bleibt in einem Strang, und was ein
+Baustein voraussetzt, kommt in der App vorher (geübt oder auf einer Seite mit `recap` wiederholt).
 Das Format beschreibt der [Vertrag der Lernlandkarte](https://github.com/lernapps/apps/blob/main/docs/learning-map-contract.md).
 
 ## Eine App bauen
