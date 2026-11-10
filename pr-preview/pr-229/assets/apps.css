@@ -209,6 +209,17 @@ textarea.field { resize: vertical; font-size: .875rem; }
 .map-chain-steps ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .25rem; }
 .map-direct { font-size: .75rem; padding: .05rem .4rem; border-radius: 999px; background: #dbeafe; color: #1e3a8a; }
 
+/* How far a subject's map is reviewed (feat/map-status): a draft loudly, in amber; checked and reviewed quietly. */
+.map-status { padding: .875rem 1rem; border-radius: .625rem; line-height: 1.5; }
+.map-status-draft { background: #fef3c7; color: #78350f; border: 2px solid #d97706; }
+.map-status-draft a { color: #78350f; }
+.map-status-ok { background: var(--la-surface, #f8fafc); color: var(--la-text, #1e293b); border: 1px solid var(--la-border, #e2e8f0); font-size: .9375rem; }
+.map-status-note { font-size: .875rem; opacity: .85; }
+.map-status-tag { display: inline-block; margin-right: .375rem; padding: .1rem .55rem; border-radius: 999px; font-size: .8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.map-status-tag-draft { background: #d97706; color: #fff; }
+.map-status-tag-checked { background: #dbeafe; color: #1e3a8a; }
+.map-status-tag-reviewed { background: #dcfce7; color: #14532d; }
+
 /* The colours that have no token of the frame: their dark values. */
 @media (prefers-color-scheme: dark) {
   .panel-thanks { border-color: #9f1239; background: #2a0f1a; }
@@ -237,6 +248,11 @@ textarea.field { resize: vertical; font-size: .875rem; }
   .map-focus li[data-before] .map-chip { box-shadow: inset 4px 0 0 #60a5fa; }
   .map-focus li[data-after] .map-chip { box-shadow: inset 4px 0 0 #fbbf24; }
   .map-direct { background: #1e3a8a; color: #dbeafe; }
+  .map-status-draft { background: #3b2604; color: #fde68a; border-color: #d97706; }
+  .map-status-draft a { color: #fde68a; }
+  .map-status-tag-draft { background: #b45309; }
+  .map-status-tag-checked { background: #1e3a8a; color: #dbeafe; }
+  .map-status-tag-reviewed { background: #14532d; color: #bbf7d0; }
   .map-focus li[data-competency]:not([data-chosen]):not([data-before]):not([data-after]) .map-chip-covered { background: #1e2f5c; }
 }
 
