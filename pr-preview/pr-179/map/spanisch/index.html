@@ -76,7 +76,7 @@
   <h2 id="ordnung-spanisch" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/pr-preview/pr-179/map/spanisch/" class="btn btn-primary" aria-current="page">Nach Klassen</a></li>
-    <li><a href="/apps/pr-preview/pr-179/map/spanisch/c/" class="btn btn-secondary">Nach Stufen der Kette</a></li>
+    <li><a href="/apps/pr-preview/pr-179/map/spanisch/c/" class="btn btn-secondary">Nach Klasse und Kette</a></li>
   </ul>
 </nav>
 
@@ -115,7 +115,7 @@
     </div>
     <div class="map-legend" role="group" aria-label="Bausteine zeigen" data-map-filter hidden>
       <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt <span class="map-filter-count">0</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">184</span></button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">186</span></button>
     </div>
   </div>
   <div class="map-scroll" role="region" aria-label="Lernlandkarte Spanisch: Bausteine nach Strang und Klasse" tabindex="0">
@@ -131,7 +131,7 @@
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-179/map/spanisch/wortschatz/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Wortschatz</a>
-            <span class="block mt-1 text-sm text-slate-600">0 von 32 Bausteinen geübt</span>
+            <span class="block mt-1 text-sm text-slate-600">0 von 34 Bausteinen geübt</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -548,6 +548,14 @@
 <li data-competency="uhrzeit">
   <a href="/apps/pr-preview/pr-179/map/spanisch/c/uhrzeit/" class="map-chip map-chip-gap" data-opens="detail-uhrzeit">
     <span>Uhrzeit</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              
+<li data-competency="wochentage-und-monate">
+  <a href="/apps/pr-preview/pr-179/map/spanisch/c/wochentage-und-monate/" class="map-chip map-chip-gap" data-opens="detail-wochentage-und-monate">
+    <span>Wochentage und Monate</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1154,7 +1162,7 @@
               
 <li data-competency="datum">
   <a href="/apps/pr-preview/pr-179/map/spanisch/c/datum/" class="map-chip map-chip-gap" data-opens="detail-datum">
-    <span>Wochentage, Monate und Datum</span>
+    <span>Datum</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1211,6 +1219,14 @@
 <li data-competency="falsche-freunde">
   <a href="/apps/pr-preview/pr-179/map/spanisch/c/falsche-freunde/" class="map-chip map-chip-gap" data-opens="detail-falsche-freunde">
     <span>Falsche Freunde</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              
+<li data-competency="sprachvergleich">
+  <a href="/apps/pr-preview/pr-179/map/spanisch/c/sprachvergleich/" class="map-chip map-chip-gap" data-opens="detail-sprachvergleich">
+    <span>Sprachvergleich Deutsch–Spanisch</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1943,6 +1959,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/adjektiv-angleichung/" class="text-blue-700 underline underline-offset-2"><span>Angleichung der Adjektive</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/wortfamilien/" class="text-blue-700 underline underline-offset-2"><span>Wortfamilien</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2119,6 +2137,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/praesens-regelmaessig/" class="text-blue-700 underline underline-offset-2"><span>Präsens regelmäßiger Verben</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/praepositionen-a-und-de/" class="text-blue-700 underline underline-offset-2"><span>Präpositionen a und de</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2237,7 +2257,9 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-179/map/spanisch/c/praesens-regelmaessig/" class="text-blue-700 underline underline-offset-2"><span>Präsens regelmäßiger Verben</span></a>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/indirekte-objektpronomen/" class="text-blue-700 underline underline-offset-2"><span>Indirekte Objektpronomen</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/betonte-pronomen/" class="text-blue-700 underline underline-offset-2"><span>Betonte Pronomen nach Präposition</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2465,6 +2487,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/praesens-regelmaessig/" class="text-blue-700 underline underline-offset-2"><span>Präsens regelmäßiger Verben</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/unterrichtssprache/" class="text-blue-700 underline underline-offset-2"><span>Unterrichtssprache</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2503,6 +2527,8 @@
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/direkte-objektpronomen/" class="text-blue-700 underline underline-offset-2"><span>Direkte Objektpronomen</span></a>
 </li><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/indirekte-objektpronomen/" class="text-blue-700 underline underline-offset-2"><span>Indirekte Objektpronomen</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/akzent-setzen/" class="text-blue-700 underline underline-offset-2"><span>Schriftakzent (tilde)</span></a> <span class="text-slate-600">· Strang Aussprache und Rechtschreibung</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2873,8 +2899,6 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-179/map/spanisch/c/praesens-regelmaessig/" class="text-blue-700 underline underline-offset-2"><span>Präsens regelmäßiger Verben</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/verben-mit-unregelmaessiger-ich-form/" class="text-blue-700 underline underline-offset-2"><span>Unregelmäßige ich-Form im Präsens</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -3168,6 +3192,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/praesens-regelmaessig/" class="text-blue-700 underline underline-offset-2"><span>Präsens regelmäßiger Verben</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/lateinamerikanische-woerter/" class="text-blue-700 underline underline-offset-2"><span>Lateinamerikanischer Wortschatz</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3217,8 +3243,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/ser-oder-estar/" class="text-blue-700 underline underline-offset-2"><span>Ser oder estar</span></a> <span class="text-slate-600">· Strang Grammatik</span>
-</li><li>
-<a href="/apps/pr-preview/pr-179/map/spanisch/c/adjektiv-angleichung/" class="text-blue-700 underline underline-offset-2"><span>Angleichung der Adjektive</span></a> <span class="text-slate-600">· Strang Grammatik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3234,7 +3258,11 @@
     <p class="m-0">Ich kann über meine Schule, Fächer und den Stundenplan sprechen.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/uhrzeit/" class="text-blue-700 underline underline-offset-2"><span>Uhrzeit</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Wochentage und Monate</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3357,7 +3385,9 @@
     <p class="m-0">Ich kann über das Wetter und die Jahreszeiten sprechen (hace calor, llueve).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/gruppenverben-diphthong/" class="text-blue-700 underline underline-offset-2"><span>Stammwechsel e → ie, o → ue</span></a> <span class="text-slate-600">· Strang Grammatik</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3417,14 +3447,31 @@
 </template>
 
 
-<template id="detail-datum" data-kind="Baustein · Wortschatz">
-  <p data-dialog-title>Wochentage, Monate und Datum</p>
+<template id="detail-wochentage-und-monate" data-kind="Baustein · Wortschatz">
+  <p data-dialog-title>Wochentage und Monate</p>
   <div data-dialog-body>
-    <p class="m-0">Ich kann Wochentage, Monate und das Datum angeben (el lunes, el 3 de mayo).</p>
+    <p class="m-0">Ich kann die Wochentage und die Monate nennen (el lunes, en mayo).</p>
+    <dl class="map-facts">
+      <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
+      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-179/map/spanisch/c/wochentage-und-monate/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
+  </div>
+</template>
+
+
+<template id="detail-datum" data-kind="Baustein · Wortschatz">
+  <p data-dialog-title>Datum</p>
+  <div data-dialog-body>
+    <p class="m-0">Ich kann das Datum angeben und danach fragen (Hoy es lunes, 3 de mayo. ¿Qué fecha es hoy?).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/zahlen-bis-100/" class="text-blue-700 underline underline-offset-2"><span>Zahlen bis 100</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Wochentage und Monate</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3506,7 +3553,9 @@
     <p class="m-0">Ich kann über einen Text sprechen und seinen Inhalt zusammenfassen (El texto trata de …, el párrafo, resumir).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/fragen-zum-text/" class="text-blue-700 underline underline-offset-2"><span>Fragen zum Text</span></a> <span class="text-slate-600">· Strang Texte und Medien</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3523,6 +3572,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/konjunktionen/" class="text-blue-700 underline underline-offset-2"><span>Konjunktionen</span></a> <span class="text-slate-600">· Strang Grammatik</span>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/gespraechswoerter/" class="text-blue-700 underline underline-offset-2"><span>Gesprächswörter</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3596,6 +3647,23 @@
 </template>
 
 
+<template id="detail-sprachvergleich" data-kind="Baustein · Wortschatz">
+  <p data-dialog-title>Sprachvergleich Deutsch–Spanisch</p>
+  <div data-dialog-body>
+    <p class="m-0">Ich kann Spanisch mit Deutsch und anderen Sprachen vergleichen und typische Unterschiede erklären.</p>
+    <dl class="map-facts">
+      <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/falsche-freunde/" class="text-blue-700 underline underline-offset-2"><span>Falsche Freunde</span></a>
+</li></ul></dd></div>
+      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-179/map/spanisch/c/sprachvergleich/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
+  </div>
+</template>
+
+
 <template id="detail-lateinamerikanische-woerter" data-kind="Baustein · Wortschatz">
   <p data-dialog-title>Lateinamerikanischer Wortschatz</p>
   <div data-dialog-body>
@@ -3632,7 +3700,9 @@
     <p class="m-0">Ich kann über Handy, Internet und soziale Medien in meinem Alltag sprechen.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/freizeit-und-hobbys/" class="text-blue-700 underline underline-offset-2"><span>Freizeit und Hobbys</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3666,7 +3736,9 @@
     <p class="m-0">Ich kann über Umwelt und Umweltschutz im Alltag sprechen (reciclar, ahorrar agua).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/einkaufen/" class="text-blue-700 underline underline-offset-2"><span>Einkaufen</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3877,7 +3949,9 @@
     <p class="m-0">Ich kann die umgedrehten Frage- und Ausrufezeichen am Satzanfang setzen (¿Cuánto vale? ¡Qué calor!).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/fragesaetze/" class="text-blue-700 underline underline-offset-2"><span>Fragesätze</span></a> <span class="text-slate-600">· Strang Grammatik</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3893,7 +3967,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-179/map/spanisch/c/datum/" class="text-blue-700 underline underline-offset-2"><span>Wochentage, Monate und Datum</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Wochentage und Monate</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3934,6 +4008,12 @@
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/c-g-j-aussprache/" class="text-blue-700 underline underline-offset-2"><span>Aussprache von c, g, j und z</span></a>
 </li><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/diphthonge/" class="text-blue-700 underline underline-offset-2"><span>Diphthonge</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/r-und-rr/" class="text-blue-700 underline underline-offset-2"><span>R und rr</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/ll-n-ch/" class="text-blue-700 underline underline-offset-2"><span>Ll, ñ und ch</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/h-b-v/" class="text-blue-700 underline underline-offset-2"><span>H, b und v</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4064,7 +4144,9 @@
     <p class="m-0">Ich kann den Tagesablauf in Spanien mit Deutschland vergleichen, zum Beispiel Essenszeiten und Öffnungszeiten.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/tagesablauf/" class="text-blue-700 underline underline-offset-2"><span>Tagesablauf</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -4079,7 +4161,9 @@
     <p class="m-0">Ich kann den Schulalltag Jugendlicher in Spanien oder Lateinamerika mit meinem vergleichen, auch das Notensystem.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/schule/" class="text-blue-700 underline underline-offset-2"><span>Schule</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -4094,7 +4178,9 @@
     <p class="m-0">Ich kann wichtige Feste in Spanien und Lateinamerika beschreiben (Navidad, Nochevieja, los Reyes Magos, Día de Muertos).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Wochentage und Monate</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -4109,7 +4195,9 @@
     <p class="m-0">Ich kann entscheiden, ob ich jemanden duze oder sieze, und Menschen höflich begrüßen (dos besos, señor, señora).</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/subjektpronomen/" class="text-blue-700 underline underline-offset-2"><span>Subjektpronomen</span></a> <span class="text-slate-600">· Strang Grammatik</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -4126,6 +4214,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/autonome-gemeinschaften/" class="text-blue-700 underline underline-offset-2"><span>Autonome Gemeinschaften</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/klischees-hinterfragen/" class="text-blue-700 underline underline-offset-2"><span>Klischees hinterfragen</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4143,6 +4233,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/sprachen-spaniens/" class="text-blue-700 underline underline-offset-2"><span>Sprachen Spaniens</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/vortrag/" class="text-blue-700 underline underline-offset-2"><span>Kurzvortrag</span></a> <span class="text-slate-600">· Strang Texte und Medien</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4326,7 +4418,9 @@
     <p class="m-0">Ich kann über Auswanderung und Einwanderung in Spanien und Lateinamerika sprechen.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/laender-lateinamerikas/" class="text-blue-700 underline underline-offset-2"><span>Länder Lateinamerikas</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -4428,7 +4522,11 @@
     <p class="m-0">Ich kann Sachtexte und erzählende Texte unterscheiden und typische Merkmale nennen.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/gebrauchstexte/" class="text-blue-700 underline underline-offset-2"><span>Gebrauchstexte</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/nacherzaehlen/" class="text-blue-700 underline underline-offset-2"><span>Nacherzählung</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -4865,6 +4963,8 @@
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/tu-oder-usted/" class="text-blue-700 underline underline-offset-2"><span>Tú oder usted</span></a> <span class="text-slate-600">· Strang Länder und Kulturen</span>
 </li><li>
 <a href="/apps/pr-preview/pr-179/map/spanisch/c/condicional-simple/" class="text-blue-700 underline underline-offset-2"><span>Condicional simple</span></a> <span class="text-slate-600">· Strang Grammatik</span>
+</li><li>
+<a href="/apps/pr-preview/pr-179/map/spanisch/c/umgangssprache-und-standardsprache/" class="text-blue-700 underline underline-offset-2"><span>Umgangssprache und Standardsprache</span></a> <span class="text-slate-600">· Strang Wortschatz</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
