@@ -9,6 +9,7 @@
 #   NW = Kernlehrplan NRW Sek I Gymnasium Sport (2019), 2.4 bis Ende Erprobungsstufe ("5-6"), 2.5 bis Ende Sek I ("7-10");
 #        IF a-f = Inhaltsfelder, BF1-BF9 = Bewegungsfelder; SiLP = Beispiel für einen schulinternen Lehrplan (nur Hinweis)
 # Stimmen HE / BY / NW. SCHWACH = weniger als zwei Länder nennen den Baustein ausdrücklich (eines nur allgemein oder zur Wahl).
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Sport, en: Physical education }       # the file name is the subject's id: sport
 source:
   title: Bewegungs- und Inhaltsfelder der Länder (keine KMK-Bildungsstandards), Leitquelle Kernlehrplan Sport Gymnasium Sek I NRW (2019), verglichen mit dem Kerncurriculum Hessen und dem LehrplanPLUS Bayern
@@ -53,11 +54,12 @@ strands:
         requires: [belastung-und-koerper]
       # HE Kap. 7.1 Laufen, Springen, Werfen, S. 27 (ausdauerndes Laufen in selbst gewähltem Tempo); BY S5 LB1 (Ausdauerleistung im aeroben Bereich); NW 2.4.2 BF1, S. 23 f. (aerobe Ausdauerleistung ohne Unterbrechung)
       # Stimmen 5-6 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
+      # requires motorische-grundfaehigkeiten (Herleitung): Aerobe Ausdauer ist eine Form der Grundfähigkeit Ausdauer; NW nennt beide als inhaltliche Kerne desselben Bewegungsfelds (NW 2.4.2 BF1, S. 23)
       - id: aerobe-ausdauer
         name: { de: "Aerobe Ausdauer", en: "Aerobic endurance" }
         iCan: "Ich kann erklären, was aerobe Ausdauer ist und woran ich merke, dass ich in einem Tempo laufe, das ich lange durchhalten kann."
         gradeBand: "5-6"
-        requires: [belastung-und-koerper]
+        requires: [belastung-und-koerper, motorische-grundfaehigkeiten]
       # HE Kap. 7.1 LSW, S. 27 (Dauerlauf in selbst gewähltem Tempo über mindestens 15 Minuten); BY S5 LB1 (15-minütige Ausdauerleistung im aeroben Bereich); NW 2.4.2 BF1, S. 24 (z. B. Laufen 15 min)
       # Stimmen 5-6 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
       - id: ausdauer-15-minuten
@@ -220,11 +222,12 @@ strands:
         gradeBand: "5-6"
       # HE Kap. 6 Urteils- und Entscheidungskompetenz, S. 19 (Zusammenhang von sportlichem Handeln und Ernährung); BY S7 LB1 (gesunde Ernährung im Zusammenhang mit sportlicher Betätigung, Flüssigkeitshaushalt, Nährstoffe)
       # Stimmen 5-10 / 7-8 (Jg 7) / – -> 7-8 (Mehrheit)
+      # requires belastung-und-koerper: Warum man beim Sport trinken muss, folgt aus dem Schwitzen bei Belastung; BY lehrt Belastung und Temperaturregulation in Jg 6, den Flüssigkeitshaushalt in Jg 7 (BY S6 LB1, S7 LB1)
       - id: ernaehrung-und-sport
         name: { de: "Essen und Trinken beim Sport", en: "Nutrition and hydration in sport" }
         iCan: "Ich kann erklären, was ich vor, während und nach dem Sport essen und trinken sollte und warum Flüssigkeit wichtig ist."
         gradeBand: "7-8"
-        requires: [gesunde-ernaehrung]
+        requires: [gesunde-ernaehrung, belastung-und-koerper]
       # HE Kap. 5 Leitidee Gesundheit, S. 15 (Sporttreiben in den Alltag integrieren; Folgen von Bewegungsmangel); BY S10 LB1 (regelmäßige sportliche Aktivitäten und Wohlbefinden); S10 LB3 (gesundheitsfördernde Freizeitgestaltung); S9 LB3; NW 2.5.1 IF f, S. 32 (Muster des eigenen Bewegungsverhaltens im Alltag erfassen und analysieren)
       # Stimmen 5-10 / 9-10 (Jg 10) / 7-10 -> 9-10 (Mehrheit)
       - id: bewegungsmangel
@@ -426,6 +429,15 @@ strands:
         name: { de: "Baderegeln", en: "Swimming pool rules" }
         iCan: "Ich kann die Baderegeln nennen und erklären, wie sie mich und andere schützen."
         gradeBand: "5-6"
+      # HE Kap. 6 Bewegen im Wasser, S. 22 f. (vorrangig sicherstellen, dass sich die Lernenden mindestens über Wasser halten können; Vortrieb in Bauch- und/oder Rückenlage; Atem- und Schwimmtechniken, mindestens 100 m); BY S5 4.2 (Gesamtkoordination in mindestens einer Schwimmart, auch zur Selbstrettung); NW 2.4.2 BF4, S. 25 (eine Wechselzug- oder eine Gleichzugtechnik einschließlich Atemtechnik sicher und ausdauernd)
+      # Stimmen 5-10 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit). Neu (Owner, 2026-11-11): Die Länder verlangen eine erste Schwimmart nach Wahl der Schule; requires kennt nur „und“, daher ein eigener Baustein für „Brust oder Kraul“.
+      # requires auftrieb-und-gleiten: Eine Schwimmart erzeugt Vortrieb aus Auftrieb und Gleiten; NW nennt Auftrieb, Vortrieb und Gleiten als grundlegende Fertigkeiten vor der Schwimmtechnik (NW 2.4.2 BF4, S. 25; HE Kap. 6 Bewegen im Wasser, S. 22 f.)
+      # requires atmen-im-wasser: Die Schwimmart wird „einschließlich Atemtechnik“ verlangt; Einatmen über und Ausatmen unter Wasser gehören zu den Schwimmtechniken (NW 2.4.2 BF4, S. 25; HE Kap. 6 Bewegen im Wasser, S. 23)
+      - id: erste-schwimmart
+        name: { de: "Erste Schwimmart", en: "First swimming stroke" }
+        iCan: "Ich kann eine Schwimmart, Brust oder Kraul, in der Grobform so sicher schwimmen, dass ich mich damit über Wasser halte und vorwärtskomme."
+        gradeBand: "5-6"
+        requires: [auftrieb-und-gleiten, atmen-im-wasser]
       # HE Kap. 6 Bewegen im Wasser, S. 23 (Atem- und Schwimmtechniken, mindestens 100 m); BY S5 4.2 (Gesamtkoordination in mindestens einer Schwimmart); S6 4.2 (Fachbegriffe zur Bewegungsbeschreibung der ersten Schwimmart); NW 2.4.2 BF4, S. 25 (eine Wechselzug- oder eine Gleichzugtechnik einschließlich Atemtechnik)
       # Stimmen 5-10 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit). Die Länder schreiben keine bestimmte Schwimmart vor; NW unterscheidet Gleich- und Wechselzugtechnik
       - id: gleichzugtechnik
@@ -442,25 +454,28 @@ strands:
         requires: [auftrieb-und-gleiten, atmen-im-wasser]
       # HE Kap. 6 Bewegen im Wasser, S. 23 (Sprünge vom Startblock); BY S6 4.2 (Startsprung und Wende einer Schwimmart regelkonform; Wettkampfbestimmungen von Start und Wende); NW 2.4.2 BF4, S. 25 (einschließlich Start und Wende)
       # Stimmen 5-10 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit)
+      # requires erste-schwimmart: Startsprung und Wende werden in der eigenen Schwimmart ausgeführt (BY S6 4.2: „Startsprung und Wende einer Schwimmart“; NW 2.4.2 BF4, S. 25: Wechselzug- oder Gleichzugtechnik „einschließlich … Start und Wende“)
       - id: start-und-wende
         name: { de: "Start und Wende", en: "Starts and turns" }
         iCan: "Ich kann in meiner Schwimmart einen Startsprung und eine Wende nach den Wettkampfregeln ausführen."
         gradeBand: "5-6"
-        requires: [ins-wasser-springen]
+        requires: [ins-wasser-springen, erste-schwimmart]
       # HE Kap. 6 Bewegen im Wasser, S. 23 (mindestens eine Strecke von 100 m bewältigen); BY S5 4.2 (Ausdauerleistung im aeroben Bereich); S6 4.2 (kontinuierliches Schwimmen); NW 2.4.2 BF1, S. 23 f. (Schwimmen 15 min, beliebige Schwimmart, mind. 200 m)
       # Stimmen 5-10 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
+      # requires erste-schwimmart: Dauerschwimmen braucht eine sichere Schwimmart mit Atemtechnik; NW verlangt 15 min in „beliebige[r] Schwimmart“, HE nennt Atem- und Schwimmtechniken „Voraussetzung, um mindestens eine Strecke von 100m zu bewältigen“ (NW 2.4.2 BF1, S. 24; HE Kap. 6 Bewegen im Wasser, S. 23)
       - id: ausdauernd-schwimmen
         name: { de: "15-Minuten-Dauerschwimmen", en: "15-minute continuous swim" }
         iCan: "Ich kann 15 Minuten ohne Pause schwimmen."
         gradeBand: "5-6"
-        requires: [aerobe-ausdauer]
+        requires: [aerobe-ausdauer, erste-schwimmart]
       # HE Kap. 6 Bewegen im Wasser, S. 22 (vorrangig sicherstellen, dass sich die Lernenden mindestens über Wasser halten können); BY S5 4.2 (Schwimmart auch zur Selbstrettung nutzen; Verhalten in Notsituationen); S6 4.2 (Krämpfe, Erschöpfungszustand); NW 2.5.2 BF4, S. 34 (Maßnahmen und Möglichkeiten zur Selbst- und Fremdrettung nutzen)
       # Stimmen 5-10 / 5-6 (Jg 5) / 7-10 -> 5-6 (Gleichstand 5-6/7-8/9-10: requires entscheidet (früheste Stufe nach den Voraussetzungen))
+      # requires erste-schwimmart: Die Schüler „nutzen diese [Schwimmart] auch zur Selbstrettung“; HE stellt das Über-Wasser-Halten an den Anfang (BY S5 4.2; HE Kap. 6 Bewegen im Wasser, S. 22)
       - id: selbstrettung
         name: { de: "Selbstrettung", en: "Self-rescue" }
         iCan: "Ich kann mich in Notsituationen im Wasser, zum Beispiel bei einem Krampf oder bei Erschöpfung, richtig verhalten und mich selbst retten."
         gradeBand: "5-6"
-        requires: [baderegeln]
+        requires: [baderegeln, erste-schwimmart]
       # HE Kap. 6 Bewegen im Wasser, S. 23 (Kenntnisse über eine erste Hilfe); BY S8 4.2 (Rettungshilfen unter Berücksichtigung der Gefahren der Fremdrettung einsetzen); NW 2.5.2 BF4, S. 34 (Selbst- und Fremdrettung)
       # Stimmen 5-10 / 7-8 (Jg 8) / 7-10 -> 7-8 (Mehrheit)
       - id: fremdrettung
@@ -486,10 +501,13 @@ strands:
         gradeBand: "5-6"
       # HE Kap. 6 Bewegungskompetenz, S. 18 (Bewegung anforderungsgemäß steuern; nur allgemein); BY S5 4.4 (Übungen zur Körperspannung); S6 LB1 (Stützkraft und Körperspannung); NW 2.4.2 BF1, S. 23 (grundlegende Muskel- und Körperspannung aufbauen und nutzen)
       # Stimmen 5-10 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
+      # requires anspannung-entspannung: Körperspannung baut man auf, indem man Muskeln bewusst anspannt; BY nennt die Übungen zur Körperspannung und das An- und Entspannen bestimmter Muskelgruppen im selben Jahr (BY S6 LB1)
+      # requires rumpfmuskulatur (Herleitung): Körperspannung hält vor allem die Bauch-, Rücken- und Gesäßmuskulatur; BY lehrt die Rumpfmuskulatur in Jg 5 und die Körperspannung in LB1 in Jg 6 (BY S5 LB1, S6 LB1)
       - id: koerperspannung
         name: { de: "Körperspannung", en: "Body tension" }
         iCan: "Ich kann erklären, warum Körperspannung beim Turnen wichtig ist, und sie in Übungen aufbauen und halten."
         gradeBand: "5-6"
+        requires: [anspannung-entspannung, rumpfmuskulatur]
       # HE Kap. 7.1 Bewegen an und mit Geräten, S. 26 (Sicherheits- und Hilfestellung, Hauptgriffarten); BY S5 4.4 (Helfergriffe, z. B. Klammergriff); S6 4.4 (Dreh-/Schubhilfe); NW 2.4.2 BF5, S. 25 (grundlegende turnerische Sicherheits- und Hilfestellungen ausführen)
       # Stimmen 5-6 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
       - id: helfergriffe
@@ -517,7 +535,7 @@ strands:
         name: { de: "Handstand", en: "Handstand" }
         iCan: "Ich kann in den Handstand aufschwingen, ihn kurz halten und abrollen."
         gradeBand: "5-6"
-        requires: [rolle-vorwaerts, koerperspannung]
+        requires: [rolle-vorwaerts]
       # HE Kap. 6 Bewegen an und mit Geräten, S. 21 (Boden: Rad); BY S5 4.4 (Boden: Rad); NW 2.4.2 BF5, S. 25 (Überschläge; SiLP Jg 6, UV 5.2)
       # Stimmen 7-10 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
       - id: rad
@@ -676,11 +694,12 @@ strands:
         requires: [gestaltungskriterien, ausdruck-koerpersprache]
       # HE Kap. 6 Urteils- und Entscheidungskompetenz, S. 19 (Bewegungsausführungen nach vereinbarten Kriterien beurteilen); NW 2.4.1 IF b, S. 21 (Präsentationen anhand grundlegender Kriterien beurteilen); 2.5.1 IF b, S. 29
       # Stimmen 5-10 / – / 5-6 -> 5-6 (Mehrheit)
+      # requires bewegung-beobachten: Wer eine Präsentation nach Kriterien beurteilt, muss sie zuerst nach Merkmalen beobachten; HE und NW nennen das Beobachten nach Vorgaben vor dem Beurteilen nach Kriterien (HE Kap. 6 Urteils- und Entscheidungskompetenz, S. 19; NW 2.4.1 IF a, S. 20)
       - id: gestaltung-beurteilen
         name: { de: "Gestaltungen beurteilen", en: "Evaluating performances" }
         iCan: "Ich kann eine Präsentation nach Kriterien wie Synchronität, Ausdruck, Schwierigkeit und Nutzung des Raums beurteilen."
         gradeBand: "5-6"
-        requires: [formationen]
+        requires: [formationen, bewegung-beobachten]
       # SCHWACH (HE nennt Bewegungskünste nicht; NW nur als ein Bereich von drei zur Wahl). BY S5 4.4 (einfache Elemente der Bewegungskünste, z. B. Jonglieren); NW 2.5.2 BF6, S. 35 (Pantomime, Bewegungstheater oder Jonglage; SiLP Jg 7, UV 6.3)
       # Stimmen – / 5-6 (Jg 5) / 7-10 -> 5-6 (Gleichstand 5-6/7-8/9-10: requires entscheidet (früheste Stufe nach den Voraussetzungen))
       - id: jonglieren
@@ -921,7 +940,7 @@ strands:
         name: { de: "Turnier organisieren", en: "Organising a tournament" }
         iCan: "Ich kann einen kleinen Wettbewerb oder ein Turnier mit Spielplan, Regeln und Ergebnisliste selbst organisieren."
         gradeBand: "5-6"
-        requires: [regeln-im-sport, messen-und-kampfrichten]
+        requires: [messen-und-kampfrichten]
   - id: bewegungslernen
     name: { de: "Bewegungen lernen und Leistung beurteilen", en: "Learning movements and judging performance" }
     competencies:
@@ -985,10 +1004,12 @@ strands:
     competencies:
       # HE Kap. 6 Fahren, Rollen, Gleiten, S. 23 (Antriebserzeugung, Veränderung von Geschwindigkeit und Richtung: Beschleunigen, Kurven fahren, Ausweichen; gilt auch für Jg 5/6); BY S7 4.6 (Wintersport: Gleichgewicht und Geschwindigkeit kontrollieren; Kurvenfahren); NW 2.4.2 BF8, S. 27 (mit einem Gleit-, Fahr- oder Rollgerät kontrolliert fortbewegen, gezielt die Richtung ändern)
       # Stimmen 5-10 / 7-8 (Jg 7) / 5-6 -> 5-6 (Gleichstand 5-6/7-8: requires entscheidet (früheste Stufe nach den Voraussetzungen))
+      # requires wagnis-einschaetzen: HE nennt Wagnis als zentrale Leitidee des Fahrens; Geschwindigkeit, labiles Gleichgewicht und Untergrund „erfordern eine realistische Selbsteinschätzung“ (HE Kap. 6 Fahren, Rollen, Gleiten, S. 23)
       - id: fahren-und-lenken
         name: { de: "Fahren und Lenken", en: "Riding and steering" }
         iCan: "Ich kann mich mit einem Roll- oder Gleitgerät wie Inlinern, Rad oder Skiern kontrolliert fortbewegen, beschleunigen und die Richtung ändern."
         gradeBand: "5-6"
+        requires: [wagnis-einschaetzen]
       # HE Kap. 6 Fahren, Rollen, Gleiten, S. 23 (Bremsen und Stoppen); BY S7 4.6 (Bremsen und Anhalten, z. B. Bremspflug, Stoppschwung, Hockeystopp); NW 2.4.2 BF8, S. 27 (situations- und sicherheitsbewusst beschleunigen und bremsen)
       # Stimmen 5-10 / 7-8 (Jg 7) / 5-6 -> 5-6 (Gleichstand 5-6/7-8: requires entscheidet (früheste Stufe nach den Voraussetzungen))
       - id: bremsen-und-anhalten
@@ -1012,11 +1033,12 @@ strands:
         requires: [bremsen-und-anhalten]
       # HE Kap. 6 Fahren, Rollen, Gleiten, S. 23 (witterungsabhängiger Untergrund; situative Bedingungen vor Ort); BY S6 LB3 (Umwelteinflüsse: UV-Strahlung, Ozonbelastung, Schneebeschaffenheit, Temperatur; Ausrüstung und Verhalten je nach Wetter); S5 LB3 (angemessene Kleidung); NW 2.5.2 BF8, S. 36 (Wahrnehmung von Material, Geschwindigkeit und Umwelt)
       # Stimmen 5-10 / 5-6 (Jg 6) / 7-10 -> 5-6 (Gleichstand 5-6/7-8/9-10: requires entscheidet (früheste Stufe nach den Voraussetzungen))
+      # requires belastung-und-koerper: Wie Hitze und Ozon beim Sport wirken, versteht man über die Reaktionen des Körpers auf Belastung (Atmung, Körpertemperatur, Schwitzen); BY nennt Belastung und Temperaturregulation und die Umwelteinflüsse im selben Jahr (BY S6 LB1, S6 LB3)
       - id: wetter-und-umwelt
         name: { de: "Wetter und Sport im Freien", en: "Weather and outdoor sport" }
         iCan: "Ich kann erklären, wie Wetter, UV-Strahlung, Ozon und Temperatur den Sport im Freien beeinflussen, und mich passend ausrüsten."
         gradeBand: "5-6"
-        requires: [sportkleidung-und-hygiene]
+        requires: [sportkleidung-und-hygiene, belastung-und-koerper]
       # HE Kap. 6 Urteils- und Entscheidungskompetenz, S. 19 (Ressourcen und Bewegungsräume, insbesondere die Natur, verantwortungsbewusst nutzen und die Zusammenhänge erklären); BY S7 LB3 (Regeln des Natur- und Umweltschutzes; DSV-Umweltregeln); S8, S9 LB3
       # Stimmen 5-10 / 7-8 (Jg 7) / – -> 7-8 (Mehrheit)
       - id: natur-schuetzen

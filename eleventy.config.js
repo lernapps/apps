@@ -61,6 +61,8 @@ export default function (eleventyConfig) {
         strand: strands.indexOf(c.strand),
         requires: c.requires,
         step: c.step,
+        band: String(c.gradeBand).replace("-", "/"),
+        bandStep: c.place.step,
         name: tx(c.name, lang),
         iCan: tx(c.iCan, lang),
       })),

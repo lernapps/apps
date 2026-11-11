@@ -309,3 +309,127 @@ Richtstufen: 4 × 5-6, 4 × 7-8, 2 × 9-10.
    DBK ersetzt werden, sobald eine erreichbar ist.
 5. **Fernöstliche Religionen:** HE nennt keine; BY behandelt Hinduismus und Buddhismus, NRW eine nach Wahl. Ob
    `hinduismus` bleiben soll, ist offen.
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“).
+Ich habe die zwei allein stehenden Bausteine in beide Richtungen geprüft, alle bestehenden Kanten gelesen und die
+Quellen dafür neu geöffnet. Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids,
+`gradeBand`, `status`, `iCan` und die Stränge sind unverändert. Die Spalte „requires“ in Abschnitt 3 zeigt den
+alten Stand; maßgeblich ist `map/katholische-religion.yaml`.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 147 | 13 | 2 | 3 | 13 |
+| nachher | 143 | 12 | 0 | 1 | 13 |
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante (Messskript: keine Zeile
+`LATE` oder `INDIRECT`; vorher 6 Zeilen `INDIRECT`). `npm test` grün (ein Test ohne Docker übersprungen). Die Karte
+hat kein `explainerFocus: competency`, und keine App in `entries/` nutzt das Fach; ein Vergleich mit
+`npm run listing` war daher nicht nötig.
+
+### 6.2 Quellen
+
+Am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML). Seitenzahlen sind die
+gedruckten Seiten; bei HE und NW sind sie gleich den Seiten der PDF.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| DBK | Die deutschen Bischöfe Nr. 116: Kirchliche Richtlinien zu Bildungsstandards für den katholischen Religionsunterricht in der Sekundarstufe I | 24.06.2025 | https://epflicht.ulb.uni-bonn.de/download/pdf/811625 |
+| HE | Kerncurriculum Hessen, Sekundarstufe I – Gymnasium, Katholische Religion | Ausgabe 2026 (Stand Juni 2026) | https://kultus.hessen.de/sites/kultus.hessen.de/files/2026-10/web_kc_katholische_religion_sek1_gymnasium.pdf |
+| BY | LehrplanPLUS Gymnasium, Fachlehrplan Katholische Religionslehre, KR5–KR10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/katholische-religionslehre (KR5 … KR9: dieselbe Adresse mit 5 … 9) |
+| NW | Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Katholische Religionslehre | Heft 3403, 1. Auflage 2019 | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_kr_klp_3403_2019_06_23_1.pdf |
+
+Eine neue fachdidaktische Quelle habe ich nicht gebraucht: Die neuen Kanten stützen sich auf die Länderpläne, die DBK
+oder eine Herleitung mit hoher Zuversicht. KMK-Bildungsstandards gibt es für das Fach nicht (Abschnitt 1).
+
+### 6.3 Neue Kanten (4)
+
+„Bündel“: Ein Plan nennt beide Inhalte in derselben Einheit; die Richtung folgt aus dem Inhalt oder der Reihenfolge
+im Plan. „Herleitung“: Keine Quelle nennt die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `symbole-der-festkreise` | `rituale-im-alltag` | Erst die Bedeutung von Ritualen im Alltag, dann Rituale und Symbole eines christlichen Festes. NW nennt beides nacheinander; die Urteilskompetenz fragt nach der „Bedeutung von Ritualen und Symbolen für religiöse Feste und Feiern“. | NW IF7 E, S. 25 („beschreiben die Verwendung und Bedeutung von Ritualen im Alltag, erläutern verschiedene Rituale und Symbole eines zentralen christlichen Festes“); HE 6, S. 22 („Feste im Kirchenjahr mit ihren Riten und Symbolen“) | Bündel |
+| `buddhismus` | `hinduismus` | Die vier edlen Wahrheiten und der achtfache Pfad sind ein Weg aus dem Kreislauf der Wiedergeburt. Wiedergeburt und Karma lernt man in der Karte beim Hinduismus. BY nennt beide Lehren in einer Kompetenz und den Hinduismus zuerst. Die Karte Evangelische Religion hat dieselbe Kante (`buddha` → `hinduismus-grundbegriffe`). | BY KR10 LB5 („erklären die Lehre von Wiedergeburt und Erlösung (Hinduismus, Buddhismus)“; Inhalte: erst Hinduismus mit Wiedergeburt, Karma, Dharma, dann Buddhismus) | Bündel |
+| `gott-und-goetze` | `zehn-gebote` | Das goldene Kalb (Ex 32) bricht das Bilderverbot der Zehn Gebote (Ex 20,4); damit begründet die Bibel ihre Kritik an selbst gemachten Götterbildern. Die Karte Evangelische Religion hat dieselbe Kante (`erstes-gebot` → `zehn-gebote`). | – | Herleitung |
+| `kirche-im-nationalsozialismus` | `nachfolge` | Das Verhalten der Kirche in der NS-Zeit wird an ihrem Anspruch gemessen, Jesus nachzufolgen; politischer Widerstand gegen Unterdrückung ist ein Beispiel für Nachfolge. | NW IF4 S, S. 31 („beschreiben das Verhalten der Kirche in der Zeit des Nationalsozialismus in der Spannung von Widerstand und Schuld“; „beurteilen … das Verhalten der Kirche angesichts ihres Anspruchs, Jesus nachzufolgen“); DBK Kap. 3.3 Kirche und Gemeinde, S. 29 („was Nachfolge Jesu in unterschiedlichen Zeiten bedeutet (z. B. … politischer Widerstand gegen Unterdrückung …)“) | Quelle |
+
+Zählung: 1 Quelle, 2 Bündel, 1 Herleitung.
+
+### 6.4 Entfernte Kanten (8)
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `geschlechterrollen` | `gottebenbildlichkeit` | Indirekt: folgt schon über `identitaet-jugendalter` → `gottebenbildlichkeit`. |
+| `analoge-rede-von-gott` | `gottesbilder` | Indirekt: folgt schon über `gott-und-goetze` → `biblische-gottesbilder` → `gottesbilder`. |
+| `propheten` | `geschichte-israels` | Indirekt: folgt schon über `zehn-gebote` → `exodus` → `geschichte-israels`. |
+| `konflikte-um-jesus` | `gruppen-zur-zeit-jesu` | Indirekt: folgt schon über `reich-gottes` → `jesus-und-ausgegrenzte` → `gruppen-zur-zeit-jesu`. |
+| `grundvollzuege` | `pfarrgemeinde` | Indirekt: folgt schon über `caritas` → `pfarrgemeinde`. |
+| `moschee` | `religionen-in-der-umgebung` | Indirekt: folgt schon über `synagoge` → `religionen-in-der-umgebung`. |
+| `gott-und-goetze` | `exodus` | Wird indirekt durch die neue Kante: folgt über `zehn-gebote` → `exodus`. |
+| `kirche-im-nationalsozialismus` | `kirche-im-mittelalter` | Falsch: Die Kante sagte nur „das Mittelalter war früher“. Um das Verhalten der Kirche in der NS-Zeit zu verstehen, braucht man das Mittelalter nicht. Ersetzt durch `nachfolge` (6.3). `kirche-im-mittelalter` bleibt Voraussetzung von `reformation`. |
+
+Die übrigen Kanten habe ich geprüft und behalten. Stichproben in den Quellen: `religioese-angebote-pruefen` →
+`einzigartigkeit-des-menschen` (BY KR8 LB5: „christliche Kriterien … v. a. Verwirklichung der Würde des Menschen“),
+`analoge-rede-von-gott` → `gott-und-goetze` (HE 9/10, S. 17: „Daher ist jede menschliche Rede von Gott analoge Rede.
+In diesem Zusammenhang kritisieren biblische Texte (Ex 32,1-20; Jes 44) selbst gemachte Gottesvorstellungen.“),
+`glueck-und-sinn` → `christliche-ethik` (BY KR10 LB4: biblisch begründete Leitlinien und „Bewertungskriterien für die
+Tragfähigkeit von Sinnkonzepten“).
+
+### 6.5 Wurzeln, die bleiben (12, davon 0 allein)
+
+| Baustein | Grund |
+|---|---|
+| `einzigartigkeit-des-menschen` | Anfang des Strangs `mensch` (alle drei Länder in Jg 5/6); Ebenbild, Solidarität, Lebensschutz und die Prüfung religiöser Angebote bauen darauf auf. |
+| `fragen-nach-gott` | Anfang des Strangs `gott`: Staunen und Fragen als Zugang (BY KR6 LB1, NW IF2 E). |
+| `aufbau-der-bibel` | Anfang des Strangs `bibel`; jede Arbeit mit Bibeltexten braucht ihn. |
+| `umwelt-jesu` | Anfang des Strangs `jesus-christus`: Land und Alltag zur Zeit Jesu brauchen keinen anderen Baustein. |
+| `kirchenraum` | Anfang der Kirchenerkundung (BY KR5 LB5, NW IF4 E); Kirchenbau und Moschee-Vergleich bauen darauf auf. Eine Kante zu `sonntag-und-eucharistie` (Altar, Tabernakel) wäre nur mittel sicher (6.7). |
+| `pfarrgemeinde` | Erfahrung der Gemeinde vor Ort (alle drei Länder Jg 5/6); Caritas und Ämter bauen darauf auf. |
+| `zeichen-und-symbole` | Grundbegriffe Zeichen und Symbol; Sakramente, Kreuz und Festsymbole bauen darauf auf. |
+| `rituale-im-alltag` | Rituale im eigenen Alltag brauchen keine Vorkenntnis (NW IF7 E). Jetzt nicht mehr allein: `symbole-der-festkreise` baut darauf auf. |
+| `religionen-in-der-umgebung` | Anfang der Begegnung mit Judentum und Islam (HE 6, NW IF6 E). |
+| `hinduismus` | Keine Voraussetzung in der Karte; ein Baustein „Was ist Religion?“ fehlt, und keine der Quellen nennt ihn (6.6). Jetzt nicht mehr allein: `buddhismus` baut darauf auf. |
+| `goldene-regel` | Anfang des Strangs `ethik` (alle drei Länder Jg 5/6); Nächstenliebe baut darauf auf. |
+| `schuld-und-vergebung` | Erzählungen von Schuld und Vergebung (Lk 15, Josef) werden in Jg 5/6 direkt erzählt; keine Voraussetzung ist sicher (6.7). Das Bußsakrament baut darauf auf. |
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+1. **`wiedergeburt-und-karma`** (Strang `religionen`, Richtstufe 9-10). iCan: „Ich kann erklären, was die Lehre von
+   Wiedergeburt und Karma besagt und wie sie sich vom christlichen Glauben an die Auferstehung unterscheidet.“
+   Quellen: BY KR10 LB5 („erklären die Lehre von Wiedergeburt und Erlösung (Hinduismus, Buddhismus)“), BY KR10 LB2
+   (Reinkarnation), NW IF6 S, S. 33 („unterscheiden die Vorstellungen von Auferstehung und Reinkarnation“).
+   Kanten: `hinduismus` → `wiedergeburt-und-karma`; `buddhismus` → `wiedergeburt-und-karma` statt → `hinduismus`;
+   eventuell `auferstehung-und-jenseits` → `wiedergeburt-und-karma`. Grund: NW verlangt nur eine fernöstliche
+   Religion. Mit dem neuen Baustein müsste eine Klasse, die nur den Buddhismus behandelt, nicht den ganzen
+   Hinduismus vorher lernen.
+
+Einen Baustein „Was ist Religion?“ schlage ich nicht vor: Keine der katholischen Quellen nennt ihn als Inhalt.
+
+### 6.7 Offene Punkte
+
+1. **`buddhismus` → `hinduismus`:** Die Kante ist für BY richtig (beide in KR10 LB5). In NRW wählt die Schule eine
+   fernöstliche Religion; das SiLP wählt den Buddhismus. Wer den Hinduismus dort nicht vorher lernen will, braucht
+   den Baustein aus 6.6.
+2. **Mittlere Zuversicht, nicht in die Karte aufgenommen:**
+   - `tod-und-trauer` → `sakramente`: Die Krankensalbung ist ein Sakrament; der Baustein nennt sie aber nur als
+     Beispiel.
+   - `bar-mizwa` → `synagoge`: Bei der Bar Mizwa liest der Junge zum ersten Mal in der Synagoge aus der Tora. Dann
+     wäre die Kante zu `religionen-in-der-umgebung` indirekt.
+   - `kirchenraum` → `sonntag-und-eucharistie`: Altar und Tabernakel versteht man über die Eucharistie; BY KR5 LB5
+     nennt beides in einem Lernbereich. Viele Schulen beginnen aber mit der Kirchenerkundung.
+   - `schuld-und-vergebung` → `urgeschichte` oder → `gestalten-des-alten-testaments`: BY KR6 LB2 nennt Kain und Abel
+     und Josef („Neid und Vergebung“) zusammen; der Baustein geht aber vom Gleichnis vom barmherzigen Vater aus.
+   - `kirche-im-nationalsozialismus` → `antisemitismus`: Die Schuld der Kirche in der NS-Zeit hängt mit dem
+     christlichen Antijudaismus zusammen; die Quellen nennen beides aber in verschiedenen Inhaltsfeldern.
+3. **`erloesung-vergleichen`** sagt „Buddhismus oder Hinduismus“ und hängt nur an `buddhismus`. Durch die neue Kante
+   ist der Hinduismus nun indirekt auch Voraussetzung. Mit dem Baustein aus 6.6 ließe sich das trennen.
+
+### 6.8 Nicht geöffnet
+
+Alle zitierten Quellen habe ich im Original geöffnet. Fachdidaktische Literatur habe ich nicht gesucht, weil keine
+der Kanten sie brauchte.

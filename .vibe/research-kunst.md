@@ -329,3 +329,147 @@ Regel (Skill `map-research`): eine Stimme je Land; zwei von drei entscheiden; be
 5. **Weitere Inhalte nur eines Landes** (4.2) könnten über Lehrpläne (curricula) später ergänzt werden.
 6. **Strangzahl:** Zehn Stränge statt weniger großer (z. B. „Bildgestaltung“, „Gestaltungsfelder“, „Bildbetrachtung“
    nach NW). Wie bei Musik (KD-23) angenommen, nicht bestätigt.
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein stehenden
+Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“). Ich habe die
+Quellen neu geöffnet, jeden Baustein ohne Anknüpfung in beide Richtungen geprüft und alle bestehenden Kanten
+durchgesehen. Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids, `gradeBand`,
+`status`, `iCan` und Stränge sind unverändert; es gibt keine neuen Bausteine.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 158 | 23 | 4 | 8 | 8 |
+| nachher | 160 | 22 | 0 | 1 | 8 |
+
+Geprüft (Skript `measure.mjs` im Scratchpad): keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine
+indirekte Kante. `npm test`: 111 bestanden, 1 übersprungen (Docker), 0 Fehler. Die Karte hat kein
+`explainerFocus: competency`, und keine App in `entries/` nutzt Kunst; ein Vergleich mit `npm run listing` entfällt.
+
+### 6.2 Quellen
+
+Am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML). Seitenzahlen sind die
+gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE KC | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Kunst | Fassung 2011 (geändert 01.07.2021), 36 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-07/kerncurriculum_kunst_gymnasium.pdf |
+| HE G9 | Hessisches Kultusministerium: Lehrplan Kunst, Gymnasialer Bildungsgang, Jahrgangsstufen 5 bis 13 | PDF vom 08.02.2016, 35 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-kunst.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Kunst, Ku5 bis Ku10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/kunst (ebenso …/6/kunst bis …/10/kunst) |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Kunst | Heft 3405, 1. Auflage 2019, 32 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_ku_klp_3405_2019_06_23.pdf |
+
+Fachdidaktische Literatur habe ich nicht herangezogen (siehe 6.8). Alle neuen Kanten stützen sich auf die Pläne der
+Länder oder auf eine Herleitung.
+
+### 6.3 Neue Kanten (7)
+
+„Bündel“: Ein Plan nennt beide Inhalte im selben Jahrgang oder in derselben Einheit. „Herleitung“: Keine Quelle
+nennt die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `inszenierte-fotografie` | `kleidung-als-zeichen` | Wer ein Foto mit Kleidung inszeniert, muss wissen, was Kleidung über Menschen mitteilt. | HE G9 9.1 S. 27 („Pose und Attribut (u.a. Mimik, Gestik, Haltung, Kleidung)“); BY Ku9 LB3 („Gestaltungsmittel der Inszenierung, z. B. Kleidung, Requisit, Kulisse, Attribut, Statussymbol“) | Quelle |
+| `expressive-bilder` | `malspuren` | Inneres Erleben drückt sich auch in der Spur des Farbauftrags aus. | HE G9 5.1 S. 11 („Malerische Spur innerer Bewegung“); 6.1 S. 16 („Farbauftrag als Ausdrucksmittel“) | Quelle |
+| `designobjekt-entwerfen` | `sammeln` | Ein Entwurf beginnt mit gesammelten Bildern, Dingen und Ideen (Moodboard). | BY Ku9 LB2 („Entwurf und Analyse z. B. von Bekleidung, Mode, Schmuck und Ornament, u. a. mit Collage- und Zufallsverfahren, Moodboard, Zeichnung, Materialdruck“) | Bündel |
+| `fantasiebild` | `punkt-und-linie` | Das Fantasiebild entsteht als Zeichnung aus einem Vorrat an Linien und Formen. | HE G9 5.2 S. 13 („Entwicklung eines Formrepertoires: Ausdrucksqualitäten zeichnerischer Spuren, Figuren … Erzählbilder, Bildergeschichten, Fantasiebilder, Fabelwesen“) | Bündel |
+| `hoehlenmalerei` | `funktionen-der-kunst` | Der Baustein fragt, wozu die Werke gemacht wurden. | BY Ku5 LB2 („Vor- und Frühgeschichte: Objekte … in Bezug auf Kulte und Grundbedürfnisse des Menschen; sakrale und profane Funktion“) | Bündel |
+| `wegbereiter-der-moderne` | `abstrahieren` | Wer zeigen will, wie diese Maler die Abstraktion vorbereitet haben, muss wissen, was Abstrahieren heißt. | BY Ku10 LB1 (Prinzipien des Verzerrens, Kombinierens oder Collagierens, „um spielerisch mit den Möglichkeiten der Abstraktion zu experimentieren“; Impressionisten und Wegbereiter der Moderne, „Relevanz für die Vorbereitung der Abstraktion“) | Bündel |
+| `selbstdarstellung-online` | `praesentieren` | Eine Selbstdarstellung im Internet ist eine Präsentation für ein Publikum; man bewertet sie danach, ob sie zu Zweck und Publikum passt. | Stütze: NW S. 22 („Plattformen zur Präsentation, Kommunikation und Interaktion“), S. 26 („bewerten digital und analog erstellte Präsentationen hinsichtlich ihrer Kontext- und Adressatenbezogenheit“) | Herleitung |
+
+Zusammen: 2 Quelle, 4 Bündel, 1 Herleitung.
+
+### 6.4 Entfernte Kanten (5)
+
+Alle fünf sind indirekt. Keine bestehende Kante war inhaltlich falsch. Die Epochen hängen als Kette aneinander
+(BY vergleicht jede Epoche mit der vorigen); `epochen-ueberblick` braucht deshalb nur das Ende jeder Kette direkt.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `epochen-ueberblick` | `mittelalterliche-bilder` | Folgt über `barock` → `renaissance` → `mittelalterliche-bilder`. |
+| `epochen-ueberblick` | `renaissance` | Folgt über `barock` → `renaissance`. |
+| `epochen-ueberblick` | `klassizismus-und-romantik` | Folgt über `wegbereiter-der-moderne` → `impressionismus` → `realismus` → `klassizismus-und-romantik`. |
+| `epochen-ueberblick` | `realismus` | Folgt über `wegbereiter-der-moderne` → `impressionismus` → `realismus`. |
+| `epochen-ueberblick` | `impressionismus` | Folgt über `wegbereiter-der-moderne` → `impressionismus`. |
+
+Die Ketten selbst habe ich an den Quellen geprüft: `renaissance` → `mittelalterliche-bilder` (BY Ku8 LB1
+„Raumdarstellung im Vergleich mit dem Mittelalter“), `barock` → `renaissance` (BY Ku8 LB1 „Werke des Barock im
+Vergleich zur Renaissance“), `realismus` → `klassizismus-und-romantik` (BY Ku9 LB1: die drei Strömungen
+„vergleichen“), `impressionismus` → `realismus` (BY Ku10 LB1: Impressionisten „hinsichtlich ihrer Vorläufer“; Manet).
+Sie bleiben.
+
+### 6.5 Wurzeln, die bleiben (22, davon 0 allein)
+
+| Baustein | Strang | Grund |
+|---|---|---|
+| `farbeigenschaften` | farbe | Anfang der Farbenlehre: Farbton, Helligkeit, Sättigung. |
+| `farbauftrag` | farbe | Anfang des Malens (deckend, lasierend); setzt keine Farbenlehre voraus. |
+| `figur-grund` | form-flaeche | Anfang der Flächengestaltung. |
+| `streuung-reihung-ballung` | form-flaeche | Anfang der Flächenordnung; unabhängig von Figur und Grund. |
+| `formeigenschaften` | form-flaeche | Anfang der Formenlehre (tektonisch, organisch). |
+| `vordergrund-hintergrund` | raum | Anfang der Raumdarstellung. |
+| `licht-und-schatten` | raum | Kein Baustein ist sicher direkt nötig (offener Punkt 1). |
+| `koerperproportionen` | raum | Anfang der Figurendarstellung. |
+| `zeichenmaterial` | zeichnung-druck | Anfang des Zeichnens. |
+| `material-erkunden` | plastik | Anfang des plastischen Gestaltens und der Architektur. |
+| `kamerastandpunkt` | foto-film | Anfang der Fotografie (offener Punkt 2). |
+| `koerpersprache` | foto-film | Anfang von Standbild und Inszenierung. |
+| `recht-am-eigenen-bild` | foto-film | Rechtswissen; setzt keinen Baustein der Karte voraus. |
+| `kleidung-als-zeichen` | architektur-design | Keine sichere Voraussetzung; `inszenierte-fotografie` baut jetzt darauf auf. |
+| `schrift-und-wirkung` | architektur-design | Anfang der Typografie; Plakat und Logo bauen darauf auf. |
+| `verfremden` | bildstrategien | Anfang der Bildstrategien; `abstrahieren` baut darauf auf. |
+| `sammeln` | bildstrategien | Arbeitsweise ohne Voraussetzung; `designobjekt-entwerfen` baut jetzt darauf auf. |
+| `praesentieren` | bildstrategien | Kein Baustein ist sicher direkt nötig; `selbstdarstellung-online` baut jetzt darauf auf. |
+| `ersteindruck` | bildanalyse | Anfang der Bildbetrachtung. |
+| `werkangaben` | bildanalyse | Werkangaben lesen braucht keinen anderen Baustein. |
+| `funktionen-der-kunst` | bildanalyse | Anfang: wozu Kunst gemacht wird; Steinzeitkunst und Street-Art bauen darauf auf. |
+| `antike-architektur` | kunstgeschichte | Die Architektur beginnt in der Karte erst mit 7-8 (`bauwerk-untersuchen`); eine frühere Voraussetzung fehlt (offener Punkt 3). |
+
+**Teilnetze:** nur noch eines. Vorher waren `farbauftrag` → `farbmaterial`, `malspuren` → `zufallsverfahren` und
+`verfremden` → `abstrahieren` eigene Teilnetze, dazu die vier allein stehenden Bausteine.
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+Keine Lücke ist zwingend. Ein Kandidat, nur schwach belegt:
+
+- **`fiktion-und-wirklichkeit`** (Strang `bildstrategien`, Richtstufe 7-8): „Ich kann an Bildern zeigen, wo sie
+  die Wirklichkeit abbilden und wo sie etwas Erfundenes zeigen.“ Quellen: NW E IF3 Rezeption (S. 21: „bewerten in
+  Gestaltungen das Verhältnis zwischen Wirklichkeit und Fiktion“); BY Ku5 LB1 („Bildmotive aus Fantasie,
+  Beobachtung oder Erlebnis“). HE nennt es nicht ausdrücklich. Kanten: requires `fantasiebild`; Voraussetzung von
+  `dokumentation-und-inszenierung`. Nur aufnehmen, wenn Lehrkräfte es wollen; mit zwei schwachen Belegen erfüllt es
+  die Regel „zwei von drei Ländern“ nur knapp.
+
+### 6.7 Offene Punkte
+
+1. **`licht-und-schatten`** bleibt Wurzel. Möglich wäre `licht-und-schatten` → `farbkontraste` (Hell-Dunkel-Kontrast)
+   oder → `farbeigenschaften` (Helligkeit). Zuversicht nur mittel: Licht und Schatten zeichnet man auch ohne
+   Farbenlehre.
+2. **`kamerastandpunkt`** → `bildausschnitt-und-ansicht`: BY nennt „Ansicht“ in Ku6 LB1 und „Standpunkt,
+   Perspektive … Bildausschnitt“ in Ku9 LB3 zusammen. Man kann Frosch- und Vogelperspektive aber auch ohne die
+   Zeichenübung lernen. Zuversicht mittel; nicht aufgenommen.
+3. **`antike-architektur`** bleibt Wurzel. BY nennt schon in Ku6 LB2 „einfache Untersuchungskriterien für
+   Architektur“; in der Karte steht dieser Inhalt erst in `bauwerk-untersuchen` (7-8). Eine Kante ginge nur mit
+   früherer Richtstufe; das ist eine Frage an die Abstimmung, nicht an `requires`.
+4. **`fantasiebild` → `punkt-und-linie`** (Bündel): HE führt Fantasiebilder im zeichnerischen Gestalten. Ein
+   Fantasiebild kann man aber auch malen oder kleben. Wenn Lehrkräfte das so sehen, lässt sich die Kante streichen;
+   dann ist `fantasiebild` wieder allein.
+5. **`montage` → `fantasiebild`** (Prinzip Kombinieren; BY Ku10 LB1 „Kombinierens oder Collagierens“): Zuversicht
+   mittel; nicht aufgenommen.
+6. **`assemblage` → `sammeln`** (gefundene Dinge sammeln; BY Ku5 LB2 „Montage aus Fundstücken“, NW E IF2
+   „sammelnd“): Zuversicht mittel; nicht aufgenommen.
+7. **`abstrahieren` → `beobachtend-zeichnen`** (HE G9 9.2 S. 29 „Dekonstruktion realistischer Erscheinungsformen“; BY
+   Ku10 „über das naturalistische Abbilden hinaus“): Abstrahieren beginnt beim genauen Abbild. Zuversicht mittel;
+   nicht aufgenommen.
+8. **`selbstdarstellung-online` → `praesentieren`** ist eine Herleitung. Die NW-Stellen stützen sie, nennen die
+   Verbindung aber nicht ausdrücklich. Bitte von Lehrkräften bestätigen lassen.
+9. **`zufallsverfahren` → `texturen-zeichnen`** (Frottage nimmt Oberflächen ab): Zuversicht mittel; nicht
+   aufgenommen.
+
+### 6.8 Nicht geöffnet
+
+- Fachdidaktische Handbücher zum Aufbau des Kunstunterrichts (z. B. Kirchner/Otto, Peez) sind nicht frei online.
+  Nicht geöffnet, nicht zitiert. Für die neuen Kanten waren sie nicht nötig.
+- Den Hessischen „Leitfaden Kunst Sekundarstufe I“ (2011) habe ich wie in Abschnitt 1 nicht verwendet; er ist nicht
+  verbindlich.

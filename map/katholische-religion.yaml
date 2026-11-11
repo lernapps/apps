@@ -22,6 +22,7 @@
 #          "SiLP j.n" = Jahrgang j im Beispiel für einen schulinternen Lehrplan (2020), nur als Hinweis, keine Stimme.
 # Abstimmung je Baustein: Stimmen HE/BY/NW -> Richtstufe (Grund). "schwach belegt" = weniger als zwei Länder.
 # Genaue Titel, Ausgaben und URLs: .vibe/research-katholische-religion.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Katholische Religion, en: Catholic religious education }   # the file name is the subject's id
 source:
   title: Die deutschen Bischöfe Nr. 116, Kirchliche Richtlinien zu Bildungsstandards für den katholischen Religionsunterricht in der Sekundarstufe I (Sekretariat der Deutschen Bischofskonferenz, 24.06.2025)
@@ -76,7 +77,7 @@ strands:
         name: { de: "Rollenbilder von Frau und Mann", en: "Images of women and men" }
         iCan: "Ich kann Bilder von Frauen und Männern in Medien beschreiben und mit der biblischen Aussage vergleichen, dass Gott den Menschen als Mann und Frau gleichwertig geschaffen hat."
         gradeBand: "7-8"
-        requires: [gottebenbildlichkeit, identitaet-jugendalter]
+        requires: [identitaet-jugendalter]
       # DBK MuW (Sinnhorizont menschlicher Existenz); BY KR10 LB4: Glücksversprechen, Sinnkonzepte, Kohelet; NW IF7 S: alternative Formen der Suche nach Sinn und Erfüllung; SiLP 10.4. Stimmen –/9-10/7-10 -> 9-10 (Mehrheit).
       # Siehe auch: evangelische-religion/gelingendes-leben
       - id: glueck-und-sinn
@@ -143,11 +144,12 @@ strands:
         requires: [gebet]
       # DBK 2004: 4.2 Nr. 2 (Gott und Götze); HE 9/10: Kritik selbst gemachter Gottesvorstellungen (Ex 32; Jes 44) (S. 17, 35); BY KR5 LB3: historische Gottesvorstellungen mit dem biblischen Gottesbild vergleichen; NW IF2 S: biblische Gottesbilder. Stimmen 9-10/5-6/7-10 -> 9-10 (Mehrheit).
       # Siehe auch: evangelische-religion/erstes-gebot
+      # requires zehn-gebote (Herleitung): Das goldene Kalb (Ex 32) bricht das Bilderverbot der Zehn Gebote (Ex 20,4); die Kritik an selbst gemachten Götterbildern begründet die Bibel mit diesem Gebot
       - id: gott-und-goetze
         name: { de: "Gott und Götze", en: "God and idols" }
         iCan: "Ich kann an der Erzählung vom goldenen Kalb erklären, warum die Bibel selbst gemachte Götterbilder kritisiert."
         gradeBand: "9-10"
-        requires: [biblische-gottesbilder, exodus]
+        requires: [biblische-gottesbilder, zehn-gebote]
       # DBK Bibel (Gott der Freiheit, Exodus); HE 8: Gott offenbart sich und lässt sich ansprechen (Ex 3) (S. 26, 36); NW IF2 S: Glaube an die Gegenwart Gottes als Spezifikum des jüdisch-christlichen Gottesverständnisses. Stimmen 7-8/–/7-10 -> 7-8 (Mehrheit).
       # Siehe auch: evangelische-religion/dornbusch
       - id: gottesname
@@ -196,7 +198,7 @@ strands:
         name: { de: "Analoge Rede von Gott", en: "Speaking of God by analogy" }
         iCan: "Ich kann erklären, warum Menschen nach christlichem Verständnis von Gott nur in Vergleichen sprechen können."
         gradeBand: "9-10"
-        requires: [gottesbilder, gott-und-goetze]
+        requires: [gott-und-goetze]
   - id: bibel
     name: { de: "Bibel und Tradition", en: "Bible and tradition" }
     competencies:
@@ -299,7 +301,7 @@ strands:
         name: { de: "Propheten in der Bibel", en: "Biblical prophets" }
         iCan: "Ich kann an einem Propheten wie Amos oder Jeremia erklären, was ein Prophet in der Bibel ist und wofür er eintritt."
         gradeBand: "7-8"
-        requires: [geschichte-israels, zehn-gebote]
+        requires: [zehn-gebote]
       # DBK Bibel (prophetisches Wirken in Geschichte und Gegenwart); 2004: 4.3 Nr. 4; BY KR8 LB2: modernes prophetisches Handeln; NW IF2 S: Wirksamkeit prophetischen Handelns. Stimmen –/7-8/7-10 -> 7-8 (Mehrheit).
       - id: prophetisch-handeln-heute
         name: { de: "Prophetisches Handeln heute", en: "Prophetic action today" }
@@ -383,7 +385,7 @@ strands:
         name: { de: "Konflikte um Jesus", en: "Conflicts around Jesus" }
         iCan: "Ich kann erklären, warum Jesu Botschaft und Handeln Widerspruch hervorriefen und zu seinem Tod führten."
         gradeBand: "9-10"
-        requires: [reich-gottes, gruppen-zur-zeit-jesu]
+        requires: [reich-gottes]
       # DBK 2004: 4.4 Nr. 3 (Passionsgeschichte); HE 6: Tod und Auferstehung Jesu (S. 22, 37); BY KR6 LB3: Kreuzigung, Tod und Auferstehung; NW IF4 E: Feste als Vergegenwärtigung des Lebens, des Todes und der Auferstehung Jesu. Stimmen 5-6/5-6/5-6 -> 5-6 (einstimmig).
       # Siehe auch: evangelische-religion/passion-und-ostern
       - id: passion
@@ -506,11 +508,12 @@ strands:
         gradeBand: "5-6"
         requires: [weihnachtsevangelium, auferstehung]
       # DBK Religion in der pluralen Gesellschaft (Feste und Alltagskultur); HE 6: Feste mit ihren Riten und Symbolen (S. 22); BY KR5 LB2: Symbole, Riten, Brauchtum der Weihnachtszeit; KR6 LB3: Riten und Symbole des Osterfestkreises; NW IF7 E: Rituale und Symbole eines zentralen christlichen Festes. Stimmen 5-6/5-6/5-6 -> 5-6 (einstimmig).
+      # requires rituale-im-alltag: Erst die Bedeutung von Ritualen im Alltag, dann Rituale und Symbole eines christlichen Festes; NW nennt beides nacheinander im selben Inhaltsfeld (NW IF7 E, S. 25)
       - id: symbole-der-festkreise
         name: { de: "Symbole der Festkreise", en: "Symbols of Christmas and Easter" }
         iCan: "Ich kann Symbole und Bräuche des Weihnachts- und des Osterfestkreises deuten, zum Beispiel Adventskranz oder Osterkerze."
         gradeBand: "5-6"
-        requires: [kirchenjahr, zeichen-und-symbole]
+        requires: [kirchenjahr, zeichen-und-symbole, rituale-im-alltag]
       # DBK Kirche (Sakramente); 2004: 4.5 Nr. 1 und 2; HE 6: Sonntag als Tag des Herrn – Feier der Eucharistie (S. 22, 37); BY KR5 LB5: Eucharistiefeier; KR7 LB2; NW IF4 E: Bedeutung des Sonntags und der Eucharistie. Stimmen 5-6/5-6/5-6 -> 5-6 (einstimmig).
       - id: sonntag-und-eucharistie
         name: { de: "Sonntag und Eucharistie", en: "Sunday and the Eucharist" }
@@ -566,7 +569,7 @@ strands:
         name: { de: "Grundvollzüge der Kirche", en: "Core functions of the Church" }
         iCan: "Ich kann die Grundaufgaben der Kirche erklären: Zeugnis geben (Martyria), Gottesdienst feiern (Liturgia) und Menschen dienen (Diakonia) in Gemeinschaft (Koinonia)."
         gradeBand: "7-8"
-        requires: [pfarrgemeinde, caritas, sonntag-und-eucharistie]
+        requires: [caritas, sonntag-und-eucharistie]
       # DBK Kirche (Selbstverständnis); 2004: 4.5 Nr. 1; HE 9/10: Aufgaben von Geistlichen und Laien, Lehramt (S. 19, 35); BY KR8 LB4: Bedeutung des Papstamtes; NW IF4 S: Aufbau der katholischen Kirche. Stimmen 9-10/7-8/7-10 -> 7-8 (Gleichstand 7-8/9-10; die frühere Stufe, kein requires verlangt eine spätere).
       - id: aemter-der-kirche
         name: { de: "Ämter in der Kirche", en: "Ministries and roles in the Church" }
@@ -621,11 +624,12 @@ strands:
         requires: [katholisch-und-evangelisch]
       # DBK Kirche (Nachfolge: politischer Widerstand); 2004: 4.5 Nr. 3; HE 9/10: kritische Reflexion der eigenen Vergangenheit (S. 19); BY KR9 LB4: Anpassung, Rückzug, Exil und Widerstand im Nationalsozialismus; NW IF4 S: Verhalten der Kirche im Nationalsozialismus zwischen Widerstand und Schuld; SiLP 9.6. Stimmen 9-10/9-10/7-10 -> 9-10 (einstimmig).
       # Siehe auch: evangelische-religion/kirche-im-nationalsozialismus
+      # requires nachfolge: Das Verhalten der Kirche in der NS-Zeit wird an ihrem Anspruch gemessen, Jesus nachzufolgen; politischer Widerstand ist ein Beispiel für Nachfolge (NW IF4 S, S. 31; DBK Kirche, S. 29)
       - id: kirche-im-nationalsozialismus
         name: { de: "Kirche im Nationalsozialismus", en: "The Church under Nazism" }
         iCan: "Ich kann beschreiben, wie sich Christen und die Kirche in der Zeit des Nationalsozialismus zwischen Anpassung und Widerstand verhielten."
         gradeBand: "9-10"
-        requires: [kirche-im-mittelalter]
+        requires: [nachfolge]
       # DBK Kirche (aktuelle Themen der Kirchenkritik); BY KR8 LB4: gesellschaftliche Wahrnehmung der Kirche, Selbsterneuerung als ständige Aufgabe; NW IF4 S: aktuelle Herausforderungen der Kirche in der Nachfolge Jesu. Stimmen –/7-8/7-10 -> 7-8 (Mehrheit).
       - id: kirche-in-der-kritik
         name: { de: "Kirche in der Kritik", en: "The Church under criticism" }
@@ -699,7 +703,7 @@ strands:
         name: { de: "Moschee", en: "The mosque" }
         iCan: "Ich kann die Ausstattung einer Moschee beschreiben und mit einer Kirche und einer Synagoge vergleichen."
         gradeBand: "5-6"
-        requires: [religionen-in-der-umgebung, kirchenraum, synagoge]
+        requires: [kirchenraum, synagoge]
       # DBK Religion (Feste); 2004: 4.6 Nr. 2; HE 6: Ramazan Bayrami und Kurban Bayrami (S. 23); BY KR7 LB5: Feste und geprägte Zeiten; NW IF6 E: zentrale Rituale. Stimmen 5-6/7-8/5-6 -> 5-6 (Mehrheit).
       # Siehe auch: evangelische-religion/islamische-feste
       - id: islamische-feste
@@ -757,10 +761,12 @@ strands:
         gradeBand: "9-10"
       # DBK Religion (eine fernöstliche Religion); BY KR10 LB5: Vier edle Wahrheiten, Achtfacher Pfad, Siddhartha Gautama; NW IF6 S: eine fernöstliche Religion als Weg der Heilssuche; SiLP 8.6. Stimmen –/9-10/7-10 -> 9-10 (Mehrheit).
       # Siehe auch: evangelische-religion/buddhismus-lehre
+      # requires hinduismus: Die vier edlen Wahrheiten und der achtfache Pfad sind ein Weg aus dem Kreislauf der Wiedergeburt; Wiedergeburt und Karma lernt man beim Hinduismus, BY nennt beide Lehren zusammen und den Hinduismus zuerst (BY KR10 LB5)
       - id: buddhismus
         name: { de: "Buddhismus", en: "Buddhism" }
         iCan: "Ich kann Grundzüge des Buddhismus erklären, zum Beispiel das Leben Siddhartha Gautamas, die vier edlen Wahrheiten und den achtfachen Pfad."
         gradeBand: "9-10"
+        requires: [hinduismus]
       # DBK Religion (fernöstliche Religion als Weg der Erlösung, Vergleich); BY KR10 LB5: christliche und hinduistische/buddhistische Erlösungsvorstellungen unterscheiden; NW IF6 S: Sicht auf Welt und Mensch im Christentum und in einer fernöstlichen Religion vergleichen. Stimmen –/9-10/7-10 -> 9-10 (Mehrheit).
       - id: erloesung-vergleichen
         name: { de: "Erlösung im Religionsvergleich", en: "Salvation across religions" }

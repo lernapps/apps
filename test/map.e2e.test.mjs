@@ -74,21 +74,45 @@ describe("the built pages", () => {
 
   test("the map by steps: one row per step, the competencies as links, the order linked from the subject", () => {
     const html = read("map/mathematik/c/index.html");
-    const rows = [...html.matchAll(/<th scope="row">Stufe (\d+)/g)].map((m) => Number(m[1]));
-    assert.deepEqual(rows, Array.from({ length: rows.length }, (_, i) => i + 1));
-    assert.ok(rows.length > 1);
+    assert.ok([...html.matchAll(/<th scope="row">Schritt \d+/g)].length > 1);
     assert.match(html, /href="\/apps\/map\/mathematik\/c\/zufall-laplace\/" class="map-chip/);
     assert.match(html, /<script type="application\/json" id="map-steps-data">/);
-    assert.match(read("map/mathematik/index.html"), /href="\/apps\/map\/mathematik\/c\/"[^>]*>Nach Stufen der Kette/);
-    assert.match(read("en/map/mathematik/c/index.html"), /<th scope="row">Step 1/);
+    assert.match(read("map/mathematik/index.html"), /href="\/apps\/map\/mathematik\/c\/"[^>]*>Nach Klasse und Kette/);
+    assert.match(read("en/map/mathematik/c/index.html"), /<th scope="row">Step 1</);
+  });
+
+  test("the map by grade and chain: a heading row per grade band, steps from 1 in each, no counts (feat/map-chains, KD-17)", () => {
+    const html = read("map/mathematik/c/index.html");
+    const bands = [...html.matchAll(/<tr class="map-band-row"><th scope="rowgroup"[^>]*>Klasse (5\/6|7\/8|9\/10)<\/th><\/tr>/g)].map((m) => m[1]);
+    assert.deepEqual(bands, ["5/6", "7/8", "9/10"]);
+    const parts = html.split('class="map-band-row"').slice(1);
+    for (const part of parts) {
+      const steps = [...part.matchAll(/<th scope="row">Schritt (\d+)<\/th>/g)].map((m) => Number(m[1]));
+      assert.deepEqual(steps, Array.from({ length: steps.length }, (_, i) => i + 1));
+    }
+    assert.doesNotMatch(html, /map-chip-band|map-filter-count|Bausteinen geübt/);
+    assert.match(read("en/map/mathematik/c/index.html"), /<th scope="rowgroup"[^>]*>Grade 5\/6<\/th>/);
+  });
+
+  test("the map by steps names the competencies that stand alone and marks them (feat/map-chains, KD-12)", async () => {
+    const { loadMap } = await import("../lib/map.js");
+    for (const subject of loadMap("map")) {
+      const alone = [...subject.competencies.values()].filter((c) => !c.requires.length && !subject.requiredBy.get(c.id).length);
+      const html = read(`map/${subject.id}/c/index.html`);
+      const marked = [...html.matchAll(/<li[^>]* data-alone data-competency="([^"]+)"/g)].map((m) => m[1]);
+      assert.deepEqual(marked.sort(), alone.map((c) => c.id).sort(), subject.id);
+      const summary = html.match(/<p class="m-0 text-slate-700" data-map-alone>([\s\S]*?)<\/p>/)[1];
+      if (alone.length) assert.match(summary, new RegExp(`${alone.length} Bausteine? steh(t|en) allein`), subject.id);
+      else assert.match(summary, /Jeder Baustein ist in die Kette eingeordnet/, subject.id);
+    }
   });
 
   test("the page of a competency shows its chain: every ancestor by step, the direct descendants and how many follow", () => {
     const page = read("map/mathematik/c/zufall-laplace/index.html");
-    assert.match(page, /Dieser Baustein · Stufe 7/);
+    assert.match(page, /Dieser Baustein · Klasse \d\/\d+ · Schritt \d+/);
     assert.match(page, /href="\/apps\/map\/mathematik\/c\/wahrscheinlichkeitsbegriff\/"[^]*?<span class="map-direct">direkt<\/span>/);
     assert.match(page, /href="\/apps\/map\/mathematik\/c\/vierfeldertafel\/"/);
-    assert.match(page, /Danach bauen noch \d+ Bausteine in \d+ weiteren Stufen? darauf auf\./);
+    assert.match(page, /Danach bauen noch \d+ Bausteine in \d+ weiteren Schritten? darauf auf\./);
     assert.match(page, /href="\/apps\/map\/mathematik\/c\/#zufall-laplace"/);
   });
 
@@ -206,7 +230,7 @@ describe("in the browser", () => {
     assert.ok((await page.locator("svg.map-arrows > path").count()) > 0);
     assert.equal(await page.locator('li[data-competency="wahrscheinlichkeitsbegriff"]').getAttribute("data-before"), "");
     assert.equal(await page.locator('li[data-competency="vierfeldertafel"]').getAttribute("data-after"), "");
-    assert.match(await chain.textContent(), /Stochastik · Stufe 7/);
+    assert.match(await chain.textContent(), /Stochastik · Klasse \d\/\d+ · Schritt \d+/);
     assert.match(await chain.textContent(), /Baut auf · \d+/);
     await chain.getByRole("button", { name: "wahrscheinlichkeitsbegriff" }).click();
     assert.match(page.url(), /#wahrscheinlichkeitsbegriff$/);

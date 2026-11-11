@@ -221,3 +221,117 @@ Lesehilfe: **Stimmen** = HE / BY / NW. „7-10“ = Hessen (zählt für 7-8 und 
    Tabellenkalkulation (nur BY), CSS, Zeichencodierung, analog/digital und Umweltbilanz (nur HE).
 6. Keine Lehrpläne (`curricula/`): HE nennt nur „Ende 9/10“, NW nur Doppelstufen; Bayern würde einzelne Jahrgänge
    erlauben, ist aber im Auftrag nicht vorgesehen.
+
+## 5. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“).
+Ich habe alle 116 Kanten geprüft und die Quellen der Länder neu gelesen. Die Begründung jeder neuen Kante steht als
+Kommentar `# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan` und Stränge sind unverändert; kein neuer
+Baustein.
+
+### 5.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 116 | 4 | 0 | 2 | 8 |
+| nachher | 112 | 4 | 0 | 1 | 10 |
+
+Die Karte war schon gut verbunden. Das zweite Teilnetz war `urheberrecht` → `lizenzmodelle`; es hängt jetzt über
+`hypertext` am großen Netz. Die Zahl der Stufen (längste Kette) steigt von 8 auf 10, weil `datenschutzrecht` jetzt auf
+`datenschutz-und-datensicherheit` aufbaut; diese Reihenfolge ist fachlich gewollt (Abschnitt 5.3).
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante (Messskript: keine Zeilen
+`LATE` oder `INDIRECT`; vorher 6 Zeilen `INDIRECT`). `npm test` grün. `npm run listing` für `entries/typonaut.yaml`
+(die einzige App mit `subject: informatik`) vorher und nachher gleich: „bestanden“, keine neuen Befunde. Die Karte hat
+`explainerFocus: strand` (Vorgabe); Typonaut nennt keine Bausteine.
+
+### 5.2 Quellen
+
+Alle am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML). Seitenzahlen sind
+die gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| GI | Gesellschaft für Informatik: Bildungsstandards Informatik für die Sekundarstufe I | Januar 2025, doi:10.18420/rec2025_052 | https://www.mnu.de/images/fachbereiche/Informatik/Bildungsstandards_Sek_I_2025__pdf-A_.pdf |
+| HE | Hessisches Kultusministerium: Kerncurriculum Informatik für den Wahlunterricht, Sek I gymnasialer Bildungsgang | August 2021 | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-08/kch_informatik.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, NT6, NT7, Informatik 9 und 10 (NTG) | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/6/nt_gym · …/7/nt_gym · …/9/informatik · …/10/informatik |
+| NW | MSB NRW: Kernlehrplan Sek I, Klasse 5 und 6, Informatik | Heft 5028, 2021 | https://lehrplannavigator.nrw.de/system/files/media/document/file/si_kl5u6_if_klp_2021_07_01.pdf |
+| NW-WP | MSB NRW: Kernlehrplan Sek I Gymnasium, Wahlpflichtfach Informatik | 2023 | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_wpif_klp_2023_06_01.pdf |
+
+Fachdidaktische Literatur habe ich nicht gebraucht: Die neuen Kanten stützen sich auf die Lehrpläne oder auf den
+Inhalt. Es gibt keine KMK-Bildungsstandards Informatik (Abschnitt 1).
+
+Die Pläne bestätigen mehrere bestehende Kanten ausdrücklich, zum Beispiel: BY NT7 2.3 nennt die Strukturelemente in
+der Reihenfolge Anweisung, Sequenz, bedingte Anweisung, Wiederholung mit fester Anzahl, Wiederholung mit Bedingung;
+BY Inf9 LB1 nennt das Datenflussdiagramm als „Repräsentation einer Funktion“ und dann die „Verkettung von
+Funktionen“ (`funktionen-verketten` → `datenflussdiagramm`); BY NT7 2.1 nennt die Hypertextstruktur als „Graph,
+bestehend aus Knoten und Kanten“ (`hypertext` → `graph`); HE S. 16 nennt „Zusammenhang zwischen baumartig
+strukturierten Hypertexten und weiteren Strukturen, unter anderem Dateisysteme, DNS“.
+
+### 5.3 Neue Kanten (3)
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `hypertext` | `urheberrecht` | Wer einen Hypertext erstellt, beachtet das Urheberrecht und gibt Quellen an; beide Pläne verlangen das beim Erstellen. | BY NT7 2.1 („Erstellung einer Hypertextstruktur; hierbei berücksichtigen sie grundlegende Aspekte des Urheberrechts und wenden einfache Zitiernormen (Quellenangaben) an“); HE S. 16 TF Internet („wenden bei der Erstellung einer eigenen Website Grundsätze des Urheberrechts … an“) | Quelle |
+| `datenschutzrecht` | `datenschutz-und-datensicherheit` | Das Datenschutzrecht regelt den Datenschutz; den Begriff braucht man, um einen Fall zu beurteilen. | HE S. 16 TF Internet: Schwerpunkte „Datenschutz“, „Datensicherheit“ mit „entscheiden …, ob personenbezogene Daten gewonnen, verarbeitet und genutzt werden dürfen“ | Bündel |
+| `variable` | `visuelle-programmierung` | Variablen legt man in einem Programm an; dazu muss man ein Programm schreiben und ausführen können. Ersetzt die Kante zu `sequenz`. | HE S. 18 (Variablen im TF Grundlagen der Programmierung); BY Inf9 LB3 („verwenden bei der Implementierung Wertzuweisungen“) | Herleitung |
+
+### 5.4 Entfernte Kanten (7)
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `zeichencodierung` | `binaersystem` | indirekt: folgt über `bit-und-byte` → `binaersystem` |
+| `feld-array` | `datentypen` | indirekt: folgt über `variable` → `datentypen` |
+| `algorithmus-ausfuehren` | `verzweigung` | indirekt: folgt über `wiederholung-mit-bedingung` → `verzweigung` |
+| `struktogramm` | `verzweigung` | indirekt, wie oben |
+| `programmablaufplan` | `verzweigung` | indirekt, wie oben |
+| `pseudocode` | `verzweigung` | indirekt, wie oben |
+| `variable` | `sequenz` | indirekt nach der neuen Kante: folgt über `visuelle-programmierung` → `sequenz` |
+
+Keine bestehende Kante war inhaltlich falsch. Fragliche Kanten stehen in 5.6.
+
+### 5.5 Wurzeln, die bleiben (4, keine allein)
+
+| Baustein | Grund |
+|---|---|
+| `information-und-daten` | Anfang des Fachs: Information und Daten unterscheiden (NW 5/6 S. 17, erste Kompetenzerwartung „erläutern den Datenbegriff“). Viele Bausteine in `daten` und `gesellschaft` bauen darauf auf. |
+| `algorithmus-begriff` | Anfang von `algorithmen`: eine eindeutige Handlungsvorschrift für einen Alltagsablauf aufschreiben braucht kein Vorwissen aus der Karte (NW 5/6 S. 17, BY NT7 2.3 „Definition des Begriffs“). |
+| `informatiksysteme-im-alltag` | Anfang von `informatiksysteme`: Beispiele aus der Erfahrungswelt nennen (NW 5/6 S. 19, erste Kompetenzerwartung). |
+| `urheberrecht` | Rechtsbegriff, den die Karte nicht weiter zerlegt; BY lehrt ihn in NT6 2.2 bei der Multimediapräsentation, also vor allem anderen in `gesellschaft`. Darauf bauen jetzt `hypertext` und `lizenzmodelle` auf. |
+
+`sprachen-automaten` hat keine eigene Wurzel: `syntax-und-semantik` baut auf `textbasierte-programmierung`,
+`automaten-im-alltag` auf `eva-prinzip` auf.
+
+### 5.6 Offene Punkte
+
+1. **`informationen-bewerten` → `webseite-abrufen`:** Glaubwürdigkeit prüfen braucht nicht den Ablauf zwischen Browser
+   und Server. BY NT7 2.1 lehrt beides im selben Lernbereich (Bündel), deshalb habe ich die Kante gelassen. Besser
+   wäre vielleicht `internetdienste` (das WWW als Dienst). Mittlere Zuversicht; Lehrkräfte fragen.
+2. **`maschinelles-lernen` → `baum`:** NW 5/6 S. 18 lehrt maschinelles Lernen „mit Entscheidungsbäumen“. Das iCan ist
+   aber allgemein (aus Beispieldaten Muster lernen); die Kante gilt nur, wenn eine App den Entscheidungsbaum zeigt.
+   Mittlere Zuversicht, nicht aufgenommen.
+3. **`eigene-daten-schuetzen` → `speicherorte-vergleichen`:** NW 5/6 S. 20 nennt „Nutzen und Risiken beim Umgang mit
+   eigenen und fremden Daten auch im Hinblick auf Speicherorte“. Das ist ein Teilaspekt; nicht aufgenommen.
+4. **`eigene-daten-schuetzen` → `digitale-kommunikation`:** BY NT7 2.2 nennt „Datenschutz im Rahmen der digitalen
+   Kommunikation“. Einstellungen zur Privatsphäre wählt man aber auch auf dem Gerät, nicht nur im Messenger. Mittlere
+   Zuversicht.
+5. **`sicheres-passwort` → `verschluesselung-bewerten`:** Beide beruhen auf der Idee „wie viele Möglichkeiten müsste
+   ein Angreifer ausprobieren“. Die Stufen würden passen (Verschlüsselung bewerten 5-6, Passwort 7-8). Das ist aber
+   eine Ähnlichkeit, keine sichere Abhängigkeit, und keine Quelle nennt sie.
+6. **`lizenzmodelle` → `hardware-und-software`:** Lizenzmodelle wie freie und proprietäre Software setzen den Begriff
+   Software voraus. Die Kante ist plausibel, aber nicht nötig, um den Baustein anzubinden; nicht aufgenommen.
+7. **`darstellungen-ueberfuehren`** verlangt alle drei Darstellungen (Struktogramm, PAP, Pseudocode). Für das
+   Übertragen reichen zwei. Lehrkräfte könnten entscheiden, ob eine davon entfallen soll.
+8. **`datenschutzrecht` → `eigene-daten-schuetzen`** bleibt neben der neuen Kante: BY Inf9 LB4 lehrt beides im selben
+   Lernbereich. Wer nur den Begriff als Voraussetzung will, streicht diese Kante; es entsteht nichts Indirektes.
+
+### 5.7 Vorgeschlagene neue Bausteine
+
+Keine. Die Karte hat keine allein stehenden Bausteine, und jede Lücke, die ich sah, ist schon in Abschnitt 4,
+Punkt 2 als „nur ein Land“ notiert (zum Beispiel Entscheidungsbaum nur NW, Präsentation nur BY).
+
+### 5.8 Nicht geöffnet
+
+Keine. Alle Quellen ließen sich laden. Fachdidaktische Handbücher (z. B. Hubwieser, Didaktik der Informatik) sind
+nicht frei online; ich habe sie nicht gebraucht und nicht zitiert.

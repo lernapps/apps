@@ -3,6 +3,7 @@
 # HE = Kerncurriculum Hessen Sek I Gymnasium Physik (2011), Schwerpunkte s1 (erste Hälfte der Stunden) / s2 (nach Jg 9/10);
 # BY = LehrplanPLUS Bayern Gymnasium (NT 5-7, Physik 8-10); NW = Kernlehrplan NRW Sek I Gymnasium Physik (2019) mit Jahrgang aus dem Umsetzungsbeispiel (SiLP).
 # Genaue Titel, Ausgaben und URLs: report.md. NEU = Baustein neu; "Früher" = frühere Richtstufe.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Physik, en: Physics }                  # the file name is the subject's id: physik
 source:
   title: KMK, Weiterentwickelte Bildungsstandards in den Naturwissenschaften für das Fach Physik (MSA), Beschluss vom 16.12.2004 i.d.F. vom 13.06.2024
@@ -70,7 +71,7 @@ strands:
         name: { de: "Energieerhaltung", en: "Conservation of energy" }
         iCan: "Ich kann mit dem Energieerhaltungssatz erklären, dass Energie nicht verloren geht, sondern nur umgewandelt oder übertragen wird."
         gradeBand: "9-10"
-        requires: [energieumwandlung, energieuebertragung]
+        requires: [energieuebertragung]
       # KMK Energie (Energieentwertung); HE s1 und s2 (Entwertung); NW IF11 (Jg 10); BY Ph9 3.2 (Energiestrom)
       - id: energieentwertung
         name: { de: "Energieentwertung", en: "Energy dissipation" }
@@ -82,7 +83,7 @@ strands:
         name: { de: "Energiebilanz", en: "Energy balance" }
         iCan: "Ich kann die Energiebilanz eines Vorgangs berechnen."
         gradeBand: "9-10"
-        requires: [energieerhaltung, energie-und-joule, lageenergie-berechnen, bewegungsenergie-berechnen]
+        requires: [energieerhaltung, lageenergie-berechnen, bewegungsenergie-berechnen]
       # KMK Energie (Leistung); BY Ph9 1.1 (Jg 9); NW IF7 (Jg 9); HE s2 (Leistungen). Früher 7-8: kein Land belegt das
       - id: leistung
         name: { de: "Leistung", en: "Power" }
@@ -205,13 +206,13 @@ strands:
         name: { de: "Elektrische Ladung", en: "Electric charge" }
         iCan: "Ich kann elektrische Ladung beschreiben und erklären, wie sich gleichartige und verschiedenartige Ladungen verhalten."
         gradeBand: "9-10"
-        requires: [atomaufbau]
       # NEU. HE s2 (elektrostatische Alltagsphänomene); NW IF9 (Elektrostatik, SiLP 9.6 Blitze und Gewitter); BY NT7 1.3 (Reibungselektrizität, Jg 7). Abweichung: BY 7-8
+      # requires atomaufbau: Elektrostatische Aufladung erklärt man damit, dass Elektronen der Atomhülle von einem Körper auf den anderen wechseln und der Kern bleibt (BY NT7 1.3: „erklären einfache elektrostatische Phänomene … mithilfe ihrer Kenntnisse über Ladungseigenschaften und über das Kern-Hülle-Modell des Atoms“; NW IF9 S. 40: „elektrische Aufladung … mithilfe eines einfachen Elektronen-Atomrumpf-Modells erklären“)
       - id: elektrostatische-phaenomene
         name: { de: "Elektrostatische Phänomene", en: "Electrostatic phenomena" }
         iCan: "Ich kann elektrostatische Phänomene aus dem Alltag wie Reibungselektrizität oder Blitze mit Ladungen erklären."
         gradeBand: "9-10"
-        requires: [elektrische-ladung]
+        requires: [atomaufbau]
       # KMK Elektrizitätslehre (Stromstärke); BY Ph8 1 (Jg 8); HE s1 (Größen Strom und Spannung); NW IF9 (Jg 9-10). Abweichung: NW 9-10
       - id: stromstaerke
         name: { de: "Stromstärke", en: "Electric current" }
@@ -219,11 +220,12 @@ strands:
         gradeBand: "7-8"
         requires: [einfacher-stromkreis]
       # NEU. NW IF9 (Ladungstransport, Elektronen-Atomrumpf-Modell); HE s2 (Strom als Ladung pro Zeit); BY NT7 1.3 (Strom als Bewegung von Ladungen, Jg 7). Abweichung: BY 7-8
+      # requires atomaufbau: Das Elektronenmodell des Stroms braucht die Elektronen der Atomhülle, die sich zwischen den festen Atomrümpfen bewegen (NW IF9 S. 39: „Elektronen-Atomrumpf-Modell, Ladungstransport und elektrischer Strom“, S. 40: „Leitungseigenschaften von Stoffen mithilfe eines einfachen Elektronen-Atomrumpf-Modells erklären“; BY NT7 1.3: „Kern-Hülle-Modell des Atoms“ und „elektrischer Strom als Bewegung von Ladungen“ im selben Abschnitt)
       - id: strom-als-ladungstransport
         name: { de: "Strom als Ladungstransport", en: "Current as flow of charge" }
         iCan: "Ich kann den elektrischen Strom als Transport von Ladungen mit einem Elektronenmodell erklären."
         gradeBand: "9-10"
-        requires: [stromstaerke, elektrische-ladung]
+        requires: [stromstaerke, atomaufbau]
       # NW IF9 (Stromstärken messen, Jg 9-10); BY Ph8 1 (Messen, Jg 8); HE s1/s2 (Aufbauen und Erkunden). Uneins: bleibt
       - id: stromstaerke-messen
         name: { de: "Stromstärke messen", en: "Measuring current" }
@@ -301,7 +303,7 @@ strands:
         name: { de: "Sicherungen im Haushalt", en: "Fuses in the home" }
         iCan: "Ich kann erklären, wie Sicherungen und Kurzschlussschutz in der Hausinstallation vor Überlastung schützen."
         gradeBand: "9-10"
-        requires: [widerstand, elektrische-leistung]
+        requires: [elektrische-leistung]
       # NEU. NW IF2 (Magnetpole, Kräfte, Jg 6); HE s1 (Eigenschaften von Magneten); BY NT7 1.1 (Jg 7)
       - id: permanentmagnete
         name: { de: "Permanentmagnete", en: "Permanent magnets" }
@@ -395,10 +397,12 @@ strands:
         gradeBand: "9-10"
         requires: [geschwindigkeit-berechnen]
       # KMK Mechanik (Kräfte und ihre Wirkungen); HE s2; NW IF7 (Jg 9); BY Ph8 3.2 (Jg 8). Abweichung: BY 7-8. Früher 7-8
+      # requires geschwindigkeitsaenderung: Dass eine Kraft die Bewegung ändert, setzt den Begriff der Geschwindigkeitsänderung voraus; BY und NW lehren die Bewegungsänderung vor den Kräften (KMK S. 15: „Kräfte und ihre Wirkungen, insbesondere Geschwindigkeitsänderung (Betrag und Richtung)“; BY Ph8 3.1 „Geschwindigkeitsänderung … als Folge einer Krafteinwirkung“ vor 3.2 „Kräfte und ihre Wirkungen“; NW IF7 S. 36: „Bewegungen: Geschwindigkeit, Beschleunigung“ vor „Kraft: Bewegungsänderung, Verformung“)
       - id: kraft-wirkungen
         name: { de: "Wirkungen von Kräften", en: "Effects of forces" }
         iCan: "Ich kann erklären, dass eine Kraft einen Körper verformen oder seine Bewegung ändern kann."
         gradeBand: "9-10"
+        requires: [geschwindigkeitsaenderung]
       # KMK Mechanik (Kraft); NW IF7 (Kräfte als vektorielle Größen, Jg 9); HE s2 (Kräftepaare darstellen); BY Ph8 3.2 (Jg 8). Früher 7-8
       - id: kraft-darstellen
         name: { de: "Kraft darstellen und messen", en: "Representing and measuring forces" }
@@ -428,7 +432,7 @@ strands:
         name: { de: "Kraft und Geschwindigkeitsänderung", en: "Force and change in velocity" }
         iCan: "Ich kann erklären, wie eine Kraft den Betrag und die Richtung der Geschwindigkeit ändert."
         gradeBand: "9-10"
-        requires: [kraft-darstellen, geschwindigkeitsaenderung]
+        requires: [kraft-darstellen]
       # KMK Mechanik (Trägheitsprinzip); HE s2 (Trägheit); BY Ph8 3.2 (Trägheitssatz, Jg 8); NW IF7 (Kräftegleichgewicht). Abweichung: BY 7-8
       - id: traegheitsprinzip
         name: { de: "Trägheitsprinzip", en: "Law of inertia" }
@@ -479,11 +483,12 @@ strands:
         gradeBand: "5-6"
         requires: [geradlinige-lichtausbreitung]
       # KMK Elektromagnetische Strahlung (Mondphasen); HE s1 (Sonne-Erde-Mond); BY NT7 1.2 (Jg 7); NW IF6 (SiLP 7.5, Jg 7)
+      # requires lichtquellen-und-sehen: Der Mond leuchtet nicht selbst; man sieht nur seine von der Sonne beleuchtete Hälfte. BY lehrt beides im selben Abschnitt (BY NT7 1.2: „Lichtquellen und beleuchtete Körper, Sehvorgang“ und „Mondphasen, Mond- und Sonnenfinsternis“)
       - id: mondphasen
         name: { de: "Mondphasen", en: "Phases of the Moon" }
         iCan: "Ich kann die Mondphasen mit der Stellung von Sonne, Erde und Mond erklären."
         gradeBand: "7-8"
-        requires: [schatten]
+        requires: [schatten, lichtquellen-und-sehen]
       # KMK Elektromagnetische Strahlung (Finsternisse); BY NT7 1.2; NW IF6 (Jg 7); HE s1
       - id: finsternisse
         name: { de: "Sonnen- und Mondfinsternis", en: "Solar and lunar eclipses" }
@@ -569,11 +574,12 @@ strands:
         gradeBand: "9-10"
         requires: [elektromagnetisches-spektrum]
       # KMK Elektromagnetische Strahlung (Strahlungshaushalt, Rückstrahlvermögen); BY Ph9 3.2 (Strahlungsgleichgewicht); HE s2 (Klima)
+      # requires waermestrahlung: Die Erde nimmt Sonnenstrahlung auf und gibt Wärmestrahlung ab; ohne Wärmestrahlung lässt sich die Bilanz nicht beschreiben (BY Ph9 3.2: „beschreiben … Wärmestrahlung. Sie nutzen diese Kenntnisse, um … die Vorgänge zu erklären, die zur Erwärmung der Erdatmosphäre führen“, Inhalt „Strahlungsgleichgewicht der Erde“; KMK S. 15: Wärmestrahlung und Strahlungshaushalt der Erde im Bereich Elektromagnetische Strahlung)
       - id: strahlungshaushalt-erde
         name: { de: "Strahlungshaushalt der Erde", en: "Earth’s radiation budget" }
         iCan: "Ich kann den Strahlungshaushalt der Erde beschreiben, auch das Rückstrahlvermögen von Flächen."
         gradeBand: "9-10"
-        requires: [absorption-emission-transmission, elektromagnetisches-spektrum]
+        requires: [waermestrahlung, elektromagnetisches-spektrum]
       # KMK Elektromagnetische Strahlung (Treibhauseffekt); BY Ph9 3.2 (Modellversuch, anthropogene Beiträge); HE s2 (Klimaproblematik)
       - id: treibhauseffekt
         name: { de: "Treibhauseffekt", en: "Greenhouse effect" }
@@ -591,10 +597,12 @@ strands:
     name: { de: Ionisierende Strahlung, en: Ionising radiation }
     competencies:
       # NEU. NW IF10 (Atomaufbau, Isotope) und IF9 (Elektronen-Atomrumpf); BY Ph9 LB 2 (Atome), Ph10 4 (Atomkern); HE s1 (Modelle des Aufbaus der Materie); KMK Ionisierende Strahlung (Kernumwandlungen setzen ihn voraus)
+      # requires elektrische-ladung: Kern und Hülle, Protonen und Elektronen unterscheidet man nach ihrer Ladung; BY lehrt Ladungsarten und das Kern-Hülle-Modell zusammen, NW die Elektrostatik vor dem Atomaufbau (BY NT7 1.3: „Ladungsarten und ihre grundlegenden Eigenschaften, Kern-Hülle-Modell des Atoms“; NW IF9 S. 39 „Elektrostatik: elektrische Ladungen“ vor IF10 S. 41 „Atomaufbau“)
       - id: atomaufbau
         name: { de: "Aufbau des Atoms", en: "Structure of the atom" }
         iCan: "Ich kann den Aufbau eines Atoms aus Kern und Hülle beschreiben und Protonen, Neutronen und Elektronen unterscheiden."
         gradeBand: "9-10"
+        requires: [elektrische-ladung]
       # KMK Ionisierende Strahlung; NW IF10 (Jg 10); BY Ph10 4 (Entdeckung der Radioaktivität); HE s2. Voraussetzung vorher: elektromagnetisches-spektrum
       - id: radioaktivitaet
         name: { de: "Radioaktivität", en: "Radioactivity" }
@@ -654,7 +662,7 @@ strands:
         name: { de: "Kernspaltung", en: "Nuclear fission" }
         iCan: "Ich kann die Kernspaltung beschreiben und erklären, wie ein Kernkraftwerk Energie gewinnt."
         gradeBand: "9-10"
-        requires: [spontanzerfall, atomaufbau, energieumwandlung]
+        requires: [spontanzerfall, energieumwandlung]
       # KMK Ionisierende Strahlung (Kernfusion); NW IF10; BY Ph10 5.2 (Fusionsreaktor, Profilbereich)
       - id: kernfusion
         name: { de: "Kernfusion", en: "Nuclear fusion" }

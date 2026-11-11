@@ -106,13 +106,17 @@
 
 {#- A competency as a box in a grid: filled when an app practises it, dashed when it is a gap (the text says so too).
     A link to its page; assets/map.js opens its details (template "detail-<id>") as a dialog instead. -#}
-{% macro mapChip(subject, comp, again=[], dialog=true) %}
+{#- A competency as a chip: its name, whether an app practises it, the grades it comes again in (again) and, with band
+    (the view by grade and chain), the label "steht allein" when nothing links it (feat/map-chains, KD-12). Its grade
+    band is the row there (KD-17), so the chip does not repeat it. -#}
+{% macro mapChip(subject, comp, again=[], dialog=true, band=false) %}
 {%- set covered = comp.practisedBy.length > 0 %}
-<li{% if covered %} data-covered{% endif %} data-competency="{{ comp.id }}">
+<li{% if covered %} data-covered{% endif %}{% if band and comp.alone %} data-alone{% endif %} data-competency="{{ comp.id }}">
   <a href="{{ mapUrl(subject.id + '/c/' + comp.id + '/') }}" class="map-chip {{ 'map-chip-covered' if covered else 'map-chip-gap' }}"{% if dialog %} data-opens="detail-{{ comp.id }}"{% endif %}>
     <span{{ comp.name | fallbackLang(lang) | safe }}>{{ comp.name | tx(lang) }}</span>
     <span class="sr-only">({{ t.map.covered if covered else t.map.gap }})</span>
     {%- if again.length %}<span class="map-chip-note">{{ t.map.subject.again(again | join(", ")) }}</span>{% endif %}
+    {%- if band and comp.alone %}<span class="map-chip-tags"><span class="map-chip-alone">{{ t.map.steps.alone.tag }}</span></span>{% endif %}
   </a>
 </li>
 {% endmacro %}

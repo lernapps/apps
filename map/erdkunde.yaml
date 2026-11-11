@@ -12,6 +12,7 @@
 # Stimmen HE/BY/NW -> Richtstufe. Gleichstand: die frühere Stufe, außer requires erzwingt die spätere; liegen die
 # Stimmen 5-6 und 9-10 auseinander oder sind alle drei verschieden, die mittlere.
 # Genaue Titel, Ausgaben und URLs: .vibe/research-erdkunde.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Erdkunde, en: Geography }              # the file name is the subject's id: erdkunde
 source:
   title: Deutsche Gesellschaft für Geographie (DGfG), Bildungsstandards im Fach Geographie für den Mittleren Schulabschluss, 10. Auflage 2020
@@ -608,7 +609,7 @@ strands:
         name: { de: "Bodenerosion", en: "Soil erosion" }
         iCan: "Ich kann erklären, wie Bodenerosion durch Wind und Wasser entsteht und wie man sie verhindern kann."
         gradeBand: "7-8"
-        requires: [exogene-kraefte, boden]
+        requires: [boden]
       # DG F4 S19 (Desertifikation); HE LP 8 (Desertifikation, Raumbeispiel Sahelzone); BY Geo10 LB6 (Desertifikation in der Sahelzone); NW IF6 (Desertifikation).
       # Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe)
       - id: desertifikation
@@ -621,17 +622,20 @@ strands:
     competencies:
       # DG F3 S10 (wirtschaftliche Raumstrukturen); HE LP 9 (Wirtschaftsstruktur); BY Geo7 LB5 (Standortfaktoren unterschiedlicher Branchen); NW IF3 (primärer, sekundärer, tertiärer Sektor).
       # Stimmen 9-10/7-8/5-6 -> 7-8 (drei verschiedene Stimmen: die mittlere)
+      # requires bauernhof: Den primären Sektor kennt man vom Bauernhof; NW nennt die Sektoren mit der Landwirtschaft im selben Inhaltsfeld, HE und BY lehren den Betrieb vor den Sektoren (NW IF3 S. 21; HE LP Jg 5 S. 7 vor Jg 9 S. 15; BY Geo5 LB4 vor Geo7 LB5)
       - id: wirtschaftssektoren
         name: { de: "Wirtschaftssektoren", en: "Economic sectors" }
         iCan: "Ich kann Betriebe und Berufe dem primären, sekundären und tertiären Wirtschaftssektor zuordnen."
         gradeBand: "7-8"
+        requires: [bauernhof]
       # DG F4 S17 (Standortwahl von Betrieben); HE LP 9 (Standortfaktoren); BY Geo7 LB5 (erklären und vergleichen die Bedeutung von Standortfaktoren); NW IF3 (Standortfaktoren des sekundären Sektors).
       # Stimmen 9-10/7-8/5-6 -> 7-8 (drei verschiedene Stimmen: die mittlere)
+      # requires verkehr: Verkehrswege sind ein Standortfaktor; NW nennt die Verkehrsinfrastruktur bei den Standortfaktoren, BY die Infrastruktur im selben Lernbereich (NW IF3 S. 21: „Standortfaktoren des sekundären Sektors: Rohstoffe, Arbeitskräfte, Verkehrsinfrastruktur“; BY Geo7 LB5)
       - id: standortfaktoren
         name: { de: "Standortfaktoren", en: "Location factors" }
         iCan: "Ich kann erklären, warum sich ein Betrieb an einem bestimmten Ort ansiedelt, zum Beispiel wegen Rohstoffen, Arbeitskräften, Verkehrswegen oder Kunden."
         gradeBand: "7-8"
-        requires: [wirtschaftssektoren]
+        requires: [wirtschaftssektoren, verkehr]
       # DG F3 S12 (Strukturwandel); HE LP 9 (Region im Wandel; alte und neue Industriegebiete der USA); BY –; NW IF3 (Strukturwandel industriell geprägter Räume).
       # Stimmen 9-10/–/5-6 -> 7-8 (keine Mehrheit (5-6/9-10); requires standortfaktoren (7-8) schließt 5-6 aus; die mittlere Stufe)
       - id: strukturwandel

@@ -10,6 +10,7 @@
 #         S1 = erste Stufe (7-8), S2 = zweite Stufe (9-10); IF = Inhaltsfeld; Aufgabentyp = Kap. 3
 # Richtstufe: zwei von drei Stimmen; drei verschiedene: die mittlere; Gleichstand: die frühere Stufe, außer eine direkte
 # Voraussetzung liegt in derselben oder einer späteren Stufe (dann die spätere). "SCHWACH BELEGT" = weniger als zwei Länder.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Deutsch, en: German }
 source:
   title: KMK, Bildungsstandards für das Fach Deutsch, Erster Schulabschluss (ESA) und Mittlerer Schulabschluss (MSA), Beschluss vom 15.10.2004 und vom 04.12.2003 i. d. F. vom 23.06.2022
@@ -101,11 +102,12 @@ strands:
         gradeBand: "9-10"
         requires: [referat]
       # KMK 4.1 Mit anderen sprechen: Diskussionen (S. 19); HE 8.1 Diskussion vorbereiten, durchführen und auswerten (Jg 8); BY D8 1.3 kürzere Diskussionen vorbereiten und auswerten; NW S1 IF3 Kommunikationssituation Diskussion | Stimmen HE/BY/NW 7-8/7-8/7-8 → 7-8 (Mehrheit)
+      # requires aktiv-zuhoeren: Auf Gegenargumente eingehen kann nur, wer sie aktiv zuhörend erfasst hat (NW S1 IF3 S. 28 „in Gesprächen und Diskussionen aktiv zuhören und zugleich eigene Gesprächsbeiträge planen“; BY D8 1.3 „Beiträge anderer aufgreifen … auf die vertretenen Meinungen und (Gegen-)Argumente eingehen“)
       - id: diskussion-fuehren
         name: { de: "Diskussion führen", en: "Taking part in a discussion" }
         iCan: "Ich kann eine Diskussion vorbereiten, mich mit Argumenten beteiligen und auf Gegenargumente eingehen."
         gradeBand: "7-8"
-        requires: [meinung-begruenden-muendlich, gespraechsregeln]
+        requires: [meinung-begruenden-muendlich, gespraechsregeln, aktiv-zuhoeren]
       # KMK 4.1 Mit anderen sprechen: Rollen (Moderation), Gespräche steuern (S. 19); HE 8.1 Gespräche leiten (Jg 8); BY D9 1.3 Möglichkeiten der Gesprächssteuerung; NW S2 IF3 Rolle moderierend | Stimmen HE/BY/NW 7-8/9-10/9-10 → 9-10 (Mehrheit)
       - id: gespraech-leiten
         name: { de: "Diskussionsleitung", en: "Chairing a discussion" }
@@ -123,7 +125,7 @@ strands:
         name: { de: "Interview", en: "Conducting an interview" }
         iCan: "Ich kann ein Interview vorbereiten, führen und auswerten."
         gradeBand: "7-8"
-        requires: [aktiv-zuhoeren, mitschreiben]
+        requires: [mitschreiben]
       # KMK 4.1 Zu anderen sprechen: Bewerbungsgespräch; Mit anderen sprechen: Vorstellungsgespräche (S. 17, 19); HE KC Schwerpunkt 7/8: Vorstellen, Bewerben; BY D9 1.3 ggf. Bewerbungsgespräch; NW S2 IF3 Bewerbungsgespräch | Stimmen HE/BY/NW 7-8/9-10/9-10 → 9-10 (Mehrheit)
       - id: bewerbungsgespraech
         name: { de: "Vorstellungsgespräch", en: "Job interview" }
@@ -145,10 +147,12 @@ strands:
         gradeBand: "5-6"
         requires: [schreibziel-und-adressat]
       # KMK 4.2 Texte überarbeiten (S. 27 f.); HE KC 7.1 Texte kriterienorientiert überprüfen; KC Schwerpunkt 5/6: Schreibkonferenz; BY D5 3.3 Textlupe, Schreibkonferenz; NW E IF1 Texte angeleitet überarbeiten; Aufgabentyp 5 | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires schreibziel-und-adressat: Man prüft einen Text zuerst daran, ob er zu Schreibanlass, Textfunktion und Adressaten passt (KMK 4.2 Texte überarbeiten, S. 28; BY D7 3.3 Kriterien „im Hinblick auf Logik und Adressatenbezug“)
       - id: texte-ueberarbeiten
         name: { de: "Texte überarbeiten", en: "Revising texts" }
         iCan: "Ich kann einen Text mit einer Checkliste, der Textlupe oder in einer Schreibkonferenz überarbeiten."
         gradeBand: "5-6"
+        requires: [schreibziel-und-adressat]
       # KMK 4.2 digitale Schreibwerkzeuge (S. 26); HE KC 7.1 mit Hilfestellung Textverarbeitungsprogramme einsetzen (Ende Jg 6); BY D6 3.1 Textverarbeitungsprogramme; NW E IF4 grundlegende Funktionen der Textverarbeitung | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: textverarbeitung
         name: { de: "Textverarbeitung", en: "Word processing" }
@@ -386,7 +390,7 @@ strands:
         name: { de: "Verlängern und Ableiten", en: "Spelling by extending and deriving" }
         iCan: "Ich kann durch Verlängern (Hund – Hunde) und Ableiten (Bäume – Baum) entscheiden, wie ein Wort geschrieben wird."
         gradeBand: "5-6"
-        requires: [silben-und-wortbausteine, wortfamilie]
+        requires: [wortfamilie]
       # KMK 4.2 Orthografisch schreiben: Kernwörter, Merkwörter (S. 23); HE 5.3 Phonologisches Prinzip (Jg 5); BY D5 4.3 Regeln der Dehnung; NW E IF1 Rechtschreibstrategien auf Laut-Buchstaben-Ebene | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: dehnung
         name: { de: "Dehnung", en: "Spelling long vowels" }
@@ -436,11 +440,12 @@ strands:
         gradeBand: "5-6"
         requires: [silben-und-wortbausteine]
       # KMK 4.2 Orthografisch schreiben: Fremdwörter richtig schreiben (S. 23); HE 8.3 Fremdwörter, Fremdwörterbuch (Jg 8); BY D6 4.3 häufig gebrauchte Fremdwörter; NW S1 IF1 Fremdwörter | Stimmen HE/BY/NW 7-8/5-6/7-8 → 7-8 (Mehrheit)
+      # requires erbwort-lehnwort-fremdwort: Wer ein Fremdwort als solches erkennt, richtet seine Schreibung danach aus (HE KC 7.2 S. 39 „Fremdwörter erkennen und die Aussprache und Schreibung daran ausrichten“)
       - id: fremdwoerter-schreiben
         name: { de: "Fremdwörter schreiben", en: "Spelling loanwords" }
         iCan: "Ich kann häufige Fremdwörter richtig schreiben und ihre Schreibung nachschlagen."
         gradeBand: "7-8"
-        requires: [im-woerterbuch-nachschlagen]
+        requires: [im-woerterbuch-nachschlagen, erbwort-lehnwort-fremdwort]
       # KMK 4.2 Rechtschreibhilfen nutzen (S. 24); HE 5.3 Gebrauch des Wörterbuchs (Jg 5); BY D5 4.3 Methoden der Fehleranalyse; NW E IF1 Nachschlagen; E IF4 Rechtschreibprogramme beurteilen | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: im-woerterbuch-nachschlagen
         name: { de: "Im Wörterbuch nachschlagen", en: "Using a dictionary" }
@@ -477,11 +482,12 @@ strands:
         iCan: "Ich kann Kommas bei Aufzählungen richtig setzen."
         gradeBand: "5-6"
       # KMK 4.2 Interpunktionszeichen: Komma (S. 24); HE 6.3 Komma in Satzreihen und Satzgefügen (Jg 6); BY D6 4.3 Kommas in Satzreihen und Satzgefügen; NW E IF1 Haupt- und Nebensatzverknüpfung | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires komma-aufzaehlung: Das Komma zwischen Hauptsätzen ist das Komma der Aufzählung (Reihung), nur zwischen Sätzen; HE lehrt das Komma bei Aufzählungen in Jg 5, in Satzreihen und Satzgefügen in Jg 6 (HE 5.3 S. 19 → HE 6.3 S. 24; BY D5 4.3 → D6 4.3; Amtliches Regelwerk 2024 § 70, S. 115: gereihte Wörter und gereihte Sätze)
       - id: komma-satzreihe-satzgefuege
         name: { de: "Komma in Satzreihe und Satzgefüge", en: "Commas between clauses" }
         iCan: "Ich kann Kommas zwischen Hauptsätzen und zwischen Haupt- und Nebensatz setzen."
         gradeBand: "5-6"
-        requires: [satzreihe-und-satzgefuege]
+        requires: [satzreihe-und-satzgefuege, komma-aufzaehlung]
       # KMK 4.2 Interpunktionszeichen: Komma, Gedankenstrich, Klammern (S. 24); HE –; BY D7 4.3 Kommas bei Apposition und nachgestellter Bestimmung; NW E IF1 Zeichensetzung Apposition; S1 IF1 Parenthesen | Stimmen HE/BY/NW –/7-8/5-6 → 7-8 (Gleichstand, requires) | Gleichstand; die Voraussetzung attribut liegt in 5-6, daher 7-8
       - id: komma-apposition
         name: { de: "Komma bei Einschüben", en: "Commas with appositives" }
@@ -627,7 +633,7 @@ strands:
         name: { de: "Jugendbuch lesen", en: "Reading a youth novel" }
         iCan: "Ich kann ein Kinder- oder Jugendbuch als Ganzschrift lesen und Handlung und Figuren im Überblick darstellen."
         gradeBand: "5-6"
-        requires: [handlung-erschliessen, figuren-untersuchen]
+        requires: [figuren-untersuchen]
       # KMK 4.4 Fachbegriffe: Autor, Erzähler (S. 34); HE 7.2 zwischen Autorin/Autor und Erzählerin/Erzähler unterscheiden (Jg 7); BY D8 2.2 Darstellungsweise (Erzählerbericht, Figurenrede); NW E IF2 erzählerische Vermittlung (Erzählerfigur) | Stimmen HE/BY/NW 7-8/7-8/5-6 → 7-8 (Mehrheit)
       - id: erzaehler-und-autor
         name: { de: "Erzähler und Autor", en: "Narrator and author" }
@@ -657,7 +663,7 @@ strands:
         name: { de: "Innerer Monolog", en: "Interior monologue" }
         iCan: "Ich kann zu einer Figur einen inneren Monolog schreiben, der ihre Gedanken und Gefühle zeigt."
         gradeBand: "7-8"
-        requires: [figuren-untersuchen, fortsetzen-und-umschreiben]
+        requires: [fortsetzen-und-umschreiben]
       # KMK 4.4 Literatur: Figurenkonstellationen (S. 34); HE 9.2 Figurenkonstellation (Jg 9); KC 7.2 Beziehungen zwischen Figuren; BY D8 2.2 Konstellation und Interaktion der Figuren; NW E IF2 Figurenbeziehungen erläutern | Stimmen HE/BY/NW 9-10/7-8/5-6 → 7-8 (Mitte)
       - id: figurenkonstellation
         name: { de: "Figurenkonstellation", en: "Character constellation" }
@@ -699,13 +705,13 @@ strands:
         name: { de: "Fiktionalitätssignale", en: "Signals of fictionality" }
         iCan: "Ich kann Signale im Text erkennen, die zeigen, dass erzählt und erfunden wird."
         gradeBand: "7-8"
-        requires: [fiktion-und-wirklichkeit, erzaehler-und-autor]
+        requires: [erzaehler-und-autor]
       # KMK 4.4 Literatur: Deutungen formulieren, Deutungshypothesen überprüfen (S. 34 f.); HE KC Kap. 6 Interpretieren; KC Schwerpunkt 9/10; BY D9 3.2 erste Deutungshypothesen; D10 2.1; NW S2 IF2 schlüssige Deutungen entwickeln | Stimmen HE/BY/NW 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: deutungshypothese
         name: { de: "Deutungshypothese", en: "Interpretive hypothesis" }
         iCan: "Ich kann zu einem literarischen Text eine Deutungshypothese formulieren und am Text überprüfen."
         gradeBand: "9-10"
-        requires: [textbelege-angeben, figur-charakterisieren]
+        requires: [figur-charakterisieren]
       # KMK 4.4 Textwissen: Text und Kontext (Entstehungszeit, Epoche, Leben) (S. 32); HE 9.2 Zusammenhang zwischen Werk und Autor (Jg 9); 10.2 historisch-soziale Situation; BY D9 2.2 Zeitbezug und biografische Informationen; NW S2 IF2 Epochenbezug, biografischer Bezug | Stimmen HE/BY/NW 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: text-und-kontext
         name: { de: "Text und Kontext", en: "Text and context" }
@@ -752,7 +758,7 @@ strands:
         name: { de: "Ballade", en: "Ballads" }
         iCan: "Ich kann Merkmale einer Ballade nennen und zeigen, wie sie Erzählung, Gedicht und Drama verbindet."
         gradeBand: "7-8"
-        requires: [vers-strophe-reim, epik-lyrik-dramatik]
+        requires: [vers-strophe-reim]
       # KMK 4.4 sprachliche Gestaltungsmittel: Symbol (S. 33); HE 9.2 sprachliche Bilder (Vergleich, Metapher, Symbol) (Jg 9); BY –; NW – | Stimmen HE/BY/NW 9-10/–/– → 9-10 (eine Stimme) | SCHWACH BELEGT: nur KMK und HE; aufgenommen, weil die KMK das Symbol nennt
       - id: symbol
         name: { de: "Symbol", en: "Symbols" }
@@ -883,32 +889,36 @@ strands:
         gradeBand: "7-8"
         requires: [eigene-mediennutzung]
       # KMK 4.4 digitale Nutzerprofile, Algorithmen (S. 37); HE –; BY D8 2.4 Art der Informationsvermittlung sozialer Medien; NW S2 IF4 Funktionsweisen von Suchmaschinen und sozialen Medien | Stimmen HE/BY/NW –/7-8/9-10 → 9-10 (Gleichstand, requires) | Gleichstand; die Voraussetzung liegt in 7-8, daher 9-10
+      # requires recherchieren: Wie eine Suchmaschine auswählt, erklärt man an der eigenen Suche; NW führt von Suchmaschinen als Rechercheweg zu ihrer Funktionsweise (NW E IF4 S. 22 Recherchestrategien, u. a. Suchmaschinen für Kinder → S1 IF4 S. 29 Informationen in Suchmaschinen abhängig von Internetformaten → S2 IF4 S. 35 Funktionsweisen von Suchmaschinen und sozialen Medien)
       - id: algorithmen-und-soziale-medien
         name: { de: "Algorithmen und soziale Medien", en: "Algorithms and social media" }
         iCan: "Ich kann erklären, wie Suchmaschinen und soziale Medien mit Nutzerprofilen und Algorithmen auswählen, was ich sehe."
         gradeBand: "9-10"
-        requires: [privatsphaere-im-netz]
+        requires: [privatsphaere-im-netz, recherchieren]
       # KMK 4.4 Textwissen: mediale Gestaltung (Musik, Geräusche); Hörspiel (S. 32 f.); HE 5.2 Hörspiele (Jg 5); BY D5 2.4 Hörtexte, Musik und Geräusche; NW E IF4 Hörfassungen | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: hoerspiel
         name: { de: "Hörspiel", en: "Radio play" }
         iCan: "Ich kann beschreiben, wie ein Hörspiel mit Stimmen, Geräuschen und Musik eine Stimmung erzeugt."
         gradeBand: "5-6"
       # KMK 4.4 multimodale Texte: Text-Bild-Bezüge (S. 36); HE –; BY D8 2.4 grafische Literatur; NW E IF4 Gestaltungsmittel u. a. bei Graphic Novels | Stimmen HE/BY/NW –/7-8/5-6 → 5-6 (Gleichstand, frühere Stufe)
+      # requires handlung-erschliessen (Herleitung): Wer beschreibt, wie Bild und Text zusammen erzählen, muss Figuren und Handlungsschritte der Geschichte erfassen; NW nennt Graphic Novels als Präsentationsform literarischer Texte (NW E IF4 S. 22)
       - id: comic-und-graphic-novel
         name: { de: "Comic und Graphic Novel", en: "Comics and graphic novels" }
         iCan: "Ich kann beschreiben, wie in einem Comic oder einer Graphic Novel Bild und Text zusammen erzählen."
         gradeBand: "5-6"
+        requires: [handlung-erschliessen]
       # KMK 4.4 Fachbegriffe: Kameraperspektive, Einstellungsgröße (S. 34); HE 10.2 filmtechnische Mittel: Perspektive (Jg 10); BY D6 2.4 Kameraeinstellung, -perspektive, -bewegung; NW S1 IF4 Kameratechnik | Stimmen HE/BY/NW 9-10/5-6/7-8 → 7-8 (Mitte)
       - id: einstellungsgroessen-und-perspektive
         name: { de: "Einstellungsgrößen und Kameraperspektive", en: "Shot sizes and camera angles" }
         iCan: "Ich kann in einem Film Einstellungsgrößen und Kameraperspektiven bestimmen und ihre Wirkung beschreiben."
         gradeBand: "7-8"
       # KMK 4.4 Fachbegriffe: Montage, Kamerabewegung, Schnitt (MSA, S. 34); HE 10.2 Montage, Beleuchtung, Verhältnis Text-Bild (Jg 10); BY D7 2.4 Ton- und Bildeffekte, Schnitttechniken; NW S1 IF4 Bildgestaltung, Tongestaltung | Stimmen HE/BY/NW 9-10/7-8/7-8 → 7-8 (Mehrheit)
+      # requires hoerspiel: Wie Musik und Geräusche wirken, lernt man zuerst am Hörtext; im Film kommt das Bild dazu. BY und NW behandeln Hörtexte vor der Tongestaltung im Film (BY D5 2.4 „Hörtexte oder Filme … Musik und Geräusche“ → D7 2.4 „Ton- und Bildeffekte sowie Schnitttechniken“; NW E IF4 S. 22 Hörfassungen → S1 IF4 S. 30 Tongestaltung)
       - id: schnitt-montage-ton
         name: { de: "Schnitt, Montage und Ton", en: "Editing, montage and sound" }
         iCan: "Ich kann beschreiben, wie Schnitt, Montage, Musik und Geräusche in einem Film wirken."
         gradeBand: "7-8"
-        requires: [einstellungsgroessen-und-perspektive]
+        requires: [einstellungsgroessen-und-perspektive, hoerspiel]
       # KMK 4.4 intermediale Vergleiche, z. B. Buch und Film (S. 35); HE 10.2 Literaturverfilmungen (Jg 10); BY D8 2.4 mediale Gestaltungsmittel deuten Textvorlagen; NW E IF4 Präsentationsformen literarischer Texte | Stimmen HE/BY/NW 9-10/7-8/5-6 → 7-8 (Mitte)
       - id: buch-und-film-vergleichen
         name: { de: "Buch und Verfilmung vergleichen", en: "Comparing book and film" }
@@ -1140,11 +1150,12 @@ strands:
         gradeBand: "5-6"
         requires: [mehrdeutige-woerter]
       # KMK 4.5 Sprachwandel: Entlehnungen aus anderen Sprachen (S. 40); HE 7.3 Herkunft von Wörtern: Lehnwort, Fremdwort, Anglizismen (Jg 7); BY D8 4.2 Fremdwörter erklären; NW S1 IF1 Lehnwörter, Fremdwörter | Stimmen HE/BY/NW 7-8/7-8/7-8 → 7-8 (Mehrheit)
+      # requires sprachen-vergleichen: Ein Lehn- oder Fremdwort erkennt man, wenn man es mit Wörtern anderer Sprachen vergleicht; NW führt vom Vergleich der Sprachen der Lerngruppe zu Lehn- und Fremdwörtern (NW E IF1 S. 18 → S1 IF1 S. 24 f.; HE 8.3 S. 35 Fremdwörter: „Verknüpfung mit bekannten Fremdsprachen“)
       - id: erbwort-lehnwort-fremdwort
         name: { de: "Erbwort, Lehnwort, Fremdwort", en: "Native words, loanwords, foreign words" }
         iCan: "Ich kann Erbwörter, Lehnwörter und Fremdwörter unterscheiden und Wörter aus anderen Sprachen erkennen."
         gradeBand: "7-8"
-        requires: [ableitung]
+        requires: [ableitung, sprachen-vergleichen]
       # KMK 4.5 Sprachwandel: Bedeutungswandel (S. 40); HE 8.3 Entstehung und Veränderung; Nuancen in der Wortbedeutung (Jg 8); BY D7 4.1 Bedeutungswandel; NW S2 IF1 Bedeutungsveränderungen | Stimmen HE/BY/NW 7-8/7-8/9-10 → 7-8 (Mehrheit)
       - id: bedeutungswandel
         name: { de: "Bedeutungswandel", en: "Semantic change" }

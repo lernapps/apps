@@ -350,3 +350,202 @@ ausdrücklich).
 5. **Fertigkeitsbausteine** (Rolle, Handstand, Korbleger …) verbinden Können und Wissen im iCan. Wenn Apps nur Wissen
    prüfen sollen, wäre ein reines Wissens-iCan („… Technikmerkmale nennen“) genauer.
 6. **Hessen** ist von 2011. Ein neuerer Hessischer Lehrplan Sport G9 war nicht Teil der Quellen.
+
+## 8. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung aus einer Quelle oder als gekennzeichnete Herleitung (Skill
+`map-research`, Abschnitt „Connect every competency“). Ich habe für jede Wurzel und jedes kleine Teilnetz in beide
+Richtungen gesucht: Was braucht der Baustein? Welcher spätere Baustein braucht ihn? Die Begründung jeder neuen Kante
+steht als Kommentar `# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan` und Stränge sind unverändert. Ich
+habe keine Bausteine eingefügt.
+
+### 8.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 164 | 23 | 0 | 10 | 7 |
+| nachher | 172 | 21 | 0 | 2 | 7 |
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe (`LATE`), keine indirekte Kante (`INDIRECT`).
+`npm test` grün (ein Test ohne Docker übersprungen). Die Karte hat kein `explainerFocus: competency`, und kein Eintrag
+in `entries/` nutzt Sport; ein Vergleich mit `npm run listing` war daher nicht nötig.
+
+### 8.2 Quellen
+
+Alle Quellen der Länder habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als
+HTML). Seitenzahlen sind die gedruckten Seiten. KMK-Bildungsstandards für Sport gibt es nicht.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Sport | Fassung 2011, 37 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-07/kerncurriculum_sport_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Basissport, S5 bis S10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/sport/basis_sport bis …/10/sport/basis_sport |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Sport | Heft 3426, 1. Auflage 2019, 40 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_sp_klp_3426_2019_06_23.pdf |
+| SSi (neu, Fachdidaktik) | Jürgen Schmidt-Sinns: Turnen – Aber sicher! Bodenturnen und Partnerakrobatik. Hofmann-Verlag, Schorndorf | Leseprobe des Verlags (PDF vom 19.09.2024); Kap. 4.2 „Körperspannung als zwingende Voraussetzung für Turnen, Parkour und Akrobatik“, S. 30; Kap. 5.2 Rolle vorwärts, „Motorische Voraussetzungen“ | https://www.hofmann-verlag.de/pdfs/1231.pdf |
+
+**Hinweise:**
+- **SSi** begründet keine neue Kante. Es bestätigt die bestehenden Kanten der Turnelemente zu `koerperspannung`
+  (`rolle-vorwaerts`, `rad`, `minitrampolin`, `akrobatik`): Körperspannung ist „zwingende Voraussetzung“ für Turnen
+  und Akrobatik und erleichtert die Hilfeleistung (S. 30).
+- **Bündel:** Wo ein Land zwei Inhalte im selben Jahrgang oder einen Inhalt ein Jahr früher nennt, nutze ich das als
+  Stütze. Ein Bündel allein reicht nicht; der Inhalt muss die Richtung der Kante tragen.
+
+### 8.3 Neue Kanten (10)
+
+„Herleitung“: Keine Quelle nennt die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|
+| `ausdauernd-schwimmen` | `atmen-im-wasser` | Einatmen über und Ausatmen unter Wasser sind laut HE „Voraussetzung, um mindestens eine Strecke von 100m zu bewältigen“. | HE Kap. 6 Bewegen im Wasser, S. 23 | Quelle |
+| `fahren-und-lenken` | `wagnis-einschaetzen` | Wagnis ist die zentrale Leitidee des Fahrens; Geschwindigkeit, labiles Gleichgewicht und Untergrund „erfordern eine realistische Selbsteinschätzung“. | HE Kap. 6 Fahren, Rollen, Gleiten, S. 23 | Quelle |
+| `gestaltung-beurteilen` | `bewegung-beobachten` | Wer eine Präsentation nach Kriterien beurteilt, muss sie zuerst nach Merkmalen beobachten. HE und NW nennen das Beobachten nach Vorgaben vor dem Beurteilen nach Kriterien. | HE Kap. 6 Urteils- und Entscheidungskompetenz, S. 19; NW 2.4.1 IF a, S. 20 (Methoden- vor Urteilskompetenz) | Bündel |
+| `koerperspannung` | `anspannung-entspannung` | Körperspannung baut man auf, indem man Muskeln bewusst anspannt. BY nennt beides im selben Jahr. | BY S6 LB1 („Übungen zur Stärkung von Stützkraft und Körperspannung“; „Anspannung und Entspannung bestimmter Muskeln/Muskelgruppen“) | Bündel |
+| `koerperspannung` | `rumpfmuskulatur` | Körperspannung hält vor allem die Bauch-, Rücken- und Gesäßmuskulatur. BY lehrt die Rumpfmuskulatur in Jg 5, die Körperspannung im Lernbereich Gesundheit in Jg 6. | BY S5 LB1, S6 LB1 | Herleitung |
+| `ernaehrung-und-sport` | `belastung-und-koerper` | Warum man beim Sport trinken muss, folgt aus dem Schwitzen bei Belastung. BY lehrt Belastung und Temperaturregulation in Jg 6, den Flüssigkeitshaushalt in Jg 7. | BY S6 LB1, S7 LB1 | Bündel |
+| `wetter-und-umwelt` | `belastung-und-koerper` | Wie Hitze und Ozon beim Sport wirken, versteht man über Atmung, Körpertemperatur und Schwitzen bei Belastung. BY nennt beides in Jg 6. | BY S6 LB1 („Zusammenhänge von körperlicher Belastung und Temperaturregulation“), S6 LB3 („Umwelteinflüsse (z. B. UV-Strahlung, Ozonbelastung, …, Temperatur)“) | Bündel |
+| `aerobe-ausdauer` | `motorische-grundfaehigkeiten` | Aerobe Ausdauer ist eine Form der Grundfähigkeit Ausdauer. NW nennt beide als inhaltliche Kerne desselben Bewegungsfelds. | NW 2.4.2 BF1, S. 23 | Herleitung |
+| `selbstrettung` | `auftrieb-und-gleiten` | Bei Krampf oder Erschöpfung hält man sich über Wasser, indem man den Auftrieb nutzt (zum Beispiel in Rückenlage treiben). HE stellt das Über-Wasser-Halten an den Anfang. | HE Kap. 6 Bewegen im Wasser, S. 22 | Herleitung |
+| `start-und-wende` | `auftrieb-und-gleiten` | Nach dem Startsprung und nach dem Abstoß in der Wende gleitet man gestreckt unter Wasser, bevor man schwimmt. | – | Herleitung |
+
+Zusammen: 2 Quelle, 4 Bündel, 4 Herleitung.
+
+### 8.4 Entfernte Kanten (2)
+
+Beide sind indirekt. Keine bestehende Kante war inhaltlich falsch.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `handstand` | `koerperspannung` | Folgt schon über `rolle-vorwaerts` → `koerperspannung`. |
+| `wettbewerb-organisieren` | `regeln-im-sport` | Folgt schon über `messen-und-kampfrichten` → `leichtathletik-regeln` → `regeln-im-sport`. |
+
+Weitere bestehende Kanten habe ich geprüft und behalten. Zweifel stehen unter 8.7.
+
+### 8.5 Wurzeln, die bleiben (21, keine allein)
+
+| Baustein | Grund |
+|---|---|
+| `motorische-grundfaehigkeiten` | Anfang der Trainingslehre; Koordination, Dehnen, Leistungsfaktoren und jetzt aerobe Ausdauer bauen darauf auf. |
+| `belastung-und-koerper` | Anfang der Körperwahrnehmung bei Belastung (Atmung, Puls, Schwitzen); braucht keinen anderen Baustein. |
+| `rumpfmuskulatur` | Anfang der Kräftigung; jetzt auch Grundlage der Körperspannung. |
+| `sportkleidung-und-hygiene` | Anfang der Vorbereitung auf den Sport; Schutzausrüstung und Wetter bauen darauf auf. |
+| `sicher-in-der-sporthalle` | Anfang der Sicherheit; Geräteaufbau, Helfergriffe und Erste Hilfe bauen darauf auf. |
+| `gesunde-ernaehrung` | Anfang der Ernährung; braucht keinen Sportbaustein. |
+| `anspannung-entspannung` | Anfang der Körperwahrnehmung; Entspannungsmethoden und jetzt Körperspannung bauen darauf auf. |
+| `wagnis-einschaetzen` | Anfang der Leitidee Wagnis; Klettern, Angst, Wagnis und Risiko und jetzt Fahren bauen darauf auf. |
+| `schnell-starten` | Anfang des Laufens. |
+| `schersprung` | Anfang des Hochsprungs. Kein anderer Baustein ist sicher nötig. Bildet mit `flop` das einzige zweite Teilnetz (siehe 8.7). |
+| `schlagwurf` | Anfang des Werfens; Wurftechnik und Handball bauen darauf auf. |
+| `auftrieb-und-gleiten` | Anfang des Schwimmens (Wassergewöhnung). |
+| `atmen-im-wasser` | Anfang des Schwimmens (Wassergewöhnung). |
+| `baderegeln` | Anfang der Sicherheit im Wasser. |
+| `turnerische-grundformen` | Anfang des Turnens. |
+| `im-rhythmus-bewegen` | Anfang des Gestaltens und Tanzens. |
+| `spielidee` | Anfang des Spielens. |
+| `ball-zuspielen-annehmen` | Anfang der Ballfertigkeiten (sportspielübergreifend). |
+| `regeln-im-sport` | Anfang des Strangs Fairness; alle Regelbausteine bauen darauf auf. |
+| `bewegungsmerkmale` | Anfang des Bewegungslernens (Fachbegriffe). |
+| `fallen` | Anfang des Kämpfens; eine Kante zu den Rollen wäre nur mittel sicher (siehe 8.7). |
+
+**Teilnetze (2):** ein großes Netz mit 149 Bausteinen und `schersprung` → `flop`. Das übergreifende Wissen ist jetzt
+mit den Bewegungsfeldern verbunden: Gesundheit über Körperspannung, Wetter, Ernährung und Wagnis; Bewegungslernen
+über das Beurteilen von Gestaltungen; Fairness wie bisher über die Regeln.
+
+### 8.6 Vorgeschlagene neue Bausteine (Lücken im Modell)
+
+1. **`erste-schwimmart`** (Strang `schwimmen`, Richtstufe 5-6): „Ich kann eine Schwimmart in der Grobform so sicher
+   schwimmen, dass ich mich damit über Wasser halte und vorwärtskomme.“ Quellen: HE Kap. 6 Bewegen im Wasser, S. 22 f.
+   (über Wasser halten; 100 m); BY S5 4.2 (Gesamtkoordination in mindestens einer Schwimmart, auch zur
+   Selbstrettung); NW 2.4.2 BF4, S. 25 (eine Wechselzug- oder eine Gleichzugtechnik). Kanten: requires
+   `auftrieb-und-gleiten`, `atmen-im-wasser`; Voraussetzung von `ausdauernd-schwimmen`, `selbstrettung` und
+   `start-und-wende` („in meiner Schwimmart“). Grund: `requires` kennt nur „und“. Heute brauchen diese drei Bausteine
+   eine der beiden Schwimmarten, die Karte kann aber nicht „Brust oder Kraul“ sagen. Mit dem Baustein würden
+   `gleichzugtechnik` und `wechselzugtechnik` darauf aufbauen oder ihn verfeinern.
+2. **Kein weiterer Vorschlag.** Für `schersprung` fehlt kein Baustein; der Hochsprung ist ein eigener Anfang.
+
+### 8.7 Offene Punkte
+
+1. **`schersprung` → `flop` bleibt ein eigenes Teilnetz.** Kandidaten mit nur mittlerer Zuversicht:
+   `schersprung` → `sprinttechnik` (der Anlauf ist kurz und kein Sprint) oder `schersprung` → `weitsprung`
+   (gemeinsam ist nur der einbeinige Absprung). Nicht aufgenommen.
+2. **`fallen` → `rolle-rueckwaerts`** (mittlere Zuversicht): In der Fallschule baut das Rückwärtsfallen oft auf dem
+   Rückwärtsrollen auf. Keine Quelle der Länder verbindet beides; nicht aufgenommen.
+3. **`weitsprung-phasen` → `bewegungsphasen`** (mittel): `stuetzsprung-phasen` nutzt schon das Phasenmodell. Die
+   vier Phasen des Weitsprungs sind aber ein eigenes, sportartspezifisches Modell. Mit der Kante würde
+   `weitsprung-phasen` → `bewegungsmerkmale` indirekt und fiele weg.
+4. **`mit-angst-umgehen` → `anspannung-entspannung`** (mittel): Entspannung ist eine Strategie gegen Angst (NW 2.5.1
+   IF c, S. 30: Strategien zum Umgang mit Emotionen), aber nicht die einzige.
+5. **`sportkleidung-und-hygiene` und `sicher-in-der-sporthalle`** nennt BY in einem Inhalt (S5 LB1:
+   „Sicherheitsvorkehrungen und Hygienemaßnahmen: Merkmale funktioneller Sportkleidung, Unfallprophylaxe …“). Eine
+   Richtung lässt sich daraus nicht ableiten; beide bleiben Wurzeln.
+6. **`start-und-wende` → `auftrieb-und-gleiten`** ist eine Herleitung. Die eigentliche Voraussetzung ist die eigene
+   Schwimmart (siehe 8.6).
+7. **Bestehende Kanten mit Zweifel (behalten):** `bezugsnormen` → `leistungsfaktoren` (NW stützt sie nur als Bündel im
+   Inhaltsfeld d); `orientierungslauf` → `ausdauer-15-minuten` (der Kern ist das Kartenlesen);
+   `koerperbilder-und-trends` → `bewegungsmangel`. Bitte von Lehrkräften prüfen lassen.
+
+### 8.8 Nicht geöffnet
+
+- Handbücher der Sportdidaktik und Bewegungslehre (z. B. Meinel/Schnabel, Bewegungslehre – Sportmotorik) sind nicht
+  frei online. Nicht geöffnet, nicht zitiert.
+- Weitere Treffer zur Körperspannung (Friedrich Verlag, Sportpädagogik 1/2020; Raabe) sind hinter einer Bezahlschranke.
+  Nicht geöffnet, nicht zitiert.
+
+### 8.9 Neue Bausteine (Owner, 2026-11-11)
+
+Der Owner hat entschieden, den Vorschlag aus 8.6 aufzunehmen. Ich habe die Fundstellen im Original nachgelesen
+(Quellen wie in 8.2). Alle drei Länder nennen den Baustein; er gehört damit in die Karte.
+
+**`erste-schwimmart`** (Erste Schwimmart / First swimming stroke)
+
+- **iCan:** „Ich kann eine Schwimmart, Brust oder Kraul, in der Grobform so sicher schwimmen, dass ich mich damit über
+  Wasser halte und vorwärtskomme.“
+- **Strang:** `schwimmen`, nach den Grundlagen (`auftrieb-und-gleiten`, `atmen-im-wasser`, `baderegeln`) und vor
+  `gleichzugtechnik` und `wechselzugtechnik`.
+- **Richtstufe:** Stimmen HE 5-10 / BY 5-6 (Jg 5) / NW 5-6 → **5-6** (Mehrheit).
+- **Quellen:**
+  - HE Kap. 6 Bewegen im Wasser, S. 22 f.: „vorrangig sicherzustellen, dass sich die Lernenden mindestens über Wasser
+    halten können“; Vortrieb in Bauch- und/oder Rückenlage; Atem- und Schwimmtechniken für mindestens 100 m.
+  - BY S5 4.2: „setzen die Gesamtkoordination in mindestens einer Schwimmart weitgehend harmonisch um und nutzen diese
+    auch zur Selbstrettung“.
+  - NW 2.4.2 BF4, S. 25: „eine Wechselzug- oder eine Gleichzugtechnik einschließlich Atemtechnik, Start und Wende …
+    sicher und ausdauernd ausführen“.
+
+**Neue Kanten (5)**
+
+| Baustein | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|
+| `erste-schwimmart` | `auftrieb-und-gleiten` | Eine Schwimmart erzeugt Vortrieb aus Auftrieb und Gleiten. NW nennt diese Fertigkeiten vor der Schwimmtechnik. | NW 2.4.2 BF4, S. 25; HE Kap. 6, S. 22 f. | Quelle |
+| `erste-schwimmart` | `atmen-im-wasser` | Die Schwimmart wird „einschließlich Atemtechnik“ verlangt. | NW 2.4.2 BF4, S. 25; HE Kap. 6, S. 23 | Quelle |
+| `ausdauernd-schwimmen` | `erste-schwimmart` | 15 Minuten in „beliebige[r] Schwimmart“; Atem- und Schwimmtechniken sind Voraussetzung für 100 m. | NW 2.4.2 BF1, S. 24; HE Kap. 6, S. 23 | Quelle |
+| `selbstrettung` | `erste-schwimmart` | Die Schüler nutzen ihre Schwimmart „auch zur Selbstrettung“. | BY S5 4.2; HE Kap. 6, S. 22 | Quelle |
+| `start-und-wende` | `erste-schwimmart` | „Startsprung und Wende einer Schwimmart“. | BY S6 4.2; NW 2.4.2 BF4, S. 25 | Quelle |
+
+**Entfernte Kanten (3)** – alle jetzt indirekt über `erste-schwimmart`:
+
+| Baustein | Voraussetzung | Weg jetzt |
+|---|---|---|
+| `ausdauernd-schwimmen` | `atmen-im-wasser` | über `erste-schwimmart` → `atmen-im-wasser` |
+| `selbstrettung` | `auftrieb-und-gleiten` | über `erste-schwimmart` → `auftrieb-und-gleiten` |
+| `start-und-wende` | `auftrieb-und-gleiten` | über `erste-schwimmart` → `auftrieb-und-gleiten` |
+
+Damit sind zwei Herleitungen aus 8.3 durch Kanten mit Quelle ersetzt (Punkt 6 in 8.7 ist erledigt).
+
+**Zahlen**
+
+| | Bausteine | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|---|
+| vorher | 151 | 172 | 21 | 0 | 2 | 7 |
+| nachher | 152 | 174 | 21 | 0 | 2 | 7 |
+
+Strang `schwimmen`: jetzt 13 Bausteine (11 × 5-6, 1 × 7-8, 1 × 9-10). Geprüft mit `measure.mjs`: keine Zeile `LATE`
+oder `INDIRECT`. `npm test` grün (ein Test ohne Docker übersprungen). Kein Eintrag in `entries/` nutzt Sport; ein
+Vergleich mit `npm run listing` war nicht nötig.
+
+**Offene Punkte**
+
+1. **`gleichzugtechnik` und `wechselzugtechnik`** bauen weiter direkt auf `auftrieb-und-gleiten` und
+   `atmen-im-wasser` auf, nicht auf `erste-schwimmart`. Die erste Schwimmart ist eine dieser beiden Techniken in der
+   Grobform; die beiden Bausteine verfeinern sie (Technikmerkmale beschreiben). Ob sie auf `erste-schwimmart` aufbauen
+   sollen, entscheidet der Owner. Dann würden ihre beiden Kanten indirekt und fielen weg.
+2. **Überschneidung:** Eine App kann `erste-schwimmart` und eine der beiden Techniken auf derselben Seite üben. Bitte
+   von Lehrkräften prüfen lassen, ob die Trennung „sicher schwimmen“ und „Technik beschreiben“ trägt.

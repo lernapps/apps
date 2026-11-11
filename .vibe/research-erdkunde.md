@@ -329,3 +329,113 @@ Produktion.
 Downloads: `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/src-erdkunde/`.
 Daten und Skripte: `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/gen-erdkunde/`
 (`data.py`, `check.py`, `yaml_out.py`, `render.py`).
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung aus einer Quelle oder als gekennzeichnete Herleitung (Skill
+`map-research`, „Connect every competency“). Ich habe jede Wurzel in beide Richtungen geprüft (Was braucht sie? Was
+baut auf ihr auf?) und alle 157 bestehenden Kanten gelesen. Die Begründung jeder neuen Kante steht als Kommentar
+`# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan` und Stränge sind unverändert.
+
+**Ergebnis in Kürze:** Die Karte war schon gut verbunden (kein Baustein allein). Ich habe 2 Kanten mit Quelle
+ergänzt und 1 indirekte Kante entfernt. Eine Wurzel weniger, ein Teilnetz weniger.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 157 | 11 | 0 | 3 | 10 |
+| nachher | 158 | 10 | 0 | 2 | 10 |
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante (Messskript ohne Zeilen
+`LATE` und `INDIRECT`). `npm test` grün. Die Karte hat kein `explainerFocus: competency` (es gilt `strand`); der
+Vergleich mit `npm run listing` entfällt daher, obwohl `entries/naturwunder-quiz.yaml` das Fach nutzt.
+
+### 6.2 Quellen
+
+Alle Quellen habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML).
+Es sind dieselben Ausgaben wie in Abschnitt 1:
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| DG | DGfG: Bildungsstandards im Fach Geographie für den Mittleren Schulabschluss | 10. Auflage, Juli 2020 | https://fachportal.lernnetz.de/files/Inhalte%20der%20Unterrichtsf%C3%A4cher/Geographie/Download%20Center/Bildungsstandards%20SI%20Geographie%202020%20Web.pdf |
+| HE (LP) | Hessisches Kultusministerium: Lehrplan Erdkunde, Gymnasialer Bildungsgang, Jg 5 bis 13 (G9) | ohne Jahr (PDF von 2016) | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-erdkunde.pdf |
+| HE (KC) | Hessisches Kultusministerium: Kerncurriculum Erdkunde, Sek I Gymnasium | ohne Jahr (PDF von 2011) | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/kerncurriculum_erdkunde_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Geographie Geo5, Geo7, Geo10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/geographie · …/7/geographie · …/10/geographie |
+| NW | MSB NRW: Kernlehrplan Erdkunde, Sek I Gymnasium | Heft 3408, 2019 | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_ek_klp_3408_2019_06_23.pdf |
+
+KMK-Bildungsstandards gibt es für Geographie nicht (Abschnitt 1.1). **Fachdidaktik:** Für die neuen Kanten war keine
+nötig; die Länder nennen sie selbst. Ich habe keine neue fachdidaktische Quelle zitiert.
+
+### 6.3 Neue Kanten (2)
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `wirtschaftssektoren` | `bauernhof` | Den primären Sektor kennt man vom Bauernhof. NW nennt die Sektoren zusammen mit der Landwirtschaft; HE und BY lehren den Betrieb in Jg 5, die Sektoren erst später. | NW IF3 S. 21 („Standortfaktoren des primären Sektors: Boden, Klima“, mit Landwirtschaft); HE LP Jg 5 S. 7 („Landwirtschaftlicher Betrieb“) vor Jg 9 S. 15 („Wirtschaftsstruktur“); BY Geo5 LB4 vor Geo7 LB5 | Bündel |
+| `standortfaktoren` | `verkehr` | Verkehrswege sind ein Standortfaktor (das iCan nennt sie). NW nennt die Verkehrsinfrastruktur bei den Standortfaktoren; BY nennt Standortfaktoren und Infrastruktur im selben Lernbereich. | NW IF3 S. 21 („Standortfaktoren des sekundären Sektors: Rohstoffe, Arbeitskräfte, Verkehrsinfrastruktur“); BY Geo7 LB5; DG F3 S11 S. 14 („Erschließung … durch Verkehrswege“) | Quelle |
+
+Damit hängt das Teilnetz `verkehr` → `seehafen` am Hauptnetz, und `wirtschaftssektoren` ist keine Wurzel mehr.
+
+### 6.4 Entfernte Kanten (1)
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `bodenerosion` | `exogene-kraefte` | Indirekt: folgt schon über `boden` → `exogene-kraefte`. |
+
+Keine bestehende Kante war inhaltlich falsch. Fraglich, aber durch ein Bündel gedeckt (deshalb behalten):
+`meeresschutz` → `fischerei` (der Baustein handelt von Verschmutzung, nicht vom Fischfang; HE LP Jg 5 und BY Geo7
+LB6 lehren beides in einer Einheit), `treibhauseffekt` → `klimazonen-der-erde` (BY Geo10 lehrt die Strahlungs- und
+Temperaturverhältnisse der Zonen in LB3 direkt vor dem Treibhauseffekt in LB4), `gezeiten-und-watt` →
+`grosslandschaften-deutschland` (HE LP Jg 5: „Deutschland (allg.)“ vor „am Meer“).
+
+### 6.5 Wurzeln, die bleiben (10, keine allein)
+
+| Baustein | Strang | Grund |
+|---|---|---|
+| `himmelsrichtungen` | orientierung | Anfang der Orientierung (HE LP Jg 5: Windrose, Kompass); braucht keinen anderen Baustein. |
+| `globus-und-karte` | orientierung | Anfang der Kartenarbeit; Legende, Maßstab, Gradnetz und Kontinente bauen darauf auf. |
+| `sonnensystem` | erde | Anfang des Strangs „Planet Erde“ (BY Geo5 LB2, HE LP Jg 5). |
+| `exogene-kraefte` | erde | Grundbegriff der Oberflächenformung; Boden und Küstenformen bauen darauf auf. Eine Kante zu `wetter-und-klima` (Frost, Niederschlag) wäre nur mittel sicher, siehe 6.7. |
+| `wetter-und-klima` | klima | Anfang des Strangs Klima; braucht keinen Baustein. |
+| `energietraeger` | wirtschaft | Keine Quelle verlangt einen Baustein vorher; `klimaschutz` baut darauf auf (NW IF5 S. 27: Maßnahmen gegen die Erwärmung „im Hinblick auf eine gesicherte … Energieversorgung“). |
+| `verkehr` | wirtschaft | Thema ab Jg 5 ohne sichere Voraussetzung; `seehafen` und jetzt `standortfaktoren` bauen darauf auf. |
+| `fischerei` | wirtschaft | Thema „Nutzung des Meeres“ ohne sichere Voraussetzung; `meeresschutz` baut darauf auf. Bildet mit ihm das zweite Teilnetz (6.7). |
+| `nachhaltigkeit` | wirtschaft | Leitbegriff; sieben Bausteine bauen darauf auf. Er setzt keinen Baustein voraus. |
+| `stadt-und-land` | siedlung | Anfang des Strangs Siedlung (NW IF1, HE LP Jg 5). |
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+Keine. Für die verbleibenden Wurzeln fehlt kein Zwischenschritt, den zwei Länder nennen. Ein Baustein „Rohstoffe
+und ihre Entstehung“ (Bodenschätze, fossile Lagerstätten) als Voraussetzung von `energietraeger` nennen HE LP 6.1
+(„Bodenschätze“) und BY Geo7 LB6 („Erdöl und Erdgas“) nur als Teil des Energiethemas; ein eigener Baustein lohnt
+sich nach den Quellen nicht.
+
+### 6.7 Offene Punkte (auch Kanten mit nur mittlerer Zuversicht)
+
+1. **Teilnetz `fischerei` → `meeresschutz`** hängt nicht am Hauptnetz. Kandidat mit mittlerer Zuversicht:
+   `fischerei` → `nachhaltigkeit` (Überfischung heißt: mehr entnehmen als nachwächst). Das iCan verlangt aber nur,
+   das Problem zu erklären, nicht den Begriff Nachhaltigkeit. Nicht aufgenommen.
+2. **`verkehr` → `daseinsgrundfunktionen`** (NW IF1 S. 19 zählt Mobilität zu den Daseinsgrundfunktionen; HE LP Jg 5
+   nennt Verkehr in der Heimatgemeinde). Mittel: der Baustein vergleicht Verkehrsmittel und Netze und braucht die
+   Liste der Funktionen nicht unbedingt. Nicht aufgenommen.
+3. **`stadt-umland` → `verkehr`** (Pendeln mit öffentlichen und eigenen Verkehrsmitteln; HE LP Jg 5). Mittel: der
+   Baustein fragt, *warum* Menschen pendeln, nicht womit.
+4. **`leben-in-risikoraeumen` → `boden`** (das iCan nennt fruchtbare Böden an Vulkanen; NW IF4 S. 26:
+   „Landwirtschaft, Rohstoffe, Tourismus, Energie“). Mittel: der Baustein erklärt, warum Menschen dort leben, nicht
+   warum der Boden fruchtbar ist.
+5. **`klimawandel-ursachen` → `energietraeger`** (vom Menschen verursacht vor allem durch fossile Energie). Mittel:
+   das iCan von `energietraeger` nennt CO₂ nicht. Mit dieser Kante würde `klimaschutz` → `energietraeger` indirekt
+   und fiele weg.
+6. **`exogene-kraefte` → `wetter-und-klima`** (Frost und Niederschlag treiben Verwitterung und Abtragung). Mittel:
+   der Baustein braucht nur die Alltagsbegriffe, nicht die Unterscheidung von Wetter und Klima.
+7. **`tourismus-voraussetzungen` → `wetter-und-klima`** (NW IF2 S. 20: „touristisches Potenzial: Temperatur und
+   Niederschlag“). Mittel: dafür reicht Alltagswissen.
+
+### 6.8 Nicht geöffnet
+
+- DGfG direkt (geographie.de, dgfg.org): wie in Abschnitt 5; ich habe die Kopie beim IQSH gelesen.
+- Fachdidaktische Handbücher zur Geographie (z. B. zu Daseinsgrundfunktionen nach Partzsch) sind nicht frei online;
+  nicht geöffnet, nicht zitiert.
+
+Downloads: `/tmp/claude-0/-home-user/63cb6fc9-e6ad-586d-91c1-59230f4b1df1/scratchpad/src-erdkunde/`.

@@ -398,3 +398,296 @@ und BY (Jahrgänge 6–10) gliedern gleich. Zuschnitt:
 Die Downloads liegen in `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/src-geschichte/`,
 die Bausteine als Daten und die Skripte in
 `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/gen-geschichte/` (`data.py`, `check.py`).
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein stehenden
+Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“). Geschichte ist
+der Sonderfall: Die Karte hatte 1 Wurzel und eine Kette mit 58 Stufen, die fast nur die Zeit abbildete. Ich habe jede
+der 259 Kanten mit einer Frage geprüft: **Braucht man A, um B zu verstehen** (einen Begriff, eine Ursache, Vorwissen)?
+Dass A früher war, reicht nicht. Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids,
+`gradeBand`, `status`, `iCan` und Stränge sind unverändert; es gibt keine neuen Bausteine.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 259 | 1 | 0 | 1 | 58 |
+| nachher | 249 | 3 | 0 | 1 | 49 |
+
+Geprüft (Skript `measure.mjs` im Scratchpad): keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine
+indirekte Kante (vorher 13 Zeilen `INDIRECT`). `npm test`: 111 bestanden, 1 übersprungen (Docker), 0 Fehler. Die Karte hat kein `explainerFocus: competency`, und keine App in
+`entries/` nutzt Geschichte; ein Vergleich mit `npm run listing` entfällt.
+
+**Warum die Kette lang bleibt:** Die längste Kette hat noch 49 Stufen. Fast jede ihrer Kanten ist jetzt ein Begriff
+(Herrschaft der Pharaonen → Monarchie → Republik; Ständegesellschaft → Ursachen der Französischen Revolution;
+totalitäre Diktatur → SED-Diktatur) oder eine Ursache (Weltwirtschaftskrise → Präsidialkabinette → Scheitern von
+Weimar → Machtübernahme). Solche Ketten sind im Fach echt: Geschichte erklärt Späteres aus Früherem. Kürzer würde die
+Kette nur, wenn ich Ursachen-Kanten striche; das wäre falsch.
+
+### 6.2 Quellen
+
+Am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML). Seitenzahlen sind die
+gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE KC | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Geschichte | Fassung 2011, 31 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-07/kerncurriculum_geschichte_gymnasium.pdf |
+| HE LP | Hessisches Kultusministerium: Lehrplan Geschichte, Gymnasialer Bildungsgang, Jahrgangsstufen 6 bis 13 | PDF vom 08.02.2016, 44 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-geschichte.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Geschichte, G6 bis G10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/6/geschichte (ebenso …/7/ bis …/10/geschichte) |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Geschichte | Heft 3407, 1. Auflage 2019, 38 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_ge_klp_3407_2019_06_23.pdf |
+| Kühberger IzPB 38 | Christoph Kühberger: Lernen mit Konzepten – Basiskonzepte in politischen und historischen Lernprozessen. In: Forum Politische Bildung (Hg.): Informationen zur Politischen Bildung Nr. 38, S. 20–29 | Jahr nicht im Text (zitiert Literatur bis 2016; PDF geändert 2020) | https://www.politischebildung.com/wp-content/uploads/izpb38_kuehberger.pdf |
+
+Es gibt keine KMK-Bildungsstandards Geschichte für die Sekundarstufe I (Abschnitt 1).
+
+**Fachdidaktik zu Längsschnitten und Grundbegriffen:** Kühberger beschreibt, wie ein Begriff über Jahre wächst: Man
+führt ihn an einem ersten Fall ein und greift ihn an späteren Fällen wieder auf. Sein Beispiel (Kasten „Progression im
+Lernprozess“, S. 21): die Struktur einer Gesellschaft zuerst an einer Hochkultur, dann beim Mittelalter „auf das
+bereits bekannte Beispiel einer Hochkultur zu verweisen, um anschließend nach Strukturmerkmalen einer feudalen
+Gesellschaft zu fragen“. „Herrschaftsformen“ und „Gewaltenteilung“ nennt er Teilkonzepte von „Macht“ (S. 24). Die
+Längsschnitte in Bayern tun dasselbe: G6 LB4 ordnet Herrscher nach „Monarchie, Demokratie“ ein, G7 LB6 vergleicht den
+Absolutismus „mit ihnen bereits bekannten Herrschaftsformen aus Antike und Mittelalter“, G7 LB1 das mittelalterliche
+Königtum „mit einer ihnen bereits bekannten Monarchie der Antike“, G8 LB1 nutzt „Kenntnisse über antike und
+mittelalterliche Herrscher, um das Selbstverständnis Napoleons als Kaiser zu beschreiben“. Daraus folgt die Regel, nach
+der ich geprüft habe: Eine Kante über Epochen hinweg trägt einen Begriff (Monarchie, Stände, Kaisertum, Verfassung),
+nicht die Reihenfolge der Zeit.
+
+### 6.3 Neue Kanten (15)
+
+„Bündel“: Ein Plan nennt beide Inhalte im selben Jahrgang oder in derselben Einheit. „Herleitung“: Keine Quelle nennt
+die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `staendegesellschaft` | `pharao-und-gesellschaft` | Den Aufbau einer Gesellschaft in Rangstufen lernt man an Ägypten; die Ständegesellschaft wendet ihn auf das Mittelalter an. | Kühberger IzPB 38 S. 21 (wörtlich: Hochkultur, dann feudale Gesellschaft) | Quelle (Fachdidaktik) |
+| `ursachen-der-franzoesischen-revolution` | `staendegesellschaft` | Die Ungleichheit der Stände ist eine Ursache der Revolution. | BY G8 LB1 („Ursachen der Französischen Revolution: Gedankengut der Aufklärung, Gesellschaft, Wirtschaft“); HE LP 9.1 Hinweise S. 27 („Wiederholung: Leben und Wirtschaften im Mittelalter“) | Quelle |
+| `napoleon` | `kaiserkroenung-800` | Napoleons Kaisertum knüpft an Karl den Großen an. | BY G8 LB1 („nutzen ihre Kenntnisse über antike und mittelalterliche Herrscher, um das Selbstverständnis Napoleons als Kaiser zu beschreiben“) | Quelle |
+| `augsburger-religionsfriede` | `fuerstenmacht` | Der Friede gab den Landesherren das Recht, die Konfession zu bestimmen. | HE LP 8.4 Hinweise S. 23 („Wiederholung: Kampf um geistliche und weltliche Herrschaft“ = Thema 8.2 mit fürstlicher Territorialgewalt) | Quelle |
+| `obrigkeitsstaat-und-militarismus` | `verfassung-des-kaiserreichs` | Das Obrigkeitsdenken zeigt sich schon in der Verfassung. | BY G8 LB5 (Reichsverfassung „hinsichtlich ihrer obrigkeitsstaatlichen und partizipatorischen Elemente“ beurteilen) | Quelle |
+| `novemberrevolution` | `epochenjahr-1917` | Kriegseintritt der USA (Niederlage) und Russische Revolution (Räte) erklären die Revolution. | HE LP 10.1 (1) S. 33 („Novemberrevolution …: Epochenjahr 1917; Kriegsende; Zusammenbruch des Kaiserreichs“) | Quelle |
+| `menschwerdung` | `archaeologie` | Was wir über die ersten Menschen wissen, stammt aus Funden. | NW IF1 S. 16 und S. 22 (Entwicklung des Menschen; Verfahrensweisen historischen Arbeitens); BY G6 LB1 (Archäologie) | Bündel |
+| `altsteinzeit` | `archaeologie` | Das Leben in der Altsteinzeit kennen wir nur aus Funden. | HE LP 6.2 (1) S. 12 („kulturelle Überreste und ihre Deutung“; „Funde als Quellen“); BY G6 LB1 | Bündel |
+| `leben-in-rom` | `caesar-und-augustus` | „Brot und Spiele“ und das Leben in der Großstadt gehören zur Kaiserzeit. | HE LP 6.5 (3) S. 15 („Die Kaiserzeit: … Leben und Wohnen in Rom …; Brot und Spiele“) | Bündel |
+| `lehnswesen` | `karl-der-grosse` | Das Lehnswesen antwortet auf die Frage, wie ein König ein großes Reich regiert. | NW IF3a S. 24 (Ordnungsprinzipien im Fränkischen Großreich anhand Karls des Großen); HE LP 8.1 (2) S. 17 („Reisekönigtum; Pfalzordnung; Lehnswesen; Königsboten“) | Bündel |
+| `roemische-republik` | `monarchie` | Die Republik ist die Ordnung ohne König; man braucht den Gegenbegriff. | Stütze: BY G6 LB4; Kühberger IzPB 38 S. 21 | Herleitung |
+| `glaube-im-mittelalter` | `christen-im-roemischen-reich` | Die Rolle der Kirche im Mittelalter setzt voraus, dass das Christentum Staatsreligion wurde. | Stütze: HE LP 8.2 Hinweise S. 20 („Wiederholung: … Judentum, Christentum, Islam“) | Herleitung |
+| `hexenverfolgung` | `pest` | Den Gedanken „Sündenbock in der Krise“ lernt man an Pest und Judenverfolgung. | Stütze: HE LP 8.3 Begründung S. 21 („Erschütterung dieses Weltbildes und Pogromen und Panikreaktionen“) | Herleitung |
+| `frauenbewegung` | `menschenrechte-1789` | Die Frauenbewegung forderte die Rechte, die 1789 versprochen, Frauen aber nicht gewährt wurden. | Stütze: HE LP 9.1 Begründung S. 26; NW IF5 S. 30 („Anspruch und Wirklichkeit der Menschen- und Bürgerrechte von 1789“) | Herleitung |
+| `ns-ideologie` | `imperialismus` | Die „Rassenlehre“ setzt den Gedanken fort, ein Volk sei anderen überlegen (Sozialdarwinismus). | Stütze: HE LP 10.3 (1) S. 36 („Sozialdarwinismus und NS-Rassenideologie“); HE LP 9.5 (1) S. 31; NW IF8 S. 32 („deren Ursprünge“) | Herleitung |
+
+Zusammen: 6 Quelle (davon 1 Fachdidaktik), 4 Bündel, 5 Herleitung.
+
+### 6.4 Entfernte Kanten (25)
+
+**Nur Zeit (13):** A war früher, wird aber nicht gebraucht, um B zu verstehen.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `menschwerdung` | `epochen` | Die Epochen-Ordnung wird nicht gebraucht; ersetzt durch `archaeologie`. |
+| `altsteinzeit` | `menschwerdung` | Wie Jäger und Sammler lebten, versteht man ohne die Evolution in Afrika; ersetzt durch `archaeologie`. |
+| `polis` | `epochen` | Landschaft und Stadtstaat brauchen keine Epochen-Ordnung. BY führt den Begriff „Antike“ erst in derselben Einheit ein (G6 LB3). |
+| `islam-ausbreitung` | `epochen` | Wie oben; der Islam beginnt einen eigenen Strang der Religionsgeschichte. |
+| `roemische-republik` | `gruendungssage-roms` | Die Verfassung der Republik braucht die Sage nicht; ersetzt durch `monarchie`. |
+| `leben-in-rom` | `roemische-republik` | Der Alltag mit „Brot und Spiele“ gehört zur Kaiserzeit; ersetzt durch `caesar-und-augustus`. |
+| `staendegesellschaft` | `karl-der-grosse` | Die Stände braucht man ohne Karl den Großen zu verstehen; ersetzt durch `pharao-und-gesellschaft`. |
+| `glaube-im-mittelalter` | `staendegesellschaft` | Glaube und Kirche brauchen die Stände nicht; ersetzt durch `christen-im-roemischen-reich`. Nebenbei hätte die alte Kante die neue Ursachen-Kante zur Französischen Revolution indirekt gemacht. |
+| `hexenverfolgung` | `kritik-an-der-kirche` | Hexen wurden in katholischen und evangelischen Gebieten verfolgt; die Kritik am Ablass erklärt das nicht. Ersetzt durch `pest`. |
+| `absolutismus` | `westfaelischer-friede` | Der Absolutismus Ludwigs XIV. braucht den Friedensschluss nicht; der Begriff kommt aus `monarchie` (BY G7 LB6). |
+| `frauenbewegung` | `reichsgruendung-1871` | Die Frauenbewegung begann vor 1871; ersetzt durch `menschenrechte-1789`. |
+| `stellungskrieg` | `julikrise-1914` | Was den Krieg „industriell“ machte, erklärt die Industrialisierung, nicht die Julikrise. Damit war auch die indirekte Kante `stellungskrieg` → `industrialisierung-deutschland` gelöst. |
+| `ns-ideologie` | `aufstieg-der-nsdap` | Die Ideologie versteht man ohne die Wahlerfolge ab 1930; ersetzt durch `imperialismus`. |
+
+**Falsch (1):**
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `novemberrevolution` | `versailler-vertrag` | Die Revolution war im November 1918, der Vertrag im Juni 1919. Ersetzt durch `epochenjahr-1917`. |
+
+**Indirekt (11):** Die Voraussetzung folgt schon über einen anderen Weg.
+
+| Baustein | Voraussetzung | folgt über |
+|---|---|---|
+| `zeitleiste` | `zeitrechnung` | `jahrhunderte` |
+| `caesar-und-augustus` | `monarchie` | `krise-der-republik` → … → `roemische-republik` → `monarchie` |
+| `ursachen-der-franzoesischen-revolution` | `absolutismus` | `aufklaerung` |
+| `liberalismus-und-nationalismus` | `aufklaerung` | `nationalbewegung` → `napoleon` → … → `aufklaerung` |
+| `obrigkeitsstaat-und-militarismus` | `reichsgruendung-1871` | `verfassung-des-kaiserreichs` (neu) |
+| `obrigkeitsstaat-und-militarismus` | `liberalismus-und-nationalismus` | `verfassung-des-kaiserreichs` → `reichsgruendung-1871` → … |
+| `weimarer-verfassung` | `gewaltenteilung` | `raete-oder-parlament` → `novemberrevolution` → `verfassung-des-kaiserreichs` → `konstitutionelle-monarchie` |
+| `aufstieg-der-nsdap` | `feinde-der-republik` | `weltwirtschaftskrise` → `stabilisierung` → `krisenjahr-1923` |
+| `ermaechtigungsgesetz` | `weimarer-verfassung` | `machtuebernahme-1933` → … → `praesidialkabinette` |
+| `totalitaere-diktatur` | `gleichschaltung` | `terror-und-verfolgung` |
+| `kalter-krieg` | `epochenjahr-1917` | `potsdamer-konferenz` → … → `neuordnung-europas-1919` → `versailler-vertrag` (HE LP 10.4 nennt die Anknüpfung; sie bleibt über die Kette erhalten) |
+
+Alle anderen Kanten habe ich geprüft und behalten, weil sie einen Begriff, eine Ursache oder Vorwissen tragen. Beispiele
+mit Quelle: `monarchie` → `pharao-und-gesellschaft` (BY G6 LB2), `absolutismus` → `monarchie` (BY G7 LB6),
+`imperialismus` → `industrialisierung-deutschland`, `liberalismus-und-nationalismus` (HE LP 9.5 Begründung: „nicht ohne
+Nationalstaatsbildung und Hochindustrialisierung erklärbar“), `industrialisierung-england` → `merkantilismus` (HE LP 9.3
+Hinweise: „Wiederholung: Merkantilismus“), `grundgesetz` → `weimarer-verfassung` (HE LP 10.1 Begründung),
+`krise-der-republik` → `expansion-roms` (NW IF2: „Rückwirkungen der römischen Expansion“).
+
+### 6.5 Wurzeln, die bleiben (3, davon 0 allein)
+
+| Baustein | Strang | Grund |
+|---|---|---|
+| `was-ist-geschichte` | grundlagen | Anfang des Fachs: Vergangenheit, Gegenwart, Zukunft. |
+| `polis` | antike | Anfang der griechischen Geschichte; Landschaft und Stadtstaat brauchen keinen anderen Baustein. Kolonisation, Demokratie und Hellenismus bauen darauf auf. |
+| `islam-ausbreitung` | mittelalter | Anfang einer Religionsgeschichte; „Drei Religionen“ und „Dreiteilung der Mittelmeerwelt“ bauen darauf auf. |
+
+Kein Baustein steht allein. `epochen` hat jetzt nur noch `voelkerwanderung` als Nachfolger: Das ist der einzige
+Baustein, dessen iCan die Epochengrenze selbst behandelt (BY G6 LB6: „dass sich Epochengrenzen anhand mehrerer
+historischer Ereignisse festmachen lassen“).
+
+### 6.6 Vorgeschlagene neue Bausteine (Lücken im Modell)
+
+1. **`herrschaftsformen`** (Strang `grundlagen`, Richtstufe 5-6): „Ich kann Monarchie, Aristokratie, Demokratie und
+   Republik unterscheiden und Herrscher einer Herrschaftsform zuordnen.“ Quellen: BY G6 LB4 (Längsschnitt: historische
+   Persönlichkeiten „im Hinblick auf die jeweilige Herrschaftsform einzuordnen“), BY G7 LB7 (Grundbegriffe „Polis,
+   Demokratie, Monarchie, König, Kaiser, Absolutismus und Aristokratie“), HE KC Kap. 6 Dimension „Herrschaft“ (ohne
+   Jahrgang), NW SK 6 („Herrschaftsformen“, Stufe 2), Kühberger IzPB 38 S. 24 (Teilkonzept „Herrschaftsformen“).
+   Kanten: requires `monarchie`, `attische-demokratie`; Voraussetzung von `roemische-republik`, `absolutismus`,
+   `konstitutionelle-monarchie`, `totalitaere-diktatur`. Der Baustein würde den Begriff tragen, den heute viele
+   einzelne Kanten tragen.
+2. **`was-ist-eine-revolution`** (Strang `revolutionen`, Richtstufe 7-8): „Ich kann erklären, was eine Revolution ist,
+   und Ursachen, Anlass und Folgen einer Revolution unterscheiden.“ Quellen: HE KC Kap. 5 (Basiskonzept: „Evolution und
+   Revolution“), HE LP Kategorie „Revolution und Evolution“ (6.2, 10.1), BY G8 LB1 („die Multikausalität von
+   revolutionären Prozessen“), NW SK 3 („Anlässe und Ursachen … Folgen“). Kanten: requires `revolution-1789`;
+   Voraussetzung von `revolution-1848`, `russische-revolution`, `novemberrevolution`, `friedliche-revolution`. Heute
+   verbindet keine Kante diese Revolutionen über den Begriff.
+
+### 6.7 Offene Punkte (mittlere Zuversicht, nicht in der Karte)
+
+1. **`liberalismus-und-nationalismus` → `konstitutionelle-monarchie`:** Die Liberalen forderten Verfassungen (HE LP
+   9.2 (2), BY G8 LB2). Die Kante würde aber `verfassung-des-kaiserreichs` → `konstitutionelle-monarchie` indirekt
+   machen; diese Kante ist besser belegt (BY G8 LB5). Nicht aufgenommen.
+2. **`kaiserkroenung-800` → `caesar-und-augustus`** (BY G6 LB6: antikes und mittelalterliches Kaisertum vergleichen) und
+   **`koenigserhebung` → `monarchie`** (BY G7 LB1): beide gut belegt, aber indirekt (über `christen-im-roemischen-reich`
+   → `frankenreich` → `karl-der-grosse`). Nicht aufgenommen; der Baustein `herrschaftsformen` (6.6) würde das lösen.
+3. **`novemberrevolution` → `krieg-und-zivilbevoelkerung`** (Hunger und Kriegsmüdigkeit als Ursache): fachlich
+   naheliegend, kein Plan nennt es ausdrücklich.
+4. **`entdeckungsfahrten` → `konstantinopel-1453`** (der Landweg nach Asien wird schwieriger): BY G7 LB3 nennt beides
+   im selben Lernbereich; die Ursache ist in der Forschung umstritten.
+5. **`erinnerung-an-den-ns` → `erinnerung-an-den-ersten-weltkrieg`** (Begriff Erinnerungskultur): NW UK 5 und HK 4
+   nennen Erinnerungskultur übergreifend; nicht zwingend.
+6. **`industrialisierung-deutschland` → `wiener-kongress`** (der Zollverein setzt den Deutschen Bund voraus).
+7. **`absolutismus-in-deutschland` → `westfaelischer-friede`** (Souveränität der Reichsfürsten).
+8. **`roemische-familie` → `roemische-republik`** bleibt als Bündel (HE LP 6.5 (1)). Die Familie versteht man auch ohne
+   die Verfassung; Lehrkräfte sollten die Kante prüfen. Ohne sie stünde `roemische-familie` allein.
+9. **Herleitungen** (6.3, 5 Kanten) bitte von Lehrkräften bestätigen lassen, vor allem `hexenverfolgung` → `pest` und
+   `ns-ideologie` → `imperialismus`.
+10. **`epochen` als Orientierung:** Ob `epochen` vor jedem Epochenanfang stehen soll (wie vorher bei `polis`,
+    `menschwerdung`, `islam-ausbreitung`), ist eine Frage an Lehrkräfte. Nach der Regel „nur was direkt gebraucht wird“
+    habe ich es entfernt.
+
+### 6.8 Nicht geöffnet
+
+- **Körber 2012**, „Kompetenzorientiertes Geschichtslernen“ (pedocs,
+  https://www.pedocs.de/volltexte/2012/5850/pdf/Koerber_2012_Kompetenzorientiertes_Geschichtslernen_D_A.pdf): Die
+  Verbindung brach beim Herunterladen ab. Nicht zitiert.
+- **Historische Sozialkunde 1/2016** „Historisches Lernen mit Konzepten“ (fdzgeschichte.univie.ac.at): Der Server
+  lieferte eine HTML-Seite statt des PDF. Nicht zitiert.
+- **VGD-Rahmenmodell Bildungsstandards Geschichte** (2006/2010) und Handbücher der Geschichtsdidaktik (z. B. Sauer,
+  Pandel): nicht frei online gefunden. Nicht zitiert.
+
+Downloads: `/tmp/claude-0/-home-user/63cb6fc9-e6ad-586d-91c1-59230f4b1df1/scratchpad/src-geschichte/`.
+
+### 6.9 Neue Bausteine (Owner, 2026-11-11)
+
+Der Owner hat entschieden, die beiden Bausteine aus 6.6 aufzunehmen. Ich habe jede Fundstelle im Original nachgelesen
+(Quellen wie in 6.2). Beide erfüllen die Regel: Zwei der drei Länder nennen sie.
+
+**`herrschaftsformen`** (Strang `grundlagen`, am Ende des Strangs; Richtstufe 5-6)
+
+- iCan: „Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer
+  Herrschaftsform zuordnen.“
+- Quellen: BY G6 LB4 (Längsschnitt: historische Persönlichkeiten mit den Begriffen „Monarchie, Demokratie“ „im Hinblick
+  auf die jeweilige Herrschaftsform einzuordnen“; Beispiele Hatschepsut, Themistokles, Alexander); BY G7 LB6
+  (Absolutismus mit „bereits bekannten Herrschaftsformen aus Antike und Mittelalter“ vergleichen); BY G7 LB7
+  (Grundbegriffe Monarchie, Demokratie, Aristokratie); NW Stufe 1 SK 6, S. 20 („Herrschaftsformen in historischen Räumen
+  und ihrer zeitlichen Dimension“ identifizieren); HE KC Kap. 6, S. 22 (Dimension „Herrschaft“: „die Formen von
+  Herrschaft“, ohne Jahrgang); HE LP S. 4 (Schwerpunkt „Herrschaft und ihre Legitimation“, in Jg 6 bei 6.3 bis 6.5).
+- Stimmen HE/BY/NW: 5-10 / 5-6 / 5-6 → **5-6** (Mehrheit).
+- Kanten: requires `monarchie`, `attische-demokratie` (beide BY G6 LB4: die bekannten Begriffe „Monarchie, Demokratie“
+  werden genutzt). Darauf bauen auf: `roemische-republik` (Herleitung, gestützt durch BY G6 LB4 vor LB5) und
+  `absolutismus` (BY G7 LB6).
+
+**`was-ist-eine-revolution`** (Strang `revolutionen`, nach `menschenrechte-1789`; Richtstufe 7-8)
+
+- iCan: „Ich kann erklären, was eine Revolution ist, und Ursachen, Anlass und Folgen einer Revolution unterscheiden.“
+- Quellen: HE KC Kap. 5, S. 17 (Basiskonzept mit „Evolution und Revolution“) und Kap. 6, S. 20 (Sachverhalte mit
+  Zeitverlaufsvorstellungen wie „Reform und Revolution“ beurteilen; ohne Jahrgang); HE LP S. 4 (Kategorie „Revolution
+  und Evolution“, bei 6.2 und 10.1); BY G8 LB1 („erklären am Beispiel der Französischen Revolution die Multikausalität
+  von revolutionären Prozessen“); NW Stufe 2 SK 3, S. 25 (Anlässe, Ursachen, Folgen unterscheiden) und IF5, S. 29
+  (Anlass und Ursachen der Französischen Revolution). Ausdrücklich als Begriff nennen ihn HE und BY; NW nur am Beispiel
+  1789.
+- Stimmen HE/BY/NW: 5-10 / 7-8 / 7-10 → **7-8** (alle drei). Das ist nicht später als die früheste Revolution, die auf
+  ihm aufbaut (1848 und 1917, beide 7-8).
+- Kanten: requires `revolution-1789` (BY G8 LB1: „am Beispiel der Französischen Revolution“). Darauf bauen auf:
+  `revolution-1848` und `russische-revolution` (beide Herleitung; gestützt durch HE LP S. 4, HE KC S. 20, BY G8 LB2 und
+  HE LP 9.5 Begründung S. 31: „‚Oktober‘revolution“ in Anführungszeichen).
+
+**Neue Kanten (7)**
+
+| Baustein | Voraussetzung | Art |
+|---|---|---|
+| `herrschaftsformen` | `monarchie` | Quelle (BY G6 LB4) |
+| `herrschaftsformen` | `attische-demokratie` | Quelle (BY G6 LB4) |
+| `roemische-republik` | `herrschaftsformen` | Herleitung |
+| `absolutismus` | `herrschaftsformen` | Quelle (BY G7 LB6) |
+| `was-ist-eine-revolution` | `revolution-1789` | Quelle (BY G8 LB1) |
+| `revolution-1848` | `was-ist-eine-revolution` | Herleitung |
+| `russische-revolution` | `was-ist-eine-revolution` | Herleitung |
+
+**Entfernte Kanten (3)**, weil sie über die neuen Bausteine indirekt werden:
+
+| Baustein | Voraussetzung | folgt über |
+|---|---|---|
+| `roemische-republik` | `monarchie` | `herrschaftsformen` |
+| `absolutismus` | `monarchie` | `herrschaftsformen` |
+| `erbe-der-antike` | `attische-demokratie` | `romanisierung` → … → `roemische-republik` → `herrschaftsformen` |
+
+**Vorgeschlagene Kanten, die ich nicht eingetragen habe**, weil sie indirekt wären (der Begriff kommt schon über die
+Kette an):
+
+| Baustein | Voraussetzung | folgt über |
+|---|---|---|
+| `konstitutionelle-monarchie` | `herrschaftsformen` | `revolution-1789` und `gewaltenteilung` → … → `absolutismus` |
+| `totalitaere-diktatur` | `herrschaftsformen` | `terror-und-verfolgung` → … → `konstitutionelle-monarchie` → … |
+| `novemberrevolution` | `was-ist-eine-revolution` | `epochenjahr-1917` → `russische-revolution`; ebenso `verfassung-des-kaiserreichs` → … → `revolution-1848` |
+| `friedliche-revolution` | `was-ist-eine-revolution` | `alltag-in-der-ddr` → … → `russische-revolution` |
+
+So verbindet der Begriff alle fünf Revolutionen: 1789 → Begriff → 1848 und 1917; 1918 und 1989 erreichen ihn über
+die Kette.
+
+**Abweichung vom Vorschlag (6.6):** Das iCan von `herrschaftsformen` nennt die Republik nicht mehr. Grund: Die
+`roemische-republik` baut auf dem Baustein auf; man kann die Republik nicht unterscheiden, bevor man sie kennt. So
+ordnet auch BY: LB4 (Monarchie, Demokratie) steht vor LB5 (Rom); BY nennt die Republik dort nicht.
+
+**Offener Punkt 6.7 (2)** (`kaiserkroenung-800` → `caesar-und-augustus`, `koenigserhebung` → `monarchie`): Beide
+Kanten bleiben indirekt, auch über `herrschaftsformen` (`kaiserkroenung-800` → `karl-der-grosse` → … →
+`caesar-und-augustus` → … → `roemische-republik` → `herrschaftsformen` → `monarchie`). Gelöst ist der Punkt in der
+Sache: Der Vergleich mit dem antiken Kaisertum und mit einer bekannten Monarchie (BY G6 LB6, G7 LB1) hat jetzt einen
+Begriffs-Baustein in der Kette, nicht nur die Zeitfolge. Eigene Kanten dafür sind nicht nötig.
+
+**Zahlen** (`measure.mjs`):
+
+| | Bausteine | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|---|
+| vorher (6.1) | 195 | 249 | 3 | 0 | 1 | 49 |
+| nachher | 197 | 253 | 3 | 0 | 1 | 50 |
+
+Keine Zeilen `LATE` oder `INDIRECT`. `npm test`: 111 bestanden, 1 übersprungen (Docker), 0 Fehler. Keine App in
+`entries/` nutzt Geschichte; ein Vergleich mit `npm run listing` entfällt. Die längste Kette wird um eine Stufe länger,
+weil `herrschaftsformen` zwischen `monarchie` und `roemische-republik` steht.
+
+**Offene Punkte**
+
+1. Die drei Herleitungen (`roemische-republik`, `revolution-1848`, `russische-revolution` → neuer Baustein) bitte von
+   Lehrkräften bestätigen lassen.
+2. BY G7 LB6 vergleicht den Absolutismus auch mit Herrschaftsformen des **Mittelalters**. `absolutismus` hat keinen
+   Vorfahren im Mittelalter. Eine Kante zu `koenigserhebung` oder `lehnswesen` wäre möglich; ich habe sie nicht
+   eingetragen, weil der Owner sie nicht vorgeschlagen hat.
+3. `herrschaftsformen` steht im Strang `grundlagen`, braucht aber Bausteine aus `urgeschichte` und `antike`. Eine App
+   für den Strang `grundlagen` muss für ihn auf Ägypten und Athen verweisen (Einstieg mit Rückblick).
+4. `was-ist-eine-revolution` gilt auch für `neolithische-revolution` (HE LP 6.2 nennt die Kategorie dort). Diese steht
+   in 5-6 und kann nicht darauf aufbauen; „Revolution“ ist dort ein übertragener Begriff.

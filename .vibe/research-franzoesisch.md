@@ -389,3 +389,225 @@ S. 21) und „Film, Jugendroman, Chanson“ (`film-untersuchen`, `lektuere`, `ge
    `geschichte/versailles-und-hof`). Die Gegenstücke in den Karten Erdkunde und Geschichte fehlen noch.
 7. **Hessen.** Der Lehrplan G9 ist älter als das KC 2023 und trägt kein Datum. Ein neuer Hessen-Plan für Französisch
    kann Jahrgänge verschieben.
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“).
+Ich habe alle 249 bestehenden Kanten geprüft und die Quellen neu gelesen. Die Begründung jeder neuen Kante steht als
+Kommentar `# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan` und die Stränge sind unverändert. Neue
+Bausteine gibt es nicht. Der Grundwortschatz (`map/franzoesisch/vocabulary/`) ist unverändert.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 249 | 5 | 0 | 2 | 9 |
+| nachher | 256 | 5 | 0 | 1 | 9 |
+
+Die Karte war schon gut verbunden. Vorher gab es 7 indirekte Kanten und ein kleines eigenes Teilnetz
+(`austausch-und-partnerschaften` → `deutsch-franzoesische-freundschaft` → `frankreich-und-europa`). Jetzt gibt es
+ein einziges Netz.
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante (Skript `measure.mjs`).
+`npm test` grün. Keine App in `entries/` nutzt Französisch; ein Vergleich mit `npm run listing` war deshalb nicht nötig.
+
+### 6.2 Quellen
+
+Alle Quellen habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML).
+Seitenzahlen sind die gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| KMK | KMK: Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss | Beschluss vom 15.10.2004 und 04.12.2003 i. d. F. vom 22.06.2023 | https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2023/2023_06_22-Bista-ESA-MSA-ErsteFremdsprache.pdf |
+| HE | Hessisches Kultusministerium: Lehrplan Französisch, Gymnasialer Bildungsgang, Jahrgangsstufen 5 bis 13 | ohne Jahr (PDF von 2016), 54 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-franzoesisch.pdf |
+| KC | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Moderne Fremdsprachen | Juli 2023, 53 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2023-07/2023_-_kerncurriculum_moderne_fremdsprachen_-_sekundarstufe_i_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Französisch (2. Fremdsprache), F6 bis F10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/6/franzoesisch/2-fremdsprache · …/7/franzoesisch/2-fremdsprache · …/8/franzoesisch/2fs · …/9/franzoesisch/2-fremdsprache · …/10/franzoesisch/1-2-fremdsprache |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Französisch | Heft 3410, 1. Auflage 2019, 48 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_f_klp_3410_2019_06_23.pdf |
+| BS (neu, Fachdidaktik) | Inge Bartning, Suzanne Schlyter: Itinéraires acquisitionnels et stades de développement en français L2. Journal of French Language Studies 14 (3), S. 281–299 | 2004 (Fassung im Repositorium der Universität Lund) | https://lup.lub.lu.se/search/files/2637967/625552.pdf |
+
+**Hinweise:**
+- **BS** beschreibt Erwerbswege des Französischen als Fremdsprache (Lernende mit Schwedisch als Erstsprache, gesteuert
+  und ungesteuert) und fasst sie in sechs Stufen. BS begründet nur `requires`, nie einen Baustein oder eine Richtstufe.
+  BS bestätigt viele bestehende Kanten:
+  - futur composé vor futur simple, futur simple mit dem conditionnel (S. 287 f.): `futur-simple` → `futur-compose`,
+    `conditionnel-present` → `futur-simple`;
+  - passé composé vor imparfait, plus-que-parfait danach (S. 287): `imparfait-oder-passe-compose`, `plus-que-parfait`;
+  - ne … pas, dann ne … jamais/rien, dann ne … plus/personne, personne ne zuletzt (S. 289 f.): die Kette der Verneinung;
+  - Objektpronomen vor dem Infinitiv früher als vor dem Hilfsverb; en und y sehr spät (S. 290 f.):
+    `accord-participe-avoir`, `pronomen-y`, `pronomen-en-mengen` bauen auf `direkte-objektpronomen` auf;
+  - Genus beim bestimmten Artikel vor dem unbestimmten (S. 291): `unbestimmter-artikel` → `bestimmter-artikel`;
+  - Nebensätze: zuerst et, mais, puis, dann quand, parce que und Relativsätze mit qui, que, dann si und que-Sätze,
+    dann il faut que (S. 292): `relativsatz-qui-que-ou`, `meinung-aeussern` → `nebensatz-quand-parce-que`;
+  - subjonctif spät, zuerst nach il faut que, dann nach Konjunktionen (S. 288 f.): `subjonctif-gefuehle` und
+    `subjonctif-konjunktionen` → `subjonctif-il-faut-que`, `subjonctif-konjunktionen` → `konjunktionen-erweitert`.
+- **KMK S. 18:** Die sprachlichen Mittel folgen einer kommunikativen Progression; die sprachstrukturelle Progression
+  hat „dienende Funktion“. Das stützt Kanten von Themen zu den Strukturen, mit denen man über sie spricht. Eine
+  einzelne Kante begründet die KMK nicht.
+- **Bündel** heißt: Ein Lehrplan nennt Thema und Struktur im selben Jahrgang oder lehrt das eine vor dem anderen.
+
+### 6.3 Neue Kanten (16)
+
+| Baustein | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|
+| `passe-compose-avoir` | `unregelmaessige-verben-aller-faire` | Der Baustein übt auch die Partizipien fait und pris. | BY F6 1.2 Grammatik (faire, prendre) → F7 1.2 Grammatik (passé composé); HE S. 34 (Jg 7) | Bündel |
+| `freizeit-und-hobbys` | `unregelmaessige-verben-aller-faire` | Sportarten sagt man mit faire de (faire du vélo). | BY F6 1.2 Grammatik (faire) und F6 5 (Freizeitgestaltung: Hobbys, Sportarten) | Bündel |
+| `venir-de-etre-en-train-de` | `verb-etre` | Être en train de bildet man mit den Formen von être. | – | Herleitung |
+| `passe-compose-etre` | `adjektiv-angleichung` | Das Partizip wird wie ein Adjektiv mit -e und -s angeglichen. | HE S. 34 (Jg 7: Angleichung der Adjektive) → S. 37 (Jg 8: accord im passé composé: être) | Bündel |
+| `intonationsfrage` | `betonung-und-satzmelodie` | Die Intonationsfrage erkennt man nur an der steigenden Satzmelodie. | NW S. 19 (S1 Aussprache: „Wort- und Satzmelodie − Intonationsfrage“); HE S. 33 f. (Jg 7) | Bündel |
+| `lautschrift` | `u-und-ou` | BY nennt /y/ neben Nasalen und e-Lauten als erste Zeichen der Lautschrift. | BY F6 1.2 Aussprache und Intonation | Quelle |
+| `stadt-und-land` | `adjektiv-steigerung` | Der Baustein vergleicht Stadt und Land. | BY F7 5 (Leben in der Stadt und auf dem Land) und F7 1.2 Grammatik (comparatif et superlatif) | Bündel |
+| `alltag-jugendlicher` | `freizeit-und-hobbys` | NW nennt die Freizeitgestaltung als Teil der Lebenswirklichkeit Jugendlicher. | NW S. 20 (S1 IKK) | Quelle |
+| `alltag-jugendlicher` | `schule-und-schulalltag` | NW nennt den Schulalltag als Teil der Lebenswirklichkeit Jugendlicher. | NW S. 20 (S1 IKK) | Quelle |
+| `frankreich-und-europa` | `eine-region-frankreichs` | BY führt Straßburg als Teil der Region Grand Est ein, nach den Regionen in F7 und F8. | BY F8 5 (Regionen) → F9 5 (Region Grand Est, Strasbourg, Europäisches Parlament) | Bündel |
+| `figuren-ort-zeit-handlung` | `fragepronomen-qui-que` | Wer vorkommt und was passiert, fragt man mit qui und qu’est-ce que. | – | Herleitung |
+| `textbesprechung` | `figuren-ort-zeit-handlung` | Wörter wie le personnage und la scène benennen, was man zu Figuren, Ort und Handlung herausfindet. | – | Herleitung |
+| `schule-und-schulalltag` | `datum-wochentage-monate` | Der Stundenplan braucht die Wochentage. | – | Herleitung |
+| `essen-und-lebensmittel` | `vorlieben-und-abneigungen` | Der Baustein übt, zu sagen, was man gern isst und trinkt. | – | Herleitung |
+| `bedingungssatz-real` | `nebensatz-quand-parce-que` | Nebensätze mit si folgen im Erwerb auf Nebensätze mit quand und parce que. | BS S. 292 (3.6, Stufe B → C) | Quelle |
+| `subjonctif-il-faut-que` | `meinung-aeussern` | Der subjonctif tritt erst nach que-Sätzen wie je crois que auf. | BS S. 289 (3.2.3), S. 292 (3.6, Stufe C → D) | Quelle |
+
+Zusammen: 5 Quelle, 6 Bündel, 5 Herleitung.
+
+### 6.4 Entfernte Kanten (9)
+
+Alle waren indirekt: Sie folgen schon über andere Kanten. Sieben waren schon vorher indirekt, zwei werden es durch
+neue Kanten. Keine bestehende Kante war inhaltlich falsch; zweifelhafte stehen in 6.7.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `direkte-objektpronomen` | `subjektpronomen` | Folgt über `direktes-und-indirektes-objekt` → `aussagesatz-wortstellung` → `subjektpronomen`. |
+| `futur-simple` | `unregelmaessige-verben-aller-faire` | Folgt über `futur-compose`. |
+| `subjonctif-bildung` | `verben-auf-er` | Folgt über `unregelmaessige-verben-venir-voir` → `unregelmaessige-verben-aller-faire`. |
+| `indirekte-rede-vergangenheit` | `imparfait` | Folgt über `plus-que-parfait` → `imparfait-oder-passe-compose`. |
+| `beruf-und-praktikum` | `futur-simple` | Folgt über `conditionnel-present`. |
+| `liaison` | `stumme-buchstaben` | Folgt über `h-aspire-h-muet`. |
+| `charakterisierung` | `adjektiv-angleichung` | Folgt über `gefuehle-ausdruecken`. |
+| `passe-compose-avoir` | `verben-auf-er` | Folgt jetzt über die neue Kante zu `unregelmaessige-verben-aller-faire`. |
+| `freizeit-und-hobbys` | `verben-auf-er` | Folgt jetzt über die neue Kante zu `unregelmaessige-verben-aller-faire`. |
+
+### 6.5 Wurzeln, die bleiben (5, keine allein)
+
+| Baustein | Grund |
+|---|---|
+| `subjektpronomen` | Anfang der Grammatik: Verben, Wortstellung und Pronomen bauen darauf auf. |
+| `bestimmter-artikel` | Anfang: le, la, les braucht man vom ersten Nomen an; Genus beim bestimmten Artikel kommt vor dem beim unbestimmten (BS S. 291). |
+| `zahlen-bis-100` | Anfang des Wortschatzes; Uhrzeit, Datum, Preise und große Zahlen bauen darauf auf. |
+| `laut-und-schrift` | Anfang der Aussprache: alle Laute und die Rechtschreibung bauen darauf auf. |
+| `austausch-und-partnerschaften` | Wissen über Programme (DFJW, Städtepartnerschaften) setzt keinen Baustein voraus; HE plant ein Begegnungsprojekt schon ab Ende des 1. Lernjahrs (S. 33). `deutsch-franzoesische-freundschaft` baut darauf auf (BY F10 5: OFAJ, Städtepartnerschaften, Austausch). |
+
+### 6.6 Vorgeschlagene neue Bausteine (Lücken im Modell)
+
+1. **`nebensatz-que`** (Strang `grammatik`): „Ich kann einen Satz mit que anschließen, zum Beispiel Je pense que … oder
+   Il dit que …“ Richtstufe vermutlich 5-6 (die Stimmen müsste man zählen). Quellen: BS S. 292 (3.6 Stufe C: que-Sätze
+   als eigene Erwerbsstufe); NW S1 Grammatik S. 19 (direkte und indirekte Rede im Präsens); BY F8 1.2 Wortschatz
+   (je crois que, je pense que). Kanten: → `nebensatz-quand-parce-que`; darauf bauen `indirekte-rede-praesens`,
+   `meinung-aeussern` und `subjonctif-il-faut-que` auf (die neue Kante `subjonctif-il-faut-que` → `meinung-aeussern`
+   würde dann auf `nebensatz-que` zeigen). Heute steckt der que-Satz unausgesprochen in zwei Bausteinen.
+
+### 6.7 Offene Punkte (mittlere Zuversicht, nicht in der Karte)
+
+1. **`zeichensetzung` → `akzente-und-cedille`** (bestehend): NW nennt beides in einer Liste der Orthografie (S. 20:
+   „diakritischer Zeichen und typografischer Besonderheiten“). Inhaltlich braucht die Zeichensetzung die Akzente nicht.
+   Ich lasse die Kante, weil sonst `zeichensetzung` allein stünde und keine sichere andere Kante da ist.
+2. **`textbesprechung` → `meinung-aeussern`** (bestehend): Wörter für Textelemente brauchen keine Meinungsäußerung.
+   Die Kante ist aber nicht sicher falsch (HE Jg 9/10 „Textbesprechung“ schließt das Kommentieren ein). Lehrkräfte
+   sollten entscheiden.
+3. **`frankreich-auf-der-karte` → `praepositionen-laender-staedte`** (bestehend): Diese Kante hebt die Richtstufe von
+   drei Landeskunde-Bausteinen gegen die Mehrheit auf 7-8 (Abschnitt 2.4). Sie stimmt nur für die Nachbarländer
+   (en Allemagne, en Belgique).
+4. **`kurzpraesentation` → `futur-compose`**: „Je vais vous parler de …“ ist futur composé, kann aber als feste Wendung
+   gelernt werden (BS S. 287: Formeln kommen vor der Regel).
+5. **`formeller-brief` → `wuensche-und-vorschlaege`** und **`reisen-und-unterkunft` → `wuensche-und-vorschlaege`**:
+   Eine Anfrage und eine Buchung brauchen höfliche Bitten (je voudrais). Keine Quelle bündelt das.
+6. **`gerondif` → `konjunktionen-erweitert`**: Das gérondif ersetzt oft einen Nebensatz mit pendant que oder quand; BS
+   (S. 292 f., Stufe E) sieht integrierte Strukturen wie das gérondif nach den Nebensätzen. Die Abhängigkeit ist
+   aber nicht zwingend.
+7. **`indirekte-rede-vergangenheit` → `conditionnel-present`**: Die Zeitenfolge verlangt auch il a dit qu’il
+   viendrait (HE S. 43, Übergangsprofil 2. FS: „unter Berücksichtigung der Zeitenfolge“). Das iCan nennt nur imparfait.
+8. **`deutsch-franzoesische-freundschaft` und `absolutismus-versailles` → `imparfait-oder-passe-compose`**: Über
+   Geschichte spricht man meist in der Vergangenheit; man kann sie aber auch im Präsens erzählen.
+9. **`gefuehle-ausdruecken` → `verb-avoir`** (avoir peur, avoir honte): richtig, aber nur eine Wendung; ich habe sie
+   weggelassen.
+
+### 6.8 Nicht geöffnet
+
+- **Schlyter (2003), Stades de développement en français L2. Exemples d’apprenants suédophones** (Lund): heruntergeladen
+  (https://lup.lub.lu.se/search/files/6119759/624010.pdf), aber nicht zitiert; BS (2004) fasst dieselben Stufen.
+- **GER/CEFR Companion Volume (Europarat 2020)** und Handbücher der Französischdidaktik: nicht geöffnet, nicht zitiert
+  (bei Englisch gab der Server des Europarats HTTP 403).
+
+### 6.9 Neue Bausteine (Owner, 2026-11-11)
+
+Der Owner hat entschieden, den Vorschlag aus 6.6 aufzunehmen. Ich habe die Fundstellen im Original nachgelesen
+(Dateien vom 10.11.2026, siehe 6.2). Der Grundwortschatz (`map/franzoesisch/vocabulary/`) ist unverändert.
+
+#### `nebensatz-que` (Strang `grammatik`)
+
+- **iCan:** „Ich kann einen Satz mit que anschließen, zum Beispiel Je pense que … oder Il dit que …“
+- **Ort:** direkt nach `nebensatz-quand-parce-que`.
+- **Belege:**
+  - KMK: nennt den que-Satz nicht (Lexiko-Grammatik S. 18 f. nennt keine einzelnen Strukturen).
+  - HE Teil B 2, Jg 8 (S. 36): Satz: „direkte / indirekte Rede / Frage (Einleitungsverb im Präsens)“;
+    Präpositionen / Konjunktionen: „Konjunktionen (ohne subjonctif)“.
+  - BY F7 1.2 Grammatik: „discours indirect et interrogation indirecte (au présent …)“;
+    F8 1.2 Wortschatz: „die eigene Meinung, u. a. à mon avis, je crois que, … je pense que, je trouve que“.
+  - NW S1 Grammatik (S. 19): „direkte und indirekte Rede im Präsens“.
+  - Fachdidaktik (nur für die Kanten): BS S. 292 (3.6): Stufe B quand, parce que, Relativsätze; Stufe C si und
+    „les complétives en que: je crois que, je veux que“; Stufe D il faut que.
+- **Aufnahme:** Alle drei Länder verlangen die indirekte Rede im Präsens. Sie wird im Französischen immer mit einem
+  que-Satz gebildet (Il dit que …). Deshalb zähle ich das als Nennung durch drei Länder. Das Wort que nennt
+  ausdrücklich nur BY (F8). Siehe offene Punkte.
+- **Richtstufe:** erste Nennung je Land: HE Jg 8 → Lernjahr 2 → 7-8; BY F7 → Lernjahr 2 → 5-6; NW S1 → 5-6, 7-8.
+  Stimmen: 5-6 zweimal (BY, NW), 7-8 zweimal (HE, NW). Gleichstand → frühere Stufe **5-6**. Die Voraussetzung
+  `nebensatz-quand-parce-que` ist 5-6; sie erzwingt keine spätere Stufe.
+
+#### Verteilung in `grammatik`
+
+Mit dem neuen Baustein hielte 5-6 45 von 89 Bausteinen in `grammatik`, also mehr als die Hälfte. Nach der Regel in 2.4
+wandert deshalb ein Baustein nach 7-8. Kandidaten waren die Gleichstände 5-6/7-8 am Ende einer Kette in 5-6:
+`plural-besonderheiten` (Kette 2), `relativsatz-qui-que-ou` (3) und `indirekte-rede-praesens` (4).
+`nebensatz-que` selbst ist kein Ende einer Kette, denn `indirekte-rede-praesens` baut darauf auf.
+Die längste Kette hat `indirekte-rede-praesens`; er wandert nach **7-8**. Nichts in 5-6 baut auf ihm auf
+(`indirekte-frage-praesens` ist 7-8, `indirekte-rede-vergangenheit` 9-10). Danach: `grammatik` 5-6: 44,
+7-8: 35, 9-10: 10 (89).
+
+#### Neue Kanten (4)
+
+| Baustein | Voraussetzung | Begründung | Fundstelle |
+|---|---|---|---|
+| `nebensatz-que` | `nebensatz-quand-parce-que` | Nebensätze mit que folgen im Erwerb auf Nebensätze mit quand und parce que. | BS S. 292 (3.6, Stufe B → C) |
+| `indirekte-rede-praesens` | `nebensatz-que` | Wiedergeben, was jemand sagt, heißt einen que-Satz anschließen. | HE S. 36, BY F7, NW S. 19; BS S. 292 |
+| `meinung-aeussern` | `nebensatz-que` | Je pense que und je trouve que leiten einen que-Satz ein. | BY F8 1.2 Wortschatz; BS S. 292 (Stufe C) |
+| `subjonctif-il-faut-que` | `nebensatz-que` | Der subjonctif tritt erst nach que-Sätzen wie je crois que auf. | BS S. 289 (3.2.3), S. 292 (Stufe C → D) |
+
+#### Entfernte Kanten (3)
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `meinung-aeussern` | `nebensatz-quand-parce-que` | Folgt jetzt über `nebensatz-que`. |
+| `indirekte-rede-praesens` | `subjektpronomen` | Folgt jetzt über `nebensatz-que` → `nebensatz-quand-parce-que` → `aussagesatz-wortstellung`. |
+| `subjonctif-il-faut-que` | `meinung-aeussern` | Wie in 6.6 vorgeschlagen: Die Begründung (que-Sätze vor dem subjonctif) zeigt jetzt auf `nebensatz-que`. |
+
+#### Zahlen
+
+| | Bausteine | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|---|
+| vorher | 186 | 256 | 5 | 0 | 1 | 9 |
+| nachher | 187 | 257 | 5 | 0 | 1 | 9 |
+
+Richtstufen gesamt nachher: 84 × 5-6, 76 × 7-8, 27 × 9-10. Geprüft mit `measure.mjs`: keine Zeilen LATE oder
+INDIRECT. `npm test` grün (ein Test ohne Docker übersprungen). Keine App in `entries/` nutzt Französisch, es gibt
+keinen Lehrplan unter `map/franzoesisch/curricula/`; ein Vergleich der Listings war nicht nötig.
+
+#### Offene Punkte
+
+1. **Beleg:** Den que-Satz nennen HE und NW nur über die indirekte Rede im Präsens, nicht als eigene Struktur. Wer
+   „nennen“ eng liest, findet nur BY (F8: je crois que, je pense que). Dann trägt den Baustein die Regel „Voraussetzung
+   eines Bausteins, den zwei Länder nennen“ (Skill `map-research`): Er ist Voraussetzung von
+   `indirekte-rede-praesens` (alle drei Länder) und `meinung-aeussern` (HE, BY).
+2. **`indirekte-rede-praesens` jetzt 7-8:** Die Verschiebung folgt nur aus der Verteilung. Lehrkräfte sollten prüfen,
+   ob sie lieber `plural-besonderheiten` oder `relativsatz-qui-que-ou` verschieben.
+3. **`subjonctif-il-faut-que` ohne `meinung-aeussern`:** Ob der subjonctif auch die Wendungen der Meinung braucht
+   (je ne pense pas que + subjonctif), ist offen. BS S. 289 nennt diesen Kontext als den spätesten (Stufe E); er
+   gehört eher zu `subjonctif-gefuehle` oder einem eigenen Baustein.

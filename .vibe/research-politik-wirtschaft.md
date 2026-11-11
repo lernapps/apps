@@ -382,3 +382,165 @@ YAML-Datei.
 - LehrplanPLUS-Gesamtlehrpläne als PDF: laut https://www.lehrplanplus.bayern.de/gesamtlehrplaene in Überarbeitung;
   ich habe die Online-Fassung genutzt.
 - Sonst keine: Alle genannten Quellen waren abrufbar.
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein stehenden
+Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“). Ich habe die
+Quellen der Länder neu geöffnet, dazu ein fachdidaktisches Werk zum Aufbau der Fachkonzepte. Jeden Baustein ohne
+Anknüpfung habe ich in beide Richtungen geprüft (Was braucht er? Was baut auf ihm auf?) und alle bestehenden Kanten
+durchgesehen. Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids, `gradeBand`,
+`status`, `iCan` und Stränge sind unverändert; es gibt keine neuen Bausteine.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 166 | 22 | 4 | 10 | 12 |
+| nachher | 176 | 13 | 0 | 1 | 16 |
+
+Geprüft (Skript `measure.mjs` im Scratchpad): keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine
+indirekte Kante. `npm test`: 111 bestanden, 1 übersprungen (Docker), 0 Fehler. Die Karte hat kein
+`explainerFocus: competency`, und keine App in
+`entries/` nutzt Politik und Wirtschaft; ein Vergleich mit `npm run listing` entfällt.
+
+Die Zahl der Stufen steigt von 12 auf 16, weil `gewaltenteilung` jetzt nach den Verfassungsorganen kommt (siehe 6.3
+und 6.4). Die längste Kette führt nun über Bundestag, Wahl, Regierung und Gewaltenteilung zu `eu-organe` und
+`eu-gesetzgebung`.
+
+Vorher waren getrennte Teilnetze: Familie (`familie-aufgaben` → `familie-im-wandel`), Verträge
+(`rechte-und-pflichten-jugendlicher` bis `widerruf-online-kauf`), Recht (`funktionen-des-rechts` bis `rechtsstaat`),
+Arbeit (`bedeutung-von-arbeit` bis `arbeitslosigkeit`), Kinder weltweit (`kinder-weltweit` bis
+`entwicklungszusammenarbeit`) und die vier allein stehenden Bausteine. Jetzt ist alles ein Netz.
+
+### 6.2 Quellen
+
+Am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML). Seitenzahlen sind die
+gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE | Hessisches Kultusministerium: Lehrplan Politik & Wirtschaft, Gymnasialer Bildungsgang, Jahrgangsstufen 7 bis 13 | PDF vom 08.02.2016, 26 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-politik-und-wirtschaft.pdf |
+| KC | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Politik und Wirtschaft | Fassung 2011, 41 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-07/kerncurriculum_politik_und_wirtschaft_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, PuG10, WR10, Geo7, Geo10, G10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/pug/einstuendig (ebenso …/10/wirtschaft-und-recht/andere, …/7/geographie, …/10/geographie, …/10/geschichte) |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium, Wirtschaft-Politik | Heft 3429, 1. Auflage 2019, 39 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_wipo_klp_3429_2019_06_23.pdf |
+| KdP (neu, Fachdidaktik) | Georg Weißeno, Joachim Detjen, Ingo Juchler, Peter Massing, Dagmar Richter: Konzepte der Politik – ein Kompetenzmodell | Bundeszentrale für politische Bildung, Schriftenreihe Band 1016, Bonn 2010, 224 S. | https://www.bpb.de/system/files/dokument_pdf/Konzepte%20der%20Politik_091201.pdf |
+
+**Hinweise:**
+- **KdP** beschreibt für jedes Fachkonzept (z. B. Gewaltenteilung, Rechtsstaat, Konflikt, Interessengruppen) unter
+  „Vernetzung des Fachkonzepts“, welche Konzepte vorausgehen, und unter „Beispielthemen“ den Aufbau von der
+  Primarstufe bis zur Sek II. Ich nutze es nur für `requires` (Skill, Quellen Punkt 4). Das Modell ist in der
+  Politikdidaktik umstritten (Gegenentwurf der Autorengruppe Fachdidaktik, 2011); ich nutze nur Aussagen zur
+  Reihenfolge, nicht die Konzeptliste.
+- **HE Teil B 1, S. 5** sagt allgemein: Das Orientierungswissen ist „so angeordnet, dass zunächst der unmittelbare
+  Erfahrungsbereich … aufgenommen und mit den Jahrgangsstufen zunehmend erweitert wird“, vor allem für Demokratie
+  und für die ökonomische Bildung. Das stützt Kanten von Schule und Haushalt zu Gemeinde und Arbeitswelt.
+- Die gemeinsamen Begriffe (Demokratie, Markt, Grundrechte) waren schon Knoten mit vielen Nachfolgern
+  (`demokratie-merkmale` 5, `markt` 4, `grundgesetz-bedeutung` 6). Die Lücken lagen woanders: Recht, Familie,
+  Geld und Arbeit hingen nicht am Netz.
+
+### 6.3 Neue Kanten (16)
+
+„Bündel“: Ein Plan nennt beide Inhalte im selben Jahrgang, in derselben Einheit oder lehrt einen davon früher.
+„Herleitung“: Keine Quelle nennt die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `sozialisation` | `familie-aufgaben` | Die Familie ist die erste Instanz, die mich prägt. | HE 7.1 S. 7 (Einheit „Kindheit und Familie“: „Bedeutung der Familie … Erziehungs- und Sozialisationsformen“); NW IF4 St1 S. 22 | Bündel |
+| `soziales-engagement` | `jugend-als-lebensphase` | NW fragt nach der Bedeutung des Engagements für die eigene Identität, im Schwerpunkt Lebensgestaltung. | NW IF4 St2 S. 29 („individuelle Lebensgestaltung: Selbstverwirklichung, soziale Erwartungen und soziale Verantwortung“; „Bedeutung sozialen Engagements für die Identitätsbildung“) | Bündel |
+| `gemeinderat-buergermeister` | `mitbestimmung-schule` | Wahl und Vertretung lernt man zuerst in der Schule, dann in der Gemeinde. | HE 7.2 S. 9 (Begründung: Schule als „Ausgangspunkt“, Kommune „im Anschluss daran … weitergehender Einblick in demokratische Strukturen der Wahl und der Entscheidungsfindung“); KdP S. 90 (Repräsentation: Klassensprecher, dann Bürgermeister und Rat) | Quelle |
+| `rechte-und-pflichten-jugendlicher` | `jugendschutz` | NW nennt das Jugendschutzgesetz als Teil der Rechte und Pflichten. | NW IF2 St1 S. 21 („Rechte und Pflichten von Kindern und Jugendlichen in Familie und Schule: Schulordnung, Schulgesetz, Jugendschutzgesetz“); HE 8.1 S. 13 | Bündel |
+| `urheberrecht` | `mediennutzung` | Die Rechtsfragen betreffen die eigene Mediennutzung; NW nennt beides im selben Inhaltsfeld. | NW IF5 St1 S. 23 („Nutzung digitaler und analoger Medien …“; „rechtliche Grundlagen für die Mediennutzung“) | Bündel |
+| `funktionen-des-rechts` | `werte-normen-gesetze` | Recht sind verbindliche Normen mit Sanktion; man muss Normen und Gesetze unterscheiden können. | KdP S. 86 (Rechtsstaat: Konzeptentwicklung beginnt mit der „Kontrastierung selbstgegebener Regeln mit staatlichen Gesetzen“); HE 7.1 S. 7 (Normen, Sanktionen) → HE 8.1 S. 13 (Rechtsordnung) | Quelle |
+| `geschaeftsfaehigkeit` | `taschengeld-planen` | Der Taschengeldparagraf setzt voraus, dass man weiß, was Taschengeld ist. | NW IF1 St1 S. 20 („Funktionen des Geldes und Taschengeldverwendung“; „Rechte und Pflichten minderjähriger Verbraucherinnen und Verbraucher“) | Bündel |
+| `geldfunktionen` | `taschengeld-planen` | NW nennt Geldfunktionen und Taschengeld in einem Schwerpunkt; HE behandelt Geld im Haushalt vor den Geldfunktionen. | NW IF1 St1 S. 20 (wie oben); HE 7.3 S. 11 → HE 8.2 S. 15 | Bündel |
+| `bedeutung-von-arbeit` | `privathaushalt` | Erwerbsarbeit ist die Einkommensquelle des Haushalts; HE führt vom Haushalt zur Arbeitswelt. | HE 7.3 S. 11 (Haushalt als „Hinführung zur ökonomischen Bildung“, Kernbereich „Ökonomie und Arbeitswelt“); HE Teil B 1 S. 5 | Quelle |
+| `nachhaltigkeit-begriff` | `ressourcen-schonen` | NW führt nachhaltiges Handeln über Ressourcenschonung ein. | NW IF3 St1 S. 22 („ökologische Herausforderungen und Chancen nachhaltigen Handelns: Ressourcenschonung, Energieeinsparung“); HE 7.2 S. 9 (Umweltschutz in der Gemeinde und Lokale Agenda 21 in einer Einheit) | Bündel |
+| `nachhaltigkeitsziele` | `kinder-weltweit` | Die Ziele „Keine Armut, Hochwertige Bildung“ nennt NW zusammen mit den Lebenssituationen von Kindern. | NW IF3 St1 S. 22 | Bündel |
+| `freihandel-protektionismus` | `entwicklungsstand` | Wer Folgen für Entwicklungsländer beurteilt, muss wissen, was ein Land mit niedrigem Entwicklungsstand ist. | HE 10.3 S. 22 („Welthandelsstrukturen; Globalisierung; Unterentwicklung“); NW IF10 St2 S. 34 | Bündel |
+| `gewaltenteilung` | `rechtsstaat` | Gewaltenteilung ist ein Grundsatz des Rechtsstaats; HE nimmt die Rechtsstaatlichkeit aus Jg 8 in Jg 10 auf. | HE 10.1 S. 19 („nimmt die in den Jahrgangsstufen 7, 8 und 9 angesprochenen Prinzipien … der Rechts- und Sozialstaatlichkeit auf“); NW IF2 St2 S. 28 („Grundlagen des Rechtsstaats: Gewaltenteilung“); KC S. 25 | Quelle |
+| `gewaltenteilung` | `bundesregierung` | Regierung und Parlament sind anschaulicher als die Gewaltenteilung und gehen ihr voraus. | KdP S. 71 („Die Konzepte Regierung, Parlament und Opposition … sind anschaulicher als die Gewaltenteilung und sollten deshalb in der Konzeptentwicklung vorangehen“); BY PuG10 LB3 (Stellung des Bundeskanzlers, „um wechselseitige Abhängigkeiten der Verfassungsorgane … nachzuvollziehen“) | Quelle |
+| `internationale-konflikte` | `kommunaler-streitfall` | Das Konzept Konflikt baut von Interessenkonflikten in der Gemeinde zu Konflikten zwischen Staaten auf. | KdP S. 116 f. (Konflikt: in der Grundschule „Interessenkonflikte … bei kommunalpolitischen Themen“, später „Konflikte zwischen Staaten“) | Quelle |
+| `interessenverbaende` | `kommunaler-streitfall` | Interessengruppen versteht man nur, wenn man Interessenkonflikte kennt. | KdP S. 113 („Zum Konzeptaufbau ist ein Verständnis des Fachkonzepts Konflikt … notwendig“) | Quelle |
+
+Zusammen: 7 Quelle, 9 Bündel, 0 Herleitung.
+
+### 6.4 Entfernte Kanten (6)
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `bundespraesident` | `bundestag` | Indirekt: folgt über `bundesrat` → `bundestag`. |
+| `gesetzgebung` | `bundestag` | Indirekt: folgt über `bundesrat` → `bundestag`. |
+| `geschaeftsmodell` | `betriebliche-funktionen` | Indirekt: folgt über `preiskalkulation` → `betriebliche-funktionen`. |
+| `klimaschutz` | `ressourcen-schonen` | Wird indirekt durch die neue Kante `nachhaltigkeit-begriff` → `ressourcen-schonen`. |
+| `bundestag` | `gewaltenteilung` | Falsche Richtung: Nach KdP S. 71 gehen Parlament und Regierung der Gewaltenteilung voraus. BY nennt die Gewaltenteilung selbst nur als „wechselseitige Abhängigkeiten der Verfassungsorgane“ (PuG10 LB3). Die Kante ist jetzt umgekehrt über `bundesregierung` geführt. |
+| `gewaltenteilung` | `grundgesetz-bedeutung` | Wird indirekt durch die neue Kante zu `bundesregierung` (über `regierungsbildung` → … → `volkssouveraenitaet` → `grundgesetz-bedeutung`). |
+
+Alle anderen Kanten habe ich geprüft und behalten. Keine weitere war falsch.
+
+### 6.5 Wurzeln, die bleiben (13, davon 0 allein)
+
+| Baustein | Strang | Grund |
+|---|---|---|
+| `familie-aufgaben` | gesellschaft | Anfang: die Familie als erste Gruppe (HE 7.1, NW IF4 St1). |
+| `zusammenleben-in-vielfalt` | gesellschaft | Erfahrung aus dem eigenen Umfeld; kein Baustein ist sicher direkt nötig. `vorurteile-und-minderheiten` und `integration` bauen darauf auf. |
+| `politik-begriff` | teilhabe | Anfang des Politikbegriffs; NW nennt ihn als ersten Schwerpunkt („Leben in der Demokratie“, IF2 St1). |
+| `mitbestimmung-schule` | teilhabe | Anfang der Partizipation (HE 7.2: „Ausgangspunkt“); die Gemeinde baut jetzt darauf auf. |
+| `gemeinde-aufgaben` | teilhabe | Anfang der Gemeinde; Aufgaben wie Schwimmbad und Busse kennt man aus dem Alltag. |
+| `jugendschutz` | recht | Erster Kontakt mit Recht in Jg 5/6 (NW IF2 St1); die Rechte und Pflichten bauen jetzt darauf auf. |
+| `beduerfnisse-und-gueter` | wirtschaft | Anfang der ökonomischen Bildung (NW IF1 St1: „Grundlage menschlicher Existenz“). |
+| `taschengeld-planen` | wirtschaft | Anfang aus der Lebenswelt; Haushalt, Geldfunktionen und Geschäftsfähigkeit bauen darauf auf. |
+| `ressourcen-schonen` | nachhaltigkeit | Konkreter Anfang in Jg 5/6 (NW IF3 St1); der Begriff Nachhaltigkeit baut jetzt darauf auf. |
+| `europa-im-alltag` | europa | Anfang des Strangs Europa aus der Lebenswelt (BY Geo7 LB2). |
+| `migration` | internationale-politik | Formen und Ursachen der Wanderung setzen keinen Baustein voraus; `integration` baut darauf auf. |
+| `kinder-weltweit` | internationale-politik | Anfang des Themas Entwicklung in Jg 5/6 (NW IF3 St1). |
+| `mediennutzung` | medien | Anfang des Strangs Medien; die eigene Nutzung (HE 7.4, NW IF5 St1). |
+
+Keine Wurzel ist allein. Die Stränge `politisches-system`, `arbeitswelt` und `sozialstaat` haben keine Wurzel; sie
+hängen an Bausteinen anderer Stränge.
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+Keine Lücke ist zwingend; jeder Baustein hat eine Anknüpfung. Ein Kandidat, nur zur Prüfung:
+
+- **`konflikt-und-konsens`** (Strang `gesellschaft`, Richtstufe 5-6 oder 7-8): „Ich kann an einem Streit in der
+  Klasse zeigen, wie man Konflikte nach Regeln löst und einen Kompromiss findet.“ Quellen: HE 7.1 (Konflikt und
+  Konsens in der sozialen Gruppe, Konfliktregelung); NW St1 Handlungskompetenz HK 3 (Formen der Konfliktmediation,
+  nur übergreifend); KdP S. 116 f. (Konflikte schon in der Grundschule). BY nur SWG (PuG8 LB2). Kanten: requires
+  `gruppen-normen-sanktionen`; Voraussetzung von `kommunaler-streitfall` und `kompromiss-und-mehrheit`. In 3.4 steht
+  der Inhalt unter „Nicht aufgenommen (nur ein Land)“; NW nennt ihn nur als übergreifende Kompetenz, nicht als
+  Inhalt. Darum nur ein Vorschlag.
+
+### 6.7 Offene Punkte
+
+1. **Gewaltenteilung nach den Organen.** Die Umkehr (6.4) folgt KdP S. 71 und passt zu HE 10.1 (Grundwerte als
+   „zusammenfassende … Betrachtung“). Wer die Gewaltenteilung als Ordnungsprinzip vor den Organen will (BY PuG10 LB1
+   nennt Art. 20 GG vor LB3), stellt die alte Kante `bundestag` → `gewaltenteilung` wieder her und streicht
+   `gewaltenteilung` → `bundesregierung`. Lehrkräfte sollten entscheiden.
+2. **Mittlere Zuversicht, nicht aufgenommen:**
+   - `politische-beteiligung` → `soziales-engagement` (zivilgesellschaftliche Partizipation baut auf Engagement auf;
+     NW nennt beides in verschiedenen Inhaltsfeldern).
+   - `soziale-marktwirtschaft` ↔ `sozialstaatsprinzip`: HE 9.2 nennt „freie und soziale Marktwirtschaft“ in der
+     Einheit Sozialstaatlichkeit (S. 18). Die Richtung ist offen; NW trennt beides (IF1, IF7).
+   - `interessenverbaende` → `gewaltenteilung`: KdP S. 113 nennt auch Gewaltenteilung als nötig für das Konzept
+     Interessengruppen. Die Kante würde `parteien-aufgaben` indirekt machen und den Strang `teilhabe` stark
+     verschieben.
+   - `eu-werte` → `demokratie-merkmale` und → `rechtsstaat`: Die EU-Werte nennen Demokratie und Rechtsstaatlichkeit;
+     die Kante wäre richtig, ist aber für die Anbindung nicht nötig.
+   - `wirtschaftskreislauf` → `geldfunktionen`: HE 8.2 nennt beides in einem Satz; der Kreislauf braucht aber nur
+     den Begriff Geldstrom.
+   - `geldfunktionen` → `beduerfnisse-und-gueter` (Geld als Tauschmittel für Güter; HE 8.2: am Tausch ansetzen).
+3. **KdP S. 63** sagt, dem Fachkonzept Demokratie gingen Rechtsstaat, Sozialstaat, Gewaltenteilung und Grundrechte
+   voraus. Das gilt für das volle Konzept (Sek II), nicht für `demokratie-merkmale` (7-8, erste Merkmale). Ich habe
+   daraus keine Kante gemacht.
+4. **`zusammenleben-in-vielfalt` und `migration`** bleiben Wurzeln. Eine Kante zwischen beiden wäre nur eine
+   Nähe, keine sichere Abhängigkeit.
+
+### 6.8 Nicht geöffnet
+
+- **GPJE (2004): Nationale Bildungsstandards für den Fachunterricht in der Politischen Bildung an Schulen.** Kein
+  PDF im Original gefunden (die Suche fand nur Aufsätze darüber). Nicht zitiert.
+- **DeGöB (2004): Kompetenzen der ökonomischen Bildung für allgemein bildende Schulen.** Nicht gesucht; die Kanten
+  im Bereich Wirtschaft stützen sich auf HE und NW. Nicht zitiert.
+- Handbücher der Politik- und Wirtschaftsdidaktik (z. B. Sander, Handbuch politische Bildung) sind nicht frei
+  online; nicht geöffnet, nicht zitiert.

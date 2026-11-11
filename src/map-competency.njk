@@ -10,7 +10,7 @@ eleventyComputed:
   description: "{{ view.competency.iCan | tx(lang) }}"
 ---
 {#-
-  A competency (feat/learning-map, B10): "Ich kann …", strand and source; its chain (feat/map-steps: every ancestor
+  A competency (feat/learning-map, B10): "Ich kann …", strand and source; its chain (feat/map-steps, by grade and step since feat/map-chains KD-17: every ancestor
   and the direct descendants by step, also across strands); when each captured curriculum places it ("Wann ist er dran?"); the apps and pages
   that practise it, or that it is a gap.
 -#}
@@ -56,7 +56,7 @@ eleventyComputed:
         {%- if comp.ancestorsByStep.length %}
         <dl class="map-chain-steps">
           {%- for group in comp.ancestorsByStep %}
-          <dt>{{ P.step(group.step) }}</dt>
+          <dt>{{ P.place(group.band | band, group.bandStep) }}</dt>
           <dd><ul>{% for id in group.ids %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}{% if id in comp.requires %} <span class="map-direct">{{ P.direct }}</span>{% endif %}</li>{% endfor %}</ul></dd>
           {%- endfor %}
         </dl>
@@ -64,7 +64,7 @@ eleventyComputed:
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div class="p-3 rounded-lg bg-blue-700 text-white">
-        <h3 class="m-0 text-sm font-semibold">{{ P.self }} · {{ P.step(comp.step) }}</h3>
+        <h3 class="m-0 text-sm font-semibold">{{ P.self }} · {{ P.place(comp.gradeBand | band, comp.place.step) }}</h3>
         <p class="m-0 mt-1 font-bold"{{ comp.name | fallbackLang(lang) | safe }}>{{ label }}</p>
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
@@ -73,7 +73,7 @@ eleventyComputed:
         {%- if comp.childrenByStep.length %}
         <dl class="map-chain-steps">
           {%- for group in comp.childrenByStep %}
-          <dt>{{ P.step(group.step) }}</dt>
+          <dt>{{ P.place(group.band | band, group.bandStep) }}</dt>
           <dd><ul>{% for id in group.ids %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}</li>{% endfor %}</ul></dd>
           {%- endfor %}
         </dl>

@@ -25,6 +25,8 @@ export default async function () {
     const competencies = [...subject.competencies.values()].map((c) => ({
       ...c,
       requiredBy: subject.requiredBy.get(c.id),
+      // Not placed in the chain (feat/map-chains, KD-12): no prerequisite, and nothing builds on it.
+      alone: !c.requires.length && !subject.requiredBy.get(c.id)?.length,
       practisedBy: covered.get(c.id),
       placements: subject.curricula
         .filter((cu) => cu.placements.has(c.id))
@@ -91,6 +93,7 @@ export default async function () {
       rows: rows(subject),
       // The grid by steps of the chain (/map/<subject>/c/, feat/map-steps).
       stepRows: stepRows(subject),
+      alone: competencies.filter((c) => c.alone).map((c) => c.id),
       // How many competencies an app practises (the cards of /map/, the filter of the subject page).
       covered: competencies.filter((c) => c.practisedBy.length).length,
       // The basic vocabulary of a language subject, by level (map/<subject>/vocabulary/), or none.
@@ -191,6 +194,7 @@ function chain(subject, c) {
   const inOrder = (set) => order.filter((id) => set.has(id));
   return {
     step,
+    place: subject.places.get(c.id),
     ancestorsByStep: byStep(subject, inOrder(before)),
     ancestorCount: before.size,
     childrenByStep: byStep(subject, inOrder(new Set(direct))),

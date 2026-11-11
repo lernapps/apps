@@ -11,8 +11,11 @@
 #        zählt nicht.
 #   NW = Kernlehrplan Wirtschaft-Politik Sek I Gymnasium NRW (2019, Heft 3429); St1 = bis Ende Erprobungsstufe ("5-6"),
 #        St2 = bis Ende Sek I (zählt für "7-8" und "9-10"); SiLP = Umsetzungsbeispiel, nur Hinweis.
+#   KdP = Weißeno, Detjen, Juchler, Massing, Richter: Konzepte der Politik – ein Kompetenzmodell (bpb, Schriftenreihe 1016,
+#        2010); Fachdidaktik, nur für requires.
 # Abstimmung: eine Stimme je Land (HE/BY/NW); zwei von drei entscheiden; drei verschiedene: die mittlere;
 # Gleichstand: requires, sonst die früheste Stufe. Genaue Titel, Ausgaben und URLs: .vibe/research-politik-wirtschaft.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Politik und Wirtschaft, en: Politics and economics }  # the file name is the subject's id: politik-wirtschaft
 source:
   title: Kerncurriculum Hessen, Sekundarstufe I - Gymnasium, Politik und Wirtschaft (Hessisches Kultusministerium), mit Lehrplan Politik und Wirtschaft G9 Hessen
@@ -37,10 +40,12 @@ strands:
         requires: [familie-aufgaben]
       # HE 7.1 (Erziehungs- und Sozialisationsformen); KC IF Individuum und Gesellschaft (Sozialisation); NW IF4 St1 (Identität und Rollen: Familie, Schule und Peergroup); BY nur SWG: PuG8 LB2 (Bezugspersonen, Sozialisationsinstanzen).
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 5-6 (Gleichstand, früheste Stufe)
+      # requires familie-aufgaben: Die Familie ist die erste Instanz, die mich prägt; HE nennt Aufgaben der Familie und Sozialisation in derselben Einheit „Kindheit und Familie“ (HE 7.1 S. 7: „Bedeutung der Familie … Erziehungs- und Sozialisationsformen“; NW IF4 St1 S. 22: „Identität und Rollen: Familie, Schule und Peergroup“)
       - id: sozialisation
         name: { de: "Sozialisation", en: "Socialisation" }
         iCan: { de: "Ich kann erklären, wie Familie, Schule, Freunde und Medien mich prägen." }
         gradeBand: "5-6"
+        requires: [familie-aufgaben]
       # HE 7.1 (Rollenerwartungen); NW IF4 St1 (Identität und Rollen; Folgen von Rollenerwartungen in der Familie); IF4 St2 (Einfluss sozialer Erwartungen auf die Identitätsbildung); BY nur SWG: PuG8 LB1.
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 5-6 (Gleichstand, früheste Stufe)
       - id: rollen-und-erwartungen
@@ -98,10 +103,12 @@ strands:
         requires: [zusammenleben-in-vielfalt]
       # KC IF Demokratie (Elemente gesellschaftspolitischer Partizipation); HE Übergangsprofil (Verantwortungsbereitschaft); NW IF4 St2 (Möglichkeiten des sozialen Engagements; Bedeutung für Identität und Gesellschaft); BY nur SWG: PuG8 6.1 (Vereine, Ehrenamt). SCHWACH BELEGT: HE nennt Engagement nur allgemein.
       # Stimmen HE/BY/NW 7-10/–/7-10 -> 7-8 (Gleichstand, früheste Stufe)
+      # requires jugend-als-lebensphase: NW nennt Engagement bei der individuellen Lebensgestaltung und fragt nach seiner Bedeutung für die Identität (NW IF4 St2 S. 29: „individuelle Lebensgestaltung: Selbstverwirklichung, soziale Erwartungen und soziale Verantwortung“; „Bedeutung sozialen Engagements für die Identitätsbildung“)
       - id: soziales-engagement
         name: { de: "Soziales Engagement und Ehrenamt", en: "Volunteering and civic engagement" }
         iCan: { de: "Ich kann Möglichkeiten nennen, mich für andere zu engagieren, zum Beispiel im Ehrenamt, und begründen, was das mir und der Gesellschaft bringt." }
         gradeBand: "7-8"
+        requires: [jugend-als-lebensphase]
   - id: teilhabe
     name: { de: "Demokratie und Teilhabe", en: "Democracy and participation" }
     competencies:
@@ -125,11 +132,12 @@ strands:
         gradeBand: "5-6"
       # HE 7.2 (Struktur der Kommune; Wahlen, Parteien); NW IF2 St1 (Institutionen, Akteure und Prozesse; Wahlen auf kommunaler Ebene).
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 5-6 (Gleichstand, früheste Stufe)
+      # requires mitbestimmung-schule: Wahl und Vertretung lernt man zuerst in der Schule (Klassensprecher), dann in der Gemeinde (HE 7.2 S. 9: „Ausgangspunkt … ist der unmittelbare Erfahrungsbereich in der Schule“, die Kommune „im Anschluss daran … weitergehender Einblick in demokratische Strukturen der Wahl und der Entscheidungsfindung“; KdP S. 90: Klassensprecher, dann Bürgermeister und Rat)
       - id: gemeinderat-buergermeister
         name: { de: "Gemeinderat und Bürgermeister", en: "Local council and mayor" }
         iCan: { de: "Ich kann erklären, wie Gemeinderat und Bürgermeisterin oder Bürgermeister gewählt werden und wie sie entscheiden." }
         gradeBand: "5-6"
-        requires: [gemeinde-aufgaben]
+        requires: [gemeinde-aufgaben, mitbestimmung-schule]
       # HE 7.2 (Bürgerbeteiligung; Jugendparlament, Jugendforum); NW IF2 St1 (Formen demokratischer Beteiligung in Stadt/Gemeinde); BY nur SWG: PuG8 LB4 (Mitwirkungsmöglichkeiten Jugendlicher auf kommunaler Ebene).
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 5-6 (Gleichstand, früheste Stufe)
       - id: beteiligung-kommune
@@ -174,11 +182,12 @@ strands:
         requires: [wahlen-funktion]
       # HE 10.1 (Parteien und Verbände; pluralistische Demokratie); KC IF Demokratie (Pluralismus); BY PuG10 LB2 (Kennzeichen der pluralistischen Demokratie: Interessengruppen); NW IF2 St2 (Partizipation in der Zivilgesellschaft).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
+      # requires kommunaler-streitfall: Zum Konzept Interessengruppen ist ein Verständnis von Interessenkonflikten nötig (KdP S. 113: „Zum Konzeptaufbau ist ein Verständnis des Fachkonzepts Konflikt … notwendig“)
       - id: interessenverbaende
         name: { de: "Interessenverbände und Pluralismus", en: "Interest groups and pluralism" }
         iCan: { de: "Ich kann erklären, wie Verbände und andere Gruppen ihre Interessen in die Politik einbringen, und warum das zu einer pluralistischen Demokratie gehört." }
         gradeBand: "9-10"
-        requires: [parteien-aufgaben]
+        requires: [parteien-aufgaben, kommunaler-streitfall]
       # HE 10.1 (Bürgerbeteiligung; Handlungsmöglichkeiten des Einzelnen); BY PuG10 LB2 (politische Mitwirkungsmöglichkeiten; Chancen und Grenzen der Durchsetzung eigener Interessen); NW IF2 St2 (Formen, Chancen und Grenzen zivilgesellschaftlicher Partizipation).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: politische-beteiligung
@@ -233,11 +242,13 @@ strands:
         requires: [volkssouveraenitaet]
       # HE 10.1 (Gewaltenteilung); KC IF Demokratie; BY PuG10 LB3 (wechselseitige Abhängigkeiten der Verfassungsorgane); NW IF2 St2 (Grundlagen des Rechtsstaats: Gewaltenteilung).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
+      # requires rechtsstaat: Gewaltenteilung ist ein Grundsatz des Rechtsstaats; HE nimmt die Rechtsstaatlichkeit aus Jg 8 in Jg 10 auf (HE 10.1 S. 19: „nimmt die in den Jahrgangsstufen 7, 8 und 9 angesprochenen Prinzipien … der Rechts- und Sozialstaatlichkeit auf“; NW IF2 St2 S. 28: „Grundlagen des Rechtsstaats: Gewaltenteilung“; KC S. 25)
+      # requires bundesregierung: Regierung und Parlament sind anschaulicher als die Gewaltenteilung und gehen ihr voraus; BY erschließt die Abhängigkeiten der Organe über Stellung und Spielraum des Bundeskanzlers (KdP S. 71; BY PuG10 LB3)
       - id: gewaltenteilung
         name: { de: "Gewaltenteilung", en: "Separation of powers" }
         iCan: { de: "Ich kann die Gewaltenteilung in Gesetzgebung, Regierung und Verwaltung sowie Rechtsprechung erklären und begründen, warum sie Macht begrenzt." }
         gradeBand: "9-10"
-        requires: [grundgesetz-bedeutung]
+        requires: [rechtsstaat, bundesregierung]
       # HE 7.2 (Länderhoheit, Funktionsweise politischer Institutionen auf Länderebene); NW IF2 St2 (demokratische Institutionen auf Landes- und Bundesebene; SiLP UV IX, Jg 7/8: Landesebene); BY nur SWG: PuG9 LB3 (Politik im Freistaat Bayern).
       # Stimmen HE/BY/NW 7-8/–/7-10 -> 7-8 (Mehrheit)
       - id: landespolitik
@@ -258,7 +269,7 @@ strands:
         name: { de: "Aufgaben des Bundestags", en: "Functions of the Bundestag" }
         iCan: { de: "Ich kann die Aufgaben des Bundestags erklären: Gesetze beschließen, die Bundeskanzlerin oder den Bundeskanzler wählen und die Regierung kontrollieren." }
         gradeBand: "9-10"
-        requires: [repraesentative-demokratie, gewaltenteilung]
+        requires: [repraesentative-demokratie]
       # HE 10.1 (Mehrheitsbildung: Fraktionen); BY PuG10 LB3 (Stellung des Abgeordneten, Art. 38 GG); NW IF2 St2 (Parlamentarismus).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: abgeordnete
@@ -307,7 +318,7 @@ strands:
         name: { de: "Bundespräsident", en: "The Federal President" }
         iCan: { de: "Ich kann beschreiben, wie die Bundespräsidentin oder der Bundespräsident gewählt wird und welche Aufgaben das Amt hat." }
         gradeBand: "9-10"
-        requires: [bundestag, bundesrat]
+        requires: [bundesrat]
       # HE 10.1 (Begründung: starker Schutz der Grundrechte durch das Bundesverfassungsgericht); BY PuG10 LB3 (zentrale Verfassungsorgane); NW IF2 St2 (Verfassungsstaatlichkeit; Organe). SCHWACH BELEGT: kein Land nennt das Gericht im verbindlichen Inhalt ausdrücklich.
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: bundesverfassungsgericht
@@ -321,7 +332,7 @@ strands:
         name: { de: "Gesetzgebung im Bund", en: "Federal legislative process" }
         iCan: { de: "Ich kann den Weg eines Bundesgesetzes vom Entwurf über Bundestag und Bundesrat bis zur Verkündung beschreiben." }
         gradeBand: "9-10"
-        requires: [bundestag, bundesrat]
+        requires: [bundesrat]
       # HE 10.1 (Meinungsbildung, Entscheidungsfindung); BY PuG10 LB3 (Politikzyklus); NW IF2 St2 (Prinzipien, Formen und Zusammenwirken); BY nur SWG: PuG8 LB4 (einfache Darstellung des Politikkreislaufs).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: politikzyklus
@@ -355,10 +366,12 @@ strands:
     competencies:
       # HE 8.1 (Rechte und Pflichten von Jugendlichen); BY WR10 LB2 (Minderjährigenrecht); NW IF2 St1 (Rechte und Pflichten von Kindern und Jugendlichen in Familie und Schule: Schulordnung, Schulgesetz).
       # Stimmen HE/BY/NW 7-8/9-10/5-6 -> 7-8 (drei verschiedene Stimmen, mittlere)
+      # requires jugendschutz: NW nennt das Jugendschutzgesetz als Teil der Rechte und Pflichten von Kindern und Jugendlichen (NW IF2 St1 S. 21: „Rechte und Pflichten … in Familie und Schule: Schulordnung, Schulgesetz, Jugendschutzgesetz“; HE 8.1 S. 13: rechtliche Stellung der Jugend „am Jugendschutz“)
       - id: rechte-und-pflichten-jugendlicher
         name: { de: "Rechte und Pflichten Jugendlicher", en: "Young people's rights and duties" }
         iCan: { de: "Ich kann Rechte und Pflichten von Kindern und Jugendlichen in Familie und Schule nennen." }
         gradeBand: "7-8"
+        requires: [jugendschutz]
       # HE 8.1 (Jugendrecht; Begründung: Jugendschutz); NW IF2 St1 (Jugendschutzgesetz).
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 5-6 (Gleichstand, früheste Stufe)
       - id: jugendschutz
@@ -367,10 +380,12 @@ strands:
         gradeBand: "5-6"
       # HE 8.1 (Rechtsordnung regelt das friedliche Zusammenleben); KC IF Recht und Rechtsprechung (Schutz- und Ordnungsfunktion); BY WR10 LB2 (Funktionen des Rechts); NW IF2 St1 (Bedeutung von Regeln und Rechten in Familie, Schule und Gemeinde).
       # Stimmen HE/BY/NW 7-8/9-10/5-6 -> 7-8 (drei verschiedene Stimmen, mittlere)
+      # requires werte-normen-gesetze: Recht sind verbindliche Normen mit Sanktion; das Konzept Rechtsstaat beginnt mit dem Vergleich selbstgegebener Regeln mit staatlichen Gesetzen (KdP S. 86; HE 7.1 Normen, Sanktionen S. 7 -> HE 8.1 Rechtsordnung S. 13)
       - id: funktionen-des-rechts
         name: { de: "Funktionen des Rechts", en: "Functions of law" }
         iCan: { de: "Ich kann erklären, wozu wir Recht brauchen: Es sichert Frieden, schützt die Freiheit und schafft Ordnung." }
         gradeBand: "7-8"
+        requires: [werte-normen-gesetze]
       # HE 8.1 (Strafrecht, Zivilrecht, Öffentliches Recht); BY WR10 LB2 (widerrechtliches Handeln: unerlaubte Handlung, Straftat).
       # Stimmen HE/BY/NW 7-8/9-10/– -> 7-8 (Gleichstand, früheste Stufe)
       - id: rechtsgebiete
@@ -387,11 +402,12 @@ strands:
         requires: [rechtsgebiete]
       # HE 8.1 (Geschäftsfähigkeit); BY WR10 LB2 (Stufen der Geschäftsfähigkeit; Handlungsmöglichkeiten des beschränkt Geschäftsfähigen); NW IF1 St1 (Rechte und Pflichten minderjähriger Verbraucherinnen und Verbraucher); IF8 St2 (Geschäftsfähigkeit).
       # Stimmen HE/BY/NW 7-8/9-10/5-6 -> 7-8 (drei verschiedene Stimmen, mittlere)
+      # requires taschengeld-planen: Der Taschengeldparagraf setzt voraus, dass man weiß, was Taschengeld ist und wie man es einteilt; NW nennt beides im selben Inhaltsfeld (NW IF1 St1 S. 20: „Funktionen des Geldes und Taschengeldverwendung“; „Rechte und Pflichten minderjähriger Verbraucherinnen und Verbraucher“)
       - id: geschaeftsfaehigkeit
         name: { de: "Geschäftsfähigkeit und Taschengeldparagraf", en: "Legal capacity and pocket-money rule" }
         iCan: { de: "Ich kann die Stufen der Geschäftsfähigkeit erklären und mit dem Taschengeldparagrafen entscheiden, ob ein Kauf gültig ist." }
         gradeBand: "7-8"
-        requires: [rechte-und-pflichten-jugendlicher]
+        requires: [rechte-und-pflichten-jugendlicher, taschengeld-planen]
       # HE 8.2 (Verkaufen und Kaufen; Rechte und Pflichten beim Kaufvertrag); BY WR10 LB2 (Zustandekommen von Verträgen; Rechte und Pflichten aus dem Kaufvertrag); NW IF8 St2 (Verbraucherrechte und -pflichten im Alltag: Kauf- und Mietverträge).
       # Stimmen HE/BY/NW 7-8/9-10/7-10 -> 7-8 (Gleichstand, früheste Stufe)
       - id: kaufvertrag
@@ -443,10 +459,12 @@ strands:
         requires: [jugendstrafrecht]
       # BY WR10 LB2 (Rechtsfolgen von Urheberrechtsverletzungen, z. B. im Internet); NW IF5 St1 (rechtliche Grundlagen für die Mediennutzung in Schule und privatem Umfeld); IF8 St2 (Persönlichkeits-, Urheber- und Nutzungsrechte).
       # Stimmen HE/BY/NW –/9-10/5-6 -> 5-6 (Gleichstand, früheste Stufe)
+      # requires mediennutzung: NW nennt die rechtlichen Grundlagen im selben Inhaltsfeld wie die eigene Mediennutzung (NW IF5 St1 S. 23: „Nutzung digitaler und analoger Medien …“; „rechtliche Grundlagen für die Mediennutzung in Schule und privatem Umfeld“)
       - id: urheberrecht
         name: { de: "Urheberrecht im Internet", en: "Copyright on the internet" }
         iCan: { de: "Ich kann erklären, was ich mit fremden Bildern, Texten und Musik im Internet tun darf und was das Urheberrecht verbietet." }
         gradeBand: "5-6"
+        requires: [mediennutzung]
       # HE 8.1 (Gerichtswesen und Rechtsstaatlichkeit: Unabhängigkeit der Gerichte, Gleichheitsgrundsatz, Schutz vor staatlicher Willkür); BY PuG10 LB1 (Bundesrepublik als demokratischer und sozialer Rechtsstaat, Art. 20 GG); NW IF2 St2 (Grundlagen des Rechtsstaats).
       # Stimmen HE/BY/NW 7-8/9-10/7-10 -> 7-8 (Gleichstand, früheste Stufe)
       - id: rechtsstaat
@@ -485,10 +503,12 @@ strands:
         requires: [taschengeld-planen]
       # HE 8.2 (Geldfunktionen); BY WR10 LB1 (Geldwertstabilität, Geldfunktionen); NW IF1 St1 (Funktionen des Geldes als Tausch-, Wertaufbewahrungs- und Rechenmittel).
       # Stimmen HE/BY/NW 7-8/9-10/5-6 -> 7-8 (drei verschiedene Stimmen, mittlere)
+      # requires taschengeld-planen: NW nennt Geldfunktionen und Taschengeld in einem Schwerpunkt; HE behandelt Geld im Haushalt (7.3) vor den Geldfunktionen (8.2) (NW IF1 St1 S. 20: „Funktionen des Geldes und Taschengeldverwendung“; HE 7.3 S. 11, HE 8.2 S. 15)
       - id: geldfunktionen
         name: { de: "Funktionen des Geldes", en: "Functions of money" }
         iCan: { de: "Ich kann die Funktionen des Geldes erklären: Tauschmittel, Wertaufbewahrungsmittel und Recheneinheit." }
         gradeBand: "7-8"
+        requires: [taschengeld-planen]
       # BY WR10 LB1 (Zahlungsarten; digitale Zahlungsverfahren: Möglichkeiten und Risiken); NW IF1 St2 (Geld und seine Funktionen im digitalen Zeitalter; Digitalisierung des Zahlungsverkehrs).
       # Stimmen HE/BY/NW –/9-10/7-10 -> 9-10 (Mehrheit)
       - id: zahlungsarten
@@ -592,10 +612,12 @@ strands:
     competencies:
       # HE 9.1 (individuelle und gesellschaftliche Bedeutung von Arbeit, Erwerbstätigkeit und Beruf); NW IF7 St2 (Bedeutung unbezahlter Familienarbeit).
       # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit)
+      # requires privathaushalt: Erwerbsarbeit ist die Einkommensquelle des Haushalts; HE führt vom privaten Haushalt zur Arbeitswelt (HE 7.3 S. 11: Haushalt als „Hinführung zur ökonomischen Bildung“, Kernbereich „Ökonomie und Arbeitswelt“; HE Teil B 1 S. 5: vom unmittelbaren Erfahrungsbereich aus erweitert, „vor allem … für den Bereich der Ökonomischen Bildung“)
       - id: bedeutung-von-arbeit
         name: { de: "Bedeutung von Arbeit", en: "The meaning of work" }
         iCan: { de: "Ich kann erklären, welche Bedeutung Arbeit und Beruf für den Einzelnen und für die Gesellschaft haben, auch unbezahlte Arbeit in der Familie." }
         gradeBand: "9-10"
+        requires: [privathaushalt]
       # HE 9.1 (Berufe und Berufswahl: Eignung, Qualifikation; Bildungs- und Berufsplanung); NW IF6 St2 (Berufswahl und Berufswegplanung: Ausbildung, Studium, unternehmerische Selbstständigkeit).
       # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit)
       - id: berufswahl
@@ -630,7 +652,7 @@ strands:
         name: { de: "Ein Geschäftsmodell entwickeln", en: "Developing a business model" }
         iCan: { de: "Ich kann für eine Geschäftsidee ein einfaches Geschäftsmodell entwickeln: Angebot, Kundschaft, Marketing, Standort und Finanzierung." }
         gradeBand: "9-10"
-        requires: [betriebliche-funktionen, preiskalkulation]
+        requires: [preiskalkulation]
       # HE 9.1 (Selbständigkeit, unternehmerisches Handeln und Risiko); NW IF6 St2 (Chancen und Risiken unternehmerischer Selbstständigkeit; Familienunternehmen, Handwerk).
       # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit)
       - id: selbststaendigkeit
@@ -758,10 +780,12 @@ strands:
     competencies:
       # HE 7.2 (Lokale Agenda 21); KC IF Gesellschaft und Natur (soziale, ökonomische und ökologische Bedürfnisse; Generationenverantwortung); BY WR10 LB1 (Prinzip der Nachhaltigkeit: ökonomische, ökologische und soziale Aspekte); NW IF3 St1 (nachhaltige Entwicklung als Herausforderung im privaten, gesellschaftlichen, wirtschaftlichen und politischen Handeln).
       # Stimmen HE/BY/NW 7-8/9-10/5-6 -> 7-8 (drei verschiedene Stimmen, mittlere)
+      # requires ressourcen-schonen: NW führt nachhaltiges Handeln über Ressourcenschonung und Energiesparen ein; HE nennt Umweltschutz in der Gemeinde und Lokale Agenda 21 in einer Einheit (NW IF3 St1 S. 22: „ökologische Herausforderungen und Chancen nachhaltigen Handelns: Ressourcenschonung, Energieeinsparung“; HE 7.2 S. 9)
       - id: nachhaltigkeit-begriff
         name: { de: "Nachhaltige Entwicklung", en: "Sustainable development" }
         iCan: { de: "Ich kann erklären, was nachhaltige Entwicklung bedeutet, und ökologische, wirtschaftliche und soziale Ziele unterscheiden." }
         gradeBand: "7-8"
+        requires: [ressourcen-schonen]
       # HE 7.3 (Vermeidung von Umweltbelastungen; Ressourcenschonung); NW IF3 St1 (Ressourcenschonung, Energieeinsparung; staatliche Maßnahmen und individuelle Handlungsmöglichkeiten); HE 7.2 (Umweltschutz in der Gemeinde: Müll, Wasser, Verkehr).
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 5-6 (Gleichstand, früheste Stufe)
       - id: ressourcen-schonen
@@ -777,11 +801,12 @@ strands:
         requires: [nachhaltigkeit-begriff, konsumentscheidung]
       # HE 7.2 (Lokale Agenda 21); HE 10.2, 10.3 (Agenda 21); NW IF3 St1 (Sustainable Development Goals: Keine Armut, Hochwertige Bildung). SCHWACH BELEGT: HE nennt die Agenda 21, den Vorläufer der SDGs.
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 7-8 (Gleichstand, requires entscheidet)
+      # requires kinder-weltweit: NW nennt die Ziele „Keine Armut, Hochwertige Bildung“ zusammen mit den Lebenssituationen von Kindern in der Welt (NW IF3 St1 S. 22)
       - id: nachhaltigkeitsziele
         name: { de: "UN-Nachhaltigkeitsziele", en: "UN Sustainable Development Goals" }
         iCan: { de: "Ich kann die Ziele der Vereinten Nationen für nachhaltige Entwicklung an Beispielen erklären, zum Beispiel keine Armut und hochwertige Bildung." }
         gradeBand: "7-8"
-        requires: [nachhaltigkeit-begriff]
+        requires: [nachhaltigkeit-begriff, kinder-weltweit]
       # KC IF Gesellschaft und Natur (Spannungsfeld zwischen Ökonomie und Ökologie); NW IF1 St2 (Wachstum und nachhaltige Entwicklung; quantitatives und qualitatives Wachstum). SCHWACH BELEGT: HE nur allgemein im KC.
       # Stimmen HE/BY/NW 7-10/–/7-10 -> 7-8 (Gleichstand, früheste Stufe)
       - id: wachstum
@@ -795,7 +820,7 @@ strands:
         name: { de: "Klimaschutz und Energieversorgung", en: "Climate protection and energy supply" }
         iCan: { de: "Ich kann Maßnahmen für Klimaschutz und eine sichere, nachhaltige Energieversorgung beschreiben und beurteilen." }
         gradeBand: "9-10"
-        requires: [nachhaltigkeit-begriff, ressourcen-schonen]
+        requires: [nachhaltigkeit-begriff]
   - id: europa
     name: { de: "Europäische Union", en: "European Union" }
     competencies:
@@ -873,10 +898,12 @@ strands:
         requires: [menschenwuerde]
       # HE 10.2 (internationale Konfliktfelder und Interessen; innergesellschaftliche Konflikte und internationale Friedenssicherung); NW IF11 St2 (Erscheinungsformen und Ursachen internationaler Konflikte, Krisen und Kriege).
       # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit)
+      # requires kommunaler-streitfall: Das Konzept Konflikt baut von Interessenkonflikten in der Gemeinde zu Konflikten zwischen Staaten auf; man untersucht beide nach Beteiligten und Interessen (KdP S. 116 f.)
       - id: internationale-konflikte
         name: { de: "Internationale Konflikte analysieren", en: "Analysing international conflicts" }
         iCan: { de: "Ich kann einen internationalen Konflikt nach Ursachen, Beteiligten und Interessen untersuchen." }
         gradeBand: "9-10"
+        requires: [kommunaler-streitfall]
       # HE 10.2 (Organisationen zur Friedenssicherung: Ziele, Aufbau, Handlungsmöglichkeiten; UNO); BY PuG10 LB4 (Einbindung Deutschlands in internationale Organisationen); G10 LB2 (UNO); NW IF11 St2 (Friedenssicherung durch die UNO).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: vereinte-nationen
@@ -941,11 +968,12 @@ strands:
         requires: [globalisierung, betriebliche-funktionen]
       # HE 10.3 (Welthandelsstrukturen; Unterentwicklung); NW IF10 St2 (Merkmale von Freihandel und Protektionismus; Auswirkungen auf Industrie- und Entwicklungsländer). SCHWACH BELEGT: HE nennt nur Welthandelsstrukturen.
       # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit)
+      # requires entwicklungsstand: Wer Folgen für Entwicklungsländer beurteilt, muss wissen, was ein Land mit niedrigem Entwicklungsstand ist (HE 10.3 S. 22: „Welthandelsstrukturen; Globalisierung; Unterentwicklung“; NW IF10 St2 S. 34: „… in Industrie- und Entwicklungsländern“)
       - id: freihandel-protektionismus
         name: { de: "Freihandel und Protektionismus", en: "Free trade and protectionism" }
         iCan: { de: "Ich kann Freihandel und Protektionismus unterscheiden und ihre Folgen für Industrie- und Entwicklungsländer beurteilen." }
         gradeBand: "9-10"
-        requires: [internationale-arbeitsteilung]
+        requires: [internationale-arbeitsteilung, entwicklungsstand]
       # HE 10.3 (internationale Wirtschaftsstrukturen); BY PuG10 LB4 (Einbindung in internationale staatliche Organisationen in verschiedenen Bereichen); NW IF10 St2 (Staaten und Organisationen als Akteure der Weltwirtschaft).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: akteure-weltwirtschaft

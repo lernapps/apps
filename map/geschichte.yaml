@@ -12,8 +12,10 @@
 #   NW = Kernlehrplan NRW Sek I Gymnasium (G9) Geschichte, Heft 3407 (2019), IF = Inhaltsfeld;
 #        Stufe 1 = bis Ende Erprobungsstufe (Jg 5/6) -> "5-6"; Stufe 2 = bis Ende Sek I -> "7-10" (zählt für 7-8 und 9-10)
 #        SK/MK/UK/HK = Sach-, Methoden-, Urteils-, Handlungskompetenz
+#   Kühberger IzPB 38 = Fachdidaktik, nur für requires: C. Kühberger, „Lernen mit Konzepten“, Informationen zur Politischen Bildung Nr. 38
 # Richtstufe: eine Stimme je Land, zwei von drei entscheiden; bei Gleichstand entscheiden die requires,
 # lassen sie beide Stufen zu, die frühere. "SCHWACH BELEGT" = nur ein Land ausdrücklich, das zweite nur allgemein.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Geschichte, en: History }               # the file name is the subject's id: geschichte
 source:
   title: Gemeinsame Inhaltsbereiche der Länder (keine KMK-Bildungsstandards Geschichte Sek I); Grundlage Kerncurriculum Hessen, Sekundarstufe I - Gymnasium, Geschichte (Hessisches Kultusministerium), mit LehrplanPLUS Bayern und Kernlehrplan NRW
@@ -51,7 +53,7 @@ strands:
         name: { de: "Zeitleiste", en: "Timeline" }
         iCan: "Ich kann Ereignisse auf einer Zeitleiste in die richtige Reihenfolge bringen und Abstände zwischen ihnen erkennen."
         gradeBand: "5-6"
-        requires: [zeitrechnung, jahrhunderte]
+        requires: [jahrhunderte]
       # HE LP 6.1 (3): Zeitalter/Epochen; KC Kap. 6: Konzept der Epoche; BY G6 LB3, LB6: Begriffe Antike, Mittelalter, Epochengrenzen; G7 LB3: Neuzeit; NW 2.1 Sachkompetenz: historische Epochen; Stufe 1 SK 6. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       - id: epochen
         name: { de: "Epochen der Geschichte", en: "Historical periods" }
@@ -82,21 +84,31 @@ strands:
         iCan: "Ich kann erklären, wie Archäologinnen und Archäologen Funde ausgraben, datieren und deuten."
         gradeBand: "5-6"
         requires: [quellenarten]
+      # BY G6 LB4 (Längsschnitt): historische Persönlichkeiten mit den Begriffen Monarchie und Demokratie „im Hinblick auf die jeweilige Herrschaftsform einordnen“; G7 LB6: Absolutismus mit „bereits bekannten Herrschaftsformen aus Antike und Mittelalter“ vergleichen; G7 LB7: Grundbegriffe Monarchie, Demokratie, Aristokratie; NW Stufe 1 SK 6 S. 20: „Herrschaftsformen in historischen Räumen und ihrer zeitlichen Dimension“ identifizieren; HE KC Kap. 6 S. 22: Dimension „Herrschaft“, „die Formen von Herrschaft“ (ohne Jahrgang); LP S. 4: Schwerpunkt „Herrschaft und ihre Legitimation“ (in Jg 6 bei 6.3 bis 6.5). Stimmen HE/BY/NW 5-10/5-6/5-6: Mehrheit. Neu (Owner, 2026-11-11): trägt die Begriffskanten Monarchie → Republik → Absolutismus.
+      # requires monarchie: Die Herrschaft eines Einzelnen kennt man vom Pharao; diese Form vergleicht man mit den anderen. (BY G6 LB4: „nutzen die bekannten Grundlegenden Daten und Begriffe … Pharao, Antike, Polis, Monarchie, Demokratie, um historische Persönlichkeiten zeitlich und im Hinblick auf die jeweilige Herrschaftsform einzuordnen“)
+      # requires attische-demokratie: Die Herrschaft des Volkes kennt man aus Athen; diese Form vergleicht man mit den anderen. (BY G6 LB4, wie oben; die attische Demokratie lehrt BY in LB3, davor)
+      - id: herrschaftsformen
+        name: { de: "Herrschaftsformen", en: "Forms of government" }
+        iCan: "Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer Herrschaftsform zuordnen."
+        gradeBand: "5-6"
+        requires: [monarchie, attische-demokratie]
   - id: urgeschichte
     name: { de: "Urgeschichte und frühe Hochkulturen", en: "Prehistory and early civilisations" }
     competencies:
       # SCHWACH BELEGT (ausdrücklich nur KC HE und die Beschreibung von IF1 NW). HE KC Basisnarrativ Ur- und Frühgeschichte: „Menschwerdung“ (ohne Jahrgang); LP 6.2 nennt sie nicht; BY G6 (Titel „Von den ersten Menschen …“), LB1 nennt nur die Altsteinzeit; NW IF1 (Stufe 1): „Entwicklung des Menschen“ (Beschreibung des Inhaltsfelds). Stimmen HE/BY/NW 5-10/5-6/5-6: Mehrheit
+      # requires archaeologie: Was wir über die ersten Menschen wissen, stammt aus Funden (Knochen, Werkzeuge), die Archäologen ausgraben, datieren und deuten. (NW IF1 Stufe 1 S. 22: „Entwicklung des Menschen“ (S. 16) zusammen mit „grundlegende Verfahrensweisen, Zugriffe und Kategorien historischen Arbeitens“; BY G6 LB1: „Bedeutung der Archäologie“ im selben Lernbereich wie die Altsteinzeit)
       - id: menschwerdung
         name: { de: "Menschwerdung und Ausbreitung", en: "Human evolution and migration" }
         iCan: "Ich kann beschreiben, wie sich die ersten Menschen in Afrika entwickelten und über die Erde ausbreiteten."
         gradeBand: "5-6"
-        requires: [epochen]
+        requires: [archaeologie]
       # HE LP 6.2 (1): Leben in der Altsteinzeit (Kalt- und Warmzeiten, Gruppen, Wohnplätze); BY G6 LB1: Jäger und Sammler der Altsteinzeit; NW IF1 (Stufe 1): Lebensweisen in der Alt- und Jungsteinzeit. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # requires archaeologie: Das Leben in der Altsteinzeit kennen wir nur aus Funden; man muss wissen, wie Funde datiert und gedeutet werden. (HE LP 6.2 (1) S. 12: „kulturelle Überreste und ihre Deutung“, Arbeitsmethoden „Funde als Quellen, z.B. ‚Ötzi‘“; BY G6 LB1: „Bedeutung der Archäologie“ und „Jäger und Sammler der Altsteinzeit“ im selben Lernbereich)
       - id: altsteinzeit
         name: { de: "Altsteinzeit: Jäger und Sammler", en: "Palaeolithic hunter-gatherers" }
         iCan: "Ich kann beschreiben, wie die Menschen in der Altsteinzeit als Jäger und Sammler lebten."
         gradeBand: "5-6"
-        requires: [menschwerdung]
+        requires: [archaeologie]
       # HE LP 6.2 (1): Auseinandersetzung mit der Natur, Werkzeuge und Waffen; BY G6 LB1: Überlebenstechniken (Feuer, Wohnungsbau, Werkzeug- und Waffentechnik); NW IF1 (Stufe 1): steinzeitliche Lebensformen. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       - id: feuer-und-werkzeuge
         name: { de: "Feuer und Werkzeuge", en: "Fire and tools" }
@@ -165,7 +177,6 @@ strands:
         name: { de: "Griechische Poleis", en: "Greek city-states" }
         iCan: "Ich kann erklären, wie die Landschaft Griechenlands dazu beitrug, dass viele selbstständige Stadtstaaten (Poleis) entstanden."
         gradeBand: "5-6"
-        requires: [epochen]
       # HE LP 6.4 (1): Kolonisation; BY G6 LB3: Kolonisation (Vergleich mit Migration heute). Stimmen HE/BY/NW 5-6/5-6/–: Mehrheit
       - id: griechische-kolonisation
         name: { de: "Griechische Kolonisation", en: "Greek colonisation" }
@@ -217,11 +228,12 @@ strands:
         requires: [quelle-und-darstellung]
       # HE LP 6.5 (1): Grundzüge der republikanischen Ordnung; BY G6 LB5: römische Republik, Grundbegriffe Senat, Republik, Diktator; NW IF2 (Stufe 1): res publica. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       # Siehe auch: latein/koenigszeit-und-republik, latein/senat-und-magistrate
+      # requires herrschaftsformen (Herleitung): Die Republik ist die Ordnung ohne König: Konsuln auf ein Jahr und zu zweit, ein Senat der Vornehmen und eine Volksversammlung. Wer sie verstehen will, braucht die Gegenbegriffe Monarchie, Aristokratie und Demokratie. Gestützt: BY G6 LB4 (Herrschaftsformen „Monarchie, Demokratie“ einordnen) steht vor LB5 (Imperium Romanum); Kühberger IzPB 38 S. 21 (ein Konzept am ersten Fall einführen und an späteren Fällen wieder aufgreifen). Ersetzt die Kante zu monarchie, die über herrschaftsformen weiter gilt.
       - id: roemische-republik
         name: { de: "Römische Republik", en: "The Roman Republic" }
         iCan: "Ich kann den Aufbau der römischen Republik mit Senat, Konsuln und Volksversammlung beschreiben."
         gradeBand: "5-6"
-        requires: [gruendungssage-roms]
+        requires: [herrschaftsformen]
       # HE LP 6.5 (1): Patrizier und Plebejer; BY G6 LB5: römische Republik, Gesellschaft und Machtverhältnisse; NW IF2 (Stufe 1): Lebenswirklichkeiten unterschiedlicher gesellschaftlicher Gruppen. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       - id: patrizier-und-plebejer
         name: { de: "Patrizier und Plebejer", en: "Patricians and plebeians" }
@@ -254,13 +266,14 @@ strands:
         name: { de: "Caesar, Augustus und Prinzipat", en: "Caesar, Augustus and the Principate" }
         iCan: "Ich kann erklären, wie Caesar und Augustus die Alleinherrschaft errichteten und wie aus der Republik das Kaisertum (Prinzipat) wurde."
         gradeBand: "5-6"
-        requires: [krise-der-republik, monarchie]
+        requires: [krise-der-republik]
       # HE LP 6.5 (3): Leben und Wohnen in Rom und auf dem Land, Brot und Spiele; BY G6 LB5/LB7: Gesellschaft (kein eigener Inhalt zum Stadtleben); NW IF2 (Stufe 1): großstädtisches Alltagsleben im antiken Rom. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
+      # requires caesar-und-augustus: „Brot und Spiele“ und das Leben in der Großstadt gehören zur Kaiserzeit; man braucht den Kaiser, um sie zu verstehen. (HE LP 6.5 (3) S. 15: „Die Kaiserzeit: Stellung und Lebensweise der Kaiser; Leben und Wohnen in Rom …; Brot und Spiele“)
       - id: leben-in-rom
         name: { de: "Alltag im antiken Rom", en: "Daily life in ancient Rome" }
         iCan: "Ich kann das Alltagsleben in der Großstadt Rom beschreiben, zum Beispiel Wohnen, Arbeiten, Thermen und „Brot und Spiele“."
         gradeBand: "5-6"
-        requires: [roemische-republik]
+        requires: [caesar-und-augustus]
       # HE LP 6.5 (3): Romanisierung der Provinzen; BY G6 LB5: römische Herrschaft in den Provinzen, Bayern; Grundbegriffe Romanisierung, Provinz; NW IF2 (Stufe 1) UK: Einfluss des Imperium Romanum auf die eroberten Gebiete. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       # Siehe auch: latein/provinzen-und-imperium
       - id: romanisierung
@@ -287,7 +300,7 @@ strands:
         name: { de: "Erbe der Antike", en: "The legacy of antiquity" }
         iCan: "Ich kann Spuren der griechischen und römischen Antike in unserer Kultur zeigen, zum Beispiel in Sprache, Bauwerken, Recht und Politik."
         gradeBand: "5-6"
-        requires: [romanisierung, attische-demokratie, spuren-der-vergangenheit]
+        requires: [romanisierung, spuren-der-vergangenheit]
   - id: mittelalter
     name: { de: "Mittelalter", en: "Middle Ages" }
     competencies:
@@ -302,7 +315,6 @@ strands:
         name: { de: "Entstehung und Ausbreitung des Islam", en: "Rise and spread of Islam" }
         iCan: "Ich kann beschreiben, wie Mohammed den Islam begründete und wie sich der Islam schnell ausbreitete."
         gradeBand: "5-6"
-        requires: [epochen]
       # HE LP 6.5 (4): gemeinsame Wurzeln von Judentum, Christentum und Islam; KC: Einflüsse von Religionen (Judentum, Christentum, Islam); BY G6 LB5, LB6: Grundbegriffe Judentum, Christentum, Islam; NW IF3b (Stufe 2): Menschen unterschiedlicher Religionen. Stimmen HE/BY/NW 5-6/5-6/7-10: Mehrheit
       - id: drei-religionen
         name: { de: "Judentum, Christentum und Islam", en: "Judaism, Christianity and Islam" }
@@ -346,17 +358,19 @@ strands:
         gradeBand: "5-6"
         requires: [kaiserkroenung-800]
       # HE LP 8.1 (4): Stände, unterständische Gruppen; BY G7 LB2: Struktur der Agrar- und Feudalgesellschaft, Stände; NW IF3a (Stufe 1): Lebensformen in der Ständegesellschaft. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
+      # requires pharao-und-gesellschaft: Den Aufbau einer Gesellschaft in Rangstufen lernt man zuerst an Ägypten; die Ständegesellschaft wendet diesen Begriff auf das Mittelalter an. (Kühberger IzPB 38 S. 21: beim Mittelalter „auf das bereits bekannte Beispiel einer Hochkultur zu verweisen, um anschließend nach Strukturmerkmalen einer feudalen Gesellschaft zu fragen“)
       - id: staendegesellschaft
         name: { de: "Mittelalterliche Ständegesellschaft", en: "The three medieval estates" }
         iCan: "Ich kann die mittelalterliche Ständegesellschaft mit Geistlichen, Adligen und Bauern beschreiben."
         gradeBand: "7-8"
-        requires: [karl-der-grosse]
+        requires: [pharao-und-gesellschaft]
       # HE LP 8.1 (2): Lehnswesen, Ministeriale; BY G7 LB1: Lehnswesen; NW IF3a (Stufe 1): Ordnungsprinzipien im Fränkischen Großreich. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
+      # requires karl-der-grosse: Das Lehnswesen antwortet auf die Frage, wie ein König ein großes Reich ohne Beamte regiert (Grafen, Königsboten, Treue gegen Land). (NW IF3a Stufe 1 S. 24: „anhand der Herrschafts- und Verwaltungspraxis von Karl dem Großen die Ordnungsprinzipien im Fränkischen Großreich“; HE LP 8.1 (2) S. 17: „Reisekönigtum; Pfalzordnung; Lehnswesen; Königsboten“)
       - id: lehnswesen
         name: { de: "Lehnswesen", en: "Feudalism" }
         iCan: "Ich kann das Lehnswesen erklären: wer wem Land gab und wer dafür Treue und Dienste schuldete."
         gradeBand: "7-8"
-        requires: [staendegesellschaft]
+        requires: [staendegesellschaft, karl-der-grosse]
       # HE LP 8.1 (1): Grundherrschaft, Hörigkeit, Allmende, Dreifelderwirtschaft; BY G7 LB2: Grundherrschaft; NW IF3a (Stufe 1): Lebensformen auf dem Land. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
       - id: grundherrschaft
         name: { de: "Grundherrschaft", en: "Manorialism" }
@@ -376,11 +390,12 @@ strands:
         gradeBand: "7-8"
         requires: [staendegesellschaft]
       # HE LP 8.1 (3): Leben mit und in der Kirche; KC: Einflüsse von Religionen auf Weltdeutungen; BY G7 LB2: grundlegende Merkmale des Lebens im Mittelalter; NW IF3a (Stufe 1) UK: Stellenwert des christlichen Glaubens. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
+      # requires christen-im-roemischen-reich (Herleitung): Die Rolle von Glaube und Kirche im Mittelalter setzt voraus, dass man weiß, wie das Christentum zur Staatsreligion wurde. Gestützt: HE LP 8.2 Hinweise S. 20 („Wiederholung: Auflösung des röm. Reiches; Judentum, Christentum, Islam“).
       - id: glaube-im-mittelalter
         name: { de: "Glaube und Kirche im Mittelalter", en: "Medieval faith and church" }
         iCan: "Ich kann erklären, welche Rolle der christliche Glaube und die Kirche im Leben der Menschen im Mittelalter spielten."
         gradeBand: "7-8"
-        requires: [staendegesellschaft]
+        requires: [christen-im-roemischen-reich]
       # HE LP 8.2 (2): Reichskirchensystem, Canossa 1077, Investiturstreit, Wormser Konkordat 1122; BY G7 LB1: Reichskirche, Investiturstreit; NW IF3a (Stufe 1) UK: Protagonisten im Investiturstreit. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
       - id: investiturstreit
         name: { de: "Investiturstreit", en: "The Investiture Controversy" }
@@ -535,17 +550,19 @@ strands:
         gradeBand: "7-8"
         requires: [luther-und-reformation, grundherrschaft]
       # HE LP 8.4 (3): Kaiserwahl Karls V. 1519, Wormser Edikt 1521, Augsburger Religionsfriede 1555; BY G7 LB5: Karl V., konfessionelle Spaltung. Stimmen HE/BY/NW 7-8/7-8/–: Mehrheit
+      # requires fuerstenmacht: Der Friede legte die Konfession in die Hand der Landesherren; das versteht nur, wer weiß, wie mächtig die Fürsten im Reich geworden waren. (HE LP 8.4 Hinweise S. 23: „Wiederholung: Kampf um geistliche und weltliche Herrschaft“ = Thema 8.2 mit „Herausbildung der fürstlichen Territorialgewalt“)
       - id: augsburger-religionsfriede
         name: { de: "Augsburger Religionsfriede", en: "Peace of Augsburg" }
         iCan: "Ich kann erklären, wie Kaiser Karl V. auf die Reformation reagierte und was der Augsburger Religionsfriede von 1555 regelte."
         gradeBand: "7-8"
-        requires: [luther-und-reformation]
+        requires: [luther-und-reformation, fuerstenmacht]
       # BY G7 LB5: Krisenerscheinungen im 16. Jh., u. a. Hexenverfolgung; NW IF4 (Stufe 2): Ursachen und Motive der Hexenverfolgungen an einem regionalen Beispiel. Stimmen HE/BY/NW –/7-8/7-10: Mehrheit
+      # requires pest (Herleitung): In Krisen suchten Menschen Schuldige; diesen Gedanken (Sündenböcke) lernt man an der Pest und den Judenverfolgungen. Gestützt: HE LP 8.3 Begründung S. 21 (Zusammenhang zwischen der Erschütterung des Weltbildes „und Pogromen und Panikreaktionen“); BY G7 LB5 („Krisenerscheinungen im 16. Jh., u. a. Hexenverfolgung“).
       - id: hexenverfolgung
         name: { de: "Hexenverfolgung", en: "Witch hunts" }
         iCan: "Ich kann an einem Beispiel erklären, warum Menschen in der Frühen Neuzeit als Hexen verfolgt wurden."
         gradeBand: "7-8"
-        requires: [kritik-an-der-kirche]
+        requires: [pest]
       # HE LP 8.4 (4): Konfessionalisierung, Gegenreformation, Dreißigjähriger Krieg; BY G7 LB5: Dreißigjähriger Krieg als konfessionelle und machtpolitische Auseinandersetzung; NW IF4 (Stufe 2): religiöse und politische Ursachen. Stimmen HE/BY/NW 7-8/7-8/7-10: Mehrheit
       - id: dreissigjaehriger-krieg
         name: { de: "Ursachen des Dreißigjährigen Krieges", en: "Causes of the Thirty Years' War" }
@@ -566,11 +583,12 @@ strands:
         requires: [dreissigjaehriger-krieg]
       # HE LP 8.5 (1): Ludwig XIV., Souveränität, Gewaltmonopol, Staatsräson; BY G7 LB6: französischer Absolutismus, Absolutismus als Leitbild. Stimmen HE/BY/NW 7-8/7-8/–: Mehrheit
       # Siehe auch: franzoesisch/absolutismus-versailles
+      # requires herrschaftsformen: Den Absolutismus versteht man im Vergleich mit den Herrschaftsformen, die man aus der Antike kennt. (BY G7 LB6: „vergleichen den Absolutismus mit ihnen bereits bekannten Herrschaftsformen aus Antike und Mittelalter“). Ersetzt die Kante zu monarchie, die über herrschaftsformen weiter gilt.
       - id: absolutismus
         name: { de: "Absolutismus", en: "Absolutism" }
         iCan: "Ich kann am Beispiel Ludwigs XIV. erklären, was Absolutismus ist."
         gradeBand: "7-8"
-        requires: [monarchie, westfaelischer-friede]
+        requires: [herrschaftsformen]
       # HE LP 8.5 (1): Versailles; BY G7 LB6: Versailles als Abbild der absolutistischen Herrschaftsidee, Barock. Stimmen HE/BY/NW 7-8/7-8/–: Mehrheit
       # Siehe auch: franzoesisch/absolutismus-versailles
       - id: versailles-und-hof
@@ -618,11 +636,12 @@ strands:
         gradeBand: "7-8"
         requires: [aufklaerung]
       # HE LP 9.1 (1): Krise des Ancien Régime; BY G8 LB1: Ursachen (Aufklärung, Gesellschaft, Wirtschaft), Multikausalität; NW IF5 (Stufe 2): zwischen Anlass und Ursachen der Französischen Revolution unterscheiden. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
+      # requires staendegesellschaft: Die Ungleichheit der Stände ist eine der Ursachen; man muss die Ständegesellschaft kennen. (BY G8 LB1: „Ursachen der Französischen Revolution: Gedankengut der Aufklärung, Gesellschaft, Wirtschaft“; HE LP 9.1 Hinweise S. 27: „Wiederholung: Leben und Wirtschaften im Mittelalter“)
       - id: ursachen-der-franzoesischen-revolution
         name: { de: "Ursachen der Französischen Revolution", en: "Causes of the French Revolution" }
         iCan: "Ich kann Ursachen und Anlass der Französischen Revolution unterscheiden, zum Beispiel Staatsschulden und die Ungleichheit der Stände."
         gradeBand: "7-8"
-        requires: [aufklaerung, absolutismus]
+        requires: [aufklaerung, staendegesellschaft]
       # HE LP 9.1 (1): Einberufung der Generalstände, Ballhausschwur, Sturm auf die Bastille; BY G8 LB1: Grundzüge der Französischen Revolution, 1789; NW IF5 (Stufe 2): Französische Revolution. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: revolution-1789
         name: { de: "Revolution von 1789", en: "The revolution of 1789" }
@@ -633,6 +652,13 @@ strands:
       - id: menschenrechte-1789
         name: { de: "Erklärung der Menschenrechte 1789", en: "Declaration of the Rights of Man" }
         iCan: "Ich kann erklären, was die Erklärung der Menschen- und Bürgerrechte von 1789 versprach und für wen sie damals galt."
+        gradeBand: "7-8"
+        requires: [revolution-1789]
+      # HE KC Kap. 5 S. 17: Basiskonzept mit „Evolution und Revolution“; Kap. 6 S. 20: historische Sachverhalte mit Zeitverlaufsvorstellungen wie „Reform und Revolution“ beurteilen (ohne Jahrgang); LP S. 4: Kategorie „Revolution und Evolution“ (bei 6.2 und 10.1); BY G8 LB1: „erklären am Beispiel der Französischen Revolution die Multikausalität von revolutionären Prozessen, indem sie Ursachen herausarbeiten und kurz- und langfristige Folgen berücksichtigen“; NW Stufe 2 SK 3 S. 25: Anlässe und Ursachen, Verlaufsformen sowie Folgen historischer Ereignisse unterscheiden; IF5 S. 29: Anlass und Ursachen der Französischen Revolution. Stimmen HE/BY/NW 5-10/7-8/7-10: Mehrheit. Neu (Owner, 2026-11-11): verbindet die Revolutionen 1789, 1848, 1917, 1918 und 1989 über den Begriff.
+      # requires revolution-1789: Den Begriff lernt man am ersten Fall, der Französischen Revolution, und wendet ihn auf spätere Revolutionen an. (BY G8 LB1, wie oben: „am Beispiel der Französischen Revolution“)
+      - id: was-ist-eine-revolution
+        name: { de: "Was ist eine Revolution?", en: "What is a revolution?" }
+        iCan: "Ich kann erklären, was eine Revolution ist, und Ursachen, Anlass und Folgen einer Revolution unterscheiden."
         gradeBand: "7-8"
         requires: [revolution-1789]
       # HE LP 9.1 (2): Grundprinzipien der Verfassung von 1791; BY G8 LB1: konstitutionelle Monarchie im Unterschied zum Absolutismus (Verfassungsschaubild). Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
@@ -648,11 +674,12 @@ strands:
         gradeBand: "7-8"
         requires: [menschenrechte-1789]
       # HE LP 9.1 (3), (4): Aufstieg Napoleons, Europa unter der Herrschaft Napoleons, Code civil; BY G8 LB1: Kaisertum Napoleons und französische Vorherrschaft in Europa. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
+      # requires kaiserkroenung-800: Napoleon krönte sich zum Kaiser und knüpfte dabei an Karl den Großen an; sein Selbstverständnis erklärt man mit dem Kaisertum des Mittelalters. (BY G8 LB1: „nutzen ihre Kenntnisse über antike und mittelalterliche Herrscher, um das Selbstverständnis Napoleons als Kaiser zu beschreiben“)
       - id: napoleon
         name: { de: "Napoleons Herrschaft über Europa", en: "Napoleon's rule in Europe" }
         iCan: "Ich kann beschreiben, wie Napoleon an die Macht kam, sich zum Kaiser krönte und große Teile Europas beherrschte."
         gradeBand: "7-8"
-        requires: [jakobinerherrschaft]
+        requires: [jakobinerherrschaft, kaiserkroenung-800]
       # HE LP 9.1 (4): Reichsdeputationshauptschluss 1803, Rheinbund 1806; BY G8 LB1: 1806 Ende des Heiligen Römischen Reichs, territoriale Veränderungen, Säkularisation. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: ende-des-reiches-1806
         name: { de: "Ende des Alten Reiches 1806", en: "End of the Holy Roman Empire" }
@@ -682,7 +709,7 @@ strands:
         name: { de: "Liberalismus und Nationalismus", en: "Liberalism and nationalism" }
         iCan: "Ich kann erklären, was Liberale und Nationale im 19. Jahrhundert forderten."
         gradeBand: "7-8"
-        requires: [nationalbewegung, aufklaerung]
+        requires: [nationalbewegung]
       # HE LP 9.2 (2): System Metternich, Karlsbader Beschlüsse 1819; BY G8 LB2: Restauration, Zensur. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: restauration
         name: { de: "Restauration", en: "Restoration under Metternich" }
@@ -696,11 +723,12 @@ strands:
         gradeBand: "7-8"
         requires: [restauration]
       # HE LP 9.2 (3): Revolution in Berlin und Wien, Märzminister; BY G8 LB2: Revolution von 1848/49; NW IF5 (Stufe 2): Revolution von 1848/49. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
+      # requires was-ist-eine-revolution (Herleitung): Ursachen (Restauration, Not), Anlass (die Februarrevolution in Paris), Verlauf und Folgen von 1848/49 ordnet man mit dem Begriff Revolution. Gestützt: HE LP S. 4 (Kategorie „Revolution und Evolution“); HE KC Kap. 6 S. 20 („Reform und Revolution“); BY G8 LB2 („Deutschland zwischen Restauration und Revolution“) folgt auf LB1.
       - id: revolution-1848
         name: { de: "Revolution von 1848/49", en: "The revolution of 1848–49" }
         iCan: "Ich kann den Verlauf der Revolution von 1848/49 in Deutschland beschreiben."
         gradeBand: "7-8"
-        requires: [restauration]
+        requires: [restauration, was-ist-eine-revolution]
       # HE LP 9.2 (3): Nationalversammlung der Paulskirche, Grundrechte, klein- und großdeutsche Lösung; BY G8 LB2: Errungenschaften der Revolution; Grundbegriff Parlament; NW IF5 (Stufe 2): Revolution von 1848/49. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: paulskirche
         name: { de: "Paulskirchenparlament", en: "Frankfurt Parliament" }
@@ -780,17 +808,19 @@ strands:
         gradeBand: "7-8"
         requires: [verfassung-des-kaiserreichs, antworten-auf-die-soziale-frage, sozialismus-und-kommunismus]
       # HE LP 9.4 (2): Militarisierung der Gesellschaft; BY G8 LB5: obrigkeitsstaatliches Denken, Militarismus und Nationalismus; NW IF5 (Stufe 2): nationales Selbstverständnis im Kaiserreich. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
+      # requires verfassung-des-kaiserreichs: Das Obrigkeitsdenken zeigt sich schon in der Verfassung (Macht von Kaiser und Kanzler, schwacher Reichstag). (BY G8 LB5: „werten ein Schaubild der Reichsverfassung von 1871 aus, um sie hinsichtlich ihrer obrigkeitsstaatlichen und partizipatorischen Elemente zu beurteilen“)
       - id: obrigkeitsstaat-und-militarismus
         name: { de: "Obrigkeitsstaat und Militarismus", en: "Authoritarianism and militarism" }
         iCan: "Ich kann an Beispielen zeigen, wie Gehorsam, Militär und Nationalismus das Leben im Kaiserreich prägten."
         gradeBand: "7-8"
-        requires: [reichsgruendung-1871, liberalismus-und-nationalismus]
+        requires: [verfassung-des-kaiserreichs]
       # HE LP 9.4 (2): Familie und Frauenemanzipation; BY G8 LB5: Frauenbewegung. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
+      # requires menschenrechte-1789 (Herleitung): Die Frauenbewegung forderte die gleichen Rechte, die 1789 versprochen, Frauen aber nicht gewährt wurden. Gestützt: HE LP 9.1 Begründung S. 26 (Umsetzung der Menschenrechte führt zu Konflikten, „die auch die Rolle der Frau betreffen“); NW IF5 Stufe 2 S. 30 („Anspruch und Wirklichkeit der Menschen- und Bürgerrechte von 1789“).
       - id: frauenbewegung
         name: { de: "Frauenbewegung im Kaiserreich", en: "The women's movement" }
         iCan: "Ich kann erklären, wofür die Frauenbewegung im Kaiserreich kämpfte."
         gradeBand: "7-8"
-        requires: [reichsgruendung-1871]
+        requires: [menschenrechte-1789]
       # HE LP 9.1 (5): Judenemanzipation; 9.4 (2): Judenemanzipation und Antisemitismus; NW IF5 (Stufe 2): Stellung und Selbstverständnis von Menschen jüdischen Glaubens im „langen“ 19. Jahrhundert. Stimmen HE/BY/NW 9-10/–/7-10: Mehrheit
       - id: juden-im-19-jahrhundert
         name: { de: "Juden im 19. Jahrhundert", en: "Jews in the 19th century" }
@@ -841,7 +871,7 @@ strands:
         name: { de: "Stellungskrieg und Materialschlacht", en: "Trench warfare and attrition" }
         iCan: "Ich kann beschreiben, was den Ersten Weltkrieg zu einem neuen, industriellen Krieg machte, zum Beispiel Stellungskrieg und Materialschlacht."
         gradeBand: "7-8"
-        requires: [julikrise-1914, industrialisierung-deutschland]
+        requires: [industrialisierung-deutschland]
       # HE LP 9.5 (3): die neue Dimension des Krieges (Zivilbevölkerung nicht eigens genannt); BY G8 LB6: Auswirkungen auf die Zivilbevölkerung; NW IF6 (Stufe 2): Auswirkungen auf das Leben der Zivilbevölkerung. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: krieg-und-zivilbevoelkerung
         name: { de: "Heimatfront im Ersten Weltkrieg", en: "The home front, 1914–1918" }
@@ -849,11 +879,12 @@ strands:
         gradeBand: "7-8"
         requires: [stellungskrieg]
       # HE LP 9.5 (4): Lenin und die Oktoberrevolution; BY G8 LB6: Epochenjahr 1917, Russische Revolution; NW IF6 (Stufe 2): neue weltpolitische Koordinaten, Epochenjahr 1917. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
+      # requires was-ist-eine-revolution (Herleitung): Ob die Machtübernahme der Bolschewiki eine Revolution war oder ein Umsturz einer kleinen Gruppe, prüft man am Begriff Revolution. Gestützt: HE LP 9.5 Begründung S. 31 (die „‚Oktober‘revolution“ in Anführungszeichen); HE LP S. 4 (Kategorie „Revolution und Evolution“).
       - id: russische-revolution
         name: { de: "Russische Revolution 1917", en: "The Russian Revolution" }
         iCan: "Ich kann beschreiben, wie Lenin und die Bolschewiki 1917 in Russland die Macht übernahmen."
         gradeBand: "7-8"
-        requires: [julikrise-1914, sozialismus-und-kommunismus]
+        requires: [julikrise-1914, sozialismus-und-kommunismus, was-ist-eine-revolution]
       # HE LP 9.5 (4): Anfänge des bipolaren Weltsystems, Kriegseintritt der USA; BY G8 LB6: Begriff „Epochenjahr“ am Beispiel 1917; NW IF6 (Stufe 2) UK: Zäsurcharakter der Ereignisse des Jahres 1917. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: epochenjahr-1917
         name: { de: "Epochenjahr 1917", en: "1917 as a turning point" }
@@ -879,11 +910,12 @@ strands:
         gradeBand: "7-8"
         requires: [stellungskrieg, spuren-der-vergangenheit]
       # HE LP 10.1 (1): Kriegsende, Zusammenbruch des Kaiserreichs und Übergang zur Republik; BY G9 LB1: Novemberrevolution 1918; NW IF7 (Stufe 2): Etablierung einer Demokratie. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
+      # requires epochenjahr-1917: Kriegseintritt der USA und Russische Revolution erklären die Niederlage und das Vorbild der Räte. (HE LP 10.1 (1) S. 33: „Novemberrevolution und Konstituierung der Republik: Epochenjahr 1917; Kriegsende; Zusammenbruch des Kaiserreichs“)
       - id: novemberrevolution
         name: { de: "Novemberrevolution 1918", en: "The November Revolution" }
         iCan: "Ich kann beschreiben, wie in der Novemberrevolution 1918 das Kaiserreich endete und die Republik ausgerufen wurde."
         gradeBand: "9-10"
-        requires: [versailler-vertrag, verfassung-des-kaiserreichs]
+        requires: [verfassung-des-kaiserreichs, epochenjahr-1917]
       # HE LP 10.1 (1): Rätesystem oder parlamentarische Demokratie; BY G9 LB1: Rolle des Volkes bei der Neugestaltung des Gemeinwesens; NW IF7 (Stufe 2): Unterschiede zwischen parlamentarischer Demokratie und Rätesystem. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       - id: raete-oder-parlament
         name: { de: "Rätesystem oder Parlament", en: "Council system or parliament" }
@@ -895,7 +927,7 @@ strands:
         name: { de: "Weimarer Reichsverfassung", en: "The Weimar Constitution" }
         iCan: "Ich kann Stärken und Schwächen der Weimarer Reichsverfassung erklären, zum Beispiel die große Macht des Reichspräsidenten."
         gradeBand: "9-10"
-        requires: [raete-oder-parlament, gewaltenteilung]
+        requires: [raete-oder-parlament]
       # HE LP 10.1 (1): Wahlrecht für Frauen; NW IF7 (Stufe 2) UK: Gleichberechtigung von Frauen und Männern zwischen Anspruch und Wirklichkeit. Stimmen HE/BY/NW 9-10/–/7-10: Mehrheit
       - id: frauenwahlrecht
         name: { de: "Frauenwahlrecht", en: "Women's suffrage" }
@@ -943,7 +975,7 @@ strands:
         name: { de: "Aufstieg der NSDAP", en: "Rise of the Nazi Party" }
         iCan: "Ich kann erklären, warum die NSDAP ab 1930 so viele Wählerstimmen gewann."
         gradeBand: "9-10"
-        requires: [weltwirtschaftskrise, feinde-der-republik]
+        requires: [weltwirtschaftskrise]
       # HE LP 10.1 (4): Ursachenzusammenhänge des 30. Januar 1933; BY G9 LB1: Scheitern der Weimarer Demokratie multikausal erklären; NW IF7 (Stufe 2) UK: Belastungsfaktoren, Verantwortung der Akteure. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       - id: scheitern-von-weimar
         name: { de: "Scheitern der Weimarer Republik", en: "Collapse of the Weimar Republic" }
@@ -960,11 +992,12 @@ strands:
         gradeBand: "9-10"
         requires: [scheitern-von-weimar]
       # HE LP 10.3 (1), (2): Sozialdarwinismus und NS-Rassenideologie, Führerprinzip und Volksgemeinschaft; BY G9 LB2: Ideologie des Nationalsozialismus; Grundbegriff „Volksgemeinschaft“; NW IF8 (Stufe 2): grundlegende Elemente der NS-Ideologie („Rassenlehre“, „Führergedanke“). Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
+      # requires imperialismus (Herleitung): Die „Rassenlehre“ setzt den Gedanken fort, ein Volk sei anderen überlegen, wie ihn der Imperialismus verbreitete (Sozialdarwinismus). Gestützt: HE LP 10.3 (1) S. 36 („Sozialdarwinismus und NS-Rassenideologie“); HE LP 9.5 (1) S. 31 („Ideologische und wirtschaftliche Begründungen des Imperialismus“); NW IF8 Stufe 2 S. 32 (Elemente der NS-Ideologie, „deren Ursprünge“).
       - id: ns-ideologie
         name: { de: "NS-Ideologie", en: "Nazi ideology" }
         iCan: "Ich kann die Grundgedanken der NS-Ideologie erklären, zum Beispiel „Rassenlehre“, „Führerprinzip“ und „Volksgemeinschaft“."
         gradeBand: "9-10"
-        requires: [aufstieg-der-nsdap]
+        requires: [imperialismus]
       # HE LP 10.3 (1): „eliminatorischer“ Antisemitismus; BY G9 LB2: Grundbegriff Antisemitismus; NW IF8 (Stufe 2): Antisemitismus, Ursprünge und Auswirkungen. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       - id: antisemitismus
         name: { de: "Antisemitismus", en: "Antisemitism" }
@@ -976,7 +1009,7 @@ strands:
         name: { de: "Ermächtigungsgesetz", en: "The Enabling Act" }
         iCan: "Ich kann erklären, wie die Nationalsozialisten 1933 mit dem Ermächtigungsgesetz die Demokratie und den Rechtsstaat abschafften."
         gradeBand: "9-10"
-        requires: [machtuebernahme-1933, weimarer-verfassung]
+        requires: [machtuebernahme-1933]
       # HE LP 10.3 (2): „Gleichschaltung“ 1933–34; BY G9 LB2: „Gleichschaltung“; NW IF8 (Stufe 2): Stufen der Verwirklichung des totalen Staates. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       - id: gleichschaltung
         name: { de: "Gleichschaltung", en: "Nazi coordination (Gleichschaltung)" }
@@ -1000,7 +1033,7 @@ strands:
         name: { de: "Totalitäre Diktatur", en: "Totalitarian dictatorship" }
         iCan: "Ich kann die Merkmale einer totalitären Diktatur nennen und am NS-Staat zeigen."
         gradeBand: "9-10"
-        requires: [gleichschaltung, terror-und-verfolgung, propaganda]
+        requires: [terror-und-verfolgung, propaganda]
       # HE LP 10.3 (2): Militarisierung von Staat und Gesellschaft; BY G9 LB2: Leben im totalitären Staat, Quellen der Alltagsgeschichte; NW IF8 (Stufe 2): Alltagsleben in der NS-Diktatur zwischen Zustimmung, Unterdrückung, Verfolgung und Widerstand. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       - id: alltag-im-ns-staat
         name: { de: "Alltag im NS-Staat", en: "Everyday life under Nazism" }
@@ -1105,7 +1138,7 @@ strands:
         name: { de: "Entstehung des Kalten Krieges", en: "Origins of the Cold War" }
         iCan: "Ich kann erklären, wie nach 1945 der Kalte Krieg zwischen den USA und der Sowjetunion entstand und die Welt in zwei Blöcke teilte."
         gradeBand: "9-10"
-        requires: [potsdamer-konferenz, epochenjahr-1917]
+        requires: [potsdamer-konferenz]
       # HE LP 10.4 (2): „doppelte Staatsgründung“; BY G9 LB4: Teilung Deutschlands und doppelte Staatsgründung, 1949; NW IF10 (Stufe 2): Teilung; Bundesrepublik und DDR in der geteilten Welt. Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       - id: doppelte-staatsgruendung
         name: { de: "Doppelte Staatsgründung 1949", en: "Two German states in 1949" }

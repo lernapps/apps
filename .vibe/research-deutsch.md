@@ -356,3 +356,168 @@ KMK sie nennt oder weil sie direkte Voraussetzung sind:
 Keine. Die Downloads liegen in `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/src-deutsch/`,
 die Bausteine als Daten und der Generator mit den Prüfungen in
 `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/gen-deutsch/` (`data.py`, `gen.py`).
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge. Es gibt wenige Wurzeln und keine
+allein stehenden Bausteine. Jede neue Kante hat eine Begründung (Skill `map-research`, Abschnitt „Connect every
+competency“). Die Begründung jeder neuen Kante steht als Kommentar `# requires …` über dem Baustein. Ids,
+`gradeBand`, `status`, `iCan` und Stränge sind unverändert. Es gibt keine neuen Bausteine.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 234 | 29 | 5 | 9 | 8 |
+| nachher | 235 | 27 | 0 | 2 | 8 |
+
+8 Kanten sind neu, 7 sind entfernt. Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine
+indirekte Kante (Messskript ohne Zeilen `LATE` oder `INDIRECT`). `npm test` ist grün. `npm run listing` für
+`entries/textcheck.yaml` (die einzige App mit `subject: deutsch`): vorher und nachher „bestanden“, ohne Befund. Die
+App nennt keine Bausteine, deshalb berühren die Kanten sie nicht.
+
+### 6.2 Quellen
+
+Am 10.11.2026 habe ich alle Quellen neu heruntergeladen und gelesen: PDF mit `pdftotext -layout`, LehrplanPLUS als
+HTML. Die Seitenzahlen sind die gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| KMK | KMK: Bildungsstandards für das Fach Deutsch, ESA und MSA | i. d. F. vom 23.06.2022 | https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/2022_06_23-Bista-ESA-MSA-Deutsch.pdf |
+| HE | Hessisches Kultusministerium: Lehrplan Deutsch, Gymnasialer Bildungsgang, Jg 5–13 (G9) | ohne Jahr (PDF von 2016) | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-deutsch.pdf |
+| HE KC | Hessisches Kultusministerium: Kerncurriculum Sekundarstufe I – Gymnasium, Deutsch | 2011 | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/kerncurriculum_deutsch_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Deutsch, D5–D10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/deutsch (bis …/10/deutsch) |
+| NW | MSB NRW: Kernlehrplan Sek I Gymnasium, Deutsch | Heft 3409, 2019 | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_d_klp_3409_2019_06_23.pdf |
+| RR (neu, nur für `requires`) | Rat für deutsche Rechtschreibung: Amtliches Regelwerk der deutschen Rechtschreibung | 2024 (Teil I: Regeln) | https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf |
+
+**Hinweise:**
+- **RR** ist keine fachdidaktische Literatur. Es ist die Norm, die der Unterricht lehrt. Ich nutze es nur für die
+  Begründung einer Kante: § 70 (S. 115) fasst gereihte Wörter und gereihte Sätze in einer Regel zusammen. Das Komma
+  zwischen Hauptsätzen ist also das Komma der Aufzählung.
+- **Bündel:** Ein Lehrplan nennt beide Inhalte im selben Satz oder in derselben Stufe. Oder er lehrt den einen in
+  einer früheren Stufe als den anderen, im selben Arbeitsbereich oder Inhaltsfeld.
+
+### 6.3 Neue Kanten (8)
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `texte-ueberarbeiten` | `schreibziel-und-adressat` | Man prüft einen Text zuerst daran, ob er zu Schreibanlass, Textfunktion und Adressaten passt. | KMK 4.2 „Texte überarbeiten“, S. 28 („im Hinblick auf: die Aufgabenstellung (Schreibsituation, Schreibanlass, Textfunktion und Textsorte) … Adressaten“); BY D7 3.3 („im Hinblick auf Logik und Adressatenbezug“) | Quelle |
+| `diskussion-fuehren` | `aktiv-zuhoeren` | Auf Gegenargumente eingehen kann nur, wer ihnen aktiv zugehört hat. | NW S1 IF3, S. 28 („in Gesprächen und Diskussionen aktiv zuhören und zugleich eigene Gesprächsbeiträge planen“); BY D8 1.3 („Beiträge anderer aufgreifen … auf (Gegen-)Argumente eingehen“) | Quelle |
+| `fremdwoerter-schreiben` | `erbwort-lehnwort-fremdwort` | Wer ein Fremdwort als solches erkennt, richtet seine Schreibung danach aus. | HE KC 7.2, S. 39 („Fremdwörter erkennen und die Aussprache und Schreibung daran ausrichten“) | Quelle |
+| `komma-satzreihe-satzgefuege` | `komma-aufzaehlung` | Das Komma zwischen Hauptsätzen ist das Komma der Aufzählung, nur zwischen Sätzen. | HE 5.3, S. 19 (Komma bei Aufzählungen, Jg 5) → HE 6.3, S. 24 (Komma in Satzreihen und Satzgefügen, Jg 6); BY D5 4.3 → D6 4.3 („Kommas bei Aufzählungen, in Satzreihen und Satzgefügen“); RR § 70, S. 115 | Bündel |
+| `schnitt-montage-ton` | `hoerspiel` | Wie Musik und Geräusche wirken, lernt man zuerst am Hörtext. Im Film kommt das Bild dazu. | BY D5 2.4 („Hörtexte oder Filme … Musik und Geräusche“) → D7 2.4 („Ton- und Bildeffekte sowie Schnitttechniken“); NW E IF4, S. 22 (Hörfassungen) → S1 IF4, S. 30 (Tongestaltung) | Bündel |
+| `erbwort-lehnwort-fremdwort` | `sprachen-vergleichen` | Ein Lehn- oder Fremdwort erkennt man, wenn man es mit den Wörtern anderer Sprachen vergleicht. | NW E IF1, S. 18 (Sprachen der Lerngruppe untersuchen) → S1 IF1, S. 24 f. (Unterschiede zwischen Sprachen; Lehnwörter, Fremdwörter); HE 8.3, S. 35 (Fremdwörter: „Verknüpfung mit bekannten Fremdsprachen“) | Bündel |
+| `algorithmen-und-soziale-medien` | `recherchieren` | Wie eine Suchmaschine auswählt, erklärt man an der eigenen Suche. | NW E IF4, S. 22 (Recherchestrategien, u. a. Suchmaschinen für Kinder) → S1 IF4, S. 29 (Informationen in Suchmaschinen) → S2 IF4, S. 35 (Funktionsweisen von Suchmaschinen und sozialen Medien) | Bündel |
+| `comic-und-graphic-novel` | `handlung-erschliessen` | Wer beschreiben will, wie Bild und Text zusammen erzählen, muss die Figuren und Handlungsschritte erfassen. | NW E IF4, S. 22 (Graphic Novels als Präsentationsform literarischer Texte); die Kante selbst nennt keine Quelle | Herleitung |
+
+Damit haben alle fünf bisher allein stehenden Bausteine einen Anschluss:
+- `texte-ueberarbeiten` und `comic-und-graphic-novel` bekommen eine Voraussetzung.
+- Auf `komma-aufzaehlung`, `hoerspiel` und `sprachen-vergleichen` baut jetzt ein späterer Baustein auf.
+
+`diskussion-fuehren` und `algorithmen-und-soziale-medien` binden zwei Teilnetze an das große Netz an: die
+Zuhören-Kette (`aktiv-zuhoeren` → `mitschreiben` → `interview`, `protokoll`) und die Kette zur eigenen Mediennutzung.
+
+### 6.4 Entfernte Kanten (7)
+
+Alle sieben sind indirekt: Sie ergeben sich schon über eine andere Kante. Keine bestehende Kante war inhaltlich
+falsch.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `interview` | `aktiv-zuhoeren` | Folgt schon über `mitschreiben` → `aktiv-zuhoeren`. |
+| `verlaengern-und-ableiten` | `silben-und-wortbausteine` | Folgt schon über `wortfamilie` → `silben-und-wortbausteine`. |
+| `jugendbuch-lesen` | `handlung-erschliessen` | Folgt schon über `figuren-untersuchen` → `handlung-erschliessen`. |
+| `innerer-monolog` | `figuren-untersuchen` | Folgt schon über `fortsetzen-und-umschreiben` → `figuren-untersuchen`. |
+| `fiktionalitaetssignale` | `fiktion-und-wirklichkeit` | Folgt schon über `erzaehler-und-autor` → `fiktion-und-wirklichkeit`. |
+| `deutungshypothese` | `textbelege-angeben` | Folgt schon über `figur-charakterisieren` → `textbelege-angeben`. |
+| `ballade` | `epik-lyrik-dramatik` | Folgt schon über `vers-strophe-reim` → `epik-lyrik-dramatik`. |
+
+### 6.5 Wurzeln, die bleiben (27, keine allein)
+
+Bei jeder Wurzel habe ich in beide Richtungen gesucht. Bei keiner fand ich eine sichere Voraussetzung im Modell.
+Auf jede baut mindestens ein späterer Baustein auf.
+
+| Wurzel | Strang | Grund |
+|---|---|---|
+| `gespraechsregeln` | sprechen-zuhoeren | Anfang des Gesprächs (Grundschule, BY D5 1.3). Siehe offenen Punkt 1. |
+| `aktiv-zuhoeren` | sprechen-zuhoeren | Anfang des Zuhörens. Mitschreiben, Interview und Diskussion bauen darauf auf. |
+| `meinung-begruenden-muendlich` | sprechen-zuhoeren | Anfang des Argumentierens (BY D5 1.3 „auf einfache Weise begründen“). |
+| `koerpersprache-und-stimme` | sprechen-zuhoeren | Anfang des Sprechens vor anderen. Vorlesen, Kurzvortrag und szenisches Spiel bauen darauf auf. |
+| `schreibziel-und-adressat` | schreiben | Anfang des Schreibprozesses (KMK 4.2 „Texte planen“). |
+| `textverarbeitung` | schreiben | Werkzeug, das keinen anderen Baustein voraussetzt. Der Lebenslauf baut darauf auf. |
+| `silben-und-wortbausteine` | schreiben | Anfang der Rechtschreibung (silbisches und morphologisches Prinzip aus der Grundschule, BY D5 4.3). |
+| `komma-aufzaehlung` | schreiben | Erste Kommaregel. Ein Komma bei Aufzählungen setzt keine Satzlehre voraus. |
+| `lesetechniken` | lesen | Anfang des Lesens (BY D5 2.1: „aus der Grundschule bekannte Lesetechniken“). |
+| `lesen-vorbereiten` | lesen | Anfang des Leseprozesses (KMK 4.3: vor dem Lesen). Siehe offenen Punkt 3. |
+| `fiktion-und-wirklichkeit` | texte-medien | Anfang des Umgangs mit Texten (BY D5 2.1: literarische und pragmatische Texte unterscheiden). |
+| `handlung-erschliessen` | texte-medien | Anfang des Verstehens von Erzählungen. |
+| `vergleich-und-metapher` | texte-medien | Erste sprachliche Bilder (BY D5 4.1, NW E IF1). Sie setzen keine Gattung voraus. |
+| `diagramme-lesen` | texte-medien | Nichtlineare Texte (BY D5 2.3). Eine Kante zu `lesetechniken` ist nur mittel sicher (offener Punkt 4). |
+| `recherchieren` | texte-medien | Anfang der Arbeit mit Informationsquellen. Siehe offenen Punkt 4. |
+| `eigene-mediennutzung` | texte-medien | Anfang der Medienreflexion (BY D5 2.4). |
+| `hoerspiel` | texte-medien | Erste Gestaltungsmittel eines Mediums. Darauf baut jetzt `schnitt-montage-ton` auf. |
+| `einstellungsgroessen-und-perspektive` | texte-medien | Erste Filmsprache. Siehe offenen Punkt 2. |
+| `nomen-und-artikel` | sprache | Wortart aus der Grundschule. |
+| `verb-konjugieren` | sprache | Wortart aus der Grundschule. |
+| `adjektiv-und-steigerung` | sprache | Wortart aus der Grundschule. |
+| `konjunktionen` | sprache | Wortart. Satzgefüge und das/dass bauen darauf auf. |
+| `satzarten` | sprache | Anfang der Satzlehre (Aussage, Frage, Aufforderung). |
+| `grammatische-proben` | sprache | Werkzeug der Satzlehre. Es setzt keinen Baustein voraus. |
+| `wortfeld-und-synonyme` | sprache | Anfang der Wortbedeutung. |
+| `muendlich-und-schriftlich` | sprache | Anfang der Reflexion über Sprachgebrauch (BY D5 4.1). |
+| `sprachen-vergleichen` | sprache | Mehrsprachigkeit der Lerngruppe (NW E IF1). Darauf baut jetzt `erbwort-lehnwort-fremdwort` auf. |
+
+Die Wortarten (`nomen-und-artikel`, `verb-konjugieren`, `adjektiv-und-steigerung`, `konjunktionen`) bleiben
+einzelne Wurzeln. Die Karte hat keinen Baustein „Wortarten unterscheiden“, der vor ihnen stünde. Er würde nur
+zusammenfassen, was die vier schon lehren. Ich schlage ihn deshalb nicht vor.
+
+**Teilnetze (2):** das große Netz und `lesen-vorbereiten` → `fragen-an-den-text` (offener Punkt 3).
+
+### 6.6 Vorgeschlagene neue Bausteine (Lücken im Modell)
+
+1. **`film-erzaehlen`**: „Ich kann in einem Kurzfilm Handlung und Figuren erschließen und beschreiben, wie der Film
+   mit Bild und Ton erzählt.“
+   - Strang: `texte-medien`. Richtstufe: 7-8, vorläufig.
+   - Quellen: NW S1 IF4, S. 29 f. („Medienrezeption: Audiovisuelles Erzählen (im (Kurz-)Film)“; „Handlungsstrukturen in
+     audiovisuellen Texten … identifizieren“); BY D5 2.2 und D9 2.2 (Ganzschrift, ergänzt durch die Analyse eines
+     Films); KMK 4.4 (intermediale Vergleiche, S. 35).
+   - Kanten: `requires: [handlung-erschliessen, einstellungsgroessen-und-perspektive]`. `buch-und-film-vergleichen`
+     würde auf `film-erzaehlen` aufbauen.
+   - Lücke: Heute beschreibt die Karte nur die Gestaltungsmittel des Films. Wie man die Handlung eines Films
+     erschließt, fehlt. Darauf beruht aber der Vergleich von Buch und Film.
+   - Vor der Aufnahme muss jemand die Stimmen der Länder auszählen. HE habe ich dafür nicht geprüft.
+
+Darüber hinaus fehlt im Modell kein Baustein für die Kanten.
+
+### 6.7 Offene Punkte
+
+Die folgenden Kanten sind nur mittel sicher. Ich habe sie nicht in die Karte aufgenommen.
+
+1. **`gespraechsregeln` → `aktiv-zuhoeren`:** BY D5 1.3 zählt „aufmerksam zuhören“ zu den Gesprächsregeln. Es ist
+   aber offen, ob man aktives Zuhören braucht, um Gesprächsregeln zu nennen, oder ob beide zusammen entstehen.
+   Lehrkräfte sollten das entscheiden.
+2. **`einstellungsgroessen-und-perspektive` → `comic-und-graphic-novel`:** Ein Comic zeigt Bildausschnitte und
+   Perspektiven am stehenden Bild. NW lehrt Graphic Novels (E IF4, S. 22) vor der Kameratechnik (S1 IF4, S. 30).
+   Filmsprache lässt sich aber auch ohne Comic lernen. Die Kante wäre ein Bündel ohne klare Abhängigkeit.
+3. **Teilnetz `lesen-vorbereiten` → `fragen-an-den-text`:**
+   - Möglich wäre `lesetagebuch` → `fragen-an-den-text`. BY D5 2.1 nennt „Formulieren von Fragen an einen Text“ und
+     das Lesetagebuch im selben Punkt.
+   - Ein Lesetagebuch braucht aber keine Fragen an den Text. Ich habe die Kante deshalb nicht aufgenommen.
+   - Das Teilnetz zeigt, dass die Lesestrategien vor und während des Lesens (KMK 4.3) im Modell kaum mit dem Rest
+     verbunden sind.
+4. **`recherchieren` → `lesetechniken` und `diagramme-lesen` → `lesetechniken`:**
+   - Gezieltes Suchen nach Informationen ist eine Lesetechnik.
+   - NW nennt Lesestrategien und Recherche aber als getrennte Punkte (E IF4, S. 21 f.).
+   - Beide Kanten wären plausibel, aber nicht sicher.
+5. **`kommunikationsmodell` → `gespraechsregeln` (bestehende Kante):** Für ein Kommunikationsmodell (Sender,
+   Nachricht, Empfänger) braucht man die Gesprächsregeln nicht direkt. Ich habe die Kante gelassen, weil sie nicht
+   falsch ist. Lehrkräfte sollten sie prüfen.
+6. **Die Kante `comic-und-graphic-novel` → `handlung-erschliessen` ist eine Herleitung.** Die anderen sieben neuen
+   Kanten stützen sich auf Quellen. Diese Kante sollten Lehrkräfte bestätigen.
+
+### 6.8 Nicht geöffnet
+
+- Ich habe keine fachdidaktische Literatur geöffnet. Handbücher der Deutschdidaktik zum Aufbau sind nicht frei
+  online, zum Beispiel zu Rechtschreibung, Zeichensetzung, Lesestrategien oder Filmdidaktik. Ich zitiere sie nicht.
+- Alle anderen Quellen habe ich geöffnet. Die Downloads liegen in
+  `/tmp/claude-0/-home-user/63cb6fc9-e6ad-586d-91c1-59230f4b1df1/scratchpad/src-deutsch/`.

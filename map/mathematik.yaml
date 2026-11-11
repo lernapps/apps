@@ -14,6 +14,7 @@
 #   SILP   = NRW, Beispiel fuer einen schulinternen Lehrplan Gymnasium Sek I Mathematik (31.01.2020), unit "6.2" ... (grade = first number;
 #            the Kernlehrplan itself names only the stages, the example gives the grades; S1 is read as 7-8, S2 as 9-10)
 #   "bands" = where HE / BY / NRW place it; the Richtstufe is the majority. Where all three differ it says "no majority".
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Mathematik, en: Mathematics }
 source:
   title: KMK-Bildungsstandards Mathematik, ESA und MSA (2022)
@@ -107,10 +108,11 @@ strands:
       - id: brueche-kuerzen-erweitern
         # NEW (split from brueche-begriff). HE 6.1 (Kuerzen, Erweitern, Hauptnenner, Vergleichen und Ordnen); BY M6 1.1; NRW E Ari-12
         # bands: 6 / 6 / 5-6 -> 5-6
+        # requires primfaktoren-ggt-kgv: Zum Vergleichen bringt man Brüche auf den Hauptnenner, das kgV der Nenner (HE 6.1: „Kürzen und Erweitern von Brüchen, Hauptnenner als kgV“; BY M6 1.1: Hauptnenner „mithilfe eines algorithmischen (z. B. auf der Primfaktorzerlegung basierenden) Verfahrens“)
         name: { de: "Brüche kürzen und erweitern", en: "Simplifying and expanding fractions" }
         iCan: "Ich kann Brüche kürzen und erweitern und der Größe nach vergleichen."
         gradeBand: "5-6"
-        requires: [brueche-begriff, teilbarkeit]
+        requires: [brueche-begriff, primfaktoren-ggt-kgv]
       - id: bruchrechnung-grundaufgaben
         # NARROWED to the three Grundaufgaben (arithmetic with fractions split into the next Bausteine).
         # HE 6.1 ("Grundaufgaben der Bruchrechnung": Bruchteil, Ganzes, Anteil); BY M6 1.1, 1.5 (Anteile von Anteilen); NRW E Ari-13
@@ -192,7 +194,7 @@ strands:
         name: { de: "Prozentrechnung: Grundbegriffe", en: "Percentages: basic terms" }
         iCan: "Ich kann Prozent als Hundertstel deuten und in einer Aufgabe Grundwert, Prozentwert und Prozentsatz erkennen."
         gradeBand: "5-6"
-        requires: [brueche-begriff, dezimalbrueche]
+        requires: [dezimalbrueche]
       - id: prozent-prozentwert
         # unchanged (used by an app). KMK p.15; HE 7.1 (Grundaufgaben); BY M6 3 (Grundgleichung der Prozentrechnung); NRW S1 Fkt-8 (SILP 7.2)
         # bands: 7 / 6 / 7 -> 7-8 (BY dissents)
@@ -300,10 +302,11 @@ strands:
       - id: terme-variable
         # NARROWED (umformen split off), BAND CHANGED 5-6 -> 7-8. KMK p.18 (Variablen; Terme aufstellen); HE 8.1 (Aufstellen von Termen, Wertgleichheit); BY M7 1.1; NRW S1 Ari-4, Ari-5, Ari-7 (E Ari-6/7 only first steps; SILP 7.6)
         # bands: 8 / 7 / 7-8 -> 7-8
+        # requires rationale-zahlen-rechnen: Beim Einsetzen in Terme kommen negative Zahlen vor; Vorzeichen- und Klammerregeln bereiten die Termumformungen vor (BY M7 1.1: „greifen auf die aus den vorhergehenden Jahrgangsstufen bekannten Rechenregeln für rationale Zahlen zurück“; HE 7.2: „Klammerregeln / Vorrangregeln (Propädeutik der in Klasse 8 zu behandelnden Termumformungen)“; NRW S1 Ari-3 vor Ari-4)
         name: { de: "Terme mit Variablen", en: "Expressions with variables" }
         iCan: "Ich kann Terme mit Variablen aufstellen, ihren Wert berechnen und auf Wertgleichheit prüfen."
         gradeBand: "7-8"
-        requires: [grundrechenarten-rechengesetze, einfache-gleichungen]
+        requires: [einfache-gleichungen, rationale-zahlen-rechnen]
       - id: terme-umformen
         # NEW. KMK p.18 (formen Terme um); HE 8.1 (Umformungsregeln); BY M7 1.2 (Zusammenfassen, Ausklammern); NRW S1 Ari-7 (SILP 7.5)
         # bands: 8 / 7 / 7-8 -> 7-8
@@ -324,7 +327,7 @@ strands:
         name: { de: "Lineare Gleichungen", en: "Linear equations" }
         iCan: "Ich kann lineare Gleichungen lösen und die Lösungsverfahren vergleichen."
         gradeBand: "7-8"
-        requires: [terme-umformen, einfache-gleichungen]
+        requires: [terme-umformen]
       - id: gleichungen-aufstellen
         # NEW. KMK p.18 (Terme/Gleichungen im Sachkontext); HE 8.1 ("Aufstellen von Termen"), 8.3 (komplexe Fragestellungen mit linearen Gleichungen); BY M7 3 (passende Gleichungen aufstellen); NRW S1 Ari-6 (Gleichungen aufstellen), Ari-9 (im Sachkontext deuten)
         # bands: 8 / 7 / 7-8 -> 7-8
@@ -352,7 +355,7 @@ strands:
         name: { de: "Bruchterme", en: "Algebraic fractions" }
         iCan: "Ich kann Bruchterme kürzen, erweitern und zusammenfassen."
         gradeBand: "7-8"
-        requires: [klammern-binome, brueche-kuerzen-erweitern]
+        requires: [klammern-binome]
       - id: bruchgleichungen
         # NEW. BY M8 4; NRW S1 Ari-9 (elementare Bruchgleichungen), SILP 8.5; HE: optional (8)
         # bands: HE - / BY 8 / NRW 7-8 -> 7-8
@@ -380,14 +383,14 @@ strands:
         name: { de: "Potenzgesetze", en: "Laws of exponents" }
         iCan: "Ich kann die Potenzgesetze für natürliche Exponenten anwenden."
         gradeBand: "9-10"
-        requires: [potenzen, terme-umformen]
+        requires: [terme-umformen]
       - id: potenzen-ganzzahlige-exponenten
         # NEW. HE 10.1 (ganzzahlige Exponenten); BY M6 1.4 (negative Exponenten als Schreibweise), M8 4; NRW S2 Ari-4 (Bruchdarstellung <-> Potenzschreibweise)
         # bands: 10 / 6-8 / 9-10 -> 9-10 (BY dissents)
         name: { de: "Negative Exponenten", en: "Negative exponents" }
         iCan: "Ich kann Potenzen mit negativen Exponenten als Bruch deuten und berechnen."
         gradeBand: "9-10"
-        requires: [potenzgesetze, brueche-multiplizieren-dividieren]
+        requires: [potenzgesetze]
       - id: n-te-wurzeln
         # NEW. HE 10.1 (Potenzgleichungen x^n = a, Wurzelfunktionen); BY M9 5 (allgemeine Wurzel, rationale Exponenten); NRW S2 Ari-5, Ari-9
         # bands: 10 / 9 / 9-10 -> 9-10
@@ -415,7 +418,7 @@ strands:
         name: { de: "Logarithmen", en: "Logarithms" }
         iCan: "Ich kann den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache Exponentialgleichungen lösen."
         gradeBand: "9-10"
-        requires: [potenzgesetze, exponentialfunktionen]
+        requires: [exponentialfunktionen]
 
   # ===================================================================================================================
   # FUNKTIONEN: KMK Leitidee "Strukturen und funktionaler Zusammenhang" (Sachgebiet Funktionen), p. 18-19; NRW Inhaltsfeld Funktionen.
@@ -471,14 +474,14 @@ strands:
         name: { de: "Darstellungen von Funktionen", en: "Representing functions" }
         iCan: "Ich kann zwischen Funktionsgleichung, Wertetabelle und Graph wechseln."
         gradeBand: "7-8"
-        requires: [funktionsbegriff, koordinatensystem]
+        requires: [funktionsbegriff]
       - id: lineare-funktionen
         # KMK p.19 (kennzeichnende Merkmale, Steigung interpretieren); HE 8.1; BY M8 2; NRW S1 Fkt-5, Fkt-6 (SILP 8.3)
         # bands: 8 / 8 / 7-8 -> 7-8
         name: { de: "Lineare Funktionen", en: "Linear functions" }
         iCan: "Ich kann lineare Funktionen mit Gleichung, Tabelle und Graph beschreiben und Steigung und Achsenabschnitt deuten."
         gradeBand: "7-8"
-        requires: [proportionale-zuordnungen, funktionen-darstellung, koordinatensystem]
+        requires: [proportionale-zuordnungen, funktionen-darstellung]
       - id: geradengleichungen
         # NEW. HE 8.1 (Funktionsgleichungen zu Graphen, Nullstelle, Punktprobe); BY M8 2 (Geradengleichungen aufstellen, Nullstellen, Schnittpunkt zweier Geraden); NRW S1 Fkt-5
         # bands: 8 / 8 / 7-8 -> 7-8
@@ -492,7 +495,7 @@ strands:
         name: { de: "Quadratische Funktionen", en: "Quadratic functions" }
         iCan: "Ich kann quadratische Funktionen und ihre Parabeln beschreiben und zeichnen."
         gradeBand: "9-10"
-        requires: [lineare-funktionen, funktionen-darstellung, klammern-binome]
+        requires: [lineare-funktionen, klammern-binome]
       - id: quadratische-funktionen-anwenden
         # NEW (split from quadratische-funktionen). KMK p.19 (lineare und quadratische Funktionen bei Problemen anwenden); HE 9.3 (Extremalprobleme); BY M9 2.2; NRW S2 Fkt-9, Fkt-12
         # bands: 9 / 9 / 9-10 -> 9-10
@@ -510,10 +513,11 @@ strands:
       - id: exponentialfunktionen
         # KMK p.19 (f(x) = a·b^x); HE 10.2; BY M10 1; NRW S2 Fkt-10 (SILP 10.2)
         # bands: 10 / 10 / 9-10 -> 9-10
+        # requires funktionen-darstellung: Exponentialfunktionen beschreibt man mit Term, Wertetabelle und Graph (BY M10 1: zu b · a^x „den Verlauf des zugehörigen Graphen und dessen typische Merkmale“; KMK p.19: Funktionen in Term, Graph und Wertetabelle; HE 8.1 vor 10.2)
         name: { de: "Exponentialfunktionen", en: "Exponential functions" }
         iCan: "Ich kann Wachstum und Zerfall mit Exponentialfunktionen beschreiben und Modelle beurteilen."
         gradeBand: "9-10"
-        requires: [prozent-veraenderung, potenzgesetze]
+        requires: [prozent-veraenderung, potenzgesetze, funktionen-darstellung]
       - id: bogenmass
         # NEW. HE Übergangsprofil Jg. 10 (Kreis und Kreisteile: Winkel im Bogenmaß), HE 10.4; BY M10 3 (Bogenmaß, Einheitskreis); NRW S2 (Inhalt Sinusfunktionen: Grad- und Bogenmaß)
         # bands: 10 / 10 / 9-10 -> 9-10
@@ -527,7 +531,7 @@ strands:
         name: { de: "Sinus- und Kosinusfunktion", en: "Sine and cosine functions" }
         iCan: "Ich kann Sinus- und Kosinusfunktion mit ihren Eigenschaften beschreiben und für periodische Vorgänge nutzen."
         gradeBand: "9-10"
-        requires: [trigonometrie, bogenmass, funktionen-darstellung]
+        requires: [bogenmass, funktionen-darstellung]
 
   # ===================================================================================================================
   # GEOMETRIE: KMK Leitidee "Raum und Form" (Sachgebiet Geometrie), p. 20-21, plus the geometric part of "Groessen und Messen"
@@ -536,18 +540,28 @@ strands:
   - id: geometrie
     name: { de: Geometrie, en: Geometry }
     competencies:
+      - id: geometrische-grundbegriffe
+        # KMK p.20 (benennen und beschreiben geometrische Objekte mit Hilfe mathematischer Modelle: Punkte, Winkel, Strecken, Geraden, Flächen, Körper); HE 5.2 (Geometrische Grundbegriffe: Punkt, Strecke; die Begriffe Gerade, Ebene einführen); BY M5 2 (Punkte, Strecken, Geraden … abkürzende Schreibweisen); NRW E Geo-1 (erläutern Grundbegriffe)
+        # bands: 5 / 5 / 5-6 -> 5-6. Neu (Owner, 2026-11-11): Wurzel der Geometrie; bisher steckte der Inhalt unausgesprochen in parallel-senkrecht-abstand.
+        name: { de: "Geometrische Grundbegriffe", en: "Basic geometric terms" }
+        iCan: "Ich kann Punkt, Strecke, Gerade und Ebene unterscheiden und richtig benennen."
+        gradeBand: "5-6"
       - id: grundfiguren-eben
         # KMK p.20 (benennen und beschreiben geometrische Objekte; analysieren Winkel, Dreiecke, Vierecke); HE 5.2; BY M5 2; NRW E Geo-1
         # bands: 5 / 5 / 5-6 -> 5-6
+        # requires parallel-senkrecht-abstand: Die Eigenschaften der Grundfiguren beschreibt man mit parallelen und senkrechten Seiten (Rechteck, Parallelogramm, Trapez) (HE 5.2: „Ebene Figuren“ und „Lagebeziehung von Geraden“ in einer Einheit; NRW E Geo-1: Grundbegriffe zur Beschreibung ebener Figuren „sowie deren Lagebeziehungen“; BY M5 2: Lagebeziehungen vor den Vierecken)
         name: { de: "Ebene Grundfiguren", en: "Basic plane shapes" }
         iCan: "Ich kann ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben."
         gradeBand: "5-6"
+        requires: [parallel-senkrecht-abstand]
       - id: parallel-senkrecht-abstand
         # KMK p.20; HE 5.2 (Lagebeziehung von Geraden); BY M5 2; NRW E Geo-1
         # bands: 5 / 5 / 5-6 -> 5-6
+        # requires geometrische-grundbegriffe: Lagebeziehungen beschreibt man zwischen Punkten und Geraden; die Begriffe kommen zuerst (HE 5.2: „Geometrische Grundbegriffe“ vor „Lagebeziehung von Geraden“ in einer Einheit; BY M5 2: Lagebeziehungen „zwischen Punkt und Gerade, zwischen zwei Geraden“; NRW E Geo-1: Grundbegriffe zur Beschreibung der Lagebeziehungen)
         name: { de: "Parallelen, Senkrechten und Abstand", en: "Parallel and perpendicular lines" }
         iCan: "Ich kann parallele und senkrechte Geraden zeichnen und Abstände messen."
         gradeBand: "5-6"
+        requires: [geometrische-grundbegriffe]
       - id: winkel-messen
         # KMK p.17, 20; HE 6.2 (Winkel); BY M5 2 (Winkel bis 360°); NRW E Geo-9
         # bands: 6 / 5 / 5-6 -> 5-6
@@ -558,10 +572,11 @@ strands:
       - id: koordinatensystem
         # KMK p.20-21 (Figuren im kartesischen Koordinatensystem); HE 5.2, 7.2; BY M5 2; NRW E Geo-6 (SILP 6.2: vier Quadranten)
         # bands: 5 / 5 / 5-6 -> 5-6
+        # requires geometrische-grundbegriffe: Im Koordinatensystem stellt man Punkte, Strecken und Geraden dar (BY M5 2: „stellen Punkte, Strecken, Geraden und Kreise sorgfältig im kartesischen Koordinatensystem dar“; HE 5.2: Grundbegriffe und Koordinatensystem in einer Einheit)
         name: { de: "Koordinatensystem", en: "Coordinate system" }
         iCan: "Ich kann Punkte und Figuren im Koordinatensystem eintragen und ablesen."
         gradeBand: "5-6"
-        requires: [natuerliche-zahlen]
+        requires: [natuerliche-zahlen, geometrische-grundbegriffe]
       - id: symmetrie
         # KMK p.20 (Symmetrie); HE 5.2, 6.2; BY M7 2.1; NRW E Geo-5
         # bands: 5-6 / 7 / 5-6 -> 5-6 (BY dissents)
@@ -575,21 +590,22 @@ strands:
         name: { de: "Besondere Vierecke", en: "Special quadrilaterals" }
         iCan: "Ich kann besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden."
         gradeBand: "5-6"
-        requires: [grundfiguren-eben, parallel-senkrecht-abstand]
+        requires: [grundfiguren-eben]
       - id: konstruktionen
         # unchanged (the basic drawing and constructing; triangle constructions are dreieckskonstruktion). KMK p.21; HE 5.2 (Geodreieck, Zirkel); BY M5 2; NRW E Geo-4
         # bands: 5 / 5 / 5-6 -> 5-6
         name: { de: "Zeichnen und Konstruieren", en: "Drawing and constructing" }
         iCan: "Ich kann Figuren mit Geodreieck, Zirkel oder Geometriesoftware zeichnen und konstruieren."
         gradeBand: "5-6"
-        requires: [grundfiguren-eben, parallel-senkrecht-abstand]
+        requires: [grundfiguren-eben]
       - id: bewegungen-figuren
         # KMK p.20 (verschieben, drehen, spiegeln); HE 6.2; HE-KC 5/6; NRW E Geo-7 (SILP 6.10); BY: not as a unit
         # bands: 6 / - / 5-6 -> 5-6
+        # requires winkel-messen: Eine Drehung ist durch Zentrum und Drehwinkel bestimmt (HE 6.2: „Winkel“ vor „Bewegung von Figuren … Drehung“ in einer Einheit; KMK p.20: verschieben, drehen, spiegeln)
         name: { de: "Spiegeln, Verschieben, Drehen", en: "Reflections, translations, rotations" }
         iCan: "Ich kann Figuren spiegeln, verschieben und drehen und die Bildfigur bestimmen."
         gradeBand: "5-6"
-        requires: [symmetrie, koordinatensystem]
+        requires: [symmetrie, koordinatensystem, winkel-messen]
       - id: grundkoerper-quader-wuerfel
         # KMK p.20; HE 5.2; BY M5 4.2; NRW E Geo-3
         # bands: 5 / 5 / 5-6 -> 5-6
@@ -617,14 +633,14 @@ strands:
         name: { de: "Fläche und Umfang: Rechteck, Quadrat", en: "Area and perimeter: rectangles, squares" }
         iCan: "Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berechnen."
         gradeBand: "5-6"
-        requires: [grundfiguren-eben, umrechnung-groessen, einheiten-flaeche-volumen]
+        requires: [grundfiguren-eben, einheiten-flaeche-volumen]
       - id: zusammengesetzte-figuren
         # KMK p.17; HE 6.2; BY M5 4.2; NRW E Geo-13
         # bands: 6 / 5 / 5-6 -> 5-6
         name: { de: "Zusammengesetzte Figuren", en: "Composite shapes" }
         iCan: "Ich kann Flächeninhalt und Umfang zusammengesetzter Figuren durch Zerlegen berechnen."
         gradeBand: "5-6"
-        requires: [flaeche-umfang-quadrat-rechteck, grundfiguren-eben]
+        requires: [flaeche-umfang-quadrat-rechteck]
       - id: volumen-oberflaeche-quader-wuerfel
         # KMK p.17; HE 5.2, 6.2; BY M5 4.2, M6 2.2; NRW E Geo-12
         # bands: 5-6 / 5-6 / 5-6 -> 5-6
@@ -645,7 +661,7 @@ strands:
         name: { de: "Winkelsätze", en: "Angle theorems" }
         iCan: "Ich kann mit Winkelsätzen und dem Winkelsummensatz fehlende Winkel berechnen."
         gradeBand: "7-8"
-        requires: [winkel-messen, parallel-senkrecht-abstand]
+        requires: [winkel-messen]
       - id: dreieckskonstruktion
         # NEW (split from konstruktionen). KMK p.21 (Konstruktion, Loesbarkeit); HE 7.3 (Konstruktion von Dreiecken und Vierecken); BY M7 5; NRW S1 Geo-3, Geo-4, Geo-5
         # bands: 7 / 7 / 7-8 -> 7-8
@@ -673,7 +689,7 @@ strands:
         name: { de: "Sehne, Sekante und Tangente", en: "Chords, secants and tangents" }
         iCan: "Ich kann Sehne, Sekante und Tangente am Kreis unterscheiden und eine Tangente zeichnen."
         gradeBand: "7-8"
-        requires: [grundfiguren-eben, parallel-senkrecht-abstand]
+        requires: [grundfiguren-eben]
       - id: satz-des-thales
         # KMK p.21 (Satz des Thales, MSA); HE 8.2, HE-KC 7/8; BY M7 5; NRW S1 Geo-2 (SILP 7.3)
         # bands: 8 / 7 / 7-8 -> 7-8
@@ -785,7 +801,7 @@ strands:
         name: { de: "Berechnungen an Dreiecken und Vielecken", en: "Calculations in triangles and polygons" }
         iCan: "Ich kann Streckenlängen und Winkel in Dreiecken und Vielecken mit Pythagoras, Ähnlichkeit und Trigonometrie berechnen."
         gradeBand: "9-10"
-        requires: [satz-des-pythagoras, strahlensaetze, trigonometrie]
+        requires: [strahlensaetze, trigonometrie]
 
   # ===================================================================================================================
   # STOCHASTIK: KMK Leitidee "Daten und Zufall" (Sachgebiet Stochastik), p. 21-22, plus systematic counting (p. 16).
@@ -796,9 +812,11 @@ strands:
       - id: daten-darstellen
         # NARROWED to tables and the common diagrams; Boxplot split off. KMK p.21-22 (Tabellen, Saeulen-, Balken-, Kreis-, Liniendiagramm); HE 5.1, 6.1, 7.1 (Kreis-, Saeulendiagramm), 8.4; HE-KC 5/6, 7/8; BY M6 3; NRW E Sto-2, Sto-4
         # bands: 5-8 / 6 / 5-6 -> 5-6
+        # requires zahlen-vergleichen-ordnen: Die Achse eines Säulen- oder Balkendiagramms ist ein Zahlenstrahl mit passender Skalierung (HE 5.1: „Bestimmung von Anzahlen und Darstellung in Diagrammen“ und „Vergleichen, Ordnen, Zahlenstrahl“ in einer Einheit; BY M5 1.1: Zahlen „unter Wahl einer geeigneten Skalierung am Zahlenstrahl“ darstellen)
         name: { de: "Daten darstellen", en: "Representing data" }
         iCan: "Ich kann Daten in Tabellen und Diagrammen darstellen und die Darstellung begründen."
         gradeBand: "5-6"
+        requires: [zahlen-vergleichen-ordnen]
       - id: umfragen-erhebungen
         # NARROWED to the simple survey (planning with Stichprobe split off). KMK p.21 (ESA: planen einfache Befragungen); HE-KC 5/6 (Umfragen und Erhebungen); NRW E Sto-1 (SILP 5.1, 6.8); BY M6 3 (Daten aus Erhebungen)
         # bands: HE 5-6 (KC) / 6 / 5-6 -> 5-6
@@ -847,7 +865,7 @@ strands:
         name: { de: "Wahrscheinlichkeitsbegriff", en: "Concept of probability" }
         iCan: "Ich kann erklären, was Wahrscheinlichkeit bedeutet, und Wahrscheinlichkeiten auf einer Skala von 0 bis 1 einordnen."
         gradeBand: "7-8"
-        requires: [haeufigkeit-als-schaetzwert, brueche-begriff]
+        requires: [haeufigkeit-als-schaetzwert]
       - id: zufall-laplace
         # unchanged (used by an app). KMK p.22 (einfache Zufallsexperimente); HE 7.4 (Laplace-Formel); BY M8 5; NRW S1 Sto-4
         # bands: 7 / 8 / 7-8 -> 7-8
@@ -865,10 +883,11 @@ strands:
       - id: zufall-baumdiagramm
         # unchanged (used by an app; its text still mentions the Vierfeldertafel, which the sources place later: see vierfeldertafel). KMK p.22; HE 7.4, HE-KC 7/8; BY M8 5 (Baum fuer Zaehlen), M10 2; NRW S1 Sto-2 (SILP 8.1)
         # bands: 7 / 8-10 / 7-8 -> 7-8
+        # requires zaehlprinzip: Das Baumdiagramm zum Zählen von Möglichkeiten ist die Grundlage des Wahrscheinlichkeitsbaums (BY M5 3.1: Zählprinzip und „Baumdiagramme zur systematischen Bestimmung von Anzahlen“; BY M8 5: Laplace-Wahrscheinlichkeiten „nutzen dabei auch das Zählprinzip und Baumdiagramme“; KMK p.16, 22)
         name: { de: "Mehrstufige Zufallsexperimente", en: "Multistage random experiments" }
         iCan: "Ich kann ein mehrstufiges Zufallsexperiment als Baumdiagramm oder Vierfeldertafel darstellen."
         gradeBand: "7-8"
-        requires: [zufall-laplace]
+        requires: [zufall-laplace, zaehlprinzip]
       - id: zufall-pfadregel-1
         # unchanged (used by an app; requires extended by the fraction skill it needs). KMK p.22; HE 7.4 (Multiplikationsregel); BY M10 2; NRW S1 Sto-3 (SILP 8.1)
         # bands: 7 / 10 / 7-8 -> 7-8 (BY dissents)
@@ -889,7 +908,7 @@ strands:
         name: { de: "Zweite Pfadregel (Summenregel)", en: "Addition rule for paths" }
         iCan: "Ich kann die Wahrscheinlichkeit eines Ereignisses berechnen, indem ich die Wahrscheinlichkeiten seiner Pfade addiere."
         gradeBand: "7-8"
-        requires: [zufall-pfadregel-1, brueche-addieren-subtrahieren]
+        requires: [zufall-pfadregel-1]
       - id: zufall-ergebnisform
         # unchanged (used by an app). WEAKLY BACKED: no source names it as a unit; touches BY M6 3 (relative Haeufigkeit als Bruch, Dezimalbruch, Prozentsatz) and HE 7.4 (Bruchrechnung wiederholen). Candidate to fold into wahrscheinlichkeitsbegriff later.
         # bands: no source unit; follows prozent-grundbegriffe and laplace -> 7-8
@@ -903,7 +922,7 @@ strands:
         name: { de: "Ereignisse im Baumdiagramm", en: "Events in tree diagrams" }
         iCan: "Ich kann Ereignisse wie genau einmal oder mindestens einmal in die passenden Pfade eines Baumdiagramms übersetzen."
         gradeBand: "7-8"
-        requires: [zufall-baumdiagramm, zufall-pfadregel-2]
+        requires: [zufall-pfadregel-2]
       - id: simulationen
         # KMK p.21 (Simulationen); HE 8.4; BY M10 2 (stochastische Simulationen, Monte-Carlo); NRW S1 Sto-5
         # bands: 8 / 10 / 7-8 -> 7-8 (BY dissents)
@@ -945,7 +964,7 @@ strands:
         name: { de: "Vierfeldertafel", en: "Two-way table" }
         iCan: "Ich kann zwei verknüpfte Ereignisse in einer Vierfeldertafel darstellen und Wahrscheinlichkeiten ablesen."
         gradeBand: "9-10"
-        requires: [zufall-laplace, haeufigkeiten]
+        requires: [zufall-laplace]
       - id: bedingte-wahrscheinlichkeit
         # NEW. KMK p.22 (bedingte Wahrscheinlichkeiten erkennen, MSA); NRW S2 (Inhalt: bedingte Wahrscheinlichkeit, stochastische Unabhaengigkeit; SILP 10.6); BY M9 3 (aus Vierfeldertafeln); HE: not named
         # bands: HE - / 9 / 10 -> 9-10

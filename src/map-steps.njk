@@ -13,7 +13,9 @@ eleventyComputed:
 {#-
   The map of a subject by steps of the chain (feat/map-steps, issue #227): the same grid of strands (columns) as
   /map/<subject>/, but one row per step: a competency stands one row below its deepest prerequisite, the ones without
-  prerequisite at the top (lib/map.js stepRows). It lives in c/, the tree of the competencies (KD-05).
+  prerequisite at the top (lib/map.js stepRows). Since feat/map-chains (KD-17) the rows go by grade band, and within a
+  band by step: everything a competency requires stands above it, everything in one step is independent of each
+  other. No counts (KD-17). It lives in c/, the tree of the competencies (KD-05).
   Without JS: every competency is a link to its page, which shows its chain. With JS (assets/map-steps.js): a click
   chooses a competency, shows its ancestors and descendants, draws the arrows of the chain and lists it step by step
   beside the map; assets/map.js does the legend as a filter and the help as a dialog, as on the subject page.
@@ -47,10 +49,17 @@ eleventyComputed:
       <p class="m-0 flex items-center gap-2 text-sm text-slate-600"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>{{ S.legend.gap }}</p>
     </div>
     <div class="map-legend" role="group" aria-label="{{ S.filter }}" data-map-filter hidden>
-      <button type="button" class="map-filter" data-show="covered" aria-pressed="false"{% if not subject.covered %} disabled{% endif %}><span aria-hidden="true" class="map-swatch map-chip-covered"></span>{{ S.legend.covered }} <span class="map-filter-count">{{ subject.covered }}</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"{% if not gapCount %} disabled{% endif %}><span aria-hidden="true" class="map-swatch map-chip-gap"></span>{{ S.legend.gap }} <span class="map-filter-count">{{ gapCount }}</span></button>
+      <button type="button" class="map-filter" data-show="covered" aria-pressed="false"{% if not subject.covered %} disabled{% endif %}><span aria-hidden="true" class="map-swatch map-chip-covered"></span>{{ S.legend.covered }}</button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"{% if not gapCount %} disabled{% endif %}><span aria-hidden="true" class="map-swatch map-chip-gap"></span>{{ S.legend.gap }}</button>
     </div>
   </div>
+
+  {#- The competencies outside the chain (feat/map-chains, KD-12), named and linked, so they show at once. #}
+  <p class="m-0 text-slate-700" data-map-alone>
+    {%- if subject.alone.length %}<strong>{{ P.alone.count(subject.alone.length) }}</strong>
+    {%- for id in subject.alone %}{% set a = subject.competencies | byId(id) %} <a href="{{ c.mapUrl(subject.id + '/c/' + id + '/') | trim }}" class="text-blue-700 underline underline-offset-2">{{ a.name | tx(lang) }}</a>{{ "," if not loop.last }}{% endfor %}. {{ P.alone.why }}
+    {%- else %}{{ P.alone.placed }}{% endif %}
+  </p>
 
   <div class="map-bystep" data-map-steps>
     <div class="map-scroll" role="region" aria-label="{{ P.gridLabel(name) }}" tabindex="0">
@@ -62,22 +71,23 @@ eleventyComputed:
             {%- for s in subject.strands %}
             <th scope="col">
               <a href="{{ c.mapUrl(subject.id + '/' + s.id + '/') | trim }}" class="text-lg font-bold text-slate-900 underline underline-offset-2"{{ s.name | fallbackLang(lang) | safe }}>{{ s.name | tx(lang) }}</a>
-              <span class="block mt-1 text-sm text-slate-600">{{ S.count(s.covered, s.total) }}</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: {{ (s.covered / s.total * 100) | round }}%;"></span></span>
             </th>
             {%- endfor %}
           </tr>
         </thead>
         <tbody>
           {%- for row in subject.stepRows %}
+          {%- if row.first %}
+          <tr class="map-band-row"><th scope="rowgroup" colspan="{{ subject.strands.length + 1 }}">{{ t.map.grade(row.band | band) }}</th></tr>
+          {%- endif %}
           <tr>
-            <th scope="row">{{ P.row(row.step) }}<span class="block mt-1 text-xs font-normal text-slate-600">{{ P.rowCount(row.count) }}</span></th>
+            <th scope="row">{{ P.row(row.bandStep) }}</th>
             {%- for cell in row.cells %}
             <td>
               {%- if cell.competencies.length %}
               <ul class="map-cell">
                 {%- for id in cell.competencies %}
-                {{ c.mapChip(subject, subject.competencies | byId(id), [], false) }}
+                {{ c.mapChip(subject, subject.competencies | byId(id), [], false, true) }}
                 {%- endfor %}
               </ul>
               {%- endif %}
@@ -115,6 +125,6 @@ eleventyComputed:
 {#- What the script needs: the competencies with strand, requires, step and name, and its texts. #}
 <script type="application/json" id="map-steps-data">{{ subject | stepsData(lang) | safe }}</script>
 {%- set pageUrl = '' + (c.mapUrl(subject.id + '/c/{id}/') | trim) %}
-{%- set texts = { kind: P.chain.kind("{strand}", "{step}"), step: P.row("{step}"), before: P.chain.before, after: P.chain.after, nothing: P.chain.nothing, page: P.chain.page, clear: P.chain.clear, pageUrl: pageUrl } %}
+{%- set texts = { kind: P.chain.kind("{strand}", "{place}"), place: P.place("{band}", "{step}"), before: P.chain.before, after: P.chain.after, nothing: P.chain.nothing, page: P.chain.page, clear: P.chain.clear, pageUrl: pageUrl } %}
 <script type="application/json" id="map-steps-text">{{ texts | dump | safe }}</script>
 {{ c.mapDialog() }}
