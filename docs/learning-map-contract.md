@@ -218,6 +218,7 @@ ahead: [subjonctif-bildung]                        # comes later in this app, on
 | Rule | Checked by |
 |---|---|
 | Every id in `ahead` is practised on a page of the same app | listing (`checkPages`, kind `ahead`), `lernapps check` |
+| `ahead` only where needed: a competency of the page requires the id, and the app has it only after the page | listing (`checkPages`, kind `ahead-unneeded`, a warning), `lernapps check` |
 | Only the order is waived: a prerequisite the app does not have stays a gap or an entry | listing, `lernapps check` |
 
 `lernapps-pages.json` carries `ahead` as the page has it.

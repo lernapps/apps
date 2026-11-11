@@ -207,13 +207,14 @@ async function pageFindings(file, subject, pages, url, add) {
   for (const f of findings) {
     if (f.prerequisite && base && pages[f.page]?.path && (await text(f.page)).includes(`/apps/map/${subject.id}/c/${f.prerequisite}/`)) continue;
     const where = pages[f.page]?.path ? `${file}: ${pages[f.page].path}` : file;
-    const severity = strict && f.kind !== "entry" ? "error" : "warning";
+    const severity = strict && f.kind !== "entry" && f.kind !== "ahead-unneeded" ? "error" : "warning";
     const fix = {
       strands: "Split the page so that each page practises competencies of one strand",
       order: "Put the page that practises the prerequisite before this page",
       gap: `Practise ${f.prerequisite} on a page before this one, or repeat it there on a recap page (recap: ${subject.id}/${f.prerequisite})`,
       entry: `Add a recap page before this one (recap: ${subject.id}/${f.prerequisite}), or link its page on the map in the text`,
       ahead: `Practise ${f.prerequisite} on a page of the app, or remove it from ahead`,
+      "ahead-unneeded": `Remove ${f.prerequisite} from ahead`,
     }[f.kind];
     add(severity, where, f.text, fix);
   }
