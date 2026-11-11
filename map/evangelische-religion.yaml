@@ -10,6 +10,7 @@
 #   NW = Kernlehrplan NRW Sek I Gymnasium (G9), Evangelische Religionslehre, Heft 3414 (2019): Stufe 1 = Ende Jg 6 -> 5-6,
 #        Stufe 2 = Ende Sek I -> zählt für 7-8 und 9-10
 # Genaue Titel, Ausgaben und URLs: .vibe/research-evangelische-religion.md
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Evangelische Religion, en: Protestant religious education }
 source:
   title: Kerncurriculum Hessen, Sekundarstufe I - Gymnasium, Evangelische Religion, Ausgabe 2026 (Hessisches Ministerium für Kultus, Bildung und Chancen), verglichen mit LehrplanPLUS Bayern und Kernlehrplan NRW
@@ -521,10 +522,12 @@ strands:
         requires: [taufe]
       # HE Jg 6 Kirche: Kirchenjahr; kirchliche Feste und Feiern (S. 24, 34); BY ER6 LB4: Aufbau des Kirchenjahrs, Weihnachtsfestkreis, Osterfestkreis, Trinitatiszeit; NW IF7 Stufe 1: christliche Feiertage im Jahreskreis (S. 23). Stimmen HE/BY/NW 5-6 / 5-6 / 5-6 -> 5-6 (Mehrheit)
       # Siehe auch: katholische-religion/kirchenjahr
+      # requires stationen-im-leben-jesu: Die großen Feste folgen den Stationen im Leben Jesu (Geburt, Tod, Auferstehung, Himmelfahrt); wer sie im Kirchenjahr ordnet, braucht diese Reihenfolge. Bayern lehrt das Kirchenjahr mit Bezug auf den 2. Glaubensartikel im selben Jahr wie das Leben Jesu, NRW verlangt die Herkunft der Feiertage (BY ER6 LB4: „setzen christliche Feste in Bezug zum 2. Artikel des Apostolischen Glaubensbekenntnisses“, „insbesondere Weihnachten, Ostern und Himmelfahrt“, mit ER6 LB3 „Jesu Botschaft und Leben“; NW IF7 Stufe 1, S. 23: „erklären Herkunft und Bedeutung christlicher Feiertage im Jahreskreis“)
       - id: kirchenjahr
         name: { de: "Das Kirchenjahr", en: "The church year" }
         iCan: { de: "Ich kann den Aufbau des Kirchenjahres erklären und die großen christlichen Feste darin einordnen." }
         gradeBand: "5-6"
+        requires: [stationen-im-leben-jesu]
       # HE Jg 6 Kirche: kirchliche Feste (S. 24); BY ER6 LB4: Weihnachtsfestkreis; Feste in Bezug zum Glaubensbekenntnis; NW IF7 Stufe 1: Herkunft und Bedeutung christlicher Feiertage (S. 23). Stimmen HE/BY/NW 5-6 / 5-6 / 5-6 -> 5-6 (Mehrheit)
       - id: weihnachtsfestkreis
         name: { de: "Weihnachtsfestkreis", en: "The Christmas cycle" }
@@ -557,11 +560,12 @@ strands:
         requires: [christliche-symbole]
       # HE Jg 8 Kirche: Apg 2 (Pfingsten) (S. 27); BY ER7 LB1: Symbole für den Heiligen Geist; ER7 LB2: Pfingsten als „Geburtsstunde der Kirche“; NW IF4 Stufe 1: Entstehung der Kirche aus dem Glauben an Jesus Christus (S. 20). Stimmen HE/BY/NW 7-8 / 7-8 / 5-6 -> 7-8 (Mehrheit)
       # Siehe auch: katholische-religion/pfingsten
+      # requires christliche-symbole: Die Pfingstgeschichte spricht in Symbolen vom Heiligen Geist (Sturm, Feuerzungen; die Taube als Zeichen des Geistes); Bayern lehrt christliche Symbole wie die Taube in Jg 5 und deutet in Jg 7 die Symbole der Pfingstgeschichte (BY ER5 LB5: „Symbole und Zeichen wie Kreuz, Taube, Weg, Licht“ → BY ER7 LB1: „beschreiben Symbole für den Heiligen Geist in der Pfingstgeschichte und deuten diese“, „Symbole aus Apg 2 (Feuerzungen und Sturm)“)
       - id: pfingsten
         name: { de: "Pfingsten als Geburtstag der Kirche", en: "Pentecost as the church's birthday" }
         iCan: { de: "Ich kann die Pfingstgeschichte wiedergeben und erklären, warum Pfingsten als Geburtstag der Kirche gilt." }
         gradeBand: "7-8"
-        requires: [osterfestkreis, kirche-gebaeude-und-gemeinschaft]
+        requires: [osterfestkreis, kirche-gebaeude-und-gemeinschaft, christliche-symbole]
       # HE Jg 8 Kirche: Ursprünge der christlichen Gemeinde (S. 27); BY ER7 LB2: Leben und Konflikte in den ersten Gemeinden; NW IF4 Stufe 1: Entstehung der Kirche, Nachfolgegemeinschaft (S. 20). Stimmen HE/BY/NW 7-8 / 7-8 / 5-6 -> 7-8 (Mehrheit)
       # Siehe auch: katholische-religion/urgemeinde
       - id: erste-gemeinden
@@ -646,7 +650,7 @@ strands:
         name: { de: "Obrigkeit und Widerstand", en: "Authority and resistance" }
         iCan: { de: "Ich kann erklären, was Paulus in Römer 13 über die staatliche Gewalt schreibt, und warum Christen trotzdem über Widerstand gegen Unrecht nachdenken." }
         gradeBand: "9-10"
-        requires: [kirche-und-staat, paulus]
+        requires: [kirche-und-staat]
       # HE Jg 9/10 Kirche: kritischer Blick auf die Geschichte der Kirche; Kirche und Staat (S. 20); BY ER9 LB4: Konflikte der evangelischen Kirche im Nationalsozialismus; Deutsche Christen, Bekennende Kirche; NW IF4 Stufe 2: „Deutsche Christen“ und „Bekennende Kirche“ (S. 30). Stimmen HE/BY/NW 9-10 / 9-10 / 7-10 -> 9-10 (Mehrheit)
       # Siehe auch: katholische-religion/kirche-im-nationalsozialismus
       - id: kirche-im-nationalsozialismus

@@ -15,6 +15,9 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
    example; an example may only hint at a grade.
 3. Nothing else for the model: no textbook, no wiki. Open every source in the original and cite it with edition and
    page.
+4. **Only for `requires`:** subject-didactic literature on how the subject is built up (handbooks of the subject's
+   didactics, studies on the order of acquisition, CEFR descriptors and profiles). It may justify an edge, never a
+   competency, a strand or a grade band (feat/map-chains, KD-04).
 
 ## Method
 
@@ -36,6 +39,17 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
 - **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles. A unit
   app across strands is checked against `requires` page by page, so a dependency teachers rely on (a verb group before
   a grammar topic) must be in it.
+- **Connect every competency** (feat/map-chains, KD-03, KD-13): few roots, none that stands alone (no `requires`
+  and nothing builds on it). For a competency without a link, in this order:
+  1. Look both ways: what does it need, and what later competency needs it?
+  2. Sources: an edge a source names (KMK, Länder, didactics), or a bundle (a plan names topic and structure in the
+     same grade or unit, or teaches one in an earlier grade than the other).
+  3. Derivation from the content, only with high confidence, marked `(Herleitung)`.
+  4. Nothing safe: a gap in the model (a missing competency; propose it in the report) or a real root (say why).
+  Never invent an edge just to connect a competency. In History an edge means "needs A to understand B" (a concept,
+  a cause, prior knowledge), not "A was earlier".
+- **The reason of an edge** stands in the comment above the competency, under its sources, one line per edge:
+  `# requires <id>: <reason> (<source> <page>)`, or `# requires <id> (Herleitung): <reason>` for a derivation.
 - **explainerFocus:** do the strands separate apps, or only illustrate the subject? `strand` (the default) when an
   app can stay in one strand and still make sense (sciences, Mathematik, Geschichte: few `requires` across strands, or
   only along time); `competency` when a real unit needs several strands at once (foreign languages, Deutsch: many

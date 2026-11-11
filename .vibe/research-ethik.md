@@ -339,3 +339,111 @@ Die Downloads liegen in `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-1
 (MD5: he.pdf 35af233f…, heg9.pdf 7d2360c9…, nw.pdf 9d8b23f4…; by5–by10.html). Die Bausteine als Daten und das
 Prüf- und Erzeugungsskript liegen in `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/gen-ethik/`
 (`data.py`, `gen.py`).
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“).
+Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan`
+und Stränge sind unverändert; es gibt keine neuen Bausteine.
+
+Ausgangslage: Ethik war schon fast ganz verbunden. Es gab keinen allein stehenden Baustein, aber ein zweites Teilnetz
+(`schoepfungserzaehlungen` → `mythos-und-wissenschaft`) und zwei indirekte Kanten.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 174 | 13 | 0 | 2 | 8 |
+| nachher | 175 | 12 | 0 | 1 | 8 |
+
+Geprüft mit dem Messskript: keine Kreise, keine Voraussetzung mit späterer Richtstufe (`LATE`), keine indirekte Kante
+(`INDIRECT`). `npm test` grün. Die Karte hat kein `explainerFocus: competency`, und keine App in `entries/` nutzt Ethik;
+ein Vergleich mit `npm run listing` entfällt.
+
+### 6.2 Quellen
+
+Dieselben Quellen wie in Abschnitt 1. Ich habe sie am 10.11.2026 neu heruntergeladen und gelesen (PDF mit
+`pdftotext`, LehrplanPLUS als HTML). Die PDFs sind dieselben Dateien wie am 07.11.2026 (gleiche MD5).
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE | Hessisches Kultusministerium: Lehrplan Ethik, Gymnasialer Bildungsgang, Jahrgangsstufen 5 bis 13 | Lehrplan G9 (PDF von 2016), 51 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-ethik.pdf |
+| KC (HE) | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Ethik | Fassung 2011, 34 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/kerncurriculum_ethik_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Ethik, Eth5 bis Eth10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/ethik · …/6/ethik · … · …/10/ethik |
+| NW | MSW NRW: Kernlehrplan Sekundarstufe I, Praktische Philosophie | Heft 5017, 1. Auflage 2008, 36 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/pp_klp_5017_2008_05_06.pdf |
+
+KMK-Bildungsstandards für Ethik gibt es nicht. Eine fachdidaktische Quelle habe ich nicht gebraucht: Die neuen Kanten
+stützen sich auf Bündel in den Länderplänen oder auf eine Herleitung.
+
+### 6.3 Neue Kanten (3)
+
+„Bündel“: Ein Lehrplan lehrt beide Inhalte in derselben Einheit. „Herleitung“: Keine Quelle nennt die Kante; sie folgt
+mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `judentum` | `schoepfungserzaehlungen` | Die Tora beginnt mit der Schöpfung; den Sabbat begründet sie mit dem siebten Schöpfungstag. | HE 5.3, S. 13 („Das Judentum erzählt … von der Schöpfung“); BY Eth6 LB1 (Schöpfungsgeschichte Gen 1–2 und Heiligung des Sabbat Ex 20,8–11 in einem Lernbereich) | Bündel |
+| `menschenbilder` | `mythos-und-wissenschaft` | Der Vergleich „Geschöpf Gottes oder Naturwesen“ setzt voraus, dass man Schöpfungserzählung und naturwissenschaftliche Erklärung schon nebeneinandergestellt hat. | BY Eth6 LB1 (Schöpfungsgeschichte im Vergleich mit Urknall- und Evolutionstheorie); HE 10.4, S. 44 f. (Darwinismus, christliches Menschenbild) | Herleitung |
+| `sokrates` | `philosophische-fragen` | Der sokratische Dialog ist philosophisches Fragen; Bayern lehrt erst, philosophische Fragen von Alltagsfragen zu unterscheiden, dann Sokrates. | BY Eth10 LB1 („philosophisches Fragen, u. a. die vier Fragen nach I. Kant“; „Zweifeln, z. B. Sokrates“; „Sokrates: … sokratischer Dialog“) | Bündel |
+
+Die ersten zwei Kanten verbinden das zweite Teilnetz mit dem großen Netz. `judentum` ist keine Wurzel mehr.
+
+### 6.4 Entfernte Kanten (2)
+
+Beide waren indirekt. Keine bestehende Kante war inhaltlich falsch.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `regeln-und-gesetze` | `regeln-und-fairness` | Folgt schon über `werte-und-normen` → `regeln-und-fairness`. |
+| `islam` | `judentum` | Folgt schon über `christentum` → `judentum`. Die Kante zu `christentum` bleibt: HE 5.3, S. 13: „Der Islam nimmt die jüdische und christliche Botschaft im Koran auf“. |
+
+Die übrigen 172 Kanten habe ich einzeln gelesen. Sie sind direkt, und ihr Inhalt passt zu den Fundstellen am
+Baustein.
+
+### 6.5 Wurzeln, die bleiben (12, davon 0 allein)
+
+| Baustein | Grund |
+|---|---|
+| `gefuehle-benennen` | Anfang des Strangs Ich: Gefühle benennen braucht keine Vorkenntnis; Selbstbild, Perspektivwechsel und Gefühl und Verstand bauen darauf auf. |
+| `beduerfnisse-unterscheiden` | Anfang: Grundbedürfnisse (HE 5.1, BY Eth5 LB1); Regeln, Armut, Angewiesenheit und Bedürfnisaufschub bauen darauf auf. |
+| `pubertaet` | Körperliche und seelische Veränderungen brauchen keinen anderen Baustein; Identität, Geschlechterrollen und Liebe bauen darauf auf. |
+| `gut-und-boese` | Anfang des Strangs Gutes Handeln (HE 6.1, NW FK3). |
+| `luegen-und-wahrhaftigkeit` | Erfahrung mit Lüge und Vertrauen braucht keine Vorkenntnis; Notlüge und Wahrheit bauen darauf auf. Siehe offenen Punkt 2. |
+| `tiere-als-mitlebewesen` | Anfang der Tierethik (NW 5/6 FK5); siehe offenen Punkt 3. |
+| `sinneswahrnehmung` | Anfang des Strangs Wahrheit (HE 5.4, NW FK6). |
+| `eigene-mediennutzung` | Anfang der Medienethik: die eigene Erfahrung. |
+| `schoepfungserzaehlungen` | Anfang der großen Erzählungen (HE 5.3; NW 5/6 FK7 „Vom Anfang der Welt“); Judentum und Mythos und Wissenschaft bauen darauf auf. |
+| `feste-der-religionen` | Bayern lehrt Feste in Jg 5 (Eth5 LB4), vor den Religionen selbst (Eth6 LB1, Eth7 LB1); die Feste brauchen daher keinen Religions-Baustein. Siehe offenen Punkt 1. |
+| `hinduismus` | Erste nicht-abrahamitische Religion (BY Eth9 LB1); sie braucht keinen anderen Baustein. Buddhismus und Gottesvorstellungen bauen darauf auf. |
+| `philosophische-fragen` | Anfang des Philosophierens (BY Eth10 LB1: Staunen, Zweifeln, die vier Fragen Kants); Menschenbilder und Sokrates bauen darauf auf. |
+
+**Teilnetze:** jetzt 1.
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+Keine. Ich habe keine Lücke gefunden, die eine Kante verlangt. (Bausteine, die nur ein Land nennt, stehen weiter in
+Abschnitt 3.3.)
+
+### 6.7 Offene Punkte
+
+1. **`feste-der-religionen` → `islam`** (mittlere Zuversicht): Die Bedeutung von Ostern oder dem Fest des
+   Fastenbrechens erklärt man mit Jesus oder den Fünf Säulen. Aber Bayern lehrt die Feste vor den Religionen (Eth5 LB4
+   vor Eth6 LB1), Hessen danach (9.3 nach 5.3), NW im selben Schwerpunkt. Nicht übernommen.
+2. **`luegen-und-wahrhaftigkeit` → `pflichten-gegen-sich-und-andere`** (mittel): HE 5.2 nennt Wahrhaftigkeit als
+   Pflicht gegen andere, vor 5.4 „Wahrhaftigkeit und Lüge“. Nur ein Land, und der Baustein braucht die
+   Unterscheidung der Pflichten nicht. Nicht übernommen.
+3. **`tiere-als-mitlebewesen` → `pflichten-gegen-sich-und-andere`** (mittel): HE 5.2 nennt „Pflicht und Fürsorge:
+   Umgang mit Tieren“ in derselben Einheit wie die Pflichten. BY (Eth8 LB4) und NW (FK5) führen Tiere beim Thema
+   Natur. Nicht übernommen.
+4. **`menschenbilder` → `mythos-und-wissenschaft`** ist eine Herleitung. Wer sie zu weit findet, kann sie streichen;
+   dann hängt das Teilnetz nur noch über `judentum` → `schoepfungserzaehlungen` am großen Netz, und es entsteht keine
+   Lücke.
+5. **`skeptizismus` → `philosophische-fragen`** (mittel): BY nennt „Zweifeln“ als Anstoß zum Philosophieren in
+   derselben Einheit wie den Skeptizismus. Skeptische Zweifel braucht aber nicht das Ordnen nach Kants Fragen.
+   Nicht übernommen.
+
+### 6.8 Nicht geöffnet
+
+- Keine. Alle Quellen der Länder habe ich geöffnet. Fachdidaktische Literatur habe ich nicht gesucht, weil die
+  Länderpläne die neuen Kanten tragen.

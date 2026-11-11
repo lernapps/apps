@@ -344,3 +344,128 @@ Was das Trennen gezeigt hat:
 Die Downloads liegen in `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/src-bio/`.
 Die Bausteine als Daten und das Prüfskript liegen in
 `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/gen/` (`data.py`, `check.py`; `split.py` trennt die Zusammenlegungen, `yaml_out.py` schreibt die Karte).
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“).
+Ich habe für jede Wurzel beide Richtungen geprüft (Was braucht der Baustein? Was baut auf ihm auf?) und alle
+bestehenden Kanten auf indirekte und falsche Kanten durchgesehen. Die Begründung jeder neuen Kante steht als
+Kommentar `# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan` und Stränge sind unverändert; kein Baustein
+ist neu.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 141 | 9 | 0 | 2 | 10 |
+| nachher | 139 | 8 | 0 | 1 | 10 |
+
+Geprüft mit dem Messskript: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante (vorher
+4 indirekte Kanten). `npm test` grün (ein Test ohne Docker übersprungen). Die Karte hat kein
+`explainerFocus: competency`, und kein Eintrag in `entries/` nutzt Biologie; ein Vergleich mit `npm run listing`
+entfällt.
+
+Die Karte war schon gut verbunden. Das zweite Teilnetz war die Kette `skelett` → `gelenke` →
+`gegenspielerprinzip`; sie hängt jetzt über `angepasstheit-fortbewegung` am großen Netz.
+
+### 6.2 Quellen
+
+Alle Quellen habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML).
+Kürzel wie in Abschnitt 1.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| KMK | KMK: Weiterentwickelte Bildungsstandards in den Naturwissenschaften für das Fach Biologie (MSA) | Beschluss vom 16.12.2004 i. d. F. vom 13.06.2024 | https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2024/2024_06_13-WeBiS_Biologie_MSA.pdf |
+| HE | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Biologie | Fassung 2011, 58 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/kerncurriculum_biologie_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrpläne Natur und Technik 5 und 6, Biologie 8, 9, 10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/nt_gym · …/6/nt_gym · …/8/biologie · …/9/biologie · …/10/biologie |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Biologie | Heft 3413, 1. Auflage 2019 | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_bi_klp_-3413_2019_06_23.pdf |
+
+**Fachdidaktik:** Ich habe nach frei zugänglicher Literatur zum Aufbau gesucht (z. B. zu Schülervorstellungen zur
+Zellatmung und zur Energie). Ich habe nichts gefunden, das eine der Kanten hier direkt begründet. Ich zitiere deshalb
+keine fachdidaktische Quelle. Die Kanten stützen sich auf die Länderpläne oder sind als Herleitung gekennzeichnet.
+
+**Wichtige Fundstellen für Kanten:**
+- BY NT5 2.3 gliedert „Der Mensch als Lebewesen“ in Abschnitte. Der Abschnitt „Stoffwechsel: Stoff- und
+  Energieumwandlung“ nennt Zellatmung und Nahrungsbestandteile zusammen.
+- BY NT5 2.5 „Ökosystem Grünland“: Die Lebensgemeinschaft wird „u. a. durch die Bestimmung verschiedener krautiger
+  Pflanzenarten mithilfe von einfachen Bestimmungsbüchern“ charakterisiert.
+- NW IF1 (S. 22 f.): Angepasstheit von Säugetieren und Vögeln „hinsichtlich exemplarischer Aspekte wie
+  Skelettaufbau, Fortbewegung …“; „den Aufbau von Säugetier- und Vogelknochen vergleichend untersuchen“.
+
+### 6.3 Neue Kanten (4)
+
+„Herleitung“: Keine Quelle nennt die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `angepasstheit-fortbewegung` | `skelett` | Die Angepasstheit wird am Skelettaufbau erklärt; der Vergleich der Knochen braucht die Teile des Skeletts. BY lehrt das Skelett in Jg 5, die Fortbewegung der Wirbeltiere in Jg 6. | NW IF1 S. 22 f.; BY NT5 2.3, NT6 1.3 | Quelle |
+| `oekosystem-grundbegriffe` | `arten-bestimmen` | Die Lebensgemeinschaft erschließt man, indem man ihre Arten bestimmt. | BY NT5 2.5; NT6 1.5 | Quelle |
+| `zellatmung` | `naehrstoffe` | Die Wortgleichung beginnt mit Traubenzucker, einem Nährstoff. BY lehrt beides im selben Abschnitt. | BY NT5 2.3 „Stoffwechsel“ | Bündel |
+| `nervenzelle` | `tierzelle-pflanzenzelle` | Die Nervenzelle ist eine spezialisierte tierische Zelle; ihren Bau beschreibt man mit den Zellbestandteilen. | Hinweis: HE 9/10 S. 42 („gebunden an Zellstrukturen“) | Herleitung |
+
+### 6.4 Entfernte Kanten (6)
+
+Alle sind indirekt. Keine bestehende Kante war inhaltlich falsch.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `viren` | `kennzeichen-des-lebendigen` | Folgt schon über `bakterienzelle` → `tierzelle-pflanzenzelle` → `kennzeichen-des-lebendigen` (vorher schon indirekt). |
+| `stammbaum` | `wirbeltierklassen` | Folgt schon über `evolutionstheorie-darwin` → `zuechtung` → `wirbeltierklassen` (vorher schon indirekt). |
+| `ausgewogene-ernaehrung` | `naehrstoffe` | Folgt schon über `energiebedarf` → `naehrstoffe` (vorher schon indirekt). |
+| `sukzession` | `oekosystem-grundbegriffe` | Folgt schon über `eingriffe-des-menschen` → `nahrungsbeziehungen` → `oekosystem-grundbegriffe` (vorher schon indirekt). |
+| `zellatmung-energie` | `naehrstoffe` | Folgt jetzt über `fotosynthese-und-zellatmung` → `zellatmung` → `naehrstoffe`. |
+| `biodiversitaet-und-naturschutz` | `arten-bestimmen` | Folgt jetzt über `eingriffe-des-menschen` → … → `oekosystem-grundbegriffe` → `arten-bestimmen`. |
+
+### 6.5 Wurzeln, die bleiben (8, davon 0 allein)
+
+| Baustein | Grund |
+|---|---|
+| `kennzeichen-des-lebendigen` | Anfang des Fachs: BY NT5 2.2 und NW IF1 beginnen damit. `tierzelle-pflanzenzelle` baut darauf auf. |
+| `mikroskopieren` | Anfang der Arbeitsweise mit dem Mikroskop; braucht keinen anderen Baustein. `praeparat-und-zeichnung` baut darauf auf. |
+| `wirbeltierklassen` | Anfang der Artenkenntnis bei Tieren; Angepasstheit, Fortpflanzung, Züchtung, Wirbellose und Kommunikation bauen darauf auf. |
+| `pflanzenorgane` | Anfang der Samenpflanzen; Blüte, Fotosynthese und Arten bestimmen bauen darauf auf. Eine Kante zu `organisationsebenen` ist nur mittel sicher (offener Punkt 1). |
+| `skelett` | Anfang des Bewegungssystems; Gelenke und jetzt die Angepasstheit an die Fortbewegung bauen darauf auf. |
+| `naehrstoffe` | Anfang der Ernährung; Nachweise, Energiebedarf, Verdauung, Zellatmung und Proteine bauen darauf auf. |
+| `reiz-reaktion` | Anfang der Informationsverarbeitung; Kanten zu `kennzeichen-des-lebendigen` oder `organisationsebenen` sind nur mittel sicher (offener Punkt 2). |
+| `pubertaet` | Anfang der Sexualerziehung; braucht keinen Baustein der Karte. Geschlechtsorgane, Hygiene und Selbstbestimmung bauen darauf auf. |
+
+**Allein:** keiner. **Teilnetze:** eines.
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+Keine. Für alle Wurzeln fand sich ein Grund, warum sie Anfang sein dürfen; eine Lücke im Modell hat die Prüfung
+nicht gezeigt.
+
+### 6.7 Offene Punkte (Kanten mit mittlerer Zuversicht, nicht in der Karte)
+
+1. **`pflanzenorgane` → `organisationsebenen`:** NW IF1 nennt das Zusammenwirken der Organe einer Samenpflanze und
+   die Systemebenen Zelle – Gewebe – Organ – Organismus im selben Inhaltsfeld; BY lehrt die Organisationsebenen in
+   Jg 5, die Pflanzenteile in Jg 6. Zum Benennen von Wurzel, Sprossachse und Blatt braucht man die Ebenen aber nicht
+   unbedingt.
+2. **`reiz-reaktion` → `kennzeichen-des-lebendigen`:** BY NT5 2.2 nennt „Informationsaufnahme,
+   Informationsverarbeitung und Reaktion“ als Anforderung an Lebewesen, und NT5 2.3 hat einen Abschnitt mit diesem
+   Namen. Das ist eher eine Gliederung als eine Voraussetzung.
+3. **`zellatmung` → `atmung-und-gasaustausch` und → `verdauungsorgane`:** BY NT5 2.3 nennt den Gasaustausch in der
+   Lunge und die Aufnahme aus dem Verdauungssystem „als Voraussetzung für die Zellatmung“. Gemeint ist der
+   biologische Vorgang, nicht die Reihenfolge des Lernens. Den Zusammenhang deckt schon `koerperliche-belastung` ab.
+4. **`unspezifische-abwehr` → `blut`:** Fresszellen sind weiße Blutzellen. Keine Quelle verbindet die beiden; das
+   iCan nennt auch Haut, Schleimhäute und Magensäure.
+5. **`diabetes` → `ausgewogene-ernaehrung`:** Die Vorbeugung gegen Typ 2 (NW IF7) braucht Wissen über Ernährung.
+   Nur ein Teil des Bausteins hängt davon ab.
+6. **`angepasstheit-fortbewegung` → `gegenspielerprinzip`:** Fortbewegung braucht auch Muskeln als Gegenspieler. Die
+   Quelle (NW IF1) nennt aber den Skelettaufbau; deshalb steht die Kante zu `skelett`.
+7. **`angepasstheit-an-umweltfaktoren` → `angepasstheit-selektion`:** BY B9 LB4 lehrt beides in der Evolution. Der
+   Baustein fragt nach dem Wie, nicht nach dem Warum.
+8. **`tierkommunikation` → `wirbeltierklassen`** bleibt: BY NT6 1.3 lehrt die innerartliche Kommunikation bei den
+   Wirbeltieren und ihre Bedeutung für die Fortpflanzung. HE S. 42 stellt Verhalten dagegen neben die
+   Reiz-Reaktions-Mechanismen. Ob `tierkommunikation` → `reiz-reaktion` besser passt, sollten Lehrkräfte
+   entscheiden.
+9. Die bestehenden Kanten (ohne die neuen) haben noch keine eigene Zeile `# requires …`. Ihre Begründung steht in
+   den Fundstellen am Baustein und in Abschnitt 3.2.
+
+### 6.8 Nicht geöffnet
+
+- Fachdidaktische Handbücher der Biologie (z. B. Spörhase, Gropengießer/Harms/Kattmann) sind nicht frei online;
+  nicht geöffnet, nicht zitiert.
+- Sonst fehlte keine Quelle; alle Länderpläne und die KMK ließen sich laden.

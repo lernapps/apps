@@ -381,3 +381,228 @@ Imperativformen und der verneinte Imperativ; drei Bedingungssätze.
    Insgesamt ist 9-10 schmal (19 von 184), siehe Abschnitt 3.3.
 6. **Ungleiche Stränge:** `grammatik` ist mit 83 Bausteinen groß; eine Aufteilung in zwei Stränge (z. B. „Verben
    und Zeiten“, „Satz und Wortarten“) wäre möglich, die KMK und die Länder trennen aber nicht.
+
+## 5. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, möglichst keine
+allein stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every
+competency“). Für jeden Baustein ohne Anknüpfung habe ich in beide Richtungen gesucht: Was braucht er? Welcher
+spätere Baustein braucht ihn? Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids,
+`gradeBand`, `status`, `iCan` und die Stränge sind unverändert. Es gibt keine neuen Bausteine.
+
+### 5.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 199 | 31 | 19 | 24 | 8 |
+| nachher | 222 | 20 | 1 | 5 | 8 |
+
+Geprüft mit dem Mess-Skript: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante.
+`npm test` grün (1 Test ohne Docker übersprungen). Keine App in `entries/` nutzt Spanisch; ein Vergleich mit
+`npm run listing` entfällt darum.
+
+**Teilnetze (5):** das große Netz (162 Bausteine), die Landeskunde Spanien (11, mit `vortrag`), die Landeskunde
+Lateinamerika (8), `woerter-aus-anderen-sprachen` → `falsche-freunde` (2) und `feste-und-braeuche` (allein). Die
+beiden Netze der Landeskunde hängen fachlich nicht an Grammatik oder Wortschatz; eine Kante dorthin wäre erfunden.
+
+### 5.2 Quellen
+
+Alle Quellen der Länder und der KMK habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`,
+LehrplanPLUS als HTML). Titel, Ausgaben und URLs der Länder und der KMK: Abschnitt 1, unverändert.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE | Lehrplan Spanisch, Gymnasialer Bildungsgang, Jg 7–13 (Hessen, G9) | wie Abschnitt 1 | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-spanisch.pdf |
+| BY | LehrplanPLUS Gymnasium, Spanisch (3. FS), Sp8–Sp10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/8/spanisch (ebenso …/9/… und …/10/…) |
+| NW | Kernlehrplan Spanisch Sek I Gymnasium NRW, Heft 3416 | 1. Auflage 2019 | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_s_klp_3416_2019_06_23.pdf |
+| HE-KC, KMK | wie Abschnitt 1 | | |
+| FMC (neu, Fachdidaktik) | Andrew P. Farley, Kristina McCollam: Learner Readiness and L2 Production in Spanish: Processability Theory on Trial. Estudios de Lingüística Aplicada 40 | 2004, Heft 40, S. 47 ff.; Tab. 1 (Pienemann 1998) und Tab. 2 (Johnston 1995, Stufen für Spanisch) auf S. 64 | https://ela.enallt.unam.mx/index.php/ela/article/download/649/729 |
+
+**Hinweise:**
+- **FMC** gibt die Erwerbsstufen nach Johnston (1995) für Spanisch wieder: Stufe 1 Wörter und feste Wendungen,
+  Stufe 2 Wortstellung SVO, Stufe 5 ein Objektpronomen, Stufe 6 zwei Objektpronomen (se), Stufe 7 subjuntivo im
+  Nebensatz. Das stützt nur `requires`: `unterrichtssprache`, `gespraechswoerter` und `sich-vorstellen` dürfen als
+  feste Wendungen Wurzeln sein; die bestehenden Kanten `zwei-objektpronomen` → `pronomen-bei-infinitiv-und-gerundio`
+  (→ Objektpronomen) und subjuntivo nach den Satzverbindungen passen zur Reihenfolge. Vorsicht: Die Studie selbst
+  bestätigt die Stufen in ihrem Versuch **nicht** (S. 48). Ich nutze sie darum nur als Zusatz zu einem Lehrplan.
+- **BY** nennt jedes Grammatik-Thema nur im Jahr, in dem es zuerst vorkommt, und bündelt Strukturen nach
+  Sprechabsichten. Solche Bündel (Thema und Struktur im selben Punkt oder Jahr) nutze ich als Quelle, wie in Englisch.
+
+### 5.3 Neue Kanten (26)
+
+Art: **Quelle** = eine Quelle nennt die Reihenfolge oder die Abhängigkeit; **Bündel** = ein Plan nennt beides im
+selben Punkt oder Jahr; **Herleitung** = keine Quelle, aber hohe Zuversicht aus dem Inhalt.
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `schule` | `uhrzeit` | Der Stundenplan nennt Zeiten (A las ocho tengo matemáticas). | – | Herleitung |
+| `schulalltag-in-spanien` | `schule` | Wer den Schulalltag vergleicht, braucht die Wörter für Schule und Fächer. | BY Sp8 2 (Schulleben im Vergleich) und 5 (Schulalltag); HE7 2.2 | Bündel |
+| `wetter-und-jahreszeiten` | `gruppenverben-diphthong` | llueve und nieva sind Verben mit Stammwechsel (llover, nevar). | – | Herleitung |
+| `imperativ-tu-vosotros` | `unterrichtssprache` | Arbeitsanweisungen kennt man zuerst als feste Wendungen, dann die Regel. | BY Sp8 1.2 Wortschatz (Imperativ für den Unterricht; Arbeitsanweisungen, frases en clase); FMC Tab. 2, Stufe 1 | Bündel |
+| `meinung-aeussern` | `gespraechswoerter` | Wer auf andere reagiert, braucht Gesprächswörter (bueno, pues, o sea). | BY Sp8 1.2 Wortschatz (bueno, vale) → Sp10 1.2 Wortschatz (Interaktionswortschatz, muletillas) | Quelle |
+| `adverbien-auf-mente` | `wortfamilien` | -mente ist ein Ableitungsmuster (rápido – rápidamente). | HE8 4 (Ableitungsmuster, Wortfamilien) → HE9 3.3 (-mente) | Quelle |
+| `voseo` | `lateinamerikanische-woerter` | Den voseo versteht man, wenn man vos als Wort aus Lateinamerika kennt. | BY Sp9 1.2 Wortschatz (el auto, acá, vos) und 5 Sprachreflexion (voseo) | Bündel |
+| `formelle-e-mail` | `umgangssprache-und-standardsprache` | Eine förmliche E-Mail verlangt die Standardsprache. | BY Sp9 1.1 Schreiben (sachliche Schreiben) und 5 Sprachreflexion (Sprachregister) | Bündel |
+| `medien-im-alltag` | `freizeit-und-hobbys` | NW nennt digitale Medien im Alltag mit der Freizeitgestaltung. | NW S. 21 (S1) | Quelle |
+| `umwelt` | `einkaufen` | NW behandelt Umweltschutz beim Konsumverhalten. | NW S. 29 (S2: „Konsumverhalten auch unter Berücksichtigung des Umweltschutzes“) | Bündel |
+| `unbekannte-woerter-vorlesen` | `r-und-rr` | Unbekannte Wörter liest man nach allen Ausspracheregeln. | BY Sp8 1.2 Aussprache; NW S. 20 (r-Laute) | Quelle |
+| `unbekannte-woerter-vorlesen` | `ll-n-ch` | wie oben, für ll, ñ, ch. | BY Sp8 1.2 Aussprache; HE7 3.1 | Quelle |
+| `unbekannte-woerter-vorlesen` | `h-b-v` | wie oben: h stumm, b und v gleich. | BY Sp8 1.2 Aussprache; HE7 3.4 | Quelle |
+| `frage-und-ausrufezeichen` | `fragesaetze` | Das ¿ steht dort, wo die Frage beginnt. | – | Herleitung |
+| `tagesrhythmus-in-spanien` | `tagesablauf` | Den Tagesrhythmus vergleicht man über den eigenen Tagesablauf. | HE7 2.2 (Tagesablauf) und 2.3 (Mahlzeitenrhythmus); BY Sp8 2 und 5 | Bündel |
+| `region-andalusien` | `klischees-hinterfragen` | Die Klischees über Andalusien prüft man mit dem, was man über Klischees gelernt hat. | BY Sp9 2 (Spanienbild, Klischees) → Sp10 5 (Andalusien, Stereotype) | Quelle |
+| `migration` | `laender-lateinamerikas` | Aus- und Einwanderung zwischen Spanien und Lateinamerika setzt die Länder voraus. | – | Herleitung |
+| `sachtext-oder-erzaehlung` | `gebrauchstexte` | Sachtexte erkennt man, wenn man Gebrauchstexte kennt. | NW S. 22 (S1 Ausgangstexte: Sach- und Gebrauchstexte / literarische Texte); BY Sp8 3 | Quelle |
+| `sachtext-oder-erzaehlung` | `nacherzaehlen` | Die andere Seite: erzählende Texte mit Handlung. | NW S. 22; BY Sp8 3 (erzählende Texte, Handlungsverläufe nacherzählen) | Quelle |
+| `region-galicien` | `vortrag` | Eine Region stellt man in einem kurzen Vortrag vor. | BY Sp9 1.1 Sprechen („Vorstellung einer spanischen Region“); Sp9 5 (Galicien) | Quelle |
+| `wortschatz-textarbeit` | `fragen-zum-text` | Die Redemittel zur Textarbeit bauen auf Fragen zum Text auf. | BY Sp8 3 (Fragen zu Texten und Begriffe der Textarbeit in einem Punkt) | Bündel |
+| `tu-oder-usted` | `subjektpronomen` | Duzen oder siezen heißt tú oder usted wählen. | BY Sp8 1.2 Grammatik (Subjektpronomen mit ustedes) und 2 (tutear, tratar de usted) | Bündel |
+| `ir-praesens` | `praepositionen-a-und-de` | Ziel und Herkunft gibt man mit a und de an (voy al cine). | HE7 3.3 (ir (a), venir (de); a, de, al, del) | Bündel |
+| `gustar` | `indirekte-objektpronomen` | Bei gustar steht immer ein Objektpronomen (me, te, le). | HE8 3.3 (Pronomen le, lo; Strukturen mit gustar und parecer) | Bündel |
+| `gustar` | `betonte-pronomen` | a mí, a él hebt die Person hervor. | HE8 3.3 („a mí no me gusta nada, a él le gusta mucho“) | Bündel |
+| `imperativ-mit-pronomen` | `akzent-setzen` | Mit dem angehängten Pronomen verschiebt sich die Betonung; man braucht die tilde (¡levántate!). | – | Herleitung |
+
+Summe: 10 Quelle, 11 Bündel, 5 Herleitung.
+
+### 5.4 Entfernte Kanten (3)
+
+Alle drei waren indirekt. Keine bestehende Kante war inhaltlich falsch.
+
+| Baustein | Voraussetzung | Grund |
+|---|---|---|
+| `subjuntivo-praesens-formen` | `praesens-regelmaessig` | Folgt schon über `verben-mit-unregelmaessiger-ich-form` (war schon vorher indirekt). |
+| `personen-beschreiben` | `adjektiv-angleichung` | Folgt schon über `ser-oder-estar` (war schon vorher indirekt). |
+| `gustar` | `praesens-regelmaessig` | Folgt jetzt über `indirekte-objektpronomen`. |
+
+### 5.5 Wurzeln, die bleiben (20, davon 1 allein)
+
+| Baustein | Grund |
+|---|---|
+| `artikel-und-genus`, `subjektpronomen` | Anfang der Grammatik; Nomen und Verben bauen darauf auf. |
+| `sich-vorstellen` | Feste Wendungen ab der ersten Stunde (FMC Tab. 2, Stufe 1); `brief-und-e-mail` baut darauf auf. |
+| `zahlen-bis-100` | Anfang: Uhrzeit, Datum und Preise bauen darauf auf. |
+| `unterrichtssprache` | Feste Wendungen (FMC Stufe 1); der Imperativ baut jetzt darauf auf. |
+| `gespraechswoerter` | Einzelwörter, keine Struktur nötig; `meinung-aeussern` baut jetzt darauf auf. |
+| `wortfamilien` | Lernstrategie (BY Sp8 4, HE8 4), keine sichere Voraussetzung; `adverbien-auf-mente` baut jetzt darauf auf. |
+| `woerter-aus-anderen-sprachen` | Nutzt Vorwissen aus anderen Sprachen, keinen Spanisch-Baustein; `falsche-freunde` baut darauf auf. |
+| `lateinamerikanische-woerter` | Einzelwörter; `voseo` baut jetzt darauf auf. |
+| `umgangssprache-und-standardsprache` | Einzelne Wendungen; `formelle-e-mail` baut jetzt darauf auf. |
+| `vokale`, `r-und-rr`, `ll-n-ch`, `h-b-v` | Laute brauchen keine Vorkenntnis; `unbekannte-woerter-vorlesen` baut jetzt auf allen auf. |
+| `spanisch-als-weltsprache`, `geografie-spaniens` | Anfang der Landeskunde Lateinamerika und Spanien. |
+| `klischees-hinterfragen` | Keine sichere Voraussetzung in 5-6 oder 7-8 (Punkt 5.7.4); `region-andalusien` baut jetzt darauf auf. |
+| `lieder-und-gedichte` | Anfang: Lieder ab dem ersten Lernjahr. |
+| `vortrag` | Kurzreferat mit Stichwortzettel ab dem ersten Lernjahr (BY Sp8 1.1 Sprechen); `region-galicien` baut jetzt darauf auf. |
+| `feste-und-braeuche` | **Allein.** Die Feste brauchen das Datum (el 6 de enero), aber `datum` hat die spätere Richtstufe 7-8. Kein späterer Baustein braucht die Feste sicher. Siehe Vorschlag 5.6.1. |
+
+### 5.6 Vorgeschlagene neue Bausteine (Lücken im Modell)
+
+1. **`wochentage-und-monate`** (Strang `wortschatz`, Richtstufe 5-6): „Ich kann die Wochentage und die Monate
+   nennen.“ Quellen: BY Sp8 1.2 Wortschatz (Datum, Uhrzeit) → 5-6; HE8 3.3 (Monatsnamen, Jahreseinteilung) → 7-8;
+   NW S1 → 5-6/7-8; Gleichstand → 5-6. `datum` würde dann nur das volle Datum (el 3 de mayo). Kanten: `datum`,
+   `schule` (Stundenplan), `feste-und-braeuche` (Festtage) und `kleinschreibung` → `wochentage-und-monate`.
+   Damit wäre `feste-und-braeuche` angebunden, und `kleinschreibung` hinge nicht mehr an der Zahl im Datum.
+2. **`sprachvergleich`** (Strang `wortschatz`, Richtstufe 9-10), wie in Englisch: „Ich kann Spanisch mit Deutsch
+   und anderen Sprachen vergleichen und typische Unterschiede erklären.“ Quellen: BY Sp10 5 (Sprachreflexion:
+   „wesentliche strukturelle Unterschiede zwischen der spanischen und der deutschen Sprache“); NW S. 23
+   (Sprachbewusstheit: „im Sprachvergleich … Ähnlichkeiten und Verschiedenheiten“); HE8 1.2 (Übersetzen
+   kontrastiver Strukturen bereitet den Sprachvergleich vor). Kanten: → `falsche-freunde`,
+   `woerter-aus-anderen-sprachen`. Das Teilnetz der zwei Wortschatz-Bausteine hätte dann ein Ziel.
+
+### 5.7 Offene Punkte
+
+1. **FMC ist schwach:** Die Studie bestätigt Johnstons Stufen nicht. Ich habe sie nie allein für eine Kante
+   genutzt. Eine bessere Quelle wäre der Plan curricular des Instituto Cervantes (siehe 5.8).
+2. **`gustar` braucht jetzt die Objektpronomen.** Viele Lehrwerke lehren „me gusta“ zuerst als feste Wendung, vor
+   den Pronomen. HE lehrt beides zusammen (Jg 8). Lehrkräfte sollten entscheiden; sonst `gustar` →
+   `praesens-regelmaessig` zurück.
+3. **`umwelt` → `einkaufen`** stützt sich nur auf die Formulierung in NW (Konsum mit Umweltschutz). Inhaltlich näher
+   wäre `umwelt` → `tener-que` (tenemos que reciclar); das ist nur mittel sicher und nicht aufgenommen.
+4. **`klischees-hinterfragen`:** Man braucht Wissen über Spanien, aber `autonome-gemeinschaften` hat die spätere
+   Richtstufe 9-10; `geografie-spaniens` allein reicht nicht sicher. Nicht aufgenommen.
+5. **`migration` → `laender-lateinamerikas`** ist eine Herleitung. HE10 2.3 nennt Migration zusammen mit „España
+   hoy en día“; `migration` → `spanien-heute` wäre die Alternative mit Bündel, aber nur mittel sicher.
+6. **Mittlere Zuversicht, nicht aufgenommen:** `lateinamerikanische-woerter` → `laender-lateinamerikas` (würde das
+   Netz Lateinamerika an den Wortschatz hängen); `reisen-und-urlaub` → `wetter-und-jahreszeiten` (BY Sp8:
+   „Postkarte aus dem Urlaub“); `feste-und-braeuche` → `laender-lateinamerikas` (Día de Muertos);
+   `pronomen-bei-infinitiv-und-gerundio` → `querer-poder-infinitiv` (quiero verlo).
+7. **Bestehende Kante `bedingungssatz-real` → `futuro-inmediato`:** Der Baustein übt si + Präsens; das futuro
+   inmediato ist nur eine mögliche Folge. Ich habe die Kante gelassen; Lehrkräfte sollten sie prüfen.
+8. **`schule` → `uhrzeit`** ersetzt nur zum Teil, was der Stundenplan braucht (die Wochentage). Siehe 5.6.1.
+
+### 5.8 Nicht geöffnet
+
+- **Instituto Cervantes, Plan curricular (PCIC), Niveles de referencia A1–B2, Gramática**,
+  https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_a1-a2.htm:
+  Die Seite leitete am 10.11.2026 auf eine Wartungsseite um (curl und WebFetch). Nicht zitiert.
+- **Johnston (1995)** und **Bonilla (2014)**, From number agreement to the subjunctive, Second Language Research 31:
+  nicht frei zugänglich. Johnston zitiere ich nur über FMC.
+- **core.ac.uk/download/232781894.pdf** (Treffer der Suche zu Processability Theory und Spanisch): HTTP 403.
+
+### 5.9 Neue Bausteine (Owner, 2026-11-11)
+
+Der Owner hat die beiden Vorschläge aus 5.6 angenommen. Ich habe die Fundstellen in den Originalen noch einmal
+gelesen (Dateien vom 10.11.2026) und die Richtstufe nach dem Skill neu ausgezählt. Beide Bausteine nennen zwei der
+drei Länder; die KMK nennt keine Spanisch-Inhalte (3.1).
+
+**`wochentage-und-monate`** (Strang `wortschatz`, vor `datum`)
+- iCan: „Ich kann die Wochentage und die Monate nennen (el lunes, en mayo).“
+- Quellen: HE8 3.3 (Zahlen, Tageszeiten, Jahreseinteilung, Monatsnamen; S. 16); BY Sp8 1.2 Wortschatz („das
+  Datum, die Uhrzeit und Jahreszahlen“); NW nennt nur allgemein einen grundlegenden thematischen Wortschatz (S1)
+  und stimmt darum nicht mit, wie bei `datum`.
+- Stimmen HE / BY / NW: 7-8 / 5-6 / – → Gleichstand → die frühere: **5-6**.
+- Schwach belegt: Die Wochentage nennt ausdrücklich nur HE für die 3. Fremdsprache (Jg 9, S. 27), die nicht
+  gezählt wird. BY nennt sie im Datum mit.
+- `datum` heißt jetzt „Datum“ (en „Dates“) und lehrt nur noch das volle Datum: „Ich kann das Datum angeben und
+  danach fragen (Hoy es lunes, 3 de mayo. ¿Qué fecha es hoy?).“ So überschneiden sich die zwei Seiten nicht. Id und
+  Richtstufe von `datum` bleiben.
+
+**`sprachvergleich`** (Strang `wortschatz`, nach `falsche-freunde`), Muster: `englisch/sprachvergleich`
+- iCan: „Ich kann Spanisch mit Deutsch und anderen Sprachen vergleichen und typische Unterschiede erklären.“
+- Quellen: BY Sp10 5 (Sprachreflexion: „wesentliche strukturelle Unterschiede zwischen der spanischen und der
+  deutschen Sprache“); NW Sprachbewusstheit S1 S. 23 („im Sprachvergleich der Zielsprache mit anderen Sprachen
+  grundlegende Ähnlichkeiten und Verschiedenheiten aufzeigen“), ebenso S2 S. 32; HE nur als Querverweis
+  „Sprachvergleich“ in Jg 9 (S. 20) und Jg 10 (S. 22), vorbereitet in HE8 1.2 („Durch das Übersetzen kontrastiver
+  Strukturen werden Schüler auf den Sprachvergleich vorbereitet“).
+- Stimmen HE / BY / NW: 7-8 (Jg 9) / 9-10 (Jg 10) / 5-6 und 7-8 (S1) → 1× 5-6, 2× 7-8, 1× 9-10 → **7-8**
+  (Mehrheit). Auch ohne die schwache HE-Stimme wäre es 7-8 (drei verschiedene Stimmen → die mittlere).
+
+**Neue Kanten (5)**
+
+| Baustein | Voraussetzung | Grund | Art |
+|---|---|---|---|
+| `datum` | `wochentage-und-monate` | Das Datum besteht aus Wochentag, Zahl und Monat. | Herleitung |
+| `schule` | `wochentage-und-monate` | Der Stundenplan ist nach Wochentagen geordnet. | Herleitung |
+| `kleinschreibung` | `wochentage-und-monate` | Wochentage und Monate sind das Hauptbeispiel der Kleinschreibung. | Herleitung |
+| `feste-und-braeuche` | `wochentage-und-monate` | Feste nennt man mit Monat und Tag (los Reyes el 6 de enero); BY lehrt beides in Sp8. | Herleitung |
+| `sprachvergleich` | `falsche-freunde` | Falsche Freunde sind der bekannteste Fall von Ähnlichkeit, die täuscht (BY Sp8 5 → Sp10 5; NW S. 23). | Quelle |
+
+**Entfernte Kante (1):** `kleinschreibung` → `datum`. Die Kleinschreibung braucht nur die Namen der Tage und Monate,
+nicht die Zahl im Datum. Mit beiden Kanten wäre `wochentage-und-monate` indirekt gewesen.
+
+**Nicht gesetzt:** `sprachvergleich` → `woerter-aus-anderen-sprachen` (Vorschlag 5.6.2). Die Kante wäre indirekt,
+weil `falsche-freunde` schon auf `woerter-aus-anderen-sprachen` aufbaut.
+
+**Zahlen**
+
+| | Bausteine | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|---|
+| vorher (5.1) | 184 | 222 | 20 | 1 | 5 | 8 |
+| nachher | 186 | 226 | 20 | 0 | 4 | 8 |
+
+Richtstufen gesamt: 82 × 5-6, 85 × 7-8, 19 × 9-10. Im Strang `wortschatz` 17 × 5-6 und 17 × 7-8: keine Stufe hält
+mehr als die Hälfte. Mess-Skript: keine Zeile LATE oder INDIRECT. `npm test` grün (1 Test ohne Docker
+übersprungen). Keine App in `entries/` nutzt Spanisch; ein Vergleich der Listings entfällt.
+
+`wochentage-und-monate` ist eine neue Wurzel (einzelne Wörter, keine Voraussetzung nötig). `feste-und-braeuche` ist
+keine Wurzel mehr; die Zahl der Wurzeln bleibt 20. Kein Baustein steht mehr allein.
+
+**Offene Punkte**
+1. **Richtstufe `sprachvergleich`:** Der Vorschlag nannte 9-10, die Auszählung ergibt 7-8. Der Strang `wortschatz`
+   hat damit keinen Baustein in 9-10. BY nennt die strukturellen Unterschiede erst im letzten Lernjahr. Lehrkräfte
+   sollten prüfen, ob der Baustein später gehört.
+2. **`sprachvergleich` hängt nur am Wortschatz.** BY Sp10 meint strukturelle Unterschiede (Grammatik). Kanten zu
+   Grammatik-Bausteinen (zum Beispiel `ser-oder-estar`, wie `phrasal-verbs` in Englisch) wären möglich, haben aber
+   keine Quelle. Nicht gesetzt.
+3. Das Teilnetz `woerter-aus-anderen-sprachen` → `falsche-freunde` → `sprachvergleich` bleibt vom großen Netz
+   getrennt.
+4. Vier der fünf neuen Kanten sind Herleitungen.

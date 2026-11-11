@@ -20,6 +20,7 @@
 #        S = bis Ende Sek I -> "7-10"; IF1 Bildgestaltung, IF2 Bildkonzepte, IF3 Gestaltungsfelder.
 # Abstimmung: eine Stimme je Land; "7-10" zählt für 7-8 und 9-10; Gleichstand: requires, sonst die frühere Stufe.
 # Ein Vorschlag (Werkliste) ist nur ein Hinweis, keine Stimme. Titel, Ausgaben und URLs: .vibe/research-kunst.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Kunst, en: Art }                       # the file name is the subject's id: kunst
 source:
   title: Kerncurriculum Hessen, Sekundarstufe I - Gymnasium, Kunst (Hessisches Kultusministerium), mit Lehrplan Kunst G9 Hessen; Stränge nach den gemeinsamen Inhaltsbereichen von Hessen, Bayern und Nordrhein-Westfalen
@@ -453,11 +454,12 @@ strands:
         iCan: { de: "Ich kann Mimik, Gestik und Körperhaltung in einem Standbild oder Foto gezielt als Ausdrucksmittel einsetzen." }
         gradeBand: "5-6"
       # HE G9 9.1 Pose und Attribut, Arrangement und Komposition menschlicher Figuren (auch Fotografie); BY Ku9 LB3 sich selbst inszenieren und fotografieren; Gestaltungsmittel der Inszenierung; NW S IF3 Fotografie: Persuasion. Stimmen HE/BY/NW: 9-10 / 9-10 / 7-10 -> 9-10 (Mehrheit)
+      # requires kleidung-als-zeichen: Wer ein Foto mit Kleidung inszeniert, muss wissen, was Kleidung über Menschen mitteilt; HE und BY nennen Kleidung als Mittel der Inszenierung (HE G9 9.1 S. 27 „Pose und Attribut (u.a. Mimik, Gestik, Haltung, Kleidung)“; BY Ku9 LB3 „Gestaltungsmittel der Inszenierung, z. B. Kleidung, Requisit, Kulisse, Attribut, Statussymbol“)
       - id: inszenierte-fotografie
         name: { de: "Inszenierte Fotografie", en: "Staged photography" }
         iCan: { de: "Ich kann ein Foto inszenieren und dabei Pose, Kleidung, Requisit und Kulisse gezielt einsetzen." }
         gradeBand: "9-10"
-        requires: [koerpersprache, licht-in-der-fotografie]
+        requires: [koerpersprache, licht-in-der-fotografie, kleidung-als-zeichen]
       # BY Ku10 LB3 Fotografien zwischen Dokumentation und Inszenierung, Wahrheitsgehalt; Presse- und Werbefotografie; NW S IF3 Dokumentation und Persuasion. Stimmen HE/BY/NW: – / 9-10 / 7-10 -> 9-10 (Mehrheit)
       - id: dokumentation-und-inszenierung
         name: { de: "Dokumentarisches und inszeniertes Foto", en: "Documentary versus staged photos" }
@@ -500,11 +502,12 @@ strands:
         iCan: { de: "Ich kann erklären, was das Recht am eigenen Bild bedeutet, und danach entscheiden, welche Fotos ich zeigen darf." }
         gradeBand: "9-10"
       # HE KC Kap. 6 visuelle Alltags- und Jugendkultur erkunden; Wirkung des eigenen Auftretens beschreiben und bewerten; BY Ku9 LB3 Selbstinszenierungen in Jugendkulturen; Formen der Selbstdarstellung im Internet; NW S Produktion: Plattformen zur Präsentation, Kommunikation und Interaktion. Stimmen HE/BY/NW: 7-10 / 9-10 / 7-10 -> 9-10 (Mehrheit)
+      # requires praesentieren (Herleitung): Eine Selbstdarstellung im Internet ist eine Präsentation für ein Publikum; man bewertet sie wie jede Präsentation danach, ob sie zu Zweck und Publikum passt. NW nennt Plattformen zur Präsentation und das Bewerten von Präsentationen nach Kontext und Adressat (NW S. 22, S. 26).
       - id: selbstdarstellung-online
         name: { de: "Selbstdarstellung im Internet", en: "Self-presentation online" }
         iCan: { de: "Ich kann Selbstdarstellungen im Internet und in Jugendkulturen untersuchen und bewerten, wie sie wirken sollen." }
         gradeBand: "9-10"
-        requires: [inszenierte-fotografie, recht-am-eigenen-bild]
+        requires: [inszenierte-fotografie, recht-am-eigenen-bild, praesentieren]
   - id: architektur-design
     name: { de: "Architektur und Design", en: "Architecture and design" }
     competencies:
@@ -539,11 +542,12 @@ strands:
         gradeBand: "9-10"
         requires: [material-erkunden]
       # HE G9 9.3 Idee, Planung, Entwurf und Herstellung eines Designobjektes; BY Ku7 LB2 funktionale oder fantastische Apparate bzw. Objekte entwickeln und bauen; Ku9 LB2 Mode oder Schmuck entwerfen. Stimmen HE/BY/NW: 9-10 / 7-8 / – -> 9-10 (Gleichstand 7-8/9-10; requires entscheidet (form-und-funktion))
+      # requires sammeln: Ein Entwurf beginnt mit gesammelten Bildern, Dingen und Ideen; BY nennt das Moodboard beim Entwerfen (BY Ku9 LB2 „Entwurf und Analyse z. B. von Bekleidung, Mode, Schmuck und Ornament, u. a. mit Collage- und Zufallsverfahren, Moodboard, Zeichnung“)
       - id: designobjekt-entwerfen
         name: { de: "Gebrauchsgegenstand entwerfen", en: "Designing a product" }
         iCan: { de: "Ich kann einen Gebrauchsgegenstand entwerfen: Idee, Skizzen, Modell und Prototyp." }
         gradeBand: "9-10"
-        requires: [form-und-funktion, skizze-und-entwurf]
+        requires: [form-und-funktion, skizze-und-entwurf, sammeln]
       # HE G9 9.3 technische, gesellschaftliche und ökologische Funktionalität; Objekte vergleichen und beurteilen; BY Ku10 LB2 soziale Fragen und Aspekte von Nachhaltigkeit. Stimmen HE/BY/NW: 9-10 / 9-10 / – -> 9-10 (Mehrheit)
       - id: design-bewerten
         name: { de: "Design bewerten", en: "Evaluating design" }
@@ -594,10 +598,12 @@ strands:
     name: { de: "Bildideen und Bildstrategien", en: "Ideas and strategies for images" }
     competencies:
       # HE G9 5.2 Dingphantasien, Fantasiebilder, Fabelwesen; BY Ku5 LB1 Bildmotive aus Fantasie; NW E IF2 imaginierend; IF3 Fiktion/Vision: Fantasiebildung als Neuschöpfung. Stimmen HE/BY/NW: 5-6 / 5-6 / 5-6 -> 5-6 (Mehrheit)
+      # requires punkt-und-linie: Das Fantasiebild entsteht als Zeichnung aus einem Vorrat an Linien und Formen; HE nennt Fantasiebilder und Fabelwesen bei der „Entwicklung eines Formrepertoires“ im zeichnerischen Gestalten (HE G9 5.2 S. 13 „Ausdrucksqualitäten zeichnerischer Spuren, Figuren … Erzählbilder, Bildergeschichten, Fantasiebilder, Fabelwesen“)
       - id: fantasiebild
         name: { de: "Fantasiebild", en: "Imaginary picture" }
         iCan: { de: "Ich kann ein Fantasiebild erfinden, indem ich Bekanntes neu kombiniere, zum Beispiel zu einem Fabelwesen oder einer unmöglichen Maschine." }
         gradeBand: "5-6"
+        requires: [punkt-und-linie]
       # HE G9 6.2 Szenen: Verfremden; BY Ku10 LB1 Prinzipien des Verzerrens, Kombinierens oder Collagierens; NW E IF2 Bildstrategien: verfremdend. Stimmen HE/BY/NW: 5-6 / 9-10 / 5-6 -> 5-6 (Mehrheit)
       - id: verfremden
         name: { de: "Verfremdung", en: "Alienation of motifs" }
@@ -704,11 +710,12 @@ strands:
         iCan: { de: "Ich kann an Beispielen erklären, wozu Kunst gemacht wurde, zum Beispiel für Religion, Macht, Erinnerung oder Schmuck." }
         gradeBand: "5-6"
       # HE G9 5.1 malerische Spur innerer Bewegung; 6.1 Stimmung, Ausdruck; BY Ku9 LB1 Darstellung von Innerlichkeit; NW S IF3 Expression: Ausdruck inneren Erlebens und innerer Vorstellung. Stimmen HE/BY/NW: 5-6 / 9-10 / 7-10 -> 9-10 (Mehrheit)
+      # requires malspuren: Inneres Erleben drückt sich auch in der Spur des Farbauftrags aus; HE nennt die malerische Spur als Ausdruck innerer Bewegung (HE G9 5.1 S. 11 „Malerische Spur innerer Bewegung“; 6.1 S. 16 „Farbauftrag als Ausdrucksmittel“)
       - id: expressive-bilder
         name: { de: "Expressive Bilder", en: "Expressive pictures" }
         iCan: { de: "Ich kann an Bildern erklären, wie sie inneres Erleben ausdrücken, und selbst ein Gefühl bildnerisch ausdrücken." }
         gradeBand: "9-10"
-        requires: [farbwirkung]
+        requires: [farbwirkung, malspuren]
       # HE KC 7.1 Definieren von Bildmotiven und Bildhandlungen (Ikonografie); BY Ku7 LB1 Aspekte mittelalterlicher Ikonografie; Ku8 LB1 ikonografische Kenntnisse; NW S Rezeption: werkimmanente Untersuchungen mit bildexternen Informationen verknüpfen. Stimmen HE/BY/NW: 5-6 / 7-8 / 7-10 -> 7-8 (Mehrheit)
       - id: ikonografie
         name: { de: "Ikonografie", en: "Iconography" }
@@ -755,11 +762,12 @@ strands:
     name: { de: "Kunstgeschichte: Epochen und Werke", en: "Art history: periods and works" }
     competencies:
       # BY Ku5 LB1 Mensch und Tier als Motiv in Höhlenmalereien, Reliefs und Plastiken früher Kulturen (Altamira, Lascaux, Schwäbische Alb). Stimmen HE/BY/NW: – / 5-6 / – -> 5-6 (festgelegt: nur BY stimmt (Jg 5)). SCHWACH BELEGT: nur BY; aufgenommen als Voraussetzung von epochen-ueberblick
+      # requires funktionen-der-kunst: Der Baustein fragt, wozu die Werke gemacht wurden; BY verbindet die Kunst der Vor- und Frühgeschichte mit ihrer Funktion (BY Ku5 LB2 „in Bezug auf Kulte und Grundbedürfnisse des Menschen; sakrale und profane Funktion“)
       - id: hoehlenmalerei
         name: { de: "Kunst der Steinzeit", en: "Stone Age art" }
         iCan: { de: "Ich kann Höhlenmalereien und Plastiken der Steinzeit beschreiben und erklären, wozu sie vielleicht gemacht wurden." }
         gradeBand: "5-6"
-        requires: [bild-beschreiben]
+        requires: [bild-beschreiben, funktionen-der-kunst]
       # HE G9 6.3 Umgang mit Kunst: Ägyptische Tier- und Menschenfiguren; BY Ku5 LB1 Kunst im Alten Ägypten; Ku5 LB2 Pyramide. Stimmen HE/BY/NW: 5-6 / 5-6 / – -> 5-6 (Mehrheit)
       - id: aegyptische-kunst
         name: { de: "Ägyptische Kunst", en: "Ancient Egyptian art" }
@@ -820,11 +828,12 @@ strands:
         gradeBand: "9-10"
         requires: [lokalfarbe-erscheinungsfarbe, realismus]
       # HE G9 7.1, 7.2 Umgang mit Kunst (Vorschlag): van Gogh, Cézanne [nur Hinweis, keine Stimme]; BY Ku10 LB1 Wegbereiter der Moderne van Gogh, Cézanne, Gauguin; Vorbereitung der Abstraktion. Stimmen HE/BY/NW: – / 9-10 / – -> 9-10 (festgelegt: nur BY verbindlich (Jg 10); requires impressionismus (9-10)). SCHWACH BELEGT: verbindlich nur BY; HE nennt die Werke nur als Vorschlag
+      # requires abstrahieren: Wer zeigen will, wie diese Maler die Abstraktion vorbereitet haben, muss wissen, was Abstrahieren heißt; BY nennt beides im selben Jahr (BY Ku10 LB1 „Prinzipien … des Verzerrens, Kombinierens oder Collagierens … um spielerisch mit den Möglichkeiten der Abstraktion zu experimentieren“ und „Impressionisten und Wegbereiter der Moderne … ihrer Relevanz für die Vorbereitung der Abstraktion“)
       - id: wegbereiter-der-moderne
         name: { de: "Wegbereiter der Moderne", en: "Pioneers of modern art" }
         iCan: { de: "Ich kann an Werken von van Gogh, Cézanne und Gauguin zeigen, wie sie den Weg zur modernen Kunst bereitet haben." }
         gradeBand: "9-10"
-        requires: [impressionismus, ausdrucksfarbe]
+        requires: [impressionismus, ausdrucksfarbe, abstrahieren]
       # HE KC Kap. 6 Zugänge zu ungewohnten oder fremden Bildwelten; Toleranz und Distanz; G9 5.3 Masken aus verschiedenen Kulturkreisen; BY Ku10 LB1 Einflüsse außereuropäischer Kunst und Kultur auf die Kunst der frühen Moderne; Exotismus. Stimmen HE/BY/NW: 7-10 / 9-10 / – -> 9-10 (Mehrheit)
       - id: aussereuropaeische-einfluesse
         name: { de: "Außereuropäische Einflüsse", en: "Non-European influences" }
@@ -848,4 +857,4 @@ strands:
         name: { de: "Epochen im Überblick", en: "Overview of art periods" }
         iCan: { de: "Ich kann die großen Epochen der Kunst von der Steinzeit bis zur Moderne in die richtige Reihenfolge bringen und ein Werk an Merkmalen einer Epoche zuordnen." }
         gradeBand: "9-10"
-        requires: [hoehlenmalerei, aegyptische-kunst, antike-plastik, antike-architektur, romanik-und-gotik, mittelalterliche-bilder, renaissance, barock, klassizismus-und-romantik, realismus, impressionismus, wegbereiter-der-moderne, jugendstil]
+        requires: [hoehlenmalerei, aegyptische-kunst, antike-plastik, antike-architektur, romanik-und-gotik, barock, wegbereiter-der-moderne, jugendstil]

@@ -8,6 +8,8 @@
 #        LB2 Musik-Mensch-Zeit, LB3 Bewegung-Tanz-Szene, LB4 Musik und ihre Grundlagen; "nur MuG" = Musisches Gymnasium
 #   NW = Kernlehrplan Musik Gymnasium Sek I, Nordrhein-Westfalen (2019), Ordnungssysteme musikalischer Strukturen
 #   RP = Lehrplan Musik Sek I, Rheinland-Pfalz (2018), Kap. 4.2 und 5.1
+#   GIML = Gordon Institute for Music Learning: Music Learning Theory, Seite „Methodology“ (https://giml.org/mlt/methodology/); nur für requires
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Musik, en: Music }
 source:
   title: Kerncurriculum Hessen, Sekundarstufe I - Gymnasium, Musik (Hessisches Kultusministerium), mit Lehrplan Musik G9 Hessen
@@ -155,7 +157,7 @@ strands:
         name: { de: "Instrumentenfamilien", en: "Instrument families" }
         iCan: { de: "Ich kann Instrumente nach der Art, wie sie klingen, in Familien einordnen." }
         gradeBand: "5-6"
-        requires: [klangquellen-unterscheiden, schwingung]
+        requires: [schwingung]
       # G9 5/04 (Instrumentale Besetzungen, Ensembles); NW 5/6 (Ensembles); BY Mu6 LB4 (Besetzungen)
       - id: ensembles-besetzungen
         name: { de: "Ensembles und Besetzungen", en: "Ensembles and line-ups" }
@@ -209,13 +211,13 @@ strands:
         name: { de: "Elektronische Klangerzeugung", en: "Electronic sound generation" }
         iCan: { de: "Ich kann erklären, wie ein elektrisches oder digitales Instrument Klänge erzeugt und verändert." }
         gradeBand: "7-8"
-        requires: [schwingung, klangformung]
+        requires: [klangformung]
       # KC Kap. 6 Inhaltsfeld Klang (Klanggestaltung); NW Sek I Ende (Klangerzeugung, Klangveränderung)
       - id: klang-gestalten
         name: { de: "Klanggestaltung", en: "Shaping sound" }
         iCan: { de: "Ich kann einen Klang gezielt gestalten, zum Beispiel durch die Art des Anschlagens, durch Dämpfen oder durch Klangbearbeitung." }
         gradeBand: "9-10"
-        requires: [klangformung, verstaerkung-resonanz, klang-verfremden]
+        requires: [verstaerkung-resonanz, klang-verfremden]
   - id: rhythmus-takt
     name: { de: "Rhythmus, Takt und Tempo", en: "Rhythm, metre and tempo" }
     competencies:
@@ -302,7 +304,7 @@ strands:
         name: { de: "Beat und Off-Beat", en: "Beat and off-beat" }
         iCan: { de: "Ich kann in einem Song Beat und Off-Beat unterscheiden und den Groove mitklatschen." }
         gradeBand: "7-8"
-        requires: [synkope, betonung-hoeren]
+        requires: [synkope]
       # G9 Takt/Metrum 8 (5/4, 7/4, Polymetrik); BY Mu6 LB4 (7/8, 5/4)
       - id: besondere-taktarten
         name: { de: "Ungerade Taktarten", en: "Irregular time signatures" }
@@ -401,7 +403,7 @@ strands:
         name: { de: "Diatonik und Chromatik", en: "Diatonic and chromatic" }
         iCan: { de: "Ich kann eine diatonische von einer chromatischen Tonfolge unterscheiden." }
         gradeBand: "5-6"
-        requires: [halbtonschritte, tonleiter-ganzton-halbton]
+        requires: [tonleiter-ganzton-halbton]
       # G9 Tonhöhe/Melodik 6 (Charakteristik von Melodien: Dreiklangs-, Stufenmelodik); BY Mu5/Mu6 LB4
       - id: melodietypen
         name: { de: "Stufen- und Dreiklangsmelodik", en: "Stepwise and triadic melody" }
@@ -421,11 +423,12 @@ strands:
         gradeBand: "5-6"
         requires: [intervall-benennen]
       # G9 Zusammenklang/Harmonik 6 (Dreiklangsarten); BY Mu6 LB4 (Dreiklänge in Dur und Moll hören, benennen, notieren); NW Sek I Ende (Dur, Moll)
+      # requires intervall-qualitaet: Dur- und Moll-Dreiklang unterscheiden sich in der großen oder kleinen Terz; BY und HE nennen beides im selben Jahr (BY Mu6 LB4: „bestimmen Intervalle bis zur Quinte sowie Dreiklangsformen in Dur und Moll“, „Intervalle bis zur Oktave: rein, groß und klein“; G9 S. 10, Jg 6: „genauere Intervallbestimmung“, „Dreiklangsarten“)
       - id: dreiklangsarten
         name: { de: "Dur- und Moll-Dreiklang", en: "Major and minor triads" }
         iCan: { de: "Ich kann Dur- und Moll-Dreiklänge hören, aufbauen und unterscheiden." }
         gradeBand: "5-6"
-        requires: [dreiklang, moll-aufbau]
+        requires: [dreiklang, moll-aufbau, intervall-qualitaet]
       # G9 Zusammenklang/Harmonik 6 (Konsonanz/Dissonanz); NW 5/6 Harmonik; RP dissonant, konsonant
       - id: konsonanz-dissonanz
         name: { de: "Konsonanz und Dissonanz", en: "Consonance and dissonance" }
@@ -544,11 +547,12 @@ strands:
         gradeBand: "5-6"
         requires: [notenwerte-im-takt, rhythmus-nachklatschen]
       # KC 7.1 Musik machen (Notationen lesen); G9 Gestalten mit Instrumenten 5/6 (Melodien nach Noten); Übergangsprofil
+      # requires tonfolge-nachsingen: Noten liest man erst, wenn man Tonfolgen hörend nachsingen kann, so wie Rhythmen lesen auf Rhythmen nachklatschen aufbaut (GIML Methodology, „Sequence“: „learn to read notation …, but only after they have developed the ability to audiate the note patterns“; erste Stufe „aural/oral“: hören und nachsingen)
       - id: melodie-lesen
         name: { de: "Melodien lesen", en: "Reading melodies" }
         iCan: { de: "Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen." }
         gradeBand: "5-6"
-        requires: [noten-benennen, rhythmus-lesen]
+        requires: [noten-benennen, rhythmus-lesen, tonfolge-nachsingen]
       # KC 7.1 Musik machen (Musik notieren); BY Mu5 LB4 (rhythmische Folgen hörend erfassen und notieren, nur MuG)
       - id: rhythmus-notieren
         name: { de: "Rhythmen notieren", en: "Writing down rhythms" }
@@ -584,7 +588,7 @@ strands:
         name: { de: "Hörpartitur mitlesen", en: "Following a listening map" }
         iCan: { de: "Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist." }
         gradeBand: "5-6"
-        requires: [grafisch-notieren, konzentriert-hoeren]
+        requires: [grafisch-notieren]
       # G9 Hören mit Noten 8 (Akkordnotationen/Leadsheet); BY Mu7 LB4 (Akkordfolgen notieren, Liedbegleitung nach Akkordsymbolen); NW Sek I Ende (Akkordbezeichnungen)
       - id: akkordsymbole
         name: { de: "Akkordsymbole im Leadsheet", en: "Chord symbols in a lead sheet" }
@@ -747,11 +751,12 @@ strands:
         gradeBand: "5-6"
         requires: [haltung-atmung]
       # BY Mu7 LB1 (Stimme in der Phase der Mutation, Stimmideale)
+      # requires stimme-klangquelle: Was im Stimmwechsel passiert, erklärt man mit dem Wissen, wie die Stimme entsteht; BY nennt beides im selben Lernbereich (BY Mu7 LB1: „beschreiben mit Wissen um physiologische Grundlagen erlebte Funktionsweisen der eigenen Stimme“ / „Die Stimme in der Phase der Mutation“)
       - id: stimme-im-stimmwechsel
         name: { de: "Stimme im Stimmwechsel", en: "Voice change" }
         iCan: { de: "Ich kann erklären, was im Stimmwechsel mit der Stimme passiert, und meine Stimme dabei schonend einsetzen." }
         gradeBand: "7-8"
-        requires: [stimme-pflegen]
+        requires: [stimme-pflegen, stimme-klangquelle]
       # KC 7.1 Musik machen (deutliche Artikulation, saubere Intonation); BY Mu5 LB1 (Sprachverständlichkeit)
       - id: artikulation-intonation
         name: { de: "Aussprache und Intonation", en: "Diction and intonation" }
@@ -830,11 +835,12 @@ strands:
         gradeBand: "5-6"
         requires: [rhythmus-nachklatschen]
       # G9 Gestalten mit Instrumenten 5/6 (Klassenmusizieren, Mitspielsätze); BY Mu5/Mu6 LB1 (Arrangements)
+      # requires spieltechnik-instrument: Wer im Mitspielsatz eine Stimme spielt, braucht die Spieltechnik seines Instruments; der Lehrplan nennt Spieltechniken in Jg 5 vor den Mitspielsätzen in Jg 6 (G9 S. 8, Lernfeld Gestalten mit Instrumenten; G9 S. 14, 5/04: „Spielweisen“ / „Einsatz vorhandener Instrumente bei Klassenarrangements und Mitspielsätzen“)
       - id: mitspielsatz
         name: { de: "Mitspielsatz im Klassenensemble", en: "Playing in a class ensemble" }
         iCan: { de: "Ich kann in einem Mitspielsatz meine Stimme im Klassenensemble spielen." }
         gradeBand: "5-6"
-        requires: [lied-begleiten, aufeinander-hoeren]
+        requires: [lied-begleiten, aufeinander-hoeren, spieltechnik-instrument]
       # KC 7.1 Musik machen (aufeinander hören und reagieren); BY Mu5 LB1 (achtsam interagieren)
       - id: aufeinander-hoeren
         name: { de: "Aufeinander hören", en: "Listening to each other" }
@@ -846,7 +852,7 @@ strands:
         name: { de: "Mehrstimmige Stücke aufführen", en: "Performing pieces in parts" }
         iCan: { de: "Ich kann ein Musikstück mit mehreren Stimmen rhythmisch und tonal sicher gemeinsam aufführen." }
         gradeBand: "9-10"
-        requires: [aufeinander-hoeren, rhythmus-nachbauen, tonfolge-im-metrum, zweistimmig-singen]
+        requires: [rhythmus-nachbauen, tonfolge-im-metrum, zweistimmig-singen]
       # KC Inhaltsfeld Gesang und Instrumentalspiel (Verfahren zur Übung und Festigung); RP 1.5 Üben
       - id: ueben-strategien
         name: { de: "Übestrategien", en: "Practice strategies" }
@@ -863,7 +869,7 @@ strands:
         name: { de: "Gruppe anleiten", en: "Leading a group" }
         iCan: { de: "Ich kann eine kleine Gruppe beim Musizieren anleiten, zum Beispiel mit einem Einsatzzeichen." }
         gradeBand: "5-6"
-        requires: [aufeinander-hoeren, gesten-verstehen]
+        requires: [gesten-verstehen]
       # KC Kap. 6 Musik machen (organisieren und anleiten)
       - id: musizieren-organisieren
         name: { de: "Gruppenmusizieren organisieren", en: "Organising group music-making" }
@@ -1074,11 +1080,13 @@ strands:
         gradeBand: "7-8"
         requires: [epoche-barock]
       # G9 8/11 Songs in Rock und Pop; BY Mu7/Mu8 LB2 und LB4 (Stile der Popularmusik); NW 9 Bedeutungen; RP Popmusik
+      # requires beat-offbeat: Stile unterscheidet man auch am Rhythmus; BY lehrt Off-Beat „in Stilen der Popularmusik“ ein Jahr vor dem Unterscheiden der Stile nach Rhythmik (BY Mu7 LB4: „Synkope, Off-Beat … in Stilen der Popularmusik“ → BY Mu8 LB4: „unterscheiden charakteristische Merkmale verschiedener Stile in der Popularmusik (z. B. Rhythmik, Besetzung, Sound)“)
+      # requires ensembles-besetzungen: Stile unterscheidet man auch an der Besetzung; BY lehrt Besetzungen vorher (BY Mu6 LB4: „charakteristische Elemente aus den Bereichen Besetzung …“ → BY Mu8 LB4, wie oben)
       - id: popularmusik-stile
         name: { de: "Stile der Popularmusik", en: "Popular music styles" }
         iCan: { de: "Ich kann Stile der Popularmusik an Rhythmus, Besetzung und Sound unterscheiden." }
         gradeBand: "7-8"
-        requires: [gebrauchspraxen-nennen, songaufbau]
+        requires: [gebrauchspraxen-nennen, songaufbau, beat-offbeat, ensembles-besetzungen]
       # BY Mu8 LB2 und LB4 (Musik in einem nicht abendländisch geprägten Kulturkreis); G9 Musik und Gesellschaft 8; RP Traditionelle Musik der Welt
       - id: musik-nicht-abendlaendisch
         name: { de: "Außereuropäische Musik", en: "Non-Western music" }
@@ -1108,7 +1116,7 @@ strands:
         name: { de: "Musik einer Epoche zuordnen", en: "Assigning music to a period" }
         iCan: { de: "Ich kann ein Musikstück einer geschichtlichen Zeit zuordnen und die Zeit am Stück begründen." }
         gradeBand: "9-10"
-        requires: [epoche-barock, epoche-klassik, epoche-romantik, epoche-neue-musik]
+        requires: [epoche-neue-musik]
       # BY Mu10 LB2 und LB4 (Jazz); RP Jazz; G9 Musik und Gesellschaft 8 (Blues, Jazz)
       - id: jazz
         name: { de: "Jazz", en: "Jazz" }

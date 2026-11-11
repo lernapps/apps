@@ -7,6 +7,7 @@
 # im Schulbeispiel, nur Hinweis.
 # Richtstufe: eine Stimme je Land (HE / BY / NW). "7-10" = zweite Stufe von HE oder NW ohne Jahrgang, zählt für 7-8 und
 # 9-10; ein Gleichstand wird über requires entschieden. Genaue Titel, Ausgaben und URLs: .vibe/research-biologie.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Biologie, en: Biology }                # the file name is the subject's id: biologie
 source:
   title: KMK, Weiterentwickelte Bildungsstandards in den Naturwissenschaften für das Fach Biologie (MSA), Beschluss vom 16.12.2004 i.d.F. vom 13.06.2024
@@ -51,11 +52,12 @@ strands:
         gradeBand: "5-6"
         requires: [tierzelle-pflanzenzelle, pflanzenorgane]
       # KMK Z3 Zellatmung; HE 5/6: grundlegende phänomenologische Aspekte zur Atmung (S. 44); BY NT5 2.3 (Jg 5): Zellatmung, einfaches Reaktionsschema; NW IF4 (Stufe 2; SiLP 8.8): Grundprinzip der Zellatmung. Stimmen 5-6 / 5-6 / 7-10: Mehrheit
+      # requires naehrstoffe: Die Wortgleichung beginnt mit Traubenzucker, einem Nährstoff; BY lehrt Nahrungsbestandteile und Zellatmung im selben Abschnitt „Stoffwechsel“ (BY NT5 2.3)
       - id: zellatmung
         name: { de: "Zellatmung", en: "Cellular respiration" }
         iCan: "Ich kann die Zellatmung als Wortgleichung angeben und erklären, wozu Zellen Sauerstoff und Nährstoffe brauchen."
         gradeBand: "5-6"
-        requires: [tierzelle-pflanzenzelle]
+        requires: [tierzelle-pflanzenzelle, naehrstoffe]
       # KMK Z3 Fotosynthese und Zellatmung; HE 9/10: Vernetzung zu auf- und abbauenden Stoffwechselprozessen (S. 44); BY NT6 1.2 (Jg 6): Zusammenhang stofflich und energetisch; NW IF4 (Stufe 2; SiLP 8.8): Fotosynthese der Zellatmung gegenüberstellen. Stimmen 7-10 / 5-6 / 7-10: Gleichstand 7-8/9-10; requires entscheidet (klimawandel)
       - id: fotosynthese-und-zellatmung
         name: { de: "Fotosynthese und Zellatmung", en: "Photosynthesis and cellular respiration" }
@@ -67,7 +69,7 @@ strands:
         name: { de: "Energie aus der Zellatmung", en: "Energy from cellular respiration" }
         iCan: "Ich kann erklären, wie Zellen bei der Zellatmung Energie aus Glucose für Bewegung, Wachstum und Körperwärme bereitstellen."
         gradeBand: "9-10"
-        requires: [fotosynthese-und-zellatmung, naehrstoffe]
+        requires: [fotosynthese-und-zellatmung]
       # KMK Z4 Enzymreaktion (Voraussetzung); HE –; BY B9 3.1 (Jg 9): Vielfalt der Proteine; B10 3.1: Aufbau aus Aminosäuren; NW IF6 (Stufe 2; SiLP 10.4): funktionelle Vielfalt der Proteine. Stimmen – / 9-10 / 7-10: Mehrheit
       - id: proteine
         name: { de: "Proteine", en: "Proteins" }
@@ -103,7 +105,7 @@ strands:
         name: { de: "Viren", en: "Viruses" }
         iCan: "Ich kann den Bau eines Virus beschreiben und erklären, warum sich Viren nur in Wirtszellen vermehren können."
         gradeBand: "9-10"
-        requires: [bakterienzelle, kennzeichen-des-lebendigen]
+        requires: [bakterienzelle]
       # KMK Z2 Zellen; V2 Vererbung; HE 9/10: vereinfachtes DNA-Modell (S. 41, 45); BY B9 3.1 (Jg 9): einfaches DNA-Modell; NW IF6 (Stufe 2; SiLP 10.4): DNA. Stimmen 7-10 / 9-10 / 7-10: Mehrheit
       - id: dna-modell
         name: { de: "DNA-Modell", en: "DNA model" }
@@ -137,11 +139,12 @@ strands:
         iCan: "Ich kann die fünf Wirbeltierklassen an Körperbedeckung, Atmung, Körpertemperatur und Fortpflanzung unterscheiden und ein Tier einer Klasse zuordnen."
         gradeBand: "5-6"
       # KMK V3 Angepasstheit; HE 5/6: Körperbau, Lebensweise und Lebensraum (S. 47); BY NT6 1.3 (Jg 6): Fortbewegung im Wasser, an Land, in der Luft; NW IF1 (Stufe 1): Angepasstheit von Säugetieren und Vögeln (Skelett, Fortbewegung). Stimmen 5-6 / 5-6 / 5-6: Mehrheit
+      # requires skelett: Die Angepasstheit wird am Skelettaufbau erklärt, der Vergleich der Knochen braucht die Teile des Skeletts (NW IF1 S. 22 f.: „Skelettaufbau, Fortbewegung“, Säugetier- und Vogelknochen vergleichen); BY lehrt das Skelett in Jg 5 (NT5 2.3), die Fortbewegung der Wirbeltiere in Jg 6 (NT6 1.3)
       - id: angepasstheit-fortbewegung
         name: { de: "Angepasstheit an die Fortbewegung", en: "Adaptations for locomotion" }
         iCan: "Ich kann an Beispielen erklären, wie der Körperbau von Fischen, Vögeln und Säugetieren an die Fortbewegung im Wasser, in der Luft oder an Land angepasst ist."
         gradeBand: "5-6"
-        requires: [wirbeltierklassen]
+        requires: [wirbeltierklassen, skelett]
       # KMK V3 Angepasstheit; HE 5/6: Körperbau und artspezifische Lebensweise (S. 47); BY NT6 1.3 (Jg 6): Fleisch- und Pflanzenfresser, Nahrungserwerb; NW IF1 (Stufe 1): Angepasstheit beim Nahrungserwerb. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: angepasstheit-ernaehrung
         name: { de: "Angepasstheit an die Ernährung", en: "Adaptations for feeding" }
@@ -266,7 +269,7 @@ strands:
         name: { de: "Stammbäume der Evolution", en: "Phylogenetic trees" }
         iCan: "Ich kann aus abgestuften Ähnlichkeiten im Körperbau auf Verwandtschaft schließen und sie in einem Stammbaum darstellen."
         gradeBand: "9-10"
-        requires: [evolutionstheorie-darwin, wirbeltierklassen]
+        requires: [evolutionstheorie-darwin]
       # KMK V3 Verwandtschaft; HE –; BY B10 LB4 (Jg 10): systematische Gruppen des natürlichen Systems: Reich, Stamm, Klasse; NW IF5 (Stufe 2; SiLP 8.5): natürliches System der Lebewesen. Stimmen – / 9-10 / 7-10: Mehrheit
       - id: natuerliches-system
         name: { de: "Natürliches System", en: "Biological classification" }
@@ -375,7 +378,7 @@ strands:
         name: { de: "Ausgewogene Ernährung", en: "Balanced diet" }
         iCan: "Ich kann eine ausgewogene Mahlzeit zusammenstellen und begründen, warum sie gesund ist."
         gradeBand: "5-6"
-        requires: [energiebedarf, naehrstoffe]
+        requires: [energiebedarf]
       # KMK M1 Organsysteme; HE 5/6: Verdauungssystem (S. 43); BY NT5 2.3 (Jg 5): Verdauungsorgane, Resorption; B10 3.2; NW IF2 (Stufe 1): Verdauungsorgane und -vorgänge. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: verdauungsorgane
         name: { de: "Verdauungsorgane", en: "Digestive system" }
@@ -430,11 +433,12 @@ strands:
         gradeBand: "7-8"
         requires: [reiz-reaktion]
       # KMK M1 Organsysteme; HE 9/10: Erregung und Erregungsweiterleitung zum Gehirn an Zellstrukturen (Sinneszelle, Nervenzelle) (S. 28, 42); BY B8 LB2 (Jg 8): Aufbau einer Nervenzelle; NW IF7 (Stufe 2; SiLP 10.6): einfache Modellvorstellungen zu Neuron und Synapse. Stimmen 7-10 / 7-8 / 7-10: Mehrheit
+      # requires tierzelle-pflanzenzelle (Herleitung): Die Nervenzelle ist eine spezialisierte tierische Zelle; ihren Bau (Zellkörper mit Zellkern, Zellmembran) beschreibt man mit den Zellbestandteilen (vgl. HE 9/10 S. 42: Erregungsweiterleitung „gebunden an Zellstrukturen“)
       - id: nervenzelle
         name: { de: "Nervenzelle", en: "Nerve cell" }
         iCan: "Ich kann den Bau einer Nervenzelle mit Zellkörper, Dendriten, Axon und Endknöpfchen beschreiben und erklären, wie sie Signale weiterleitet."
         gradeBand: "7-8"
-        requires: [reiz-reaktion]
+        requires: [reiz-reaktion, tierzelle-pflanzenzelle]
       # KMK M1 Organsysteme; HE –; BY B8 LB2 (Jg 8): grundlegende Funktionsweise einer chemischen Synapse; NW IF7 (Stufe 2; SiLP 10.6): Informationsübertragung an chemischen Synapsen. Stimmen – / 7-8 / 7-10: Mehrheit. Hinweis: HE nennt nur die Erregungsweiterleitung an Zellstrukturen (S. 28)
       - id: synapse
         name: { de: "Synapse", en: "Synapse" }
@@ -594,10 +598,12 @@ strands:
     name: { de: "Lebewesen in ihrer Umwelt", en: "Living things in their environment" }
     competencies:
       # KMK U1 Ökosysteme; HE 5/6: Tiere und Pflanzen eines ausgewählten Ökosystems (S. 43); BY NT5 2.5 (Jg 5): Lebensraum, Lebensgemeinschaft; NT6 1.5; NW IF4 (Stufe 2; SiLP 8.1): Biotop und Biozönose. Stimmen 5-6 / 5-6 / 7-10: Mehrheit
+      # requires arten-bestimmen: Die Lebensgemeinschaft eines Ökosystems erschließt man, indem man ihre Arten bestimmt (BY NT5 2.5: „charakterisieren einen Teil der Lebensgemeinschaft des Grünlands u. a. durch die Bestimmung verschiedener krautiger Pflanzenarten“; ebenso NT6 1.5: „bestimmen Lebewesen aquatischer Ökosysteme“)
       - id: oekosystem-grundbegriffe
         name: { de: "Ökosystem: Biotop und Biozönose", en: "Ecosystem: habitat and community" }
         iCan: "Ich kann an einem heimischen Ökosystem wie Wiese, Wald oder Gewässer beschreiben, was Lebensraum (Biotop) und Lebensgemeinschaft (Biozönose) sind."
         gradeBand: "5-6"
+        requires: [arten-bestimmen]
       # KMK U2 Artenkenntnis; HE 9/10: Erweiterung der Artenkenntnis (S. 44); BY NT5 2.1, 2.5 (Jg 5): Bestimmen von Samenpflanzen; B8 LB1; NW IF1 (Stufe 1): Bestimmungsschlüssel für Samenpflanzen; IF4: Taxa bestimmen. Stimmen 7-10 / 5-6 / 5-6: Mehrheit
       - id: arten-bestimmen
         name: { de: "Arten bestimmen", en: "Identifying species" }
@@ -633,13 +639,13 @@ strands:
         name: { de: "Sukzession", en: "Succession" }
         iCan: "Ich kann beschreiben, wie sich ein Ökosystem im Lauf der Zeit verändert (Sukzession), und natürliche von menschengemachten Veränderungen unterscheiden."
         gradeBand: "7-8"
-        requires: [oekosystem-grundbegriffe, eingriffe-des-menschen]
+        requires: [eingriffe-des-menschen]
       # KMK U1 Biodiversität, Naturschutz; HE 9/10: Artenvielfalt und Artensterben, Gefährdung (S. 44, 47); BY NT5 2.5 (Jg 5): Biodiversität; NT6 1.5 (Jg 6): Schutz der biologischen Vielfalt; NW IF4 (Stufe 2; SiLP 8.9): Biotop- und Artenschutz. Stimmen 7-10 / 5-6 / 7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: biodiversitaet-und-naturschutz
         name: { de: "Biodiversität und Naturschutz", en: "Biodiversity and conservation" }
         iCan: "Ich kann erklären, was Biodiversität ist, warum sie gefährdet ist und wie Biotopschutz Arten schützt."
         gradeBand: "7-8"
-        requires: [eingriffe-des-menschen, arten-bestimmen]
+        requires: [eingriffe-des-menschen]
       # KMK U4 Nachhaltigkeit; HE 9/10: Handlungsoptionen im Sinne der Nachhaltigkeit (S. 30, 45); BY B8 LB6 (Jg 8): nachhaltige Entwicklung, ökologischer Fußabdruck; NW IF4 (Stufe 2; SiLP 8.9): Handlungsoptionen Naturschutz und Nachhaltigkeit. Stimmen 7-10 / 7-8 / 7-10: Mehrheit
       - id: nachhaltigkeit
         name: { de: "Nachhaltige Entwicklung", en: "Sustainable development" }

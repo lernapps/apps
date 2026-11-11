@@ -438,3 +438,240 @@ Geschichte Großbritanniens in drei (`roemer-in-britannien`, `normannen-1066`, `
 Die Downloads liegen in `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/src-englisch/`.
 Die Bausteine als Daten und das Prüfskript liegen in
 `/tmp/claude-0/-home-user-apps/1c2b2c5a-27bd-5db5-a715-10acdfd55efc/scratchpad/gen-englisch/` (`data.py`, `check.py`).
+
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, möglichst keine
+allein stehenden Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every
+competency“). Ein Teilagent hat die Quellen neu gelesen und Kanten vorgeschlagen; ich habe jede Zeile geprüft.
+Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids, `gradeBand` und `status`
+sind unverändert.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 225 | 60 | 23 | 32 | 8 |
+| nachher | 262 | 34 | 5 | 9 | 8 |
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante. `npm test` und
+`npm run build` grün. `npm run listing` über alle Einträge: keine neuen Befunde (keine App nutzt Englisch).
+
+### 6.2 Quellen
+
+Alle Quellen der Länder und der KMK habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`,
+LehrplanPLUS als HTML). Seitenzahlen sind die gedruckten Seiten.
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| KMK | KMK: Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss | Beschluss vom 15.10.2004 und 04.12.2003 i. d. F. vom 22.06.2023 | https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2023/2023_06_22-Bista-ESA-MSA-ErsteFremdsprache.pdf |
+| HE | Hessisches Kultusministerium: Lehrplan Englisch, Gymnasialer Bildungsgang, Jahrgangsstufen 5 bis 13 (G9) | ohne Jahr (PDF von 2016), 51 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-englisch.pdf |
+| HE-KC | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Moderne Fremdsprachen | Juli 2023, 53 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2023-07/2023_-_kerncurriculum_moderne_fremdsprachen_-_sekundarstufe_i_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrpläne Englisch (1. Fremdsprache), E5 bis E10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/englisch · …/6/englisch/1-fremdsprache · …/7/… · …/8/… · …/9/englisch/1-fremdsprache · https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/10/englisch |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Englisch | Heft 3417, 1. Auflage 2019, 43 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_e_klp_3417_2019_06_23.pdf |
+| PT (neu, Fachdidaktik) | Pascal Simon Buttkewitz: Acquiring English as a Third Language: A Processability Perspective. Dissertation, Universität Paderborn (betreut von M. Pienemann) | überarbeitete Fassung August 2018; Kap. 4.3 „Application of PT to the Acquisition of English (ESL)“, S. 76–79, mit Tab. 4-1 nach Pienemann (2011, S. 14) | https://digital.ub.uni-paderborn.de/hs/download/pdf/2908115 |
+
+**Hinweise:**
+- **BY** gliedert die Grammatik in Sprechabsichten. Ein Spiegelstrich bündelt Strukturen zu einer Funktion, z. B. E5:
+  „beschreiben Handlungen, Abläufe und Gewohnheiten in der Gegenwart … present tense simple“. Solche Bündel und
+  Listen, die ein Wortfeld mit einer Struktur nennen, nutze ich als Quelle für Kanten (Regel 1 des Owners).
+- **KMK S. 18** sagt: Die Auswahl der sprachlichen Mittel folgt einer kommunikativen Progression; die
+  sprachstrukturelle Progression hat „dienende Funktion“. Das stützt Kanten von Wortfeldern und Textsorten zu den
+  Strukturen, mit denen man über sie spricht. Eine einzelne Kante begründet die KMK nicht.
+- **PT** (Processability Theory) begründet hier nur `requires`: kanonische Wortstellung SVO früh (Stufe 2),
+  Fragen mit vorangestelltem Hilfsverb später, Aufheben der Inversion in Nebensätzen (indirekte Fragen) zuletzt
+  (Stufe 6, S. 78 f.). Formelhafte Wendungen sind schon auf Stufe 1 möglich (S. 77). Das bestätigt die bestehende
+  Kante `indirekte-fragen` → `fragewoerter` und begründet, warum `classroom-phrases` und `would-like` Wurzeln
+  bleiben dürfen.
+
+### 6.3 Neue Kanten (48)
+
+„Herleitung“: Keine Quelle nennt die Kante; sie folgt mit hoher Zuversicht aus dem Inhalt (Regel 2 des Skills).
+
+| Baustein | Aktion | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|---|
+| `to-be` | add | `personalpronomen` | Ob man am, is oder are sagt, hängt vom Subjekt ab (I, he, they). | – | Herleitung |
+| `have-got` | add | `personalpronomen` | Ob man have oder has sagt, hängt vom Subjekt ab, wie beim simple present. | – | Herleitung |
+| `there-is-are` | add | `to-be` | „There is / there are“ ist eine Form von „to be“. | – | Herleitung |
+| `there-is-are` | add | `plural` | Die Wahl zwischen is und are hängt von Einzahl und Mehrzahl des Nomens ab. | – | Herleitung |
+| `adjektive` | add | `to-be` | Der Baustein übt Adjektive nach „be“ (The house is big.). | – | Herleitung |
+| `some-any` | add | `plural` | Some und any stehen vor Nomen in der Mehrzahl oder vor nicht zählbaren Nomen, wie much und many. | – | Herleitung |
+| `praepositionen-zeit` | add | `uhrzeit` | „At 6 o’clock“ braucht die Uhrzeit; BY nennt Uhrzeit und Zeitangaben im selben Wortschatz. | BY E5 1.2 Wortschatz („Uhrzeit, Orts-, Zeit- und Häufigkeitsangaben, Monatsnamen, Wochentage“) | Quelle |
+| `praepositionen-zeit` | add | `datum` | „On Monday, in July“ braucht Wochentage und Monate; BY nennt beides mit den Zeitangaben. | BY E5 1.2 Wortschatz (wie oben) | Quelle |
+| `infinitivkonstruktionen` | add | `would-like` | „I’d like (you) to …“ ist der erste Infinitiv mit to; Jg 8 baut die Infinitive darauf aus. | BY E5 1.2 Wortschatz („I want / I’d like (you) to“) → BY E8 1.2 Grammatik (Infinitiv); HE S. 17 (Jg 5: „einfache Infinitivanschlüsse“) → HE S. 27 (Jg 8: Infinitivkonstruktionen) | Quelle |
+| `infinitivkonstruktionen` | add | `fragewoerter` | Der Baustein übt den Infinitiv nach Fragewörtern (how to, what to). | – | Herleitung |
+| `indirekte-aufforderungen` | add | `infinitivkonstruktionen` | „She told me to wait“ ist ein Infinitiv mit eigenem Subjekt; HE nennt es bei den Infinitiven. | HE S. 27 (Jg 8, 3.3: „Infinitivkonstruktionen bei Befehlen, Aufforderungen und Fragen“) | Quelle |
+| `indirekte-aufforderungen` | add | `imperativ` | Wer eine Aufforderung wiedergibt, muss die direkte Aufforderung kennen. | – | Herleitung |
+| `passiv` | add | `to-be` | Das Passiv bildet man mit einer Form von „be“ und der dritten Form. | – | Herleitung |
+| `passiv-zeiten` | add | `can-must` | Der Baustein übt das Passiv mit Modalverben (It can be done.). | – | Herleitung |
+| `future-progressive-perfect` | add | `present-progressive` | „Will be doing“ ist eine Verlaufsform; sie setzt die -ing-Verlaufsform voraus. | – | Herleitung |
+| `question-tags` | add | `to-be` | Die häufigsten Tags sind Formen von „be“ (isn’t it?). | – | Herleitung |
+| `question-tags` | add | `simple-past-fragen` | Der Baustein übt Tags auch mit did; HE nennt Tags mit „do“ im selben Jahr wie Fragen im simple past. | – | Herleitung |
+| `essen-trinken` | add | `simple-present` | Über Essgewohnheiten spricht man im simple present; BY ordnet Gewohnheiten dem present simple zu. | BY E5 1.2 Grammatik („beschreiben … Gewohnheiten in der Gegenwart: … present tense simple“) und E5 5 („Essgewohnheiten“) | Quelle |
+| `freizeit-hobbys` | add | `simple-present` | Über Hobbys und Gewohnheiten spricht man im simple present; das KC nennt beides zusammen. | HE-KC S. 32 (7.1: „sich mit ihren Interessen, Hobbys, Gewohnheiten und Alltagsbeschäftigungen vorstellen“) | Quelle |
+| `familie-personen` | add | `adjektive` | Der Baustein beschreibt Menschen nach Aussehen und Charakter, also mit Adjektiven. | – | Herleitung |
+| `tagesablauf` | add | `praepositionen-zeit` | „I get up at seven, on Saturdays …“ braucht die Präpositionen der Zeit. | – | Herleitung |
+| `reisen-verkehr` | add | `uhrzeit` | Wer eine Fahrkarte kauft oder nach Abfahrt fragt, braucht die Uhrzeit. | – | Herleitung |
+| `gesundheit` | add | `have-got` | Beschwerden sagt man mit „I’ve got a headache / a cold“. | – | Herleitung |
+| `gefuehle-freundschaft` | add | `adjektive` | Gefühle nennt man meist mit Adjektiven (happy, sad, angry). | – | Herleitung |
+| `medien` | add | `freizeit-hobbys` | NW behandelt Medien zuerst als Teil der Freizeitgestaltung. | NW S. 20 (EPS: „Alltag und Freizeitgestaltung … Hobbys, Sport, … analoge und digitale Medien“); S. 28 (S1) | Quelle |
+| `konsum-werbung` | add | `kleidung-einkaufen` | NW führt vom Konsumverhalten (Einkaufen) in Jg 5/6 zu Werbung und Verbraucherschutz in Jg 9/10. | NW S. 20 (EPS: „Konsumverhalten“) → S. 36 (S2: „Werbung, Konsum und Verbraucherschutz“) | Quelle |
+| `gesellschaft-politik` | add | `politik-uk` | Die Wörter für Parlament, Wahl und Regierung lernt man beim politischen System; BY baut den Politikwortschatz von Jg 8 bis 10 auf. | BY E8 1.2 Wortschatz („Begriffe zu … Politik“) und E8 5 („politische Systeme … konstitutionelle Monarchie“) → BY E10 1.2 Wortschatz („politischem Handeln“) | Quelle |
+| `verbindungswoerter-argumentieren` | add | `konjunktionen` | However und therefore bauen auf but und so auf. | – | Herleitung |
+| `meinung-redemittel` | add | `that-saetze` | Die Grundform der Meinung ist „I think that …“. | – | Herleitung |
+| `umschreiben` | add | `relativsaetze` | Man umschreibt ein fehlendes Wort meist mit einem Relativsatz (It’s a thing which …, a person who …). | – | Herleitung |
+| `wortfamilien` | add | `grammatik-fachbegriffe` | Wortfamilien ordnet man nach Wortart (Verb help, Adjektiv helpful), dazu braucht man noun, verb, adjective. | – | Herleitung |
+| `text-fachbegriffe` | add | `figuren-ort-handlung` | Character, setting und plot benennen, was man in Jg 5/6 als Figuren, Ort und Handlung herausfindet. | BY E5/E6 3 („Handlungsablauf und Figuren“, „Figuren und Schauplatz“) → BY E10 3 („Grundbegriffe der literarischen Interpretation (… Figuren, plot)“) | Quelle |
+| `intonation-fragen` | add | `fragewoerter` | Die Satzmelodie unterscheidet Ja-Nein-Fragen (steigend) und Fragen mit Fragewort (fallend); man braucht beide Fragearten. | – | Herleitung |
+| `grossschreibung` | add | `datum` | Die Regel betrifft vor allem Wochentage und Monate (Monday, July). | – | Herleitung |
+| `laut-buchstabe` | add | `silent-letters` | Verbindungen wie igh (night) enthalten stumme Buchstaben. | – | Herleitung |
+| `satzbetonung` | add | `bindungen` | Englischer Satzrhythmus heißt auch: Wörter verbinden; BY und HE nennen Betonung und Bindungen zusammen. | BY E8 1.2 Aussprache und Intonation („Betonung, Bindungen und Verschleifungen“); HE S. 21 (Jg 6, 3.1: „Silbenabschwächung, Bindungen und Verschleifungen“) | Quelle |
+| `kurzformen` | add | `simple-present-fragen` | Der Baustein übt auch don’t und doesn’t. | – | Herleitung |
+| `rechtschreibung-endungen` | add | `present-progressive` | Der Baustein übt auch die Schreibung vor -ing (make – making). | – | Herleitung |
+| `weitere-varietaet` | add | `be-ae-wortschatz` | Eine weitere Varietät erkennt man auch an ihren Wörtern; BY baut von britisch/amerikanisch zu AUS/NZ auf. | BY E8 1.2 Wortschatz („Unterschiede zwischen britischem und amerikanischem … Wortschatz“) → E9 1.2 Wortschatz („Wortschatzelemente einer weiteren englischen Sprachvarietät (AUS/NZ)“) | Quelle |
+| `stereotype` | add | `vielfalt-gb` | HE führt Klischees am Beispiel der verschiedenen Herkünfte britischer Jugendlicher ein. | HE S. 17 (Jg 5, 2.2: „die Problematik von Klischees und Stereotypen: erste Begegnung mit den unterschiedlichen ethnischen Hintergründen britischer Jugendlicher“) | Quelle |
+| `alltag-uk` | add | `essen-trinken` | Der Baustein vergleicht auch das Essen in Großbritannien; BY nennt Essgewohnheiten im Leben im UK. | BY E5 5 („Leben im sozialen Umfeld (Schwerpunkt UK): … Essgewohnheiten“) | Quelle |
+| `stadt-land-uk` | add | `vergleiche` | Der Baustein vergleicht Stadt und Land; BY nennt Vergleich und Steigerung im selben Jahr. | BY E6 5 („Leben in der Stadt und auf dem Land … und Vergleich mit der eigenen Lebenswelt“); E6 1.2 Grammatik („Adjektive: Steigerung, Vergleich“) | Quelle |
+| `buergerrechtsbewegung` | add | `gesellschaft-politik` | Die Bürgerrechtsbewegung ist ein Fall von Menschenrechten; HE und NW nennen beides in einem Punkt. | HE S. 33 (Jg 10, 2.2: „Human rights – equal opportunity: e.g. ethnic diversity“); NW S. 36 (S2: „Demokratie und Menschenrechte“) | Quelle |
+| `kurznachricht` | add | `praepositionen-zeit` | Eine Einladung nennt Tag und Uhrzeit (on Saturday at 3). | – | Herleitung |
+| `sachtext-fiktion` | add | `alltagstexte` | Man kann Sachtexte von erfundenen Texten nur unterscheiden, wenn man beide kennt; NW nennt Gebrauchstexte und literarische Texte als zwei Gruppen. | NW S. 21 (EPS, Ausgangstexte: „Sach- und Gebrauchstexte … Einladungen, Anzeigen, Flyer, Informationstafeln“ / „literarische Texte“); S. 29 (S1) | Quelle |
+| `sachtext-fiktion` | add | `figuren-ort-handlung` | Die andere Seite der Unterscheidung: erzählende Texte mit Figuren und Handlung. | NW S. 21 (wie oben); BY E8 3 („unterscheiden zwischen Sachtexten und fiktionalen Texten“) | Quelle |
+| `kommentar` | add | `text-gliedern` | Der Baustein verlangt eine klare Gliederung; BY nennt sie bei argumentativen Texten. | BY E10 3 („argumentative Texte … klare Strukturierung, logische Argumentation“) | Quelle |
+| `schule` | add | `datum` | Der Stundenplan braucht die Wochentage. | – | Herleitung |
+
+**Nicht übernommen** (Zuversicht nur mittel, wie der Teilagent selbst schreibt): `technik-fortschritt` → `passiv`
+(über Erfindungen spricht man auch im Aktiv), `relativsaetze` → `konjunktionen` (ein Relativsatz braucht keine
+Konjunktion), `information-meinung` → `medien` (der Baustein hat mit `zeitungsartikel` schon eine Voraussetzung).
+
+### 6.4 Entfernte Kanten (11)
+
+Alle sind indirekt: Sie folgen schon über andere Kanten. Sieben waren schon vorher indirekt, vier werden es durch
+neue Kanten. Keine bestehende Kante war inhaltlich falsch.
+
+| Baustein | Aktion | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|---|
+| `simple-oder-progressive` | remove | `simple-present` | Folgt schon über `adverbien-haeufigkeit` → `simple-present`. | – | Herleitung |
+| `past-perfect` | remove | `simple-past` | Folgt schon über `present-perfect` → `unregelmaessige-verben` → `simple-past`. | – | Herleitung |
+| `present-perfect-oder-simple-past` | remove | `simple-past` | Folgt schon über `present-perfect` → … → `simple-past`. | – | Herleitung |
+| `emphase-do` | remove | `simple-present-fragen` | Folgt schon über `simple-past-fragen` → `simple-present-fragen`. | – | Herleitung |
+| `endungen-s-ed` | remove | `simple-present` | Folgt schon über `simple-past` → `simple-present`. | – | Herleitung |
+| `satzbetonung` | remove | `wortbetonung` | Folgt schon über `schwache-formen` → `wortbetonung`. | – | Herleitung |
+| `bildungssystem` | remove | `schule-uk` | Folgt schon über `schule-usa` → `schule-uk`. | – | Herleitung |
+| `question-tags` | remove | `simple-present-fragen` | Folgt jetzt über die neue Kante zu `simple-past-fragen`. | – | Herleitung |
+| `tagesablauf` | remove | `uhrzeit` | Folgt jetzt über `praepositionen-zeit` → `uhrzeit`. | – | Herleitung |
+| `personen-orte-beschreiben` | remove | `adjektive` | Folgt jetzt über `familie-personen` → `adjektive`. | – | Herleitung |
+| `kurzgeschichte` | remove | `figuren-ort-handlung` | Folgt jetzt über `text-fachbegriffe` → `figuren-ort-handlung`. | – | Herleitung |
+
+### 6.5 Wurzeln, die bleiben (34, davon 5 allein)
+
+Die 32 Wurzeln mit Gründen aus dem Vorschlag, dazu `relativsaetze` und `technik-fortschritt` (siehe 6.3, nicht
+übernommen).
+
+| Baustein | Aktion | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|---|
+| `personalpronomen` | keep-root | – | Anfang der Grammatik; to-be, have-got und simple present bauen darauf auf. | – | Herleitung |
+| `artikel` | keep-root | – | Anfang: a, an, the braucht man vom ersten Nomen an. | – | Herleitung |
+| `plural` | keep-root | – | Anfang: Einzahl und Mehrzahl der Nomen. | – | Herleitung |
+| `imperativ` | keep-root | – | Anfang: Aufforderungen im Unterricht vom ersten Tag an. | – | Herleitung |
+| `wortstellung` | keep-root | – | SVO ist die erste Satzregel (PT, Stufe 2); siehe offenen Punkt 3. | PT Kap. 4.3, S. 77 f. | Quelle |
+| `can-must` | keep-root | – | Modalverb + Grundform braucht keine andere Struktur. | – | Herleitung |
+| `would-like` | keep-root | – | Feste Wendung (PT, Stufe 1: formelhaft); `infinitivkonstruktionen` baut darauf auf. | PT Kap. 4.3, S. 77 | Quelle |
+| `praepositionen-ort` | keep-root | – | Anfang: Ortsangaben (in, on, under) brauchen keine andere Struktur. | – | Herleitung |
+| `konjunktionen` | keep-root | – | Anfang des Satzverbindens (and, but, because). | – | Herleitung |
+| `will-future` | keep-root | – | Kein Baustein ist sicher direkt nötig; die Nähe zu can-must ist nur eine Ähnlichkeit (offener Punkt 4). | – | Herleitung |
+| `zahlen` | keep-root | – | Anfang des Wortschatzes; Uhrzeit, Datum und Preise bauen darauf auf. | – | Herleitung |
+| `classroom-phrases` | keep-root | – | Feste Wendungen ab der ersten Stunde (PT, Stufe 1); kein Baustein braucht sie als Voraussetzung. Bleibt allein. | PT Kap. 4.3, S. 77 | Quelle |
+| `grammatik-fachbegriffe` | keep-root | – | Begriffe wie noun und verb setzen keinen Baustein voraus; `wortfamilien` baut darauf auf. | – | Herleitung |
+| `umwelt` | keep-root | – | Kein Lehrplan bindet das Thema an eine Struktur oder ein Wortfeld; eine Kante zu should wäre nur wahrscheinlich (offener Punkt 5). Bleibt allein. | – | Herleitung |
+| `berufswelt` | keep-root | – | Thema ab Jg 9 ohne sichere Struktur; `lebenslauf` baut darauf auf. | – | Herleitung |
+| `verbindungswoerter-erzaehlen` | keep-root | – | First, then, finally braucht keine Zeitform; Erzählen und Bildergeschichte bauen darauf auf. | – | Herleitung |
+| `phrasal-verbs` | keep-root | – | Wörter, die man einzeln lernt (BY ab E5); keine Struktur nötig, nichts baut sicher darauf auf. Bleibt allein. | – | Herleitung |
+| `false-friends` | keep-root | – | Einzelwörter im Vergleich mit dem Deutschen (BY ab E5); keine Voraussetzung, nichts baut darauf auf. Bleibt allein. | – | Herleitung |
+| `be-ae-wortschatz` | keep-root | – | Einzelwörter (flat – apartment); `weitere-varietaet` baut jetzt darauf auf. | – | Herleitung |
+| `lautschrift` | keep-root | – | Anfang der Aussprache. | – | Herleitung |
+| `silent-letters` | keep-root | – | Stumme Buchstaben brauchen keine Vorkenntnis; `laut-buchstabe` baut jetzt darauf auf. | – | Herleitung |
+| `bindungen` | keep-root | – | Verbinden von Wörtern braucht keinen anderen Aussprache-Baustein; `satzbetonung` baut jetzt darauf auf. | – | Herleitung |
+| `britische-inseln` | keep-root | – | Anfang der Landeskunde UK. | – | Herleitung |
+| `gruss-hoeflichkeit` | keep-root | – | Anfang: Gruß und Dank ab der ersten Stunde. | – | Herleitung |
+| `vielfalt-gb` | keep-root | – | Keine sichere Voraussetzung; Stereotype, London und Migration bauen darauf auf. | – | Herleitung |
+| `usa-ueberblick` | keep-root | – | Anfang der Landeskunde USA. | – | Herleitung |
+| `dialog-schreiben` | keep-root | – | Kurze Dialoge schreibt man ab Jg 5 mit dem, was man hat; keine bestimmte Struktur nötig. | – | Herleitung |
+| `zusammenfassung` | keep-root | – | Gilt für Sach- und Erzähltexte; kein einzelner Baustein trägt es. | – | Herleitung |
+| `figuren-ort-handlung` | keep-root | – | Anfang des Textverstehens. | – | Herleitung |
+| `gedichte-reime` | keep-root | – | Anfang: Reime und Lieder ab Jg 5. | – | Herleitung |
+| `alltagstexte` | keep-root | – | Leseverstehen einfacher Gebrauchstexte; eine Kante zu `uhrzeit` wäre nur für Fahrpläne richtig. | – | Herleitung |
+| `text-gliedern` | keep-root | – | Gliedern gilt für alle Textsorten; kein einzelner Baustein trägt es (offener Punkt 6). | – | Herleitung |
+| `relativsaetze` | keep-root | – | Notwendige Relativsätze (who, which) brauchen keinen anderen Baustein sicher; `umschreiben` baut darauf auf. | – | Herleitung |
+| `technik-fortschritt` | keep-root | – | Keine Quelle bindet das Thema an eine Struktur; die Kante zu `passiv` war nicht sicher genug. Bleibt allein. | – | Herleitung |
+
+**Allein (5):** `classroom-phrases`, `umwelt`, `phrasal-verbs`, `false-friends`, `technik-fortschritt`. Drei davon
+haben die Richtstufe 7-8 oder 9-10; die Stufen-Ansicht zeigt sie trotzdem in Stufe 1 (mit Etikett der Richtstufe,
+KD-09). Das ist der Fall für die Frage nach einem Feld für die Stufe (KD-05).
+
+**Teilnetze (9):** ein großes Netz, die Aussprache-Kette ab `lautschrift` (fachlich getrennt: Lautschrift, Vokale
+und Betonung hängen nicht an Grammatik oder Themen), `grammatik-fachbegriffe` → `wortfamilien`,
+`dialog-schreiben` → `drama-szene` und die 5 allein stehenden Bausteine.
+
+### 6.6 Offene Punkte
+
+1. **`to-be` → `personalpronomen`:** Beide lernt man in den ersten Stunden zusammen. Die Kante macht
+   `personalpronomen` zur einzigen Wurzel der Verbformen. Wer beide als Wurzeln will, lässt diese Kante und
+   `have-got` → `personalpronomen` weg; dann gibt es 2 Wurzeln mehr. Lehrkräfte sollten entscheiden.
+2. **`personalpronomen` umfasst auch Objektformen** (me, him). `to-be` braucht nur die Subjektformen. Wenn eine App
+   sich daran stört, wäre ein eigener Baustein „Subjektpronomen“ sauberer (das ändert Bausteine, nicht nur Kanten).
+3. **`wortstellung` bündelt zwei Inhalte:** SVO (ganz am Anfang) und „Ort vor Zeit“. Für den zweiten Teil wären
+   `praepositionen-ort` und `praepositionen-zeit` echte Voraussetzungen. Ich habe sie nicht vorgeschlagen, weil der
+   erste Teil sonst zu spät käme. Vorschlag für später: Baustein teilen.
+4. **`will-future`** bleibt Wurzel. Möglich wäre `will-future` → `can-must` (gleiches Muster: Hilfsverb +
+   Grundform, Verneinung ohne do). Das ist eine Ähnlichkeit, keine sichere Abhängigkeit.
+5. **`umwelt`** bleibt allein. Kandidaten mit mittlerer Zuversicht: `umwelt` → `modalverben-could-might-should`
+   (Empfehlungen; BY E6 bündelt „Vorschläge … und Empfehlungen“ mit should) oder `umwelt` → `if-satz-1`.
+6. **`text-gliedern`** könnte auf `geschichte-erzaehlen` (Anfang, Mitte, Ende) aufbauen; das gilt aber nur für
+   erzählende Texte.
+7. **Mittlere Zuversicht bei drei neuen Kanten:** `technik-fortschritt` → `passiv` (über Erfindungen spricht man
+   auch im Aktiv), `relativsaetze` → `konjunktionen` (Nebensatz-Prinzip, keine Quelle verlangt es ausdrücklich) und
+   `information-meinung` → `medien`. Bitte von Lehrkräften bestätigen lassen; jede lässt sich einzeln streichen,
+   ohne dass Kreise oder indirekte Kanten entstehen.
+8. **`kleidung-einkaufen` → `would-like`** (I’d like … im Laden) habe ich nicht vorgeschlagen: BY nennt „I’d like“
+   im Wortschatz, aber nicht beim Einkaufen.
+
+### 6.7 Nicht geöffnet
+
+- **GER/CEFR Companion Volume (Europarat 2020),** https://rm.coe.int/16809ea0d4: Der Server antwortete mit
+  HTTP 403 (curl und WebFetch). Nicht zitiert.
+- **English Grammar Profile und English Vocabulary Profile (Cambridge, englishprofile.org):** Die Seite
+  `…/english-grammar-profile/egp-online` gab HTTP 404. Nicht zitiert.
+- **Pienemann (1998), Language Processing and Second Language Development; Pienemann (2011)** im Original: nicht frei
+  zugänglich. Ich zitiere die Stufen nur über Buttkewitz (2018), der Tab. 4-1 aus Pienemann (2011, S. 14) wiedergibt.
+- **Vortragsfolien „Processability Theory“ (FU Berlin)**: HTTP 404.
+- Handbücher der Englischdidaktik (z. B. Haß, Thaler) sind nicht frei online; nicht geöffnet, nicht zitiert.
+
+### 6.8 Nachtrag: die fünf allein stehenden Bausteine (Owner, 2026-11-10)
+
+Der Owner wollte alle fünf eingeordnet haben und einen neuen Baustein für den Sprachvergleich. Vorgehen: in beide
+Richtungen suchen (Was braucht der Baustein? Was baut auf ihm auf?), Bündel in den Lehrplänen auswerten, sonst
+herleiten.
+
+| Baustein | Kante | Art | Grund |
+|---|---|---|---|
+| `konsum-werbung` | → `umwelt` | Quelle | BY E9 5: Konsumverhalten „im Hinblick auf Nachhaltigkeit“ |
+| `imperativ` | → `classroom-phrases` | Herleitung | Anweisungen erst als feste Wendung, dann die Regel (PT Kap. 4.3, S. 77) |
+| `technik-fortschritt` | → `passiv` | Herleitung | „was invented“; HE lehrt das Passiv in Jg 7, das Thema in Jg 8 (HE7 3.3, HE8 2.2) |
+| `phrasal-verbs` | → `praepositionen-ort` | Herleitung | Die Partikeln (up, down, out) kennt man zuerst als Orts- und Richtungsangaben |
+| `sprachvergleich` (neu) | → `phrasal-verbs`, `false-friends` | Owner; NW | Typische Unterschiede und täuschende Ähnlichkeiten zum Deutschen |
+
+**Neuer Baustein `sprachvergleich`** (Strang `wortschatz`, Richtstufe 9-10): „Ich kann Englisch und Deutsch
+vergleichen und typische Unterschiede in Wortbildung, Wortstellung und Ausdruck erklären.“ Quellen: KMK S. 7
+(Sprachbewusstheit, ohne Jahrgang); HE Jg 9 (fächerverbindend: Sprachvergleich); NW EPS S. 22 und S2 S. 39
+(Sprachbewusstheit: im Vergleich mit der deutschen Sprache Ähnlichkeiten und Unterschiede erkennen); BY nennt ihn
+nicht. Stimmen HE/BY/NW 9-10/–/5-10 → 9-10. Der Baustein ist zugleich ein Teil der KMK-Kompetenz
+Sprachbewusstheit, die die Karte sonst nicht modelliert (Abschnitt 4, Punkt 6).
+
+| | Bausteine | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|---|
+| nach 6.1 | 223 | 262 | 34 | 5 | 9 | 8 |
+| jetzt | 224 | 268 | 31 | 0 | 4 | 8 |
+
+Offen bleibt: `phrasal-verbs` und `false-friends` haben die Richtstufe 9-10, obwohl BY beide ab Jg 5 nennt (die
+Abstimmung zählt BY als Spanne 5-10). Ob sie früher gehören, ist eine Frage an Lehrkräfte, keine an `requires`.

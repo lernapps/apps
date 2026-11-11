@@ -17,6 +17,9 @@
 #   Stufe, außer requires erzwingt die spätere. Hält eine Stufe mehr als die Hälfte eines Strangs, wandern Bausteine
 #   entlang requires in die nächste Stufe („verteilt“). Titel, Ausgaben, URLs und Entscheidungen:
 #   .vibe/research-franzoesisch.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
+#   Kanten ab feat/map-chains (2026-11-10) haben eine eigene Zeile; BS = Bartning/Schlyter 2004, Itinéraires acquisitionnels
+#   et stades de développement en français L2 (Fachdidaktik, nur für requires).
 name: { de: Französisch, en: French }               # the file name is the subject's id: franzoesisch
 source:
   title: KMK, Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss, Beschluss vom 15.10.2004 und vom 04.12.2003 i.d.F. vom 22.06.2023
@@ -178,7 +181,7 @@ strands:
         name: { de: "Direkte Objektpronomen", en: "Direct object pronouns" }
         iCan: "Ich kann ein direktes Objekt durch le, la, les, me, te, nous oder vous ersetzen und richtig stellen, auch vor einem Infinitiv."
         gradeBand: "5-6"
-        requires: [direktes-und-indirektes-objekt, subjektpronomen]
+        requires: [direktes-und-indirektes-objekt]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 8 Pronomen: Objektpronomen lui, leur; BY F7 Grammatik: pronoms objets indirects + place, aussi devant infinitif; NW –.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / – -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (grammatik hielt nach den Stimmen 50 von 88 Bausteinen in 5-6)
       - id: indirekte-objektpronomen
@@ -251,11 +254,12 @@ strands:
         requires: [verneinung-plus-rien-jamais]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 7 Satz: Intonationsfrage; BY F6 Grammatik: interrogation par intonation; NW S1 Aussprache (S. 19): Intonationsfrage; S1 Grammatik (S. 19): Fragesätze.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires betonung-und-satzmelodie: Die Intonationsfrage ist nur an der steigenden Satzmelodie zu erkennen; NW und HE nennen beides zusammen. (NW S. 19 (S1 Aussprache: „Wort- und Satzmelodie − Intonationsfrage“); HE S. 33 f. (Jg 7: Intonationskurven auf Satzebene; Intonationsfrage))
       - id: intonationsfrage
         name: { de: "Intonationsfrage", en: "Intonation questions" }
         iCan: "Ich kann eine Frage nur mit der Satzmelodie stellen, zum Beispiel Tu viens ?"
         gradeBand: "5-6"
-        requires: [aussagesatz-wortstellung]
+        requires: [aussagesatz-wortstellung, betonung-und-satzmelodie]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 7 Satz: „Est-ce que“-Frage; BY F6 Grammatik: interrogation avec « est-ce que »; NW S1 Grammatik (S. 19): Fragesätze (Hinweis: SiLP UV 7.3).
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       - id: frage-mit-est-ce-que
@@ -333,6 +337,14 @@ strands:
         iCan: "Ich kann Sätze mit et, mais, ou, quand und parce que verbinden."
         gradeBand: "5-6"
         requires: [aussagesatz-wortstellung]
+      # KMK –; HE Jg 8 Satz (S. 36): direkte / indirekte Rede (Einleitungsverb im Präsens), Konjunktionen (ohne subjonctif); BY F7 Grammatik: discours indirect (au présent); F8 Wortschatz: die eigene Meinung (je crois que, je pense que, je trouve que); NW S1 Grammatik (S. 19): direkte und indirekte Rede im Präsens. Die indirekte Rede bildet man mit einem que-Satz (Il dit que …); das Wort que nennt ausdrücklich nur BY. Neu (Owner, 2026-11-11): der que-Satz steckte bisher unausgesprochen in indirekte-rede-praesens und meinung-aeussern.
+      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe)
+      # requires nebensatz-quand-parce-que: Nebensätze mit que (je crois que) folgen im Erwerb auf Nebensätze mit quand und parce que. (BS S. 292 (3.6, Stufe B → C))
+      - id: nebensatz-que
+        name: { de: "Nebensätze mit que", en: "That-clauses with que" }
+        iCan: "Ich kann einen Satz mit que anschließen, zum Beispiel Je pense que … oder Il dit que …"
+        gradeBand: "5-6"
+        requires: [nebensatz-quand-parce-que]
       # KMK Lexiko-Grammatik (S. 18 f.); MSA: Zusammenhänge erklären; HE Jg 8 Konjunktionen (ohne subjonctif); Jg 9 Präpositionen/Konjunktionen: Erweiterung; BY –; NW S2 Grammatik (S. 28): Satzgefüge, Konjunktionen; temporale, kausale, konsekutive Zusammenhänge.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / – / S2 → 7-8, 9-10 -> 7-8 (Mehrheit)
       - id: konjunktionen-erweitert
@@ -363,11 +375,12 @@ strands:
         requires: [infinitiv-mit-pour, passe-compose-avoir]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 9 Satz: Infinitivkonstruktionen être en train de faire qc, venir de; BY F8 Wortschatz: zeitliche Bezüge verbal (venir de faire qc / être en train de faire qc); NW –.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit)
+      # requires verb-etre (Herleitung): Être en train de bildet man mit den Formen von être (je suis en train de …).
       - id: venir-de-etre-en-train-de
         name: { de: "Venir de und être en train de", en: "Venir de and être en train de" }
         iCan: "Ich kann mit venir de, être en train de und aller ausdrücken, dass etwas gerade passiert ist, gerade passiert oder gleich passiert."
         gradeBand: "7-8"
-        requires: [futur-compose, unregelmaessige-verben-venir-voir]
+        requires: [futur-compose, unregelmaessige-verben-venir-voir, verb-etre]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 7 Verben: regelmäßige Verben auf -er; Tempora: Präsens; BY F6 Grammatik: présent; verbes réguliers en « -er »; NW S1 Grammatik (S. 19): présent der regelmäßigen Verben auf -er (Hinweis: SiLP UV 7.2).
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       - id: verben-auf-er
@@ -447,18 +460,20 @@ strands:
         requires: [unregelmaessige-verben-aller-faire]
       # KMK Lexiko-Grammatik (S. 18 f.) (ESA: Vermischung von Zeitformen als typischer Fehler); HE Jg 7 Tempora: passé composé; BY F7 Grammatik: passé composé avec « avoir » (sans accord); NW S1 Grammatik (S. 19): passé composé der regelmäßigen Verben auf -er, -ir, -re und frequenter unregelmäßiger Verben (Hinweis: SiLP UV 7.7).
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires unregelmaessige-verben-aller-faire: Der Baustein übt auch die Partizipien fait und pris; BY lehrt faire und prendre ein Jahr vor dem passé composé, HE im selben Jahr. (BY F6 1.2 Grammatik (« faire », « prendre ») → F7 1.2 Grammatik (passé composé); HE S. 34 (Jg 7, 3.3: Verben, Tempora))
       - id: passe-compose-avoir
         name: { de: "Passé composé mit avoir", en: "Passé composé with avoir" }
         iCan: "Ich kann das passé composé mit avoir bilden, auch mit unregelmäßigen Partizipien wie fait und pris."
         gradeBand: "5-6"
-        requires: [verb-avoir, verben-auf-er]
+        requires: [verb-avoir, unregelmaessige-verben-aller-faire]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 7 Tempora: passé composé; Jg 8 Verben: accord im passé composé: être; BY F7 Grammatik: passé composé avec « être »; NW S1 Grammatik (S. 19): passé composé.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires adjektiv-angleichung: Das Partizip wird wie ein Adjektiv mit -e und -s angeglichen; HE lehrt die Angleichung der Adjektive vor dem accord im passé composé. (HE S. 34 (Jg 7, 3.3: Adjektive, Angleichung) → S. 37 (Jg 8, 3.3: accord im passé composé: être))
       - id: passe-compose-etre
         name: { de: "Passé composé mit être", en: "Passé composé with être" }
         iCan: "Ich kann das passé composé mit être bilden und das Partizip an das Subjekt angleichen."
         gradeBand: "5-6"
-        requires: [passe-compose-avoir, verb-etre]
+        requires: [passe-compose-avoir, verb-etre, adjektiv-angleichung]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 8 Verben: accord im passé composé: reflexive Verben; BY F8 Grammatik: verbes pronominaux (temps du passé); NW –.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit)
       - id: reflexive-verben-passe-compose
@@ -500,7 +515,7 @@ strands:
         name: { de: "Futur simple", en: "Futur simple" }
         iCan: "Ich kann das futur simple bilden, auch bei unregelmäßigen Verben wie être, avoir, aller und faire."
         gradeBand: "7-8"
-        requires: [futur-compose, unregelmaessige-verben-aller-faire]
+        requires: [futur-compose]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 9 Tempora/Modi: conditionnel; BY F9 Grammatik: conditionnel présent; NW S2 Grammatik (S. 28): frequente Formen des conditionnel (Hinweis: SiLP UV 9.4).
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 9 → 9-10 / S2 → 7-8, 9-10 -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe)
       - id: conditionnel-present
@@ -517,11 +532,12 @@ strands:
         requires: [conditionnel-present, passe-compose-etre]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 9 Satz: Konditionalsatz; BY F9 Grammatik: les propositions de condition (type I); NW S2 Grammatik (S. 28): Annahmen, Hypothesen oder Bedingungen formulieren.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 9 → 9-10 / S2 → 7-8, 9-10 -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe)
+      # requires nebensatz-quand-parce-que: Nebensätze mit si folgen im Erwerb auf Nebensätze mit quand und parce que. (BS S. 292 (3.6, Stufe B → C))
       - id: bedingungssatz-real
         name: { de: "Realer Bedingungssatz", en: "Real conditional" }
         iCan: "Ich kann erfüllbare Bedingungen mit si und Präsens formulieren, zum Beispiel S’il pleut, je reste à la maison."
         gradeBand: "7-8"
-        requires: [futur-simple]
+        requires: [futur-simple, nebensatz-quand-parce-que]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 9 Satz: Konditionalsatz; Übergangsprofil: reale und irreale Konditionalsätze; BY F9 Grammatik: les propositions de condition (type II); NW S2 Grammatik (S. 28): Annahmen, Hypothesen oder Bedingungen formulieren.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 9 → 9-10 / S2 → 7-8, 9-10 -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe)
       - id: bedingungssatz-irreal-gegenwart
@@ -542,14 +558,15 @@ strands:
         name: { de: "Bildung des subjonctif", en: "Forming the subjonctif" }
         iCan: "Ich kann den subjonctif présent regelmäßiger und häufiger unregelmäßiger Verben bilden."
         gradeBand: "9-10"
-        requires: [verben-auf-er, unregelmaessige-verben-venir-voir]
+        requires: [unregelmaessige-verben-venir-voir]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 10: subjonctif présent; Übergangsprofil: subjonctif présent (häufig vorkommende Strukturen); BY F10 Grammatik: principaux déclencheurs du subjonctif; NW S2 Grammatik (S. 28): Bitten, Wünsche und Erwartungen äußern; frequente Formen des subjonctif.
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 9-10 (Mehrheit)
+      # requires nebensatz-que: Der subjonctif tritt erst nach den que-Sätzen wie je crois que auf; il faut que ist sein erster Kontext. (BS S. 289 (3.2.3) und S. 292 (3.6, Stufe C → D)). Neu (Owner, 2026-11-11): ersetzt die Kante zu meinung-aeussern.
       - id: subjonctif-il-faut-que
         name: { de: "Subjonctif nach il faut que", en: "Subjonctif after il faut que" }
         iCan: "Ich kann den subjonctif nach il faut que und nach Verben des Wollens wie vouloir que verwenden."
         gradeBand: "9-10"
-        requires: [subjonctif-bildung]
+        requires: [subjonctif-bildung, nebensatz-que]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 10: subjonctif présent; Übergangsprofil: subjonctif présent (häufig vorkommende Strukturen); BY F10 Grammatik: äußern Wünsche und Zweifel, werten und bringen Gefühle zum Ausdruck; F10 Wortschatz: être + adjectif exprimant un sentiment + que, regretter que; NW S2 Grammatik (S. 28): Gefühle, Meinungen … äußern; frequente Formen des subjonctif.
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 9-10 (Mehrheit)
       - id: subjonctif-gefuehle
@@ -565,12 +582,13 @@ strands:
         gradeBand: "9-10"
         requires: [subjonctif-il-faut-que, konjunktionen-erweitert]
       # KMK Lexiko-Grammatik (S. 18 f.); MSA Sprachmittlung; HE Jg 8 Satz: direkte / indirekte Rede (Einleitungsverb im Präsens); BY F7 Grammatik: discours indirect (au présent); NW S1 Grammatik (S. 19): direkte und indirekte Rede im Präsens (Hinweis: SiLP UV 8.4).
-      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe)
+      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (grammatik hielt mit nebensatz-que 45 von 89 Bausteinen in 5-6; Ende der Kette, längste Kette der Gleichstände; Owner, 2026-11-11)
+      # requires nebensatz-que (Owner, 2026-11-11): Wiedergeben, was jemand sagt, heißt einen que-Satz anschließen (Il dit qu’il est malade). (HE S. 36, BY F7, NW S. 19: indirekte Rede im Präsens; BS S. 292 (3.6, Stufe C))
       - id: indirekte-rede-praesens
         name: { de: "Indirekte Rede im Präsens", en: "Reported speech in the present" }
         iCan: "Ich kann wiedergeben, was jemand sagt, zum Beispiel Il dit qu’il est malade."
-        gradeBand: "5-6"
-        requires: [subjektpronomen, possessivbegleiter]
+        gradeBand: "7-8"
+        requires: [nebensatz-que, possessivbegleiter]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 8 Satz: direkte / indirekte Frage (Einleitungsverb im Präsens); BY F7 Grammatik: interrogation indirecte (au présent, sans « ce qui », « ce que »); NW S1 Grammatik (S. 19): direkte und indirekte Rede im Präsens.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (grammatik hielt nach den Stimmen 50 von 88 Bausteinen in 5-6)
       - id: indirekte-frage-praesens
@@ -584,7 +602,7 @@ strands:
         name: { de: "Indirekte Rede in der Vergangenheit", en: "Reported speech in the past" }
         iCan: "Ich kann wiedergeben, was jemand gesagt hat, und dabei die Zeiten anpassen, zum Beispiel Il a dit qu’il était malade."
         gradeBand: "9-10"
-        requires: [indirekte-rede-praesens, imparfait, plus-que-parfait]
+        requires: [indirekte-rede-praesens, plus-que-parfait]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 10 Grammatik: indirekte Rede / Frage in der Vergangenheit; BY F10 Grammatik: interrogation indirecte (aussi avec « ce qui » / « ce que ») au passé; NW S2 Grammatik (S. 28): Zeitenfolge der indirekten Rede.
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 9-10 (Mehrheit)
       - id: indirekte-frage-vergangenheit
@@ -660,11 +678,12 @@ strands:
         requires: [possessivbegleiter, adjektiv-angleichung]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Situationen: Freizeit; Jg 9: Sport, altersadäquate Freizeitgestaltung; BY F6 Themengebiete: Freizeitgestaltung (Hobbys, Sportarten, Computer); NW S1 Wortschatz (S. 18): thematischer Wortschatz zum soziokulturellen Orientierungswissen; S1 IKK (S. 20): Freizeitgestaltung.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires unregelmaessige-verben-aller-faire: Sportarten sagt man mit faire de (faire du vélo); BY nennt faire und die Freizeitgestaltung im selben Jahr. (BY F6 1.2 Grammatik (« faire ») und F6 5 (Freizeitgestaltung: Hobbys, Sportarten))
       - id: freizeit-und-hobbys
         name: { de: "Freizeit und Hobbys", en: "Leisure and hobbies" }
         iCan: "Ich kann über meine Hobbys, Sportarten und meine Freizeit sprechen."
         gradeBand: "5-6"
-        requires: [verben-auf-er, zusammengezogener-artikel]
+        requires: [unregelmaessige-verben-aller-faire, zusammengezogener-artikel]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE KC 7.4 (Ende Jg 8, S. 39): über Vorstellungen und Vorlieben sprechen; BY F7 Wortschatz: Vorlieben und Abneigungen (ça me plaît, ça m’a plu); NW – (Hinweis: SiLP UV 7.2).
       # Stimmen HE/BY/NW Ende Jg 8 → 5-6, 7-8 / Jg 7 → 5-6 / – -> 5-6 (Mehrheit)
       - id: vorlieben-und-abneigungen
@@ -674,11 +693,12 @@ strands:
         requires: [verben-auf-er, bestimmter-artikel]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Situationen: Schule; BY F6 Themengebiete: schulischer Alltag (Klasse, Stundenplan, Räume); F7: Schulmaterialien; NW S1 Wortschatz (S. 18): thematischer Wortschatz zum soziokulturellen Orientierungswissen; S1 IKK (S. 20): Schulalltag.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires datum-wochentage-monate (Herleitung): Der Stundenplan braucht die Wochentage.
       - id: schule-und-schulalltag
         name: { de: "Schule und Schulalltag", en: "School and school life" }
         iCan: "Ich kann über meine Schule, meinen Stundenplan und meine Schulsachen sprechen."
         gradeBand: "5-6"
-        requires: [unbestimmter-artikel, uhrzeit]
+        requires: [unbestimmter-artikel, uhrzeit, datum-wochentage-monate]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Zahlwörter: 1–1000; BY F6 Wortschatz: Zahlen bis 100; NW – (Hinweis: SiLP UV 7.1).
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / – -> 5-6 (Mehrheit)
       - id: zahlen-bis-100
@@ -736,11 +756,12 @@ strands:
         requires: [praepositionen-des-ortes]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Landeskunde: interkulturelle Unterschiede (z. B. Essen); BY F6 Themengebiete: Esskultur; F7: Rezepte (crêpes, galette des rois); NW –.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / – -> 5-6 (Mehrheit)
+      # requires vorlieben-und-abneigungen (Herleitung): Der Baustein übt, zu sagen, was man gern isst und trinkt (j’adore, je préfère, j’aime le …).
       - id: essen-und-lebensmittel
         name: { de: "Essen und Lebensmittel", en: "Food and meals" }
         iCan: "Ich kann Lebensmittel und Mahlzeiten benennen und sagen, was ich gern esse und trinke."
         gradeBand: "5-6"
-        requires: [teilungsartikel]
+        requires: [teilungsartikel, vorlieben-und-abneigungen]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Situationen: Einkaufen; BY F7 Themengebiete: Einkauf; F6 Leseverstehen: Preise; NW S1 Wortschatz (S. 18): thematischer Wortschatz zum soziokulturellen Orientierungswissen; S1 IKK (S. 20): Konsumverhalten.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       - id: einkaufen
@@ -799,11 +820,12 @@ strands:
         requires: [praepositionen-des-ortes]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); MSA: eigene Überlegungen zu Themen von allgemeinem Interesse ausdrücken; HE Jg 8 Sprechen: einfache Strukturen des Argumentierens; BY F8 Wortschatz: die eigene Meinung (à mon avis, je crois que, je pense que, je trouve que); NW –.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit)
+      # requires nebensatz-que (Owner, 2026-11-11): Je pense que und je trouve que leiten einen que-Satz ein. (BY F8 Wortschatz: je crois que, je pense que, je trouve que; BS S. 292 (3.6, Stufe C))
       - id: meinung-aeussern
         name: { de: "Meinung äußern", en: "Giving your opinion" }
         iCan: "Ich kann meine Meinung mit Wendungen wie à mon avis, je pense que und je trouve que sagen und kurz begründen."
         gradeBand: "7-8"
-        requires: [nebensatz-quand-parce-que]
+        requires: [nebensatz-que]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE KC 7.4 (Ende Jg 8, S. 39): eigene Vorlieben, Gefühle und Vorstellungen mitteilen; BY F10 Wortschatz: être + adjectif exprimant un sentiment + que; NW S2 Grammatik (S. 28): Gefühle … äußern.
       # Stimmen HE/BY/NW Ende Jg 8 → 5-6, 7-8 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe)
       - id: gefuehle-ausdruecken
@@ -852,7 +874,7 @@ strands:
         name: { de: "Beruf und Praktikum", en: "Jobs and work experience" }
         iCan: "Ich kann über Berufe, meinen Traumberuf und ein Praktikum sprechen."
         gradeBand: "7-8"
-        requires: [futur-simple, conditionnel-present]
+        requires: [conditionnel-present]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 10 Inhalte: Probleme der Gegenwart (z. B. … Medien); BY F9 Themengebiete: Medien (Buch, Film, TV, digitale Medien); NW S2 Wortschatz (S. 27): thematischer Wortschatz; S2 IKK (S. 29): Chancen und Risiken der Mediennutzung; soziale Medien und Netzwerke (Hinweis: SiLP UV 9.2).
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 9 → 9-10 / S2 → 7-8, 9-10 -> 9-10 (Mehrheit)
       - id: medien-und-netz
@@ -869,11 +891,12 @@ strands:
         requires: [meinung-aeussern]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 9 Wortschatz: erstes Vokabular zur Textbesprechung; Jg 10: Vokabular zur Textbesprechung; BY F10 Wortschatz: Funktionswortschatz für den Lernbereich Text- und Medienkompetenzen; NW S2 Wortschatz (S. 27): grundlegender Wortschatz zur Textbesprechung.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe)
+      # requires figuren-ort-zeit-handlung (Herleitung): Wörter wie le personnage und la scène benennen, was man zu Figuren, Ort und Handlung herausfindet.
       - id: textbesprechung
         name: { de: "Wortschatz zur Textbesprechung", en: "Vocabulary for discussing texts" }
         iCan: "Ich kann mit Wörtern wie le personnage, le narrateur, la scène und le titre über einen Text sprechen."
         gradeBand: "7-8"
-        requires: [meinung-aeussern]
+        requires: [meinung-aeussern, figuren-ort-zeit-handlung]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); IK MSA: sprachlich angemessen in Bezug auf Situation und Beteiligte agieren (S. 21); HE Jg 10 Satz: code oral vs. code écrit; Bewusstsein für Stil und Register; BY F7 Sprachreflexion: gesprochenes und geschriebenes Französisch; F8: français standard und français familier, Zurückhaltung beim Jugendjargon; NW –.
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 7 → 5-6 / – -> 5-6 (Gleichstand 5-6/9-10, frühere Stufe)
       - id: sprachregister
@@ -945,7 +968,7 @@ strands:
         name: { de: "Liaison", en: "Liaison" }
         iCan: "Ich kann zwei Wörter richtig binden (liaison) und weiß, wann ich nicht binden darf."
         gradeBand: "7-8"
-        requires: [stumme-buchstaben, h-aspire-h-muet]
+        requires: [h-aspire-h-muet]
       # KMK Aussprache und Prosodie (S. 20) (Prosodie: Betonung, Intonation, Rhythmus); HE Jg 7 Lautlehre: Sprechtakte und Intonationskurven auf Satzebene; BY F7 Aussprache: artikulieren und betonen in kurzen Äußerungen; F10: Satzmelodie und -rhythmus; NW S1 Aussprache (S. 19 f.): Wort- und Satzmelodie, Intonationsfrage.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       - id: betonung-und-satzmelodie
@@ -955,11 +978,12 @@ strands:
         requires: [laut-und-schrift]
       # KMK Aussprache und Prosodie (S. 20); HE Jg 7 Methoden: Grundlagen der Lautschrift (rezeptiv); BY F6 Aussprache: wichtige Symbole der internationalen Lautschrift; F7–F10; NW –.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / – -> 5-6 (Mehrheit)
+      # requires u-und-ou: BY nennt das Zeichen /y/ neben Nasalen und e-Lauten als erste Zeichen der Lautschrift. (BY F6 1.2 Aussprache und Intonation („Symbole der internationalen Lautschrift … (u. a. Nasale und e-Laute, /y/)“))
       - id: lautschrift
         name: { de: "Lautschrift", en: "Phonetic alphabet" }
         iCan: "Ich kann die Zeichen der Lautschrift lesen und damit die Aussprache eines Wortes nachschlagen."
         gradeBand: "5-6"
-        requires: [nasale, e-laute]
+        requires: [nasale, e-laute, u-und-ou]
       # KMK Aussprache und Prosodie (S. 20) (MSA: wiederholt einzelne weniger vertraute Laute und Wörter falsch); HE Übergangsprofil 2. FS (S. 43): Erschließung der Aussprache unbekannter Wörter mit Hilfe des Wörterbuchs bzw. durch Analogschluss; BY F8 Aussprache: unbekannte Wörter korrekt aussprechen; F9: abweichende Graphem-Phonem-Beziehungen; NW –.
       # Stimmen HE/BY/NW Ende Jg 10 → 5-6, 7-8, 9-10 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit); verteilt nach 9-10 (aussprache hielt nach den Stimmen 8 von 15 Bausteinen in 7-8)
       - id: aussprache-unbekannter-woerter
@@ -1035,11 +1059,13 @@ strands:
         requires: [datum-wochentage-monate]
       # KMK Interkulturelle Kompetenz (S. 20 f.): Vielfalt der Sitten und Gebräuche; HE Jg 8 Situationen: Einblicke in Familienstrukturen, Tagesabläufe; BY F6 Interkulturelle Kompetenzen: Alltag in Deutschland und Frankreich vergleichen; F7: Alltag deutscher und französischer Jugendlicher; NW S1 IKK, soziokulturelles Orientierungswissen (S. 20 f.): Lebenswirklichkeiten von Jugendlichen (Familie, Freundschaft, Freizeit, Schulalltag).
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe)
+      # requires freizeit-und-hobbys: NW nennt die Freizeitgestaltung als Teil der Lebenswirklichkeit von Jugendlichen. (NW S. 20 (S1 IKK: „Lebenswirklichkeiten von Jugendlichen: Familie, Freundschaft, Freizeitgestaltung, Schulalltag“))
+      # requires schule-und-schulalltag: NW nennt den Schulalltag als Teil der Lebenswirklichkeit von Jugendlichen. (NW S. 20 (wie oben))
       - id: alltag-jugendlicher
         name: { de: "Alltag Jugendlicher", en: "Teenage life in France" }
         iCan: "Ich kann den Alltag von Jugendlichen in Frankreich beschreiben und mit meinem Alltag vergleichen."
         gradeBand: "5-6"
-        requires: [tagesablauf, familie-und-freunde]
+        requires: [tagesablauf, familie-und-freunde, freizeit-und-hobbys, schule-und-schulalltag]
       # KMK Interkulturelle Kompetenz (S. 20 f.); HE Jg 9 Themenbereiche: Schulwesen im Vergleich D / F; BY F8 Themengebiete: das französische Schulsystem, auch im Vergleich zu Deutschland; NW S2 IKK, soziokulturelles Orientierungswissen (S. 29 f.): Einblicke in das französische Schulsystem.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 8 → 7-8 / S2 → 7-8, 9-10 -> 7-8 (Mehrheit)
       - id: schulsystem-frankreich
@@ -1071,11 +1097,12 @@ strands:
         requires: [staedte-frankreichs]
       # KMK Interkulturelle Kompetenz (S. 20 f.); HE Jg 8 Situationen: Sozialstrukturen der Städte; BY F7 Themengebiete: Leben in der Stadt und auf dem Land (Paris, Lyon, Nantes, Bretagne); NW – (Hinweis: SiLP UV 7.6).
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / – -> 7-8 (Gleichstand 5-6/7-8; requires erzwingt 7-8)
+      # requires adjektiv-steigerung: Der Baustein vergleicht Stadt und Land; BY nennt den Vergleich und comparatif/superlatif im selben Jahr. (BY F7 5 („Leben in der Stadt und auf dem Land“) und F7 1.2 Grammatik („… vergleichen sie: … comparatif et superlatif de l’adjectif“))
       - id: stadt-und-land
         name: { de: "Stadt und Land", en: "Town and country" }
         iCan: "Ich kann das Leben in einer französischen Stadt und auf dem Land beschreiben und vergleichen."
         gradeBand: "7-8"
-        requires: [wohnen, staedte-frankreichs]
+        requires: [wohnen, staedte-frankreichs, adjektiv-steigerung]
       # KMK Interkulturelle Kompetenz (S. 20 f.); HE Jg 8 Landeskunde: exemplarisches Kennenlernen wenigstens einer Region Frankreichs; Jg 9: mindestens eine weitere Region; BY F7 Interkulturelle Kompetenzen: Region Bretagne; F8: Normandie, Occitanie, Provence-Alpes-Côte d’Azur; NW S1 IKK, soziokulturelles Orientierungswissen (S. 20 f.): regionale Besonderheiten (Hinweis: SiLP UV 8.6).
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 7-8 (Gleichstand 5-6/7-8; requires erzwingt 7-8)
       - id: eine-region-frankreichs
@@ -1127,11 +1154,12 @@ strands:
       # Siehe auch: geschichte/europaeische-einigung
       # KMK Interkulturelle Kompetenz (S. 20 f.); HE Übergangsprofil 2. FS (S. 43): Landeskunde Frankreich und Europa; KC 6.1: Rolle Europas in der Welt; BY F9 Themengebiete: Region Grand Est, Strasbourg als Standort des Europäischen Parlaments; NW –.
       # Stimmen HE/BY/NW Ende Jg 10 → 5-6, 7-8, 9-10 / Jg 9 → 9-10 / – -> 9-10 (Mehrheit)
+      # requires eine-region-frankreichs: BY führt Straßburg als Teil der Region Grand Est ein, nach den Regionen in F7 und F8. (BY F8 5 (Regionen Normandie, Occitanie, Provence-Alpes-Côte d’Azur) → F9 5 („Begegnung mit der Region Grand Est, u. a. Strasbourg, auch als Standort des Europäischen Parlaments“))
       - id: frankreich-und-europa
         name: { de: "Frankreich und Europa", en: "France and Europe" }
         iCan: "Ich kann die Rolle Frankreichs in Europa beschreiben, zum Beispiel am Europäischen Parlament in Straßburg."
         gradeBand: "9-10"
-        requires: [deutsch-franzoesische-freundschaft]
+        requires: [deutsch-franzoesische-freundschaft, eine-region-frankreichs]
       # Siehe auch: geschichte/absolutismus, geschichte/versailles-und-hof
       # KMK Interkulturelle Kompetenz (S. 20 f.); HE Jg 10 Inhalte: Geschichte Frankreichs, z. B. Absolutisme, Occupation, Ve République; BY F9 Themengebiete: Sonnenkönig, Versailles damals und heute; NW –.
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 9 → 9-10 / – -> 9-10 (Mehrheit). SCHWACH BELEGT: HE nennt den Absolutismus nur als Beispiel („z. B.“)
@@ -1187,11 +1215,12 @@ strands:
         requires: [betonung-und-satzmelodie]
       # KMK Leseverstehen ESA (S. 12): in einfachen literarisch-ästhetischen Texten zentrale Themen oder Figuren erkennen; HE KC 7.4 (Ende Jg 8, S. 38): fiktionalen Texten Informationen über Zeit, Ort, Personen und Handlungsverlauf entnehmen; BY F6 TMK: Inhalt von Texten global erfassen, einfache Fragen zu Texten beantworten; F7: Personen in fiktionalen Texten beschreiben; NW S1 TMK (S. 21): wesentliche Informationen zu Personen, Handlungen, Ort und Zeit entnehmen.
       # Stimmen HE/BY/NW Ende Jg 8 → 5-6, 7-8 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires fragepronomen-qui-que (Herleitung): Wer vorkommt und was passiert, fragt man mit qui und qu’est-ce que, so wie wo und wann mit où und quand.
       - id: figuren-ort-zeit-handlung
         name: { de: "Figuren, Ort, Zeit, Handlung", en: "Characters, setting and plot" }
         iCan: "Ich kann einer Geschichte entnehmen, wer vorkommt, wo und wann sie spielt und was passiert."
         gradeBand: "5-6"
-        requires: [fragewoerter]
+        requires: [fragewoerter, fragepronomen-qui-que]
       # KMK TMK ESA (S. 22): kurze, einfache Texte in ein anderes Genre überführen; HE KC 7.4 (Ende Jg 8, S. 39): Inhalte kurzer Texte und Bildgeschichten wiedergeben; BY F7 Schreiben: einfache Bildergeschichten; NW – (S1 TMK: Bildmedien nur als Ausgangstext).
       # Stimmen HE/BY/NW Ende Jg 8 → 5-6, 7-8 / Jg 7 → 5-6 / – -> 5-6 (Mehrheit)
       - id: bildergeschichte
@@ -1240,7 +1269,7 @@ strands:
         name: { de: "Charakterisierung", en: "Character description" }
         iCan: "Ich kann eine Figur aus einem Text charakterisieren: ihr Aussehen, ihr Verhalten und ihre Gefühle."
         gradeBand: "7-8"
-        requires: [figuren-ort-zeit-handlung, gefuehle-ausdruecken, adjektiv-angleichung]
+        requires: [figuren-ort-zeit-handlung, gefuehle-ausdruecken]
       # KMK TMK ESA (S. 22): die wichtigsten Punkte kurzer Texte wiedergeben; HE Jg 10 Textarbeit: Hinführung zum résumé; Übergangsprofil (S. 43): Inhaltsangaben; BY F10 TMK: wesentliche Aspekte zusammenfassend wiedergeben; F10 Schreiben: zusammenfassende Texte; NW S2 TMK (S. 31): Zieltexte Zusammenfassung; S2 Schreiben (S. 26): wesentliche Inhalte zusammenfassen.
       # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 9-10 (Mehrheit)
       - id: resume

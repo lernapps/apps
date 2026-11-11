@@ -29,6 +29,7 @@
 # Es gewinnt die Stufe mit den meisten Stimmen; Gleichstand: die frühere, außer requires erzwingt die spätere. Hält eine
 # Stufe mehr als die Hälfte eines Strangs, rücken Bausteine entlang requires weiter ("verteilt", mit Grund).
 # SCHWACH = schwach belegt (Grund genannt). Genaue Titel, Ausgaben und URLs: .vibe/research-spanisch.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Spanisch, en: Spanish }                # the file name is the subject's id: spanisch
 source:
   title: KMK, Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss, Beschluss vom 15.10.2004 und vom 04.12.2003 i.d.F. vom 22.06.2023 (Struktur; Inhalte aus den Lehrplänen Hessen, Bayern und NRW)
@@ -116,11 +117,12 @@ strands:
         gradeBand: "5-6"
         requires: [adjektiv-angleichung]
       # HE9 3.3 (Adverbien auf -mente, Adverb und Adjektiv); BY Sp9 1.2 (Adverbien auf -mente); NW S1 Grammatik (Adverbien) | HE Jg 9 = LJ 3/4 → 7-8; BY Jg 9 = LJ 2/3 → 7-8; NW S1 = LJ 1-2/4 → 5-6/7-8 | 1× 5-6, 3× 7-8 → 7-8 (Mehrheit)
+      # requires wortfamilien: -mente ist ein Ableitungsmuster (rápido – rápidamente); HE lehrt Ableitungsmuster und Wortfamilien in Jg 8, die Adverbien auf -mente in Jg 9 (HE8 4 → HE9 3.3).
       - id: adverbien-auf-mente
         name: { de: "Adverbien auf -mente", en: "Adverbs ending in -mente" }
         iCan: "Ich kann Adverbien auf -mente bilden und Adverb und Adjektiv richtig unterscheiden."
         gradeBand: "7-8"
-        requires: [adjektiv-angleichung]
+        requires: [adjektiv-angleichung, wortfamilien]
       # HE8 3.3 (Steigerung der Adjektive und Vergleich); BY Sp8 1.2 (Komparativ; tan(to) … como); NW S1 Grammatik (Komparativ) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 2× 7-8 → 5-6 (Gleichstand: die frühere)
       - id: komparativ
         name: { de: "Komparativ", en: "Comparatives" }
@@ -176,11 +178,12 @@ strands:
         gradeBand: "5-6"
         requires: [praesens-regelmaessig]
       # HE7 3.3 (ir (a), venir (de)); BY Sp8 1.2 (ir; venir); NW S1 Grammatik (u. a. ir) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
+      # requires praepositionen-a-und-de: Ziel und Herkunft gibt man mit a und de an (voy al cine); HE nennt ir (a), venir (de) und a, de, al, del zusammen (HE7 3.3).
       - id: ir-praesens
         name: { de: "Verb ir im Präsens", en: "The verb ir in the present" }
         iCan: "Ich kann ir im Präsens konjugieren und mit a und de Ziel und Herkunft angeben (voy a Madrid, vengo de casa)."
         gradeBand: "5-6"
-        requires: [praesens-regelmaessig]
+        requires: [praesens-regelmaessig, praepositionen-a-und-de]
       # HE7 3.3 (hacer, decir, poner, venir); BY Sp8 1.2 (1. Person von saber, hacer, poner, salir, decir …; Verben mit -zco); NW S1 Grammatik (u. a. hacer) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
       - id: verben-mit-unregelmaessiger-ich-form
         name: { de: "Unregelmäßige ich-Form im Präsens", en: "Irregular first person present forms" }
@@ -218,11 +221,13 @@ strands:
         gradeBand: "5-6"
         requires: [tener]
       # HE8 3.3 (Strukturen mit gustar und parecer; a mí no me gusta nada); BY Sp8 1.2 Wortschatz (gustar + infinitivo); NW S1 Grammatik (modale Hilfsverben, u. a. gustar) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 2× 7-8 → 5-6 (Gleichstand: die frühere)
+      # requires indirekte-objektpronomen: Bei gustar steht immer ein indirektes Objektpronomen (me, te, le); HE nennt die Pronomen und gustar zusammen (HE8 3.3).
+      # requires betonte-pronomen: a mí, a él hebt die Person hervor (a él le gustan); HE nennt die betonten Pronomen bei gustar (HE8 3.3: „a mí no me gusta nada, a él le gusta mucho“).
       - id: gustar
         name: { de: "Gustar und ähnliche Verben", en: "Gustar and similar verbs" }
         iCan: "Ich kann mit gustar, encantar und parecer sagen, was mir und anderen gefällt (me gusta, a él le gustan)."
         gradeBand: "5-6"
-        requires: [praesens-regelmaessig]
+        requires: [indirekte-objektpronomen, betonte-pronomen]
       # HE7 3.3 (Verlaufsform estamos comiendo); BY Sp8 1.2 (Verlaufsform estar + gerundio); NW S1 Grammatik (estar + gerundio) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
       - id: estar-gerundio
         name: { de: "Estar und gerundio", en: "Estar plus gerundio" }
@@ -296,11 +301,12 @@ strands:
         gradeBand: "7-8"
         requires: [pronomen-bei-infinitiv-und-gerundio]
       # HE8 3.3 (positive Imperative tú, vosotros); BY Sp8 1.2 (bejahter Aufforderungssatz, 2. Person Singular und Plural); NW S1 Grammatik (affirmativer imperativo) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 2× 7-8 → 5-6 (Gleichstand: die frühere)
+      # requires unterrichtssprache: Arbeitsanweisungen (¡Escucha!, ¡Abrid el libro!) kennt man zuerst als feste Wendungen, dann lernt man die Regel; BY nennt Imperativformen für den Unterricht mit den Arbeitsanweisungen (BY Sp8 1.2 Wortschatz; FMC Tab. 2, Stufe 1: formelhafte Wendungen).
       - id: imperativ-tu-vosotros
         name: { de: "Imperativ: tú und vosotros", en: "Imperative: tú and vosotros" }
         iCan: "Ich kann den bejahten Imperativ für tú und vosotros bilden (¡habla!, ¡comed!)."
         gradeBand: "5-6"
-        requires: [praesens-regelmaessig]
+        requires: [praesens-regelmaessig, unterrichtssprache]
       # HE8 3.3 (¡pon!, ¡ten!, ¡sal!, ¡haz!, ¡ven!, ¡di!); BY Sp8 1.2 (imperativo, auch unregelmäßige Formen); NW S1 Grammatik (affirmativer imperativo) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 2× 7-8 → 7-8 (Gleichstand: die frühere 5-6; verteilt: 5-6 hielte sonst 43 von 83; baut auf imperativ-tu-vosotros auf)
       - id: imperativ-unregelmaessig
         name: { de: "Imperativ: unregelmäßige Formen", en: "Imperative: irregular forms" }
@@ -308,11 +314,12 @@ strands:
         gradeBand: "7-8"
         requires: [imperativ-tu-vosotros]
       # HE8 3.3 (¡dime!, ¡dile!, ¡hazlo!, ¡ponlo!); BY Sp8 1.2 (Stellung beim bejahten Imperativ) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW – | 1× 5-6, 1× 7-8 → 7-8 (Gleichstand: die frühere 5-6; verteilt: 5-6 hielte sonst 43 von 83; baut auf imperativ-unregelmaessig und den Objektpronomen auf)
+      # requires akzent-setzen (Herleitung): Mit dem angehängten Pronomen verschiebt sich die Betonung nach hinten, darum braucht man die tilde (¡levántate!, ¡dímelo!).
       - id: imperativ-mit-pronomen
         name: { de: "Imperativ mit Pronomen", en: "Imperative with pronouns" }
         iCan: "Ich kann Pronomen an den bejahten Imperativ anhängen und den Akzent richtig setzen (¡dime!, ¡hazlo!, ¡levántate!)."
         gradeBand: "7-8"
-        requires: [imperativ-unregelmaessig, direkte-objektpronomen, indirekte-objektpronomen]
+        requires: [imperativ-unregelmaessig, direkte-objektpronomen, indirekte-objektpronomen, akzent-setzen]
       # HE9 3.3 (Pronomen beim negativen Imperativ: no me digas); BY Sp9 1.2 (Aufforderungssatz bejaht und verneint); NW S2 Grammatik (verneinter imperativo) | HE Jg 9 = LJ 3/4 → 7-8; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 3× 7-8, 1× 9-10 → 7-8 (Mehrheit)
       - id: imperativ-verneint
         name: { de: "Verneinter Imperativ", en: "Negative imperative" }
@@ -438,7 +445,7 @@ strands:
         name: { de: "Presente de subjuntivo: regelmäßig", en: "Present subjunctive: regular forms" }
         iCan: "Ich kann die Formen des presente de subjuntivo regelmäßiger Verben bilden (hable, coma, viva)."
         gradeBand: "7-8"
-        requires: [praesens-regelmaessig, verben-mit-unregelmaessiger-ich-form]
+        requires: [verben-mit-unregelmaessiger-ich-form]
       # HE9 3.3 (subjuntivo: Formen); BY Sp9 1.2 (presente de subjuntivo); NW S2 Grammatik (Formen des presente de subjuntivo) | HE Jg 9 = LJ 3/4 → 7-8; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 3× 7-8, 1× 9-10 → 7-8 (Mehrheit)
       - id: subjuntivo-praesens-unregelmaessig
         name: { de: "Presente de subjuntivo: unregelmäßig", en: "Present subjunctive: irregular forms" }
@@ -530,11 +537,12 @@ strands:
         gradeBand: "9-10"
         requires: [reflexive-verben]
       # SCHWACH: nur BY nennt den voseo ausdrücklich; NW nennt hispanoamerikanische Varietäten allgemein. BY Sp9 5 Themengebiete (Sprachreflexion: der voseo und die damit verbundenen Verbformen); NW S2 IK (regionalismos und hispanoamerikanische Varietäten verstehen) | HE –; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 2× 7-8, 1× 9-10 → 7-8 (Mehrheit)
+      # requires lateinamerikanische-woerter: Den voseo versteht man, wenn man vos als Wort aus Lateinamerika kennt; BY nennt vos bei den Wörtern aus Hispanoamerika und den voseo im selben Jahr (BY Sp9 1.2 Wortschatz und 5 Sprachreflexion).
       - id: voseo
         name: { de: "Voseo", en: "Voseo" }
         iCan: "Ich kann die Verbformen des voseo verstehen (vos tenés, vos sos)."
         gradeBand: "7-8"
-        requires: [praesens-regelmaessig]
+        requires: [praesens-regelmaessig, lateinamerikanische-woerter]
   - id: wortschatz
     name: { de: Wortschatz, en: Vocabulary }
     competencies:
@@ -554,12 +562,15 @@ strands:
         name: { de: "Personen beschreiben", en: "Describing people" }
         iCan: "Ich kann Aussehen und Charakter einer Person beschreiben."
         gradeBand: "5-6"
-        requires: [ser-oder-estar, adjektiv-angleichung]
+        requires: [ser-oder-estar]
       # HE7 2.2 (Schule); BY Sp8 5 (Schulalltag); NW S1 IK (Aspekte des Schulalltags) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
+      # requires uhrzeit (Herleitung): Der Stundenplan nennt Zeiten (A las ocho tengo matemáticas).
+      # requires wochentage-und-monate (Herleitung): Der Stundenplan ist nach Wochentagen geordnet (el lunes tengo inglés).
       - id: schule
         name: { de: "Schule", en: "School" }
         iCan: "Ich kann über meine Schule, Fächer und den Stundenplan sprechen."
         gradeBand: "5-6"
+        requires: [uhrzeit, wochentage-und-monate]
       # HE7 2.2 (Wohnen); BY Sp8 5 (Wohnen) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW – | 2× 5-6 → 5-6 (Mehrheit)
       - id: wohnen
         name: { de: "Wohnen", en: "Home" }
@@ -597,10 +608,12 @@ strands:
         gradeBand: "5-6"
         requires: [ortsangaben, imperativ-tu-vosotros]
       # HE8 3.3 (Jahreseinteilung); BY Sp8 5 (Jahreszeiten) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW – | 1× 5-6, 1× 7-8 → 5-6 (Gleichstand: die frühere)
+      # requires gruppenverben-diphthong (Herleitung): llueve und nieva sind Formen von Verben mit Stammwechsel o → ue und e → ie (llover, nevar).
       - id: wetter-und-jahreszeiten
         name: { de: "Wetter und Jahreszeiten", en: "Weather and seasons" }
         iCan: "Ich kann über das Wetter und die Jahreszeiten sprechen (hace calor, llueve)."
         gradeBand: "5-6"
+        requires: [gruppenverben-diphthong]
       # HE7 3.3 (Zahlen von 1–100); BY Sp8 1.2 (die Grundzahlen); NW S1 Wortschatz (grundlegender Wortschatz) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
       - id: zahlen-bis-100
         name: { de: "Zahlen bis 100", en: "Numbers up to 100" }
@@ -618,12 +631,18 @@ strands:
         iCan: "Ich kann nach der Uhrzeit fragen und sie angeben (Son las tres y media)."
         gradeBand: "5-6"
         requires: [zahlen-bis-100, ser]
-      # HE8 3.3 (Monatsnamen); BY Sp8 1.2 (das Datum) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW – | 1× 5-6, 1× 7-8 → 7-8 (Gleichstand: die frühere 5-6; verteilt: 5-6 hielte sonst 22 von 32; baut auf zahlen-bis-100 auf)
+      # HE8 3.3 (Jahreseinteilung, Monatsnamen); BY Sp8 1.2 Wortschatz (das Datum); NW – (nur allgemein: grundlegender thematischer Wortschatz, S1 S. 19) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW – | 1× 5-6, 1× 7-8 → 5-6 (Gleichstand: die frühere). Neu (Owner, 2026-11-11): aus datum gelöst, damit Stundenplan, Feste und Kleinschreibung in 5-6 darauf aufbauen können. Schwach belegt: Wochentage nennt ausdrücklich nur HE für die 3. FS (Jg 9, S. 27, nicht gezählt); BY nennt sie im Datum mit.
+      - id: wochentage-und-monate
+        name: { de: "Wochentage und Monate", en: "Days of the week and months" }
+        iCan: "Ich kann die Wochentage und die Monate nennen (el lunes, en mayo)."
+        gradeBand: "5-6"
+      # HE8 3.3 (Monatsnamen); BY Sp8 1.2 (das Datum) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW – | 1× 5-6, 1× 7-8 → 7-8 (Gleichstand: die frühere 5-6; verteilt: 5-6 hielte sonst 22 von 32; baut auf zahlen-bis-100 und wochentage-und-monate auf). Seit 2026-11-11 nur noch das volle Datum; Wochentage und Monate stehen in wochentage-und-monate.
+      # requires wochentage-und-monate (Herleitung): Das Datum setzt sich aus Wochentag, Zahl und Monat zusammen (lunes, 3 de mayo).
       - id: datum
-        name: { de: "Wochentage, Monate und Datum", en: "Days, months and dates" }
-        iCan: "Ich kann Wochentage, Monate und das Datum angeben (el lunes, el 3 de mayo)."
+        name: { de: "Datum", en: "Dates" }
+        iCan: "Ich kann das Datum angeben und danach fragen (Hoy es lunes, 3 de mayo. ¿Qué fecha es hoy?)."
         gradeBand: "7-8"
-        requires: [zahlen-bis-100]
+        requires: [zahlen-bis-100, wochentage-und-monate]
       # HE-KC 7.4 (mehrteilige Arbeitsanweisungen verstehen); BY Sp8 1.2 (Arbeitsanweisungen, frases en clase); NW S1 Wortschatz (zur unterrichtlichen Kommunikation) | HE KC Ende Jg 8 = LJ 1-2 → 5-6/7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 2× 7-8 → 5-6 (Mehrheit)
       - id: unterrichtssprache
         name: { de: "Unterrichtssprache", en: "Classroom language" }
@@ -647,16 +666,19 @@ strands:
         gradeBand: "5-6"
         requires: [hay, ortsangaben]
       # HE9 1.2.1 (Textgliederung, Hinführung zur Inhaltsangabe); BY Sp8 1.2 (erste Redemittel zur Textarbeit); Sp9 1.2 (Wortschatz zur Textarbeit, Operatoren); NW S2 Wortschatz (zur Textbesprechung) | HE Jg 9 = LJ 3/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S2 = LJ 3-4/4 → 7-8/9-10 | 1× 5-6, 2× 7-8, 1× 9-10 → 7-8 (Mehrheit)
+      # requires fragen-zum-text: Die Redemittel zur Textarbeit baut man auf Fragen zum Text auf; BY nennt Fragen zu Texten und die Begriffe der Textarbeit im selben Punkt (BY Sp8 3).
       - id: wortschatz-textarbeit
         name: { de: "Wortschatz zur Textarbeit", en: "Vocabulary for text work" }
         iCan: "Ich kann über einen Text sprechen und seinen Inhalt zusammenfassen (El texto trata de …, el párrafo, resumir)."
         gradeBand: "7-8"
+        requires: [fragen-zum-text]
       # HE9 1.2.1 (Formulierung einer Stellungnahme); BY Sp9 1.2 (Meinung in einfacher Weise); Sp10 1.2 (Interaktionswortschatz); NW S2 Grammatik (Annahmen, Gefühle, Erwartungen formulieren) | HE Jg 9 = LJ 3/4 → 7-8; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 3× 7-8, 1× 9-10 → 7-8 (Mehrheit)
+      # requires gespraechswoerter: Wer auf andere reagiert, braucht Gesprächswörter (bueno, pues, o sea); BY baut von den ersten Gesprächswörtern zum Interaktionswortschatz für die Meinung auf (BY Sp8 1.2 Wortschatz → Sp10 1.2 Wortschatz).
       - id: meinung-aeussern
         name: { de: "Meinung äußern", en: "Giving your opinion" }
         iCan: "Ich kann meine Meinung sagen, begründen und auf andere reagieren (creo que, en mi opinión, estoy de acuerdo)."
         gradeBand: "7-8"
-        requires: [konjunktionen]
+        requires: [konjunktionen, gespraechswoerter]
       # HE10 3.3 (Übersicht: alle Konjunktionen); BY Sp9 1.2 (sin embargo, además, por un lado, por otro lado); Sp10 1.2 (aunque, así que, por lo tanto); NW S2 Grammatik (weiterführende Konnektoren: por lo tanto, sin embargo, no obstante, en cambio) | HE Jg 10 = LJ 4/4 → 9-10; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 2× 7-8, 2× 9-10 → 7-8 (Gleichstand: die frühere)
       - id: konnektoren
         name: { de: "Konnektoren", en: "Linking words" }
@@ -679,6 +701,13 @@ strands:
         iCan: "Ich kann falsche Freunde erkennen (la carta ist kein Karton, el bombón ist kein Bonbon)."
         gradeBand: "7-8"
         requires: [woerter-aus-anderen-sprachen]
+      # HE9 Querverweise (Sprachvergleich: L, GrA, D, E, F …; S. 20), vorbereitet in HE8 1.2 (Übersetzen kontrastiver Strukturen); BY Sp10 5 (Sprachreflexion: wesentliche strukturelle Unterschiede zwischen der spanischen und der deutschen Sprache); NW S1 Sprachbewusstheit S. 23 (im Sprachvergleich grundlegende Ähnlichkeiten und Verschiedenheiten aufzeigen), ebenso S2 S. 32 | HE Jg 9 = LJ 3/4 → 7-8; BY Jg 10 = LJ 3/3 → 9-10; NW S1 = LJ 1-2/4 → 5-6/7-8 | 1× 5-6, 2× 7-8, 1× 9-10 → 7-8 (Mehrheit). Neu (Owner, 2026-11-11), wie englisch/sprachvergleich. Schwach belegt in HE (nur Querverweis).
+      # requires falsche-freunde: Falsche Freunde sind der bekannteste Fall von Ähnlichkeit, die täuscht; der Vergleich baut auf ihnen auf (BY Sp8 5 Sprachreflexion: Parallelen und Unterschiede zum Wortschatz anderer Sprachen → Sp10 5 strukturelle Unterschiede; NW S1 S. 23). woerter-aus-anderen-sprachen folgt über falsche-freunde.
+      - id: sprachvergleich
+        name: { de: "Sprachvergleich Deutsch–Spanisch", en: "Comparing German and Spanish" }
+        iCan: "Ich kann Spanisch mit Deutsch und anderen Sprachen vergleichen und typische Unterschiede erklären."
+        gradeBand: "7-8"
+        requires: [falsche-freunde]
       # HE8 3.1 (lateinamerikanisches Spanisch: Phonetik und Lexik); BY Sp8 1.2 (Lateinamerikanismen lindo, plata); Sp9 1.2 (el auto, acá, vos); NW S2 IK (hispanoamerikanische Varietäten verstehen) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S2 = LJ 3-4/4 → 7-8/9-10 | 1× 5-6, 2× 7-8, 1× 9-10 → 7-8 (Mehrheit)
       - id: lateinamerikanische-woerter
         name: { de: "Lateinamerikanischer Wortschatz", en: "Latin American vocabulary" }
@@ -690,10 +719,12 @@ strands:
         iCan: "Ich kann umgangssprachliche Wendungen und Jugendsprache von der Standardsprache unterscheiden."
         gradeBand: "7-8"
       # BY Sp9 5 (Konsum- und Medienverhalten von Jugendlichen); NW S1 IK (Nutzung digitaler Medien im Alltag); S2 IK (Bedeutung digitaler Medien) | HE –; BY Jg 9 = LJ 2/3 → 7-8; NW S1 = LJ 1-2/4 → 5-6/7-8 | 1× 5-6, 2× 7-8 → 7-8 (Mehrheit)
+      # requires freizeit-und-hobbys: NW nennt die Nutzung digitaler Medien im Alltag zusammen mit der Freizeitgestaltung (NW S. 21, S1 Soziokulturelles Orientierungswissen).
       - id: medien-im-alltag
         name: { de: "Medien im Alltag", en: "Media in everyday life" }
         iCan: "Ich kann über Handy, Internet und soziale Medien in meinem Alltag sprechen."
         gradeBand: "7-8"
+        requires: [freizeit-und-hobbys]
       # HE8 2.2 (Jugendkultur); HE9 2.2 (conflicto generacional); BY Sp9 5 (Freundschaften, Probleme Gleichaltriger); NW S2 IK (Freundschaft/Partnerschaft) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 3× 7-8, 1× 9-10 → 7-8 (Mehrheit)
       - id: freundschaft-und-gefuehle
         name: { de: "Freundschaft und Gefühle", en: "Friendship and feelings" }
@@ -701,10 +732,12 @@ strands:
         gradeBand: "7-8"
         requires: [gustar, estar]
       # HE8 2.2 (Umwelt); NW S2 IK (Konsumverhalten unter Berücksichtigung des Umweltschutzes) | HE Jg 8 = LJ 2/4 → 7-8; BY –; NW S2 = LJ 3-4/4 → 7-8/9-10 | 2× 7-8, 1× 9-10 → 7-8 (Mehrheit)
+      # requires einkaufen: NW behandelt den Umweltschutz beim Konsumverhalten, also beim Einkaufen (NW S. 29, S2: „Freizeitgestaltung und Konsumverhalten auch unter Berücksichtigung des Umweltschutzes“).
       - id: umwelt
         name: { de: "Umwelt", en: "Environment" }
         iCan: "Ich kann über Umwelt und Umweltschutz im Alltag sprechen (reciclar, ahorrar agua)."
         gradeBand: "7-8"
+        requires: [einkaufen]
       # HE10 2.1 (turismo en España); BY Sp9 5 (Urlaub und Reisen); Sp9 1.2 (individueller Wortschatz: Urlaubserlebnisse) | HE Jg 10 = LJ 4/4 → 9-10; BY Jg 9 = LJ 2/3 → 7-8; NW – | 1× 7-8, 1× 9-10 → 7-8 (Gleichstand: die frühere)
       - id: reisen-und-urlaub
         name: { de: "Reisen und Urlaub", en: "Travel and holidays" }
@@ -777,16 +810,19 @@ strands:
         gradeBand: "7-8"
         requires: [akzent-setzen]
       # HE7 3.4 (Frage- und Ausrufezeichen zu Beginn und am Ende); NW S1 Orthografie (Sonderzeichen ¿, ¡) | HE Jg 7 = LJ 1/4 → 5-6; BY –; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 1× 7-8 → 5-6 (Mehrheit)
+      # requires fragesaetze (Herleitung): Das ¿ setzt man dort, wo die Frage beginnt; dazu muss man Fragesätze bilden und erkennen können.
       - id: frage-und-ausrufezeichen
         name: { de: "Umgedrehte Frage- und Ausrufezeichen", en: "Inverted question and exclamation marks" }
         iCan: "Ich kann die umgedrehten Frage- und Ausrufezeichen am Satzanfang setzen (¿Cuánto vale? ¡Qué calor!)."
         gradeBand: "5-6"
-      # HE7 3.4 (Kleinschreibung mit Ausnahme von Eigennamen und Satzanfang); BY Sp8 1.1 Schreiben (Groß-/Kleinschreibung); NW S1 Orthografie (Groß- und Kleinschreibung) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 7-8 (Mehrheit 5-6; verteilt: 5-6 hielte sonst 14 von 15; baut auf datum (Wochentage, Monate) auf)
+        requires: [fragesaetze]
+      # HE7 3.4 (Kleinschreibung mit Ausnahme von Eigennamen und Satzanfang); BY Sp8 1.1 Schreiben (Groß-/Kleinschreibung); NW S1 Orthografie (Groß- und Kleinschreibung) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 7-8 (Mehrheit 5-6; verteilt: 5-6 hielte sonst 14 von 15)
+      # requires wochentage-und-monate (Herleitung): Wochentage und Monate sind das Hauptbeispiel der Kleinschreibung (el lunes, en mayo); bis 2026-11-11 hing der Baustein an datum.
       - id: kleinschreibung
         name: { de: "Kleinschreibung", en: "Use of lower case" }
         iCan: "Ich kann Nomen klein schreiben und weiß, dass auch Wochentage, Monate und Nationalitäten klein geschrieben werden."
         gradeBand: "7-8"
-        requires: [datum]
+        requires: [wochentage-und-monate]
       # HE7 3.1 (Intonationsmuster Aussagesatz – Fragesatz); BY Sp8 1.2 (Aussage-, Aufforderungs- und Frageintonation); NW S1 Aussprache (Aussprache und Intonation) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 7-8 (Mehrheit 5-6; verteilt: 5-6 hielte sonst 14 von 15; baut auf betonung und fragesaetze auf)
       - id: satzmelodie
         name: { de: "Satzmelodie", en: "Intonation" }
@@ -794,11 +830,14 @@ strands:
         gradeBand: "7-8"
         requires: [fragesaetze, betonung]
       # HE8 1.1.2 (phonetisch und intonatorisch annähernd korrektes Vorlesen); BY Sp8 1.2 (unbekannte Wörter richtig aussprechen, Texte vorlesen); NW S1 Aussprache (Lesetexte vortragen) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 2× 7-8 → 7-8 (Gleichstand: die frühere 5-6; verteilt: 5-6 hielte sonst 14 von 15; baut auf betonung, c-g-j-aussprache und diphthonge auf)
+      # requires r-und-rr: Unbekannte Wörter liest man nach allen Ausspracheregeln, auch r und rr (BY Sp8 1.2 Aussprache: spezifische Laute, „auch einfache unbekannte Wörter richtig“; NW S. 20, r-Laute).
+      # requires ll-n-ch: Auch ll, ñ und ch gehören zu den Lauten, die man beim Vorlesen richtig sprechen muss (BY Sp8 1.2 Aussprache; HE7 3.1: „besondere Phoneme ll, ñ, rr, ch“).
+      # requires h-b-v: Beim Vorlesen bleibt das h stumm, b und v klingen gleich (BY Sp8 1.2 Aussprache; HE7 3.4: Nichtlautung des h).
       - id: unbekannte-woerter-vorlesen
         name: { de: "Unbekannte Wörter vorlesen", en: "Reading unknown words aloud" }
         iCan: "Ich kann auch unbekannte Wörter und Texte nach den Ausspracheregeln richtig vorlesen."
         gradeBand: "7-8"
-        requires: [betonung, c-g-j-aussprache, diphthonge]
+        requires: [betonung, c-g-j-aussprache, diphthonge, r-und-rr, ll-n-ch, h-b-v]
       # HE8 3.1 (regionale Aussprachevarianten); HE9 1.1.1 (LAm: el seseo); BY Sp10 5 (regionale Aussprachevarianten); NW S2 IK (regionalismos und hispanoamerikanische Varietäten verstehen) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 10 = LJ 3/3 → 9-10; NW S2 = LJ 3-4/4 → 7-8/9-10 | 2× 7-8, 2× 9-10 → 9-10 (Gleichstand: die frühere 7-8; verteilt: 5-6 hielte sonst 14 von 15; 7-8 hielte sonst 8 von 15; Ende der Kette, baut auf c-g-j-aussprache auf)
       - id: aussprachevarianten
         name: { de: "Regionale Aussprachevarianten", en: "Regional pronunciation" }
@@ -843,37 +882,47 @@ strands:
         gradeBand: "7-8"
         requires: [geografie-spaniens]
       # HE7 2.3 (späterer Mahlzeitenrhythmus, ¿siesta?); BY Sp8 2 (Unterschiede bei Öffnungszeiten); NW S1 IK (Alltagsleben, Tagesabläufe) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
+      # requires tagesablauf: Den Tagesrhythmus vergleicht man über den eigenen Tagesablauf; HE und BY nennen Tagesablauf und Essenszeiten im selben Jahr (HE7 2.2 Tagesablauf und 2.3 Mahlzeitenrhythmus; BY Sp8 2 und 5).
       - id: tagesrhythmus-in-spanien
         name: { de: "Tagesrhythmus in Spanien", en: "Daily rhythm in Spain" }
         iCan: "Ich kann den Tagesablauf in Spanien mit Deutschland vergleichen, zum Beispiel Essenszeiten und Öffnungszeiten."
         gradeBand: "5-6"
+        requires: [tagesablauf]
       # HE7 2.2 (Schule); BY Sp8 2 (Schulleben; Schulnoten); Sp8 1.1 Sprachmittlung; NW S1 IK (Aspekte des Schulalltags) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
+      # requires schule: Wer den Schulalltag vergleicht, braucht die Wörter für Schule, Fächer und Stundenplan; BY nennt Schulleben im Vergleich und Schulalltag im selben Jahr (BY Sp8 2 und 5; HE7 2.2 Schule).
       - id: schulalltag-in-spanien
         name: { de: "Schulalltag in Spanien", en: "School life in Spain" }
         iCan: "Ich kann den Schulalltag Jugendlicher in Spanien oder Lateinamerika mit meinem vergleichen, auch das Notensystem."
         gradeBand: "5-6"
+        requires: [schule]
       # HE7 2.3 (Navidades, Nochevieja, Reyes, fiestas nacionales y regionales); BY Sp8 5 (Feste und Bräuche); NW S1 IK (gesellschaftliches Leben, Feste, Traditionen) | HE Jg 7 = LJ 1/4 → 5-6; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 3× 5-6, 1× 7-8 → 5-6 (Mehrheit)
+      # requires wochentage-und-monate (Herleitung): Feste nennt man mit Monat und Tag (Navidad en diciembre, los Reyes el 6 de enero); BY lehrt beides im selben Jahr (Sp8 1.2 Wortschatz, Sp8 5).
       - id: feste-und-braeuche
         name: { de: "Feste und Bräuche", en: "Festivals and customs" }
         iCan: "Ich kann wichtige Feste in Spanien und Lateinamerika beschreiben (Navidad, Nochevieja, los Reyes Magos, Día de Muertos)."
         gradeBand: "5-6"
+        requires: [wochentage-und-monate]
       # HE-KC 6.1 (Sensibilität für andere Gebräuche); BY Sp8 2 (tutear bzw. tratar de usted; besitos zur Begrüßung); NW S1 IK (kulturspezifische Konventionen in Begegnungssituationen) | HE KC Ende Jg 10 = LJ 3-4 → 7-8/9-10; BY Jg 8 = LJ 1/3 → 5-6; NW S1 = LJ 1-2/4 → 5-6/7-8 | 2× 5-6, 2× 7-8, 1× 9-10 → 5-6 (Gleichstand: die frühere)
+      # requires subjektpronomen: Duzen oder siezen heißt tú oder usted wählen; BY nennt die Subjektpronomen mit ustedes und das Siezen im selben Jahr (BY Sp8 1.2 Grammatik und 2).
       - id: tu-oder-usted
         name: { de: "Tú oder usted", en: "Tú or usted" }
         iCan: "Ich kann entscheiden, ob ich jemanden duze oder sieze, und Menschen höflich begrüßen (dos besos, señor, señora)."
         gradeBand: "5-6"
+        requires: [subjektpronomen]
       # HE8 2.3 (Regionen in Auswahl: Andalucía); BY Sp10 5 (Andalusien: Kultur, Wirtschaft, Stereotype); NW S2 IK (vertiefte Beschäftigung mit einer ausgewählten Region in Spanien) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 10 = LJ 3/3 → 9-10; NW S2 = LJ 3-4/4 → 7-8/9-10 | 2× 7-8, 2× 9-10 → 9-10 (Gleichstand: die frühere; requires erzwingt 9-10)
+      # requires klischees-hinterfragen: Die Klischees über Andalusien prüft man mit dem, was man über Klischees zu Spanien gelernt hat; BY führt vom Spanienbild (Sp9) zu den Stereotypen über Andalusien (Sp10) (BY Sp9 2 → Sp10 5).
       - id: region-andalusien
         name: { de: "Andalusien", en: "Andalusia" }
         iCan: "Ich kann Andalusien mit seiner Kultur, Wirtschaft und seinen Klischees vorstellen."
         gradeBand: "9-10"
-        requires: [autonome-gemeinschaften]
+        requires: [autonome-gemeinschaften, klischees-hinterfragen]
       # HE8 2.3 (Regionen in Auswahl: Galicia); BY Sp9 5 (Galicien als mehrsprachige Region, gallego); NW S2 IK (vertiefte Beschäftigung mit einer ausgewählten Region in Spanien) | HE Jg 8 = LJ 2/4 → 7-8; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 3× 7-8, 1× 9-10 → 7-8 (Mehrheit)
+      # requires vortrag: Eine Region stellt man in einem kurzen Vortrag vor; BY nennt die Präsentation am Beispiel „Vorstellung einer spanischen Region“ (BY Sp9 1.1 Sprechen; Galicien: BY Sp9 5).
       - id: region-galicien
         name: { de: "Galicien", en: "Galicia" }
         iCan: "Ich kann Galicien als Region mit eigener Sprache vorstellen."
         gradeBand: "7-8"
-        requires: [sprachen-spaniens]
+        requires: [sprachen-spaniens, vortrag]
       # HE10 2.1 (turismo en España); BY Sp9 5 (die Balearen als touristisch bedeutsame Region); NW S2 IK (wirtschaftliches Leben in Spanien) | HE Jg 10 = LJ 4/4 → 9-10; BY Jg 9 = LJ 2/3 → 7-8; NW S2 = LJ 3-4/4 → 7-8/9-10 | 2× 7-8, 2× 9-10 → 9-10 (Gleichstand: die frühere; requires erzwingt 9-10)
       - id: tourismus-in-spanien
         name: { de: "Tourismus in Spanien", en: "Tourism in Spain" }
@@ -934,10 +983,12 @@ strands:
         gradeBand: "9-10"
         requires: [autonome-gemeinschaften]
       # HE10 2.1 (emigración; gitanos e inmigrantes (minorías) en España); NW S2 IK (Umgang mit Vielfalt) | HE Jg 10 = LJ 4/4 → 9-10; BY –; NW S2 = LJ 3-4/4 → 7-8/9-10 | 1× 7-8, 2× 9-10 → 9-10 (Mehrheit)
+      # requires laender-lateinamerikas (Herleitung): Wer über Aus- und Einwanderung zwischen Spanien und Lateinamerika spricht, muss die Länder Lateinamerikas kennen.
       - id: migration
         name: { de: "Migration", en: "Migration" }
         iCan: "Ich kann über Auswanderung und Einwanderung in Spanien und Lateinamerika sprechen."
         gradeBand: "9-10"
+        requires: [laender-lateinamerikas]
   - id: texte
     name: { de: Texte und Medien, en: Texts and media }
     competencies:
@@ -971,10 +1022,13 @@ strands:
         gradeBand: "5-6"
         requires: [gustar, lieder-und-gedichte]
       # SCHWACH: BY und NW ordnen die Texte so, verlangen die Unterscheidung aber nicht ausdrücklich. KMK TM (Text- und Medienkompetenz, S. 21-22); BY Sp9 3 (fiktionale und nicht-fiktionale Texte); NW S1 TM (Ausgangstexte: Sach- und Gebrauchstexte; kurze literarische Texte) | HE –; BY Jg 9 = LJ 2/3 → 7-8; NW S1 = LJ 1-2/4 → 5-6/7-8 | 1× 5-6, 2× 7-8 → 7-8 (Mehrheit)
+      # requires gebrauchstexte: Sachtexte erkennt man nur, wenn man Gebrauchstexte kennt; NW nennt Sach- und Gebrauchstexte und literarische Texte als zwei Gruppen (NW S. 22, S1 Ausgangstexte; BY Sp8 3).
+      # requires nacherzaehlen: Die andere Seite: erzählende Texte, deren Handlung man wiedergeben kann (NW S. 22; BY Sp8 3: erzählende Texte, Handlungsverläufe nacherzählen).
       - id: sachtext-oder-erzaehlung
         name: { de: "Sachtext oder Erzählung", en: "Non-fiction or narrative" }
         iCan: "Ich kann Sachtexte und erzählende Texte unterscheiden und typische Merkmale nennen."
         gradeBand: "7-8"
+        requires: [gebrauchstexte, nacherzaehlen]
       # KMK TM (Text- und Medienkompetenz, S. 21-22); BY Sp9 3 (kurze Zeitungs- und Zeitschriftentexte); Sp10 3 (Berichte, Kommentare); NW S1 TM (Ausgangstexte: kurze und einfach strukturierte Zeitungsartikel); S2 TM (Zeitungsartikel und Tagesnachrichten) | HE –; BY Jg 9 = LJ 2/3 → 7-8; NW S1 = LJ 1-2/4 → 5-6/7-8 | 1× 5-6, 2× 7-8 → 7-8 (Mehrheit)
       - id: zeitungsartikel
         name: { de: "Zeitungsartikel", en: "Newspaper article" }
@@ -1119,8 +1173,9 @@ strands:
         gradeBand: "7-8"
         requires: [meinung-aeussern]
       # KMK SCHR S. 15 (MSA: formelle Schreiben); BY Sp10 3 (sachliche Schreiben, z. B. Anfragen und Reservierungen per E-Mail); NW S2 Schreiben (formalisierte Texte verfassen) | HE –; BY Jg 10 = LJ 3/3 → 9-10; NW S2 = LJ 3-4/4 → 7-8/9-10 | 1× 7-8, 2× 9-10 → 9-10 (Mehrheit)
+      # requires umgangssprache-und-standardsprache: Eine förmliche E-Mail verlangt die Standardsprache; BY nennt sachliche Schreiben und den Unterschied der Sprachregister im selben Jahr (BY Sp9 1.1 Schreiben und 5 Sprachreflexion).
       - id: formelle-e-mail
         name: { de: "Förmliche E-Mail", en: "Formal email" }
         iCan: "Ich kann eine förmliche E-Mail schreiben, zum Beispiel eine Anfrage oder eine Reservierung (Estimados señores: …)."
         gradeBand: "9-10"
-        requires: [brief-und-e-mail, tu-oder-usted, condicional-simple]
+        requires: [brief-und-e-mail, tu-oder-usted, condicional-simple, umgangssprache-und-standardsprache]

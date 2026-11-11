@@ -18,6 +18,7 @@
 # Jg 10), die drei Teile des Lehrgangs sind also die Jahrgangsstufen 5-6, 7-8, 9-10. Hielte eine Stufe mehr als die
 # Hälfte eines Strangs, ist sie entlang requires verteilt ("verteilt", mit Grund).
 # Genaue Titel, Ausgaben und URLs: .vibe/research-englisch.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Englisch, en: English }                # the file name is the subject's id: englisch
 source:
   title: KMK, Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss, Beschluss vom 15.10.2004 und vom 04.12.2003 i.d.F. vom 22.06.2023
@@ -30,15 +31,19 @@ strands:
     name: { de: Grammatik, en: Grammar }
     competencies:
       # HE5 3.3 (to be; Lang- und Kurzformen); BY E5 1.2 (Hilfsverben be, have (got), do); NW EPS (statements, questions, short answers; negations) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires personalpronomen (Herleitung): Ob man am, is oder are sagt, hängt vom Subjekt ab (I, he, they).
       - id: to-be
         name: { de: "Verb to be", en: "The verb to be" }
         iCan: "Ich kann die Formen von „to be“ (am, is, are) in Aussagen, Verneinungen und Fragen verwenden."
         gradeBand: "5-6"
+        requires: [personalpronomen]
       # HE5 3.3 (to have (got)); BY E5 1.2 (have (got)); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
+      # requires personalpronomen (Herleitung): Ob man have oder has sagt, hängt vom Subjekt ab, wie beim simple present.
       - id: have-got
         name: { de: "Have got und has got", en: "Have got and has got" }
         iCan: "Ich kann mit „have got“ und „has got“ sagen, was jemand hat, und danach fragen."
         gradeBand: "5-6"
+        requires: [personalpronomen]
       # HE5 3.3 (Subjekt- und Objektformen der Personalpronomen); BY E5 1.2 (Personalpronomen); NW EPS (pronouns) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: personalpronomen
         name: { de: "Personalpronomen", en: "Personal pronouns" }
@@ -73,15 +78,20 @@ strands:
         gradeBand: "5-6"
         requires: [plural]
       # SCHWACH. HE5 3.3 (there als grammatisches Subjekt); BY –; NW – | 5-6/–/– → 5-6 (festgelegt: nur HE; aufgenommen als direkte Voraussetzung von bild-beschreiben)
+      # requires to-be (Herleitung): „There is / there are“ ist eine Form von „to be“.
+      # requires plural (Herleitung): Die Wahl zwischen is und are hängt von Einzahl und Mehrzahl des Nomens ab.
       - id: there-is-are
         name: { de: "There is und there are", en: "There is and there are" }
         iCan: "Ich kann mit „there is“ und „there are“ sagen, was es an einem Ort gibt."
         gradeBand: "5-6"
+        requires: [to-be, plural]
       # HE5 3.3 (Befehl; Bejahung und Verneinung); BY E5 1.2 (Imperative); NW EPS (commands) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires classroom-phrases (Herleitung): Arbeitsanweisungen im Unterricht (Open your books.) kennt man zuerst als feste Wendungen; die Regel des Imperativs kommt danach. Feste Wendungen gehen der Regel voraus (PT Kap. 4.3, S. 77).
       - id: imperativ
         name: { de: "Imperativ", en: "Imperative" }
         iCan: "Ich kann Aufforderungen und Verbote mit dem Imperativ formulieren (Open the door. Don’t run.)."
         gradeBand: "5-6"
+        requires: [classroom-phrases]
       # HE5 3.3 (S-P-O; Orts-/Zeitangaben); BY E5 1.2 (place – time, S-V-O im Aussagesatz); NW EPS (word order) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: wortstellung
         name: { de: "Wortstellung im Aussagesatz", en: "Word order in statements" }
@@ -134,7 +144,7 @@ strands:
         name: { de: "Simple present oder present progressive", en: "Simple present or present progressive" }
         iCan: "Ich kann entscheiden, ob ich simple present oder present progressive brauche, und Signalwörter dafür nutzen."
         gradeBand: "5-6"
-        requires: [simple-present, present-progressive, adverbien-haeufigkeit]
+        requires: [present-progressive, adverbien-haeufigkeit]
       # HE5 3.3 (can, (must), may, should); BY E5 1.2 (can, must, needn’t, mustn’t); NW EPS (modal auxiliaries: can/cannot, may (not), must (not), needn’t, should (not)) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: can-must
         name: { de: "Can, must und needn’t", en: "Can, must and needn’t" }
@@ -158,10 +168,12 @@ strands:
         gradeBand: "5-6"
         requires: [plural]
       # HE5 3.3 (some); HE6 3.3 (some/any/no); BY E5 1.2 (some, any); NW EPS (determiners, quantifiers) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires plural (Herleitung): Some und any stehen vor Nomen in der Mehrzahl oder vor nicht zählbaren Nomen, wie much und many.
       - id: some-any
         name: { de: "Some, any und no", en: "Some, any and no" }
         iCan: "Ich kann some, any und no in Aussagen, Verneinungen und Fragen richtig verwenden."
         gradeBand: "5-6"
+        requires: [plural]
       # HE6 3.3 (alle Zusammensetzungen und Ausnahmen); BY E5 1.2 (somebody, anybody, nobody; something, anything, nothing); NW EPS (pronouns) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: somebody-anything
         name: { de: "Zusammensetzungen mit some und any", en: "Compounds of some and any" }
@@ -169,20 +181,25 @@ strands:
         gradeBand: "5-6"
         requires: [some-any]
       # HE8 3.3 (Zusammenschau der wichtigsten Präpositionen); BY E5 1.2 Wortschatz (Zeitangaben); NW EPS (zeitliche Bezüge herstellen) | 7-8/5-6/5-6 → 5-6 (Mehrheit)
+      # requires uhrzeit: „At 6 o’clock“ braucht die Uhrzeit; BY nennt Uhrzeit und Zeitangaben im selben Wortschatz. (BY E5 1.2 Wortschatz („Uhrzeit, Orts-, Zeit- und Häufigkeitsangaben, Monatsnamen, Wochentage“))
+      # requires datum: „On Monday, in July“ braucht Wochentage und Monate; BY nennt beides mit den Zeitangaben. (BY E5 1.2 Wortschatz (wie oben))
       - id: praepositionen-zeit
         name: { de: "Präpositionen der Zeit", en: "Prepositions of time" }
         iCan: "Ich kann die Präpositionen in, on und at bei Zeitangaben richtig verwenden (on Monday, at 6 o’clock, in July)."
         gradeBand: "5-6"
+        requires: [uhrzeit, datum]
       # HE5 3.3 (Ortsangaben); HE8 3.3 (Zusammenschau der Präpositionen); BY E5 1.2 Wortschatz (Ortsangaben); NW EPS (räumliche Bezüge herstellen) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: praepositionen-ort
         name: { de: "Präpositionen des Ortes", en: "Prepositions of place" }
         iCan: "Ich kann mit Präpositionen wie in, on, under, next to und behind sagen, wo etwas ist."
         gradeBand: "5-6"
       # HE5 3.3 (attributiver und prädikativer Gebrauch; Stellung); BY E5 1.2 (beschreiben mit einfachen Mitteln); NW EPS (adjectives) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires to-be (Herleitung): Der Baustein übt Adjektive nach „be“ (The house is big.).
       - id: adjektive
         name: { de: "Stellung der Adjektive", en: "Position of adjectives" }
         iCan: "Ich kann Adjektive vor ein Nomen (a big house) und nach „be“ (The house is big.) stellen."
         gradeBand: "5-6"
+        requires: [to-be]
       # HE5 3.3 (einfache Konjunktionen when, but, as); HE6 3.3 (so / because); BY E5 1.2 (einfache Nebensätze, v. a. temporal, kausal); NW EPS (compound sentences: and, or, but; adverbial clauses: time, reason, result) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: konjunktionen
         name: { de: "Konjunktionen and, but, because", en: "Conjunctions and, but and because" }
@@ -246,7 +263,7 @@ strands:
         name: { de: "Present perfect oder simple past", en: "Present perfect or simple past" }
         iCan: "Ich kann entscheiden, ob ich present perfect oder simple past brauche, und Signalwörter dafür nutzen."
         gradeBand: "7-8"
-        requires: [present-perfect, simple-past]
+        requires: [present-perfect]
       # HE6 3.3 (Ausdruck der Dauer; since und for); BY E7 1.2 (present perfect simple / progressive); NW S1 S. 26 (Dauer ausdrücken) | 5-6/7-8/7-8 → 7-8 (Mehrheit)
       - id: since-for
         name: { de: "Since und for", en: "Since and for" }
@@ -264,7 +281,7 @@ strands:
         name: { de: "Past perfect", en: "Past perfect" }
         iCan: "Ich kann im past perfect ausdrücken, dass etwas vor einem anderen Ereignis in der Vergangenheit geschah."
         gradeBand: "7-8"
-        requires: [simple-past, present-perfect]
+        requires: [present-perfect]
       # HE8 3.3 (Temporalsätze: Zeitenfolge); BY E7 1.2 (Temporalsätze: Zeitenfolge); NW S1 S. 26 (Abfolge von Handlungen ausdrücken) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: zeitenfolge-temporalsaetze
         name: { de: "Zeitenfolge in Temporalsätzen", en: "Tenses in time clauses" }
@@ -278,11 +295,12 @@ strands:
         gradeBand: "7-8"
         requires: [will-oder-going-to]
       # HE8 3.3 (future II); BY –; NW S2 S. 34 (will-future progressive, will-future perfect) | 7-8/–/9-10 → 7-8 (Gleichstand: die frühere)
+      # requires present-progressive (Herleitung): „Will be doing“ ist eine Verlaufsform; sie setzt die -ing-Verlaufsform voraus.
       - id: future-progressive-perfect
         name: { de: "Future progressive und future perfect", en: "Future progressive and future perfect" }
         iCan: "Ich kann mit „will be doing“ und „will have done“ über Abläufe und Ergebnisse in der Zukunft sprechen."
         gradeBand: "7-8"
-        requires: [will-future, present-perfect]
+        requires: [will-future, present-perfect, present-progressive]
       # HE9 3.3 (past perfect progressive); BY –; NW S2 S. 34 (tense and aspect) | 9-10/–/9-10 → 9-10 (Mehrheit)
       - id: past-perfect-progressive
         name: { de: "Past perfect progressive", en: "Past perfect progressive" }
@@ -320,11 +338,13 @@ strands:
         gradeBand: "9-10"
         requires: [simple-past]
       # HE6 3.3 (question tag mit/ohne do); BY E6 1.2 (question tags); NW EPS (question tags) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires to-be (Herleitung): Die häufigsten Tags sind Formen von „be“ (isn’t it?).
+      # requires simple-past-fragen (Herleitung): Der Baustein übt Tags auch mit did; HE nennt Tags mit „do“ im selben Jahr wie Fragen im simple past.
       - id: question-tags
         name: { de: "Question tags", en: "Question tags" }
         iCan: "Ich kann an eine Aussage ein question tag anhängen (It’s cold, isn’t it?), auch mit do und did."
         gradeBand: "5-6"
-        requires: [simple-present-fragen]
+        requires: [to-be, simple-past-fragen]
       # HE6 3.3 (Fragen mit Präposition am Satzende); BY E6 1.2 (Fragen mit Präpositionen); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
       - id: fragen-praeposition-ende
         name: { de: "Fragen mit Präposition am Ende", en: "Questions ending in a preposition" }
@@ -469,11 +489,13 @@ strands:
         gradeBand: "7-8"
         requires: [reported-speech, past-perfect]
       # HE8 3.3 (Infinitivkonstruktionen bei Befehlen, Aufforderungen); BY E9 1.2 (indirekte Rede); NW S1 S. 26 (reported speech) | 7-8/9-10/7-8 → 7-8 (Mehrheit)
+      # requires infinitivkonstruktionen: „She told me to wait“ ist ein Infinitiv mit eigenem Subjekt; HE nennt es bei den Infinitiven. (HE S. 27 (Jg 8, 3.3: „Infinitivkonstruktionen bei Befehlen, Aufforderungen und Fragen“))
+      # requires imperativ (Herleitung): Wer eine Aufforderung wiedergibt, muss die direkte Aufforderung kennen.
       - id: indirekte-aufforderungen
         name: { de: "Indirekte Aufforderungen", en: "Reported commands" }
         iCan: "Ich kann Bitten und Aufforderungen indirekt wiedergeben (She told me to wait.)."
         gradeBand: "7-8"
-        requires: [reported-speech]
+        requires: [reported-speech, infinitivkonstruktionen, imperativ]
       # HE8 3.3 (indirekte Rede: Fragen); BY E9 1.2 (indirekte Rede in allen Zeitstufen); NW S2 S. 35 (indirect questions) | 7-8/9-10/9-10 → 9-10 (Mehrheit)
       - id: indirekte-fragen
         name: { de: "Indirekte Fragen", en: "Reported questions" }
@@ -481,17 +503,19 @@ strands:
         gradeBand: "9-10"
         requires: [backshift, fragewoerter]
       # HE7 3.3 (Aktiv-Passiv); BY E8 1.2 (Passiv); NW S1 S. 26 (active vs. passive voice) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
+      # requires to-be (Herleitung): Das Passiv bildet man mit einer Form von „be“ und der dritten Form.
       - id: passiv
         name: { de: "Passiv: simple present und past", en: "Passive: simple present and past" }
         iCan: "Ich kann Sätze im Passiv im simple present und simple past bilden und sagen, wer etwas getan hat (by …)."
         gradeBand: "7-8"
-        requires: [unregelmaessige-verben]
+        requires: [unregelmaessige-verben, to-be]
       # HE7 3.3; HE9 (Revision: Passiv); BY E8 1.2 (Passiv in verschiedenen Zeiten); NW S1 S. 26 (active vs. passive voice) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
+      # requires can-must (Herleitung): Der Baustein übt das Passiv mit Modalverben (It can be done.).
       - id: passiv-zeiten
         name: { de: "Passiv in weiteren Zeiten", en: "Passive in other tenses" }
         iCan: "Ich kann das Passiv auch im present perfect, im will-future und mit Modalverben bilden (It has been sold. It can be done.)."
         gradeBand: "7-8"
-        requires: [passiv, present-perfect, will-future]
+        requires: [passiv, present-perfect, will-future, can-must]
       # HE –; BY E8 1.2 (Verben mit zwei Objekten); NW S2 S. 34 (personal passive (verbs with two objects)) | –/7-8/9-10 → 7-8 (Gleichstand: die frühere) Hinweis: BY nennt Verben mit zwei Objekten neben dem Passiv, aber nicht ausdrücklich das persönliche Passiv.
       - id: passiv-zwei-objekte
         name: { de: "Passiv mit zwei Objekten", en: "Passive with two objects" }
@@ -511,10 +535,13 @@ strands:
         gradeBand: "7-8"
         requires: [gerund]
       # HE8 3.3 (Infinitivkonstruktionen; nach where, what, how; nach Superlativen; mit eigenem Sinnsubjekt); BY E8 1.2 (in order to, it’s X (for sb.) to, the first to do sth.); NW S2 S. 35 (infinitive clauses) | 7-8/7-8/9-10 → 7-8 (Mehrheit)
+      # requires would-like: „I’d like (you) to …“ ist der erste Infinitiv mit to; Jg 8 baut die Infinitive darauf aus. (BY E5 1.2 Wortschatz („I want / I’d like (you) to“) → BY E8 1.2 Grammatik (Infinitiv); HE S. 17 (Jg 5: „einfache Infinitivanschlüsse“) → HE S. 27 (Jg 8: Infinitivkonstruktionen))
+      # requires fragewoerter (Herleitung): Der Baustein übt den Infinitiv nach Fragewörtern (how to, what to).
       - id: infinitivkonstruktionen
         name: { de: "Infinitivkonstruktionen", en: "Infinitive constructions" }
         iCan: "Ich kann Infinitive mit to verwenden, zum Beispiel nach in order, nach Fragewörtern und in „It’s easy for me to …“."
         gradeBand: "7-8"
+        requires: [would-like, fragewoerter]
       # HE8 3.3 (Abgrenzung zum Gerundium; stop, remember, forget, try, mean); BY E8 1.2 (stop doing / to do sth., remember doing / to do sth.); NW – | 7-8/7-8/– → 7-8 (Mehrheit)
       - id: gerund-oder-infinitiv
         name: { de: "Gerundium oder Infinitiv", en: "Gerund or infinitive" }
@@ -544,7 +571,7 @@ strands:
         name: { de: "Betonung mit do", en: "Emphatic do" }
         iCan: "Ich kann eine Aussage mit do, does oder did verstärken (I do like it!)."
         gradeBand: "9-10"
-        requires: [simple-present-fragen, simple-past-fragen]
+        requires: [simple-past-fragen]
       # HE9 3.3 (Spaltsätze mit it und what); BY E9 1.2 (sprachliche Mittel der Hervorhebung); NW S2 S. 35 (Formen der Emphase) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: cleft-sentences
         name: { de: "Cleft sentences", en: "Cleft sentences" }
@@ -608,16 +635,19 @@ strands:
         iCan: "Ich kann grundlegende Fachbegriffe wie noun, verb, adjective, tense und sentence verstehen und verwenden."
         gradeBand: "5-6"
       # HE5 2.1 (Familie; Begegnung mit anderen); BY E5 1.2 (Verwandtschaftsbezeichnungen); E5 5 (Familie, Freunde); NW EPS (Familie, Freunde) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires adjektive (Herleitung): Der Baustein beschreibt Menschen nach Aussehen und Charakter, also mit Adjektiven.
       - id: familie-personen
         name: { de: "Familie und Personenbeschreibung", en: "Family and describing people" }
         iCan: "Ich kann Familienmitglieder benennen und Menschen mit einfachen Wörtern nach Aussehen und Charakter beschreiben."
         gradeBand: "5-6"
-        requires: [have-got]
+        requires: [have-got, adjektive]
       # HE5 2.1 (Schule: Klassenzimmer); HE6 (Stundenplan, Fächer); BY E5 1.2 (Schulfächer); E5 5 (Schulalltag); NW EPS (Lernen für die Schule) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires datum (Herleitung): Der Stundenplan braucht die Wochentage.
       - id: schule
         name: { de: "Schule und Schulalltag", en: "School" }
         iCan: "Ich kann über meine Schule sprechen: Fächer, Stundenplan, Klassenzimmer und Schultag."
         gradeBand: "5-6"
+        requires: [datum]
       # HE5 2.1 (Wohnen: Haus/Wohnung, Zimmer, Garten); BY E5 1.2 (Wohnräume, Möbelstücke); NW S1 S. 28 (Wohnen und Zusammenleben in der Familie) | 5-6/5-6/7-8 → 5-6 (Mehrheit)
       - id: wohnen
         name: { de: "Wohnen und Zuhause", en: "Home" }
@@ -625,10 +655,12 @@ strands:
         gradeBand: "5-6"
         requires: [there-is-are]
       # HE5 2.1 (Einkaufen); Aufgabengebiet Gesundheitserziehung (Ernährung); BY E5 1.2 (Mahlzeiten, Lebensmittel); E5 5 (Essgewohnheiten); NW EPS (Ernährung) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires simple-present: Über Essgewohnheiten spricht man im simple present; BY ordnet Gewohnheiten dem present simple zu. (BY E5 1.2 Grammatik („beschreiben … Gewohnheiten in der Gegenwart: … present tense simple“) und E5 5 („Essgewohnheiten“))
       - id: essen-trinken
         name: { de: "Essen und Trinken", en: "Food and drink" }
         iCan: "Ich kann Lebensmittel und Mahlzeiten benennen und über Essgewohnheiten sprechen."
         gradeBand: "5-6"
+        requires: [simple-present]
       # HE5 2.1 (Einkaufen); BY E5 1.2 (Kleidung); E5 5 (Einkaufen); NW EPS (Konsumverhalten); Berufsorientierung (Taschengeld) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: kleidung-einkaufen
         name: { de: "Kleidung und Einkaufen", en: "Clothes and shopping" }
@@ -636,10 +668,12 @@ strands:
         gradeBand: "5-6"
         requires: [zahlen]
       # HE5 2.1 (Freizeit, Spiele); BY E5 1.2 (Freizeitaktivitäten, Haustiere); NW EPS (Hobbys) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires simple-present: Über Hobbys und Gewohnheiten spricht man im simple present; das KC nennt beides zusammen. (HE-KC S. 32 (7.1: „sich mit ihren Interessen, Hobbys, Gewohnheiten und Alltagsbeschäftigungen vorstellen“))
       - id: freizeit-hobbys
         name: { de: "Freizeit und Hobbys", en: "Free time and hobbies" }
         iCan: "Ich kann über meine Hobbys, Haustiere und meine Freizeit sprechen."
         gradeBand: "5-6"
+        requires: [simple-present]
       # HE6 2.1 (Sport; TV); BY E6 1.2 (Sport, Musik); E6 5; NW EPS (Sport) | 5-6/5-6/5-6 → 5-6 (Mehrheit) → 7-8 (verteilt: HE6 und BY E6 im 2. Lernjahr; folgt auf freizeit-hobbys und führt zu jugendkultur (9-10); 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: sport-musik
         name: { de: "Sport, Musik und Fernsehen", en: "Sport, music and TV" }
@@ -647,11 +681,12 @@ strands:
         gradeBand: "7-8"
         requires: [freizeit-hobbys]
       # HE5 2.1 (Tagesablauf); BY E5 5 (Tages- und Jahresablauf); NW EPS (Alltag) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires praepositionen-zeit (Herleitung): „I get up at seven, on Saturdays …“ braucht die Präpositionen der Zeit.
       - id: tagesablauf
         name: { de: "Tagesablauf", en: "Daily routine" }
         iCan: "Ich kann meinen Tagesablauf beschreiben (I get up at seven …)."
         gradeBand: "5-6"
-        requires: [uhrzeit, simple-present]
+        requires: [simple-present, praepositionen-zeit]
       # HE6 2.1 (Verkehr, Wegbeschreibungen); HE-KC 7.1 (sehr einfache Wegbeschreibung); BY E6 1.2 (Wegbeschreibung); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
       - id: stadt-wegbeschreibung
         name: { de: "Stadt und Wegbeschreibung", en: "Town and directions" }
@@ -659,85 +694,118 @@ strands:
         gradeBand: "5-6"
         requires: [praepositionen-ort, imperativ]
       # HE6 2.3 (Verkehrsmittel und Verkehrswege in und nach GB); BY E6 1.2 (Reisen); E6 5 (Bahnhof, Flughafen, Ticketschalter); NW – | 5-6/5-6/– → 5-6 (Mehrheit) → 7-8 (verteilt: HE6 und BY E6 im 2. Lernjahr, NW nennt es nicht; kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
+      # requires uhrzeit (Herleitung): Wer eine Fahrkarte kauft oder nach Abfahrt fragt, braucht die Uhrzeit.
       - id: reisen-verkehr
         name: { de: "Reisen und Verkehr", en: "Travel and transport" }
         iCan: "Ich kann Verkehrsmittel benennen und mich am Bahnhof oder Flughafen verständigen, zum Beispiel eine Fahrkarte kaufen."
         gradeBand: "7-8"
+        requires: [uhrzeit]
       # HE5 Aufgabengebiet Gesundheitserziehung (Arztbesuch); BY E6 1.2 (Gesundheit); E6 5 (Arzt/Apotheke); NW – | 5-6/5-6/– → 5-6 (Mehrheit) Hinweis: HE nennt den Arztbesuch nur unter den Aufgabengebieten.
+      # requires have-got (Herleitung): Beschwerden sagt man mit „I’ve got a headache / a cold“.
       - id: gesundheit
         name: { de: "Körper und Gesundheit", en: "Body and health" }
         iCan: "Ich kann Körperteile und Beschwerden benennen und beim Arzt oder in der Apotheke sagen, was mir fehlt."
         gradeBand: "5-6"
+        requires: [have-got]
       # HE6 2.2 (Freundschaften und Beziehungen; bullying; Schlichtung von Streitigkeiten); HE8 (dating); BY –; NW S1 S. 28 (Leben in der peer group, Freundschaft) | 5-6/–/7-8 → 5-6 (Gleichstand: die frühere)
+      # requires adjektive (Herleitung): Gefühle nennt man meist mit Adjektiven (happy, sad, angry).
       - id: gefuehle-freundschaft
         name: { de: "Gefühle und Freundschaft", en: "Feelings and friendship" }
         iCan: "Ich kann über Gefühle, Freundschaft und Streit sprechen, auch über Mobbing."
         gradeBand: "5-6"
+        requires: [adjektive]
       # HE10 2.2 (Media and communication); BY E7 5 (Mediennutzung Jugendlicher: Möglichkeiten und Gefahren); NW EPS (analoge und digitale Medien); S1 | 9-10/7-8/5-6 → 7-8 (drei verschiedene Stimmen: die mittlere)
+      # requires freizeit-hobbys: NW behandelt Medien zuerst als Teil der Freizeitgestaltung. (NW S. 20 (EPS: „Alltag und Freizeitgestaltung … Hobbys, Sport, … analoge und digitale Medien“); S. 28 (S1))
       - id: medien
         name: { de: "Medien und soziale Netzwerke", en: "Media and social networks" }
         iCan: "Ich kann über Medien und soziale Netzwerke sprechen, auch über ihre Chancen und Gefahren."
         gradeBand: "7-8"
+        requires: [freizeit-hobbys]
       # HE5 Aufgabengebiet Umwelterziehung (Abfallvermeidung, Recycling); HE6 2.1 (Müllvermeidung); BY E9 5 (Konsum- und Medienverhalten, auch im Hinblick auf Nachhaltigkeit); NW S1 S. 28 (Umweltschutz) | 5-6/9-10/7-8 → 7-8 (drei verschiedene Stimmen: die mittlere)
       - id: umwelt
         name: { de: "Umwelt und Nachhaltigkeit", en: "Environment and sustainability" }
         iCan: "Ich kann über Umweltschutz sprechen, zum Beispiel über Müll, Recycling und Nachhaltigkeit."
         gradeBand: "7-8"
       # HE8 2.2 (scientific/technological progress); BY E10 5 (durch technologischen Fortschritt bedingte Wertvorstellungen); NW S1 S. 28 (wirtschaftlich-technologische Aspekte) | 7-8/9-10/7-8 → 7-8 (Mehrheit)
+      # requires passiv (Herleitung): Über Erfindungen spricht man meist im Passiv (was invented in …); HE lehrt das Passiv in Jg 7 und das Thema in Jg 8 (HE7 3.3 Aktiv-Passiv; HE8 2.2 scientific/technological progress).
       - id: technik-fortschritt
         name: { de: "Technik und Fortschritt", en: "Technology and progress" }
         iCan: "Ich kann über Erfindungen und technischen Fortschritt sprechen."
         gradeBand: "7-8"
+        requires: [passiv]
       # HE9 2.2 (The world of work); BY E9 1.2 (Berufswelt, Bewerbungen); E9 5 (Praktikum, Ferienjob); NW S2 S. 36 (Schülerjobs, Praktika, Berufsprofile); S1 (Freizeit- und Ferienjobs) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: berufswelt
         name: { de: "Berufe und Arbeitswelt", en: "Jobs and careers" }
         iCan: "Ich kann Berufe benennen und über Praktikum, Ferienjob und meine Berufswünsche sprechen."
         gradeBand: "9-10"
       # HE –; BY E9 1.2 (Konsum- und Medienverhalten); E9 5; NW S2 S. 36 (Werbung, Konsum und Verbraucherschutz) | –/9-10/9-10 → 9-10 (Mehrheit)
+      # requires kleidung-einkaufen: NW führt vom Konsumverhalten (Einkaufen) in Jg 5/6 zu Werbung und Verbraucherschutz in Jg 9/10. (NW S. 20 (EPS: „Konsumverhalten“) → S. 36 (S2: „Werbung, Konsum und Verbraucherschutz“))
+      # requires umwelt: BY behandelt Konsumverhalten „im Hinblick auf Nachhaltigkeit“; dafür braucht man den Wortschatz zu Umwelt und Nachhaltigkeit (BY E9 5).
       - id: konsum-werbung
         name: { de: "Konsum und Werbung", en: "Consumerism and advertising" }
         iCan: "Ich kann über Konsum, Werbung und meine Rechte als Verbraucherin oder Verbraucher sprechen."
         gradeBand: "9-10"
+        requires: [kleidung-einkaufen, umwelt]
       # HE10 2.2 (Human rights; civil society, volunteerism); BY E10 1.2 (politisches Handeln, weltanschauliche Aspekte); NW S2 S. 36 (gesellschaftliches Engagement; Demokratie und Menschenrechte) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
+      # requires politik-uk: Die Wörter für Parlament, Wahl und Regierung lernt man beim politischen System; BY baut den Politikwortschatz von Jg 8 bis 10 auf. (BY E8 1.2 Wortschatz („Begriffe zu … Politik“) und E8 5 („politische Systeme … konstitutionelle Monarchie“) → BY E10 1.2 Wortschatz („politischem Handeln“))
       - id: gesellschaft-politik
         name: { de: "Gesellschaft und Politik", en: "Society and politics" }
         iCan: "Ich kann über Demokratie, Menschenrechte und gesellschaftliches Engagement sprechen."
         gradeBand: "9-10"
+        requires: [politik-uk]
       # HE –; BY E5 1.1 Sprechen (mehrere einfache, miteinander verbundene Sätze); NW EPS (zeitliche Bezüge zwischen Sätzen herstellen) | –/5-6/5-6 → 5-6 (Mehrheit) Hinweis: Beide Länder nennen die Verknüpfung, nicht die Wörter.
       - id: verbindungswoerter-erzaehlen
         name: { de: "Verbindungswörter beim Erzählen", en: "Sequencing words" }
         iCan: "Ich kann Sätze in einer Erzählung mit first, then, after that und finally ordnen."
         gradeBand: "5-6"
       # HE9 3.3 (Satzadverbien); HE10 4 (linking); BY E7 1.2 (however, therefore); E8 (moreover, on the one hand … on the other hand); NW S1 S. 25 (Vokabular zur Textproduktion) | 9-10/7-8/7-8 → 7-8 (Mehrheit)
+      # requires konjunktionen (Herleitung): However und therefore bauen auf but und so auf.
       - id: verbindungswoerter-argumentieren
         name: { de: "Verbindungswörter beim Argumentieren", en: "Linking words for arguments" }
         iCan: "Ich kann Gedanken mit however, therefore, moreover und on the one hand … on the other hand verknüpfen."
         gradeBand: "7-8"
+        requires: [konjunktionen]
       # HE6 1.2.1 (Gesprächsführung: Zustimmen); HE9 (formelhafte Wendungen in Gespräch und Diskussion); BY E9 1.2 (Wortschatz zur differenzierten Meinungsäußerung); NW S1 S. 30 (Stellungnahmen) | 5-6/9-10/7-8 → 7-8 (drei verschiedene Stimmen: die mittlere)
+      # requires that-saetze (Herleitung): Die Grundform der Meinung ist „I think that …“.
       - id: meinung-redemittel
         name: { de: "Redemittel für die Meinung", en: "Phrases for giving opinions" }
         iCan: "Ich kann meine Meinung sagen, zustimmen und widersprechen (In my opinion …, I agree because …)."
         gradeBand: "7-8"
+        requires: [that-saetze]
       # KMK SCHR S. 16 (MSA: ein fehlendes Wort paraphrasieren); HE5/6 4 (Synonyme, Antonyme); HE9 1.2 (Paraphrasierung); BY E7 1.2 (Paraphrasen, Synonyme und Antonyme); E8, E9; NW S2 S. 38 (Kompensationsstrategien) | 5-6/7-8/9-10 → 7-8 (drei verschiedene Stimmen: die mittlere)
+      # requires relativsaetze (Herleitung): Man umschreibt ein fehlendes Wort meist mit einem Relativsatz (It’s a thing which …, a person who …).
       - id: umschreiben
         name: { de: "Wörter umschreiben", en: "Paraphrasing words" }
         iCan: "Ich kann ein Wort, das mir fehlt, mit anderen Wörtern, Synonymen oder Gegenteilen umschreiben."
         gradeBand: "7-8"
+        requires: [relativsaetze]
       # HE6 1.1.2 (Erschließen von Vokabular über die Wortfamilie); HE7, HE8; BY E5 4 (Wortfelder, Wortfamilien); NW – | 5-6/5-6/– → 5-6 (Mehrheit) → 7-8 (verteilt: HE nennt es in Jg 6, 7 und 8; das Erschließen über die Wortfamilie braucht einen Grundwortschatz; kein Baustein in 5-6 baut darauf auf; 5-6 hielte sonst mehr als die Hälfte des Strangs)
+      # requires grammatik-fachbegriffe (Herleitung): Wortfamilien ordnet man nach Wortart (Verb help, Adjektiv helpful), dazu braucht man noun, verb, adjective.
       - id: wortfamilien
         name: { de: "Wortfamilien und Wortbildung", en: "Word families and word formation" }
         iCan: "Ich kann Wörter einer Wortfamilie erkennen und mit Vor- und Nachsilben neue Wörter erschließen (help, helpful, helpless)."
         gradeBand: "7-8"
+        requires: [grammatik-fachbegriffe]
       # HE10 3.3 (phrasal verbs); BY E5, E6, E7 1.2 (erste/einfache phrasal verbs); E10 (grundlegende phrasal verbs); NW – | 9-10/5-10/– → 9-10 (Mehrheit) Hinweis: BY nennt phrasal verbs in Jg 5, 6, 7 und 10; gezählt als Spanne 5-10.
+      # requires praepositionen-ort (Herleitung): Die Partikeln der phrasal verbs (up, down, in, out, on) kennt man zuerst als Orts- und Richtungsangaben.
       - id: phrasal-verbs
         name: { de: "Phrasal verbs", en: "Phrasal verbs" }
         iCan: "Ich kann häufige phrasal verbs wie give up, look after und find out verstehen und verwenden."
         gradeBand: "9-10"
+        requires: [praepositionen-ort]
       # HE9 3.2 (false friends); BY E5 1.2 (erste false friends: to become, to mean); E6 (typische); E10 (wichtige); NW – | 9-10/5-10/– → 9-10 (Mehrheit) Hinweis: BY nennt false friends in Jg 5, 6 und 10; gezählt als Spanne 5-10.
       - id: false-friends
         name: { de: "False friends", en: "False friends" }
         iCan: "Ich kann typische false friends wie become, chef und sensible richtig verwenden."
         gradeBand: "9-10"
+      # KMK S. 7 (Sprachbewusstheit aus der Auseinandersetzung mit verschiedenen Sprachen, ohne Jahrgang); HE9 (fächerverbindend: Sprachvergleich mit D, F, L u. a.); BY –; NW EPS S. 22 und S2 S. 39 (Sprachbewusstheit: im Vergleich des Englischen mit der deutschen Sprache Ähnlichkeiten und Unterschiede erkennen und benennen) | 9-10/–/5-10 → 9-10 (Mehrheit). Neu (Owner, 2026-11-10): verbindet phrasal verbs und false friends, die typisch anders sind als im Deutschen.
+      # requires phrasal-verbs: Phrasal verbs sind ein typischer Unterschied zum Deutschen (eine Bedeutung aus Verb und Partikel); der Vergleich baut auf ihnen auf (Owner; NW S2 S. 39).
+      # requires false-friends: False friends sind der bekannteste Fall von Ähnlichkeit, die täuscht (NW EPS S. 22: Ähnlichkeiten und Unterschiede erkennen).
+      - id: sprachvergleich
+        name: { de: "Sprachvergleich Deutsch–Englisch", en: "Comparing German and English" }
+        iCan: "Ich kann Englisch und Deutsch vergleichen und typische Unterschiede in Wortbildung, Wortstellung und Ausdruck erklären."
+        gradeBand: "9-10"
+        requires: [phrasal-verbs, false-friends]
       # HE8 3.1 (Varianten des britischen und amerikanischen Englisch); BY E8 1.2 (Unterschiede zwischen britischem und amerikanischem Wortschatz); NW S1 S. 25 (lexikalische Unterschiede zwischen amerikanischem und britischem Englisch) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: be-ae-wortschatz
         name: { de: "Britischer und amerikanischer Wortschatz", en: "British and American vocabulary" }
@@ -750,10 +818,12 @@ strands:
         gradeBand: "7-8"
         requires: [kurzformen]
       # HE10 3.2 (Vokabular für Äußerungen über Sprache und Texte); BY E9 1.2 (für die Texterschließung und -interpretation notwendige Fachbegriffe); NW S2 S. 34 (Vokabular zur Textbesprechung) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
+      # requires figuren-ort-handlung: Character, setting und plot benennen, was man in Jg 5/6 als Figuren, Ort und Handlung herausfindet. (BY E5/E6 3 („Handlungsablauf und Figuren“, „Figuren und Schauplatz“) → BY E10 3 („Grundbegriffe der literarischen Interpretation (… Figuren, plot)“))
       - id: text-fachbegriffe
         name: { de: "Fachbegriffe der Textarbeit", en: "Terms for talking about texts" }
         iCan: "Ich kann Fachbegriffe zum Sprechen über Texte verwenden, zum Beispiel narrator, character, setting, plot und stanza."
         gradeBand: "9-10"
+        requires: [figuren-ort-handlung]
 
   # KMK 2.1 Verfügen über sprachliche Mittel: Aussprache und Prosodie (S. 20); Orthographie (S. 19)
   - id: aussprache
@@ -787,23 +857,26 @@ strands:
         name: { de: "Aussprache von -s und -ed", en: "Pronouncing -s and -ed endings" }
         iCan: "Ich kann die Endungen -s und -ed richtig aussprechen (/s/, /z/, /ɪz/ und /t/, /d/, /ɪd/)."
         gradeBand: "5-6"
-        requires: [simple-present, simple-past]
+        requires: [simple-past]
       # HE5 3.4 (stummes e); BY –; NW EPS (silent letters, Aussprache und Orthografie) | 5-6/–/5-6 → 5-6 (Mehrheit)
       - id: silent-letters
         name: { de: "Stumme Buchstaben", en: "Silent letters" }
         iCan: "Ich kann stumme Buchstaben wie in knife, write und listen erkennen und die Wörter richtig sprechen und schreiben."
         gradeBand: "5-6"
       # HE6 3.4 (von der Schreibung auf die Lautung schließen; Homonyme see/sea); BY E5 1.2 (Zusammenhänge von Lautung und Schreibung); NW EPS (typische Laut-Buchstaben-Verbindungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit) → 7-8 (verteilt: HE6 (von der Schreibung auf die Lautung schließen); folgt auf vokale und führt zu be-ae-schreibung (7-8); 5-6 hielte sonst mehr als die Hälfte des Strangs)
+      # requires silent-letters (Herleitung): Verbindungen wie igh (night) enthalten stumme Buchstaben.
       - id: laut-buchstabe
         name: { de: "Laut und Buchstabe", en: "Sounds and spelling patterns" }
         iCan: "Ich kann typische Buchstabenverbindungen wie ee, ea und igh lesen und gleich klingende Wörter wie see und sea unterscheiden."
         gradeBand: "7-8"
-        requires: [vokale]
+        requires: [vokale, silent-letters]
       # HE5 3.1 (rising/falling intonation); BY E6 1.2 (korrekte Intonation, besonders bei Fragen); NW EPS (Intonation einfacher Aussagesätze, Fragen und Aufforderungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires fragewoerter (Herleitung): Die Satzmelodie unterscheidet Ja-Nein-Fragen (steigend) und Fragen mit Fragewort (fallend); man braucht beide Fragearten.
       - id: intonation-fragen
         name: { de: "Satzmelodie", en: "Intonation" }
         iCan: "Ich kann Aussagen, Fragen und Aufforderungen mit der passenden Satzmelodie sprechen (steigend oder fallend)."
         gradeBand: "5-6"
+        requires: [fragewoerter]
       # HE6 3.1 (Intonationsmuster, z. B. question tags); HE8; BY E6 1.2 (Intonation, besonders bei Fragen; question tags); NW – | 5-6/5-6/– → 5-6 (Mehrheit) → 7-8 (verteilt: Ende der Kette question-tags → Intonation; HE6 und HE8, BY E6, NW nennt es nicht; 5-6 hielte sonst mehr als die Hälfte des Strangs)
       - id: intonation-question-tags
         name: { de: "Satzmelodie bei question tags", en: "Intonation in question tags" }
@@ -811,22 +884,26 @@ strands:
         gradeBand: "7-8"
         requires: [question-tags, intonation-fragen]
       # HE5 3.3 (Lang- und Kurzformen); BY E5 5 (short forms); NW EPS (short/long forms) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires simple-present-fragen (Herleitung): Der Baustein übt auch don’t und doesn’t.
       - id: kurzformen
         name: { de: "Kurzformen", en: "Contractions" }
         iCan: "Ich kann Kurzformen wie I’m, don’t und she’s richtig sprechen und mit Apostroph schreiben."
         gradeBand: "5-6"
-        requires: [to-be]
+        requires: [to-be, simple-present-fragen]
       # HE5 3.4 (Konsonantenverdopplung nach kurzen Vokalen, stummes e, y – ie); BY E5 1.1 Schreiben (orthographisch korrekt); NW EPS (orthografische Besonderheiten vor Flexionsendungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires present-progressive (Herleitung): Der Baustein übt auch die Schreibung vor -ing (make – making).
       - id: rechtschreibung-endungen
         name: { de: "Schreibung vor Endungen", en: "Spelling changes before endings" }
         iCan: "Ich kann die Schreibung vor Endungen richtig ändern (stop – stopped, cry – cries, make – making)."
         gradeBand: "5-6"
-        requires: [plural, simple-past]
+        requires: [plural, simple-past, present-progressive]
       # SCHWACH. KMK LG S. 19 (Orthographie und Zeichensetzung); HE –; BY –; NW EPS (capitalisation) | –/–/5-6 → 5-6 (festgelegt: nur NW; KMK nennt Orthographie und Zeichensetzung)
+      # requires datum (Herleitung): Die Regel betrifft vor allem Wochentage und Monate (Monday, July).
       - id: grossschreibung
         name: { de: "Großschreibung", en: "Capital letters" }
         iCan: "Ich kann die englischen Regeln der Großschreibung anwenden (I, Monday, English, Nomen klein)."
         gradeBand: "5-6"
+        requires: [datum]
       # HE7 3.1 (bedeutungsunterscheidende Funktion der Aussprache: present); BY E8 1.2 (Betonung); NW EPS (Wortbetonung) | 7-8/7-8/5-6 → 7-8 (Mehrheit)
       - id: wortbetonung
         name: { de: "Wortbetonung", en: "Word stress" }
@@ -845,11 +922,12 @@ strands:
         iCan: "Ich kann Wörter beim Sprechen verbinden, auch mit dem linking r (far away)."
         gradeBand: "7-8"
       # HE8 3.1 (Rhythmus, Betonung und Intonation im englischen Satz); BY E9 1.2 (Satzmelodie und -rhythmus, sinnvoll betonen); NW S1 S. 27 (emphatische Betonung, Variationen der Satzmelodie) | 7-8/9-10/7-8 → 7-8 (Mehrheit)
+      # requires bindungen: Englischer Satzrhythmus heißt auch: Wörter verbinden; BY und HE nennen Betonung und Bindungen zusammen. (BY E8 1.2 Aussprache und Intonation („Betonung, Bindungen und Verschleifungen“); HE S. 21 (Jg 6, 3.1: „Silbenabschwächung, Bindungen und Verschleifungen“))
       - id: satzbetonung
         name: { de: "Satzbetonung und Rhythmus", en: "Sentence stress and rhythm" }
         iCan: "Ich kann in einem Satz die wichtigen Wörter betonen und im englischen Rhythmus sprechen."
         gradeBand: "7-8"
-        requires: [wortbetonung, schwache-formen]
+        requires: [schwache-formen, bindungen]
       # HE8 3.1 (lautliche Unterschiede zwischen britischem und amerikanischem Englisch); BY E8 5 (Varietäten: Britische Inseln, USA, Kanada); NW S1 S. 27 (Aussprachevarianten des britischen und amerikanischen Englisch) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: be-ae-aussprache
         name: { de: "Britische und amerikanische Aussprache", en: "British and American pronunciation" }
@@ -875,11 +953,12 @@ strands:
         gradeBand: "9-10"
         requires: [satzbetonung]
       # HE9 1.1.1 (leichte regionale/soziale Sprachvarianten); HE10; BY E9 1.2 (Wortschatz AUS/NZ); E10 (weitere Varietäten); NW S2 S. 35 (eine weitere Varietät des Englischen) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
+      # requires be-ae-wortschatz: Eine weitere Varietät erkennt man auch an ihren Wörtern; BY baut von britisch/amerikanisch zu AUS/NZ auf. (BY E8 1.2 Wortschatz („Unterschiede zwischen britischem und amerikanischem … Wortschatz“) → E9 1.2 Wortschatz („Wortschatzelemente einer weiteren englischen Sprachvarietät (AUS/NZ)“))
       - id: weitere-varietaet
         name: { de: "Weitere Varietäten des Englischen", en: "Other varieties of English" }
         iCan: "Ich kann typische Merkmale einer weiteren Varietät des Englischen erkennen, zum Beispiel des australischen oder schottischen Englisch."
         gradeBand: "9-10"
-        requires: [be-ae-aussprache]
+        requires: [be-ae-aussprache, be-ae-wortschatz]
 
   # KMK 2.2 Interkulturelle Kompetenz: soziokulturelles Wissen (S. 20 f.)
   - id: landeskunde
@@ -891,11 +970,12 @@ strands:
         iCan: "Ich kann die Teile des Vereinigten Königreichs und ihre Hauptstädte auf der Karte zeigen und UK, Great Britain und Ireland unterscheiden."
         gradeBand: "5-6"
       # HE5 2.1 (Familie, Wohnen); HE-KC 7.1 (Sitten und Bräuche des eigenen Landes und der Zielsprache); BY E5 5 (Leben im sozialen Umfeld, Schwerpunkt UK); NW EPS (Lebenswirklichkeiten von Familien und Kindern in Großbritannien) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires essen-trinken: Der Baustein vergleicht auch das Essen in Großbritannien; BY nennt Essgewohnheiten im Leben im UK. (BY E5 5 („Leben im sozialen Umfeld (Schwerpunkt UK): … Essgewohnheiten“))
       - id: alltag-uk
         name: { de: "Alltag in Großbritannien", en: "Everyday life in Britain" }
         iCan: "Ich kann das Familienleben, das Wohnen und das Essen in Großbritannien beschreiben und mit meinem Alltag vergleichen."
         gradeBand: "5-6"
-        requires: [familie-personen, wohnen]
+        requires: [familie-personen, wohnen, essen-trinken]
       # HE-KC 7.1 (Schulalltag in verschiedenen Ländern der Zielsprache); HE7 2.2 (school uniform; school life); BY E5 5 (Schulalltag); NW EPS (Einblick in den Schulalltag in Großbritannien) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: schule-uk
         name: { de: "Schule in Großbritannien", en: "School in Britain" }
@@ -919,11 +999,12 @@ strands:
         iCan: "Ich kann beschreiben, dass in Großbritannien Menschen mit vielen verschiedenen Herkünften zusammenleben."
         gradeBand: "5-6"
       # HE6 2.1 (Leben in einer großen Stadt und auf dem Land); BY E6 5 (Leben in der Stadt und auf dem Land im UK bzw. in den USA); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
+      # requires vergleiche: Der Baustein vergleicht Stadt und Land; BY nennt Vergleich und Steigerung im selben Jahr. (BY E6 5 („Leben in der Stadt und auf dem Land … und Vergleich mit der eigenen Lebenswelt“); E6 1.2 Grammatik („Adjektive: Steigerung, Vergleich“))
       - id: stadt-land-uk
         name: { de: "Stadt und Land in Großbritannien", en: "Town and country in Britain" }
         iCan: "Ich kann das Leben in einer britischen Großstadt und auf dem Land vergleichen."
         gradeBand: "5-6"
-        requires: [britische-inseln]
+        requires: [britische-inseln, vergleiche]
       # HE7 2.3 (Great Britain: region); BY E6 5 (Cornwall oder Lake District); E7 (Wales); NW EPS (Region in Großbritannien) | 7-8/5-6/5-6 → 5-6 (Mehrheit)
       - id: region-uk
         name: { de: "Regionen Großbritanniens", en: "Regions of Britain" }
@@ -1026,10 +1107,12 @@ strands:
         gradeBand: "7-8"
         requires: [unabhaengigkeit-usa]
       # HE5 2.2 (Problematik von Klischees und Stereotypen); BY E10 2 (Stereotype hinterfragen; Vorurteile und Klischees); NW EPS (über Stereotype austauschen); S1 S. 28 (Stereotype/Klischees und Vorurteile erläutern) | 5-6/9-10/7-8 → 7-8 (drei verschiedene Stimmen: die mittlere)
+      # requires vielfalt-gb: HE führt Klischees am Beispiel der verschiedenen Herkünfte britischer Jugendlicher ein. (HE S. 17 (Jg 5, 2.2: „die Problematik von Klischees und Stereotypen: erste Begegnung mit den unterschiedlichen ethnischen Hintergründen britischer Jugendlicher“))
       - id: stereotype
         name: { de: "Stereotype und Vorurteile", en: "Stereotypes and prejudice" }
         iCan: "Ich kann Klischees und Vorurteile über Länder und Menschen erkennen und hinterfragen."
         gradeBand: "7-8"
+        requires: [vielfalt-gb]
       # SCHWACH. HE9/10 fakultativ (Einbeziehung weiterer englischsprachiger Länder); BY E8 5 (Kanada: Geographie und Gesellschaft; Inuit/First People); NW S2 S. 36 (ein weiteres anglophones Land, Wahl offen) | –/7-8/9-10 → 7-8 (Gleichstand: die frühere)
       - id: kanada
         name: { de: "Kanada", en: "Canada" }
@@ -1047,7 +1130,7 @@ strands:
         name: { de: "Schulsysteme in UK und USA", en: "British and American school systems" }
         iCan: "Ich kann die Schulsysteme in Großbritannien und den USA mit ihren Abschlüssen beschreiben und mit Deutschland vergleichen."
         gradeBand: "9-10"
-        requires: [schule-uk, schule-usa]
+        requires: [schule-usa]
       # HE10 2.2 (Minorities USA/GB; Human rights); BY E10 5 (African Americans: Sklaverei, Amerikanischer Bürgerkrieg, Abraham Lincoln); NW S2 S. 36 (Demokratie und Menschenrechte) | 9-10/9-10/9-10 → 9-10 (Mehrheit) Hinweis: HE und NW nennen das Thema allgemein.
       - id: sklaverei-buergerkrieg
         name: { de: "Sklaverei und Bürgerkrieg", en: "Slavery and the Civil War" }
@@ -1055,11 +1138,12 @@ strands:
         gradeBand: "9-10"
         requires: [unabhaengigkeit-usa]
       # HE10 2.2 (Human rights: equal opportunity, ethnic diversity); BY E10 5 (Civil Rights Movement; Rosa Parks, Martin Luther King, Malcolm X, Barack Obama; heutige Situation); NW S2 S. 36 (Demokratie und Menschenrechte) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
+      # requires gesellschaft-politik: Die Bürgerrechtsbewegung ist ein Fall von Menschenrechten; HE und NW nennen beides in einem Punkt. (HE S. 33 (Jg 10, 2.2: „Human rights – equal opportunity: e.g. ethnic diversity“); NW S. 36 (S2: „Demokratie und Menschenrechte“))
       - id: buergerrechtsbewegung
         name: { de: "Bürgerrechtsbewegung in den USA", en: "The civil rights movement" }
         iCan: "Ich kann die Bürgerrechtsbewegung mit Rosa Parks und Martin Luther King beschreiben und die heutige Lage einschätzen."
         gradeBand: "9-10"
-        requires: [sklaverei-buergerkrieg]
+        requires: [sklaverei-buergerkrieg, gesellschaft-politik]
       # HE10 2.2 (Minorities (USA/GB); ethnic diversity); BY –; NW S2 S. 36 (Migration und Mobilität in der globalisierten Welt) | 9-10/–/9-10 → 9-10 (Mehrheit)
       - id: migration-heute
         name: { de: "Migration und Minderheiten heute", en: "Migration and minorities today" }
@@ -1090,10 +1174,12 @@ strands:
         gradeBand: "5-6"
         requires: [gruss-hoeflichkeit]
       # KMK SCHR S. 15 (ESA: kurze, einfache Notizen und Mitteilungen); HE-KC 7.1 (persönliche schriftliche Mitteilungen; Alltagstexte); BY E5 3 (Sprachnachrichten, persönliche Mitteilungen); NW EPS (Textnachrichten; Einladungen) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
+      # requires praepositionen-zeit (Herleitung): Eine Einladung nennt Tag und Uhrzeit (on Saturday at 3).
       - id: kurznachricht
         name: { de: "Kurznachricht und Einladung", en: "Short messages and invitations" }
         iCan: "Ich kann eine kurze Nachricht, eine Notiz oder eine Einladung schreiben."
         gradeBand: "5-6"
+        requires: [praepositionen-zeit]
       # HE5 1.2.2 (Tagebucheinträge); BY E7 3 (Tagebucheinträge bzw. Beiträge zu einem Blog); NW EPS (Zieltexte: Tagebucheinträge) | 5-6/7-8/5-6 → 5-6 (Mehrheit)
       - id: tagebucheintrag
         name: { de: "Tagebucheintrag", en: "Diary entry" }
@@ -1159,7 +1245,7 @@ strands:
         name: { de: "Personen und Orte beschreiben", en: "Describing people and places" }
         iCan: "Ich kann in einem Text eine Person oder einen Ort anschaulich beschreiben."
         gradeBand: "5-6"
-        requires: [familie-personen, adjektive]
+        requires: [familie-personen]
       # KMK SCHR S. 16 (MSA: kurze Berichte; Beschreibungen eines Ereignisses); HE7 1.1 (Textarten: Berichte); BY E7 3 (Artikel für Schülerzeitung; berichtende Texte); NW S1 S. 30 (Zieltexte: Erfahrungsberichte) | 7-8/7-8/7-8 → 7-8 (Mehrheit)
       - id: bericht-artikel
         name: { de: "Bericht und Artikel", en: "Report and article" }
@@ -1197,10 +1283,13 @@ strands:
         gradeBand: "7-8"
         requires: [meinung-redemittel]
       # HE –; BY E8 3 (unterscheiden zwischen Sachtexten und fiktionalen Texten); NW S1 S. 29 (Sach- und Gebrauchstexte, literarische Texte) | –/7-8/7-8 → 7-8 (Mehrheit) Hinweis: NW ordnet die Texte so, verlangt die Unterscheidung aber nicht ausdrücklich.
+      # requires alltagstexte: Man kann Sachtexte von erfundenen Texten nur unterscheiden, wenn man beide kennt; NW nennt Gebrauchstexte und literarische Texte als zwei Gruppen. (NW S. 21 (EPS, Ausgangstexte: „Sach- und Gebrauchstexte … Einladungen, Anzeigen, Flyer, Informationstafeln“ / „literarische Texte“); S. 29 (S1))
+      # requires figuren-ort-handlung: Die andere Seite der Unterscheidung: erzählende Texte mit Figuren und Handlung. (NW S. 21 (wie oben); BY E8 3 („unterscheiden zwischen Sachtexten und fiktionalen Texten“))
       - id: sachtext-fiktion
         name: { de: "Sachtext und fiktionaler Text", en: "Fiction and non-fiction" }
         iCan: "Ich kann Sachtexte und erfundene Texte unterscheiden und typische Merkmale nennen."
         gradeBand: "7-8"
+        requires: [alltagstexte, figuren-ort-handlung]
       # HE-KC 6.1 (Präsentationen zu vertrauten Themen); HE10 4 (Kurzvortrag); BY E7 1.2 (Funktionswortschatz zur Präsentation eigener Beiträge); NW EPS (notizengestützt eine einfache Präsentation); S1 (digital gestützte Präsentationen) | 9-10/7-8/5-6 → 7-8 (drei verschiedene Stimmen: die mittlere)
       - id: praesentation
         name: { de: "Präsentation", en: "Presentation" }
@@ -1244,11 +1333,12 @@ strands:
         gradeBand: "7-8"
         requires: [meinung-begruenden]
       # HE10 1.2 (Stellungnahmen und Argumentationen); BY E9 3 (begründete Stellungnahmen); E10 (argumentative Texte); NW S2 S. 38 (Zieltexte: Stellungnahmen) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
+      # requires text-gliedern: Der Baustein verlangt eine klare Gliederung; BY nennt sie bei argumentativen Texten. (BY E10 3 („argumentative Texte … klare Strukturierung, logische Argumentation“))
       - id: kommentar
         name: { de: "Argumentativer Text", en: "Argumentative essay" }
         iCan: "Ich kann einen argumentativen Text mit Pro und Contra, klarer Gliederung und Schlussfolgerung schreiben."
         gradeBand: "9-10"
-        requires: [meinung-begruenden, verbindungswoerter-argumentieren]
+        requires: [meinung-begruenden, verbindungswoerter-argumentieren, text-gliedern]
       # HE10 1.2 (Inhaltsangabe: present; keine direkte/indirekte Rede; keine Zitate; keine Stellungnahme); HE9 (Hinführung); BY E9 3 (wesentliche Aspekte anspruchsvollerer Texte zusammenfassend wiedergeben); NW S2 S. 38 (Zieltexte: Zusammenfassungen) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
       - id: inhaltsangabe
         name: { de: "Inhaltsangabe", en: "Plot summary" }
@@ -1284,7 +1374,7 @@ strands:
         name: { de: "Kurzgeschichte", en: "Short story" }
         iCan: "Ich kann typische Merkmale einer Kurzgeschichte nennen und an einem Beispiel zeigen."
         gradeBand: "9-10"
-        requires: [figuren-ort-handlung, text-fachbegriffe]
+        requires: [text-fachbegriffe]
       # SCHWACH. HE –; BY E10 3 (Autor vs. Erzähler); NW S2 S. 38 (grundlegende Gestaltungsmittel von Texten) | –/9-10/9-10 → 9-10 (Mehrheit)
       - id: erzaehlperspektive
         name: { de: "Erzählperspektive", en: "Narrative perspective" }

@@ -364,3 +364,117 @@ Richtstufen: 5-6: 12, 7-8: 12, 9-10: 12.
   `…/6/latein/2-fremdsprache` (Jg 6–8) und `…/9/latein`, `…/10/latein`.
 - Eine Hessische Stundentafel für G9 habe ich nicht geöffnet. Den Beginn der 2. Fremdsprache in Jg 7 entnehme ich dem
   Lehrplan G9 selbst (Teil B 2.1 „Die Jahrgangsstufe 7“).
+
+## 7. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein stehenden
+Bausteine; jede neue Kante mit Begründung (Skill `map-research`, Abschnitt „Connect every competency“). Ich habe alle
+Kanten geprüft und für jeden Baustein ohne Anknüpfung in beide Richtungen gesucht. Die Begründung jeder neuen Kante
+steht als Kommentar `# requires …` am Baustein. Ids, `gradeBand`, `status`, `iCan` und Stränge sind unverändert.
+Keine neuen Bausteine.
+
+### 7.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 263 | 10 | 2 | 4 | 13 |
+| nachher | 251 | 9 | 0 | 1 | 13 |
+
+Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante (vorher 16). `npm test`
+grün. Keine App in `entries/` nutzt Latein; deshalb kein Vergleich mit `npm run listing`.
+
+Vorher gab es neben dem großen Netz drei Teilnetze: `stadt-rom` → `alltag-und-freizeit` und die allein stehenden
+`roemische-zahlen` und `kalender-und-zeitrechnung`. Jetzt ist alles ein Netz.
+
+### 7.2 Quellen
+
+Am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS als HTML). Titel und Ausgaben wie in
+Abschnitt 1:
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE | Hessisches Kultusministerium: Lehrplan Latein, Gymnasialer Bildungsgang, Jahrgangsstufen 5 bis 13 (G9) | ohne Jahr (PDF von 2016), 62 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-06/g9-latein.pdf |
+| KC | Hessisches Kultusministerium: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Latein | 2011, 42 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2021-07/kerncurriculum_latein_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Latein (L6–L8 als 2. Fremdsprache, L9, L10) | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/6/latein/2-fremdsprache · …/7/latein/2-fremdsprache · …/8/latein/2-fremdsprache · …/9/latein · …/10/latein |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Latein | Heft 3402, 2019, 35 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_l_klp_3402_2019_06_23_0.pdf |
+
+KMK-Bildungsstandards für Latein gibt es nicht (Abschnitt 4, Entscheidung 1). Fachdidaktische Literatur habe ich für
+diese Runde nicht gebraucht: Die neuen Kanten stützen sich auf BY oder auf den Inhalt; die entfernten Kanten sind
+rein indirekt.
+
+### 7.3 Neue Kanten (4)
+
+| Baustein | Voraussetzung | Grund | Fundstelle | Art |
+|---|---|---|---|---|
+| `inschriften-und-abkuerzungen` | `roemische-zahlen` | Inschriften an Gebäuden nennen Jahreszahlen oft in römischen Zahlen; BY nennt römische Zahlen, Inschriften und Abkürzungen in einem Punkt. | BY L6 2.1 („erkennen in ihrer näheren Umgebung die Verwendung römischer Zahlen, lateinischer Inschriften sowie Abkürzungen“) | Bündel |
+| `zahlwoerter` | `roemische-zahlen` | Die Zahlwörter lernt man zusammen mit den Zahlzeichen. | BY L7 2.2 (Numeralia: „Kardinalia im Zahlenraum bis 1000 mit Zahlzeichen“) | Quelle |
+| `antike-im-alltag` | `stadt-rom` | Römische Bauformen in der eigenen Umgebung (Amphitheater, Triumphbogen, Thermen) erkennt man an den Vorbildern in Rom. | BY L6 LB3 (Topografie Roms: „Kolosseum – Amphitheater, Konstantinsbogen – Triumphbogen … Thermen“; „erkennen in Bauten ihres Erfahrungsbereichs die Typik römischer Architektur“) | Bündel |
+| `kalender-und-zeitrechnung` | `roemische-goetter` | Viele Monatsnamen kommen von Göttern (Ianuarius – Janus, Martius – Mars, Iunius – Juno); das iCan verlangt, die Monatsnamen zu verstehen. | – | Herleitung |
+
+### 7.4 Entfernte Kanten (16)
+
+Alle sind indirekt: Die Voraussetzung folgt schon über eine andere Kante desselben Bausteins. Keine bestehende Kante
+war inhaltlich falsch.
+
+| Baustein | entfernte Voraussetzung | folgt schon über |
+|---|---|---|
+| `adverbien-bilden` | `adjektive-a-o-deklination` | `adjektive-dritte-deklination` |
+| `reflexivpronomen` | `personalpronomen` | `possessivpronomen` |
+| `ire` | `praesens-konsonantische-und-i-konjugation` | `perfekt-v-und-u` |
+| `ferre` | `praesens-konsonantische-und-i-konjugation` | `stammformen` |
+| `velle-nolle-malle` | `esse-und-posse` | `infinitiv-praesens` |
+| `passiv-praesensstamm` | `imperfekt` | `futur-i` |
+| `infinitive-passiv` | `passiv-praesensstamm` | `passiv-perfektstamm` |
+| `konjunktiv-perfekt` | `perfekt-v-und-u` | `passiv-perfektstamm` (über `ppp` → `stammformen`) |
+| `deponentien` | `passiv-praesensstamm` | `passiv-perfektstamm` |
+| `nd-formen` | `adjektive-a-o-deklination` | `partizip-praesens` |
+| `praepositionen` | `kasus-numerus-genus` | `adverbiale-bestimmung` |
+| `ablativ-funktionen` | `adverbiale-bestimmung` | `praepositionen` |
+| `indirekter-fragesatz` | `konjunktiv-praesens` | `konjunktiv-perfekt` |
+| `aufforderung-im-konjunktiv` | `konjunktiv-praesens` | `konjunktiv-perfekt` |
+| `potentialis-und-deliberativ` | `konjunktiv-praesens` | `konjunktiv-perfekt` |
+| `satz-konstruieren` | `subjekt-und-praedikat` | `objekte` |
+
+### 7.5 Wurzeln, die bleiben (9, keine allein)
+
+| Baustein | Grund |
+|---|---|
+| `wortarten` | Anfang der Grammatik; Kasus und Personalendungen bauen darauf auf. |
+| `vokabeln-lernen` | Anfang des Wortschatzes; Lerntechnik ohne Vorwissen. |
+| `aussprache-und-betonung` | Anfang der Aussprache; Vorlesen und Metrik bauen darauf auf. |
+| `lautgesetze` | Kein anderer Baustein wird sicher gebraucht (siehe offenen Punkt 3); Präfixe und `ferre` bauen darauf auf. |
+| `textsorten-erkennen` | Die Merkmale von Erzählung, Dialog, Brief und Rede kennen die Kinder aus dem Deutschunterricht; HE nennt sie ab Jg 7 (HE 7 2.3). `fabel` und `rede-und-argumentation` bauen darauf auf. |
+| `roemische-familie` | Anfang der Kultur (Alltag); Sklaverei, Patrone, Werte bauen darauf auf. |
+| `roemische-goetter` | Anfang der Mythologie; Sagen, Kult, Kalender bauen darauf auf. |
+| `stadt-rom` | Anfang der Topografie; Alltag und Antike im Alltag bauen darauf auf. |
+| `roemische-zahlen` | Zahlzeichen lesen braucht keinen anderen Baustein; Inschriften und Zahlwörter bauen darauf auf. |
+
+### 7.6 Vorgeschlagene neue Bausteine (Lücken im Modell)
+
+- **`nci`** (Strang `satzlehre`, Richtstufe 9-10): „Ich kann einen NcI nach Verben wie videtur oder dicitur erkennen und
+  übersetzen.“ Quellen: BY L8 2.3 („satzwertige Konstruktionen: … NcI (3. Person)“); HE nur für L1. Kanten:
+  `nci` → `aci-gleichzeitig`, `nci` → `infinitive-passiv`. Er ist schon offener Punkt 2 in Abschnitt 5; nur ein Land
+  nennt ihn in L2, deshalb nur ein Vorschlag.
+
+Sonst fehlt für die Ketten kein Baustein.
+
+### 7.7 Offene Punkte (Kanten mit mittlerer Zuversicht, nicht in der Karte)
+
+1. **`kalender-und-zeitrechnung` → `roemische-zahlen`:** Römische Datumsangaben und Jahreszahlen stehen oft in
+   römischen Zahlen; HE 7 3.6 nennt beides im selben Punkt. Das iCan nennt aber keine Zahlzeichen.
+2. **`epochen-der-roemischen-geschichte` → `kalender-und-zeitrechnung`:** Epochen ordnen braucht die Zählung
+   v. Chr. / n. Chr. Diese lernt man aber im Fach Geschichte, nicht im Latein.
+3. **`lautgesetze` → `aussprache-und-betonung`:** Vokalschwächung und Quantitäten hängen zusammen, eine direkte
+   Abhängigkeit nennt aber keine Quelle.
+4. **`wohnen-in-rom` → `stadt-rom`:** Die insula ist das Mietshaus der Stadt Rom; die villa rustica liegt auf dem Land.
+5. **`roemer-in-germanien` → `stadt-rom`:** Römische Städte in Deutschland (Thermen, Amphitheater) erkennt man an den
+   Vorbildern in Rom; der Baustein hat aber schon eine Voraussetzung (`provinzen-und-imperium`).
+6. **`potentialis-und-deliberativ` → `fragesaetze`:** Der Deliberativ ist eine Frage („quid faciam?“). Der Baustein
+   übt aber vor allem die Form, nicht die Frageart.
+7. Die Herleitung **`kalender-und-zeitrechnung` → `roemische-goetter`** sollten Lehrkräfte bestätigen; sie lässt sich
+   einzeln streichen, dann ist der Baustein wieder allein.
+
+### 7.8 Nicht geöffnet
+
+Keine. Alle Quellen ließen sich öffnen. Fachdidaktische Literatur habe ich nicht gesucht, weil keine Kante sie
+brauchte.

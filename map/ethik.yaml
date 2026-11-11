@@ -10,6 +10,7 @@
 # Richtstufe: eine Stimme je Land (HE / BY / NW). NW "7-10" = Kap. 4.2 ohne Jahrgang, zählt für 7-8 und 9-10.
 # Gleichstand: die früheste Stufe, die requires zulässt. Drei verschiedene Stimmen: die mittlere.
 # "schwach" = schwach belegt (Grund im Kommentar). Genaue Titel, Ausgaben und URLs: .vibe/research-ethik.md.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Ethik, en: Ethics }                    # the file name is the subject's id: ethik
 source:
   title: Kerncurriculum Hessen, Sekundarstufe I – Gymnasium, Ethik (Hessisches Kultusministerium, 2011), Inhaltsfelder; abgeglichen mit den Fragenkreisen des Kernlehrplans Praktische Philosophie NRW (2008) und dem LehrplanPLUS Ethik Bayern
@@ -364,7 +365,7 @@ strands:
         name: { de: "Regeln, Gesetze und Normen", en: "Rules, laws and norms" }
         iCan: "Ich kann Regeln, Gesetze und moralische Normen unterscheiden und erklären, wer Gesetze macht."
         gradeBand: "7-8"
-        requires: [regeln-und-fairness, werte-und-normen]
+        requires: [werte-und-normen]
       # HE 6.3 Recht und Gerechtigkeit I: subjektiv verletzende Erfahrungen evidenter Ungerechtigkeiten; KC6 Erfahrungen von Gerechtigkeit und Ungerechtigkeit (S. 22); BY Eth5 LB2: Entscheidungskriterien in der Familie, z. B. Gerechtigkeit; NW 5/6 FK4 Regeln und Gesetze. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: gerechtigkeit-erfahren
         name: { de: "Gerechtigkeit erfahren", en: "Experiencing justice" }
@@ -664,11 +665,12 @@ strands:
         gradeBand: "9-10"
         requires: [meinen-glauben-wissen]
       # HE 10.1 Gewissen und Identität III: Dilemma (Sokrates); BY Eth10 LB1: Sokrates, Auseinandersetzung mit den Sophisten, sokratischer Dialog; NW 7-9 K: führen eine Diskussion im Sinne des sokratischen Philosophierens (S. 32). Stimmen 9-10 / 9-10 / 7-10: Mehrheit
+      # requires philosophische-fragen: Der sokratische Dialog ist philosophisches Fragen; Bayern lehrt erst philosophische Fragen von Alltagsfragen zu unterscheiden und dann Sokrates, in derselben Einheit (BY Eth10 LB1: „philosophisches Fragen, u. a. die vier Fragen nach I. Kant“; „Zweifeln, z. B. Sokrates“; „Sokrates: … sokratischer Dialog“)
       - id: sokrates
         name: { de: "Sokrates", en: "Socrates" }
         iCan: "Ich kann erklären, wie Sokrates im Gespräch durch Fragen nach Wahrheit suchte und was sein Satz „Ich weiß, dass ich nichts weiß“ bedeutet."
         gradeBand: "9-10"
-        requires: [meinen-glauben-wissen]
+        requires: [meinen-glauben-wissen, philosophische-fragen]
       # HE 6.4 Menschenbilder I: Fernsehen: Wer bestimmt über die eigenen Konsumgewohnheiten?; BY Eth6 LB2: Analyse der eigenen Mediennutzung; NW 5/6 FK6 Medienwelten; K: beschreiben und bewerten den eigenen Umgang mit Medien (S. 28). Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: eigene-mediennutzung
         name: { de: "Eigene Mediennutzung", en: "Personal media use" }
@@ -748,10 +750,12 @@ strands:
         gradeBand: "5-6"
         requires: [feste-der-religionen]
       # HE 5.3 Religion I: Das Judentum erzählt von Schöpfung, Bund Gottes mit dem Volk Israel, Erwartung des Messias; BY Eth6 LB1: Selbstverständnis des Judentums: Abrams Landzuweisung, Bund, Sabbat; NW 5/6 FK7 Leben und Feste in unterschiedlichen Religionen. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
+      # requires schoepfungserzaehlungen: Die Tora beginnt mit der Schöpfung, und den Sabbat begründet sie mit dem siebten Schöpfungstag; Hessen und Bayern lehren die Schöpfungserzählung als Teil des Judentums in derselben Einheit (HE 5.3, S. 13: „Das Judentum erzählt … von der Schöpfung“; BY Eth6 LB1: Schöpfungsgeschichte Gen 1–2 und Heiligung des Sabbat Ex 20,8–11)
       - id: judentum
         name: { de: "Judentum", en: "Judaism" }
         iCan: "Ich kann Grundlagen des Judentums beschreiben, zum Beispiel die Tora, den Bund Gottes mit Abraham und den Sabbat."
         gradeBand: "5-6"
+        requires: [schoepfungserzaehlungen]
       # HE 5.3 Religion I: Leben, Lehre und Heilsdeutung des Jesus von Nazaret; BY Eth6 LB1: Bergpredigt, Doppelgebot, Barmherziger Samariter, Tod und Auferstehung; NW 5/6 FK7 Leben und Feste in unterschiedlichen Religionen. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: christentum
         name: { de: "Christentum", en: "Christianity" }
@@ -763,7 +767,7 @@ strands:
         name: { de: "Islam", en: "Islam" }
         iCan: "Ich kann Grundlagen des Islam beschreiben: das Leben Mohammeds, den Koran und die Fünf Säulen."
         gradeBand: "5-6"
-        requires: [judentum, christentum]
+        requires: [christentum]
       # HE KC8 Religionen, Weltbilder und Kulturen: mögliche Probleme des Zusammenlebens (S. 27); 6.1: Speisevorschriften; BY Eth7 LB1: Alltagsfragen von Muslimen in Deutschland, Kopftuch-Debatte, Integration; NW 7-9 FK2 Interkulturalität; K: nehmen gesellschaftliche Entwicklungen in ihrer interkulturellen Prägung wahr (S. 31). Stimmen 7-8 / 7-8 / 7-10: Mehrheit
       - id: religion-und-zusammenleben
         name: { de: "Religionen im Zusammenleben", en: "Religious coexistence" }
@@ -823,11 +827,12 @@ strands:
         iCan: "Ich kann philosophische Fragen erkennen und mit Kants vier Fragen ordnen: Was kann ich wissen? Was soll ich tun? Was darf ich hoffen? Was ist der Mensch?"
         gradeBand: "9-10"
       # HE 10.4 Menschenbilder III: Menschenbilder aus philosophischen Perspektiven (Darwinismus, Freud, Sartre, Gehlen), christliches Menschenbild und Menschenbild der Aufklärung; KC10 Menschen- und Weltbilder (S. 18); BY Eth10 LB3: Vorstellung vom homo oeconomicus; NW 7-9 FK7 Menschen- und Gottesbilder in Religionen; K: entwickeln verschiedene Menschen- und Weltbilder (S. 31). Stimmen 9-10 / 9-10 / 7-10: Mehrheit
+      # requires mythos-und-wissenschaft (Herleitung): Der Vergleich „Geschöpf Gottes oder Naturwesen“ setzt voraus, dass man die Schöpfungserzählung und die naturwissenschaftliche Erklärung schon nebeneinandergestellt hat (BY Eth6 LB1: Schöpfungsgeschichte im Vergleich mit Urknall- und Evolutionstheorie; HE 10.4, S. 44 f.: Darwinismus und christliches Menschenbild)
       - id: menschenbilder
         name: { de: "Menschenbilder", en: "Views of human nature" }
         iCan: "Ich kann verschiedene Menschenbilder vergleichen, zum Beispiel den Menschen als Geschöpf Gottes, als Naturwesen oder als freies Wesen, das sich selbst entwirft."
         gradeBand: "9-10"
-        requires: [mensch-als-kulturwesen, philosophische-fragen]
+        requires: [mensch-als-kulturwesen, philosophische-fragen, mythos-und-wissenschaft]
       # HE 6.4 Menschenbilder I: Glück oder Erfolg?; 10.3: persönliches Glück; BY Eth8 LB1: Stellenwert von Spaß und Freude im Leben; NW 7-9 FK7 Glück und Sinn des Lebens. Stimmen 5-6 / 7-8 / 7-10: Mehrheit
       - id: glueck
         name: { de: "Vorstellungen vom Glück", en: "Concepts of happiness" }

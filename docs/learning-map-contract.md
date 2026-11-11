@@ -66,10 +66,13 @@ strands:
 
 A competency is addressed across the platform as `<subject>/<competency>`, a strand as `<subject>/<strand>`.
 
-The **step** (Stufe) of a competency is not written in the file: it follows from `requires`. A competency without
-`requires` is in step 1, any other one step below its deepest prerequisite (1 + the longest path over `requires`).
-`lib/map.js` computes it (`steps`, with `ancestors`, `descendants` and `stepRows`); the map shows the subject by steps at
-`/apps/map/<subject>/c/` and the chain of a competency on its page. The JSON (section 5) does not carry it.
+The **place** of a competency (Klasse und Schritt) is not written in the file: it follows from `requires` and
+`gradeBand`. Within its grade band a competency is in step 1 if it requires nothing of the same band, any other one
+step below its deepest prerequisite of the same band. A prerequisite of an earlier band stands in an earlier band, so
+everything a competency requires stands above it, and the competencies of one step are independent of each other.
+`lib/map.js` computes it (`places`, and `steps` numbering the rows through all bands, with `ancestors`, `descendants`,
+`byStep` and `stepRows`); the map shows the subject by grade and chain at `/apps/map/<subject>/c/` and the chain of a
+competency on its page (feat/map-chains, KD-17). The JSON (section 5) does not carry it.
 
 ### The focus of a subject: `explainerFocus` (lernapps/apps#226)
 

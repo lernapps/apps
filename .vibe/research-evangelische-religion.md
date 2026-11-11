@@ -365,3 +365,110 @@ und prüfen). Prozesskompetenzen sind nicht modelliert.
 ## 5. Quellen, die ich nicht öffnen konnte
 
 Keine. Alle drei Länderquellen waren im Original erreichbar.
+
+## 6. requires überarbeitet (2026-11-10, feat/map-chains)
+
+Auftrag des Owners: Die Bausteine stehen in der fachlich richtigen Reihenfolge; wenige Wurzeln, keine allein
+stehenden Bausteine; jede neue Kante mit Begründung aus einer Quelle oder als Herleitung gekennzeichnet (Skill
+`map-research`, Abschnitt „Connect every competency“). Die Karte war schon gut verbunden: keine allein stehenden
+Bausteine, aber zwei Teilnetze und eine indirekte Kante. Für jede Wurzel bin ich die vier Schritte des Skills in beide
+Richtungen durchgegangen. Die Begründung jeder neuen Kante steht als Kommentar `# requires …` am Baustein. Ids,
+`gradeBand`, `status`, `iCan` und Stränge sind unverändert; es gibt keine neuen Bausteine.
+
+### 6.1 Zahlen
+
+| | Kanten | Wurzeln | allein | Teilnetze | Stufen |
+|---|---|---|---|---|---|
+| vorher | 202 | 11 | 0 | 2 | 14 |
+| nachher | 203 | 10 | 0 | 1 | 14 |
+
+Das zweite Teilnetz war `christliche-symbole` → `symbole-in-der-kultur`. Es hängt jetzt über `pfingsten` am großen
+Netz. Geprüft: keine Kreise, keine Voraussetzung mit späterer Richtstufe, keine indirekte Kante. `npm test` grün.
+Kein Eintrag in `entries/` nutzt das Fach, und die Karte hat kein `explainerFocus: competency`; ein Vergleich mit
+`npm run listing` war deshalb nicht nötig.
+
+### 6.2 Quellen
+
+Alle drei Länderquellen habe ich am 10.11.2026 neu heruntergeladen und gelesen (PDF mit `pdftotext`, LehrplanPLUS
+als HTML). Seitenzahlen sind die gedruckten Seiten. KMK-Bildungsstandards gibt es für das Fach in der Sek I nicht
+(Abschnitt 1).
+
+| Kürzel | Titel | Ausgabe | URL |
+|---|---|---|---|
+| HE | Hessisches Ministerium für Kultus, Bildung und Chancen: Kerncurriculum für Hessen, Sekundarstufe I – Gymnasium, Evangelische Religion | Ausgabe 2026, Stand Juni 2026, 36 S. | https://kultus.hessen.de/sites/kultus.hessen.de/files/2026-10/web_kc_evangelische_religion_sek1_gymnasium.pdf |
+| BY | ISB Bayern: LehrplanPLUS Gymnasium, Fachlehrplan Evangelische Religionslehre, ER5 bis ER10 | Online-Fassung, abgerufen am 10.11.2026 | https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/5/evangelische-religionslehre (ebenso …/6/ bis …/10/) |
+| NW | MSB NRW: Kernlehrplan für die Sekundarstufe I Gymnasium in Nordrhein-Westfalen, Evangelische Religionslehre | Heft 3414, 1. Auflage 2019, 35 S. | https://lehrplannavigator.nrw.de/system/files/media/document/file/g9_er_klp_3414_2019_06_23.pdf |
+
+Fachdidaktische Literatur habe ich nicht herangezogen: Die neuen Kanten tragen die Länderquellen selbst (Bündel in
+Bayern und NRW).
+
+### 6.3 Neue Kanten (2)
+
+| Baustein | Aktion | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|---|
+| `kirchenjahr` | add | `stationen-im-leben-jesu` | Die großen Feste folgen den Stationen im Leben Jesu (Geburt, Tod, Auferstehung, Himmelfahrt). Wer sie im Kirchenjahr ordnet, braucht diese Reihenfolge. | BY ER6 LB4 („setzen christliche Feste in Bezug zum 2. Artikel des Apostolischen Glaubensbekenntnisses“; „insbesondere Weihnachten, Ostern und Himmelfahrt“), im selben Jahr wie ER6 LB3 „Jesu Botschaft und Leben“; NW IF7 Stufe 1, S. 23 („erklären Herkunft und Bedeutung christlicher Feiertage im Jahreskreis“) | Bündel |
+| `pfingsten` | add | `christliche-symbole` | Die Pfingstgeschichte spricht in Symbolen vom Heiligen Geist (Sturm, Feuerzungen; die Taube als Zeichen des Geistes). | BY ER5 LB5 („Symbole und Zeichen wie Kreuz, Taube, Weg, Licht“) → BY ER7 LB1 („beschreiben Symbole für den Heiligen Geist in der Pfingstgeschichte und deuten diese“; „Symbole aus Apg 2 (Feuerzungen und Sturm)“) | Bündel |
+
+Beide Kanten sind Bündel: Ein Land lehrt beide Inhalte in derselben Einheit oder lehrt die Voraussetzung in einem
+früheren Jahr und greift sie dann ausdrücklich auf.
+
+### 6.4 Entfernte Kanten (1)
+
+| Baustein | Aktion | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|---|
+| `obrigkeit-und-widerstand` | remove | `paulus` | Indirekt: folgt schon über `kirche-und-staat` → `ausbreitung-des-christentums` → `paulus`. Paulus bleibt Vorfahre des Bausteins. | – | Herleitung |
+
+Die Kante `kirche-und-staat` → `ausbreitung-des-christentums` bleibt: NW verlangt die Beziehung von Kirche und Staat
+„im Verlauf der Geschichte“ (IF4 Stufe 2, S. 30), und die Konstantinische Wende ist ihr Anfang. Sonst habe ich keine
+inhaltlich falsche Kante gefunden.
+
+### 6.5 Wurzeln, die bleiben (10, keine allein)
+
+| Baustein | Aktion | Voraussetzung | Begründung | Fundstelle | Art |
+|---|---|---|---|---|---|
+| `identitaet` | keep-root | – | Anfang des Strangs `mensch` mit der eigenen Erfahrung; Bayern beginnt Jg 5 damit. `gottes-zuwendung` baut darauf auf. | BY ER5 LB1 „Ich und die anderen“; HE Jg 6 Mensch und Welt (S. 23) | Quelle |
+| `gottesvorstellungen` | keep-root | – | Anfang des Strangs `gott` mit den eigenen Vorstellungen; braucht keine Bibelkunde. | HE Jg 6 Gott (S. 23); BY ER5 LB3; NW IF2 Stufe 1 (S. 19) | Quelle |
+| `bibel-aufbau` | keep-root | – | Anfang der Bibelkunde; Bibelstellen finden und alle Bibeltexte bauen darauf auf. | BY ER5 LB2; NW IF5 Stufe 1 (S. 21) | Quelle |
+| `land-zur-zeit-jesu` | keep-root | – | Anfang des Strangs `jesus-christus`: Bayern lehrt die Lebenswelt Jesu vor seiner Botschaft. | BY ER6 LB2 „Zwischen Galiläa und Jerusalem“ vor LB3 | Quelle |
+| `kirche-gebaeude-und-gemeinschaft` | keep-root | – | Anfang des Strangs `kirche`: zwei Bedeutungen von „Kirche“, ohne Vorwissen. | NW IF4 Stufe 1 (S. 21) | Quelle |
+| `christliche-symbole` | keep-root | – | Symbole in der Umgebung; Bayern lehrt sie im ersten Jahr. Eine Kante zu `passion-und-ostern` (Kreuz) ist nur mittel sicher (offener Punkt 2). `pfingsten` und `symbole-in-der-kultur` bauen darauf auf. | BY ER5 LB5 | Quelle |
+| `religionen-in-der-umgebung` | keep-root | – | Anfang des Strangs `religionen` mit der Begegnung vor Ort. | HE Jg 6 Religionen (S. 24) | Quelle |
+| `regeln-fuer-das-zusammenleben` | keep-root | – | Anfang des Strangs `ethik`: Warum Menschen Regeln brauchen, setzt nichts voraus. Zehn Gebote, Konflikte und Gerechtigkeit bauen darauf auf. | HE Jg 6 Ethik (S. 24) | Quelle |
+| `familie-und-freundschaft` | keep-root | – | Eigene Lebenswelt, ohne Vorwissen. Gemeinschaft, Liebe und Partnerschaft bauen darauf auf. | BY ER6 LB1 „In Beziehung“ | Quelle |
+| `vorurteile` | keep-root | – | Eigene Lebenswelt; `antisemitismus` baut darauf auf. Eine Kante zu `identitaet` ist nur mittel sicher (offener Punkt 1). | BY ER6 LB5 | Quelle |
+
+**Teilnetze:** jetzt nur noch eins.
+
+### 6.6 Vorgeschlagene neue Bausteine
+
+1. **`fremdsein-und-verschiedenheit`** (Strang `ethik`, Richtstufe 5-6): „Ich kann beschreiben, wie es sich anfühlt,
+   fremd oder anders zu sein, und erklären, warum Verschiedenheit zum Menschsein gehört.“ Quellen: BY ER6 LB5
+   („Situationen des Fremdseins“, „Verschiedenheit als Bedrohung und als Bereicherung“, „Verschiedenheit und
+   Differenz als Grundgegebenheit des Menschseins“); HE Jg 6 Mensch und Welt nur in Ansätzen („Selbst- und
+   Fremdwahrnehmung“, S. 23). Kanten: `requires identitaet`; `vorurteile` requires `fremdsein-und-verschiedenheit`.
+   Er wäre die Brücke von der Identität zu den Vorurteilen, die Bayern in dieser Reihenfolge lehrt. Nur Bayern nennt
+   ihn deutlich; aufnehmen nur, wenn Lehrkräfte die Brücke wollen.
+
+### 6.7 Offene Punkte
+
+1. **`vorurteile` → `identitaet`** (mittel): Vorurteile sind ein falsches Bild von anderen; `identitaet` erklärt
+   Selbst- und Fremdbild. Bayern lehrt Identität in Jg 5 und Vorurteile in Jg 6 mit dem Erleben von Fremdsein
+   (ER5 LB1 → ER6 LB5). Die Ursachen von Vorurteilen, die Bayern nennt (Vereinfachung, Gewohnheit, Unsicherheit),
+   brauchen den Begriff Identität aber nicht. Nicht übernommen; siehe auch 6.6.
+2. **`christliche-symbole` → `passion-und-ostern`** (mittel): Das Kreuz versteht man nur mit dem Tod Jesu. Bayern
+   lehrt die Symbole aber in Jg 5 (ER5 LB5) und die Passion erst in Jg 6 (ER6 LB3). Nicht übernommen.
+3. **`sabbat` → `schoepfungserzaehlungen`** (mittel): Die Bibel begründet den Sabbat mit dem siebten Schöpfungstag
+   (2. Mose 20,11), an anderer Stelle mit der Befreiung aus Ägypten (5. Mose 5,15). Die Ethik-Karte hat die Kante
+   `judentum` → `schoepfungserzaehlungen`. Keine der drei Länderquellen nennt den Zusammenhang hier ausdrücklich.
+4. **`regeln-fuer-das-zusammenleben` → `familie-und-freundschaft`** (mittel): Bayern nennt den „Umgang mit Regeln“
+   im Familienleben (ER6 LB1), lehrt die Zehn Gebote als Regeln aber schon in Jg 5 (ER5 LB1). Nicht übernommen.
+5. **Ältere Kanten ohne Kommentar:** Die 201 Kanten aus der ersten Fassung haben noch keine Zeile `# requires …`;
+   ihre Quellen stehen nur in den Quellenzeilen der Bausteine und in Abschnitt 2. Ich habe sie geprüft, aber nicht
+   einzeln kommentiert.
+6. **`obrigkeit-und-widerstand`:** Röm 13 stammt von Paulus. Die direkte Kante ist entfernt, weil sie indirekt war.
+   Fällt später `kirche-und-staat` → `ausbreitung-des-christentums` weg, muss `paulus` wieder direkt dazu.
+
+### 6.8 Nicht geöffnet
+
+Keine. Fachdidaktische Handbücher (z. B. zur Religionsdidaktik) habe ich nicht gesucht, weil die Länderquellen die
+neuen Kanten tragen.

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/subject.v1.schema.json
 #
-# Proposal for map/chemie.yaml. Not in /home/user/apps. Reasons and decisions: report.md in the same folder.
+# Reasons and decisions: .vibe/research-chemie.md (the first report.md was not kept; the report there starts with requires).
 #
-# Source abbreviations in the comments (full citations in report.md, section 1):
+# Source abbreviations in the comments (full citations in .vibe/research-chemie.md):
 #   KMK  = KMK, Weiterentwickelte Bildungsstandards Chemie (MSA), Beschluss 16.12.2004 i.d.F. 13.06.2024
 #          S = Standard (S 0 .. S 3.3); "Inhalt" = Verbindliche inhaltliche Aspekte (p. 15)
 #   IMPL = KMK, Implementationsbroschüre Naturwissenschaften, 06.06.2024
@@ -13,9 +13,11 @@
 #          The Kernlehrplan itself has two stages only. The grades NW7..NW10 come from two school-internal curricula
 #          (Hildegardis-Gymnasium Bochum, Couven-Gymnasium Aachen), which agree: IF1-4 Jg. 7, IF5-7 Jg. 8,
 #          IF8 Jg. 9, IF9-10 Jg. 10. They are indicative only.
+#   ZPG  = ZPG Chemie Baden-Württemberg, „Das Teilchenmodell in Klasse 8“ (Juni 2010), only for requires
 #   (Länder) = content not in the KMK list but in the named Länder.
 #   "Richtstufe geschätzt" = no majority of the three curricula; the band is carried over from the old model.
 # gradeBand rule: two of the three Länder curricula; disagreements are named. No Chemie in grades 5-6 in any of them.
+# requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Chemie, en: Chemistry }
 source:
   title: KMK-Bildungsstandards Chemie, Mittlerer Schulabschluss (Beschluss vom 16.12.2004 i.d.F. vom 13.06.2024); Strang- und Baustein-Zuschnitt nach den verbindlichen inhaltlichen Aspekten, ergänzt um Inhalte der Kerncurricula Hessen, Bayern und Nordrhein-Westfalen
@@ -77,7 +79,7 @@ strands:
         name: { de: "Gasnachweise", en: "Tests for gases" }
         iCan: "Ich kann Sauerstoff, Wasserstoff und Kohlenstoffdioxid mit Glimmspan-, Knallgas- und Kalkwasserprobe nachweisen."
         gradeBand: "7-8"
-        requires: [stoffeigenschaften-beschreiben, sicherheit-beim-experimentieren]
+        requires: [stoffeigenschaften-beschreiben]
       - id: ph-wert-deuten
         # KMK Inhalt "pH-Wert von Lösungen"; NW IF9 (Jg. 10, pH-Wert bestimmen); BY10 LB2 (Indikatoren, pH-Skala); HE2 Säuren, Laugen. (BY8 only as optional Profil.)
         # requires changed: was loeslichkeit (no content link). iCan now names Indikatoren (BY, NW).
@@ -94,15 +96,17 @@ strands:
       # ---- Ordnung der Stoffe: Reinstoffe, Gemische, Elemente, Verbindungen ----
       - id: reinstoffe-und-gemische
         # KMK S 1.1, Inhalt "Reinstoffe und Stoffgemische"; BY8 LB2; NW IF1; HE1 Der Mix macht's.
+        # requires stoffeigenschaften-beschreiben: Reinstoffe erkennt man an ihren Kenneigenschaften wie Schmelztemperatur, Dichte, Löslichkeit (NW IF1 S. 20; BY8 LB2; HE1 S. 30 „Vergleich von Stoffeigenschaften“)
         name: { de: "Reinstoffe und Gemische", en: "Pure substances and mixtures" }
         iCan: "Ich kann Reinstoffe und Gemische unterscheiden."
         gradeBand: "7-8"
+        requires: [stoffeigenschaften-beschreiben]
       - id: gemische-trennen
         # BY8 LB2 (Destillation, Chromatographie, Extraktion); NW IF1 (Filtration, Destillation); HE1 Trennverfahren. Not in the KMK list. Borderline coarse (2-3 lessons), not split.
         name: { de: "Trennverfahren", en: "Separating mixtures" }
         iCan: "Ich kann ein Stoffgemisch mit einem passenden Verfahren trennen, etwa durch Filtrieren, Eindampfen oder Destillieren."
         gradeBand: "7-8"
-        requires: [reinstoffe-und-gemische, stoffeigenschaften-beschreiben]
+        requires: [reinstoffe-und-gemische]
       - id: elemente-und-verbindungen
         # KMK S 1.1, Inhalt "Elemente und Verbindungen"; BY8 LB3; NW IF3 (Jg. 7); HE1 Verwandlungen.
         name: { de: "Elemente und Verbindungen", en: "Elements and compounds" }
@@ -112,9 +116,11 @@ strands:
       # ---- Modelle: vom Teilchenmodell zum Atommodell ----
       - id: teilchenmodell
         # KMK Inhalt "Denkmodelle ... auf submikroskopischer Ebene"; BY8 LB2; NW IF1 "einfache Teilchenvorstellung"; HE1 Teilchenmodell.
+        # requires stoffeigenschaften-beschreiben: Das Teilchenmodell erklärt beobachtete Stoffeigenschaften; erst die Beobachtung, dann das Modell (BY8 LB2 „Von beobachtbaren Stoffeigenschaften zum Teilchenmodell“; HE1 S. 33 „Teilchenmodell zur Deutung von Phänomenen“; ZPG S. 2)
         name: { de: "Teilchenmodell", en: "Particle model" }
         iCan: "Ich kann das Teilchenmodell beschreiben und sagen, was es erklärt und was nicht."
         gradeBand: "7-8"
+        requires: [stoffeigenschaften-beschreiben]
       - id: aggregatzustaende-mit-teilchenmodell
         # NW IF1 (Aggregatzustände mit einfachem Teilchenmodell erklären); BY8 LB2; HE1.
         name: { de: "Aggregatzustände im Teilchenmodell", en: "States of matter in the particle model" }
@@ -129,10 +135,11 @@ strands:
         requires: [teilchenmodell]
       - id: daltonsches-atommodell
         # NEW. NW IF3 (Jg. 7, einfaches Atommodell erklärt Massenänderungen); BY8 LB3 (Daltonsches Atommodell: Massenerhaltung, Umgruppierung von Atomen). HE: no explicit Dalton step.
+        # requires massenerhaltung: Das Atommodell erklärt das Gesetz von der Erhaltung der Masse; der Befund kommt vor dem Modell (NW IF3 S. 23 „Ein einfaches Atommodell ermöglicht eine Erklärung des Gesetzes von der Erhaltung der Masse“; BY8 LB3; ZPG S. 2)
         name: { de: "Daltonsches Atommodell", en: "Dalton's atomic model" }
         iCan: "Ich kann mit dem Atommodell nach Dalton erklären, was Atome sind und wie sie sich bei einer Reaktion neu gruppieren."
         gradeBand: "7-8"
-        requires: [teilchenmodell, elemente-und-verbindungen]
+        requires: [teilchenmodell, elemente-und-verbindungen, massenerhaltung]
       - id: symbole-der-elemente
         # HE1 Elementsymbole; BY8 LB3 Atomartensymbole; KMK S 3.1.
         name: { de: "Elementsymbole", en: "Element symbols" }
@@ -169,7 +176,7 @@ strands:
         name: { de: "Metalle und Nichtmetalle", en: "Metals and non-metals" }
         iCan: "Ich kann Metalle, Nichtmetalle und Grenzfälle an ihren Eigenschaften und ihrem Platz im Periodensystem erkennen."
         gradeBand: "7-8"
-        requires: [periodensystem-lesen, stoffeigenschaften-beschreiben]
+        requires: [periodensystem-lesen]
       - id: ordnungszahl-und-massenzahl
         # BY9 LB2 (Protonenzahl, Nukleonenzahl, Isotope); HE2 (Ordnungszahl, Kernladungszahl, Atommassen); NW IF5 (Jg. 8: disagreement). Band changed 7-8 -> 9-10 by majority.
         name: { de: "Ordnungszahl und Massenzahl", en: "Atomic number and mass number" }
@@ -193,7 +200,7 @@ strands:
         name: { de: "Hauptgruppen", en: "Main groups" }
         iCan: "Ich kann die acht Hauptgruppen nennen und sagen, wie viele Außenelektronen ihre Atome haben."
         gradeBand: "9-10"
-        requires: [periodensystem-lesen, schalenmodell]
+        requires: [schalenmodell]
       - id: reaktionen-mit-atommodell-vorhersagen
         # KMK Inhalt "differenziertes Atommodell, das dazu geeignet ist, Reaktionen vorherzusagen"; BY9 LB2 (Edelgasregel, Ionenladung); NW IF6; HE2 (Elektronenkonfiguration und Reaktionsverhalten).
         name: { de: "Reaktionsverhalten aus Außenelektronen", en: "Predicting reactivity from valence electrons" }
@@ -328,10 +335,11 @@ strands:
         requires: [kennzeichen-chemischer-reaktionen, elemente-und-verbindungen]
       - id: massenerhaltung
         # KMK Inhalt "Massen- und Energieerhaltung"; BY8 LB3; NW IF3 (Jg. 7); HE2 (Erhaltung der Masse: disagreement).
+        # requires changed (2026-11-10): teilchenmodell removed. The law is a finding on the level of substances; it is explained with the atom model (daltonsches-atommodell), not with the simple particle model (ZPG S. 2; NW IF3 S. 23).
         name: { de: "Gesetz der Massenerhaltung", en: "Law of conservation of mass" }
         iCan: "Ich kann mit einem Versuch zeigen und erklären, dass bei einer Reaktion die Gesamtmasse gleich bleibt."
         gradeBand: "7-8"
-        requires: [kennzeichen-chemischer-reaktionen, teilchenmodell]
+        requires: [kennzeichen-chemischer-reaktionen]
       - id: wortgleichung
         # NW IF2 (Reaktionsschemata in Worten); HE1 (Wortgleichungen); BY8 LB1/LB3 (Reaktionsschema).
         name: { de: "Wortgleichung", en: "Word equations" }
@@ -355,14 +363,14 @@ strands:
         name: { de: "Reaktionsgleichungen aufstellen", en: "Balancing chemical equations" }
         iCan: "Ich kann eine einfache Reaktionsgleichung aufstellen, bei der auf beiden Seiten gleich viele Atome stehen."
         gradeBand: "7-8"
-        requires: [wortgleichung, formeln-von-verbindungen, massenerhaltung, daltonsches-atommodell]
+        requires: [wortgleichung, formeln-von-verbindungen]
       # ---- Stöchiometrie ----
       - id: stoffmenge-und-molare-masse
         # KMK Inhalt "einfache stöchiometrische Betrachtungen"; NW IF9 (Jg. 10, Stoffmenge); HE2 (Stöchiometrie); BY8 LB3 already teaches Stoffmenge and molare Masse (disagreement). Band 9-10 by majority.
         name: { de: "Stoffmenge und molare Masse", en: "Amount of substance and molar mass" }
         iCan: "Ich kann die Stoffmenge und die molare Masse eines Stoffes nutzen, um Teilchenzahl und Masse ineinander umzurechnen."
         gradeBand: "9-10"
-        requires: [formeln-von-verbindungen, massenerhaltung]
+        requires: [formeln-von-verbindungen]
       - id: stoechiometrische-berechnung
         # KMK Inhalt "einfache stöchiometrische Betrachtungen als mathematische Modellierung des Reaktionsgeschehens"; NW IF9; HE2; BY8 LB3 (Stoffumsätze).
         name: { de: "Stöchiometrische Berechnungen", en: "Stoichiometric calculations" }
