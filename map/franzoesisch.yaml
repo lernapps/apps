@@ -664,11 +664,11 @@ strands:
     competencies:
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); IK ESA: Gruß-Rituale (S. 20); HE Jg 7 Situationen: Begrüßung, Vorstellung, Verabschiedung; BY F6 Sprechen: Begrüßung, Verabschiedung und Sich-Vorstellen; NW S1 IKK (S. 21): elementare Begegnungssituationen (Hinweis: SiLP UV 7.1).
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
+      # requires changed (Owner, 2026-11-11): keine Voraussetzung mehr, `verb-etre` entfernt. Begrüßen und sich vorstellen (Bonjour, Je m'appelle …, Ça va ?) lernt man zu Beginn als feste Wendungen, vor der Regel; wie in Englisch classroom-phrases vor imperativ. Zweimal erprobt: Mit der Kante rutschte die Begrüßung ans Ende des Einstiegs.
       - id: begruessen-und-vorstellen
         name: { de: "Begrüßen und vorstellen", en: "Greetings and introductions" }
         iCan: "Ich kann mich begrüßen, verabschieden, vorstellen und fragen, wie es jemandem geht."
         gradeBand: "5-6"
-        requires: [verb-etre]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Situationen: Freunde, Familie; BY F6 Themengebiete: häusliche und familiäre Situationen (Familie, Haustiere, Freunde); NW S1 Wortschatz (S. 18): thematischer Wortschatz zum soziokulturellen Orientierungswissen; S1 IKK (S. 20): Familie, Freundschaft.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       - id: familie-und-freunde

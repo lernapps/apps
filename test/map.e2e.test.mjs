@@ -52,6 +52,10 @@ describe("the built pages", () => {
     const physik = JSON.parse(read("map/physik.json"));
     const stromkreis = physik.strands.find((s) => s.id === "elektrizitaetslehre").competencies.find((c) => c.id === "einfacher-stromkreis");
     assert.equal(stromkreis.practisedBy[0].app, "elektrizitaet");
+    // where it stands and how much builds on it (feat/map-json-place)
+    assert.deepEqual(stromkreis.place, { band: "5-6", step: 1 });
+    assert.ok(stromkreis.opens > 0);
+    for (const c of physik.strands.flatMap((s) => s.competencies)) assert.ok(c.place?.band && c.place.step >= 1 && Number.isInteger(c.opens), c.id);
     assert.deepEqual(JSON.parse(read("map/mathematik.json")).curricula.map((c) => c.id), ["he-gymnasium"]);
   });
 

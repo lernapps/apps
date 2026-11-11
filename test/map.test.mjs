@@ -118,6 +118,10 @@ test("pages: the prerequisites in order, a gap in the middle of the chain, the e
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["g1"] }, { competencies: ["t1"] }])), ["entry:w1", "gap:g2"]);
   // practised, but after the page that needs it
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["w1"] }, { competencies: ["g2"] }, { competencies: ["g1"] }])), ["order:g1"]);
+  // ahead of it on purpose (feat/map-json-place, KD-03): no finding when the app practises it on another page, a
+  // finding when it does not; only the order is waived
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["w1"] }, { competencies: ["g2"], ahead: ["g1"] }, { competencies: ["g1"] }])), []);
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["w1"] }, { competencies: ["g2"], ahead: ["g1"] }])), ["ahead:g1"]);
   // a recap page before, or a link in the page's text, fills the entry; a recap after it is out of order
   assert.deepEqual(kinds(checkPages(woven, [{ recap: "sprache/w2" }, { competencies: ["t2"] }])), []);
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t2"], linked: new Set(["w2"]) }])), []);

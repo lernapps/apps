@@ -611,3 +611,9 @@ keinen Lehrplan unter `map/franzoesisch/curricula/`; ein Vergleich der Listings 
 3. **`subjonctif-il-faut-que` ohne `meinung-aeussern`:** Ob der subjonctif auch die Wendungen der Meinung braucht
    (je ne pense pas que + subjonctif), ist offen. BS S. 289 nennt diesen Kontext als den spätesten (Stufe E); er
    gehört eher zu `subjonctif-gefuehle` oder einem eigenen Baustein.
+
+### Kante geändert (Owner, 2026-11-11, feat/map-json-place)
+
+`begruessen-und-vorstellen` braucht `verb-etre` nicht mehr. Begrüßen und sich vorstellen lernt man zu Beginn als
+feste Wendungen, vor der Regel. In zwei Erprobungen des Skills `lernapps-map-assignment` (lernapps/tooling) rutschte
+die Begrüßung mit der Kante ans Ende eines Einstiegs. Der Baustein steht jetzt in 5-6, Schritt 1.

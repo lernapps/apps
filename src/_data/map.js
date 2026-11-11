@@ -25,6 +25,7 @@ export default async function () {
     const competencies = [...subject.competencies.values()].map((c) => ({
       ...c,
       requiredBy: subject.requiredBy.get(c.id),
+      opens: descendants(subject, c.id).size,
       // Not placed in the chain (feat/map-chains, KD-12): no prerequisite, and nothing builds on it.
       alone: !c.requires.length && !subject.requiredBy.get(c.id)?.length,
       practisedBy: covered.get(c.id),
@@ -140,6 +141,10 @@ export default async function () {
             iCan: c.iCan,
             gradeBand: c.gradeBand,
             requires: c.requires,
+            // where it stands in the view by grade and chain, and how many competencies build on it (directly or
+            // further down): what an assistant needs to choose a gap (feat/map-json-place, KD-01, KD-02)
+            place: c.place,
+            opens: c.opens,
             practisedBy: c.practisedBy.map((p) => ({ app: p.app.id, url: p.app.url, pages: p.pages.map((pg) => pg.url) })),
           };
         }),
