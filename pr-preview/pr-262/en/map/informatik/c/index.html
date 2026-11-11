@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en" data-la-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Learning map Computer science by grade and chain · lernapps.net</title>
+  <meta name="description" content="What builds on what in Computer science, grade by grade, step by step.">
+  <link rel="canonical" href="https://lernapps.net/apps/en/map/informatik/c/">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/apps/pr-preview/pr-262/lernapps-tokens.css">
+<link rel="stylesheet" href="/apps/pr-preview/pr-262/lernapps-frame.css">
+<link rel="alternate" hreflang="en" href="/apps/pr-preview/pr-262/en/map/informatik/c/">
+<link rel="alternate" hreflang="de" href="/apps/pr-preview/pr-262/map/informatik/c/">
+<script>(() => {
+  const key = "lernapps-lang", here = "en", pages = {"de":"/apps/pr-preview/pr-262/map/informatik/c/"};
+  const known = ["de","en"];
+  const browser = (navigator.languages || [navigator.language]).map((l) => String(l).slice(0, 2).toLowerCase()).find((l) => known.includes(l));
+  let chosen = null;
+  try { chosen = localStorage.getItem(key); } catch {}
+  const wanted = known.includes(chosen) ? chosen : browser;
+  if (wanted && wanted !== here && pages[wanted] && !/bot|crawl|spider|slurp/i.test(navigator.userAgent)) {
+    location.replace(pages[wanted] + location.search + location.hash);
+    return;
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-la-lang]");
+    if (!a) return;
+    try { a.dataset.laLang === browser ? localStorage.removeItem(key) : localStorage.setItem(key, a.dataset.laLang); } catch {}
+  });
+})();</script>
+  <link rel="stylesheet" href="/apps/pr-preview/pr-262/uno.css">
+  <link rel="stylesheet" href="/apps/pr-preview/pr-262/assets/apps.css">
+  <script src="/apps/pr-preview/pr-262/assets/map.js" defer></script>
+  <script src="/apps/pr-preview/pr-262/assets/map-steps.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
+  <a class="la-skip" href="#main-content" lang="en">Skip to content</a>
+<p class="la-preview" lang="en">Preview of a change. The real page: <a href="https://lernapps.net/apps/en/map/informatik/c/">lernapps.net/apps/en/map/informatik/c/</a></p><header class="la-header" lang="en">
+  <div class="la-header__inner">
+    <a class="la-brand" href="/en/" aria-label="lernapps.net – home page"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
+    <nav class="la-nav la-nav--bar" aria-label="Main navigation"><ul><li><a href="/apps/pr-preview/pr-262/en/" aria-current="page">Catalog</a></li><li><a href="/practice/en/">Practise</a></li><li><a href="/apps/pr-preview/pr-262/en/build/">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li><li><a href="/en/tutor/">Tutor</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">Platform</a></li><li><a href="/en/join/">Get involved</a></li><li class="la-lang"><a href="/apps/pr-preview/pr-262/map/informatik/c/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav>
+    <details class="la-menu"><summary>Menu</summary><nav class="la-nav la-nav--menu" aria-label="Main navigation"><div class="la-menu__group"><p class="la-menu__title" id="la-menu-0">For learners</p><ul aria-labelledby="la-menu-0"><li><a href="/apps/pr-preview/pr-262/en/" aria-current="page">App catalog</a></li><li><a href="/practice/en/">Practise for a test</a></li></ul></div><div class="la-menu__group"><p class="la-menu__title" id="la-menu-1">For makers</p><ul aria-labelledby="la-menu-1"><li><a href="/apps/pr-preview/pr-262/en/build/">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li></ul></div><div class="la-menu__group"><p class="la-menu__title" id="la-menu-2">Understand and join in</p><ul aria-labelledby="la-menu-2"><li><a href="/en/tutor/">Tutor</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">Platform</a></li><li><a href="/en/join/">Get involved</a></li></ul></div><ul class="la-menu__lang"><li class="la-lang"><a href="/apps/pr-preview/pr-262/map/informatik/c/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav></details>
+  </div>
+</header>
+
+  <main id="main-content" tabindex="-1" class="flex-1 outline-none">
+    
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-12 flex flex-col gap-4">
+  
+<nav aria-label="Breadcrumb" class="text-sm text-slate-600">
+  <ol class="list-none p-0 m-0 flex flex-wrap gap-x-2 gap-y-1">
+    <li class="flex gap-2"><a href="/apps/pr-preview/pr-262/en/map/" class="text-blue-700 underline underline-offset-2">Learning map</a><span aria-hidden="true">›</span>
+    </li>
+    <li class="flex gap-2"><a href="/apps/pr-preview/pr-262/en/map/informatik/" class="text-blue-700 underline underline-offset-2">Computer science</a><span aria-hidden="true">›</span>
+    </li>
+    <li class="flex gap-2"><span aria-current="page">By grade and chain</span>
+    </li>
+  </ol>
+</nav>
+
+  
+<aside class="map-status map-status-draft" aria-labelledby="status-informatik">
+  <p class="m-0"><strong id="status-informatik" class="map-status-tag map-status-tag-draft">Draft</strong> This map is only an idea to show the principle. No teacher of the subject has checked it yet. Strands, building blocks and arrows may be wrong or missing.</p>
+  <p class="m-0 mt-1">Do you teach the subject? Look through the map and tell us what is missing or wrong: <a href="https://github.com/lernapps/apps/issues/new?title=Learning%20map%20Computer%20science%3A%20review" class="underline underline-offset-2 font-semibold">Help out</a> <span class="map-status-note">(GitHub issue, needs a GitHub account)</span></p>
+</aside>
+
+
+  <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Learning map Computer science by grade and chain</h1>
+    <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>How to read the map</a>
+  </div>
+  <p class="m-0 text-slate-700 max-w-3xl">The rows go by grade: first 5/6, then 7/8, then 9/10. Within a grade, a building block stands one step below its deepest prerequisite of the same grade. So everything a building block needs stands above it. Everything in the same step is independent of each other.</p>
+
+  
+<nav aria-labelledby="ordnung-informatik" class="flex flex-wrap items-center gap-2">
+  <h2 id="ordnung-informatik" class="m-0 text-sm font-semibold text-slate-600">Order the rows</h2>
+  <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
+    <li><a href="/apps/pr-preview/pr-262/en/map/informatik/" class="btn btn-secondary">By grade</a></li>
+    <li><a href="/apps/pr-preview/pr-262/en/map/informatik/c/" class="btn btn-primary" aria-current="page">By grade and chain</a></li>
+  </ul>
+</nav>
+
+  <div class="map-toolbar">
+    <div class="map-legend" data-map-legend>
+      <p class="m-0 flex items-center gap-2 text-sm text-slate-600"><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Covered</p>
+      <p class="m-0 flex items-center gap-2 text-sm text-slate-600"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap</p>
+    </div>
+    <div class="map-legend" role="group" aria-label="Show building blocks" data-map-filter hidden>
+      <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Covered</button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap</button>
+    </div>
+  </div>
+  <p class="m-0 text-slate-700" data-map-alone>Every building block is placed in the chain.
+  </p>
+
+  <div class="map-bystep" data-map-steps>
+    <div class="map-scroll" role="region" aria-label="Learning map Computer science: building blocks by strand, grade and step" tabindex="0">
+      <table class="map-grid" style="min-width: 67rem;">
+        <colgroup><col style="width: 7rem;"><col><col><col><col><col></colgroup>
+        <thead>
+          <tr>
+            <td class="text-sm text-slate-600 align-bottom">Grade and step ↓ · Strand →</td>
+            <th scope="col">
+              <a href="/apps/pr-preview/pr-262/en/map/informatik/daten/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Information and data</a>
+            </th>
+            <th scope="col">
+              <a href="/apps/pr-preview/pr-262/en/map/informatik/algorithmen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Algorithms</a>
+            </th>
+            <th scope="col">
+              <a href="/apps/pr-preview/pr-262/en/map/informatik/sprachen-automaten/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Languages and automata</a>
+            </th>
+            <th scope="col">
+              <a href="/apps/pr-preview/pr-262/en/map/informatik/informatiksysteme/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Computer systems</a>
+            </th>
+            <th scope="col">
+              <a href="/apps/pr-preview/pr-262/en/map/informatik/gesellschaft/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Computing, people and society</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="6">Grade 5/6</th></tr>
+          <tr>
+            <th scope="row">Step 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="information-und-daten">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/information-und-daten/" class="map-chip map-chip-gap">
+    <span>Information and data</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="informatiksysteme-im-alltag">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/informatiksysteme-im-alltag/" class="map-chip map-chip-gap">
+    <span>Computing systems in everyday life</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="urheberrecht">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/urheberrecht/" class="map-chip map-chip-gap">
+    <span>Copyright</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 2</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="daten-interpretieren">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/daten-interpretieren/" class="map-chip map-chip-gap">
+    <span>Interpreting data</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="darstellungsformen-von-information">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/darstellungsformen-von-information/" class="map-chip map-chip-gap">
+    <span>Representing information</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="codierung-im-alltag">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/codierung-im-alltag/" class="map-chip map-chip-gap">
+    <span>Everyday codes</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="ki-im-alltag">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/ki-im-alltag/" class="map-chip map-chip-gap">
+    <span>AI in everyday life</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="hardware-und-software">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/hardware-und-software/" class="map-chip map-chip-gap">
+    <span>Hardware and software</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="informatik-in-alltag-und-beruf">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/informatik-in-alltag-und-beruf/" class="map-chip map-chip-gap">
+    <span>Computing in life and work</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 3</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="binaersystem">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/binaersystem/" class="map-chip map-chip-gap">
+    <span>Binary number system</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="pixelgrafik">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/pixelgrafik/" class="map-chip map-chip-gap">
+    <span>Raster graphics</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="baum">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/baum/" class="map-chip map-chip-gap">
+    <span>Trees</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="verschluesselung-grundidee">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/verschluesselung-grundidee/" class="map-chip map-chip-gap">
+    <span>Basics of encryption</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="maschinelles-lernen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/maschinelles-lernen/" class="map-chip map-chip-gap">
+    <span>Machine learning</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="computer-bestandteile">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/computer-bestandteile/" class="map-chip map-chip-gap">
+    <span>Computer components</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="programme-bedienen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/programme-bedienen/" class="map-chip map-chip-gap">
+    <span>Using application software</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="ki-chancen-und-risiken">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/ki-chancen-und-risiken/" class="map-chip map-chip-gap">
+    <span>Opportunities and risks of AI</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 4</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="dezimal-in-binaer">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/dezimal-in-binaer/" class="map-chip map-chip-gap">
+    <span>Decimal to binary conversion</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="bit-und-byte">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/bit-und-byte/" class="map-chip map-chip-gap">
+    <span>Bits and bytes</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="pixel-und-vektorgrafik">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/pixel-und-vektorgrafik/" class="map-chip map-chip-gap">
+    <span>Raster and vector graphics</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="verschluesselung-bewerten">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/verschluesselung-bewerten/" class="map-chip map-chip-gap">
+    <span>Security of encryption</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="eva-prinzip">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/eva-prinzip/" class="map-chip map-chip-gap">
+    <span>Input-process-output model</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="informatiksystem-auswaehlen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/informatiksystem-auswaehlen/" class="map-chip map-chip-gap">
+    <span>Choosing devices and software</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="ordner-und-dateien">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/ordner-und-dateien/" class="map-chip map-chip-gap">
+    <span>Files and folders</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 5</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="automaten-im-alltag">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/automaten-im-alltag/" class="map-chip map-chip-gap">
+    <span>Everyday automata</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="dateipfad">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/dateipfad/" class="map-chip map-chip-gap">
+    <span>File paths</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="speicherorte-vergleichen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/speicherorte-vergleichen/" class="map-chip map-chip-gap">
+    <span>Comparing storage locations</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 6</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="zustandsdiagramm">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/zustandsdiagramm/" class="map-chip map-chip-gap">
+    <span>State diagrams</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="6">Grade 7/8</th></tr>
+          <tr>
+            <th scope="row">Step 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="zeichencodierung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/zeichencodierung/" class="map-chip map-chip-gap">
+    <span>Character encoding</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="analog-und-digital">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/analog-und-digital/" class="map-chip map-chip-gap">
+    <span>Analogue and digital</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="graph">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/graph/" class="map-chip map-chip-gap">
+    <span>Graphs</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="algorithmus-begriff">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/algorithmus-begriff/" class="map-chip map-chip-gap">
+    <span>What an algorithm is</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="internet-aufbau">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/internet-aufbau/" class="map-chip map-chip-gap">
+    <span>Structure of the internet</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="sicheres-passwort">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/sicheres-passwort/" class="map-chip map-chip-gap">
+    <span>Secure passwords</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="schadsoftware">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/schadsoftware/" class="map-chip map-chip-gap">
+    <span>Malware</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="datensicherung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datensicherung/" class="map-chip map-chip-gap">
+    <span>Data backup</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="personenbezogene-daten">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/personenbezogene-daten/" class="map-chip map-chip-gap">
+    <span>Personal data</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="umweltbilanz-digitaler-geraete">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/umweltbilanz-digitaler-geraete/" class="map-chip map-chip-gap">
+    <span>Environmental impact of digital devices</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 2</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="hypertext">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/hypertext/" class="map-chip map-chip-gap">
+    <span>Hypertext</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="algorithmische-eigenschaften">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/algorithmische-eigenschaften/" class="map-chip map-chip-gap">
+    <span>Properties of algorithms</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="sequenz">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/sequenz/" class="map-chip map-chip-gap">
+    <span>Sequence</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="client-und-server">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/client-und-server/" class="map-chip map-chip-gap">
+    <span>Client and server</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="ip-adresse-und-dns">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/ip-adresse-und-dns/" class="map-chip map-chip-gap">
+    <span>IP addresses and DNS</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="schutzsoftware">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/schutzsoftware/" class="map-chip map-chip-gap">
+    <span>Security software and updates</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="eigene-daten-schuetzen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/eigene-daten-schuetzen/" class="map-chip map-chip-gap">
+    <span>Protecting your own data</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="datenschutz-und-datensicherheit">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datenschutz-und-datensicherheit/" class="map-chip map-chip-gap">
+    <span>Data protection and data security</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="recht-am-eigenen-bild">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/recht-am-eigenen-bild/" class="map-chip map-chip-gap">
+    <span>Right to one&#39;s own image</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 3</th>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="verzweigung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/verzweigung/" class="map-chip map-chip-gap">
+    <span>Selection</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="wiederholung-feste-anzahl">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/wiederholung-feste-anzahl/" class="map-chip map-chip-gap">
+    <span>Count-controlled loop</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="visuelle-programmierung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/visuelle-programmierung/" class="map-chip map-chip-gap">
+    <span>Block-based programming</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="url-aufbau">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/url-aufbau/" class="map-chip map-chip-gap">
+    <span>Structure of a URL</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="internetdienste">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/internetdienste/" class="map-chip map-chip-gap">
+    <span>Internet services and protocols</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 4</th>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="wiederholung-mit-bedingung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/wiederholung-mit-bedingung/" class="map-chip map-chip-gap">
+    <span>Condition-controlled loop</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="webseite-abrufen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/webseite-abrufen/" class="map-chip map-chip-gap">
+    <span>How a web page is loaded</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="digitale-kommunikation">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/digitale-kommunikation/" class="map-chip map-chip-gap">
+    <span>Digital communication</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 5</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="gefahren-im-netz">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/gefahren-im-netz/" class="map-chip map-chip-gap">
+    <span>Online dangers</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="informationen-bewerten">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/informationen-bewerten/" class="map-chip map-chip-gap">
+    <span>Evaluating online information</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="6">Grade 9/10</th></tr>
+          <tr>
+            <th scope="row">Step 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="datentypen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datentypen/" class="map-chip map-chip-gap">
+    <span>Data types</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="datenbanken-im-alltag">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datenbanken-im-alltag/" class="map-chip map-chip-gap">
+    <span>Databases in everyday life</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="caesar-verschluesselung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/caesar-verschluesselung/" class="map-chip map-chip-gap">
+    <span>Caesar cipher</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="trainingsdaten">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/trainingsdaten/" class="map-chip map-chip-gap">
+    <span>Training data and bias</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="algorithmus-ausfuehren">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/algorithmus-ausfuehren/" class="map-chip map-chip-gap">
+    <span>Tracing an algorithm</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="struktogramm">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/struktogramm/" class="map-chip map-chip-gap">
+    <span>Nassi-Shneiderman diagram</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="programmablaufplan">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/programmablaufplan/" class="map-chip map-chip-gap">
+    <span>Flowchart</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="pseudocode">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/pseudocode/" class="map-chip map-chip-gap">
+    <span>Pseudocode</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="textbasierte-programmierung">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/textbasierte-programmierung/" class="map-chip map-chip-gap">
+    <span>Text-based programming</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="unterprogramme">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/unterprogramme/" class="map-chip map-chip-gap">
+    <span>Subroutines</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="automat-entwerfen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/automat-entwerfen/" class="map-chip map-chip-gap">
+    <span>Designing automata</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="datenschutzrecht">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datenschutzrecht/" class="map-chip map-chip-gap">
+    <span>Data protection law</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="lizenzmodelle">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/lizenzmodelle/" class="map-chip map-chip-gap">
+    <span>Software and content licences</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 2</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="rechnen-und-vergleichen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/rechnen-und-vergleichen/" class="map-chip map-chip-gap">
+    <span>Arithmetic and comparison operators</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="datenmodell">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datenmodell/" class="map-chip map-chip-gap">
+    <span>Data modelling</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="darstellungen-ueberfuehren">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/darstellungen-ueberfuehren/" class="map-chip map-chip-gap">
+    <span>Translating algorithm representations</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="variable">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/variable/" class="map-chip map-chip-gap">
+    <span>Variables and assignment</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="quelltext-aendern">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/quelltext-aendern/" class="map-chip map-chip-gap">
+    <span>Reading and modifying code</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="programm-testen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/programm-testen/" class="map-chip map-chip-gap">
+    <span>Testing programs</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="syntax-und-semantik">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/syntax-und-semantik/" class="map-chip map-chip-gap">
+    <span>Syntax and semantics</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="daten-in-datenbanken">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/daten-in-datenbanken/" class="map-chip map-chip-gap">
+    <span>Personal data in databases</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 3</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="logische-verknuepfungen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/logische-verknuepfungen/" class="map-chip map-chip-gap">
+    <span>Logical operators</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="feld-array">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/feld-array/" class="map-chip map-chip-gap">
+    <span>Arrays</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="tabellenkalkulation-formeln">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/tabellenkalkulation-formeln/" class="map-chip map-chip-gap">
+    <span>Spreadsheet formulas</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="tabellenschema">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/tabellenschema/" class="map-chip map-chip-gap">
+    <span>Table schema</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="parameter">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/parameter/" class="map-chip map-chip-gap">
+    <span>Parameters</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="syntaxfehler-finden">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/syntaxfehler-finden/" class="map-chip map-chip-gap">
+    <span>Fixing syntax errors</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="html-grundgeruest">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/html-grundgeruest/" class="map-chip map-chip-gap">
+    <span>Basic HTML structure</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="big-data">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/big-data/" class="map-chip map-chip-gap">
+    <span>Big data</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 4</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="relative-und-absolute-bezuege">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/relative-und-absolute-bezuege/" class="map-chip map-chip-gap">
+    <span>Relative and absolute cell references</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="datenflussdiagramm">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datenflussdiagramm/" class="map-chip map-chip-gap">
+    <span>Data flow diagrams</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="primaerschluessel">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/primaerschluessel/" class="map-chip map-chip-gap">
+    <span>Primary keys</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="html-attribute-und-links">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/html-attribute-und-links/" class="map-chip map-chip-gap">
+    <span>HTML attributes and links</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 5</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="funktionen-verketten">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/funktionen-verketten/" class="map-chip map-chip-gap">
+    <span>Spreadsheet functions</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="datenbank-anlegen">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/datenbank-anlegen/" class="map-chip map-chip-gap">
+    <span>Creating a database table</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="beziehungen-und-fremdschluessel">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/beziehungen-und-fremdschluessel/" class="map-chip map-chip-gap">
+    <span>Relationships and foreign keys</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="css">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/css/" class="map-chip map-chip-gap">
+    <span>CSS styling</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Step 6</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="sql-abfrage">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/sql-abfrage/" class="map-chip map-chip-gap">
+    <span>SQL queries</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+                
+<li data-competency="redundanz-und-konsistenz">
+  <a href="/apps/pr-preview/pr-262/en/map/informatik/c/redundanz-und-konsistenz/" class="map-chip map-chip-gap">
+    <span>Redundancy and consistency</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <aside class="map-chain panel" aria-labelledby="kette-titel" data-map-chain hidden>
+      <h2 id="kette-titel" class="m-0 text-sm font-semibold uppercase tracking-wide text-slate-600">The chain</h2>
+      <div aria-live="polite" data-chain-body><p class="m-0 text-slate-600">Choose a building block in the map to see its chain here.</p></div>
+    </aside>
+  </div>
+
+  <p class="m-0 text-slate-600">Click a building block to see what it builds on and what builds on it, step by step.</p>
+
+  <section id="hilfe" class="panel scroll-mt-4" aria-labelledby="hilfe-titel" data-kind="Computer science" data-map-help>
+    <h2 id="hilfe-titel" class="m-0 text-xl font-bold text-slate-900" data-dialog-title>How to read the map</h2>
+    <div class="mt-3" data-dialog-body>
+      <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-262/en/map/#strang" class="text-blue-700 underline underline-offset-2">Strand</a> · a column</dt><dd class="m-0 mt-1 text-slate-600">A part of the subject that runs over several school years.</dd></div>
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-262/en/map/#baustein" class="text-blue-700 underline underline-offset-2">Building block</a> · a box</dt><dd class="m-0 mt-1 text-slate-600">One thing a child can learn: “I can …”.</dd></div>
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-262/en/map/#schritt" class="text-blue-700 underline underline-offset-2">Step</a> · a row</dt><dd class="m-0 mt-1 text-slate-600">Where a building block stands in its grade in the chain of “builds on”. Everything in the same step is independent of each other; everything above comes first.</dd></div>
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-262/en/map/#app" class="text-blue-700 underline underline-offset-2">App</a> · the colour</dt><dd class="m-0 mt-1 text-slate-600">Blue means covered: an app practises the building block. Dashed means gap: no app practises it yet.</dd></div>
+      </dl>
+      <p class="m-0 mt-3"><a href="/apps/pr-preview/pr-262/en/map/#begriffe" class="text-blue-700 underline underline-offset-2">All terms and how they belong together</a> · <a href="/apps/pr-preview/pr-262/en/map/#methode" class="text-blue-700 underline underline-offset-2">Why this method?</a></p>
+    </div>
+  </section>
+</div>
+<script type="application/json" id="map-steps-data">{"strands":["Information and data","Algorithms","Languages and automata","Computer systems","Computing, people and society"],"competencies":[{"id":"information-und-daten","strand":0,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Information and data","iCan":"Ich kann Information und Daten unterscheiden und erklären, dass Daten erst durch ihre Deutung zu Information werden."},{"id":"daten-interpretieren","strand":0,"requires":["information-und-daten"],"step":2,"band":"5/6","bandStep":2,"name":"Interpreting data","iCan":"Ich kann Daten in ihrem Zusammenhang deuten, zum Beispiel erkennen, ob die Zahl 21 ein Alter, eine Temperatur oder eine Uhrzeit ist."},{"id":"darstellungsformen-von-information","strand":0,"requires":["information-und-daten"],"step":2,"band":"5/6","bandStep":2,"name":"Representing information","iCan":"Ich kann eine Information in verschiedenen Formen darstellen, zum Beispiel als Text, Tabelle, Bild oder Diagramm, und eine passende Form wählen."},{"id":"codierung-im-alltag","strand":0,"requires":["information-und-daten"],"step":2,"band":"5/6","bandStep":2,"name":"Everyday codes","iCan":"Ich kann Beispiele für Codierungen aus dem Alltag nennen und eine Nachricht mit einer vorgegebenen Codierung codieren und decodieren."},{"id":"binaersystem","strand":0,"requires":["codierung-im-alltag"],"step":3,"band":"5/6","bandStep":3,"name":"Binary number system","iCan":"Ich kann erklären, wie das Binärsystem als Stellenwertsystem mit den Ziffern 0 und 1 funktioniert, und eine Binärzahl in eine Dezimalzahl umrechnen."},{"id":"dezimal-in-binaer","strand":0,"requires":["binaersystem"],"step":4,"band":"5/6","bandStep":4,"name":"Decimal to binary conversion","iCan":"Ich kann eine Dezimalzahl in eine Binärzahl umrechnen, zum Beispiel durch fortgesetztes Teilen durch 2."},{"id":"bit-und-byte","strand":0,"requires":["binaersystem"],"step":4,"band":"5/6","bandStep":4,"name":"Bits and bytes","iCan":"Ich kann die Einheiten Bit, Byte, Kilobyte, Megabyte und Gigabyte erklären und Datenmengen damit vergleichen."},{"id":"zeichencodierung","strand":0,"requires":["bit-und-byte"],"step":7,"band":"7/8","bandStep":1,"name":"Character encoding","iCan":"Ich kann erklären, wie Buchstaben und Zeichen mit einem Code wie ASCII oder Unicode als Binärzahlen gespeichert werden."},{"id":"pixelgrafik","strand":0,"requires":["codierung-im-alltag"],"step":3,"band":"5/6","bandStep":3,"name":"Raster graphics","iCan":"Ich kann erklären, wie ein Bild als Raster aus Pixeln mit Farbwerten gespeichert wird."},{"id":"pixel-und-vektorgrafik","strand":0,"requires":["pixelgrafik"],"step":4,"band":"5/6","bandStep":4,"name":"Raster and vector graphics","iCan":"Ich kann Pixel- und Vektorgrafiken unterscheiden und begründen, welche Grafikart für einen Zweck besser passt."},{"id":"analog-und-digital","strand":0,"requires":["binaersystem"],"step":7,"band":"7/8","bandStep":1,"name":"Analogue and digital","iCan":"Ich kann den Unterschied zwischen analoger und digitaler Darstellung erklären und Beispiele für das Digitalisieren nennen."},{"id":"datentypen","strand":0,"requires":["daten-interpretieren"],"step":12,"band":"9/10","bandStep":1,"name":"Data types","iCan":"Ich kann die Datentypen ganze Zahl, Kommazahl, Text und Wahrheitswert unterscheiden und für eine Angabe den passenden Datentyp wählen."},{"id":"rechnen-und-vergleichen","strand":0,"requires":["datentypen"],"step":13,"band":"9/10","bandStep":2,"name":"Arithmetic and comparison operators","iCan":"Ich kann mit Daten in einem Programm rechnen und Werte vergleichen, zum Beispiel mit +, -, *, /, \u003c und =."},{"id":"logische-verknuepfungen","strand":0,"requires":["rechnen-und-vergleichen"],"step":14,"band":"9/10","bandStep":3,"name":"Logical operators","iCan":"Ich kann Bedingungen mit und, oder und nicht verknüpfen und den Wahrheitswert des Ergebnisses bestimmen."},{"id":"feld-array","strand":0,"requires":["variable"],"step":14,"band":"9/10","bandStep":3,"name":"Arrays","iCan":"Ich kann gleichartige Daten in einem Feld (Array) speichern und über den Index auf einzelne Elemente zugreifen."},{"id":"baum","strand":0,"requires":["darstellungsformen-von-information"],"step":3,"band":"5/6","bandStep":3,"name":"Trees","iCan":"Ich kann hierarchische Informationen als Baum mit Wurzel, Knoten, Kanten und Blättern darstellen."},{"id":"graph","strand":0,"requires":["baum"],"step":7,"band":"7/8","bandStep":1,"name":"Graphs","iCan":"Ich kann vernetzte Informationen, zum Beispiel verlinkte Webseiten, als Graph aus Knoten und Kanten darstellen."},{"id":"hypertext","strand":0,"requires":["graph","urheberrecht"],"step":8,"band":"7/8","bandStep":2,"name":"Hypertext","iCan":"Ich kann den Aufbau eines Hypertexts aus Seiten und Verweisen beschreiben und einen einfachen Hypertext erstellen."},{"id":"tabellenkalkulation-formeln","strand":0,"requires":["rechnen-und-vergleichen"],"step":14,"band":"9/10","bandStep":3,"name":"Spreadsheet formulas","iCan":"Ich kann in einer Tabellenkalkulation Formeln mit Zellbezügen schreiben, damit Ergebnisse automatisch neu berechnet werden."},{"id":"relative-und-absolute-bezuege","strand":0,"requires":["tabellenkalkulation-formeln"],"step":15,"band":"9/10","bandStep":4,"name":"Relative and absolute cell references","iCan":"Ich kann relative und absolute Zellbezüge unterscheiden und beim Kopieren einer Formel richtig einsetzen."},{"id":"datenflussdiagramm","strand":0,"requires":["tabellenkalkulation-formeln"],"step":15,"band":"9/10","bandStep":4,"name":"Data flow diagrams","iCan":"Ich kann darstellen, wie Daten durch Funktionen fließen, und dazu ein Datenflussdiagramm zeichnen."},{"id":"funktionen-verketten","strand":0,"requires":["datenflussdiagramm","logische-verknuepfungen"],"step":16,"band":"9/10","bandStep":5,"name":"Spreadsheet functions","iCan":"Ich kann vordefinierte Funktionen einer Tabellenkalkulation, auch die WENN-Funktion, nutzen und mehrere Funktionen verketten."},{"id":"datenbanken-im-alltag","strand":0,"requires":["darstellungsformen-von-information"],"step":12,"band":"9/10","bandStep":1,"name":"Databases in everyday life","iCan":"Ich kann Beispiele nennen, wo im Alltag Datenbanken große Datenbestände verwalten, und erklären, wozu man sie braucht."},{"id":"datenmodell","strand":0,"requires":["datenbanken-im-alltag"],"step":13,"band":"9/10","bandStep":2,"name":"Data modelling","iCan":"Ich kann einen Ausschnitt der Wirklichkeit mit Objekttypen (Entitäten oder Klassen) und ihren Attributen modellieren und als Diagramm darstellen."},{"id":"tabellenschema","strand":0,"requires":["datenmodell","datentypen"],"step":14,"band":"9/10","bandStep":3,"name":"Table schema","iCan":"Ich kann ein Datenmodell in ein Tabellenschema mit Datenfeldern und Datentypen überführen und Datensatz und Datenfeld unterscheiden."},{"id":"primaerschluessel","strand":0,"requires":["tabellenschema"],"step":15,"band":"9/10","bandStep":4,"name":"Primary keys","iCan":"Ich kann erklären, wozu ein Primärschlüssel dient, und für eine Tabelle einen geeigneten Schlüssel wählen."},{"id":"datenbank-anlegen","strand":0,"requires":["primaerschluessel"],"step":16,"band":"9/10","bandStep":5,"name":"Creating a database table","iCan":"Ich kann eine Datenbanktabelle in einem Datenbanksystem anlegen und Datensätze eingeben, ändern und löschen."},{"id":"sql-abfrage","strand":0,"requires":["datenbank-anlegen","logische-verknuepfungen"],"step":17,"band":"9/10","bandStep":6,"name":"SQL queries","iCan":"Ich kann mit SQL (SELECT, FROM, WHERE) gezielt Spalten und Datensätze aus einer Tabelle abfragen."},{"id":"beziehungen-und-fremdschluessel","strand":0,"requires":["primaerschluessel"],"step":16,"band":"9/10","bandStep":5,"name":"Relationships and foreign keys","iCan":"Ich kann Beziehungen zwischen Objekttypen modellieren und sie in verknüpften Tabellen mit Fremdschlüsseln umsetzen."},{"id":"redundanz-und-konsistenz","strand":0,"requires":["beziehungen-und-fremdschluessel"],"step":17,"band":"9/10","bandStep":6,"name":"Redundancy and consistency","iCan":"Ich kann an einem Beispiel erklären, warum doppelt gespeicherte Daten (Redundanz) zu Widersprüchen führen und wie verknüpfte Tabellen das vermeiden."},{"id":"verschluesselung-grundidee","strand":0,"requires":["codierung-im-alltag"],"step":3,"band":"5/6","bandStep":3,"name":"Basics of encryption","iCan":"Ich kann an einem einfachen Verfahren, zum Beispiel einer Skytale, erklären, wie man einen Text mit einem Schlüssel ver- und entschlüsselt."},{"id":"verschluesselung-bewerten","strand":0,"requires":["verschluesselung-grundidee"],"step":4,"band":"5/6","bandStep":4,"name":"Security of encryption","iCan":"Ich kann Verschlüsselungsverfahren vergleichen und beurteilen, wie sicher sie sind, zum Beispiel wie viele Schlüssel ein Angreifer ausprobieren müsste."},{"id":"caesar-verschluesselung","strand":0,"requires":["verschluesselung-grundidee"],"step":12,"band":"9/10","bandStep":1,"name":"Caesar cipher","iCan":"Ich kann einen Text mit einem Ersetzungsverfahren wie der Caesar-Verschlüsselung ver- und entschlüsseln."},{"id":"ki-im-alltag","strand":0,"requires":["informatiksysteme-im-alltag"],"step":2,"band":"5/6","bandStep":2,"name":"AI in everyday life","iCan":"Ich kann Beispiele für künstliche Intelligenz aus meinem Alltag nennen, zum Beispiel Empfehlungen, Sprach- oder Bilderkennung."},{"id":"maschinelles-lernen","strand":0,"requires":["ki-im-alltag","daten-interpretieren"],"step":3,"band":"5/6","bandStep":3,"name":"Machine learning","iCan":"Ich kann an einem Beispiel erklären, dass ein KI-System aus Beispieldaten Muster lernt, statt dass jemand jede Regel programmiert."},{"id":"trainingsdaten","strand":0,"requires":["maschinelles-lernen"],"step":12,"band":"9/10","bandStep":1,"name":"Training data and bias","iCan":"Ich kann an einem Beispiel zeigen, wie die Auswahl der Trainingsdaten die Ergebnisse eines lernenden Systems beeinflusst, auch durch Verzerrungen."},{"id":"algorithmus-begriff","strand":1,"requires":[],"step":7,"band":"7/8","bandStep":1,"name":"What an algorithm is","iCan":"Ich kann erklären, was ein Algorithmus ist, und für einen Ablauf aus dem Alltag eine eindeutige Handlungsvorschrift aufschreiben."},{"id":"algorithmische-eigenschaften","strand":1,"requires":["algorithmus-begriff"],"step":8,"band":"7/8","bandStep":2,"name":"Properties of algorithms","iCan":"Ich kann prüfen, ob eine Handlungsvorschrift ein Algorithmus ist: endlich beschrieben, eindeutig und nach endlich vielen Schritten fertig."},{"id":"sequenz","strand":1,"requires":["algorithmus-begriff"],"step":8,"band":"7/8","bandStep":2,"name":"Sequence","iCan":"Ich kann Anweisungen in der richtigen Reihenfolge zu einer Sequenz anordnen."},{"id":"verzweigung","strand":1,"requires":["sequenz"],"step":9,"band":"7/8","bandStep":3,"name":"Selection","iCan":"Ich kann mit einer Verzweigung (wenn – dann – sonst) festlegen, dass ein Algorithmus abhängig von einer Bedingung verschiedene Anweisungen ausführt."},{"id":"wiederholung-feste-anzahl","strand":1,"requires":["sequenz"],"step":9,"band":"7/8","bandStep":3,"name":"Count-controlled loop","iCan":"Ich kann mit einer Wiederholung mit fester Anzahl Anweisungen mehrmals ausführen lassen."},{"id":"wiederholung-mit-bedingung","strand":1,"requires":["wiederholung-feste-anzahl","verzweigung"],"step":10,"band":"7/8","bandStep":4,"name":"Condition-controlled loop","iCan":"Ich kann mit einer Wiederholung mit Bedingung Anweisungen so lange ausführen lassen, bis eine Bedingung erfüllt ist."},{"id":"visuelle-programmierung","strand":1,"requires":["sequenz"],"step":9,"band":"7/8","bandStep":3,"name":"Block-based programming","iCan":"Ich kann einen Algorithmus in einer blockbasierten (visuellen) Programmiersprache als Programm umsetzen und ausführen."},{"id":"algorithmus-ausfuehren","strand":1,"requires":["wiederholung-mit-bedingung"],"step":12,"band":"9/10","bandStep":1,"name":"Tracing an algorithm","iCan":"Ich kann einen Algorithmus Schritt für Schritt von Hand ausführen und so sein Ergebnis ermitteln."},{"id":"struktogramm","strand":1,"requires":["wiederholung-mit-bedingung"],"step":12,"band":"9/10","bandStep":1,"name":"Nassi-Shneiderman diagram","iCan":"Ich kann einen Algorithmus als Struktogramm darstellen und ein Struktogramm lesen."},{"id":"programmablaufplan","strand":1,"requires":["wiederholung-mit-bedingung"],"step":12,"band":"9/10","bandStep":1,"name":"Flowchart","iCan":"Ich kann einen Algorithmus als Programmablaufplan (PAP) darstellen und einen PAP lesen."},{"id":"pseudocode","strand":1,"requires":["wiederholung-mit-bedingung"],"step":12,"band":"9/10","bandStep":1,"name":"Pseudocode","iCan":"Ich kann einen Algorithmus in Pseudocode aufschreiben."},{"id":"darstellungen-ueberfuehren","strand":1,"requires":["struktogramm","programmablaufplan","pseudocode"],"step":13,"band":"9/10","bandStep":2,"name":"Translating algorithm representations","iCan":"Ich kann einen Algorithmus von einer Darstellungsform in eine andere übertragen, zum Beispiel vom Struktogramm in Programmcode."},{"id":"textbasierte-programmierung","strand":1,"requires":["visuelle-programmierung"],"step":12,"band":"9/10","bandStep":1,"name":"Text-based programming","iCan":"Ich kann einen Algorithmus in einer textbasierten Programmiersprache als Programm schreiben und ausführen."},{"id":"variable","strand":1,"requires":["visuelle-programmierung","datentypen"],"step":13,"band":"9/10","bandStep":2,"name":"Variables and assignment","iCan":"Ich kann in einem Programm Variablen anlegen, ihnen mit einer Wertzuweisung Werte geben und diese Werte ändern."},{"id":"unterprogramme","strand":1,"requires":["visuelle-programmierung"],"step":12,"band":"9/10","bandStep":1,"name":"Subroutines","iCan":"Ich kann ein Programm in Teile zerlegen und wiederkehrende Abläufe als Unterprogramm (Methode, Funktion) definieren und aufrufen."},{"id":"parameter","strand":1,"requires":["unterprogramme","variable"],"step":14,"band":"9/10","bandStep":3,"name":"Parameters","iCan":"Ich kann einem Unterprogramm über Parameter Werte übergeben."},{"id":"quelltext-aendern","strand":1,"requires":["textbasierte-programmierung","algorithmus-ausfuehren"],"step":13,"band":"9/10","bandStep":2,"name":"Reading and modifying code","iCan":"Ich kann fremden Quelltext lesen, kommentieren, verändern und ergänzen."},{"id":"programm-testen","strand":1,"requires":["visuelle-programmierung","algorithmus-ausfuehren"],"step":13,"band":"9/10","bandStep":2,"name":"Testing programs","iCan":"Ich kann mit gezielt gewählten Testfällen prüfen, ob ein Programm eine Aufgabe richtig löst."},{"id":"syntax-und-semantik","strand":2,"requires":["textbasierte-programmierung"],"step":13,"band":"9/10","bandStep":2,"name":"Syntax and semantics","iCan":"Ich kann an Beispielen erklären, was Syntax (die Schreibregeln) und Semantik (die Bedeutung) einer formalen Sprache sind."},{"id":"syntaxfehler-finden","strand":2,"requires":["syntax-und-semantik"],"step":14,"band":"9/10","bandStep":3,"name":"Fixing syntax errors","iCan":"Ich kann Syntaxfehler in einem Quelltext finden, Fehlermeldungen deuten und die Fehler beheben."},{"id":"html-grundgeruest","strand":2,"requires":["hypertext","syntax-und-semantik"],"step":14,"band":"9/10","bandStep":3,"name":"Basic HTML structure","iCan":"Ich kann eine einfache Webseite in HTML schreiben und dabei Elemente mit Start- und End-Tags richtig verschachteln."},{"id":"html-attribute-und-links","strand":2,"requires":["html-grundgeruest"],"step":15,"band":"9/10","bandStep":4,"name":"HTML attributes and links","iCan":"Ich kann HTML-Elemente mit Attributen ergänzen, zum Beispiel einen Verweis mit href oder ein Bild mit src einbinden."},{"id":"css","strand":2,"requires":["html-attribute-und-links"],"step":16,"band":"9/10","bandStep":5,"name":"CSS styling","iCan":"Ich kann das Aussehen einer Webseite mit CSS festlegen und erklären, warum man Inhalt und Darstellung trennt."},{"id":"automaten-im-alltag","strand":2,"requires":["eva-prinzip"],"step":5,"band":"5/6","bandStep":5,"name":"Everyday automata","iCan":"Ich kann an einem Automaten aus dem Alltag, zum Beispiel einem Getränkeautomaten, erklären, wie er abhängig von Eingabe und Zustand reagiert."},{"id":"zustandsdiagramm","strand":2,"requires":["automaten-im-alltag"],"step":6,"band":"5/6","bandStep":6,"name":"State diagrams","iCan":"Ich kann das Verhalten eines Automaten mit Zuständen und Übergängen in einem Zustandsdiagramm darstellen und ein solches Diagramm lesen."},{"id":"automat-entwerfen","strand":2,"requires":["zustandsdiagramm"],"step":12,"band":"9/10","bandStep":1,"name":"Designing automata","iCan":"Ich kann für eine konkrete Aufgabe, zum Beispiel eine Ampelsteuerung, einen Automaten mit Zuständen und Übergängen entwerfen."},{"id":"informatiksysteme-im-alltag","strand":3,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Computing systems in everyday life","iCan":"Ich kann Informatiksysteme in meinem Alltag erkennen, zum Beispiel Smartphone, Spielkonsole oder Kasse."},{"id":"hardware-und-software","strand":3,"requires":["informatiksysteme-im-alltag"],"step":2,"band":"5/6","bandStep":2,"name":"Hardware and software","iCan":"Ich kann Hardware und Software unterscheiden und erklären, wie sie in einem Informatiksystem zusammenwirken."},{"id":"computer-bestandteile","strand":3,"requires":["hardware-und-software"],"step":3,"band":"5/6","bandStep":3,"name":"Computer components","iCan":"Ich kann die wichtigsten Bestandteile eines Computers wie Prozessor, Arbeitsspeicher, Festspeicher sowie Ein- und Ausgabegeräte benennen und ihre Aufgaben beschreiben."},{"id":"eva-prinzip","strand":3,"requires":["computer-bestandteile"],"step":4,"band":"5/6","bandStep":4,"name":"Input-process-output model","iCan":"Ich kann das EVA-Prinzip (Eingabe, Verarbeitung, Ausgabe) erklären und Geräte und Vorgänge den drei Phasen zuordnen."},{"id":"informatiksystem-auswaehlen","strand":3,"requires":["computer-bestandteile"],"step":4,"band":"5/6","bandStep":4,"name":"Choosing devices and software","iCan":"Ich kann für eine Aufgabe ein passendes Gerät oder Programm auswählen und meine Wahl begründen."},{"id":"programme-bedienen","strand":3,"requires":["hardware-und-software"],"step":3,"band":"5/6","bandStep":3,"name":"Using application software","iCan":"Ich kann Grundfunktionen von Programmen wie Öffnen, Speichern, Kopieren und Einfügen sicher nutzen."},{"id":"ordner-und-dateien","strand":3,"requires":["programme-bedienen","baum"],"step":4,"band":"5/6","bandStep":4,"name":"Files and folders","iCan":"Ich kann Dateien in einer sinnvollen Ordnerstruktur ablegen und wiederfinden."},{"id":"dateipfad","strand":3,"requires":["ordner-und-dateien"],"step":5,"band":"5/6","bandStep":5,"name":"File paths","iCan":"Ich kann den Ort einer Datei als Pfad angeben und einen Pfad lesen."},{"id":"speicherorte-vergleichen","strand":3,"requires":["ordner-und-dateien","bit-und-byte"],"step":5,"band":"5/6","bandStep":5,"name":"Comparing storage locations","iCan":"Ich kann Speicherorte wie Gerät, USB-Stick und Cloud nach Kapazität, Erreichbarkeit und Sicherheit vergleichen."},{"id":"internet-aufbau","strand":3,"requires":["hardware-und-software"],"step":7,"band":"7/8","bandStep":1,"name":"Structure of the internet","iCan":"Ich kann erklären, dass das Internet ein Netz aus vielen Netzen ist, in dem Router Daten weiterleiten, und lokale und globale Netze unterscheiden."},{"id":"client-und-server","strand":3,"requires":["internet-aufbau"],"step":8,"band":"7/8","bandStep":2,"name":"Client and server","iCan":"Ich kann die Rollen von Client und Server beschreiben und Beispiele dafür nennen."},{"id":"ip-adresse-und-dns","strand":3,"requires":["internet-aufbau"],"step":8,"band":"7/8","bandStep":2,"name":"IP addresses and DNS","iCan":"Ich kann erklären, dass jeder Rechner im Internet eine IP-Adresse hat und das DNS Namen wie schule.de in IP-Adressen übersetzt."},{"id":"url-aufbau","strand":3,"requires":["ip-adresse-und-dns","dateipfad"],"step":9,"band":"7/8","bandStep":3,"name":"Structure of a URL","iCan":"Ich kann die Bestandteile einer URL wie Protokoll, Domain und Pfad benennen."},{"id":"internetdienste","strand":3,"requires":["client-und-server"],"step":9,"band":"7/8","bandStep":3,"name":"Internet services and protocols","iCan":"Ich kann Dienste des Internets wie das World Wide Web und E-Mail unterscheiden und erklären, dass sie nach festen Regeln (Protokollen) kommunizieren."},{"id":"webseite-abrufen","strand":3,"requires":["url-aufbau","internetdienste"],"step":10,"band":"7/8","bandStep":4,"name":"How a web page is loaded","iCan":"Ich kann beschreiben, was passiert, wenn ein Browser eine Webseite von einem Webserver abruft."},{"id":"sicheres-passwort","strand":3,"requires":["informatiksysteme-im-alltag"],"step":7,"band":"7/8","bandStep":1,"name":"Secure passwords","iCan":"Ich kann ein sicheres Passwort bilden und erklären, wie ich meine Zugänge schütze."},{"id":"schadsoftware","strand":3,"requires":["hardware-und-software"],"step":7,"band":"7/8","bandStep":1,"name":"Malware","iCan":"Ich kann Arten von Schadsoftware wie Viren und Trojaner beschreiben und erklären, wie sie auf ein Gerät gelangen."},{"id":"schutzsoftware","strand":3,"requires":["schadsoftware"],"step":8,"band":"7/8","bandStep":2,"name":"Security software and updates","iCan":"Ich kann erklären, wie Firewall, Virenschutz und Updates ein Gerät schützen, und Sicherheitseinstellungen nutzen."},{"id":"datensicherung","strand":3,"requires":["speicherorte-vergleichen"],"step":7,"band":"7/8","bandStep":1,"name":"Data backup","iCan":"Ich kann meine Daten durch Sicherungskopien und gespeicherte Zwischenstände vor Verlust schützen."},{"id":"informatik-in-alltag-und-beruf","strand":4,"requires":["informatiksysteme-im-alltag"],"step":2,"band":"5/6","bandStep":2,"name":"Computing in life and work","iCan":"Ich kann an Beispielen beschreiben, wie Informatiksysteme mein Leben und die Arbeitswelt verändern."},{"id":"personenbezogene-daten","strand":4,"requires":["information-und-daten"],"step":7,"band":"7/8","bandStep":1,"name":"Personal data","iCan":"Ich kann erklären, was personenbezogene Daten sind, und an Beispielen beschreiben, wo sie gesammelt und genutzt werden."},{"id":"eigene-daten-schuetzen","strand":4,"requires":["personenbezogene-daten"],"step":8,"band":"7/8","bandStep":2,"name":"Protecting your own data","iCan":"Ich kann sparsam mit meinen Daten umgehen und Einstellungen wählen, die meine Privatsphäre schützen."},{"id":"datenschutz-und-datensicherheit","strand":4,"requires":["personenbezogene-daten","datensicherung"],"step":8,"band":"7/8","bandStep":2,"name":"Data protection and data security","iCan":"Ich kann Datenschutz (Schutz von Personen) und Datensicherheit (Schutz der Daten vor Verlust und Zugriff) unterscheiden."},{"id":"datenschutzrecht","strand":4,"requires":["eigene-daten-schuetzen","datenschutz-und-datensicherheit"],"step":12,"band":"9/10","bandStep":1,"name":"Data protection law","iCan":"Ich kann Grundsätze des Datenschutzrechts nennen und beurteilen, ob personenbezogene Daten in einem Fall erhoben und genutzt werden dürfen."},{"id":"daten-in-datenbanken","strand":4,"requires":["datenbanken-im-alltag","datenschutzrecht"],"step":13,"band":"9/10","bandStep":2,"name":"Personal data in databases","iCan":"Ich kann Nutzen und Risiken beurteilen, wenn personenbezogene Daten in Datenbanken gespeichert und ausgewertet werden."},{"id":"big-data","strand":4,"requires":["daten-in-datenbanken"],"step":14,"band":"9/10","bandStep":3,"name":"Big data","iCan":"Ich kann Chancen und Gefahren beurteilen, wenn sehr große Datenmengen gesammelt, verknüpft und automatisch ausgewertet werden."},{"id":"recht-am-eigenen-bild","strand":4,"requires":["personenbezogene-daten"],"step":8,"band":"7/8","bandStep":2,"name":"Right to one's own image","iCan":"Ich kann erklären, was das Recht am eigenen Bild bedeutet, und beachten, wann ich Fotos anderer veröffentlichen darf."},{"id":"urheberrecht","strand":4,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Copyright","iCan":"Ich kann erklären, was das Urheberrecht schützt, und fremde Texte, Bilder und Musik nur mit Erlaubnis und Quellenangabe verwenden."},{"id":"lizenzmodelle","strand":4,"requires":["urheberrecht"],"step":12,"band":"9/10","bandStep":1,"name":"Software and content licences","iCan":"Ich kann Lizenzmodelle wie proprietäre Software, freie Software und Creative-Commons-Lizenzen vergleichen."},{"id":"digitale-kommunikation","strand":4,"requires":["internetdienste"],"step":10,"band":"7/8","bandStep":4,"name":"Digital communication","iCan":"Ich kann Möglichkeiten der digitalen Kommunikation wie E-Mail, Messenger und soziale Netzwerke nach Chancen und Risiken vergleichen."},{"id":"gefahren-im-netz","strand":4,"requires":["digitale-kommunikation"],"step":11,"band":"7/8","bandStep":5,"name":"Online dangers","iCan":"Ich kann Gefahren im Netz wie Phishing, Abofallen, gefälschte Identitäten und Cybermobbing erkennen und weiß, wie ich mich verhalte."},{"id":"informationen-bewerten","strand":4,"requires":["webseite-abrufen"],"step":11,"band":"7/8","bandStep":5,"name":"Evaluating online information","iCan":"Ich kann im Internet gezielt suchen und die Glaubwürdigkeit von Quellen und Suchergebnissen prüfen."},{"id":"umweltbilanz-digitaler-geraete","strand":4,"requires":["computer-bestandteile"],"step":7,"band":"7/8","bandStep":1,"name":"Environmental impact of digital devices","iCan":"Ich kann beschreiben, wie Herstellung, Nutzung und Entsorgung digitaler Geräte die Umwelt belasten, und das mit Papier vergleichen."},{"id":"ki-chancen-und-risiken","strand":4,"requires":["ki-im-alltag"],"step":3,"band":"5/6","bandStep":3,"name":"Opportunities and risks of AI","iCan":"Ich kann an Beispielen Chancen und Risiken künstlicher Intelligenz für mich und die Gesellschaft beschreiben."}]}</script>
+<script type="application/json" id="map-steps-text">{"kind":"{strand} · {place}","place":"Grade {band} · step {step}","before":"Builds on","after":"Built on by","nothing":"none","page":"To the page of the building block","clear":"Clear the choice","pageUrl":"/apps/pr-preview/pr-262/en/map/informatik/c/{id}/"}</script>
+
+<dialog class="map-dialog" data-map-dialog aria-labelledby="map-dialog-title">
+  <div class="map-dialog-inner">
+    <div class="flex items-start justify-between gap-3">
+      <div class="flex flex-col gap-2 items-start">
+        <p class="map-badge m-0" data-dialog-kind></p>
+        <h2 id="map-dialog-title" class="m-0 text-xl font-bold leading-tight text-slate-900" data-dialog-heading></h2>
+      </div>
+      <button type="button" class="btn btn-secondary map-close" data-dialog-close aria-label="Close"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="mt-4 flex flex-col gap-4" data-dialog-content></div>
+  </div>
+</dialog>
+
+
+  </main>
+
+  <footer class="la-footer" lang="en">
+  <div class="la-footer__inner">
+    <p>lernapps.net is free and has no ads. It lives on your thanks.</p>
+    <nav aria-label="Footer"><ul><li><a href="/en/privacy/">Privacy</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/docs/en/platform-design/">Platform design</a></li><li><a href="https://github.com/lernapps/apps">Source code</a></li></ul></nav>
+  </div>
+</footer>
+</body>
+</html>
