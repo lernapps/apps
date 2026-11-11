@@ -109,9 +109,9 @@ if (root && dataNode && textNode) {
       steps.get(c.step).push(c);
     }
     const dl = document.createElement("dl");
-    for (const [step, list] of [...steps].sort((a, b) => a[0] - b[0])) {
+    for (const [, list] of [...steps].sort((a, b) => a[0] - b[0])) {
       const dt = document.createElement("dt");
-      dt.textContent = text.step.replace("{step}", step);
+      dt.textContent = place(list[0]);
       const dd = document.createElement("dd");
       for (const c of list) {
         const b = document.createElement("button");
@@ -128,6 +128,11 @@ if (root && dataNode && textNode) {
     return section;
   }
 
+  // Where a competency stands: its grade band and its step in it (feat/map-chains, KD-17).
+  function place(c) {
+    return text.place.replace("{band}", c.band).replace("{step}", c.bandStep);
+  }
+
   function render() {
     if (!chosen) {
       body.innerHTML = empty;
@@ -138,7 +143,7 @@ if (root && dataNode && textNode) {
     head.className = "flex flex-col gap-1";
     const kind = document.createElement("p");
     kind.className = "map-badge m-0 self-start";
-    kind.textContent = text.kind.replace("{strand}", data.strands[c.strand]).replace("{step}", c.step);
+    kind.textContent = text.kind.replace("{strand}", data.strands[c.strand]).replace("{place}", place(c));
     const name = document.createElement("p");
     name.className = "m-0 text-lg font-bold text-slate-900";
     name.textContent = c.name;
