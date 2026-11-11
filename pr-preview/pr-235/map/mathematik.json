@@ -1029,6 +1029,17 @@
       },
       "competencies": [
         {
+          "id": "geometrische-grundbegriffe",
+          "name": {
+            "de": "Geometrische Grundbegriffe",
+            "en": "Basic geometric terms"
+          },
+          "iCan": "Ich kann Punkt, Strecke, Gerade und Ebene unterscheiden und richtig benennen.",
+          "gradeBand": "5-6",
+          "requires": [],
+          "practisedBy": []
+        },
+        {
           "id": "grundfiguren-eben",
           "name": {
             "de": "Ebene Grundfiguren",
@@ -1049,7 +1060,9 @@
           },
           "iCan": "Ich kann parallele und senkrechte Geraden zeichnen und Abstände messen.",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "geometrische-grundbegriffe"
+          ],
           "practisedBy": []
         },
         {
@@ -1074,7 +1087,8 @@
           "iCan": "Ich kann Punkte und Figuren im Koordinatensystem eintragen und ablesen.",
           "gradeBand": "5-6",
           "requires": [
-            "natuerliche-zahlen"
+            "natuerliche-zahlen",
+            "geometrische-grundbegriffe"
           ],
           "practisedBy": []
         },

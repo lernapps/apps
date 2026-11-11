@@ -146,6 +146,20 @@
             "quellenarten"
           ],
           "practisedBy": []
+        },
+        {
+          "id": "herrschaftsformen",
+          "name": {
+            "de": "Herrschaftsformen",
+            "en": "Forms of government"
+          },
+          "iCan": "Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer Herrschaftsform zuordnen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "monarchie",
+            "attische-demokratie"
+          ],
+          "practisedBy": []
         }
       ]
     },
@@ -445,7 +459,7 @@
           "iCan": "Ich kann den Aufbau der römischen Republik mit Senat, Konsuln und Volksversammlung beschreiben.",
           "gradeBand": "5-6",
           "requires": [
-            "monarchie"
+            "herrschaftsformen"
           ],
           "practisedBy": []
         },
@@ -577,7 +591,6 @@
           "gradeBand": "5-6",
           "requires": [
             "romanisierung",
-            "attische-demokratie",
             "spuren-der-vergangenheit"
           ],
           "practisedBy": []
@@ -1207,7 +1220,7 @@
           "iCan": "Ich kann am Beispiel Ludwigs XIV. erklären, was Absolutismus ist.",
           "gradeBand": "7-8",
           "requires": [
-            "monarchie"
+            "herrschaftsformen"
           ],
           "practisedBy": []
         },
@@ -1346,6 +1359,19 @@
             "en": "Declaration of the Rights of Man"
           },
           "iCan": "Ich kann erklären, was die Erklärung der Menschen- und Bürgerrechte von 1789 versprach und für wen sie damals galt.",
+          "gradeBand": "7-8",
+          "requires": [
+            "revolution-1789"
+          ],
+          "practisedBy": []
+        },
+        {
+          "id": "was-ist-eine-revolution",
+          "name": {
+            "de": "Was ist eine Revolution?",
+            "en": "What is a revolution?"
+          },
+          "iCan": "Ich kann erklären, was eine Revolution ist, und Ursachen, Anlass und Folgen einer Revolution unterscheiden.",
           "gradeBand": "7-8",
           "requires": [
             "revolution-1789"
@@ -1495,7 +1521,8 @@
           "iCan": "Ich kann den Verlauf der Revolution von 1848/49 in Deutschland beschreiben.",
           "gradeBand": "7-8",
           "requires": [
-            "restauration"
+            "restauration",
+            "was-ist-eine-revolution"
           ],
           "practisedBy": []
         },
@@ -1837,7 +1864,8 @@
           "gradeBand": "7-8",
           "requires": [
             "julikrise-1914",
-            "sozialismus-und-kommunismus"
+            "sozialismus-und-kommunismus",
+            "was-ist-eine-revolution"
           ],
           "practisedBy": []
         },

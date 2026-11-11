@@ -794,6 +794,20 @@
           "practisedBy": []
         },
         {
+          "id": "erste-schwimmart",
+          "name": {
+            "de": "Erste Schwimmart",
+            "en": "First swimming stroke"
+          },
+          "iCan": "Ich kann eine Schwimmart, Brust oder Kraul, in der Grobform so sicher schwimmen, dass ich mich damit über Wasser halte und vorwärtskomme.",
+          "gradeBand": "5-6",
+          "requires": [
+            "auftrieb-und-gleiten",
+            "atmen-im-wasser"
+          ],
+          "practisedBy": []
+        },
+        {
           "id": "gleichzugtechnik",
           "name": {
             "de": "Brustschwimmen",
@@ -831,7 +845,7 @@
           "gradeBand": "5-6",
           "requires": [
             "ins-wasser-springen",
-            "auftrieb-und-gleiten"
+            "erste-schwimmart"
           ],
           "practisedBy": []
         },
@@ -845,7 +859,7 @@
           "gradeBand": "5-6",
           "requires": [
             "aerobe-ausdauer",
-            "atmen-im-wasser"
+            "erste-schwimmart"
           ],
           "practisedBy": []
         },
@@ -859,7 +873,7 @@
           "gradeBand": "5-6",
           "requires": [
             "baderegeln",
-            "auftrieb-und-gleiten"
+            "erste-schwimmart"
           ],
           "practisedBy": []
         },

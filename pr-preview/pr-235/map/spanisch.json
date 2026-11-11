@@ -1181,7 +1181,8 @@
           "iCan": "Ich kann über meine Schule, Fächer und den Stundenplan sprechen.",
           "gradeBand": "5-6",
           "requires": [
-            "uhrzeit"
+            "uhrzeit",
+            "wochentage-und-monate"
           ],
           "practisedBy": []
         },
@@ -1318,15 +1319,27 @@
           "practisedBy": []
         },
         {
+          "id": "wochentage-und-monate",
+          "name": {
+            "de": "Wochentage und Monate",
+            "en": "Days of the week and months"
+          },
+          "iCan": "Ich kann die Wochentage und die Monate nennen (el lunes, en mayo).",
+          "gradeBand": "5-6",
+          "requires": [],
+          "practisedBy": []
+        },
+        {
           "id": "datum",
           "name": {
-            "de": "Wochentage, Monate und Datum",
-            "en": "Days, months and dates"
+            "de": "Datum",
+            "en": "Dates"
           },
-          "iCan": "Ich kann Wochentage, Monate und das Datum angeben (el lunes, el 3 de mayo).",
+          "iCan": "Ich kann das Datum angeben und danach fragen (Hoy es lunes, 3 de mayo. ¿Qué fecha es hoy?).",
           "gradeBand": "7-8",
           "requires": [
-            "zahlen-bis-100"
+            "zahlen-bis-100",
+            "wochentage-und-monate"
           ],
           "practisedBy": []
         },
@@ -1451,6 +1464,19 @@
           "gradeBand": "7-8",
           "requires": [
             "woerter-aus-anderen-sprachen"
+          ],
+          "practisedBy": []
+        },
+        {
+          "id": "sprachvergleich",
+          "name": {
+            "de": "Sprachvergleich Deutsch–Spanisch",
+            "en": "Comparing German and Spanish"
+          },
+          "iCan": "Ich kann Spanisch mit Deutsch und anderen Sprachen vergleichen und typische Unterschiede erklären.",
+          "gradeBand": "7-8",
+          "requires": [
+            "falsche-freunde"
           ],
           "practisedBy": []
         },
@@ -1695,7 +1721,7 @@
           "iCan": "Ich kann Nomen klein schreiben und weiß, dass auch Wochentage, Monate und Nationalitäten klein geschrieben werden.",
           "gradeBand": "7-8",
           "requires": [
-            "datum"
+            "wochentage-und-monate"
           ],
           "practisedBy": []
         },
@@ -1861,7 +1887,9 @@
           },
           "iCan": "Ich kann wichtige Feste in Spanien und Lateinamerika beschreiben (Navidad, Nochevieja, los Reyes Magos, Día de Muertos).",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "wochentage-und-monate"
+          ],
           "practisedBy": []
         },
         {

@@ -596,6 +596,19 @@
           "practisedBy": []
         },
         {
+          "id": "nebensatz-que",
+          "name": {
+            "de": "Nebensätze mit que",
+            "en": "That-clauses with que"
+          },
+          "iCan": "Ich kann einen Satz mit que anschließen, zum Beispiel Je pense que … oder Il dit que …",
+          "gradeBand": "5-6",
+          "requires": [
+            "nebensatz-quand-parce-que"
+          ],
+          "practisedBy": []
+        },
+        {
           "id": "konjunktionen-erweitert",
           "name": {
             "de": "Weitere Konjunktionen",
@@ -1012,7 +1025,7 @@
           "gradeBand": "9-10",
           "requires": [
             "subjonctif-bildung",
-            "meinung-aeussern"
+            "nebensatz-que"
           ],
           "practisedBy": []
         },
@@ -1050,9 +1063,9 @@
             "en": "Reported speech in the present"
           },
           "iCan": "Ich kann wiedergeben, was jemand sagt, zum Beispiel Il dit qu’il est malade.",
-          "gradeBand": "5-6",
+          "gradeBand": "7-8",
           "requires": [
-            "subjektpronomen",
+            "nebensatz-que",
             "possessivbegleiter"
           ],
           "practisedBy": []
@@ -1503,7 +1516,7 @@
           "iCan": "Ich kann meine Meinung mit Wendungen wie à mon avis, je pense que und je trouve que sagen und kurz begründen.",
           "gradeBand": "7-8",
           "requires": [
-            "nebensatz-quand-parce-que"
+            "nebensatz-que"
           ],
           "practisedBy": []
         },

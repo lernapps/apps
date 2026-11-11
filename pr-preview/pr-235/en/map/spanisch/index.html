@@ -115,7 +115,7 @@
     </div>
     <div class="map-legend" role="group" aria-label="Show building blocks" data-map-filter hidden>
       <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Covered <span class="map-filter-count">0</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap <span class="map-filter-count">184</span></button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap <span class="map-filter-count">186</span></button>
     </div>
   </div>
   <div class="map-scroll" role="region" aria-label="Learning map Spanish: building blocks by strand and grade" tabindex="0">
@@ -131,7 +131,7 @@
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-235/en/map/spanisch/wortschatz/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Vocabulary</a>
-            <span class="block mt-1 text-sm text-slate-600">0 of 32 building blocks practised</span>
+            <span class="block mt-1 text-sm text-slate-600">0 of 34 building blocks practised</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -548,6 +548,14 @@
 <li data-competency="uhrzeit">
   <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/uhrzeit/" class="map-chip map-chip-gap" data-opens="detail-uhrzeit">
     <span>Telling the time</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              
+<li data-competency="wochentage-und-monate">
+  <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/wochentage-und-monate/" class="map-chip map-chip-gap" data-opens="detail-wochentage-und-monate">
+    <span>Days of the week and months</span>
     <span class="sr-only">(gap, no app yet)</span>
   </a>
 </li>
@@ -1154,7 +1162,7 @@
               
 <li data-competency="datum">
   <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/datum/" class="map-chip map-chip-gap" data-opens="detail-datum">
-    <span>Days, months and dates</span>
+    <span>Dates</span>
     <span class="sr-only">(gap, no app yet)</span>
   </a>
 </li>
@@ -1211,6 +1219,14 @@
 <li data-competency="falsche-freunde">
   <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/falsche-freunde/" class="map-chip map-chip-gap" data-opens="detail-falsche-freunde">
     <span>False friends</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              
+<li data-competency="sprachvergleich">
+  <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/sprachvergleich/" class="map-chip map-chip-gap" data-opens="detail-sprachvergleich">
+    <span>Comparing German and Spanish</span>
     <span class="sr-only">(gap, no app yet)</span>
   </a>
 </li>
@@ -3244,6 +3260,8 @@
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/uhrzeit/" class="text-blue-700 underline underline-offset-2"><span>Telling the time</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-235/en/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Days of the week and months</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3429,14 +3447,31 @@
 </template>
 
 
-<template id="detail-datum" data-kind="Building block · Vocabulary">
-  <p data-dialog-title>Days, months and dates</p>
+<template id="detail-wochentage-und-monate" data-kind="Building block · Vocabulary">
+  <p data-dialog-title>Days of the week and months</p>
   <div data-dialog-body>
-    <p class="m-0" lang="de">Ich kann Wochentage, Monate und das Datum angeben (el lunes, el 3 de mayo).</p>
+    <p class="m-0" lang="de">Ich kann die Wochentage und die Monate nennen (el lunes, en mayo).</p>
+    <dl class="map-facts">
+      <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
+      <div><dt>Builds on</dt><dd>no other building block</dd></div>
+      <div><dt>Practised in</dt><dd>no app yet – a gap
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-235/en/map/spanisch/c/wochentage-und-monate/" class="btn btn-primary">All about this building block</a></p>
+  </div>
+</template>
+
+
+<template id="detail-datum" data-kind="Building block · Vocabulary">
+  <p data-dialog-title>Dates</p>
+  <div data-dialog-body>
+    <p class="m-0" lang="de">Ich kann das Datum angeben und danach fragen (Hoy es lunes, 3 de mayo. ¿Qué fecha es hoy?).</p>
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-235/en/map/spanisch/c/zahlen-bis-100/" class="text-blue-700 underline underline-offset-2"><span>Numbers up to 100</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-235/en/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Days of the week and months</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3608,6 +3643,23 @@
 </dd></div>
     </dl>
     <p class="m-0"><a href="/apps/pr-preview/pr-235/en/map/spanisch/c/falsche-freunde/" class="btn btn-primary">All about this building block</a></p>
+  </div>
+</template>
+
+
+<template id="detail-sprachvergleich" data-kind="Building block · Vocabulary">
+  <p data-dialog-title>Comparing German and Spanish</p>
+  <div data-dialog-body>
+    <p class="m-0" lang="de">Ich kann Spanisch mit Deutsch und anderen Sprachen vergleichen und typische Unterschiede erklären.</p>
+    <dl class="map-facts">
+      <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
+      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-235/en/map/spanisch/c/falsche-freunde/" class="text-blue-700 underline underline-offset-2"><span>False friends</span></a>
+</li></ul></dd></div>
+      <div><dt>Practised in</dt><dd>no app yet – a gap
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-235/en/map/spanisch/c/sprachvergleich/" class="btn btn-primary">All about this building block</a></p>
   </div>
 </template>
 
@@ -3915,7 +3967,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-235/en/map/spanisch/c/datum/" class="text-blue-700 underline underline-offset-2"><span>Days, months and dates</span></a> <span class="text-slate-600">· strand Vocabulary</span>
+<a href="/apps/pr-preview/pr-235/en/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Days of the week and months</span></a> <span class="text-slate-600">· strand Vocabulary</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4126,7 +4178,9 @@
     <p class="m-0" lang="de">Ich kann wichtige Feste in Spanien und Lateinamerika beschreiben (Navidad, Nochevieja, los Reyes Magos, Día de Muertos).</p>
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
-      <div><dt>Builds on</dt><dd>no other building block</dd></div>
+      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-235/en/map/spanisch/c/wochentage-und-monate/" class="text-blue-700 underline underline-offset-2"><span>Days of the week and months</span></a> <span class="text-slate-600">· strand Vocabulary</span>
+</li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
     </dl>
