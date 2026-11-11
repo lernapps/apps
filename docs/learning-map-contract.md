@@ -72,7 +72,7 @@ step below its deepest prerequisite of the same band. A prerequisite of an earli
 everything a competency requires stands above it, and the competencies of one step are independent of each other.
 `lib/map.js` computes it (`places`, and `steps` numbering the rows through all bands, with `ancestors`, `descendants`,
 `byStep` and `stepRows`); the map shows the subject by grade and chain at `/apps/map/<subject>/c/` and the chain of a
-competency on its page (feat/map-chains, KD-17). The JSON (section 5) does not carry it.
+competency on its page (feat/map-chains, KD-17). The JSON (section 5) carries it as `place: { band, step }`.
 
 ### The focus of a subject: `explainerFocus` (lernapps/apps#226)
 
@@ -204,6 +204,24 @@ pages are in the order of the app. With `strand: none` the file has `"strand": "
 app (`subject` in `src/app.yaml`, section 1) has `"subject": "<subject>"` instead of `"strand"`. A recap
 page has `"recap": "<subject>/<competency>"` instead of `competencies`.
 
+### A page ahead of its prerequisites: `ahead`
+
+A page may come before a prerequisite of its competencies on purpose, for example greetings learnt as fixed phrases
+before the grammar behind them. It lists those prerequisites in `ahead` (ids), and the app practises each of them on
+another page; then their order is not checked (feat/map-json-place, KD-03).
+
+```yaml
+competencies: [subjonctif-il-faut-que]
+ahead: [subjonctif-bildung]                        # comes later in this app, on purpose
+```
+
+| Rule | Checked by |
+|---|---|
+| Every id in `ahead` is practised on a page of the same app | listing (`checkPages`, kind `ahead`), `lernapps check` |
+| Only the order is waived: a prerequisite the app does not have stays a gap or an entry | listing, `lernapps check` |
+
+`lernapps-pages.json` carries `ahead` as the page has it.
+
 ## 4. A catalog entry: `entries/<id>.yaml` (lernapps/apps)
 
 `subject` is the id of a subject of the map; the catalog shows its name from the map (lernapps/apps#226). Two
@@ -230,7 +248,8 @@ says under "The focus of a subject".
 ## 5. The map as data: `/apps/map/<subject>.json` (lernapps/apps)
 
 For assistants and the tooling: the subject as in its YAML (with `explainerFocus`, always given), plus `curricula` (id, land, schoolType, version, placements)
-and `coverage` (per competency: the apps and pages that practise it), and for a language with a basic vocabulary its
+and `coverage` (per competency: the apps and pages that practise it), per competency its `place` (`{ band, step }`,
+section 1) and `opens` (how many competencies build on it, directly or further down), and for a language with a basic vocabulary its
 `vocabulary` (section 6). Linked from `/apps/llms.txt`.
 
 ## 6. The basic vocabulary of a language: `map/<subject>/vocabulary/` (lernapps/apps)

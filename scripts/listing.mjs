@@ -213,6 +213,7 @@ async function pageFindings(file, subject, pages, url, add) {
       order: "Put the page that practises the prerequisite before this page",
       gap: `Practise ${f.prerequisite} on a page before this one, or repeat it there on a recap page (recap: ${subject.id}/${f.prerequisite})`,
       entry: `Add a recap page before this one (recap: ${subject.id}/${f.prerequisite}), or link its page on the map in the text`,
+      ahead: `Practise ${f.prerequisite} on a page of the app, or remove it from ahead`,
     }[f.kind];
     add(severity, where, f.text, fix);
   }
