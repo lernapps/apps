@@ -148,7 +148,6 @@
           "iCan": "Ich kann mit dem Energieerhaltungssatz erklären, dass Energie nicht verloren geht, sondern nur umgewandelt oder übertragen wird.",
           "gradeBand": "9-10",
           "requires": [
-            "energieumwandlung",
             "energieuebertragung"
           ],
           "practisedBy": []
@@ -177,7 +176,6 @@
           "gradeBand": "9-10",
           "requires": [
             "energieerhaltung",
-            "energie-und-joule",
             "lageenergie-berechnen",
             "bewegungsenergie-berechnen"
           ],
@@ -539,9 +537,7 @@
           },
           "iCan": "Ich kann elektrische Ladung beschreiben und erklären, wie sich gleichartige und verschiedenartige Ladungen verhalten.",
           "gradeBand": "9-10",
-          "requires": [
-            "atomaufbau"
-          ],
+          "requires": [],
           "practisedBy": []
         },
         {
@@ -553,7 +549,7 @@
           "iCan": "Ich kann elektrostatische Phänomene aus dem Alltag wie Reibungselektrizität oder Blitze mit Ladungen erklären.",
           "gradeBand": "9-10",
           "requires": [
-            "elektrische-ladung"
+            "atomaufbau"
           ],
           "practisedBy": []
         },
@@ -588,7 +584,7 @@
           "gradeBand": "9-10",
           "requires": [
             "stromstaerke",
-            "elektrische-ladung"
+            "atomaufbau"
           ],
           "practisedBy": []
         },
@@ -839,7 +835,6 @@
           "iCan": "Ich kann erklären, wie Sicherungen und Kurzschlussschutz in der Hausinstallation vor Überlastung schützen.",
           "gradeBand": "9-10",
           "requires": [
-            "widerstand",
             "elektrische-leistung"
           ],
           "practisedBy": []
@@ -1056,7 +1051,9 @@
           },
           "iCan": "Ich kann erklären, dass eine Kraft einen Körper verformen oder seine Bewegung ändern kann.",
           "gradeBand": "9-10",
-          "requires": [],
+          "requires": [
+            "geschwindigkeitsaenderung"
+          ],
           "practisedBy": []
         },
         {
@@ -1120,8 +1117,7 @@
           "iCan": "Ich kann erklären, wie eine Kraft den Betrag und die Richtung der Geschwindigkeit ändert.",
           "gradeBand": "9-10",
           "requires": [
-            "kraft-darstellen",
-            "geschwindigkeitsaenderung"
+            "kraft-darstellen"
           ],
           "practisedBy": []
         },
@@ -1243,7 +1239,8 @@
           "iCan": "Ich kann die Mondphasen mit der Stellung von Sonne, Erde und Mond erklären.",
           "gradeBand": "7-8",
           "requires": [
-            "schatten"
+            "schatten",
+            "lichtquellen-und-sehen"
           ],
           "practisedBy": []
         },
@@ -1443,7 +1440,7 @@
           "iCan": "Ich kann den Strahlungshaushalt der Erde beschreiben, auch das Rückstrahlvermögen von Flächen.",
           "gradeBand": "9-10",
           "requires": [
-            "absorption-emission-transmission",
+            "waermestrahlung",
             "elektromagnetisches-spektrum"
           ],
           "practisedBy": []
@@ -1491,7 +1488,9 @@
           },
           "iCan": "Ich kann den Aufbau eines Atoms aus Kern und Hülle beschreiben und Protonen, Neutronen und Elektronen unterscheiden.",
           "gradeBand": "9-10",
-          "requires": [],
+          "requires": [
+            "elektrische-ladung"
+          ],
           "practisedBy": []
         },
         {
@@ -1623,7 +1622,6 @@
           "gradeBand": "9-10",
           "requires": [
             "spontanzerfall",
-            "atomaufbau",
             "energieumwandlung"
           ],
           "practisedBy": []

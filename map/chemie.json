@@ -160,8 +160,7 @@
           "iCan": "Ich kann Sauerstoff, Wasserstoff und Kohlenstoffdioxid mit Glimmspan-, Knallgas- und Kalkwasserprobe nachweisen.",
           "gradeBand": "7-8",
           "requires": [
-            "stoffeigenschaften-beschreiben",
-            "sicherheit-beim-experimentieren"
+            "stoffeigenschaften-beschreiben"
           ],
           "practisedBy": []
         },
@@ -200,7 +199,9 @@
           },
           "iCan": "Ich kann Reinstoffe und Gemische unterscheiden.",
           "gradeBand": "7-8",
-          "requires": [],
+          "requires": [
+            "stoffeigenschaften-beschreiben"
+          ],
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -220,8 +221,7 @@
           "iCan": "Ich kann ein Stoffgemisch mit einem passenden Verfahren trennen, etwa durch Filtrieren, Eindampfen oder Destillieren.",
           "gradeBand": "7-8",
           "requires": [
-            "reinstoffe-und-gemische",
-            "stoffeigenschaften-beschreiben"
+            "reinstoffe-und-gemische"
           ],
           "practisedBy": []
         },
@@ -246,7 +246,9 @@
           },
           "iCan": "Ich kann das Teilchenmodell beschreiben und sagen, was es erklärt und was nicht.",
           "gradeBand": "7-8",
-          "requires": [],
+          "requires": [
+            "stoffeigenschaften-beschreiben"
+          ],
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -302,7 +304,8 @@
           "gradeBand": "7-8",
           "requires": [
             "teilchenmodell",
-            "elemente-und-verbindungen"
+            "elemente-und-verbindungen",
+            "massenerhaltung"
           ],
           "practisedBy": []
         },
@@ -414,8 +417,7 @@
           "iCan": "Ich kann Metalle, Nichtmetalle und Grenzfälle an ihren Eigenschaften und ihrem Platz im Periodensystem erkennen.",
           "gradeBand": "7-8",
           "requires": [
-            "periodensystem-lesen",
-            "stoffeigenschaften-beschreiben"
+            "periodensystem-lesen"
           ],
           "practisedBy": [
             {
@@ -492,7 +494,6 @@
           "iCan": "Ich kann die acht Hauptgruppen nennen und sagen, wie viele Außenelektronen ihre Atome haben.",
           "gradeBand": "9-10",
           "requires": [
-            "periodensystem-lesen",
             "schalenmodell"
           ],
           "practisedBy": [
@@ -822,8 +823,7 @@
           "iCan": "Ich kann mit einem Versuch zeigen und erklären, dass bei einer Reaktion die Gesamtmasse gleich bleibt.",
           "gradeBand": "7-8",
           "requires": [
-            "kennzeichen-chemischer-reaktionen",
-            "teilchenmodell"
+            "kennzeichen-chemischer-reaktionen"
           ],
           "practisedBy": [
             {
@@ -886,9 +886,7 @@
           "gradeBand": "7-8",
           "requires": [
             "wortgleichung",
-            "formeln-von-verbindungen",
-            "massenerhaltung",
-            "daltonsches-atommodell"
+            "formeln-von-verbindungen"
           ],
           "practisedBy": [
             {
@@ -909,8 +907,7 @@
           "iCan": "Ich kann die Stoffmenge und die molare Masse eines Stoffes nutzen, um Teilchenzahl und Masse ineinander umzurechnen.",
           "gradeBand": "9-10",
           "requires": [
-            "formeln-von-verbindungen",
-            "massenerhaltung"
+            "formeln-von-verbindungen"
           ],
           "practisedBy": []
         },

@@ -76,7 +76,7 @@
   <h2 id="ordnung-mathematik" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/map/mathematik/he-gymnasium/" class="btn btn-primary" aria-current="page">Nach Klassen</a></li>
-    <li><a href="/apps/map/mathematik/c/" class="btn btn-secondary">Nach Stufen der Kette</a></li>
+    <li><a href="/apps/map/mathematik/c/" class="btn btn-secondary">Nach Klasse und Kette</a></li>
   </ul>
 </nav>
 
@@ -116,7 +116,7 @@
     </div>
     <div class="map-legend" role="group" aria-label="Bausteine zeigen" data-map-filter hidden>
       <button type="button" class="map-filter" data-show="covered" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt <span class="map-filter-count">16</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">111</span></button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">112</span></button>
     </div>
   </div>
   <div class="map-scroll" role="region" aria-label="Lernlandkarte Mathematik: Bausteine nach Strang und Klasse" tabindex="0">
@@ -142,7 +142,7 @@
           </th>
           <th scope="col">
             <a href="/apps/map/mathematik/geometrie/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Geometrie</a>
-            <span class="block mt-1 text-sm text-slate-600">0 von 36 Bausteinen geübt</span>
+            <span class="block mt-1 text-sm text-slate-600">0 von 37 Bausteinen geübt</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -413,6 +413,16 @@
             </ul>
           </td>
           <td>
+            <ul class="map-cell">
+              
+<li data-competency="geometrische-grundbegriffe">
+  <a href="/apps/map/mathematik/c/geometrische-grundbegriffe/" class="map-chip map-chip-gap" data-opens="detail-geometrische-grundbegriffe">
+    <span>Geometrische Grundbegriffe</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+            </ul>
           </td>
           <td>
           </td>
@@ -1364,7 +1374,7 @@
         <div><dt class="font-bold"><a href="/apps/map/#richtstufe" class="text-blue-700 underline underline-offset-2">Richtstufe</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Ungefähr wann ein Baustein dran ist. Wählst du einen Lehrplan, siehst du dessen Klassen.</dd></div>
         <div><dt class="font-bold"><a href="/apps/map/#app" class="text-blue-700 underline underline-offset-2">App</a> · die Farbe</dt><dd class="m-0 mt-1 text-slate-600">Blau heißt abgedeckt: Eine App übt den Baustein. Gestrichelt heißt Lücke: Noch keine App übt ihn.</dd></div>
       </dl>
-      <p id="modus" class="m-0 mt-4 text-slate-600">Du siehst den Lehrplan Hessen, Gymnasium (G9). Er ordnet 123 von 127 Bausteinen einer Klasse zu. Ein Baustein steht in der ersten Klasse, in der er dran ist. „Wieder in Klasse …“ sagt, wann der Lehrplan ihn noch einmal aufgreift. Bausteine ohne Klasse stehen in der gestreiften Zeile ihrer Richtstufe.</p>
+      <p id="modus" class="m-0 mt-4 text-slate-600">Du siehst den Lehrplan Hessen, Gymnasium (G9). Er ordnet 123 von 128 Bausteinen einer Klasse zu. Ein Baustein steht in der ersten Klasse, in der er dran ist. „Wieder in Klasse …“ sagt, wann der Lehrplan ihn noch einmal aufgreift. Bausteine ohne Klasse stehen in der gestreiften Zeile ihrer Richtstufe.</p>
       <p class="m-0 mt-2 text-slate-600">Noch nicht erfasst: Baden-Württemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen</p>
       <p class="m-0 mt-3"><a href="/apps/map/#begriffe" class="text-blue-700 underline underline-offset-2">Alle Begriffe und wie sie zusammenhängen</a> · <a href="/apps/map/#methode" class="text-blue-700 underline underline-offset-2">Warum diese Methode?</a></p>
     </div>
@@ -1563,7 +1573,7 @@
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/brueche-begriff/" class="text-blue-700 underline underline-offset-2"><span>Bruchbegriff</span></a>
 </li><li>
-<a href="/apps/map/mathematik/c/teilbarkeit/" class="text-blue-700 underline underline-offset-2"><span>Teiler, Vielfache und Teilbarkeit</span></a>
+<a href="/apps/map/mathematik/c/primfaktoren-ggt-kgv/" class="text-blue-700 underline underline-offset-2"><span>Primfaktoren, ggT und kgV</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -1773,8 +1783,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 7</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/brueche-begriff/" class="text-blue-700 underline underline-offset-2"><span>Bruchbegriff</span></a>
-</li><li>
 <a href="/apps/map/mathematik/c/dezimalbrueche/" class="text-blue-700 underline underline-offset-2"><span>Dezimalbrüche und Periode</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>
@@ -2088,9 +2096,9 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/grundrechenarten-rechengesetze/" class="text-blue-700 underline underline-offset-2"><span>Vorrangregeln und Rechengesetze</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
-</li><li>
 <a href="/apps/map/mathematik/c/einfache-gleichungen/" class="text-blue-700 underline underline-offset-2"><span>Einfache Gleichungen</span></a>
+</li><li>
+<a href="/apps/map/mathematik/c/rationale-zahlen-rechnen/" class="text-blue-700 underline underline-offset-2"><span>Rechnen mit negativen Zahlen</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2150,8 +2158,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/terme-umformen/" class="text-blue-700 underline underline-offset-2"><span>Terme umformen</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/einfache-gleichungen/" class="text-blue-700 underline underline-offset-2"><span>Einfache Gleichungen</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2224,8 +2230,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>noch nicht eingeordnet, es gilt die Richtstufe 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/klammern-binome/" class="text-blue-700 underline underline-offset-2"><span>Klammern und binomische Formeln</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/brueche-kuerzen-erweitern/" class="text-blue-700 underline underline-offset-2"><span>Brüche kürzen und erweitern</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2301,8 +2305,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/potenzen/" class="text-blue-700 underline underline-offset-2"><span>Potenzen und Zehnerpotenzen</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
-</li><li>
 <a href="/apps/map/mathematik/c/terme-umformen/" class="text-blue-700 underline underline-offset-2"><span>Terme umformen</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -2322,8 +2324,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/potenzgesetze/" class="text-blue-700 underline underline-offset-2"><span>Potenzgesetze</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/brueche-multiplizieren-dividieren/" class="text-blue-700 underline underline-offset-2"><span>Bruchrechnung: Multiplikation und Division</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2401,8 +2401,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/potenzgesetze/" class="text-blue-700 underline underline-offset-2"><span>Potenzgesetze</span></a>
-</li><li>
 <a href="/apps/map/mathematik/c/exponentialfunktionen/" class="text-blue-700 underline underline-offset-2"><span>Exponentialfunktionen</span></a> <span class="text-slate-600">· Strang Funktionen</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -2538,8 +2536,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 8, 9, 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/funktionsbegriff/" class="text-blue-700 underline underline-offset-2"><span>Funktionsbegriff</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/koordinatensystem/" class="text-blue-700 underline underline-offset-2"><span>Koordinatensystem</span></a> <span class="text-slate-600">· Strang Geometrie</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2560,8 +2556,6 @@
 <a href="/apps/map/mathematik/c/proportionale-zuordnungen/" class="text-blue-700 underline underline-offset-2"><span>Proportionale Zuordnungen</span></a>
 </li><li>
 <a href="/apps/map/mathematik/c/funktionen-darstellung/" class="text-blue-700 underline underline-offset-2"><span>Darstellungen von Funktionen</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/koordinatensystem/" class="text-blue-700 underline underline-offset-2"><span>Koordinatensystem</span></a> <span class="text-slate-600">· Strang Geometrie</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2600,8 +2594,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 9</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/lineare-funktionen/" class="text-blue-700 underline underline-offset-2"><span>Lineare Funktionen</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/funktionen-darstellung/" class="text-blue-700 underline underline-offset-2"><span>Darstellungen von Funktionen</span></a>
 </li><li>
 <a href="/apps/map/mathematik/c/klammern-binome/" class="text-blue-700 underline underline-offset-2"><span>Klammern und binomische Formeln</span></a> <span class="text-slate-600">· Strang Algebra</span>
 </li></ul></dd></div>
@@ -2664,6 +2656,8 @@
 <a href="/apps/map/mathematik/c/prozent-veraenderung/" class="text-blue-700 underline underline-offset-2"><span>Prozentuale Zu- und Abnahme</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
 </li><li>
 <a href="/apps/map/mathematik/c/potenzgesetze/" class="text-blue-700 underline underline-offset-2"><span>Potenzgesetze</span></a> <span class="text-slate-600">· Strang Algebra</span>
+</li><li>
+<a href="/apps/map/mathematik/c/funktionen-darstellung/" class="text-blue-700 underline underline-offset-2"><span>Darstellungen von Funktionen</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2701,8 +2695,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/trigonometrie/" class="text-blue-700 underline underline-offset-2"><span>Trigonometrie im rechtwinkligen Dreieck</span></a> <span class="text-slate-600">· Strang Geometrie</span>
-</li><li>
 <a href="/apps/map/mathematik/c/bogenmass/" class="text-blue-700 underline underline-offset-2"><span>Bogenmaß</span></a>
 </li><li>
 <a href="/apps/map/mathematik/c/funktionen-darstellung/" class="text-blue-700 underline underline-offset-2"><span>Darstellungen von Funktionen</span></a>
@@ -2715,6 +2707,22 @@
 </template>
 
 
+<template id="detail-geometrische-grundbegriffe" data-kind="Baustein · Geometrie">
+  <p data-dialog-title>Geometrische Grundbegriffe</p>
+  <div data-dialog-body>
+    <p class="m-0">Ich kann Punkt, Strecke, Gerade und Ebene unterscheiden und richtig benennen.</p>
+    <dl class="map-facts">
+      <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
+      <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>noch nicht eingeordnet, es gilt die Richtstufe 5/6</dd></div>
+      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/map/mathematik/c/geometrische-grundbegriffe/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
+  </div>
+</template>
+
+
 <template id="detail-grundfiguren-eben" data-kind="Baustein · Geometrie">
   <p data-dialog-title>Ebene Grundfiguren</p>
   <div data-dialog-body>
@@ -2722,7 +2730,9 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 5</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/map/mathematik/c/parallel-senkrecht-abstand/" class="text-blue-700 underline underline-offset-2"><span>Parallelen, Senkrechten und Abstand</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -2738,7 +2748,9 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 5</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/map/mathematik/c/geometrische-grundbegriffe/" class="text-blue-700 underline underline-offset-2"><span>Geometrische Grundbegriffe</span></a>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -2774,6 +2786,8 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 5, 7</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/natuerliche-zahlen/" class="text-blue-700 underline underline-offset-2"><span>Natürliche Zahlen im Stellenwertsystem</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
+</li><li>
+<a href="/apps/map/mathematik/c/geometrische-grundbegriffe/" class="text-blue-700 underline underline-offset-2"><span>Geometrische Grundbegriffe</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2810,8 +2824,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 5</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/grundfiguren-eben/" class="text-blue-700 underline underline-offset-2"><span>Ebene Grundfiguren</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/parallel-senkrecht-abstand/" class="text-blue-700 underline underline-offset-2"><span>Parallelen, Senkrechten und Abstand</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2830,8 +2842,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 5</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/grundfiguren-eben/" class="text-blue-700 underline underline-offset-2"><span>Ebene Grundfiguren</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/parallel-senkrecht-abstand/" class="text-blue-700 underline underline-offset-2"><span>Parallelen, Senkrechten und Abstand</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2852,6 +2862,8 @@
 <a href="/apps/map/mathematik/c/symmetrie/" class="text-blue-700 underline underline-offset-2"><span>Symmetrie</span></a>
 </li><li>
 <a href="/apps/map/mathematik/c/koordinatensystem/" class="text-blue-700 underline underline-offset-2"><span>Koordinatensystem</span></a>
+</li><li>
+<a href="/apps/map/mathematik/c/winkel-messen/" class="text-blue-700 underline underline-offset-2"><span>Winkel messen und zeichnen</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2925,8 +2937,6 @@
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/grundfiguren-eben/" class="text-blue-700 underline underline-offset-2"><span>Ebene Grundfiguren</span></a>
 </li><li>
-<a href="/apps/map/mathematik/c/umrechnung-groessen/" class="text-blue-700 underline underline-offset-2"><span>Einheiten umrechnen</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
-</li><li>
 <a href="/apps/map/mathematik/c/einheiten-flaeche-volumen/" class="text-blue-700 underline underline-offset-2"><span>Flächen- und Volumeneinheiten</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -2946,8 +2956,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 6, 7</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/" class="text-blue-700 underline underline-offset-2"><span>Fläche und Umfang: Rechteck, Quadrat</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/grundfiguren-eben/" class="text-blue-700 underline underline-offset-2"><span>Ebene Grundfiguren</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3006,8 +3014,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 7</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/winkel-messen/" class="text-blue-700 underline underline-offset-2"><span>Winkel messen und zeichnen</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/parallel-senkrecht-abstand/" class="text-blue-700 underline underline-offset-2"><span>Parallelen, Senkrechten und Abstand</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3084,8 +3090,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/grundfiguren-eben/" class="text-blue-700 underline underline-offset-2"><span>Ebene Grundfiguren</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/parallel-senkrecht-abstand/" class="text-blue-700 underline underline-offset-2"><span>Parallelen, Senkrechten und Abstand</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3405,8 +3409,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 9, 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/satz-des-pythagoras/" class="text-blue-700 underline underline-offset-2"><span>Satz des Pythagoras</span></a>
-</li><li>
 <a href="/apps/map/mathematik/c/strahlensaetze/" class="text-blue-700 underline underline-offset-2"><span>Strahlensätze</span></a>
 </li><li>
 <a href="/apps/map/mathematik/c/trigonometrie/" class="text-blue-700 underline underline-offset-2"><span>Trigonometrie im rechtwinkligen Dreieck</span></a>
@@ -3426,7 +3428,9 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 5, 7, 8, 9</dd></div>
-      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/map/mathematik/c/zahlen-vergleichen-ordnen/" class="text-blue-700 underline underline-offset-2"><span>Zahlen vergleichen und ordnen</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
+</li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -3554,8 +3558,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 6, 7</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/haeufigkeit-als-schaetzwert/" class="text-blue-700 underline underline-offset-2"><span>Relative Häufigkeit als Schätzwert</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/brueche-begriff/" class="text-blue-700 underline underline-offset-2"><span>Bruchbegriff</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3620,6 +3622,8 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 7, 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/zufall-laplace/" class="text-blue-700 underline underline-offset-2"><span>Laplace-Formel</span></a>
+</li><li>
+<a href="/apps/map/mathematik/c/zaehlprinzip/" class="text-blue-700 underline underline-offset-2"><span>Zählprinzip</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>
 <ul class="list-none p-0 m-0 flex flex-col gap-1">
@@ -3691,8 +3695,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 7, 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/zufall-pfadregel-1/" class="text-blue-700 underline underline-offset-2"><span>Erste Pfadregel (Produktregel)</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/brueche-addieren-subtrahieren/" class="text-blue-700 underline underline-offset-2"><span>Bruchrechnung: Addition und Subtraktion</span></a> <span class="text-slate-600">· Strang Arithmetik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>
 <ul class="list-none p-0 m-0 flex flex-col gap-1">
@@ -3740,8 +3742,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 7, 10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/mathematik/c/zufall-baumdiagramm/" class="text-blue-700 underline underline-offset-2"><span>Mehrstufige Zufallsexperimente</span></a>
-</li><li>
 <a href="/apps/map/mathematik/c/zufall-pfadregel-2/" class="text-blue-700 underline underline-offset-2"><span>Zweite Pfadregel (Summenregel)</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>
@@ -3858,8 +3858,6 @@
       <div><dt>Lehrplan Hessen, Gymnasium (G9)</dt><dd>Klasse 7, 8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/map/mathematik/c/zufall-laplace/" class="text-blue-700 underline underline-offset-2"><span>Laplace-Formel</span></a>
-</li><li>
-<a href="/apps/map/mathematik/c/haeufigkeiten/" class="text-blue-700 underline underline-offset-2"><span>Absolute und relative Häufigkeit</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>

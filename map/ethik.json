@@ -791,7 +791,6 @@
           "iCan": "Ich kann Regeln, Gesetze und moralische Normen unterscheiden und erklären, wer Gesetze macht.",
           "gradeBand": "7-8",
           "requires": [
-            "regeln-und-fairness",
             "werte-und-normen"
           ],
           "practisedBy": []
@@ -1467,7 +1466,8 @@
           "iCan": "Ich kann erklären, wie Sokrates im Gespräch durch Fragen nach Wahrheit suchte und was sein Satz „Ich weiß, dass ich nichts weiß“ bedeutet.",
           "gradeBand": "9-10",
           "requires": [
-            "meinen-glauben-wissen"
+            "meinen-glauben-wissen",
+            "philosophische-fragen"
           ],
           "practisedBy": []
         },
@@ -1656,7 +1656,9 @@
           },
           "iCan": "Ich kann Grundlagen des Judentums beschreiben, zum Beispiel die Tora, den Bund Gottes mit Abraham und den Sabbat.",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "schoepfungserzaehlungen"
+          ],
           "practisedBy": []
         },
         {
@@ -1681,7 +1683,6 @@
           "iCan": "Ich kann Grundlagen des Islam beschreiben: das Leben Mohammeds, den Koran und die Fünf Säulen.",
           "gradeBand": "5-6",
           "requires": [
-            "judentum",
             "christentum"
           ],
           "practisedBy": []
@@ -1828,7 +1829,8 @@
           "gradeBand": "9-10",
           "requires": [
             "mensch-als-kulturwesen",
-            "philosophische-fragen"
+            "philosophische-fragen",
+            "mythos-und-wissenschaft"
           ],
           "practisedBy": []
         },

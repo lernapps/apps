@@ -298,8 +298,7 @@
           "iCan": "Ich kann ein direktes Objekt durch le, la, les, me, te, nous oder vous ersetzen und richtig stellen, auch vor einem Infinitiv.",
           "gradeBand": "5-6",
           "requires": [
-            "direktes-und-indirektes-objekt",
-            "subjektpronomen"
+            "direktes-und-indirektes-objekt"
           ],
           "practisedBy": []
         },
@@ -444,7 +443,8 @@
           "iCan": "Ich kann eine Frage nur mit der Satzmelodie stellen, zum Beispiel Tu viens ?",
           "gradeBand": "5-6",
           "requires": [
-            "aussagesatz-wortstellung"
+            "aussagesatz-wortstellung",
+            "betonung-und-satzmelodie"
           ],
           "practisedBy": []
         },
@@ -596,6 +596,19 @@
           "practisedBy": []
         },
         {
+          "id": "nebensatz-que",
+          "name": {
+            "de": "Nebensätze mit que",
+            "en": "That-clauses with que"
+          },
+          "iCan": "Ich kann einen Satz mit que anschließen, zum Beispiel Je pense que … oder Il dit que …",
+          "gradeBand": "5-6",
+          "requires": [
+            "nebensatz-quand-parce-que"
+          ],
+          "practisedBy": []
+        },
+        {
           "id": "konjunktionen-erweitert",
           "name": {
             "de": "Weitere Konjunktionen",
@@ -658,7 +671,8 @@
           "gradeBand": "7-8",
           "requires": [
             "futur-compose",
-            "unregelmaessige-verben-venir-voir"
+            "unregelmaessige-verben-venir-voir",
+            "verb-etre"
           ],
           "practisedBy": []
         },
@@ -815,7 +829,7 @@
           "gradeBand": "5-6",
           "requires": [
             "verb-avoir",
-            "verben-auf-er"
+            "unregelmaessige-verben-aller-faire"
           ],
           "practisedBy": []
         },
@@ -829,7 +843,8 @@
           "gradeBand": "5-6",
           "requires": [
             "passe-compose-avoir",
-            "verb-etre"
+            "verb-etre",
+            "adjektiv-angleichung"
           ],
           "practisedBy": []
         },
@@ -912,8 +927,7 @@
           "iCan": "Ich kann das futur simple bilden, auch bei unregelmäßigen Verben wie être, avoir, aller und faire.",
           "gradeBand": "7-8",
           "requires": [
-            "futur-compose",
-            "unregelmaessige-verben-aller-faire"
+            "futur-compose"
           ],
           "practisedBy": []
         },
@@ -954,7 +968,8 @@
           "iCan": "Ich kann erfüllbare Bedingungen mit si und Präsens formulieren, zum Beispiel S’il pleut, je reste à la maison.",
           "gradeBand": "7-8",
           "requires": [
-            "futur-simple"
+            "futur-simple",
+            "nebensatz-quand-parce-que"
           ],
           "practisedBy": []
         },
@@ -996,7 +1011,6 @@
           "iCan": "Ich kann den subjonctif présent regelmäßiger und häufiger unregelmäßiger Verben bilden.",
           "gradeBand": "9-10",
           "requires": [
-            "verben-auf-er",
             "unregelmaessige-verben-venir-voir"
           ],
           "practisedBy": []
@@ -1010,7 +1024,8 @@
           "iCan": "Ich kann den subjonctif nach il faut que und nach Verben des Wollens wie vouloir que verwenden.",
           "gradeBand": "9-10",
           "requires": [
-            "subjonctif-bildung"
+            "subjonctif-bildung",
+            "nebensatz-que"
           ],
           "practisedBy": []
         },
@@ -1048,9 +1063,9 @@
             "en": "Reported speech in the present"
           },
           "iCan": "Ich kann wiedergeben, was jemand sagt, zum Beispiel Il dit qu’il est malade.",
-          "gradeBand": "5-6",
+          "gradeBand": "7-8",
           "requires": [
-            "subjektpronomen",
+            "nebensatz-que",
             "possessivbegleiter"
           ],
           "practisedBy": []
@@ -1079,7 +1094,6 @@
           "gradeBand": "9-10",
           "requires": [
             "indirekte-rede-praesens",
-            "imparfait",
             "plus-que-parfait"
           ],
           "practisedBy": []
@@ -1235,7 +1249,7 @@
           "iCan": "Ich kann über meine Hobbys, Sportarten und meine Freizeit sprechen.",
           "gradeBand": "5-6",
           "requires": [
-            "verben-auf-er",
+            "unregelmaessige-verben-aller-faire",
             "zusammengezogener-artikel"
           ],
           "practisedBy": []
@@ -1264,7 +1278,8 @@
           "gradeBand": "5-6",
           "requires": [
             "unbestimmter-artikel",
-            "uhrzeit"
+            "uhrzeit",
+            "datum-wochentage-monate"
           ],
           "practisedBy": []
         },
@@ -1380,7 +1395,8 @@
           "iCan": "Ich kann Lebensmittel und Mahlzeiten benennen und sagen, was ich gern esse und trinke.",
           "gradeBand": "5-6",
           "requires": [
-            "teilungsartikel"
+            "teilungsartikel",
+            "vorlieben-und-abneigungen"
           ],
           "practisedBy": []
         },
@@ -1500,7 +1516,7 @@
           "iCan": "Ich kann meine Meinung mit Wendungen wie à mon avis, je pense que und je trouve que sagen und kurz begründen.",
           "gradeBand": "7-8",
           "requires": [
-            "nebensatz-quand-parce-que"
+            "nebensatz-que"
           ],
           "practisedBy": []
         },
@@ -1592,7 +1608,6 @@
           "iCan": "Ich kann über Berufe, meinen Traumberuf und ein Praktikum sprechen.",
           "gradeBand": "7-8",
           "requires": [
-            "futur-simple",
             "conditionnel-present"
           ],
           "practisedBy": []
@@ -1633,7 +1648,8 @@
           "iCan": "Ich kann mit Wörtern wie le personnage, le narrateur, la scène und le titre über einen Text sprechen.",
           "gradeBand": "7-8",
           "requires": [
-            "meinung-aeussern"
+            "meinung-aeussern",
+            "figuren-ort-zeit-handlung"
           ],
           "practisedBy": []
         },
@@ -1771,7 +1787,6 @@
           "iCan": "Ich kann zwei Wörter richtig binden (liaison) und weiß, wann ich nicht binden darf.",
           "gradeBand": "7-8",
           "requires": [
-            "stumme-buchstaben",
             "h-aspire-h-muet"
           ],
           "practisedBy": []
@@ -1799,7 +1814,8 @@
           "gradeBand": "5-6",
           "requires": [
             "nasale",
-            "e-laute"
+            "e-laute",
+            "u-und-ou"
           ],
           "practisedBy": []
         },
@@ -1954,7 +1970,9 @@
           "gradeBand": "5-6",
           "requires": [
             "tagesablauf",
-            "familie-und-freunde"
+            "familie-und-freunde",
+            "freizeit-und-hobbys",
+            "schule-und-schulalltag"
           ],
           "practisedBy": []
         },
@@ -2021,7 +2039,8 @@
           "gradeBand": "7-8",
           "requires": [
             "wohnen",
-            "staedte-frankreichs"
+            "staedte-frankreichs",
+            "adjektiv-steigerung"
           ],
           "practisedBy": []
         },
@@ -2123,7 +2142,8 @@
           "iCan": "Ich kann die Rolle Frankreichs in Europa beschreiben, zum Beispiel am Europäischen Parlament in Straßburg.",
           "gradeBand": "9-10",
           "requires": [
-            "deutsch-franzoesische-freundschaft"
+            "deutsch-franzoesische-freundschaft",
+            "eine-region-frankreichs"
           ],
           "practisedBy": []
         },
@@ -2238,7 +2258,8 @@
           "iCan": "Ich kann einer Geschichte entnehmen, wer vorkommt, wo und wann sie spielt und was passiert.",
           "gradeBand": "5-6",
           "requires": [
-            "fragewoerter"
+            "fragewoerter",
+            "fragepronomen-qui-que"
           ],
           "practisedBy": []
         },
@@ -2333,8 +2354,7 @@
           "gradeBand": "7-8",
           "requires": [
             "figuren-ort-zeit-handlung",
-            "gefuehle-ausdruecken",
-            "adjektiv-angleichung"
+            "gefuehle-ausdruecken"
           ],
           "practisedBy": []
         },

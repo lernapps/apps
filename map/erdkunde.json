@@ -1137,7 +1137,6 @@
           "iCan": "Ich kann erklären, wie Bodenerosion durch Wind und Wasser entsteht und wie man sie verhindern kann.",
           "gradeBand": "7-8",
           "requires": [
-            "exogene-kraefte",
             "boden"
           ],
           "practisedBy": []
@@ -1174,7 +1173,9 @@
           },
           "iCan": "Ich kann Betriebe und Berufe dem primären, sekundären und tertiären Wirtschaftssektor zuordnen.",
           "gradeBand": "7-8",
-          "requires": [],
+          "requires": [
+            "bauernhof"
+          ],
           "practisedBy": []
         },
         {
@@ -1186,7 +1187,8 @@
           "iCan": "Ich kann erklären, warum sich ein Betrieb an einem bestimmten Ort ansiedelt, zum Beispiel wegen Rohstoffen, Arbeitskräften, Verkehrswegen oder Kunden.",
           "gradeBand": "7-8",
           "requires": [
-            "wirtschaftssektoren"
+            "wirtschaftssektoren",
+            "verkehr"
           ],
           "practisedBy": []
         },
