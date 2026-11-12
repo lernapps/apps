@@ -28,6 +28,11 @@
           "iCan": "Ich kann beim Experimentieren die Sicherheitsregeln einhalten und Gefahrenzeichen deuten.",
           "gradeBand": "7-8",
           "requires": [],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 70,
           "practisedBy": []
         },
         {
@@ -41,6 +46,11 @@
           "requires": [
             "sicherheit-beim-experimentieren"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 69,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -60,6 +70,11 @@
           "iCan": "Ich kann die drei Aggregatzustände und ihre Übergänge (schmelzen, erstarren, verdampfen, kondensieren, sublimieren) benennen und beschreiben.",
           "gradeBand": "7-8",
           "requires": [],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 4,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -81,6 +96,11 @@
           "requires": [
             "aggregatzustaende-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -102,6 +122,11 @@
           "requires": [
             "schmelz-und-siedetemperatur"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -115,6 +140,11 @@
           "requires": [
             "stoffeigenschaften-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -136,6 +166,11 @@
           "requires": [
             "stoffeigenschaften-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -149,6 +184,11 @@
           "requires": [
             "stoffeigenschaften-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -160,9 +200,13 @@
           "iCan": "Ich kann Sauerstoff, Wasserstoff und Kohlenstoffdioxid mit Glimmspan-, Knallgas- und Kalkwasserprobe nachweisen.",
           "gradeBand": "7-8",
           "requires": [
-            "stoffeigenschaften-beschreiben",
-            "sicherheit-beim-experimentieren"
+            "stoffeigenschaften-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -176,6 +220,11 @@
           "requires": [
             "stoffeigenschaften-beschreiben"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -190,6 +239,11 @@
             "ph-wert-deuten",
             "atome-ionen-und-molekuele-unterscheiden"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -200,7 +254,14 @@
           },
           "iCan": "Ich kann Reinstoffe und Gemische unterscheiden.",
           "gradeBand": "7-8",
-          "requires": [],
+          "requires": [
+            "stoffeigenschaften-beschreiben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 48,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -220,9 +281,13 @@
           "iCan": "Ich kann ein Stoffgemisch mit einem passenden Verfahren trennen, etwa durch Filtrieren, Eindampfen oder Destillieren.",
           "gradeBand": "7-8",
           "requires": [
-            "reinstoffe-und-gemische",
-            "stoffeigenschaften-beschreiben"
+            "reinstoffe-und-gemische"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -236,6 +301,11 @@
           "requires": [
             "reinstoffe-und-gemische"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 46,
           "practisedBy": []
         },
         {
@@ -246,7 +316,14 @@
           },
           "iCan": "Ich kann das Teilchenmodell beschreiben und sagen, was es erklärt und was nicht.",
           "gradeBand": "7-8",
-          "requires": [],
+          "requires": [
+            "stoffeigenschaften-beschreiben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 44,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -269,6 +346,11 @@
             "teilchenmodell",
             "aggregatzustaende-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -290,6 +372,11 @@
           "requires": [
             "teilchenmodell"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -302,8 +389,14 @@
           "gradeBand": "7-8",
           "requires": [
             "teilchenmodell",
-            "elemente-und-verbindungen"
+            "elemente-und-verbindungen",
+            "massenerhaltung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 39,
           "practisedBy": []
         },
         {
@@ -317,6 +410,11 @@
           "requires": [
             "elemente-und-verbindungen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 40,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -339,6 +437,11 @@
             "symbole-der-elemente",
             "daltonsches-atommodell"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 6
+          },
+          "opens": 20,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -360,6 +463,11 @@
           "requires": [
             "daltonsches-atommodell"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 6
+          },
+          "opens": 31,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -382,6 +490,11 @@
             "atombau-bausteine",
             "formeln-von-verbindungen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 7
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -395,6 +508,11 @@
           "requires": [
             "symbole-der-elemente"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 6
+          },
+          "opens": 29,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -414,9 +532,13 @@
           "iCan": "Ich kann Metalle, Nichtmetalle und Grenzfälle an ihren Eigenschaften und ihrem Platz im Periodensystem erkennen.",
           "gradeBand": "7-8",
           "requires": [
-            "periodensystem-lesen",
-            "stoffeigenschaften-beschreiben"
+            "periodensystem-lesen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 7
+          },
+          "opens": 8,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -439,6 +561,11 @@
             "atombau-bausteine",
             "periodensystem-lesen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 23,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -460,6 +587,11 @@
           "requires": [
             "ordnungszahl-und-massenzahl"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 22,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -481,6 +613,11 @@
           "requires": [
             "schalenmodell"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 20,
           "practisedBy": []
         },
         {
@@ -492,9 +629,13 @@
           "iCan": "Ich kann die acht Hauptgruppen nennen und sagen, wie viele Außenelektronen ihre Atome haben.",
           "gradeBand": "9-10",
           "requires": [
-            "periodensystem-lesen",
             "schalenmodell"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 2,
           "practisedBy": [
             {
               "app": "anorganische-chemie",
@@ -516,6 +657,11 @@
           "requires": [
             "atommodell-mit-energiestufen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 17,
           "practisedBy": []
         },
         {
@@ -530,6 +676,11 @@
             "hauptgruppen",
             "atommodell-mit-energiestufen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -543,6 +694,11 @@
           "requires": [
             "periodensystem-und-atombau"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -556,6 +712,11 @@
           "requires": [
             "reaktionen-mit-atommodell-vorhersagen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -570,6 +731,11 @@
             "atome-ionen-und-molekuele-unterscheiden",
             "metalle-und-nichtmetalle"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 8
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -583,6 +749,11 @@
           "requires": [
             "ionenbindung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 9
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -597,6 +768,11 @@
             "metalle-und-nichtmetalle",
             "atome-ionen-und-molekuele-unterscheiden"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 8
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -610,6 +786,11 @@
           "requires": [
             "reaktionen-mit-atommodell-vorhersagen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 12,
           "practisedBy": []
         },
         {
@@ -623,6 +804,11 @@
           "requires": [
             "elektronenpaarbindung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -638,6 +824,11 @@
             "elektronenpaarbindung",
             "metallbindung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -651,6 +842,11 @@
           "requires": [
             "lewis-formeln"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 7
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -664,6 +860,11 @@
           "requires": [
             "raeumliche-struktur-von-molekuelen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 8
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -677,6 +878,11 @@
           "requires": [
             "partialladungen-und-dipole"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 9
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -691,6 +897,11 @@
             "bindungstypen-vergleichen",
             "wechselwirkungen-zwischen-teilchen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 10
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -704,6 +915,11 @@
           "requires": [
             "lewis-formeln"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 7
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -717,6 +933,11 @@
           "requires": [
             "kohlenwasserstoffe-alkane"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 8
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -731,6 +952,11 @@
             "funktionelle-gruppen-und-stoffklassen",
             "wechselwirkungen-zwischen-teilchen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 10
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -745,6 +971,11 @@
             "kohlenwasserstoffe-alkane",
             "wechselwirkungen-zwischen-teilchen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 10
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -767,6 +998,11 @@
           "requires": [
             "stoffeigenschaften-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 54,
           "practisedBy": [
             {
               "app": "chemie-reaktionen",
@@ -789,6 +1025,11 @@
             "kennzeichen-chemischer-reaktionen",
             "aggregatzustaende-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": [
             {
               "app": "chemie-reaktionen",
@@ -811,6 +1052,11 @@
             "kennzeichen-chemischer-reaktionen",
             "elemente-und-verbindungen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -822,9 +1068,13 @@
           "iCan": "Ich kann mit einem Versuch zeigen und erklären, dass bei einer Reaktion die Gesamtmasse gleich bleibt.",
           "gradeBand": "7-8",
           "requires": [
-            "kennzeichen-chemischer-reaktionen",
-            "teilchenmodell"
+            "kennzeichen-chemischer-reaktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 40,
           "practisedBy": [
             {
               "app": "chemie-reaktionen",
@@ -846,6 +1096,11 @@
           "requires": [
             "kennzeichen-chemischer-reaktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -860,6 +1115,11 @@
             "kennzeichen-chemischer-reaktionen",
             "elemente-und-verbindungen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -874,6 +1134,11 @@
             "synthese-und-analyse",
             "wortgleichung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -886,10 +1151,13 @@
           "gradeBand": "7-8",
           "requires": [
             "wortgleichung",
-            "formeln-von-verbindungen",
-            "massenerhaltung",
-            "daltonsches-atommodell"
+            "formeln-von-verbindungen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 7
+          },
+          "opens": 8,
           "practisedBy": [
             {
               "app": "chemie-reaktionen",
@@ -909,9 +1177,13 @@
           "iCan": "Ich kann die Stoffmenge und die molare Masse eines Stoffes nutzen, um Teilchenzahl und Masse ineinander umzurechnen.",
           "gradeBand": "9-10",
           "requires": [
-            "formeln-von-verbindungen",
-            "massenerhaltung"
+            "formeln-von-verbindungen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -926,6 +1198,11 @@
             "stoffmenge-und-molare-masse",
             "reaktionsgleichung-aufstellen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -940,6 +1217,11 @@
             "stoffmenge-und-molare-masse",
             "loeslichkeit"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -954,6 +1236,11 @@
             "reaktionsgleichung-aufstellen",
             "verbrennung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 8
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -968,6 +1255,11 @@
             "oxidation-und-reduktion",
             "metalle-und-nichtmetalle"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 9
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -982,6 +1274,11 @@
             "oxidation-und-reduktion",
             "ionen-bilden"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -996,6 +1293,11 @@
             "redoxreaktion-als-elektronenuebergang",
             "elektrische-leitfaehigkeit"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 7
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1010,6 +1312,11 @@
             "ionen-in-sauren-und-alkalischen-loesungen",
             "reaktionsgleichung-aufstellen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1023,6 +1330,11 @@
           "requires": [
             "saeure-base-reaktion"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1038,6 +1350,11 @@
             "partialladungen-und-dipole",
             "loeslichkeit"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 9
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1052,6 +1369,11 @@
             "kennzeichen-chemischer-reaktionen",
             "teilchenmodell"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         }
       ]
@@ -1072,6 +1394,11 @@
           "iCan": "Ich kann chemische, elektrische, thermische und Strahlungsenergie unterscheiden.",
           "gradeBand": "7-8",
           "requires": [],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 9,
           "practisedBy": []
         },
         {
@@ -1086,6 +1413,11 @@
             "energieformen-unterscheiden",
             "kennzeichen-chemischer-reaktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -1099,6 +1431,11 @@
           "requires": [
             "energieumwandlung-bei-reaktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -1112,6 +1449,11 @@
           "requires": [
             "energieumwandlung-bei-reaktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1125,6 +1467,11 @@
           "requires": [
             "exotherm-und-endotherm"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 6
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1138,6 +1485,11 @@
           "requires": [
             "energieschema-lesen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 7
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1152,6 +1504,11 @@
             "exotherm-und-endotherm",
             "energieerhaltung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1166,6 +1523,11 @@
             "aktivierungsenergie",
             "temperatur-und-reaktionsgeschwindigkeit"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1180,6 +1542,11 @@
             "salze-loesen",
             "exotherm-und-endotherm"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 10
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1194,6 +1561,11 @@
             "redoxreaktion-als-elektronenuebergang",
             "energieumwandlung-bei-reaktionen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 7
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Lernlandkarte Kunst nach Stufen · lernapps.net</title>
-  <meta name="description" content="Was in Kunst worauf aufbaut, Stufe für Stufe.">
+  <title>Lernlandkarte Kunst nach Klasse und Kette · lernapps.net</title>
+  <meta name="description" content="Was in Kunst worauf aufbaut, Klasse für Klasse, Schritt für Schritt.">
   <link rel="canonical" href="https://lernapps.net/apps/map/kunst/c/">
   <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -58,7 +58,7 @@
     </li>
     <li class="flex gap-2"><a href="/apps/pr-preview/pr-181/map/kunst/" class="text-blue-700 underline underline-offset-2">Kunst</a><span aria-hidden="true">›</span>
     </li>
-    <li class="flex gap-2"><span aria-current="page">Nach Stufen der Kette</span>
+    <li class="flex gap-2"><span aria-current="page">Nach Klasse und Kette</span>
     </li>
   </ol>
 </nav>
@@ -71,17 +71,17 @@
 
 
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Kunst nach Stufen</h1>
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Kunst nach Klasse und Kette</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>So liest du die Karte</a>
   </div>
-  <p class="m-0 text-slate-700 max-w-3xl">Jede Zeile ist eine Stufe in der Kette „baut auf“. Ein Baustein steht eine Zeile unter seiner tiefsten Voraussetzung. Ganz oben stehen die Bausteine ohne Voraussetzung.</p>
+  <p class="m-0 text-slate-700 max-w-3xl">Die Zeilen gehen nach Klassen: erst 5/6, dann 7/8, dann 9/10. In jeder Klasse steht ein Baustein einen Schritt unter seiner tiefsten Voraussetzung aus derselben Klasse. Alles, was ein Baustein braucht, steht also weiter oben. Alles im selben Schritt ist voneinander unabhängig.</p>
 
   
 <nav aria-labelledby="ordnung-kunst" class="flex flex-wrap items-center gap-2">
   <h2 id="ordnung-kunst" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/pr-preview/pr-181/map/kunst/" class="btn btn-secondary">Nach Klassen</a></li>
-    <li><a href="/apps/pr-preview/pr-181/map/kunst/c/" class="btn btn-primary" aria-current="page">Nach Stufen der Kette</a></li>
+    <li><a href="/apps/pr-preview/pr-181/map/kunst/c/" class="btn btn-primary" aria-current="page">Nach Klasse und Kette</a></li>
   </ul>
 </nav>
 
@@ -91,73 +91,56 @@
       <p class="m-0 flex items-center gap-2 text-sm text-slate-600"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke</p>
     </div>
     <div class="map-legend" role="group" aria-label="Bausteine zeigen" data-map-filter hidden>
-      <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt <span class="map-filter-count">0</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">136</span></button>
+      <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt</button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke</button>
     </div>
   </div>
+  <p class="m-0 text-slate-700" data-map-alone>Jeder Baustein ist in die Kette eingeordnet.
+  </p>
 
   <div class="map-bystep" data-map-steps>
-    <div class="map-scroll" role="region" aria-label="Lernlandkarte Kunst: Bausteine nach Strang und Stufe" tabindex="0">
+    <div class="map-scroll" role="region" aria-label="Lernlandkarte Kunst: Bausteine nach Strang, Klasse und Schritt" tabindex="0">
       <table class="map-grid" style="min-width: 127rem;">
         <colgroup><col style="width: 7rem;"><col><col><col><col><col><col><col><col><col><col></colgroup>
         <thead>
           <tr>
-            <td class="text-sm text-slate-600 align-bottom">Stufe ↓ · Strang →</td>
+            <td class="text-sm text-slate-600 align-bottom">Klasse und Schritt ↓ · Strang →</td>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/farbe/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Farbe</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 18 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/form-flaeche/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Form und Fläche</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 9 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/raum/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Raum, Körper und Perspektive</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 14 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/zeichnung-druck/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Zeichnung und Druckgrafik</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 14 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/plastik/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Plastik, Objekt und Material</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 10 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/foto-film/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Fotografie, Film und Aktion</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 14 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/architektur-design/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Architektur und Design</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 14 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/bildstrategien/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Bildideen und Bildstrategien</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 8 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/bildanalyse/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Bilder beschreiben und deuten</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 19 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-181/map/kunst/kunstgeschichte/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Kunstgeschichte: Epochen und Werke</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 16 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
           </tr>
         </thead>
         <tbody>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="11">Klasse 5/6</th></tr>
           <tr>
-            <th scope="row">Stufe 1<span class="block mt-1 text-xs font-normal text-slate-600">23 Bausteine</span></th>
+            <th scope="row">Schritt 1</th>
             <td>
               <ul class="map-cell">
                 
@@ -217,14 +200,6 @@
 </li>
 
                 
-<li data-competency="licht-und-schatten">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/licht-und-schatten/" class="map-chip map-chip-gap">
-    <span>Licht und Schatten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
 <li data-competency="koerperproportionen">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/koerperproportionen/" class="map-chip map-chip-gap">
     <span>Körperproportionen</span>
@@ -276,46 +251,12 @@
   </a>
 </li>
 
-                
-<li data-competency="recht-am-eigenen-bild">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/recht-am-eigenen-bild/" class="map-chip map-chip-gap">
-    <span>Recht am eigenen Bild</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="kleidung-als-zeichen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/kleidung-als-zeichen/" class="map-chip map-chip-gap">
-    <span>Kleidung und Mode als Zeichen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="schrift-und-wirkung">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/schrift-und-wirkung/" class="map-chip map-chip-gap">
-    <span>Schrift und Wirkung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
-                
-<li data-competency="fantasiebild">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/fantasiebild/" class="map-chip map-chip-gap">
-    <span>Fantasiebild</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
                 
 <li data-competency="verfremden">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/verfremden/" class="map-chip map-chip-gap">
@@ -328,14 +269,6 @@
 <li data-competency="sammeln">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/sammeln/" class="map-chip map-chip-gap">
     <span>Sammeln und Moodboard</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="praesentieren">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/praesentieren/" class="map-chip map-chip-gap">
-    <span>Arbeiten präsentieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -384,7 +317,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 2<span class="block mt-1 text-xs font-normal text-slate-600">27 Bausteine</span></th>
+            <th scope="row">Schritt 2</th>
             <td>
               <ul class="map-cell">
                 
@@ -440,14 +373,6 @@
 </li>
 
                 
-<li data-competency="symmetrie-asymmetrie">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/symmetrie-asymmetrie/" class="map-chip map-chip-gap">
-    <span>Symmetrie und Asymmetrie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
 <li data-competency="ornament-und-muster">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/ornament-und-muster/" class="map-chip map-chip-gap">
     <span>Ornament und Muster</span>
@@ -483,22 +408,6 @@
   </a>
 </li>
 
-                
-<li data-competency="luftperspektive">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/luftperspektive/" class="map-chip map-chip-gap">
-    <span>Luftperspektive</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="gesichtsproportionen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/gesichtsproportionen/" class="map-chip map-chip-gap">
-    <span>Kopf- und Gesichtsproportionen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -507,14 +416,6 @@
 <li data-competency="punkt-und-linie">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/punkt-und-linie/" class="map-chip map-chip-gap">
     <span>Punkt und Linie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="hochdruck">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/hochdruck/" class="map-chip map-chip-gap">
-    <span>Hochdruck</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -550,72 +451,10 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="licht-in-der-fotografie">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/licht-in-der-fotografie/" class="map-chip map-chip-gap">
-    <span>Licht in der Fotografie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="aktionskunst">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/aktionskunst/" class="map-chip map-chip-gap">
-    <span>Performance und Aktionskunst</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="bauwerk-untersuchen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/bauwerk-untersuchen/" class="map-chip map-chip-gap">
-    <span>Bauwerke untersuchen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="architekturmodell">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/architekturmodell/" class="map-chip map-chip-gap">
-    <span>Architekturmodell</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="form-und-funktion">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/form-und-funktion/" class="map-chip map-chip-gap">
-    <span>Form und Funktion</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="logo-und-marke">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/logo-und-marke/" class="map-chip map-chip-gap">
-    <span>Logo und Marke</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="abstrahieren">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/abstrahieren/" class="map-chip map-chip-gap">
-    <span>Abstrahieren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -630,20 +469,10 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="street-art">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/street-art/" class="map-chip map-chip-gap">
-    <span>Street-Art und Graffiti</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 3<span class="block mt-1 text-xs font-normal text-slate-600">34 Bausteine</span></th>
+            <th scope="row">Schritt 3</th>
             <td>
               <ul class="map-cell">
                 
@@ -691,14 +520,6 @@
 </li>
 
                 
-<li data-competency="richtungen-im-bild">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/richtungen-im-bild/" class="map-chip map-chip-gap">
-    <span>Richtungen und Kompositionslinien</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
 <li data-competency="bewegung-darstellen">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/bewegung-darstellen/" class="map-chip map-chip-gap">
     <span>Bewegung auf der Fläche</span>
@@ -709,24 +530,6 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="parallelperspektive">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/parallelperspektive/" class="map-chip map-chip-gap">
-    <span>Parallelperspektive</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="horizont-und-fluchtpunkt">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/horizont-und-fluchtpunkt/" class="map-chip map-chip-gap">
-    <span>Horizont und Fluchtpunkt</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -754,30 +557,6 @@
   </a>
 </li>
 
-                
-<li data-competency="linolschnitt">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/linolschnitt/" class="map-chip map-chip-gap">
-    <span>Linolschnitt</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="materialdruck">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/materialdruck/" class="map-chip map-chip-gap">
-    <span>Materialdruck</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="druckverfahren">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/druckverfahren/" class="map-chip map-chip-gap">
-    <span>Druckverfahren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -801,67 +580,15 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="inszenierte-fotografie">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/inszenierte-fotografie/" class="map-chip map-chip-gap">
-    <span>Inszenierte Fotografie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
+            </td>
+            <td>
             </td>
             <td>
               <ul class="map-cell">
                 
-<li data-competency="grundriss-und-ansicht">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/grundriss-und-ansicht/" class="map-chip map-chip-gap">
-    <span>Grundriss, Schnitt und Ansicht</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="design-bewerten">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/design-bewerten/" class="map-chip map-chip-gap">
-    <span>Design bewerten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="unikat-und-serie">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/unikat-und-serie/" class="map-chip map-chip-gap">
-    <span>Unikat und Serienprodukt</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="plakat-gestalten">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/plakat-gestalten/" class="map-chip map-chip-gap">
-    <span>Plakatgestaltung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="zufallsverfahren">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/zufallsverfahren/" class="map-chip map-chip-gap">
-    <span>Zufallsverfahren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="montage">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/montage/" class="map-chip map-chip-gap">
-    <span>Montage und Fotomontage</span>
+<li data-competency="fantasiebild">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/fantasiebild/" class="map-chip map-chip-gap">
+    <span>Fantasiebild</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -902,30 +629,6 @@
   </a>
 </li>
 
-                
-<li data-competency="ikonografie">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/ikonografie/" class="map-chip map-chip-gap">
-    <span>Ikonografie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="portraet">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/portraet/" class="map-chip map-chip-gap">
-    <span>Porträt</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="stillleben">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/stillleben/" class="map-chip map-chip-gap">
-    <span>Stillleben</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -938,37 +641,13 @@
   </a>
 </li>
 
-                
-<li data-competency="romanik-und-gotik">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/romanik-und-gotik/" class="map-chip map-chip-gap">
-    <span>Romanik und Gotik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="jugendstil">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/jugendstil/" class="map-chip map-chip-gap">
-    <span>Jugendstil</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 4<span class="block mt-1 text-xs font-normal text-slate-600">30 Bausteine</span></th>
+            <th scope="row">Schritt 4</th>
             <td>
               <ul class="map-cell">
-                
-<li data-competency="subtraktive-farbmischung">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/subtraktive-farbmischung/" class="map-chip map-chip-gap">
-    <span>Subtraktive Farbmischung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
                 
 <li data-competency="farbverwandtschaften">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/farbverwandtschaften/" class="map-chip map-chip-gap">
@@ -977,10 +656,143 @@
   </a>
 </li>
 
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
                 
-<li data-competency="weitere-farbkontraste">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/weitere-farbkontraste/" class="map-chip map-chip-gap">
-    <span>Qualitäts-, Quantitäts- und Simultankontrast</span>
+<li data-competency="bildergeschichte">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildergeschichte/" class="map-chip map-chip-gap">
+    <span>Bildergeschichte und Comic</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="keramik-techniken">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/keramik-techniken/" class="map-chip map-chip-gap">
+    <span>Keramische Techniken</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="vollplastik-und-relief">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/vollplastik-und-relief/" class="map-chip map-chip-gap">
+    <span>Vollplastik und Relief</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="spielfigur">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/spielfigur/" class="map-chip map-chip-gap">
+    <span>Spielfigur und Maske</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="einstellungsgroessen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/einstellungsgroessen/" class="map-chip map-chip-gap">
+    <span>Einstellungsgrößen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="landschaftsbild">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/landschaftsbild/" class="map-chip map-chip-gap">
+    <span>Landschaftsbild</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 5</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="kamerabewegung">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/kamerabewegung/" class="map-chip map-chip-gap">
+    <span>Kamerabewegung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="aegyptische-kunst">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/aegyptische-kunst/" class="map-chip map-chip-gap">
+    <span>Ägyptische Kunst</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="antike-plastik">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/antike-plastik/" class="map-chip map-chip-gap">
+    <span>Antike Plastik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="11">Klasse 7/8</th></tr>
+          <tr>
+            <th scope="row">Schritt 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="subtraktive-farbmischung">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/subtraktive-farbmischung/" class="map-chip map-chip-gap">
+    <span>Subtraktive Farbmischung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1008,9 +820,456 @@
             <td>
               <ul class="map-cell">
                 
+<li data-competency="horizont-und-fluchtpunkt">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/horizont-und-fluchtpunkt/" class="map-chip map-chip-gap">
+    <span>Horizont und Fluchtpunkt</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="licht-und-schatten">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/licht-und-schatten/" class="map-chip map-chip-gap">
+    <span>Licht und Schatten</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="gesichtsproportionen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/gesichtsproportionen/" class="map-chip map-chip-gap">
+    <span>Kopf- und Gesichtsproportionen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="beobachtend-zeichnen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/beobachtend-zeichnen/" class="map-chip map-chip-gap">
+    <span>Beobachtendes Zeichnen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="hochdruck">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/hochdruck/" class="map-chip map-chip-gap">
+    <span>Hochdruck</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="koerper-und-raum">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/koerper-und-raum/" class="map-chip map-chip-gap">
+    <span>Plastik und Raum</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="filmschnitt">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/filmschnitt/" class="map-chip map-chip-gap">
+    <span>Filmschnitt</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="bauwerk-untersuchen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/bauwerk-untersuchen/" class="map-chip map-chip-gap">
+    <span>Bauwerke untersuchen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="architekturmodell">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/architekturmodell/" class="map-chip map-chip-gap">
+    <span>Architekturmodell</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="schrift-und-wirkung">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/schrift-und-wirkung/" class="map-chip map-chip-gap">
+    <span>Schrift und Wirkung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="bildzitat">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildzitat/" class="map-chip map-chip-gap">
+    <span>Bildzitat</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="praesentieren">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/praesentieren/" class="map-chip map-chip-gap">
+    <span>Arbeiten präsentieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="ikonografie">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/ikonografie/" class="map-chip map-chip-gap">
+    <span>Ikonografie</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="portraet">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/portraet/" class="map-chip map-chip-gap">
+    <span>Porträt</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="stillleben">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/stillleben/" class="map-chip map-chip-gap">
+    <span>Stillleben</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 2</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="farbmodulation">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/farbmodulation/" class="map-chip map-chip-gap">
+    <span>Farbmodulation</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
 <li data-competency="zentralperspektive">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/zentralperspektive/" class="map-chip map-chip-gap">
     <span>Zentralperspektive</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="schraffur">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/schraffur/" class="map-chip map-chip-gap">
+    <span>Schraffur</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="linolschnitt">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/linolschnitt/" class="map-chip map-chip-gap">
+    <span>Linolschnitt</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="druckverfahren">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/druckverfahren/" class="map-chip map-chip-gap">
+    <span>Druckverfahren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="grundriss-und-ansicht">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/grundriss-und-ansicht/" class="map-chip map-chip-gap">
+    <span>Grundriss, Schnitt und Ansicht</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="plakat-gestalten">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/plakat-gestalten/" class="map-chip map-chip-gap">
+    <span>Plakatgestaltung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="logo-und-marke">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/logo-und-marke/" class="map-chip map-chip-gap">
+    <span>Logo und Marke</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="bildsymbole">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildsymbole/" class="map-chip map-chip-gap">
+    <span>Bildsymbole</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="bildgattungen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildgattungen/" class="map-chip map-chip-gap">
+    <span>Bildgattungen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="romanik-und-gotik">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/romanik-und-gotik/" class="map-chip map-chip-gap">
+    <span>Romanik und Gotik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="mittelalterliche-bilder">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/mittelalterliche-bilder/" class="map-chip map-chip-gap">
+    <span>Mittelalterliche Bilder</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 3</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="vervielfaeltigung">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/vervielfaeltigung/" class="map-chip map-chip-gap">
+    <span>Vervielfältigung von Bildern</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="innenraum-gestalten">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/innenraum-gestalten/" class="map-chip map-chip-gap">
+    <span>Innenraumgestaltung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="kommunikationsdesign">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/kommunikationsdesign/" class="map-chip map-chip-gap">
+    <span>Kommunikationsdesign</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="raum-analysieren">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/raum-analysieren/" class="map-chip map-chip-gap">
+    <span>Raumanalyse</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="renaissance">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/renaissance/" class="map-chip map-chip-gap">
+    <span>Renaissance</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 4</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="werbung-durchschauen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/werbung-durchschauen/" class="map-chip map-chip-gap">
+    <span>Werbung durchschauen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="barock">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/barock/" class="map-chip map-chip-gap">
+    <span>Barock</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="11">Klasse 9/10</th></tr>
+          <tr>
+            <th scope="row">Schritt 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="weitere-farbkontraste">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/weitere-farbkontraste/" class="map-chip map-chip-gap">
+    <span>Qualitäts-, Quantitäts- und Simultankontrast</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="ausdrucksfarbe">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/ausdrucksfarbe/" class="map-chip map-chip-gap">
+    <span>Ausdrucksfarbe</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="symmetrie-asymmetrie">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/symmetrie-asymmetrie/" class="map-chip map-chip-gap">
+    <span>Symmetrie und Asymmetrie</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="parallelperspektive">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/parallelperspektive/" class="map-chip map-chip-gap">
+    <span>Parallelperspektive</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="zwei-fluchtpunkte">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/zwei-fluchtpunkte/" class="map-chip map-chip-gap">
+    <span>Perspektive mit zwei Fluchtpunkten</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="luftperspektive">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/luftperspektive/" class="map-chip map-chip-gap">
+    <span>Luftperspektive</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1036,33 +1295,63 @@
             <td>
               <ul class="map-cell">
                 
-<li data-competency="beobachtend-zeichnen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/beobachtend-zeichnen/" class="map-chip map-chip-gap">
-    <span>Beobachtendes Zeichnen</span>
+<li data-competency="erklaerende-zeichnung">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/erklaerende-zeichnung/" class="map-chip map-chip-gap">
+    <span>Erklärende Zeichnung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
                 
-<li data-competency="schraffur">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/schraffur/" class="map-chip map-chip-gap">
-    <span>Schraffur</span>
+<li data-competency="materialdruck">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/materialdruck/" class="map-chip map-chip-gap">
+    <span>Materialdruck</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="licht-in-der-fotografie">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/licht-in-der-fotografie/" class="map-chip map-chip-gap">
+    <span>Licht in der Fotografie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
                 
-<li data-competency="bildergeschichte">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildergeschichte/" class="map-chip map-chip-gap">
-    <span>Bildergeschichte und Comic</span>
+<li data-competency="schaerfe-und-blende">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/schaerfe-und-blende/" class="map-chip map-chip-gap">
+    <span>Schärfe, Blende und Belichtung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
                 
-<li data-competency="vervielfaeltigung">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/vervielfaeltigung/" class="map-chip map-chip-gap">
-    <span>Vervielfältigung von Bildern</span>
+<li data-competency="digitale-bildbearbeitung">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/digitale-bildbearbeitung/" class="map-chip map-chip-gap">
+    <span>Digitale Bildbearbeitung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="aktionskunst">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/aktionskunst/" class="map-chip map-chip-gap">
+    <span>Performance und Aktionskunst</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="recht-am-eigenen-bild">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/recht-am-eigenen-bild/" class="map-chip map-chip-gap">
+    <span>Recht am eigenen Bild</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1072,33 +1361,17 @@
             <td>
               <ul class="map-cell">
                 
-<li data-competency="keramik-techniken">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/keramik-techniken/" class="map-chip map-chip-gap">
-    <span>Keramische Techniken</span>
+<li data-competency="form-und-funktion">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/form-und-funktion/" class="map-chip map-chip-gap">
+    <span>Form und Funktion</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
                 
-<li data-competency="vollplastik-und-relief">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/vollplastik-und-relief/" class="map-chip map-chip-gap">
-    <span>Vollplastik und Relief</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="koerper-und-raum">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/koerper-und-raum/" class="map-chip map-chip-gap">
-    <span>Plastik und Raum</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="spielfigur">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/spielfigur/" class="map-chip map-chip-gap">
-    <span>Spielfigur und Maske</span>
+<li data-competency="kleidung-als-zeichen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/kleidung-als-zeichen/" class="map-chip map-chip-gap">
+    <span>Kleidung und Mode als Zeichen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1108,13 +1381,183 @@
             <td>
               <ul class="map-cell">
                 
-<li data-competency="einstellungsgroessen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/einstellungsgroessen/" class="map-chip map-chip-gap">
-    <span>Einstellungsgrößen</span>
+<li data-competency="zufallsverfahren">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/zufallsverfahren/" class="map-chip map-chip-gap">
+    <span>Zufallsverfahren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
+                
+<li data-competency="montage">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/montage/" class="map-chip map-chip-gap">
+    <span>Montage und Fotomontage</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="abstrahieren">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/abstrahieren/" class="map-chip map-chip-gap">
+    <span>Abstrahieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="expressive-bilder">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/expressive-bilder/" class="map-chip map-chip-gap">
+    <span>Expressive Bilder</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="kontext-deuten">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/kontext-deuten/" class="map-chip map-chip-gap">
+    <span>Deutung im Kontext</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="klassizismus-und-romantik">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/klassizismus-und-romantik/" class="map-chip map-chip-gap">
+    <span>Klassizismus und Romantik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="street-art">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/street-art/" class="map-chip map-chip-gap">
+    <span>Street-Art und Graffiti</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 2</th>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="richtungen-im-bild">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/richtungen-im-bild/" class="map-chip map-chip-gap">
+    <span>Richtungen und Kompositionslinien</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="inszenierte-fotografie">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/inszenierte-fotografie/" class="map-chip map-chip-gap">
+    <span>Inszenierte Fotografie</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="designobjekt-entwerfen">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/designobjekt-entwerfen/" class="map-chip map-chip-gap">
+    <span>Gebrauchsgegenstand entwerfen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="design-bewerten">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/design-bewerten/" class="map-chip map-chip-gap">
+    <span>Design bewerten</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="unikat-und-serie">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/unikat-und-serie/" class="map-chip map-chip-gap">
+    <span>Unikat und Serienprodukt</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="farbe-analysieren">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/farbe-analysieren/" class="map-chip map-chip-gap">
+    <span>Farbanalyse</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="realismus">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/realismus/" class="map-chip map-chip-gap">
+    <span>Realismus</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="jugendstil">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/jugendstil/" class="map-chip map-chip-gap">
+    <span>Jugendstil</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 3</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
                 
 <li data-competency="dokumentation-und-inszenierung">
   <a href="/apps/pr-preview/pr-181/map/kunst/c/dokumentation-und-inszenierung/" class="map-chip map-chip-gap">
@@ -1134,44 +1577,8 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="innenraum-gestalten">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/innenraum-gestalten/" class="map-chip map-chip-gap">
-    <span>Innenraumgestaltung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="designobjekt-entwerfen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/designobjekt-entwerfen/" class="map-chip map-chip-gap">
-    <span>Gebrauchsgegenstand entwerfen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="kommunikationsdesign">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/kommunikationsdesign/" class="map-chip map-chip-gap">
-    <span>Kommunikationsdesign</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="bildzitat">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildzitat/" class="map-chip map-chip-gap">
-    <span>Bildzitat</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -1183,54 +1590,14 @@
   </a>
 </li>
 
-                
-<li data-competency="expressive-bilder">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/expressive-bilder/" class="map-chip map-chip-gap">
-    <span>Expressive Bilder</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="bildsymbole">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildsymbole/" class="map-chip map-chip-gap">
-    <span>Bildsymbole</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="kontext-deuten">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/kontext-deuten/" class="map-chip map-chip-gap">
-    <span>Deutung im Kontext</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="landschaftsbild">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/landschaftsbild/" class="map-chip map-chip-gap">
-    <span>Landschaftsbild</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
               <ul class="map-cell">
                 
-<li data-competency="mittelalterliche-bilder">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/mittelalterliche-bilder/" class="map-chip map-chip-gap">
-    <span>Mittelalterliche Bilder</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="klassizismus-und-romantik">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/klassizismus-und-romantik/" class="map-chip map-chip-gap">
-    <span>Klassizismus und Romantik</span>
+<li data-competency="impressionismus">
+  <a href="/apps/pr-preview/pr-181/map/kunst/c/impressionismus/" class="map-chip map-chip-gap">
+    <span>Impressionismus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1239,156 +1606,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 5<span class="block mt-1 text-xs font-normal text-slate-600">14 Bausteine</span></th>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="farbmodulation">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/farbmodulation/" class="map-chip map-chip-gap">
-    <span>Farbmodulation</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="ausdrucksfarbe">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/ausdrucksfarbe/" class="map-chip map-chip-gap">
-    <span>Ausdrucksfarbe</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="zwei-fluchtpunkte">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/zwei-fluchtpunkte/" class="map-chip map-chip-gap">
-    <span>Perspektive mit zwei Fluchtpunkten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="erklaerende-zeichnung">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/erklaerende-zeichnung/" class="map-chip map-chip-gap">
-    <span>Erklärende Zeichnung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="schaerfe-und-blende">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/schaerfe-und-blende/" class="map-chip map-chip-gap">
-    <span>Schärfe, Blende und Belichtung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="digitale-bildbearbeitung">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/digitale-bildbearbeitung/" class="map-chip map-chip-gap">
-    <span>Digitale Bildbearbeitung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="kamerabewegung">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/kamerabewegung/" class="map-chip map-chip-gap">
-    <span>Kamerabewegung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="werbung-durchschauen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/werbung-durchschauen/" class="map-chip map-chip-gap">
-    <span>Werbung durchschauen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="raum-analysieren">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/raum-analysieren/" class="map-chip map-chip-gap">
-    <span>Raumanalyse</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="bildgattungen">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/bildgattungen/" class="map-chip map-chip-gap">
-    <span>Bildgattungen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="aegyptische-kunst">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/aegyptische-kunst/" class="map-chip map-chip-gap">
-    <span>Ägyptische Kunst</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="antike-plastik">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/antike-plastik/" class="map-chip map-chip-gap">
-    <span>Antike Plastik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="renaissance">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/renaissance/" class="map-chip map-chip-gap">
-    <span>Renaissance</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="realismus">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/realismus/" class="map-chip map-chip-gap">
-    <span>Realismus</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Stufe 6<span class="block mt-1 text-xs font-normal text-slate-600">5 Bausteine</span></th>
+            <th scope="row">Schritt 4</th>
             <td>
             </td>
             <td>
@@ -1409,66 +1627,7 @@
   </a>
 </li>
 
-                
-<li data-competency="filmschnitt">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/filmschnitt/" class="map-chip map-chip-gap">
-    <span>Filmschnitt</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="farbe-analysieren">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/farbe-analysieren/" class="map-chip map-chip-gap">
-    <span>Farbanalyse</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-            <td>
-              <ul class="map-cell">
-                
-<li data-competency="barock">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/barock/" class="map-chip map-chip-gap">
-    <span>Barock</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="impressionismus">
-  <a href="/apps/pr-preview/pr-181/map/kunst/c/impressionismus/" class="map-chip map-chip-gap">
-    <span>Impressionismus</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Stufe 7<span class="block mt-1 text-xs font-normal text-slate-600">1 Baustein</span></th>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
             </td>
             <td>
             </td>
@@ -1490,7 +1649,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 8<span class="block mt-1 text-xs font-normal text-slate-600">2 Bausteine</span></th>
+            <th scope="row">Schritt 5</th>
             <td>
             </td>
             <td>
@@ -1539,7 +1698,7 @@
     </aside>
   </div>
 
-  <p class="m-0 text-slate-600">Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Stufe für Stufe.</p>
+  <p class="m-0 text-slate-600">Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Schritt für Schritt.</p>
 
   <section id="hilfe" class="panel scroll-mt-4" aria-labelledby="hilfe-titel" data-kind="Kunst" data-map-help>
     <h2 id="hilfe-titel" class="m-0 text-xl font-bold text-slate-900" data-dialog-title>So liest du die Karte</h2>
@@ -1547,15 +1706,15 @@
       <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-181/map/#strang" class="text-blue-700 underline underline-offset-2">Strang</a> · eine Spalte</dt><dd class="m-0 mt-1 text-slate-600">Ein Teilgebiet des Fachs, das sich über mehrere Schuljahre zieht.</dd></div>
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-181/map/#baustein" class="text-blue-700 underline underline-offset-2">Baustein</a> · ein Kästchen</dt><dd class="m-0 mt-1 text-slate-600">Eine Sache, die ein Kind lernen kann: „Ich kann …“.</dd></div>
-        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-181/map/#stufe" class="text-blue-700 underline underline-offset-2">Stufe</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Wie weit unten ein Baustein in der Kette „baut auf“ steht. Sie sagt nichts über Klassen.</dd></div>
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-181/map/#schritt" class="text-blue-700 underline underline-offset-2">Schritt</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Wo ein Baustein in seiner Klasse in der Kette „baut auf“ steht. Alles im selben Schritt ist voneinander unabhängig; alles darüber kommt vorher.</dd></div>
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-181/map/#app" class="text-blue-700 underline underline-offset-2">App</a> · die Farbe</dt><dd class="m-0 mt-1 text-slate-600">Blau heißt abgedeckt: Eine App übt den Baustein. Gestrichelt heißt Lücke: Noch keine App übt ihn.</dd></div>
       </dl>
       <p class="m-0 mt-3"><a href="/apps/pr-preview/pr-181/map/#begriffe" class="text-blue-700 underline underline-offset-2">Alle Begriffe und wie sie zusammenhängen</a> · <a href="/apps/pr-preview/pr-181/map/#methode" class="text-blue-700 underline underline-offset-2">Warum diese Methode?</a></p>
     </div>
   </section>
 </div>
-<script type="application/json" id="map-steps-data">{"strands":["Farbe","Form und Fläche","Raum, Körper und Perspektive","Zeichnung und Druckgrafik","Plastik, Objekt und Material","Fotografie, Film und Aktion","Architektur und Design","Bildideen und Bildstrategien","Bilder beschreiben und deuten","Kunstgeschichte: Epochen und Werke"],"competencies":[{"id":"farbeigenschaften","strand":0,"requires":[],"step":1,"name":"Farbeigenschaften","iCan":"Ich kann Farben nach Farbton, Helligkeit und Sättigung (Leuchtkraft) unterscheiden."},{"id":"farben-benennen","strand":0,"requires":["farbeigenschaften"],"step":2,"name":"Farben benennen","iCan":"Ich kann Farben genau benennen, mit üblichen Farbnamen und mit eigenen treffenden Namen."},{"id":"farbkreis","strand":0,"requires":["farbeigenschaften"],"step":2,"name":"Farbkreis","iCan":"Ich kann Grundfarben, Mischfarben erster und zweiter Ordnung im Farbkreis zeigen und ihre Lage erklären."},{"id":"farben-mischen","strand":0,"requires":["farbkreis"],"step":3,"name":"Farben mischen","iCan":"Ich kann aus wenigen Farben viele Farbtöne mischen und eine Farbe gezielt aufhellen und abdunkeln."},{"id":"subtraktive-farbmischung","strand":0,"requires":["farben-mischen"],"step":4,"name":"Subtraktive Farbmischung","iCan":"Ich kann erklären, warum Malfarben beim Mischen dunkler werden, und mit Cyan, Magenta und Gelb gezielt mischen."},{"id":"farbverwandtschaften","strand":0,"requires":["farben-mischen"],"step":4,"name":"Farbverwandtschaften","iCan":"Ich kann Farbfamilien und Nachbarfarben bilden, auch durch Beimischen von Schwarz und Weiß."},{"id":"farbkontraste","strand":0,"requires":["farbeigenschaften"],"step":2,"name":"Farbkontraste","iCan":"Ich kann an Bildern zeigen, was ein Farbkontrast ist, und den Farbe-an-sich-Kontrast und den Hell-Dunkel-Kontrast erkennen."},{"id":"komplementaerkontrast","strand":0,"requires":["farbkreis","farbkontraste"],"step":3,"name":"Komplementärkontrast","iCan":"Ich kann Komplementärfarben im Farbkreis finden und ihre starke Wirkung im Bild beschreiben."},{"id":"kalt-warm-kontrast","strand":0,"requires":["farbkontraste"],"step":3,"name":"Kalt-Warm-Kontrast","iCan":"Ich kann warme und kalte Farben unterscheiden und ihre Wirkung im Bild beschreiben."},{"id":"weitere-farbkontraste","strand":0,"requires":["komplementaerkontrast","kalt-warm-kontrast"],"step":4,"name":"Qualitäts-, Quantitäts- und Simultankontrast","iCan":"Ich kann Qualitäts-, Quantitäts- und Simultankontrast an Bildern erkennen und erklären."},{"id":"farbauftrag","strand":0,"requires":[],"step":1,"name":"Farbauftrag","iCan":"Ich kann deckend, lasierend und pastos malen und die Wirkung des Farbauftrags beschreiben."},{"id":"farbmaterial","strand":0,"requires":["farbauftrag"],"step":2,"name":"Pigment und Bindemittel","iCan":"Ich kann erklären, dass Malfarbe aus Pigment und Bindemittel besteht, und eine einfache Farbe selbst herstellen."},{"id":"malspuren","strand":0,"requires":["farbauftrag"],"step":2,"name":"Malspuren","iCan":"Ich kann Farbe auf verschiedene Weise auftragen, zum Beispiel tupfen, spritzen oder wischen, und die Wirkung der Spuren beschreiben."},{"id":"farbwirkung","strand":0,"requires":["farbkontraste"],"step":3,"name":"Farbwirkung","iCan":"Ich kann beschreiben, welche Stimmung Farben und Farbklänge in einem Bild erzeugen."},{"id":"lokalfarbe-erscheinungsfarbe","strand":0,"requires":["farben-mischen"],"step":4,"name":"Lokalfarbe und Erscheinungsfarbe","iCan":"Ich kann die eigene Farbe eines Gegenstands (Lokalfarbe) von der Farbe unterscheiden, die er im Licht zeigt (Erscheinungsfarbe)."},{"id":"farbmodulation","strand":0,"requires":["lokalfarbe-erscheinungsfarbe","licht-und-schatten"],"step":5,"name":"Farbmodulation","iCan":"Ich kann einen Gegenstand durch fein abgestufte Farbtöne plastisch malen."},{"id":"ausdrucksfarbe","strand":0,"requires":["farbwirkung","lokalfarbe-erscheinungsfarbe"],"step":5,"name":"Ausdrucksfarbe","iCan":"Ich kann Farben unabhängig vom Gegenstand einsetzen, um ein Gefühl auszudrücken (Ausdrucksfarbe)."},{"id":"symbolfarbe","strand":0,"requires":["farbwirkung"],"step":4,"name":"Symbolfarbe","iCan":"Ich kann erklären, wofür eine Farbe in einem Bild als Zeichen steht, zum Beispiel Blau für Maria (Symbolfarbe)."},{"id":"figur-grund","strand":1,"requires":[],"step":1,"name":"Figur und Grund","iCan":"Ich kann Figur und Grund in einem Bild unterscheiden und gezielt gestalten, auch als Positiv- und Negativform."},{"id":"streuung-reihung-ballung","strand":1,"requires":[],"step":1,"name":"Streuung, Reihung und Ballung","iCan":"Ich kann Formen auf einer Fläche streuen, reihen oder ballen und die Wirkung vergleichen."},{"id":"platzierung-im-format","strand":1,"requires":["figur-grund"],"step":2,"name":"Platzierung im Format","iCan":"Ich kann Bildgegenstände bewusst im Format platzieren und ihre Größe so wählen, dass das Wichtige auffällt."},{"id":"bildausschnitt-und-ansicht","strand":1,"requires":["platzierung-im-format"],"step":3,"name":"Bildausschnitt und Ansicht","iCan":"Ich kann einen Bildausschnitt und eine Ansicht wählen, die die Wirkung eines Bildes steigern."},{"id":"symmetrie-asymmetrie","strand":1,"requires":["streuung-reihung-ballung"],"step":2,"name":"Symmetrie und Asymmetrie","iCan":"Ich kann symmetrische und asymmetrische Bildordnungen unterscheiden und ihre Wirkung beschreiben."},{"id":"richtungen-im-bild","strand":1,"requires":["symmetrie-asymmetrie"],"step":3,"name":"Richtungen und Kompositionslinien","iCan":"Ich kann Richtungen und Kompositionslinien in einem Bild finden und zeigen, wie sie den Blick lenken."},{"id":"formeigenschaften","strand":1,"requires":[],"step":1,"name":"Geometrische und organische Formen","iCan":"Ich kann geometrische (tektonische) und organische Formen unterscheiden und Formverwandtschaften und Formkontraste erkennen."},{"id":"ornament-und-muster","strand":1,"requires":["streuung-reihung-ballung","formeigenschaften"],"step":2,"name":"Ornament und Muster","iCan":"Ich kann ein Ornament oder Muster aus einer Grundform durch Wiederholen und Spiegeln entwickeln."},{"id":"bewegung-darstellen","strand":1,"requires":["punkt-und-linie"],"step":3,"name":"Bewegung auf der Fläche","iCan":"Ich kann Bewegung auf einer Fläche darstellen, zum Beispiel durch schräge Richtungen, Wiederholung und Bewegungsspuren."},{"id":"vordergrund-hintergrund","strand":2,"requires":[],"step":1,"name":"Vorder-, Mittel- und Hintergrund","iCan":"Ich kann in einem Bild Vordergrund, Mittelgrund und Hintergrund trennen."},{"id":"ueberdeckung","strand":2,"requires":["vordergrund-hintergrund"],"step":2,"name":"Überdeckung und Staffelung","iCan":"Ich kann durch Überdecken (Überschneiden) und Staffeln Raum auf der Fläche darstellen."},{"id":"groessenabnahme","strand":2,"requires":["vordergrund-hintergrund"],"step":2,"name":"Größenabnahme","iCan":"Ich kann Raum darstellen, indem ich Dinge in der Ferne kleiner zeichne."},{"id":"hoehenlage","strand":2,"requires":["vordergrund-hintergrund"],"step":2,"name":"Höhenlage","iCan":"Ich kann Raum darstellen, indem ich Dinge in der Ferne höher im Bild anordne (Höhenlage)."},{"id":"parallelperspektive","strand":2,"requires":["ueberdeckung"],"step":3,"name":"Parallelperspektive","iCan":"Ich kann Körper wie Würfel und Häuser in Parallelperspektive zeichnen."},{"id":"horizont-und-fluchtpunkt","strand":2,"requires":["groessenabnahme"],"step":3,"name":"Horizont und Fluchtpunkt","iCan":"Ich kann Horizont, Augenhöhe, Fluchtpunkt und Fluchtlinien in einem Bild finden und erklären, wo der Betrachter steht."},{"id":"zentralperspektive","strand":2,"requires":["horizont-und-fluchtpunkt"],"step":4,"name":"Zentralperspektive","iCan":"Ich kann einen Raum oder eine Straße mit einem Fluchtpunkt zeichnen."},{"id":"zwei-fluchtpunkte","strand":2,"requires":["zentralperspektive"],"step":5,"name":"Perspektive mit zwei Fluchtpunkten","iCan":"Ich kann einen Körper über Eck mit zwei Fluchtpunkten zeichnen."},{"id":"licht-und-schatten","strand":2,"requires":[],"step":1,"name":"Licht und Schatten","iCan":"Ich kann Eigenschatten und Schlagschatten unterscheiden und einen Körper durch Licht und Schatten plastisch wirken lassen."},{"id":"luftperspektive","strand":2,"requires":["vordergrund-hintergrund","farbeigenschaften"],"step":2,"name":"Luftperspektive","iCan":"Ich kann Ferne darstellen, indem ich Farben und Kontraste nach hinten blasser, bläulicher und unschärfer werden lasse (Luftperspektive)."},{"id":"farbperspektive","strand":2,"requires":["kalt-warm-kontrast","vordergrund-hintergrund"],"step":4,"name":"Farbperspektive","iCan":"Ich kann mit warmen Farben vorn und kalten Farben hinten Raumtiefe erzeugen (Farbperspektive)."},{"id":"koerperproportionen","strand":2,"requires":[],"step":1,"name":"Körperproportionen","iCan":"Ich kann einen menschlichen Körper nach einem einfachen Proportionsschema zeichnen, zum Beispiel mit Kopfmaßen."},{"id":"gesichtsproportionen","strand":2,"requires":["koerperproportionen"],"step":2,"name":"Kopf- und Gesichtsproportionen","iCan":"Ich kann einen Kopf von vorn in seinen Proportionen zeichnen, zum Beispiel mit den Augen auf halber Höhe."},{"id":"figur-in-bewegung","strand":2,"requires":["koerperproportionen","bewegung-darstellen"],"step":4,"name":"Figur in Bewegung","iCan":"Ich kann eine menschliche Figur in einer Pose oder Bewegung zeichnen, auch mit Verkürzungen."},{"id":"zeichenmaterial","strand":3,"requires":[],"step":1,"name":"Zeichenmittel","iCan":"Ich kann Zeichenmittel wie Bleistift, Kohle, Kreide und Tusche nach ihrer Wirkung unterscheiden und passend auswählen."},{"id":"punkt-und-linie","strand":3,"requires":["zeichenmaterial"],"step":2,"name":"Punkt und Linie","iCan":"Ich kann mit Punkten und Linien verschiedener Art zeichnen und ihre Wirkung beschreiben."},{"id":"kontur-und-binnenstruktur","strand":3,"requires":["punkt-und-linie"],"step":3,"name":"Kontur und Binnenstruktur","iCan":"Ich kann den Umriss (Kontur) und die Linien im Inneren einer Form (Binnenstruktur) zeichnen."},{"id":"texturen-zeichnen","strand":3,"requires":["punkt-und-linie"],"step":3,"name":"Texturen zeichnen","iCan":"Ich kann Oberflächen wie Holz, Fell oder Stein mit zeichnerischen Strukturen darstellen."},{"id":"beobachtend-zeichnen","strand":3,"requires":["kontur-und-binnenstruktur"],"step":4,"name":"Beobachtendes Zeichnen","iCan":"Ich kann einen Gegenstand genau beobachten und sachlich richtig zeichnen."},{"id":"schraffur","strand":3,"requires":["kontur-und-binnenstruktur","licht-und-schatten"],"step":4,"name":"Schraffur","iCan":"Ich kann mit Schraffur und Kreuzschraffur Helligkeit, Volumen und Oberfläche darstellen."},{"id":"skizze-und-entwurf","strand":3,"requires":["punkt-und-linie"],"step":3,"name":"Skizze und Entwurf","iCan":"Ich kann ein Vorhaben mit Skizzen planen und daraus einen Entwurf machen."},{"id":"erklaerende-zeichnung","strand":3,"requires":["beobachtend-zeichnen"],"step":5,"name":"Erklärende Zeichnung","iCan":"Ich kann einen Ablauf oder den Aufbau eines Geräts mit einer erklärenden Zeichnung darstellen, zum Beispiel als Explosionszeichnung."},{"id":"bildergeschichte","strand":3,"requires":["erzaehlende-bilder"],"step":4,"name":"Bildergeschichte und Comic","iCan":"Ich kann eine Handlung in einer Bildfolge erzählen, zum Beispiel als Bildergeschichte oder Comic."},{"id":"hochdruck","strand":3,"requires":["figur-grund"],"step":2,"name":"Hochdruck","iCan":"Ich kann das Prinzip des Hochdrucks erklären und einen einfachen Druck herstellen, zum Beispiel mit Stempel oder Moosgummi."},{"id":"linolschnitt","strand":3,"requires":["hochdruck"],"step":3,"name":"Linolschnitt","iCan":"Ich kann einen Linolschnitt planen und drucken und dabei Formen auf das Wesentliche vereinfachen."},{"id":"materialdruck","strand":3,"requires":["hochdruck"],"step":3,"name":"Materialdruck","iCan":"Ich kann Materialien und Gegenstände als Druckstock nutzen und ihre Spuren gestalterisch einsetzen."},{"id":"druckverfahren","strand":3,"requires":["hochdruck"],"step":3,"name":"Druckverfahren","iCan":"Ich kann Hochdruck, Tiefdruck und Siebdruck nach ihrem Prinzip unterscheiden."},{"id":"vervielfaeltigung","strand":3,"requires":["druckverfahren"],"step":4,"name":"Vervielfältigung von Bildern","iCan":"Ich kann erklären, wie Druck und Digitalisierung das Verbreiten von Bildern verändert haben."},{"id":"material-erkunden","strand":4,"requires":[],"step":1,"name":"Materialien erkunden","iCan":"Ich kann Materialien nach Aussehen und Gefühl beim Anfassen beschreiben und für ein Vorhaben das passende auswählen."},{"id":"aufbauen-und-abtragen","strand":4,"requires":["material-erkunden"],"step":2,"name":"Additive und subtraktive Verfahren","iCan":"Ich kann aufbauende (additive) und abtragende (subtraktive) Verfahren der Plastik unterscheiden."},{"id":"modellieren","strand":4,"requires":["aufbauen-und-abtragen"],"step":3,"name":"Modellieren mit Ton","iCan":"Ich kann eine Figur aus Ton modellieren: Grundform, Hinzufügen, Wegnehmen und Oberfläche gestalten."},{"id":"keramik-techniken","strand":4,"requires":["modellieren"],"step":4,"name":"Keramische Techniken","iCan":"Ich kann ein Gefäß in Aufbau- oder Plattentechnik bauen und Ton durch Engobe oder Glasur gestalten."},{"id":"plastische-mittel","strand":4,"requires":["aufbauen-und-abtragen"],"step":3,"name":"Plastische Gestaltungsmittel","iCan":"Ich kann an einer Plastik Masse, Gliederung und Oberfläche beschreiben und ihre Wirkung erklären."},{"id":"vollplastik-und-relief","strand":4,"requires":["plastische-mittel"],"step":4,"name":"Vollplastik und Relief","iCan":"Ich kann Vollplastik und Relief unterscheiden und erklären, von wo man sie betrachten kann."},{"id":"koerper-und-raum","strand":4,"requires":["plastische-mittel"],"step":4,"name":"Plastik und Raum","iCan":"Ich kann beschreiben, wie eine Plastik den Raum um sich herum einnimmt, zum Beispiel offen, geschlossen oder bewegt."},{"id":"collage","strand":4,"requires":["material-erkunden"],"step":2,"name":"Collage","iCan":"Ich kann aus ausgeschnittenen Papieren und Bildteilen eine Collage gestalten."},{"id":"assemblage","strand":4,"requires":["material-erkunden"],"step":2,"name":"Assemblage","iCan":"Ich kann aus gefundenen Gegenständen ein neues Objekt bauen und ihm so eine neue Bedeutung geben."},{"id":"spielfigur","strand":4,"requires":["modellieren"],"step":4,"name":"Spielfigur und Maske","iCan":"Ich kann eine Spielfigur oder Maske bauen, deren Ausdruck durch Übertreiben und Typisieren deutlich wird."},{"id":"kamerastandpunkt","strand":5,"requires":[],"step":1,"name":"Kamerastandpunkt","iCan":"Ich kann Normalsicht, Froschperspektive und Vogelperspektive unterscheiden und ihre Wirkung beschreiben."},{"id":"einstellungsgroessen","strand":5,"requires":["bildausschnitt-und-ansicht"],"step":4,"name":"Einstellungsgrößen","iCan":"Ich kann Einstellungsgrößen wie Totale, Halbnah, Nah und Detail unterscheiden und gezielt wählen."},{"id":"licht-in-der-fotografie","strand":5,"requires":["kamerastandpunkt","licht-und-schatten"],"step":2,"name":"Licht in der Fotografie","iCan":"Ich kann Licht in einem Foto gezielt führen, zum Beispiel als Gegenlicht oder Seitenlicht, und die Wirkung beschreiben."},{"id":"schaerfe-und-blende","strand":5,"requires":["einstellungsgroessen"],"step":5,"name":"Schärfe, Blende und Belichtung","iCan":"Ich kann erklären, wie Blende, Brennweite und Belichtungszeit Schärfe und Bewegung in einem Foto verändern."},{"id":"koerpersprache","strand":5,"requires":[],"step":1,"name":"Körpersprache im Bild","iCan":"Ich kann Mimik, Gestik und Körperhaltung in einem Standbild oder Foto gezielt als Ausdrucksmittel einsetzen."},{"id":"inszenierte-fotografie","strand":5,"requires":["koerpersprache","licht-in-der-fotografie"],"step":3,"name":"Inszenierte Fotografie","iCan":"Ich kann ein Foto inszenieren und dabei Pose, Kleidung, Requisit und Kulisse gezielt einsetzen."},{"id":"dokumentation-und-inszenierung","strand":5,"requires":["inszenierte-fotografie"],"step":4,"name":"Dokumentarisches und inszeniertes Foto","iCan":"Ich kann dokumentarische und inszenierte Fotos unterscheiden und ihren Wahrheitsgehalt bewerten, zum Beispiel bei Presse- und Werbefotos."},{"id":"digitale-bildbearbeitung","strand":5,"requires":["einstellungsgroessen"],"step":5,"name":"Digitale Bildbearbeitung","iCan":"Ich kann ein Foto mit einem Bildbearbeitungsprogramm verändern, zum Beispiel Ausschnitt, Helligkeit und Farbe, auch mit Ebenen."},{"id":"bildmanipulation","strand":5,"requires":["digitale-bildbearbeitung","dokumentation-und-inszenierung"],"step":6,"name":"Bildmanipulation","iCan":"Ich kann erkennen, wie Fotos durch Bearbeitung verändert werden, und bewerten, wann das täuscht."},{"id":"kamerabewegung","strand":5,"requires":["einstellungsgroessen"],"step":5,"name":"Kamerabewegung","iCan":"Ich kann Kamerabewegungen wie Schwenk, Fahrt und Zoom im Film erkennen und ihre Wirkung beschreiben."},{"id":"filmschnitt","strand":5,"requires":["kamerabewegung"],"step":6,"name":"Filmschnitt","iCan":"Ich kann erklären, wie Schnitt, Zeitlupe und Zeitraffer das Tempo und die Wirkung eines Films verändern."},{"id":"aktionskunst","strand":5,"requires":["koerpersprache"],"step":2,"name":"Performance und Aktionskunst","iCan":"Ich kann an Beispielen erklären, wie Künstlerinnen und Künstler in Performance und Aktionskunst ihren Körper, Zeit und Raum als Material nutzen."},{"id":"recht-am-eigenen-bild","strand":5,"requires":[],"step":1,"name":"Recht am eigenen Bild","iCan":"Ich kann erklären, was das Recht am eigenen Bild bedeutet, und danach entscheiden, welche Fotos ich zeigen darf."},{"id":"selbstdarstellung-online","strand":5,"requires":["inszenierte-fotografie","recht-am-eigenen-bild"],"step":4,"name":"Selbstdarstellung im Internet","iCan":"Ich kann Selbstdarstellungen im Internet und in Jugendkulturen untersuchen und bewerten, wie sie wirken sollen."},{"id":"bauwerk-untersuchen","strand":6,"requires":["material-erkunden"],"step":2,"name":"Bauwerke untersuchen","iCan":"Ich kann ein Bauwerk nach Außenraum und Innenraum, Material, Konstruktion und Funktion beschreiben."},{"id":"grundriss-und-ansicht","strand":6,"requires":["bauwerk-untersuchen"],"step":3,"name":"Grundriss, Schnitt und Ansicht","iCan":"Ich kann Grundriss, Schnitt und Ansicht eines Gebäudes oder Raums lesen und zeichnen."},{"id":"architekturmodell","strand":6,"requires":["material-erkunden"],"step":2,"name":"Architekturmodell","iCan":"Ich kann ein Modell eines Gebäudes oder Raums aus Pappe, Holz oder anderen Materialien bauen."},{"id":"innenraum-gestalten","strand":6,"requires":["grundriss-und-ansicht","architekturmodell"],"step":4,"name":"Innenraumgestaltung","iCan":"Ich kann einen Innenraum für bestimmte Nutzer entwerfen und dabei Licht, Proportion, Material und Ausstattung bedenken."},{"id":"form-und-funktion","strand":6,"requires":["material-erkunden"],"step":2,"name":"Form und Funktion","iCan":"Ich kann an Gebrauchsgegenständen erklären, wie Form, Funktion und Material zusammenhängen."},{"id":"designobjekt-entwerfen","strand":6,"requires":["form-und-funktion","skizze-und-entwurf"],"step":4,"name":"Gebrauchsgegenstand entwerfen","iCan":"Ich kann einen Gebrauchsgegenstand entwerfen: Idee, Skizzen, Modell und Prototyp."},{"id":"design-bewerten","strand":6,"requires":["form-und-funktion"],"step":3,"name":"Design bewerten","iCan":"Ich kann ein Produkt nach Aussehen, Nutzen, sozialen Folgen und Nachhaltigkeit bewerten."},{"id":"unikat-und-serie","strand":6,"requires":["form-und-funktion"],"step":3,"name":"Unikat und Serienprodukt","iCan":"Ich kann am Beispiel von Jugendstil und Bauhaus erklären, wie sich handwerklich gefertigte Einzelstücke und Industrieprodukte unterscheiden."},{"id":"kleidung-als-zeichen","strand":6,"requires":[],"step":1,"name":"Kleidung und Mode als Zeichen","iCan":"Ich kann erklären, was Kleidung, Schmuck und Mode über Menschen mitteilen, auch in verschiedenen Zeiten und Kulturen."},{"id":"schrift-und-wirkung","strand":6,"requires":[],"step":1,"name":"Schrift und Wirkung","iCan":"Ich kann Schriften nach Form und Wirkung unterscheiden und eine Schrift wählen, die zur Botschaft passt."},{"id":"plakat-gestalten","strand":6,"requires":["schrift-und-wirkung","platzierung-im-format"],"step":3,"name":"Plakatgestaltung","iCan":"Ich kann ein Plakat gestalten, auf dem Bild und Schrift zusammen eine klare Botschaft geben."},{"id":"logo-und-marke","strand":6,"requires":["schrift-und-wirkung","formeigenschaften"],"step":2,"name":"Logo und Marke","iCan":"Ich kann ein Logo entwerfen, das einfach, unverwechselbar und gut zu merken ist."},{"id":"kommunikationsdesign","strand":6,"requires":["plakat-gestalten"],"step":4,"name":"Kommunikationsdesign","iCan":"Ich kann an einem Beispiel aus Werbung oder Information Sender, Botschaft, Medium und Empfänger benennen."},{"id":"werbung-durchschauen","strand":6,"requires":["kommunikationsdesign"],"step":5,"name":"Werbung durchschauen","iCan":"Ich kann zeigen, mit welchen Bildmitteln Werbung mich beeinflussen will, und das bewerten."},{"id":"fantasiebild","strand":7,"requires":[],"step":1,"name":"Fantasiebild","iCan":"Ich kann ein Fantasiebild erfinden, indem ich Bekanntes neu kombiniere, zum Beispiel zu einem Fabelwesen oder einer unmöglichen Maschine."},{"id":"verfremden","strand":7,"requires":[],"step":1,"name":"Verfremdung","iCan":"Ich kann ein Motiv verfremden, zum Beispiel durch Vergrößern, Verzerren, ungewohnte Farben oder einen fremden Ort."},{"id":"sammeln","strand":7,"requires":[],"step":1,"name":"Sammeln und Moodboard","iCan":"Ich kann zu einem Thema Bilder, Dinge und Ideen sammeln und ordnen, zum Beispiel in einem Moodboard."},{"id":"zufallsverfahren","strand":7,"requires":["malspuren"],"step":3,"name":"Zufallsverfahren","iCan":"Ich kann mit Zufallsverfahren wie Frottage, Klecksbild oder Abklatsch arbeiten und aus dem Ergebnis ein Bild entwickeln."},{"id":"montage","strand":7,"requires":["collage"],"step":3,"name":"Montage und Fotomontage","iCan":"Ich kann Bildteile so zu einer Montage verbinden, dass eine neue Aussage entsteht, auch als Fotomontage."},{"id":"bildzitat","strand":7,"requires":["werkvergleich"],"step":4,"name":"Bildzitat","iCan":"Ich kann ein bekanntes Kunstwerk zitieren und in einen neuen Zusammenhang setzen."},{"id":"abstrahieren","strand":7,"requires":["verfremden"],"step":2,"name":"Abstrahieren","iCan":"Ich kann einen Gegenstand schrittweise vereinfachen, bis er abstrakt wird, und erklären, was dabei verloren geht oder gewonnen wird."},{"id":"praesentieren","strand":7,"requires":[],"step":1,"name":"Arbeiten präsentieren","iCan":"Ich kann meine Arbeiten für ein bestimmtes Publikum präsentieren, zum Beispiel in einer Mappe, Ausstellung oder online."},{"id":"ersteindruck","strand":8,"requires":[],"step":1,"name":"Erster Eindruck","iCan":"Ich kann meinen ersten Eindruck von einem Bild in Worte fassen und sagen, was ihn auslöst."},{"id":"bild-beschreiben","strand":8,"requires":["ersteindruck"],"step":2,"name":"Bildbeschreibung","iCan":"Ich kann ein Bild geordnet beschreiben: was dargestellt ist, wo es steht und wie es aussieht."},{"id":"werkangaben","strand":8,"requires":[],"step":1,"name":"Werkangaben","iCan":"Ich kann die Angaben zu einem Werk lesen und nennen: Künstlerin oder Künstler, Titel, Jahr, Technik, Material und Maße."},{"id":"bildaufbau","strand":8,"requires":["bild-beschreiben","streuung-reihung-ballung"],"step":3,"name":"Bildaufbau","iCan":"Ich kann den Aufbau eines Bildes untersuchen: wichtige Formen, Richtungen und wie die Fläche geordnet ist."},{"id":"kompositionsskizze","strand":8,"requires":["bildaufbau","richtungen-im-bild"],"step":4,"name":"Kompositionsskizze","iCan":"Ich kann mit einer Skizze die Komposition eines Bildes sichtbar machen, zum Beispiel Achsen, Kompositionslinien oder einen Farbauszug."},{"id":"farbe-analysieren","strand":8,"requires":["bildaufbau","ausdrucksfarbe","symbolfarbe"],"step":6,"name":"Farbanalyse","iCan":"Ich kann die Farbgestaltung eines Werks untersuchen: Farbwahl, Farbbeziehungen und Farbfunktionen."},{"id":"raum-analysieren","strand":8,"requires":["bildaufbau","zentralperspektive"],"step":5,"name":"Raumanalyse","iCan":"Ich kann untersuchen, mit welchen Mitteln ein Bild Raum darstellt, und Raumdarstellungen verschiedener Zeiten vergleichen."},{"id":"erzaehlende-bilder","strand":8,"requires":["bild-beschreiben"],"step":3,"name":"Erzählende Bilder","iCan":"Ich kann an einem Bild erklären, wie es eine Geschichte erzählt: Thema, Handlung, Figuren und Ort."},{"id":"bild-deuten","strand":8,"requires":["bild-beschreiben"],"step":3,"name":"Bilddeutung","iCan":"Ich kann eine eigene Deutung eines Bildes vorschlagen und mit dem begründen, was im Bild zu sehen ist."},{"id":"werkvergleich","strand":8,"requires":["bild-beschreiben"],"step":3,"name":"Werkvergleich","iCan":"Ich kann zwei Werke nach festgelegten Gesichtspunkten vergleichen und Gemeinsamkeiten und Unterschiede nennen."},{"id":"funktionen-der-kunst","strand":8,"requires":[],"step":1,"name":"Funktionen der Kunst","iCan":"Ich kann an Beispielen erklären, wozu Kunst gemacht wurde, zum Beispiel für Religion, Macht, Erinnerung oder Schmuck."},{"id":"expressive-bilder","strand":8,"requires":["farbwirkung"],"step":4,"name":"Expressive Bilder","iCan":"Ich kann an Bildern erklären, wie sie inneres Erleben ausdrücken, und selbst ein Gefühl bildnerisch ausdrücken."},{"id":"ikonografie","strand":8,"requires":["bild-beschreiben"],"step":3,"name":"Ikonografie","iCan":"Ich kann Bildmotive und Attribute erkennen und damit bestimmen, wer oder was dargestellt ist, zum Beispiel bei Heiligen."},{"id":"bildsymbole","strand":8,"requires":["ikonografie"],"step":4,"name":"Bildsymbole","iCan":"Ich kann Symbole in Bildern entschlüsseln, zum Beispiel Zeichen der Vergänglichkeit in einem Stillleben."},{"id":"kontext-deuten","strand":8,"requires":["bild-deuten","ikonografie","werkangaben"],"step":4,"name":"Deutung im Kontext","iCan":"Ich kann ein Werk deuten, indem ich das Bild mit Wissen über die Künstlerin oder den Künstler und die Zeit verbinde."},{"id":"portraet","strand":8,"requires":["bild-beschreiben"],"step":3,"name":"Porträt","iCan":"Ich kann Formen des Porträts unterscheiden, zum Beispiel Kopfbild, Brustbild, Ganzfigur und Selbstbildnis."},{"id":"stillleben","strand":8,"requires":["bild-beschreiben"],"step":3,"name":"Stillleben","iCan":"Ich kann erklären, was ein Stillleben ist und was die Anordnung der Dinge erzählen kann."},{"id":"landschaftsbild","strand":8,"requires":["farbwirkung","vordergrund-hintergrund"],"step":4,"name":"Landschaftsbild","iCan":"Ich kann erklären, wie ein Landschaftsbild eine Stimmung erzeugt."},{"id":"bildgattungen","strand":8,"requires":["portraet","stillleben","landschaftsbild"],"step":5,"name":"Bildgattungen","iCan":"Ich kann die Bildgattungen Porträt, Stillleben, Landschaft und Historienbild unterscheiden und ein Werk zuordnen."},{"id":"hoehlenmalerei","strand":9,"requires":["bild-beschreiben"],"step":3,"name":"Kunst der Steinzeit","iCan":"Ich kann Höhlenmalereien und Plastiken der Steinzeit beschreiben und erklären, wozu sie vielleicht gemacht wurden."},{"id":"aegyptische-kunst","strand":9,"requires":["bild-beschreiben","vollplastik-und-relief"],"step":5,"name":"Ägyptische Kunst","iCan":"Ich kann an Figuren und Reliefs aus dem Alten Ägypten typische Darstellungsregeln erkennen."},{"id":"antike-plastik","strand":9,"requires":["vollplastik-und-relief","koerperproportionen"],"step":5,"name":"Antike Plastik","iCan":"Ich kann griechische und römische Statuen beschreiben und den Kontrapost und das Schönheitsideal der Antike erklären."},{"id":"antike-architektur","strand":9,"requires":[],"step":1,"name":"Antike Architektur","iCan":"Ich kann griechische Tempel und römische Bauten an typischen Merkmalen erkennen, zum Beispiel Säulen, Bogen und Kuppel."},{"id":"romanik-und-gotik","strand":9,"requires":["bauwerk-untersuchen"],"step":3,"name":"Romanik und Gotik","iCan":"Ich kann romanische und gotische Kirchen an Rundbogen und Spitzbogen, Mauern und Fenstern unterscheiden."},{"id":"mittelalterliche-bilder","strand":9,"requires":["ikonografie"],"step":4,"name":"Mittelalterliche Bilder","iCan":"Ich kann an mittelalterlichen Bildern Goldgrund, Bedeutungsgröße und typische Bildmotive wie Verkündigung oder Kreuzigung erkennen."},{"id":"renaissance","strand":9,"requires":["mittelalterliche-bilder","zentralperspektive"],"step":5,"name":"Renaissance","iCan":"Ich kann erklären, wie sich mit der Renaissance das Bild vom Menschen und die Raumdarstellung verändert haben."},{"id":"barock","strand":9,"requires":["renaissance"],"step":6,"name":"Barock","iCan":"Ich kann typische Merkmale des Barock beschreiben, zum Beispiel Bewegung, Licht und Prunk, und sie mit der Renaissance vergleichen."},{"id":"klassizismus-und-romantik","strand":9,"requires":["werkvergleich"],"step":4,"name":"Klassizismus und Romantik","iCan":"Ich kann Werke des Klassizismus und der Romantik an ihrer Sicht auf den Menschen und die Natur unterscheiden."},{"id":"realismus","strand":9,"requires":["klassizismus-und-romantik"],"step":5,"name":"Realismus","iCan":"Ich kann erklären, wie der Realismus im 19. Jahrhundert die soziale Wirklichkeit darstellt."},{"id":"impressionismus","strand":9,"requires":["lokalfarbe-erscheinungsfarbe","realismus"],"step":6,"name":"Impressionismus","iCan":"Ich kann typische Merkmale des Impressionismus beschreiben, zum Beispiel Licht, Freilichtmalerei und flüchtiger Pinselstrich."},{"id":"wegbereiter-der-moderne","strand":9,"requires":["impressionismus","ausdrucksfarbe"],"step":7,"name":"Wegbereiter der Moderne","iCan":"Ich kann an Werken von van Gogh, Cézanne und Gauguin zeigen, wie sie den Weg zur modernen Kunst bereitet haben."},{"id":"aussereuropaeische-einfluesse","strand":9,"requires":["wegbereiter-der-moderne"],"step":8,"name":"Außereuropäische Einflüsse","iCan":"Ich kann erklären, wie Kunst aus Afrika, Asien und Ozeanien die Kunst der frühen Moderne beeinflusst hat, und diesen Blick kritisch bewerten."},{"id":"jugendstil","strand":9,"requires":["ornament-und-muster","form-und-funktion"],"step":3,"name":"Jugendstil","iCan":"Ich kann typische Formen des Jugendstils erkennen und erklären, was ein Gesamtkunstwerk ist."},{"id":"street-art","strand":9,"requires":["funktionen-der-kunst"],"step":2,"name":"Street-Art und Graffiti","iCan":"Ich kann Formen von Street-Art und Graffiti beschreiben und ihre Wirkung im öffentlichen Raum bewerten."},{"id":"epochen-ueberblick","strand":9,"requires":["hoehlenmalerei","aegyptische-kunst","antike-plastik","antike-architektur","romanik-und-gotik","mittelalterliche-bilder","renaissance","barock","klassizismus-und-romantik","realismus","impressionismus","wegbereiter-der-moderne","jugendstil"],"step":8,"name":"Epochen im Überblick","iCan":"Ich kann die großen Epochen der Kunst von der Steinzeit bis zur Moderne in die richtige Reihenfolge bringen und ein Werk an Merkmalen einer Epoche zuordnen."}]}</script>
-<script type="application/json" id="map-steps-text">{"kind":"{strand} · Stufe {step}","step":"Stufe {step}","before":"Baut auf","after":"Darauf baut auf","nothing":"keine","page":"Zur Seite des Bausteins","clear":"Auswahl aufheben","pageUrl":"/apps/pr-preview/pr-181/map/kunst/c/{id}/"}</script>
+<script type="application/json" id="map-steps-data">{"strands":["Farbe","Form und Fläche","Raum, Körper und Perspektive","Zeichnung und Druckgrafik","Plastik, Objekt und Material","Fotografie, Film und Aktion","Architektur und Design","Bildideen und Bildstrategien","Bilder beschreiben und deuten","Kunstgeschichte: Epochen und Werke"],"competencies":[{"id":"farbeigenschaften","strand":0,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Farbeigenschaften","iCan":"Ich kann Farben nach Farbton, Helligkeit und Sättigung (Leuchtkraft) unterscheiden."},{"id":"farben-benennen","strand":0,"requires":["farbeigenschaften"],"step":2,"band":"5/6","bandStep":2,"name":"Farben benennen","iCan":"Ich kann Farben genau benennen, mit üblichen Farbnamen und mit eigenen treffenden Namen."},{"id":"farbkreis","strand":0,"requires":["farbeigenschaften"],"step":2,"band":"5/6","bandStep":2,"name":"Farbkreis","iCan":"Ich kann Grundfarben, Mischfarben erster und zweiter Ordnung im Farbkreis zeigen und ihre Lage erklären."},{"id":"farben-mischen","strand":0,"requires":["farbkreis"],"step":3,"band":"5/6","bandStep":3,"name":"Farben mischen","iCan":"Ich kann aus wenigen Farben viele Farbtöne mischen und eine Farbe gezielt aufhellen und abdunkeln."},{"id":"subtraktive-farbmischung","strand":0,"requires":["farben-mischen"],"step":6,"band":"7/8","bandStep":1,"name":"Subtraktive Farbmischung","iCan":"Ich kann erklären, warum Malfarben beim Mischen dunkler werden, und mit Cyan, Magenta und Gelb gezielt mischen."},{"id":"farbverwandtschaften","strand":0,"requires":["farben-mischen"],"step":4,"band":"5/6","bandStep":4,"name":"Farbverwandtschaften","iCan":"Ich kann Farbfamilien und Nachbarfarben bilden, auch durch Beimischen von Schwarz und Weiß."},{"id":"farbkontraste","strand":0,"requires":["farbeigenschaften"],"step":2,"band":"5/6","bandStep":2,"name":"Farbkontraste","iCan":"Ich kann an Bildern zeigen, was ein Farbkontrast ist, und den Farbe-an-sich-Kontrast und den Hell-Dunkel-Kontrast erkennen."},{"id":"komplementaerkontrast","strand":0,"requires":["farbkreis","farbkontraste"],"step":3,"band":"5/6","bandStep":3,"name":"Komplementärkontrast","iCan":"Ich kann Komplementärfarben im Farbkreis finden und ihre starke Wirkung im Bild beschreiben."},{"id":"kalt-warm-kontrast","strand":0,"requires":["farbkontraste"],"step":3,"band":"5/6","bandStep":3,"name":"Kalt-Warm-Kontrast","iCan":"Ich kann warme und kalte Farben unterscheiden und ihre Wirkung im Bild beschreiben."},{"id":"weitere-farbkontraste","strand":0,"requires":["komplementaerkontrast","kalt-warm-kontrast"],"step":10,"band":"9/10","bandStep":1,"name":"Qualitäts-, Quantitäts- und Simultankontrast","iCan":"Ich kann Qualitäts-, Quantitäts- und Simultankontrast an Bildern erkennen und erklären."},{"id":"farbauftrag","strand":0,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Farbauftrag","iCan":"Ich kann deckend, lasierend und pastos malen und die Wirkung des Farbauftrags beschreiben."},{"id":"farbmaterial","strand":0,"requires":["farbauftrag"],"step":2,"band":"5/6","bandStep":2,"name":"Pigment und Bindemittel","iCan":"Ich kann erklären, dass Malfarbe aus Pigment und Bindemittel besteht, und eine einfache Farbe selbst herstellen."},{"id":"malspuren","strand":0,"requires":["farbauftrag"],"step":2,"band":"5/6","bandStep":2,"name":"Malspuren","iCan":"Ich kann Farbe auf verschiedene Weise auftragen, zum Beispiel tupfen, spritzen oder wischen, und die Wirkung der Spuren beschreiben."},{"id":"farbwirkung","strand":0,"requires":["farbkontraste"],"step":3,"band":"5/6","bandStep":3,"name":"Farbwirkung","iCan":"Ich kann beschreiben, welche Stimmung Farben und Farbklänge in einem Bild erzeugen."},{"id":"lokalfarbe-erscheinungsfarbe","strand":0,"requires":["farben-mischen"],"step":6,"band":"7/8","bandStep":1,"name":"Lokalfarbe und Erscheinungsfarbe","iCan":"Ich kann die eigene Farbe eines Gegenstands (Lokalfarbe) von der Farbe unterscheiden, die er im Licht zeigt (Erscheinungsfarbe)."},{"id":"farbmodulation","strand":0,"requires":["lokalfarbe-erscheinungsfarbe","licht-und-schatten"],"step":7,"band":"7/8","bandStep":2,"name":"Farbmodulation","iCan":"Ich kann einen Gegenstand durch fein abgestufte Farbtöne plastisch malen."},{"id":"ausdrucksfarbe","strand":0,"requires":["farbwirkung","lokalfarbe-erscheinungsfarbe"],"step":10,"band":"9/10","bandStep":1,"name":"Ausdrucksfarbe","iCan":"Ich kann Farben unabhängig vom Gegenstand einsetzen, um ein Gefühl auszudrücken (Ausdrucksfarbe)."},{"id":"symbolfarbe","strand":0,"requires":["farbwirkung"],"step":6,"band":"7/8","bandStep":1,"name":"Symbolfarbe","iCan":"Ich kann erklären, wofür eine Farbe in einem Bild als Zeichen steht, zum Beispiel Blau für Maria (Symbolfarbe)."},{"id":"figur-grund","strand":1,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Figur und Grund","iCan":"Ich kann Figur und Grund in einem Bild unterscheiden und gezielt gestalten, auch als Positiv- und Negativform."},{"id":"streuung-reihung-ballung","strand":1,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Streuung, Reihung und Ballung","iCan":"Ich kann Formen auf einer Fläche streuen, reihen oder ballen und die Wirkung vergleichen."},{"id":"platzierung-im-format","strand":1,"requires":["figur-grund"],"step":2,"band":"5/6","bandStep":2,"name":"Platzierung im Format","iCan":"Ich kann Bildgegenstände bewusst im Format platzieren und ihre Größe so wählen, dass das Wichtige auffällt."},{"id":"bildausschnitt-und-ansicht","strand":1,"requires":["platzierung-im-format"],"step":3,"band":"5/6","bandStep":3,"name":"Bildausschnitt und Ansicht","iCan":"Ich kann einen Bildausschnitt und eine Ansicht wählen, die die Wirkung eines Bildes steigern."},{"id":"symmetrie-asymmetrie","strand":1,"requires":["streuung-reihung-ballung"],"step":10,"band":"9/10","bandStep":1,"name":"Symmetrie und Asymmetrie","iCan":"Ich kann symmetrische und asymmetrische Bildordnungen unterscheiden und ihre Wirkung beschreiben."},{"id":"richtungen-im-bild","strand":1,"requires":["symmetrie-asymmetrie"],"step":11,"band":"9/10","bandStep":2,"name":"Richtungen und Kompositionslinien","iCan":"Ich kann Richtungen und Kompositionslinien in einem Bild finden und zeigen, wie sie den Blick lenken."},{"id":"formeigenschaften","strand":1,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Geometrische und organische Formen","iCan":"Ich kann geometrische (tektonische) und organische Formen unterscheiden und Formverwandtschaften und Formkontraste erkennen."},{"id":"ornament-und-muster","strand":1,"requires":["streuung-reihung-ballung","formeigenschaften"],"step":2,"band":"5/6","bandStep":2,"name":"Ornament und Muster","iCan":"Ich kann ein Ornament oder Muster aus einer Grundform durch Wiederholen und Spiegeln entwickeln."},{"id":"bewegung-darstellen","strand":1,"requires":["punkt-und-linie"],"step":3,"band":"5/6","bandStep":3,"name":"Bewegung auf der Fläche","iCan":"Ich kann Bewegung auf einer Fläche darstellen, zum Beispiel durch schräge Richtungen, Wiederholung und Bewegungsspuren."},{"id":"vordergrund-hintergrund","strand":2,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Vorder-, Mittel- und Hintergrund","iCan":"Ich kann in einem Bild Vordergrund, Mittelgrund und Hintergrund trennen."},{"id":"ueberdeckung","strand":2,"requires":["vordergrund-hintergrund"],"step":2,"band":"5/6","bandStep":2,"name":"Überdeckung und Staffelung","iCan":"Ich kann durch Überdecken (Überschneiden) und Staffeln Raum auf der Fläche darstellen."},{"id":"groessenabnahme","strand":2,"requires":["vordergrund-hintergrund"],"step":2,"band":"5/6","bandStep":2,"name":"Größenabnahme","iCan":"Ich kann Raum darstellen, indem ich Dinge in der Ferne kleiner zeichne."},{"id":"hoehenlage","strand":2,"requires":["vordergrund-hintergrund"],"step":2,"band":"5/6","bandStep":2,"name":"Höhenlage","iCan":"Ich kann Raum darstellen, indem ich Dinge in der Ferne höher im Bild anordne (Höhenlage)."},{"id":"parallelperspektive","strand":2,"requires":["ueberdeckung"],"step":10,"band":"9/10","bandStep":1,"name":"Parallelperspektive","iCan":"Ich kann Körper wie Würfel und Häuser in Parallelperspektive zeichnen."},{"id":"horizont-und-fluchtpunkt","strand":2,"requires":["groessenabnahme"],"step":6,"band":"7/8","bandStep":1,"name":"Horizont und Fluchtpunkt","iCan":"Ich kann Horizont, Augenhöhe, Fluchtpunkt und Fluchtlinien in einem Bild finden und erklären, wo der Betrachter steht."},{"id":"zentralperspektive","strand":2,"requires":["horizont-und-fluchtpunkt"],"step":7,"band":"7/8","bandStep":2,"name":"Zentralperspektive","iCan":"Ich kann einen Raum oder eine Straße mit einem Fluchtpunkt zeichnen."},{"id":"zwei-fluchtpunkte","strand":2,"requires":["zentralperspektive"],"step":10,"band":"9/10","bandStep":1,"name":"Perspektive mit zwei Fluchtpunkten","iCan":"Ich kann einen Körper über Eck mit zwei Fluchtpunkten zeichnen."},{"id":"licht-und-schatten","strand":2,"requires":[],"step":6,"band":"7/8","bandStep":1,"name":"Licht und Schatten","iCan":"Ich kann Eigenschatten und Schlagschatten unterscheiden und einen Körper durch Licht und Schatten plastisch wirken lassen."},{"id":"luftperspektive","strand":2,"requires":["vordergrund-hintergrund","farbeigenschaften"],"step":10,"band":"9/10","bandStep":1,"name":"Luftperspektive","iCan":"Ich kann Ferne darstellen, indem ich Farben und Kontraste nach hinten blasser, bläulicher und unschärfer werden lasse (Luftperspektive)."},{"id":"farbperspektive","strand":2,"requires":["kalt-warm-kontrast","vordergrund-hintergrund"],"step":10,"band":"9/10","bandStep":1,"name":"Farbperspektive","iCan":"Ich kann mit warmen Farben vorn und kalten Farben hinten Raumtiefe erzeugen (Farbperspektive)."},{"id":"koerperproportionen","strand":2,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Körperproportionen","iCan":"Ich kann einen menschlichen Körper nach einem einfachen Proportionsschema zeichnen, zum Beispiel mit Kopfmaßen."},{"id":"gesichtsproportionen","strand":2,"requires":["koerperproportionen"],"step":6,"band":"7/8","bandStep":1,"name":"Kopf- und Gesichtsproportionen","iCan":"Ich kann einen Kopf von vorn in seinen Proportionen zeichnen, zum Beispiel mit den Augen auf halber Höhe."},{"id":"figur-in-bewegung","strand":2,"requires":["koerperproportionen","bewegung-darstellen"],"step":10,"band":"9/10","bandStep":1,"name":"Figur in Bewegung","iCan":"Ich kann eine menschliche Figur in einer Pose oder Bewegung zeichnen, auch mit Verkürzungen."},{"id":"zeichenmaterial","strand":3,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Zeichenmittel","iCan":"Ich kann Zeichenmittel wie Bleistift, Kohle, Kreide und Tusche nach ihrer Wirkung unterscheiden und passend auswählen."},{"id":"punkt-und-linie","strand":3,"requires":["zeichenmaterial"],"step":2,"band":"5/6","bandStep":2,"name":"Punkt und Linie","iCan":"Ich kann mit Punkten und Linien verschiedener Art zeichnen und ihre Wirkung beschreiben."},{"id":"kontur-und-binnenstruktur","strand":3,"requires":["punkt-und-linie"],"step":3,"band":"5/6","bandStep":3,"name":"Kontur und Binnenstruktur","iCan":"Ich kann den Umriss (Kontur) und die Linien im Inneren einer Form (Binnenstruktur) zeichnen."},{"id":"texturen-zeichnen","strand":3,"requires":["punkt-und-linie"],"step":3,"band":"5/6","bandStep":3,"name":"Texturen zeichnen","iCan":"Ich kann Oberflächen wie Holz, Fell oder Stein mit zeichnerischen Strukturen darstellen."},{"id":"beobachtend-zeichnen","strand":3,"requires":["kontur-und-binnenstruktur"],"step":6,"band":"7/8","bandStep":1,"name":"Beobachtendes Zeichnen","iCan":"Ich kann einen Gegenstand genau beobachten und sachlich richtig zeichnen."},{"id":"schraffur","strand":3,"requires":["kontur-und-binnenstruktur","licht-und-schatten"],"step":7,"band":"7/8","bandStep":2,"name":"Schraffur","iCan":"Ich kann mit Schraffur und Kreuzschraffur Helligkeit, Volumen und Oberfläche darstellen."},{"id":"skizze-und-entwurf","strand":3,"requires":["punkt-und-linie"],"step":3,"band":"5/6","bandStep":3,"name":"Skizze und Entwurf","iCan":"Ich kann ein Vorhaben mit Skizzen planen und daraus einen Entwurf machen."},{"id":"erklaerende-zeichnung","strand":3,"requires":["beobachtend-zeichnen"],"step":10,"band":"9/10","bandStep":1,"name":"Erklärende Zeichnung","iCan":"Ich kann einen Ablauf oder den Aufbau eines Geräts mit einer erklärenden Zeichnung darstellen, zum Beispiel als Explosionszeichnung."},{"id":"bildergeschichte","strand":3,"requires":["erzaehlende-bilder"],"step":4,"band":"5/6","bandStep":4,"name":"Bildergeschichte und Comic","iCan":"Ich kann eine Handlung in einer Bildfolge erzählen, zum Beispiel als Bildergeschichte oder Comic."},{"id":"hochdruck","strand":3,"requires":["figur-grund"],"step":6,"band":"7/8","bandStep":1,"name":"Hochdruck","iCan":"Ich kann das Prinzip des Hochdrucks erklären und einen einfachen Druck herstellen, zum Beispiel mit Stempel oder Moosgummi."},{"id":"linolschnitt","strand":3,"requires":["hochdruck"],"step":7,"band":"7/8","bandStep":2,"name":"Linolschnitt","iCan":"Ich kann einen Linolschnitt planen und drucken und dabei Formen auf das Wesentliche vereinfachen."},{"id":"materialdruck","strand":3,"requires":["hochdruck"],"step":10,"band":"9/10","bandStep":1,"name":"Materialdruck","iCan":"Ich kann Materialien und Gegenstände als Druckstock nutzen und ihre Spuren gestalterisch einsetzen."},{"id":"druckverfahren","strand":3,"requires":["hochdruck"],"step":7,"band":"7/8","bandStep":2,"name":"Druckverfahren","iCan":"Ich kann Hochdruck, Tiefdruck und Siebdruck nach ihrem Prinzip unterscheiden."},{"id":"vervielfaeltigung","strand":3,"requires":["druckverfahren"],"step":8,"band":"7/8","bandStep":3,"name":"Vervielfältigung von Bildern","iCan":"Ich kann erklären, wie Druck und Digitalisierung das Verbreiten von Bildern verändert haben."},{"id":"material-erkunden","strand":4,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Materialien erkunden","iCan":"Ich kann Materialien nach Aussehen und Gefühl beim Anfassen beschreiben und für ein Vorhaben das passende auswählen."},{"id":"aufbauen-und-abtragen","strand":4,"requires":["material-erkunden"],"step":2,"band":"5/6","bandStep":2,"name":"Additive und subtraktive Verfahren","iCan":"Ich kann aufbauende (additive) und abtragende (subtraktive) Verfahren der Plastik unterscheiden."},{"id":"modellieren","strand":4,"requires":["aufbauen-und-abtragen"],"step":3,"band":"5/6","bandStep":3,"name":"Modellieren mit Ton","iCan":"Ich kann eine Figur aus Ton modellieren: Grundform, Hinzufügen, Wegnehmen und Oberfläche gestalten."},{"id":"keramik-techniken","strand":4,"requires":["modellieren"],"step":4,"band":"5/6","bandStep":4,"name":"Keramische Techniken","iCan":"Ich kann ein Gefäß in Aufbau- oder Plattentechnik bauen und Ton durch Engobe oder Glasur gestalten."},{"id":"plastische-mittel","strand":4,"requires":["aufbauen-und-abtragen"],"step":3,"band":"5/6","bandStep":3,"name":"Plastische Gestaltungsmittel","iCan":"Ich kann an einer Plastik Masse, Gliederung und Oberfläche beschreiben und ihre Wirkung erklären."},{"id":"vollplastik-und-relief","strand":4,"requires":["plastische-mittel"],"step":4,"band":"5/6","bandStep":4,"name":"Vollplastik und Relief","iCan":"Ich kann Vollplastik und Relief unterscheiden und erklären, von wo man sie betrachten kann."},{"id":"koerper-und-raum","strand":4,"requires":["plastische-mittel"],"step":6,"band":"7/8","bandStep":1,"name":"Plastik und Raum","iCan":"Ich kann beschreiben, wie eine Plastik den Raum um sich herum einnimmt, zum Beispiel offen, geschlossen oder bewegt."},{"id":"collage","strand":4,"requires":["material-erkunden"],"step":2,"band":"5/6","bandStep":2,"name":"Collage","iCan":"Ich kann aus ausgeschnittenen Papieren und Bildteilen eine Collage gestalten."},{"id":"assemblage","strand":4,"requires":["material-erkunden"],"step":2,"band":"5/6","bandStep":2,"name":"Assemblage","iCan":"Ich kann aus gefundenen Gegenständen ein neues Objekt bauen und ihm so eine neue Bedeutung geben."},{"id":"spielfigur","strand":4,"requires":["modellieren"],"step":4,"band":"5/6","bandStep":4,"name":"Spielfigur und Maske","iCan":"Ich kann eine Spielfigur oder Maske bauen, deren Ausdruck durch Übertreiben und Typisieren deutlich wird."},{"id":"kamerastandpunkt","strand":5,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Kamerastandpunkt","iCan":"Ich kann Normalsicht, Froschperspektive und Vogelperspektive unterscheiden und ihre Wirkung beschreiben."},{"id":"einstellungsgroessen","strand":5,"requires":["bildausschnitt-und-ansicht"],"step":4,"band":"5/6","bandStep":4,"name":"Einstellungsgrößen","iCan":"Ich kann Einstellungsgrößen wie Totale, Halbnah, Nah und Detail unterscheiden und gezielt wählen."},{"id":"licht-in-der-fotografie","strand":5,"requires":["kamerastandpunkt","licht-und-schatten"],"step":10,"band":"9/10","bandStep":1,"name":"Licht in der Fotografie","iCan":"Ich kann Licht in einem Foto gezielt führen, zum Beispiel als Gegenlicht oder Seitenlicht, und die Wirkung beschreiben."},{"id":"schaerfe-und-blende","strand":5,"requires":["einstellungsgroessen"],"step":10,"band":"9/10","bandStep":1,"name":"Schärfe, Blende und Belichtung","iCan":"Ich kann erklären, wie Blende, Brennweite und Belichtungszeit Schärfe und Bewegung in einem Foto verändern."},{"id":"koerpersprache","strand":5,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Körpersprache im Bild","iCan":"Ich kann Mimik, Gestik und Körperhaltung in einem Standbild oder Foto gezielt als Ausdrucksmittel einsetzen."},{"id":"inszenierte-fotografie","strand":5,"requires":["koerpersprache","licht-in-der-fotografie","kleidung-als-zeichen"],"step":11,"band":"9/10","bandStep":2,"name":"Inszenierte Fotografie","iCan":"Ich kann ein Foto inszenieren und dabei Pose, Kleidung, Requisit und Kulisse gezielt einsetzen."},{"id":"dokumentation-und-inszenierung","strand":5,"requires":["inszenierte-fotografie"],"step":12,"band":"9/10","bandStep":3,"name":"Dokumentarisches und inszeniertes Foto","iCan":"Ich kann dokumentarische und inszenierte Fotos unterscheiden und ihren Wahrheitsgehalt bewerten, zum Beispiel bei Presse- und Werbefotos."},{"id":"digitale-bildbearbeitung","strand":5,"requires":["einstellungsgroessen"],"step":10,"band":"9/10","bandStep":1,"name":"Digitale Bildbearbeitung","iCan":"Ich kann ein Foto mit einem Bildbearbeitungsprogramm verändern, zum Beispiel Ausschnitt, Helligkeit und Farbe, auch mit Ebenen."},{"id":"bildmanipulation","strand":5,"requires":["digitale-bildbearbeitung","dokumentation-und-inszenierung"],"step":13,"band":"9/10","bandStep":4,"name":"Bildmanipulation","iCan":"Ich kann erkennen, wie Fotos durch Bearbeitung verändert werden, und bewerten, wann das täuscht."},{"id":"kamerabewegung","strand":5,"requires":["einstellungsgroessen"],"step":5,"band":"5/6","bandStep":5,"name":"Kamerabewegung","iCan":"Ich kann Kamerabewegungen wie Schwenk, Fahrt und Zoom im Film erkennen und ihre Wirkung beschreiben."},{"id":"filmschnitt","strand":5,"requires":["kamerabewegung"],"step":6,"band":"7/8","bandStep":1,"name":"Filmschnitt","iCan":"Ich kann erklären, wie Schnitt, Zeitlupe und Zeitraffer das Tempo und die Wirkung eines Films verändern."},{"id":"aktionskunst","strand":5,"requires":["koerpersprache"],"step":10,"band":"9/10","bandStep":1,"name":"Performance und Aktionskunst","iCan":"Ich kann an Beispielen erklären, wie Künstlerinnen und Künstler in Performance und Aktionskunst ihren Körper, Zeit und Raum als Material nutzen."},{"id":"recht-am-eigenen-bild","strand":5,"requires":[],"step":10,"band":"9/10","bandStep":1,"name":"Recht am eigenen Bild","iCan":"Ich kann erklären, was das Recht am eigenen Bild bedeutet, und danach entscheiden, welche Fotos ich zeigen darf."},{"id":"selbstdarstellung-online","strand":5,"requires":["inszenierte-fotografie","recht-am-eigenen-bild","praesentieren"],"step":12,"band":"9/10","bandStep":3,"name":"Selbstdarstellung im Internet","iCan":"Ich kann Selbstdarstellungen im Internet und in Jugendkulturen untersuchen und bewerten, wie sie wirken sollen."},{"id":"bauwerk-untersuchen","strand":6,"requires":["material-erkunden"],"step":6,"band":"7/8","bandStep":1,"name":"Bauwerke untersuchen","iCan":"Ich kann ein Bauwerk nach Außenraum und Innenraum, Material, Konstruktion und Funktion beschreiben."},{"id":"grundriss-und-ansicht","strand":6,"requires":["bauwerk-untersuchen"],"step":7,"band":"7/8","bandStep":2,"name":"Grundriss, Schnitt und Ansicht","iCan":"Ich kann Grundriss, Schnitt und Ansicht eines Gebäudes oder Raums lesen und zeichnen."},{"id":"architekturmodell","strand":6,"requires":["material-erkunden"],"step":6,"band":"7/8","bandStep":1,"name":"Architekturmodell","iCan":"Ich kann ein Modell eines Gebäudes oder Raums aus Pappe, Holz oder anderen Materialien bauen."},{"id":"innenraum-gestalten","strand":6,"requires":["grundriss-und-ansicht","architekturmodell"],"step":8,"band":"7/8","bandStep":3,"name":"Innenraumgestaltung","iCan":"Ich kann einen Innenraum für bestimmte Nutzer entwerfen und dabei Licht, Proportion, Material und Ausstattung bedenken."},{"id":"form-und-funktion","strand":6,"requires":["material-erkunden"],"step":10,"band":"9/10","bandStep":1,"name":"Form und Funktion","iCan":"Ich kann an Gebrauchsgegenständen erklären, wie Form, Funktion und Material zusammenhängen."},{"id":"designobjekt-entwerfen","strand":6,"requires":["form-und-funktion","skizze-und-entwurf","sammeln"],"step":11,"band":"9/10","bandStep":2,"name":"Gebrauchsgegenstand entwerfen","iCan":"Ich kann einen Gebrauchsgegenstand entwerfen: Idee, Skizzen, Modell und Prototyp."},{"id":"design-bewerten","strand":6,"requires":["form-und-funktion"],"step":11,"band":"9/10","bandStep":2,"name":"Design bewerten","iCan":"Ich kann ein Produkt nach Aussehen, Nutzen, sozialen Folgen und Nachhaltigkeit bewerten."},{"id":"unikat-und-serie","strand":6,"requires":["form-und-funktion"],"step":11,"band":"9/10","bandStep":2,"name":"Unikat und Serienprodukt","iCan":"Ich kann am Beispiel von Jugendstil und Bauhaus erklären, wie sich handwerklich gefertigte Einzelstücke und Industrieprodukte unterscheiden."},{"id":"kleidung-als-zeichen","strand":6,"requires":[],"step":10,"band":"9/10","bandStep":1,"name":"Kleidung und Mode als Zeichen","iCan":"Ich kann erklären, was Kleidung, Schmuck und Mode über Menschen mitteilen, auch in verschiedenen Zeiten und Kulturen."},{"id":"schrift-und-wirkung","strand":6,"requires":[],"step":6,"band":"7/8","bandStep":1,"name":"Schrift und Wirkung","iCan":"Ich kann Schriften nach Form und Wirkung unterscheiden und eine Schrift wählen, die zur Botschaft passt."},{"id":"plakat-gestalten","strand":6,"requires":["schrift-und-wirkung","platzierung-im-format"],"step":7,"band":"7/8","bandStep":2,"name":"Plakatgestaltung","iCan":"Ich kann ein Plakat gestalten, auf dem Bild und Schrift zusammen eine klare Botschaft geben."},{"id":"logo-und-marke","strand":6,"requires":["schrift-und-wirkung","formeigenschaften"],"step":7,"band":"7/8","bandStep":2,"name":"Logo und Marke","iCan":"Ich kann ein Logo entwerfen, das einfach, unverwechselbar und gut zu merken ist."},{"id":"kommunikationsdesign","strand":6,"requires":["plakat-gestalten"],"step":8,"band":"7/8","bandStep":3,"name":"Kommunikationsdesign","iCan":"Ich kann an einem Beispiel aus Werbung oder Information Sender, Botschaft, Medium und Empfänger benennen."},{"id":"werbung-durchschauen","strand":6,"requires":["kommunikationsdesign"],"step":9,"band":"7/8","bandStep":4,"name":"Werbung durchschauen","iCan":"Ich kann zeigen, mit welchen Bildmitteln Werbung mich beeinflussen will, und das bewerten."},{"id":"fantasiebild","strand":7,"requires":["punkt-und-linie"],"step":3,"band":"5/6","bandStep":3,"name":"Fantasiebild","iCan":"Ich kann ein Fantasiebild erfinden, indem ich Bekanntes neu kombiniere, zum Beispiel zu einem Fabelwesen oder einer unmöglichen Maschine."},{"id":"verfremden","strand":7,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Verfremdung","iCan":"Ich kann ein Motiv verfremden, zum Beispiel durch Vergrößern, Verzerren, ungewohnte Farben oder einen fremden Ort."},{"id":"sammeln","strand":7,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Sammeln und Moodboard","iCan":"Ich kann zu einem Thema Bilder, Dinge und Ideen sammeln und ordnen, zum Beispiel in einem Moodboard."},{"id":"zufallsverfahren","strand":7,"requires":["malspuren"],"step":10,"band":"9/10","bandStep":1,"name":"Zufallsverfahren","iCan":"Ich kann mit Zufallsverfahren wie Frottage, Klecksbild oder Abklatsch arbeiten und aus dem Ergebnis ein Bild entwickeln."},{"id":"montage","strand":7,"requires":["collage"],"step":10,"band":"9/10","bandStep":1,"name":"Montage und Fotomontage","iCan":"Ich kann Bildteile so zu einer Montage verbinden, dass eine neue Aussage entsteht, auch als Fotomontage."},{"id":"bildzitat","strand":7,"requires":["werkvergleich"],"step":6,"band":"7/8","bandStep":1,"name":"Bildzitat","iCan":"Ich kann ein bekanntes Kunstwerk zitieren und in einen neuen Zusammenhang setzen."},{"id":"abstrahieren","strand":7,"requires":["verfremden"],"step":10,"band":"9/10","bandStep":1,"name":"Abstrahieren","iCan":"Ich kann einen Gegenstand schrittweise vereinfachen, bis er abstrakt wird, und erklären, was dabei verloren geht oder gewonnen wird."},{"id":"praesentieren","strand":7,"requires":[],"step":6,"band":"7/8","bandStep":1,"name":"Arbeiten präsentieren","iCan":"Ich kann meine Arbeiten für ein bestimmtes Publikum präsentieren, zum Beispiel in einer Mappe, Ausstellung oder online."},{"id":"ersteindruck","strand":8,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Erster Eindruck","iCan":"Ich kann meinen ersten Eindruck von einem Bild in Worte fassen und sagen, was ihn auslöst."},{"id":"bild-beschreiben","strand":8,"requires":["ersteindruck"],"step":2,"band":"5/6","bandStep":2,"name":"Bildbeschreibung","iCan":"Ich kann ein Bild geordnet beschreiben: was dargestellt ist, wo es steht und wie es aussieht."},{"id":"werkangaben","strand":8,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Werkangaben","iCan":"Ich kann die Angaben zu einem Werk lesen und nennen: Künstlerin oder Künstler, Titel, Jahr, Technik, Material und Maße."},{"id":"bildaufbau","strand":8,"requires":["bild-beschreiben","streuung-reihung-ballung"],"step":3,"band":"5/6","bandStep":3,"name":"Bildaufbau","iCan":"Ich kann den Aufbau eines Bildes untersuchen: wichtige Formen, Richtungen und wie die Fläche geordnet ist."},{"id":"kompositionsskizze","strand":8,"requires":["bildaufbau","richtungen-im-bild"],"step":12,"band":"9/10","bandStep":3,"name":"Kompositionsskizze","iCan":"Ich kann mit einer Skizze die Komposition eines Bildes sichtbar machen, zum Beispiel Achsen, Kompositionslinien oder einen Farbauszug."},{"id":"farbe-analysieren","strand":8,"requires":["bildaufbau","ausdrucksfarbe","symbolfarbe"],"step":11,"band":"9/10","bandStep":2,"name":"Farbanalyse","iCan":"Ich kann die Farbgestaltung eines Werks untersuchen: Farbwahl, Farbbeziehungen und Farbfunktionen."},{"id":"raum-analysieren","strand":8,"requires":["bildaufbau","zentralperspektive"],"step":8,"band":"7/8","bandStep":3,"name":"Raumanalyse","iCan":"Ich kann untersuchen, mit welchen Mitteln ein Bild Raum darstellt, und Raumdarstellungen verschiedener Zeiten vergleichen."},{"id":"erzaehlende-bilder","strand":8,"requires":["bild-beschreiben"],"step":3,"band":"5/6","bandStep":3,"name":"Erzählende Bilder","iCan":"Ich kann an einem Bild erklären, wie es eine Geschichte erzählt: Thema, Handlung, Figuren und Ort."},{"id":"bild-deuten","strand":8,"requires":["bild-beschreiben"],"step":3,"band":"5/6","bandStep":3,"name":"Bilddeutung","iCan":"Ich kann eine eigene Deutung eines Bildes vorschlagen und mit dem begründen, was im Bild zu sehen ist."},{"id":"werkvergleich","strand":8,"requires":["bild-beschreiben"],"step":3,"band":"5/6","bandStep":3,"name":"Werkvergleich","iCan":"Ich kann zwei Werke nach festgelegten Gesichtspunkten vergleichen und Gemeinsamkeiten und Unterschiede nennen."},{"id":"funktionen-der-kunst","strand":8,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Funktionen der Kunst","iCan":"Ich kann an Beispielen erklären, wozu Kunst gemacht wurde, zum Beispiel für Religion, Macht, Erinnerung oder Schmuck."},{"id":"expressive-bilder","strand":8,"requires":["farbwirkung","malspuren"],"step":10,"band":"9/10","bandStep":1,"name":"Expressive Bilder","iCan":"Ich kann an Bildern erklären, wie sie inneres Erleben ausdrücken, und selbst ein Gefühl bildnerisch ausdrücken."},{"id":"ikonografie","strand":8,"requires":["bild-beschreiben"],"step":6,"band":"7/8","bandStep":1,"name":"Ikonografie","iCan":"Ich kann Bildmotive und Attribute erkennen und damit bestimmen, wer oder was dargestellt ist, zum Beispiel bei Heiligen."},{"id":"bildsymbole","strand":8,"requires":["ikonografie"],"step":7,"band":"7/8","bandStep":2,"name":"Bildsymbole","iCan":"Ich kann Symbole in Bildern entschlüsseln, zum Beispiel Zeichen der Vergänglichkeit in einem Stillleben."},{"id":"kontext-deuten","strand":8,"requires":["bild-deuten","ikonografie","werkangaben"],"step":10,"band":"9/10","bandStep":1,"name":"Deutung im Kontext","iCan":"Ich kann ein Werk deuten, indem ich das Bild mit Wissen über die Künstlerin oder den Künstler und die Zeit verbinde."},{"id":"portraet","strand":8,"requires":["bild-beschreiben"],"step":6,"band":"7/8","bandStep":1,"name":"Porträt","iCan":"Ich kann Formen des Porträts unterscheiden, zum Beispiel Kopfbild, Brustbild, Ganzfigur und Selbstbildnis."},{"id":"stillleben","strand":8,"requires":["bild-beschreiben"],"step":6,"band":"7/8","bandStep":1,"name":"Stillleben","iCan":"Ich kann erklären, was ein Stillleben ist und was die Anordnung der Dinge erzählen kann."},{"id":"landschaftsbild","strand":8,"requires":["farbwirkung","vordergrund-hintergrund"],"step":4,"band":"5/6","bandStep":4,"name":"Landschaftsbild","iCan":"Ich kann erklären, wie ein Landschaftsbild eine Stimmung erzeugt."},{"id":"bildgattungen","strand":8,"requires":["portraet","stillleben","landschaftsbild"],"step":7,"band":"7/8","bandStep":2,"name":"Bildgattungen","iCan":"Ich kann die Bildgattungen Porträt, Stillleben, Landschaft und Historienbild unterscheiden und ein Werk zuordnen."},{"id":"hoehlenmalerei","strand":9,"requires":["bild-beschreiben","funktionen-der-kunst"],"step":3,"band":"5/6","bandStep":3,"name":"Kunst der Steinzeit","iCan":"Ich kann Höhlenmalereien und Plastiken der Steinzeit beschreiben und erklären, wozu sie vielleicht gemacht wurden."},{"id":"aegyptische-kunst","strand":9,"requires":["bild-beschreiben","vollplastik-und-relief"],"step":5,"band":"5/6","bandStep":5,"name":"Ägyptische Kunst","iCan":"Ich kann an Figuren und Reliefs aus dem Alten Ägypten typische Darstellungsregeln erkennen."},{"id":"antike-plastik","strand":9,"requires":["vollplastik-und-relief","koerperproportionen"],"step":5,"band":"5/6","bandStep":5,"name":"Antike Plastik","iCan":"Ich kann griechische und römische Statuen beschreiben und den Kontrapost und das Schönheitsideal der Antike erklären."},{"id":"antike-architektur","strand":9,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Antike Architektur","iCan":"Ich kann griechische Tempel und römische Bauten an typischen Merkmalen erkennen, zum Beispiel Säulen, Bogen und Kuppel."},{"id":"romanik-und-gotik","strand":9,"requires":["bauwerk-untersuchen"],"step":7,"band":"7/8","bandStep":2,"name":"Romanik und Gotik","iCan":"Ich kann romanische und gotische Kirchen an Rundbogen und Spitzbogen, Mauern und Fenstern unterscheiden."},{"id":"mittelalterliche-bilder","strand":9,"requires":["ikonografie"],"step":7,"band":"7/8","bandStep":2,"name":"Mittelalterliche Bilder","iCan":"Ich kann an mittelalterlichen Bildern Goldgrund, Bedeutungsgröße und typische Bildmotive wie Verkündigung oder Kreuzigung erkennen."},{"id":"renaissance","strand":9,"requires":["mittelalterliche-bilder","zentralperspektive"],"step":8,"band":"7/8","bandStep":3,"name":"Renaissance","iCan":"Ich kann erklären, wie sich mit der Renaissance das Bild vom Menschen und die Raumdarstellung verändert haben."},{"id":"barock","strand":9,"requires":["renaissance"],"step":9,"band":"7/8","bandStep":4,"name":"Barock","iCan":"Ich kann typische Merkmale des Barock beschreiben, zum Beispiel Bewegung, Licht und Prunk, und sie mit der Renaissance vergleichen."},{"id":"klassizismus-und-romantik","strand":9,"requires":["werkvergleich"],"step":10,"band":"9/10","bandStep":1,"name":"Klassizismus und Romantik","iCan":"Ich kann Werke des Klassizismus und der Romantik an ihrer Sicht auf den Menschen und die Natur unterscheiden."},{"id":"realismus","strand":9,"requires":["klassizismus-und-romantik"],"step":11,"band":"9/10","bandStep":2,"name":"Realismus","iCan":"Ich kann erklären, wie der Realismus im 19. Jahrhundert die soziale Wirklichkeit darstellt."},{"id":"impressionismus","strand":9,"requires":["lokalfarbe-erscheinungsfarbe","realismus"],"step":12,"band":"9/10","bandStep":3,"name":"Impressionismus","iCan":"Ich kann typische Merkmale des Impressionismus beschreiben, zum Beispiel Licht, Freilichtmalerei und flüchtiger Pinselstrich."},{"id":"wegbereiter-der-moderne","strand":9,"requires":["impressionismus","ausdrucksfarbe","abstrahieren"],"step":13,"band":"9/10","bandStep":4,"name":"Wegbereiter der Moderne","iCan":"Ich kann an Werken von van Gogh, Cézanne und Gauguin zeigen, wie sie den Weg zur modernen Kunst bereitet haben."},{"id":"aussereuropaeische-einfluesse","strand":9,"requires":["wegbereiter-der-moderne"],"step":14,"band":"9/10","bandStep":5,"name":"Außereuropäische Einflüsse","iCan":"Ich kann erklären, wie Kunst aus Afrika, Asien und Ozeanien die Kunst der frühen Moderne beeinflusst hat, und diesen Blick kritisch bewerten."},{"id":"jugendstil","strand":9,"requires":["ornament-und-muster","form-und-funktion"],"step":11,"band":"9/10","bandStep":2,"name":"Jugendstil","iCan":"Ich kann typische Formen des Jugendstils erkennen und erklären, was ein Gesamtkunstwerk ist."},{"id":"street-art","strand":9,"requires":["funktionen-der-kunst"],"step":10,"band":"9/10","bandStep":1,"name":"Street-Art und Graffiti","iCan":"Ich kann Formen von Street-Art und Graffiti beschreiben und ihre Wirkung im öffentlichen Raum bewerten."},{"id":"epochen-ueberblick","strand":9,"requires":["hoehlenmalerei","aegyptische-kunst","antike-plastik","antike-architektur","romanik-und-gotik","barock","wegbereiter-der-moderne","jugendstil"],"step":14,"band":"9/10","bandStep":5,"name":"Epochen im Überblick","iCan":"Ich kann die großen Epochen der Kunst von der Steinzeit bis zur Moderne in die richtige Reihenfolge bringen und ein Werk an Merkmalen einer Epoche zuordnen."}]}</script>
+<script type="application/json" id="map-steps-text">{"kind":"{strand} · {place}","place":"Klasse {band} · Schritt {step}","before":"Baut auf","after":"Darauf baut auf","nothing":"keine","page":"Zur Seite des Bausteins","clear":"Auswahl aufheben","pageUrl":"/apps/pr-preview/pr-181/map/kunst/c/{id}/"}</script>
 
 <dialog class="map-dialog" data-map-dialog aria-labelledby="map-dialog-title">
   <div class="map-dialog-inner">
