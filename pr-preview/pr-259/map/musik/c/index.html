@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Lernlandkarte Musik nach Stufen · lernapps.net</title>
-  <meta name="description" content="Was in Musik worauf aufbaut, Stufe für Stufe.">
+  <title>Lernlandkarte Musik nach Klasse und Kette · lernapps.net</title>
+  <meta name="description" content="Was in Musik worauf aufbaut, Klasse für Klasse, Schritt für Schritt.">
   <link rel="canonical" href="https://lernapps.net/apps/map/musik/c/">
   <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -58,7 +58,7 @@
     </li>
     <li class="flex gap-2"><a href="/apps/pr-preview/pr-259/map/musik/" class="text-blue-700 underline underline-offset-2">Musik</a><span aria-hidden="true">›</span>
     </li>
-    <li class="flex gap-2"><span aria-current="page">Nach Stufen der Kette</span>
+    <li class="flex gap-2"><span aria-current="page">Nach Klasse und Kette</span>
     </li>
   </ol>
 </nav>
@@ -71,17 +71,17 @@
 
 
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Musik nach Stufen</h1>
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Musik nach Klasse und Kette</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>So liest du die Karte</a>
   </div>
-  <p class="m-0 text-slate-700 max-w-3xl">Jede Zeile ist eine Stufe in der Kette „baut auf“. Ein Baustein steht eine Zeile unter seiner tiefsten Voraussetzung. Ganz oben stehen die Bausteine ohne Voraussetzung.</p>
+  <p class="m-0 text-slate-700 max-w-3xl">Die Zeilen gehen nach Klassen: erst 5/6, dann 7/8, dann 9/10. In jeder Klasse steht ein Baustein einen Schritt unter seiner tiefsten Voraussetzung aus derselben Klasse. Alles, was ein Baustein braucht, steht also weiter oben. Alles im selben Schritt ist voneinander unabhängig.</p>
 
   
 <nav aria-labelledby="ordnung-musik" class="flex flex-wrap items-center gap-2">
   <h2 id="ordnung-musik" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/pr-preview/pr-259/map/musik/" class="btn btn-secondary">Nach Klassen</a></li>
-    <li><a href="/apps/pr-preview/pr-259/map/musik/c/" class="btn btn-primary" aria-current="page">Nach Stufen der Kette</a></li>
+    <li><a href="/apps/pr-preview/pr-259/map/musik/c/" class="btn btn-primary" aria-current="page">Nach Klasse und Kette</a></li>
   </ul>
 </nav>
 
@@ -91,68 +91,53 @@
       <p class="m-0 flex items-center gap-2 text-sm text-slate-600"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke</p>
     </div>
     <div class="map-legend" role="group" aria-label="Bausteine zeigen" data-map-filter hidden>
-      <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt <span class="map-filter-count">0</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">187</span></button>
+      <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt</button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke</button>
     </div>
   </div>
+  <p class="m-0 text-slate-700" data-map-alone>Jeder Baustein ist in die Kette eingeordnet.
+  </p>
 
   <div class="map-bystep" data-map-steps>
-    <div class="map-scroll" role="region" aria-label="Lernlandkarte Musik: Bausteine nach Strang und Stufe" tabindex="0">
+    <div class="map-scroll" role="region" aria-label="Lernlandkarte Musik: Bausteine nach Strang, Klasse und Schritt" tabindex="0">
       <table class="map-grid" style="min-width: 115rem;">
         <colgroup><col style="width: 7rem;"><col><col><col><col><col><col><col><col><col></colgroup>
         <thead>
           <tr>
-            <td class="text-sm text-slate-600 align-bottom">Stufe ↓ · Strang →</td>
+            <td class="text-sm text-slate-600 align-bottom">Klasse und Schritt ↓ · Strang →</td>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/hoerkultur/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Musik hören und beschreiben</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 16 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/klang/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Klang, Instrumente und Vortrag</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 17 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/rhythmus-takt/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Rhythmus, Takt und Tempo</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 17 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/tonhoehe-harmonik/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Tonhöhe, Tonleitern und Harmonik</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 27 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/zeichen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Notation und Zeichen</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 21 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/form/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Form und Struktur</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 19 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/gesang-instrumentalspiel/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Singen, Instrumentalspiel und Erfinden</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 32 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/bewegung-gestaltungsmedien/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Bewegung und Gestaltungsmedien</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 13 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-259/map/musik/kontext/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Musik im Kontext</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 25 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
           </tr>
         </thead>
         <tbody>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="10">Klasse 5/6</th></tr>
           <tr>
-            <th scope="row">Stufe 1<span class="block mt-1 text-xs font-normal text-slate-600">6 Bausteine</span></th>
+            <th scope="row">Schritt 1</th>
             <td>
               <ul class="map-cell">
                 
@@ -229,7 +214,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 2<span class="block mt-1 text-xs font-normal text-slate-600">17 Bausteine</span></th>
+            <th scope="row">Schritt 2</th>
             <td>
               <ul class="map-cell">
                 
@@ -244,14 +229,6 @@
 <li data-competency="parameter-nennen">
   <a href="/apps/pr-preview/pr-259/map/musik/c/parameter-nennen/" class="map-chip map-chip-gap">
     <span>Musikalische Parameter</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="hoerlandschaft-entdecken">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/hoerlandschaft-entdecken/" class="map-chip map-chip-gap">
-    <span>Stille und Umweltgeräusche</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -333,14 +310,6 @@
 </li>
 
                 
-<li data-competency="instrument-technisch-korrekt">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/instrument-technisch-korrekt/" class="map-chip map-chip-gap">
-    <span>Klanggestaltung am Instrument</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
 <li data-competency="aufeinander-hoeren">
   <a href="/apps/pr-preview/pr-259/map/musik/c/aufeinander-hoeren/" class="map-chip map-chip-gap">
     <span>Aufeinander hören</span>
@@ -398,21 +367,13 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 3<span class="block mt-1 text-xs font-normal text-slate-600">28 Bausteine</span></th>
+            <th scope="row">Schritt 3</th>
             <td>
               <ul class="map-cell">
                 
 <li data-competency="hoergewohnheiten-beschreiben">
   <a href="/apps/pr-preview/pr-259/map/musik/c/hoergewohnheiten-beschreiben/" class="map-chip map-chip-gap">
     <span>Eigene Hörgewohnheiten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="verlaeufe-hoeren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/verlaeufe-hoeren/" class="map-chip map-chip-gap">
-    <span>Musikalische Verläufe hören</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -570,14 +531,6 @@
             <td>
               <ul class="map-cell">
                 
-<li data-competency="stimme-im-stimmwechsel">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/stimme-im-stimmwechsel/" class="map-chip map-chip-gap">
-    <span>Stimme im Stimmwechsel</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
 <li data-competency="zielton-singen">
   <a href="/apps/pr-preview/pr-259/map/musik/c/zielton-singen/" class="map-chip map-chip-gap">
     <span>Zielton treffen</span>
@@ -589,14 +542,6 @@
 <li data-competency="lieder-auswendig-singen">
   <a href="/apps/pr-preview/pr-259/map/musik/c/lieder-auswendig-singen/" class="map-chip map-chip-gap">
     <span>Lieder auswendig singen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="musizieren-korrigieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musizieren-korrigieren/" class="map-chip map-chip-gap">
-    <span>Musizieren reflektieren und verbessern</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -631,45 +576,13 @@
   </a>
 </li>
 
-                
-<li data-competency="musik-nicht-abendlaendisch">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-nicht-abendlaendisch/" class="map-chip map-chip-gap">
-    <span>Außereuropäische Musik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="urheberrecht-musikmarkt">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/urheberrecht-musikmarkt/" class="map-chip map-chip-gap">
-    <span>Urheberrecht und Musikmarkt</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="soziale-bedingungen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/soziale-bedingungen/" class="map-chip map-chip-gap">
-    <span>Gesellschaftliche Bedingungen von Musik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 4<span class="block mt-1 text-xs font-normal text-slate-600">32 Bausteine</span></th>
+            <th scope="row">Schritt 4</th>
             <td>
               <ul class="map-cell">
-                
-<li data-competency="parameter-differenziert-hoeren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/parameter-differenziert-hoeren/" class="map-chip map-chip-gap">
-    <span>Parameter genau heraushören</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
                 
 <li data-competency="programmmusik-hoeren">
   <a href="/apps/pr-preview/pr-259/map/musik/c/programmmusik-hoeren/" class="map-chip map-chip-gap">
@@ -682,14 +595,6 @@
 <li data-competency="mittel-der-wirkung">
   <a href="/apps/pr-preview/pr-259/map/musik/c/mittel-der-wirkung/" class="map-chip map-chip-gap">
     <span>Musikalische Mittel der Wirkung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="sach-werturteil">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/sach-werturteil/" class="map-chip map-chip-gap">
-    <span>Sach- und Werturteil</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -718,14 +623,6 @@
 <li data-competency="klang-verfremden">
   <a href="/apps/pr-preview/pr-259/map/musik/c/klang-verfremden/" class="map-chip map-chip-gap">
     <span>Klangverfremdung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="elektronische-klangerzeugung">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/elektronische-klangerzeugung/" class="map-chip map-chip-gap">
-    <span>Elektronische Klangerzeugung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -858,14 +755,6 @@
   </a>
 </li>
 
-                
-<li data-competency="imitation-polyphonie">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/imitation-polyphonie/" class="map-chip map-chip-gap">
-    <span>Polyphonie und Homophonie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -874,14 +763,6 @@
 <li data-competency="tonfolge-nachsingen">
   <a href="/apps/pr-preview/pr-259/map/musik/c/tonfolge-nachsingen/" class="map-chip map-chip-gap">
     <span>Tonfolgen nachsingen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="lieder-genrebewusst-singen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/lieder-genrebewusst-singen/" class="map-chip map-chip-gap">
-    <span>Stilgerecht singen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -926,62 +807,12 @@
   </a>
 </li>
 
-                
-<li data-competency="epoche-klassik">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/epoche-klassik/" class="map-chip map-chip-gap">
-    <span>Wiener Klassik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="musiktheater">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musiktheater/" class="map-chip map-chip-gap">
-    <span>Oper und Musical</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="gebrauchspraxen-unterscheiden">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/gebrauchspraxen-unterscheiden/" class="map-chip map-chip-gap">
-    <span>Musikalische Gebrauchspraxen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 5<span class="block mt-1 text-xs font-normal text-slate-600">33 Bausteine</span></th>
+            <th scope="row">Schritt 5</th>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="hoergewohnheiten-reflektieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/hoergewohnheiten-reflektieren/" class="map-chip map-chip-gap">
-    <span>Hörgewohnheiten reflektieren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="medien-inszenierung">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/medien-inszenierung/" class="map-chip map-chip-gap">
-    <span>Musik in Film und Werbung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="wirkung-begruenden">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/wirkung-begruenden/" class="map-chip map-chip-gap">
-    <span>Wirkung von Musik begründen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -989,14 +820,6 @@
 <li data-competency="artikulation-vortrag">
   <a href="/apps/pr-preview/pr-259/map/musik/c/artikulation-vortrag/" class="map-chip map-chip-gap">
     <span>Legato und Staccato</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="klang-gestalten">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/klang-gestalten/" class="map-chip map-chip-gap">
-    <span>Klanggestaltung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1097,46 +920,6 @@
   </a>
 </li>
 
-                
-<li data-competency="songaufbau">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/songaufbau/" class="map-chip map-chip-gap">
-    <span>Aufbau eines Pop-Songs</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="phrase-periode">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/phrase-periode/" class="map-chip map-chip-gap">
-    <span>Phrasen: Frage und Antwort</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="variationsform">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/variationsform/" class="map-chip map-chip-gap">
-    <span>Variationsform</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="concerto-grosso">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/concerto-grosso/" class="map-chip map-chip-gap">
-    <span>Concerto grosso</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="entwicklung-hoeren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/entwicklung-hoeren/" class="map-chip map-chip-gap">
-    <span>Motivische Entwicklung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -1161,14 +944,6 @@
 <li data-competency="tonfolge-im-metrum">
   <a href="/apps/pr-preview/pr-259/map/musik/c/tonfolge-im-metrum/" class="map-chip map-chip-gap">
     <span>Tonfolgen im Metrum</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="musizieren-organisieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musizieren-organisieren/" class="map-chip map-chip-gap">
-    <span>Gruppenmusizieren organisieren</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1201,22 +976,6 @@
   </a>
 </li>
 
-                
-<li data-competency="musik-szenisch-interpretieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-szenisch-interpretieren/" class="map-chip map-chip-gap">
-    <span>Szenische Interpretation</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="musik-digital-visualisieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-digital-visualisieren/" class="map-chip map-chip-gap">
-    <span>Musik visualisieren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -1229,46 +988,12 @@
   </a>
 </li>
 
-                
-<li data-competency="epoche-romantik">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/epoche-romantik/" class="map-chip map-chip-gap">
-    <span>Romantik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="identitaet-peergroup">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/identitaet-peergroup/" class="map-chip map-chip-gap">
-    <span>Musik und Zugehörigkeit</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="gebrauchspraxis-positionieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/gebrauchspraxis-positionieren/" class="map-chip map-chip-gap">
-    <span>Gebrauchspraxis bewerten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 6<span class="block mt-1 text-xs font-normal text-slate-600">19 Bausteine</span></th>
+            <th scope="row">Schritt 6</th>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="beeinflussung-erkennen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/beeinflussung-erkennen/" class="map-chip map-chip-gap">
-    <span>Beeinflussung durch Musik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
             </td>
@@ -1341,35 +1066,9 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="sonatensatz">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/sonatensatz/" class="map-chip map-chip-gap">
-    <span>Sonatensatzform</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="formverlauf-darstellen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/formverlauf-darstellen/" class="map-chip map-chip-gap">
-    <span>Formverlauf darstellen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
-                
-<li data-competency="mehrstimmig-singen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/mehrstimmig-singen/" class="map-chip map-chip-gap">
-    <span>Mehrstimmig im Chor singen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
                 
 <li data-competency="rhythmus-nachbauen">
   <a href="/apps/pr-preview/pr-259/map/musik/c/rhythmus-nachbauen/" class="map-chip map-chip-gap">
@@ -1386,14 +1085,6 @@
   </a>
 </li>
 
-                
-<li data-competency="musik-aufgabenbezogen-gestalten">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-aufgabenbezogen-gestalten/" class="map-chip map-chip-gap">
-    <span>Eigenes Stück komponieren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -1402,14 +1093,6 @@
 <li data-competency="bewegung-nach-ausdruck-form">
   <a href="/apps/pr-preview/pr-259/map/musik/c/bewegung-nach-ausdruck-form/" class="map-chip map-chip-gap">
     <span>Bewegung nach Ausdruck und Form</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="umsetzung-kritisieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/umsetzung-kritisieren/" class="map-chip map-chip-gap">
-    <span>Umsetzungen kritisch bewerten</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1426,27 +1109,11 @@
   </a>
 </li>
 
-                
-<li data-competency="popularmusik-stile">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/popularmusik-stile/" class="map-chip map-chip-gap">
-    <span>Stile der Popularmusik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="epoche-neue-musik">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/epoche-neue-musik/" class="map-chip map-chip-gap">
-    <span>Musik des 20. Jahrhunderts</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 7<span class="block mt-1 text-xs font-normal text-slate-600">18 Bausteine</span></th>
+            <th scope="row">Schritt 7</th>
             <td>
             </td>
             <td>
@@ -1465,14 +1132,6 @@
 <li data-competency="weitere-taktarten">
   <a href="/apps/pr-preview/pr-259/map/musik/c/weitere-taktarten/" class="map-chip map-chip-gap">
     <span>Zusammengesetzte Taktarten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="binaer-ternaer">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/binaer-ternaer/" class="map-chip map-chip-gap">
-    <span>Binärer und ternärer Rhythmus</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1505,22 +1164,6 @@
   </a>
 </li>
 
-                
-<li data-competency="besondere-tonleitern">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/besondere-tonleitern/" class="map-chip map-chip-gap">
-    <span>Pentatonik, Ganzton- und Bluestonleiter</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="intervalle-erkennen-singen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/intervalle-erkennen-singen/" class="map-chip map-chip-gap">
-    <span>Alle Intervalle hören und singen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -1548,25 +1191,9 @@
 </li>
 
                 
-<li data-competency="mehrstimmig-realisieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/mehrstimmig-realisieren/" class="map-chip map-chip-gap">
-    <span>Mehrstimmige Stücke aufführen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
 <li data-competency="rhythmus-erfinden">
   <a href="/apps/pr-preview/pr-259/map/musik/c/rhythmus-erfinden/" class="map-chip map-chip-gap">
     <span>Rhythmen erfinden</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="improvisieren-nach-vorgabe">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/improvisieren-nach-vorgabe/" class="map-chip map-chip-gap">
-    <span>Improvisation über Pattern und Akkorde</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1602,51 +1229,15 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="musik-zeitepoche">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-zeitepoche/" class="map-chip map-chip-gap">
-    <span>Musik einer Epoche zuordnen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="auffuehrung-planen">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/auffuehrung-planen/" class="map-chip map-chip-gap">
-    <span>Aufführung planen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 8<span class="block mt-1 text-xs font-normal text-slate-600">10 Bausteine</span></th>
+            <th scope="row">Schritt 8</th>
             <td>
             </td>
             <td>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="synkope">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/synkope/" class="map-chip map-chip-gap">
-    <span>Synkope</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="besondere-taktarten">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/besondere-taktarten/" class="map-chip map-chip-gap">
-    <span>Ungerade Taktarten</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -1703,63 +1294,17 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="choreografieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/choreografieren/" class="map-chip map-chip-gap">
-    <span>Choreografie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="digitale-musikproduktion">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/digitale-musikproduktion/" class="map-chip map-chip-gap">
-    <span>Digitale Musikproduktion</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="rezeption-erklaeren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/rezeption-erklaeren/" class="map-chip map-chip-gap">
-    <span>Rezeptionsgeschichte</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 9<span class="block mt-1 text-xs font-normal text-slate-600">8 Bausteine</span></th>
+            <th scope="row">Schritt 9</th>
             <td>
             </td>
             <td>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="beat-offbeat">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/beat-offbeat/" class="map-chip map-chip-gap">
-    <span>Beat und Off-Beat</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="freie-metrik">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/freie-metrik/" class="map-chip map-chip-gap">
-    <span>Freie Metrik</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -1775,14 +1320,6 @@
 <li data-competency="dreiklangsarten">
   <a href="/apps/pr-preview/pr-259/map/musik/c/dreiklangsarten/" class="map-chip map-chip-gap">
     <span>Dur- und Moll-Dreiklang</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="quintenzirkel">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/quintenzirkel/" class="map-chip map-chip-gap">
-    <span>Quintenzirkel</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1828,18 +1365,31 @@
             <td>
             </td>
           </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="10">Klasse 7/8</th></tr>
           <tr>
-            <th scope="row">Stufe 10<span class="block mt-1 text-xs font-normal text-slate-600">7 Bausteine</span></th>
-            <td>
-            </td>
-            <td>
-            </td>
+            <th scope="row">Schritt 1</th>
             <td>
               <ul class="map-cell">
                 
-<li data-competency="polyrhythmik">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/polyrhythmik/" class="map-chip map-chip-gap">
-    <span>Polyrhythmik</span>
+<li data-competency="verlaeufe-hoeren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/verlaeufe-hoeren/" class="map-chip map-chip-gap">
+    <span>Musikalische Verläufe hören</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="sach-werturteil">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/sach-werturteil/" class="map-chip map-chip-gap">
+    <span>Sach- und Werturteil</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="medien-inszenierung">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/medien-inszenierung/" class="map-chip map-chip-gap">
+    <span>Musik in Film und Werbung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1848,6 +1398,62 @@
             </td>
             <td>
               <ul class="map-cell">
+                
+<li data-competency="elektronische-klangerzeugung">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/elektronische-klangerzeugung/" class="map-chip map-chip-gap">
+    <span>Elektronische Klangerzeugung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="synkope">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/synkope/" class="map-chip map-chip-gap">
+    <span>Synkope</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="binaer-ternaer">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/binaer-ternaer/" class="map-chip map-chip-gap">
+    <span>Binärer und ternärer Rhythmus</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="besondere-taktarten">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/besondere-taktarten/" class="map-chip map-chip-gap">
+    <span>Ungerade Taktarten</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="besondere-tonleitern">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/besondere-tonleitern/" class="map-chip map-chip-gap">
+    <span>Pentatonik, Ganzton- und Bluestonleiter</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="quintenzirkel">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/quintenzirkel/" class="map-chip map-chip-gap">
+    <span>Quintenzirkel</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
                 
 <li data-competency="dreiklangsumkehrung">
   <a href="/apps/pr-preview/pr-259/map/musik/c/dreiklangsumkehrung/" class="map-chip map-chip-gap">
@@ -1884,18 +1490,46 @@
   </a>
 </li>
 
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
                 
-<li data-competency="traditionell-und-grafisch-notieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/traditionell-und-grafisch-notieren/" class="map-chip map-chip-gap">
-    <span>Traditionell und grafisch notieren</span>
+<li data-competency="imitation-polyphonie">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/imitation-polyphonie/" class="map-chip map-chip-gap">
+    <span>Polyphonie und Homophonie</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
                 
-<li data-competency="nach-notation-musizieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/nach-notation-musizieren/" class="map-chip map-chip-gap">
-    <span>Mehrstimmig nach Notation musizieren</span>
+<li data-competency="songaufbau">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/songaufbau/" class="map-chip map-chip-gap">
+    <span>Aufbau eines Pop-Songs</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="phrase-periode">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/phrase-periode/" class="map-chip map-chip-gap">
+    <span>Phrasen: Frage und Antwort</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="variationsform">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/variationsform/" class="map-chip map-chip-gap">
+    <span>Variationsform</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="concerto-grosso">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/concerto-grosso/" class="map-chip map-chip-gap">
+    <span>Concerto grosso</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1903,21 +1537,83 @@
               </ul>
             </td>
             <td>
+              <ul class="map-cell">
+                
+<li data-competency="stimme-im-stimmwechsel">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/stimme-im-stimmwechsel/" class="map-chip map-chip-gap">
+    <span>Stimme im Stimmwechsel</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="improvisieren-nach-vorgabe">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/improvisieren-nach-vorgabe/" class="map-chip map-chip-gap">
+    <span>Improvisation über Pattern und Akkorde</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
             <td>
+              <ul class="map-cell">
+                
+<li data-competency="musik-szenisch-interpretieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-szenisch-interpretieren/" class="map-chip map-chip-gap">
+    <span>Szenische Interpretation</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
             <td>
-            </td>
-            <td>
+              <ul class="map-cell">
+                
+<li data-competency="epoche-klassik">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/epoche-klassik/" class="map-chip map-chip-gap">
+    <span>Wiener Klassik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="musik-nicht-abendlaendisch">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-nicht-abendlaendisch/" class="map-chip map-chip-gap">
+    <span>Außereuropäische Musik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="urheberrecht-musikmarkt">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/urheberrecht-musikmarkt/" class="map-chip map-chip-gap">
+    <span>Urheberrecht und Musikmarkt</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 11<span class="block mt-1 text-xs font-normal text-slate-600">5 Bausteine</span></th>
+            <th scope="row">Schritt 2</th>
             <td>
             </td>
             <td>
             </td>
             <td>
+              <ul class="map-cell">
+                
+<li data-competency="beat-offbeat">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/beat-offbeat/" class="map-chip map-chip-gap">
+    <span>Beat und Off-Beat</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -1948,16 +1644,6 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="partitur-orientieren">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/partitur-orientieren/" class="map-chip map-chip-gap">
-    <span>Orchesterpartitur</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
@@ -1979,7 +1665,17 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 12<span class="block mt-1 text-xs font-normal text-slate-600">3 Bausteine</span></th>
+            <th scope="row">Schritt 3</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
             <td>
             </td>
             <td>
@@ -1988,6 +1684,98 @@
             </td>
             <td>
               <ul class="map-cell">
+                
+<li data-competency="popularmusik-stile">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/popularmusik-stile/" class="map-chip map-chip-gap">
+    <span>Stile der Popularmusik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="10">Klasse 9/10</th></tr>
+          <tr>
+            <th scope="row">Schritt 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="parameter-differenziert-hoeren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/parameter-differenziert-hoeren/" class="map-chip map-chip-gap">
+    <span>Parameter genau heraushören</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="hoerlandschaft-entdecken">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/hoerlandschaft-entdecken/" class="map-chip map-chip-gap">
+    <span>Stille und Umweltgeräusche</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="hoergewohnheiten-reflektieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/hoergewohnheiten-reflektieren/" class="map-chip map-chip-gap">
+    <span>Hörgewohnheiten reflektieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="wirkung-begruenden">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/wirkung-begruenden/" class="map-chip map-chip-gap">
+    <span>Wirkung von Musik begründen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="klang-gestalten">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/klang-gestalten/" class="map-chip map-chip-gap">
+    <span>Klanggestaltung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="polyrhythmik">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/polyrhythmik/" class="map-chip map-chip-gap">
+    <span>Polyrhythmik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="freie-metrik">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/freie-metrik/" class="map-chip map-chip-gap">
+    <span>Freie Metrik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="intervalle-erkennen-singen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/intervalle-erkennen-singen/" class="map-chip map-chip-gap">
+    <span>Alle Intervalle hören und singen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
                 
 <li data-competency="freie-harmonik">
   <a href="/apps/pr-preview/pr-259/map/musik/c/freie-harmonik/" class="map-chip map-chip-gap">
@@ -1999,11 +1787,87 @@
               </ul>
             </td>
             <td>
-            </td>
-            <td>
+              <ul class="map-cell">
+                
+<li data-competency="traditionell-und-grafisch-notieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/traditionell-und-grafisch-notieren/" class="map-chip map-chip-gap">
+    <span>Traditionell und grafisch notieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="partitur-orientieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/partitur-orientieren/" class="map-chip map-chip-gap">
+    <span>Orchesterpartitur</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
             <td>
               <ul class="map-cell">
+                
+<li data-competency="entwicklung-hoeren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/entwicklung-hoeren/" class="map-chip map-chip-gap">
+    <span>Motivische Entwicklung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="lieder-genrebewusst-singen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/lieder-genrebewusst-singen/" class="map-chip map-chip-gap">
+    <span>Stilgerecht singen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="mehrstimmig-singen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/mehrstimmig-singen/" class="map-chip map-chip-gap">
+    <span>Mehrstimmig im Chor singen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="instrument-technisch-korrekt">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/instrument-technisch-korrekt/" class="map-chip map-chip-gap">
+    <span>Klanggestaltung am Instrument</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="mehrstimmig-realisieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/mehrstimmig-realisieren/" class="map-chip map-chip-gap">
+    <span>Mehrstimmige Stücke aufführen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="musizieren-korrigieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musizieren-korrigieren/" class="map-chip map-chip-gap">
+    <span>Musizieren reflektieren und verbessern</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="musizieren-organisieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musizieren-organisieren/" class="map-chip map-chip-gap">
+    <span>Gruppenmusizieren organisieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
                 
 <li data-competency="harmonische-begleitung-erfinden">
   <a href="/apps/pr-preview/pr-259/map/musik/c/harmonische-begleitung-erfinden/" class="map-chip map-chip-gap">
@@ -2012,12 +1876,62 @@
   </a>
 </li>
 
+                
+<li data-competency="musik-aufgabenbezogen-gestalten">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-aufgabenbezogen-gestalten/" class="map-chip map-chip-gap">
+    <span>Eigenes Stück komponieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
               </ul>
             </td>
             <td>
+              <ul class="map-cell">
+                
+<li data-competency="choreografieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/choreografieren/" class="map-chip map-chip-gap">
+    <span>Choreografie</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="musik-digital-visualisieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-digital-visualisieren/" class="map-chip map-chip-gap">
+    <span>Musik visualisieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="digitale-musikproduktion">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/digitale-musikproduktion/" class="map-chip map-chip-gap">
+    <span>Digitale Musikproduktion</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="umsetzung-kritisieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/umsetzung-kritisieren/" class="map-chip map-chip-gap">
+    <span>Umsetzungen kritisch bewerten</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
             <td>
               <ul class="map-cell">
+                
+<li data-competency="epoche-romantik">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/epoche-romantik/" class="map-chip map-chip-gap">
+    <span>Romantik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
                 
 <li data-competency="jazz">
   <a href="/apps/pr-preview/pr-259/map/musik/c/jazz/" class="map-chip map-chip-gap">
@@ -2026,11 +1940,142 @@
   </a>
 </li>
 
+                
+<li data-competency="musiktheater">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musiktheater/" class="map-chip map-chip-gap">
+    <span>Oper und Musical</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="soziale-bedingungen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/soziale-bedingungen/" class="map-chip map-chip-gap">
+    <span>Gesellschaftliche Bedingungen von Musik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="gebrauchspraxen-unterscheiden">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/gebrauchspraxen-unterscheiden/" class="map-chip map-chip-gap">
+    <span>Musikalische Gebrauchspraxen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
               </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 13<span class="block mt-1 text-xs font-normal text-slate-600">1 Baustein</span></th>
+            <th scope="row">Schritt 2</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="beeinflussung-erkennen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/beeinflussung-erkennen/" class="map-chip map-chip-gap">
+    <span>Beeinflussung durch Musik</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="nach-notation-musizieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/nach-notation-musizieren/" class="map-chip map-chip-gap">
+    <span>Mehrstimmig nach Notation musizieren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="sonatensatz">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/sonatensatz/" class="map-chip map-chip-gap">
+    <span>Sonatensatzform</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="neue-kompositionstechniken">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/neue-kompositionstechniken/" class="map-chip map-chip-gap">
+    <span>Neue Kompositionstechniken</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="formverlauf-darstellen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/formverlauf-darstellen/" class="map-chip map-chip-gap">
+    <span>Formverlauf darstellen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="epoche-neue-musik">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/epoche-neue-musik/" class="map-chip map-chip-gap">
+    <span>Musik des 20. Jahrhunderts</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="identitaet-peergroup">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/identitaet-peergroup/" class="map-chip map-chip-gap">
+    <span>Musik und Zugehörigkeit</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="gebrauchspraxis-positionieren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/gebrauchspraxis-positionieren/" class="map-chip map-chip-gap">
+    <span>Gebrauchspraxis bewerten</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="auffuehrung-planen">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/auffuehrung-planen/" class="map-chip map-chip-gap">
+    <span>Aufführung planen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 3</th>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
             <td>
             </td>
             <td>
@@ -2044,20 +2089,45 @@
             <td>
               <ul class="map-cell">
                 
-<li data-competency="neue-kompositionstechniken">
-  <a href="/apps/pr-preview/pr-259/map/musik/c/neue-kompositionstechniken/" class="map-chip map-chip-gap">
-    <span>Neue Kompositionstechniken</span>
+<li data-competency="musik-zeitepoche">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/musik-zeitepoche/" class="map-chip map-chip-gap">
+    <span>Musik einer Epoche zuordnen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
               </ul>
             </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 4</th>
             <td>
             </td>
             <td>
             </td>
             <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="rezeption-erklaeren">
+  <a href="/apps/pr-preview/pr-259/map/musik/c/rezeption-erklaeren/" class="map-chip map-chip-gap">
+    <span>Rezeptionsgeschichte</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
             </td>
           </tr>
         </tbody>
@@ -2069,7 +2139,7 @@
     </aside>
   </div>
 
-  <p class="m-0 text-slate-600">Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Stufe für Stufe.</p>
+  <p class="m-0 text-slate-600">Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Schritt für Schritt.</p>
 
   <section id="hilfe" class="panel scroll-mt-4" aria-labelledby="hilfe-titel" data-kind="Musik" data-map-help>
     <h2 id="hilfe-titel" class="m-0 text-xl font-bold text-slate-900" data-dialog-title>So liest du die Karte</h2>
@@ -2077,15 +2147,15 @@
       <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-259/map/#strang" class="text-blue-700 underline underline-offset-2">Strang</a> · eine Spalte</dt><dd class="m-0 mt-1 text-slate-600">Ein Teilgebiet des Fachs, das sich über mehrere Schuljahre zieht.</dd></div>
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-259/map/#baustein" class="text-blue-700 underline underline-offset-2">Baustein</a> · ein Kästchen</dt><dd class="m-0 mt-1 text-slate-600">Eine Sache, die ein Kind lernen kann: „Ich kann …“.</dd></div>
-        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-259/map/#stufe" class="text-blue-700 underline underline-offset-2">Stufe</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Wie weit unten ein Baustein in der Kette „baut auf“ steht. Sie sagt nichts über Klassen.</dd></div>
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-259/map/#schritt" class="text-blue-700 underline underline-offset-2">Schritt</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Wo ein Baustein in seiner Klasse in der Kette „baut auf“ steht. Alles im selben Schritt ist voneinander unabhängig; alles darüber kommt vorher.</dd></div>
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-259/map/#app" class="text-blue-700 underline underline-offset-2">App</a> · die Farbe</dt><dd class="m-0 mt-1 text-slate-600">Blau heißt abgedeckt: Eine App übt den Baustein. Gestrichelt heißt Lücke: Noch keine App übt ihn.</dd></div>
       </dl>
       <p class="m-0 mt-3"><a href="/apps/pr-preview/pr-259/map/#begriffe" class="text-blue-700 underline underline-offset-2">Alle Begriffe und wie sie zusammenhängen</a> · <a href="/apps/pr-preview/pr-259/map/#methode" class="text-blue-700 underline underline-offset-2">Warum diese Methode?</a></p>
     </div>
   </section>
 </div>
-<script type="application/json" id="map-steps-data">{"strands":["Musik hören und beschreiben","Klang, Instrumente und Vortrag","Rhythmus, Takt und Tempo","Tonhöhe, Tonleitern und Harmonik","Notation und Zeichen","Form und Struktur","Singen, Instrumentalspiel und Erfinden","Bewegung und Gestaltungsmedien","Musik im Kontext"],"competencies":[{"id":"konzentriert-hoeren","strand":0,"requires":[],"step":1,"name":"Konzentriertes Hören","iCan":"Ich kann meine Aufmerksamkeit gezielt auf das Hören richten."},{"id":"hoerweisen-unterscheiden","strand":0,"requires":["konzentriert-hoeren"],"step":2,"name":"Hörweisen unterscheiden","iCan":"Ich kann verschiedene Arten des Hörens unterscheiden, zum Beispiel nebenbei hören und genau hinhören."},{"id":"hoergewohnheiten-beschreiben","strand":0,"requires":["hoerweisen-unterscheiden"],"step":3,"name":"Eigene Hörgewohnheiten","iCan":"Ich kann beschreiben, wann und wie ich selbst Musik höre, und das mit anderen vergleichen."},{"id":"parameter-nennen","strand":0,"requires":["konzentriert-hoeren"],"step":2,"name":"Musikalische Parameter","iCan":"Ich kann die Grundeigenschaften Tempo, Tonhöhe, Tondauer, Lautstärke, Klangfarbe und Klangdichte nennen und unterscheiden."},{"id":"verlaeufe-hoeren","strand":0,"requires":["parameter-nennen"],"step":3,"name":"Musikalische Verläufe hören","iCan":"Ich kann in einem Stück rhythmische, melodische, klangliche und formale Verläufe heraushören und mit Fachwörtern beschreiben."},{"id":"parameter-differenziert-hoeren","strand":0,"requires":["verlaeufe-hoeren"],"step":4,"name":"Parameter genau heraushören","iCan":"Ich kann die Parameter in einem Musikstück genau heraushören und mit den Fachwörtern benennen."},{"id":"hoerlandschaft-entdecken","strand":0,"requires":["konzentriert-hoeren"],"step":2,"name":"Stille und Umweltgeräusche","iCan":"Ich kann Stille und die Geräusche meiner Umgebung bewusst wahrnehmen und beschreiben."},{"id":"hoergewohnheiten-reflektieren","strand":0,"requires":["hoergewohnheiten-beschreiben","sach-werturteil"],"step":5,"name":"Hörgewohnheiten reflektieren","iCan":"Ich kann meine eigenen Hörgewohnheiten kritisch prüfen und begründen, was ich an ihnen ändern möchte."},{"id":"gefuehle-in-worte-fassen","strand":0,"requires":["konzentriert-hoeren"],"step":2,"name":"Gefühle zur Musik","iCan":"Ich kann in Worte fassen, welche Gefühle und Bilder Musik bei mir auslöst."},{"id":"wirkung-beschreiben","strand":0,"requires":["gefuehle-in-worte-fassen"],"step":3,"name":"Wirkung von Musik beschreiben","iCan":"Ich kann die Wirkung von Musik mit passenden Wörtern beschreiben, zum Beispiel feierlich, ruhig oder bedrohlich."},{"id":"programmmusik-hoeren","strand":0,"requires":["wirkung-beschreiben"],"step":4,"name":"Programmmusik","iCan":"Ich kann erkennen, wie eine Musik eine Geschichte oder ein Bild darstellt, und das mit Merkmalen der Musik begründen."},{"id":"mittel-der-wirkung","strand":0,"requires":["wirkung-beschreiben","parameter-nennen"],"step":4,"name":"Musikalische Mittel der Wirkung","iCan":"Ich kann zeigen, welche musikalischen Mittel eine Wirkung erzeugen, zum Beispiel Tempo, Lautstärke oder Dur und Moll."},{"id":"sach-werturteil","strand":0,"requires":["wirkung-beschreiben"],"step":4,"name":"Sach- und Werturteil","iCan":"Ich kann ein Urteil über Musik begründen und eine Sachaussage von einer Geschmacksaussage unterscheiden."},{"id":"medien-inszenierung","strand":0,"requires":["mittel-der-wirkung"],"step":5,"name":"Musik in Film und Werbung","iCan":"Ich kann erkennen, wie Film, Werbung oder Computerspiele Musik einsetzen, um zu wirken."},{"id":"wirkung-begruenden","strand":0,"requires":["mittel-der-wirkung","sach-werturteil"],"step":5,"name":"Wirkung von Musik begründen","iCan":"Ich kann begründen, warum eine Musik so wirkt, und meine Gefühle dazu einordnen."},{"id":"beeinflussung-erkennen","strand":0,"requires":["medien-inszenierung","wirkung-begruenden"],"step":6,"name":"Beeinflussung durch Musik","iCan":"Ich kann erkennen, wann Musik mich beeinflussen soll, und mich dazu begründet verhalten."},{"id":"klangquellen-unterscheiden","strand":1,"requires":[],"step":1,"name":"Klangquellen","iCan":"Ich kann Stimme, Körper, Gegenstände und Instrumente als Klangquellen unterscheiden."},{"id":"schwingung","strand":1,"requires":["klangquellen-unterscheiden"],"step":2,"name":"Schwingung als Klangursache","iCan":"Ich kann erklären, dass jeder Klang durch eine Schwingung entsteht."},{"id":"verstaerkung-resonanz","strand":1,"requires":["schwingung"],"step":3,"name":"Resonanzkörper","iCan":"Ich kann erklären, wie ein Resonanzkörper einen Klang lauter macht."},{"id":"klangformung","strand":1,"requires":["schwingung"],"step":3,"name":"Material, Form und Klang","iCan":"Ich kann beschreiben, wie Material und Form eines Instruments den Klang verändern."},{"id":"klangweg-uebertragung","strand":1,"requires":["schwingung"],"step":3,"name":"Schallübertragung","iCan":"Ich kann erklären, wie ein Klang als Schall durch die Luft zu meinem Ohr kommt."},{"id":"stimme-klangquelle","strand":1,"requires":["klangquellen-unterscheiden"],"step":2,"name":"Entstehung der Stimme","iCan":"Ich kann erklären, wie meine Stimme entsteht und was dabei mitschwingt."},{"id":"instrumentenfamilien","strand":1,"requires":["klangquellen-unterscheiden","schwingung"],"step":3,"name":"Instrumentenfamilien","iCan":"Ich kann Instrumente nach der Art, wie sie klingen, in Familien einordnen."},{"id":"ensembles-besetzungen","strand":1,"requires":["instrumentenfamilien"],"step":4,"name":"Ensembles und Besetzungen","iCan":"Ich kann Besetzungen wie Sinfonieorchester, Band oder Chor erkennen und ihre Instrumente oder Stimmen nennen."},{"id":"stimmlagen","strand":1,"requires":["stimme-klangquelle"],"step":3,"name":"Stimmlagen","iCan":"Ich kann die Stimmlagen Sopran, Alt, Tenor und Bass unterscheiden und beim Hören erkennen."},{"id":"klangfarbe-hoeren","strand":1,"requires":["parameter-nennen"],"step":3,"name":"Klangfarbe","iCan":"Ich kann hören, warum zwei Instrumente beim gleichen Ton verschieden klingen, und die Klangfarbe beschreiben."},{"id":"klangdichte-hoeren","strand":1,"requires":["parameter-nennen"],"step":3,"name":"Klangdichte","iCan":"Ich kann hören, ob wenige oder viele Stimmen und Instrumente gleichzeitig klingen, und die Dichte beschreiben."},{"id":"lautstaerke-hoeren","strand":1,"requires":["parameter-nennen"],"step":3,"name":"Lautstärken hören","iCan":"Ich kann Lautstärken hören und der Stärke nach ordnen."},{"id":"dynamik-zeichen","strand":1,"requires":["lautstaerke-hoeren"],"step":4,"name":"Dynamikzeichen","iCan":"Ich kann die Lautstärkezeichen von pianissimo bis fortissimo sowie crescendo und decrescendo lesen und beim Musizieren umsetzen."},{"id":"artikulation-vortrag","strand":1,"requires":["dynamik-zeichen"],"step":5,"name":"Legato und Staccato","iCan":"Ich kann legato und staccato hören und beim Musizieren umsetzen."},{"id":"klang-verfremden","strand":1,"requires":["klangformung"],"step":4,"name":"Klangverfremdung","iCan":"Ich kann einen Klang oder eine Stimme verfremden und beschreiben, was sich am Klang ändert."},{"id":"elektronische-klangerzeugung","strand":1,"requires":["schwingung","klangformung"],"step":4,"name":"Elektronische Klangerzeugung","iCan":"Ich kann erklären, wie ein elektrisches oder digitales Instrument Klänge erzeugt und verändert."},{"id":"klang-gestalten","strand":1,"requires":["klangformung","verstaerkung-resonanz","klang-verfremden"],"step":5,"name":"Klanggestaltung","iCan":"Ich kann einen Klang gezielt gestalten, zum Beispiel durch die Art des Anschlagens, durch Dämpfen oder durch Klangbearbeitung."},{"id":"tondauer-hoeren","strand":2,"requires":["parameter-nennen"],"step":3,"name":"Tondauer","iCan":"Ich kann kurze und lange Töne hören und der Dauer nach ordnen."},{"id":"grundschlag-finden","strand":2,"requires":["tempo-hoeren"],"step":4,"name":"Grundschlag","iCan":"Ich kann in Musik den gleichmäßigen Grundschlag finden und mitklopfen."},{"id":"betonung-hoeren","strand":2,"requires":["grundschlag-finden"],"step":5,"name":"Betonte und unbetonte Schläge","iCan":"Ich kann betonte und unbetonte Schläge hören."},{"id":"taktarten-unterscheiden","strand":2,"requires":["betonung-hoeren"],"step":6,"name":"Taktarten","iCan":"Ich kann den 2/4-, 3/4- und 4/4-Takt am Klang unterscheiden."},{"id":"auftakt-volltakt","strand":2,"requires":["taktarten-unterscheiden"],"step":7,"name":"Auftakt und Volltakt","iCan":"Ich kann einen Auftakt von einem Volltakt unterscheiden."},{"id":"rhythmus-erklaeren","strand":2,"requires":["grundschlag-finden","tondauer-hoeren"],"step":5,"name":"Rhythmus und Grundschlag","iCan":"Ich kann erklären, dass der Rhythmus aus Tempo und Tondauer entsteht, und ihn vom Grundschlag unterscheiden."},{"id":"tempo-hoeren","strand":2,"requires":["parameter-nennen"],"step":3,"name":"Schnelles und langsames Tempo","iCan":"Ich kann schnelles und langsames Tempo hören und beschreiben."},{"id":"tempo-woerter","strand":2,"requires":["tempo-hoeren"],"step":4,"name":"Tempobezeichnungen","iCan":"Ich kann Tempowörter wie Allegro und Adagio dem passenden Tempo zuordnen."},{"id":"tempo-veraendern","strand":2,"requires":["tempo-hoeren"],"step":4,"name":"Tempoveränderungen","iCan":"Ich kann hören und lesen, wenn ein Stück schneller oder langsamer wird, und die Fachwörter dafür nennen."},{"id":"triole","strand":2,"requires":["rhythmus-erklaeren","notenwerte-erkennen"],"step":6,"name":"Triole","iCan":"Ich kann eine Triole hören, lesen und klatschen."},{"id":"weitere-taktarten","strand":2,"requires":["taktarten-unterscheiden"],"step":7,"name":"Zusammengesetzte Taktarten","iCan":"Ich kann zusammengesetzte Taktarten wie 6/8 erkennen und einen Taktwechsel hören."},{"id":"synkope","strand":2,"requires":["weitere-taktarten"],"step":8,"name":"Synkope","iCan":"Ich kann eine Synkope hören und klatschen."},{"id":"binaer-ternaer","strand":2,"requires":["triole"],"step":7,"name":"Binärer und ternärer Rhythmus","iCan":"Ich kann hören und spielen, ob ein Rhythmus binär oder ternär (swingend) ausgeführt wird."},{"id":"beat-offbeat","strand":2,"requires":["synkope","betonung-hoeren"],"step":9,"name":"Beat und Off-Beat","iCan":"Ich kann in einem Song Beat und Off-Beat unterscheiden und den Groove mitklatschen."},{"id":"besondere-taktarten","strand":2,"requires":["weitere-taktarten"],"step":8,"name":"Ungerade Taktarten","iCan":"Ich kann ungewöhnliche Taktarten wie 5/4 oder 7/8 erkennen und mitzählen."},{"id":"polyrhythmik","strand":2,"requires":["beat-offbeat","besondere-taktarten"],"step":10,"name":"Polyrhythmik","iCan":"Ich kann erklären, wie mehrere Rhythmen gleichzeitig eine gemeinsame Wirkung ergeben, und sie zusammen spielen."},{"id":"freie-metrik","strand":2,"requires":["besondere-taktarten"],"step":9,"name":"Freie Metrik","iCan":"Ich kann Musik mit festem Metrum von Musik ohne durchgehendes Metrum unterscheiden."},{"id":"tonhoehe-hoch-tief","strand":3,"requires":["parameter-nennen"],"step":3,"name":"Hohe und tiefe Töne","iCan":"Ich kann hohe und tiefe Töne unterscheiden und ordnen."},{"id":"klaviatur-tasten","strand":3,"requires":["tonhoehe-hoch-tief"],"step":4,"name":"Klaviatur","iCan":"Ich kann die Tasten der Klaviatur benennen und das C finden."},{"id":"oktave","strand":3,"requires":["klaviatur-tasten"],"step":5,"name":"Oktave","iCan":"Ich kann Oktaven auf der Klaviatur finden und Töne mit gleichem Namen in verschiedenen Oktaven benennen."},{"id":"halbtonschritte","strand":3,"requires":["klaviatur-tasten"],"step":5,"name":"Halbtonschritte abzählen","iCan":"Ich kann Halbtonschritte auf der Klaviatur abzählen."},{"id":"tonleiter-ganzton-halbton","strand":3,"requires":["halbtonschritte"],"step":6,"name":"Ganzton und Halbton","iCan":"Ich kann Ganztonschritte und Halbtonschritte unterscheiden."},{"id":"intervall-hoeren","strand":3,"requires":["tonhoehe-hoch-tief"],"step":4,"name":"Tonwiederholung, Schritt und Sprung","iCan":"Ich kann hören und beschreiben, ob eine Melodie einen Ton wiederholt, in Schritten geht oder springt."},{"id":"intervall-benennen","strand":3,"requires":["intervall-hoeren","klaviatur-tasten"],"step":5,"name":"Intervalle benennen","iCan":"Ich kann den Abstand zwischen zwei Tönen abzählen und mit dem Namen des Intervalls benennen."},{"id":"intervall-qualitaet","strand":3,"requires":["intervall-benennen","halbtonschritte"],"step":6,"name":"Reine, große und kleine Intervalle","iCan":"Ich kann Intervalle bis zur Oktave genau bestimmen: rein, groß oder klein."},{"id":"dur-tonleiter-bauen","strand":3,"requires":["tonleiter-ganzton-halbton"],"step":7,"name":"Dur-Tonleiter","iCan":"Ich kann die Dur-Tonleiter aus Ganzton- und Halbtonschritten aufbauen."},{"id":"dur-moll-hoeren","strand":3,"requires":["konzentriert-hoeren"],"step":2,"name":"Dur und Moll hören","iCan":"Ich kann Dur und Moll am Klang unterscheiden."},{"id":"moll-aufbau","strand":3,"requires":["dur-tonleiter-bauen","dur-moll-hoeren"],"step":8,"name":"Aufbau der Moll-Tonleiter","iCan":"Ich kann erklären, worin sich der Aufbau von Moll von Dur unterscheidet."},{"id":"moll-varianten","strand":3,"requires":["moll-aufbau"],"step":9,"name":"Natürliches, harmonisches und melodisches Moll","iCan":"Ich kann natürliches, harmonisches und melodisches Moll unterscheiden und erklären, was ein Leitton ist."},{"id":"diatonik-chromatik","strand":3,"requires":["halbtonschritte","tonleiter-ganzton-halbton"],"step":7,"name":"Diatonik und Chromatik","iCan":"Ich kann eine diatonische von einer chromatischen Tonfolge unterscheiden."},{"id":"melodietypen","strand":3,"requires":["intervall-hoeren"],"step":5,"name":"Stufen- und Dreiklangsmelodik","iCan":"Ich kann eine Melodie als Stufenmelodik oder Dreiklangsmelodik beschreiben."},{"id":"tonart-vorzeichen","strand":3,"requires":["dur-tonleiter-bauen","vorzeichen-lesen"],"step":8,"name":"Tonart und Vorzeichen","iCan":"Ich kann an den Vorzeichen erkennen, in welcher Dur-Tonart ein Stück steht."},{"id":"dreiklang","strand":3,"requires":["intervall-benennen"],"step":6,"name":"Dreiklang","iCan":"Ich kann einen Dreiklang aus Grundton, Terz und Quinte aufbauen."},{"id":"dreiklangsarten","strand":3,"requires":["dreiklang","moll-aufbau"],"step":9,"name":"Dur- und Moll-Dreiklang","iCan":"Ich kann Dur- und Moll-Dreiklänge hören, aufbauen und unterscheiden."},{"id":"konsonanz-dissonanz","strand":3,"requires":["intervall-qualitaet"],"step":7,"name":"Konsonanz und Dissonanz","iCan":"Ich kann konsonante und dissonante Zusammenklänge hören und unterscheiden."},{"id":"besondere-tonleitern","strand":3,"requires":["dur-moll-hoeren","tonleiter-ganzton-halbton"],"step":7,"name":"Pentatonik, Ganzton- und Bluestonleiter","iCan":"Ich kann Pentatonik, Ganztonleiter und Blues-Tonleiter am Klang erkennen und aufbauen."},{"id":"quintenzirkel","strand":3,"requires":["tonart-vorzeichen"],"step":9,"name":"Quintenzirkel","iCan":"Ich kann den Quintenzirkel lesen und damit Tonarten und ihre Vorzeichen finden."},{"id":"dreiklangsumkehrung","strand":3,"requires":["dreiklangsarten"],"step":10,"name":"Dreiklangsumkehrungen","iCan":"Ich kann die Umkehrungen eines Dreiklangs bilden und erkennen."},{"id":"hauptfunktionen","strand":3,"requires":["tonart-vorzeichen","dreiklangsarten"],"step":10,"name":"Tonika, Subdominante, Dominante","iCan":"Ich kann Tonika, Subdominante und Dominante in einer Tonart benennen und ihre Akkorde bilden."},{"id":"kadenz","strand":3,"requires":["hauptfunktionen"],"step":11,"name":"Kadenz","iCan":"Ich kann eine einfache Kadenz spielen und hören."},{"id":"nebenstufen","strand":3,"requires":["hauptfunktionen"],"step":11,"name":"Nebenstufen","iCan":"Ich kann erklären, wie Nebenstufen die Hauptfunktionen ersetzen können."},{"id":"dominantseptakkord","strand":3,"requires":["hauptfunktionen"],"step":11,"name":"Dominantseptakkord","iCan":"Ich kann einen Dominantseptakkord bilden und in einer Kadenz erkennen."},{"id":"intervalle-erkennen-singen","strand":3,"requires":["intervall-qualitaet","zielton-singen"],"step":7,"name":"Alle Intervalle hören und singen","iCan":"Ich kann alle Intervalle bis zur Oktave hören, benennen und singen, auch übermäßige und verminderte."},{"id":"freie-harmonik","strand":3,"requires":["kadenz","konsonanz-dissonanz"],"step":12,"name":"Freie Harmonik und Cluster","iCan":"Ich kann Musik mit Kadenzharmonik von Musik mit freier Harmonik oder Clustern unterscheiden."},{"id":"notensystem","strand":4,"requires":["tonhoehe-hoch-tief"],"step":4,"name":"Notensystem und Violinschlüssel","iCan":"Ich kann das Notensystem mit seinen fünf Linien und den Violinschlüssel beschreiben."},{"id":"noten-benennen","strand":4,"requires":["notensystem","klaviatur-tasten"],"step":5,"name":"Notennamen","iCan":"Ich kann Noten auf Linien, in Zwischenräumen und auf Hilfslinien erkennen und mit ihrem Namen benennen."},{"id":"bassschluessel","strand":4,"requires":["noten-benennen"],"step":6,"name":"Bassschlüssel","iCan":"Ich kann den Bassschlüssel lesen und die Noten darin benennen."},{"id":"vorzeichen-lesen","strand":4,"requires":["noten-benennen","halbtonschritte"],"step":6,"name":"Versetzungszeichen","iCan":"Ich kann Kreuz, b und Auflösungszeichen lesen und erhöhte oder erniedrigte Töne spielen."},{"id":"notenwerte-erkennen","strand":4,"requires":["tondauer-hoeren"],"step":4,"name":"Notenwerte","iCan":"Ich kann ganze, halbe, Viertel- und Achtelnoten unterscheiden und ihre Dauer vergleichen."},{"id":"pausen-kennen","strand":4,"requires":["notenwerte-erkennen"],"step":5,"name":"Pausenzeichen","iCan":"Ich kann Pausenzeichen lesen und weiß, dass eine Pause genauso lange dauert wie die Note mit gleichem Namen."},{"id":"punktierung","strand":4,"requires":["notenwerte-erkennen"],"step":5,"name":"Punktierte Noten","iCan":"Ich kann punktierte Noten lesen und ihre Dauer berechnen."},{"id":"notenwerte-im-takt","strand":4,"requires":["notenwerte-erkennen","taktarten-unterscheiden"],"step":7,"name":"Notenwerte im Takt","iCan":"Ich kann Notenwerte und Pausen zusammenzählen und sagen, ob sie in einen Takt passen."},{"id":"rhythmus-lesen","strand":4,"requires":["notenwerte-im-takt","rhythmus-nachklatschen"],"step":8,"name":"Rhythmen lesen","iCan":"Ich kann einen notierten Rhythmus lesen und in Klang umsetzen."},{"id":"melodie-lesen","strand":4,"requires":["noten-benennen","rhythmus-lesen"],"step":9,"name":"Melodien lesen","iCan":"Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen."},{"id":"rhythmus-notieren","strand":4,"requires":["notenwerte-im-takt"],"step":8,"name":"Rhythmen notieren","iCan":"Ich kann einen Rhythmus, den ich gehört oder erfunden habe, in Notenwerten aufschreiben."},{"id":"melodie-notieren","strand":4,"requires":["noten-benennen","rhythmus-notieren"],"step":9,"name":"Melodien notieren","iCan":"Ich kann eine kurze Melodie in Noten aufschreiben."},{"id":"grafisch-notieren","strand":4,"requires":["parameter-nennen"],"step":3,"name":"Grafische Notation erstellen","iCan":"Ich kann Musik mit eigenen Zeichen als Grafik aufschreiben."},{"id":"grafik-musizieren","strand":4,"requires":["grafisch-notieren"],"step":4,"name":"Nach grafischer Notation spielen","iCan":"Ich kann nach einer grafischen Notation Klänge machen."},{"id":"gesten-verstehen","strand":4,"requires":["aufeinander-hoeren"],"step":3,"name":"Musikalische Handzeichen","iCan":"Ich kann Handzeichen und Gesten, die Musik anzeigen, verstehen und darauf reagieren."},{"id":"hoerpartitur-verfolgen","strand":4,"requires":["grafisch-notieren","konzentriert-hoeren"],"step":4,"name":"Hörpartitur mitlesen","iCan":"Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist."},{"id":"akkordsymbole","strand":4,"requires":["dreiklangsarten","melodie-lesen"],"step":10,"name":"Akkordsymbole im Leadsheet","iCan":"Ich kann Akkordsymbole in einem Leadsheet lesen und ein Lied damit begleiten."},{"id":"partitur-mitlesen","strand":4,"requires":["melodie-lesen","bassschluessel","ensembles-besetzungen"],"step":10,"name":"Partiturausschnitt mitlesen","iCan":"Ich kann in einem Partiturausschnitt eine Stimme verfolgen und beim Hören mitlesen."},{"id":"traditionell-und-grafisch-notieren","strand":4,"requires":["melodie-notieren","grafisch-notieren"],"step":10,"name":"Traditionell und grafisch notieren","iCan":"Ich kann ein Musikstück sowohl grafisch als auch in traditioneller Notenschrift festhalten."},{"id":"nach-notation-musizieren","strand":4,"requires":["melodie-lesen","grafik-musizieren","mehrstimmig-realisieren"],"step":10,"name":"Mehrstimmig nach Notation musizieren","iCan":"Ich kann nach Noten oder einer Grafik auch mehrstimmig musizieren."},{"id":"partitur-orientieren","strand":4,"requires":["partitur-mitlesen"],"step":11,"name":"Orchesterpartitur","iCan":"Ich kann mich in einer Orchesterpartitur zurechtfinden und Gehörtes darin wiederfinden."},{"id":"abschnitte-hoeren","strand":5,"requires":["konzentriert-hoeren"],"step":2,"name":"Formteile A und B","iCan":"Ich kann in einem Stück Abschnitte erkennen und mit Buchstaben wie A und B benennen."},{"id":"wiederholung-kontrast","strand":5,"requires":["abschnitte-hoeren"],"step":3,"name":"Wiederholung und Kontrast","iCan":"Ich kann Wiederholung und Kontrast in einem Stück hören und beschreiben."},{"id":"veraenderung-hoeren","strand":5,"requires":["wiederholung-kontrast"],"step":4,"name":"Veränderte Abschnitte","iCan":"Ich kann hören, wie ein Abschnitt verändert wird."},{"id":"spannung-steigerung","strand":5,"requires":["wiederholung-kontrast"],"step":4,"name":"Spannung und Entspannung","iCan":"Ich kann hören, wie eine Musik Spannung aufbaut und wieder löst."},{"id":"motiv-thema","strand":5,"requires":["wiederholung-kontrast"],"step":4,"name":"Motiv und Thema","iCan":"Ich kann ein Motiv oder Thema in einem Stück wiedererkennen."},{"id":"kompositionsmodelle","strand":5,"requires":["wiederholung-kontrast"],"step":4,"name":"Einfache Liedformen","iCan":"Ich kann einfache Liedformen wie Strophe-Refrain und die dreiteilige ABA-Form erkennen."},{"id":"rondo-menuett","strand":5,"requires":["kompositionsmodelle"],"step":5,"name":"Rondo und Menuett","iCan":"Ich kann ein Rondo und ein Menuett am Aufbau erkennen."},{"id":"kanon-prinzip","strand":5,"requires":["abschnitte-hoeren","aufeinander-hoeren"],"step":3,"name":"Kanonprinzip","iCan":"Ich kann das Kanonprinzip erklären und einen Kanon hören und singen."},{"id":"ostinato-riff","strand":5,"requires":["wiederholung-kontrast"],"step":4,"name":"Ostinato und Riff","iCan":"Ich kann einen Ostinato oder ein Riff in einem Stück erkennen und spielen."},{"id":"imitation-polyphonie","strand":5,"requires":["kanon-prinzip"],"step":4,"name":"Polyphonie und Homophonie","iCan":"Ich kann hören, ob eine Musik mehrstimmig melodisch (polyphon) oder mit Begleitung (homophon) gebaut ist."},{"id":"songaufbau","strand":5,"requires":["kompositionsmodelle"],"step":5,"name":"Aufbau eines Pop-Songs","iCan":"Ich kann den Aufbau eines Pop-Songs mit Intro, Strophe, Refrain und Bridge beschreiben."},{"id":"phrase-periode","strand":5,"requires":["motiv-thema"],"step":5,"name":"Phrasen: Frage und Antwort","iCan":"Ich kann in einer Melodie Phrasen erkennen und Frage und Antwort unterscheiden."},{"id":"blues-schema","strand":5,"requires":["songaufbau","hauptfunktionen"],"step":11,"name":"12-taktiges Blues-Schema","iCan":"Ich kann das 12-taktige Blues-Schema hören und spielen."},{"id":"variationsform","strand":5,"requires":["veraenderung-hoeren"],"step":5,"name":"Variationsform","iCan":"Ich kann erkennen, wie ein Thema in Variationen verändert wird."},{"id":"concerto-grosso","strand":5,"requires":["wiederholung-kontrast","ensembles-besetzungen"],"step":5,"name":"Concerto grosso","iCan":"Ich kann das Wechselspiel von Solo und Tutti im Concerto grosso hören."},{"id":"entwicklung-hoeren","strand":5,"requires":["veraenderung-hoeren","motiv-thema"],"step":5,"name":"Motivische Entwicklung","iCan":"Ich kann beschreiben, wie sich Musik aus einem kurzen Motiv entwickelt."},{"id":"sonatensatz","strand":5,"requires":["entwicklung-hoeren"],"step":6,"name":"Sonatensatzform","iCan":"Ich kann die Teile eines Sonatensatzes (Exposition, Durchführung, Reprise) beim Hören verfolgen."},{"id":"neue-kompositionstechniken","strand":5,"requires":["freie-harmonik","entwicklung-hoeren"],"step":13,"name":"Neue Kompositionstechniken","iCan":"Ich kann Zwölftonmusik, Minimal Music oder Klangflächenmusik am Aufbau erkennen."},{"id":"formverlauf-darstellen","strand":5,"requires":["kompositionsmodelle","entwicklung-hoeren"],"step":6,"name":"Formverlauf darstellen","iCan":"Ich kann den Formverlauf eines Stücks in einer Übersicht darstellen."},{"id":"haltung-atmung","strand":6,"requires":[],"step":1,"name":"Haltung und Atmung beim Singen","iCan":"Ich kann mit aufrechter Haltung und ruhiger Atmung singen."},{"id":"stimme-pflegen","strand":6,"requires":["haltung-atmung"],"step":2,"name":"Stimmpflege und Einsingen","iCan":"Ich kann meine Stimme pflegen und mich vor dem Singen einsingen."},{"id":"stimme-im-stimmwechsel","strand":6,"requires":["stimme-pflegen"],"step":3,"name":"Stimme im Stimmwechsel","iCan":"Ich kann erklären, was im Stimmwechsel mit der Stimme passiert, und meine Stimme dabei schonend einsetzen."},{"id":"artikulation-intonation","strand":6,"requires":["haltung-atmung"],"step":2,"name":"Aussprache und Intonation","iCan":"Ich kann deutlich sprechen und sauber singen."},{"id":"zielton-singen","strand":6,"requires":["artikulation-intonation"],"step":3,"name":"Zielton treffen","iCan":"Ich kann einen vorgegebenen Ton mit der Stimme treffen."},{"id":"tonfolge-nachsingen","strand":6,"requires":["zielton-singen"],"step":4,"name":"Tonfolgen nachsingen","iCan":"Ich kann eine kurze Tonfolge hören und Ton für Ton nachsingen."},{"id":"lieder-auswendig-singen","strand":6,"requires":["artikulation-intonation"],"step":3,"name":"Lieder auswendig singen","iCan":"Ich kann mehrere Lieder aus verschiedenen Bereichen auswendig singen."},{"id":"zweistimmig-singen","strand":6,"requires":["tonfolge-nachsingen","aufeinander-hoeren"],"step":5,"name":"Zweistimmig singen","iCan":"Ich kann in einer Gruppe zweistimmig singen, zum Beispiel einen Kanon oder ein Lied mit zweiter Stimme."},{"id":"lieder-genrebewusst-singen","strand":6,"requires":["lieder-auswendig-singen"],"step":4,"name":"Stilgerecht singen","iCan":"Ich kann ein großes Repertoire auswendig singen und dabei zum Stil des Liedes passend gestalten."},{"id":"mehrstimmig-singen","strand":6,"requires":["zweistimmig-singen"],"step":6,"name":"Mehrstimmig im Chor singen","iCan":"Ich kann in einem Chor oder Ensemble mehrstimmig singen und meine Stimme sicher halten."},{"id":"spieltechnik-instrument","strand":6,"requires":[],"step":1,"name":"Spieltechnik am Instrument","iCan":"Ich kann ein Instrument sachgerecht behandeln und mit passender Spieltechnik spielen."},{"id":"instrument-technisch-korrekt","strand":6,"requires":["spieltechnik-instrument"],"step":2,"name":"Klanggestaltung am Instrument","iCan":"Ich kann ein Instrument technisch korrekt spielen und seinen Klang bewusst gestalten."},{"id":"rhythmus-nachklatschen","strand":6,"requires":["grundschlag-finden"],"step":5,"name":"Rhythmen nachklatschen","iCan":"Ich kann einen gehörten Rhythmus nachklatschen und im Takt bleiben."},{"id":"rhythmus-nachbauen","strand":6,"requires":["rhythmus-nachklatschen"],"step":6,"name":"Rhythmusmuster bauen","iCan":"Ich kann ein Rhythmus-Muster zusammensetzen und im Takt klatschen oder spielen."},{"id":"tonfolge-im-metrum","strand":6,"requires":["tonfolge-nachsingen","grundschlag-finden"],"step":5,"name":"Tonfolgen im Metrum","iCan":"Ich kann eine kurze Tonfolge im gleichmäßigen Grundschlag singen oder spielen."},{"id":"lied-begleiten","strand":6,"requires":["rhythmus-nachklatschen"],"step":6,"name":"Lieder im Grundschlag begleiten","iCan":"Ich kann ein Lied mit dem Grundschlag begleiten und im Tempo bleiben."},{"id":"mitspielsatz","strand":6,"requires":["lied-begleiten","aufeinander-hoeren"],"step":7,"name":"Mitspielsatz im Klassenensemble","iCan":"Ich kann in einem Mitspielsatz meine Stimme im Klassenensemble spielen."},{"id":"aufeinander-hoeren","strand":6,"requires":["konzentriert-hoeren"],"step":2,"name":"Aufeinander hören","iCan":"Ich kann beim gemeinsamen Musizieren auf die anderen hören und darauf reagieren."},{"id":"mehrstimmig-realisieren","strand":6,"requires":["aufeinander-hoeren","rhythmus-nachbauen","tonfolge-im-metrum","zweistimmig-singen"],"step":7,"name":"Mehrstimmige Stücke aufführen","iCan":"Ich kann ein Musikstück mit mehreren Stimmen rhythmisch und tonal sicher gemeinsam aufführen."},{"id":"ueben-strategien","strand":6,"requires":[],"step":1,"name":"Übestrategien","iCan":"Ich kann ein Stück mit passenden Übestrategien einüben und festigen."},{"id":"musizieren-korrigieren","strand":6,"requires":["ueben-strategien","aufeinander-hoeren"],"step":3,"name":"Musizieren reflektieren und verbessern","iCan":"Ich kann mein Musizieren und das der Gruppe vergleichend wahrnehmen und verbessern."},{"id":"musizieren-anleiten","strand":6,"requires":["aufeinander-hoeren","gesten-verstehen"],"step":4,"name":"Gruppe anleiten","iCan":"Ich kann eine kleine Gruppe beim Musizieren anleiten, zum Beispiel mit einem Einsatzzeichen."},{"id":"musizieren-organisieren","strand":6,"requires":["musizieren-anleiten"],"step":5,"name":"Gruppenmusizieren organisieren","iCan":"Ich kann ein Musizieren in der Gruppe vorbereiten und organisieren und dabei anleiten."},{"id":"frei-experimentieren","strand":6,"requires":["klangquellen-unterscheiden"],"step":2,"name":"Freies Experimentieren mit Klängen","iCan":"Ich kann frei mit Stimme und Instrument experimentieren und neue Klänge entdecken."},{"id":"rhythmus-erfinden","strand":6,"requires":["rhythmus-nachbauen","notenwerte-erkennen"],"step":7,"name":"Rhythmen erfinden","iCan":"Ich kann einen eigenen Rhythmus über vier Takte erfinden und spielen."},{"id":"melodie-erfinden","strand":6,"requires":["dur-tonleiter-bauen","tonfolge-nachsingen"],"step":8,"name":"Melodien erfinden","iCan":"Ich kann aus den Tönen der Dur-Tonleiter eine kurze eigene Melodie erfinden und singen."},{"id":"text-vertonen","strand":6,"requires":["melodie-erfinden"],"step":9,"name":"Texte vertonen","iCan":"Ich kann zu einem kurzen Text eine eigene Melodie erfinden."},{"id":"musik-variieren","strand":6,"requires":["mittel-der-wirkung","veraenderung-hoeren"],"step":5,"name":"Lieder variieren","iCan":"Ich kann ein Lied oder eine Melodie verändern, zum Beispiel im Rhythmus, im Tempo oder in der Lautstärke."},{"id":"musik-nach-vorgabe-erfinden","strand":6,"requires":["frei-experimentieren"],"step":3,"name":"Musik zu Bild oder Geschichte","iCan":"Ich kann nach einer Vorgabe außerhalb der Musik, zum Beispiel einem Bild oder einer Geschichte, eine kurze Musik erfinden."},{"id":"improvisieren-nach-vorgabe","strand":6,"requires":["frei-experimentieren","rhythmus-nachbauen"],"step":7,"name":"Improvisation über Pattern und Akkorde","iCan":"Ich kann über ein rhythmisches Pattern oder eine einfache Akkordfolge improvisieren."},{"id":"harmonische-begleitung-erfinden","strand":6,"requires":["kadenz","akkordsymbole"],"step":12,"name":"Harmonische Begleitung erfinden","iCan":"Ich kann zu einer Melodie eine harmonische Begleitung erfinden und über eine Harmoniefolge improvisieren."},{"id":"musik-aufgabenbezogen-gestalten","strand":6,"requires":["musik-nach-vorgabe-erfinden","musik-variieren"],"step":6,"name":"Eigenes Stück komponieren","iCan":"Ich kann nach einer Aufgabe und nach musikalischen Kriterien ein eigenes Stück erfinden, ausarbeiten und vorführen."},{"id":"bewegungsmuster-ausfuehren","strand":7,"requires":["grundschlag-finden"],"step":5,"name":"Bewegungsmuster zur Musik","iCan":"Ich kann ein Bewegungsmuster zu Musik auswählen und gut abgestimmt ausführen."},{"id":"tanzen-nach-anleitung","strand":7,"requires":["bewegungsmuster-ausfuehren","taktarten-unterscheiden"],"step":7,"name":"Einfache Tänze","iCan":"Ich kann einen einfachen Tanz, zum Beispiel einen Volkstanz, nach Anleitung tanzen."},{"id":"dirigieren-taktschlagen","strand":7,"requires":["taktarten-unterscheiden"],"step":7,"name":"Dirigieren","iCan":"Ich kann einen 2er-, 3er- und 4er-Takt dirigieren."},{"id":"bewegung-nach-ausdruck-form","strand":7,"requires":["bewegungsmuster-ausfuehren","wirkung-beschreiben"],"step":6,"name":"Bewegung nach Ausdruck und Form","iCan":"Ich kann mich so zu Musik bewegen, dass die Bewegung zu Ausdruck, Tempo und Form der Musik passt."},{"id":"musik-in-bild","strand":7,"requires":["wirkung-beschreiben"],"step":4,"name":"Musik ins Bild setzen","iCan":"Ich kann den Verlauf und die Wirkung von Musik in einem Bild oder einer Zeichnung darstellen."},{"id":"musik-in-szene-sprache","strand":7,"requires":["wirkung-beschreiben"],"step":4,"name":"Musik in Szene und Sprache","iCan":"Ich kann Musik in einer Szene oder in Worten umsetzen."},{"id":"umsetzung-beurteilen","strand":7,"requires":["musik-in-bild"],"step":5,"name":"Umsetzungen beurteilen","iCan":"Ich kann beurteilen, ob ein Bild, eine Bewegung oder eine Szene zur Musik passt."},{"id":"tonaufnahme-erstellen","strand":7,"requires":["lied-begleiten"],"step":7,"name":"Tonaufnahmen","iCan":"Ich kann eine eigene Musik mit einem Aufnahmegerät aufnehmen und anhören."},{"id":"musik-szenisch-interpretieren","strand":7,"requires":["musik-in-szene-sprache"],"step":5,"name":"Szenische Interpretation","iCan":"Ich kann Musik und Stimmung eines Werkausschnitts als Pantomime oder Szene darstellen."},{"id":"choreografieren","strand":7,"requires":["bewegung-nach-ausdruck-form","tanzen-nach-anleitung"],"step":8,"name":"Choreografie","iCan":"Ich kann nach Kriterien Bewegungen zur Musik entwerfen und als Choreografie einüben."},{"id":"musik-digital-visualisieren","strand":7,"requires":["musik-in-bild"],"step":5,"name":"Musik visualisieren","iCan":"Ich kann den Aufbau und den Ausdruck von Musik mit analogen oder digitalen Medien sichtbar machen."},{"id":"digitale-musikproduktion","strand":7,"requires":["tonaufnahme-erstellen"],"step":8,"name":"Digitale Musikproduktion","iCan":"Ich kann mit einem Programm eine kurze Musik aufnehmen, bearbeiten und zusammenstellen."},{"id":"umsetzung-kritisieren","strand":7,"requires":["umsetzung-beurteilen"],"step":6,"name":"Umsetzungen kritisch bewerten","iCan":"Ich kann eine Umsetzung von Musik kritisch bewerten und Alternativen vorschlagen."},{"id":"herkunft-einordnen","strand":8,"requires":[],"step":1,"name":"Herkunft eines Musikstücks","iCan":"Ich kann sagen, wann, wo und von wem ein Musikstück stammt."},{"id":"komponist-biografie","strand":8,"requires":["herkunft-einordnen"],"step":2,"name":"Komponistenbiografie","iCan":"Ich kann wichtige Stationen im Leben einer Komponistin oder eines Komponisten beschreiben und in ihre Zeit einordnen."},{"id":"musik-und-umfeld","strand":8,"requires":["herkunft-einordnen"],"step":2,"name":"Musik und Entstehungsumfeld","iCan":"Ich kann Merkmale eines Musikstücks mit seiner Entstehung und seinem Umfeld verbinden und beurteilen."},{"id":"musik-anderer-kulturen","strand":8,"requires":["herkunft-einordnen"],"step":2,"name":"Musik anderer Kulturen","iCan":"Ich kann Musik aus anderen Ländern und Kulturen kennenlernen und ihr einen Ort zuordnen."},{"id":"epoche-barock","strand":8,"requires":["komponist-biografie"],"step":3,"name":"Barock","iCan":"Ich kann Musik des Barock an typischen Merkmalen erkennen und in ihre Zeit einordnen."},{"id":"gebrauchspraxen-nennen","strand":8,"requires":["herkunft-einordnen"],"step":2,"name":"Wofür Musik gebraucht wird","iCan":"Ich kann Beispiele nennen, wofür Musik gebraucht wird, zum Beispiel bei Festen, im Sport oder zum Tanzen."},{"id":"zweck-umfeld-einordnen","strand":8,"requires":["gebrauchspraxen-nennen"],"step":3,"name":"Zweck und Umfeld von Musik","iCan":"Ich kann Musik nach Zweck und Umfeld einordnen und beurteilen."},{"id":"repertoire-aufbauen","strand":8,"requires":["lieder-auswendig-singen","gebrauchspraxen-nennen"],"step":4,"name":"Repertoire vortragen","iCan":"Ich kann Lieder und Stücke aus verschiedenen Bereichen der Musikpraxis vortragen."},{"id":"auffuehrung-mitgestalten","strand":8,"requires":["repertoire-aufbauen"],"step":5,"name":"Schulaufführung mitgestalten","iCan":"Ich kann bei einer Aufführung in der Schule gestaltend mitmachen."},{"id":"auffuehrung-auswerten","strand":8,"requires":["auffuehrung-mitgestalten"],"step":6,"name":"Aufführung auswerten","iCan":"Ich kann eine Aufführung auswerten und sagen, was gelungen ist und was ich anders machen würde."},{"id":"epoche-klassik","strand":8,"requires":["epoche-barock"],"step":4,"name":"Wiener Klassik","iCan":"Ich kann Musik der Wiener Klassik an typischen Merkmalen erkennen und in ihre Zeit einordnen."},{"id":"popularmusik-stile","strand":8,"requires":["gebrauchspraxen-nennen","songaufbau"],"step":6,"name":"Stile der Popularmusik","iCan":"Ich kann Stile der Popularmusik an Rhythmus, Besetzung und Sound unterscheiden."},{"id":"musik-nicht-abendlaendisch","strand":8,"requires":["musik-anderer-kulturen"],"step":3,"name":"Außereuropäische Musik","iCan":"Ich kann Musik aus einem nicht europäischen Kulturkreis beschreiben und ihre Aufgabe dort erklären."},{"id":"urheberrecht-musikmarkt","strand":8,"requires":["gebrauchspraxen-nennen"],"step":3,"name":"Urheberrecht und Musikmarkt","iCan":"Ich kann erklären, wie Musik im Internet vertrieben wird und was das Urheberrecht für Musikschaffende bedeutet."},{"id":"epoche-romantik","strand":8,"requires":["epoche-klassik"],"step":5,"name":"Romantik","iCan":"Ich kann Musik der Romantik an typischen Merkmalen erkennen und in ihre Zeit einordnen."},{"id":"epoche-neue-musik","strand":8,"requires":["epoche-romantik"],"step":6,"name":"Musik des 20. Jahrhunderts","iCan":"Ich kann Musik des 20. Jahrhunderts an neuen Mitteln erkennen und in ihre Zeit einordnen."},{"id":"musik-zeitepoche","strand":8,"requires":["epoche-barock","epoche-klassik","epoche-romantik","epoche-neue-musik"],"step":7,"name":"Musik einer Epoche zuordnen","iCan":"Ich kann ein Musikstück einer geschichtlichen Zeit zuordnen und die Zeit am Stück begründen."},{"id":"jazz","strand":8,"requires":["binaer-ternaer","blues-schema","besondere-tonleitern"],"step":12,"name":"Jazz","iCan":"Ich kann erklären, wie der Jazz aus dem Blues entstand, und typische Stilmittel des Jazz hören."},{"id":"musiktheater","strand":8,"requires":["wirkung-beschreiben","abschnitte-hoeren"],"step":4,"name":"Oper und Musical","iCan":"Ich kann Oper und Musical vergleichen und ihre Bestandteile wie Ouvertüre, Rezitativ, Arie und Chor nennen."},{"id":"soziale-bedingungen","strand":8,"requires":["musik-und-umfeld"],"step":3,"name":"Gesellschaftliche Bedingungen von Musik","iCan":"Ich kann erklären, wie Wirtschaft, Gesellschaft und Medien beeinflussen, welche Musik entsteht und gehört wird."},{"id":"rezeption-erklaeren","strand":8,"requires":["musik-zeitepoche"],"step":8,"name":"Rezeptionsgeschichte","iCan":"Ich kann erklären, wie ein Stück zu verschiedenen Zeiten aufgenommen und verstanden wurde."},{"id":"gebrauchspraxen-unterscheiden","strand":8,"requires":["zweck-umfeld-einordnen"],"step":4,"name":"Musikalische Gebrauchspraxen","iCan":"Ich kann verschiedene musikalische Gebrauchspraxen unterscheiden und ihre Merkmale erklären."},{"id":"identitaet-peergroup","strand":8,"requires":["gebrauchspraxen-unterscheiden","soziale-bedingungen"],"step":5,"name":"Musik und Zugehörigkeit","iCan":"Ich kann erklären, wie Musik zu einer Gruppe, einer Mode oder einer Zeit gehört und Zugehörigkeit zeigt."},{"id":"gebrauchspraxis-positionieren","strand":8,"requires":["gebrauchspraxen-unterscheiden","sach-werturteil"],"step":5,"name":"Gebrauchspraxis bewerten","iCan":"Ich kann die Eigenarten einer Gebrauchspraxis kritisch bewerten und begründet Stellung nehmen."},{"id":"auffuehrung-planen","strand":8,"requires":["auffuehrung-auswerten","musizieren-organisieren"],"step":7,"name":"Aufführung planen","iCan":"Ich kann eine musikalische Aufführung planen, gestaltend an ihr teilnehmen und sie auswerten."}]}</script>
-<script type="application/json" id="map-steps-text">{"kind":"{strand} · Stufe {step}","step":"Stufe {step}","before":"Baut auf","after":"Darauf baut auf","nothing":"keine","page":"Zur Seite des Bausteins","clear":"Auswahl aufheben","pageUrl":"/apps/pr-preview/pr-259/map/musik/c/{id}/"}</script>
+<script type="application/json" id="map-steps-data">{"strands":["Musik hören und beschreiben","Klang, Instrumente und Vortrag","Rhythmus, Takt und Tempo","Tonhöhe, Tonleitern und Harmonik","Notation und Zeichen","Form und Struktur","Singen, Instrumentalspiel und Erfinden","Bewegung und Gestaltungsmedien","Musik im Kontext"],"competencies":[{"id":"konzentriert-hoeren","strand":0,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Konzentriertes Hören","iCan":"Ich kann meine Aufmerksamkeit gezielt auf das Hören richten."},{"id":"hoerweisen-unterscheiden","strand":0,"requires":["konzentriert-hoeren"],"step":2,"band":"5/6","bandStep":2,"name":"Hörweisen unterscheiden","iCan":"Ich kann verschiedene Arten des Hörens unterscheiden, zum Beispiel nebenbei hören und genau hinhören."},{"id":"hoergewohnheiten-beschreiben","strand":0,"requires":["hoerweisen-unterscheiden"],"step":3,"band":"5/6","bandStep":3,"name":"Eigene Hörgewohnheiten","iCan":"Ich kann beschreiben, wann und wie ich selbst Musik höre, und das mit anderen vergleichen."},{"id":"parameter-nennen","strand":0,"requires":["konzentriert-hoeren"],"step":2,"band":"5/6","bandStep":2,"name":"Musikalische Parameter","iCan":"Ich kann die Grundeigenschaften Tempo, Tonhöhe, Tondauer, Lautstärke, Klangfarbe und Klangdichte nennen und unterscheiden."},{"id":"verlaeufe-hoeren","strand":0,"requires":["parameter-nennen"],"step":10,"band":"7/8","bandStep":1,"name":"Musikalische Verläufe hören","iCan":"Ich kann in einem Stück rhythmische, melodische, klangliche und formale Verläufe heraushören und mit Fachwörtern beschreiben."},{"id":"parameter-differenziert-hoeren","strand":0,"requires":["verlaeufe-hoeren"],"step":13,"band":"9/10","bandStep":1,"name":"Parameter genau heraushören","iCan":"Ich kann die Parameter in einem Musikstück genau heraushören und mit den Fachwörtern benennen."},{"id":"hoerlandschaft-entdecken","strand":0,"requires":["konzentriert-hoeren"],"step":13,"band":"9/10","bandStep":1,"name":"Stille und Umweltgeräusche","iCan":"Ich kann Stille und die Geräusche meiner Umgebung bewusst wahrnehmen und beschreiben."},{"id":"hoergewohnheiten-reflektieren","strand":0,"requires":["hoergewohnheiten-beschreiben","sach-werturteil"],"step":13,"band":"9/10","bandStep":1,"name":"Hörgewohnheiten reflektieren","iCan":"Ich kann meine eigenen Hörgewohnheiten kritisch prüfen und begründen, was ich an ihnen ändern möchte."},{"id":"gefuehle-in-worte-fassen","strand":0,"requires":["konzentriert-hoeren"],"step":2,"band":"5/6","bandStep":2,"name":"Gefühle zur Musik","iCan":"Ich kann in Worte fassen, welche Gefühle und Bilder Musik bei mir auslöst."},{"id":"wirkung-beschreiben","strand":0,"requires":["gefuehle-in-worte-fassen"],"step":3,"band":"5/6","bandStep":3,"name":"Wirkung von Musik beschreiben","iCan":"Ich kann die Wirkung von Musik mit passenden Wörtern beschreiben, zum Beispiel feierlich, ruhig oder bedrohlich."},{"id":"programmmusik-hoeren","strand":0,"requires":["wirkung-beschreiben"],"step":4,"band":"5/6","bandStep":4,"name":"Programmmusik","iCan":"Ich kann erkennen, wie eine Musik eine Geschichte oder ein Bild darstellt, und das mit Merkmalen der Musik begründen."},{"id":"mittel-der-wirkung","strand":0,"requires":["wirkung-beschreiben","parameter-nennen"],"step":4,"band":"5/6","bandStep":4,"name":"Musikalische Mittel der Wirkung","iCan":"Ich kann zeigen, welche musikalischen Mittel eine Wirkung erzeugen, zum Beispiel Tempo, Lautstärke oder Dur und Moll."},{"id":"sach-werturteil","strand":0,"requires":["wirkung-beschreiben"],"step":10,"band":"7/8","bandStep":1,"name":"Sach- und Werturteil","iCan":"Ich kann ein Urteil über Musik begründen und eine Sachaussage von einer Geschmacksaussage unterscheiden."},{"id":"medien-inszenierung","strand":0,"requires":["mittel-der-wirkung"],"step":10,"band":"7/8","bandStep":1,"name":"Musik in Film und Werbung","iCan":"Ich kann erkennen, wie Film, Werbung oder Computerspiele Musik einsetzen, um zu wirken."},{"id":"wirkung-begruenden","strand":0,"requires":["mittel-der-wirkung","sach-werturteil"],"step":13,"band":"9/10","bandStep":1,"name":"Wirkung von Musik begründen","iCan":"Ich kann begründen, warum eine Musik so wirkt, und meine Gefühle dazu einordnen."},{"id":"beeinflussung-erkennen","strand":0,"requires":["medien-inszenierung","wirkung-begruenden"],"step":14,"band":"9/10","bandStep":2,"name":"Beeinflussung durch Musik","iCan":"Ich kann erkennen, wann Musik mich beeinflussen soll, und mich dazu begründet verhalten."},{"id":"klangquellen-unterscheiden","strand":1,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Klangquellen","iCan":"Ich kann Stimme, Körper, Gegenstände und Instrumente als Klangquellen unterscheiden."},{"id":"schwingung","strand":1,"requires":["klangquellen-unterscheiden"],"step":2,"band":"5/6","bandStep":2,"name":"Schwingung als Klangursache","iCan":"Ich kann erklären, dass jeder Klang durch eine Schwingung entsteht."},{"id":"verstaerkung-resonanz","strand":1,"requires":["schwingung"],"step":3,"band":"5/6","bandStep":3,"name":"Resonanzkörper","iCan":"Ich kann erklären, wie ein Resonanzkörper einen Klang lauter macht."},{"id":"klangformung","strand":1,"requires":["schwingung"],"step":3,"band":"5/6","bandStep":3,"name":"Material, Form und Klang","iCan":"Ich kann beschreiben, wie Material und Form eines Instruments den Klang verändern."},{"id":"klangweg-uebertragung","strand":1,"requires":["schwingung"],"step":3,"band":"5/6","bandStep":3,"name":"Schallübertragung","iCan":"Ich kann erklären, wie ein Klang als Schall durch die Luft zu meinem Ohr kommt."},{"id":"stimme-klangquelle","strand":1,"requires":["klangquellen-unterscheiden"],"step":2,"band":"5/6","bandStep":2,"name":"Entstehung der Stimme","iCan":"Ich kann erklären, wie meine Stimme entsteht und was dabei mitschwingt."},{"id":"instrumentenfamilien","strand":1,"requires":["schwingung"],"step":3,"band":"5/6","bandStep":3,"name":"Instrumentenfamilien","iCan":"Ich kann Instrumente nach der Art, wie sie klingen, in Familien einordnen."},{"id":"ensembles-besetzungen","strand":1,"requires":["instrumentenfamilien"],"step":4,"band":"5/6","bandStep":4,"name":"Ensembles und Besetzungen","iCan":"Ich kann Besetzungen wie Sinfonieorchester, Band oder Chor erkennen und ihre Instrumente oder Stimmen nennen."},{"id":"stimmlagen","strand":1,"requires":["stimme-klangquelle"],"step":3,"band":"5/6","bandStep":3,"name":"Stimmlagen","iCan":"Ich kann die Stimmlagen Sopran, Alt, Tenor und Bass unterscheiden und beim Hören erkennen."},{"id":"klangfarbe-hoeren","strand":1,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Klangfarbe","iCan":"Ich kann hören, warum zwei Instrumente beim gleichen Ton verschieden klingen, und die Klangfarbe beschreiben."},{"id":"klangdichte-hoeren","strand":1,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Klangdichte","iCan":"Ich kann hören, ob wenige oder viele Stimmen und Instrumente gleichzeitig klingen, und die Dichte beschreiben."},{"id":"lautstaerke-hoeren","strand":1,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Lautstärken hören","iCan":"Ich kann Lautstärken hören und der Stärke nach ordnen."},{"id":"dynamik-zeichen","strand":1,"requires":["lautstaerke-hoeren"],"step":4,"band":"5/6","bandStep":4,"name":"Dynamikzeichen","iCan":"Ich kann die Lautstärkezeichen von pianissimo bis fortissimo sowie crescendo und decrescendo lesen und beim Musizieren umsetzen."},{"id":"artikulation-vortrag","strand":1,"requires":["dynamik-zeichen"],"step":5,"band":"5/6","bandStep":5,"name":"Legato und Staccato","iCan":"Ich kann legato und staccato hören und beim Musizieren umsetzen."},{"id":"klang-verfremden","strand":1,"requires":["klangformung"],"step":4,"band":"5/6","bandStep":4,"name":"Klangverfremdung","iCan":"Ich kann einen Klang oder eine Stimme verfremden und beschreiben, was sich am Klang ändert."},{"id":"elektronische-klangerzeugung","strand":1,"requires":["klangformung"],"step":10,"band":"7/8","bandStep":1,"name":"Elektronische Klangerzeugung","iCan":"Ich kann erklären, wie ein elektrisches oder digitales Instrument Klänge erzeugt und verändert."},{"id":"klang-gestalten","strand":1,"requires":["verstaerkung-resonanz","klang-verfremden"],"step":13,"band":"9/10","bandStep":1,"name":"Klanggestaltung","iCan":"Ich kann einen Klang gezielt gestalten, zum Beispiel durch die Art des Anschlagens, durch Dämpfen oder durch Klangbearbeitung."},{"id":"tondauer-hoeren","strand":2,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Tondauer","iCan":"Ich kann kurze und lange Töne hören und der Dauer nach ordnen."},{"id":"grundschlag-finden","strand":2,"requires":["tempo-hoeren"],"step":4,"band":"5/6","bandStep":4,"name":"Grundschlag","iCan":"Ich kann in Musik den gleichmäßigen Grundschlag finden und mitklopfen."},{"id":"betonung-hoeren","strand":2,"requires":["grundschlag-finden"],"step":5,"band":"5/6","bandStep":5,"name":"Betonte und unbetonte Schläge","iCan":"Ich kann betonte und unbetonte Schläge hören."},{"id":"taktarten-unterscheiden","strand":2,"requires":["betonung-hoeren"],"step":6,"band":"5/6","bandStep":6,"name":"Taktarten","iCan":"Ich kann den 2/4-, 3/4- und 4/4-Takt am Klang unterscheiden."},{"id":"auftakt-volltakt","strand":2,"requires":["taktarten-unterscheiden"],"step":7,"band":"5/6","bandStep":7,"name":"Auftakt und Volltakt","iCan":"Ich kann einen Auftakt von einem Volltakt unterscheiden."},{"id":"rhythmus-erklaeren","strand":2,"requires":["grundschlag-finden","tondauer-hoeren"],"step":5,"band":"5/6","bandStep":5,"name":"Rhythmus und Grundschlag","iCan":"Ich kann erklären, dass der Rhythmus aus Tempo und Tondauer entsteht, und ihn vom Grundschlag unterscheiden."},{"id":"tempo-hoeren","strand":2,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Schnelles und langsames Tempo","iCan":"Ich kann schnelles und langsames Tempo hören und beschreiben."},{"id":"tempo-woerter","strand":2,"requires":["tempo-hoeren"],"step":4,"band":"5/6","bandStep":4,"name":"Tempobezeichnungen","iCan":"Ich kann Tempowörter wie Allegro und Adagio dem passenden Tempo zuordnen."},{"id":"tempo-veraendern","strand":2,"requires":["tempo-hoeren"],"step":4,"band":"5/6","bandStep":4,"name":"Tempoveränderungen","iCan":"Ich kann hören und lesen, wenn ein Stück schneller oder langsamer wird, und die Fachwörter dafür nennen."},{"id":"triole","strand":2,"requires":["rhythmus-erklaeren","notenwerte-erkennen"],"step":6,"band":"5/6","bandStep":6,"name":"Triole","iCan":"Ich kann eine Triole hören, lesen und klatschen."},{"id":"weitere-taktarten","strand":2,"requires":["taktarten-unterscheiden"],"step":7,"band":"5/6","bandStep":7,"name":"Zusammengesetzte Taktarten","iCan":"Ich kann zusammengesetzte Taktarten wie 6/8 erkennen und einen Taktwechsel hören."},{"id":"synkope","strand":2,"requires":["weitere-taktarten"],"step":10,"band":"7/8","bandStep":1,"name":"Synkope","iCan":"Ich kann eine Synkope hören und klatschen."},{"id":"binaer-ternaer","strand":2,"requires":["triole"],"step":10,"band":"7/8","bandStep":1,"name":"Binärer und ternärer Rhythmus","iCan":"Ich kann hören und spielen, ob ein Rhythmus binär oder ternär (swingend) ausgeführt wird."},{"id":"beat-offbeat","strand":2,"requires":["synkope"],"step":11,"band":"7/8","bandStep":2,"name":"Beat und Off-Beat","iCan":"Ich kann in einem Song Beat und Off-Beat unterscheiden und den Groove mitklatschen."},{"id":"besondere-taktarten","strand":2,"requires":["weitere-taktarten"],"step":10,"band":"7/8","bandStep":1,"name":"Ungerade Taktarten","iCan":"Ich kann ungewöhnliche Taktarten wie 5/4 oder 7/8 erkennen und mitzählen."},{"id":"polyrhythmik","strand":2,"requires":["beat-offbeat","besondere-taktarten"],"step":13,"band":"9/10","bandStep":1,"name":"Polyrhythmik","iCan":"Ich kann erklären, wie mehrere Rhythmen gleichzeitig eine gemeinsame Wirkung ergeben, und sie zusammen spielen."},{"id":"freie-metrik","strand":2,"requires":["besondere-taktarten"],"step":13,"band":"9/10","bandStep":1,"name":"Freie Metrik","iCan":"Ich kann Musik mit festem Metrum von Musik ohne durchgehendes Metrum unterscheiden."},{"id":"tonhoehe-hoch-tief","strand":3,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Hohe und tiefe Töne","iCan":"Ich kann hohe und tiefe Töne unterscheiden und ordnen."},{"id":"klaviatur-tasten","strand":3,"requires":["tonhoehe-hoch-tief"],"step":4,"band":"5/6","bandStep":4,"name":"Klaviatur","iCan":"Ich kann die Tasten der Klaviatur benennen und das C finden."},{"id":"oktave","strand":3,"requires":["klaviatur-tasten"],"step":5,"band":"5/6","bandStep":5,"name":"Oktave","iCan":"Ich kann Oktaven auf der Klaviatur finden und Töne mit gleichem Namen in verschiedenen Oktaven benennen."},{"id":"halbtonschritte","strand":3,"requires":["klaviatur-tasten"],"step":5,"band":"5/6","bandStep":5,"name":"Halbtonschritte abzählen","iCan":"Ich kann Halbtonschritte auf der Klaviatur abzählen."},{"id":"tonleiter-ganzton-halbton","strand":3,"requires":["halbtonschritte"],"step":6,"band":"5/6","bandStep":6,"name":"Ganzton und Halbton","iCan":"Ich kann Ganztonschritte und Halbtonschritte unterscheiden."},{"id":"intervall-hoeren","strand":3,"requires":["tonhoehe-hoch-tief"],"step":4,"band":"5/6","bandStep":4,"name":"Tonwiederholung, Schritt und Sprung","iCan":"Ich kann hören und beschreiben, ob eine Melodie einen Ton wiederholt, in Schritten geht oder springt."},{"id":"intervall-benennen","strand":3,"requires":["intervall-hoeren","klaviatur-tasten"],"step":5,"band":"5/6","bandStep":5,"name":"Intervalle benennen","iCan":"Ich kann den Abstand zwischen zwei Tönen abzählen und mit dem Namen des Intervalls benennen."},{"id":"intervall-qualitaet","strand":3,"requires":["intervall-benennen","halbtonschritte"],"step":6,"band":"5/6","bandStep":6,"name":"Reine, große und kleine Intervalle","iCan":"Ich kann Intervalle bis zur Oktave genau bestimmen: rein, groß oder klein."},{"id":"dur-tonleiter-bauen","strand":3,"requires":["tonleiter-ganzton-halbton"],"step":7,"band":"5/6","bandStep":7,"name":"Dur-Tonleiter","iCan":"Ich kann die Dur-Tonleiter aus Ganzton- und Halbtonschritten aufbauen."},{"id":"dur-moll-hoeren","strand":3,"requires":["konzentriert-hoeren"],"step":2,"band":"5/6","bandStep":2,"name":"Dur und Moll hören","iCan":"Ich kann Dur und Moll am Klang unterscheiden."},{"id":"moll-aufbau","strand":3,"requires":["dur-tonleiter-bauen","dur-moll-hoeren"],"step":8,"band":"5/6","bandStep":8,"name":"Aufbau der Moll-Tonleiter","iCan":"Ich kann erklären, worin sich der Aufbau von Moll von Dur unterscheidet."},{"id":"moll-varianten","strand":3,"requires":["moll-aufbau"],"step":9,"band":"5/6","bandStep":9,"name":"Natürliches, harmonisches und melodisches Moll","iCan":"Ich kann natürliches, harmonisches und melodisches Moll unterscheiden und erklären, was ein Leitton ist."},{"id":"diatonik-chromatik","strand":3,"requires":["tonleiter-ganzton-halbton"],"step":7,"band":"5/6","bandStep":7,"name":"Diatonik und Chromatik","iCan":"Ich kann eine diatonische von einer chromatischen Tonfolge unterscheiden."},{"id":"melodietypen","strand":3,"requires":["intervall-hoeren"],"step":5,"band":"5/6","bandStep":5,"name":"Stufen- und Dreiklangsmelodik","iCan":"Ich kann eine Melodie als Stufenmelodik oder Dreiklangsmelodik beschreiben."},{"id":"tonart-vorzeichen","strand":3,"requires":["dur-tonleiter-bauen","vorzeichen-lesen"],"step":8,"band":"5/6","bandStep":8,"name":"Tonart und Vorzeichen","iCan":"Ich kann an den Vorzeichen erkennen, in welcher Dur-Tonart ein Stück steht."},{"id":"dreiklang","strand":3,"requires":["intervall-benennen"],"step":6,"band":"5/6","bandStep":6,"name":"Dreiklang","iCan":"Ich kann einen Dreiklang aus Grundton, Terz und Quinte aufbauen."},{"id":"dreiklangsarten","strand":3,"requires":["dreiklang","moll-aufbau","intervall-qualitaet"],"step":9,"band":"5/6","bandStep":9,"name":"Dur- und Moll-Dreiklang","iCan":"Ich kann Dur- und Moll-Dreiklänge hören, aufbauen und unterscheiden."},{"id":"konsonanz-dissonanz","strand":3,"requires":["intervall-qualitaet"],"step":7,"band":"5/6","bandStep":7,"name":"Konsonanz und Dissonanz","iCan":"Ich kann konsonante und dissonante Zusammenklänge hören und unterscheiden."},{"id":"besondere-tonleitern","strand":3,"requires":["dur-moll-hoeren","tonleiter-ganzton-halbton"],"step":10,"band":"7/8","bandStep":1,"name":"Pentatonik, Ganzton- und Bluestonleiter","iCan":"Ich kann Pentatonik, Ganztonleiter und Blues-Tonleiter am Klang erkennen und aufbauen."},{"id":"quintenzirkel","strand":3,"requires":["tonart-vorzeichen"],"step":10,"band":"7/8","bandStep":1,"name":"Quintenzirkel","iCan":"Ich kann den Quintenzirkel lesen und damit Tonarten und ihre Vorzeichen finden."},{"id":"dreiklangsumkehrung","strand":3,"requires":["dreiklangsarten"],"step":10,"band":"7/8","bandStep":1,"name":"Dreiklangsumkehrungen","iCan":"Ich kann die Umkehrungen eines Dreiklangs bilden und erkennen."},{"id":"hauptfunktionen","strand":3,"requires":["tonart-vorzeichen","dreiklangsarten"],"step":10,"band":"7/8","bandStep":1,"name":"Tonika, Subdominante, Dominante","iCan":"Ich kann Tonika, Subdominante und Dominante in einer Tonart benennen und ihre Akkorde bilden."},{"id":"kadenz","strand":3,"requires":["hauptfunktionen"],"step":11,"band":"7/8","bandStep":2,"name":"Kadenz","iCan":"Ich kann eine einfache Kadenz spielen und hören."},{"id":"nebenstufen","strand":3,"requires":["hauptfunktionen"],"step":11,"band":"7/8","bandStep":2,"name":"Nebenstufen","iCan":"Ich kann erklären, wie Nebenstufen die Hauptfunktionen ersetzen können."},{"id":"dominantseptakkord","strand":3,"requires":["hauptfunktionen"],"step":11,"band":"7/8","bandStep":2,"name":"Dominantseptakkord","iCan":"Ich kann einen Dominantseptakkord bilden und in einer Kadenz erkennen."},{"id":"intervalle-erkennen-singen","strand":3,"requires":["intervall-qualitaet","zielton-singen"],"step":13,"band":"9/10","bandStep":1,"name":"Alle Intervalle hören und singen","iCan":"Ich kann alle Intervalle bis zur Oktave hören, benennen und singen, auch übermäßige und verminderte."},{"id":"freie-harmonik","strand":3,"requires":["kadenz","konsonanz-dissonanz"],"step":13,"band":"9/10","bandStep":1,"name":"Freie Harmonik und Cluster","iCan":"Ich kann Musik mit Kadenzharmonik von Musik mit freier Harmonik oder Clustern unterscheiden."},{"id":"notensystem","strand":4,"requires":["tonhoehe-hoch-tief"],"step":4,"band":"5/6","bandStep":4,"name":"Notensystem und Violinschlüssel","iCan":"Ich kann das Notensystem mit seinen fünf Linien und den Violinschlüssel beschreiben."},{"id":"noten-benennen","strand":4,"requires":["notensystem","klaviatur-tasten"],"step":5,"band":"5/6","bandStep":5,"name":"Notennamen","iCan":"Ich kann Noten auf Linien, in Zwischenräumen und auf Hilfslinien erkennen und mit ihrem Namen benennen."},{"id":"bassschluessel","strand":4,"requires":["noten-benennen"],"step":6,"band":"5/6","bandStep":6,"name":"Bassschlüssel","iCan":"Ich kann den Bassschlüssel lesen und die Noten darin benennen."},{"id":"vorzeichen-lesen","strand":4,"requires":["noten-benennen","halbtonschritte"],"step":6,"band":"5/6","bandStep":6,"name":"Versetzungszeichen","iCan":"Ich kann Kreuz, b und Auflösungszeichen lesen und erhöhte oder erniedrigte Töne spielen."},{"id":"notenwerte-erkennen","strand":4,"requires":["tondauer-hoeren"],"step":4,"band":"5/6","bandStep":4,"name":"Notenwerte","iCan":"Ich kann ganze, halbe, Viertel- und Achtelnoten unterscheiden und ihre Dauer vergleichen."},{"id":"pausen-kennen","strand":4,"requires":["notenwerte-erkennen"],"step":5,"band":"5/6","bandStep":5,"name":"Pausenzeichen","iCan":"Ich kann Pausenzeichen lesen und weiß, dass eine Pause genauso lange dauert wie die Note mit gleichem Namen."},{"id":"punktierung","strand":4,"requires":["notenwerte-erkennen"],"step":5,"band":"5/6","bandStep":5,"name":"Punktierte Noten","iCan":"Ich kann punktierte Noten lesen und ihre Dauer berechnen."},{"id":"notenwerte-im-takt","strand":4,"requires":["notenwerte-erkennen","taktarten-unterscheiden"],"step":7,"band":"5/6","bandStep":7,"name":"Notenwerte im Takt","iCan":"Ich kann Notenwerte und Pausen zusammenzählen und sagen, ob sie in einen Takt passen."},{"id":"rhythmus-lesen","strand":4,"requires":["notenwerte-im-takt","rhythmus-nachklatschen"],"step":8,"band":"5/6","bandStep":8,"name":"Rhythmen lesen","iCan":"Ich kann einen notierten Rhythmus lesen und in Klang umsetzen."},{"id":"melodie-lesen","strand":4,"requires":["noten-benennen","rhythmus-lesen","tonfolge-nachsingen"],"step":9,"band":"5/6","bandStep":9,"name":"Melodien lesen","iCan":"Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen."},{"id":"rhythmus-notieren","strand":4,"requires":["notenwerte-im-takt"],"step":8,"band":"5/6","bandStep":8,"name":"Rhythmen notieren","iCan":"Ich kann einen Rhythmus, den ich gehört oder erfunden habe, in Notenwerten aufschreiben."},{"id":"melodie-notieren","strand":4,"requires":["noten-benennen","rhythmus-notieren"],"step":9,"band":"5/6","bandStep":9,"name":"Melodien notieren","iCan":"Ich kann eine kurze Melodie in Noten aufschreiben."},{"id":"grafisch-notieren","strand":4,"requires":["parameter-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Grafische Notation erstellen","iCan":"Ich kann Musik mit eigenen Zeichen als Grafik aufschreiben."},{"id":"grafik-musizieren","strand":4,"requires":["grafisch-notieren"],"step":4,"band":"5/6","bandStep":4,"name":"Nach grafischer Notation spielen","iCan":"Ich kann nach einer grafischen Notation Klänge machen."},{"id":"gesten-verstehen","strand":4,"requires":["aufeinander-hoeren"],"step":3,"band":"5/6","bandStep":3,"name":"Musikalische Handzeichen","iCan":"Ich kann Handzeichen und Gesten, die Musik anzeigen, verstehen und darauf reagieren."},{"id":"hoerpartitur-verfolgen","strand":4,"requires":["grafisch-notieren"],"step":4,"band":"5/6","bandStep":4,"name":"Hörpartitur mitlesen","iCan":"Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist."},{"id":"akkordsymbole","strand":4,"requires":["dreiklangsarten","melodie-lesen"],"step":10,"band":"7/8","bandStep":1,"name":"Akkordsymbole im Leadsheet","iCan":"Ich kann Akkordsymbole in einem Leadsheet lesen und ein Lied damit begleiten."},{"id":"partitur-mitlesen","strand":4,"requires":["melodie-lesen","bassschluessel","ensembles-besetzungen"],"step":10,"band":"7/8","bandStep":1,"name":"Partiturausschnitt mitlesen","iCan":"Ich kann in einem Partiturausschnitt eine Stimme verfolgen und beim Hören mitlesen."},{"id":"traditionell-und-grafisch-notieren","strand":4,"requires":["melodie-notieren","grafisch-notieren"],"step":13,"band":"9/10","bandStep":1,"name":"Traditionell und grafisch notieren","iCan":"Ich kann ein Musikstück sowohl grafisch als auch in traditioneller Notenschrift festhalten."},{"id":"nach-notation-musizieren","strand":4,"requires":["melodie-lesen","grafik-musizieren","mehrstimmig-realisieren"],"step":14,"band":"9/10","bandStep":2,"name":"Mehrstimmig nach Notation musizieren","iCan":"Ich kann nach Noten oder einer Grafik auch mehrstimmig musizieren."},{"id":"partitur-orientieren","strand":4,"requires":["partitur-mitlesen"],"step":13,"band":"9/10","bandStep":1,"name":"Orchesterpartitur","iCan":"Ich kann mich in einer Orchesterpartitur zurechtfinden und Gehörtes darin wiederfinden."},{"id":"abschnitte-hoeren","strand":5,"requires":["konzentriert-hoeren"],"step":2,"band":"5/6","bandStep":2,"name":"Formteile A und B","iCan":"Ich kann in einem Stück Abschnitte erkennen und mit Buchstaben wie A und B benennen."},{"id":"wiederholung-kontrast","strand":5,"requires":["abschnitte-hoeren"],"step":3,"band":"5/6","bandStep":3,"name":"Wiederholung und Kontrast","iCan":"Ich kann Wiederholung und Kontrast in einem Stück hören und beschreiben."},{"id":"veraenderung-hoeren","strand":5,"requires":["wiederholung-kontrast"],"step":4,"band":"5/6","bandStep":4,"name":"Veränderte Abschnitte","iCan":"Ich kann hören, wie ein Abschnitt verändert wird."},{"id":"spannung-steigerung","strand":5,"requires":["wiederholung-kontrast"],"step":4,"band":"5/6","bandStep":4,"name":"Spannung und Entspannung","iCan":"Ich kann hören, wie eine Musik Spannung aufbaut und wieder löst."},{"id":"motiv-thema","strand":5,"requires":["wiederholung-kontrast"],"step":4,"band":"5/6","bandStep":4,"name":"Motiv und Thema","iCan":"Ich kann ein Motiv oder Thema in einem Stück wiedererkennen."},{"id":"kompositionsmodelle","strand":5,"requires":["wiederholung-kontrast"],"step":4,"band":"5/6","bandStep":4,"name":"Einfache Liedformen","iCan":"Ich kann einfache Liedformen wie Strophe-Refrain und die dreiteilige ABA-Form erkennen."},{"id":"rondo-menuett","strand":5,"requires":["kompositionsmodelle"],"step":5,"band":"5/6","bandStep":5,"name":"Rondo und Menuett","iCan":"Ich kann ein Rondo und ein Menuett am Aufbau erkennen."},{"id":"kanon-prinzip","strand":5,"requires":["abschnitte-hoeren","aufeinander-hoeren"],"step":3,"band":"5/6","bandStep":3,"name":"Kanonprinzip","iCan":"Ich kann das Kanonprinzip erklären und einen Kanon hören und singen."},{"id":"ostinato-riff","strand":5,"requires":["wiederholung-kontrast"],"step":4,"band":"5/6","bandStep":4,"name":"Ostinato und Riff","iCan":"Ich kann einen Ostinato oder ein Riff in einem Stück erkennen und spielen."},{"id":"imitation-polyphonie","strand":5,"requires":["kanon-prinzip"],"step":10,"band":"7/8","bandStep":1,"name":"Polyphonie und Homophonie","iCan":"Ich kann hören, ob eine Musik mehrstimmig melodisch (polyphon) oder mit Begleitung (homophon) gebaut ist."},{"id":"songaufbau","strand":5,"requires":["kompositionsmodelle"],"step":10,"band":"7/8","bandStep":1,"name":"Aufbau eines Pop-Songs","iCan":"Ich kann den Aufbau eines Pop-Songs mit Intro, Strophe, Refrain und Bridge beschreiben."},{"id":"phrase-periode","strand":5,"requires":["motiv-thema"],"step":10,"band":"7/8","bandStep":1,"name":"Phrasen: Frage und Antwort","iCan":"Ich kann in einer Melodie Phrasen erkennen und Frage und Antwort unterscheiden."},{"id":"blues-schema","strand":5,"requires":["songaufbau","hauptfunktionen"],"step":11,"band":"7/8","bandStep":2,"name":"12-taktiges Blues-Schema","iCan":"Ich kann das 12-taktige Blues-Schema hören und spielen."},{"id":"variationsform","strand":5,"requires":["veraenderung-hoeren"],"step":10,"band":"7/8","bandStep":1,"name":"Variationsform","iCan":"Ich kann erkennen, wie ein Thema in Variationen verändert wird."},{"id":"concerto-grosso","strand":5,"requires":["wiederholung-kontrast","ensembles-besetzungen"],"step":10,"band":"7/8","bandStep":1,"name":"Concerto grosso","iCan":"Ich kann das Wechselspiel von Solo und Tutti im Concerto grosso hören."},{"id":"entwicklung-hoeren","strand":5,"requires":["veraenderung-hoeren","motiv-thema"],"step":13,"band":"9/10","bandStep":1,"name":"Motivische Entwicklung","iCan":"Ich kann beschreiben, wie sich Musik aus einem kurzen Motiv entwickelt."},{"id":"sonatensatz","strand":5,"requires":["entwicklung-hoeren"],"step":14,"band":"9/10","bandStep":2,"name":"Sonatensatzform","iCan":"Ich kann die Teile eines Sonatensatzes (Exposition, Durchführung, Reprise) beim Hören verfolgen."},{"id":"neue-kompositionstechniken","strand":5,"requires":["freie-harmonik","entwicklung-hoeren"],"step":14,"band":"9/10","bandStep":2,"name":"Neue Kompositionstechniken","iCan":"Ich kann Zwölftonmusik, Minimal Music oder Klangflächenmusik am Aufbau erkennen."},{"id":"formverlauf-darstellen","strand":5,"requires":["kompositionsmodelle","entwicklung-hoeren"],"step":14,"band":"9/10","bandStep":2,"name":"Formverlauf darstellen","iCan":"Ich kann den Formverlauf eines Stücks in einer Übersicht darstellen."},{"id":"haltung-atmung","strand":6,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Haltung und Atmung beim Singen","iCan":"Ich kann mit aufrechter Haltung und ruhiger Atmung singen."},{"id":"stimme-pflegen","strand":6,"requires":["haltung-atmung"],"step":2,"band":"5/6","bandStep":2,"name":"Stimmpflege und Einsingen","iCan":"Ich kann meine Stimme pflegen und mich vor dem Singen einsingen."},{"id":"stimme-im-stimmwechsel","strand":6,"requires":["stimme-pflegen","stimme-klangquelle"],"step":10,"band":"7/8","bandStep":1,"name":"Stimme im Stimmwechsel","iCan":"Ich kann erklären, was im Stimmwechsel mit der Stimme passiert, und meine Stimme dabei schonend einsetzen."},{"id":"artikulation-intonation","strand":6,"requires":["haltung-atmung"],"step":2,"band":"5/6","bandStep":2,"name":"Aussprache und Intonation","iCan":"Ich kann deutlich sprechen und sauber singen."},{"id":"zielton-singen","strand":6,"requires":["artikulation-intonation"],"step":3,"band":"5/6","bandStep":3,"name":"Zielton treffen","iCan":"Ich kann einen vorgegebenen Ton mit der Stimme treffen."},{"id":"tonfolge-nachsingen","strand":6,"requires":["zielton-singen"],"step":4,"band":"5/6","bandStep":4,"name":"Tonfolgen nachsingen","iCan":"Ich kann eine kurze Tonfolge hören und Ton für Ton nachsingen."},{"id":"lieder-auswendig-singen","strand":6,"requires":["artikulation-intonation"],"step":3,"band":"5/6","bandStep":3,"name":"Lieder auswendig singen","iCan":"Ich kann mehrere Lieder aus verschiedenen Bereichen auswendig singen."},{"id":"zweistimmig-singen","strand":6,"requires":["tonfolge-nachsingen","aufeinander-hoeren"],"step":5,"band":"5/6","bandStep":5,"name":"Zweistimmig singen","iCan":"Ich kann in einer Gruppe zweistimmig singen, zum Beispiel einen Kanon oder ein Lied mit zweiter Stimme."},{"id":"lieder-genrebewusst-singen","strand":6,"requires":["lieder-auswendig-singen"],"step":13,"band":"9/10","bandStep":1,"name":"Stilgerecht singen","iCan":"Ich kann ein großes Repertoire auswendig singen und dabei zum Stil des Liedes passend gestalten."},{"id":"mehrstimmig-singen","strand":6,"requires":["zweistimmig-singen"],"step":13,"band":"9/10","bandStep":1,"name":"Mehrstimmig im Chor singen","iCan":"Ich kann in einem Chor oder Ensemble mehrstimmig singen und meine Stimme sicher halten."},{"id":"spieltechnik-instrument","strand":6,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Spieltechnik am Instrument","iCan":"Ich kann ein Instrument sachgerecht behandeln und mit passender Spieltechnik spielen."},{"id":"instrument-technisch-korrekt","strand":6,"requires":["spieltechnik-instrument"],"step":13,"band":"9/10","bandStep":1,"name":"Klanggestaltung am Instrument","iCan":"Ich kann ein Instrument technisch korrekt spielen und seinen Klang bewusst gestalten."},{"id":"rhythmus-nachklatschen","strand":6,"requires":["grundschlag-finden"],"step":5,"band":"5/6","bandStep":5,"name":"Rhythmen nachklatschen","iCan":"Ich kann einen gehörten Rhythmus nachklatschen und im Takt bleiben."},{"id":"rhythmus-nachbauen","strand":6,"requires":["rhythmus-nachklatschen"],"step":6,"band":"5/6","bandStep":6,"name":"Rhythmusmuster bauen","iCan":"Ich kann ein Rhythmus-Muster zusammensetzen und im Takt klatschen oder spielen."},{"id":"tonfolge-im-metrum","strand":6,"requires":["tonfolge-nachsingen","grundschlag-finden"],"step":5,"band":"5/6","bandStep":5,"name":"Tonfolgen im Metrum","iCan":"Ich kann eine kurze Tonfolge im gleichmäßigen Grundschlag singen oder spielen."},{"id":"lied-begleiten","strand":6,"requires":["rhythmus-nachklatschen"],"step":6,"band":"5/6","bandStep":6,"name":"Lieder im Grundschlag begleiten","iCan":"Ich kann ein Lied mit dem Grundschlag begleiten und im Tempo bleiben."},{"id":"mitspielsatz","strand":6,"requires":["lied-begleiten","aufeinander-hoeren","spieltechnik-instrument"],"step":7,"band":"5/6","bandStep":7,"name":"Mitspielsatz im Klassenensemble","iCan":"Ich kann in einem Mitspielsatz meine Stimme im Klassenensemble spielen."},{"id":"aufeinander-hoeren","strand":6,"requires":["konzentriert-hoeren"],"step":2,"band":"5/6","bandStep":2,"name":"Aufeinander hören","iCan":"Ich kann beim gemeinsamen Musizieren auf die anderen hören und darauf reagieren."},{"id":"mehrstimmig-realisieren","strand":6,"requires":["rhythmus-nachbauen","tonfolge-im-metrum","zweistimmig-singen"],"step":13,"band":"9/10","bandStep":1,"name":"Mehrstimmige Stücke aufführen","iCan":"Ich kann ein Musikstück mit mehreren Stimmen rhythmisch und tonal sicher gemeinsam aufführen."},{"id":"ueben-strategien","strand":6,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Übestrategien","iCan":"Ich kann ein Stück mit passenden Übestrategien einüben und festigen."},{"id":"musizieren-korrigieren","strand":6,"requires":["ueben-strategien","aufeinander-hoeren"],"step":13,"band":"9/10","bandStep":1,"name":"Musizieren reflektieren und verbessern","iCan":"Ich kann mein Musizieren und das der Gruppe vergleichend wahrnehmen und verbessern."},{"id":"musizieren-anleiten","strand":6,"requires":["gesten-verstehen"],"step":4,"band":"5/6","bandStep":4,"name":"Gruppe anleiten","iCan":"Ich kann eine kleine Gruppe beim Musizieren anleiten, zum Beispiel mit einem Einsatzzeichen."},{"id":"musizieren-organisieren","strand":6,"requires":["musizieren-anleiten"],"step":13,"band":"9/10","bandStep":1,"name":"Gruppenmusizieren organisieren","iCan":"Ich kann ein Musizieren in der Gruppe vorbereiten und organisieren und dabei anleiten."},{"id":"frei-experimentieren","strand":6,"requires":["klangquellen-unterscheiden"],"step":2,"band":"5/6","bandStep":2,"name":"Freies Experimentieren mit Klängen","iCan":"Ich kann frei mit Stimme und Instrument experimentieren und neue Klänge entdecken."},{"id":"rhythmus-erfinden","strand":6,"requires":["rhythmus-nachbauen","notenwerte-erkennen"],"step":7,"band":"5/6","bandStep":7,"name":"Rhythmen erfinden","iCan":"Ich kann einen eigenen Rhythmus über vier Takte erfinden und spielen."},{"id":"melodie-erfinden","strand":6,"requires":["dur-tonleiter-bauen","tonfolge-nachsingen"],"step":8,"band":"5/6","bandStep":8,"name":"Melodien erfinden","iCan":"Ich kann aus den Tönen der Dur-Tonleiter eine kurze eigene Melodie erfinden und singen."},{"id":"text-vertonen","strand":6,"requires":["melodie-erfinden"],"step":9,"band":"5/6","bandStep":9,"name":"Texte vertonen","iCan":"Ich kann zu einem kurzen Text eine eigene Melodie erfinden."},{"id":"musik-variieren","strand":6,"requires":["mittel-der-wirkung","veraenderung-hoeren"],"step":5,"band":"5/6","bandStep":5,"name":"Lieder variieren","iCan":"Ich kann ein Lied oder eine Melodie verändern, zum Beispiel im Rhythmus, im Tempo oder in der Lautstärke."},{"id":"musik-nach-vorgabe-erfinden","strand":6,"requires":["frei-experimentieren"],"step":3,"band":"5/6","bandStep":3,"name":"Musik zu Bild oder Geschichte","iCan":"Ich kann nach einer Vorgabe außerhalb der Musik, zum Beispiel einem Bild oder einer Geschichte, eine kurze Musik erfinden."},{"id":"improvisieren-nach-vorgabe","strand":6,"requires":["frei-experimentieren","rhythmus-nachbauen"],"step":10,"band":"7/8","bandStep":1,"name":"Improvisation über Pattern und Akkorde","iCan":"Ich kann über ein rhythmisches Pattern oder eine einfache Akkordfolge improvisieren."},{"id":"harmonische-begleitung-erfinden","strand":6,"requires":["kadenz","akkordsymbole"],"step":13,"band":"9/10","bandStep":1,"name":"Harmonische Begleitung erfinden","iCan":"Ich kann zu einer Melodie eine harmonische Begleitung erfinden und über eine Harmoniefolge improvisieren."},{"id":"musik-aufgabenbezogen-gestalten","strand":6,"requires":["musik-nach-vorgabe-erfinden","musik-variieren"],"step":13,"band":"9/10","bandStep":1,"name":"Eigenes Stück komponieren","iCan":"Ich kann nach einer Aufgabe und nach musikalischen Kriterien ein eigenes Stück erfinden, ausarbeiten und vorführen."},{"id":"bewegungsmuster-ausfuehren","strand":7,"requires":["grundschlag-finden"],"step":5,"band":"5/6","bandStep":5,"name":"Bewegungsmuster zur Musik","iCan":"Ich kann ein Bewegungsmuster zu Musik auswählen und gut abgestimmt ausführen."},{"id":"tanzen-nach-anleitung","strand":7,"requires":["bewegungsmuster-ausfuehren","taktarten-unterscheiden"],"step":7,"band":"5/6","bandStep":7,"name":"Einfache Tänze","iCan":"Ich kann einen einfachen Tanz, zum Beispiel einen Volkstanz, nach Anleitung tanzen."},{"id":"dirigieren-taktschlagen","strand":7,"requires":["taktarten-unterscheiden"],"step":7,"band":"5/6","bandStep":7,"name":"Dirigieren","iCan":"Ich kann einen 2er-, 3er- und 4er-Takt dirigieren."},{"id":"bewegung-nach-ausdruck-form","strand":7,"requires":["bewegungsmuster-ausfuehren","wirkung-beschreiben"],"step":6,"band":"5/6","bandStep":6,"name":"Bewegung nach Ausdruck und Form","iCan":"Ich kann mich so zu Musik bewegen, dass die Bewegung zu Ausdruck, Tempo und Form der Musik passt."},{"id":"musik-in-bild","strand":7,"requires":["wirkung-beschreiben"],"step":4,"band":"5/6","bandStep":4,"name":"Musik ins Bild setzen","iCan":"Ich kann den Verlauf und die Wirkung von Musik in einem Bild oder einer Zeichnung darstellen."},{"id":"musik-in-szene-sprache","strand":7,"requires":["wirkung-beschreiben"],"step":4,"band":"5/6","bandStep":4,"name":"Musik in Szene und Sprache","iCan":"Ich kann Musik in einer Szene oder in Worten umsetzen."},{"id":"umsetzung-beurteilen","strand":7,"requires":["musik-in-bild"],"step":5,"band":"5/6","bandStep":5,"name":"Umsetzungen beurteilen","iCan":"Ich kann beurteilen, ob ein Bild, eine Bewegung oder eine Szene zur Musik passt."},{"id":"tonaufnahme-erstellen","strand":7,"requires":["lied-begleiten"],"step":7,"band":"5/6","bandStep":7,"name":"Tonaufnahmen","iCan":"Ich kann eine eigene Musik mit einem Aufnahmegerät aufnehmen und anhören."},{"id":"musik-szenisch-interpretieren","strand":7,"requires":["musik-in-szene-sprache"],"step":10,"band":"7/8","bandStep":1,"name":"Szenische Interpretation","iCan":"Ich kann Musik und Stimmung eines Werkausschnitts als Pantomime oder Szene darstellen."},{"id":"choreografieren","strand":7,"requires":["bewegung-nach-ausdruck-form","tanzen-nach-anleitung"],"step":13,"band":"9/10","bandStep":1,"name":"Choreografie","iCan":"Ich kann nach Kriterien Bewegungen zur Musik entwerfen und als Choreografie einüben."},{"id":"musik-digital-visualisieren","strand":7,"requires":["musik-in-bild"],"step":13,"band":"9/10","bandStep":1,"name":"Musik visualisieren","iCan":"Ich kann den Aufbau und den Ausdruck von Musik mit analogen oder digitalen Medien sichtbar machen."},{"id":"digitale-musikproduktion","strand":7,"requires":["tonaufnahme-erstellen"],"step":13,"band":"9/10","bandStep":1,"name":"Digitale Musikproduktion","iCan":"Ich kann mit einem Programm eine kurze Musik aufnehmen, bearbeiten und zusammenstellen."},{"id":"umsetzung-kritisieren","strand":7,"requires":["umsetzung-beurteilen"],"step":13,"band":"9/10","bandStep":1,"name":"Umsetzungen kritisch bewerten","iCan":"Ich kann eine Umsetzung von Musik kritisch bewerten und Alternativen vorschlagen."},{"id":"herkunft-einordnen","strand":8,"requires":[],"step":1,"band":"5/6","bandStep":1,"name":"Herkunft eines Musikstücks","iCan":"Ich kann sagen, wann, wo und von wem ein Musikstück stammt."},{"id":"komponist-biografie","strand":8,"requires":["herkunft-einordnen"],"step":2,"band":"5/6","bandStep":2,"name":"Komponistenbiografie","iCan":"Ich kann wichtige Stationen im Leben einer Komponistin oder eines Komponisten beschreiben und in ihre Zeit einordnen."},{"id":"musik-und-umfeld","strand":8,"requires":["herkunft-einordnen"],"step":2,"band":"5/6","bandStep":2,"name":"Musik und Entstehungsumfeld","iCan":"Ich kann Merkmale eines Musikstücks mit seiner Entstehung und seinem Umfeld verbinden und beurteilen."},{"id":"musik-anderer-kulturen","strand":8,"requires":["herkunft-einordnen"],"step":2,"band":"5/6","bandStep":2,"name":"Musik anderer Kulturen","iCan":"Ich kann Musik aus anderen Ländern und Kulturen kennenlernen und ihr einen Ort zuordnen."},{"id":"epoche-barock","strand":8,"requires":["komponist-biografie"],"step":3,"band":"5/6","bandStep":3,"name":"Barock","iCan":"Ich kann Musik des Barock an typischen Merkmalen erkennen und in ihre Zeit einordnen."},{"id":"gebrauchspraxen-nennen","strand":8,"requires":["herkunft-einordnen"],"step":2,"band":"5/6","bandStep":2,"name":"Wofür Musik gebraucht wird","iCan":"Ich kann Beispiele nennen, wofür Musik gebraucht wird, zum Beispiel bei Festen, im Sport oder zum Tanzen."},{"id":"zweck-umfeld-einordnen","strand":8,"requires":["gebrauchspraxen-nennen"],"step":3,"band":"5/6","bandStep":3,"name":"Zweck und Umfeld von Musik","iCan":"Ich kann Musik nach Zweck und Umfeld einordnen und beurteilen."},{"id":"repertoire-aufbauen","strand":8,"requires":["lieder-auswendig-singen","gebrauchspraxen-nennen"],"step":4,"band":"5/6","bandStep":4,"name":"Repertoire vortragen","iCan":"Ich kann Lieder und Stücke aus verschiedenen Bereichen der Musikpraxis vortragen."},{"id":"auffuehrung-mitgestalten","strand":8,"requires":["repertoire-aufbauen"],"step":5,"band":"5/6","bandStep":5,"name":"Schulaufführung mitgestalten","iCan":"Ich kann bei einer Aufführung in der Schule gestaltend mitmachen."},{"id":"auffuehrung-auswerten","strand":8,"requires":["auffuehrung-mitgestalten"],"step":6,"band":"5/6","bandStep":6,"name":"Aufführung auswerten","iCan":"Ich kann eine Aufführung auswerten und sagen, was gelungen ist und was ich anders machen würde."},{"id":"epoche-klassik","strand":8,"requires":["epoche-barock"],"step":10,"band":"7/8","bandStep":1,"name":"Wiener Klassik","iCan":"Ich kann Musik der Wiener Klassik an typischen Merkmalen erkennen und in ihre Zeit einordnen."},{"id":"popularmusik-stile","strand":8,"requires":["gebrauchspraxen-nennen","songaufbau","beat-offbeat","ensembles-besetzungen"],"step":12,"band":"7/8","bandStep":3,"name":"Stile der Popularmusik","iCan":"Ich kann Stile der Popularmusik an Rhythmus, Besetzung und Sound unterscheiden."},{"id":"musik-nicht-abendlaendisch","strand":8,"requires":["musik-anderer-kulturen"],"step":10,"band":"7/8","bandStep":1,"name":"Außereuropäische Musik","iCan":"Ich kann Musik aus einem nicht europäischen Kulturkreis beschreiben und ihre Aufgabe dort erklären."},{"id":"urheberrecht-musikmarkt","strand":8,"requires":["gebrauchspraxen-nennen"],"step":10,"band":"7/8","bandStep":1,"name":"Urheberrecht und Musikmarkt","iCan":"Ich kann erklären, wie Musik im Internet vertrieben wird und was das Urheberrecht für Musikschaffende bedeutet."},{"id":"epoche-romantik","strand":8,"requires":["epoche-klassik"],"step":13,"band":"9/10","bandStep":1,"name":"Romantik","iCan":"Ich kann Musik der Romantik an typischen Merkmalen erkennen und in ihre Zeit einordnen."},{"id":"epoche-neue-musik","strand":8,"requires":["epoche-romantik"],"step":14,"band":"9/10","bandStep":2,"name":"Musik des 20. Jahrhunderts","iCan":"Ich kann Musik des 20. Jahrhunderts an neuen Mitteln erkennen und in ihre Zeit einordnen."},{"id":"musik-zeitepoche","strand":8,"requires":["epoche-neue-musik"],"step":15,"band":"9/10","bandStep":3,"name":"Musik einer Epoche zuordnen","iCan":"Ich kann ein Musikstück einer geschichtlichen Zeit zuordnen und die Zeit am Stück begründen."},{"id":"jazz","strand":8,"requires":["binaer-ternaer","blues-schema","besondere-tonleitern"],"step":13,"band":"9/10","bandStep":1,"name":"Jazz","iCan":"Ich kann erklären, wie der Jazz aus dem Blues entstand, und typische Stilmittel des Jazz hören."},{"id":"musiktheater","strand":8,"requires":["wirkung-beschreiben","abschnitte-hoeren"],"step":13,"band":"9/10","bandStep":1,"name":"Oper und Musical","iCan":"Ich kann Oper und Musical vergleichen und ihre Bestandteile wie Ouvertüre, Rezitativ, Arie und Chor nennen."},{"id":"soziale-bedingungen","strand":8,"requires":["musik-und-umfeld"],"step":13,"band":"9/10","bandStep":1,"name":"Gesellschaftliche Bedingungen von Musik","iCan":"Ich kann erklären, wie Wirtschaft, Gesellschaft und Medien beeinflussen, welche Musik entsteht und gehört wird."},{"id":"rezeption-erklaeren","strand":8,"requires":["musik-zeitepoche"],"step":16,"band":"9/10","bandStep":4,"name":"Rezeptionsgeschichte","iCan":"Ich kann erklären, wie ein Stück zu verschiedenen Zeiten aufgenommen und verstanden wurde."},{"id":"gebrauchspraxen-unterscheiden","strand":8,"requires":["zweck-umfeld-einordnen"],"step":13,"band":"9/10","bandStep":1,"name":"Musikalische Gebrauchspraxen","iCan":"Ich kann verschiedene musikalische Gebrauchspraxen unterscheiden und ihre Merkmale erklären."},{"id":"identitaet-peergroup","strand":8,"requires":["gebrauchspraxen-unterscheiden","soziale-bedingungen"],"step":14,"band":"9/10","bandStep":2,"name":"Musik und Zugehörigkeit","iCan":"Ich kann erklären, wie Musik zu einer Gruppe, einer Mode oder einer Zeit gehört und Zugehörigkeit zeigt."},{"id":"gebrauchspraxis-positionieren","strand":8,"requires":["gebrauchspraxen-unterscheiden","sach-werturteil"],"step":14,"band":"9/10","bandStep":2,"name":"Gebrauchspraxis bewerten","iCan":"Ich kann die Eigenarten einer Gebrauchspraxis kritisch bewerten und begründet Stellung nehmen."},{"id":"auffuehrung-planen","strand":8,"requires":["auffuehrung-auswerten","musizieren-organisieren"],"step":14,"band":"9/10","bandStep":2,"name":"Aufführung planen","iCan":"Ich kann eine musikalische Aufführung planen, gestaltend an ihr teilnehmen und sie auswerten."}]}</script>
+<script type="application/json" id="map-steps-text">{"kind":"{strand} · {place}","place":"Klasse {band} · Schritt {step}","before":"Baut auf","after":"Darauf baut auf","nothing":"keine","page":"Zur Seite des Bausteins","clear":"Auswahl aufheben","pageUrl":"/apps/pr-preview/pr-259/map/musik/c/{id}/"}</script>
 
 <dialog class="map-dialog" data-map-dialog aria-labelledby="map-dialog-title">
   <div class="map-dialog-inner">
