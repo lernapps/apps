@@ -76,7 +76,7 @@
   <h2 id="ordnung-geschichte" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/pr-preview/pr-248/map/geschichte/" class="btn btn-primary" aria-current="page">Nach Klassen</a></li>
-    <li><a href="/apps/pr-preview/pr-248/map/geschichte/c/" class="btn btn-secondary">Nach Stufen der Kette</a></li>
+    <li><a href="/apps/pr-preview/pr-248/map/geschichte/c/" class="btn btn-secondary">Nach Klasse und Kette</a></li>
   </ul>
 </nav>
 
@@ -115,7 +115,7 @@
     </div>
     <div class="map-legend" role="group" aria-label="Bausteine zeigen" data-map-filter hidden>
       <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt <span class="map-filter-count">0</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">195</span></button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">197</span></button>
     </div>
   </div>
   <div class="map-scroll" role="region" aria-label="Lernlandkarte Geschichte: Bausteine nach Strang und Klasse" tabindex="0">
@@ -126,7 +126,7 @@
           <td class="text-sm text-slate-600 align-bottom">Klasse ↓ · Strang →</td>
           <th scope="col">
             <a href="/apps/pr-preview/pr-248/map/geschichte/grundlagen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Geschichte und Zeit: Grundbegriffe</a>
-            <span class="block mt-1 text-sm text-slate-600">0 von 10 Bausteinen geübt</span>
+            <span class="block mt-1 text-sm text-slate-600">0 von 11 Bausteinen geübt</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -151,7 +151,7 @@
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-248/map/geschichte/revolutionen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Aufklärung, Revolutionen und 19. Jahrhundert</a>
-            <span class="block mt-1 text-sm text-slate-600">0 von 33 Bausteinen geübt</span>
+            <span class="block mt-1 text-sm text-slate-600">0 von 34 Bausteinen geübt</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -252,6 +252,14 @@
 <li data-competency="archaeologie">
   <a href="/apps/pr-preview/pr-248/map/geschichte/c/archaeologie/" class="map-chip map-chip-gap" data-opens="detail-archaeologie">
     <span>Archäologie</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              
+<li data-competency="herrschaftsformen">
+  <a href="/apps/pr-preview/pr-248/map/geschichte/c/herrschaftsformen/" class="map-chip map-chip-gap" data-opens="detail-herrschaftsformen">
+    <span>Herrschaftsformen</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -999,6 +1007,14 @@
 <li data-competency="menschenrechte-1789">
   <a href="/apps/pr-preview/pr-248/map/geschichte/c/menschenrechte-1789/" class="map-chip map-chip-gap" data-opens="detail-menschenrechte-1789">
     <span>Erklärung der Menschenrechte 1789</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              
+<li data-competency="was-ist-eine-revolution">
+  <a href="/apps/pr-preview/pr-248/map/geschichte/c/was-ist-eine-revolution/" class="map-chip map-chip-gap" data-opens="detail-was-ist-eine-revolution">
+    <span>Was ist eine Revolution?</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1917,8 +1933,6 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/zeitrechnung/" class="text-blue-700 underline underline-offset-2"><span>Zeitrechnung vor und nach Christus</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/jahrhunderte/" class="text-blue-700 underline underline-offset-2"><span>Jahrhunderte und Jahrtausende</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -2014,6 +2028,25 @@
 </template>
 
 
+<template id="detail-herrschaftsformen" data-kind="Baustein · Geschichte und Zeit: Grundbegriffe">
+  <p data-dialog-title>Herrschaftsformen</p>
+  <div data-dialog-body>
+    <p class="m-0">Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer Herrschaftsform zuordnen.</p>
+    <dl class="map-facts">
+      <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/monarchie/" class="text-blue-700 underline underline-offset-2"><span>Monarchie</span></a> <span class="text-slate-600">· Strang Urgeschichte und frühe Hochkulturen</span>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/attische-demokratie/" class="text-blue-700 underline underline-offset-2"><span>Attische Demokratie</span></a> <span class="text-slate-600">· Strang Antike: Griechenland und Rom</span>
+</li></ul></dd></div>
+      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-248/map/geschichte/c/herrschaftsformen/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
+  </div>
+</template>
+
+
 <template id="detail-menschwerdung" data-kind="Baustein · Urgeschichte und frühe Hochkulturen">
   <p data-dialog-title>Menschwerdung und Ausbreitung</p>
   <div data-dialog-body>
@@ -2021,7 +2054,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/epochen/" class="text-blue-700 underline underline-offset-2"><span>Epochen der Geschichte</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/archaeologie/" class="text-blue-700 underline underline-offset-2"><span>Archäologie</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2038,7 +2071,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/menschwerdung/" class="text-blue-700 underline underline-offset-2"><span>Menschwerdung und Ausbreitung</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/archaeologie/" class="text-blue-700 underline underline-offset-2"><span>Archäologie</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2224,9 +2257,7 @@
     <p class="m-0">Ich kann erklären, wie die Landschaft Griechenlands dazu beitrug, dass viele selbstständige Stadtstaaten (Poleis) entstanden.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/epochen/" class="text-blue-700 underline underline-offset-2"><span>Epochen der Geschichte</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
-</li></ul></dd></div>
+      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -2378,7 +2409,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/gruendungssage-roms/" class="text-blue-700 underline underline-offset-2"><span>Gründungssage Roms</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/herrschaftsformen/" class="text-blue-700 underline underline-offset-2"><span>Herrschaftsformen</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2466,8 +2497,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/krise-der-republik/" class="text-blue-700 underline underline-offset-2"><span>Krise der Römischen Republik</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/monarchie/" class="text-blue-700 underline underline-offset-2"><span>Monarchie</span></a> <span class="text-slate-600">· Strang Urgeschichte und frühe Hochkulturen</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2484,7 +2513,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/roemische-republik/" class="text-blue-700 underline underline-offset-2"><span>Römische Republik</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/caesar-und-augustus/" class="text-blue-700 underline underline-offset-2"><span>Caesar, Augustus und Prinzipat</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2554,8 +2583,6 @@
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/romanisierung/" class="text-blue-700 underline underline-offset-2"><span>Romanisierung</span></a>
 </li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/attische-demokratie/" class="text-blue-700 underline underline-offset-2"><span>Attische Demokratie</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/spuren-der-vergangenheit/" class="text-blue-700 underline underline-offset-2"><span>Spuren der Vergangenheit</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -2591,9 +2618,7 @@
     <p class="m-0">Ich kann beschreiben, wie Mohammed den Islam begründete und wie sich der Islam schnell ausbreitete.</p>
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/epochen/" class="text-blue-700 underline underline-offset-2"><span>Epochen der Geschichte</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
-</li></ul></dd></div>
+      <div><dt>Baut auf</dt><dd>auf keinem anderen Baustein</dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
     </dl>
@@ -2734,7 +2759,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/karl-der-grosse/" class="text-blue-700 underline underline-offset-2"><span>Herrschaft Karls des Großen</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/pharao-und-gesellschaft/" class="text-blue-700 underline underline-offset-2"><span>Pharao und ägyptische Gesellschaft</span></a> <span class="text-slate-600">· Strang Urgeschichte und frühe Hochkulturen</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2752,6 +2777,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/staendegesellschaft/" class="text-blue-700 underline underline-offset-2"><span>Mittelalterliche Ständegesellschaft</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/karl-der-grosse/" class="text-blue-700 underline underline-offset-2"><span>Herrschaft Karls des Großen</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -2819,7 +2846,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/staendegesellschaft/" class="text-blue-700 underline underline-offset-2"><span>Mittelalterliche Ständegesellschaft</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/christen-im-roemischen-reich/" class="text-blue-700 underline underline-offset-2"><span>Christen im Römischen Reich</span></a> <span class="text-slate-600">· Strang Antike: Griechenland und Rom</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3280,6 +3307,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/luther-und-reformation/" class="text-blue-700 underline underline-offset-2"><span>Luther und die Reformation</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/fuerstenmacht/" class="text-blue-700 underline underline-offset-2"><span>Aufstieg der Landesfürsten</span></a> <span class="text-slate-600">· Strang Mittelalter</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3296,7 +3325,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/kritik-an-der-kirche/" class="text-blue-700 underline underline-offset-2"><span>Kirchenkritik und Ablasshandel</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/pest/" class="text-blue-700 underline underline-offset-2"><span>Pest im 14. Jahrhundert</span></a> <span class="text-slate-600">· Strang Mittelalter</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3364,9 +3393,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/monarchie/" class="text-blue-700 underline underline-offset-2"><span>Monarchie</span></a> <span class="text-slate-600">· Strang Urgeschichte und frühe Hochkulturen</span>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/westfaelischer-friede/" class="text-blue-700 underline underline-offset-2"><span>Westfälischer Friede</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/herrschaftsformen/" class="text-blue-700 underline underline-offset-2"><span>Herrschaftsformen</span></a> <span class="text-slate-600">· Strang Geschichte und Zeit: Grundbegriffe</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3506,7 +3533,7 @@
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/aufklaerung/" class="text-blue-700 underline underline-offset-2"><span>Aufklärung</span></a>
 </li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/absolutismus/" class="text-blue-700 underline underline-offset-2"><span>Absolutismus</span></a> <span class="text-slate-600">· Strang Frühe Neuzeit</span>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/staendegesellschaft/" class="text-blue-700 underline underline-offset-2"><span>Mittelalterliche Ständegesellschaft</span></a> <span class="text-slate-600">· Strang Mittelalter</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3546,6 +3573,23 @@
 </dd></div>
     </dl>
     <p class="m-0"><a href="/apps/pr-preview/pr-248/map/geschichte/c/menschenrechte-1789/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
+  </div>
+</template>
+
+
+<template id="detail-was-ist-eine-revolution" data-kind="Baustein · Aufklärung, Revolutionen und 19. Jahrhundert">
+  <p data-dialog-title>Was ist eine Revolution?</p>
+  <div data-dialog-body>
+    <p class="m-0">Ich kann erklären, was eine Revolution ist, und Ursachen, Anlass und Folgen einer Revolution unterscheiden.</p>
+    <dl class="map-facts">
+      <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/revolution-1789/" class="text-blue-700 underline underline-offset-2"><span>Revolution von 1789</span></a>
+</li></ul></dd></div>
+      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-248/map/geschichte/c/was-ist-eine-revolution/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
   </div>
 </template>
 
@@ -3594,6 +3638,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/jakobinerherrschaft/" class="text-blue-700 underline underline-offset-2"><span>Jakobinerherrschaft</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/kaiserkroenung-800/" class="text-blue-700 underline underline-offset-2"><span>Kaiserkrönung im Jahr 800</span></a> <span class="text-slate-600">· Strang Mittelalter</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3681,8 +3727,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/nationalbewegung/" class="text-blue-700 underline underline-offset-2"><span>Entstehung der Nationalbewegung</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/aufklaerung/" class="text-blue-700 underline underline-offset-2"><span>Aufklärung</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3736,6 +3780,8 @@
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/restauration/" class="text-blue-700 underline underline-offset-2"><span>Restauration</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/was-ist-eine-revolution/" class="text-blue-700 underline underline-offset-2"><span>Was ist eine Revolution?</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -3981,9 +4027,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/reichsgruendung-1871/" class="text-blue-700 underline underline-offset-2"><span>Reichsgründung 1871</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/liberalismus-und-nationalismus/" class="text-blue-700 underline underline-offset-2"><span>Liberalismus und Nationalismus</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/verfassung-des-kaiserreichs/" class="text-blue-700 underline underline-offset-2"><span>Verfassung des Kaiserreichs</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4000,7 +4044,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/reichsgruendung-1871/" class="text-blue-700 underline underline-offset-2"><span>Reichsgründung 1871</span></a>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/menschenrechte-1789/" class="text-blue-700 underline underline-offset-2"><span>Erklärung der Menschenrechte 1789</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4142,8 +4186,6 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 7/8</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/julikrise-1914/" class="text-blue-700 underline underline-offset-2"><span>Julikrise 1914</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/industrialisierung-deutschland/" class="text-blue-700 underline underline-offset-2"><span>Industrialisierung in Deutschland</span></a> <span class="text-slate-600">· Strang Aufklärung, Revolutionen und 19. Jahrhundert</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
@@ -4181,6 +4223,8 @@
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/julikrise-1914/" class="text-blue-700 underline underline-offset-2"><span>Julikrise 1914</span></a>
 </li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/sozialismus-und-kommunismus/" class="text-blue-700 underline underline-offset-2"><span>Sozialismus und Kommunismus</span></a> <span class="text-slate-600">· Strang Aufklärung, Revolutionen und 19. Jahrhundert</span>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/was-ist-eine-revolution/" class="text-blue-700 underline underline-offset-2"><span>Was ist eine Revolution?</span></a> <span class="text-slate-600">· Strang Aufklärung, Revolutionen und 19. Jahrhundert</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4267,9 +4311,9 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/versailler-vertrag/" class="text-blue-700 underline underline-offset-2"><span>Versailler Vertrag</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/verfassung-des-kaiserreichs/" class="text-blue-700 underline underline-offset-2"><span>Verfassung des Kaiserreichs</span></a> <span class="text-slate-600">· Strang Aufklärung, Revolutionen und 19. Jahrhundert</span>
+</li><li>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/epochenjahr-1917/" class="text-blue-700 underline underline-offset-2"><span>Epochenjahr 1917</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4304,8 +4348,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/raete-oder-parlament/" class="text-blue-700 underline underline-offset-2"><span>Rätesystem oder Parlament</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/gewaltenteilung/" class="text-blue-700 underline underline-offset-2"><span>Gewaltenteilung</span></a> <span class="text-slate-600">· Strang Aufklärung, Revolutionen und 19. Jahrhundert</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4450,8 +4492,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/weltwirtschaftskrise/" class="text-blue-700 underline underline-offset-2"><span>Weltwirtschaftskrise</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/feinde-der-republik/" class="text-blue-700 underline underline-offset-2"><span>Feinde der Weimarer Republik</span></a>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4504,7 +4544,7 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/aufstieg-der-nsdap/" class="text-blue-700 underline underline-offset-2"><span>Aufstieg der NSDAP</span></a> <span class="text-slate-600">· Strang Imperialismus, Erster Weltkrieg und Weimarer Republik</span>
+<a href="/apps/pr-preview/pr-248/map/geschichte/c/imperialismus/" class="text-blue-700 underline underline-offset-2"><span>Motive des Imperialismus</span></a> <span class="text-slate-600">· Strang Imperialismus, Erster Weltkrieg und Weimarer Republik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4541,8 +4581,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/machtuebernahme-1933/" class="text-blue-700 underline underline-offset-2"><span>Machtübernahme 1933</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/weimarer-verfassung/" class="text-blue-700 underline underline-offset-2"><span>Weimarer Reichsverfassung</span></a> <span class="text-slate-600">· Strang Imperialismus, Erster Weltkrieg und Weimarer Republik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>
@@ -4610,8 +4648,6 @@
     <dl class="map-facts">
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/gleichschaltung/" class="text-blue-700 underline underline-offset-2"><span>Gleichschaltung</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/terror-und-verfolgung/" class="text-blue-700 underline underline-offset-2"><span>Terror gegen politische Gegner</span></a>
 </li><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/propaganda/" class="text-blue-700 underline underline-offset-2"><span>NS-Propaganda</span></a>
@@ -4914,8 +4950,6 @@
       <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
       <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-248/map/geschichte/c/potsdamer-konferenz/" class="text-blue-700 underline underline-offset-2"><span>Potsdamer Konferenz</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-248/map/geschichte/c/epochenjahr-1917/" class="text-blue-700 underline underline-offset-2"><span>Epochenjahr 1917</span></a> <span class="text-slate-600">· Strang Imperialismus, Erster Weltkrieg und Weimarer Republik</span>
 </li></ul></dd></div>
       <div><dt>Geübt in</dt><dd>noch keine App – Lücke
 </dd></div>

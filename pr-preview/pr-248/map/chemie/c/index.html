@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Lernlandkarte Chemie nach Stufen · lernapps.net</title>
-  <meta name="description" content="Was in Chemie worauf aufbaut, Stufe für Stufe.">
+  <title>Lernlandkarte Chemie nach Klasse und Kette · lernapps.net</title>
+  <meta name="description" content="Was in Chemie worauf aufbaut, Klasse für Klasse, Schritt für Schritt.">
   <link rel="canonical" href="https://lernapps.net/apps/map/chemie/c/">
   <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -58,7 +58,7 @@
     </li>
     <li class="flex gap-2"><a href="/apps/pr-preview/pr-248/map/chemie/" class="text-blue-700 underline underline-offset-2">Chemie</a><span aria-hidden="true">›</span>
     </li>
-    <li class="flex gap-2"><span aria-current="page">Nach Stufen der Kette</span>
+    <li class="flex gap-2"><span aria-current="page">Nach Klasse und Kette</span>
     </li>
   </ol>
 </nav>
@@ -71,17 +71,17 @@
 
 
   <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
-    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Chemie nach Stufen</h1>
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight text-slate-900" style="font-size: clamp(1.75rem, 5vw, 2.5rem);">Lernlandkarte Chemie nach Klasse und Kette</h1>
     <a href="#hilfe" class="map-help-link" data-opens="hilfe"><span aria-hidden="true" class="map-help-icon">?</span>So liest du die Karte</a>
   </div>
-  <p class="m-0 text-slate-700 max-w-3xl">Jede Zeile ist eine Stufe in der Kette „baut auf“. Ein Baustein steht eine Zeile unter seiner tiefsten Voraussetzung. Ganz oben stehen die Bausteine ohne Voraussetzung.</p>
+  <p class="m-0 text-slate-700 max-w-3xl">Die Zeilen gehen nach Klassen: erst 5/6, dann 7/8, dann 9/10. In jeder Klasse steht ein Baustein einen Schritt unter seiner tiefsten Voraussetzung aus derselben Klasse. Alles, was ein Baustein braucht, steht also weiter oben. Alles im selben Schritt ist voneinander unabhängig.</p>
 
   
 <nav aria-labelledby="ordnung-chemie" class="flex flex-wrap items-center gap-2">
   <h2 id="ordnung-chemie" class="m-0 text-sm font-semibold text-slate-600">Zeilen ordnen</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/pr-preview/pr-248/map/chemie/" class="btn btn-secondary">Nach Klassen</a></li>
-    <li><a href="/apps/pr-preview/pr-248/map/chemie/c/" class="btn btn-primary" aria-current="page">Nach Stufen der Kette</a></li>
+    <li><a href="/apps/pr-preview/pr-248/map/chemie/c/" class="btn btn-primary" aria-current="page">Nach Klasse und Kette</a></li>
   </ul>
 </nav>
 
@@ -91,38 +91,35 @@
       <p class="m-0 flex items-center gap-2 text-sm text-slate-600"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke</p>
     </div>
     <div class="map-legend" role="group" aria-label="Bausteine zeigen" data-map-filter hidden>
-      <button type="button" class="map-filter" data-show="covered" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt <span class="map-filter-count">19</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke <span class="map-filter-count">56</span></button>
+      <button type="button" class="map-filter" data-show="covered" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Abgedeckt</button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Lücke</button>
     </div>
   </div>
+  <p class="m-0 text-slate-700" data-map-alone>Jeder Baustein ist in die Kette eingeordnet.
+  </p>
 
   <div class="map-bystep" data-map-steps>
-    <div class="map-scroll" role="region" aria-label="Lernlandkarte Chemie: Bausteine nach Strang und Stufe" tabindex="0">
+    <div class="map-scroll" role="region" aria-label="Lernlandkarte Chemie: Bausteine nach Strang, Klasse und Schritt" tabindex="0">
       <table class="map-grid" style="min-width: 43rem;">
         <colgroup><col style="width: 7rem;"><col><col><col></colgroup>
         <thead>
           <tr>
-            <td class="text-sm text-slate-600 align-bottom">Stufe ↓ · Strang →</td>
+            <td class="text-sm text-slate-600 align-bottom">Klasse und Schritt ↓ · Strang →</td>
             <th scope="col">
               <a href="/apps/pr-preview/pr-248/map/chemie/stoffe-und-teilchen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Aufbau und Eigenschaften von Stoffen und Teilchen</a>
-              <span class="block mt-1 text-sm text-slate-600">15 von 46 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 33%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-248/map/chemie/chemische-reaktion/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Chemische Reaktion</a>
-              <span class="block mt-1 text-sm text-slate-600">4 von 19 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 21%;"></span></span>
             </th>
             <th scope="col">
               <a href="/apps/pr-preview/pr-248/map/chemie/energie/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Energie</a>
-              <span class="block mt-1 text-sm text-slate-600">0 von 10 Bausteinen geübt</span>
-              <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
             </th>
           </tr>
         </thead>
         <tbody>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="4">Klasse 7/8</th></tr>
           <tr>
-            <th scope="row">Stufe 1<span class="block mt-1 text-xs font-normal text-slate-600">5 Bausteine</span></th>
+            <th scope="row">Schritt 1</th>
             <td>
               <ul class="map-cell">
                 
@@ -137,22 +134,6 @@
 <li data-covered data-competency="aggregatzustaende-beschreiben">
   <a href="/apps/pr-preview/pr-248/map/chemie/c/aggregatzustaende-beschreiben/" class="map-chip map-chip-covered">
     <span>Aggregatzustände und Übergänge</span>
-    <span class="sr-only">(eine App übt ihn)</span>
-  </a>
-</li>
-
-                
-<li data-covered data-competency="reinstoffe-und-gemische">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/reinstoffe-und-gemische/" class="map-chip map-chip-covered">
-    <span>Reinstoffe und Gemische</span>
-    <span class="sr-only">(eine App übt ihn)</span>
-  </a>
-</li>
-
-                
-<li data-covered data-competency="teilchenmodell">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/teilchenmodell/" class="map-chip map-chip-covered">
-    <span>Teilchenmodell</span>
     <span class="sr-only">(eine App übt ihn)</span>
   </a>
 </li>
@@ -175,7 +156,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 2<span class="block mt-1 text-xs font-normal text-slate-600">5 Bausteine</span></th>
+            <th scope="row">Schritt 2</th>
             <td>
               <ul class="map-cell">
                 
@@ -194,30 +175,6 @@
   </a>
 </li>
 
-                
-<li data-competency="elemente-und-verbindungen">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/elemente-und-verbindungen/" class="map-chip map-chip-gap">
-    <span>Elemente und Verbindungen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-covered data-competency="aggregatzustaende-mit-teilchenmodell">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/aggregatzustaende-mit-teilchenmodell/" class="map-chip map-chip-covered">
-    <span>Aggregatzustände im Teilchenmodell</span>
-    <span class="sr-only">(eine App übt ihn)</span>
-  </a>
-</li>
-
-                
-<li data-competency="denkmodelle-und-sachmodelle">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/denkmodelle-und-sachmodelle/" class="map-chip map-chip-gap">
-    <span>Denkmodelle und Sachmodelle</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
@@ -226,7 +183,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 3<span class="block mt-1 text-xs font-normal text-slate-600">10 Bausteine</span></th>
+            <th scope="row">Schritt 3</th>
             <td>
               <ul class="map-cell">
                 
@@ -270,33 +227,17 @@
 </li>
 
                 
-<li data-competency="ph-wert-deuten">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/ph-wert-deuten/" class="map-chip map-chip-gap">
-    <span>pH-Wert und Indikatoren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
+<li data-covered data-competency="reinstoffe-und-gemische">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/reinstoffe-und-gemische/" class="map-chip map-chip-covered">
+    <span>Reinstoffe und Gemische</span>
+    <span class="sr-only">(eine App übt ihn)</span>
   </a>
 </li>
 
                 
-<li data-competency="gemische-trennen">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/gemische-trennen/" class="map-chip map-chip-gap">
-    <span>Trennverfahren</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="daltonsches-atommodell">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/daltonsches-atommodell/" class="map-chip map-chip-gap">
-    <span>Daltonsches Atommodell</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-covered data-competency="symbole-der-elemente">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/symbole-der-elemente/" class="map-chip map-chip-covered">
-    <span>Elementsymbole</span>
+<li data-covered data-competency="teilchenmodell">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/teilchenmodell/" class="map-chip map-chip-covered">
+    <span>Teilchenmodell</span>
     <span class="sr-only">(eine App übt ihn)</span>
   </a>
 </li>
@@ -319,7 +260,149 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 4<span class="block mt-1 text-xs font-normal text-slate-600">10 Bausteine</span></th>
+            <th scope="row">Schritt 4</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="gemische-trennen">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/gemische-trennen/" class="map-chip map-chip-gap">
+    <span>Trennverfahren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="elemente-und-verbindungen">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/elemente-und-verbindungen/" class="map-chip map-chip-gap">
+    <span>Elemente und Verbindungen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-covered data-competency="aggregatzustaende-mit-teilchenmodell">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/aggregatzustaende-mit-teilchenmodell/" class="map-chip map-chip-covered">
+    <span>Aggregatzustände im Teilchenmodell</span>
+    <span class="sr-only">(eine App übt ihn)</span>
+  </a>
+</li>
+
+                
+<li data-competency="denkmodelle-und-sachmodelle">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/denkmodelle-und-sachmodelle/" class="map-chip map-chip-gap">
+    <span>Denkmodelle und Sachmodelle</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-covered data-competency="reaktion-oder-zustandsaenderung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/reaktion-oder-zustandsaenderung/" class="map-chip map-chip-covered">
+    <span>Reaktion oder Zustandsänderung</span>
+    <span class="sr-only">(eine App übt ihn)</span>
+  </a>
+</li>
+
+                
+<li data-covered data-competency="massenerhaltung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/massenerhaltung/" class="map-chip map-chip-covered">
+    <span>Gesetz der Massenerhaltung</span>
+    <span class="sr-only">(eine App übt ihn)</span>
+  </a>
+</li>
+
+                
+<li data-competency="wortgleichung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/wortgleichung/" class="map-chip map-chip-gap">
+    <span>Wortgleichung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="energieumwandlung-bei-reaktionen">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieumwandlung-bei-reaktionen/" class="map-chip map-chip-gap">
+    <span>Energieumwandlung bei Reaktionen</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 5</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="daltonsches-atommodell">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/daltonsches-atommodell/" class="map-chip map-chip-gap">
+    <span>Daltonsches Atommodell</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-covered data-competency="symbole-der-elemente">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/symbole-der-elemente/" class="map-chip map-chip-covered">
+    <span>Elementsymbole</span>
+    <span class="sr-only">(eine App übt ihn)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="synthese-und-analyse">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/synthese-und-analyse/" class="map-chip map-chip-gap">
+    <span>Synthese und Analyse</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="verbrennung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/verbrennung/" class="map-chip map-chip-gap">
+    <span>Verbrennung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="exotherm-und-endotherm">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/exotherm-und-endotherm/" class="map-chip map-chip-gap">
+    <span>Exotherm und endotherm</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="energieerhaltung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieerhaltung/" class="map-chip map-chip-gap">
+    <span>Energieerhaltung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 6</th>
             <td>
               <ul class="map-cell">
                 
@@ -349,63 +432,13 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-covered data-competency="reaktion-oder-zustandsaenderung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/reaktion-oder-zustandsaenderung/" class="map-chip map-chip-covered">
-    <span>Reaktion oder Zustandsänderung</span>
-    <span class="sr-only">(eine App übt ihn)</span>
-  </a>
-</li>
-
-                
-<li data-competency="synthese-und-analyse">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/synthese-und-analyse/" class="map-chip map-chip-gap">
-    <span>Synthese und Analyse</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-covered data-competency="massenerhaltung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/massenerhaltung/" class="map-chip map-chip-covered">
-    <span>Gesetz der Massenerhaltung</span>
-    <span class="sr-only">(eine App übt ihn)</span>
-  </a>
-</li>
-
-                
-<li data-competency="wortgleichung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/wortgleichung/" class="map-chip map-chip-gap">
-    <span>Wortgleichung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="verbrennung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/verbrennung/" class="map-chip map-chip-gap">
-    <span>Verbrennung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="temperatur-und-reaktionsgeschwindigkeit">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/temperatur-und-reaktionsgeschwindigkeit/" class="map-chip map-chip-gap">
-    <span>Temperatur und Reaktionsgeschwindigkeit</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
             <td>
               <ul class="map-cell">
                 
-<li data-competency="energieumwandlung-bei-reaktionen">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieumwandlung-bei-reaktionen/" class="map-chip map-chip-gap">
-    <span>Energieumwandlung bei Reaktionen</span>
+<li data-competency="energieschema-lesen">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieschema-lesen/" class="map-chip map-chip-gap">
+    <span>Energiediagramm</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -414,7 +447,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 5<span class="block mt-1 text-xs font-normal text-slate-600">8 Bausteine</span></th>
+            <th scope="row">Schritt 7</th>
             <td>
               <ul class="map-cell">
                 
@@ -430,6 +463,112 @@
   <a href="/apps/pr-preview/pr-248/map/chemie/c/metalle-und-nichtmetalle/" class="map-chip map-chip-covered">
     <span>Metalle und Nichtmetalle</span>
     <span class="sr-only">(eine App übt ihn)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-covered data-competency="reaktionsgleichung-aufstellen">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/reaktionsgleichung-aufstellen/" class="map-chip map-chip-covered">
+    <span>Reaktionsgleichungen aufstellen</span>
+    <span class="sr-only">(eine App übt ihn)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="aktivierungsenergie">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/aktivierungsenergie/" class="map-chip map-chip-gap">
+    <span>Aktivierungsenergie</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 8</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="ionenbindung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/ionenbindung/" class="map-chip map-chip-gap">
+    <span>Ionenbindung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+                
+<li data-competency="metallbindung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/metallbindung/" class="map-chip map-chip-gap">
+    <span>Metallbindung</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="oxidation-und-reduktion">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/oxidation-und-reduktion/" class="map-chip map-chip-gap">
+    <span>Oxidation und Reduktion</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Schritt 9</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="ionengitter">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/ionengitter/" class="map-chip map-chip-gap">
+    <span>Ionengitter</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="edle-und-unedle-metalle">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/edle-und-unedle-metalle/" class="map-chip map-chip-gap">
+    <span>Edle und unedle Metalle</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              </ul>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="4">Klasse 9/10</th></tr>
+          <tr>
+            <th scope="row">Schritt 1</th>
+            <td>
+              <ul class="map-cell">
+                
+<li data-competency="ph-wert-deuten">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/ph-wert-deuten/" class="map-chip map-chip-gap">
+    <span>pH-Wert und Indikatoren</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
@@ -454,17 +593,17 @@
 </li>
 
                 
-<li data-covered data-competency="reaktionsgleichung-aufstellen">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/reaktionsgleichung-aufstellen/" class="map-chip map-chip-covered">
-    <span>Reaktionsgleichungen aufstellen</span>
-    <span class="sr-only">(eine App übt ihn)</span>
+<li data-competency="stoffmenge-und-molare-masse">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/stoffmenge-und-molare-masse/" class="map-chip map-chip-gap">
+    <span>Stoffmenge und molare Masse</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
                 
-<li data-competency="stoffmenge-und-molare-masse">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/stoffmenge-und-molare-masse/" class="map-chip map-chip-gap">
-    <span>Stoffmenge und molare Masse</span>
+<li data-competency="temperatur-und-reaktionsgeschwindigkeit">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/temperatur-und-reaktionsgeschwindigkeit/" class="map-chip map-chip-gap">
+    <span>Temperatur und Reaktionsgeschwindigkeit</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -474,17 +613,9 @@
             <td>
               <ul class="map-cell">
                 
-<li data-competency="exotherm-und-endotherm">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/exotherm-und-endotherm/" class="map-chip map-chip-gap">
-    <span>Exotherm und endotherm</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="energieerhaltung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieerhaltung/" class="map-chip map-chip-gap">
-    <span>Energieerhaltung</span>
+<li data-competency="energieaustausch-mit-der-umgebung">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieaustausch-mit-der-umgebung/" class="map-chip map-chip-gap">
+    <span>System und Umgebung</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -493,7 +624,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 6<span class="block mt-1 text-xs font-normal text-slate-600">9 Bausteine</span></th>
+            <th scope="row">Schritt 2</th>
             <td>
               <ul class="map-cell">
                 
@@ -509,22 +640,6 @@
   <a href="/apps/pr-preview/pr-248/map/chemie/c/schalenmodell/" class="map-chip map-chip-covered">
     <span>Schalenmodell</span>
     <span class="sr-only">(eine App übt ihn)</span>
-  </a>
-</li>
-
-                
-<li data-competency="ionenbindung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/ionenbindung/" class="map-chip map-chip-gap">
-    <span>Ionenbindung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="metallbindung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/metallbindung/" class="map-chip map-chip-gap">
-    <span>Metallbindung</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
 
@@ -548,30 +663,14 @@
   </a>
 </li>
 
-                
-<li data-competency="oxidation-und-reduktion">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/oxidation-und-reduktion/" class="map-chip map-chip-gap">
-    <span>Oxidation und Reduktion</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
               <ul class="map-cell">
                 
-<li data-competency="energieschema-lesen">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieschema-lesen/" class="map-chip map-chip-gap">
-    <span>Energiediagramm</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-                
-<li data-competency="energieaustausch-mit-der-umgebung">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/energieaustausch-mit-der-umgebung/" class="map-chip map-chip-gap">
-    <span>System und Umgebung</span>
+<li data-competency="katalysator">
+  <a href="/apps/pr-preview/pr-248/map/chemie/c/katalysator/" class="map-chip map-chip-gap">
+    <span>Katalysator</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -580,7 +679,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 7<span class="block mt-1 text-xs font-normal text-slate-600">6 Bausteine</span></th>
+            <th scope="row">Schritt 3</th>
             <td>
               <ul class="map-cell">
                 
@@ -599,26 +698,10 @@
   </a>
 </li>
 
-                
-<li data-competency="ionengitter">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/ionengitter/" class="map-chip map-chip-gap">
-    <span>Ionengitter</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
               </ul>
             </td>
             <td>
               <ul class="map-cell">
-                
-<li data-competency="edle-und-unedle-metalle">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/edle-und-unedle-metalle/" class="map-chip map-chip-gap">
-    <span>Edle und unedle Metalle</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
                 
 <li data-competency="saeure-base-reaktion">
   <a href="/apps/pr-preview/pr-248/map/chemie/c/saeure-base-reaktion/" class="map-chip map-chip-gap">
@@ -630,20 +713,10 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="aktivierungsenergie">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/aktivierungsenergie/" class="map-chip map-chip-gap">
-    <span>Aktivierungsenergie</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 8<span class="block mt-1 text-xs font-normal text-slate-600">4 Bausteine</span></th>
+            <th scope="row">Schritt 4</th>
             <td>
               <ul class="map-cell">
                 
@@ -677,20 +750,10 @@
               </ul>
             </td>
             <td>
-              <ul class="map-cell">
-                
-<li data-competency="katalysator">
-  <a href="/apps/pr-preview/pr-248/map/chemie/c/katalysator/" class="map-chip map-chip-gap">
-    <span>Katalysator</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              </ul>
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 9<span class="block mt-1 text-xs font-normal text-slate-600">3 Bausteine</span></th>
+            <th scope="row">Schritt 5</th>
             <td>
               <ul class="map-cell">
                 
@@ -725,7 +788,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 10<span class="block mt-1 text-xs font-normal text-slate-600">3 Bausteine</span></th>
+            <th scope="row">Schritt 6</th>
             <td>
               <ul class="map-cell">
                 
@@ -762,7 +825,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 11<span class="block mt-1 text-xs font-normal text-slate-600">4 Bausteine</span></th>
+            <th scope="row">Schritt 7</th>
             <td>
               <ul class="map-cell">
                 
@@ -809,7 +872,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 12<span class="block mt-1 text-xs font-normal text-slate-600">2 Bausteine</span></th>
+            <th scope="row">Schritt 8</th>
             <td>
               <ul class="map-cell">
                 
@@ -836,7 +899,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 13<span class="block mt-1 text-xs font-normal text-slate-600">2 Bausteine</span></th>
+            <th scope="row">Schritt 9</th>
             <td>
               <ul class="map-cell">
                 
@@ -865,7 +928,7 @@
             </td>
           </tr>
           <tr>
-            <th scope="row">Stufe 14<span class="block mt-1 text-xs font-normal text-slate-600">4 Bausteine</span></th>
+            <th scope="row">Schritt 10</th>
             <td>
               <ul class="map-cell">
                 
@@ -918,7 +981,7 @@
     </aside>
   </div>
 
-  <p class="m-0 text-slate-600">Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Stufe für Stufe.</p>
+  <p class="m-0 text-slate-600">Klicke auf einen Baustein. Dann siehst du, worauf er aufbaut und was auf ihm aufbaut, Schritt für Schritt.</p>
 
   <section id="hilfe" class="panel scroll-mt-4" aria-labelledby="hilfe-titel" data-kind="Chemie" data-map-help>
     <h2 id="hilfe-titel" class="m-0 text-xl font-bold text-slate-900" data-dialog-title>So liest du die Karte</h2>
@@ -926,15 +989,15 @@
       <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-248/map/#strang" class="text-blue-700 underline underline-offset-2">Strang</a> · eine Spalte</dt><dd class="m-0 mt-1 text-slate-600">Ein Teilgebiet des Fachs, das sich über mehrere Schuljahre zieht.</dd></div>
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-248/map/#baustein" class="text-blue-700 underline underline-offset-2">Baustein</a> · ein Kästchen</dt><dd class="m-0 mt-1 text-slate-600">Eine Sache, die ein Kind lernen kann: „Ich kann …“.</dd></div>
-        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-248/map/#stufe" class="text-blue-700 underline underline-offset-2">Stufe</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Wie weit unten ein Baustein in der Kette „baut auf“ steht. Sie sagt nichts über Klassen.</dd></div>
+        <div><dt class="font-bold"><a href="/apps/pr-preview/pr-248/map/#schritt" class="text-blue-700 underline underline-offset-2">Schritt</a> · eine Zeile</dt><dd class="m-0 mt-1 text-slate-600">Wo ein Baustein in seiner Klasse in der Kette „baut auf“ steht. Alles im selben Schritt ist voneinander unabhängig; alles darüber kommt vorher.</dd></div>
         <div><dt class="font-bold"><a href="/apps/pr-preview/pr-248/map/#app" class="text-blue-700 underline underline-offset-2">App</a> · die Farbe</dt><dd class="m-0 mt-1 text-slate-600">Blau heißt abgedeckt: Eine App übt den Baustein. Gestrichelt heißt Lücke: Noch keine App übt ihn.</dd></div>
       </dl>
       <p class="m-0 mt-3"><a href="/apps/pr-preview/pr-248/map/#begriffe" class="text-blue-700 underline underline-offset-2">Alle Begriffe und wie sie zusammenhängen</a> · <a href="/apps/pr-preview/pr-248/map/#methode" class="text-blue-700 underline underline-offset-2">Warum diese Methode?</a></p>
     </div>
   </section>
 </div>
-<script type="application/json" id="map-steps-data">{"strands":["Aufbau und Eigenschaften von Stoffen und Teilchen","Chemische Reaktion","Energie"],"competencies":[{"id":"sicherheit-beim-experimentieren","strand":0,"requires":[],"step":1,"name":"Sicherheit beim Experimentieren","iCan":"Ich kann beim Experimentieren die Sicherheitsregeln einhalten und Gefahrenzeichen deuten."},{"id":"stoffeigenschaften-beschreiben","strand":0,"requires":["sicherheit-beim-experimentieren"],"step":2,"name":"Stoffeigenschaften","iCan":"Ich kann Stoffe an ihren Eigenschaften wie Farbe, Geruch, Härte und Dichte beschreiben."},{"id":"aggregatzustaende-beschreiben","strand":0,"requires":[],"step":1,"name":"Aggregatzustände und Übergänge","iCan":"Ich kann die drei Aggregatzustände und ihre Übergänge (schmelzen, erstarren, verdampfen, kondensieren, sublimieren) benennen und beschreiben."},{"id":"schmelz-und-siedetemperatur","strand":0,"requires":["aggregatzustaende-beschreiben"],"step":2,"name":"Schmelz- und Siedetemperatur","iCan":"Ich kann Schmelz- und Siedetemperatur eines Stoffes aus einer Tabelle oder Messreihe ablesen und deuten."},{"id":"aggregatzustand-bei-aeusseren-bedingungen","strand":0,"requires":["schmelz-und-siedetemperatur"],"step":3,"name":"Aggregatzustand vorhersagen","iCan":"Ich kann vorhersagen, in welchem Aggregatzustand ein Stoff bei einer bestimmten Temperatur und einem bestimmten Druck vorliegt."},{"id":"stoffe-erkennen-und-verwenden","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"name":"Stoffe erkennen und verwenden","iCan":"Ich kann einen Stoff an seinen Eigenschaften erkennen und aus ihnen auf seine Verwendung schließen."},{"id":"elektrische-leitfaehigkeit","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"name":"Elektrische Leitfähigkeit","iCan":"Ich kann mit einem Versuch prüfen, ob ein Stoff oder eine Lösung Strom leitet."},{"id":"loeslichkeit","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"name":"Löslichkeit in Wasser","iCan":"Ich kann untersuchen und angeben, wie gut sich ein Stoff in Wasser löst."},{"id":"gasnachweise","strand":0,"requires":["stoffeigenschaften-beschreiben","sicherheit-beim-experimentieren"],"step":3,"name":"Gasnachweise","iCan":"Ich kann Sauerstoff, Wasserstoff und Kohlenstoffdioxid mit Glimmspan-, Knallgas- und Kalkwasserprobe nachweisen."},{"id":"ph-wert-deuten","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"name":"pH-Wert und Indikatoren","iCan":"Ich kann mit Indikatoren und dem pH-Wert eine Lösung als sauer, neutral oder alkalisch einordnen."},{"id":"ionen-in-sauren-und-alkalischen-loesungen","strand":0,"requires":["ph-wert-deuten","atome-ionen-und-molekuele-unterscheiden"],"step":6,"name":"Ionen in sauren und alkalischen Lösungen","iCan":"Ich kann erklären, dass saure Lösungen Oxonium-Ionen und alkalische Lösungen Hydroxid-Ionen enthalten."},{"id":"reinstoffe-und-gemische","strand":0,"requires":[],"step":1,"name":"Reinstoffe und Gemische","iCan":"Ich kann Reinstoffe und Gemische unterscheiden."},{"id":"gemische-trennen","strand":0,"requires":["reinstoffe-und-gemische","stoffeigenschaften-beschreiben"],"step":3,"name":"Trennverfahren","iCan":"Ich kann ein Stoffgemisch mit einem passenden Verfahren trennen, etwa durch Filtrieren, Eindampfen oder Destillieren."},{"id":"elemente-und-verbindungen","strand":0,"requires":["reinstoffe-und-gemische"],"step":2,"name":"Elemente und Verbindungen","iCan":"Ich kann Elemente und Verbindungen als Reinstoffe unterscheiden."},{"id":"teilchenmodell","strand":0,"requires":[],"step":1,"name":"Teilchenmodell","iCan":"Ich kann das Teilchenmodell beschreiben und sagen, was es erklärt und was nicht."},{"id":"aggregatzustaende-mit-teilchenmodell","strand":0,"requires":["teilchenmodell","aggregatzustaende-beschreiben"],"step":2,"name":"Aggregatzustände im Teilchenmodell","iCan":"Ich kann mit dem Teilchenmodell erklären, warum Stoffe fest, flüssig oder gasförmig sind und wie sie ineinander übergehen."},{"id":"denkmodelle-und-sachmodelle","strand":0,"requires":["teilchenmodell"],"step":2,"name":"Denkmodelle und Sachmodelle","iCan":"Ich kann ein Denkmodell und ein Sachmodell unterscheiden und sagen, wofür ein Modell taugt und wo es an Grenzen stößt."},{"id":"daltonsches-atommodell","strand":0,"requires":["teilchenmodell","elemente-und-verbindungen"],"step":3,"name":"Daltonsches Atommodell","iCan":"Ich kann mit dem Atommodell nach Dalton erklären, was Atome sind und wie sie sich bei einer Reaktion neu gruppieren."},{"id":"symbole-der-elemente","strand":0,"requires":["elemente-und-verbindungen"],"step":3,"name":"Elementsymbole","iCan":"Ich kann Elemente mit ihrem Symbol benennen und schreiben."},{"id":"formeln-von-verbindungen","strand":0,"requires":["symbole-der-elemente","daltonsches-atommodell"],"step":4,"name":"Formeln von Verbindungen","iCan":"Ich kann die Formel einer Verbindung lesen und schreiben und sagen, welche Atome in welcher Anzahl enthalten sind."},{"id":"atombau-bausteine","strand":0,"requires":["daltonsches-atommodell"],"step":4,"name":"Bausteine des Atoms","iCan":"Ich kann sagen, aus welchen Teilchen ein Atom besteht: Protonen, Neutronen und Elektronen."},{"id":"atome-ionen-und-molekuele-unterscheiden","strand":0,"requires":["atombau-bausteine","formeln-von-verbindungen"],"step":5,"name":"Atome, Ionen und Moleküle","iCan":"Ich kann Atome, Ionen und Moleküle unterscheiden und an Beispielen zeigen, aus welchen Teilchen ein Stoff besteht."},{"id":"periodensystem-lesen","strand":0,"requires":["symbole-der-elemente"],"step":4,"name":"Periodensystem lesen","iCan":"Ich kann ein Element im Periodensystem finden und Ordnungszahl, Symbol, Periode und Gruppe ablesen."},{"id":"metalle-und-nichtmetalle","strand":0,"requires":["periodensystem-lesen","stoffeigenschaften-beschreiben"],"step":5,"name":"Metalle und Nichtmetalle","iCan":"Ich kann Metalle, Nichtmetalle und Grenzfälle an ihren Eigenschaften und ihrem Platz im Periodensystem erkennen."},{"id":"ordnungszahl-und-massenzahl","strand":0,"requires":["atombau-bausteine","periodensystem-lesen"],"step":5,"name":"Ordnungszahl und Massenzahl","iCan":"Ich kann mit Ordnungszahl und Massenzahl die Zahl der Protonen, Neutronen und Elektronen eines Atoms bestimmen."},{"id":"schalenmodell","strand":0,"requires":["ordnungszahl-und-massenzahl"],"step":6,"name":"Schalenmodell","iCan":"Ich kann die Elektronen eines Atoms im Schalenmodell auf die Schalen verteilen."},{"id":"atommodell-mit-energiestufen","strand":0,"requires":["schalenmodell"],"step":7,"name":"Energiestufenmodell","iCan":"Ich kann Elektronen in einem Atommodell mit Energiestufen und Außenelektronen beschreiben."},{"id":"hauptgruppen","strand":0,"requires":["periodensystem-lesen","schalenmodell"],"step":7,"name":"Hauptgruppen","iCan":"Ich kann die acht Hauptgruppen nennen und sagen, wie viele Außenelektronen ihre Atome haben."},{"id":"reaktionen-mit-atommodell-vorhersagen","strand":0,"requires":["atommodell-mit-energiestufen"],"step":8,"name":"Reaktionsverhalten aus Außenelektronen","iCan":"Ich kann mit der Zahl der Außenelektronen vorhersagen, wie ein Atom reagiert."},{"id":"periodensystem-und-atombau","strand":0,"requires":["hauptgruppen","atommodell-mit-energiestufen"],"step":8,"name":"Periodensystem und Atombau","iCan":"Ich kann den Platz eines Elements im Periodensystem mit dem Bau seiner Atome begründen."},{"id":"eigenschaften-im-periodensystem","strand":0,"requires":["periodensystem-und-atombau"],"step":9,"name":"Trends im Periodensystem","iCan":"Ich kann Eigenschaften von Elementen innerhalb einer Gruppe oder Periode vergleichen und Trends erklären."},{"id":"ionen-bilden","strand":0,"requires":["reaktionen-mit-atommodell-vorhersagen"],"step":9,"name":"Ionenbildung","iCan":"Ich kann beschreiben, wie aus Atomen durch Abgeben oder Aufnehmen von Elektronen Ionen entstehen."},{"id":"ionenbindung","strand":0,"requires":["atome-ionen-und-molekuele-unterscheiden","metalle-und-nichtmetalle"],"step":6,"name":"Ionenbindung","iCan":"Ich kann die Ionenbindung beschreiben und sagen, welche Stoffe so gebunden sind."},{"id":"ionengitter","strand":0,"requires":["ionenbindung"],"step":7,"name":"Ionengitter","iCan":"Ich kann den Aufbau eines Ionengitters beschreiben und seine Eigenschaften wie Sprödigkeit und Schmelztemperatur erklären."},{"id":"metallbindung","strand":0,"requires":["metalle-und-nichtmetalle","atome-ionen-und-molekuele-unterscheiden"],"step":6,"name":"Metallbindung","iCan":"Ich kann die Metallbindung beschreiben und damit Eigenschaften von Metallen erklären."},{"id":"elektronenpaarbindung","strand":0,"requires":["reaktionen-mit-atommodell-vorhersagen"],"step":9,"name":"Elektronenpaarbindung","iCan":"Ich kann die Elektronenpaarbindung beschreiben und erklären, warum Nichtmetall-Atome Elektronenpaare teilen."},{"id":"lewis-formeln","strand":0,"requires":["elektronenpaarbindung"],"step":10,"name":"Lewis-Formeln","iCan":"Ich kann Lewis-Formeln einfacher Moleküle zeichnen und lesen."},{"id":"bindungstypen-vergleichen","strand":0,"requires":["ionenbindung","elektronenpaarbindung","metallbindung"],"step":10,"name":"Bindungstypen vergleichen","iCan":"Ich kann Stoffe nach ihrer Bindung (Ionenbindung, Elektronenpaarbindung, Metallbindung) ordnen."},{"id":"raeumliche-struktur-von-molekuelen","strand":0,"requires":["lewis-formeln"],"step":11,"name":"Räumlicher Bau von Molekülen","iCan":"Ich kann die räumliche Struktur einfacher Moleküle beschreiben, etwa von Wasser oder Methan."},{"id":"partialladungen-und-dipole","strand":0,"requires":["raeumliche-struktur-von-molekuelen"],"step":12,"name":"Partialladungen und Dipole","iCan":"Ich kann erklären, wie Partialladungen entstehen, und erkennen, ob ein Molekül ein Dipol ist."},{"id":"wechselwirkungen-zwischen-teilchen","strand":0,"requires":["partialladungen-und-dipole"],"step":13,"name":"Zwischenmolekulare Wechselwirkungen","iCan":"Ich kann Wechselwirkungen zwischen Teilchen wie Wasserstoffbrücken nennen und mit ihnen Stoffeigenschaften erklären."},{"id":"struktur-und-eigenschaften-verbinden","strand":0,"requires":["bindungstypen-vergleichen","wechselwirkungen-zwischen-teilchen"],"step":14,"name":"Struktur-Eigenschafts-Beziehungen","iCan":"Ich kann aus dem Bau der Teilchen und ihrer Bindung auf die Eigenschaften eines Stoffes schließen."},{"id":"kohlenwasserstoffe-alkane","strand":0,"requires":["lewis-formeln"],"step":11,"name":"Alkane","iCan":"Ich kann Alkane mit Molekülformel und Strukturformel darstellen und ihre homologe Reihe benennen."},{"id":"funktionelle-gruppen-und-stoffklassen","strand":0,"requires":["kohlenwasserstoffe-alkane"],"step":12,"name":"Funktionelle Gruppen und Stoffklassen","iCan":"Ich kann organische Stoffe an ihrer funktionellen Gruppe einer Stoffklasse zuordnen, etwa Alkanole."},{"id":"eigenschaften-organischer-stoffe","strand":0,"requires":["funktionelle-gruppen-und-stoffklassen","wechselwirkungen-zwischen-teilchen"],"step":14,"name":"Eigenschaften organischer Stoffe","iCan":"Ich kann Siedetemperatur und Löslichkeit organischer Stoffe mit ihrer Molekülstruktur und den Wechselwirkungen zwischen den Molekülen erklären."},{"id":"kunststoffe","strand":0,"requires":["kohlenwasserstoffe-alkane","wechselwirkungen-zwischen-teilchen"],"step":14,"name":"Kunststoffe","iCan":"Ich kann Eigenschaften und Verwendung von Kunststoffen mit ihrem Bau aus Makromolekülen begründen."},{"id":"kennzeichen-chemischer-reaktionen","strand":1,"requires":["stoffeigenschaften-beschreiben"],"step":3,"name":"Kennzeichen chemischer Reaktionen","iCan":"Ich kann an Beobachtungen erkennen, dass eine chemische Reaktion abgelaufen ist."},{"id":"reaktion-oder-zustandsaenderung","strand":1,"requires":["kennzeichen-chemischer-reaktionen","aggregatzustaende-beschreiben"],"step":4,"name":"Reaktion oder Zustandsänderung","iCan":"Ich kann eine chemische Reaktion von einer Zustandsänderung unterscheiden."},{"id":"synthese-und-analyse","strand":1,"requires":["kennzeichen-chemischer-reaktionen","elemente-und-verbindungen"],"step":4,"name":"Synthese und Analyse","iCan":"Ich kann Synthese und Analyse unterscheiden."},{"id":"massenerhaltung","strand":1,"requires":["kennzeichen-chemischer-reaktionen","teilchenmodell"],"step":4,"name":"Gesetz der Massenerhaltung","iCan":"Ich kann mit einem Versuch zeigen und erklären, dass bei einer Reaktion die Gesamtmasse gleich bleibt."},{"id":"wortgleichung","strand":1,"requires":["kennzeichen-chemischer-reaktionen"],"step":4,"name":"Wortgleichung","iCan":"Ich kann eine Reaktion als Wortgleichung aufschreiben."},{"id":"verbrennung","strand":1,"requires":["kennzeichen-chemischer-reaktionen","elemente-und-verbindungen"],"step":4,"name":"Verbrennung","iCan":"Ich kann eine Verbrennung als Reaktion mit Sauerstoff beschreiben und sagen, was zum Brennen nötig ist."},{"id":"umkehrbarkeit-chemischer-reaktionen","strand":1,"requires":["synthese-und-analyse","wortgleichung"],"step":5,"name":"Umkehrbarkeit chemischer Reaktionen","iCan":"Ich kann an einem Beispiel zeigen, dass eine chemische Reaktion umkehrbar sein kann, etwa Zerlegung und Synthese von Wasser."},{"id":"reaktionsgleichung-aufstellen","strand":1,"requires":["wortgleichung","formeln-von-verbindungen","massenerhaltung","daltonsches-atommodell"],"step":5,"name":"Reaktionsgleichungen aufstellen","iCan":"Ich kann eine einfache Reaktionsgleichung aufstellen, bei der auf beiden Seiten gleich viele Atome stehen."},{"id":"stoffmenge-und-molare-masse","strand":1,"requires":["formeln-von-verbindungen","massenerhaltung"],"step":5,"name":"Stoffmenge und molare Masse","iCan":"Ich kann die Stoffmenge und die molare Masse eines Stoffes nutzen, um Teilchenzahl und Masse ineinander umzurechnen."},{"id":"stoechiometrische-berechnung","strand":1,"requires":["stoffmenge-und-molare-masse","reaktionsgleichung-aufstellen"],"step":6,"name":"Stöchiometrische Berechnungen","iCan":"Ich kann mit einer Reaktionsgleichung berechnen, wie viel Masse eines Stoffes mit einer bestimmten Masse eines anderen reagiert."},{"id":"konzentration-von-loesungen","strand":1,"requires":["stoffmenge-und-molare-masse","loeslichkeit"],"step":6,"name":"Konzentration von Lösungen","iCan":"Ich kann die Konzentration einer Lösung berechnen und eine Lösung mit bestimmter Konzentration herstellen."},{"id":"oxidation-und-reduktion","strand":1,"requires":["reaktionsgleichung-aufstellen","verbrennung"],"step":6,"name":"Oxidation und Reduktion","iCan":"Ich kann Oxidation und Reduktion als Aufnahme und Abgabe von Sauerstoff beschreiben."},{"id":"edle-und-unedle-metalle","strand":1,"requires":["oxidation-und-reduktion","metalle-und-nichtmetalle"],"step":7,"name":"Edle und unedle Metalle","iCan":"Ich kann Metalle nach ihrer Reaktionsfähigkeit mit Sauerstoff in edle und unedle Metalle ordnen."},{"id":"redoxreaktion-als-elektronenuebergang","strand":1,"requires":["oxidation-und-reduktion","ionen-bilden"],"step":10,"name":"Redoxreaktion als Elektronenübertragung","iCan":"Ich kann eine Redoxreaktion als Übertragung von Elektronen zwischen Teilchen beschreiben."},{"id":"elektrolyse","strand":1,"requires":["redoxreaktion-als-elektronenuebergang","elektrische-leitfaehigkeit"],"step":11,"name":"Elektrolyse","iCan":"Ich kann die Elektrolyse einer Salzlösung oder Salzschmelze als erzwungene Redoxreaktion beschreiben."},{"id":"saeure-base-reaktion","strand":1,"requires":["ionen-in-sauren-und-alkalischen-loesungen","reaktionsgleichung-aufstellen"],"step":7,"name":"Säure-Base-Reaktion","iCan":"Ich kann eine Säure-Base-Reaktion als Übertragung von Protonen beschreiben."},{"id":"neutralisation","strand":1,"requires":["saeure-base-reaktion"],"step":8,"name":"Neutralisation","iCan":"Ich kann eine Neutralisation mit einer Reaktionsgleichung beschreiben."},{"id":"salze-loesen","strand":1,"requires":["ionengitter","partialladungen-und-dipole","loeslichkeit"],"step":13,"name":"Lösen von Salzen","iCan":"Ich kann das Lösen eines Salzes in Wasser als Vorgang mit Ionen beschreiben."},{"id":"temperatur-und-reaktionsgeschwindigkeit","strand":1,"requires":["kennzeichen-chemischer-reaktionen","teilchenmodell"],"step":4,"name":"Temperatur und Reaktionsgeschwindigkeit","iCan":"Ich kann erklären, wie eine Änderung der Temperatur die Geschwindigkeit einer Reaktion beeinflusst."},{"id":"energieformen-unterscheiden","strand":2,"requires":[],"step":1,"name":"Energieformen","iCan":"Ich kann chemische, elektrische, thermische und Strahlungsenergie unterscheiden."},{"id":"energieumwandlung-bei-reaktionen","strand":2,"requires":["energieformen-unterscheiden","kennzeichen-chemischer-reaktionen"],"step":4,"name":"Energieumwandlung bei Reaktionen","iCan":"Ich kann beschreiben, welche Energieformen bei einer Reaktion ineinander umgewandelt werden."},{"id":"exotherm-und-endotherm","strand":2,"requires":["energieumwandlung-bei-reaktionen"],"step":5,"name":"Exotherm und endotherm","iCan":"Ich kann exotherme und endotherme Reaktionen an Messwerten und Beobachtungen unterscheiden."},{"id":"energieerhaltung","strand":2,"requires":["energieumwandlung-bei-reaktionen"],"step":5,"name":"Energieerhaltung","iCan":"Ich kann erklären, dass bei einer Reaktion Energie weder entsteht noch verschwindet."},{"id":"energieschema-lesen","strand":2,"requires":["exotherm-und-endotherm"],"step":6,"name":"Energiediagramm","iCan":"Ich kann ein Energieschema einer Reaktion lesen und zeichnen."},{"id":"aktivierungsenergie","strand":2,"requires":["energieschema-lesen"],"step":7,"name":"Aktivierungsenergie","iCan":"Ich kann an einem Energieschema die Aktivierungsenergie zeigen und erklären, warum manche Reaktionen erst nach einem Anstoß ablaufen."},{"id":"energieaustausch-mit-der-umgebung","strand":2,"requires":["exotherm-und-endotherm","energieerhaltung"],"step":6,"name":"System und Umgebung","iCan":"Ich kann beschreiben, wie ein Reaktionssystem Energie mit seiner Umgebung austauscht."},{"id":"katalysator","strand":2,"requires":["aktivierungsenergie","temperatur-und-reaktionsgeschwindigkeit"],"step":8,"name":"Katalysator","iCan":"Ich kann erklären, wie ein Katalysator die Aktivierungsenergie senkt und eine Reaktion beschleunigt."},{"id":"energie-beim-loesen-von-salzen","strand":2,"requires":["salze-loesen","exotherm-und-endotherm"],"step":14,"name":"Lösungswärme von Salzen","iCan":"Ich kann erklären, warum sich eine Lösung beim Lösen eines Salzes erwärmt oder abkühlt."},{"id":"galvanisches-element","strand":2,"requires":["redoxreaktion-als-elektronenuebergang","energieumwandlung-bei-reaktionen"],"step":11,"name":"Galvanisches Element","iCan":"Ich kann erklären, wie in einer Batterie oder einem galvanischen Element chemische Energie in elektrische Energie umgewandelt wird."}]}</script>
-<script type="application/json" id="map-steps-text">{"kind":"{strand} · Stufe {step}","step":"Stufe {step}","before":"Baut auf","after":"Darauf baut auf","nothing":"keine","page":"Zur Seite des Bausteins","clear":"Auswahl aufheben","pageUrl":"/apps/pr-preview/pr-248/map/chemie/c/{id}/"}</script>
+<script type="application/json" id="map-steps-data">{"strands":["Aufbau und Eigenschaften von Stoffen und Teilchen","Chemische Reaktion","Energie"],"competencies":[{"id":"sicherheit-beim-experimentieren","strand":0,"requires":[],"step":1,"band":"7/8","bandStep":1,"name":"Sicherheit beim Experimentieren","iCan":"Ich kann beim Experimentieren die Sicherheitsregeln einhalten und Gefahrenzeichen deuten."},{"id":"stoffeigenschaften-beschreiben","strand":0,"requires":["sicherheit-beim-experimentieren"],"step":2,"band":"7/8","bandStep":2,"name":"Stoffeigenschaften","iCan":"Ich kann Stoffe an ihren Eigenschaften wie Farbe, Geruch, Härte und Dichte beschreiben."},{"id":"aggregatzustaende-beschreiben","strand":0,"requires":[],"step":1,"band":"7/8","bandStep":1,"name":"Aggregatzustände und Übergänge","iCan":"Ich kann die drei Aggregatzustände und ihre Übergänge (schmelzen, erstarren, verdampfen, kondensieren, sublimieren) benennen und beschreiben."},{"id":"schmelz-und-siedetemperatur","strand":0,"requires":["aggregatzustaende-beschreiben"],"step":2,"band":"7/8","bandStep":2,"name":"Schmelz- und Siedetemperatur","iCan":"Ich kann Schmelz- und Siedetemperatur eines Stoffes aus einer Tabelle oder Messreihe ablesen und deuten."},{"id":"aggregatzustand-bei-aeusseren-bedingungen","strand":0,"requires":["schmelz-und-siedetemperatur"],"step":3,"band":"7/8","bandStep":3,"name":"Aggregatzustand vorhersagen","iCan":"Ich kann vorhersagen, in welchem Aggregatzustand ein Stoff bei einer bestimmten Temperatur und einem bestimmten Druck vorliegt."},{"id":"stoffe-erkennen-und-verwenden","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Stoffe erkennen und verwenden","iCan":"Ich kann einen Stoff an seinen Eigenschaften erkennen und aus ihnen auf seine Verwendung schließen."},{"id":"elektrische-leitfaehigkeit","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Elektrische Leitfähigkeit","iCan":"Ich kann mit einem Versuch prüfen, ob ein Stoff oder eine Lösung Strom leitet."},{"id":"loeslichkeit","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Löslichkeit in Wasser","iCan":"Ich kann untersuchen und angeben, wie gut sich ein Stoff in Wasser löst."},{"id":"gasnachweise","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Gasnachweise","iCan":"Ich kann Sauerstoff, Wasserstoff und Kohlenstoffdioxid mit Glimmspan-, Knallgas- und Kalkwasserprobe nachweisen."},{"id":"ph-wert-deuten","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":10,"band":"9/10","bandStep":1,"name":"pH-Wert und Indikatoren","iCan":"Ich kann mit Indikatoren und dem pH-Wert eine Lösung als sauer, neutral oder alkalisch einordnen."},{"id":"ionen-in-sauren-und-alkalischen-loesungen","strand":0,"requires":["ph-wert-deuten","atome-ionen-und-molekuele-unterscheiden"],"step":11,"band":"9/10","bandStep":2,"name":"Ionen in sauren und alkalischen Lösungen","iCan":"Ich kann erklären, dass saure Lösungen Oxonium-Ionen und alkalische Lösungen Hydroxid-Ionen enthalten."},{"id":"reinstoffe-und-gemische","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Reinstoffe und Gemische","iCan":"Ich kann Reinstoffe und Gemische unterscheiden."},{"id":"gemische-trennen","strand":0,"requires":["reinstoffe-und-gemische"],"step":4,"band":"7/8","bandStep":4,"name":"Trennverfahren","iCan":"Ich kann ein Stoffgemisch mit einem passenden Verfahren trennen, etwa durch Filtrieren, Eindampfen oder Destillieren."},{"id":"elemente-und-verbindungen","strand":0,"requires":["reinstoffe-und-gemische"],"step":4,"band":"7/8","bandStep":4,"name":"Elemente und Verbindungen","iCan":"Ich kann Elemente und Verbindungen als Reinstoffe unterscheiden."},{"id":"teilchenmodell","strand":0,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Teilchenmodell","iCan":"Ich kann das Teilchenmodell beschreiben und sagen, was es erklärt und was nicht."},{"id":"aggregatzustaende-mit-teilchenmodell","strand":0,"requires":["teilchenmodell","aggregatzustaende-beschreiben"],"step":4,"band":"7/8","bandStep":4,"name":"Aggregatzustände im Teilchenmodell","iCan":"Ich kann mit dem Teilchenmodell erklären, warum Stoffe fest, flüssig oder gasförmig sind und wie sie ineinander übergehen."},{"id":"denkmodelle-und-sachmodelle","strand":0,"requires":["teilchenmodell"],"step":4,"band":"7/8","bandStep":4,"name":"Denkmodelle und Sachmodelle","iCan":"Ich kann ein Denkmodell und ein Sachmodell unterscheiden und sagen, wofür ein Modell taugt und wo es an Grenzen stößt."},{"id":"daltonsches-atommodell","strand":0,"requires":["teilchenmodell","elemente-und-verbindungen","massenerhaltung"],"step":5,"band":"7/8","bandStep":5,"name":"Daltonsches Atommodell","iCan":"Ich kann mit dem Atommodell nach Dalton erklären, was Atome sind und wie sie sich bei einer Reaktion neu gruppieren."},{"id":"symbole-der-elemente","strand":0,"requires":["elemente-und-verbindungen"],"step":5,"band":"7/8","bandStep":5,"name":"Elementsymbole","iCan":"Ich kann Elemente mit ihrem Symbol benennen und schreiben."},{"id":"formeln-von-verbindungen","strand":0,"requires":["symbole-der-elemente","daltonsches-atommodell"],"step":6,"band":"7/8","bandStep":6,"name":"Formeln von Verbindungen","iCan":"Ich kann die Formel einer Verbindung lesen und schreiben und sagen, welche Atome in welcher Anzahl enthalten sind."},{"id":"atombau-bausteine","strand":0,"requires":["daltonsches-atommodell"],"step":6,"band":"7/8","bandStep":6,"name":"Bausteine des Atoms","iCan":"Ich kann sagen, aus welchen Teilchen ein Atom besteht: Protonen, Neutronen und Elektronen."},{"id":"atome-ionen-und-molekuele-unterscheiden","strand":0,"requires":["atombau-bausteine","formeln-von-verbindungen"],"step":7,"band":"7/8","bandStep":7,"name":"Atome, Ionen und Moleküle","iCan":"Ich kann Atome, Ionen und Moleküle unterscheiden und an Beispielen zeigen, aus welchen Teilchen ein Stoff besteht."},{"id":"periodensystem-lesen","strand":0,"requires":["symbole-der-elemente"],"step":6,"band":"7/8","bandStep":6,"name":"Periodensystem lesen","iCan":"Ich kann ein Element im Periodensystem finden und Ordnungszahl, Symbol, Periode und Gruppe ablesen."},{"id":"metalle-und-nichtmetalle","strand":0,"requires":["periodensystem-lesen"],"step":7,"band":"7/8","bandStep":7,"name":"Metalle und Nichtmetalle","iCan":"Ich kann Metalle, Nichtmetalle und Grenzfälle an ihren Eigenschaften und ihrem Platz im Periodensystem erkennen."},{"id":"ordnungszahl-und-massenzahl","strand":0,"requires":["atombau-bausteine","periodensystem-lesen"],"step":10,"band":"9/10","bandStep":1,"name":"Ordnungszahl und Massenzahl","iCan":"Ich kann mit Ordnungszahl und Massenzahl die Zahl der Protonen, Neutronen und Elektronen eines Atoms bestimmen."},{"id":"schalenmodell","strand":0,"requires":["ordnungszahl-und-massenzahl"],"step":11,"band":"9/10","bandStep":2,"name":"Schalenmodell","iCan":"Ich kann die Elektronen eines Atoms im Schalenmodell auf die Schalen verteilen."},{"id":"atommodell-mit-energiestufen","strand":0,"requires":["schalenmodell"],"step":12,"band":"9/10","bandStep":3,"name":"Energiestufenmodell","iCan":"Ich kann Elektronen in einem Atommodell mit Energiestufen und Außenelektronen beschreiben."},{"id":"hauptgruppen","strand":0,"requires":["schalenmodell"],"step":12,"band":"9/10","bandStep":3,"name":"Hauptgruppen","iCan":"Ich kann die acht Hauptgruppen nennen und sagen, wie viele Außenelektronen ihre Atome haben."},{"id":"reaktionen-mit-atommodell-vorhersagen","strand":0,"requires":["atommodell-mit-energiestufen"],"step":13,"band":"9/10","bandStep":4,"name":"Reaktionsverhalten aus Außenelektronen","iCan":"Ich kann mit der Zahl der Außenelektronen vorhersagen, wie ein Atom reagiert."},{"id":"periodensystem-und-atombau","strand":0,"requires":["hauptgruppen","atommodell-mit-energiestufen"],"step":13,"band":"9/10","bandStep":4,"name":"Periodensystem und Atombau","iCan":"Ich kann den Platz eines Elements im Periodensystem mit dem Bau seiner Atome begründen."},{"id":"eigenschaften-im-periodensystem","strand":0,"requires":["periodensystem-und-atombau"],"step":14,"band":"9/10","bandStep":5,"name":"Trends im Periodensystem","iCan":"Ich kann Eigenschaften von Elementen innerhalb einer Gruppe oder Periode vergleichen und Trends erklären."},{"id":"ionen-bilden","strand":0,"requires":["reaktionen-mit-atommodell-vorhersagen"],"step":14,"band":"9/10","bandStep":5,"name":"Ionenbildung","iCan":"Ich kann beschreiben, wie aus Atomen durch Abgeben oder Aufnehmen von Elektronen Ionen entstehen."},{"id":"ionenbindung","strand":0,"requires":["atome-ionen-und-molekuele-unterscheiden","metalle-und-nichtmetalle"],"step":8,"band":"7/8","bandStep":8,"name":"Ionenbindung","iCan":"Ich kann die Ionenbindung beschreiben und sagen, welche Stoffe so gebunden sind."},{"id":"ionengitter","strand":0,"requires":["ionenbindung"],"step":9,"band":"7/8","bandStep":9,"name":"Ionengitter","iCan":"Ich kann den Aufbau eines Ionengitters beschreiben und seine Eigenschaften wie Sprödigkeit und Schmelztemperatur erklären."},{"id":"metallbindung","strand":0,"requires":["metalle-und-nichtmetalle","atome-ionen-und-molekuele-unterscheiden"],"step":8,"band":"7/8","bandStep":8,"name":"Metallbindung","iCan":"Ich kann die Metallbindung beschreiben und damit Eigenschaften von Metallen erklären."},{"id":"elektronenpaarbindung","strand":0,"requires":["reaktionen-mit-atommodell-vorhersagen"],"step":14,"band":"9/10","bandStep":5,"name":"Elektronenpaarbindung","iCan":"Ich kann die Elektronenpaarbindung beschreiben und erklären, warum Nichtmetall-Atome Elektronenpaare teilen."},{"id":"lewis-formeln","strand":0,"requires":["elektronenpaarbindung"],"step":15,"band":"9/10","bandStep":6,"name":"Lewis-Formeln","iCan":"Ich kann Lewis-Formeln einfacher Moleküle zeichnen und lesen."},{"id":"bindungstypen-vergleichen","strand":0,"requires":["ionenbindung","elektronenpaarbindung","metallbindung"],"step":15,"band":"9/10","bandStep":6,"name":"Bindungstypen vergleichen","iCan":"Ich kann Stoffe nach ihrer Bindung (Ionenbindung, Elektronenpaarbindung, Metallbindung) ordnen."},{"id":"raeumliche-struktur-von-molekuelen","strand":0,"requires":["lewis-formeln"],"step":16,"band":"9/10","bandStep":7,"name":"Räumlicher Bau von Molekülen","iCan":"Ich kann die räumliche Struktur einfacher Moleküle beschreiben, etwa von Wasser oder Methan."},{"id":"partialladungen-und-dipole","strand":0,"requires":["raeumliche-struktur-von-molekuelen"],"step":17,"band":"9/10","bandStep":8,"name":"Partialladungen und Dipole","iCan":"Ich kann erklären, wie Partialladungen entstehen, und erkennen, ob ein Molekül ein Dipol ist."},{"id":"wechselwirkungen-zwischen-teilchen","strand":0,"requires":["partialladungen-und-dipole"],"step":18,"band":"9/10","bandStep":9,"name":"Zwischenmolekulare Wechselwirkungen","iCan":"Ich kann Wechselwirkungen zwischen Teilchen wie Wasserstoffbrücken nennen und mit ihnen Stoffeigenschaften erklären."},{"id":"struktur-und-eigenschaften-verbinden","strand":0,"requires":["bindungstypen-vergleichen","wechselwirkungen-zwischen-teilchen"],"step":19,"band":"9/10","bandStep":10,"name":"Struktur-Eigenschafts-Beziehungen","iCan":"Ich kann aus dem Bau der Teilchen und ihrer Bindung auf die Eigenschaften eines Stoffes schließen."},{"id":"kohlenwasserstoffe-alkane","strand":0,"requires":["lewis-formeln"],"step":16,"band":"9/10","bandStep":7,"name":"Alkane","iCan":"Ich kann Alkane mit Molekülformel und Strukturformel darstellen und ihre homologe Reihe benennen."},{"id":"funktionelle-gruppen-und-stoffklassen","strand":0,"requires":["kohlenwasserstoffe-alkane"],"step":17,"band":"9/10","bandStep":8,"name":"Funktionelle Gruppen und Stoffklassen","iCan":"Ich kann organische Stoffe an ihrer funktionellen Gruppe einer Stoffklasse zuordnen, etwa Alkanole."},{"id":"eigenschaften-organischer-stoffe","strand":0,"requires":["funktionelle-gruppen-und-stoffklassen","wechselwirkungen-zwischen-teilchen"],"step":19,"band":"9/10","bandStep":10,"name":"Eigenschaften organischer Stoffe","iCan":"Ich kann Siedetemperatur und Löslichkeit organischer Stoffe mit ihrer Molekülstruktur und den Wechselwirkungen zwischen den Molekülen erklären."},{"id":"kunststoffe","strand":0,"requires":["kohlenwasserstoffe-alkane","wechselwirkungen-zwischen-teilchen"],"step":19,"band":"9/10","bandStep":10,"name":"Kunststoffe","iCan":"Ich kann Eigenschaften und Verwendung von Kunststoffen mit ihrem Bau aus Makromolekülen begründen."},{"id":"kennzeichen-chemischer-reaktionen","strand":1,"requires":["stoffeigenschaften-beschreiben"],"step":3,"band":"7/8","bandStep":3,"name":"Kennzeichen chemischer Reaktionen","iCan":"Ich kann an Beobachtungen erkennen, dass eine chemische Reaktion abgelaufen ist."},{"id":"reaktion-oder-zustandsaenderung","strand":1,"requires":["kennzeichen-chemischer-reaktionen","aggregatzustaende-beschreiben"],"step":4,"band":"7/8","bandStep":4,"name":"Reaktion oder Zustandsänderung","iCan":"Ich kann eine chemische Reaktion von einer Zustandsänderung unterscheiden."},{"id":"synthese-und-analyse","strand":1,"requires":["kennzeichen-chemischer-reaktionen","elemente-und-verbindungen"],"step":5,"band":"7/8","bandStep":5,"name":"Synthese und Analyse","iCan":"Ich kann Synthese und Analyse unterscheiden."},{"id":"massenerhaltung","strand":1,"requires":["kennzeichen-chemischer-reaktionen"],"step":4,"band":"7/8","bandStep":4,"name":"Gesetz der Massenerhaltung","iCan":"Ich kann mit einem Versuch zeigen und erklären, dass bei einer Reaktion die Gesamtmasse gleich bleibt."},{"id":"wortgleichung","strand":1,"requires":["kennzeichen-chemischer-reaktionen"],"step":4,"band":"7/8","bandStep":4,"name":"Wortgleichung","iCan":"Ich kann eine Reaktion als Wortgleichung aufschreiben."},{"id":"verbrennung","strand":1,"requires":["kennzeichen-chemischer-reaktionen","elemente-und-verbindungen"],"step":5,"band":"7/8","bandStep":5,"name":"Verbrennung","iCan":"Ich kann eine Verbrennung als Reaktion mit Sauerstoff beschreiben und sagen, was zum Brennen nötig ist."},{"id":"umkehrbarkeit-chemischer-reaktionen","strand":1,"requires":["synthese-und-analyse","wortgleichung"],"step":10,"band":"9/10","bandStep":1,"name":"Umkehrbarkeit chemischer Reaktionen","iCan":"Ich kann an einem Beispiel zeigen, dass eine chemische Reaktion umkehrbar sein kann, etwa Zerlegung und Synthese von Wasser."},{"id":"reaktionsgleichung-aufstellen","strand":1,"requires":["wortgleichung","formeln-von-verbindungen"],"step":7,"band":"7/8","bandStep":7,"name":"Reaktionsgleichungen aufstellen","iCan":"Ich kann eine einfache Reaktionsgleichung aufstellen, bei der auf beiden Seiten gleich viele Atome stehen."},{"id":"stoffmenge-und-molare-masse","strand":1,"requires":["formeln-von-verbindungen"],"step":10,"band":"9/10","bandStep":1,"name":"Stoffmenge und molare Masse","iCan":"Ich kann die Stoffmenge und die molare Masse eines Stoffes nutzen, um Teilchenzahl und Masse ineinander umzurechnen."},{"id":"stoechiometrische-berechnung","strand":1,"requires":["stoffmenge-und-molare-masse","reaktionsgleichung-aufstellen"],"step":11,"band":"9/10","bandStep":2,"name":"Stöchiometrische Berechnungen","iCan":"Ich kann mit einer Reaktionsgleichung berechnen, wie viel Masse eines Stoffes mit einer bestimmten Masse eines anderen reagiert."},{"id":"konzentration-von-loesungen","strand":1,"requires":["stoffmenge-und-molare-masse","loeslichkeit"],"step":11,"band":"9/10","bandStep":2,"name":"Konzentration von Lösungen","iCan":"Ich kann die Konzentration einer Lösung berechnen und eine Lösung mit bestimmter Konzentration herstellen."},{"id":"oxidation-und-reduktion","strand":1,"requires":["reaktionsgleichung-aufstellen","verbrennung"],"step":8,"band":"7/8","bandStep":8,"name":"Oxidation und Reduktion","iCan":"Ich kann Oxidation und Reduktion als Aufnahme und Abgabe von Sauerstoff beschreiben."},{"id":"edle-und-unedle-metalle","strand":1,"requires":["oxidation-und-reduktion","metalle-und-nichtmetalle"],"step":9,"band":"7/8","bandStep":9,"name":"Edle und unedle Metalle","iCan":"Ich kann Metalle nach ihrer Reaktionsfähigkeit mit Sauerstoff in edle und unedle Metalle ordnen."},{"id":"redoxreaktion-als-elektronenuebergang","strand":1,"requires":["oxidation-und-reduktion","ionen-bilden"],"step":15,"band":"9/10","bandStep":6,"name":"Redoxreaktion als Elektronenübertragung","iCan":"Ich kann eine Redoxreaktion als Übertragung von Elektronen zwischen Teilchen beschreiben."},{"id":"elektrolyse","strand":1,"requires":["redoxreaktion-als-elektronenuebergang","elektrische-leitfaehigkeit"],"step":16,"band":"9/10","bandStep":7,"name":"Elektrolyse","iCan":"Ich kann die Elektrolyse einer Salzlösung oder Salzschmelze als erzwungene Redoxreaktion beschreiben."},{"id":"saeure-base-reaktion","strand":1,"requires":["ionen-in-sauren-und-alkalischen-loesungen","reaktionsgleichung-aufstellen"],"step":12,"band":"9/10","bandStep":3,"name":"Säure-Base-Reaktion","iCan":"Ich kann eine Säure-Base-Reaktion als Übertragung von Protonen beschreiben."},{"id":"neutralisation","strand":1,"requires":["saeure-base-reaktion"],"step":13,"band":"9/10","bandStep":4,"name":"Neutralisation","iCan":"Ich kann eine Neutralisation mit einer Reaktionsgleichung beschreiben."},{"id":"salze-loesen","strand":1,"requires":["ionengitter","partialladungen-und-dipole","loeslichkeit"],"step":18,"band":"9/10","bandStep":9,"name":"Lösen von Salzen","iCan":"Ich kann das Lösen eines Salzes in Wasser als Vorgang mit Ionen beschreiben."},{"id":"temperatur-und-reaktionsgeschwindigkeit","strand":1,"requires":["kennzeichen-chemischer-reaktionen","teilchenmodell"],"step":10,"band":"9/10","bandStep":1,"name":"Temperatur und Reaktionsgeschwindigkeit","iCan":"Ich kann erklären, wie eine Änderung der Temperatur die Geschwindigkeit einer Reaktion beeinflusst."},{"id":"energieformen-unterscheiden","strand":2,"requires":[],"step":1,"band":"7/8","bandStep":1,"name":"Energieformen","iCan":"Ich kann chemische, elektrische, thermische und Strahlungsenergie unterscheiden."},{"id":"energieumwandlung-bei-reaktionen","strand":2,"requires":["energieformen-unterscheiden","kennzeichen-chemischer-reaktionen"],"step":4,"band":"7/8","bandStep":4,"name":"Energieumwandlung bei Reaktionen","iCan":"Ich kann beschreiben, welche Energieformen bei einer Reaktion ineinander umgewandelt werden."},{"id":"exotherm-und-endotherm","strand":2,"requires":["energieumwandlung-bei-reaktionen"],"step":5,"band":"7/8","bandStep":5,"name":"Exotherm und endotherm","iCan":"Ich kann exotherme und endotherme Reaktionen an Messwerten und Beobachtungen unterscheiden."},{"id":"energieerhaltung","strand":2,"requires":["energieumwandlung-bei-reaktionen"],"step":5,"band":"7/8","bandStep":5,"name":"Energieerhaltung","iCan":"Ich kann erklären, dass bei einer Reaktion Energie weder entsteht noch verschwindet."},{"id":"energieschema-lesen","strand":2,"requires":["exotherm-und-endotherm"],"step":6,"band":"7/8","bandStep":6,"name":"Energiediagramm","iCan":"Ich kann ein Energieschema einer Reaktion lesen und zeichnen."},{"id":"aktivierungsenergie","strand":2,"requires":["energieschema-lesen"],"step":7,"band":"7/8","bandStep":7,"name":"Aktivierungsenergie","iCan":"Ich kann an einem Energieschema die Aktivierungsenergie zeigen und erklären, warum manche Reaktionen erst nach einem Anstoß ablaufen."},{"id":"energieaustausch-mit-der-umgebung","strand":2,"requires":["exotherm-und-endotherm","energieerhaltung"],"step":10,"band":"9/10","bandStep":1,"name":"System und Umgebung","iCan":"Ich kann beschreiben, wie ein Reaktionssystem Energie mit seiner Umgebung austauscht."},{"id":"katalysator","strand":2,"requires":["aktivierungsenergie","temperatur-und-reaktionsgeschwindigkeit"],"step":11,"band":"9/10","bandStep":2,"name":"Katalysator","iCan":"Ich kann erklären, wie ein Katalysator die Aktivierungsenergie senkt und eine Reaktion beschleunigt."},{"id":"energie-beim-loesen-von-salzen","strand":2,"requires":["salze-loesen","exotherm-und-endotherm"],"step":19,"band":"9/10","bandStep":10,"name":"Lösungswärme von Salzen","iCan":"Ich kann erklären, warum sich eine Lösung beim Lösen eines Salzes erwärmt oder abkühlt."},{"id":"galvanisches-element","strand":2,"requires":["redoxreaktion-als-elektronenuebergang","energieumwandlung-bei-reaktionen"],"step":16,"band":"9/10","bandStep":7,"name":"Galvanisches Element","iCan":"Ich kann erklären, wie in einer Batterie oder einem galvanischen Element chemische Energie in elektrische Energie umgewandelt wird."}]}</script>
+<script type="application/json" id="map-steps-text">{"kind":"{strand} · {place}","place":"Klasse {band} · Schritt {step}","before":"Baut auf","after":"Darauf baut auf","nothing":"keine","page":"Zur Seite des Bausteins","clear":"Auswahl aufheben","pageUrl":"/apps/pr-preview/pr-248/map/chemie/c/{id}/"}</script>
 
 <dialog class="map-dialog" data-map-dialog aria-labelledby="map-dialog-title">
   <div class="map-dialog-inner">

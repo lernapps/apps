@@ -28,6 +28,11 @@
           "iCan": "Ich kann Gesprächsregeln nennen und erklären, warum sie ein Gespräch gelingen lassen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -39,6 +44,11 @@
           "iCan": "Ich kann aktiv zuhören, gezielt nachfragen und das Gehörte in eigenen Worten wiedergeben.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -52,6 +62,11 @@
           "requires": [
             "aktiv-zuhoeren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -63,6 +78,11 @@
           "iCan": "Ich kann im Gespräch meine Meinung sagen und sie mit Gründen und Beispielen stützen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 16,
           "practisedBy": []
         },
         {
@@ -76,6 +96,11 @@
           "requires": [
             "meinung-begruenden-muendlich"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -89,6 +114,11 @@
           "requires": [
             "gespraechsregeln"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -100,6 +130,11 @@
           "iCan": "Ich kann Lautstärke, Tempo, Betonung, Blickkontakt, Mimik und Gestik beim Sprechen bewusst einsetzen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -113,6 +148,11 @@
           "requires": [
             "koerpersprache-und-stimme"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -126,6 +166,11 @@
           "requires": [
             "koerpersprache-und-stimme"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -139,6 +184,11 @@
           "requires": [
             "vorlesen-und-vortragen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -152,6 +202,11 @@
           "requires": [
             "koerpersprache-und-stimme"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -165,6 +220,11 @@
           "requires": [
             "kurzvortrag"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -179,6 +239,11 @@
             "kurzvortrag",
             "recherchieren"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -192,6 +257,11 @@
           "requires": [
             "referat"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -204,8 +274,14 @@
           "gradeBand": "7-8",
           "requires": [
             "meinung-begruenden-muendlich",
-            "gespraechsregeln"
+            "gespraechsregeln",
+            "aktiv-zuhoeren"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -219,6 +295,11 @@
           "requires": [
             "diskussion-fuehren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -232,6 +313,11 @@
           "requires": [
             "diskussion-fuehren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -243,9 +329,13 @@
           "iCan": "Ich kann ein Interview vorbereiten, führen und auswerten.",
           "gradeBand": "7-8",
           "requires": [
-            "aktiv-zuhoeren",
             "mitschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -259,6 +349,11 @@
           "requires": [
             "sprachregister-waehlen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -279,6 +374,11 @@
           "iCan": "Ich kann vor dem Schreiben klären, für wen und wozu ich schreibe, und meinen Text danach ausrichten.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 21,
           "practisedBy": []
         },
         {
@@ -292,6 +392,11 @@
           "requires": [
             "schreibziel-und-adressat"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 9,
           "practisedBy": []
         },
         {
@@ -302,7 +407,14 @@
           },
           "iCan": "Ich kann einen Text mit einer Checkliste, der Textlupe oder in einer Schreibkonferenz überarbeiten.",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "schreibziel-und-adressat"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -314,6 +426,11 @@
           "iCan": "Ich kann mit einem Textverarbeitungsprogramm einen Text schreiben, gliedern und formatieren.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -327,6 +444,11 @@
           "requires": [
             "schreibplan"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -341,6 +463,11 @@
             "erzaehlung-aufbauen",
             "woertliche-rede-zeichensetzen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -354,6 +481,11 @@
           "requires": [
             "erzaehlung-aufbauen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -367,6 +499,11 @@
           "requires": [
             "erzaehlung-aufbauen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -381,6 +518,11 @@
             "fabel",
             "erzaehlung-aufbauen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -394,6 +536,11 @@
           "requires": [
             "vers-strophe-reim"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -407,6 +554,11 @@
           "requires": [
             "spannend-erzaehlen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -420,6 +572,11 @@
           "requires": [
             "schreibziel-und-adressat"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -433,6 +590,11 @@
           "requires": [
             "gegenstand-beschreiben"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -446,6 +608,11 @@
           "requires": [
             "schreibziel-und-adressat"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -459,6 +626,11 @@
           "requires": [
             "gegenstand-beschreiben"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -472,6 +644,11 @@
           "requires": [
             "gegenstand-beschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -486,6 +663,11 @@
             "schreibziel-und-adressat",
             "tempus-praesens-praeteritum"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -501,6 +683,11 @@
             "diagramme-lesen",
             "quellen-pruefen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -514,6 +701,11 @@
           "requires": [
             "kernaussagen-wiedergeben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -529,6 +721,11 @@
             "indirekte-rede",
             "handlung-erschliessen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -543,6 +740,11 @@
             "inhaltsangabe",
             "sachtext-aufbau"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -556,6 +758,11 @@
           "requires": [
             "mitschreiben"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -569,6 +776,11 @@
           "requires": [
             "markieren-und-gliedern"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -582,6 +794,11 @@
           "requires": [
             "meinung-begruenden-muendlich"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 11,
           "practisedBy": []
         },
         {
@@ -595,6 +812,11 @@
           "requires": [
             "schriftlich-stellung-nehmen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -608,6 +830,11 @@
           "requires": [
             "argument-aufbauen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -621,6 +848,11 @@
           "requires": [
             "schreibziel-und-adressat"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -635,6 +867,11 @@
             "formeller-brief",
             "argumente-ordnen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -648,6 +885,11 @@
           "requires": [
             "argumente-ordnen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -662,6 +904,11 @@
             "schreibplan",
             "argumente-ordnen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -676,6 +923,11 @@
             "lineare-eroerterung",
             "gliederung-erstellen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -690,6 +942,11 @@
             "dialektische-eroerterung",
             "zitieren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -704,6 +961,11 @@
             "nachricht-und-kommentar",
             "argumente-ordnen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -718,6 +980,11 @@
             "buch-vorstellen",
             "argument-aufbauen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -731,6 +998,11 @@
           "requires": [
             "textverarbeitung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -745,6 +1017,11 @@
             "formeller-brief",
             "lebenslauf"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -758,6 +1035,11 @@
           "requires": [
             "textbelege-angeben"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -771,6 +1053,11 @@
           "requires": [
             "indirekte-rede"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -784,6 +1071,11 @@
           "requires": [
             "recherchieren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -799,6 +1091,11 @@
             "zitieren",
             "basissatz"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -814,6 +1111,11 @@
             "sachtext-zusammenfassen",
             "zitieren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -825,6 +1127,11 @@
           "iCan": "Ich kann Wörter in Silben und Bausteine zerlegen, um sie richtig zu schreiben.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 11,
           "practisedBy": []
         },
         {
@@ -836,9 +1143,13 @@
           "iCan": "Ich kann durch Verlängern (Hund – Hunde) und Ableiten (Bäume – Baum) entscheiden, wie ein Wort geschrieben wird.",
           "gradeBand": "5-6",
           "requires": [
-            "silben-und-wortbausteine",
             "wortfamilie"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -852,6 +1163,11 @@
           "requires": [
             "silben-und-wortbausteine"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -865,6 +1181,11 @@
           "requires": [
             "silben-und-wortbausteine"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -879,6 +1200,11 @@
             "dehnung",
             "schaerfung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -893,6 +1219,11 @@
             "pronomen",
             "konjunktionen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -906,6 +1237,11 @@
           "requires": [
             "nomen-und-artikel"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -919,6 +1255,11 @@
           "requires": [
             "grossschreibung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -932,6 +1273,11 @@
           "requires": [
             "zusammensetzung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -945,6 +1291,11 @@
           "requires": [
             "silben-und-wortbausteine"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -956,8 +1307,14 @@
           "iCan": "Ich kann häufige Fremdwörter richtig schreiben und ihre Schreibung nachschlagen.",
           "gradeBand": "7-8",
           "requires": [
-            "im-woerterbuch-nachschlagen"
+            "im-woerterbuch-nachschlagen",
+            "erbwort-lehnwort-fremdwort"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -971,6 +1328,11 @@
           "requires": [
             "alphabet-und-grundform"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -984,6 +1346,11 @@
           "requires": [
             "verb-konjugieren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -998,6 +1365,11 @@
             "verlaengern-und-ableiten",
             "im-woerterbuch-nachschlagen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1011,6 +1383,11 @@
           "requires": [
             "satzarten"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -1024,6 +1401,11 @@
           "requires": [
             "satzschlusszeichen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1035,6 +1417,11 @@
           "iCan": "Ich kann Kommas bei Aufzählungen richtig setzen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1046,8 +1433,14 @@
           "iCan": "Ich kann Kommas zwischen Hauptsätzen und zwischen Haupt- und Nebensatz setzen.",
           "gradeBand": "5-6",
           "requires": [
-            "satzreihe-und-satzgefuege"
+            "satzreihe-und-satzgefuege",
+            "komma-aufzaehlung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1061,6 +1454,11 @@
           "requires": [
             "attribut"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1074,6 +1472,11 @@
           "requires": [
             "infinitiv-und-partizipgruppen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -1094,6 +1497,11 @@
           "iCan": "Ich kann je nach Leseziel einen Text überfliegen, gezielt nach Informationen suchen oder genau lesen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 20,
           "practisedBy": []
         },
         {
@@ -1105,6 +1513,11 @@
           "iCan": "Ich kann vor dem Lesen ein Leseziel festlegen, mein Vorwissen sammeln und Erwartungen an den Text formulieren.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1118,6 +1531,11 @@
           "requires": [
             "lesetechniken"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 18,
           "practisedBy": []
         },
         {
@@ -1131,6 +1549,11 @@
           "requires": [
             "im-woerterbuch-nachschlagen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1144,6 +1567,11 @@
           "requires": [
             "markieren-und-gliedern"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 15,
           "practisedBy": []
         },
         {
@@ -1157,6 +1585,11 @@
           "requires": [
             "lesen-vorbereiten"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1170,6 +1603,11 @@
           "requires": [
             "kernaussagen-wiedergeben"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1183,6 +1621,11 @@
           "requires": [
             "kernaussagen-wiedergeben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1196,6 +1639,11 @@
           "requires": [
             "kernaussagen-wiedergeben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1209,6 +1657,11 @@
           "requires": [
             "lesetechniken"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1222,6 +1675,11 @@
           "requires": [
             "kernaussagen-wiedergeben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -1242,6 +1700,11 @@
           "iCan": "Ich kann literarische Texte von Sachtexten unterscheiden und erklären, dass eine erzählte Welt erfunden ist.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 30,
           "practisedBy": []
         },
         {
@@ -1255,6 +1718,11 @@
           "requires": [
             "fiktion-und-wirklichkeit"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -1268,6 +1736,11 @@
           "requires": [
             "fiktion-und-wirklichkeit"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 13,
           "practisedBy": []
         },
         {
@@ -1279,6 +1752,11 @@
           "iCan": "Ich kann in einer Erzählung Ort, Zeit, Figuren und die Handlungsschritte bis zum Höhepunkt bestimmen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 28,
           "practisedBy": []
         },
         {
@@ -1292,6 +1770,11 @@
           "requires": [
             "handlung-erschliessen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 15,
           "practisedBy": []
         },
         {
@@ -1305,6 +1788,11 @@
           "requires": [
             "figuren-untersuchen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1318,6 +1806,11 @@
           "requires": [
             "figuren-untersuchen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1331,6 +1824,11 @@
           "requires": [
             "handlung-erschliessen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1344,6 +1842,11 @@
           "requires": [
             "handlung-erschliessen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1357,6 +1860,11 @@
           "requires": [
             "maerchen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1368,9 +1876,13 @@
           "iCan": "Ich kann ein Kinder- oder Jugendbuch als Ganzschrift lesen und Handlung und Figuren im Überblick darstellen.",
           "gradeBand": "5-6",
           "requires": [
-            "handlung-erschliessen",
             "figuren-untersuchen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1384,6 +1896,11 @@
           "requires": [
             "fiktion-und-wirklichkeit"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1397,6 +1914,11 @@
           "requires": [
             "erzaehler-und-autor"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1410,6 +1932,11 @@
           "requires": [
             "erzaehlform"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1423,6 +1950,11 @@
           "requires": [
             "erzaehlform"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1434,9 +1966,13 @@
           "iCan": "Ich kann zu einer Figur einen inneren Monolog schreiben, der ihre Gedanken und Gefühle zeigt.",
           "gradeBand": "7-8",
           "requires": [
-            "figuren-untersuchen",
             "fortsetzen-und-umschreiben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1450,6 +1986,11 @@
           "requires": [
             "figuren-untersuchen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1464,6 +2005,11 @@
             "figuren-untersuchen",
             "textbelege-angeben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -1477,6 +2023,11 @@
           "requires": [
             "kernaussagen-wiedergeben"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1491,6 +2042,11 @@
             "handlung-erschliessen",
             "epik-lyrik-dramatik"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1504,6 +2060,11 @@
           "requires": [
             "kurzgeschichte"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1517,6 +2078,11 @@
           "requires": [
             "handlung-erschliessen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1528,9 +2094,13 @@
           "iCan": "Ich kann Signale im Text erkennen, die zeigen, dass erzählt und erfunden wird.",
           "gradeBand": "7-8",
           "requires": [
-            "fiktion-und-wirklichkeit",
             "erzaehler-und-autor"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1542,9 +2112,13 @@
           "iCan": "Ich kann zu einem literarischen Text eine Deutungshypothese formulieren und am Text überprüfen.",
           "gradeBand": "9-10",
           "requires": [
-            "textbelege-angeben",
             "figur-charakterisieren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1558,6 +2132,11 @@
           "requires": [
             "deutungshypothese"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1571,6 +2150,11 @@
           "requires": [
             "epik-lyrik-dramatik"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1584,6 +2168,11 @@
           "requires": [
             "vers-strophe-reim"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1597,6 +2186,11 @@
           "requires": [
             "vers-strophe-reim"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1608,6 +2202,11 @@
           "iCan": "Ich kann Vergleich und Metapher in einem Text erkennen und ihre Wirkung beschreiben.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -1621,6 +2220,11 @@
           "requires": [
             "vergleich-und-metapher"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1635,6 +2239,11 @@
             "vers-strophe-reim",
             "erzaehler-und-autor"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1646,9 +2255,13 @@
           "iCan": "Ich kann Merkmale einer Ballade nennen und zeigen, wie sie Erzählung, Gedicht und Drama verbindet.",
           "gradeBand": "7-8",
           "requires": [
-            "vers-strophe-reim",
-            "epik-lyrik-dramatik"
+            "vers-strophe-reim"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1662,6 +2275,11 @@
           "requires": [
             "vergleich-und-metapher"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1675,6 +2293,11 @@
           "requires": [
             "vergleich-und-metapher"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -1690,6 +2313,11 @@
             "rhetorische-figuren",
             "lyrisches-ich"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1704,6 +2332,11 @@
             "gedicht-form-und-inhalt",
             "motiv-erkennen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1717,6 +2350,11 @@
           "requires": [
             "figuren-untersuchen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -1730,6 +2368,11 @@
           "requires": [
             "spielszene-untersuchen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1744,6 +2387,11 @@
             "spielszene-untersuchen",
             "epik-lyrik-dramatik"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1757,6 +2405,11 @@
           "requires": [
             "drama-aufbau"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1771,6 +2424,11 @@
             "drama-aufbau",
             "figurenkonstellation"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1784,6 +2442,11 @@
           "requires": [
             "markieren-und-gliedern"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1795,6 +2458,11 @@
           "iCan": "Ich kann Tabellen sowie Balken- und Kreisdiagramme lesen und ihnen Informationen entnehmen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1808,6 +2476,11 @@
           "requires": [
             "diagramme-lesen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1821,6 +2494,11 @@
           "requires": [
             "textfunktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -1834,6 +2512,11 @@
           "requires": [
             "nachricht-und-kommentar"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1847,6 +2530,11 @@
           "requires": [
             "nachricht-und-kommentar"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1861,6 +2549,11 @@
             "argument-aufbauen",
             "nachricht-und-kommentar"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1875,6 +2568,11 @@
             "textfunktionen",
             "vergleich-und-metapher"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1886,6 +2584,11 @@
           "iCan": "Ich kann mit Suchmaschinen und in der Bibliothek gezielt Informationen zu einem Thema finden.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1899,6 +2602,11 @@
           "requires": [
             "recherchieren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1913,6 +2621,11 @@
             "quellen-pruefen",
             "nachricht-und-kommentar"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1924,6 +2637,11 @@
           "iCan": "Ich kann beschreiben, wie lange und wozu ich Medien nutze, und darüber nachdenken, was mir guttut.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1937,6 +2655,11 @@
           "requires": [
             "eigene-mediennutzung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1948,8 +2671,14 @@
           "iCan": "Ich kann erklären, wie Suchmaschinen und soziale Medien mit Nutzerprofilen und Algorithmen auswählen, was ich sehe.",
           "gradeBand": "9-10",
           "requires": [
-            "privatsphaere-im-netz"
+            "privatsphaere-im-netz",
+            "recherchieren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1961,6 +2690,11 @@
           "iCan": "Ich kann beschreiben, wie ein Hörspiel mit Stimmen, Geräuschen und Musik eine Stimmung erzeugt.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1971,7 +2705,14 @@
           },
           "iCan": "Ich kann beschreiben, wie in einem Comic oder einer Graphic Novel Bild und Text zusammen erzählen.",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "handlung-erschliessen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1983,6 +2724,11 @@
           "iCan": "Ich kann in einem Film Einstellungsgrößen und Kameraperspektiven bestimmen und ihre Wirkung beschreiben.",
           "gradeBand": "7-8",
           "requires": [],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1994,8 +2740,14 @@
           "iCan": "Ich kann beschreiben, wie Schnitt, Montage, Musik und Geräusche in einem Film wirken.",
           "gradeBand": "7-8",
           "requires": [
-            "einstellungsgroessen-und-perspektive"
+            "einstellungsgroessen-und-perspektive",
+            "hoerspiel"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2010,6 +2762,11 @@
             "einstellungsgroessen-und-perspektive",
             "jugendbuch-lesen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -2030,6 +2787,11 @@
           "iCan": "Ich kann Nomen und Artikel erkennen und bestimmte und unbestimmte Artikel unterscheiden.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 17,
           "practisedBy": []
         },
         {
@@ -2043,6 +2805,11 @@
           "requires": [
             "nomen-und-artikel"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -2056,6 +2823,11 @@
           "requires": [
             "genus-und-numerus"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -2067,6 +2839,11 @@
           "iCan": "Ich kann Verben konjugieren und Grundform (Infinitiv) und Personalform unterscheiden.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 34,
           "practisedBy": []
         },
         {
@@ -2080,6 +2857,11 @@
           "requires": [
             "verb-konjugieren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 12,
           "practisedBy": []
         },
         {
@@ -2093,6 +2875,11 @@
           "requires": [
             "starke-und-schwache-verben"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 11,
           "practisedBy": []
         },
         {
@@ -2106,6 +2893,11 @@
           "requires": [
             "tempus-praesens-praeteritum"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -2119,6 +2911,11 @@
           "requires": [
             "verb-konjugieren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2132,6 +2929,11 @@
           "requires": [
             "tempus-perfekt-plusquamperfekt"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2143,6 +2945,11 @@
           "iCan": "Ich kann Adjektive erkennen und mit Positiv, Komparativ und Superlativ steigern.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -2156,6 +2963,11 @@
           "requires": [
             "nomen-und-artikel"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -2169,6 +2981,11 @@
           "requires": [
             "kasus"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2182,6 +2999,11 @@
           "requires": [
             "adjektiv-und-steigerung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2193,6 +3015,11 @@
           "iCan": "Ich kann nebenordnende und unterordnende Konjunktionen unterscheiden und Sätze damit verbinden.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 11,
           "practisedBy": []
         },
         {
@@ -2207,6 +3034,11 @@
             "tempus-perfekt-plusquamperfekt",
             "subjekt-und-praedikat"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2220,6 +3052,11 @@
           "requires": [
             "verb-konjugieren"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2233,6 +3070,11 @@
           "requires": [
             "tempus-praesens-praeteritum"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -2247,6 +3089,11 @@
             "konjunktiv-zwei",
             "woertliche-rede-zeichensetzen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -2258,6 +3105,11 @@
           "iCan": "Ich kann Aussage-, Frage- und Aufforderungssätze unterscheiden.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 9,
           "practisedBy": []
         },
         {
@@ -2269,6 +3121,11 @@
           "iCan": "Ich kann mit Umstell-, Ersatz-, Weglass- und Erweiterungsprobe Sätze untersuchen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 15,
           "practisedBy": []
         },
         {
@@ -2283,6 +3140,11 @@
             "grammatische-proben",
             "verb-konjugieren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 14,
           "practisedBy": []
         },
         {
@@ -2297,6 +3159,11 @@
             "subjekt-und-praedikat",
             "kasus"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -2310,6 +3177,11 @@
           "requires": [
             "subjekt-und-praedikat"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2324,6 +3196,11 @@
             "objekte",
             "adjektiv-und-steigerung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -2338,6 +3215,11 @@
             "subjekt-und-praedikat",
             "konjunktionen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -2351,6 +3233,11 @@
           "requires": [
             "hauptsatz-und-nebensatz"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -2366,6 +3253,11 @@
             "pronomen",
             "hauptsatz-und-nebensatz"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2380,6 +3272,11 @@
             "adverbiale",
             "satzreihe-und-satzgefuege"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2394,6 +3291,11 @@
             "objekte",
             "satzreihe-und-satzgefuege"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2407,6 +3309,11 @@
           "requires": [
             "satzreihe-und-satzgefuege"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2420,6 +3327,11 @@
           "requires": [
             "hauptsatz-und-nebensatz"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2433,6 +3345,11 @@
           "requires": [
             "nominalisierung-grossschreiben"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2446,6 +3363,11 @@
           "requires": [
             "nomen-und-artikel"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2459,6 +3381,11 @@
           "requires": [
             "silben-und-wortbausteine"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -2472,6 +3399,11 @@
           "requires": [
             "silben-und-wortbausteine"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -2483,6 +3415,11 @@
           "iCan": "Ich kann Wörter mit ähnlicher Bedeutung zu einem Wortfeld ordnen und Synonyme und Gegenwörter passend einsetzen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -2496,6 +3433,11 @@
           "requires": [
             "wortfeld-und-synonyme"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -2509,6 +3451,11 @@
           "requires": [
             "mehrdeutige-woerter"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2520,8 +3467,14 @@
           "iCan": "Ich kann Erbwörter, Lehnwörter und Fremdwörter unterscheiden und Wörter aus anderen Sprachen erkennen.",
           "gradeBand": "7-8",
           "requires": [
-            "ableitung"
+            "ableitung",
+            "sprachen-vergleichen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -2535,6 +3488,11 @@
           "requires": [
             "mehrdeutige-woerter"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2549,6 +3507,11 @@
             "bedeutungswandel",
             "erbwort-lehnwort-fremdwort"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2560,6 +3523,11 @@
           "iCan": "Ich kann Merkmale gesprochener und geschriebener Sprache unterscheiden.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -2573,6 +3541,11 @@
           "requires": [
             "muendlich-und-schriftlich"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2586,6 +3559,11 @@
           "requires": [
             "muendlich-und-schriftlich"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -2599,6 +3577,11 @@
           "requires": [
             "standard-und-bildungssprache"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2612,6 +3595,11 @@
           "requires": [
             "standard-und-bildungssprache"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2625,6 +3613,11 @@
           "requires": [
             "standard-und-bildungssprache"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2639,6 +3632,11 @@
             "standard-und-bildungssprache",
             "nominalstil-und-verbalstil"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2650,6 +3648,11 @@
           "iCan": "Ich kann Wörter und Sätze im Deutschen mit anderen Sprachen vergleichen, die ich kenne.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -2663,6 +3666,11 @@
           "requires": [
             "gespraechsregeln"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2676,6 +3684,11 @@
           "requires": [
             "kommunikationsmodell"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2689,6 +3702,11 @@
           "requires": [
             "muendlich-und-schriftlich"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2703,6 +3721,11 @@
             "pronomen",
             "konjunktionen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -2717,6 +3740,11 @@
             "rhetorische-figuren",
             "nachricht-und-kommentar"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -2730,6 +3758,11 @@
           "requires": [
             "manipulation-durch-sprache"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
