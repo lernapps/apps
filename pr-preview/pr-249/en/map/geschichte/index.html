@@ -76,7 +76,7 @@
   <h2 id="ordnung-geschichte" class="m-0 text-sm font-semibold text-slate-600">Order the rows</h2>
   <ul class="list-none p-0 m-0 flex flex-wrap gap-2">
     <li><a href="/apps/pr-preview/pr-249/en/map/geschichte/" class="btn btn-primary" aria-current="page">By grade</a></li>
-    <li><a href="/apps/pr-preview/pr-249/en/map/geschichte/c/" class="btn btn-secondary">By step of the chain</a></li>
+    <li><a href="/apps/pr-preview/pr-249/en/map/geschichte/c/" class="btn btn-secondary">By grade and chain</a></li>
   </ul>
 </nav>
 
@@ -115,7 +115,7 @@
     </div>
     <div class="map-legend" role="group" aria-label="Show building blocks" data-map-filter hidden>
       <button type="button" class="map-filter" data-show="covered" aria-pressed="false" disabled><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Covered <span class="map-filter-count">0</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap <span class="map-filter-count">195</span></button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap <span class="map-filter-count">197</span></button>
     </div>
   </div>
   <div class="map-scroll" role="region" aria-label="Learning map History: building blocks by strand and grade" tabindex="0">
@@ -126,7 +126,7 @@
           <td class="text-sm text-slate-600 align-bottom">Grade ↓ · Strand →</td>
           <th scope="col">
             <a href="/apps/pr-preview/pr-249/en/map/geschichte/grundlagen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">History and time: basic concepts</a>
-            <span class="block mt-1 text-sm text-slate-600">0 of 10 building blocks practised</span>
+            <span class="block mt-1 text-sm text-slate-600">0 of 11 building blocks practised</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -151,7 +151,7 @@
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-249/en/map/geschichte/revolutionen/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Enlightenment, revolutions and the 19th century</a>
-            <span class="block mt-1 text-sm text-slate-600">0 of 33 building blocks practised</span>
+            <span class="block mt-1 text-sm text-slate-600">0 of 34 building blocks practised</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -252,6 +252,14 @@
 <li data-competency="archaeologie">
   <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/archaeologie/" class="map-chip map-chip-gap" data-opens="detail-archaeologie">
     <span>Archaeology</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              
+<li data-competency="herrschaftsformen">
+  <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/herrschaftsformen/" class="map-chip map-chip-gap" data-opens="detail-herrschaftsformen">
+    <span>Forms of government</span>
     <span class="sr-only">(gap, no app yet)</span>
   </a>
 </li>
@@ -999,6 +1007,14 @@
 <li data-competency="menschenrechte-1789">
   <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/menschenrechte-1789/" class="map-chip map-chip-gap" data-opens="detail-menschenrechte-1789">
     <span>Declaration of the Rights of Man</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              
+<li data-competency="was-ist-eine-revolution">
+  <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/was-ist-eine-revolution/" class="map-chip map-chip-gap" data-opens="detail-was-ist-eine-revolution">
+    <span>What is a revolution?</span>
     <span class="sr-only">(gap, no app yet)</span>
   </a>
 </li>
@@ -1917,8 +1933,6 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/zeitrechnung/" class="text-blue-700 underline underline-offset-2"><span>Dating: BC and AD</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/jahrhunderte/" class="text-blue-700 underline underline-offset-2"><span>Centuries and millennia</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
@@ -2014,6 +2028,25 @@
 </template>
 
 
+<template id="detail-herrschaftsformen" data-kind="Building block · History and time: basic concepts">
+  <p data-dialog-title>Forms of government</p>
+  <div data-dialog-body>
+    <p class="m-0" lang="de">Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer Herrschaftsform zuordnen.</p>
+    <dl class="map-facts">
+      <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
+      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/monarchie/" class="text-blue-700 underline underline-offset-2"><span>Monarchy</span></a> <span class="text-slate-600">· strand Prehistory and early civilisations</span>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/attische-demokratie/" class="text-blue-700 underline underline-offset-2"><span>Athenian democracy</span></a> <span class="text-slate-600">· strand Antiquity: Greece and Rome</span>
+</li></ul></dd></div>
+      <div><dt>Practised in</dt><dd>no app yet – a gap
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-249/en/map/geschichte/c/herrschaftsformen/" class="btn btn-primary">All about this building block</a></p>
+  </div>
+</template>
+
+
 <template id="detail-menschwerdung" data-kind="Building block · Prehistory and early civilisations">
   <p data-dialog-title>Human evolution and migration</p>
   <div data-dialog-body>
@@ -2021,7 +2054,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/epochen/" class="text-blue-700 underline underline-offset-2"><span>Historical periods</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/archaeologie/" class="text-blue-700 underline underline-offset-2"><span>Archaeology</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2038,7 +2071,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/menschwerdung/" class="text-blue-700 underline underline-offset-2"><span>Human evolution and migration</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/archaeologie/" class="text-blue-700 underline underline-offset-2"><span>Archaeology</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2224,9 +2257,7 @@
     <p class="m-0" lang="de">Ich kann erklären, wie die Landschaft Griechenlands dazu beitrug, dass viele selbstständige Stadtstaaten (Poleis) entstanden.</p>
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
-      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/epochen/" class="text-blue-700 underline underline-offset-2"><span>Historical periods</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
-</li></ul></dd></div>
+      <div><dt>Builds on</dt><dd>no other building block</dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
     </dl>
@@ -2378,7 +2409,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/gruendungssage-roms/" class="text-blue-700 underline underline-offset-2"><span>The founding legend of Rome</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/herrschaftsformen/" class="text-blue-700 underline underline-offset-2"><span>Forms of government</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2466,8 +2497,6 @@
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/krise-der-republik/" class="text-blue-700 underline underline-offset-2"><span>Crisis of the Roman Republic</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/monarchie/" class="text-blue-700 underline underline-offset-2"><span>Monarchy</span></a> <span class="text-slate-600">· strand Prehistory and early civilisations</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2484,7 +2513,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/roemische-republik/" class="text-blue-700 underline underline-offset-2"><span>The Roman Republic</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/caesar-und-augustus/" class="text-blue-700 underline underline-offset-2"><span>Caesar, Augustus and the Principate</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2554,8 +2583,6 @@
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/romanisierung/" class="text-blue-700 underline underline-offset-2"><span>Romanisation</span></a>
 </li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/attische-demokratie/" class="text-blue-700 underline underline-offset-2"><span>Athenian democracy</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/spuren-der-vergangenheit/" class="text-blue-700 underline underline-offset-2"><span>Traces of the past</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
@@ -2591,9 +2618,7 @@
     <p class="m-0" lang="de">Ich kann beschreiben, wie Mohammed den Islam begründete und wie sich der Islam schnell ausbreitete.</p>
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
-      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/epochen/" class="text-blue-700 underline underline-offset-2"><span>Historical periods</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
-</li></ul></dd></div>
+      <div><dt>Builds on</dt><dd>no other building block</dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
     </dl>
@@ -2734,7 +2759,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/karl-der-grosse/" class="text-blue-700 underline underline-offset-2"><span>Charlemagne&#39;s rule</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/pharao-und-gesellschaft/" class="text-blue-700 underline underline-offset-2"><span>The pharaoh and Egyptian society</span></a> <span class="text-slate-600">· strand Prehistory and early civilisations</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2752,6 +2777,8 @@
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/staendegesellschaft/" class="text-blue-700 underline underline-offset-2"><span>The three medieval estates</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/karl-der-grosse/" class="text-blue-700 underline underline-offset-2"><span>Charlemagne&#39;s rule</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2819,7 +2846,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/staendegesellschaft/" class="text-blue-700 underline underline-offset-2"><span>The three medieval estates</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/christen-im-roemischen-reich/" class="text-blue-700 underline underline-offset-2"><span>Christians in the Roman Empire</span></a> <span class="text-slate-600">· strand Antiquity: Greece and Rome</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3280,6 +3307,8 @@
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/luther-und-reformation/" class="text-blue-700 underline underline-offset-2"><span>Luther and the Reformation</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/fuerstenmacht/" class="text-blue-700 underline underline-offset-2"><span>Rise of the territorial princes</span></a> <span class="text-slate-600">· strand Middle Ages</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3296,7 +3325,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/kritik-an-der-kirche/" class="text-blue-700 underline underline-offset-2"><span>Church abuses and indulgences</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/pest/" class="text-blue-700 underline underline-offset-2"><span>The Black Death</span></a> <span class="text-slate-600">· strand Middle Ages</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3364,9 +3393,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/monarchie/" class="text-blue-700 underline underline-offset-2"><span>Monarchy</span></a> <span class="text-slate-600">· strand Prehistory and early civilisations</span>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/westfaelischer-friede/" class="text-blue-700 underline underline-offset-2"><span>Peace of Westphalia</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/herrschaftsformen/" class="text-blue-700 underline underline-offset-2"><span>Forms of government</span></a> <span class="text-slate-600">· strand History and time: basic concepts</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3506,7 +3533,7 @@
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/aufklaerung/" class="text-blue-700 underline underline-offset-2"><span>The Enlightenment</span></a>
 </li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/absolutismus/" class="text-blue-700 underline underline-offset-2"><span>Absolutism</span></a> <span class="text-slate-600">· strand Early modern period</span>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/staendegesellschaft/" class="text-blue-700 underline underline-offset-2"><span>The three medieval estates</span></a> <span class="text-slate-600">· strand Middle Ages</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3546,6 +3573,23 @@
 </dd></div>
     </dl>
     <p class="m-0"><a href="/apps/pr-preview/pr-249/en/map/geschichte/c/menschenrechte-1789/" class="btn btn-primary">All about this building block</a></p>
+  </div>
+</template>
+
+
+<template id="detail-was-ist-eine-revolution" data-kind="Building block · Enlightenment, revolutions and the 19th century">
+  <p data-dialog-title>What is a revolution?</p>
+  <div data-dialog-body>
+    <p class="m-0" lang="de">Ich kann erklären, was eine Revolution ist, und Ursachen, Anlass und Folgen einer Revolution unterscheiden.</p>
+    <dl class="map-facts">
+      <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
+      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/revolution-1789/" class="text-blue-700 underline underline-offset-2"><span>The revolution of 1789</span></a>
+</li></ul></dd></div>
+      <div><dt>Practised in</dt><dd>no app yet – a gap
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-249/en/map/geschichte/c/was-ist-eine-revolution/" class="btn btn-primary">All about this building block</a></p>
   </div>
 </template>
 
@@ -3594,6 +3638,8 @@
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/jakobinerherrschaft/" class="text-blue-700 underline underline-offset-2"><span>The Reign of Terror</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/kaiserkroenung-800/" class="text-blue-700 underline underline-offset-2"><span>Charlemagne&#39;s coronation in 800</span></a> <span class="text-slate-600">· strand Middle Ages</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3681,8 +3727,6 @@
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/nationalbewegung/" class="text-blue-700 underline underline-offset-2"><span>Rise of German nationalism</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/aufklaerung/" class="text-blue-700 underline underline-offset-2"><span>The Enlightenment</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3736,6 +3780,8 @@
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/restauration/" class="text-blue-700 underline underline-offset-2"><span>Restoration under Metternich</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/was-ist-eine-revolution/" class="text-blue-700 underline underline-offset-2"><span>What is a revolution?</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -3981,9 +4027,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/reichsgruendung-1871/" class="text-blue-700 underline underline-offset-2"><span>Founding of the German Empire</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/liberalismus-und-nationalismus/" class="text-blue-700 underline underline-offset-2"><span>Liberalism and nationalism</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/verfassung-des-kaiserreichs/" class="text-blue-700 underline underline-offset-2"><span>Constitution of the German Empire</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4000,7 +4044,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/reichsgruendung-1871/" class="text-blue-700 underline underline-offset-2"><span>Founding of the German Empire</span></a>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/menschenrechte-1789/" class="text-blue-700 underline underline-offset-2"><span>Declaration of the Rights of Man</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4142,8 +4186,6 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/julikrise-1914/" class="text-blue-700 underline underline-offset-2"><span>The July Crisis, 1914</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/industrialisierung-deutschland/" class="text-blue-700 underline underline-offset-2"><span>Industrialisation in Germany</span></a> <span class="text-slate-600">· strand Enlightenment, revolutions and the 19th century</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
@@ -4181,6 +4223,8 @@
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/julikrise-1914/" class="text-blue-700 underline underline-offset-2"><span>The July Crisis, 1914</span></a>
 </li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/sozialismus-und-kommunismus/" class="text-blue-700 underline underline-offset-2"><span>Socialism and communism</span></a> <span class="text-slate-600">· strand Enlightenment, revolutions and the 19th century</span>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/was-ist-eine-revolution/" class="text-blue-700 underline underline-offset-2"><span>What is a revolution?</span></a> <span class="text-slate-600">· strand Enlightenment, revolutions and the 19th century</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4267,9 +4311,9 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/versailler-vertrag/" class="text-blue-700 underline underline-offset-2"><span>Treaty of Versailles</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/verfassung-des-kaiserreichs/" class="text-blue-700 underline underline-offset-2"><span>Constitution of the German Empire</span></a> <span class="text-slate-600">· strand Enlightenment, revolutions and the 19th century</span>
+</li><li>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/epochenjahr-1917/" class="text-blue-700 underline underline-offset-2"><span>1917 as a turning point</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4304,8 +4348,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/raete-oder-parlament/" class="text-blue-700 underline underline-offset-2"><span>Council system or parliament</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/gewaltenteilung/" class="text-blue-700 underline underline-offset-2"><span>Separation of powers</span></a> <span class="text-slate-600">· strand Enlightenment, revolutions and the 19th century</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4450,8 +4492,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/weltwirtschaftskrise/" class="text-blue-700 underline underline-offset-2"><span>The Great Depression</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/feinde-der-republik/" class="text-blue-700 underline underline-offset-2"><span>Enemies of the Weimar Republic</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4504,7 +4544,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/aufstieg-der-nsdap/" class="text-blue-700 underline underline-offset-2"><span>Rise of the Nazi Party</span></a> <span class="text-slate-600">· strand Imperialism, First World War and Weimar Republic</span>
+<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/imperialismus/" class="text-blue-700 underline underline-offset-2"><span>Motives of imperialism</span></a> <span class="text-slate-600">· strand Imperialism, First World War and Weimar Republic</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4541,8 +4581,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/machtuebernahme-1933/" class="text-blue-700 underline underline-offset-2"><span>The Nazi seizure of power</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/weimarer-verfassung/" class="text-blue-700 underline underline-offset-2"><span>The Weimar Constitution</span></a> <span class="text-slate-600">· strand Imperialism, First World War and Weimar Republic</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -4610,8 +4648,6 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/gleichschaltung/" class="text-blue-700 underline underline-offset-2"><span>Nazi coordination (Gleichschaltung)</span></a>
-</li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/terror-und-verfolgung/" class="text-blue-700 underline underline-offset-2"><span>Terror against political opponents</span></a>
 </li><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/propaganda/" class="text-blue-700 underline underline-offset-2"><span>Nazi propaganda</span></a>
@@ -4914,8 +4950,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-249/en/map/geschichte/c/potsdamer-konferenz/" class="text-blue-700 underline underline-offset-2"><span>Potsdam Conference</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-249/en/map/geschichte/c/epochenjahr-1917/" class="text-blue-700 underline underline-offset-2"><span>1917 as a turning point</span></a> <span class="text-slate-600">· strand Imperialism, First World War and Weimar Republic</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
