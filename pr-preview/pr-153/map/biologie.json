@@ -28,6 +28,11 @@
           "iCan": "Ich kann an den Kennzeichen des Lebendigen erklären, ob etwas ein Lebewesen ist.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 60,
           "practisedBy": []
         },
         {
@@ -39,6 +44,11 @@
           "iCan": "Ich kann die Teile eines Lichtmikroskops benennen und ein Präparat damit scharf einstellen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 61,
           "practisedBy": []
         },
         {
@@ -52,6 +62,11 @@
           "requires": [
             "mikroskopieren"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 60,
           "practisedBy": []
         },
         {
@@ -66,6 +81,11 @@
             "kennzeichen-des-lebendigen",
             "praeparat-und-zeichnung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 59,
           "practisedBy": []
         },
         {
@@ -79,6 +99,11 @@
           "requires": [
             "tierzelle-pflanzenzelle"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 18,
           "practisedBy": []
         },
         {
@@ -93,6 +118,11 @@
             "tierzelle-pflanzenzelle",
             "pflanzenorgane"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 12,
           "practisedBy": []
         },
         {
@@ -104,8 +134,14 @@
           "iCan": "Ich kann die Zellatmung als Wortgleichung angeben und erklären, wozu Zellen Sauerstoff und Nährstoffe brauchen.",
           "gradeBand": "5-6",
           "requires": [
-            "tierzelle-pflanzenzelle"
+            "tierzelle-pflanzenzelle",
+            "naehrstoffe"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -120,6 +156,11 @@
             "fotosynthese",
             "zellatmung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -131,9 +172,13 @@
           "iCan": "Ich kann erklären, wie Zellen bei der Zellatmung Energie aus Glucose für Bewegung, Wachstum und Körperwärme bereitstellen.",
           "gradeBand": "9-10",
           "requires": [
-            "fotosynthese-und-zellatmung",
-            "naehrstoffe"
+            "fotosynthese-und-zellatmung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -147,6 +192,11 @@
           "requires": [
             "naehrstoffe"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -161,6 +211,11 @@
             "proteine",
             "verdauungsorgane"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -174,6 +229,11 @@
           "requires": [
             "enzyme"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -187,6 +247,11 @@
           "requires": [
             "tierzelle-pflanzenzelle"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -200,6 +265,11 @@
           "requires": [
             "bakterienzelle"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -211,9 +281,13 @@
           "iCan": "Ich kann den Bau eines Virus beschreiben und erklären, warum sich Viren nur in Wirtszellen vermehren können.",
           "gradeBand": "9-10",
           "requires": [
-            "bakterienzelle",
-            "kennzeichen-des-lebendigen"
+            "bakterienzelle"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -227,6 +301,11 @@
           "requires": [
             "tierzelle-pflanzenzelle"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 15,
           "practisedBy": []
         },
         {
@@ -240,6 +319,11 @@
           "requires": [
             "dna-modell"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -253,6 +337,11 @@
           "requires": [
             "chromosomen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -267,6 +356,11 @@
             "mitose",
             "befruchtung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 7,
           "practisedBy": []
         }
       ]
@@ -287,6 +381,11 @@
           "iCan": "Ich kann die fünf Wirbeltierklassen an Körperbedeckung, Atmung, Körpertemperatur und Fortpflanzung unterscheiden und ein Tier einer Klasse zuordnen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 21,
           "practisedBy": []
         },
         {
@@ -298,8 +397,14 @@
           "iCan": "Ich kann an Beispielen erklären, wie der Körperbau von Fischen, Vögeln und Säugetieren an die Fortbewegung im Wasser, in der Luft oder an Land angepasst ist.",
           "gradeBand": "5-6",
           "requires": [
-            "wirbeltierklassen"
+            "wirbeltierklassen",
+            "skelett"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -313,6 +418,11 @@
           "requires": [
             "wirbeltierklassen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -326,6 +436,11 @@
           "requires": [
             "wirbeltierklassen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -339,6 +454,11 @@
           "requires": [
             "wirbeltierklassen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -352,6 +472,11 @@
           "requires": [
             "wirbeltierklassen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -365,6 +490,11 @@
           "requires": [
             "zuechtung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -376,6 +506,11 @@
           "iCan": "Ich kann Wurzel, Sprossachse und Blatt einer Samenpflanze benennen und ihre Aufgaben erklären.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 21,
           "practisedBy": []
         },
         {
@@ -389,6 +524,11 @@
           "requires": [
             "pflanzenorgane"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -402,6 +542,11 @@
           "requires": [
             "bluete-und-bestaeubung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -415,6 +560,11 @@
           "requires": [
             "fruechte-und-samen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -428,6 +578,11 @@
           "requires": [
             "bluete-und-bestaeubung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -441,6 +596,11 @@
           "requires": [
             "wirbeltierklassen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -454,6 +614,11 @@
           "requires": [
             "wirbellose"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -467,6 +632,11 @@
           "requires": [
             "zuechtung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -481,6 +651,11 @@
             "evolutionstheorie-darwin",
             "angepasstheit-fortbewegung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -494,6 +669,11 @@
           "requires": [
             "dna-modell"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -509,6 +689,11 @@
             "meiose",
             "mutation-und-modifikation"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -522,6 +707,11 @@
           "requires": [
             "fortpflanzung-wirbeltiere"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -536,6 +726,11 @@
             "artbegriff",
             "evolutionsfaktoren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -549,6 +744,11 @@
           "requires": [
             "evolutionstheorie-darwin"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -562,6 +762,11 @@
           "requires": [
             "fossilien"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -573,9 +778,13 @@
           "iCan": "Ich kann aus abgestuften Ähnlichkeiten im Körperbau auf Verwandtschaft schließen und sie in einem Stammbaum darstellen.",
           "gradeBand": "9-10",
           "requires": [
-            "evolutionstheorie-darwin",
-            "wirbeltierklassen"
+            "evolutionstheorie-darwin"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -589,6 +798,11 @@
           "requires": [
             "stammbaum"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -603,6 +817,11 @@
             "natuerliches-system",
             "fossilien"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -616,6 +835,11 @@
           "requires": [
             "meiose"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -629,6 +853,11 @@
           "requires": [
             "gen-und-allel"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -642,6 +871,11 @@
           "requires": [
             "erbgaenge"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 7
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -656,6 +890,11 @@
             "dna-modell",
             "proteine"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -670,6 +909,11 @@
             "proteinbiosynthese",
             "enzyme"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -683,6 +927,11 @@
           "requires": [
             "chromosomen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -697,6 +946,11 @@
             "meiose",
             "karyogramm"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -710,6 +964,11 @@
           "requires": [
             "trisomie-21"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -724,6 +983,11 @@
             "dna-modell",
             "bakterienzelle"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -744,6 +1008,11 @@
           "iCan": "Ich kann wichtige Teile des Skeletts wie Schädel, Wirbelsäule und Gliedmaßen benennen und ihre Aufgaben für Stütze, Schutz und Bewegung erklären.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -757,6 +1026,11 @@
           "requires": [
             "skelett"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -770,6 +1044,11 @@
           "requires": [
             "gelenke"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -781,6 +1060,11 @@
           "iCan": "Ich kann Kohlenhydrate, Fette, Eiweiße, Vitamine, Mineralstoffe und Ballaststoffe unterscheiden und ihre Aufgaben im Körper nennen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 30,
           "practisedBy": []
         },
         {
@@ -794,6 +1078,11 @@
           "requires": [
             "naehrstoffe"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -807,6 +1096,11 @@
           "requires": [
             "naehrstoffe"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -818,9 +1112,13 @@
           "iCan": "Ich kann eine ausgewogene Mahlzeit zusammenstellen und begründen, warum sie gesund ist.",
           "gradeBand": "5-6",
           "requires": [
-            "energiebedarf",
-            "naehrstoffe"
+            "energiebedarf"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -835,6 +1133,11 @@
             "naehrstoffe",
             "organisationsebenen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 14,
           "practisedBy": []
         },
         {
@@ -848,6 +1151,11 @@
           "requires": [
             "organisationsebenen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 13,
           "practisedBy": []
         },
         {
@@ -862,6 +1170,11 @@
             "verdauungsorgane",
             "atmung-und-gasaustausch"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -876,6 +1189,11 @@
             "atmung-und-gasaustausch",
             "verdauungsorgane"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 9,
           "practisedBy": []
         },
         {
@@ -889,6 +1207,11 @@
           "requires": [
             "blut"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 7
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -903,6 +1226,11 @@
             "herz-und-blutkreislauf",
             "zellatmung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 8
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -916,6 +1244,11 @@
           "requires": [
             "atmung-und-gasaustausch"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -927,6 +1260,11 @@
           "iCan": "Ich kann an einem Alltagsbeispiel die Kette von der Sinneszelle über Nerven und Gehirn bis zum Muskel darstellen.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -940,6 +1278,11 @@
           "requires": [
             "reiz-reaktion"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -951,8 +1294,14 @@
           "iCan": "Ich kann den Bau einer Nervenzelle mit Zellkörper, Dendriten, Axon und Endknöpfchen beschreiben und erklären, wie sie Signale weiterleitet.",
           "gradeBand": "7-8",
           "requires": [
-            "reiz-reaktion"
+            "reiz-reaktion",
+            "tierzelle-pflanzenzelle"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -966,6 +1315,11 @@
           "requires": [
             "nervenzelle"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -979,6 +1333,11 @@
           "requires": [
             "herz-und-blutkreislauf"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -993,6 +1352,11 @@
             "hormone",
             "synapse"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1006,6 +1370,11 @@
           "requires": [
             "hormone"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1019,6 +1388,11 @@
           "requires": [
             "blutzuckerregulation"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1032,6 +1406,11 @@
           "requires": [
             "hormon-und-nervensystem"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1046,6 +1425,11 @@
             "synapse",
             "rauchen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1059,6 +1443,11 @@
           "requires": [
             "pubertaet"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -1074,6 +1463,11 @@
             "viren",
             "hygiene"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -1087,6 +1481,11 @@
           "requires": [
             "infektionskrankheiten"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -1101,6 +1500,11 @@
             "unspezifische-abwehr",
             "proteine"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 5
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1114,6 +1518,11 @@
           "requires": [
             "spezifische-abwehr"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1127,6 +1536,11 @@
           "requires": [
             "spezifische-abwehr"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1140,6 +1554,11 @@
           "requires": [
             "infektionskrankheiten"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1151,6 +1570,11 @@
           "iCan": "Ich kann körperliche und seelische Veränderungen in der Pubertät bei Mädchen und Jungen beschreiben.",
           "gradeBand": "5-6",
           "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 26,
           "practisedBy": []
         },
         {
@@ -1164,6 +1588,11 @@
           "requires": [
             "pubertaet"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 16,
           "practisedBy": []
         },
         {
@@ -1177,6 +1606,11 @@
           "requires": [
             "geschlechtsorgane"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1190,6 +1624,11 @@
           "requires": [
             "geschlechtsorgane"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 13,
           "practisedBy": []
         },
         {
@@ -1203,6 +1642,11 @@
           "requires": [
             "befruchtung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1216,6 +1660,11 @@
           "requires": [
             "befruchtung"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1229,6 +1678,11 @@
           "requires": [
             "pubertaet"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1243,6 +1697,11 @@
             "menstruationszyklus",
             "hormone"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1257,6 +1716,11 @@
             "zyklus-und-hormone",
             "verhuetung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1270,6 +1734,11 @@
           "requires": [
             "verhuetung"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1283,6 +1752,11 @@
           "requires": [
             "pubertaet"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1296,6 +1770,11 @@
           "requires": [
             "schwangerschaft-und-geburt"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -1315,7 +1794,14 @@
           },
           "iCan": "Ich kann an einem heimischen Ökosystem wie Wiese, Wald oder Gewässer beschreiben, was Lebensraum (Biotop) und Lebensgemeinschaft (Biozönose) sind.",
           "gradeBand": "5-6",
-          "requires": [],
+          "requires": [
+            "arten-bestimmen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 12,
           "practisedBy": []
         },
         {
@@ -1329,6 +1815,11 @@
           "requires": [
             "pflanzenorgane"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 13,
           "practisedBy": []
         },
         {
@@ -1343,6 +1834,11 @@
             "oekosystem-grundbegriffe",
             "fotosynthese"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 9,
           "practisedBy": []
         },
         {
@@ -1356,6 +1852,11 @@
           "requires": [
             "nahrungsbeziehungen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -1369,6 +1870,11 @@
           "requires": [
             "wirbeltierklassen"
           ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
           "practisedBy": []
         },
         {
@@ -1382,6 +1888,11 @@
           "requires": [
             "oekosystem-grundbegriffe"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1393,9 +1904,13 @@
           "iCan": "Ich kann beschreiben, wie sich ein Ökosystem im Lauf der Zeit verändert (Sukzession), und natürliche von menschengemachten Veränderungen unterscheiden.",
           "gradeBand": "7-8",
           "requires": [
-            "oekosystem-grundbegriffe",
             "eingriffe-des-menschen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1407,9 +1922,13 @@
           "iCan": "Ich kann erklären, was Biodiversität ist, warum sie gefährdet ist und wie Biotopschutz Arten schützt.",
           "gradeBand": "7-8",
           "requires": [
-            "eingriffe-des-menschen",
-            "arten-bestimmen"
+            "eingriffe-des-menschen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1423,6 +1942,11 @@
           "requires": [
             "eingriffe-des-menschen"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1437,6 +1961,11 @@
             "tierkommunikation",
             "reiz-reaktion"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1450,6 +1979,11 @@
           "requires": [
             "angeborenes-verhalten"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1463,6 +1997,11 @@
           "requires": [
             "nahrungsbeziehungen"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1476,6 +2015,11 @@
           "requires": [
             "abiotische-faktoren"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1490,6 +2034,11 @@
             "nahrungsbeziehungen",
             "fotosynthese-und-zellatmung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1504,6 +2053,11 @@
             "nahrungsbeziehungen",
             "fotosynthese-und-zellatmung"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1518,6 +2072,11 @@
             "kohlenstoffkreislauf",
             "bakterienzelle"
           ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1532,6 +2091,11 @@
             "fotosynthese-und-zellatmung",
             "nachhaltigkeit"
           ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
