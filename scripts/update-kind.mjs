@@ -2,7 +2,8 @@
 // only when everything that differs between the base and the new commit is
 //   - text: a Markdown file (*.md) outside src/ and public/, which the app does not ship;
 //   - the version of an npm dependency that already exists in a package.json, with the lock file moved with it to
-//     packages from the npm registry.
+//     packages from the npm registry;
+//   - the comment at the end of a workflow line that pins lernapps/tooling (Renovate's `# v0.12.1`); the pin stays.
 // The base is the entry's commit, or the tree `lernapps update` makes of it (scripts/update-replay.mjs): then what the
 // update did is no difference either. Anything else needs a review: any other file, an added or removed dependency,
 // scripts, the licence. Reads files with git only; runs no code of the app.
@@ -57,6 +58,22 @@ export function lockChanges(file, before, after) {
   return reasons;
 }
 
+/** A workflow file of the app. */
+const isWorkflow = (file) => /^\.github\/workflows\/[^/]+\.ya?ml$/.test(file);
+
+/**
+ * A workflow without the comment at the end of the lines that pin lernapps/tooling (`uses: lernapps/tooling/...@<ref>`,
+ * `tooling-ref: <ref>`): Renovate writes the version there (`# v0.12.1`), `lernapps update` does not. The pin itself
+ * stays: GitHub serves the commits of forks under the name of the parent, so another ref is a difference.
+ */
+export function withoutPinComments(text) {
+  const pin = /^(.*(?:lernapps\/tooling\/[\w./-]+@\S+|\btooling-ref:[ \t]*\S+))[ \t]+#.*$/;
+  return text
+    .split("\n")
+    .map((line) => line.replace(pin, "$1"))
+    .join("\n");
+}
+
 /** Whether a file is text the app does not ship: Markdown outside src/ and public/. */
 export const isText = (file) => file.endsWith(".md") && !/^(src|public)\//.test(file);
 
@@ -79,6 +96,11 @@ export function updateKind(dir, older, newer) {
     const [status, file] = line.split("\t");
     if (isText(file)) continue;
     const name = basename(file);
+    if (status === "M" && isWorkflow(file)) {
+      const before = git("show", `${older}:${file}`);
+      const after = git("show", `${newer}:${file}`);
+      if (before.status === 0 && after.status === 0 && withoutPinComments(before.stdout) === withoutPinComments(after.stdout)) continue;
+    }
     if (status !== "M" || (name !== "package.json" && name !== "package-lock.json")) {
       reasons.push(`${file}: ${{ A: "added", D: "deleted" }[status] ?? "changed"}`);
       continue;
