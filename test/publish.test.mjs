@@ -94,6 +94,46 @@ test("the base of an update can be a tree: what lernapps update made of the old 
   assert.deepEqual(updateKind(dir, tree, git("rev-parse", "HEAD").stdout.trim()), { kind: "review", reasons: [".github/pages.yml: changed"] });
 });
 
+test("a comment behind a pin of lernapps/tooling is no difference; another pin or another line is", () => {
+  // Renovate adds `# v0.12.1` behind the pin, lernapps update writes none (lernapps/apps#153, #179, #181, #259)
+  const dir = temp("app");
+  const git = (...args) => spawnSync("git", ["-C", dir, "-c", "user.email=t@example.org", "-c", "user.name=t", ...args], { encoding: "utf8" });
+  const head = () => git("rev-parse", "HEAD").stdout.trim();
+  const pages = join(dir, ".github", "workflows", "pages.yml");
+  const cleanup = join(dir, ".github", "workflows", "preview-cleanup.yml");
+  const write = (check, ref) => {
+    writeFileSync(pages, `steps:\n  - uses: lernapps/tooling/actions/app-check@${check}\n`);
+    writeFileSync(cleanup, `jobs:\n  cleanup:\n    uses: lernapps/tooling/.github/workflows/preview-cleanup.yml@${ref}\n    with:\n      tooling-ref: "${ref}"\n`);
+  };
+  const commit = (message) => {
+    git("add", "-A");
+    git("commit", "--quiet", "-m", message);
+    return head();
+  };
+  git("init", "--quiet");
+  mkdirSync(join(dir, ".github", "workflows"), { recursive: true });
+  // what lernapps update makes of the old commit
+  write("v0.12.1 # main", "v0.12.1");
+  const replayed = commit("replay");
+  // what the app has: the comment Renovate wrote
+  write("v0.12.1 # v0.12.1 # main", "v0.12.1");
+  writeFileSync(cleanup, readFileSync(cleanup, "utf8").replace("preview-cleanup.yml@v0.12.1\n", "preview-cleanup.yml@v0.12.1 # v0.12.1\n"));
+  const commented = commit("comment");
+  assert.deepEqual(updateKind(dir, replayed, commented), { kind: "auto", reasons: [] });
+  // another pin stays a difference, with or without a comment: GitHub serves the commits of forks under this name
+  write(`${"c".repeat(40)} # v0.12.1 # main`, "v0.12.1");
+  assert.deepEqual(updateKind(dir, replayed, commit("pin")), { kind: "review", reasons: [".github/workflows/pages.yml: changed"] });
+  write("v0.12.1 # main", `${"c".repeat(40)}`);
+  assert.deepEqual(updateKind(dir, replayed, commit("ref")), { kind: "review", reasons: [".github/workflows/preview-cleanup.yml: changed"] });
+  // a comment behind another line is a difference
+  write("v0.12.1 # main", "v0.12.1");
+  writeFileSync(pages, `steps:\n  - uses: lernapps/tooling/actions/app-check@v0.12.1 # main\n  - run: curl x # v0.12.1\n`);
+  assert.deepEqual(updateKind(dir, replayed, commit("run")), { kind: "review", reasons: [".github/workflows/pages.yml: changed"] });
+  // a new workflow file is a difference, as before
+  writeFileSync(join(dir, ".github", "workflows", "new.yml"), "on: push\n");
+  assert.deepEqual(updateKind(dir, replayed, commit("new")).reasons.includes(".github/workflows/new.yml: added"), true);
+});
+
 test("a push builds every entry whose copy is missing or at another commit, and removes copies without an entry", () => {
   // several merges in a row cancel the publish runs waiting in between: the last one has to catch up on all of them
   const dir = temp("repo");

@@ -100,7 +100,8 @@ names (`source`, `commit`; lernapps/docs KD-21, plan [`.vibe/development-plan-fe
   site deploy action). Then it checks each copy where it is served and builds the catalog again.
 - The catalog links an app's copy only when `copies.txt` lists it at the entry's commit, otherwise the entry's `url`.
 - [`update.yml`](.github/workflows/update.yml): daily, a pull request `update/<id>` for each app whose `main` moved.
-  It merges by itself only when nothing but versions of existing npm dependencies changed
+  It merges by itself only when nothing but versions of existing npm dependencies changed, besides what `lernapps update`
+  makes and the comment Renovate writes behind a pin of `lernapps/tooling` in a workflow
   ([`scripts/update-kind.mjs`](scripts/update-kind.mjs)); anything else gets the label `review`.
 - [`upgrade.yml`](.github/workflows/upgrade.yml): daily, or by hand for one `source`, moves each listed app to the pins of the
   tooling: it runs `lernapps update` on the app's `main` and opens the pull request `lernapps/update` in the app with the
