@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Geo Europa
+subject: erdkunde
+grades: [5, 6]
+summary: >-
+  Du übst auf einer Karte von Europa, wie in einem Spiel: Länder, Hauptstädte, Flüsse, Gebirge, Seen, Meere und
+  Teile Europas. Erst wählst du Namen aus, dann klickst du auf der Karte oder tippst die Namen selbst. Liegst du
+  daneben, zeigt dir die Karte, wo es richtig gewesen wäre.
+url: https://mrsimpson.github.io/geo-quizzer/
+topics:
+  - title: Stufe 1 · Erkennen
+    path: app/#stufe-1
+  - title: Stufe 2 · Beziehungen
+    path: app/#stufe-2
+  - title: Stufe 3 · Zeigen
+    path: app/#stufe-3
+  - title: Stufe 4 · Frei
+    path: app/#stufe-4
+strand: erdkunde/orientierung
+competencies: [topographie-europa]
+keywords:
+  - Europa
+  - Hauptstädte
+  - Länder
+  - Karte
+  - Topographie
+  - Erdkunde
+  - Geographie
+creator:
+  name: Oliver
+  url: https://github.com/mrsimpson
+source: https://github.com/mrsimpson/geo-quizzer
+commit: 37b623acb169f8b2ef029229532ea8b14b0b70aa
+limits: >-
+  Auf dem Handy nur im Querformat nutzbar, weil die Karte viel Platz braucht. Im Hochformat zeigt die App nur den
+  Hinweis, das Gerät zu drehen.
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
