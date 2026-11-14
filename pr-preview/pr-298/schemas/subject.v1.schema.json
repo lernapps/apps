@@ -1,0 +1,250 @@
+{
+  "$id": "https://lernapps.net/apps/schemas/subject.v1.schema.json",
+  "title": "lernapps.net learning map: subject",
+  "description": "A subject of the learning map: map/<subject>.yaml",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "properties": {
+            "de": {
+              "type": "string",
+              "minLength": 1,
+              "description": "German"
+            },
+            "en": {
+              "description": "English",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "de"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Name of the subject, e.g. Mathematik; the file name is its id"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Title of the document, with its edition"
+        },
+        "url": {
+          "description": "Where to read it, when it is online",
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false,
+      "description": "Where the strands and competencies come from"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "checked",
+        "reviewed"
+      ],
+      "description": "How far the strands, competencies and requires are reviewed (feat/map-status): draft (an idea to show the principle, reviewed by no teacher yet), checked (at least one teacher of the subject reviewed it), reviewed (several did). Shown on every page of the subject's map"
+    },
+    "reviews": {
+      "description": "The reviews behind the status: checked needs at least one, reviewed at least two",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+            "description": "When the review was done, YYYY-MM-DD"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Who reviewed, by role and never by name, e.g. \"Lehrkraft Französisch, Gymnasium, Hessen\""
+          }
+        },
+        "required": [
+          "date",
+          "role"
+        ],
+        "additionalProperties": false,
+        "description": "One review of the subject's model by a teacher of the subject"
+      }
+    },
+    "explainerFocus": {
+      "description": "What an app of the subject focuses on (KD-01 of lernapps/apps#226). strand (the default): an app stays in one strand, because the strands separate (Physik, Geschichte). competency: an app may practise competencies of several strands, because the strands are woven together (foreign languages, Deutsch); such an app names the subject instead of a strand, each page stays in one strand, and its prerequisites come first in the app",
+      "type": "string",
+      "enum": [
+        "strand",
+        "competency"
+      ]
+    },
+    "strands": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Stable id, unique in the subject"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "de": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "German"
+                  },
+                  "en": {
+                    "description": "English",
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "de"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "competencies": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+                  "description": "Stable id, unique in the subject; never renamed once published"
+                },
+                "name": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "de": {
+                          "type": "string",
+                          "minLength": 1,
+                          "description": "German"
+                        },
+                        "en": {
+                          "description": "English",
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "de"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ],
+                  "description": "Short name of the competency, 2–5 words, e.g. Laplace-Formel; shown where it is listed"
+                },
+                "iCan": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "de": {
+                          "type": "string",
+                          "minLength": 1,
+                          "description": "German"
+                        },
+                        "en": {
+                          "description": "English",
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "de"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ],
+                  "description": "What a learner can do, in plain German: \"Ich kann …\""
+                },
+                "gradeBand": {
+                  "type": "string",
+                  "enum": [
+                    "5-6",
+                    "7-8",
+                    "9-10"
+                  ],
+                  "description": "Roughly in which two school years it is taught; shown where no curriculum places it"
+                },
+                "requires": {
+                  "description": "Competencies of the same subject a learner needs first, any strand",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "iCan",
+                "gradeBand"
+              ],
+              "additionalProperties": false,
+              "description": "A competency (Baustein): one thing a learner can learn"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "competencies"
+        ],
+        "additionalProperties": false,
+        "description": "A strand (Strang): a part of the subject that runs over several school years and builds on itself"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "status",
+    "strands"
+  ],
+  "additionalProperties": false
+}
