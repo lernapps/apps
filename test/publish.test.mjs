@@ -134,6 +134,49 @@ test("a comment behind a pin of lernapps/tooling is no difference; another pin o
   assert.deepEqual(updateKind(dir, replayed, commit("new")).reasons.includes(".github/workflows/new.yml: added"), true);
 });
 
+test("a pin of lernapps/tooling at the commit of its tag is no difference, at any other commit it is", () => {
+  // Renovate pins `@v0.12.3` to the commit of that tag (lernapps/apps#289, #292 to #298); the tag is resolved in
+  // lernapps/tooling by update-replay.mjs and handed over as an alias, the comment says nothing
+  const dir = temp("app");
+  const git = (...args) => spawnSync("git", ["-C", dir, "-c", "user.email=t@example.org", "-c", "user.name=t", ...args], { encoding: "utf8" });
+  const head = () => git("rev-parse", "HEAD").stdout.trim();
+  const pages = join(dir, ".github", "workflows", "pages.yml");
+  const cleanup = join(dir, ".github", "workflows", "preview-cleanup.yml");
+  const tagged = "77cea5085eaea639890a8cc3e7f86db044d5c9f1";
+  const write = (ref, comment = "# v0.12.3 # main") => {
+    writeFileSync(pages, `steps:\n  - uses: lernapps/tooling/actions/app-check@${ref} ${comment}\n`);
+    writeFileSync(cleanup, `jobs:\n  cleanup:\n    uses: lernapps/tooling/.github/workflows/preview-cleanup.yml@${ref} # v0.12.3\n    with:\n      tooling-ref: "v0.12.3" # the script of the same version\n`);
+  };
+  const commit = (message) => {
+    git("add", "-A");
+    git("commit", "--quiet", "-m", message);
+    return head();
+  };
+  git("init", "--quiet");
+  mkdirSync(join(dir, ".github", "workflows"), { recursive: true });
+  write("v0.12.3");
+  const tag = commit("tag");
+  write(tagged);
+  const pinned = commit("commit");
+  const aliases = { [tagged]: "v0.12.3" };
+  assert.deepEqual(updateKind(dir, tag, pinned, { aliases }), { kind: "auto", reasons: [] });
+  // the other way round, and a comment that says something else
+  assert.deepEqual(updateKind(dir, pinned, tag, { aliases }), { kind: "auto", reasons: [] });
+  write(tagged, "# v9.9.9");
+  assert.deepEqual(updateKind(dir, tag, commit("comment"), { aliases }), { kind: "auto", reasons: [] });
+  // without the alias it is a difference, as before
+  assert.deepEqual(updateKind(dir, tag, pinned).reasons, [".github/workflows/pages.yml: changed", ".github/workflows/preview-cleanup.yml: changed"]);
+  // another commit is a difference, whatever the comment says
+  write("d".repeat(40));
+  assert.deepEqual(updateKind(dir, tag, commit("other"), { aliases }).reasons, [".github/workflows/pages.yml: changed", ".github/workflows/preview-cleanup.yml: changed"]);
+  // a comment is dropped only on the pin lines: a change behind `#` in a quoted string of another line stays
+  write("v0.12.3");
+  writeFileSync(pages, `steps:\n  - run: echo lernapps/tooling/x@v1 "a # b"\n`);
+  const quoted = commit("quoted");
+  writeFileSync(pages, `steps:\n  - run: echo lernapps/tooling/x@v1 "a # $(curl x)"\n`);
+  assert.deepEqual(updateKind(dir, quoted, commit("hidden"), { aliases }).reasons, [".github/workflows/pages.yml: changed"]);
+});
+
 test("a push builds every entry whose copy is missing or at another commit, and removes copies without an entry", () => {
   // several merges in a row cancel the publish runs waiting in between: the last one has to catch up on all of them
   const dir = temp("repo");

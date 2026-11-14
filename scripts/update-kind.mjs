@@ -3,7 +3,8 @@
 //   - text: a Markdown file (*.md) outside src/ and public/, which the app does not ship;
 //   - the version of an npm dependency that already exists in a package.json, with the lock file moved with it to
 //     packages from the npm registry;
-//   - the comment at the end of a workflow line that pins lernapps/tooling (Renovate's `# v0.12.1`); the pin stays.
+//   - in a workflow, the comment at the end of a line that pins lernapps/tooling (Renovate's `# v0.12.1`), and a commit
+//     of lernapps/tooling where the other side has the tag of that commit (Renovate pins a tag to it); any other pin stays.
 // The base is the entry's commit, or the tree `lernapps update` makes of it (scripts/update-replay.mjs): then what the
 // update did is no difference either. Anything else needs a review: any other file, an added or removed dependency,
 // scripts, the licence. Reads files with git only; runs no code of the app.
@@ -62,23 +63,35 @@ export function lockChanges(file, before, after) {
 const isWorkflow = (file) => /^\.github\/workflows\/[^/]+\.ya?ml$/.test(file);
 
 /**
- * A workflow without the comment at the end of the lines that pin lernapps/tooling (`uses: lernapps/tooling/...@<ref>`,
- * `tooling-ref: <ref>`): Renovate writes the version there (`# v0.12.1`), `lernapps update` does not. The pin itself
- * stays: GitHub serves the commits of forks under the name of the parent, so another ref is a difference.
+ * A workflow as the comparison reads it: on the lines that pin lernapps/tooling (`uses: lernapps/tooling/...@<ref>`,
+ * `tooling-ref: <ref>`) without the comment at the end of the line (Renovate writes the version there, `# v0.12.1`,
+ * `lernapps update` does not), and with a ref that `aliases` names as the ref it stands for (Renovate pins `@v0.12.3` to
+ * the commit of that tag: { "<commit>": "v0.12.3" }). The comment is no evidence for that: update-replay.mjs asks
+ * lernapps/tooling for the commit of the tag. Any other ref stays: GitHub serves the commits of forks under the name of
+ * the parent, so another ref is a difference. On other lines the text stays whole: after a `#` in a quoted string of
+ * a `run:` line a change could hide.
  */
-export function withoutPinComments(text) {
-  const pin = /^(.*(?:lernapps\/tooling\/[\w./-]+@\S+|\btooling-ref:[ \t]*\S+))[ \t]+#.*$/;
+export function normalizePins(text, aliases = {}) {
+  const pinLine = /^[ \t]*(?:-[ \t]+)?(?:uses:[ \t]*lernapps\/tooling\/[\w./-]+@|tooling-ref:[ \t]*["']?)/;
+  const ref = /^([ \t]*(?:-[ \t]+)?(?:uses:[ \t]*lernapps\/tooling\/[\w./-]+@|tooling-ref:[ \t]*["']?))([^\s"'#]+)/;
   return text
     .split("\n")
-    .map((line) => line.replace(pin, "$1"))
+    .map((line) =>
+      pinLine.test(line)
+        ? line.replace(/[ \t]+#.*$/, "").replace(ref, (_, head, value) => `${head}${Object.hasOwn(aliases, value) ? aliases[value] : value}`)
+        : line,
+    )
     .join("\n");
 }
 
 /** Whether a file is text the app does not ship: Markdown outside src/ and public/. */
 export const isText = (file) => file.endsWith(".md") && !/^(src|public)\//.test(file);
 
-/** The kind of the update from `older` (a commit or a tree) to `newer` in the git repo at `dir`. */
-export function updateKind(dir, older, newer) {
+/**
+ * The kind of the update from `older` (a commit or a tree) to `newer` in the git repo at `dir`. `aliases` maps a commit
+ * of lernapps/tooling to the tag it is the commit of (normalizePins); without it, a commit and its tag differ.
+ */
+export function updateKind(dir, older, newer, { aliases = {} } = {}) {
   const git = (...args) => spawnSync("git", ["-C", dir, ...args], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
   const json = (commit, file) => {
     const shown = git("show", `${commit}:${file}`);
@@ -99,7 +112,7 @@ export function updateKind(dir, older, newer) {
     if (status === "M" && isWorkflow(file)) {
       const before = git("show", `${older}:${file}`);
       const after = git("show", `${newer}:${file}`);
-      if (before.status === 0 && after.status === 0 && withoutPinComments(before.stdout) === withoutPinComments(after.stdout)) continue;
+      if (before.status === 0 && after.status === 0 && normalizePins(before.stdout, aliases) === normalizePins(after.stdout, aliases)) continue;
     }
     if (status !== "M" || (name !== "package.json" && name !== "package-lock.json")) {
       reasons.push(`${file}: ${{ A: "added", D: "deleted" }[status] ?? "changed"}`);

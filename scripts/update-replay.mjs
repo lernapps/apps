@@ -56,6 +56,22 @@ function toolingPin(dir, commit) {
   }
 }
 
+/**
+ * { "<commit>": "v<version>" } for the tag of the version that `pin` (a value of toolingPin) names, in lernapps/tooling,
+ * or {}: the workflows may pin the commit of that tag instead of the tag (Renovate does), which is no difference
+ * (scripts/update-kind.mjs, normalizePins). The tag is looked up in lernapps/tooling, not read from a comment of the app.
+ */
+function tagAliases(pin) {
+  if (pin === undefined || toolingPinOf(pin).kind !== "version") return {};
+  const tag = `v${toolingPinOf(pin).value}`;
+  const listed = run("git", ["ls-remote", TOOLING, `refs/tags/${tag}`, `refs/tags/${tag}^{}`]);
+  if (listed.status !== 0) return {};
+  // an annotated tag lists the commit it points to as `<tag>^{}`; a lightweight tag lists the commit itself
+  const refs = new Map(listed.stdout.split("\n").filter(Boolean).map((line) => line.split(/\s+/).reverse()));
+  const commit = refs.get(`refs/tags/${tag}^{}`) ?? refs.get(`refs/tags/${tag}`);
+  return SHA.test(commit ?? "") ? { [commit]: tag } : {};
+}
+
 function classify() {
   const app = join(temp, "app");
   const clone = git(temp, "clone", "--quiet", "--filter=blob:none", "--no-checkout", source, app);
@@ -65,8 +81,9 @@ function classify() {
   }
   const before = toolingPin(app, from);
   const after = toolingPin(app, to);
+  const aliases = tagAliases(after);
   if (after === undefined || after === before) {
-    const { kind, reasons } = updateKind(app, from, to);
+    const { kind, reasons } = updateKind(app, from, to, { aliases });
     return verdict(kind, reasons);
   }
   const pin = toolingPinOf(after);
@@ -104,7 +121,7 @@ function classify() {
   git(tree, "add", "-A");
   const written = git(tree, "write-tree");
   if (written.status !== 0) return verdict("review", [`git write-tree: ${written.stderr.trim()}`], after);
-  const { kind, reasons } = updateKind(app, written.stdout.trim(), to);
+  const { kind, reasons } = updateKind(app, written.stdout.trim(), to, { aliases });
   return verdict(kind, reasons, after);
 }
 
