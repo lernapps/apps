@@ -20,6 +20,25 @@ wird weiter exakt verglichen (GitHub liefert Commits von Forks unter dem Namen d
 - Betroffene PRs: #259, #249, #248, #181, #180, #179, #153 (textcheck bleibt Review wegen drei Testdateien).
 - Ursache bestätigt am Quelltext von lernapps/tooling v0.12.1 (`generator/update.ts`, `moveActions`, `addPreviewCleanup`).
 
+## Round 2 (2026-11-14): the pin as commit
+PR #273 is merged. The next run of update.yml again set `review` on #289, #292, #293, #295, #296, #297, #298 (same two
+files). New cause (lernapps/musik `6126584..6f59b0a`): Renovate pinned the tag to its commit,
+`@v0.12.3` → `@77cea5085eaea639890a8cc3e7f86db044d5c9f1` (`v0.12.3` of lernapps/tooling is exactly that commit); the
+`@lernapps/tooling` pin in package.json stays `0.12.3`, so `update-replay.mjs` compares the two commits without a replay.
+Decision (user): the comment is irrelevant in every comparison, so the equality of tag and commit must not rest on it.
+- `update-replay.mjs` resolves the tag `v<version>` of the new commit's tooling pin in lernapps/tooling
+  (`git ls-remote`, peeled) and hands `{ <commit>: "v<version>" }` to `updateKind` as aliases.
+- `updateKind` reads such a commit as the tag in the pin lines; a commit that is not that tag stays a difference.
+- Comments are dropped only on lines that start with `uses: lernapps/tooling/` or `tooling-ref:` (not on any line: after
+  a `#` inside a quoted string of a `run:` line a change could hide).
+
+### Round 2: result
+- [x] Test `a pin of lernapps/tooling at the commit of its tag…` written; failed before, green after
+- [x] `normalizePins(text, aliases)` replaces `withoutPinComments`; `updateKind(dir, older, newer, { aliases })`
+- [x] `update-replay.mjs`: `tagAliases()` resolves the tag with `git ls-remote` (peeled), no comment involved; used in both paths
+- [x] Real run of `scripts/update-replay.mjs` against #289, #292, #293, #295, #296, #297, #298: all `auto`; geo-quizzer (#294): `review`, as it should be
+- [x] `publish`, `tooling-pin`, `upgrade` tests green
+
 ## Reproduce
 ### Tasks
 
