@@ -20,9 +20,9 @@ concurrency:
 
 jobs:
   changes:
-    uses: lernapps/tooling/.github/workflows/changes.yml@ef5756777eef2c19e882ce1c367043a7bc0aa804 # main
+    uses: lernapps/tooling/.github/workflows/changes.yml@00bf160914f7d22def41db9a65bb1035ed4af1b9 # main
     with:
-      tooling-ref: ef5756777eef2c19e882ce1c367043a7bc0aa804 # the commit of @lernapps/tooling in package.json, and TOOLING_REF of the pre-push hook
+      tooling-ref: 00bf160914f7d22def41db9a65bb1035ed4af1b9 # the commit of @lernapps/tooling in package.json, and TOOLING_REF of the pre-push hook
     permissions:
       contents: read
 
@@ -34,7 +34,7 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository &&
       (github.event.action == 'closed' || needs.changes.outputs.site == 'true')
     steps:
-      - uses: lernapps/tooling/actions/site-preview@ef5756777eef2c19e882ce1c367043a7bc0aa804 # main
+      - uses: lernapps/tooling/actions/site-preview@00bf160914f7d22def41db9a65bb1035ed4af1b9 # main
         with:
           site: /apps/
 
