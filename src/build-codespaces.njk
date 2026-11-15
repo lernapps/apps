@@ -1,0 +1,110 @@
+---
+pagination:
+  data: languages
+  size: 1
+  alias: pageLanguage
+permalink: "/{{ pageLanguage.root }}build/codespaces/index.html"
+layout: base.njk
+eleventyComputed:
+  title: "{{ t.codespaces.title }}"
+  description: "{{ t.codespaces.description }}"
+---
+{#-
+  Mit Codespaces bauen: building an app in the browser without installing anything, in a GitHub codespace made from the
+  template repository lernapps/start (site.tooling.start), with the assistant of the creator's choice (Claude or ChatGPT)
+  as an editor extension. The page is the illustrated guide that the README of the template summarises: the overview of
+  the workplace, the steps, the two sign-ins (both need a workaround in a codespace), pausing and continuing. The
+  screenshots (assets/codespaces/) are German; the English texts say so. /build/ links here.
+-#}
+{%- set C = t.codespaces %}
+{%- set shots = "assets/codespaces/" %}
+{%- macro shot(file, alt, width, height) %}
+<figure class="m-0 mt-3">
+  <a href="{{ ('/assets/codespaces/' + file) | url }}" class="block">
+    <img src="{{ ('/assets/codespaces/' + file) | url }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" loading="lazy" decoding="async" class="block max-w-full h-auto rounded-lg border border-slate-300">
+  </a>
+</figure>
+{%- endmacro %}
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ C.headline }}</h1>
+    <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ C.lead }}</p>
+    <a href="{{ site.tooling.start }}" class="btn btn-light btn-lg mt-5">{{ C.template }} <span aria-hidden="true">→</span></a>
+    <p class="m-0 mt-4 text-slate-300"><a href="{{ '/build/' | inLang(lang) | url }}" class="text-blue-300 underline underline-offset-2 hover:text-white">{{ C.otherWay }}</a></p>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
+  <section class="panel" aria-labelledby="mitbringen">
+    <h2 id="mitbringen" class="panel-title">{{ C.needs.headline }}</h2>
+    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+      {%- for item in C.needs.items %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="panel min-w-0" aria-labelledby="arbeitsplatz">
+    <h2 id="arbeitsplatz" class="panel-title">{{ C.overview.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ C.overview.body }}</p>
+    {{ shot("gesamtansicht.webp", C.overview.alt, 2000, 1148) }}
+    <ul class="m-0 mt-4 pl-5 list-disc text-slate-700 grid gap-2">
+      {%- for item in C.overview.parts %}
+      <li><strong>{{ item.title }}</strong> {{ item.body }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="m-0 mt-3 text-sm text-slate-600">{{ C.screenshotsGerman }}</p>
+  </section>
+
+  <section class="panel min-w-0" aria-labelledby="schritte">
+    <h2 id="schritte" class="panel-title">{{ C.steps.headline }}</h2>
+    <ol class="m-0 pl-5 list-decimal text-slate-700 grid gap-4">
+      <li>{{ C.steps.template }}</li>
+      <li>{{ C.steps.start }}</li>
+      <li>{{ C.steps.trust }}
+        {{ shot("ordner-vertrauen.webp", C.steps.trustAlt, 910, 492) }}
+      </li>
+      <li>{{ C.steps.signIn }}</li>
+      <li>{{ C.steps.describe }}</li>
+      <li>{{ C.steps.publish }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ C.steps.publishLink }}</a></li>
+    </ol>
+  </section>
+
+  <section class="panel min-w-0" aria-labelledby="claude">
+    <h2 id="claude" class="panel-title">{{ C.claude.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ C.claude.body }}</p>
+    {{ shot("claude-anmeldung.webp", C.claude.alt, 998, 686) }}
+    <p class="m-0 mt-4 text-slate-700">{{ C.claude.error }}</p>
+    {{ shot("localhost-fehler.webp", C.claude.errorAlt, 2000, 1032) }}
+    <p class="m-0 mt-4 text-slate-700">{{ C.claude.open }}</p>
+    {{ shot("webseite-oeffnen.webp", C.claude.openAlt, 2000, 289) }}
+  </section>
+
+  <section class="panel min-w-0" aria-labelledby="chatgpt">
+    <h2 id="chatgpt" class="panel-title">{{ C.chatgpt.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ C.chatgpt.body }}</p>
+    {{ shot("chatgpt-anmeldung.webp", C.chatgpt.alt, 804, 472) }}
+    <p class="m-0 mt-4 text-slate-700">{{ C.chatgpt.setting }}</p>
+    {{ shot("chatgpt-geraetecode.webp", C.chatgpt.settingAlt, 1632, 336) }}
+    <p class="m-0 mt-4 text-slate-700">{{ C.chatgpt.rights }}</p>
+    {{ shot("codex-rechte.webp", C.chatgpt.rightsAlt, 556, 472) }}
+  </section>
+
+  <section class="panel" aria-labelledby="pausieren">
+    <h2 id="pausieren" class="panel-title">{{ C.pause.headline }}</h2>
+    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+      {%- for item in C.pause.items %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="wissen">
+    <h2 id="wissen" class="panel-title">{{ C.good.headline }}</h2>
+    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+      {%- for item in C.good.items %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+</div>
