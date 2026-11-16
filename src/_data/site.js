@@ -20,6 +20,8 @@ export default {
     init: "npx --yes @lernapps/tooling init <name>",
     // the template repository to start from in a GitHub codespace (/build/codespaces/)
     start: "https://github.com/lernapps/start",
+    // the list of a person's own codespaces on GitHub, to continue a paused one (/build/codespaces/)
+    codespaces: "https://github.com/codespaces",
     listing: "https://github.com/lernapps/tooling/blob/main/skills/process/lernapps-listing/SKILL.md",
     listingRaw: "https://raw.githubusercontent.com/lernapps/tooling/main/skills/process/lernapps-listing/SKILL.md",
     skills: "npx skills add lernapps/tooling",

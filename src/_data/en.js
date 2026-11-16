@@ -237,9 +237,11 @@ const en = {
     headline: "Build with Codespaces",
     lead:
       "You do not have to install anything on your computer. A codespace is a ready-made workplace in the browser. Your AI assistant is already in it.",
+    openCodespaces: "To your codespaces",
     template: "To the template on GitHub",
     otherWay: "Rather build with an assistant on your own computer?",
     needs: {
+      lead: "You need:",
       headline: "What you need",
       items: [
         "A free GitHub account.",
@@ -300,12 +302,15 @@ const en = {
     },
     pause: {
       headline: "Pausing and continuing later",
+      lead:
+        "By default a codespace stops by itself after 30 minutes without input (auto-pause). A codespace you do not open for 30 days is deleted. You can change both at GitHub.",
       items: [
-        "A codespace stops by itself after 30 minutes without input. Your files stay, even changes that are not saved yet. Running work of the assistant and the preview end.",
-        "To continue, open github.com/codespaces and click “Open” at your codespace. Or open “Code” in the repository, then “Codespaces”, and choose the existing one. Do not create a new one: it would be empty.",
-        "A codespace you do not open for 30 days is deleted. So ask the assistant at the end of a session to save your work on GitHub.",
+        "When it stops, your files stay, even changes that are not saved yet. Running work of the assistant and the preview end.",
+        "To continue, open your codespaces on GitHub (button below) and click “Open” at your codespace. That takes about a minute. Or open “Code” in the repository, then “Codespaces”, and choose the existing one. Do not create a new one: it would be empty.",
+        "Because everything is deleted after 30 days without use: ask the assistant at the end of a session to save your work on GitHub.",
         "A stopped codespace costs no computing time, only a little storage. You set the waiting time and the retention at GitHub under “Settings” and “Codespaces”.",
       ],
+      link: "To your codespaces on GitHub",
     },
     good: {
       headline: "Good to know",

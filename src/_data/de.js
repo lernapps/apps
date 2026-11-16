@@ -259,9 +259,11 @@ const de = {
     headline: "Mit Codespaces bauen",
     lead:
       "Du musst nichts auf deinem Rechner installieren. Ein Codespace ist eine fertige Arbeitsumgebung im Browser. Dein KI-Assistent ist schon darin.",
+    openCodespaces: "Zu deinen Codespaces",
     template: "Zur Vorlage auf GitHub",
     otherWay: "Lieber mit einem Assistenten auf deinem Rechner bauen?",
     needs: {
+      lead: "Du brauchst:",
       headline: "Was du brauchst",
       items: [
         "Ein kostenloses GitHub-Konto.",
@@ -322,12 +324,15 @@ const de = {
     },
     pause: {
       headline: "Pausieren und später weitermachen",
+      lead:
+        "Ein Codespace hält standardmäßig nach 30 Minuten ohne Eingabe von selbst an (Auto-Pause). Ein Codespace, den du 30 Tage lang nicht öffnest, wird gelöscht. Beides kannst du bei GitHub ändern.",
       items: [
-        "Ein Codespace hält nach 30 Minuten ohne Eingabe von selbst an. Deine Dateien bleiben erhalten, auch Änderungen, die noch nicht gespeichert sind. Laufende Arbeit des Assistenten und die Vorschau werden beendet.",
-        "Zum Weitermachen öffne github.com/codespaces und klicke bei deinem Codespace auf „Open“. Oder öffne im Repository „Code“ und dann „Codespaces“ und wähle den vorhandenen aus. Lege keinen neuen an: Der wäre leer.",
-        "Ein Codespace, den du 30 Tage lang nicht öffnest, wird gelöscht. Bitte den Assistenten deshalb am Ende einer Sitzung, deine Arbeit auf GitHub zu sichern.",
+        "Beim Anhalten bleiben deine Dateien erhalten, auch Änderungen, die noch nicht gespeichert sind. Laufende Arbeit des Assistenten und die Vorschau werden beendet.",
+        "Zum Weitermachen öffnest du deine Codespaces auf GitHub (Knopf unten) und klickst bei deinem Codespace auf „Open“. Das dauert etwa eine Minute. Oder öffne im Repository „Code“ und dann „Codespaces“ und wähle den vorhandenen aus. Lege keinen neuen an: Der wäre leer.",
+        "Weil nach 30 Tagen ohne Nutzung alles gelöscht wird: Bitte den Assistenten am Ende einer Sitzung, deine Arbeit auf GitHub zu sichern.",
         "Ein angehaltener Codespace kostet keine Rechenzeit, nur ein wenig Speicher. Wartezeit und Aufbewahrung stellst du bei GitHub unter „Settings“ und „Codespaces“ ein.",
       ],
+      link: "Zu deinen Codespaces auf GitHub",
     },
     good: {
       headline: "Gut zu wissen",
