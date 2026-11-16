@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" data-la-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Build and practise with Codespaces · lernapps.net</title>
+  <meta name="description" content="Build a learning app or practise for an occasion in the browser without installing anything: with GitHub Codespaces and your AI assistant, Claude or ChatGPT.">
+  <link rel="canonical" href="https://lernapps.net/apps/en/build/codespaces/">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/apps/pr-preview/pr-325/lernapps-tokens.css">
+<link rel="stylesheet" href="/apps/pr-preview/pr-325/lernapps-frame.css">
+<link rel="alternate" hreflang="en" href="/apps/pr-preview/pr-325/en/build/codespaces/">
+<link rel="alternate" hreflang="de" href="/apps/pr-preview/pr-325/build/codespaces/">
+<script>(() => {
+  const key = "lernapps-lang", here = "en", pages = {"de":"/apps/pr-preview/pr-325/build/codespaces/"};
+  const known = ["de","en"];
+  const browser = (navigator.languages || [navigator.language]).map((l) => String(l).slice(0, 2).toLowerCase()).find((l) => known.includes(l));
+  let chosen = null;
+  try { chosen = localStorage.getItem(key); } catch {}
+  const wanted = known.includes(chosen) ? chosen : browser;
+  if (wanted && wanted !== here && pages[wanted] && !/bot|crawl|spider|slurp/i.test(navigator.userAgent)) {
+    location.replace(pages[wanted] + location.search + location.hash);
+    return;
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-la-lang]");
+    if (!a) return;
+    try { a.dataset.laLang === browser ? localStorage.removeItem(key) : localStorage.setItem(key, a.dataset.laLang); } catch {}
+  });
+})();</script>
+  <link rel="stylesheet" href="/apps/pr-preview/pr-325/uno.css">
+  <link rel="stylesheet" href="/apps/pr-preview/pr-325/assets/apps.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
+  <a class="la-skip" href="#main-content" lang="en">Skip to content</a>
+<p class="la-preview" lang="en">Preview of a change. The real page: <a href="https://lernapps.net/apps/en/build/codespaces/">lernapps.net/apps/en/build/codespaces/</a></p><header class="la-header" lang="en">
+  <div class="la-header__inner">
+    <a class="la-brand" href="/en/" aria-label="lernapps.net – home page"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
+    <nav class="la-nav la-nav--bar" aria-label="Main navigation"><ul><li><a href="/apps/pr-preview/pr-325/en/">Catalog</a></li><li><a href="/practice/en/">Practise</a></li><li><a href="/apps/pr-preview/pr-325/en/build/" aria-current="page">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li><li><a href="/en/tutor/">Tutor</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">Platform</a></li><li><a href="/en/join/">Get involved</a></li><li class="la-lang"><a href="/apps/pr-preview/pr-325/build/codespaces/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav>
+    <details class="la-menu"><summary>Menu</summary><nav class="la-nav la-nav--menu" aria-label="Main navigation"><div class="la-menu__group"><p class="la-menu__title" id="la-menu-0">For learners</p><ul aria-labelledby="la-menu-0"><li><a href="/apps/pr-preview/pr-325/en/">App catalog</a></li><li><a href="/practice/en/">Practise for a test</a></li></ul></div><div class="la-menu__group"><p class="la-menu__title" id="la-menu-1">For makers</p><ul aria-labelledby="la-menu-1"><li><a href="/apps/pr-preview/pr-325/en/build/" aria-current="page">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li></ul></div><div class="la-menu__group"><p class="la-menu__title" id="la-menu-2">Understand and join in</p><ul aria-labelledby="la-menu-2"><li><a href="/en/tutor/">Tutor</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">Platform</a></li><li><a href="/en/join/">Get involved</a></li></ul></div><ul class="la-menu__lang"><li class="la-lang"><a href="/apps/pr-preview/pr-325/build/codespaces/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav></details>
+  </div>
+</header>
+
+  <main id="main-content" tabindex="-1" class="flex-1 outline-none">
+    
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">Build and practise with Codespaces</h1>
+    <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">You do not have to install anything on your computer. A codespace is a ready-made workplace in the browser. Your AI assistant is already in it.</p>
+    <p class="m-0 mt-4 text-slate-300"><a href="/apps/pr-preview/pr-325/en/build/" class="text-blue-300 underline underline-offset-2 hover:text-white">Rather build with an assistant on your own computer?</a></p>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
+  <section class="panel min-w-0" aria-labelledby="schritte">
+    <h2 id="schritte" class="panel-title">How it works</h2>
+    <p class="m-0 text-slate-700">You need:</p>
+    <ul class="m-0 mt-2 pl-5 list-disc text-slate-700 grid gap-2">
+      <li>A free GitHub account.</li>
+      <li>A subscription or a key for an AI assistant: Claude (Claude Pro or higher) or ChatGPT (with Codex).</li>
+      <li>You pay for the AI yourself. lernapps.net does not pay for AI use.</li>
+    </ul>
+    <p class="m-0 mt-5 text-slate-700">You can do two things here: build an app and share it, or practise for an occasion, such as a test. The steps are the same, except in three places. They are marked “Build” and “Practise”.</p>
+    <ol class="m-0 mt-3 pl-5 list-decimal text-slate-700 grid gap-4">
+      <li>Open the template on GitHub (github.com/lernapps/start). Click “Use this template”, then “Create a new repository”. Give it a short name, for example “fractions”. The repository belongs to you.
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>Build:</strong> This repository becomes the repository of your app and stays.</li>
+          <li><strong>Practise:</strong> This repository is only your workplace. It can go afterwards.</li>
+        </ul>
+      </li>
+      <li>Open your new repository. Click “Code”, then “Codespaces” and “Create codespace on main”. GitHub starts the workplace. This takes about two minutes.</li>
+      <li>The editor asks whether you trust the authors of the files in this folder. Click “Trust folder and continue”. Without this yes the extensions for Claude and Codex stay off.
+        
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/ordner-vertrauen.webp" class="block w-full" style="max-width: 520px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/ordner-vertrauen.webp" alt="The question “Do you trust the authors of the files in this folder?” with an arrow to the button “Trust folder and continue”." width="910" height="492" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+      </li>
+      <li>Sign in to your assistant. How is described below for Claude and for ChatGPT. <a href="#claude" class="text-blue-700 underline underline-offset-2">Signing in to Claude</a>, <a href="#chatgpt" class="text-blue-700 underline underline-offset-2">Signing in to ChatGPT (Codex)</a></li>
+      <li>Tell the assistant what you want. It puts everything in this folder, not in a subfolder. You confirm its plan and the interim results.
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>Build:</strong> Which app you want to build. It asks for the topic, the grade and what learners do.</li>
+          <li><strong>Practise:</strong> What you want to practise for, for example “for the maths test next week”. Give it photos of the worksheets, with the subject, the grade and what is covered.</li>
+        </ul>
+      </li>
+      <li>At the end the assistant checks the app.
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>Build:</strong> It helps you publish it. <a href="/apps/pr-preview/pr-325/en/enter/" class="text-blue-700 underline underline-offset-2">How to publish your app</a></li>
+          <li><strong>Practise:</strong> It gives you the ZIP file with the folder “src”. Submit it in the form and get the link to the app. <a href="/practice/en/submit/" class="text-blue-700 underline underline-offset-2">Submitting step by step</a></li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <div class="flex flex-wrap gap-3">
+    <a href="https://github.com/lernapps/start" class="btn btn-primary btn-lg">To the template on GitHub <span aria-hidden="true">→</span></a>
+    <a href="https://github.com/codespaces" class="btn btn-secondary btn-lg">To your codespaces <span aria-hidden="true">→</span></a>
+  </div>
+
+  <section class="panel min-w-0" aria-labelledby="arbeitsplatz">
+    <h2 id="arbeitsplatz" class="panel-title">What your workplace looks like</h2>
+    <p class="m-0 text-slate-700">Once the codespace is open you see a window like this. The red speech bubbles explain the main parts.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/gesamtansicht.webp" class="block w-full" style="max-width: 2000px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/gesamtansicht.webp" alt="The codespace in the browser: the files of the app on the left, the guide in the middle, the sign-in of Claude Code on the right, the terminal at the bottom. The icons for Claude and Codex are at the top right of the editor." width="2000" height="1148" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+    <ul class="m-0 mt-4 pl-5 list-disc text-slate-700 grid gap-2">
+      <li><strong>Left:</strong> The files of your app. They are created bit by bit.</li>
+      <li><strong>Top right of the editor:</strong> Here you start your assistant: Claude or Codex (ChatGPT).</li>
+      <li><strong>Right:</strong> The sign-in opens here. Sometimes it causes problems. How to solve them is further down.</li>
+      <li><strong>Middle:</strong> The guide (README). Read it, at least the first time.</li>
+      <li><strong>Bottom:</strong> The terminal. You probably do not need it and can minimise it.</li>
+    </ul>
+    <p class="m-0 mt-3 text-sm text-slate-600">The screenshots are in German, like your codespace if your browser is set to German. Click a picture to see it larger.</p>
+  </section>
+
+  <section class="panel min-w-0" aria-labelledby="claude">
+    <h2 id="claude" class="panel-title">Signing in to Claude</h2>
+    <p class="m-0 text-slate-700">Click the icon of Claude at the top right of the editor. A window opens on the right. Choose “Claude.ai Subscription”, then “Continue in browser”.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/claude-anmeldung.webp" class="block w-full" style="max-width: 560px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/claude-anmeldung.webp" alt="The window of Claude Code with the message “Continue in browser”, a field with the address for signing in and a button to copy the address. A speech bubble says that signing in probably fails the first time." width="998" height="686" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+    <p class="m-0 mt-4 text-slate-700">The first time, signing in probably fails. The browser then says that the page “localhost” cannot be reached. That is normal in a codespace.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/localhost-fehler.webp" class="block w-full" style="max-width: 720px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/localhost-fehler.webp" alt="A browser page with the message “This site can’t be reached. localhost refused to connect”." width="2000" height="1032" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+    <p class="m-0 mt-4 text-slate-700">Copy the address from the window of Claude (button next to the field) and paste it again into a new tab of your browser. Then signing in continues. If the page shows a code, copy it and paste it into the window of Claude. The editor sometimes asks whether it may open the web page: click “Open”.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/webseite-oeffnen.webp" class="block w-full" style="max-width: 2000px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/webseite-oeffnen.webp" alt="The question “Do you want Code to open the external website?” with an arrow to the button “Open”." width="2000" height="289" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+  </section>
+
+  <section class="panel min-w-0" aria-labelledby="chatgpt">
+    <h2 id="chatgpt" class="panel-title">Signing in to ChatGPT (Codex)</h2>
+    <p class="m-0 text-slate-700">Click the icon of Codex at the top right of the editor. Do not choose “Sign in with ChatGPT” but “More options” and then signing in with a device code (“device flow”). It shows you a code that you enter on the page of ChatGPT.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/chatgpt-anmeldung.webp" class="block w-full" style="max-width: 480px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/chatgpt-anmeldung.webp" alt="The window of Codex with the buttons “Sign in with ChatGPT”, “Use API key” and the entry “More options”. A speech bubble says that signing in needs the device code." width="804" height="472" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+    <p class="m-0 mt-4 text-slate-700">You have to allow the device code in ChatGPT once, in the settings under security: “Enable device code login for Codex …”. Never share a device code with anyone.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/chatgpt-geraetecode.webp" class="block w-full" style="max-width: 760px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/chatgpt-geraetecode.webp" alt="The setting “Enable device code login for Codex, Excel, PowerPoint and Word” in ChatGPT, switched on." width="1632" height="336" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+    <p class="m-0 mt-4 text-slate-700">Codex asks what it may do on its own. You work in a separate environment: even with “Full access” your computer is not affected. Your account and everything you type in the codespace are. Do not type passwords there.</p>
+    
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="/apps/pr-preview/pr-325/assets/codespaces/codex-rechte.webp" class="block w-full" style="max-width: 360px">
+    <img src="/apps/pr-preview/pr-325/assets/codespaces/codex-rechte.webp" alt="The choice of Codex’s rights: “Request approval”, “Approve for me” and “Full access”." width="556" height="472" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+  </a>
+</figure>
+  </section>
+
+  <section class="panel" aria-labelledby="pausieren">
+    <h2 id="pausieren" class="panel-title">Pausing and continuing later</h2>
+    <p class="m-0 text-slate-700">By default a codespace stops by itself after 30 minutes without input (auto-pause). A codespace you do not open for 30 days is deleted. You can change both at GitHub.</p>
+    <ul class="m-0 mt-3 pl-5 list-disc text-slate-700 grid gap-2">
+      <li>When it stops, your files stay, even changes that are not saved yet. Running work of the assistant and the preview end.</li>
+      <li>To continue, open your codespaces on GitHub (button below) and click “Open” at your codespace. That takes about a minute. Or open “Code” in the repository, then “Codespaces”, and choose the existing one. Do not create a new one: it would be empty.</li>
+      <li>Because everything is deleted after 30 days without use: ask the assistant at the end of a session to save your work on GitHub.</li>
+      <li>A stopped codespace costs no computing time, only a little storage. You set the waiting time and the retention at GitHub under “Settings” and “Codespaces”.</li>
+    </ul>
+    <a href="https://github.com/codespaces" class="btn btn-secondary mt-4 self-start">To your codespaces on GitHub <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="panel" aria-labelledby="wissen">
+    <h2 id="wissen" class="panel-title">Good to know</h2>
+    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+      <li>GitHub gives free accounts about 60 hours of codespace time each month. Stop the codespace when you are done.</li>
+      <li>The assistant may do anything in your codespace and sees the whole internet. Do not type passwords or data of pupils there.</li>
+      <li>Your texts go to the provider of the assistant (Anthropic or OpenAI). Do not write names of learners in them.</li>
+      <li>The finished app collects no data and runs in the browser without an account. lernapps.net checks that before it appears. When you practise, content and app are public, so without names and school.</li>
+    </ul>
+  </section>
+</div>
+
+  </main>
+
+  <footer class="la-footer" lang="en">
+  <div class="la-footer__inner">
+    <p>lernapps.net is free and has no ads. It lives on your thanks.</p>
+    <nav aria-label="Footer"><ul><li><a href="/en/privacy/">Privacy</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/docs/en/platform-design/">Platform design</a></li><li><a href="https://github.com/lernapps/apps">Source code</a></li></ul></nav>
+  </div>
+</footer>
+</body>
+</html>
