@@ -197,6 +197,11 @@ const en = {
       practice: "Want to practise for a test with your own material?",
       practiceLink: "Then have a look at Practise",
     },
+    codespaces: {
+      headline: "Build without installing anything",
+      body: "No assistant on your computer? Then build in the browser: in a GitHub codespace, with Claude or ChatGPT in it. You install nothing.",
+      link: "Build with Codespaces",
+    },
     which: {
       headline: "Which assistant?",
       body: "Any assistant works if it can use skills and change files. We build with Claude Code ourselves. Even a very cheap model already builds good apps. But what counts most is what you know about your subject and your learners.",
@@ -221,6 +226,95 @@ const en = {
       headline: "And then: out into the world",
       body: "Your app can be really good software for you. But if you want the world to hear about it, you have to publish it!",
       enterLink: "How to publish your app",
+    },
+  },
+
+  // ── Build with Codespaces (subpage of /build/) ──────
+  codespaces: {
+    title: "Build with Codespaces · lernapps.net",
+    description:
+      "Build a learning app in the browser without installing anything: with GitHub Codespaces and your AI assistant, Claude or ChatGPT.",
+    headline: "Build with Codespaces",
+    lead:
+      "You do not have to install anything on your computer. A codespace is a ready-made workplace in the browser. Your AI assistant is already in it.",
+    template: "To the template on GitHub",
+    otherWay: "Rather build with an assistant on your own computer?",
+    needs: {
+      headline: "What you need",
+      items: [
+        "A free GitHub account.",
+        "A subscription or a key for an AI assistant: Claude (Claude Pro or higher) or ChatGPT (with Codex).",
+        "You pay for the AI yourself. lernapps.net does not pay for AI use.",
+      ],
+    },
+    overview: {
+      headline: "What your workplace looks like",
+      body: "Once the codespace is open you see a window like this. The red speech bubbles explain the main parts.",
+      alt:
+        "The codespace in the browser: the files of the app on the left, the guide in the middle, the sign-in of Claude Code on the right, the terminal at the bottom. The icons for Claude and Codex are at the top right of the editor.",
+      parts: [
+        { title: "Left:", body: "The files of your app. They are created bit by bit." },
+        { title: "Top right of the editor:", body: "Here you start your assistant: Claude or Codex (ChatGPT)." },
+        { title: "Right:", body: "The sign-in opens here. Sometimes it causes problems. How to solve them is further down." },
+        { title: "Middle:", body: "The guide (README). Read it, at least the first time." },
+        { title: "Bottom:", body: "The terminal. You probably do not need it and can minimise it." },
+      ],
+    },
+    screenshotsGerman: "The screenshots are in German, like your codespace if your browser is set to German.",
+    steps: {
+      headline: "How it works",
+      template:
+        "Open the template on GitHub (github.com/lernapps/start). Click “Use this template”, then “Create a new repository”. Give your app a short name, for example “fractions”. The repository belongs to you.",
+      start:
+        "Open your new repository. Click “Code”, then “Codespaces” and “Create codespace on main”. GitHub starts the workplace. This takes about two minutes.",
+      trust:
+        "The editor asks whether you trust the authors of the files in this folder. Click “Trust folder and continue”. Without this yes the extensions for Claude and Codex stay off.",
+      trustAlt: "The question “Do you trust the authors of the files in this folder?” with an arrow to the button “Trust folder and continue”.",
+      signIn: "Sign in to your assistant. How is described below for Claude and for ChatGPT.",
+      describe:
+        "Tell the assistant which app you want to build. It asks for the topic, the grade and what learners do. It puts the app in this folder, not in a subfolder. You confirm its plan and the interim results.",
+      publish: "At the end it checks the app and helps you publish it.",
+      publishLink: "How to publish your app",
+    },
+    claude: {
+      headline: "Signing in to Claude",
+      body: "Click the icon of Claude at the top right of the editor. A window opens on the right. Choose “Claude.ai Subscription”, then “Continue in browser”.",
+      alt: "The window of Claude Code with the message “Continue in browser”, a field with the address for signing in and a button to copy the address. A speech bubble says that signing in probably fails the first time.",
+      error:
+        "The first time, signing in probably fails. The browser then says that the page “localhost” cannot be reached. That is normal in a codespace.",
+      errorAlt: "A browser page with the message “This site can’t be reached. localhost refused to connect”.",
+      open:
+        "Copy the address from the window of Claude (button next to the field) and paste it again into a new tab of your browser. Then signing in continues. If the page shows a code, copy it and paste it into the window of Claude. The editor sometimes asks whether it may open the web page: click “Open”.",
+      openAlt: "The question “Do you want Code to open the external website?” with an arrow to the button “Open”.",
+    },
+    chatgpt: {
+      headline: "Signing in to ChatGPT (Codex)",
+      body: "Click the icon of Codex at the top right of the editor. Do not choose “Sign in with ChatGPT” but “More options” and then signing in with a device code (“device flow”). It shows you a code that you enter on the page of ChatGPT.",
+      alt: "The window of Codex with the buttons “Sign in with ChatGPT”, “Use API key” and the entry “More options”. A speech bubble says that signing in needs the device code.",
+      setting:
+        "You have to allow the device code in ChatGPT once, in the settings under security: “Enable device code login for Codex …”. Never share a device code with anyone.",
+      settingAlt: "The setting “Enable device code login for Codex, Excel, PowerPoint and Word” in ChatGPT, switched on.",
+      rights:
+        "Codex asks what it may do on its own. You work in a separate environment: even with “Full access” your computer is not affected. Your account and everything you type in the codespace are. Do not type passwords there.",
+      rightsAlt: "The choice of Codex’s rights: “Request approval”, “Approve for me” and “Full access”.",
+    },
+    pause: {
+      headline: "Pausing and continuing later",
+      items: [
+        "A codespace stops by itself after 30 minutes without input. Your files stay, even changes that are not saved yet. Running work of the assistant and the preview end.",
+        "To continue, open github.com/codespaces and click “Open” at your codespace. Or open “Code” in the repository, then “Codespaces”, and choose the existing one. Do not create a new one: it would be empty.",
+        "A codespace you do not open for 30 days is deleted. So ask the assistant at the end of a session to save your work on GitHub.",
+        "A stopped codespace costs no computing time, only a little storage. You set the waiting time and the retention at GitHub under “Settings” and “Codespaces”.",
+      ],
+    },
+    good: {
+      headline: "Good to know",
+      items: [
+        "GitHub gives free accounts about 60 hours of codespace time each month. Stop the codespace when you are done.",
+        "The assistant may do anything in your codespace and sees the whole internet. Do not type passwords or data of pupils there.",
+        "Your texts go to the provider of the assistant (Anthropic or OpenAI). Do not write names of learners in them.",
+        "The finished app collects no data and runs in the browser without an account. lernapps.net checks that before it appears.",
+      ],
     },
   },
 

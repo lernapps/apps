@@ -216,6 +216,11 @@ const de = {
       practice: "Du willst für eine Arbeit mit deinem eigenen Material üben?",
       practiceLink: "Dann schau bei Üben",
     },
+    codespaces: {
+      headline: "Ohne Installation bauen",
+      body: "Du hast keinen Assistenten auf deinem Rechner? Dann bau im Browser: in einem GitHub-Codespace, mit Claude oder ChatGPT darin. Du installierst nichts.",
+      link: "Mit Codespaces bauen",
+    },
     which: {
       headline: "Welcher Assistent?",
       body: "Jeder Assistent geht, der Skills nutzen und Dateien ändern kann. Wir bauen selbst mit Claude Code. Auch ein sehr günstiges Modell baut schon gute Apps. Am meisten zählt aber, was du über dein Fach und deine Lernenden weißt.",
@@ -243,6 +248,95 @@ const de = {
       headline: "Und dann: raus in die Welt",
       body: "Deine App kann richtig gute Software für dich sein. Aber wenn die Welt davon erfahren soll, musst du sie veröffentlichen!",
       enterLink: "So veröffentlichst du deine App",
+    },
+  },
+
+  // ── Mit Codespaces bauen (Unterseite von /build/) ──────
+  codespaces: {
+    title: "Mit Codespaces bauen · lernapps.net",
+    description:
+      "Bau eine Lern-App im Browser, ohne etwas zu installieren: mit GitHub Codespaces und deinem KI-Assistenten Claude oder ChatGPT.",
+    headline: "Mit Codespaces bauen",
+    lead:
+      "Du musst nichts auf deinem Rechner installieren. Ein Codespace ist eine fertige Arbeitsumgebung im Browser. Dein KI-Assistent ist schon darin.",
+    template: "Zur Vorlage auf GitHub",
+    otherWay: "Lieber mit einem Assistenten auf deinem Rechner bauen?",
+    needs: {
+      headline: "Was du brauchst",
+      items: [
+        "Ein kostenloses GitHub-Konto.",
+        "Ein Abo oder einen Schlüssel für einen KI-Assistenten: Claude (Claude Pro oder höher) oder ChatGPT (mit Codex).",
+        "Die Kosten für die KI trägst du selbst. lernapps.net bezahlt keine KI-Nutzung.",
+      ],
+    },
+    overview: {
+      headline: "So sieht dein Arbeitsplatz aus",
+      body: "Sobald der Codespace geöffnet ist, siehst du ein Fenster wie dieses. Die roten Sprechblasen erklären die wichtigsten Teile.",
+      alt:
+        "Der Codespace im Browser: links die Dateien der App, in der Mitte die Anleitung, rechts die Anmeldung von Claude Code, unten das Terminal. Oben rechts im Editor stehen die Symbole für Claude und Codex.",
+      parts: [
+        { title: "Links:", body: "Die Dateien deiner App. Sie werden nach und nach angelegt." },
+        { title: "Oben rechts im Editor:", body: "Hier startest du deinen Assistenten: Claude oder Codex (ChatGPT)." },
+        { title: "Rechts:", body: "Danach öffnet sich hier die Anmeldung. Manchmal gibt es damit Probleme. Wie du sie löst, steht weiter unten." },
+        { title: "In der Mitte:", body: "Die Anleitung (README). Lies sie, wenigstens beim ersten Mal." },
+        { title: "Unten:", body: "Das Terminal. Du brauchst es wahrscheinlich gar nicht und kannst es minimieren." },
+      ],
+    },
+    screenshotsGerman: "Die Bilder sind deutsch, wie dein Codespace, wenn dein Browser auf Deutsch eingestellt ist.",
+    steps: {
+      headline: "So geht es",
+      template:
+        "Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen für deine App ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.",
+      start:
+        "Öffne dein neues Repository. Klicke auf „Code“, dann auf „Codespaces“ und auf „Create codespace on main“. GitHub startet die Arbeitsumgebung. Das dauert etwa zwei Minuten.",
+      trust:
+        "Der Editor fragt, ob du den Autoren der Dateien in diesem Ordner vertraust. Klicke auf „Ordner vertrauen und fortfahren“. Ohne dieses Ja bleiben die Erweiterungen für Claude und Codex ausgeschaltet.",
+      trustAlt: "Die Rückfrage „Vertrauen Sie den Autoren der Dateien in diesem Ordner?“ mit einem Pfeil auf den Knopf „Ordner vertrauen und fortfahren“.",
+      signIn: "Melde dich bei deinem Assistenten an. Wie das geht, steht für Claude und für ChatGPT weiter unten.",
+      describe:
+        "Sag dem Assistenten, welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen. Er legt die App in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.",
+      publish: "Am Ende prüft er die App und hilft dir, sie zu veröffentlichen.",
+      publishLink: "So veröffentlichst du deine App",
+    },
+    claude: {
+      headline: "Anmeldung bei Claude",
+      body: "Klicke oben rechts im Editor auf das Symbol von Claude. Rechts öffnet sich ein Fenster. Wähle „Claude.ai Subscription“ und dann „Continue in browser“.",
+      alt: "Das Fenster von Claude Code mit der Meldung „Continue in browser“, einem Feld mit der Adresse zum Anmelden und einem Knopf zum Kopieren der Adresse. Eine Sprechblase sagt, dass die Anmeldung beim ersten Öffnen wahrscheinlich nicht klappt.",
+      error:
+        "Beim ersten Öffnen klappt die Anmeldung wahrscheinlich nicht. Der Browser meldet dann, dass die Seite „localhost“ nicht erreichbar ist. Das ist im Codespace normal.",
+      errorAlt: "Eine Browserseite mit der Meldung „Diese Seite ist leider nicht erreichbar. localhost hat die Verbindung verweigert“.",
+      open:
+        "Kopiere die Adresse aus dem Fenster von Claude (Knopf neben dem Feld) und füge sie noch einmal in einem neuen Tab deines Browsers ein. Dann geht die Anmeldung weiter. Zeigt die Seite einen Code, kopiere ihn und füge ihn im Fenster von Claude ein. Der Editor fragt manchmal, ob er die Webseite öffnen darf: Klicke auf „Öffnen“.",
+      openAlt: "Die Rückfrage „Möchten Sie, dass Code die externe Website öffnet?“ mit einem Pfeil auf den Knopf „Öffnen“.",
+    },
+    chatgpt: {
+      headline: "Anmeldung bei ChatGPT (Codex)",
+      body: "Klicke oben rechts im Editor auf das Symbol von Codex. Wähle nicht „Mit ChatGPT anmelden“, sondern „Weitere Optionen“ und dann die Anmeldung per Gerätecode („Device Flow“). Sie zeigt dir einen Code, den du auf der Seite von ChatGPT eingibst.",
+      alt: "Das Fenster von Codex mit den Knöpfen „Mit ChatGPT anmelden“, „API-Schlüssel verwenden“ und dem Eintrag „Weitere Optionen“. Eine Sprechblase sagt, dass für die Anmeldung der Gerätecode nötig ist.",
+      setting:
+        "Die Anmeldung per Gerätecode musst du in ChatGPT einmal erlauben, unter Einstellungen im Bereich Sicherheit: „Anmeldung per Gerätecode für Codex … aktivieren“. Teile einen Gerätecode mit niemandem.",
+      settingAlt: "Die Einstellung „Anmeldung per Gerätecode für Codex, Excel, PowerPoint und Word aktivieren“ in ChatGPT, eingeschaltet.",
+      rights:
+        "Codex fragt, was es allein tun darf. Du arbeitest in einer abgetrennten Umgebung: Auch mit „Vollzugriff“ ist dein Rechner nicht betroffen. Dein Konto und alles, was du im Codespace eingibst, schon. Gib dort keine Passwörter ein.",
+      rightsAlt: "Die Auswahl der Rechte von Codex: „Genehmigung anfordern“, „Für mich genehmigen“ und „Vollzugriff“.",
+    },
+    pause: {
+      headline: "Pausieren und später weitermachen",
+      items: [
+        "Ein Codespace hält nach 30 Minuten ohne Eingabe von selbst an. Deine Dateien bleiben erhalten, auch Änderungen, die noch nicht gespeichert sind. Laufende Arbeit des Assistenten und die Vorschau werden beendet.",
+        "Zum Weitermachen öffne github.com/codespaces und klicke bei deinem Codespace auf „Open“. Oder öffne im Repository „Code“ und dann „Codespaces“ und wähle den vorhandenen aus. Lege keinen neuen an: Der wäre leer.",
+        "Ein Codespace, den du 30 Tage lang nicht öffnest, wird gelöscht. Bitte den Assistenten deshalb am Ende einer Sitzung, deine Arbeit auf GitHub zu sichern.",
+        "Ein angehaltener Codespace kostet keine Rechenzeit, nur ein wenig Speicher. Wartezeit und Aufbewahrung stellst du bei GitHub unter „Settings“ und „Codespaces“ ein.",
+      ],
+    },
+    good: {
+      headline: "Gut zu wissen",
+      items: [
+        "GitHub gibt kostenlosen Konten jeden Monat etwa 60 Stunden Codespace-Zeit. Beende den Codespace, wenn du fertig bist.",
+        "Der Assistent darf in deinem Codespace alles tun und sieht das ganze Internet. Gib dort keine Passwörter und keine Daten von Schülerinnen und Schülern ein.",
+        "Deine Texte gehen an den Anbieter des Assistenten (Anthropic oder OpenAI). Schreibe keine Namen von Lernenden hinein.",
+        "Die fertige App sammelt keine Daten und läuft ohne Konto im Browser. Das prüft lernapps.net, bevor sie erscheint.",
+      ],
     },
   },
 

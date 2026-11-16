@@ -14,7 +14,7 @@ eleventyComputed:
   Bauen: the creator's entry point to building an app for the catalog with the tooling of lernapps.net
   (site.tooling): the prompt to give the assistant (it contains the command that starts the app; the quick path the
   assistant reads in llms.txt, so the page shows no command of its own), a pointer to /practice/ for those who
-  only want to practise with their own material, a short box on which assistant
+  only want to practise with their own material, a box on building without any installation (/build/codespaces/), a short box on which assistant
   to use (the page /tooling/assistants/), building freely without the
   templates (any framework, or tools such as Lovable or bolt.new), then the step out into the world: publishing it on
   lernapps.net (/enter/, a prominent link with a rocket, the section #eintragen, which the header's "App bauen" now
@@ -55,6 +55,12 @@ eleventyComputed:
       </div>
     </div>
     <p class="m-0 mt-3 text-sm text-slate-600">{{ B.start.practice }} <a href="{{ '/practice/' | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2">{{ B.start.practiceLink }} <span aria-hidden="true">→</span></a></p>
+  </section>
+
+  <section class="panel" aria-labelledby="codespaces">
+    <h2 id="codespaces" class="panel-title">{{ B.codespaces.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ B.codespaces.body }}</p>
+    <a href="{{ '/build/codespaces/' | inLang(lang) | url }}" class="btn btn-secondary mt-4 self-start">{{ B.codespaces.link }}</a>
   </section>
 
   <section class="panel" aria-labelledby="assistent">
