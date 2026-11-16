@@ -62,10 +62,10 @@ Jeder Hinweis verrät dir ein Merkmal des Diagramms:
   Niederschlag.
 - **Mittelmeer:** Im Süden ist der Sommer trocken. Die Säulen liegen dann unter der Linie.
 
-Es gibt mehr als eine richtige Zeichnung. Die App prüft nicht jeden Punkt, sondern ob dein Diagramm zum Ort passt:
+Es gibt mehr als eine plausible Zeichnung. Die App prüft nicht jeden Punkt, sondern ob dein Diagramm zum Ort plausibel ist:
 die Durchschnittstemperatur im ganzen Jahr, die Spanne zwischen Sommer und Winter, den wärmsten und kältesten Monat, die Menge an
-Niederschlag, die Zahl der feuchten Monate und die Jahreszeit, in der es regnet. Wenn etwas nicht passt, bekommst du
-eine Frage, die dir einen Hinweis gibt.
+Niederschlag, die Zahl der feuchten Monate und die Jahreszeit, in der es regnet. Wenn alles passt, steht dort „Richtig!“. Das heißt hier:
+Dein Diagramm ist plausibel. Wenn etwas nicht passt, bekommst du eine Frage, die dir einen Hinweis gibt.
 
 Als Maßstab helfen dir die Vergleichsorte der Seite Typische Orte der Klimazonen: Athen,
 Brest, Moskau, Tromsø und die Zugspitze. Schau dir ihre Diagramme noch einmal an und überlege, welchem dein Ort
@@ -129,7 +129,7 @@ Hinweise unter dem Achsenkreuz noch einmal lesen.
 - Was zu tun ist: Das Kind bekommt nur Hinweise zu einem Ort (Breite, Höhe, Lage) und zeichnet, wie sein Klimadiagramm aussehen könnte: zwölf Temperaturen und zwölf Niederschlagssummen, im Achsenkreuz oder in Zahlenfeldern. Danach drückt es „Prüfen“.
 - Aufgabe: „Wie sieht das Klimadiagramm für {ort} aus? Hinweise: Breite {breite} °N, Höhe der Station {hoehe} m, Lage: {lage}.“
 - Antwortformat: Zwölf Temperaturen in °C und zwölf Niederschlagssummen in mm, wie es sie gezeichnet hat.
-- Was als richtig zählt: Richtig, wenn Jahresmittel (höchstens 4 °C daneben), Temperaturspanne (6 K), wärmster und kältester Monat (1 Monat), Jahresniederschlag (30 %), Zahl der humiden Monate (1) und die Verteilung des Regens auf Sommer und Winter zum Ort passen. Ein anderer, aber plausibler Verlauf kann bestehen.
+- Was als richtig zählt: Plausibel, wenn Jahresmittel (höchstens 4 °C daneben), Temperaturspanne (6 K), wärmster und kältester Monat (1 Monat), Jahresniederschlag (30 %), Zahl der humiden Monate (1) und die Verteilung des Regens auf Sommer und Winter zum Ort passen. Ein anderer, aber plausibler Verlauf kann bestehen.
 - Typische Fehler (die Meldung der App passt zu einem davon):
   - F1: Den Jahresverlauf der Temperatur um ein halbes Jahr verschoben: der wärmste Monat liegt im Winter.
   - F2: Eine flache Temperaturlinie gezeichnet: kein Unterschied zwischen Sommer und Winter.
