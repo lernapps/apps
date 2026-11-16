@@ -284,7 +284,7 @@ const de = {
         { title: "Unten:", body: "Das Terminal. Du brauchst es wahrscheinlich gar nicht und kannst es minimieren." },
       ],
     },
-    screenshotsGerman: "Die Bilder sind deutsch, wie dein Codespace, wenn dein Browser auf Deutsch eingestellt ist.",
+    screenshotsGerman: "Die Bilder sind deutsch, wie dein Codespace, wenn dein Browser auf Deutsch eingestellt ist. Klicke auf ein Bild, um es größer zu sehen.",
     steps: {
       headline: "So geht es",
       intro:

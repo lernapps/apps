@@ -262,7 +262,7 @@ const en = {
         { title: "Bottom:", body: "The terminal. You probably do not need it and can minimise it." },
       ],
     },
-    screenshotsGerman: "The screenshots are in German, like your codespace if your browser is set to German.",
+    screenshotsGerman: "The screenshots are in German, like your codespace if your browser is set to German. Click a picture to see it larger.",
     steps: {
       headline: "How it works",
       intro:
