@@ -51,20 +51,40 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">Mit Codespaces bauen</h1>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">Du musst nichts auf deinem Rechner installieren. Ein Codespace ist eine fertige Arbeitsumgebung im Browser. Dein KI-Assistent ist schon darin.</p>
-    <a href="https://github.com/lernapps/start" class="btn btn-light btn-lg mt-5">Zur Vorlage auf GitHub <span aria-hidden="true">→</span></a>
     <p class="m-0 mt-4 text-slate-300"><a href="/apps/build/" class="text-blue-300 underline underline-offset-2 hover:text-white">Lieber mit einem Assistenten auf deinem Rechner bauen?</a></p>
   </div>
 </section>
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
-  <section class="panel" aria-labelledby="mitbringen">
-    <h2 id="mitbringen" class="panel-title">Was du brauchst</h2>
-    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+  <section class="panel min-w-0" aria-labelledby="schritte">
+    <h2 id="schritte" class="panel-title">So geht es</h2>
+    <p class="m-0 text-slate-700">Du brauchst:</p>
+    <ul class="m-0 mt-2 pl-5 list-disc text-slate-700 grid gap-2">
       <li>Ein kostenloses GitHub-Konto.</li>
       <li>Ein Abo oder einen Schlüssel für einen KI-Assistenten: Claude (Claude Pro oder höher) oder ChatGPT (mit Codex).</li>
       <li>Die Kosten für die KI trägst du selbst. lernapps.net bezahlt keine KI-Nutzung.</li>
     </ul>
+    <ol class="m-0 mt-5 pl-5 list-decimal text-slate-700 grid gap-4">
+      <li>Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen für deine App ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.</li>
+      <li>Öffne dein neues Repository. Klicke auf „Code“, dann auf „Codespaces“ und auf „Create codespace on main“. GitHub startet die Arbeitsumgebung. Das dauert etwa zwei Minuten.</li>
+      <li>Der Editor fragt, ob du den Autoren der Dateien in diesem Ordner vertraust. Klicke auf „Ordner vertrauen und fortfahren“. Ohne dieses Ja bleiben die Erweiterungen für Claude und Codex ausgeschaltet.
+        
+<figure class="m-0 mt-3">
+  <a href="/apps/assets/codespaces/ordner-vertrauen.webp" class="block">
+    <img src="/apps/assets/codespaces/ordner-vertrauen.webp" alt="Die Rückfrage „Vertrauen Sie den Autoren der Dateien in diesem Ordner?“ mit einem Pfeil auf den Knopf „Ordner vertrauen und fortfahren“." width="910" height="492" loading="lazy" decoding="async" class="block max-w-full h-auto rounded-lg border border-slate-300">
+  </a>
+</figure>
+      </li>
+      <li>Melde dich bei deinem Assistenten an. Wie das geht, steht für Claude und für ChatGPT weiter unten. <a href="#claude" class="text-blue-700 underline underline-offset-2">Anmeldung bei Claude</a>, <a href="#chatgpt" class="text-blue-700 underline underline-offset-2">Anmeldung bei ChatGPT (Codex)</a></li>
+      <li>Sag dem Assistenten, welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen. Er legt die App in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.</li>
+      <li>Am Ende prüft er die App und hilft dir, sie zu veröffentlichen. <a href="/apps/enter/" class="text-blue-700 underline underline-offset-2">So veröffentlichst du deine App</a></li>
+    </ol>
   </section>
+
+  <div class="flex flex-wrap gap-3">
+    <a href="https://github.com/lernapps/start" class="btn btn-primary btn-lg">Zur Vorlage auf GitHub <span aria-hidden="true">→</span></a>
+    <a href="https://github.com/codespaces" class="btn btn-secondary btn-lg">Zu deinen Codespaces <span aria-hidden="true">→</span></a>
+  </div>
 
   <section class="panel min-w-0" aria-labelledby="arbeitsplatz">
     <h2 id="arbeitsplatz" class="panel-title">So sieht dein Arbeitsplatz aus</h2>
@@ -83,25 +103,6 @@
       <li><strong>Unten:</strong> Das Terminal. Du brauchst es wahrscheinlich gar nicht und kannst es minimieren.</li>
     </ul>
     <p class="m-0 mt-3 text-sm text-slate-600">Die Bilder sind deutsch, wie dein Codespace, wenn dein Browser auf Deutsch eingestellt ist.</p>
-  </section>
-
-  <section class="panel min-w-0" aria-labelledby="schritte">
-    <h2 id="schritte" class="panel-title">So geht es</h2>
-    <ol class="m-0 pl-5 list-decimal text-slate-700 grid gap-4">
-      <li>Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen für deine App ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.</li>
-      <li>Öffne dein neues Repository. Klicke auf „Code“, dann auf „Codespaces“ und auf „Create codespace on main“. GitHub startet die Arbeitsumgebung. Das dauert etwa zwei Minuten.</li>
-      <li>Der Editor fragt, ob du den Autoren der Dateien in diesem Ordner vertraust. Klicke auf „Ordner vertrauen und fortfahren“. Ohne dieses Ja bleiben die Erweiterungen für Claude und Codex ausgeschaltet.
-        
-<figure class="m-0 mt-3">
-  <a href="/apps/assets/codespaces/ordner-vertrauen.webp" class="block">
-    <img src="/apps/assets/codespaces/ordner-vertrauen.webp" alt="Die Rückfrage „Vertrauen Sie den Autoren der Dateien in diesem Ordner?“ mit einem Pfeil auf den Knopf „Ordner vertrauen und fortfahren“." width="910" height="492" loading="lazy" decoding="async" class="block max-w-full h-auto rounded-lg border border-slate-300">
-  </a>
-</figure>
-      </li>
-      <li>Melde dich bei deinem Assistenten an. Wie das geht, steht für Claude und für ChatGPT weiter unten.</li>
-      <li>Sag dem Assistenten, welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen. Er legt die App in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.</li>
-      <li>Am Ende prüft er die App und hilft dir, sie zu veröffentlichen. <a href="/apps/enter/" class="text-blue-700 underline underline-offset-2">So veröffentlichst du deine App</a></li>
-    </ol>
   </section>
 
   <section class="panel min-w-0" aria-labelledby="claude">
@@ -156,12 +157,14 @@
 
   <section class="panel" aria-labelledby="pausieren">
     <h2 id="pausieren" class="panel-title">Pausieren und später weitermachen</h2>
-    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
-      <li>Ein Codespace hält nach 30 Minuten ohne Eingabe von selbst an. Deine Dateien bleiben erhalten, auch Änderungen, die noch nicht gespeichert sind. Laufende Arbeit des Assistenten und die Vorschau werden beendet.</li>
-      <li>Zum Weitermachen öffne github.com/codespaces und klicke bei deinem Codespace auf „Open“. Oder öffne im Repository „Code“ und dann „Codespaces“ und wähle den vorhandenen aus. Lege keinen neuen an: Der wäre leer.</li>
-      <li>Ein Codespace, den du 30 Tage lang nicht öffnest, wird gelöscht. Bitte den Assistenten deshalb am Ende einer Sitzung, deine Arbeit auf GitHub zu sichern.</li>
+    <p class="m-0 text-slate-700">Ein Codespace hält standardmäßig nach 30 Minuten ohne Eingabe von selbst an (Auto-Pause). Ein Codespace, den du 30 Tage lang nicht öffnest, wird gelöscht. Beides kannst du bei GitHub ändern.</p>
+    <ul class="m-0 mt-3 pl-5 list-disc text-slate-700 grid gap-2">
+      <li>Beim Anhalten bleiben deine Dateien erhalten, auch Änderungen, die noch nicht gespeichert sind. Laufende Arbeit des Assistenten und die Vorschau werden beendet.</li>
+      <li>Zum Weitermachen öffnest du deine Codespaces auf GitHub (Knopf unten) und klickst bei deinem Codespace auf „Open“. Das dauert etwa eine Minute. Oder öffne im Repository „Code“ und dann „Codespaces“ und wähle den vorhandenen aus. Lege keinen neuen an: Der wäre leer.</li>
+      <li>Weil nach 30 Tagen ohne Nutzung alles gelöscht wird: Bitte den Assistenten am Ende einer Sitzung, deine Arbeit auf GitHub zu sichern.</li>
       <li>Ein angehaltener Codespace kostet keine Rechenzeit, nur ein wenig Speicher. Wartezeit und Aufbewahrung stellst du bei GitHub unter „Settings“ und „Codespaces“ ein.</li>
     </ul>
+    <a href="https://github.com/codespaces" class="btn btn-secondary mt-4 self-start">Zu deinen Codespaces auf GitHub <span aria-hidden="true">→</span></a>
   </section>
 
   <section class="panel" aria-labelledby="wissen">
