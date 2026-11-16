@@ -19,10 +19,10 @@ eleventyComputed:
   are German; the English texts say so. /build/ links here.
 -#}
 {%- set C = t.codespaces %}
-{%- macro shot(file, alt, width, height) %}
-<figure class="m-0 mt-3">
-  <a href="{{ ('/assets/codespaces/' + file) | url }}" class="block">
-    <img src="{{ ('/assets/codespaces/' + file) | url }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" loading="lazy" decoding="async" class="block max-w-full h-auto rounded-lg border border-slate-300">
+{%- macro shot(file, alt, width, height, maxw) %}
+<figure class="m-0 mt-4 flex justify-center">
+  <a href="{{ ('/assets/codespaces/' + file) | url }}" class="block w-full" style="max-width: {{ maxw or width }}px">
+    <img src="{{ ('/assets/codespaces/' + file) | url }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" loading="lazy" decoding="async" class="block w-full h-auto rounded-lg border border-slate-200 bg-white shadow-sm">
   </a>
 </figure>
 {%- endmacro %}
@@ -53,7 +53,7 @@ eleventyComputed:
       </li>
       <li>{{ C.steps.start }}</li>
       <li>{{ C.steps.trust }}
-        {{ shot("ordner-vertrauen.webp", C.steps.trustAlt, 910, 492) }}
+        {{ shot("ordner-vertrauen.webp", C.steps.trustAlt, 910, 492, 520) }}
       </li>
       <li>{{ C.steps.signIn }} <a href="#claude" class="text-blue-700 underline underline-offset-2">{{ C.claude.headline }}</a>, <a href="#chatgpt" class="text-blue-700 underline underline-offset-2">{{ C.chatgpt.headline }}</a></li>
       <li>{{ C.steps.describe }}
@@ -91,9 +91,9 @@ eleventyComputed:
   <section class="panel min-w-0" aria-labelledby="claude">
     <h2 id="claude" class="panel-title">{{ C.claude.headline }}</h2>
     <p class="m-0 text-slate-700">{{ C.claude.body }}</p>
-    {{ shot("claude-anmeldung.webp", C.claude.alt, 998, 686) }}
+    {{ shot("claude-anmeldung.webp", C.claude.alt, 998, 686, 560) }}
     <p class="m-0 mt-4 text-slate-700">{{ C.claude.error }}</p>
-    {{ shot("localhost-fehler.webp", C.claude.errorAlt, 2000, 1032) }}
+    {{ shot("localhost-fehler.webp", C.claude.errorAlt, 2000, 1032, 720) }}
     <p class="m-0 mt-4 text-slate-700">{{ C.claude.open }}</p>
     {{ shot("webseite-oeffnen.webp", C.claude.openAlt, 2000, 289) }}
   </section>
@@ -101,11 +101,11 @@ eleventyComputed:
   <section class="panel min-w-0" aria-labelledby="chatgpt">
     <h2 id="chatgpt" class="panel-title">{{ C.chatgpt.headline }}</h2>
     <p class="m-0 text-slate-700">{{ C.chatgpt.body }}</p>
-    {{ shot("chatgpt-anmeldung.webp", C.chatgpt.alt, 804, 472) }}
+    {{ shot("chatgpt-anmeldung.webp", C.chatgpt.alt, 804, 472, 480) }}
     <p class="m-0 mt-4 text-slate-700">{{ C.chatgpt.setting }}</p>
-    {{ shot("chatgpt-geraetecode.webp", C.chatgpt.settingAlt, 1632, 336) }}
+    {{ shot("chatgpt-geraetecode.webp", C.chatgpt.settingAlt, 1632, 336, 760) }}
     <p class="m-0 mt-4 text-slate-700">{{ C.chatgpt.rights }}</p>
-    {{ shot("codex-rechte.webp", C.chatgpt.rightsAlt, 556, 472) }}
+    {{ shot("codex-rechte.webp", C.chatgpt.rightsAlt, 556, 472, 360) }}
   </section>
 
   <section class="panel" aria-labelledby="pausieren">
