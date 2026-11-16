@@ -10,7 +10,7 @@ eleventyComputed:
   description: "{{ t.codespaces.description }}"
 ---
 {#-
-  Mit Codespaces bauen: building an app in the browser without installing anything, in a GitHub codespace made from the
+  Mit Codespaces bauen und üben: building an app, or practising for an occasion (/practice/), in the browser without installing anything, in a GitHub codespace made from the
   template repository lernapps/start (site.tooling.start), with the assistant of the creator's choice (Claude or ChatGPT)
   as an editor extension. The order is the order of the work: the steps first (with what you need), then the two buttons
   (the template, and the person's own codespaces, site.tooling.codespaces), then the overview of the workplace, the two
@@ -43,15 +43,31 @@ eleventyComputed:
       <li>{{ item }}</li>
       {%- endfor %}
     </ul>
-    <ol class="m-0 mt-5 pl-5 list-decimal text-slate-700 grid gap-4">
-      <li>{{ C.steps.template }}</li>
+    <p class="m-0 mt-5 text-slate-700">{{ C.steps.intro }}</p>
+    <ol class="m-0 mt-3 pl-5 list-decimal text-slate-700 grid gap-4">
+      <li>{{ C.steps.template }}
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>{{ C.steps.buildLabel }}</strong> {{ C.steps.templateBuild }}</li>
+          <li><strong>{{ C.steps.practiceLabel }}</strong> {{ C.steps.templatePractice }}</li>
+        </ul>
+      </li>
       <li>{{ C.steps.start }}</li>
       <li>{{ C.steps.trust }}
         {{ shot("ordner-vertrauen.webp", C.steps.trustAlt, 910, 492) }}
       </li>
       <li>{{ C.steps.signIn }} <a href="#claude" class="text-blue-700 underline underline-offset-2">{{ C.claude.headline }}</a>, <a href="#chatgpt" class="text-blue-700 underline underline-offset-2">{{ C.chatgpt.headline }}</a></li>
-      <li>{{ C.steps.describe }}</li>
-      <li>{{ C.steps.publish }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ C.steps.publishLink }}</a></li>
+      <li>{{ C.steps.describe }}
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>{{ C.steps.buildLabel }}</strong> {{ C.steps.describeBuild }}</li>
+          <li><strong>{{ C.steps.practiceLabel }}</strong> {{ C.steps.describePractice }}</li>
+        </ul>
+      </li>
+      <li>{{ C.steps.publish }}
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>{{ C.steps.buildLabel }}</strong> {{ C.steps.publishBuild }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ C.steps.publishBuildLink }}</a></li>
+          <li><strong>{{ C.steps.practiceLabel }}</strong> {{ C.steps.publishPractice }} <a href="{{ '/practice/submit/' | otherSiteIn(pageLanguage.code) }}" class="text-blue-700 underline underline-offset-2">{{ C.steps.publishPracticeLink }}</a></li>
+        </ul>
+      </li>
     </ol>
   </section>
 

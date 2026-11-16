@@ -253,10 +253,10 @@ const de = {
 
   // ── Mit Codespaces bauen (Unterseite von /build/) ──────
   codespaces: {
-    title: "Mit Codespaces bauen · lernapps.net",
+    title: "Mit Codespaces bauen und üben · lernapps.net",
     description:
-      "Bau eine Lern-App im Browser, ohne etwas zu installieren: mit GitHub Codespaces und deinem KI-Assistenten Claude oder ChatGPT.",
-    headline: "Mit Codespaces bauen",
+      "Bau eine Lern-App oder übe für einen Anlass im Browser, ohne etwas zu installieren: mit GitHub Codespaces und deinem KI-Assistenten Claude oder ChatGPT.",
+    headline: "Mit Codespaces bauen und üben",
     lead:
       "Du musst nichts auf deinem Rechner installieren. Ein Codespace ist eine fertige Arbeitsumgebung im Browser. Dein KI-Assistent ist schon darin.",
     openCodespaces: "Zu deinen Codespaces",
@@ -287,8 +287,14 @@ const de = {
     screenshotsGerman: "Die Bilder sind deutsch, wie dein Codespace, wenn dein Browser auf Deutsch eingestellt ist.",
     steps: {
       headline: "So geht es",
+      intro:
+        "Du kannst hier zwei Dinge tun: eine App bauen und teilen, oder für einen Anlass üben, etwa eine Arbeit. Die Schritte sind dieselben, bis auf drei Stellen. Sie sind mit „Bauen“ und „Üben“ gekennzeichnet.",
+      buildLabel: "Bauen:",
+      practiceLabel: "Üben:",
       template:
-        "Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen für deine App ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.",
+        "Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.",
+      templateBuild: "Dieses Repository wird das Repository deiner App und bleibt.",
+      templatePractice: "Dieses Repository ist nur dein Arbeitsplatz. Es kann danach weg.",
       start:
         "Öffne dein neues Repository. Klicke auf „Code“, dann auf „Codespaces“ und auf „Create codespace on main“. GitHub startet die Arbeitsumgebung. Das dauert etwa zwei Minuten.",
       trust:
@@ -296,9 +302,14 @@ const de = {
       trustAlt: "Die Rückfrage „Vertrauen Sie den Autoren der Dateien in diesem Ordner?“ mit einem Pfeil auf den Knopf „Ordner vertrauen und fortfahren“.",
       signIn: "Melde dich bei deinem Assistenten an. Wie das geht, steht für Claude und für ChatGPT weiter unten.",
       describe:
-        "Sag dem Assistenten, welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen. Er legt die App in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.",
-      publish: "Am Ende prüft er die App und hilft dir, sie zu veröffentlichen.",
-      publishLink: "So veröffentlichst du deine App",
+        "Sag dem Assistenten, was du möchtest. Er legt alles in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.",
+      describeBuild: "Welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen.",
+      describePractice: "Wofür du üben möchtest, zum Beispiel „für die Mathearbeit nächste Woche“. Gib ihm Fotos der Arbeitsblätter, dazu Fach, Klasse und was drankommt.",
+      publish: "Am Ende prüft der Assistent die App.",
+      publishBuild: "Er hilft dir, sie zu veröffentlichen.",
+      publishBuildLink: "So veröffentlichst du deine App",
+      publishPractice: "Er gibt dir die ZIP-Datei mit dem Ordner „src“. Reich sie im Formular ein und bekomm den Link zur App.",
+      publishPracticeLink: "Einreichen, Schritt für Schritt",
     },
     claude: {
       headline: "Anmeldung bei Claude",
@@ -340,7 +351,7 @@ const de = {
         "GitHub gibt kostenlosen Konten jeden Monat etwa 60 Stunden Codespace-Zeit. Beende den Codespace, wenn du fertig bist.",
         "Der Assistent darf in deinem Codespace alles tun und sieht das ganze Internet. Gib dort keine Passwörter und keine Daten von Schülerinnen und Schülern ein.",
         "Deine Texte gehen an den Anbieter des Assistenten (Anthropic oder OpenAI). Schreibe keine Namen von Lernenden hinein.",
-        "Die fertige App sammelt keine Daten und läuft ohne Konto im Browser. Das prüft lernapps.net, bevor sie erscheint.",
+        "Die fertige App sammelt keine Daten und läuft ohne Konto im Browser. Das prüft lernapps.net, bevor sie erscheint. Beim Üben sind Inhalt und App öffentlich, also ohne Namen und Schule.",
       ],
     },
   },
