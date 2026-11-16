@@ -12,12 +12,13 @@ eleventyComputed:
 {#-
   Mit Codespaces bauen: building an app in the browser without installing anything, in a GitHub codespace made from the
   template repository lernapps/start (site.tooling.start), with the assistant of the creator's choice (Claude or ChatGPT)
-  as an editor extension. The page is the illustrated guide that the README of the template summarises: the overview of
-  the workplace, the steps, the two sign-ins (both need a workaround in a codespace), pausing and continuing. The
-  screenshots (assets/codespaces/) are German; the English texts say so. /build/ links here.
+  as an editor extension. The order is the order of the work: the steps first (with what you need), then the two buttons
+  (the template, and the person's own codespaces, site.tooling.codespaces), then the overview of the workplace, the two
+  sign-ins (both need a workaround in a codespace), pausing and continuing (with the link to the codespaces and the two
+  defaults: auto-pause after 30 minutes, deletion after 30 days), and what to know. The screenshots (assets/codespaces/)
+  are German; the English texts say so. /build/ links here.
 -#}
 {%- set C = t.codespaces %}
-{%- set shots = "assets/codespaces/" %}
 {%- macro shot(file, alt, width, height) %}
 <figure class="m-0 mt-3">
   <a href="{{ ('/assets/codespaces/' + file) | url }}" class="block">
@@ -29,20 +30,35 @@ eleventyComputed:
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
     <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">{{ C.headline }}</h1>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">{{ C.lead }}</p>
-    <a href="{{ site.tooling.start }}" class="btn btn-light btn-lg mt-5">{{ C.template }} <span aria-hidden="true">→</span></a>
     <p class="m-0 mt-4 text-slate-300"><a href="{{ '/build/' | inLang(lang) | url }}" class="text-blue-300 underline underline-offset-2 hover:text-white">{{ C.otherWay }}</a></p>
   </div>
 </section>
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 mt-8 grid gap-6">
-  <section class="panel" aria-labelledby="mitbringen">
-    <h2 id="mitbringen" class="panel-title">{{ C.needs.headline }}</h2>
-    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+  <section class="panel min-w-0" aria-labelledby="schritte">
+    <h2 id="schritte" class="panel-title">{{ C.steps.headline }}</h2>
+    <p class="m-0 text-slate-700">{{ C.needs.lead }}</p>
+    <ul class="m-0 mt-2 pl-5 list-disc text-slate-700 grid gap-2">
       {%- for item in C.needs.items %}
       <li>{{ item }}</li>
       {%- endfor %}
     </ul>
+    <ol class="m-0 mt-5 pl-5 list-decimal text-slate-700 grid gap-4">
+      <li>{{ C.steps.template }}</li>
+      <li>{{ C.steps.start }}</li>
+      <li>{{ C.steps.trust }}
+        {{ shot("ordner-vertrauen.webp", C.steps.trustAlt, 910, 492) }}
+      </li>
+      <li>{{ C.steps.signIn }} <a href="#claude" class="text-blue-700 underline underline-offset-2">{{ C.claude.headline }}</a>, <a href="#chatgpt" class="text-blue-700 underline underline-offset-2">{{ C.chatgpt.headline }}</a></li>
+      <li>{{ C.steps.describe }}</li>
+      <li>{{ C.steps.publish }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ C.steps.publishLink }}</a></li>
+    </ol>
   </section>
+
+  <div class="flex flex-wrap gap-3">
+    <a href="{{ site.tooling.start }}" class="btn btn-primary btn-lg">{{ C.template }} <span aria-hidden="true">→</span></a>
+    <a href="{{ site.tooling.codespaces }}" class="btn btn-secondary btn-lg">{{ C.openCodespaces }} <span aria-hidden="true">→</span></a>
+  </div>
 
   <section class="panel min-w-0" aria-labelledby="arbeitsplatz">
     <h2 id="arbeitsplatz" class="panel-title">{{ C.overview.headline }}</h2>
@@ -54,20 +70,6 @@ eleventyComputed:
       {%- endfor %}
     </ul>
     <p class="m-0 mt-3 text-sm text-slate-600">{{ C.screenshotsGerman }}</p>
-  </section>
-
-  <section class="panel min-w-0" aria-labelledby="schritte">
-    <h2 id="schritte" class="panel-title">{{ C.steps.headline }}</h2>
-    <ol class="m-0 pl-5 list-decimal text-slate-700 grid gap-4">
-      <li>{{ C.steps.template }}</li>
-      <li>{{ C.steps.start }}</li>
-      <li>{{ C.steps.trust }}
-        {{ shot("ordner-vertrauen.webp", C.steps.trustAlt, 910, 492) }}
-      </li>
-      <li>{{ C.steps.signIn }}</li>
-      <li>{{ C.steps.describe }}</li>
-      <li>{{ C.steps.publish }} <a href="{{ '/enter/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ C.steps.publishLink }}</a></li>
-    </ol>
   </section>
 
   <section class="panel min-w-0" aria-labelledby="claude">
@@ -92,11 +94,13 @@ eleventyComputed:
 
   <section class="panel" aria-labelledby="pausieren">
     <h2 id="pausieren" class="panel-title">{{ C.pause.headline }}</h2>
-    <ul class="m-0 pl-5 list-disc text-slate-700 grid gap-2">
+    <p class="m-0 text-slate-700">{{ C.pause.lead }}</p>
+    <ul class="m-0 mt-3 pl-5 list-disc text-slate-700 grid gap-2">
       {%- for item in C.pause.items %}
       <li>{{ item }}</li>
       {%- endfor %}
     </ul>
+    <a href="{{ site.tooling.codespaces }}" class="btn btn-secondary mt-4 self-start">{{ C.pause.link }} <span aria-hidden="true">→</span></a>
   </section>
 
   <section class="panel" aria-labelledby="wissen">
