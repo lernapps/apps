@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Mit Codespaces bauen · lernapps.net</title>
-  <meta name="description" content="Bau eine Lern-App im Browser, ohne etwas zu installieren: mit GitHub Codespaces und deinem KI-Assistenten Claude oder ChatGPT.">
+  <title>Mit Codespaces bauen und üben · lernapps.net</title>
+  <meta name="description" content="Bau eine Lern-App oder übe für einen Anlass im Browser, ohne etwas zu installieren: mit GitHub Codespaces und deinem KI-Assistenten Claude oder ChatGPT.">
   <link rel="canonical" href="https://lernapps.net/apps/build/codespaces/">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -49,7 +49,7 @@
     
 <section class="bg-slate-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
-    <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">Mit Codespaces bauen</h1>
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">Mit Codespaces bauen und üben</h1>
     <p class="m-0 mt-3 text-lg text-slate-300 max-w-2xl">Du musst nichts auf deinem Rechner installieren. Ein Codespace ist eine fertige Arbeitsumgebung im Browser. Dein KI-Assistent ist schon darin.</p>
     <p class="m-0 mt-4 text-slate-300"><a href="/apps/build/" class="text-blue-300 underline underline-offset-2 hover:text-white">Lieber mit einem Assistenten auf deinem Rechner bauen?</a></p>
   </div>
@@ -64,8 +64,14 @@
       <li>Ein Abo oder einen Schlüssel für einen KI-Assistenten: Claude (Claude Pro oder höher) oder ChatGPT (mit Codex).</li>
       <li>Die Kosten für die KI trägst du selbst. lernapps.net bezahlt keine KI-Nutzung.</li>
     </ul>
-    <ol class="m-0 mt-5 pl-5 list-decimal text-slate-700 grid gap-4">
-      <li>Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen für deine App ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.</li>
+    <p class="m-0 mt-5 text-slate-700">Du kannst hier zwei Dinge tun: eine App bauen und teilen, oder für einen Anlass üben, etwa eine Arbeit. Die Schritte sind dieselben, bis auf drei Stellen. Sie sind mit „Bauen“ und „Üben“ gekennzeichnet.</p>
+    <ol class="m-0 mt-3 pl-5 list-decimal text-slate-700 grid gap-4">
+      <li>Öffne die Vorlage auf GitHub (github.com/lernapps/start). Klicke auf „Use this template“ und dann auf „Create a new repository“. Gib einen kurzen Namen ein, zum Beispiel „bruchrechnen“. Das Repository gehört dir.
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>Bauen:</strong> Dieses Repository wird das Repository deiner App und bleibt.</li>
+          <li><strong>Üben:</strong> Dieses Repository ist nur dein Arbeitsplatz. Es kann danach weg.</li>
+        </ul>
+      </li>
       <li>Öffne dein neues Repository. Klicke auf „Code“, dann auf „Codespaces“ und auf „Create codespace on main“. GitHub startet die Arbeitsumgebung. Das dauert etwa zwei Minuten.</li>
       <li>Der Editor fragt, ob du den Autoren der Dateien in diesem Ordner vertraust. Klicke auf „Ordner vertrauen und fortfahren“. Ohne dieses Ja bleiben die Erweiterungen für Claude und Codex ausgeschaltet.
         
@@ -76,8 +82,18 @@
 </figure>
       </li>
       <li>Melde dich bei deinem Assistenten an. Wie das geht, steht für Claude und für ChatGPT weiter unten. <a href="#claude" class="text-blue-700 underline underline-offset-2">Anmeldung bei Claude</a>, <a href="#chatgpt" class="text-blue-700 underline underline-offset-2">Anmeldung bei ChatGPT (Codex)</a></li>
-      <li>Sag dem Assistenten, welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen. Er legt die App in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.</li>
-      <li>Am Ende prüft er die App und hilft dir, sie zu veröffentlichen. <a href="/apps/enter/" class="text-blue-700 underline underline-offset-2">So veröffentlichst du deine App</a></li>
+      <li>Sag dem Assistenten, was du möchtest. Er legt alles in diesem Ordner an, nicht in einem Unterordner. Du bestätigst seinen Plan und die Zwischenstände.
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>Bauen:</strong> Welche App du bauen möchtest. Er fragt nach Thema, Klassenstufe und dem, was Lernende tun sollen.</li>
+          <li><strong>Üben:</strong> Wofür du üben möchtest, zum Beispiel „für die Mathearbeit nächste Woche“. Gib ihm Fotos der Arbeitsblätter, dazu Fach, Klasse und was drankommt.</li>
+        </ul>
+      </li>
+      <li>Am Ende prüft der Assistent die App.
+        <ul class="m-0 mt-2 p-0 list-none grid gap-1">
+          <li><strong>Bauen:</strong> Er hilft dir, sie zu veröffentlichen. <a href="/apps/enter/" class="text-blue-700 underline underline-offset-2">So veröffentlichst du deine App</a></li>
+          <li><strong>Üben:</strong> Er gibt dir die ZIP-Datei mit dem Ordner „src“. Reich sie im Formular ein und bekomm den Link zur App. <a href="/practice/submit/" class="text-blue-700 underline underline-offset-2">Einreichen, Schritt für Schritt</a></li>
+        </ul>
+      </li>
     </ol>
   </section>
 
@@ -173,7 +189,7 @@
       <li>GitHub gibt kostenlosen Konten jeden Monat etwa 60 Stunden Codespace-Zeit. Beende den Codespace, wenn du fertig bist.</li>
       <li>Der Assistent darf in deinem Codespace alles tun und sieht das ganze Internet. Gib dort keine Passwörter und keine Daten von Schülerinnen und Schülern ein.</li>
       <li>Deine Texte gehen an den Anbieter des Assistenten (Anthropic oder OpenAI). Schreibe keine Namen von Lernenden hinein.</li>
-      <li>Die fertige App sammelt keine Daten und läuft ohne Konto im Browser. Das prüft lernapps.net, bevor sie erscheint.</li>
+      <li>Die fertige App sammelt keine Daten und läuft ohne Konto im Browser. Das prüft lernapps.net, bevor sie erscheint. Beim Üben sind Inhalt und App öffentlich, also ohne Namen und Schule.</li>
     </ul>
   </section>
 </div>
