@@ -231,10 +231,10 @@ const en = {
 
   // ── Build with Codespaces (subpage of /build/) ──────
   codespaces: {
-    title: "Build with Codespaces · lernapps.net",
+    title: "Build and practise with Codespaces · lernapps.net",
     description:
-      "Build a learning app in the browser without installing anything: with GitHub Codespaces and your AI assistant, Claude or ChatGPT.",
-    headline: "Build with Codespaces",
+      "Build a learning app or practise for an occasion in the browser without installing anything: with GitHub Codespaces and your AI assistant, Claude or ChatGPT.",
+    headline: "Build and practise with Codespaces",
     lead:
       "You do not have to install anything on your computer. A codespace is a ready-made workplace in the browser. Your AI assistant is already in it.",
     openCodespaces: "To your codespaces",
@@ -265,8 +265,14 @@ const en = {
     screenshotsGerman: "The screenshots are in German, like your codespace if your browser is set to German.",
     steps: {
       headline: "How it works",
+      intro:
+        "You can do two things here: build an app and share it, or practise for an occasion, such as a test. The steps are the same, except in three places. They are marked “Build” and “Practise”.",
+      buildLabel: "Build:",
+      practiceLabel: "Practise:",
       template:
-        "Open the template on GitHub (github.com/lernapps/start). Click “Use this template”, then “Create a new repository”. Give your app a short name, for example “fractions”. The repository belongs to you.",
+        "Open the template on GitHub (github.com/lernapps/start). Click “Use this template”, then “Create a new repository”. Give it a short name, for example “fractions”. The repository belongs to you.",
+      templateBuild: "This repository becomes the repository of your app and stays.",
+      templatePractice: "This repository is only your workplace. It can go afterwards.",
       start:
         "Open your new repository. Click “Code”, then “Codespaces” and “Create codespace on main”. GitHub starts the workplace. This takes about two minutes.",
       trust:
@@ -274,9 +280,14 @@ const en = {
       trustAlt: "The question “Do you trust the authors of the files in this folder?” with an arrow to the button “Trust folder and continue”.",
       signIn: "Sign in to your assistant. How is described below for Claude and for ChatGPT.",
       describe:
-        "Tell the assistant which app you want to build. It asks for the topic, the grade and what learners do. It puts the app in this folder, not in a subfolder. You confirm its plan and the interim results.",
-      publish: "At the end it checks the app and helps you publish it.",
-      publishLink: "How to publish your app",
+        "Tell the assistant what you want. It puts everything in this folder, not in a subfolder. You confirm its plan and the interim results.",
+      describeBuild: "Which app you want to build. It asks for the topic, the grade and what learners do.",
+      describePractice: "What you want to practise for, for example “for the maths test next week”. Give it photos of the worksheets, with the subject, the grade and what is covered.",
+      publish: "At the end the assistant checks the app.",
+      publishBuild: "It helps you publish it.",
+      publishBuildLink: "How to publish your app",
+      publishPractice: "It gives you the ZIP file with the folder “src”. Submit it in the form and get the link to the app.",
+      publishPracticeLink: "Submitting step by step",
     },
     claude: {
       headline: "Signing in to Claude",
@@ -318,7 +329,7 @@ const en = {
         "GitHub gives free accounts about 60 hours of codespace time each month. Stop the codespace when you are done.",
         "The assistant may do anything in your codespace and sees the whole internet. Do not type passwords or data of pupils there.",
         "Your texts go to the provider of the assistant (Anthropic or OpenAI). Do not write names of learners in them.",
-        "The finished app collects no data and runs in the browser without an account. lernapps.net checks that before it appears.",
+        "The finished app collects no data and runs in the browser without an account. lernapps.net checks that before it appears. When you practise, content and app are public, so without names and school.",
       ],
     },
   },
