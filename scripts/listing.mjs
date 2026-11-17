@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 import { dump, load } from "js-yaml";
 import { render } from "./listing-comment.mjs";
 import { reserved } from "../schemas/reserved.js";
-import { loadMap, checkApp, checkPages } from "../lib/map.js";
+import { loadMap, checkApp, checkPages, recapsOf } from "../lib/map.js";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const LERNAPPS = join(root, "node_modules", ".bin", "lernapps");
@@ -155,7 +155,7 @@ async function learningMap(file, report) {
     }
     strand = pages.strand;
     competencies = [...new Set(pages.pages.flatMap((p) => p.competencies ?? []))];
-    recaps = [...new Set(pages.pages.map((p) => p.recap).filter(Boolean))];
+    recaps = [...new Set(pages.pages.flatMap(recapsOf))];
     ordered = pages.pages;
   }
   if ((!strand || strand === "none") && competencies.length === 0) return;
@@ -211,8 +211,8 @@ async function pageFindings(file, subject, pages, url, add) {
     const fix = {
       strands: "Split the page so that each page practises competencies of one strand",
       order: "Put the page that practises the prerequisite before this page",
-      gap: `Practise ${f.prerequisite} on a page before this one, or repeat it there on a recap page (recap: ${subject.id}/${f.prerequisite})`,
-      entry: `Add a recap page before this one (recap: ${subject.id}/${f.prerequisite}), or link its page on the map in the text`,
+      gap: `Practise ${f.prerequisite} on a page before this one, or repeat it there on a recap page (recap: ${subject.id}/${f.prerequisite}, or in the recap list of one)`,
+      entry: `Add a recap page before this one (recap: ${subject.id}/${f.prerequisite}, or in the recap list of one), or link its page on the map in the text`,
       ahead: `Practise ${f.prerequisite} on a page of the app, or remove it from ahead`,
     }[f.kind];
     add(severity, where, f.text, fix);

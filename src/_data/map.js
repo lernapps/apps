@@ -1,6 +1,6 @@
 // The learning map for the pages: the subjects of map/ (checked by lib/map.js; a broken file fails the build), which
 // apps of the catalog practise which competency, and one entry per page the map has (src/map-*.njk paginate over them).
-import { loadMap, checkApp, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../../lib/map.js";
+import { loadMap, checkApp, recapsOf, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../../lib/map.js";
 import { LANDS, GRADE_BANDS } from "../../schemas/map.js";
 import catalog from "./catalog.js";
 import languages from "./languages.js";
@@ -14,7 +14,7 @@ export default async function () {
   for (const app of apps) {
     const competencies = [...(app.competencies ?? []), ...(app.pages ?? []).flatMap((p) => p.competencies ?? [])];
     if (!app.strand && !competencies.length) continue;
-    const recaps = (app.pages ?? []).map((p) => p.recap).filter(Boolean);
+    const recaps = (app.pages ?? []).flatMap(recapsOf);
     for (const e of checkApp(subjects, { subject: app.subjectId, strand: app.strand, competencies, recaps }).errors) errors.push(`${app.id}: ${e}`);
   }
   if (errors.length) throw new Error(`apps and the learning map:\n  - ${errors.join("\n  - ")}`);
