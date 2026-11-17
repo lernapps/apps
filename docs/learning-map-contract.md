@@ -175,12 +175,23 @@ recap: physik/gewichtskraft-berechnen              # "<subject>/<competency>", o
 blocks: [...]                                      # descriptive blocks only: no exercise
 ```
 
+A chapter that needs several such competencies repeats them on one recap page at its start, a collective recap
+("Das brauchst du hier"), instead of a page each:
+
+```yaml
+title: Das brauchst du hier
+recap: [physik/kraft, physik/masse]                # a list: at least one competency, none twice
+blocks: [...]                                      # very compact, descriptive blocks only: no exercise
+```
+
 | Rule | Checked by |
 |---|---|
 | A page has either `competencies` or `recap`, never both | explainer schema v2 |
+| `recap` is one competency or a list of at least one, none twice | explainer schema v2 |
 | A recap page has no exercise; `topic-has-exercises` does not apply to it | explainer schema v2, build |
-| The link to the competency's page on the map is written by the runtime, so it cannot be missing | runtime |
-| The recapped competency exists, and the app does not practise it on a page of its own | `lernapps check` (warning), listing (error) |
+| The link to each competency's page on the map (link text: its id) is written by the runtime, so it cannot be missing | runtime |
+| Each recapped competency exists, and the app does not practise it on a page of its own | `lernapps check` (warning), listing (error) |
+| The page's text names each recapped competency: its name or its "Ich kann …" sentence | `lernapps check` (warning) |
 
 A recap page counts as nothing on the map and is left out of the self-assessment.
 
@@ -202,7 +213,8 @@ catalog reads it instead of hand-written topics (KD-13).
 `path` is relative to the app's root, as a link in the app; `title` is the page's title as text (string or by language);
 pages are in the order of the app. With `strand: none` the file has `"strand": "none"` and no `competencies`. A unit
 app (`subject` in `src/app.yaml`, section 1) has `"subject": "<subject>"` instead of `"strand"`. A recap
-page has `"recap": "<subject>/<competency>"` instead of `competencies`.
+page has `"recap": "<subject>/<competency>"` instead of `competencies`; a recap page that repeats several has a list,
+`"recap": ["<subject>/<competency>", …]`. A reader accepts both.
 
 ### A page ahead of its prerequisites: `ahead`
 

@@ -4,7 +4,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
-import { loadMap, checkApp, checkPages, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../lib/map.js";
+import { loadMap, checkApp, checkPages, recapsOf, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../lib/map.js";
 
 const fixture = (name) => fileURLToPath(new URL(`fixtures/map/${name}`, import.meta.url));
 const [subject] = loadMap(fixture("ok"));
@@ -126,6 +126,21 @@ test("pages: the prerequisites in order, a gap in the middle of the chain, the e
   assert.deepEqual(kinds(checkPages(woven, [{ recap: "sprache/w2" }, { competencies: ["t2"] }])), []);
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t2"], linked: new Set(["w2"]) }])), []);
   assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t2"] }, { recap: "sprache/w2" }])), ["order:w2"]);
+});
+
+test("a recap page may repeat several competencies: recap is one or a list, and each counts", () => {
+  assert.deepEqual(recapsOf({ recap: "sprache/w2" }), ["sprache/w2"]);
+  assert.deepEqual(recapsOf({ recap: ["sprache/w1", "sprache/w2"] }), ["sprache/w1", "sprache/w2"]);
+  assert.deepEqual(recapsOf({ competencies: ["w1"] }), []);
+  // one collective recap before the page fills both entries; after it, both are out of order
+  assert.deepEqual(kinds(checkPages(woven, [{ recap: ["sprache/w1", "sprache/w2"] }, { competencies: ["g1"] }, { competencies: ["t2"] }])), []);
+  assert.deepEqual(kinds(checkPages(woven, [{ competencies: ["t2"] }, { recap: ["sprache/g1", "sprache/w2"] }])).sort(), ["order:w2"]);
+  // checkApp checks each recapped competency
+  assert.deepEqual(checkApp([woven], { subject: "sprache", competencies: ["t2"], recaps: ["sprache/w1", "sprache/w2"] }), { errors: [], hints: [] });
+  const { errors } = checkApp([woven], { subject: "sprache", competencies: ["w1"], recaps: ["sprache/w1", "sprache/zz"] });
+  assert.equal(errors.length, 2);
+  assert.match(errors[0], /recap sprache\/w1: the app practises it/);
+  assert.match(errors[1], /recap sprache\/zz: no competency/);
 });
 
 test("pages: one strand per page where strands are woven; a list without pages has no order", () => {
