@@ -423,6 +423,9 @@ statt Zeit, weil Explainer über mehrere Stufen erlaubt sind.
 - [x] Ausdruck für „fraglich, aber sinnvoll“ mit dem Owner geklärt (KD-31)
 - [x] Funktion-Zeile an 48 Kanten in 15 Karten (46 fraglich aus #679, 2 zirkelbrechend in Physik: alte Kanten zu
   `atomaufbau` schlossen den Zirkel Stromkreise ↔ Kernphysik, per Skript geprüft); 16 Begründungszeilen ergänzt
+- [x] PR, CI grün, merge (#689)
+- [x] Zwei fragliche Kanten in Politik und Wirtschaft (in #679 ohne Pfeil formuliert) mit Funktion-Zeile
+- [x] #679 gekürzt: Kantenpunkte, die in den Karten eine Funktion-Zeile haben, durch einen Verweis ersetzt
 - [ ] PR, CI grün, merge
 
 ## Commit
