@@ -69,8 +69,10 @@ Entwicklung, weil Welthandel ihre direkte Voraussetzung ist.
   Geo11 liegt nach Jg 10 und zählt nicht.
 - **NW:** Stufe 1 (IF1–IF3) → 5-6; Stufe 2 (IF4–IF10) → „7-10“, zählt für 7-8 und 9-10.
 - **Gleichstand:** die frühere Stufe, außer `requires` erzwingt die spätere (der Baustein braucht einen Baustein der
-  späteren Stufe). Das NRW-Umsetzungsbeispiel (SiLP) stimmt nicht mit und entscheidet keinen Gleichstand. Liegen
-  zwei Stimmen bei 5-6 und 9-10, oder gibt es drei verschiedene, gilt die mittlere.
+  späteren Stufe). Das NRW-Umsetzungsbeispiel (SiLP) stimmt nicht mit und entscheidet keinen Gleichstand. Auch je
+  eine Stimme bei 5-6 und 9-10 ist ein Gleichstand (die frühere Stufe); nur bei drei verschiedenen Stimmen gilt die
+  mittlere. (Korrigiert 2026-11-17 nach der verbindlichen Nacharbeit vom 2026-11-07; Branch
+  `claude/lernlandkarten-content-structure-uesnsl`.)
 
 
 ## 2. Bausteine je Strang
@@ -150,7 +152,7 @@ Lesehilfe: **Stimmen** = HE / BY / NW. „5-10“ = nur KC Hessen (Ende 9/10, z�
 | 57 | `tropischer-regenwald` | Ich kann das Ökosystem tropischer Regenwald mit seinem Stockwerkbau und seinem kurzen Nährstoffkreislauf beschreiben. | F2 S8 (Ökosystem tropischer Regenwald) | LP 8 (Problembereich tropischer Regenwald) | Geo10 LB3 (Merkmale tropischer Ökosysteme: Regenwald) | IF6 (Tropen) | 7-8 / 9-10 / 7-10 → **7-8** (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe) | `landschaftszonen-der-erde` |
 | 58 | `savanne` | Ich kann Feucht-, Trocken- und Dornsavanne unterscheiden und mit der Länge der Regenzeit erklären. | F2 S8 | LP 8 (Klima- und Vegetationszonen; Raumbeispiel Sahelzone) | Geo10 LB3 (Merkmale der Savannen) | IF6 (Tropen) | 7-8 / 9-10 / 7-10 → **7-8** (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe) | `regenzeit-trockenzeit` |
 | 59 | `wueste` | Ich kann erklären, wie Wüsten an den Wendekreisen entstehen und wie Pflanzen und Tiere an die Trockenheit angepasst sind. | F2 S8 | LP 8 (Klima- und Vegetationszonen) | Geo10 LB3 (Merkmale der Wüsten) | IF6 (Subtropen) | 7-8 / 9-10 / 7-10 → **7-8** (Gleichstand 7-8/9-10, requires entscheidet nicht; nach der Regel die frühere Stufe) | `passatkreislauf` |
-| 60 | `hoehenstufen` | Ich kann die Höhenstufen der Vegetation im Hochgebirge beschreiben und erklären, warum es mit zunehmender Höhe kälter wird. | F2 S8 (Höhenstufen der Vegetation) | LP 5 (Höhenstufen) | Geo10 LB7 (horizontale und vertikale Verbreitung der Vegetation in Südamerika) | – | 5-6 / 9-10 / – → **7-8** (keine Mehrheit (5-6/9-10), requires entscheidet nicht; die mittlere Stufe) | `grosslandschaften-deutschland`, `wetter-und-klima` |
+| 60 | `hoehenstufen` | Ich kann die Höhenstufen der Vegetation im Hochgebirge beschreiben und erklären, warum es mit zunehmender Höhe kälter wird. | F2 S8 (Höhenstufen der Vegetation) | LP 5 (Höhenstufen) | Geo10 LB7 (horizontale und vertikale Verbreitung der Vegetation in Südamerika) | – | 5-6 / 9-10 / – → **5-6** (Gleichstand 5-6/9-10: die frühere Stufe; korrigiert 2026-11-17) | `grosslandschaften-deutschland`, `wetter-und-klima` |
 | 61 | `treibhauseffekt` | Ich kann den natürlichen Treibhauseffekt erklären und wie der Mensch ihn durch Treibhausgase verstärkt. | F4 S18 (Klimawandel) | – | Geo10 LB4 (Ursachen des anthropogenen Treibhauseffekts) | IF5 (Treibhauseffekt) | – / 9-10 / 7-10 → **9-10** (Mehrheit) | `klimazonen-der-erde` |
 | 62 | `klimawandel-ursachen` | Ich kann natürliche und vom Menschen verursachte Gründe für Klimaänderungen unterscheiden und mit Messdaten belegen. | F4 S18 | – | Geo10 LB4 (extraterrestrische und terrestrische Antriebskräfte, wissenschaftliche Erkenntnisse) | IF5 (natürliche und anthropogen bedingte Klimaveränderungen) | – / 9-10 / 7-10 → **9-10** (Mehrheit) | `treibhauseffekt` |
 | 63 | `klimawandel-folgen` | Ich kann Folgen des Klimawandels wie Meeresspiegelanstieg, Dürren und Wetterextreme beschreiben und erklären, warum sie Regionen verschieden treffen. | F4 S18, S21 | – | Geo10 LB4 (Folgen, regionale Unterschiede); Geo7 LB3 (Folgen in Europa) | IF5 (Meeresspiegelanstieg, Wetterextreme; regionale Auswirkungen)<br>Hinweis: BY nennt Folgen in Europa schon in Geo7; die Stimme zählt für Geo10, wo die Ursachen behandelt werden | – / 9-10 / 7-10 → **9-10** (Mehrheit) | `klimawandel-ursachen` |
@@ -198,7 +200,7 @@ Lesehilfe: **Stimmen** = HE / BY / NW. „5-10“ = nur KC Hessen (Ende 9/10, z�
 | 95 | `tourismusformen` **(schwach)** | Ich kann Formen des Tourismus wie Erholungs-, Städte- und Ökotourismus unterscheiden. | F4 S17 | LP 6.1 (Fremdenverkehr) | Geo7 LB6 (Tourismus an Europas Küsten: Formen) | IF2 (Formen des Tourismus)<br>Hinweis: HE nennt nur den Fremdenverkehr | 5-6 / 7-8 / 5-6 → **5-6** (Mehrheit) | `tourismus-voraussetzungen` |
 | 96 | `tourismus-folgen` | Ich kann beschreiben, wie der Tourismus einen Ort wirtschaftlich, sozial und für die Umwelt verändert. | F4 S18 | LP 5 (Nutzungswandel) | Geo5 LB3 (Problematik menschlicher Eingriffe); Geo7 LB6 (Auswirkungen) | IF2 (Veränderungen eines Ortes durch den Tourismus) | 5-6 / 5-6 / 5-6 → **5-6** (Mehrheit) | `tourismus-voraussetzungen` |
 | 97 | `nachhaltigkeit` | Ich kann an einem Beispiel erklären, was nachhaltig heißt: Umwelt, Wirtschaft und Gesellschaft werden zugleich berücksichtigt. | F4 S20, S21 (nachhaltige Entwicklung) | KC Umwelt-Gesellschaft (Prinzipien der Nachhaltigkeit) | Geo7 LB4 (ökonomische, soziale und ökologische Folgewirkungen); Fachprofil (Nachhaltigkeitsviereck) | IF2 UK (ökonomisches Wachstum und nachhaltige Entwicklung); IF3 (nachhaltiges Wirtschaften) | 5-10 / 7-8 / 5-6 → **5-6** (Gleichstand 5-6/7-8, requires entscheidet nicht; nach der Regel die frühere Stufe) | – |
-| 98 | `sanfter-tourismus` | Ich kann Merkmale des sanften Tourismus nennen und begründen, warum er Natur und Menschen eines Ortes schont. | F4 S20 (Tourismusförderung) | – | Geo10 LB7 (Handlungsrichtlinien für eigene Reisen) | IF2 (Merkmale des sanften Tourismus) | – / 9-10 / 5-6 → **7-8** (keine Mehrheit (5-6/9-10), requires entscheidet nicht; die mittlere Stufe) | `tourismus-folgen`, `nachhaltigkeit` |
+| 98 | `sanfter-tourismus` | Ich kann Merkmale des sanften Tourismus nennen und begründen, warum er Natur und Menschen eines Ortes schont. | F4 S20 (Tourismusförderung) | – | Geo10 LB7 (Handlungsrichtlinien für eigene Reisen) | IF2 (Merkmale des sanften Tourismus) | – / 9-10 / 5-6 → **5-6** (Gleichstand 5-6/9-10: die frühere Stufe; korrigiert 2026-11-17) | `tourismus-folgen`, `nachhaltigkeit` |
 | 99 | `digitalisierung` **(schwach)** | Ich kann erklären, wie Onlinehandel und schnelles Internet Standorte, Arbeitsplätze und Verkehr verändern. | F3 S12 | – | Geo7 LB5 (Vernetzung durch Datennetze) | IF10 (Raumwirksamkeit von Digitalisierung); IF3 (Digitalisierung)<br>Hinweis: BY nennt nur Datennetze als Infrastruktur | – / 7-8 / 7-10 → **7-8** (Mehrheit) | `standortfaktoren` |
 
 ### Strang `siedlung`: Siedlungen und Städte (Settlements and cities) – 13 Bausteine
@@ -256,7 +258,9 @@ Lesehilfe: **Stimmen** = HE / BY / NW. „5-10“ = nur KC Hessen (Ende 9/10, z�
   `altersstruktur` (HE 5-10, NW 7-10 → 7-8, bisher 9-10). Damit hat `tragfaehigkeit` wieder seine Mehrheit 7-8
   (bisher 9-10 wegen `bevoelkerungswachstum`).
 - **Mittlere Stufe (7):** `wirtschaftssektoren`, `standortfaktoren`, `dienstleistungen` (HE 9, BY 7, NW 5-6);
-  `strukturwandel`, `sanfter-tourismus`, `hoehenstufen` (Stimmen 5-6 und 9-10); `nachhaltige-stadt` (je eine Stimme).
+  `nachhaltige-stadt` (je eine Stimme). `strukturwandel` (Stimmen 5-6 und 9-10) bleibt 7-8, weil `standortfaktoren`
+  (7-8) es verlangt. `sanfter-tourismus` und `hoehenstufen` (Stimmen 5-6 und 9-10) sind seit 2026-11-17 5-6
+  (Gleichstand, die frühere Stufe).
 - **Frühere Stufe bei Gleichstand oder ohne Mehrheit, schon in der ersten Fassung (9):** `digitale-karten`, `mental-maps`, `weg-der-lebensmittel`, `regionale-lebensmittel`,
   `wassermangel`, `seehafen`, `fischerei`, `meeresschutz`, `nachhaltigkeit`.
 

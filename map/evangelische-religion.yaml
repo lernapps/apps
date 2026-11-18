@@ -66,11 +66,12 @@ strands:
         gradeBand: "7-8"
         requires: [gottes-zuwendung]
       # HE Jg 8 Mensch und Welt: Rechtfertigungslehre Martin Luthers, Röm 3,21–28 (S. 26); BY ER8 LB1: reformatorische Entdeckungen zu Gott und Mensch; NW IF2 Stufe 2: Gedanke der Rechtfertigung als Grundlage evangelischen Glaubens (S. 28). Stimmen HE/BY/NW 7-8 / 7-8 / 7-10 -> 7-8 (Mehrheit)
+      # Siehe auch: luther-leben (kein requires: Die Lehre erschließt sich aus Röm 3,21–28 und der bedingungslosen Zuwendung Gottes, nicht aus Luthers Biografie; HE lehrt sie im Inhaltsfeld Mensch und Welt getrennt von der Reformation im Inhaltsfeld Kirche (S. 26 f.), BY nennt Leben und Einsichten Luthers zusammen im selben Lernbereich (ER8 LB1): ein Bündel, Hinweis auf einen gemeinsamen Explainer)
       - id: rechtfertigung
         name: { de: "Rechtfertigungslehre", en: "Doctrine of justification" }
         iCan: { de: "Ich kann erklären, was die evangelische Lehre von der Rechtfertigung meint: Nach ihr nimmt Gott den Menschen ohne Vorbedingung an, nicht wegen seiner Leistungen." }
         gradeBand: "7-8"
-        requires: [gottes-zuwendung, luther-leben]
+        requires: [gottes-zuwendung]
       # BY ER8 LB1: Gedanke der Freiheit eines Christenmenschen; NW IF2 Stufe 2: reformatorische Zuordnung von Freiheit und Verantwortung des Einzelnen vor Gott (S. 28 f.). Stimmen HE/BY/NW – / 7-8 / 7-10 -> 7-8 (Mehrheit)
       - id: freiheit-eines-christenmenschen
         name: { de: "Freiheit eines Christenmenschen", en: "The freedom of a Christian" }
@@ -213,13 +214,13 @@ strands:
         iCan: { de: "Ich kann erklären, was Christen meinen, wenn sie von Gott als Vater, Sohn und Heiligem Geist sprechen." }
         gradeBand: "7-8"
         requires: [glaubensbekenntnis, pfingsten]
-      # HE Jg 9/10 Religionen: 2. Mose 20,1–6 (S. 21); BY ER8 LB2: Kritik der Propheten an der Götzenverehrung; ER7 LB4: das 1. Gebot in seiner kritischen Funktion; NW IF2 Stufe 2: Funktionalisierung Gottes (S. 29). Stimmen HE/BY/NW 9-10 / 7-8 / 7-10 -> 7-8 (Gleichstand 7-8/9-10; requires entscheidet)
-      # Siehe auch: katholische-religion/gott-und-goetze
+      # HE Jg 9/10 Religionen: 2. Mose 20,1–6 (S. 21); BY ER8 LB2: Kritik der Propheten an der Götzenverehrung; ER7 LB4: das 1. Gebot in seiner kritischen Funktion; NW IF2 Stufe 2: Funktionalisierung Gottes (S. 29). Stimmen HE/BY/NW 9-10 / 7-8 / 7-10 -> 7-8 (Gleichstand 7-8/9-10; die frühere Stufe, kein requires verlangt eine spätere)
+      # Siehe auch: katholische-religion/gott-und-goetze; propheten (das Auftreten gegen fremde Götter braucht nur ein Beispiel wie Elija, nicht den ganzen Baustein zu Berufung, Botschaft und Zeichenhandlungen)
       - id: erstes-gebot
         name: { de: "Das erste Gebot", en: "The first commandment" }
-        iCan: { de: "Ich kann erklären, was das erste Gebot meint und warum Propheten gegen die Verehrung anderer Götter auftraten." }
+        iCan: { de: "Ich kann erklären, was das erste Gebot meint und warum Propheten wie Elija gegen die Verehrung anderer Götter auftraten." }
         gradeBand: "7-8"
-        requires: [zehn-gebote, propheten]
+        requires: [zehn-gebote]
       # HE Jg 9/10 Gott: Tragfähigkeit des Redens von Gott angesichts von Widerfahrnissen; Hiob, Ps 22 (S. 19); BY ER9 LB2: Anfragen an den Gottesglauben angesichts von Leidenserfahrungen (schon ER5 LB4: Frage nach dem Warum von Leid); NW IF2 Stufe 2: Argumente für und gegen den Glauben an Gott (S. 29). Stimmen HE/BY/NW 9-10 / 9-10 / 7-10 -> 9-10 (Mehrheit)
       # Siehe auch: katholische-religion/theodizee
       - id: theodizee
@@ -323,20 +324,6 @@ strands:
         iCan: { de: "Ich kann erklären, wie man einen biblischen Text mit Blick auf seine Entstehungszeit auslegt (historisch-kritischer Zugang)." }
         gradeBand: "7-8"
         requires: [bibel-entstehung, bibel-textsorten]
-      # BY ER8 LB2: Merkmale prophetischer Existenz und Verkündigung; eine prophetische Tradition im Überblick; NW IF1 Stufe 2: prophetische Rede und prophetische Aktionen (S. 27). Stimmen HE/BY/NW – / 7-8 / 7-10 -> 7-8 (Mehrheit)
-      # Siehe auch: katholische-religion/propheten
-      - id: propheten
-        name: { de: "Propheten der Bibel", en: "Prophets in the Bible" }
-        iCan: { de: "Ich kann an einem Beispiel wie Amos oder Jeremia erklären, was einen Propheten in der Bibel ausmacht: Berufung, Botschaft und Zeichenhandlungen." }
-        gradeBand: "7-8"
-        requires: [bibel-textsorten]
-      # HE Jg 8 Kirche: Ursprünge der christlichen Gemeinde (S. 27); Jg 9/10 Jesus Christus: 1. Kor 15,3–10 (S. 20); BY ER7 LB2: Leben und Wirken des Paulus; NW IF5 Stufe 2: Briefe als Textgattung (S. 31). Stimmen HE/BY/NW 7-8 / 7-8 / 7-10 -> 7-8 (Mehrheit)
-      # Siehe auch: katholische-religion/paulus
-      - id: paulus
-        name: { de: "Paulus und die Mission", en: "Paul and the early mission" }
-        iCan: { de: "Ich kann Leben und Wirken des Paulus in Grundzügen beschreiben und erklären, warum er für die Ausbreitung des Christentums wichtig war." }
-        gradeBand: "7-8"
-        requires: [pfingsten]
   - id: jesus-christus
     name: { de: "Jesus Christus", en: "Jesus Christ" }
     competencies:
@@ -571,6 +558,14 @@ strands:
       - id: erste-gemeinden
         name: { de: "Die ersten christlichen Gemeinden", en: "The first Christian communities" }
         iCan: { de: "Ich kann beschreiben, wie die ersten christlichen Gemeinden lebten und welche Konflikte es in ihnen gab." }
+        gradeBand: "7-8"
+        requires: [pfingsten]
+      # HE Jg 8 Kirche: Ursprünge der christlichen Gemeinde (S. 27); Jg 9/10 Jesus Christus: 1. Kor 15,3–10 (S. 20); BY ER7 LB2: Leben und Wirken des Paulus; NW IF5 Stufe 2: Briefe als Textgattung (S. 31). Stimmen HE/BY/NW 7-8 / 7-8 / 7-10 -> 7-8 (Mehrheit)
+      # Strang kirche: Das iCan fragt nach Leben und Mission des Paulus, nicht nach seinen Briefen als Textsorte; HE lehrt ihn im Inhaltsfeld Kirche (Ursprünge der christlichen Gemeinde, Jg 8, S. 27), BY im Lernbereich „Kirche hat Geschichte“ zwischen Pfingsten und der Ausbreitung (ER7 LB2); wie katholische-religion/paulus
+      # Siehe auch: katholische-religion/paulus
+      - id: paulus
+        name: { de: "Paulus und die Mission", en: "Paul and the early mission" }
+        iCan: { de: "Ich kann Leben und Wirken des Paulus in Grundzügen beschreiben und erklären, warum er für die Ausbreitung des Christentums wichtig war." }
         gradeBand: "7-8"
         requires: [pfingsten]
       # HE Jg 8 Kirche: Ursprünge der christlichen Gemeinde; Mt 28,16–20 (S. 27); BY ER7 LB2: Ausbreitung, Christenverfolgung, Konstantinische Wende; NW IF4 Stufe 2: Beziehung von Kirche, Staat und Gesellschaft im Verlauf der Geschichte (S. 30). Stimmen HE/BY/NW 7-8 / 7-8 / 7-10 -> 7-8 (Mehrheit)
@@ -950,6 +945,14 @@ strands:
         iCan: { de: "Ich kann erklären, was die Bibel unter Gerechtigkeit versteht, besonders den Einsatz für die Schwachen." }
         gradeBand: "7-8"
         requires: [gerechtigkeit, zehn-gebote]
+      # BY ER8 LB2: Merkmale prophetischer Existenz und Verkündigung; eine prophetische Tradition im Überblick; NW IF1 Stufe 2: prophetische Rede und prophetische Aktionen (S. 27). Stimmen HE/BY/NW – / 7-8 / 7-10 -> 7-8 (Mehrheit)
+      # Strang ethik: Beide Länder, die die Propheten nennen, lehren sie im Zusammenhang Gerechtigkeit: BY im Lernbereich „Propheten und die Frage nach Gerechtigkeit“ (ER8 LB2: „was Propheten auszeichnet und wie sie sich im Namen Gottes für Gerechtigkeit einsetzen“), NW im Inhaltsfeld 1 „Menschliches Handeln in Freiheit und Verantwortung“, Schwerpunkt „prophetischer Protest“ (S. 27); HE nennt sie nicht. Anders katholische-religion/propheten: Dort nennt die DBK sie im Bereich Bibel
+      # Siehe auch: katholische-religion/propheten
+      - id: propheten
+        name: { de: "Propheten der Bibel", en: "Prophets in the Bible" }
+        iCan: { de: "Ich kann an einem Beispiel wie Amos oder Jeremia erklären, was einen Propheten in der Bibel ausmacht: Berufung, Botschaft und Zeichenhandlungen." }
+        gradeBand: "7-8"
+        requires: [bibel-textsorten]
       # BY ER8 LB2: wie Propheten sich im Namen Gottes für Gerechtigkeit einsetzen; NW IF1 Stufe 2: prophetische Rede und Aktionen als Kritik an gesellschaftlichen Unrechtsstrukturen (S. 27). Stimmen HE/BY/NW – / 7-8 / 7-10 -> 7-8 (Mehrheit)
       - id: prophetischer-protest
         name: { de: "Prophetische Sozialkritik", en: "Prophetic social criticism" }
@@ -1010,8 +1013,9 @@ strands:
         requires: [frieden, kirche-in-der-gesellschaft]
       # HE Jg 9/10 Ethik: Konfliktsituationen in der Gesellschaft und im individuellen Erfahrungsbereich (S. 20); BY ER10 LB4: konfliktethisches Thema (Organspende, Sterbehilfe, pränatale Diagnostik); christliche Perspektiven. Stimmen HE/BY/NW 9-10 / 9-10 / – -> 9-10 (Mehrheit)
       # Siehe auch: katholische-religion/schutz-des-lebens
+      # Siehe auch: tod-und-trauer (kein requires: Die christlichen Argumente zu Organspende oder Sterbehilfe beruhen auf der Menschenwürde, nicht auf den Ritualen von Abschied und Trauer; ein Urteil, das auf ein anderes Gebiet zurückgreift)
       - id: lebensanfang-und-lebensende
         name: { de: "Ethik am Lebensanfang und -ende", en: "Beginning- and end-of-life ethics" }
         iCan: { de: "Ich kann eine ethische Frage am Anfang oder Ende des Lebens, zum Beispiel Organspende oder Sterbehilfe, beschreiben und christliche Argumente dazu nennen." }
         gradeBand: "9-10"
-        requires: [menschenwuerde-heute, tod-und-trauer]
+        requires: [menschenwuerde-heute]

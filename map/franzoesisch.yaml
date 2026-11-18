@@ -482,7 +482,8 @@ strands:
         gradeBand: "7-8"
         requires: [reflexive-verben, passe-compose-etre]
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 8 Verben: accord im passé composé: avoir; BY F8 Grammatik: réceptif : accord du participe passé avec avoir; F10: accord du participe passé avec avoir (produktiv); NW –.
-      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit)
+      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit). Zählt man für BY die produktive Stufe F10 (9-10),
+      #   bleibt es beim Gleichstand 7-8/9-10 und damit bei 7-8 (Runde 5 geprüft).
       - id: accord-participe-avoir
         name: { de: "Angleichung des Partizips bei avoir", en: "Past participle agreement with avoir" }
         iCan: "Ich kann das Partizip im passé composé mit avoir an ein vorangestelltes direktes Objekt angleichen, zum Beispiel la lettre que j’ai écrite."
@@ -584,6 +585,7 @@ strands:
       # KMK Lexiko-Grammatik (S. 18 f.); MSA Sprachmittlung; HE Jg 8 Satz: direkte / indirekte Rede (Einleitungsverb im Präsens); BY F7 Grammatik: discours indirect (au présent); NW S1 Grammatik (S. 19): direkte und indirekte Rede im Präsens (Hinweis: SiLP UV 8.4).
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 7 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (grammatik hielt mit nebensatz-que 45 von 89 Bausteinen in 5-6; Ende der Kette, längste Kette der Gleichstände; Owner, 2026-11-11)
       # requires nebensatz-que (Owner, 2026-11-11): Wiedergeben, was jemand sagt, heißt einen que-Satz anschließen (Il dit qu’il est malade). (HE S. 36, BY F7, NW S. 19: indirekte Rede im Präsens; BS S. 292 (3.6, Stufe C))
+      # Siehe auch: direkte-objektpronomen. Keine Kante: Objektpronomen wechseln beim Wiedergeben nur, wenn der Satz eines enthält (te → le); das ist eine Anwendung, keine Voraussetzung (Runde 5 geprüft).
       - id: indirekte-rede-praesens
         name: { de: "Indirekte Rede im Präsens", en: "Reported speech in the present" }
         iCan: "Ich kann wiedergeben, was jemand sagt, zum Beispiel Il dit qu’il est malade."
@@ -834,14 +836,17 @@ strands:
         gradeBand: "7-8"
         requires: [adjektiv-angleichung]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 8 Grammatische Fachausdrücke: Bezeichnungen in Arbeitsanweisungen verstehen; BY F6 Wortschatz: sehr einfache Arbeitsanweisungen (complétez, cochez), vocabulaire de classe; F7 (reliez); NW S1 Wortschatz (S. 18): Wortschatz des discours en classe.
-      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (wortschatz hielt nach den Stimmen 24 von 35 Bausteinen in 5-6)
+      # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe). Nicht mehr verteilt
+      #   (Runde 5, KD-27): Arbeitsanweisungen braucht man ab der ersten Stunde (BY F6, NW S1); sprachregister geht nach dem
+      #   BY-Beleg F8 nach 7-8, so hält wortschatz in 5-6 weiter 17 von 35 Bausteinen.
       - id: unterrichtssprache
         name: { de: "Unterrichtssprache", en: "Classroom language" }
         iCan: "Ich kann Arbeitsanweisungen wie complétez, cochez und reliez verstehen und mich im Unterricht auf Französisch verständigen."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [imperativ]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 8 Grammatische Fachausdrücke: Bezeichnungen für die grammatischen Kategorien; BY F6 Wortschatz: die grammatikalischen Begriffe des Lernbereichs Grammatik; F9/F10: erweitertes Repertoire; NW –.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 6 → 5-6 / – -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (wortschatz hielt nach den Stimmen 24 von 35 Bausteinen in 5-6)
+      # requires unterrichtssprache (Herleitung): Die Fachbegriffe stehen in Arbeitsanweisungen (Soulignez le sujet, Conjuguez le verbe); HE Jg 8 nennt beides unter „Grammatische Fachausdrücke“ (Bezeichnungen in Arbeitsanweisungen verstehen).
       - id: grammatische-fachbegriffe
         name: { de: "Grammatische Fachbegriffe", en: "Grammar terms" }
         iCan: "Ich kann grammatische Fachbegriffe auf Französisch verstehen, zum Beispiel le verbe, le sujet, le pronom."
@@ -898,11 +903,13 @@ strands:
         gradeBand: "7-8"
         requires: [meinung-aeussern, figuren-ort-zeit-handlung]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); IK MSA: sprachlich angemessen in Bezug auf Situation und Beteiligte agieren (S. 21); HE Jg 10 Satz: code oral vs. code écrit; Bewusstsein für Stil und Register; BY F7 Sprachreflexion: gesprochenes und geschriebenes Französisch; F8: français standard und français familier, Zurückhaltung beim Jugendjargon; NW –.
-      # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 7 → 5-6 / – -> 5-6 (Gleichstand 5-6/9-10, frühere Stufe)
+      # Stimmen HE/BY/NW Jg 10 → 9-10 / Jg 8 → 7-8 / – -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe). BY stimmt mit F8 (français
+      #   standard und français familier), denn das iCan unterscheidet Umgangs- und Standardsprache; F7 nennt nur gesprochenes
+      #   und geschriebenes Französisch (Runde 5, KD-27).
       - id: sprachregister
         name: { de: "Sprachregister", en: "Language registers" }
         iCan: "Ich kann Umgangssprache (français familier) von der Standardsprache unterscheiden und je nach Situation passend wählen."
-        gradeBand: "5-6"
+        gradeBand: "7-8"
         requires: [tu-oder-vous]
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE –; BY F8 Sprachreflexion: kanadisches Französisch, Südfranzösisch; F9: Merkmale des Schweizer Französisch; NW S2 Sprachbewusstheit (S. 33): einzelne Varietäten des Sprachgebrauchs erkennen.
       # Stimmen HE/BY/NW – / Jg 8 → 7-8 / S2 → 7-8, 9-10 -> 7-8 (Mehrheit). SCHWACH BELEGT: HE nennt Varietäten nicht; NW nur unter Sprachbewusstheit

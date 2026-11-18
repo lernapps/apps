@@ -257,6 +257,7 @@ strands:
         requires: [bewegungsmangel]
       # HE Kap. 5 Leitidee Gesundheit, S. 15 (Gefahren des Dopings); BY S10 LB1 (Sport und Doping: Formen, Folgen, gesellschaftspolitische Hintergründe)
       # Stimmen 5-10 / 9-10 (Jg 10) / – -> 9-10 (Mehrheit)
+      # Siehe auch: bewegungsmangel, koerperbilder-und-trends (gesundheitliches Urteil; keine Voraussetzung)
       - id: doping
         name: { de: "Doping", en: "Doping" }
         iCan: "Ich kann erklären, was Doping ist, welche gesundheitlichen Folgen es hat und warum es im Sport verboten ist."
@@ -382,6 +383,7 @@ strands:
         requires: [kugelstossen]
       # HE Kap. 6 Teamkompetenz, S. 19 (Regeln und Wettkampfvorschriften erläutern und einhalten); BY S6 4.1 (berücksichtigen wesentliche Wettkampfbestimmungen); NW 2.4.2 BF3, S. 24 (Wettbewerb unter Berücksichtigung grundlegenden Wettkampfverhaltens); 2.4.1 IF e, S. 22 (Regeln und Messverfahren beschreiben)
       # Stimmen 5-10 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit)
+      # requires regeln-im-sport: Wettkampfregeln wie Fehlstart, Übertreten und Zahl der Versuche sichern gleiche Chancen; das versteht man mit dem Gedanken, wozu Regeln da sind (NW 2.4.1 IF e, S. 22: Regeln und Messverfahren beschreiben; HE Kap. 6 Teamkompetenz, S. 19: Regeln und Wettkampfvorschriften erläutern)
       - id: leichtathletik-regeln
         name: { de: "Wettkampfregeln der Leichtathletik", en: "Athletics competition rules" }
         iCan: "Ich kann wichtige Wettkampfregeln der Leichtathletik nennen, zum Beispiel Fehlstart, Übertreten und Zahl der Versuche."
@@ -787,11 +789,12 @@ strands:
         requires: [angriff-und-abwehr]
       # HE Kap. 7.1 Spielen, S. 26 (frei zu wählendes Zielschussspiel; Kenntnisse über Regeln); BY S6 4.3 (Basketball; grundlegende Spielregeln der Sportspiele); NW 2.4.2 BF7, S. 26 (Mannschaftsspiel, u. a. Basketball, regelgerecht; SiLP Jg 6, UV 7.3)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit). HE und NW lassen das Sportspiel wählen; die Stimme gilt für jedes große Sportspiel
+      # Keine Kante zu regeln-im-sport (KD-21): Spielregeln machen ein Spiel aus (Spielidee, Spielfamilien); wozu Regeln allgemein da sind, braucht man dafür nicht. Siehe auch: regeln-im-sport
       - id: basketball-regeln
         name: { de: "Basketballregeln", en: "Basketball rules" }
         iCan: "Ich kann die wichtigsten Basketballregeln erklären, zum Beispiel Schrittregel, Doppeldribbling und Foul."
         gradeBand: "5-6"
-        requires: [spielfamilien, regeln-im-sport]
+        requires: [spielfamilien]
       # HE Kap. 7.1 Spielen, S. 25 (individuelle Ballfertigkeiten); Kap. 6, S. 20 (regelkonformes Dribbeln, Prellen); BY S6 4.3 (Basketball: Passen, Fangen, Dribbeln, Stopp- und Sternschritt); NW 2.4.2 BF7, S. 26 (technisch-koordinative Fertigkeiten im ausgewählten Spiel)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit)
       - id: basketball-dribbeln-passen
@@ -808,11 +811,12 @@ strands:
         requires: [basketball-dribbeln-passen]
       # HE Kap. 7.1 Spielen, S. 26 (frei zu wählendes Zielschussspiel; Kenntnisse über Regeln); BY S6 4.3 (Fußball; grundlegende Spielregeln der Sportspiele); NW 2.4.2 BF7, S. 26 (Mannschaftsspiel, u. a. Fußball, regelgerecht)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit). HE und NW lassen das Sportspiel wählen
+      # Keine Kante zu regeln-im-sport (KD-21): Spielregeln machen ein Spiel aus (Spielidee, Spielfamilien); wozu Regeln allgemein da sind, braucht man dafür nicht. Siehe auch: regeln-im-sport
       - id: fussball-regeln
         name: { de: "Fußballregeln", en: "Football rules" }
         iCan: "Ich kann die wichtigsten Fußballregeln erklären, zum Beispiel Einwurf, Eckstoß, Foul und Freistoß."
         gradeBand: "5-6"
-        requires: [spielfamilien, regeln-im-sport]
+        requires: [spielfamilien]
       # HE Kap. 7.1 Spielen, S. 25 (individuelle Ballfertigkeiten); Kap. 6, S. 20 (Annehmen, Stoppen, Passen, Torschuss); BY S6 4.3 (Fußball: Passen, Annahme, Mitnahme, Dribbling, Torschuss); S7 4.3 (Kurzpass mit der Innenseite); NW 2.4.2 BF7, S. 26 (technisch-koordinative Fertigkeiten im ausgewählten Spiel)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit)
       - id: fussball-passen-annehmen
@@ -822,11 +826,12 @@ strands:
         requires: [fussball-regeln, ball-zuspielen-annehmen]
       # HE Kap. 7.1 Spielen, S. 26 (frei zu wählendes Zielschussspiel; Kenntnisse über Regeln); BY S6 4.3 (Handball; grundlegende Spielregeln der Sportspiele); NW 2.4.2 BF7, S. 26 (Mannschaftsspiel, u. a. Handball, regelgerecht)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit). HE und NW lassen das Sportspiel wählen
+      # Keine Kante zu regeln-im-sport (KD-21): Spielregeln machen ein Spiel aus (Spielidee, Spielfamilien); wozu Regeln allgemein da sind, braucht man dafür nicht. Siehe auch: regeln-im-sport
       - id: handball-regeln
         name: { de: "Handballregeln", en: "Handball rules" }
         iCan: "Ich kann die wichtigsten Handballregeln erklären, zum Beispiel Schrittregel, Torraum und Siebenmeter."
         gradeBand: "5-6"
-        requires: [spielfamilien, regeln-im-sport]
+        requires: [spielfamilien]
       # HE Kap. 7.1 Spielen, S. 25 (individuelle Ballfertigkeiten); Kap. 6, S. 20 (Torwurf); BY S6 4.3 (Handball: Passen, Fangen, Prellen, Torwurf); S7 4.3 (Werfen und Fangen in der Bewegung); NW 2.4.2 BF7, S. 26 (technisch-koordinative Fertigkeiten im ausgewählten Spiel)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit)
       - id: handball-werfen-fangen
@@ -836,11 +841,12 @@ strands:
         requires: [handball-regeln, ball-zuspielen-annehmen, schlagwurf]
       # HE Kap. 7.1 Spielen, S. 26 (Rückschlagspiel; Kenntnisse über Regeln); BY S6 4.3 (Volleyball; grundlegende Spielregeln der Sportspiele); NW 2.4.2 BF7, S. 26 (Mannschaftsspiel, u. a. Volleyball, regelgerecht)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit). HE und NW lassen das Sportspiel wählen
+      # Keine Kante zu regeln-im-sport (KD-21): Spielregeln machen ein Spiel aus (Spielidee, Spielfamilien); wozu Regeln allgemein da sind, braucht man dafür nicht. Siehe auch: regeln-im-sport
       - id: volleyball-regeln
         name: { de: "Volleyballregeln", en: "Volleyball rules" }
         iCan: "Ich kann die wichtigsten Volleyballregeln erklären, zum Beispiel drei Ballkontakte, Rotation und Zählweise."
         gradeBand: "5-6"
-        requires: [spielfamilien, regeln-im-sport]
+        requires: [spielfamilien]
       # HE Kap. 7.1 Spielen, S. 26 (Rückschlagspiel: Formen des kontrollierten Zuspiels); BY S6 4.3 (Volleyball: oberes, unteres Zuspiel); S8 4.3; NW 2.4.2 BF7, S. 26 (technisch-koordinative Fertigkeiten im ausgewählten Spiel)
       # Stimmen 5-6 / 5-6 (Jg 6) / 5-6 -> 5-6 (Mehrheit)
       - id: pritschen-baggern
@@ -857,11 +863,12 @@ strands:
         requires: [pritschen-baggern]
       # HE Kap. 7.1 Spielen, S. 26 (am Beispiel eines Rückschlagspiels; Kenntnisse über Regeln); BY S5 4.3 (Bewegungserfahrungen im Bereich der Rückschlagspiele); S7 4.3 (z. B. Badminton); NW 2.4.2 BF7, S. 26 (Partnerspiel, Badminton, Tennis oder Tischtennis, regelgerecht)
       # Stimmen 5-6 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
+      # Keine Kante zu regeln-im-sport (KD-21): Spielregeln machen ein Spiel aus (Spielidee, Spielfamilien); wozu Regeln allgemein da sind, braucht man dafür nicht. Siehe auch: regeln-im-sport
       - id: rueckschlagspiel-regeln
         name: { de: "Regeln der Rückschlagspiele", en: "Rules of racket games" }
         iCan: "Ich kann die Regeln eines Rückschlagspiels wie Badminton oder Tischtennis erklären: Aufschlag, Feldgrenzen und Zählweise."
         gradeBand: "5-6"
-        requires: [spielfamilien, regeln-im-sport]
+        requires: [spielfamilien]
       # HE Kap. 6 Spielen, S. 20 f. (Grundschläge, Angriffs- und Abwehrschläge; den Gegner ausspielen); BY S8 4.3 (Erfahrungen in Rückschlagspielen, z. B. Tischtennis); S9 4.3 (Badminton); NW 2.5.2 BF7, S. 36 (im ausgewählten Partnerspiel auf fortgeschrittenem Niveau)
       # Stimmen 7-10 / 7-8 (Jg 8) / 7-10 -> 7-8 (Mehrheit)
       - id: gegner-ausspielen
@@ -871,11 +878,12 @@ strands:
         requires: [rueckschlagspiel-regeln, ball-zuspielen-annehmen]
       # HE Kap. 6 Spielen, S. 20 (zur Vertiefung ein weiteres Zielschussspiel oder ein Endzonenspiel); BY S7 4.3 (alternative Spiele, z. B. Ultimate Frisbee); S10 4.3 (Flag-Football); NW 2.5.2 BF7, S. 36 (ein Endzonenspiel, z. B. Ultimate Frisbee, Rugby, Flag-Football, regelgerecht spielen)
       # Stimmen 7-10 / 7-8 (Jg 7) / 7-10 -> 7-8 (Mehrheit)
+      # Keine Kante zu regeln-im-sport (KD-21): Spielregeln machen ein Spiel aus (Spielidee, Spielfamilien); wozu Regeln allgemein da sind, braucht man dafür nicht. Siehe auch: regeln-im-sport
       - id: endzonenspiel
         name: { de: "Endzonenspiele", en: "End-zone games" }
         iCan: "Ich kann die Spielidee und die wichtigsten Regeln eines Endzonenspiels wie Ultimate Frisbee oder Flag-Football erklären."
         gradeBand: "7-8"
-        requires: [spielfamilien, regeln-im-sport]
+        requires: [spielfamilien]
   - id: fairness
     name: { de: "Fairness, Regeln und Zusammenarbeit", en: "Fair play, rules and teamwork" }
     competencies:
@@ -936,11 +944,12 @@ strands:
         requires: [fair-play]
       # HE Kap. 6 Teamkompetenz, S. 20 (sportliche Wettbewerbssituationen selbstständig organisieren und regeln); BY S9 LB2 (Helfertätigkeiten bei Sportwettbewerben der Unterstufe); S10 LB2; NW 2.4.2 BF3, S. 24 (einen leichtathletischen Wettbewerb durchführen); 2.5.2 BF3, S. 34 (Wettkampf einzeln oder in der Gruppe)
       # Stimmen 5-10 / 9-10 (Jg 9) / 5-6 -> 5-6 (Gleichstand 5-6/9-10: requires entscheidet (früheste Stufe nach den Voraussetzungen))
+      # requires regeln-im-sport (Herleitung): Wer ein Turnier organisiert, legt Regeln fest und setzt sie durch; dafür muss man wissen, wozu Regeln da sind (HE Kap. 6 Teamkompetenz, S. 20: Wettbewerbssituationen „organisieren und regeln“). Ersetzt die Kante zu messen-und-kampfrichten: Ein Turnier mit Spielplan und Ergebnisliste braucht kein leichtathletisches Messen, nur ein leichtathletischer Wettbewerb (NW 2.4.2 BF3). Siehe auch: messen-und-kampfrichten, schiedsrichter
       - id: wettbewerb-organisieren
         name: { de: "Turnier organisieren", en: "Organising a tournament" }
         iCan: "Ich kann einen kleinen Wettbewerb oder ein Turnier mit Spielplan, Regeln und Ergebnisliste selbst organisieren."
         gradeBand: "5-6"
-        requires: [messen-und-kampfrichten]
+        requires: [regeln-im-sport]
   - id: bewegungslernen
     name: { de: "Bewegungen lernen und Leistung beurteilen", en: "Learning movements and judging performance" }
     competencies:
@@ -994,11 +1003,12 @@ strands:
         requires: [leistungsfaktoren]
       # HE Kap. 6 Laufen, Springen, Werfen, S. 22 (individuelle Bezugsnorm); Bewegen an Geräten, S. 21 (individuelle Leistungsentwicklung); BY S7 4.1 (ermitteln ihre persönliche Leistungsentwicklung im Wurf); S9 4.1; S10 4.2; NW 2.5.1 IF d, S. 31 (sportliche Leistungen erfassen und mit graphischen Darstellungen oder Diagrammen dokumentieren)
       # Stimmen 7-10 / 7-8 (Jg 7) / 7-10 -> 7-8 (Mehrheit)
+      # Keine Kante zu messen-und-kampfrichten (KD-21): Das Messen der eigenen Leistung gehört zum iCan dieses Bausteins; Kampfrichten braucht er nicht. Einen eigenen Baustein „Weiten und Zeiten messen“ gibt es nicht: BY nennt das Messen einer Weite nur als Kampfrichteraufgabe (S5 LB2), NW die Messverfahren zusammen mit den Regeln (2.4.1 IF e, S. 22); beide zusammen sind messen-und-kampfrichten. Siehe auch: messen-und-kampfrichten
       - id: leistung-dokumentieren
         name: { de: "Leistung dokumentieren", en: "Recording performance" }
         iCan: "Ich kann meine Leistungen messen, in einer Tabelle oder einem Diagramm darstellen und meine Entwicklung beschreiben."
         gradeBand: "7-8"
-        requires: [bezugsnormen, messen-und-kampfrichten]
+        requires: [bezugsnormen]
   - id: fahren-natur
     name: { de: "Fahren, Rollen, Gleiten und Sport in der Natur", en: "Wheels, skis, boats and outdoor sport" }
     competencies:

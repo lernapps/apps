@@ -1027,11 +1027,12 @@ strands:
         gradeBand: "7-8"
         requires: [tempus-praesens-praeteritum]
       # KMK 4.5 grammatische Mittel: Modus (S. 41); Fachausdrücke I: wörtliche Rede (S. 42); HE 7.3 Indirekte Rede, Konjunktiv I und II (Jg 7); BY D7 4.2 Konjunktiv als Mittel der Redewiedergabe; NW S1 IF1 direkte und indirekte Rede | Stimmen HE/BY/NW 7-8/7-8/7-8 → 7-8 (Mehrheit)
+      # Siehe auch: woertliche-rede-zeichensetzen (keine requires-Kante mehr): Umwandeln braucht nur, die wörtliche Rede und ihren Begleitsatz zu erkennen, nicht ihre Zeichen zu setzen; das Unterscheiden von direkter und indirekter Rede gehört zu diesem Baustein selbst (NW S1 IF1), das Erkennen der wörtlichen Rede kennen die Kinder aus der Grundschule. Einen eigenen Baustein „wörtliche Rede erkennen“ nennt keine Quelle.
       - id: indirekte-rede
         name: { de: "Indirekte Rede", en: "Reported speech" }
         iCan: "Ich kann wörtliche Rede mit dem Konjunktiv I in indirekte Rede umwandeln."
         gradeBand: "7-8"
-        requires: [konjunktiv-zwei, woertliche-rede-zeichensetzen]
+        requires: [konjunktiv-zwei]
       # KMK Fachausdrücke I: Aussage-, Frage-, Ausrufesatz (S. 42); HE 5.3 Satzarten (Jg 5); BY D5 4.2 Arten des einfachen Satzes; NW E IF1 Satzarten | Stimmen HE/BY/NW 5-6/5-6/5-6 → 5-6 (Mehrheit)
       - id: satzarten
         name: { de: "Satzarten", en: "Sentence types" }

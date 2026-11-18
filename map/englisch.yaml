@@ -536,7 +536,7 @@ strands:
         requires: [gerund]
       # HE8 3.3 (Infinitivkonstruktionen; nach where, what, how; nach Superlativen; mit eigenem Sinnsubjekt); BY E8 1.2 (in order to, it’s X (for sb.) to, the first to do sth.); NW S2 S. 35 (infinitive clauses) | 7-8/7-8/9-10 → 7-8 (Mehrheit)
       # requires would-like: „I’d like (you) to …“ ist der erste Infinitiv mit to; Jg 8 baut die Infinitive darauf aus. (BY E5 1.2 Wortschatz („I want / I’d like (you) to“) → BY E8 1.2 Grammatik (Infinitiv); HE S. 17 (Jg 5: „einfache Infinitivanschlüsse“) → HE S. 27 (Jg 8: Infinitivkonstruktionen))
-      # requires fragewoerter (Herleitung): Der Baustein übt den Infinitiv nach Fragewörtern (how to, what to).
+      # requires fragewoerter: Der Infinitiv nach Fragewörtern (I don't know what to do) braucht die Fragewörter; Hessen nennt ihn als Teil der Infinitivkonstruktionen, die Fragewörter in Jg 5. Kein kleinerer Baustein trägt die Fragewörter. (HE5 3.3 „wichtige Interrogativpronomen“ → HE8 3.3 Infinitivkonstruktionen „nach where, what, how“; BY E5 1.2 Fragen mit Fragewort → BY E8 1.2 Infinitiv)
       - id: infinitivkonstruktionen
         name: { de: "Infinitivkonstruktionen", en: "Infinitive constructions" }
         iCan: "Ich kann Infinitive mit to verwenden, zum Beispiel nach in order, nach Fragewörtern und in „It’s easy for me to …“."
@@ -727,10 +727,10 @@ strands:
         iCan: "Ich kann über Umweltschutz sprechen, zum Beispiel über Müll, Recycling und Nachhaltigkeit."
         gradeBand: "7-8"
       # HE8 2.2 (scientific/technological progress); BY E10 5 (durch technologischen Fortschritt bedingte Wertvorstellungen); NW S1 S. 28 (wirtschaftlich-technologische Aspekte) | 7-8/9-10/7-8 → 7-8 (Mehrheit)
-      # requires passiv (Herleitung): Über Erfindungen spricht man meist im Passiv (was invented in …); HE lehrt das Passiv in Jg 7 und das Thema in Jg 8 (HE7 3.3 Aktiv-Passiv; HE8 2.2 scientific/technological progress).
+      # requires passiv (Herleitung): Über Erfindungen spricht man meist im Passiv (was invented in …); der Baustein übt das ausdrücklich (iCan). Die Form steht vor ihrer Verwendung in einer Situation (Skill map-research); HE lehrt das Passiv in Jg 7 und das Thema in Jg 8 (HE7 3.3 Aktiv-Passiv; HE8 2.2 scientific/technological progress). Ohne die Kante stünde der Baustein allein.
       - id: technik-fortschritt
         name: { de: "Technik und Fortschritt", en: "Technology and progress" }
-        iCan: "Ich kann über Erfindungen und technischen Fortschritt sprechen."
+        iCan: "Ich kann über Erfindungen und technischen Fortschritt sprechen und sagen, wann und von wem etwas erfunden wurde (was invented by …)."
         gradeBand: "7-8"
         requires: [passiv]
       # HE9 2.2 (The world of work); BY E9 1.2 (Berufswelt, Bewerbungen); E9 5 (Praktikum, Ferienjob); NW S2 S. 36 (Schülerjobs, Praktika, Berufsprofile); S1 (Freizeit- und Ferienjobs) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
@@ -747,12 +747,11 @@ strands:
         gradeBand: "9-10"
         requires: [kleidung-einkaufen, umwelt]
       # HE10 2.2 (Human rights; civil society, volunteerism); BY E10 1.2 (politisches Handeln, weltanschauliche Aspekte); NW S2 S. 36 (gesellschaftliches Engagement; Demokratie und Menschenrechte) | 9-10/9-10/9-10 → 9-10 (Mehrheit)
-      # requires politik-uk: Die Wörter für Parlament, Wahl und Regierung lernt man beim politischen System; BY baut den Politikwortschatz von Jg 8 bis 10 auf. (BY E8 1.2 Wortschatz („Begriffe zu … Politik“) und E8 5 („politische Systeme … konstitutionelle Monarchie“) → BY E10 1.2 Wortschatz („politischem Handeln“))
+      # Siehe auch: politik-uk, politik-usa (keine requires-Kante mehr). Die Wörter für Parlament, Wahl und Regierung bringt jedes der beiden politischen Systeme mit (BY E8 1.2 Wortschatz „Begriffe zu … Politik“, E8 5 „politische Systeme“); keines von beiden ist allein nötig, und Demokratie und Menschenrechte setzen das britische System nicht voraus. Der Baustein bleibt verbunden: buergerrechtsbewegung baut auf ihm auf.
       - id: gesellschaft-politik
         name: { de: "Gesellschaft und Politik", en: "Society and politics" }
         iCan: "Ich kann über Demokratie, Menschenrechte und gesellschaftliches Engagement sprechen."
         gradeBand: "9-10"
-        requires: [politik-uk]
       # HE –; BY E5 1.1 Sprechen (mehrere einfache, miteinander verbundene Sätze); NW EPS (zeitliche Bezüge zwischen Sätzen herstellen) | –/5-6/5-6 → 5-6 (Mehrheit) Hinweis: Beide Länder nennen die Verknüpfung, nicht die Wörter.
       - id: verbindungswoerter-erzaehlen
         name: { de: "Verbindungswörter beim Erzählen", en: "Sequencing words" }

@@ -192,12 +192,12 @@ strands:
         gradeBand: "9-10"
         requires: [komparation-adjektive, adverbien-bilden]
       # SCHWACH BELEGT (NW nennt Zahlwörter nicht; HE und BY stufen sehr verschieden ein). HE 9 1.4 Numeralia (unus, duo, tres; Rest fakultativ); BY L6 2.2 Numeralia (Kardinalia und Ordinalia 1 bis 12). Stimmen HE/BY/NW 7-8 | 5-6 | – -> 5-6 (Gleichstand 5-6/7-8, ohne Bindung durch requires: frühere Stufe; Klumpen verteilt: Rang 33/54 im Strang -> 7-8). Richtstufe 7-8. Gleichstand 5-6/9-10, 5-6 nicht möglich wegen requires
-      # requires roemische-zahlen: Die Zahlwörter lernt man zusammen mit den Zahlzeichen (BY L7 2.2 Numeralia „Kardinalia im Zahlenraum bis 1000 mit Zahlzeichen“)
+      # Siehe auch: roemische-zahlen. Keine Kante (Runde 5, KD-27): BY L7 2.2 nennt Zahlwörter und Zahlzeichen zusammen („Kardinalia im Zahlenraum bis 1000 mit Zahlzeichen“), ein Bündel; die Zahlwörter versteht man ohne die Zahlzeichen.
       - id: zahlwoerter
         name: { de: "Zahlwörter", en: "Numerals" }
         iCan: "Ich kann die lateinischen Grundzahlen bis zehn und die häufigsten Ordnungszahlen erkennen und unus, duo, tres deklinieren."
         gradeBand: "7-8"
-        requires: [adjektive-a-o-deklination, dritte-deklination, roemische-zahlen]
+        requires: [adjektive-a-o-deklination, dritte-deklination]
       # HE 7 1.4 Pronomina (Personal- und Possessivpronomen); BY L6 2.2 Pronomina (Personalpronomen); NW St1 IF3 (Personalpronomina). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit)
       - id: personalpronomen
         name: { de: "Personalpronomen", en: "Personal pronouns" }
@@ -246,11 +246,13 @@ strands:
         iCan: "Ich kann die Fragepronomen quis, quid und qui, quae, quod erkennen und übersetzen."
         gradeBand: "7-8"
         requires: [relativpronomen]
-      # HE 8 1.4 Pronomina (Indefinitpronomina); BY L8 2.2 Pronomina (aliquis, aliqui, quidam, quisque). Stimmen HE/BY/NW 7-8 | 7-8 | – -> 7-8 (Mehrheit; Klumpen verteilt: Rang 46/54 im Strang -> 9-10). Richtstufe 9-10. NW nennt Indefinitpronomina nicht
+      # HE 8 1.4 Pronomina (Indefinitpronomina); BY L8 2.2 Pronomina (aliquis, aliqui, quidam, quisque). Stimmen HE/BY/NW 7-8 | 7-8 | – -> 7-8 (Mehrheit). Richtstufe 7-8. NW nennt Indefinitpronomina nicht.
+      #   Nicht mehr verteilt (Runde 5, KD-27): Beide Stimmen sagen 7-8, und keine Stufe hält damit mehr als die Hälfte des
+      #   Strangs (formenlehre 18/19/17); die Drittelung nach Rang (46/54) war strenger als die Regel des Skills map-research.
       - id: indefinitpronomen
         name: { de: "Indefinitpronomen", en: "Indefinite pronouns" }
         iCan: "Ich kann die Indefinitpronomen aliquis, quidam und quisque erkennen und übersetzen."
-        gradeBand: "9-10"
+        gradeBand: "7-8"
         requires: [interrogativpronomen]
       # HE 7 1.3 Verbum (Subjekt im Prädikat enthalten); 1.4 Verbale Flexion; BY L6 2.2 Verben (in allen Personen), Grundbegriffe Person, Numerus; NW St1 IF3 Personalendungen. Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit)
       - id: personalendungen
@@ -391,12 +393,14 @@ strands:
         gradeBand: "9-10"
         requires: [ppp]
       # HE 8 1.4 finite Formen (Indikativ und Konjunktiv; Hauptsatz im Konjunktiv); BY L7 2.2 Verben (Konjunktiv Präsens im Aktiv und Passiv); NW St2 IF3 (Konjunktiv Präsens). Stimmen HE/BY/NW 7-8 | 5-6 | 7-8/9-10 -> 7-8 (Mehrheit; Klumpen verteilt: Rang 44/54 im Strang -> 9-10). Richtstufe 9-10
+      # requires passiv-praesensstamm: Das iCan umfasst den Konjunktiv im Passiv (vocetur), und den erkennt man nur an den Passivendungen (BY L7 2.2: „im Aktiv und Passiv“). Der Konjunktiv im Aktiv allein bräuchte die Kante nicht (Runde 5 geprüft).
       - id: konjunktiv-praesens
         name: { de: "Konjunktiv Präsens", en: "Present subjunctive" }
         iCan: "Ich kann den Konjunktiv Präsens Aktiv und Passiv an seinem Kennzeichen erkennen, zum Beispiel vocet und mittat."
         gradeBand: "9-10"
         requires: [passiv-praesensstamm]
       # HE 8 1.4 finite Formen (Präsens, Imperfekt und Perfekt passiv im Indikativ und Konjunktiv); BY L7 2.2 Verben (Konjunktiv Imperfekt); NW St1 IF3 (Konjunktiv Imperfekt). Stimmen HE/BY/NW 7-8 | 5-6 | 5-6/7-8 -> 7-8 (Gleichstand 5-6/7-8, entschieden durch requires; Klumpen verteilt: Rang 41/54 im Strang -> 9-10). Richtstufe 9-10
+      # requires passiv-praesensstamm: Das iCan umfasst den Konjunktiv Imperfekt Passiv (vocaretur), der die Passivendungen braucht (HE 8 1.4: Imperfekt passiv im Indikativ und Konjunktiv). Der Konjunktiv im Aktiv allein bräuchte die Kante nicht (Runde 5 geprüft).
       - id: konjunktiv-imperfekt
         name: { de: "Konjunktiv Imperfekt", en: "Imperfect subjunctive" }
         iCan: "Ich kann den Konjunktiv Imperfekt Aktiv und Passiv bilden und erkennen, zum Beispiel vocaret und vocaretur."
@@ -663,11 +667,13 @@ strands:
         iCan: "Ich kann einen AcI mit Infinitiv Perfekt erkennen und die Vorzeitigkeit richtig übersetzen."
         gradeBand: "5-6"
         requires: [aci-gleichzeitig, infinitiv-perfekt]
-      # HE 7 1.3 Nomen (direkt und indirekt reflexiv); BY L6 2.2 Pronomina (Reflexivpronomen); NW St1 IF3 (Reflexivpronomina). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit; Klumpen verteilt: Rang 18/49 im Strang -> 7-8). Richtstufe 7-8
+      # HE 7 1.3 Nomen (direkt und indirekt reflexiv); BY L6 2.2 Pronomina (Reflexivpronomen); NW St1 IF3 (Reflexivpronomina). Stimmen HE/BY/NW 5-6 | 5-6 | 5-6/7-8 -> 5-6 (Mehrheit). Richtstufe 5-6.
+      #   Nicht mehr verteilt (Runde 5, KD-27): Alle drei Länder stimmen für 5-6, und satzlehre hält damit in 5-6 18 von 49
+      #   Bausteinen, nicht mehr als die Hälfte; Rang 18/49 lag nur knapp hinter der Drittelgrenze.
       - id: reflexiv-im-aci
         name: { de: "Reflexivpronomen im AcI", en: "Reflexives in the accusative and infinitive" }
         iCan: "Ich kann erklären, auf wen sich se oder suus in einem AcI bezieht (indirekt reflexiv)."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [reflexivpronomen, aci-gleichzeitig]
       # HE 8 1.4 infinite Formen (Infinitiv Präsens und Perfekt passiv); BY L7 2.3 satzwertige Konstruktionen (AcI gleichzeitig, vorzeitig; passiv); NW St1 IF3 (AcI). Stimmen HE/BY/NW 7-8 | 5-6 | 5-6/7-8 -> 7-8 (Gleichstand 5-6/7-8, entschieden durch requires; Klumpen verteilt: Rang 38/49 im Strang -> 9-10). Richtstufe 9-10. HE nennt nur die passiven Infinitive, NW nur den AcI
       - id: aci-passiv
@@ -1089,11 +1095,12 @@ strands:
         gradeBand: "5-6"
         requires: [roemische-goetter, stadt-rom]
       # HE 8 3.8 Fortwirken römischer Kultur (Bearbeitungen griechischer und römischer Stoffe in Musik, Malerei, Tanz); BY L7 LB3 (Inhalte aus Mythos und Geschichte in bildlichen Darstellungen mit Texten vergleichen); NW St1 IF1 (Textinhalte mit Rezeptionsdokumenten aspektbezogen interpretieren); Stufe 2 (Literatur, Film, Kunst, Musik); KC 7.1 Textkompetenz (Rezeptionsdokumente vergleichend nutzen). Stimmen HE/BY/NW 7-8 | 5-6 | 5-6/7-8 -> 5-6 (Gleichstand 5-6/7-8, ohne Bindung durch requires: frühere Stufe; Klumpen verteilt: Rang 23/36 im Strang -> 7-8). Richtstufe 7-8
+      # Siehe auch: text-deuten. Keine Kante (Runde 5, KD-27): Verglichen werden Textinhalte (NW St1 IF1, BY L7 LB3); dafür braucht man den Stoff (griechische-sagen), nicht die Methode, einen lateinischen Text zu deuten.
       - id: rezeption-in-kunst-und-film
         name: { de: "Rezeption in Kunst und Film", en: "Reception in art and film" }
         iCan: "Ich kann eine Darstellung eines antiken Stoffes in Kunst, Musik oder Film mit dem lateinischen Text vergleichen."
         gradeBand: "7-8"
-        requires: [griechische-sagen, text-deuten]
+        requires: [griechische-sagen]
       # HE 9 3.6 Fortwirken römischer Kultur (Latein als Sprache der Wissenschaft, als Wurzel romanischer Sprachen, als Kirchensprache; karolingische Renaissance); BY L8 LB3 (Verbreitung der lateinischen Sprache: Karolingische Renaissance, Humanismus, Reformation, Vatikan); NW St2 IF1 (Nachwirkungen römischer Geschichte und Kultur in Europa darstellen); KC 7.1 Kulturkompetenz (Latein als Kultursprache Europas). Stimmen HE/BY/NW 7-8 | 7-8 | 7-8/9-10 -> 7-8 (Mehrheit; Klumpen verteilt: Rang 31/36 im Strang -> 9-10). Richtstufe 9-10
       - id: latein-in-europa
         name: { de: "Latein in Europa", en: "Latin in Europe" }

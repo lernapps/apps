@@ -9,8 +9,8 @@
 #   BY = LehrplanPLUS Gymnasium Bayern, Geographie Geo5, Geo7, Geo10 (Lernbereiche LB); Geo11 liegt nach Jg 10.
 #   NW = Kernlehrplan Erdkunde Sek I Gymnasium NRW (2019): Stufe 1 = bis Ende Erprobungsstufe (IF1-IF3, 5-6),
 #        Stufe 2 = bis Ende Sek I (IF4-IF10, Stimme "7-10"). Das NRW-Umsetzungsbeispiel (SiLP) stimmt nicht mit.
-# Stimmen HE/BY/NW -> Richtstufe. Gleichstand: die frühere Stufe, außer requires erzwingt die spätere; liegen die
-# Stimmen 5-6 und 9-10 auseinander oder sind alle drei verschieden, die mittlere.
+# Stimmen HE/BY/NW -> Richtstufe. Gleichstand (auch je eine Stimme 5-6 und 9-10): die frühere Stufe, außer requires
+# erzwingt eine spätere; sind alle drei verschieden, die mittlere.
 # Genaue Titel, Ausgaben und URLs: .vibe/research-erdkunde.md.
 # requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Erdkunde, en: Geography }              # the file name is the subject's id: erdkunde
@@ -85,11 +85,12 @@ strands:
         requires: [legende, himmelsrichtungen]
       # DG O3 S9; HE LP 5 (Feldbeobachtungen und -kartierungen); BY Geo5 LB1 (Nutzungskartierungen), LB5 (einfache Formen der Kartierung); NW –.
       # Stimmen 5-6/5-6/– -> 5-6 (Mehrheit)
+      # Siehe auch: stadtviertel, daseinsgrundfunktionen (Kartieren braucht nur ein Gebiet als Beispiel und die Nutzungen als Legende, keine Gliederung der Stadt in Viertel; KD-21, Skill map-research „Was ist kein requires“)
       - id: kartierung
         name: { de: "Kartierung", en: "Field mapping" }
         iCan: "Ich kann bei einem Gang durch den Ort kartieren, wie Gebäude und Flächen genutzt werden."
         gradeBand: "5-6"
-        requires: [kartenskizze, stadtviertel]
+        requires: [kartenskizze]
       # DG O4 S11–S13; HE KC Kap. 6 (Standort bestimmen, zielgerichtet bewegen); BY Geo5 LB1 (digitale Geomedien), LB5 (orientieren sich mit Karten in städtischen Räumen); NW Stufe 1 MK1 (vor Ort, GPS-basierte Anwendungen).
       # Stimmen 5-10/5-6/5-6 -> 5-6 (Mehrheit)
       - id: standort-und-weg
@@ -438,11 +439,11 @@ strands:
         gradeBand: "7-8"
         requires: [passatkreislauf]
       # DG F2 S8 (Höhenstufen der Vegetation); HE LP 5 (Höhenstufen); BY Geo10 LB7 (horizontale und vertikale Verbreitung der Vegetation in Südamerika); NW –.
-      # Stimmen 5-6/9-10/– -> 7-8 (keine Mehrheit (5-6/9-10), requires entscheidet nicht; die mittlere Stufe)
+      # Stimmen 5-6/9-10/– -> 5-6 (Gleichstand 5-6/9-10, requires grosslandschaften-deutschland und wetter-und-klima (5-6) erzwingen keine spätere Stufe; die frühere)
       - id: hoehenstufen
         name: { de: "Höhenstufen der Vegetation", en: "Altitudinal zones of vegetation" }
         iCan: "Ich kann die Höhenstufen der Vegetation im Hochgebirge beschreiben und erklären, warum es mit zunehmender Höhe kälter wird."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [grosslandschaften-deutschland, wetter-und-klima]
       # DG F4 S18 (Klimawandel); HE –; BY Geo10 LB4 (Ursachen des anthropogenen Treibhauseffekts); NW IF5 (Treibhauseffekt).
       # Stimmen –/9-10/7-10 -> 9-10 (Mehrheit)
@@ -637,7 +638,7 @@ strands:
         gradeBand: "7-8"
         requires: [wirtschaftssektoren, verkehr]
       # DG F3 S12 (Strukturwandel); HE LP 9 (Region im Wandel; alte und neue Industriegebiete der USA); BY –; NW IF3 (Strukturwandel industriell geprägter Räume).
-      # Stimmen 9-10/–/5-6 -> 7-8 (keine Mehrheit (5-6/9-10); requires standortfaktoren (7-8) schließt 5-6 aus; die mittlere Stufe)
+      # Stimmen 9-10/–/5-6 -> 7-8 (Gleichstand 5-6/9-10; requires standortfaktoren (7-8) schließt 5-6 aus; die früheste Stufe, die requires erlaubt)
       - id: strukturwandel
         name: { de: "Strukturwandel", en: "Structural change" }
         iCan: "Ich kann am Beispiel eines alten Industriegebiets wie dem Ruhrgebiet erklären, warum Industrien schrumpfen und was an ihre Stelle tritt."
@@ -710,11 +711,11 @@ strands:
         iCan: "Ich kann an einem Beispiel erklären, was nachhaltig heißt: Umwelt, Wirtschaft und Gesellschaft werden zugleich berücksichtigt."
         gradeBand: "5-6"
       # DG F4 S20 (Tourismusförderung); HE –; BY Geo10 LB7 (Handlungsrichtlinien für eigene Reisen); NW IF2 (Merkmale des sanften Tourismus).
-      # Stimmen –/9-10/5-6 -> 7-8 (keine Mehrheit (5-6/9-10), requires entscheidet nicht; die mittlere Stufe)
+      # Stimmen –/9-10/5-6 -> 5-6 (Gleichstand 5-6/9-10, requires tourismus-folgen und nachhaltigkeit (5-6) erzwingen keine spätere Stufe; die frühere)
       - id: sanfter-tourismus
         name: { de: "Sanfter Tourismus", en: "Sustainable tourism" }
         iCan: "Ich kann Merkmale des sanften Tourismus nennen und begründen, warum er Natur und Menschen eines Ortes schont."
-        gradeBand: "7-8"
+        gradeBand: "5-6"
         requires: [tourismus-folgen, nachhaltigkeit]
       # SCHWACH BELEGT. DG F3 S12; HE –; BY Geo7 LB5 (Vernetzung durch Datennetze); NW IF10 (Raumwirksamkeit von Digitalisierung); IF3 (Digitalisierung). Hinweis: BY nennt nur Datennetze als Infrastruktur.
       # Stimmen –/7-8/7-10 -> 7-8 (Mehrheit)

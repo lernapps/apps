@@ -89,6 +89,7 @@ strands:
         requires: [stoffeigenschaften-beschreiben]
       - id: ionen-in-sauren-und-alkalischen-loesungen
         # NEW. KMK S 2.8 / Basiskonzept Donator-Akzeptor (Teilchenebene); NW IF9 (Jg. 10, "hydratisierte Ionen"); BY10 LB2 (Oxonium-/Hydroxid-Ionen); HE2 Säuren, Laugen.
+        # Strand stays stoffe-und-teilchen (checked, KD-23): the Baustein describes which particles a solution contains, KMK S 2.1 ("submikroskopischer Bau ausgewählter Reinstoffe und Stoffgemische") and S 2.7; the proton transfer itself is saeure-base-reaktion (KMK p. 15, Chemische Reaktion). Like ph-wert-deuten (KMK p. 15: "pH-Wert von Lösungen" under Aufbau und Eigenschaften von Stoffen). Siehe auch: saeure-base-reaktion
         name: { de: "Ionen in sauren und alkalischen Lösungen", en: "Ions in acidic and alkaline solutions" }
         iCan: "Ich kann erklären, dass saure Lösungen Oxonium-Ionen und alkalische Lösungen Hydroxid-Ionen enthalten."
         gradeBand: "9-10"
@@ -408,6 +409,13 @@ strands:
         iCan: "Ich kann die Elektrolyse einer Salzlösung oder Salzschmelze als erzwungene Redoxreaktion beschreiben."
         gradeBand: "9-10"
         requires: [redoxreaktion-als-elektronenuebergang, elektrische-leitfaehigkeit]
+      - id: galvanisches-element
+        # NEW (Länder, three of three). KMK Inhalt "elektrische Energie" as an Energieform; BY9 LB3 (Daniell-Element, Batterie); NW IF7 (galvanisches Element, Batterie, Akkumulator, Brennstoffzelle); HE2 ("Elektrochemische Vorgänge").
+        # Strand chemische-reaktion, was energie (KD-23): all three Länder teach it in the same unit as the Elektrolyse, as a redox reaction with electron transfer (BY9 LB3; NW IF7, same Inhaltsfeld as the Elektrolyse; HE KC 2011 S. 33 "Elektrochemische Vorgänge" in "Schatzkiste der Natur", no energy unit). The energy view stays as requires. Siehe auch: elektrolyse
+        name: { de: "Galvanisches Element", en: "Galvanic cell" }
+        iCan: "Ich kann erklären, wie in einer Batterie oder einem galvanischen Element chemische Energie in elektrische Energie umgewandelt wird."
+        gradeBand: "9-10"
+        requires: [redoxreaktion-als-elektronenuebergang, energieumwandlung-bei-reaktionen]
       - id: saeure-base-reaktion
         # KMK Inhalt "Säure-Base-Reaktionen ... als Donator-Akzeptor-Vorgänge"; BY10 LB2 (Brønsted); NW IF9 (Jg. 10); HE2. requires changed: ionen-in-sauren-und-alkalischen-loesungen instead of ph-wert-deuten and ionen-bilden.
         name: { de: "Säure-Base-Reaktion", en: "Acid-base reactions" }
@@ -488,9 +496,3 @@ strands:
         iCan: "Ich kann erklären, warum sich eine Lösung beim Lösen eines Salzes erwärmt oder abkühlt."
         gradeBand: "9-10"
         requires: [salze-loesen, exotherm-und-endotherm]
-      - id: galvanisches-element
-        # NEW (Länder, three of three). KMK Inhalt "elektrische Energie" as an Energieform; BY9 LB3 (Daniell-Element, Batterie); NW IF7 (galvanisches Element, Batterie, Akkumulator, Brennstoffzelle); HE2 ("Elektrochemische Vorgänge").
-        name: { de: "Galvanisches Element", en: "Galvanic cell" }
-        iCan: "Ich kann erklären, wie in einer Batterie oder einem galvanischen Element chemische Energie in elektrische Energie umgewandelt wird."
-        gradeBand: "9-10"
-        requires: [redoxreaktion-als-elektronenuebergang, energieumwandlung-bei-reaktionen]
