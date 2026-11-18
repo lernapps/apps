@@ -115,7 +115,7 @@
     </div>
     <div class="map-legend" role="group" aria-label="Show building blocks" data-map-filter hidden>
       <button type="button" class="map-filter" data-show="covered" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-covered"></span>Covered <span class="map-filter-count">21</span></button>
-      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap <span class="map-filter-count">87</span></button>
+      <button type="button" class="map-filter" data-show="gap" aria-pressed="false"><span aria-hidden="true" class="map-swatch map-chip-gap"></span>Gap <span class="map-filter-count">88</span></button>
     </div>
   </div>
   <div class="map-scroll" role="region" aria-label="Learning map Physics: building blocks by strand and grade" tabindex="0">
@@ -126,13 +126,13 @@
           <td class="text-sm text-slate-600 align-bottom">Grade ↓ · Strand →</td>
           <th scope="col">
             <a href="/apps/pr-preview/pr-332/en/map/physik/energie/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Energy</a>
-            <span class="block mt-1 text-sm text-slate-600">0 of 19 building blocks practised</span>
+            <span class="block mt-1 text-sm text-slate-600">0 of 20 building blocks practised</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-332/en/map/physik/elektrizitaetslehre/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Electricity</a>
-            <span class="block mt-1 text-sm text-slate-600">21 of 39 building blocks practised</span>
-            <span aria-hidden="true" class="map-bar mt-2"><span style="width: 54%;"></span></span>
+            <span class="block mt-1 text-sm text-slate-600">21 of 40 building blocks practised</span>
+            <span aria-hidden="true" class="map-bar mt-2"><span style="width: 53%;"></span></span>
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-332/en/map/physik/mechanik/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Mechanics</a>
@@ -141,7 +141,7 @@
           </th>
           <th scope="col">
             <a href="/apps/pr-preview/pr-332/en/map/physik/elektromagnetische-strahlung/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Electromagnetic radiation</a>
-            <span class="block mt-1 text-sm text-slate-600">0 of 22 building blocks practised</span>
+            <span class="block mt-1 text-sm text-slate-600">0 of 21 building blocks practised</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
           <th scope="col">
@@ -155,6 +155,16 @@
         <tr>
           <th scope="row">Grade 5/6</th>
           <td>
+            <ul class="map-cell">
+              
+<li data-competency="temperatur">
+  <a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="map-chip map-chip-gap" data-opens="detail-temperatur">
+    <span>Measuring temperature</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+            </ul>
           </td>
           <td>
             <ul class="map-cell">
@@ -302,14 +312,6 @@
           </td>
           <td>
             <ul class="map-cell">
-              
-<li data-competency="temperatur">
-  <a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="map-chip map-chip-gap" data-opens="detail-temperatur">
-    <span>Measuring temperature</span>
-    <span class="sr-only">(gap, no app yet)</span>
-  </a>
-</li>
-
               
 <li data-competency="geradlinige-lichtausbreitung">
   <a href="/apps/pr-preview/pr-332/en/map/physik/c/geradlinige-lichtausbreitung/" class="map-chip map-chip-gap" data-opens="detail-geradlinige-lichtausbreitung">
@@ -668,6 +670,14 @@
 <li data-competency="elektrische-ladung">
   <a href="/apps/pr-preview/pr-332/en/map/physik/c/elektrische-ladung/" class="map-chip map-chip-gap" data-opens="detail-elektrische-ladung">
     <span>Electric charge</span>
+    <span class="sr-only">(gap, no app yet)</span>
+  </a>
+</li>
+
+              
+<li data-competency="kern-huelle-modell">
+  <a href="/apps/pr-preview/pr-332/en/map/physik/c/kern-huelle-modell/" class="map-chip map-chip-gap" data-opens="detail-kern-huelle-modell">
+    <span>Nucleus and shell</span>
     <span class="sr-only">(gap, no app yet)</span>
   </a>
 </li>
@@ -1195,6 +1205,21 @@
 </template>
 
 
+<template id="detail-temperatur" data-kind="Building block · Energy">
+  <p data-dialog-title>Measuring temperature</p>
+  <div data-dialog-body>
+    <p class="m-0" lang="de">Ich kann Temperaturen mit einem Thermometer messen und in Grad Celsius angeben.</p>
+    <dl class="map-facts">
+      <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
+      <div><dt>Builds on</dt><dd>no other building block</dd></div>
+      <div><dt>Practised in</dt><dd>no app yet – a gap
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="btn btn-primary">All about this building block</a></p>
+  </div>
+</template>
+
+
 <template id="detail-thermische-energie" data-kind="Building block · Energy">
   <p data-dialog-title>Thermal energy and temperature</p>
   <div data-dialog-body>
@@ -1202,7 +1227,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 7/8</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="text-blue-700 underline underline-offset-2"><span>Measuring temperature</span></a> <span class="text-slate-600">· strand Electromagnetic radiation</span>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="text-blue-700 underline underline-offset-2"><span>Measuring temperature</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -1220,8 +1245,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/thermische-energie/" class="text-blue-700 underline underline-offset-2"><span>Thermal energy and temperature</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/waermestrahlung/" class="text-blue-700 underline underline-offset-2"><span>Thermal radiation</span></a> <span class="text-slate-600">· strand Electromagnetic radiation</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -1417,8 +1440,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/energieumwandlung/" class="text-blue-700 underline underline-offset-2"><span>Energy conversion</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/generator/" class="text-blue-700 underline underline-offset-2"><span>Generator</span></a> <span class="text-slate-600">· strand Electricity</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -1436,8 +1457,6 @@
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/energiespeicherung/" class="text-blue-700 underline underline-offset-2"><span>Energy storage</span></a>
-</li><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/stromversorgung/" class="text-blue-700 underline underline-offset-2"><span>Electricity supply</span></a> <span class="text-slate-600">· strand Electricity</span>
 </li><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/energiequellen/" class="text-blue-700 underline underline-offset-2"><span>Energy sources</span></a>
 </li><li>
@@ -1725,6 +1744,23 @@
 </template>
 
 
+<template id="detail-kern-huelle-modell" data-kind="Building block · Electricity">
+  <p data-dialog-title>Nucleus and shell</p>
+  <div data-dialog-body>
+    <p class="m-0" lang="de">Ich kann ein Atom vereinfacht als positiv geladenen Kern mit negativ geladenen Elektronen in der Hülle beschreiben.</p>
+    <dl class="map-facts">
+      <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
+      <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/elektrische-ladung/" class="text-blue-700 underline underline-offset-2"><span>Electric charge</span></a>
+</li></ul></dd></div>
+      <div><dt>Practised in</dt><dd>no app yet – a gap
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/pr-preview/pr-332/en/map/physik/c/kern-huelle-modell/" class="btn btn-primary">All about this building block</a></p>
+  </div>
+</template>
+
+
 <template id="detail-elektrostatische-phaenomene" data-kind="Building block · Electricity">
   <p data-dialog-title>Electrostatic phenomena</p>
   <div data-dialog-body>
@@ -1732,7 +1768,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/atomaufbau/" class="text-blue-700 underline underline-offset-2"><span>Structure of the atom</span></a> <span class="text-slate-600">· strand Ionising radiation</span>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/kern-huelle-modell/" class="text-blue-700 underline underline-offset-2"><span>Nucleus and shell</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -1773,7 +1809,7 @@
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/stromstaerke/" class="text-blue-700 underline underline-offset-2"><span>Electric current</span></a>
 </li><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/atomaufbau/" class="text-blue-700 underline underline-offset-2"><span>Structure of the atom</span></a> <span class="text-slate-600">· strand Ionising radiation</span>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/kern-huelle-modell/" class="text-blue-700 underline underline-offset-2"><span>Nucleus and shell</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2025,7 +2061,9 @@
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/leistung/" class="text-blue-700 underline underline-offset-2"><span>Power</span></a> <span class="text-slate-600">· strand Energy</span>
 </li><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/ohmsches-gesetz-rechnen/" class="text-blue-700 underline underline-offset-2"><span>Calculations with Ohm’s law</span></a>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/stromstaerke/" class="text-blue-700 underline underline-offset-2"><span>Electric current</span></a>
+</li><li>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/spannung/" class="text-blue-700 underline underline-offset-2"><span>Voltage</span></a>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>
@@ -2500,21 +2538,6 @@
 </template>
 
 
-<template id="detail-temperatur" data-kind="Building block · Electromagnetic radiation">
-  <p data-dialog-title>Measuring temperature</p>
-  <div data-dialog-body>
-    <p class="m-0" lang="de">Ich kann Temperaturen mit einem Thermometer messen und in Grad Celsius angeben.</p>
-    <dl class="map-facts">
-      <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
-      <div><dt>Builds on</dt><dd>no other building block</dd></div>
-      <div><dt>Practised in</dt><dd>no app yet – a gap
-</dd></div>
-    </dl>
-    <p class="m-0"><a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="btn btn-primary">All about this building block</a></p>
-  </div>
-</template>
-
-
 <template id="detail-geradlinige-lichtausbreitung" data-kind="Building block · Electromagnetic radiation">
   <p data-dialog-title>Rectilinear propagation of light</p>
   <div data-dialog-body>
@@ -2766,7 +2789,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="text-blue-700 underline underline-offset-2"><span>Measuring temperature</span></a>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/temperatur/" class="text-blue-700 underline underline-offset-2"><span>Measuring temperature</span></a> <span class="text-slate-600">· strand Energy</span>
 </li><li>
 <a href="/apps/pr-preview/pr-332/en/map/physik/c/absorption-emission-transmission/" class="text-blue-700 underline underline-offset-2"><span>Absorption, emission, transmission</span></a>
 </li><li>
@@ -2891,7 +2914,7 @@
     <dl class="map-facts">
       <div><dt>Grade band</dt><dd>Grade 9/10</dd></div>
       <div><dt>Builds on</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/pr-preview/pr-332/en/map/physik/c/elektrische-ladung/" class="text-blue-700 underline underline-offset-2"><span>Electric charge</span></a> <span class="text-slate-600">· strand Electricity</span>
+<a href="/apps/pr-preview/pr-332/en/map/physik/c/kern-huelle-modell/" class="text-blue-700 underline underline-offset-2"><span>Nucleus and shell</span></a> <span class="text-slate-600">· strand Electricity</span>
 </li></ul></dd></div>
       <div><dt>Practised in</dt><dd>no app yet – a gap
 </dd></div>

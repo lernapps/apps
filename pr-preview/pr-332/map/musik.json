@@ -138,6 +138,88 @@
           "practisedBy": []
         },
         {
+          "id": "grafisch-notieren",
+          "name": {
+            "de": "Grafische Notation erstellen",
+            "en": "Creating graphic notation"
+          },
+          "iCan": {
+            "de": "Ich kann Musik mit eigenen Zeichen als Grafik aufschreiben."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "parameter-nennen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "hoerpartitur-verfolgen",
+          "name": {
+            "de": "Hörpartitur mitlesen",
+            "en": "Following a listening map"
+          },
+          "iCan": {
+            "de": "Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "grafisch-notieren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "partitur-mitlesen",
+          "name": {
+            "de": "Partiturausschnitt mitlesen",
+            "en": "Following a score excerpt"
+          },
+          "iCan": {
+            "de": "Ich kann in einem Partiturausschnitt eine Stimme verfolgen und beim Hören mitlesen."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "melodie-lesen",
+            "ensembles-besetzungen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "partitur-orientieren",
+          "name": {
+            "de": "Orchesterpartitur",
+            "en": "Orchestral score"
+          },
+          "iCan": {
+            "de": "Ich kann mich in einer Orchesterpartitur zurechtfinden und Gehörtes darin wiederfinden."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "partitur-mitlesen",
+            "bassschluessel"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
           "id": "hoerlandschaft-entdecken",
           "name": {
             "de": "Stille und Umweltgeräusche",
@@ -365,7 +447,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 20,
+          "opens": 21,
           "practisedBy": []
         },
         {
@@ -820,6 +902,128 @@
           "practisedBy": []
         },
         {
+          "id": "notenwerte-erkennen",
+          "name": {
+            "de": "Notenwerte",
+            "en": "Note values"
+          },
+          "iCan": {
+            "de": "Ich kann ganze, halbe, Viertel- und Achtelnoten unterscheiden und ihre Dauer vergleichen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "tondauer-hoeren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 17,
+          "practisedBy": []
+        },
+        {
+          "id": "pausen-kennen",
+          "name": {
+            "de": "Pausenzeichen",
+            "en": "Rests"
+          },
+          "iCan": {
+            "de": "Ich kann Pausenzeichen lesen und weiß, dass eine Pause genauso lange dauert wie die Note mit gleichem Namen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "notenwerte-erkennen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "punktierung",
+          "name": {
+            "de": "Punktierte Noten",
+            "en": "Dotted notes"
+          },
+          "iCan": {
+            "de": "Ich kann punktierte Noten lesen und ihre Dauer berechnen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "notenwerte-erkennen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "notenwerte-im-takt",
+          "name": {
+            "de": "Notenwerte im Takt",
+            "en": "Note values in a bar"
+          },
+          "iCan": {
+            "de": "Ich kann Notenwerte und Pausen zusammenzählen und sagen, ob sie in einen Takt passen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "notenwerte-erkennen",
+            "taktarten-unterscheiden"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 7
+          },
+          "opens": 10,
+          "practisedBy": []
+        },
+        {
+          "id": "rhythmus-lesen",
+          "name": {
+            "de": "Rhythmen lesen",
+            "en": "Reading rhythms"
+          },
+          "iCan": {
+            "de": "Ich kann einen notierten Rhythmus lesen und in Klang umsetzen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "notenwerte-im-takt",
+            "rhythmus-nachklatschen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 8
+          },
+          "opens": 6,
+          "practisedBy": []
+        },
+        {
+          "id": "rhythmus-notieren",
+          "name": {
+            "de": "Rhythmen notieren",
+            "en": "Writing down rhythms"
+          },
+          "iCan": {
+            "de": "Ich kann einen Rhythmus, den ich gehört oder erfunden habe, in Notenwerten aufschreiben."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "notenwerte-im-takt"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 8
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
           "id": "tempo-hoeren",
           "name": {
             "de": "Schnelles und langsames Tempo",
@@ -1128,6 +1332,131 @@
             "step": 5
           },
           "opens": 26,
+          "practisedBy": []
+        },
+        {
+          "id": "notensystem",
+          "name": {
+            "de": "Notensystem und Violinschlüssel",
+            "en": "Staff and treble clef"
+          },
+          "iCan": {
+            "de": "Ich kann das Notensystem mit seinen fünf Linien und den Violinschlüssel beschreiben."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "tonhoehe-hoch-tief"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 21,
+          "practisedBy": []
+        },
+        {
+          "id": "noten-benennen",
+          "name": {
+            "de": "Notennamen",
+            "en": "Note names"
+          },
+          "iCan": {
+            "de": "Ich kann Noten auf Linien, in Zwischenräumen und auf Hilfslinien erkennen und mit ihrem Namen benennen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "notensystem",
+            "klaviatur-tasten"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 20,
+          "practisedBy": []
+        },
+        {
+          "id": "bassschluessel",
+          "name": {
+            "de": "Bassschlüssel",
+            "en": "Bass clef"
+          },
+          "iCan": {
+            "de": "Ich kann den Bassschlüssel lesen und die Noten darin benennen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "noten-benennen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "vorzeichen-lesen",
+          "name": {
+            "de": "Versetzungszeichen",
+            "en": "Accidentals"
+          },
+          "iCan": {
+            "de": "Ich kann Kreuz, b und Auflösungszeichen lesen und erhöhte oder erniedrigte Töne spielen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "noten-benennen",
+            "halbtonschritte"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 6
+          },
+          "opens": 11,
+          "practisedBy": []
+        },
+        {
+          "id": "melodie-lesen",
+          "name": {
+            "de": "Melodien lesen",
+            "en": "Reading melodies"
+          },
+          "iCan": {
+            "de": "Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "noten-benennen",
+            "rhythmus-lesen",
+            "tonfolge-nachsingen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 9
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "melodie-notieren",
+          "name": {
+            "de": "Melodien notieren",
+            "en": "Writing down melodies"
+          },
+          "iCan": {
+            "de": "Ich kann eine kurze Melodie in Noten aufschreiben."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "noten-benennen",
+            "rhythmus-notieren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 9
+          },
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1559,6 +1888,27 @@
           "practisedBy": []
         },
         {
+          "id": "akkordsymbole",
+          "name": {
+            "de": "Akkordsymbole im Leadsheet",
+            "en": "Chord symbols in a lead sheet"
+          },
+          "iCan": {
+            "de": "Ich kann Akkordsymbole in einem Leadsheet lesen und ein Lied damit begleiten."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dreiklangsarten",
+            "melodie-lesen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
           "id": "intervalle-erkennen-singen",
           "name": {
             "de": "Alle Intervalle hören und singen",
@@ -1598,448 +1948,6 @@
             "step": 1
           },
           "opens": 1,
-          "practisedBy": []
-        }
-      ]
-    },
-    {
-      "id": "zeichen",
-      "name": {
-        "de": "Notation und Zeichen",
-        "en": "Notation and signs"
-      },
-      "competencies": [
-        {
-          "id": "notensystem",
-          "name": {
-            "de": "Notensystem und Violinschlüssel",
-            "en": "Staff and treble clef"
-          },
-          "iCan": {
-            "de": "Ich kann das Notensystem mit seinen fünf Linien und den Violinschlüssel beschreiben."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "tonhoehe-hoch-tief"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 21,
-          "practisedBy": []
-        },
-        {
-          "id": "noten-benennen",
-          "name": {
-            "de": "Notennamen",
-            "en": "Note names"
-          },
-          "iCan": {
-            "de": "Ich kann Noten auf Linien, in Zwischenräumen und auf Hilfslinien erkennen und mit ihrem Namen benennen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "notensystem",
-            "klaviatur-tasten"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 5
-          },
-          "opens": 20,
-          "practisedBy": []
-        },
-        {
-          "id": "bassschluessel",
-          "name": {
-            "de": "Bassschlüssel",
-            "en": "Bass clef"
-          },
-          "iCan": {
-            "de": "Ich kann den Bassschlüssel lesen und die Noten darin benennen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "noten-benennen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 6
-          },
-          "opens": 2,
-          "practisedBy": []
-        },
-        {
-          "id": "vorzeichen-lesen",
-          "name": {
-            "de": "Versetzungszeichen",
-            "en": "Accidentals"
-          },
-          "iCan": {
-            "de": "Ich kann Kreuz, b und Auflösungszeichen lesen und erhöhte oder erniedrigte Töne spielen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "noten-benennen",
-            "halbtonschritte"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 6
-          },
-          "opens": 11,
-          "practisedBy": []
-        },
-        {
-          "id": "notenwerte-erkennen",
-          "name": {
-            "de": "Notenwerte",
-            "en": "Note values"
-          },
-          "iCan": {
-            "de": "Ich kann ganze, halbe, Viertel- und Achtelnoten unterscheiden und ihre Dauer vergleichen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "tondauer-hoeren"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 17,
-          "practisedBy": []
-        },
-        {
-          "id": "pausen-kennen",
-          "name": {
-            "de": "Pausenzeichen",
-            "en": "Rests"
-          },
-          "iCan": {
-            "de": "Ich kann Pausenzeichen lesen und weiß, dass eine Pause genauso lange dauert wie die Note mit gleichem Namen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "notenwerte-erkennen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 5
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "punktierung",
-          "name": {
-            "de": "Punktierte Noten",
-            "en": "Dotted notes"
-          },
-          "iCan": {
-            "de": "Ich kann punktierte Noten lesen und ihre Dauer berechnen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "notenwerte-erkennen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 5
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "notenwerte-im-takt",
-          "name": {
-            "de": "Notenwerte im Takt",
-            "en": "Note values in a bar"
-          },
-          "iCan": {
-            "de": "Ich kann Notenwerte und Pausen zusammenzählen und sagen, ob sie in einen Takt passen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "notenwerte-erkennen",
-            "taktarten-unterscheiden"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 7
-          },
-          "opens": 10,
-          "practisedBy": []
-        },
-        {
-          "id": "rhythmus-lesen",
-          "name": {
-            "de": "Rhythmen lesen",
-            "en": "Reading rhythms"
-          },
-          "iCan": {
-            "de": "Ich kann einen notierten Rhythmus lesen und in Klang umsetzen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "notenwerte-im-takt",
-            "rhythmus-nachklatschen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 8
-          },
-          "opens": 6,
-          "practisedBy": []
-        },
-        {
-          "id": "melodie-lesen",
-          "name": {
-            "de": "Melodien lesen",
-            "en": "Reading melodies"
-          },
-          "iCan": {
-            "de": "Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "noten-benennen",
-            "rhythmus-lesen",
-            "tonfolge-nachsingen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 9
-          },
-          "opens": 5,
-          "practisedBy": []
-        },
-        {
-          "id": "rhythmus-notieren",
-          "name": {
-            "de": "Rhythmen notieren",
-            "en": "Writing down rhythms"
-          },
-          "iCan": {
-            "de": "Ich kann einen Rhythmus, den ich gehört oder erfunden habe, in Notenwerten aufschreiben."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "notenwerte-im-takt"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 8
-          },
-          "opens": 2,
-          "practisedBy": []
-        },
-        {
-          "id": "melodie-notieren",
-          "name": {
-            "de": "Melodien notieren",
-            "en": "Writing down melodies"
-          },
-          "iCan": {
-            "de": "Ich kann eine kurze Melodie in Noten aufschreiben."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "noten-benennen",
-            "rhythmus-notieren"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 9
-          },
-          "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "grafisch-notieren",
-          "name": {
-            "de": "Grafische Notation erstellen",
-            "en": "Creating graphic notation"
-          },
-          "iCan": {
-            "de": "Ich kann Musik mit eigenen Zeichen als Grafik aufschreiben."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "parameter-nennen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 3
-          },
-          "opens": 4,
-          "practisedBy": []
-        },
-        {
-          "id": "grafik-musizieren",
-          "name": {
-            "de": "Nach grafischer Notation spielen",
-            "en": "Playing from graphic notation"
-          },
-          "iCan": {
-            "de": "Ich kann nach einer grafischen Notation Klänge machen."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "grafisch-notieren"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "gesten-verstehen",
-          "name": {
-            "de": "Musikalische Handzeichen",
-            "en": "Musical hand signs"
-          },
-          "iCan": {
-            "de": "Ich kann Handzeichen und Gesten, die Musik anzeigen, verstehen und darauf reagieren."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "aufeinander-hoeren"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 3
-          },
-          "opens": 3,
-          "practisedBy": []
-        },
-        {
-          "id": "hoerpartitur-verfolgen",
-          "name": {
-            "de": "Hörpartitur mitlesen",
-            "en": "Following a listening map"
-          },
-          "iCan": {
-            "de": "Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist."
-          },
-          "gradeBand": "5-6",
-          "requires": [
-            "grafisch-notieren"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "akkordsymbole",
-          "name": {
-            "de": "Akkordsymbole im Leadsheet",
-            "en": "Chord symbols in a lead sheet"
-          },
-          "iCan": {
-            "de": "Ich kann Akkordsymbole in einem Leadsheet lesen und ein Lied damit begleiten."
-          },
-          "gradeBand": "7-8",
-          "requires": [
-            "dreiklangsarten",
-            "melodie-lesen"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 1
-          },
-          "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "partitur-mitlesen",
-          "name": {
-            "de": "Partiturausschnitt mitlesen",
-            "en": "Following a score excerpt"
-          },
-          "iCan": {
-            "de": "Ich kann in einem Partiturausschnitt eine Stimme verfolgen und beim Hören mitlesen."
-          },
-          "gradeBand": "7-8",
-          "requires": [
-            "melodie-lesen",
-            "bassschluessel",
-            "ensembles-besetzungen"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 1
-          },
-          "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "traditionell-und-grafisch-notieren",
-          "name": {
-            "de": "Traditionell und grafisch notieren",
-            "en": "Traditional and graphic notation"
-          },
-          "iCan": {
-            "de": "Ich kann ein Musikstück sowohl grafisch als auch in traditioneller Notenschrift festhalten."
-          },
-          "gradeBand": "9-10",
-          "requires": [
-            "melodie-notieren",
-            "grafisch-notieren"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 1
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "nach-notation-musizieren",
-          "name": {
-            "de": "Mehrstimmig nach Notation musizieren",
-            "en": "Playing in parts from notation"
-          },
-          "iCan": {
-            "de": "Ich kann nach Noten oder einer Grafik auch mehrstimmig musizieren."
-          },
-          "gradeBand": "9-10",
-          "requires": [
-            "melodie-lesen",
-            "grafik-musizieren",
-            "mehrstimmig-realisieren"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 2
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "partitur-orientieren",
-          "name": {
-            "de": "Orchesterpartitur",
-            "en": "Orchestral score"
-          },
-          "iCan": {
-            "de": "Ich kann mich in einer Orchesterpartitur zurechtfinden und Gehörtes darin wiederfinden."
-          },
-          "gradeBand": "9-10",
-          "requires": [
-            "partitur-mitlesen"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 1
-          },
-          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -2721,7 +2629,7 @@
             "band": "5-6",
             "step": 6
           },
-          "opens": 4,
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -2830,6 +2738,48 @@
           "practisedBy": []
         },
         {
+          "id": "grafik-musizieren",
+          "name": {
+            "de": "Nach grafischer Notation spielen",
+            "en": "Playing from graphic notation"
+          },
+          "iCan": {
+            "de": "Ich kann nach einer grafischen Notation Klänge machen."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "grafisch-notieren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "nach-notation-musizieren",
+          "name": {
+            "de": "Mehrstimmig nach Notation musizieren",
+            "en": "Playing in parts from notation"
+          },
+          "iCan": {
+            "de": "Ich kann nach Noten oder einer Grafik auch mehrstimmig musizieren."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "melodie-lesen",
+            "grafik-musizieren",
+            "mehrstimmig-realisieren"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
           "id": "ueben-strategien",
           "name": {
             "de": "Übestrategien",
@@ -2866,6 +2816,26 @@
             "step": 1
           },
           "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "gesten-verstehen",
+          "name": {
+            "de": "Musikalische Handzeichen",
+            "en": "Musical hand signs"
+          },
+          "iCan": {
+            "de": "Ich kann Handzeichen und Gesten, die Musik anzeigen, verstehen und darauf reagieren."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "aufeinander-hoeren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -2925,7 +2895,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 3,
+          "opens": 4,
           "practisedBy": []
         },
         {
@@ -3049,7 +3019,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 0,
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -3064,7 +3034,8 @@
           "gradeBand": "9-10",
           "requires": [
             "kadenz",
-            "akkordsymbole"
+            "akkordsymbole",
+            "improvisieren-nach-vorgabe"
           ],
           "place": {
             "band": "9-10",
@@ -3086,6 +3057,27 @@
           "requires": [
             "musik-nach-vorgabe-erfinden",
             "musik-variieren"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "traditionell-und-grafisch-notieren",
+          "name": {
+            "de": "Traditionell und grafisch notieren",
+            "en": "Traditional and graphic notation"
+          },
+          "iCan": {
+            "de": "Ich kann ein Musikstück sowohl grafisch als auch in traditioneller Notenschrift festhalten."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "melodie-notieren",
+            "grafisch-notieren"
           ],
           "place": {
             "band": "9-10",
