@@ -32,6 +32,7 @@ strands:
     competencies:
       # HE5 3.3 (to be; Lang- und Kurzformen); BY E5 1.2 (Hilfsverben be, have (got), do); NW EPS (statements, questions, short answers; negations) | 5-6/5-6/5-6 → 5-6 (Mehrheit)
       # requires personalpronomen (Herleitung): Ob man am, is oder are sagt, hängt vom Subjekt ab (I, he, they).
+      # requires personalpronomen (Struktur): einzige Voraussetzung, ohne die Kante stünde to-be am Anfang einer Kette (gebraucht von there-is-are, kurzantworten, present-progressive, adjektive, question-tags, passiv, kurzformen)
       - id: to-be
         name: { de: "Verb to be", en: "The verb to be" }
         iCan: "Ich kann die Formen von „to be“ (am, is, are) in Aussagen, Verneinungen und Fragen verwenden."
@@ -39,6 +40,7 @@ strands:
         requires: [personalpronomen]
       # HE5 3.3 (to have (got)); BY E5 1.2 (have (got)); NW – | 5-6/5-6/– → 5-6 (Mehrheit)
       # requires personalpronomen (Herleitung): Ob man have oder has sagt, hängt vom Subjekt ab, wie beim simple present.
+      # requires personalpronomen (Struktur): einzige Voraussetzung, ohne die Kante stünde have-got am Anfang einer Kette (gebraucht von familie-personen, gesundheit)
       - id: have-got
         name: { de: "Have got und has got", en: "Have got and has got" }
         iCan: "Ich kann mit „have got“ und „has got“ sagen, was jemand hat, und danach fragen."

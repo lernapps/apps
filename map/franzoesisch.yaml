@@ -376,6 +376,7 @@ strands:
       # KMK Lexiko-Grammatik (S. 18 f.); HE Jg 9 Satz: Infinitivkonstruktionen être en train de faire qc, venir de; BY F8 Wortschatz: zeitliche Bezüge verbal (venir de faire qc / être en train de faire qc); NW –.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 8 → 7-8 / – -> 7-8 (Mehrheit)
       # requires verb-etre (Herleitung): Être en train de bildet man mit den Formen von être (je suis en train de …).
+      # requires verb-etre (Struktur): nicht tragend, venir-de-etre-en-train-de bleibt über futur-compose, unregelmaessige-verben-venir-voir angebunden
       - id: venir-de-etre-en-train-de
         name: { de: "Venir de und être en train de", en: "Venir de and être en train de" }
         iCan: "Ich kann mit venir de, être en train de und aller ausdrücken, dass etwas gerade passiert ist, gerade passiert oder gleich passiert."
@@ -696,6 +697,7 @@ strands:
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Situationen: Schule; BY F6 Themengebiete: schulischer Alltag (Klasse, Stundenplan, Räume); F7: Schulmaterialien; NW S1 Wortschatz (S. 18): thematischer Wortschatz zum soziokulturellen Orientierungswissen; S1 IKK (S. 20): Schulalltag.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       # requires datum-wochentage-monate (Herleitung): Der Stundenplan braucht die Wochentage.
+      # requires datum-wochentage-monate (Struktur): nicht tragend, schule-und-schulalltag bleibt über unbestimmter-artikel, uhrzeit angebunden
       - id: schule-und-schulalltag
         name: { de: "Schule und Schulalltag", en: "School and school life" }
         iCan: "Ich kann über meine Schule, meinen Stundenplan und meine Schulsachen sprechen."
@@ -759,6 +761,7 @@ strands:
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 7 Landeskunde: interkulturelle Unterschiede (z. B. Essen); BY F6 Themengebiete: Esskultur; F7: Rezepte (crêpes, galette des rois); NW –.
       # Stimmen HE/BY/NW Jg 7 → 5-6 / Jg 6 → 5-6 / – -> 5-6 (Mehrheit)
       # requires vorlieben-und-abneigungen (Herleitung): Der Baustein übt, zu sagen, was man gern isst und trinkt (j’adore, je préfère, j’aime le …).
+      # requires vorlieben-und-abneigungen (Struktur): nicht tragend, essen-und-lebensmittel bleibt über teilungsartikel angebunden
       - id: essen-und-lebensmittel
         name: { de: "Essen und Lebensmittel", en: "Food and meals" }
         iCan: "Ich kann Lebensmittel und Mahlzeiten benennen und sagen, was ich gern esse und trinke."
@@ -847,6 +850,7 @@ strands:
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 8 Grammatische Fachausdrücke: Bezeichnungen für die grammatischen Kategorien; BY F6 Wortschatz: die grammatikalischen Begriffe des Lernbereichs Grammatik; F9/F10: erweitertes Repertoire; NW –.
       # Stimmen HE/BY/NW Jg 8 → 7-8 / Jg 6 → 5-6 / – -> 5-6 (Gleichstand 5-6/7-8, frühere Stufe); verteilt nach 7-8 (wortschatz hielt nach den Stimmen 24 von 35 Bausteinen in 5-6)
       # requires unterrichtssprache (Herleitung): Die Fachbegriffe stehen in Arbeitsanweisungen (Soulignez le sujet, Conjuguez le verbe); HE Jg 8 nennt beides unter „Grammatische Fachausdrücke“ (Bezeichnungen in Arbeitsanweisungen verstehen).
+      # requires unterrichtssprache (Struktur): tragend, ohne die Kante hinge grammatische-fachbegriffe lose (keine andere Voraussetzung, kein Baustein braucht grammatische-fachbegriffe)
       - id: grammatische-fachbegriffe
         name: { de: "Grammatische Fachbegriffe", en: "Grammar terms" }
         iCan: "Ich kann grammatische Fachbegriffe auf Französisch verstehen, zum Beispiel le verbe, le sujet, le pronom."
@@ -897,6 +901,7 @@ strands:
       # KMK Lexiko-Grammatik: Wortschatz (S. 18 f.); HE Jg 9 Wortschatz: erstes Vokabular zur Textbesprechung; Jg 10: Vokabular zur Textbesprechung; BY F10 Wortschatz: Funktionswortschatz für den Lernbereich Text- und Medienkompetenzen; NW S2 Wortschatz (S. 27): grundlegender Wortschatz zur Textbesprechung.
       # Stimmen HE/BY/NW Jg 9 → 7-8 / Jg 10 → 9-10 / S2 → 7-8, 9-10 -> 7-8 (Gleichstand 7-8/9-10, frühere Stufe)
       # requires figuren-ort-zeit-handlung (Herleitung): Wörter wie le personnage und la scène benennen, was man zu Figuren, Ort und Handlung herausfindet.
+      # requires figuren-ort-zeit-handlung (Struktur): nicht tragend, textbesprechung bleibt über meinung-aeussern angebunden
       - id: textbesprechung
         name: { de: "Wortschatz zur Textbesprechung", en: "Vocabulary for discussing texts" }
         iCan: "Ich kann mit Wörtern wie le personnage, le narrateur, la scène und le titre über einen Text sprechen."
@@ -1223,6 +1228,7 @@ strands:
       # KMK Leseverstehen ESA (S. 12): in einfachen literarisch-ästhetischen Texten zentrale Themen oder Figuren erkennen; HE KC 7.4 (Ende Jg 8, S. 38): fiktionalen Texten Informationen über Zeit, Ort, Personen und Handlungsverlauf entnehmen; BY F6 TMK: Inhalt von Texten global erfassen, einfache Fragen zu Texten beantworten; F7: Personen in fiktionalen Texten beschreiben; NW S1 TMK (S. 21): wesentliche Informationen zu Personen, Handlungen, Ort und Zeit entnehmen.
       # Stimmen HE/BY/NW Ende Jg 8 → 5-6, 7-8 / Jg 6 → 5-6 / S1 → 5-6, 7-8 -> 5-6 (Mehrheit)
       # requires fragepronomen-qui-que (Herleitung): Wer vorkommt und was passiert, fragt man mit qui und qu’est-ce que, so wie wo und wann mit où und quand.
+      # requires fragepronomen-qui-que (Struktur): nicht tragend, figuren-ort-zeit-handlung bleibt über fragewoerter angebunden
       - id: figuren-ort-zeit-handlung
         name: { de: "Figuren, Ort, Zeit, Handlung", en: "Characters, setting and plot" }
         iCan: "Ich kann einer Geschichte entnehmen, wer vorkommt, wo und wann sie spielt und was passiert."

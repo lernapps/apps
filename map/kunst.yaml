@@ -546,6 +546,7 @@ strands:
         requires: [material-erkunden]
       # HE G9 9.3 Idee, Planung, Entwurf und Herstellung eines Designobjektes; BY Ku7 LB2 funktionale oder fantastische Apparate bzw. Objekte entwickeln und bauen; Ku9 LB2 Mode oder Schmuck entwerfen. Stimmen HE/BY/NW: 9-10 / 7-8 / – -> 9-10 (Gleichstand 7-8/9-10; requires entscheidet (form-und-funktion))
       # requires sammeln: Ein Entwurf beginnt mit gesammelten Bildern, Dingen und Ideen; BY nennt das Moodboard beim Entwerfen (BY Ku9 LB2 „Entwurf und Analyse z. B. von Bekleidung, Mode, Schmuck und Ornament, u. a. mit Collage- und Zufallsverfahren, Moodboard, Zeichnung“)
+      # requires sammeln (Struktur): tragend, ohne die Kante hinge sammeln lose (nur designobjekt-entwerfen braucht sammeln, sammeln hat keine Voraussetzung)
       - id: designobjekt-entwerfen
         name: { de: "Gebrauchsgegenstand entwerfen", en: "Designing a product" }
         iCan: { de: "Ich kann einen Gebrauchsgegenstand entwerfen: Idee, Skizzen, Modell und Prototyp." }
@@ -602,6 +603,7 @@ strands:
     competencies:
       # HE G9 5.2 Dingphantasien, Fantasiebilder, Fabelwesen; BY Ku5 LB1 Bildmotive aus Fantasie; NW E IF2 imaginierend; IF3 Fiktion/Vision: Fantasiebildung als Neuschöpfung. Stimmen HE/BY/NW: 5-6 / 5-6 / 5-6 -> 5-6 (Mehrheit)
       # requires punkt-und-linie: Das Fantasiebild entsteht als Zeichnung aus einem Vorrat an Linien und Formen; HE nennt Fantasiebilder und Fabelwesen bei der „Entwicklung eines Formrepertoires“ im zeichnerischen Gestalten (HE G9 5.2 S. 13 „Ausdrucksqualitäten zeichnerischer Spuren, Figuren … Erzählbilder, Bildergeschichten, Fantasiebilder, Fabelwesen“)
+      # requires punkt-und-linie (Struktur): tragend, ohne die Kante hinge fantasiebild lose (keine andere Voraussetzung, kein Baustein braucht fantasiebild)
       - id: fantasiebild
         name: { de: "Fantasiebild", en: "Imaginary picture" }
         iCan: { de: "Ich kann ein Fantasiebild erfinden, indem ich Bekanntes neu kombiniere, zum Beispiel zu einem Fabelwesen oder einer unmöglichen Maschine." }
@@ -715,6 +717,7 @@ strands:
         gradeBand: "5-6"
       # HE G9 5.1 malerische Spur innerer Bewegung; 6.1 Stimmung, Ausdruck; BY Ku9 LB1 Darstellung von Innerlichkeit; NW S IF3 Expression: Ausdruck inneren Erlebens und innerer Vorstellung. Stimmen HE/BY/NW: 5-6 / 9-10 / 7-10 -> 9-10 (Mehrheit)
       # requires malspuren: Inneres Erleben drückt sich auch in der Spur des Farbauftrags aus; HE nennt die malerische Spur als Ausdruck innerer Bewegung (HE G9 5.1 S. 11 „Malerische Spur innerer Bewegung“; 6.1 S. 16 „Farbauftrag als Ausdrucksmittel“)
+      # requires malspuren (Struktur): nicht tragend, expressive-bilder bleibt über farbwirkung angebunden
       - id: expressive-bilder
         name: { de: "Expressive Bilder", en: "Expressive pictures" }
         iCan: { de: "Ich kann an Bildern erklären, wie sie inneres Erleben ausdrücken, und selbst ein Gefühl bildnerisch ausdrücken." }
@@ -767,6 +770,7 @@ strands:
     competencies:
       # BY Ku5 LB1 Mensch und Tier als Motiv in Höhlenmalereien, Reliefs und Plastiken früher Kulturen (Altamira, Lascaux, Schwäbische Alb). Stimmen HE/BY/NW: – / 5-6 / – -> 5-6 (festgelegt: nur BY stimmt (Jg 5)). SCHWACH BELEGT: nur BY; aufgenommen als Voraussetzung von epochen-ueberblick
       # requires funktionen-der-kunst: Der Baustein fragt, wozu die Werke gemacht wurden; BY verbindet die Kunst der Vor- und Frühgeschichte mit ihrer Funktion (BY Ku5 LB2 „in Bezug auf Kulte und Grundbedürfnisse des Menschen; sakrale und profane Funktion“)
+      # requires funktionen-der-kunst (Struktur): nicht tragend, hoehlenmalerei bleibt über bild-beschreiben angebunden
       - id: hoehlenmalerei
         name: { de: "Kunst der Steinzeit", en: "Stone Age art" }
         iCan: { de: "Ich kann Höhlenmalereien und Plastiken der Steinzeit beschreiben und erklären, wozu sie vielleicht gemacht wurden." }
@@ -833,6 +837,7 @@ strands:
         requires: [lokalfarbe-erscheinungsfarbe, realismus]
       # HE G9 7.1, 7.2 Umgang mit Kunst (Vorschlag): van Gogh, Cézanne [nur Hinweis, keine Stimme]; BY Ku10 LB1 Wegbereiter der Moderne van Gogh, Cézanne, Gauguin; Vorbereitung der Abstraktion. Stimmen HE/BY/NW: – / 9-10 / – -> 9-10 (festgelegt: nur BY verbindlich (Jg 10); requires impressionismus (9-10)). SCHWACH BELEGT: verbindlich nur BY; HE nennt die Werke nur als Vorschlag
       # requires abstrahieren: Wer zeigen will, wie diese Maler die Abstraktion vorbereitet haben, muss wissen, was Abstrahieren heißt; BY nennt beides im selben Jahr (BY Ku10 LB1 „Prinzipien … des Verzerrens, Kombinierens oder Collagierens … um spielerisch mit den Möglichkeiten der Abstraktion zu experimentieren“ und „Impressionisten und Wegbereiter der Moderne … ihrer Relevanz für die Vorbereitung der Abstraktion“)
+      # requires abstrahieren (Struktur): nicht tragend, wegbereiter-der-moderne bleibt über impressionismus, ausdrucksfarbe angebunden
       - id: wegbereiter-der-moderne
         name: { de: "Wegbereiter der Moderne", en: "Pioneers of modern art" }
         iCan: { de: "Ich kann an Werken von van Gogh, Cézanne und Gauguin zeigen, wie sie den Weg zur modernen Kunst bereitet haben." }
