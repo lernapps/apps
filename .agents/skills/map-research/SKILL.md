@@ -84,12 +84,6 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
   a cause, prior knowledge), not "A was earlier".
 - **The reason of an edge** stands in the comment above the competency, under its sources, one line per edge:
   `# requires <id>: <reason> (<source> <page>)`, or `# requires <id> (Herleitung): <reason>` for a derivation.
-- **The structure of a doubtful edge:** an edge a review questions also gets a line saying what it carries in the
-  graph, so that whoever decides on it sees what removing it would do: `# requires <id> (Struktur): <role>`. The role
-  is `tragend` (without it a competency would hang loose: no requires and nothing requires it), `einzige
-  Voraussetzung` (the competency would become a root of a chain), `nicht tragend` (it stays connected over its other
-  requires) or `doppelt` (the target is reached over other requires anyway). The line describes the map as it is;
-  whoever changes the edges around it updates it. It is a comment only, not part of the map's data.
 - **explainerFocus:** do the strands separate apps, or only illustrate the subject? `strand` (the default) when an
   app can stay in one strand and still make sense (sciences, Mathematik, Geschichte: few `requires` across strands, or
   only along time); `competency` when a real unit needs several strands at once (foreign languages, Deutsch: many

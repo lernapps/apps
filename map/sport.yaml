@@ -55,7 +55,6 @@ strands:
       # HE Kap. 7.1 Laufen, Springen, Werfen, S. 27 (ausdauerndes Laufen in selbst gewähltem Tempo); BY S5 LB1 (Ausdauerleistung im aeroben Bereich); NW 2.4.2 BF1, S. 23 f. (aerobe Ausdauerleistung ohne Unterbrechung)
       # Stimmen 5-6 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
       # requires motorische-grundfaehigkeiten (Herleitung): Aerobe Ausdauer ist eine Form der Grundfähigkeit Ausdauer; NW nennt beide als inhaltliche Kerne desselben Bewegungsfelds (NW 2.4.2 BF1, S. 23)
-      # requires motorische-grundfaehigkeiten (Struktur): nicht tragend, aerobe-ausdauer bleibt über belastung-und-koerper angebunden
       - id: aerobe-ausdauer
         name: { de: "Aerobe Ausdauer", en: "Aerobic endurance" }
         iCan: "Ich kann erklären, was aerobe Ausdauer ist und woran ich merke, dass ich in einem Tempo laufe, das ich lange durchhalten kann."
@@ -251,7 +250,6 @@ strands:
         requires: [anspannung-entspannung]
       # BY S10 LB1 (Trends im Sport beurteilen); S7 LB1 (kritisch mit der Gewichtsregulation auseinandersetzen); NW 2.5.1 IF f, S. 32 (gesundheitliche Auswirkungen unter Berücksichtigung medial vermittelter Fitnesstrends und Körperideale beurteilen)
       # Stimmen – / 9-10 (Jg 10) / 7-10 -> 9-10 (Mehrheit)
-      # requires bewegungsmangel (Struktur): tragend, ohne die Kante hinge koerperbilder-und-trends lose (keine andere Voraussetzung, kein Baustein braucht koerperbilder-und-trends)
       - id: koerperbilder-und-trends
         name: { de: "Körperideale und Fitnesstrends", en: "Body ideals and fitness trends" }
         iCan: "Ich kann Fitnesstrends und Körperideale aus Medien und Werbung kritisch beurteilen."
@@ -507,7 +505,6 @@ strands:
       # Stimmen 5-10 / 5-6 (Jg 5) / 5-6 -> 5-6 (Mehrheit)
       # requires anspannung-entspannung: Körperspannung baut man auf, indem man Muskeln bewusst anspannt; BY nennt die Übungen zur Körperspannung und das An- und Entspannen bestimmter Muskelgruppen im selben Jahr (BY S6 LB1)
       # requires rumpfmuskulatur (Herleitung): Körperspannung hält vor allem die Bauch-, Rücken- und Gesäßmuskulatur; BY lehrt die Rumpfmuskulatur in Jg 5 und die Körperspannung in LB1 in Jg 6 (BY S5 LB1, S6 LB1)
-      # requires rumpfmuskulatur (Struktur): nicht tragend, koerperspannung bleibt über anspannung-entspannung angebunden
       - id: koerperspannung
         name: { de: "Körperspannung", en: "Body tension" }
         iCan: "Ich kann erklären, warum Körperspannung beim Turnen wichtig ist, und sie in Übungen aufbauen und halten."
@@ -948,7 +945,6 @@ strands:
       # HE Kap. 6 Teamkompetenz, S. 20 (sportliche Wettbewerbssituationen selbstständig organisieren und regeln); BY S9 LB2 (Helfertätigkeiten bei Sportwettbewerben der Unterstufe); S10 LB2; NW 2.4.2 BF3, S. 24 (einen leichtathletischen Wettbewerb durchführen); 2.5.2 BF3, S. 34 (Wettkampf einzeln oder in der Gruppe)
       # Stimmen 5-10 / 9-10 (Jg 9) / 5-6 -> 5-6 (Gleichstand 5-6/9-10: requires entscheidet (früheste Stufe nach den Voraussetzungen))
       # requires regeln-im-sport (Herleitung): Wer ein Turnier organisiert, legt Regeln fest und setzt sie durch; dafür muss man wissen, wozu Regeln da sind (HE Kap. 6 Teamkompetenz, S. 20: Wettbewerbssituationen „organisieren und regeln“). Ersetzt die Kante zu messen-und-kampfrichten: Ein Turnier mit Spielplan und Ergebnisliste braucht kein leichtathletisches Messen, nur ein leichtathletischer Wettbewerb (NW 2.4.2 BF3). Siehe auch: messen-und-kampfrichten, schiedsrichter
-      # requires regeln-im-sport (Struktur): tragend, ohne die Kante hinge wettbewerb-organisieren lose (keine andere Voraussetzung, kein Baustein braucht wettbewerb-organisieren)
       - id: wettbewerb-organisieren
         name: { de: "Turnier organisieren", en: "Organising a tournament" }
         iCan: "Ich kann einen kleinen Wettbewerb oder ein Turnier mit Spielplan, Regeln und Ergebnisliste selbst organisieren."
@@ -1000,7 +996,6 @@ strands:
         requires: [motorische-grundfaehigkeiten]
       # HE Kap. 7.1 LSW, S. 27 (Wissen über Kriterien der Leistungsbewertung; soziale oder kriterienorientierte Bezugsnormen); Kap. 5 Leitidee Leisten, S. 15; NW 2.5.1 IF d, S. 31 (Leistungsbegriff unter Berücksichtigung sozialer, personaler, kriterialer Bezugsnormen reflektieren)
       # Stimmen 5-6 / – / 7-10 -> 5-6 (Gleichstand 5-6/7-8/9-10: requires entscheidet (früheste Stufe nach den Voraussetzungen))
-      # requires leistungsfaktoren (Struktur): einzige Voraussetzung, ohne die Kante stünde bezugsnormen am Anfang einer Kette (gebraucht von leistung-dokumentieren)
       - id: bezugsnormen
         name: { de: "Bezugsnormen der Leistungsbewertung", en: "Reference standards for performance" }
         iCan: "Ich kann eine sportliche Leistung auf drei Arten beurteilen: im Vergleich mit mir selbst, mit anderen und mit einer festen Norm."
@@ -1063,7 +1058,6 @@ strands:
         requires: [wetter-und-umwelt]
       # BY S7 LB3 (Orientierungsläufe mit Skizzen, Karten und GPS); NW 2.5.2 BF3, S. 34 (alternative leichtathletische Wettbewerbe, z. B. Orientierungslauf, Geocaching)
       # Stimmen – / 7-8 (Jg 7) / 7-10 -> 7-8 (Mehrheit)
-      # requires ausdauer-15-minuten (Struktur): tragend, ohne die Kante hinge orientierungslauf lose (keine andere Voraussetzung, kein Baustein braucht orientierungslauf)
       - id: orientierungslauf
         name: { de: "Orientierungslauf", en: "Orienteering" }
         iCan: "Ich kann mich mit einer Karte im Gelände orientieren und einen Orientierungslauf bewältigen."

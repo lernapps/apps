@@ -385,7 +385,6 @@ strands:
         gradeBand: "9-10"
         requires: [stoffmenge-und-molare-masse, loeslichkeit]
       # ---- Donator-Akzeptor: Sauerstoff, Elektronen, Protonen ----
-      # requires reaktionsgleichung-aufstellen (Struktur): nicht tragend, oxidation-und-reduktion bleibt über verbrennung angebunden
       - id: oxidation-und-reduktion
         # NW IF3/IF4 (Jg. 7/8, Oxidbildung, Sauerstoffübertragung "im Sinne des Donator-Akzeptor-Konzeptes"); HE1 (Affinitätsreihen aus Oxidationsversuchen). BY teaches Redox only as Elektronenübergang from Jg. 9 (see their Ergänzende Information zum Redoxkonzept).
         name: { de: "Oxidation und Reduktion", en: "Oxidation and reduction" }
