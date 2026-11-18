@@ -1,6 +1,6 @@
 ---
 name: map-explainers
-description: Use when the explainers of a subject of the learning map are drafted and proposed as GitHub issues (labels explainer, proposed) - what an explainer draft holds (boundaries, didactics, chapters of Bausteine), how it is cut, checked and turned into issues, and the brief for an agent per subject.
+description: Use when the explainers of a subject of the learning map are drafted and proposed as GitHub issues (labels explainer, ready) - what an explainer draft holds (boundaries, didactics, chapters of Bausteine), how it is cut, checked and turned into issues, and the brief for an agent per subject.
 ---
 
 # Drafting the explainers of a subject
@@ -18,7 +18,7 @@ explainers and what builds on it, `check.mjs --relations` computes from the map.
 or several is secondary.
 
 The drafts are a one-off planning aid for creators, not part of the map's model (no field, no schema). The result is
-**GitHub issues in lernapps/apps, in German, with the labels `explainer` and `proposed`**: one per explainer and one
+**GitHub issues in lernapps/apps, in German, with the labels `explainer` and `ready`**: one per explainer and one
 overview per subject (KD-19). The draft file is only a working file to check the boundaries and to write the issues
 from; it is not committed. The pilots `map/physik/explainer.md`, `map/franzoesisch/explainer.md` and
 `map/politik-wirtschaft/explainer.md` show the draft format. The decisions behind this are the KD-xx of
@@ -178,7 +178,7 @@ The parser has a small test, run by hand and not by `npm test`:
 
 1. `node .agents/skills/map-explainers/scripts/issues.mjs <subject> --file <draft.md>` prints the texts as JSON: one
    issue per explainer (`Explainer <Fach>: <Titel>`) and an overview (`Explainer <Fach>: Überblick`), all with the
-   labels `explainer` and `proposed`. Explainer ids in the text become their titles; Bausteine become links to the map.
+   labels `explainer` and `ready`. Explainer ids in the text become their titles; Bausteine become links to the map.
 2. Before creating anything, list the open issues of lernapps/apps with the label `explainer` and the subject's name in
    the title: do not create a subject twice.
 3. Create the explainer issues in lernapps/apps (GitHub tools, `issue_write`), in the order of the draft; note their
@@ -188,10 +188,15 @@ The parser has a small test, run by hand and not by `npm test`:
    and update the explainer issues whose text now has `#n` links.
 5. Do not edit the issue texts by hand: change the draft and render again. Do not commit the draft file.
 
-An explainer issue holds: Leitidee, kind of app, bands, numbers of chapters and Bausteine; Didaktik; Abgrenzung; the
-chapters (title, band, Kernidee, Didaktik, Bausteine as links to the map, exceptions); the task to examine how the
-explainer fits into the subject's learning map (no computed relations, KD-18); when it is done. The overview holds the
-principles of the subject, the list of its explainers, the Bausteine without explainer and the notes on the map.
+An explainer issue is a build order an agent can work on without asking (KD-29): Leitidee, kind of app, bands,
+numbers of chapters and Bausteine; Didaktik; Abgrenzung; the chapters (title, band, Kernidee, Didaktik, Bausteine as
+links to the map, exceptions); "So gehst du vor" (read the map, plan collective recaps, build with the skills of
+lernapps/tooling wherever the builder decides, `lernapps check`, list the app, close the issue); when it is done. The
+overview holds the principles of the subject, the list of its explainers and the Bausteine without explainer.
+
+Write every text for the builder, not about the drafting: no decision numbers (KD-xx), no history of the map ("Karte
+geändert", "Zirkel aufgelöst"), no notes of the check. Questions about the map do not go into explainer issues: they
+go into the one issue "Lernlandkarte: offene Prüfpunkte" (label `map-review`).
 
 ## Brief for an agent per subject
 

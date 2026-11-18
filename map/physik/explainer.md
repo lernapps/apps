@@ -24,7 +24,7 @@ So schneiden wir die Explainer:
 Typische Ausnahmen: Die Karte ordnet nach den KMK-Bereichen. Dadurch liegen Themen, die im Unterricht eine Einheit
 sind, in verschiedenen Strängen (der Atomaufbau bei der ionisierenden Strahlung, die Ladung bei der
 Elektrizitätslehre; die Wärmestrahlung bei der Strahlung, der Wärmetransport bei der Energie). Ein Explainer bleibt in seinem Strang, darum
-entstehen an diesen Stellen Grenzen mitten in einer Kette. Sie sind begründet und unter "Hinweise zur Karte" notiert.
+entstehen an diesen Stellen Grenzen mitten in einer Kette. Die betroffenen Explainer und Kapitel nennen sie.
 
 ## Explainer
 
@@ -90,7 +90,7 @@ entstehen an diesen Stellen Grenzen mitten in einer Kette. Sie sind begründet u
 - Kernidee: Ich kann zeigen, dass ein stromdurchflossener Draht eine Kompassnadel ablenkt, und erklären, wie ein Elektromagnet funktioniert.
 - Didaktik: Greift das Feldlinienbild auf: Die Kompassnadeln stehen jetzt neben einem Draht. Schaltet man den Strom ab, ist das Feld weg. Das ist die Brücke zwischen den Magneten aus 5-6 und der Spule in 9-10.
 - Bausteine: magnetwirkung-strom
-- Begründung: Nur ein Baustein. Die Karte stellt die magnetische Wirkung des Stroms allein in 7-8 (Länder uneins: NW Jg 6, BY Jg 7, HE 9-10). Das Kapitel bleibt trotzdem eigen, damit es im Jahr dazwischen nutzbar ist und die Stufen nicht mischt.
+- Begründung: Nur ein Baustein: Die magnetische Wirkung des Stroms ist der einzige Baustein des Themas in 7-8 (NW lehrt sie in Jg 6, BY in Jg 7, HE in 9-10). Das Kapitel bleibt eigen, damit es im Jahr zwischen den Magneten und der Spule nutzbar ist und die Stufen nicht mischt.
 
 #### `motor` · Strom erzeugt Bewegung (9-10)
 - Kernidee: Ich kann das Feld einer Spule zeichnen und erklären, wie ein Elektromotor daraus Bewegung macht.
@@ -107,7 +107,7 @@ entstehen an diesen Stellen Grenzen mitten in einer Kette. Sie sind begründet u
 - Leitidee: Ich verstehe, dass Energie nicht verloren geht, sondern umgewandelt und übertragen wird, dass dabei immer ein Teil als Wärme entwertet wird und wie man damit Geräte und eine Energieversorgung beurteilt.
 - Didaktik: Ein **Energieflussdiagramm**, das wächst: Zuerst stehen Energieformen als Kästen da, dann kommen Pfeile für Umwandlung und Übertragung, dann zeigt die Breite der Pfeile die Menge (was hineingeht, kommt auch heraus). Ein grauer Pfeil für die Abwärme wird sichtbar; die Pfeile bekommen Zahlen in Joule, dann in Joule pro Sekunde. Am Ende werden ganze Kraftwerke als Diagramm gezeichnet und verglichen.
 - Abgrenzung: Hier steht der allgemeine Energiebegriff mit Bilanz, Leistung, Wirkungsgrad und Energieversorgung. Nicht hier: elektrische Leistung und Energie eines Geräts und die Stromrechnung (`stromkreise`), wie Generator und Stromnetz funktionieren (`magnetismus`), Wärmestrahlung und Treibhauseffekt (`unsichtbare-strahlung`), Kernspaltung und Kernfusion (`kernphysik`). Kraftwerksarten werden hier als Umwandlungskette verglichen, ihr Generator wird in `magnetismus` erklärt.
-- Begründung: Die Karte führt `nachhaltige-energieversorgung` über `stromversorgung` (Strang Elektrizitätslehre), und diese baut über die elektrische Leistung wieder auf `leistung` aus diesem Explainer auf. Die Grenze durch diese Kette folgt aus den Strängen; das Kapitel `energieversorgung` setzt das Stromnetz aus `magnetismus` voraus und verweist darauf. `thermische-energie` steht im Kapitel `waerme` (9-10), siehe dort.
+- Begründung: Das Kapitel `energieversorgung` verweist für das Stromnetz auf `magnetismus`. `thermische-energie` steht im Kapitel `waerme` (9-10), siehe dort.
 
 #### `energieformen` · Energie hat viele Formen (9-10)
 - Kernidee: Ich kann Energieformen unterscheiden, sagen, wovon Lage- und Bewegungsenergie abhängen, und Energie in Joule angeben.
@@ -123,7 +123,7 @@ entstehen an diesen Stellen Grenzen mitten in einer Kette. Sie sind begründet u
 - Kernidee: Ich kann Temperaturen messen, thermische Energie und Temperatur unterscheiden, Wege der Wärme nennen und erklären, warum Energie bei jeder Umwandlung zum Teil entwertet wird.
 - Didaktik: Beginnt beim Temperatursinn: Eine Hand in kaltem, eine in warmem Wasser, dann beide in lauwarmes; das Thermometer misst zuverlässig. Dann bringt das Kapitel bewusst ein zweites Modell hinein, das **Teilchenmodell**: Das Diagramm zeigt nur, dass am Ende Wärme steht, nicht was Wärme ist. Ein Einblendfenster zeigt schwingende Teilchen: schneller heißt wärmer, mehr Teilchen heißt mehr thermische Energie. Das Kapitel gehört trotzdem hierher, weil die Abwärme das Ende jedes Energieflussdiagramms ist.
 - Bausteine: temperatur, thermische-energie, waermetransport, energieentwertung
-- Begründung: `temperatur` steht auf der Karte in 5-6, `thermische-energie` in 7-8 (Mitte zwischen NW Jg 6, HE 7-8 und BY Jg 9). NW und HE lehren Temperatur und Wärme als eine Einheit; beide gehören zum Teilchenbild dieses Kapitels, ihre Seiten können auch früher genutzt werden.
+- Begründung: `temperatur` steht auf der Karte in 5-6, `thermische-energie` in 7-8. NW und HE lehren Temperatur und Wärme als eine Einheit; beide gehören zum Teilchenbild dieses Kapitels, ihre Seiten können auch früher genutzt werden.
 
 #### `energie-berechnen` · Energie berechnen und bilanzieren (9-10)
 - Kernidee: Ich kann Lage- und Bewegungsenergie berechnen und die Energiebilanz eines Vorgangs aufstellen.
@@ -217,7 +217,7 @@ entstehen an diesen Stellen Grenzen mitten in einer Kette. Sie sind begründet u
 - Kernidee: Ich weiß, dass unser Auge nur einen kleinen Teil der Strahlung sieht, kann Strahlung nach ihrer Wellenlänge ordnen und Nutzen und Risiken von Mobilfunk- und Röntgenstrahlung vergleichen.
 - Didaktik: Führt die Leiste ein: Das Auge sieht nur ein Fenster, Infrarot und Ultraviolett machen erst Sensoren sichtbar (Wärmebildkamera, Handykamera vor einer Fernbedienung). Dann bekommt die Leiste eine Skala der Wellenlänge, vom Radio über Wärmestrahlung und Licht bis Röntgen. Zu Mobilfunk und Röntgen wechselt das Kapitel am Ende zu einem Fall mit eigenem Urteil (Handy im Schlafzimmer? Röntgen beim Zahnarzt?).
 - Bausteine: wahrnehmungsgrenzen, wellenlaenge, elektromagnetisches-spektrum, mobilfunkstrahlung-roentgenstrahlung
-- Begründung: `wahrnehmungsgrenzen` steht auf der Karte in 7-8. Ohne `temperatur` (jetzt Strang Energie) hätte es ein Kapitel für sich allein; die Wellenlänge baut direkt darauf auf. Seine Seite ist für 7-8 nutzbar.
+- Begründung: `wahrnehmungsgrenzen` steht auf der Karte in 7-8. Es trägt allein kein Kapitel, und die Wellenlänge baut direkt darauf auf: Erst wer weiß, dass Sensoren mehr erfassen als das Auge, fragt nach der Skala dahinter. Seine Seite ist für 7-8 nutzbar.
 
 #### `strahlung-und-klima` · Wärmestrahlung und Klima (9-10)
 - Kernidee: Ich kann erklären, wie Körper Wärmestrahlung abgeben, wie der Strahlungshaushalt der Erde funktioniert und wie der Treibhauseffekt das Klima verändert.
@@ -242,7 +242,7 @@ entstehen an diesen Stellen Grenzen mitten in einer Kette. Sie sind begründet u
 
 #### `zerfall-ist-zufall` · Zerfall ist Zufall (9-10)
 - Kernidee: Ich kann den Kernzerfall als Zufallsprozess beschreiben, Zählraten deuten und mit der Halbwertszeit rechnen.
-- Didaktik: Erweitert das Modell um den Zufall: Viele Würfel sind viele Kerne; wer eine Sechs würfelt, zerfällt. Von Runde zu Runde entsteht die Zerfallskurve, an der man die Halbwertszeit abliest und dann berechnet. Das Zählrohr misst, was die Würfel simulieren.
+- Didaktik: Erweitert das Modell um den Zufall: Viele Würfel sind viele Kerne; wer eine Sechs würfelt, zerfällt. Von Wurf zu Wurf entsteht die Zerfallskurve, an der man die Halbwertszeit abliest und dann berechnet. Das Zählrohr misst, was die Würfel simulieren.
 - Bausteine: spontanzerfall, aktivitaet-zaehlrate, halbwertszeit, halbwertszeit-rechnen
 
 #### `strahlenschutz-und-medizin` · Strahlenschutz und Medizin (9-10)
