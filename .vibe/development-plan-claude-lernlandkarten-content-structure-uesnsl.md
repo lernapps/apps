@@ -172,6 +172,13 @@ Eine Zeile `# requires <id> (Struktur): …` an den in #679 fraglichen Kanten (#
 eher, wer einen Baustein braucht (required by), und doppelte die vorhandene Begründungszeile `# requires <id>: …`.
 Offen: wie die Karte ausdrückt, warum eine Kante fraglich, aber dennoch sinnvoll ist.
 
+### KD-31: Funktion einer Kante als Zeile unter ihrer Begründung (Owner, 2026-11-18)
+Unter der Begründungszeile `# requires <id>: …` steht bei fraglichen oder zirkelbrechenden Kanten
+`#   Funktion: <Funktionen> – <Zweifel>; sinnvoll, weil <…>`. Funktionen: `fraglich` (Prüfpunkt, z. B. #679),
+`tragend` (einzige Voraussetzung des Bausteins; nur aus Sicht des Bausteins mit der Kante, nicht „required by“),
+`zirkelbrechend` (ersetzt eine Kante, die einen Zirkel schloss). Fehlt die Begründungszeile, kommt sie dazu. Nur
+Kommentar, nicht im JSON. Skill `map-research` beschreibt die Zeile.
+
 ## Notes
 - Stränge: im Mittel 19 Kompetenzen, kleinster 6, größter 94 (Französisch/Grammatik 89, Physik/Elektrizitätslehre 39
   über Klasse 5 bis 10). Ein Strang ist für einen Explainer meist zu groß.
@@ -413,7 +420,10 @@ statt Zeit, weil Explainer über mehrere Stufen erlaubt sind.
 ### Tasks
 - [x] Kanten aus #679 gegen die Karten ausgewertet (Skript im Scratchpad); Strukturzeile #687 gemergt und auf Wunsch
   des Owners zurückgenommen (KD-30)
-- [ ] Ausdruck für „fraglich, aber sinnvoll“ mit dem Owner klären
+- [x] Ausdruck für „fraglich, aber sinnvoll“ mit dem Owner geklärt (KD-31)
+- [x] Funktion-Zeile an 48 Kanten in 15 Karten (46 fraglich aus #679, 2 zirkelbrechend in Physik: alte Kanten zu
+  `atomaufbau` schlossen den Zirkel Stromkreise ↔ Kernphysik, per Skript geprüft); 16 Begründungszeilen ergänzt
+- [ ] PR, CI grün, merge
 
 ## Commit
 ### Entrance Criteria
