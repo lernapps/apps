@@ -23,9 +23,9 @@ seine Themen verschiedene Modelle brauchen: das Grundgesetz als Maßstab und die
 Haushaltsbuch und der Markt als Modell; Krieg und Frieden als Konfliktanalyse, die eine Welt als Weltkarte mit
 Personen und der Welthandel als Lieferkette eines Produkts.
 
-Die Explainer lassen sich in eine Reihe bringen: Keiner baut über andere auf sich selbst auf. Darum ist der
-Welthandel ein eigener Explainer: Er braucht den Betrieb und seine Wertschöpfungskette, und der Betrieb braucht die
-Nachhaltigkeit, die wiederum auf die Kinder in der einen Welt zurückgreift.
+Die Explainer lassen sich in eine Reihe bringen, in der jeder nur auf frühere aufbaut. Der Welthandel ist darum ein
+eigener Explainer: Er braucht den Betrieb und seine Wertschöpfungskette, der Betrieb braucht die Nachhaltigkeit, und
+die Nachhaltigkeit greift auf die Kinder in der einen Welt zurück.
 
 Typische Ausnahmen: Einige Zellen der Karte haben nur einen Baustein (Taschengeld in 5-6, Ressourcen in 5-6,
 Klimaschutz in 9-10). Diese Bausteine stehen in einem eigenen Kapitel ihrer Stufe, damit das

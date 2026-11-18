@@ -161,6 +161,12 @@ Ziel: Am 2026-11-18 früh sollen die Issues autonom abgearbeitet werden.
 Nach Runde 5 darf ich `main` in den Branch holen, die Commits zu einem zusammenfassen, einen PR anlegen und bei
 grüner CI mergen, damit die korrigierten Karten und Skills morgen früh auf `main` sind.
 
+### KD-29: Issues als Bauaufträge ohne Rückfragen (Owner, 2026-11-18)
+Die Explainer-Issues müssen ein Agent ohne Nachfrage abarbeiten können: keine Prozessgeschichte, keine KD-Nummern,
+keine offenen Punkte der Karte darin. Label `ready` statt `proposed`. Wo und wie gebaut wird, entscheidet, wer umsetzt;
+das Issue sagt, wie man vorgeht („So gehst du vor“). Offene Prüfpunkte der Karte stehen in einem eigenen Issue
+„Lernlandkarte: offene Prüfpunkte“ (Label `map-review`).
+
 ## Notes
 - Stränge: im Mittel 19 Kompetenzen, kleinster 6, größter 94 (Französisch/Grammatik 89, Physik/Elektrizitätslehre 39
   über Klasse 5 bis 10). Ein Strang ist für einen Explainer meist zu groß.
@@ -389,6 +395,14 @@ statt Zeit, weil Explainer über mehrere Stufen erlaubt sind.
 - [x] Je Fach: Hinweise aus Überblick-Issue und Arbeitsdatei prüfen, Karte korrigieren, Entwurf anpassen, Issues nachziehen (alle 19 Fächer; Biologie #403–#416 hatten Platzhalter, jetzt voller Text; alle 304 Explainer-Issues mit Text geprüft)
 - [x] Tests, Build, Commit je Gruppe (115 Tests grün, Build grün nach Merge von main)
 - [x] Abschluss: main hineingeholt; Commits zusammenfassen, PR (für das autonome Abarbeiten muss die Karte auf main sein)
+
+## Code (Runde 6: Issues als Bauaufträge, KD-29)
+### Tasks
+- [x] `issues.mjs`: Label `ready`, Abschnitt „So gehst du vor“, Überblick ohne Hinweise zur Karte; Skill angepasst
+- [x] Entwürfe aller Fächer sprachlich bereinigen (keine Prozessgeschichte), offene Prüfpunkte sammeln (ein Agent je Fach)
+- [x] Alle Explainer-Issues und Überblicke neu schreiben, Label `proposed` → `ready`; erste Zeile „Bauauftrag“ (letzter Durchgang je Fach)
+- [x] Issue „Lernlandkarte: offene Prüfpunkte“ anlegen: lernapps/apps#679 (129 Punkte, Label `map-review`)
+- [ ] PR, CI grün, merge
 
 ## Commit
 ### Entrance Criteria
