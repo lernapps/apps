@@ -431,6 +431,7 @@ strands:
         iCan: "Ich kann Volumen und Oberflächeninhalt von Pyramide, Kegel und Kugel berechnen."
         gradeBand: "9-10"
         requires: [volumen-oberflaeche-zylinder, satz-des-pythagoras, grundkoerper-pyramide-kegel-kugel]
+      # requires trigonometrie (Struktur): nicht tragend, bogenmass bleibt über kreis-umfang-flaeche angebunden
       - id: bogenmass
         # KMK L Größen und Messen S. 17: „wählen Einheiten von Größen situationsgerecht aus (insbesondere für … Winkel) und wandeln sie ggf. um“
         # Das Bogenmaß nennt die KMK nicht; es dient der Sinusfunktion (L Strukturen und funktionaler Zusammenhang S. 19). Schwerpunkt: Winkeleinheit umrechnen.
@@ -1094,6 +1095,7 @@ strands:
         iCan: "Ich kann einfache Zufallsversuche mit Zufallszahlen und Tabellenkalkulation simulieren und auswerten."
         gradeBand: "7-8"
         requires: [haeufigkeit-als-schaetzwert]
+      # requires mittelwert (Struktur): einzige Voraussetzung, ohne die Kante stünde kenngroessen-lage-streumasse am Anfang einer Kette (gebraucht von boxplot)
       - id: kenngroessen-lage-streumasse
         # KMK L Daten und Zufall S. 21-22: „ermitteln und interpretieren Kenngrößen (z. B. Minimum, Maximum, … Median, Spannweite, Quartile)“
         # NARROWED (Mittelwert split off). KMK p.22 (Median, Spannweite, Quartile); HE 9.7 (Zentralwert, Spannweite, Standardabweichung), HE-KC 9/10; BY M7 4; NRW E Sto-3 (SILP 5.1, 6.8)

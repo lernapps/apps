@@ -163,6 +163,7 @@ strands:
         gradeBand: "5-6"
         requires: [einfacher-stromkreis]
       # NW IF2 / SiLP 6.3 (Schaltskizzen lesen und erstellen, Jg 6); HE s1 (Schaltskizzen); BY NT7 1.3
+      # requires schalter (Struktur): einzige Voraussetzung, ohne die Kante stünde schaltzeichen am Anfang einer Kette (gebraucht von reihenschaltung, parallelschaltung, stromstaerke-messen, spannung-messen)
       - id: schaltzeichen
         name: { de: "Schaltzeichen und Schaltplan", en: "Circuit symbols and diagrams" }
         iCan: "Ich kann einen Stromkreis als Schaltplan mit Schaltzeichen zeichnen und einen Schaltplan lesen."
@@ -305,6 +306,8 @@ strands:
         requires: [reihenschaltung-groessen, parallelschaltung-groessen]
       # KMK Elektrizitätslehre (elektrische Leistung); BY Ph9 1.2 (Jg 9); NW IF9 (Definitionsgleichungen); HE s2
       # requires stromstaerke, spannung (Herleitung, KD-21): P = U · I braucht Spannung und Stromstärke, nicht das ohmsche Gesetz (vorher ohmsches-gesetz-rechnen)
+      # requires stromstaerke (Struktur): nicht tragend, elektrische-leistung bleibt über leistung, spannung angebunden
+      # requires spannung (Struktur): nicht tragend, elektrische-leistung bleibt über leistung, stromstaerke angebunden
       - id: elektrische-leistung
         name: { de: "Elektrische Leistung", en: "Electrical power" }
         iCan: "Ich kann die elektrische Leistung aus Spannung und Stromstärke berechnen."

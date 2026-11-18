@@ -167,6 +167,10 @@ keine offenen Punkte der Karte darin. Label `ready` statt `proposed`. Wo und wie
 das Issue sagt, wie man vorgeht („So gehst du vor“). Offene Prüfpunkte der Karte stehen in einem eigenen Issue
 „Lernlandkarte: offene Prüfpunkte“ (Label `map-review`).
 
+### KD-30: Struktur einer fraglichen Kante als Kommentar an der Kante (Owner, 2026-11-18)
+Was eine in #679 fragliche Kante im Graphen trägt (tragend, einzige Voraussetzung, nicht tragend, doppelt), steht als
+YAML-Kommentar an der Kante, nicht im Issue und nicht in den Daten der Karte (JSON). Nur für die fraglichen Kanten.
+
 ## Notes
 - Stränge: im Mittel 19 Kompetenzen, kleinster 6, größter 94 (Französisch/Grammatik 89, Physik/Elektrizitätslehre 39
   über Klasse 5 bis 10). Ein Strang ist für einen Explainer meist zu groß.
@@ -402,6 +406,13 @@ statt Zeit, weil Explainer über mehrere Stufen erlaubt sind.
 - [x] Entwürfe aller Fächer sprachlich bereinigen (keine Prozessgeschichte), offene Prüfpunkte sammeln (ein Agent je Fach)
 - [x] Alle Explainer-Issues und Überblicke neu schreiben, Label `proposed` → `ready`; erste Zeile „Bauauftrag“ (letzter Durchgang je Fach)
 - [x] Issue „Lernlandkarte: offene Prüfpunkte“ anlegen: lernapps/apps#679 (129 Punkte, Label `map-review`)
+- [x] PR, CI grün, merge (#680)
+
+## Code (Runde 7: Struktur der fraglichen Kanten, KD-30)
+### Tasks
+- [x] Kanten aus #679 gegen die Karten ausgewertet: keine doppelt, keine verhindert einen Zirkel; einige tragen
+  (Baustein sonst lose) oder sind einzige Voraussetzung; 6 vorgeschlagene Kanten schlössen einen Explainer-Zirkel
+- [x] Strukturzeile `# requires <id> (Struktur): …` an die 49 fraglichen Kanten in 15 Karten; Skill map-research nennt sie
 - [ ] PR, CI grün, merge
 
 ## Commit

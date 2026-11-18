@@ -902,6 +902,7 @@ strands:
         gradeBand: "5-6"
       # KMK 4.4 multimodale Texte: Text-Bild-Bezüge (S. 36); HE –; BY D8 2.4 grafische Literatur; NW E IF4 Gestaltungsmittel u. a. bei Graphic Novels | Stimmen HE/BY/NW –/7-8/5-6 → 5-6 (Gleichstand, frühere Stufe)
       # requires handlung-erschliessen (Herleitung): Wer beschreibt, wie Bild und Text zusammen erzählen, muss Figuren und Handlungsschritte der Geschichte erfassen; NW nennt Graphic Novels als Präsentationsform literarischer Texte (NW E IF4 S. 22)
+      # requires handlung-erschliessen (Struktur): tragend, ohne die Kante hinge comic-und-graphic-novel lose (keine andere Voraussetzung, kein Baustein braucht comic-und-graphic-novel)
       - id: comic-und-graphic-novel
         name: { de: "Comic und Graphic Novel", en: "Comics and graphic novels" }
         iCan: "Ich kann beschreiben, wie in einem Comic oder einer Graphic Novel Bild und Text zusammen erzählen."
@@ -1216,6 +1217,7 @@ strands:
         iCan: "Ich kann Wörter und Sätze im Deutschen mit anderen Sprachen vergleichen, die ich kenne."
         gradeBand: "5-6"
       # KMK 4.5 gelingende vs. misslingende Kommunikation (S. 39); HE 9.3 Gelingen und Misslingen mit Hilfe eines Kommunikationsmodells erklären (Jg 9); BY D8 1.3 einfaches Kommunikationsmodell; NW E IF3 gelingende und misslingende Kommunikation; Produzent/in und Rezipient/in | Stimmen HE/BY/NW 9-10/7-8/5-6 → 7-8 (Mitte)
+      # requires gespraechsregeln (Struktur): einzige Voraussetzung, ohne die Kante stünde kommunikationsmodell am Anfang einer Kette (gebraucht von sach-und-beziehungsebene)
       - id: kommunikationsmodell
         name: { de: "Kommunikationsmodell", en: "Communication model" }
         iCan: "Ich kann mit einem einfachen Kommunikationsmodell (Sender, Nachricht, Empfänger) erklären, wie Missverständnisse entstehen."
