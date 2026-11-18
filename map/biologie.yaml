@@ -436,7 +436,6 @@ strands:
         requires: [reiz-reaktion]
       # KMK M1 Organsysteme; HE 9/10: Erregung und Erregungsweiterleitung zum Gehirn an Zellstrukturen (Sinneszelle, Nervenzelle) (S. 28, 42); BY B8 LB2 (Jg 8): Aufbau einer Nervenzelle; NW IF7 (Stufe 2; SiLP 10.6): einfache Modellvorstellungen zu Neuron und Synapse. Stimmen 7-10 / 7-8 / 7-10: Mehrheit
       # requires tierzelle-pflanzenzelle (Herleitung): Die Nervenzelle ist eine spezialisierte tierische Zelle; ihren Bau (Zellkörper mit Zellkern, Zellmembran) beschreibt man mit den Zellbestandteilen (vgl. HE 9/10 S. 42: Erregungsweiterleitung „gebunden an Zellstrukturen“)
-      # requires tierzelle-pflanzenzelle (Struktur): nicht tragend, nervenzelle bleibt über reiz-reaktion angebunden
       - id: nervenzelle
         name: { de: "Nervenzelle", en: "Nerve cell" }
         iCan: "Ich kann den Bau einer Nervenzelle mit Zellkörper, Dendriten, Axon und Endknöpfchen beschreiben und erklären, wie sie Signale weiterleitet."
@@ -626,7 +625,6 @@ strands:
         gradeBand: "5-6"
         requires: [nahrungsbeziehungen]
       # KMK U2 Wechselbeziehungen zwischen Lebewesen; HE 5/6: einfache Beispiele für Verhaltensweisen aus der Tierwelt (S. 42); 9/10: intra- und interspezifisch; BY NT6 1.3 (Jg 6): innerartliche Kommunikation; B9 5.4: Signale bei Insekten; NW –. Stimmen 5-6 / 5-6 / –: Mehrheit
-      # requires wirbeltierklassen (Struktur): einzige Voraussetzung, ohne die Kante stünde tierkommunikation am Anfang einer Kette (gebraucht von angeborenes-verhalten)
       - id: tierkommunikation
         name: { de: "Kommunikation bei Tieren", en: "Animal communication" }
         iCan: "Ich kann an Beispielen beschreiben, wie Tiere mit Lauten, Duftstoffen, Farben oder Bewegungen miteinander kommunizieren."

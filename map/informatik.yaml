@@ -305,9 +305,6 @@ strands:
         gradeBand: "9-10"
         requires: [wiederholung-mit-bedingung]
       # GI AL-6 (7-10); HE I1: überführen verschiedene Beschreibungsformen von Algorithmen ineinander; NW WP Alg: stellen Algorithmen in verschiedenen Repräsentationen dar. Stimmen 7-10 / – / 9-10 → 9-10 (Mehrheit)
-      # requires struktogramm (Struktur): nicht tragend, darstellungen-ueberfuehren bleibt über programmablaufplan, pseudocode angebunden
-      # requires programmablaufplan (Struktur): nicht tragend, darstellungen-ueberfuehren bleibt über struktogramm, pseudocode angebunden
-      # requires pseudocode (Struktur): nicht tragend, darstellungen-ueberfuehren bleibt über struktogramm, programmablaufplan angebunden
       - id: darstellungen-ueberfuehren
         name: { de: "Darstellungen von Algorithmen überführen", en: "Translating algorithm representations" }
         iCan: "Ich kann einen Algorithmus von einer Darstellungsform in eine andere übertragen, zum Beispiel vom Struktogramm in Programmcode."
@@ -321,7 +318,6 @@ strands:
         requires: [visuelle-programmierung]
       # GI ID-7 (7-10); HE TF Programmierung: Variablen; BY Inf9 LB3: Variablenkonzept; Wertzuweisung zur Änderung von Variablenwerten; NW WP Alg: Variablen verschiedener Typen. Stimmen 7-10 / 9-10 / 9-10 → 9-10 (Mehrheit)
       # requires visuelle-programmierung (Herleitung): Variablen legt man in einem Programm an; dazu muss man ein Programm schreiben und ausführen können. HE nennt Variablen im Themenfeld Grundlagen der Programmierung (HE S. 18), BY bei der Implementierung (BY Inf9 LB3).
-      # requires visuelle-programmierung (Struktur): nicht tragend, variable bleibt über datentypen angebunden
       - id: variable
         name: { de: "Variablen und Wertzuweisung", en: "Variables and assignment" }
         iCan: "Ich kann in einem Programm Variablen anlegen, ihnen mit einer Wertzuweisung Werte geben und diese Werte ändern."
@@ -547,7 +543,6 @@ strands:
         requires: [personenbezogene-daten, datensicherung]
       # GI IMG-4 (7-10); HE TF Internet: entscheiden, ob personenbezogene Daten gewonnen, verarbeitet und genutzt werden dürfen; BY Inf9 LB4: bewerten Regelungen zum Datenschutz im Spannungsfeld zwischen Persönlichkeitsrechten und Interessen. Stimmen 7-10 / 9-10 / – → 9-10 (Mehrheit)
       # requires datenschutz-und-datensicherheit: Das Datenschutzrecht regelt den Datenschutz; den Begriff braucht man, um einen Fall zu beurteilen. HE nennt Datenschutz und Datensicherheit als Schwerpunkte zusammen mit dieser Kompetenz. (HE S. 16 TF Internet: „Datenschutz“, „Datensicherheit“ – „entscheiden für ausgewählte Beispiele, ob personenbezogene Daten gewonnen, verarbeitet und genutzt werden dürfen“)
-      # requires eigene-daten-schuetzen (Struktur): nicht tragend, datenschutzrecht bleibt über datenschutz-und-datensicherheit angebunden
       - id: datenschutzrecht
         name: { de: "Datenschutzrecht", en: "Data protection law" }
         iCan: "Ich kann Grundsätze des Datenschutzrechts nennen und beurteilen, ob personenbezogene Daten in einem Fall erhoben und genutzt werden dürfen."
@@ -595,7 +590,6 @@ strands:
         gradeBand: "7-8"
         requires: [digitale-kommunikation]
       # GI –; HE TF Internet: bewerten Chancen der Internetnutzung (Recherche); BY NT7 2.1: nutzen effektive Strategien zur Informationsbeschaffung und bewerten Suchergebnisse kritisch. Stimmen 7-10 / 7-8 / – → 7-8 (Mehrheit)
-      # requires webseite-abrufen (Struktur): tragend, ohne die Kante hinge informationen-bewerten lose (keine andere Voraussetzung, kein Baustein braucht informationen-bewerten)
       - id: informationen-bewerten
         name: { de: "Informationen im Netz bewerten", en: "Evaluating online information" }
         iCan: "Ich kann im Internet gezielt suchen und die Glaubwürdigkeit von Quellen und Suchergebnissen prüfen."

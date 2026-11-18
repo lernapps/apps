@@ -167,9 +167,10 @@ keine offenen Punkte der Karte darin. Label `ready` statt `proposed`. Wo und wie
 das Issue sagt, wie man vorgeht („So gehst du vor“). Offene Prüfpunkte der Karte stehen in einem eigenen Issue
 „Lernlandkarte: offene Prüfpunkte“ (Label `map-review`).
 
-### KD-30: Struktur einer fraglichen Kante als Kommentar an der Kante (Owner, 2026-11-18)
-Was eine in #679 fragliche Kante im Graphen trägt (tragend, einzige Voraussetzung, nicht tragend, doppelt), steht als
-YAML-Kommentar an der Kante, nicht im Issue und nicht in den Daten der Karte (JSON). Nur für die fraglichen Kanten.
+### KD-30: Strukturzeile an fraglichen Kanten verworfen (Owner, 2026-11-18)
+Eine Zeile `# requires <id> (Struktur): …` an den in #679 fraglichen Kanten (#687) ist zurückgenommen: Sie beschrieb
+eher, wer einen Baustein braucht (required by), und doppelte die vorhandene Begründungszeile `# requires <id>: …`.
+Offen: wie die Karte ausdrückt, warum eine Kante fraglich, aber dennoch sinnvoll ist.
 
 ## Notes
 - Stränge: im Mittel 19 Kompetenzen, kleinster 6, größter 94 (Französisch/Grammatik 89, Physik/Elektrizitätslehre 39
@@ -408,12 +409,11 @@ statt Zeit, weil Explainer über mehrere Stufen erlaubt sind.
 - [x] Issue „Lernlandkarte: offene Prüfpunkte“ anlegen: lernapps/apps#679 (129 Punkte, Label `map-review`)
 - [x] PR, CI grün, merge (#680)
 
-## Code (Runde 7: Struktur der fraglichen Kanten, KD-30)
+## Code (Runde 7: fragliche Kanten)
 ### Tasks
-- [x] Kanten aus #679 gegen die Karten ausgewertet: keine doppelt, keine verhindert einen Zirkel; einige tragen
-  (Baustein sonst lose) oder sind einzige Voraussetzung; 6 vorgeschlagene Kanten schlössen einen Explainer-Zirkel
-- [x] Strukturzeile `# requires <id> (Struktur): …` an die 49 fraglichen Kanten in 15 Karten; Skill map-research nennt sie
-- [ ] PR, CI grün, merge
+- [x] Kanten aus #679 gegen die Karten ausgewertet (Skript im Scratchpad); Strukturzeile #687 gemergt und auf Wunsch
+  des Owners zurückgenommen (KD-30)
+- [ ] Ausdruck für „fraglich, aber sinnvoll“ mit dem Owner klären
 
 ## Commit
 ### Entrance Criteria
