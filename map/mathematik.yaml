@@ -431,6 +431,8 @@ strands:
         iCan: "Ich kann Volumen und Oberflächeninhalt von Pyramide, Kegel und Kugel berechnen."
         gradeBand: "9-10"
         requires: [volumen-oberflaeche-zylinder, satz-des-pythagoras, grundkoerper-pyramide-kegel-kugel]
+      # requires trigonometrie: HE, BY und NRW lehren das Bogenmaß nach Sinus und Kosinus (HE 10.4, BY M10 3)
+      #   Funktion: fraglich – die Kante folgt der Reihenfolge der Lehrpläne, inhaltlich braucht das Bogenmaß Gradmaß und Kreisumfang; sinnvoll, weil das Bogenmaß für Sinus und Kosinus als Funktionen eingeführt wird
       - id: bogenmass
         # KMK L Größen und Messen S. 17: „wählen Einheiten von Größen situationsgerecht aus (insbesondere für … Winkel) und wandeln sie ggf. um“
         # Das Bogenmaß nennt die KMK nicht; es dient der Sinusfunktion (L Strukturen und funktionaler Zusammenhang S. 19). Schwerpunkt: Winkeleinheit umrechnen.
@@ -1094,6 +1096,8 @@ strands:
         iCan: "Ich kann einfache Zufallsversuche mit Zufallszahlen und Tabellenkalkulation simulieren und auswerten."
         gradeBand: "7-8"
         requires: [haeufigkeit-als-schaetzwert]
+      # requires mittelwert: HE lehrt den Mittelwert vor den Kenngrößen (HE 6.1 vor 9.7); NRW vergleicht Median und Mittel (E Sto-3)
+      #   Funktion: fraglich, tragend – Median und Spannweite brauchen das Mittel nicht rechnerisch; sinnvoll, weil man die Lagemaße miteinander vergleicht
       - id: kenngroessen-lage-streumasse
         # KMK L Daten und Zufall S. 21-22: „ermitteln und interpretieren Kenngrößen (z. B. Minimum, Maximum, … Median, Spannweite, Quartile)“
         # NARROWED (Mittelwert split off). KMK p.22 (Median, Spannweite, Quartile); HE 9.7 (Zentralwert, Spannweite, Standardabweichung), HE-KC 9/10; BY M7 4; NRW E Sto-3 (SILP 5.1, 6.8)

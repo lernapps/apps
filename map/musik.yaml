@@ -318,6 +318,8 @@ strands:
         requires: [notenwerte-erkennen, taktarten-unterscheiden]
       # KC 7.1 Musik machen (Zeichen und Notationen lesen und in Klang umsetzen); G9 Gestalten mit Instrumenten 5 (Rhythmen nach Noten)
       # Strang rhythmus-takt statt Notation (KD-26): Einen notierten Rhythmus lesen und klatschen ist Rhythmusarbeit.
+      # requires rhythmus-nachklatschen: Rhythmen liest man erst, wenn man sie hörend nachklatschen kann (GIML Methodology, „Sequence“)
+      #   Funktion: fraglich – aus der Music Learning Theory, nicht aus einem Lehrplan; sinnvoll, weil die Kante die Reihenfolge erst hören, dann lesen festlegt
       - id: rhythmus-lesen
         name: { de: "Rhythmen lesen", en: "Reading rhythms" }
         iCan: { de: "Ich kann einen notierten Rhythmus lesen und in Klang umsetzen." }
@@ -454,6 +456,7 @@ strands:
       # KC 7.1 Musik machen (Notationen lesen); G9 Gestalten mit Instrumenten 5/6 (Melodien nach Noten); Übergangsprofil
       # Strang tonhoehe-harmonik statt Notation (KD-26): Eine Melodie lesen heißt Tonhöhen aus Noten ablesen; Nachbarn noten-benennen und melodie-notieren.
       # requires tonfolge-nachsingen: Noten liest man erst, wenn man Tonfolgen hörend nachsingen kann, so wie Rhythmen lesen auf Rhythmen nachklatschen aufbaut (GIML Methodology, „Sequence“: „learn to read notation …, but only after they have developed the ability to audiate the note patterns“; erste Stufe „aural/oral“: hören und nachsingen)
+      #   Funktion: fraglich – aus der Music Learning Theory, nicht aus einem Lehrplan; sinnvoll, weil Noten erst liest, wer Tonfolgen hörend nachsingen kann
       - id: melodie-lesen
         name: { de: "Melodien lesen", en: "Reading melodies" }
         iCan: { de: "Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen." }

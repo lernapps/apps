@@ -230,6 +230,7 @@ strands:
       # HE LP 6.5 (1): Grundzüge der republikanischen Ordnung; BY G6 LB5: römische Republik, Grundbegriffe Senat, Republik, Diktator; NW IF2 (Stufe 1): res publica. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       # Siehe auch: latein/koenigszeit-und-republik, latein/senat-und-magistrate
       # requires herrschaftsformen (Herleitung): Die Republik ist die Ordnung ohne König: Konsuln auf ein Jahr und zu zweit, ein Senat der Vornehmen und eine Volksversammlung. Wer sie verstehen will, braucht die Gegenbegriffe Monarchie, Aristokratie und Demokratie. Gestützt: BY G6 LB4 (Herrschaftsformen „Monarchie, Demokratie“ einordnen) steht vor LB5 (Imperium Romanum); Kühberger IzPB 38 S. 21 (ein Konzept am ersten Fall einführen und an späteren Fällen wieder aufgreifen). Ersetzt die Kante zu monarchie, die über herrschaftsformen weiter gilt.
+      #   Funktion: fraglich, tragend – hergeleitet; sinnvoll, weil man die Republik mit den Gegenbegriffen Monarchie, Aristokratie und Demokratie versteht (BY G6 LB4 vor LB5)
       - id: roemische-republik
         name: { de: "Römische Republik", en: "The Roman Republic" }
         iCan: "Ich kann den Aufbau der römischen Republik mit Senat, Konsuln und Volksversammlung beschreiben."
@@ -243,6 +244,8 @@ strands:
         requires: [roemische-republik]
       # HE LP 6.5 (1): altrömische Familie; BY G6 LB7: Struktur und Aufgaben der „familia“; NW IF2 (Stufe 1): römische Familie; UK Werte antiker Erziehung. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       # Siehe auch: latein/roemische-familie
+      # requires roemische-republik: Familie und Republik stehen in derselben Einheit (HE LP 6.5 (1)); die Rolle des pater familias spiegelt die Ordnung der Republik
+      #   Funktion: fraglich, tragend – die Familie versteht man auch ohne die Verfassung, die Kante ist ein Bündel; sinnvoll, weil HE beides zusammen lehrt
       - id: roemische-familie
         name: { de: "Römische Familie", en: "The Roman family" }
         iCan: "Ich kann beschreiben, wie eine römische Familie (familia) aufgebaut war und welche Rolle Vater, Mutter, Kinder und Sklaven hatten."
@@ -391,6 +394,7 @@ strands:
         requires: [staendegesellschaft]
       # HE LP 8.1 (3): Leben mit und in der Kirche; KC: Einflüsse von Religionen auf Weltdeutungen; BY G7 LB2: grundlegende Merkmale des Lebens im Mittelalter; NW IF3a (Stufe 1) UK: Stellenwert des christlichen Glaubens. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
       # requires christen-im-roemischen-reich (Herleitung): Die Rolle von Glaube und Kirche im Mittelalter setzt voraus, dass man weiß, wie das Christentum zur Staatsreligion wurde. Gestützt: HE LP 8.2 Hinweise S. 20 („Wiederholung: Auflösung des röm. Reiches; Judentum, Christentum, Islam“).
+      #   Funktion: fraglich, tragend – hergeleitet; sinnvoll, weil die Rolle der Kirche voraussetzt, wie das Christentum Staatsreligion wurde
       - id: glaube-im-mittelalter
         name: { de: "Glaube und Kirche im Mittelalter", en: "Medieval faith and church" }
         iCan: "Ich kann erklären, welche Rolle der christliche Glaube und die Kirche im Leben der Menschen im Mittelalter spielten."
@@ -725,6 +729,7 @@ strands:
         requires: [restauration]
       # HE LP 9.2 (3): Revolution in Berlin und Wien, Märzminister; BY G8 LB2: Revolution von 1848/49; NW IF5 (Stufe 2): Revolution von 1848/49. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       # requires was-ist-eine-revolution (Herleitung): Ursachen (Restauration, Not), Anlass (die Februarrevolution in Paris), Verlauf und Folgen von 1848/49 ordnet man mit dem Begriff Revolution. Gestützt: HE LP S. 4 (Kategorie „Revolution und Evolution“); HE KC Kap. 6 S. 20 („Reform und Revolution“); BY G8 LB2 („Deutschland zwischen Restauration und Revolution“) folgt auf LB1.
+      #   Funktion: fraglich – hergeleitet; sinnvoll, weil man Ursachen, Verlauf und Folgen von 1848/49 mit dem Begriff Revolution ordnet
       - id: revolution-1848
         name: { de: "Revolution von 1848/49", en: "The revolution of 1848–49" }
         iCan: "Ich kann den Verlauf der Revolution von 1848/49 in Deutschland beschreiben."
@@ -817,6 +822,7 @@ strands:
         requires: [verfassung-des-kaiserreichs]
       # HE LP 9.4 (2): Familie und Frauenemanzipation; BY G8 LB5: Frauenbewegung. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       # requires menschenrechte-1789 (Herleitung): Die Frauenbewegung forderte die gleichen Rechte, die 1789 versprochen, Frauen aber nicht gewährt wurden. Gestützt: HE LP 9.1 Begründung S. 26 (Umsetzung der Menschenrechte führt zu Konflikten, „die auch die Rolle der Frau betreffen“); NW IF5 Stufe 2 S. 30 („Anspruch und Wirklichkeit der Menschen- und Bürgerrechte von 1789“).
+      #   Funktion: fraglich, tragend – hergeleitet; sinnvoll, weil die Frauenbewegung die 1789 versprochenen Rechte forderte
       - id: frauenbewegung
         name: { de: "Frauenbewegung im Kaiserreich", en: "The women's movement" }
         iCan: "Ich kann erklären, wofür die Frauenbewegung im Kaiserreich kämpfte."
@@ -881,7 +887,9 @@ strands:
         requires: [stellungskrieg]
       # HE LP 9.5 (4): Lenin und die Oktoberrevolution; BY G8 LB6: Epochenjahr 1917, Russische Revolution; NW IF6 (Stufe 2): neue weltpolitische Koordinaten, Epochenjahr 1917. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       # requires was-ist-eine-revolution (Herleitung): Ob die Machtübernahme der Bolschewiki eine Revolution war oder ein Umsturz einer kleinen Gruppe, prüft man am Begriff Revolution. Gestützt: HE LP 9.5 Begründung S. 31 (die „‚Oktober‘revolution“ in Anführungszeichen); HE LP S. 4 (Kategorie „Revolution und Evolution“).
+      #   Funktion: fraglich – hergeleitet; sinnvoll, weil man am Begriff prüft, ob 1917 eine Revolution oder ein Umsturz war
       # requires krieg-und-zivilbevoelkerung (Herleitung): Die Revolution von 1917 erklärt man mit den Lasten des Krieges, Hunger und Kriegsmüdigkeit, nicht mit dem Kriegsausbruch im Einzelnen. Gestützt: BY G8 LB6 und NW IF6 (Stufe 2) behandeln 1917 im Zusammenhang des Ersten Weltkriegs (Epochenjahr). Ersetzt die Kante zu julikrise-1914. Siehe auch: julikrise-1914
+      #   Funktion: fraglich – hergeleitet; sinnvoll, weil man 1917 mit Hunger und Kriegsmüdigkeit erklärt
       - id: russische-revolution
         name: { de: "Russische Revolution 1917", en: "The Russian Revolution" }
         iCan: "Ich kann beschreiben, wie Lenin und die Bolschewiki 1917 in Russland die Macht übernahmen."
