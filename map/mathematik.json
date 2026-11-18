@@ -15,8 +15,8 @@
     {
       "id": "arithmetik",
       "name": {
-        "de": "Arithmetik",
-        "en": "Arithmetic"
+        "de": "Zahl und Operation",
+        "en": "Number and operation"
       },
       "competencies": [
         {
@@ -32,7 +32,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 99,
+          "opens": 100,
           "practisedBy": []
         },
         {
@@ -50,7 +50,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 21,
+          "opens": 22,
           "practisedBy": []
         },
         {
@@ -86,7 +86,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 63,
+          "opens": 64,
           "practisedBy": []
         },
         {
@@ -104,7 +104,7 @@
             "band": "5-6",
             "step": 3
           },
-          "opens": 56,
+          "opens": 57,
           "practisedBy": []
         },
         {
@@ -141,7 +141,7 @@
             "band": "5-6",
             "step": 4
           },
-          "opens": 43,
+          "opens": 44,
           "practisedBy": []
         },
         {
@@ -182,6 +182,42 @@
           "practisedBy": []
         },
         {
+          "id": "muster-zahlenfolgen",
+          "name": {
+            "de": "Zahlenfolgen und Muster",
+            "en": "Number sequences and patterns"
+          },
+          "iCan": "Ich kann Zahlenfolgen fortsetzen und die Regel mit Worten und mit einem Term beschreiben.",
+          "gradeBand": "5-6",
+          "requires": [
+            "grundrechenarten-rechengesetze"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "zaehlprinzip",
+          "name": {
+            "de": "Zählprinzip",
+            "en": "Counting principle"
+          },
+          "iCan": "Ich kann mit dem Zählprinzip und Baumdiagrammen die Anzahl von Möglichkeiten bestimmen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "grundrechenarten-rechengesetze"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 6,
+          "practisedBy": []
+        },
+        {
           "id": "brueche-begriff",
           "name": {
             "de": "Bruchbegriff",
@@ -196,7 +232,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 71,
+          "opens": 72,
           "practisedBy": []
         },
         {
@@ -287,7 +323,7 @@
             "band": "5-6",
             "step": 3
           },
-          "opens": 33,
+          "opens": 34,
           "practisedBy": []
         },
         {
@@ -306,7 +342,7 @@
             "band": "5-6",
             "step": 4
           },
-          "opens": 19,
+          "opens": 20,
           "practisedBy": []
         },
         {
@@ -325,83 +361,6 @@
             "step": 2
           },
           "opens": 27,
-          "practisedBy": []
-        },
-        {
-          "id": "rationale-zahlen-rechnen",
-          "name": {
-            "de": "Rechnen mit negativen Zahlen",
-            "en": "Calculating with negative numbers"
-          },
-          "iCan": "Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten.",
-          "gradeBand": "7-8",
-          "requires": [
-            "rationale-zahlen",
-            "brueche-multiplizieren-dividieren"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 1
-          },
-          "opens": 26,
-          "practisedBy": []
-        },
-        {
-          "id": "quadratwurzeln",
-          "name": {
-            "de": "Quadratwurzeln",
-            "en": "Square roots"
-          },
-          "iCan": "Ich kann Quadratwurzeln erklären und Näherungswerte bestimmen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "potenzen",
-            "zahlen-vergleichen-ordnen",
-            "dezimalbrueche-rechnen"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 1
-          },
-          "opens": 13,
-          "practisedBy": []
-        },
-        {
-          "id": "reelle-zahlen",
-          "name": {
-            "de": "Reelle Zahlen",
-            "en": "Real numbers"
-          },
-          "iCan": "Ich kann rationale und irrationale Zahlen unterscheiden und die reellen Zahlen als Zahlbereich einordnen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "quadratwurzeln",
-            "rationale-zahlen-rechnen"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 2
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "wurzelgesetze",
-          "name": {
-            "de": "Wurzelgesetze",
-            "en": "Laws of roots"
-          },
-          "iCan": "Ich kann Wurzelgesetze anwenden und einfache Wurzelterme vereinfachen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "quadratwurzeln",
-            "rationale-zahlen-rechnen"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 2
-          },
-          "opens": 0,
           "practisedBy": []
         },
         {
@@ -429,6 +388,25 @@
               ]
             }
           ]
+        },
+        {
+          "id": "rationale-zahlen-rechnen",
+          "name": {
+            "de": "Rechnen mit negativen Zahlen",
+            "en": "Calculating with negative numbers"
+          },
+          "iCan": "Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten.",
+          "gradeBand": "7-8",
+          "requires": [
+            "rationale-zahlen",
+            "brueche-multiplizieren-dividieren"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 26,
+          "practisedBy": []
         },
         {
           "id": "prozent-prozentwert",
@@ -627,24 +605,127 @@
           "practisedBy": []
         },
         {
-          "id": "zinseszins",
+          "id": "quadratwurzeln",
           "name": {
-            "de": "Zinseszins",
-            "en": "Compound interest"
+            "de": "Quadratwurzeln",
+            "en": "Square roots"
           },
-          "iCan": "Ich kann Zinseszinsen berechnen.",
-          "gradeBand": "7-8",
+          "iCan": "Ich kann Quadratwurzeln erklären und Näherungswerte bestimmen.",
+          "gradeBand": "9-10",
           "requires": [
-            "zinsrechnung",
-            "prozent-veraenderung"
+            "potenzen",
+            "zahlen-vergleichen-ordnen",
+            "dezimalbrueche-rechnen"
           ],
           "place": {
-            "band": "7-8",
-            "step": 3
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 14,
+          "practisedBy": []
+        },
+        {
+          "id": "reelle-zahlen",
+          "name": {
+            "de": "Reelle Zahlen",
+            "en": "Real numbers"
+          },
+          "iCan": "Ich kann rationale und irrationale Zahlen unterscheiden und die reellen Zahlen als Zahlbereich einordnen.",
+          "gradeBand": "9-10",
+          "requires": [
+            "quadratwurzeln",
+            "rationale-zahlen-rechnen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
           },
           "opens": 0,
           "practisedBy": []
         },
+        {
+          "id": "wurzelgesetze",
+          "name": {
+            "de": "Wurzelgesetze",
+            "en": "Laws of roots"
+          },
+          "iCan": "Ich kann Wurzelgesetze anwenden und einfache Wurzelterme vereinfachen.",
+          "gradeBand": "9-10",
+          "requires": [
+            "quadratwurzeln",
+            "rationale-zahlen-rechnen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "potenzgesetze",
+          "name": {
+            "de": "Potenzgesetze",
+            "en": "Laws of exponents"
+          },
+          "iCan": "Ich kann die Potenzgesetze für natürliche Exponenten anwenden.",
+          "gradeBand": "9-10",
+          "requires": [
+            "terme-umformen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "potenzen-ganzzahlige-exponenten",
+          "name": {
+            "de": "Negative Exponenten",
+            "en": "Negative exponents"
+          },
+          "iCan": "Ich kann Potenzen mit negativen Exponenten als Bruch deuten und berechnen.",
+          "gradeBand": "9-10",
+          "requires": [
+            "potenzgesetze"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "n-te-wurzeln",
+          "name": {
+            "de": "N-te Wurzeln",
+            "en": "Nth roots"
+          },
+          "iCan": "Ich kann n-te Wurzeln bestimmen und Wurzeln als Potenzen mit Bruch-Exponenten schreiben.",
+          "gradeBand": "9-10",
+          "requires": [
+            "quadratwurzeln",
+            "potenzen-ganzzahlige-exponenten"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
+          "practisedBy": []
+        }
+      ]
+    },
+    {
+      "id": "groessen-und-messen",
+      "name": {
+        "de": "Größen und Messen",
+        "en": "Quantities and measurement"
+      },
+      "competencies": [
         {
           "id": "groessenvorstellungen-schaetzen",
           "name": {
@@ -658,7 +739,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 29,
+          "opens": 30,
           "practisedBy": []
         },
         {
@@ -676,7 +757,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 18,
+          "opens": 19,
           "practisedBy": []
         },
         {
@@ -694,7 +775,216 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 17,
+          "opens": 18,
+          "practisedBy": []
+        },
+        {
+          "id": "einheiten-flaeche-volumen",
+          "name": {
+            "de": "Flächen- und Volumeneinheiten",
+            "en": "Units of area and volume"
+          },
+          "iCan": "Ich kann Flächen- und Volumeneinheiten umrechnen und ihre Größe einschätzen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "umrechnung-groessen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 15,
+          "practisedBy": []
+        },
+        {
+          "id": "flaeche-umfang-quadrat-rechteck",
+          "name": {
+            "de": "Fläche und Umfang: Rechteck, Quadrat",
+            "en": "Area and perimeter: rectangles, squares"
+          },
+          "iCan": "Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berechnen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "grundfiguren-eben",
+            "einheiten-flaeche-volumen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 14,
+          "practisedBy": []
+        },
+        {
+          "id": "zusammengesetzte-figuren",
+          "name": {
+            "de": "Zusammengesetzte Figuren",
+            "en": "Composite shapes"
+          },
+          "iCan": "Ich kann Flächeninhalt und Umfang zusammengesetzter Figuren durch Zerlegen berechnen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "flaeche-umfang-quadrat-rechteck"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "volumen-oberflaeche-quader-wuerfel",
+          "name": {
+            "de": "Volumen und Oberfläche: Quader, Würfel",
+            "en": "Volume and surface area: cuboids, cubes"
+          },
+          "iCan": "Ich kann Volumen und Oberflächeninhalt von Quader und Würfel berechnen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "flaeche-umfang-quadrat-rechteck",
+            "grundkoerper-quader-wuerfel"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "flaeche-umfang-dreieck-viereck",
+          "name": {
+            "de": "Fläche und Umfang: Dreieck, Viereck",
+            "en": "Area and perimeter: triangles, quadrilaterals"
+          },
+          "iCan": "Ich kann Flächeninhalt und Umfang von Dreieck und besonderen Vierecken berechnen.",
+          "gradeBand": "7-8",
+          "requires": [
+            "flaeche-umfang-quadrat-rechteck",
+            "vierecke-grundfiguren"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "volumen-oberflaeche-prisma",
+          "name": {
+            "de": "Volumen und Oberfläche: Prisma",
+            "en": "Volume and surface area: prisms"
+          },
+          "iCan": "Ich kann Volumen und Oberflächeninhalt von Prismen berechnen.",
+          "gradeBand": "7-8",
+          "requires": [
+            "volumen-oberflaeche-quader-wuerfel",
+            "flaeche-umfang-dreieck-viereck",
+            "grundkoerper-prisma-zylinder"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "kreis-umfang-flaeche",
+          "name": {
+            "de": "Kreisumfang und Kreisfläche",
+            "en": "Circumference and area of circles"
+          },
+          "iCan": "Ich kann Umfang und Flächeninhalt eines Kreises berechnen und die Zahl Pi am Kreis erklären.",
+          "gradeBand": "9-10",
+          "requires": [
+            "flaeche-umfang-quadrat-rechteck",
+            "dezimalbrueche-rechnen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "volumen-oberflaeche-zylinder",
+          "name": {
+            "de": "Volumen und Oberfläche: Zylinder",
+            "en": "Volume and surface area: cylinders"
+          },
+          "iCan": "Ich kann Volumen und Oberflächeninhalt von Zylindern berechnen.",
+          "gradeBand": "9-10",
+          "requires": [
+            "volumen-oberflaeche-prisma",
+            "kreis-umfang-flaeche"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "volumen-oberflaeche-pyramide-kegel-kugel",
+          "name": {
+            "de": "Volumen und Oberfläche: Pyramide, Kegel, Kugel",
+            "en": "Volume and surface area: pyramids, cones, spheres"
+          },
+          "iCan": "Ich kann Volumen und Oberflächeninhalt von Pyramide, Kegel und Kugel berechnen.",
+          "gradeBand": "9-10",
+          "requires": [
+            "volumen-oberflaeche-zylinder",
+            "satz-des-pythagoras",
+            "grundkoerper-pyramide-kegel-kugel"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "bogenmass",
+          "name": {
+            "de": "Bogenmaß",
+            "en": "Radians"
+          },
+          "iCan": "Ich kann Winkel im Bogenmaß angeben und zwischen Grad- und Bogenmaß wechseln.",
+          "gradeBand": "9-10",
+          "requires": [
+            "trigonometrie",
+            "kreis-umfang-flaeche"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "berechnungen-dreiecke-vielecke",
+          "name": {
+            "de": "Berechnungen an Dreiecken und Vielecken",
+            "en": "Calculations in triangles and polygons"
+          },
+          "iCan": "Ich kann Streckenlängen und Winkel in Dreiecken und Vielecken mit Pythagoras, Ähnlichkeit und Trigonometrie berechnen.",
+          "gradeBand": "9-10",
+          "requires": [
+            "strahlensaetze",
+            "trigonometrie"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 4
+          },
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -702,8 +992,8 @@
     {
       "id": "algebra",
       "name": {
-        "de": "Algebra",
-        "en": "Algebra"
+        "de": "Strukturen und funktionaler Zusammenhang",
+        "en": "Structures and functional relationships"
       },
       "competencies": [
         {
@@ -725,21 +1015,41 @@
           "practisedBy": []
         },
         {
-          "id": "muster-zahlenfolgen",
+          "id": "dreisatz",
           "name": {
-            "de": "Zahlenfolgen und Muster",
-            "en": "Number sequences and patterns"
+            "de": "Dreisatz",
+            "en": "Rule of three"
           },
-          "iCan": "Ich kann Zahlenfolgen fortsetzen und die Regel mit Worten und mit einem Term beschreiben.",
+          "iCan": "Ich kann Sachaufgaben mit dem Dreisatz lösen.",
           "gradeBand": "5-6",
           "requires": [
-            "grundrechenarten-rechengesetze"
+            "grundrechenarten-rechengesetze",
+            "messen-laenge-masse-geld-zeit"
           ],
           "place": {
             "band": "5-6",
             "step": 4
           },
-          "opens": 0,
+          "opens": 17,
+          "practisedBy": []
+        },
+        {
+          "id": "massstab",
+          "name": {
+            "de": "Maßstab",
+            "en": "Scale"
+          },
+          "iCan": "Ich kann mit Maßstäben rechnen und Zeichnungen im passenden Maßstab lesen und anfertigen.",
+          "gradeBand": "5-6",
+          "requires": [
+            "dreisatz",
+            "umrechnung-groessen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -920,6 +1230,136 @@
           "practisedBy": []
         },
         {
+          "id": "zuordnungen",
+          "name": {
+            "de": "Zuordnungen",
+            "en": "Relations between quantities"
+          },
+          "iCan": "Ich kann Zuordnungen zwischen Größen in Tabellen, Schaubildern und mit Worten darstellen und beschreiben.",
+          "gradeBand": "7-8",
+          "requires": [
+            "koordinatensystem"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 21,
+          "practisedBy": []
+        },
+        {
+          "id": "proportionale-zuordnungen",
+          "name": {
+            "de": "Proportionale Zuordnungen",
+            "en": "Direct proportion"
+          },
+          "iCan": "Ich kann proportionale Zuordnungen erkennen, darstellen und mit dem Proportionalitätsfaktor rechnen.",
+          "gradeBand": "7-8",
+          "requires": [
+            "zuordnungen",
+            "dreisatz"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 14,
+          "practisedBy": []
+        },
+        {
+          "id": "antiproportionale-zuordnungen",
+          "name": {
+            "de": "Antiproportionale Zuordnungen",
+            "en": "Inverse proportion"
+          },
+          "iCan": "Ich kann antiproportionale Zuordnungen erkennen, darstellen und von proportionalen unterscheiden.",
+          "gradeBand": "7-8",
+          "requires": [
+            "zuordnungen",
+            "dreisatz"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "funktionsbegriff",
+          "name": {
+            "de": "Funktionsbegriff",
+            "en": "Concept of a function"
+          },
+          "iCan": "Ich kann erklären, was eine Funktion ist, und Funktionsterm, Graph, Definitionsmenge und Wertemenge unterscheiden.",
+          "gradeBand": "7-8",
+          "requires": [
+            "zuordnungen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 12,
+          "practisedBy": []
+        },
+        {
+          "id": "funktionen-darstellung",
+          "name": {
+            "de": "Darstellungen von Funktionen",
+            "en": "Representing functions"
+          },
+          "iCan": "Ich kann zwischen Funktionsgleichung, Wertetabelle und Graph wechseln.",
+          "gradeBand": "7-8",
+          "requires": [
+            "funktionsbegriff"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 11,
+          "practisedBy": []
+        },
+        {
+          "id": "lineare-funktionen",
+          "name": {
+            "de": "Lineare Funktionen",
+            "en": "Linear functions"
+          },
+          "iCan": "Ich kann lineare Funktionen mit Gleichung, Tabelle und Graph beschreiben und Steigung und Achsenabschnitt deuten.",
+          "gradeBand": "7-8",
+          "requires": [
+            "proportionale-zuordnungen",
+            "funktionen-darstellung"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "geradengleichungen",
+          "name": {
+            "de": "Geradengleichungen",
+            "en": "Equations of lines"
+          },
+          "iCan": "Ich kann die Gleichung einer Geraden aus zwei Punkten oder aus Punkt und Steigung bestimmen und Nullstelle und Schnittpunkt berechnen.",
+          "gradeBand": "7-8",
+          "requires": [
+            "lineare-funktionen",
+            "lineare-gleichungen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
           "id": "lineare-gleichungssysteme",
           "name": {
             "de": "Lineare Gleichungssysteme: grafisch",
@@ -957,55 +1397,19 @@
           "practisedBy": []
         },
         {
-          "id": "potenzgesetze",
+          "id": "zinseszins",
           "name": {
-            "de": "Potenzgesetze",
-            "en": "Laws of exponents"
+            "de": "Zinseszins",
+            "en": "Compound interest"
           },
-          "iCan": "Ich kann die Potenzgesetze für natürliche Exponenten anwenden.",
-          "gradeBand": "9-10",
+          "iCan": "Ich kann Zinseszinsen berechnen.",
+          "gradeBand": "7-8",
           "requires": [
-            "terme-umformen"
+            "zinsrechnung",
+            "prozent-veraenderung"
           ],
           "place": {
-            "band": "9-10",
-            "step": 1
-          },
-          "opens": 5,
-          "practisedBy": []
-        },
-        {
-          "id": "potenzen-ganzzahlige-exponenten",
-          "name": {
-            "de": "Negative Exponenten",
-            "en": "Negative exponents"
-          },
-          "iCan": "Ich kann Potenzen mit negativen Exponenten als Bruch deuten und berechnen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "potenzgesetze"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 2
-          },
-          "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "n-te-wurzeln",
-          "name": {
-            "de": "N-te Wurzeln",
-            "en": "Nth roots"
-          },
-          "iCan": "Ich kann n-te Wurzeln bestimmen und Wurzeln als Potenzen mit Bruch-Exponenten schreiben.",
-          "gradeBand": "9-10",
-          "requires": [
-            "quadratwurzeln",
-            "potenzen-ganzzahlige-exponenten"
-          ],
-          "place": {
-            "band": "9-10",
+            "band": "7-8",
             "step": 3
           },
           "opens": 0,
@@ -1047,201 +1451,6 @@
             "step": 3
           },
           "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "logarithmen",
-          "name": {
-            "de": "Logarithmen",
-            "en": "Logarithms"
-          },
-          "iCan": "Ich kann den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache Exponentialgleichungen lösen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "exponentialfunktionen"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 3
-          },
-          "opens": 0,
-          "practisedBy": []
-        }
-      ]
-    },
-    {
-      "id": "funktionen",
-      "name": {
-        "de": "Funktionen",
-        "en": "Functions"
-      },
-      "competencies": [
-        {
-          "id": "zuordnungen",
-          "name": {
-            "de": "Zuordnungen",
-            "en": "Relations between quantities"
-          },
-          "iCan": "Ich kann Zuordnungen zwischen Größen in Tabellen, Schaubildern und mit Worten darstellen und beschreiben.",
-          "gradeBand": "7-8",
-          "requires": [
-            "koordinatensystem"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 1
-          },
-          "opens": 20,
-          "practisedBy": []
-        },
-        {
-          "id": "dreisatz",
-          "name": {
-            "de": "Dreisatz",
-            "en": "Rule of three"
-          },
-          "iCan": "Ich kann Sachaufgaben mit dem Dreisatz lösen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "grundrechenarten-rechengesetze",
-            "messen-laenge-masse-geld-zeit"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 16,
-          "practisedBy": []
-        },
-        {
-          "id": "massstab",
-          "name": {
-            "de": "Maßstab",
-            "en": "Scale"
-          },
-          "iCan": "Ich kann mit Maßstäben rechnen und Zeichnungen im passenden Maßstab lesen und anfertigen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "dreisatz",
-            "umrechnung-groessen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 5
-          },
-          "opens": 7,
-          "practisedBy": []
-        },
-        {
-          "id": "proportionale-zuordnungen",
-          "name": {
-            "de": "Proportionale Zuordnungen",
-            "en": "Direct proportion"
-          },
-          "iCan": "Ich kann proportionale Zuordnungen erkennen, darstellen und mit dem Proportionalitätsfaktor rechnen.",
-          "gradeBand": "7-8",
-          "requires": [
-            "zuordnungen",
-            "dreisatz"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 2
-          },
-          "opens": 13,
-          "practisedBy": []
-        },
-        {
-          "id": "antiproportionale-zuordnungen",
-          "name": {
-            "de": "Antiproportionale Zuordnungen",
-            "en": "Inverse proportion"
-          },
-          "iCan": "Ich kann antiproportionale Zuordnungen erkennen, darstellen und von proportionalen unterscheiden.",
-          "gradeBand": "7-8",
-          "requires": [
-            "zuordnungen",
-            "dreisatz"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 2
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "funktionsbegriff",
-          "name": {
-            "de": "Funktionsbegriff",
-            "en": "Concept of a function"
-          },
-          "iCan": "Ich kann erklären, was eine Funktion ist, und Funktionsterm, Graph, Definitionsmenge und Wertemenge unterscheiden.",
-          "gradeBand": "7-8",
-          "requires": [
-            "zuordnungen"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 2
-          },
-          "opens": 11,
-          "practisedBy": []
-        },
-        {
-          "id": "funktionen-darstellung",
-          "name": {
-            "de": "Darstellungen von Funktionen",
-            "en": "Representing functions"
-          },
-          "iCan": "Ich kann zwischen Funktionsgleichung, Wertetabelle und Graph wechseln.",
-          "gradeBand": "7-8",
-          "requires": [
-            "funktionsbegriff"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 3
-          },
-          "opens": 10,
-          "practisedBy": []
-        },
-        {
-          "id": "lineare-funktionen",
-          "name": {
-            "de": "Lineare Funktionen",
-            "en": "Linear functions"
-          },
-          "iCan": "Ich kann lineare Funktionen mit Gleichung, Tabelle und Graph beschreiben und Steigung und Achsenabschnitt deuten.",
-          "gradeBand": "7-8",
-          "requires": [
-            "proportionale-zuordnungen",
-            "funktionen-darstellung"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 4
-          },
-          "opens": 5,
-          "practisedBy": []
-        },
-        {
-          "id": "geradengleichungen",
-          "name": {
-            "de": "Geradengleichungen",
-            "en": "Equations of lines"
-          },
-          "iCan": "Ich kann die Gleichung einer Geraden aus zwei Punkten oder aus Punkt und Steigung bestimmen und Nullstelle und Schnittpunkt berechnen.",
-          "gradeBand": "7-8",
-          "requires": [
-            "lineare-funktionen",
-            "lineare-gleichungen"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 5
-          },
-          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1322,22 +1531,21 @@
           "practisedBy": []
         },
         {
-          "id": "bogenmass",
+          "id": "logarithmen",
           "name": {
-            "de": "Bogenmaß",
-            "en": "Radians"
+            "de": "Logarithmen",
+            "en": "Logarithms"
           },
-          "iCan": "Ich kann Winkel im Bogenmaß angeben und zwischen Grad- und Bogenmaß wechseln.",
+          "iCan": "Ich kann den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache Exponentialgleichungen lösen.",
           "gradeBand": "9-10",
           "requires": [
-            "trigonometrie",
-            "kreis-umfang-flaeche"
+            "exponentialfunktionen"
           ],
           "place": {
             "band": "9-10",
-            "step": 4
+            "step": 3
           },
-          "opens": 1,
+          "opens": 0,
           "practisedBy": []
         },
         {
@@ -1346,7 +1554,7 @@
             "de": "Sinus- und Kosinusfunktion",
             "en": "Sine and cosine functions"
           },
-          "iCan": "Ich kann Sinus- und Kosinusfunktion mit ihren Eigenschaften beschreiben und für periodische Vorgänge nutzen.",
+          "iCan": "Ich kann die Graphen der Sinus- und Kosinusfunktion am Einheitskreis herleiten und ihre Eigenschaften beschreiben.",
           "gradeBand": "9-10",
           "requires": [
             "bogenmass",
@@ -1356,6 +1564,24 @@
             "band": "9-10",
             "step": 5
           },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "periodische-vorgaenge",
+          "name": {
+            "de": "Periodische Vorgänge beschreiben",
+            "en": "Describing periodic processes"
+          },
+          "iCan": "Ich kann periodische Vorgänge mit Funktionen der Form f(x) = a·sin(b·x) beschreiben und Amplitude und Periode deuten.",
+          "gradeBand": "9-10",
+          "requires": [
+            "sinusfunktion"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 6
+          },
           "opens": 0,
           "practisedBy": []
         }
@@ -1364,8 +1590,8 @@
     {
       "id": "geometrie",
       "name": {
-        "de": "Geometrie",
-        "en": "Geometry"
+        "de": "Raum und Form",
+        "en": "Space and shape"
       },
       "competencies": [
         {
@@ -1381,25 +1607,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 51,
-          "practisedBy": []
-        },
-        {
-          "id": "grundfiguren-eben",
-          "name": {
-            "de": "Ebene Grundfiguren",
-            "en": "Basic plane shapes"
-          },
-          "iCan": "Ich kann ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben.",
-          "gradeBand": "5-6",
-          "requires": [
-            "parallel-senkrecht-abstand"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 3
-          },
-          "opens": 34,
+          "opens": 52,
           "practisedBy": []
         },
         {
@@ -1416,6 +1624,24 @@
           "place": {
             "band": "5-6",
             "step": 2
+          },
+          "opens": 36,
+          "practisedBy": []
+        },
+        {
+          "id": "grundfiguren-eben",
+          "name": {
+            "de": "Ebene Grundfiguren",
+            "en": "Basic plane shapes"
+          },
+          "iCan": "Ich kann ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben.",
+          "gradeBand": "5-6",
+          "requires": [
+            "parallel-senkrecht-abstand"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
           },
           "opens": 35,
           "practisedBy": []
@@ -1435,7 +1661,7 @@
             "band": "5-6",
             "step": 4
           },
-          "opens": 13,
+          "opens": 14,
           "practisedBy": []
         },
         {
@@ -1454,7 +1680,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 23,
+          "opens": 24,
           "practisedBy": []
         },
         {
@@ -1472,7 +1698,7 @@
             "band": "5-6",
             "step": 4
           },
-          "opens": 10,
+          "opens": 11,
           "practisedBy": []
         },
         {
@@ -1508,7 +1734,7 @@
             "band": "5-6",
             "step": 4
           },
-          "opens": 11,
+          "opens": 12,
           "practisedBy": []
         },
         {
@@ -1528,7 +1754,7 @@
             "band": "5-6",
             "step": 5
           },
-          "opens": 8,
+          "opens": 9,
           "practisedBy": []
         },
         {
@@ -1565,80 +1791,6 @@
             "step": 5
           },
           "opens": 2,
-          "practisedBy": []
-        },
-        {
-          "id": "einheiten-flaeche-volumen",
-          "name": {
-            "de": "Flächen- und Volumeneinheiten",
-            "en": "Units of area and volume"
-          },
-          "iCan": "Ich kann Flächen- und Volumeneinheiten umrechnen und ihre Größe einschätzen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "umrechnung-groessen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 3
-          },
-          "opens": 14,
-          "practisedBy": []
-        },
-        {
-          "id": "flaeche-umfang-quadrat-rechteck",
-          "name": {
-            "de": "Fläche und Umfang: Rechteck, Quadrat",
-            "en": "Area and perimeter: rectangles, squares"
-          },
-          "iCan": "Ich kann Flächeninhalt und Umfang von Quadrat und Rechteck berechnen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "grundfiguren-eben",
-            "einheiten-flaeche-volumen"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 13,
-          "practisedBy": []
-        },
-        {
-          "id": "zusammengesetzte-figuren",
-          "name": {
-            "de": "Zusammengesetzte Figuren",
-            "en": "Composite shapes"
-          },
-          "iCan": "Ich kann Flächeninhalt und Umfang zusammengesetzter Figuren durch Zerlegen berechnen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "flaeche-umfang-quadrat-rechteck"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 5
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "volumen-oberflaeche-quader-wuerfel",
-          "name": {
-            "de": "Volumen und Oberfläche: Quader, Würfel",
-            "en": "Volume and surface area: cuboids, cubes"
-          },
-          "iCan": "Ich kann Volumen und Oberflächeninhalt von Quader und Würfel berechnen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "flaeche-umfang-quadrat-rechteck",
-            "grundkoerper-quader-wuerfel"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 5
-          },
-          "opens": 3,
           "practisedBy": []
         },
         {
@@ -1694,7 +1846,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 9,
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -1713,7 +1865,7 @@
             "band": "7-8",
             "step": 2
           },
-          "opens": 7,
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -1773,25 +1925,6 @@
           "practisedBy": []
         },
         {
-          "id": "flaeche-umfang-dreieck-viereck",
-          "name": {
-            "de": "Fläche und Umfang: Dreieck, Viereck",
-            "en": "Area and perimeter: triangles, quadrilaterals"
-          },
-          "iCan": "Ich kann Flächeninhalt und Umfang von Dreieck und besonderen Vierecken berechnen.",
-          "gradeBand": "7-8",
-          "requires": [
-            "flaeche-umfang-quadrat-rechteck",
-            "vierecke-grundfiguren"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 1
-          },
-          "opens": 3,
-          "practisedBy": []
-        },
-        {
           "id": "grundkoerper-prisma-zylinder",
           "name": {
             "de": "Prisma und Zylinder",
@@ -1829,45 +1962,6 @@
           "practisedBy": []
         },
         {
-          "id": "volumen-oberflaeche-prisma",
-          "name": {
-            "de": "Volumen und Oberfläche: Prisma",
-            "en": "Volume and surface area: prisms"
-          },
-          "iCan": "Ich kann Volumen und Oberflächeninhalt von Prismen berechnen.",
-          "gradeBand": "7-8",
-          "requires": [
-            "volumen-oberflaeche-quader-wuerfel",
-            "flaeche-umfang-dreieck-viereck",
-            "grundkoerper-prisma-zylinder"
-          ],
-          "place": {
-            "band": "7-8",
-            "step": 2
-          },
-          "opens": 2,
-          "practisedBy": []
-        },
-        {
-          "id": "kreis-umfang-flaeche",
-          "name": {
-            "de": "Kreisumfang und Kreisfläche",
-            "en": "Circumference and area of circles"
-          },
-          "iCan": "Ich kann Umfang und Flächeninhalt eines Kreises berechnen und die Zahl Pi am Kreis erklären.",
-          "gradeBand": "9-10",
-          "requires": [
-            "flaeche-umfang-quadrat-rechteck",
-            "dezimalbrueche-rechnen"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 1
-          },
-          "opens": 4,
-          "practisedBy": []
-        },
-        {
           "id": "aehnlichkeit",
           "name": {
             "de": "Ähnlichkeit",
@@ -1884,7 +1978,7 @@
             "band": "9-10",
             "step": 1
           },
-          "opens": 6,
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1922,7 +2016,7 @@
             "band": "9-10",
             "step": 2
           },
-          "opens": 6,
+          "opens": 7,
           "practisedBy": []
         },
         {
@@ -1941,7 +2035,7 @@
             "band": "9-10",
             "step": 3
           },
-          "opens": 4,
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -1998,72 +2092,14 @@
           },
           "opens": 0,
           "practisedBy": []
-        },
-        {
-          "id": "volumen-oberflaeche-zylinder",
-          "name": {
-            "de": "Volumen und Oberfläche: Zylinder",
-            "en": "Volume and surface area: cylinders"
-          },
-          "iCan": "Ich kann Volumen und Oberflächeninhalt von Zylindern berechnen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "volumen-oberflaeche-prisma",
-            "kreis-umfang-flaeche"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 2
-          },
-          "opens": 1,
-          "practisedBy": []
-        },
-        {
-          "id": "volumen-oberflaeche-pyramide-kegel-kugel",
-          "name": {
-            "de": "Volumen und Oberfläche: Pyramide, Kegel, Kugel",
-            "en": "Volume and surface area: pyramids, cones, spheres"
-          },
-          "iCan": "Ich kann Volumen und Oberflächeninhalt von Pyramide, Kegel und Kugel berechnen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "volumen-oberflaeche-zylinder",
-            "satz-des-pythagoras",
-            "grundkoerper-pyramide-kegel-kugel"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 3
-          },
-          "opens": 0,
-          "practisedBy": []
-        },
-        {
-          "id": "berechnungen-dreiecke-vielecke",
-          "name": {
-            "de": "Berechnungen an Dreiecken und Vielecken",
-            "en": "Calculations in triangles and polygons"
-          },
-          "iCan": "Ich kann Streckenlängen und Winkel in Dreiecken und Vielecken mit Pythagoras, Ähnlichkeit und Trigonometrie berechnen.",
-          "gradeBand": "9-10",
-          "requires": [
-            "strahlensaetze",
-            "trigonometrie"
-          ],
-          "place": {
-            "band": "9-10",
-            "step": 4
-          },
-          "opens": 0,
-          "practisedBy": []
         }
       ]
     },
     {
       "id": "stochastik",
       "name": {
-        "de": "Stochastik",
-        "en": "Probability and statistics"
+        "de": "Daten und Zufall",
+        "en": "Data and chance"
       },
       "competencies": [
         {
@@ -2137,24 +2173,6 @@
             "step": 5
           },
           "opens": 2,
-          "practisedBy": []
-        },
-        {
-          "id": "zaehlprinzip",
-          "name": {
-            "de": "Zählprinzip",
-            "en": "Counting principle"
-          },
-          "iCan": "Ich kann mit dem Zählprinzip und Baumdiagrammen die Anzahl von Möglichkeiten bestimmen.",
-          "gradeBand": "5-6",
-          "requires": [
-            "grundrechenarten-rechengesetze"
-          ],
-          "place": {
-            "band": "5-6",
-            "step": 4
-          },
-          "opens": 6,
           "practisedBy": []
         },
         {
@@ -2483,13 +2501,13 @@
             "en": "Reading charts critically"
           },
           "iCan": "Ich kann Diagramme in Medien kritisch lesen und erkennen, wie sie täuschen können.",
-          "gradeBand": "7-8",
+          "gradeBand": "5-6",
           "requires": [
             "daten-darstellen"
           ],
           "place": {
-            "band": "7-8",
-            "step": 1
+            "band": "5-6",
+            "step": 4
           },
           "opens": 0,
           "practisedBy": []

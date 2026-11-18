@@ -50,7 +50,7 @@
             "band": "9-10",
             "step": 2
           },
-          "opens": 11,
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -112,6 +112,22 @@
           "practisedBy": []
         },
         {
+          "id": "temperatur",
+          "name": {
+            "de": "Temperatur messen",
+            "en": "Measuring temperature"
+          },
+          "iCan": "Ich kann Temperaturen mit einem Thermometer messen und in Grad Celsius angeben.",
+          "gradeBand": "5-6",
+          "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 8,
+          "practisedBy": []
+        },
+        {
           "id": "thermische-energie",
           "name": {
             "de": "Thermische Energie und Temperatur",
@@ -138,12 +154,11 @@
           "iCan": "Ich kann Wärmeleitung, Wärmemitführung (Konvektion) und Wärmestrahlung unterscheiden und Beispiele aus dem Alltag zuordnen.",
           "gradeBand": "9-10",
           "requires": [
-            "thermische-energie",
-            "waermestrahlung"
+            "thermische-energie"
           ],
           "place": {
             "band": "9-10",
-            "step": 2
+            "step": 1
           },
           "opens": 0,
           "practisedBy": []
@@ -256,7 +271,7 @@
             "band": "9-10",
             "step": 3
           },
-          "opens": 7,
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -341,12 +356,11 @@
           "iCan": "Ich kann die Energieumwandlungskette verschiedener Kraftwerksarten beschreiben und sie vergleichen.",
           "gradeBand": "9-10",
           "requires": [
-            "energieumwandlung",
-            "generator"
+            "energieumwandlung"
           ],
           "place": {
             "band": "9-10",
-            "step": 4
+            "step": 3
           },
           "opens": 1,
           "practisedBy": []
@@ -361,13 +375,12 @@
           "gradeBand": "9-10",
           "requires": [
             "energiespeicherung",
-            "stromversorgung",
             "energiequellen",
             "kraftwerksarten"
           ],
           "place": {
             "band": "9-10",
-            "step": 6
+            "step": 4
           },
           "opens": 0,
           "practisedBy": []
@@ -394,7 +407,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 34,
+          "opens": 32,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -420,7 +433,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 12,
+          "opens": 7,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -464,7 +477,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 15,
+          "opens": 10,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -490,7 +503,7 @@
             "band": "5-6",
             "step": 3
           },
-          "opens": 14,
+          "opens": 9,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -621,7 +634,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 8,
+          "opens": 6,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -697,6 +710,24 @@
             "band": "9-10",
             "step": 1
           },
+          "opens": 16,
+          "practisedBy": []
+        },
+        {
+          "id": "kern-huelle-modell",
+          "name": {
+            "de": "Kern und Hülle",
+            "en": "Nucleus and shell"
+          },
+          "iCan": "Ich kann ein Atom vereinfacht als positiv geladenen Kern mit negativ geladenen Elektronen in der Hülle beschreiben.",
+          "gradeBand": "9-10",
+          "requires": [
+            "elektrische-ladung"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
           "opens": 15,
           "practisedBy": []
         },
@@ -709,7 +740,7 @@
           "iCan": "Ich kann elektrostatische Phänomene aus dem Alltag wie Reibungselektrizität oder Blitze mit Ladungen erklären.",
           "gradeBand": "9-10",
           "requires": [
-            "atomaufbau"
+            "kern-huelle-modell"
           ],
           "place": {
             "band": "9-10",
@@ -733,7 +764,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 14,
+          "opens": 13,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -754,7 +785,7 @@
           "gradeBand": "9-10",
           "requires": [
             "stromstaerke",
-            "atomaufbau"
+            "kern-huelle-modell"
           ],
           "place": {
             "band": "9-10",
@@ -779,7 +810,7 @@
             "band": "7-8",
             "step": 2
           },
-          "opens": 10,
+          "opens": 5,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -805,7 +836,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 17,
+          "opens": 15,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -832,7 +863,7 @@
             "band": "7-8",
             "step": 2
           },
-          "opens": 10,
+          "opens": 5,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -860,7 +891,7 @@
             "band": "9-10",
             "step": 1
           },
-          "opens": 11,
+          "opens": 6,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -914,7 +945,7 @@
             "band": "9-10",
             "step": 2
           },
-          "opens": 9,
+          "opens": 4,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -940,7 +971,7 @@
             "band": "9-10",
             "step": 3
           },
-          "opens": 8,
+          "opens": 3,
           "practisedBy": [
             {
               "app": "elektrizitaet",
@@ -1034,13 +1065,14 @@
           "gradeBand": "9-10",
           "requires": [
             "leistung",
-            "ohmsches-gesetz-rechnen"
+            "stromstaerke",
+            "spannung"
           ],
           "place": {
             "band": "9-10",
             "step": 4
           },
-          "opens": 4,
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -1092,7 +1124,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 12,
+          "opens": 10,
           "practisedBy": []
         },
         {
@@ -1128,7 +1160,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 8,
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -1165,7 +1197,7 @@
             "band": "9-10",
             "step": 1
           },
-          "opens": 7,
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -1202,7 +1234,7 @@
             "band": "9-10",
             "step": 2
           },
-          "opens": 5,
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -1220,7 +1252,7 @@
             "band": "9-10",
             "step": 3
           },
-          "opens": 3,
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1238,7 +1270,7 @@
             "band": "9-10",
             "step": 3
           },
-          "opens": 2,
+          "opens": 1,
           "practisedBy": []
         },
         {
@@ -1258,7 +1290,7 @@
             "band": "9-10",
             "step": 5
           },
-          "opens": 1,
+          "opens": 0,
           "practisedBy": []
         }
       ]
@@ -1548,22 +1580,6 @@
       },
       "competencies": [
         {
-          "id": "temperatur",
-          "name": {
-            "de": "Temperatur messen",
-            "en": "Measuring temperature"
-          },
-          "iCan": "Ich kann Temperaturen mit einem Thermometer messen und in Grad Celsius angeben.",
-          "gradeBand": "5-6",
-          "requires": [],
-          "place": {
-            "band": "5-6",
-            "step": 1
-          },
-          "opens": 8,
-          "practisedBy": []
-        },
-        {
           "id": "geradlinige-lichtausbreitung",
           "name": {
             "de": "Geradlinige Lichtausbreitung",
@@ -1576,7 +1592,7 @@
             "band": "5-6",
             "step": 1
           },
-          "opens": 25,
+          "opens": 24,
           "practisedBy": []
         },
         {
@@ -1594,7 +1610,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 9,
+          "opens": 8,
           "practisedBy": []
         },
         {
@@ -1667,7 +1683,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 12,
+          "opens": 11,
           "practisedBy": []
         },
         {
@@ -1685,7 +1701,7 @@
             "band": "5-6",
             "step": 2
           },
-          "opens": 7,
+          "opens": 6,
           "practisedBy": []
         },
         {
@@ -1704,7 +1720,7 @@
             "band": "7-8",
             "step": 1
           },
-          "opens": 6,
+          "opens": 5,
           "practisedBy": []
         },
         {
@@ -1834,7 +1850,7 @@
             "band": "9-10",
             "step": 1
           },
-          "opens": 4,
+          "opens": 3,
           "practisedBy": []
         },
         {
@@ -1964,13 +1980,13 @@
           "iCan": "Ich kann den Aufbau eines Atoms aus Kern und Hülle beschreiben und Protonen, Neutronen und Elektronen unterscheiden.",
           "gradeBand": "9-10",
           "requires": [
-            "elektrische-ladung"
+            "kern-huelle-modell"
           ],
           "place": {
             "band": "9-10",
-            "step": 2
+            "step": 3
           },
-          "opens": 14,
+          "opens": 12,
           "practisedBy": []
         },
         {
@@ -1986,7 +2002,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 3
+            "step": 4
           },
           "opens": 11,
           "practisedBy": []
@@ -2005,7 +2021,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 4
+            "step": 5
           },
           "opens": 3,
           "practisedBy": []
@@ -2023,7 +2039,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 4
+            "step": 5
           },
           "opens": 3,
           "practisedBy": []
@@ -2041,7 +2057,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 4
+            "step": 5
           },
           "opens": 5,
           "practisedBy": []
@@ -2060,7 +2076,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 5
+            "step": 6
           },
           "opens": 2,
           "practisedBy": []
@@ -2078,7 +2094,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 6
+            "step": 7
           },
           "opens": 0,
           "practisedBy": []
@@ -2096,7 +2112,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 5
+            "step": 6
           },
           "opens": 2,
           "practisedBy": []
@@ -2114,7 +2130,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 6
+            "step": 7
           },
           "opens": 1,
           "practisedBy": []
@@ -2132,7 +2148,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 7
+            "step": 8
           },
           "opens": 0,
           "practisedBy": []
@@ -2151,7 +2167,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 5
+            "step": 6
           },
           "opens": 2,
           "practisedBy": []
@@ -2169,7 +2185,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 6
+            "step": 7
           },
           "opens": 0,
           "practisedBy": []
@@ -2188,7 +2204,7 @@
           ],
           "place": {
             "band": "9-10",
-            "step": 6
+            "step": 7
           },
           "opens": 0,
           "practisedBy": []

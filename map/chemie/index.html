@@ -131,12 +131,12 @@
           </th>
           <th scope="col">
             <a href="/apps/map/chemie/chemische-reaktion/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Chemische Reaktion</a>
-            <span class="block mt-1 text-sm text-slate-600">4 von 19 Bausteinen geübt</span>
-            <span aria-hidden="true" class="map-bar mt-2"><span style="width: 21%;"></span></span>
+            <span class="block mt-1 text-sm text-slate-600">4 von 20 Bausteinen geübt</span>
+            <span aria-hidden="true" class="map-bar mt-2"><span style="width: 20%;"></span></span>
           </th>
           <th scope="col">
             <a href="/apps/map/chemie/energie/" class="text-lg font-bold text-slate-900 underline underline-offset-2">Energie</a>
-            <span class="block mt-1 text-sm text-slate-600">0 von 10 Bausteinen geübt</span>
+            <span class="block mt-1 text-sm text-slate-600">0 von 9 Bausteinen geübt</span>
             <span aria-hidden="true" class="map-bar mt-2"><span style="width: 0%;"></span></span>
           </th>
         </tr>
@@ -711,6 +711,14 @@
 </li>
 
               
+<li data-competency="galvanisches-element">
+  <a href="/apps/map/chemie/c/galvanisches-element/" class="map-chip map-chip-gap" data-opens="detail-galvanisches-element">
+    <span>Galvanisches Element</span>
+    <span class="sr-only">(Lücke, noch keine App)</span>
+  </a>
+</li>
+
+              
 <li data-competency="saeure-base-reaktion">
   <a href="/apps/map/chemie/c/saeure-base-reaktion/" class="map-chip map-chip-gap" data-opens="detail-saeure-base-reaktion">
     <span>Säure-Base-Reaktion</span>
@@ -766,14 +774,6 @@
 <li data-competency="energie-beim-loesen-von-salzen">
   <a href="/apps/map/chemie/c/energie-beim-loesen-von-salzen/" class="map-chip map-chip-gap" data-opens="detail-energie-beim-loesen-von-salzen">
     <span>Lösungswärme von Salzen</span>
-    <span class="sr-only">(Lücke, noch keine App)</span>
-  </a>
-</li>
-
-              
-<li data-competency="galvanisches-element">
-  <a href="/apps/map/chemie/c/galvanisches-element/" class="map-chip map-chip-gap" data-opens="detail-galvanisches-element">
-    <span>Galvanisches Element</span>
     <span class="sr-only">(Lücke, noch keine App)</span>
   </a>
 </li>
@@ -1986,6 +1986,25 @@
 </template>
 
 
+<template id="detail-galvanisches-element" data-kind="Baustein · Chemische Reaktion">
+  <p data-dialog-title>Galvanisches Element</p>
+  <div data-dialog-body>
+    <p class="m-0">Ich kann erklären, wie in einer Batterie oder einem galvanischen Element chemische Energie in elektrische Energie umgewandelt wird.</p>
+    <dl class="map-facts">
+      <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
+      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
+<a href="/apps/map/chemie/c/redoxreaktion-als-elektronenuebergang/" class="text-blue-700 underline underline-offset-2"><span>Redoxreaktion als Elektronenübertragung</span></a>
+</li><li>
+<a href="/apps/map/chemie/c/energieumwandlung-bei-reaktionen/" class="text-blue-700 underline underline-offset-2"><span>Energieumwandlung bei Reaktionen</span></a> <span class="text-slate-600">· Strang Energie</span>
+</li></ul></dd></div>
+      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
+</dd></div>
+    </dl>
+    <p class="m-0"><a href="/apps/map/chemie/c/galvanisches-element/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
+  </div>
+</template>
+
+
 <template id="detail-saeure-base-reaktion" data-kind="Baustein · Chemische Reaktion">
   <p data-dialog-title>Säure-Base-Reaktion</p>
   <div data-dialog-body>
@@ -2217,25 +2236,6 @@
 </dd></div>
     </dl>
     <p class="m-0"><a href="/apps/map/chemie/c/energie-beim-loesen-von-salzen/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
-  </div>
-</template>
-
-
-<template id="detail-galvanisches-element" data-kind="Baustein · Energie">
-  <p data-dialog-title>Galvanisches Element</p>
-  <div data-dialog-body>
-    <p class="m-0">Ich kann erklären, wie in einer Batterie oder einem galvanischen Element chemische Energie in elektrische Energie umgewandelt wird.</p>
-    <dl class="map-facts">
-      <div><dt>Richtstufe</dt><dd>Klasse 9/10</dd></div>
-      <div><dt>Baut auf</dt><dd><ul class="list-none p-0 m-0 flex flex-col gap-1"><li>
-<a href="/apps/map/chemie/c/redoxreaktion-als-elektronenuebergang/" class="text-blue-700 underline underline-offset-2"><span>Redoxreaktion als Elektronenübertragung</span></a> <span class="text-slate-600">· Strang Chemische Reaktion</span>
-</li><li>
-<a href="/apps/map/chemie/c/energieumwandlung-bei-reaktionen/" class="text-blue-700 underline underline-offset-2"><span>Energieumwandlung bei Reaktionen</span></a>
-</li></ul></dd></div>
-      <div><dt>Geübt in</dt><dd>noch keine App – Lücke
-</dd></div>
-    </dl>
-    <p class="m-0"><a href="/apps/map/chemie/c/galvanisches-element/" class="btn btn-primary">Alle Angaben zum Baustein</a></p>
   </div>
 </template>
 
