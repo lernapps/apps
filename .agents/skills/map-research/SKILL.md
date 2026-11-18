@@ -22,7 +22,16 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
 ## Method
 
 - **Strands:** the KMK areas as they are. Split or merge one only with a reason in the report; a strand needs at least
-  as many competencies as one app can cover in several school years.
+  as many competencies as one app can cover in several school years. Where the KMK has **Leitideen** that cut across
+  Sachgebiete (Mathematik: Zahl und Operation, Größen und Messen, Strukturen und funktionaler Zusammenhang, Raum und
+  Form, Daten und Zufall, KMK 2022 S. 6-7), the strands are the Leitideen, not the Sachgebiete: two strands that need
+  each other in the same band are a sign that one Leitidee was cut in two (lernapps/apps branch
+  `claude/lernlandkarten-content-structure-uesnsl`, KD-24). A strand id used by an app stays; rename the strand instead.
+- **The strand of a Baustein** is where its content is taught, read from its `iCan` and its sources, not where its
+  concept is filed in the abstract: `herrschaftsformen` ("Herrscher der Antike einer Herrschaftsform zuordnen") belongs
+  to Antike, not to Grundbegriffe; `kern-huelle-modell` for electrostatics belongs to Elektrizitätslehre, the full
+  `atomaufbau` to Ionisierende Strahlung. If most neighbours of a Baustein lie in another strand, check its strand
+  (`probe.mjs`, KD-23). A Baustein used by an app stays in the app's strand.
 - **A competency** belongs in the map if the KMK names it, or two of the three Länder do, or it is a prerequisite of
   one of those. Fine-grained: one competency is what one page of an app can teach. The size of the map follows from
   that, there is no target number: never merge competencies to keep a map small; split one when it teaches better.
@@ -36,6 +45,31 @@ The format is `docs/learning-map-contract.md`; the reasons are the KD-xx of `.vi
   3 → "9-10". A stage without grades votes for every part it covers. What counts is the order and that the bands do
   not clump: if one band holds more than half of a strand, spread it along `requires` and give the reason.
 - **Basic vocabulary** of a language (which words come first, by CEFR level): skill `map-vocabulary`, not this one.
+- **requires is specific** (lernapps/apps branch `claude/lernlandkarten-content-structure-uesnsl`, KD-21): an edge
+  means "without B, A cannot be understood", and it points at the **smallest** Baustein that is really needed. Test
+  each edge: does A need all of B, or only one aspect of it? If only an aspect (a simple Kern-Hülle model, not the
+  whole `atomaufbau` of nuclear physics; alternating voltage, not the whole `generator`), point at that aspect, and if
+  the map lacks it, propose a small Baustein for it. A topic that only belongs to the same context, an application or
+  a judgement that draws on another area ("Energieversorgung bewerten" and the power grid) is no `requires`: name it
+  in the comment as `Siehe auch: <id>`. Edges that close a circle among explainers (skill `map-explainers`) are the
+  first to check.
+- **Probe the map** after every change of strands or `requires`:
+  `node .agents/skills/map-research/scripts/probe.mjs <subject>`. It reports (a report, not a test):
+  1. circles between cells strand × grade band (two strands that need each other in the same band) with the edges
+     inside them. For each edge: a real prerequisite? the smallest Baustein needed? For an edge into **another strand**
+     also: is the Baustein in the right strand (KD-23)? A wrong strand is fixed by moving the Baustein, a wrong edge by
+     the rule above. Real interleaving of two strands in one band is a reason to ask whether they are one strand
+     (as Algebra and Funktionen, one KMK Leitidee).
+  2. only with `explainerFocus: strand`: Bausteine whose neighbours (requires and required by) lie mostly in another
+     strand: is their strand right?
+  A Baustein or strand id used by an app stays (see below); moving a Baustein out of an app's strand breaks its listing.
+- **What is no requires** (KD-21): a Land naming two contents together (a bundle in one unit) is a hint for a common
+  explainer, not an edge, unless one is needed to understand the other; an application or judgement that draws on
+  another area ("Energieversorgung bewerten" and the power grid) is `Siehe auch`; a method that only needs some
+  example (`kartierung` and a Stadtviertel) needs no edge to the example. What is a requires: in languages, fixed
+  phrases before the rule (`imperativ` → `classroom-phrases`, PT 4.3), a form before its use in a situation.
+- **A Baustein alone in its cell** (one strand, one band) is a reason to check its band against the votes, not to
+  move it without a source: a band changes only by the vote rule below.
 - **requires:** only what is needed directly; never a later grade band; across strands allowed; no cycles. A unit
   app across strands is checked against `requires` page by page, so a dependency teachers rely on (a verb group before
   a grammar topic) must be in it.

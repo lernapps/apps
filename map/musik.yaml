@@ -9,6 +9,7 @@
 #   NW = Kernlehrplan Musik Gymnasium Sek I, Nordrhein-Westfalen (2019), Ordnungssysteme musikalischer Strukturen
 #   RP = Lehrplan Musik Sek I, Rheinland-Pfalz (2018), Kap. 4.2 und 5.1
 #   GIML = Gordon Institute for Music Learning: Music Learning Theory, Seite „Methodology“ (https://giml.org/mlt/methodology/); nur für requires
+# KD-26: Notation ist die Schreibweise von Rhythmus und Tonhöhe (BY LB4 „Musik und ihre Grundlagen“ lehrt die Grundlagen zusammen); es gibt keinen eigenen Strang Notation, jeder Baustein steht im Strang seines Inhalts.
 # requires: Neue und geänderte Kanten sind am Baustein begründet („# requires <id>: …“), die übrigen über die Fundstellen; Methode: Skill map-research.
 name: { de: Musik, en: Music }
 source:
@@ -54,6 +55,36 @@ strands:
         iCan: { de: "Ich kann die Parameter in einem Musikstück genau heraushören und mit den Fachwörtern benennen." }
         gradeBand: "9-10"
         requires: [verlaeufe-hoeren]
+      # KC Inhaltsfeld Zeichen (Grafiken); G9 Hören ohne Noten 5 (Hörverläufe grafisch); NW 5/6 (grafische Notation)
+      # Strang hoerkultur statt Notation (KD-26): Grafische Notation hält Hörverläufe fest (G9 Hören ohne Noten 5); sie braucht nur parameter-nennen.
+      - id: grafisch-notieren
+        name: { de: "Grafische Notation erstellen", en: "Creating graphic notation" }
+        iCan: { de: "Ich kann Musik mit eigenen Zeichen als Grafik aufschreiben." }
+        gradeBand: "5-6"
+        requires: [parameter-nennen]
+      # G9 Hören mit Noten 5/6 (Klangpartitur, Hörpartituren); NW 5/6 Rezeption (einfache Notationen benennen)
+      # Strang hoerkultur statt Notation (KD-26): Eine Hörpartitur liest man beim Hören mit (G9 Hören mit Noten 5/6).
+      - id: hoerpartitur-verfolgen
+        name: { de: "Hörpartitur mitlesen", en: "Following a listening map" }
+        iCan: { de: "Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist." }
+        gradeBand: "5-6"
+        requires: [grafisch-notieren]
+      # G9 Hören mit Noten 6/8 (Einzelstimmen in einfachen Partituren, Klavierauszug); BY Mu7 LB4 (Partiturausschnitte lesen); NW Sek I Ende (Partitur)
+      # Strang hoerkultur statt Notation (KD-26): Eine Stimme beim Hören in der Partitur verfolgen ist Hören mit Noten (G9 Hören mit Noten 6/8).
+      # bassschluessel steht bei partitur-orientieren: Eine Stimme im Ausschnitt zu verfolgen braucht nur das Notenlesen (melodie-lesen); erst die ganze Partitur verlangt jeden Schlüssel.
+      - id: partitur-mitlesen
+        name: { de: "Partiturausschnitt mitlesen", en: "Following a score excerpt" }
+        iCan: { de: "Ich kann in einem Partiturausschnitt eine Stimme verfolgen und beim Hören mitlesen." }
+        gradeBand: "7-8"
+        requires: [melodie-lesen, ensembles-besetzungen]
+      # G9 Hören mit Noten 10 (Orientierung in der Partitur, Auffinden von Gehörtem); BY Mu9/Mu10 LB4 (Einzelstimmen und Stimmgruppen in Partituren verfolgen)
+      # Strang hoerkultur statt Notation (KD-26): Gehörtes in der Partitur wiederfinden ist Hören mit Noten (G9 Hören mit Noten 10).
+      # requires bassschluessel: In der Orchesterpartitur stehen die tiefen Stimmen im Bassschlüssel; Stimmgruppen verfolgen heißt auch sie lesen (BY Mu9/Mu10 LB4 „Einzelstimmen und Stimmgruppen in Partituren verfolgen“)
+      - id: partitur-orientieren
+        name: { de: "Orchesterpartitur", en: "Orchestral score" }
+        iCan: { de: "Ich kann mich in einer Orchesterpartitur zurechtfinden und Gehörtes darin wiederfinden." }
+        gradeBand: "9-10"
+        requires: [partitur-mitlesen, bassschluessel]
       # KC Kap. 6 Inhaltsfeld Hörkultur (Stille erfahren, Hörlandschaften); RP 4.2.4 (Klangereignisse der Umwelt)
       - id: hoerlandschaft-entdecken
         name: { de: "Stille und Umweltgeräusche", en: "Silence and soundscapes" }
@@ -257,6 +288,48 @@ strands:
         iCan: { de: "Ich kann erklären, dass der Rhythmus aus Tempo und Tondauer entsteht, und ihn vom Grundschlag unterscheiden." }
         gradeBand: "5-6"
         requires: [grundschlag-finden, tondauer-hoeren]
+      # G9 Tondauer/Rhythmus 5 (Noten- und Pausenwerte); BY Mu5 LB4 (bis zum Sechzehntelwert); NW 5/6 Notation (Tondauern)
+      # Strang rhythmus-takt statt Notation (KD-26): Notenwerte sind die Schreibweise der Tondauer; BY LB4 und G9 Tondauer/Rhythmus lehren sie mit dem Rhythmus.
+      - id: notenwerte-erkennen
+        name: { de: "Notenwerte", en: "Note values" }
+        iCan: { de: "Ich kann ganze, halbe, Viertel- und Achtelnoten unterscheiden und ihre Dauer vergleichen." }
+        gradeBand: "5-6"
+        requires: [tondauer-hoeren]
+      # G9 Tondauer/Rhythmus 5 (Noten- und Pausenwerte); BY Mu5 LB4
+      # Strang rhythmus-takt statt Notation (KD-26): Pausenwerte gehören zu den Notenwerten (G9 Tondauer/Rhythmus 5).
+      - id: pausen-kennen
+        name: { de: "Pausenzeichen", en: "Rests" }
+        iCan: { de: "Ich kann Pausenzeichen lesen und weiß, dass eine Pause genauso lange dauert wie die Note mit gleichem Namen." }
+        gradeBand: "5-6"
+        requires: [notenwerte-erkennen]
+      # G9 Tondauer/Rhythmus 5 (Punktierung); RP Notenwerte, Pausen, Punktierung
+      # Strang rhythmus-takt statt Notation (KD-26): Punktierung verlängert die Tondauer (G9 Tondauer/Rhythmus 5).
+      - id: punktierung
+        name: { de: "Punktierte Noten", en: "Dotted notes" }
+        iCan: { de: "Ich kann punktierte Noten lesen und ihre Dauer berechnen." }
+        gradeBand: "5-6"
+        requires: [notenwerte-erkennen]
+      # G9 Tondauer/Rhythmus und Takt/Metrum 5; KC 7.1 Zeichen
+      # Strang rhythmus-takt statt Notation (KD-26): Notenwerte im Takt zusammenzählen ist Rhythmus und Takt (G9 Tondauer/Rhythmus und Takt/Metrum 5).
+      - id: notenwerte-im-takt
+        name: { de: "Notenwerte im Takt", en: "Note values in a bar" }
+        iCan: { de: "Ich kann Notenwerte und Pausen zusammenzählen und sagen, ob sie in einen Takt passen." }
+        gradeBand: "5-6"
+        requires: [notenwerte-erkennen, taktarten-unterscheiden]
+      # KC 7.1 Musik machen (Zeichen und Notationen lesen und in Klang umsetzen); G9 Gestalten mit Instrumenten 5 (Rhythmen nach Noten)
+      # Strang rhythmus-takt statt Notation (KD-26): Einen notierten Rhythmus lesen und klatschen ist Rhythmusarbeit.
+      - id: rhythmus-lesen
+        name: { de: "Rhythmen lesen", en: "Reading rhythms" }
+        iCan: { de: "Ich kann einen notierten Rhythmus lesen und in Klang umsetzen." }
+        gradeBand: "5-6"
+        requires: [notenwerte-im-takt, rhythmus-nachklatschen]
+      # KC 7.1 Musik machen (Musik notieren); BY Mu5 LB4 (rhythmische Folgen hörend erfassen und notieren, nur MuG)
+      # Strang rhythmus-takt statt Notation (KD-26): Einen Rhythmus aufschreiben ist die Schreibweise des Rhythmus.
+      - id: rhythmus-notieren
+        name: { de: "Rhythmen notieren", en: "Writing down rhythms" }
+        iCan: { de: "Ich kann einen Rhythmus, den ich gehört oder erfunden habe, in Notenwerten aufschreiben." }
+        gradeBand: "5-6"
+        requires: [notenwerte-im-takt]
       # KC Inhaltsfeld Parameter (Tempo); G9 Weitere Parameter 5 (langsam - schnell)
       - id: tempo-hoeren
         name: { de: "Schnelles und langsames Tempo", en: "Fast and slow tempo" }
@@ -350,6 +423,49 @@ strands:
         iCan: { de: "Ich kann Halbtonschritte auf der Klaviatur abzählen." }
         gradeBand: "5-6"
         requires: [klaviatur-tasten]
+      # G9 Tonhöhe/Melodik 5 (Violinschlüssel); BY Mu5 LB4 (traditionelle Notenschrift lesen und schreiben); NW 5/6 Notation
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Das Notensystem zeigt die Tonhöhe (G9 Tonhöhe/Melodik 5, BY Mu5 LB4).
+      - id: notensystem
+        name: { de: "Notensystem und Violinschlüssel", en: "Staff and treble clef" }
+        iCan: { de: "Ich kann das Notensystem mit seinen fünf Linien und den Violinschlüssel beschreiben." }
+        gradeBand: "5-6"
+        requires: [tonhoehe-hoch-tief]
+      # G9 Tonhöhe/Melodik 5 (Stammtöne); BY Mu5 LB4 (Tonhöhen im Violinschlüssel); RP Notennamen
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Notennamen sind die Schreibweise der Tonhöhe (G9 Tonhöhe/Melodik 5 Stammtöne).
+      - id: noten-benennen
+        name: { de: "Notennamen", en: "Note names" }
+        iCan: { de: "Ich kann Noten auf Linien, in Zwischenräumen und auf Hilfslinien erkennen und mit ihrem Namen benennen." }
+        gradeBand: "5-6"
+        requires: [notensystem, klaviatur-tasten]
+      # G9 Tonhöhe/Melodik 6 (Bass-Schlüssel); BY Mu5 LB4 (Violin- und Bassschlüssel); NW Sek I Ende (Bassschlüssel)
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Der Schlüssel legt die Tonhöhe fest (G9 Tonhöhe/Melodik 6).
+      - id: bassschluessel
+        name: { de: "Bassschlüssel", en: "Bass clef" }
+        iCan: { de: "Ich kann den Bassschlüssel lesen und die Noten darin benennen." }
+        gradeBand: "5-6"
+        requires: [noten-benennen]
+      # BY Mu5 LB4 (Kreuz- und b-Vorzeichen, Auflösungszeichen); NW 5/6 Notation (Vorzeichen); RP Vorzeichen
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Versetzungszeichen erhöhen oder erniedrigen Töne; Nachbarn halbtonschritte und tonart-vorzeichen.
+      - id: vorzeichen-lesen
+        name: { de: "Versetzungszeichen", en: "Accidentals" }
+        iCan: { de: "Ich kann Kreuz, b und Auflösungszeichen lesen und erhöhte oder erniedrigte Töne spielen." }
+        gradeBand: "5-6"
+        requires: [noten-benennen, halbtonschritte]
+      # KC 7.1 Musik machen (Notationen lesen); G9 Gestalten mit Instrumenten 5/6 (Melodien nach Noten); Übergangsprofil
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Eine Melodie lesen heißt Tonhöhen aus Noten ablesen; Nachbarn noten-benennen und melodie-notieren.
+      # requires tonfolge-nachsingen: Noten liest man erst, wenn man Tonfolgen hörend nachsingen kann, so wie Rhythmen lesen auf Rhythmen nachklatschen aufbaut (GIML Methodology, „Sequence“: „learn to read notation …, but only after they have developed the ability to audiate the note patterns“; erste Stufe „aural/oral“: hören und nachsingen)
+      - id: melodie-lesen
+        name: { de: "Melodien lesen", en: "Reading melodies" }
+        iCan: { de: "Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen." }
+        gradeBand: "5-6"
+        requires: [noten-benennen, rhythmus-lesen, tonfolge-nachsingen]
+      # KC 7.1 Musik machen (Musik notieren); BY Mu6 LB4 (Tonfolgen nach dem Höreindruck notieren, nur MuG)
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Eine Melodie aufschreiben ist die Schreibweise der Tonhöhe.
+      - id: melodie-notieren
+        name: { de: "Melodien notieren", en: "Writing down melodies" }
+        iCan: { de: "Ich kann eine kurze Melodie in Noten aufschreiben." }
+        gradeBand: "5-6"
+        requires: [noten-benennen, rhythmus-notieren]
       # G9 Tonhöhe/Melodik 5 (Ganz- und Halbtonschritt, Tonskala); BY Mu5 LB4
       - id: tonleiter-ganzton-halbton
         name: { de: "Ganzton und Halbton", en: "Tones and semitones" }
@@ -477,6 +593,13 @@ strands:
         iCan: { de: "Ich kann einen Dominantseptakkord bilden und in einer Kadenz erkennen." }
         gradeBand: "7-8"
         requires: [hauptfunktionen]
+      # G9 Hören mit Noten 8 (Akkordnotationen/Leadsheet); BY Mu7 LB4 (Akkordfolgen notieren, Liedbegleitung nach Akkordsymbolen); NW Sek I Ende (Akkordbezeichnungen)
+      # Strang tonhoehe-harmonik statt Notation (KD-26): Akkordsymbole benennen Dreiklänge; alle Quellen lehren sie in der Harmonik (BY Mu7 LB4, NW Akkordbezeichnungen, G9 Hören mit Noten 8).
+      - id: akkordsymbole
+        name: { de: "Akkordsymbole im Leadsheet", en: "Chord symbols in a lead sheet" }
+        iCan: { de: "Ich kann Akkordsymbole in einem Leadsheet lesen und ein Lied damit begleiten." }
+        gradeBand: "7-8"
+        requires: [dreiklangsarten, melodie-lesen]
       # NW Sek I Ende (Intervalle rein, klein, groß, vermindert, übermäßig); BY Mu6 LB4 (übermäßige und verminderte, nur MuG)
       - id: intervalle-erkennen-singen
         name: { de: "Alle Intervalle hören und singen", en: "Hearing and singing all intervals" }
@@ -489,136 +612,6 @@ strands:
         iCan: { de: "Ich kann Musik mit Kadenzharmonik von Musik mit freier Harmonik oder Clustern unterscheiden." }
         gradeBand: "9-10"
         requires: [kadenz, konsonanz-dissonanz]
-  - id: zeichen
-    name: { de: "Notation und Zeichen", en: "Notation and signs" }
-    competencies:
-      # G9 Tonhöhe/Melodik 5 (Violinschlüssel); BY Mu5 LB4 (traditionelle Notenschrift lesen und schreiben); NW 5/6 Notation
-      - id: notensystem
-        name: { de: "Notensystem und Violinschlüssel", en: "Staff and treble clef" }
-        iCan: { de: "Ich kann das Notensystem mit seinen fünf Linien und den Violinschlüssel beschreiben." }
-        gradeBand: "5-6"
-        requires: [tonhoehe-hoch-tief]
-      # G9 Tonhöhe/Melodik 5 (Stammtöne); BY Mu5 LB4 (Tonhöhen im Violinschlüssel); RP Notennamen
-      - id: noten-benennen
-        name: { de: "Notennamen", en: "Note names" }
-        iCan: { de: "Ich kann Noten auf Linien, in Zwischenräumen und auf Hilfslinien erkennen und mit ihrem Namen benennen." }
-        gradeBand: "5-6"
-        requires: [notensystem, klaviatur-tasten]
-      # G9 Tonhöhe/Melodik 6 (Bass-Schlüssel); BY Mu5 LB4 (Violin- und Bassschlüssel); NW Sek I Ende (Bassschlüssel)
-      - id: bassschluessel
-        name: { de: "Bassschlüssel", en: "Bass clef" }
-        iCan: { de: "Ich kann den Bassschlüssel lesen und die Noten darin benennen." }
-        gradeBand: "5-6"
-        requires: [noten-benennen]
-      # BY Mu5 LB4 (Kreuz- und b-Vorzeichen, Auflösungszeichen); NW 5/6 Notation (Vorzeichen); RP Vorzeichen
-      - id: vorzeichen-lesen
-        name: { de: "Versetzungszeichen", en: "Accidentals" }
-        iCan: { de: "Ich kann Kreuz, b und Auflösungszeichen lesen und erhöhte oder erniedrigte Töne spielen." }
-        gradeBand: "5-6"
-        requires: [noten-benennen, halbtonschritte]
-      # G9 Tondauer/Rhythmus 5 (Noten- und Pausenwerte); BY Mu5 LB4 (bis zum Sechzehntelwert); NW 5/6 Notation (Tondauern)
-      - id: notenwerte-erkennen
-        name: { de: "Notenwerte", en: "Note values" }
-        iCan: { de: "Ich kann ganze, halbe, Viertel- und Achtelnoten unterscheiden und ihre Dauer vergleichen." }
-        gradeBand: "5-6"
-        requires: [tondauer-hoeren]
-      # G9 Tondauer/Rhythmus 5 (Noten- und Pausenwerte); BY Mu5 LB4
-      - id: pausen-kennen
-        name: { de: "Pausenzeichen", en: "Rests" }
-        iCan: { de: "Ich kann Pausenzeichen lesen und weiß, dass eine Pause genauso lange dauert wie die Note mit gleichem Namen." }
-        gradeBand: "5-6"
-        requires: [notenwerte-erkennen]
-      # G9 Tondauer/Rhythmus 5 (Punktierung); RP Notenwerte, Pausen, Punktierung
-      - id: punktierung
-        name: { de: "Punktierte Noten", en: "Dotted notes" }
-        iCan: { de: "Ich kann punktierte Noten lesen und ihre Dauer berechnen." }
-        gradeBand: "5-6"
-        requires: [notenwerte-erkennen]
-      # G9 Tondauer/Rhythmus und Takt/Metrum 5; KC 7.1 Zeichen
-      - id: notenwerte-im-takt
-        name: { de: "Notenwerte im Takt", en: "Note values in a bar" }
-        iCan: { de: "Ich kann Notenwerte und Pausen zusammenzählen und sagen, ob sie in einen Takt passen." }
-        gradeBand: "5-6"
-        requires: [notenwerte-erkennen, taktarten-unterscheiden]
-      # KC 7.1 Musik machen (Zeichen und Notationen lesen und in Klang umsetzen); G9 Gestalten mit Instrumenten 5 (Rhythmen nach Noten)
-      - id: rhythmus-lesen
-        name: { de: "Rhythmen lesen", en: "Reading rhythms" }
-        iCan: { de: "Ich kann einen notierten Rhythmus lesen und in Klang umsetzen." }
-        gradeBand: "5-6"
-        requires: [notenwerte-im-takt, rhythmus-nachklatschen]
-      # KC 7.1 Musik machen (Notationen lesen); G9 Gestalten mit Instrumenten 5/6 (Melodien nach Noten); Übergangsprofil
-      # requires tonfolge-nachsingen: Noten liest man erst, wenn man Tonfolgen hörend nachsingen kann, so wie Rhythmen lesen auf Rhythmen nachklatschen aufbaut (GIML Methodology, „Sequence“: „learn to read notation …, but only after they have developed the ability to audiate the note patterns“; erste Stufe „aural/oral“: hören und nachsingen)
-      - id: melodie-lesen
-        name: { de: "Melodien lesen", en: "Reading melodies" }
-        iCan: { de: "Ich kann eine kurze Melodie aus Noten ablesen und anhören oder singen." }
-        gradeBand: "5-6"
-        requires: [noten-benennen, rhythmus-lesen, tonfolge-nachsingen]
-      # KC 7.1 Musik machen (Musik notieren); BY Mu5 LB4 (rhythmische Folgen hörend erfassen und notieren, nur MuG)
-      - id: rhythmus-notieren
-        name: { de: "Rhythmen notieren", en: "Writing down rhythms" }
-        iCan: { de: "Ich kann einen Rhythmus, den ich gehört oder erfunden habe, in Notenwerten aufschreiben." }
-        gradeBand: "5-6"
-        requires: [notenwerte-im-takt]
-      # KC 7.1 Musik machen (Musik notieren); BY Mu6 LB4 (Tonfolgen nach dem Höreindruck notieren, nur MuG)
-      - id: melodie-notieren
-        name: { de: "Melodien notieren", en: "Writing down melodies" }
-        iCan: { de: "Ich kann eine kurze Melodie in Noten aufschreiben." }
-        gradeBand: "5-6"
-        requires: [noten-benennen, rhythmus-notieren]
-      # KC Inhaltsfeld Zeichen (Grafiken); G9 Hören ohne Noten 5 (Hörverläufe grafisch); NW 5/6 (grafische Notation)
-      - id: grafisch-notieren
-        name: { de: "Grafische Notation erstellen", en: "Creating graphic notation" }
-        iCan: { de: "Ich kann Musik mit eigenen Zeichen als Grafik aufschreiben." }
-        gradeBand: "5-6"
-        requires: [parameter-nennen]
-      # KC 7.1 Musik machen (Zeichen in Klang umsetzen); G9 6/09 (Realisieren nach grafischer Notation)
-      - id: grafik-musizieren
-        name: { de: "Nach grafischer Notation spielen", en: "Playing from graphic notation" }
-        iCan: { de: "Ich kann nach einer grafischen Notation Klänge machen." }
-        gradeBand: "5-6"
-        requires: [grafisch-notieren]
-      # KC Inhaltsfeld Zeichen (Gesten); G9 Gestalten durch körperliche Umsetzung 5/6 (Dirigierbewegungen)
-      - id: gesten-verstehen
-        name: { de: "Musikalische Handzeichen", en: "Musical hand signs" }
-        iCan: { de: "Ich kann Handzeichen und Gesten, die Musik anzeigen, verstehen und darauf reagieren." }
-        gradeBand: "5-6"
-        requires: [aufeinander-hoeren]
-      # G9 Hören mit Noten 5/6 (Klangpartitur, Hörpartituren); NW 5/6 Rezeption (einfache Notationen benennen)
-      - id: hoerpartitur-verfolgen
-        name: { de: "Hörpartitur mitlesen", en: "Following a listening map" }
-        iCan: { de: "Ich kann beim Hören einer Hörpartitur oder Klangpartitur mitlesen und die Stelle zeigen, an der die Musik gerade ist." }
-        gradeBand: "5-6"
-        requires: [grafisch-notieren]
-      # G9 Hören mit Noten 8 (Akkordnotationen/Leadsheet); BY Mu7 LB4 (Akkordfolgen notieren, Liedbegleitung nach Akkordsymbolen); NW Sek I Ende (Akkordbezeichnungen)
-      - id: akkordsymbole
-        name: { de: "Akkordsymbole im Leadsheet", en: "Chord symbols in a lead sheet" }
-        iCan: { de: "Ich kann Akkordsymbole in einem Leadsheet lesen und ein Lied damit begleiten." }
-        gradeBand: "7-8"
-        requires: [dreiklangsarten, melodie-lesen]
-      # G9 Hören mit Noten 6/8 (Einzelstimmen in einfachen Partituren, Klavierauszug); BY Mu7 LB4 (Partiturausschnitte lesen); NW Sek I Ende (Partitur)
-      - id: partitur-mitlesen
-        name: { de: "Partiturausschnitt mitlesen", en: "Following a score excerpt" }
-        iCan: { de: "Ich kann in einem Partiturausschnitt eine Stimme verfolgen und beim Hören mitlesen." }
-        gradeBand: "7-8"
-        requires: [melodie-lesen, bassschluessel, ensembles-besetzungen]
-      # KC Kap. 6 Musik machen (grafisch und traditionell notieren)
-      - id: traditionell-und-grafisch-notieren
-        name: { de: "Traditionell und grafisch notieren", en: "Traditional and graphic notation" }
-        iCan: { de: "Ich kann ein Musikstück sowohl grafisch als auch in traditioneller Notenschrift festhalten." }
-        gradeBand: "9-10"
-        requires: [melodie-notieren, grafisch-notieren]
-      # KC Kap. 6 Musik machen (nach Zeichen und Notationen musizieren)
-      - id: nach-notation-musizieren
-        name: { de: "Mehrstimmig nach Notation musizieren", en: "Playing in parts from notation" }
-        iCan: { de: "Ich kann nach Noten oder einer Grafik auch mehrstimmig musizieren." }
-        gradeBand: "9-10"
-        requires: [melodie-lesen, grafik-musizieren, mehrstimmig-realisieren]
-      # G9 Hören mit Noten 10 (Orientierung in der Partitur, Auffinden von Gehörtem); BY Mu9/Mu10 LB4 (Einzelstimmen und Stimmgruppen in Partituren verfolgen)
-      - id: partitur-orientieren
-        name: { de: "Orchesterpartitur", en: "Orchestral score" }
-        iCan: { de: "Ich kann mich in einer Orchesterpartitur zurechtfinden und Gehörtes darin wiederfinden." }
-        gradeBand: "9-10"
-        requires: [partitur-mitlesen]
   - id: form
     name: { de: "Form und Struktur", en: "Form and structure" }
     competencies:
@@ -853,6 +846,20 @@ strands:
         iCan: { de: "Ich kann ein Musikstück mit mehreren Stimmen rhythmisch und tonal sicher gemeinsam aufführen." }
         gradeBand: "9-10"
         requires: [rhythmus-nachbauen, tonfolge-im-metrum, zweistimmig-singen]
+      # KC 7.1 Musik machen (Zeichen in Klang umsetzen); G9 6/09 (Realisieren nach grafischer Notation)
+      # Strang gesang-instrumentalspiel statt Notation (KD-26): Nach einer Grafik Klänge machen ist Musizieren (KC 7.1 Musik machen, G9 6/09 Realisieren).
+      - id: grafik-musizieren
+        name: { de: "Nach grafischer Notation spielen", en: "Playing from graphic notation" }
+        iCan: { de: "Ich kann nach einer grafischen Notation Klänge machen." }
+        gradeBand: "5-6"
+        requires: [grafisch-notieren]
+      # KC Kap. 6 Musik machen (nach Zeichen und Notationen musizieren)
+      # Strang gesang-instrumentalspiel statt Notation (KD-26): Mehrstimmig nach Notation musizieren ist Musizieren (KC Kap. 6 Musik machen); Nachbar mehrstimmig-realisieren.
+      - id: nach-notation-musizieren
+        name: { de: "Mehrstimmig nach Notation musizieren", en: "Playing in parts from notation" }
+        iCan: { de: "Ich kann nach Noten oder einer Grafik auch mehrstimmig musizieren." }
+        gradeBand: "9-10"
+        requires: [melodie-lesen, grafik-musizieren, mehrstimmig-realisieren]
       # KC Inhaltsfeld Gesang und Instrumentalspiel (Verfahren zur Übung und Festigung); RP 1.5 Üben
       - id: ueben-strategien
         name: { de: "Übestrategien", en: "Practice strategies" }
@@ -864,6 +871,13 @@ strands:
         iCan: { de: "Ich kann mein Musizieren und das der Gruppe vergleichend wahrnehmen und verbessern." }
         gradeBand: "9-10"
         requires: [ueben-strategien, aufeinander-hoeren]
+      # KC Inhaltsfeld Zeichen (Gesten); G9 Gestalten durch körperliche Umsetzung 5/6 (Dirigierbewegungen)
+      # Strang gesang-instrumentalspiel statt Notation (KD-26): Handzeichen und Dirigiergesten steuern das gemeinsame Musizieren; Nachbarn aufeinander-hoeren und musizieren-anleiten.
+      - id: gesten-verstehen
+        name: { de: "Musikalische Handzeichen", en: "Musical hand signs" }
+        iCan: { de: "Ich kann Handzeichen und Gesten, die Musik anzeigen, verstehen und darauf reagieren." }
+        gradeBand: "5-6"
+        requires: [aufeinander-hoeren]
       # KC 7.1 Musik machen (musikalische Aktionen anleiten); G9 Gestalten durch körperliche Umsetzung 5/6 (Dirigierbewegungen)
       - id: musizieren-anleiten
         name: { de: "Gruppe anleiten", en: "Leading a group" }
@@ -919,17 +933,25 @@ strands:
         gradeBand: "7-8"
         requires: [frei-experimentieren, rhythmus-nachbauen]
       # G9 Gestalten durch Erfinden 10 (harmonische Begleitungen, Improvisation über eine Harmoniefolge); Übergangsprofil
+      # requires improvisieren-nach-vorgabe: Über eine Harmoniefolge improvisiert, wer schon über ein Pattern und eine einfache Akkordfolge improvisiert hat; die Lehrpläne führen die Improvisation so weiter (BY Mu7 LB1 „Improvisieren auf Basis rhythmischer Patterns und einfacher harmonischer Modelle“ → G9 Gestalten durch Erfinden 10 „Improvisation über eine Harmoniefolge“)
       - id: harmonische-begleitung-erfinden
         name: { de: "Harmonische Begleitung erfinden", en: "Creating a harmonic accompaniment" }
         iCan: { de: "Ich kann zu einer Melodie eine harmonische Begleitung erfinden und über eine Harmoniefolge improvisieren." }
         gradeBand: "9-10"
-        requires: [kadenz, akkordsymbole]
+        requires: [kadenz, akkordsymbole, improvisieren-nach-vorgabe]
       # KC Kap. 6 Musik machen (aufgabenbezogen erfinden, variieren, gestalten)
       - id: musik-aufgabenbezogen-gestalten
         name: { de: "Eigenes Stück komponieren", en: "Composing a piece" }
         iCan: { de: "Ich kann nach einer Aufgabe und nach musikalischen Kriterien ein eigenes Stück erfinden, ausarbeiten und vorführen." }
         gradeBand: "9-10"
         requires: [musik-nach-vorgabe-erfinden, musik-variieren]
+      # KC Kap. 6 Musik machen (grafisch und traditionell notieren)
+      # Strang gesang-instrumentalspiel statt Notation (KD-26): Ein eigenes Stück festhalten gehört zum Erfinden (KC Kap. 6 Musik machen).
+      - id: traditionell-und-grafisch-notieren
+        name: { de: "Traditionell und grafisch notieren", en: "Traditional and graphic notation" }
+        iCan: { de: "Ich kann ein Musikstück sowohl grafisch als auch in traditioneller Notenschrift festhalten." }
+        gradeBand: "9-10"
+        requires: [melodie-notieren, grafisch-notieren]
   - id: bewegung-gestaltungsmedien
     name: { de: "Bewegung und Gestaltungsmedien", en: "Movement and media of design" }
     competencies:

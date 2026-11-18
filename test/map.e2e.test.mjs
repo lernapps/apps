@@ -234,7 +234,7 @@ describe("in the browser", () => {
     assert.ok((await page.locator("svg.map-arrows > path").count()) > 0);
     assert.equal(await page.locator('li[data-competency="wahrscheinlichkeitsbegriff"]').getAttribute("data-before"), "");
     assert.equal(await page.locator('li[data-competency="vierfeldertafel"]').getAttribute("data-after"), "");
-    assert.match(await chain.textContent(), /Stochastik · Klasse \d\/\d+ · Schritt \d+/);
+    assert.match(await chain.textContent(), /Daten und Zufall · Klasse \d\/\d+ · Schritt \d+/);
     assert.match(await chain.textContent(), /Baut auf · \d+/);
     await chain.getByRole("button", { name: "wahrscheinlichkeitsbegriff" }).click();
     assert.match(page.url(), /#wahrscheinlichkeitsbegriff$/);

@@ -168,11 +168,12 @@ strands:
         requires: [demokratie-merkmale]
       # HE 10.1 (Mehrheitsbildung; Kompromiss als Voraussetzung für die Akzeptanz von Mehrheitsentscheidungen); BY PuG10 LB3 (Lösungen erarbeiten und Mehrheiten organisieren); PuG10 LB2 (Minderheitenschutz); NW IF2 St2 (Prinzipien demokratischer Institutionen); BY nur SWG: PuG8 LB4 (Kompromissfindung, Minderheitenschutz).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
+      # requires kommunaler-streitfall (Herleitung): Ein Kompromiss gleicht gegensätzliche Interessen aus; ohne einen Interessenkonflikt, den die Karte am Streitfall in der Gemeinde einführt, ist er nicht zu verstehen. Wie bei interessenverbaende und internationale-konflikte (Fachkonzept Konflikt, KdP).
       - id: kompromiss-und-mehrheit
         name: { de: "Mehrheit, Kompromiss und Minderheitenschutz", en: "Majority, compromise and minority rights" }
         iCan: { de: "Ich kann erklären, warum in einer Demokratie die Mehrheit entscheidet, Kompromisse nötig sind und die Minderheit geschützt bleibt." }
         gradeBand: "9-10"
-        requires: [demokratie-merkmale]
+        requires: [demokratie-merkmale, kommunaler-streitfall]
       # HE 10.1 (Aufgaben, Stellung und innere Struktur der Parteien); BY PuG10 LB2 (Aufgaben von politischen Parteien); NW IF2 St2 (Aufgaben und Funktionen von Parteien im politischen System).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: parteien-aufgaben
@@ -314,11 +315,12 @@ strands:
         requires: [foederalismus, bundestag]
       # HE 10.1 (Wahl und Rolle des Bundespräsidenten); BY PuG10 LB3 (wesentliche Aufgaben und Funktionen zentraler Verfassungsorgane); NW IF2 St2 (Organe des Verfassungsstaates).
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
+      # requires bundestag (Herleitung): Die Bundesversammlung, die das Amt wählt, besteht zur Hälfte aus den Mitgliedern des Bundestags, und das Amt ernennt die vom Bundestag gewählte Regierungsspitze; den Bundesrat braucht man für das Amt nicht. Siehe auch: gesetzgebung (Ausfertigung der Gesetze)
       - id: bundespraesident
         name: { de: "Bundespräsident", en: "The Federal President" }
         iCan: { de: "Ich kann beschreiben, wie die Bundespräsidentin oder der Bundespräsident gewählt wird und welche Aufgaben das Amt hat." }
         gradeBand: "9-10"
-        requires: [bundesrat]
+        requires: [bundestag]
       # HE 10.1 (Begründung: starker Schutz der Grundrechte durch das Bundesverfassungsgericht); BY PuG10 LB3 (zentrale Verfassungsorgane); NW IF2 St2 (Verfassungsstaatlichkeit; Organe). SCHWACH BELEGT: kein Land nennt das Gericht im verbindlichen Inhalt ausdrücklich.
       # Stimmen HE/BY/NW 9-10/9-10/7-10 -> 9-10 (Mehrheit)
       - id: bundesverfassungsgericht
@@ -801,12 +803,12 @@ strands:
         requires: [nachhaltigkeit-begriff, konsumentscheidung]
       # HE 7.2 (Lokale Agenda 21); HE 10.2, 10.3 (Agenda 21); NW IF3 St1 (Sustainable Development Goals: Keine Armut, Hochwertige Bildung). SCHWACH BELEGT: HE nennt die Agenda 21, den Vorläufer der SDGs.
       # Stimmen HE/BY/NW 7-8/–/5-6 -> 7-8 (Gleichstand, requires entscheidet)
-      # requires kinder-weltweit: NW nennt die Ziele „Keine Armut, Hochwertige Bildung“ zusammen mit den Lebenssituationen von Kindern in der Welt (NW IF3 St1 S. 22)
+      # Ohne requires kinder-weltweit (KD-21): NW nennt die Ziele nur zusammen mit den Lebenssituationen von Kindern in der Welt (NW IF3 St1 S. 22); das ist ein Bündel, keine Voraussetzung. Siehe auch: kinder-weltweit
       - id: nachhaltigkeitsziele
         name: { de: "UN-Nachhaltigkeitsziele", en: "UN Sustainable Development Goals" }
         iCan: { de: "Ich kann die Ziele der Vereinten Nationen für nachhaltige Entwicklung an Beispielen erklären, zum Beispiel keine Armut und hochwertige Bildung." }
         gradeBand: "7-8"
-        requires: [nachhaltigkeit-begriff, kinder-weltweit]
+        requires: [nachhaltigkeit-begriff]
       # KC IF Gesellschaft und Natur (Spannungsfeld zwischen Ökonomie und Ökologie); NW IF1 St2 (Wachstum und nachhaltige Entwicklung; quantitatives und qualitatives Wachstum). SCHWACH BELEGT: HE nur allgemein im KC.
       # Stimmen HE/BY/NW 7-10/–/7-10 -> 7-8 (Gleichstand, früheste Stufe)
       - id: wachstum
@@ -889,12 +891,12 @@ strands:
   - id: internationale-politik
     name: { de: "Internationale Politik und Globalisierung", en: "International politics and globalisation" }
     competencies:
-      # KC IF Recht und Rechtsprechung (Menschenrechte und internationale Bezüge); NW IF11 St2 (UN-Menschenrechtscharta); HE 10.2 (Menschenrechte und Sicherheit in Europa).
-      # Stimmen HE/BY/NW 7-10/–/7-10 -> 7-8 (Gleichstand, früheste Stufe)
+      # HE 10.2 (verbindlich: „Menschenrechte und Sicherheit in Europa“, S. 21) und 10.1 (verbindlich: „Grund- und Menschenrechte“, S. 20); KC IF Recht und Rechtsprechung (Menschenrechte und internationale Bezüge); NW IF11 St2 (UN-Menschenrechtscharta).
+      # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit). Früher 7-8: HE zählte als KC "7-10", obwohl der Lehrplan den Inhalt in Jg 10 verbindlich nennt.
       - id: menschenrechte
         name: { de: "Allgemeine Erklärung der Menschenrechte", en: "Universal Declaration of Human Rights" }
         iCan: { de: "Ich kann erklären, was in der Allgemeinen Erklärung der Menschenrechte steht und warum sie für alle Menschen gilt." }
-        gradeBand: "7-8"
+        gradeBand: "9-10"
         requires: [menschenwuerde]
       # HE 10.2 (internationale Konfliktfelder und Interessen; innergesellschaftliche Konflikte und internationale Friedenssicherung); NW IF11 St2 (Erscheinungsformen und Ursachen internationaler Konflikte, Krisen und Kriege).
       # Stimmen HE/BY/NW 9-10/–/7-10 -> 9-10 (Mehrheit)

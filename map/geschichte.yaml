@@ -84,14 +84,6 @@ strands:
         iCan: "Ich kann erklären, wie Archäologinnen und Archäologen Funde ausgraben, datieren und deuten."
         gradeBand: "5-6"
         requires: [quellenarten]
-      # BY G6 LB4 (Längsschnitt): historische Persönlichkeiten mit den Begriffen Monarchie und Demokratie „im Hinblick auf die jeweilige Herrschaftsform einordnen“; G7 LB6: Absolutismus mit „bereits bekannten Herrschaftsformen aus Antike und Mittelalter“ vergleichen; G7 LB7: Grundbegriffe Monarchie, Demokratie, Aristokratie; NW Stufe 1 SK 6 S. 20: „Herrschaftsformen in historischen Räumen und ihrer zeitlichen Dimension“ identifizieren; HE KC Kap. 6 S. 22: Dimension „Herrschaft“, „die Formen von Herrschaft“ (ohne Jahrgang); LP S. 4: Schwerpunkt „Herrschaft und ihre Legitimation“ (in Jg 6 bei 6.3 bis 6.5). Stimmen HE/BY/NW 5-10/5-6/5-6: Mehrheit. Neu (Owner, 2026-11-11): trägt die Begriffskanten Monarchie → Republik → Absolutismus.
-      # requires monarchie: Die Herrschaft eines Einzelnen kennt man vom Pharao; diese Form vergleicht man mit den anderen. (BY G6 LB4: „nutzen die bekannten Grundlegenden Daten und Begriffe … Pharao, Antike, Polis, Monarchie, Demokratie, um historische Persönlichkeiten zeitlich und im Hinblick auf die jeweilige Herrschaftsform einzuordnen“)
-      # requires attische-demokratie: Die Herrschaft des Volkes kennt man aus Athen; diese Form vergleicht man mit den anderen. (BY G6 LB4, wie oben; die attische Demokratie lehrt BY in LB3, davor)
-      - id: herrschaftsformen
-        name: { de: "Herrschaftsformen", en: "Forms of government" }
-        iCan: "Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer Herrschaftsform zuordnen."
-        gradeBand: "5-6"
-        requires: [monarchie, attische-demokratie]
   - id: urgeschichte
     name: { de: "Urgeschichte und frühe Hochkulturen", en: "Prehistory and early civilisations" }
     competencies:
@@ -226,6 +218,15 @@ strands:
         iCan: "Ich kann die Sage von der Gründung Roms erzählen und erklären, wie sich ein Mythos von einem Geschichtsbericht unterscheidet."
         gradeBand: "5-6"
         requires: [quelle-und-darstellung]
+      # Strang Antike statt Grundlagen (KD-23): Die Herrschaftsformen werden an Herrschern der Antike eingeführt; alle Nachbarn liegen in der Antike.
+      # BY G6 LB4 (Längsschnitt): historische Persönlichkeiten mit den Begriffen Monarchie und Demokratie „im Hinblick auf die jeweilige Herrschaftsform einordnen“; G7 LB6: Absolutismus mit „bereits bekannten Herrschaftsformen aus Antike und Mittelalter“ vergleichen; G7 LB7: Grundbegriffe Monarchie, Demokratie, Aristokratie; NW Stufe 1 SK 6 S. 20: „Herrschaftsformen in historischen Räumen und ihrer zeitlichen Dimension“ identifizieren; HE KC Kap. 6 S. 22: Dimension „Herrschaft“, „die Formen von Herrschaft“ (ohne Jahrgang); LP S. 4: Schwerpunkt „Herrschaft und ihre Legitimation“ (in Jg 6 bei 6.3 bis 6.5). Stimmen HE/BY/NW 5-10/5-6/5-6: Mehrheit. Neu (Owner, 2026-11-11): trägt die Begriffskanten Monarchie → Republik → Absolutismus.
+      # requires monarchie: Die Herrschaft eines Einzelnen kennt man vom Pharao; diese Form vergleicht man mit den anderen. (BY G6 LB4: „nutzen die bekannten Grundlegenden Daten und Begriffe … Pharao, Antike, Polis, Monarchie, Demokratie, um historische Persönlichkeiten zeitlich und im Hinblick auf die jeweilige Herrschaftsform einzuordnen“)
+      # requires attische-demokratie: Die Herrschaft des Volkes kennt man aus Athen; diese Form vergleicht man mit den anderen. (BY G6 LB4, wie oben; die attische Demokratie lehrt BY in LB3, davor)
+      - id: herrschaftsformen
+        name: { de: "Herrschaftsformen", en: "Forms of government" }
+        iCan: "Ich kann Monarchie, Aristokratie und Demokratie unterscheiden und Herrscherinnen und Herrscher der Antike einer Herrschaftsform zuordnen."
+        gradeBand: "5-6"
+        requires: [monarchie, attische-demokratie]
       # HE LP 6.5 (1): Grundzüge der republikanischen Ordnung; BY G6 LB5: römische Republik, Grundbegriffe Senat, Republik, Diktator; NW IF2 (Stufe 1): res publica. Stimmen HE/BY/NW 5-6/5-6/5-6: Mehrheit
       # Siehe auch: latein/koenigszeit-und-republik, latein/senat-und-magistrate
       # requires herrschaftsformen (Herleitung): Die Republik ist die Ordnung ohne König: Konsuln auf ein Jahr und zu zweit, ein Senat der Vornehmen und eine Volksversammlung. Wer sie verstehen will, braucht die Gegenbegriffe Monarchie, Aristokratie und Demokratie. Gestützt: BY G6 LB4 (Herrschaftsformen „Monarchie, Demokratie“ einordnen) steht vor LB5 (Imperium Romanum); Kühberger IzPB 38 S. 21 (ein Konzept am ersten Fall einführen und an späteren Fällen wieder aufgreifen). Ersetzt die Kante zu monarchie, die über herrschaftsformen weiter gilt.
@@ -358,12 +359,11 @@ strands:
         gradeBand: "5-6"
         requires: [kaiserkroenung-800]
       # HE LP 8.1 (4): Stände, unterständische Gruppen; BY G7 LB2: Struktur der Agrar- und Feudalgesellschaft, Stände; NW IF3a (Stufe 1): Lebensformen in der Ständegesellschaft. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
-      # requires pharao-und-gesellschaft: Den Aufbau einer Gesellschaft in Rangstufen lernt man zuerst an Ägypten; die Ständegesellschaft wendet diesen Begriff auf das Mittelalter an. (Kühberger IzPB 38 S. 21: beim Mittelalter „auf das bereits bekannte Beispiel einer Hochkultur zu verweisen, um anschließend nach Strukturmerkmalen einer feudalen Gesellschaft zu fragen“)
+      # Ohne requires: Die Ständegesellschaft ist ohne die ägyptische Gesellschaftspyramide verständlich; der Rückgriff auf die Hochkultur ist ein Vergleich (Kühberger IzPB 38 S. 21: „auf das bereits bekannte Beispiel einer Hochkultur zu verweisen, um anschließend nach Strukturmerkmalen einer feudalen Gesellschaft zu fragen“), keine Voraussetzung (KD-21). Einstieg in die Gesellschaft des Mittelalters. Siehe auch: pharao-und-gesellschaft
       - id: staendegesellschaft
         name: { de: "Mittelalterliche Ständegesellschaft", en: "The three medieval estates" }
         iCan: "Ich kann die mittelalterliche Ständegesellschaft mit Geistlichen, Adligen und Bauern beschreiben."
         gradeBand: "7-8"
-        requires: [pharao-und-gesellschaft]
       # HE LP 8.1 (2): Lehnswesen, Ministeriale; BY G7 LB1: Lehnswesen; NW IF3a (Stufe 1): Ordnungsprinzipien im Fränkischen Großreich. Stimmen HE/BY/NW 7-8/7-8/5-6: Mehrheit
       # requires karl-der-grosse: Das Lehnswesen antwortet auf die Frage, wie ein König ein großes Reich ohne Beamte regiert (Grafen, Königsboten, Treue gegen Land). (NW IF3a Stufe 1 S. 24: „anhand der Herrschafts- und Verwaltungspraxis von Karl dem Großen die Ordnungsprinzipien im Fränkischen Großreich“; HE LP 8.1 (2) S. 17: „Reisekönigtum; Pfalzordnung; Lehnswesen; Königsboten“)
       - id: lehnswesen
@@ -558,6 +558,7 @@ strands:
         requires: [luther-und-reformation, fuerstenmacht]
       # BY G7 LB5: Krisenerscheinungen im 16. Jh., u. a. Hexenverfolgung; NW IF4 (Stufe 2): Ursachen und Motive der Hexenverfolgungen an einem regionalen Beispiel. Stimmen HE/BY/NW –/7-8/7-10: Mehrheit
       # requires pest (Herleitung): In Krisen suchten Menschen Schuldige; diesen Gedanken (Sündenböcke) lernt man an der Pest und den Judenverfolgungen. Gestützt: HE LP 8.3 Begründung S. 21 (Zusammenhang zwischen der Erschütterung des Weltbildes „und Pogromen und Panikreaktionen“); BY G7 LB5 („Krisenerscheinungen im 16. Jh., u. a. Hexenverfolgung“).
+      # Geprüft (KD-21): Der Kern des iCan („warum verfolgt“) ist der Sündenbock in der Krise, den man an der Pest lernt. Reformation und Dreißigjähriger Krieg gehören zum Zusammenhang (Höhepunkt der Verfolgungen um 1560-1630), sind aber zum Verstehen nicht nötig: Verfolgt wurde in katholischen und evangelischen Gebieten, und vor wie während des Krieges. Siehe auch: luther-und-reformation, dreissigjaehriger-krieg
       - id: hexenverfolgung
         name: { de: "Hexenverfolgung", en: "Witch hunts" }
         iCan: "Ich kann an einem Beispiel erklären, warum Menschen in der Frühen Neuzeit als Hexen verfolgt wurden."
@@ -674,12 +675,12 @@ strands:
         gradeBand: "7-8"
         requires: [menschenrechte-1789]
       # HE LP 9.1 (3), (4): Aufstieg Napoleons, Europa unter der Herrschaft Napoleons, Code civil; BY G8 LB1: Kaisertum Napoleons und französische Vorherrschaft in Europa. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
-      # requires kaiserkroenung-800: Napoleon krönte sich zum Kaiser und knüpfte dabei an Karl den Großen an; sein Selbstverständnis erklärt man mit dem Kaisertum des Mittelalters. (BY G8 LB1: „nutzen ihre Kenntnisse über antike und mittelalterliche Herrscher, um das Selbstverständnis Napoleons als Kaiser zu beschreiben“)
+      # Siehe auch: kaiserkroenung-800 (Vergleich, keine Voraussetzung: Napoleons Herrschaft und Kaiserkrönung sind ohne die Krönung von 800 verständlich; BY G8 LB1 nutzt „Kenntnisse über antike und mittelalterliche Herrscher“ zum Vergleich des Selbstverständnisses)
       - id: napoleon
         name: { de: "Napoleons Herrschaft über Europa", en: "Napoleon's rule in Europe" }
         iCan: "Ich kann beschreiben, wie Napoleon an die Macht kam, sich zum Kaiser krönte und große Teile Europas beherrschte."
         gradeBand: "7-8"
-        requires: [jakobinerherrschaft, kaiserkroenung-800]
+        requires: [jakobinerherrschaft]
       # HE LP 9.1 (4): Reichsdeputationshauptschluss 1803, Rheinbund 1806; BY G8 LB1: 1806 Ende des Heiligen Römischen Reichs, territoriale Veränderungen, Säkularisation. Stimmen HE/BY/NW 9-10/7-8/–: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: ende-des-reiches-1806
         name: { de: "Ende des Alten Reiches 1806", en: "End of the Holy Roman Empire" }
@@ -880,11 +881,12 @@ strands:
         requires: [stellungskrieg]
       # HE LP 9.5 (4): Lenin und die Oktoberrevolution; BY G8 LB6: Epochenjahr 1917, Russische Revolution; NW IF6 (Stufe 2): neue weltpolitische Koordinaten, Epochenjahr 1917. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       # requires was-ist-eine-revolution (Herleitung): Ob die Machtübernahme der Bolschewiki eine Revolution war oder ein Umsturz einer kleinen Gruppe, prüft man am Begriff Revolution. Gestützt: HE LP 9.5 Begründung S. 31 (die „‚Oktober‘revolution“ in Anführungszeichen); HE LP S. 4 (Kategorie „Revolution und Evolution“).
+      # requires krieg-und-zivilbevoelkerung (Herleitung): Die Revolution von 1917 erklärt man mit den Lasten des Krieges, Hunger und Kriegsmüdigkeit, nicht mit dem Kriegsausbruch im Einzelnen. Gestützt: BY G8 LB6 und NW IF6 (Stufe 2) behandeln 1917 im Zusammenhang des Ersten Weltkriegs (Epochenjahr). Ersetzt die Kante zu julikrise-1914. Siehe auch: julikrise-1914
       - id: russische-revolution
         name: { de: "Russische Revolution 1917", en: "The Russian Revolution" }
         iCan: "Ich kann beschreiben, wie Lenin und die Bolschewiki 1917 in Russland die Macht übernahmen."
         gradeBand: "7-8"
-        requires: [julikrise-1914, sozialismus-und-kommunismus, was-ist-eine-revolution]
+        requires: [krieg-und-zivilbevoelkerung, sozialismus-und-kommunismus, was-ist-eine-revolution]
       # HE LP 9.5 (4): Anfänge des bipolaren Weltsystems, Kriegseintritt der USA; BY G8 LB6: Begriff „Epochenjahr“ am Beispiel 1917; NW IF6 (Stufe 2) UK: Zäsurcharakter der Ereignisse des Jahres 1917. Stimmen HE/BY/NW 9-10/7-8/7-10: Gleichstand 7-8/9-10; requires lassen beide zu: frühere Stufe
       - id: epochenjahr-1917
         name: { de: "Epochenjahr 1917", en: "1917 as a turning point" }
@@ -993,6 +995,7 @@ strands:
         requires: [scheitern-von-weimar]
       # HE LP 10.3 (1), (2): Sozialdarwinismus und NS-Rassenideologie, Führerprinzip und Volksgemeinschaft; BY G9 LB2: Ideologie des Nationalsozialismus; Grundbegriff „Volksgemeinschaft“; NW IF8 (Stufe 2): grundlegende Elemente der NS-Ideologie („Rassenlehre“, „Führergedanke“). Stimmen HE/BY/NW 9-10/9-10/7-10: Mehrheit
       # requires imperialismus (Herleitung): Die „Rassenlehre“ setzt den Gedanken fort, ein Volk sei anderen überlegen, wie ihn der Imperialismus verbreitete (Sozialdarwinismus). Gestützt: HE LP 10.3 (1) S. 36 („Sozialdarwinismus und NS-Rassenideologie“); HE LP 9.5 (1) S. 31 („Ideologische und wirtschaftliche Begründungen des Imperialismus“); NW IF8 Stufe 2 S. 32 (Elemente der NS-Ideologie, „deren Ursprünge“).
+      # Geprüft (KD-21): imperialismus ist der kleinste Baustein, der den Gedanken der Überlegenheit (Sozialdarwinismus) trägt; sein iCan nennt ihn ausdrücklich. Einen eigenen Baustein „Rassismus und Sozialdarwinismus“ nennt nur HE (LP 9.5 (1), 10.3 (1)), kein zweites Land. Siehe auch: liberalismus-und-nationalismus (Volksgemeinschaft), juden-im-19-jahrhundert (über antisemitismus)
       - id: ns-ideologie
         name: { de: "NS-Ideologie", en: "Nazi ideology" }
         iCan: "Ich kann die Grundgedanken der NS-Ideologie erklären, zum Beispiel „Rassenlehre“, „Führerprinzip“ und „Volksgemeinschaft“."

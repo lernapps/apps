@@ -79,12 +79,13 @@ strands:
         gradeBand: "7-8"
         requires: [identitaet-jugendalter]
       # DBK MuW (Sinnhorizont menschlicher Existenz); BY KR10 LB4: Glücksversprechen, Sinnkonzepte, Kohelet; NW IF7 S: alternative Formen der Suche nach Sinn und Erfüllung; SiLP 10.4. Stimmen –/9-10/7-10 -> 9-10 (Mehrheit).
-      # Siehe auch: evangelische-religion/gelingendes-leben
+      # requires naechstenliebe: Wer Glücksvorstellungen mit biblischen Leitlinien vergleicht, braucht die zentrale Leitlinie, das Gebot der Gottes- und Nächstenliebe; BY nennt beides im selben Lernbereich (BY KR10 LB4: Glücksversprechen und Sinnkonzepte, biblisch begründete Leitlinien; Nächstenliebe). Ethisches Argumentieren ist dafür nicht nötig.
+      # Siehe auch: evangelische-religion/gelingendes-leben; christliche-ethik (Maßstäbe des Handelns, ein Zusammenhang, keine Voraussetzung)
       - id: glueck-und-sinn
         name: { de: "Glück und gelingendes Leben", en: "Happiness and a fulfilled life" }
         iCan: "Ich kann verschiedene Vorstellungen von Glück und gelingendem Leben beschreiben und mit biblischen Leitlinien vergleichen."
         gradeBand: "9-10"
-        requires: [christliche-ethik]
+        requires: [naechstenliebe]
       # DBK 2004: 4.1 Nr. 5 (Vollendung der Schöpfung); HE 9/10: Hoffnung auf Erlösung und Vollendung der Schöpfung (S. 17, 35); BY KR10 LB2: christliche Jenseitsvorstellungen (Himmel, Fegefeuer, Hölle); NW IF3 S: Zusammenhang zwischen Auferweckung Jesu und Auferweckung der Toten. Stimmen 9-10/9-10/7-10 -> 9-10 (einstimmig).
       # Siehe auch: evangelische-religion/auferstehungshoffnung
       - id: christliche-hoffnung
@@ -507,13 +508,6 @@ strands:
         iCan: "Ich kann die großen Feste des Kirchenjahres wie Advent, Weihnachten, Ostern und Pfingsten ordnen und erklären, woran sie erinnern."
         gradeBand: "5-6"
         requires: [weihnachtsevangelium, auferstehung]
-      # DBK Religion in der pluralen Gesellschaft (Feste und Alltagskultur); HE 6: Feste mit ihren Riten und Symbolen (S. 22); BY KR5 LB2: Symbole, Riten, Brauchtum der Weihnachtszeit; KR6 LB3: Riten und Symbole des Osterfestkreises; NW IF7 E: Rituale und Symbole eines zentralen christlichen Festes. Stimmen 5-6/5-6/5-6 -> 5-6 (einstimmig).
-      # requires rituale-im-alltag: Erst die Bedeutung von Ritualen im Alltag, dann Rituale und Symbole eines christlichen Festes; NW nennt beides nacheinander im selben Inhaltsfeld (NW IF7 E, S. 25)
-      - id: symbole-der-festkreise
-        name: { de: "Symbole der Festkreise", en: "Symbols of Christmas and Easter" }
-        iCan: "Ich kann Symbole und Bräuche des Weihnachts- und des Osterfestkreises deuten, zum Beispiel Adventskranz oder Osterkerze."
-        gradeBand: "5-6"
-        requires: [kirchenjahr, zeichen-und-symbole, rituale-im-alltag]
       # DBK Kirche (Sakramente); 2004: 4.5 Nr. 1 und 2; HE 6: Sonntag als Tag des Herrn – Feier der Eucharistie (S. 22, 37); BY KR5 LB5: Eucharistiefeier; KR7 LB2; NW IF4 E: Bedeutung des Sonntags und der Eucharistie. Stimmen 5-6/5-6/5-6 -> 5-6 (einstimmig).
       - id: sonntag-und-eucharistie
         name: { de: "Sonntag und Eucharistie", en: "Sunday and the Eucharist" }
@@ -644,6 +638,14 @@ strands:
         name: { de: "Rituale im Alltag", en: "Everyday rituals" }
         iCan: "Ich kann Rituale im Alltag beschreiben und erklären, wozu Menschen sie brauchen."
         gradeBand: "5-6"
+      # DBK Religion in der pluralen Gesellschaft (Feste und Alltagskultur); HE 6: Feste mit ihren Riten und Symbolen (S. 22); BY KR5 LB2: Symbole, Riten, Brauchtum der Weihnachtszeit; KR6 LB3: Riten und Symbole des Osterfestkreises; NW IF7 E: Rituale und Symbole eines zentralen christlichen Festes. Stimmen 5-6/5-6/5-6 -> 5-6 (einstimmig).
+      # Strang religionen: Das iCan fragt nach Bräuchen und Symbolen der Feste, nicht nach ihrem Ursprung im Leben Jesu (das ist kirchenjahr); die DBK nennt die Feste im Kirchenjahr als Beispiel für die „Bedeutung des Christentums für die Alltagskultur“ im Bereich Religion in der pluralen Gesellschaft (S. 29), NW die Rituale und Symbole eines christlichen Festes in IF7 „Religion in Alltag und Kultur“ (S. 25); HE nennt sie im Inhaltsfeld Kirche (S. 22), BY in den Lernbereichen zu Jesus (KR5 LB2, KR6 LB3)
+      # requires rituale-im-alltag: Erst die Bedeutung von Ritualen im Alltag, dann Rituale und Symbole eines christlichen Festes; NW nennt beides nacheinander im selben Inhaltsfeld (NW IF7 E, S. 25)
+      - id: symbole-der-festkreise
+        name: { de: "Symbole der Festkreise", en: "Symbols of Christmas and Easter" }
+        iCan: "Ich kann Symbole und Bräuche des Weihnachts- und des Osterfestkreises deuten, zum Beispiel Adventskranz oder Osterkerze."
+        gradeBand: "5-6"
+        requires: [kirchenjahr, zeichen-und-symbole, rituale-im-alltag]
       # DBK Religion in der pluralen Gesellschaft (Vielfalt in der Umgebung); 2004: 4.6 Nr. 1 und 2; HE 6: Begegnung und Kennenlernen von Judentum und Islam (S. 22); BY KR7 LB5: Vielfalt muslimisch geprägter Lebenspraxis; KR9 LB5: Spuren jüdischen Lebens; NW IF6 E: wie Menschen jüdischen, christlichen und islamischen Glaubens in unserer Gesellschaft leben. Stimmen 5-6/7-8/5-6 -> 5-6 (Mehrheit).
       # Siehe auch: evangelische-religion/religionen-in-der-umgebung
       - id: religionen-in-der-umgebung
@@ -836,11 +838,13 @@ strands:
         requires: [zehn-gebote]
       # DBK MuW (Liebe, Freundschaft, Partnerschaft); HE 8: Leiblichkeit, Partnerschaftlichkeit, Liebe (S. 26); 9/10: Partnerschaft in Liebe und Treue (S. 17); BY KR9 LB3: Freundschaft, Partnerschaft, Liebe, Sexualität; NW IF1 S: Gelingen einer Beziehung, verantwortete Sexualität; SiLP 8.3. Stimmen 7-8/9-10/7-10 -> 7-8 (Gleichstand 7-8/9-10; die frühere Stufe, kein requires verlangt eine spätere).
       # Siehe auch: evangelische-religion/liebe-und-partnerschaft
+      # requires gottebenbildlichkeit: Das christliche Verständnis von Partnerschaft gründet auf dem Menschen als Ebenbild Gottes, als Mann und Frau geschaffen (HE 8 Mensch und Welt: „Gott schuf den Menschen nach seinem Bilde als Mann und Frau. Bibel und christliche Tradition wertschätzen Leiblichkeit, Partnerschaftlichkeit und Liebe“, S. 26; BY KR9 LB3: „Wertschätzung der in der Gottebenbildlichkeit begründeten Würde des Menschen“)
+      # Siehe auch: identitaet-jugendalter (kein requires: HE und NW nennen Identität und Partnerschaft im selben Inhaltsfeld, ein Bündel; gebraucht wird nur das Menschenbild, das identitaet-jugendalter selbst aus gottebenbildlichkeit bezieht)
       - id: freundschaft-und-partnerschaft
         name: { de: "Freundschaft und Partnerschaft", en: "Friendship and relationships" }
         iCan: "Ich kann beschreiben, was nach christlichem Verständnis zu einer gelingenden Freundschaft und Partnerschaft gehört."
         gradeBand: "7-8"
-        requires: [identitaet-jugendalter]
+        requires: [gottebenbildlichkeit]
       # DBK MuW (Werte und Normen als Handlungsmaßstäbe); HE 9/10: biblische Weisungen und kirchliche Tradition als Maßstäbe (S. 17); BY KR9 LB1: ethische Argumentationsweisen; KR10 LB1: Grundformen ethischer Argumentation; NW IF1 S: Grundgedanken biblisch-christlicher Ethik im Prozess ethischer Urteilsfindung. Stimmen 9-10/9-10/7-10 -> 9-10 (einstimmig).
       - id: christliche-ethik
         name: { de: "Ethisch argumentieren", en: "Ethical reasoning" }

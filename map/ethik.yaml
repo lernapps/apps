@@ -176,12 +176,13 @@ strands:
         iCan: "Ich kann verschiedene sexuelle Orientierungen benennen und begründen, warum jeder Mensch darin Respekt verdient."
         gradeBand: "7-8"
         requires: [sexualitaet-und-verantwortung, menschenwuerde]
-      # HE 10.2 Liebe III: Ehe/Partnerschaft als Lebens- und Rechtsform; nichteheliche und gleichgeschlechtliche Partnerschaften; BY Eth8 LB3: partnerschaftliche Lebensformen heute; NW 7-9 FK2 Freundschaft, Liebe und Partnerschaft. Stimmen 9-10 / 7-8 / 7-10: Gleichstand 7-8/9-10; requires (liebe-und-partnerschaft, recht-und-moral: 7-8): früheste passende Stufe 7-8
+      # HE 10.2 Liebe III: Ehe/Partnerschaft als Lebens- und Rechtsform; nichteheliche und gleichgeschlechtliche Partnerschaften; BY Eth8 LB3: partnerschaftliche Lebensformen heute; NW 7-9 FK2 Freundschaft, Liebe und Partnerschaft. Stimmen 9-10 / 7-8 / 7-10: Gleichstand 7-8/9-10; requires (liebe-und-partnerschaft: 7-8): früheste passende Stufe 7-8
+      # Keine Kante zu recht-und-moral (KD-21): Die Ehe braucht nur den Gedanken, dass der Staat eine Lebensform rechtlich regelt („Lebens- und Rechtsform“, HE 10.2), nicht die Unterscheidung von Recht und Moral; diesen Gedanken bringen die Kinder in 7-8 mit. Siehe auch: recht-und-moral, regeln-und-gesetze
       - id: ehe-und-lebensformen
         name: { de: "Ehe und Lebensformen", en: "Marriage and other partnerships" }
         iCan: "Ich kann Ehe und andere Formen der Partnerschaft als Lebens- und Rechtsformen vergleichen."
         gradeBand: "7-8"
-        requires: [liebe-und-partnerschaft, recht-und-moral]
+        requires: [liebe-und-partnerschaft]
       # HE 8.1 Gewissen und Identität II: Wir-Gefühl und Außenseitertum; BY Eth6 LB3: Gründe für Außenseiter, Möglichkeiten, Außenseiter zu integrieren; NW 5/6 FK2 Der Mensch in der Gemeinschaft. Stimmen 7-8 / 5-6 / 5-6: Mehrheit
       - id: aussenseiter
         name: { de: "Außenseiter", en: "Outsiders" }
@@ -665,12 +666,12 @@ strands:
         gradeBand: "9-10"
         requires: [meinen-glauben-wissen]
       # HE 10.1 Gewissen und Identität III: Dilemma (Sokrates); BY Eth10 LB1: Sokrates, Auseinandersetzung mit den Sophisten, sokratischer Dialog; NW 7-9 K: führen eine Diskussion im Sinne des sokratischen Philosophierens (S. 32). Stimmen 9-10 / 9-10 / 7-10: Mehrheit
-      # requires philosophische-fragen: Der sokratische Dialog ist philosophisches Fragen; Bayern lehrt erst philosophische Fragen von Alltagsfragen zu unterscheiden und dann Sokrates, in derselben Einheit (BY Eth10 LB1: „philosophisches Fragen, u. a. die vier Fragen nach I. Kant“; „Zweifeln, z. B. Sokrates“; „Sokrates: … sokratischer Dialog“)
+      # Keine Kante zu philosophische-fragen (KD-21): Sokrates' Methode versteht man ohne Kants vier Fragen; Bayern nennt beide in derselben Einheit (BY Eth10 LB1: „philosophisches Fragen, u. a. die vier Fragen nach I. Kant“; „Sokrates: … sokratischer Dialog“), ein Bündel, keine Voraussetzung. Siehe auch: philosophische-fragen
       - id: sokrates
         name: { de: "Sokrates", en: "Socrates" }
         iCan: "Ich kann erklären, wie Sokrates im Gespräch durch Fragen nach Wahrheit suchte und was sein Satz „Ich weiß, dass ich nichts weiß“ bedeutet."
         gradeBand: "9-10"
-        requires: [meinen-glauben-wissen, philosophische-fragen]
+        requires: [meinen-glauben-wissen]
       # HE 6.4 Menschenbilder I: Fernsehen: Wer bestimmt über die eigenen Konsumgewohnheiten?; BY Eth6 LB2: Analyse der eigenen Mediennutzung; NW 5/6 FK6 Medienwelten; K: beschreiben und bewerten den eigenen Umgang mit Medien (S. 28). Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: eigene-mediennutzung
         name: { de: "Eigene Mediennutzung", en: "Personal media use" }
@@ -822,6 +823,7 @@ strands:
         gradeBand: "9-10"
         requires: [gottesvorstellungen]
       # HE 9.3 Religion III: Ich als Frage, Welt als Frage; Wer bin ich, was ist mir die Welt?; BY Eth10 LB1: Anstöße zum Philosophieren (Staunen, Zweifeln), philosophisches Fragen, die vier Fragen nach I. Kant; NW 5/6 K: identifizieren Grundfragen der menschlichen Existenz als philosophische Fragen (S. 28). Stimmen 9-10 / 9-10 / 5-6: Mehrheit
+      # Strang geprüft (KD-23): HE lehrt die Fragen in 9.3 Religion III („Ich als Frage, Welt als Frage“); der Baustein, der auf ihm aufbaut (menschenbilder), steht im selben Strang. Kein Land lehrt ihn unter Identität oder Wahrheit.
       - id: philosophische-fragen
         name: { de: "Kants vier Fragen", en: "Kant's four questions" }
         iCan: "Ich kann philosophische Fragen erkennen und mit Kants vier Fragen ordnen: Was kann ich wissen? Was soll ich tun? Was darf ich hoffen? Was ist der Mensch?"

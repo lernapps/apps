@@ -125,6 +125,7 @@ strands:
         gradeBand: "9-10"
         requires: [chromosomen]
       # KMK Z2 Meiose; V2 genetische Variabilität; HE 9/10: Keimzellbildung, Meiose (S. 45); BY B9 3.3 (Jg 9): Meiose, Neukombination; NW IF6 (Stufe 2; SiLP 10.4): Meiose und Befruchtung. Stimmen 7-10 / 9-10 / 7-10: Mehrheit
+      # requires befruchtung (Herleitung, geprüft): Warum Keimzellen einen einfachen Chromosomensatz haben, erklärt man damit, dass bei der Befruchtung Eizelle und Spermienzelle verschmelzen; gebraucht wird nur diese Verschmelzung, die `befruchtung` (5-6) lehrt (NW IF6, Stufe 2: „Meiose und Befruchtung“ als ein Schwerpunkt). Strang Zellen nach KMK S. 15 („Zellen, Mitose, Meiose“), obwohl die meisten Nachbarn in Vielfalt liegen
       - id: meiose
         name: { de: "Meiose", en: "Meiosis" }
         iCan: "Ich kann das Prinzip der Meiose beschreiben und erklären, warum Keimzellen einen einfachen Chromosomensatz haben und Geschwister verschieden sind."
@@ -380,17 +381,18 @@ strands:
         gradeBand: "5-6"
         requires: [energiebedarf]
       # KMK M1 Organsysteme; HE 5/6: Verdauungssystem (S. 43); BY NT5 2.3 (Jg 5): Verdauungsorgane, Resorption; B10 3.2; NW IF2 (Stufe 1): Verdauungsorgane und -vorgänge. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
+      # Ohne requires organisationsebenen (KD-21): Den Weg der Nahrung durch die Organe versteht man ohne die Ordnung Zelle – Gewebe – Organ – Organsystem; dass BY (NT5 2.2 vor 2.3) und NW (IF1 vor IF2) die Ebenen vorher lehren, ist eine Reihenfolge, keine Voraussetzung. Siehe auch: organisationsebenen
       - id: verdauungsorgane
         name: { de: "Verdauungsorgane", en: "Digestive system" }
         iCan: "Ich kann den Weg der Nahrung durch die Verdauungsorgane beschreiben und erklären, was in jedem Organ geschieht."
         gradeBand: "5-6"
-        requires: [naehrstoffe, organisationsebenen]
+        requires: [naehrstoffe]
       # KMK M1 Organsysteme; HE 5/6: Herz-Lungen-System (S. 43); BY NT5 2.3 (Jg 5): Gasaustausch; B10 3.3; NW IF2 (Stufe 1): Atmungsorgane, Gasaustausch in der Lunge. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
+      # Ohne requires organisationsebenen (KD-21): Weg der Atemluft und Gasaustausch in den Lungenbläschen brauchen die Ordnung der Ebenen nicht; Wurzel des Themas Atmung. Siehe auch: organisationsebenen
       - id: atmung-und-gasaustausch
         name: { de: "Atmung und Gasaustausch", en: "Breathing and gas exchange" }
         iCan: "Ich kann den Weg der Atemluft beschreiben und erklären, wie in den Lungenbläschen Sauerstoff und Kohlenstoffdioxid ausgetauscht werden."
         gradeBand: "5-6"
-        requires: [organisationsebenen]
       # KMK M1 Organsysteme; HE 5/6: Prinzip der Oberflächenvergrößerung an Lunge oder Darm (S. 41); BY NT5 2.3 (Jg 5): Oberflächenvergrößerung; NW IF2 (Stufe 1): Oberflächenvergrößerung an Dünndarm und Lunge. Stimmen 5-6 / 5-6 / 5-6: Mehrheit
       - id: oberflaechenvergroesserung
         name: { de: "Oberflächenvergrößerung", en: "Increasing surface area" }
@@ -696,6 +698,7 @@ strands:
         requires: [kohlenstoffkreislauf, bakterienzelle]
       # Siehe auch: erdkunde/klimawandel-ursachen, erdkunde/klimawandel-folgen (Biologie: Treibhauseffekt und Folgen für Lebewesen).
       # SCHWACH BELEGT. KMK U4 Klimawandel, Klimafolgen; HE 9/10: globale Stoffkreisläufe, Eingriffe des Menschen, Prognosen (S. 30; Klima nicht genannt); BY B8 LB6 (Jg 8): globale Stoffströme (Klima nicht genannt); NW –. Stimmen 7-10 / 7-8 / –: Mehrheit
+      # Ohne requires kohlenstoffkreislauf (geprüft, KD-21): Für die Wirkung von mehr CO2 auf Treibhauseffekt und Lebewesen reicht, dass Zellatmung und Verbrennung CO2 abgeben und Fotosynthese es bindet (fotosynthese-und-zellatmung); den ganzen Kreislauf braucht der Baustein nicht. 7-8 nach den Stimmen von HE (7-10) und BY (Jg 8). Siehe auch: kohlenstoffkreislauf
       - id: klimawandel
         name: { de: "Klimawandel", en: "Climate change" }
         iCan: "Ich kann erklären, wie mehr Kohlenstoffdioxid in der Luft den Treibhauseffekt verstärkt und welche Folgen der Klimawandel für Lebewesen und Ökosysteme hat."

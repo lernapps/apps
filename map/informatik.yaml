@@ -122,12 +122,12 @@ strands:
         gradeBand: "7-8"
         requires: [baum]
       # GI ID-6 (7-10); HE TF Internet: Struktur von Hypertexten; stellen Hypertextstrukturen grafisch dar; BY NT7 2.1: modellieren Hypertextstrukturen; Erstellung mit WYSIWYG-Editor. Stimmen 7-10 / 7-8 / – → 7-8 (Mehrheit)
-      # requires urheberrecht: Wer einen Hypertext erstellt, beachtet dabei das Urheberrecht und gibt Quellen an; beide Pläne verlangen das ausdrücklich beim Erstellen. (BY NT7 2.1 Kompetenzerwartung „Erstellung einer Hypertextstruktur; hierbei berücksichtigen sie grundlegende Aspekte des Urheberrechts“; HE S. 16 TF Internet „wenden bei der Erstellung einer eigenen Website Grundsätze des Urheberrechts … an“)
+      # Siehe auch: urheberrecht. BY NT7 2.1 („Erstellung einer Hypertextstruktur; hierbei berücksichtigen sie grundlegende Aspekte des Urheberrechts“) und HE S. 16 TF Internet („wenden bei der Erstellung einer eigenen Website Grundsätze des Urheberrechts … an“) nennen es beim Erstellen zusammen: ein Hinweis auf einen gemeinsamen Explainer, keine Voraussetzung, um den Aufbau aus Seiten und Verweisen zu verstehen (KD-21).
       - id: hypertext
         name: { de: "Hypertext", en: "Hypertext" }
         iCan: "Ich kann den Aufbau eines Hypertexts aus Seiten und Verweisen beschreiben und einen einfachen Hypertext erstellen."
         gradeBand: "7-8"
-        requires: [graph, urheberrecht]
+        requires: [graph]
       # SCHWACH (nur BY und GI). GI ID-9 (7-10): Datenflüsse mit Tabellenkalkulationssystemen; BY Inf9 LB1: Tabellenblatt, Zelle, Formel, Zellbezug. Stimmen – / 9-10 / – → 9-10 (einzige Stimme)
       - id: tabellenkalkulation-formeln
         name: { de: "Formeln in der Tabellenkalkulation", en: "Spreadsheet formulas" }
@@ -219,11 +219,11 @@ strands:
         gradeBand: "9-10"
         requires: [verschluesselung-grundidee]
       # SCHWACH (nur NW und GI (BY und HE Sek I ohne KI; HE-Entwurf KI und Digitale Welt 5/6 nennt es)). GI AL-9 (7-10); IMG-8 (7-10); NW 5/6 AuKI: benennen Anwendungsbeispiele künstlicher Intelligenz aus ihrer Lebenswelt; WP KI. Stimmen – / – / 5-6 → 5-6 (einzige Stimme)
+      # Ohne requires informatiksysteme-im-alltag (KD-21): Beispiele für KI aus dem Alltag (Empfehlungen, Sprach- und Bilderkennung) lassen sich nennen, ohne den Begriff Informatiksystem zu kennen; NW 5/6 führt AuKI und IS als getrennte Inhaltsfelder, keines setzt das andere voraus. Damit ist der Zirkel zwischen Daten und Informatiksysteme in 5-6 aufgelöst. Siehe auch: informatiksysteme-im-alltag
       - id: ki-im-alltag
         name: { de: "KI im Alltag", en: "AI in everyday life" }
         iCan: "Ich kann Beispiele für künstliche Intelligenz aus meinem Alltag nennen, zum Beispiel Empfehlungen, Sprach- oder Bilderkennung."
         gradeBand: "5-6"
-        requires: [informatiksysteme-im-alltag]
       # SCHWACH (nur NW und GI). GI ID-11 (7-10); AL-9; NW 5/6 AuKI: Entscheidungsbaum enaktiv als Prinzip des maschinellen Lernens; Funktionsweise künstlicher neuronaler Netze; WP KI. Stimmen – / – / 5-6 → 5-6 (einzige Stimme)
       - id: maschinelles-lernen
         name: { de: "Maschinelles Lernen", en: "Machine learning" }

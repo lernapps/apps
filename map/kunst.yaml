@@ -269,11 +269,12 @@ strands:
         gradeBand: "7-8"
         requires: [koerperproportionen]
       # HE G9 9.1 Ausdrucksmerkmale wie Pose, Haltung; BY Ku9 LB1 menschliche Figur in Posen und in Bewegung, perspektivische Verkürzungen. Stimmen HE/BY/NW: 9-10 / 9-10 / – -> 9-10 (Mehrheit)
+      # Siehe auch: bewegung-darstellen (Bewegungsspuren auf der Fläche; die Figur braucht Proportion, Pose und Verkürzung, nicht diese Mittel)
       - id: figur-in-bewegung
         name: { de: "Figur in Bewegung", en: "Figure in motion" }
         iCan: { de: "Ich kann eine menschliche Figur in einer Pose oder Bewegung zeichnen, auch mit Verkürzungen." }
         gradeBand: "9-10"
-        requires: [koerperproportionen, bewegung-darstellen]
+        requires: [koerperproportionen]
   - id: zeichnung-druck
     name: { de: "Zeichnung und Druckgrafik", en: "Drawing and printmaking" }
     competencies:
@@ -325,11 +326,13 @@ strands:
         gradeBand: "9-10"
         requires: [beobachtend-zeichnen]
       # HE G9 5.2 Erzählbilder, Bildergeschichten; BY Ku6 LB3 Text-Bild-Kombinationen, z. B. Bildergeschichten; NW E IF3 Narration: Darstellung von Handlungsabläufen. Stimmen HE/BY/NW: 5-6 / 5-6 / 5-6 -> 5-6 (Mehrheit)
+      # requires punkt-und-linie: Die Bildfolge wird gezeichnet; Bewegungs- und Ausdruckslinien tragen die Handlung. HE nennt beides in einer Einheit (HE G9 5.2 S. 13 „Ausdrucksqualitäten zeichnerischer Spuren, Figuren … Erzählbilder, Bildergeschichten“; Bündel)
+      # Siehe auch: erzaehlende-bilder (Rezeption desselben Themas; eine Bildfolge zu zeichnen setzt die Analyse eines Erzählbilds nicht voraus)
       - id: bildergeschichte
         name: { de: "Bildergeschichte und Comic", en: "Picture story and comic" }
         iCan: { de: "Ich kann eine Handlung in einer Bildfolge erzählen, zum Beispiel als Bildergeschichte oder Comic." }
         gradeBand: "5-6"
-        requires: [erzaehlende-bilder]
+        requires: [punkt-und-linie]
       # BY Ku7 LB3 Hoch-, Tief- oder Siebdruck erstellen; NW S IF1 Möglichkeiten des Hochdrucks. Stimmen HE/BY/NW: – / 7-8 / 7-10 -> 7-8 (Mehrheit)
       - id: hochdruck
         name: { de: "Hochdruck", en: "Relief printing" }
@@ -502,12 +505,12 @@ strands:
         iCan: { de: "Ich kann erklären, was das Recht am eigenen Bild bedeutet, und danach entscheiden, welche Fotos ich zeigen darf." }
         gradeBand: "9-10"
       # HE KC Kap. 6 visuelle Alltags- und Jugendkultur erkunden; Wirkung des eigenen Auftretens beschreiben und bewerten; BY Ku9 LB3 Selbstinszenierungen in Jugendkulturen; Formen der Selbstdarstellung im Internet; NW S Produktion: Plattformen zur Präsentation, Kommunikation und Interaktion. Stimmen HE/BY/NW: 7-10 / 9-10 / 7-10 -> 9-10 (Mehrheit)
-      # requires praesentieren (Herleitung): Eine Selbstdarstellung im Internet ist eine Präsentation für ein Publikum; man bewertet sie wie jede Präsentation danach, ob sie zu Zweck und Publikum passt. NW nennt Plattformen zur Präsentation und das Bewerten von Präsentationen nach Kontext und Adressat (NW S. 22, S. 26).
+      # Siehe auch: praesentieren (eigene Arbeiten zeigen; fremde Selbstdarstellungen zu untersuchen setzt es nicht voraus; NW S. 22, S. 26)
       - id: selbstdarstellung-online
         name: { de: "Selbstdarstellung im Internet", en: "Self-presentation online" }
         iCan: { de: "Ich kann Selbstdarstellungen im Internet und in Jugendkulturen untersuchen und bewerten, wie sie wirken sollen." }
         gradeBand: "9-10"
-        requires: [inszenierte-fotografie, recht-am-eigenen-bild, praesentieren]
+        requires: [inszenierte-fotografie, recht-am-eigenen-bild]
   - id: architektur-design
     name: { de: "Architektur und Design", en: "Architecture and design" }
     competencies:
@@ -639,6 +642,7 @@ strands:
         gradeBand: "9-10"
         requires: [verfremden]
       # HE KC 7.1 Präsentationsformen für Bilder; eigene Bilder angemessen präsentieren; BY Ku7 LB2 präsentieren ihre Ergebnisse; NW S IF2 kontext- und adressatenbezogene Präsentationen. Stimmen HE/BY/NW: 5-6 / 7-8 / 7-10 -> 7-8 (Mehrheit)
+      # Steht ohne Kante: Präsentieren ist eine Arbeitsweise; kein Baustein ist sicher direkt nötig, und keiner setzt es voraus (Siehe auch: selbstdarstellung-online). Strang nach den Quellen: NW IF2 Bildkonzepte und HE KC „Strategien der Bilderfindung, Präsentationsformen“.
       - id: praesentieren
         name: { de: "Arbeiten präsentieren", en: "Presenting work" }
         iCan: { de: "Ich kann meine Arbeiten für ein bestimmtes Publikum präsentieren, zum Beispiel in einer Mappe, Ausstellung oder online." }
