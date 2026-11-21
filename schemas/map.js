@@ -151,6 +151,14 @@ export const VocabularySource = z
     language: z.string().regex(/^[a-z]{2,3}$/, "a language code, e.g. fr").describe("The language of the words"),
     source: Lexicon,
     levels: z.array(z.enum(LEVELS)).min(1).describe("The levels the list takes from the lexicon, e.g. [A1, A2]"),
+    minDocuments: z
+      .number()
+      .int()
+      .min(2)
+      .optional()
+      .describe(
+        "For a lexicon that counts documents per level (EFLLex nb_doc@a1 …): a word is at the first level at which at least this many documents use it; without it, at the first level it is seen at all",
+      ),
     add: z.array(Correction).optional().describe("Words the lexicon lacks, with their level"),
     level: z.array(Correction).optional().describe("Words of the lexicon with another level"),
     remove: z.array(Correction).optional().describe("Words of the lexicon left out"),
