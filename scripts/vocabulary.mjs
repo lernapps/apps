@@ -11,8 +11,16 @@ import { join } from "node:path";
 import { load } from "js-yaml";
 import { VocabularySource, LEVELS } from "../schemas/map.js";
 
-/** The words of a lexicon TSV: word, tag and level of each line, without the header. */
-export function readLexicon(text) {
+/** A lexicon artefact, not a word: a lemma with an underscore or a digit, or one that does not begin with a letter. */
+const isArtefact = (word) => /[_\d]/.test(word) || !/^\p{L}/u.test(word);
+
+/**
+ * The words of a lexicon TSV: word, tag and level of each line, without the header and without artefacts. A level is
+ * read from a column `level`, else from the columns of the frequencies (`freq_A1` …, or `level_freq@a1` … as EFLLex
+ * writes them): the first level a word is seen at. With the columns `nb_doc@a1` … and `minDocuments`, a word is only
+ * seen at a level when at least that many documents of the lexicon's corpus use it there.
+ */
+export function readLexicon(text, minDocuments = 1) {
   const [head = "", ...lines] = text.split(/\r?\n/).filter((line) => line.trim() !== "");
   const columns = head.split("\t").map((name) => name.trim());
   const at = (name) => {
@@ -21,16 +29,25 @@ export function readLexicon(text) {
     return index;
   };
   const [word, tag] = [at("word"), at("tag")];
-  // a lexicon without a column level (EFLLex, ELELex …): the first level a word is seen at, as FLELex counts it
   const level = columns.indexOf("level");
-  const frequencies = LEVELS.map((name) => [name, columns.indexOf(`freq_${name}`)]).filter(([, index]) => index !== -1);
+  const documents = LEVELS.map((name) => [name, columns.indexOf(`nb_doc@${name.toLowerCase()}`)]).filter(([, index]) => index !== -1);
+  const frequencies = LEVELS.map((name) => {
+    const index = [`freq_${name}`, `level_freq@${name.toLowerCase()}`].map((n) => columns.indexOf(n)).find((i) => i !== -1);
+    return [name, index ?? -1];
+  }).filter(([, index]) => index !== -1);
   if (level === -1 && frequencies.length === 0)
     throw new Error(`the lexicon has neither a column level nor columns freq_A1 …; its columns are ${columns.join(", ")}`);
-  return lines.map((line) => {
-    const cells = line.split("\t").map((cell) => cell.trim());
-    const first = frequencies.find(([, index]) => Number(cells[index]) > 0)?.[0] ?? "";
-    return { word: cells[word] ?? "", pos: cells[tag] ?? "", level: level === -1 ? first : (cells[level] ?? "") };
-  });
+  return lines
+    .map((line) => {
+      const cells = line.split("\t").map((cell) => cell.trim());
+      const seen = (index) => Number(cells[index]) > 0;
+      const first =
+        (documents.length > 0 && minDocuments > 1
+          ? documents.find(([, index]) => Number(cells[index]) >= minDocuments)?.[0]
+          : frequencies.find(([, index]) => seen(index))?.[0]) ?? "";
+      return { word: cells[word] ?? "", pos: cells[tag] ?? "", level: level === -1 ? first : (cells[level] ?? "") };
+    })
+    .filter((entry) => !isArtefact(entry.word));
 }
 
 const key = (entry) => `${entry.word}\t${entry.pos}`;
@@ -44,7 +61,7 @@ export function vocabulary(lexicon, source) {
   for (const correction of source.level ?? []) {
     const from = all.get(key(correction));
     if (from === undefined) throw new Error(`level: ${correction.word} (${correction.pos}) is not in the lexicon; add it`);
-    words.set(key(correction), { ...from, level: correction.level, note: `${from.level} → ${correction.level}: ${correction.reason}` });
+    words.set(key(correction), { ...from, level: correction.level, note: `${from.level || "ohne Stufe"} → ${correction.level}: ${correction.reason}` });
   }
   for (const correction of source.add ?? []) {
     if (all.has(key(correction))) throw new Error(`add: ${correction.word} (${correction.pos}) is in the lexicon; change its level`);
@@ -92,7 +109,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
   const dir = join("map", subject, "vocabulary");
   const source = VocabularySource.parse(load(readFileSync(join(dir, "source.yaml"), "utf8")));
-  const words = vocabulary(readLexicon(readFileSync(lexiconFile, "utf8")), source);
+  const words = vocabulary(readLexicon(readFileSync(lexiconFile, "utf8"), source.minDocuments), source);
   writeFileSync(join(dir, "words.yaml"), wordsFile(source, words));
   const counts = source.levels.map((level) => `${level}: ${words.filter((w) => w.level === level).length}`).join(", ");
   console.log(`wrote ${join(dir, "words.yaml")}: ${words.length} words (${counts})`);

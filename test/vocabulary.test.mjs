@@ -32,6 +32,18 @@ test("a lexicon: word, tag and level of each line; without a column level, the f
   assert.throws(() => readLexicon("lemma\ttag\n"), /the lexicon has no column word/);
 });
 
+test("EFLLex: columns level_freq@a1 and nb_doc@a1; minDocuments sets the level, artefacts are left out", () => {
+  const efllex = [
+    "word\ttag\tlevel_freq@a1\tlevel_freq@a2\tlevel_freq@b1\tnb_doc@a1\tnb_doc@a2\tnb_doc@b1",
+    "cat\tNN\t3\t203\t32\t1\t21\t5",
+    "dog\tNN\t489\t225\t66\t15\t23\t11",
+    "-hour_journey\tNN\t0\t5\t0\t0\t1\t0",
+    "12th\tJJ\t4\t0\t0\t2\t0\t0",
+  ].join("\n");
+  assert.deepEqual(readLexicon(efllex).map((w) => `${w.word}/${w.level}`), ["cat/A1", "dog/A1"]);
+  assert.deepEqual(readLexicon(efllex, 2).map((w) => `${w.word}/${w.level}`), ["cat/A2", "dog/A1"]);
+});
+
 test("the list: the levels taken, the corrections applied with their notes, by level then alphabet", () => {
   const source = {
     ...SOURCE,

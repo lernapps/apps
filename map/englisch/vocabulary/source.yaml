@@ -1,0 +1,449 @@
+# The basic vocabulary of English (docs/learning-map-contract.md, section 6): which lexicon, which levels, and the
+# corrections for children's everyday life. scripts/vocabulary.mjs writes words.yaml from it and the lexicon.
+# Licence: CC BY-NC-SA 4.0, as EFLLex (LICENSE.md in this folder).
+language: en
+source:
+  title: "EFLLex with NLP4J parts of speech (CEFRLex, CENTAL, UCLouvain)"
+  url: https://cental.uclouvain.be/cefrlex/efllex/download/
+  licence: CC BY-NC-SA 4.0
+  cite:
+    - "Dürlich, L. & François, T. (2018). EFLLex: A Graded Lexical Resource for Learners of English as a Foreign Language. In Proceedings of the 11th International Conference on Language Resources and Evaluation (LREC 2018), Miyazaki, Japan."
+levels: [A1, A2]
+# EFLLex has no level per word, only frequencies per level (from textbooks and readers). A word is on the first level at
+# which at least two documents of its corpus use it. Words seen once at all would give A1 2114 and A2 1779 words, mostly
+# from single readers; at least 2 documents gives about A1 1300 and A2 1100 (French: A1 1251, A2 679); at least 3 gives
+# about A1 1030 and A2 820; a frequency of 10 per million gives about A1 1160 and A2 450 (counts before the corrections).
+# The script also leaves out lemmas with a digit or underscore or without a leading letter (50s, 12th, -hour_journey).
+minDocuments: 2
+# Corrections for a child of the first year of English, British English. Each names its reason.
+level:
+  - word: zero
+    pos: CD
+    level: A1
+    reason: "die Zahl 0 in Telefonnummern, Spielständen und Temperaturen, von Anfang an"
+  - word: nineteen
+    pos: CD
+    level: A1
+    reason: "Zahlen bis 100 gehören zum ersten Jahr (Strang wortschatz, Zahlen und Preise); ihre Nachbarn stehen auf A1/A2"
+  - word: seventy
+    pos: CD
+    level: A1
+    reason: "Zahlen bis 100 gehören zum ersten Jahr (Zahlen und Preise); die anderen Zehner stehen schon auf A1/A2"
+  - word: ninety
+    pos: CD
+    level: A1
+    reason: "Zahlen bis 100 gehören zum ersten Jahr (Zahlen und Preise); die anderen Zehner stehen schon auf A1/A2"
+  - word: sixth
+    pos: JJ
+    level: A2
+    reason: "Ordnungszahlen für das Datum (the sixth of May); fifth und seventh stehen schon auf A2"
+  - word: eighth
+    pos: JJ
+    level: A2
+    reason: "Ordnungszahlen für das Datum (the eighth of May); seventh und ninth stehen schon auf A2"
+  - word: tenth
+    pos: JJ
+    level: A2
+    reason: "Ordnungszahlen für das Datum (the tenth of June); ninth steht schon auf A2"
+  - word: twelfth
+    pos: JJ
+    level: A2
+    reason: "Ordnungszahlen für das Datum (the twelfth of June); ninth steht schon auf A2"
+  - word: twentieth
+    pos: JJ
+    level: A2
+    reason: "Ordnungszahlen für das Datum (the twentieth of May)"
+  - word: calendar
+    pos: NN
+    level: A1
+    reason: "Kalender und Datum im Klassenzimmer, Strang wortschatz (Wochentage, Monate und Datum)"
+  - word: rubber
+    pos: NN
+    level: A1
+    reason: "Radiergummi im Federmäppchen, britisches Wort vom ersten Schultag an (AmE eraser fehlt im Lexikon)"
+  - word: ruler
+    pos: NN
+    level: A1
+    reason: "Lineal im Federmäppchen, vom ersten Schultag an"
+  - word: pupil
+    pos: NN
+    level: A2
+    reason: "Schülerin und Schüler: das britische Wort für das Kind in der Klasse"
+  - word: playground
+    pos: NN
+    level: A2
+    reason: "Schulhof, Ort der Pause im Schultag"
+  - word: maths
+    pos: NN
+    level: A1
+    reason: "britisch für Mathe, steht im Stundenplan; das Lexikon kennt nur mathematics (C1)"
+  - word: geography
+    pos: NN
+    level: A2
+    reason: "Erdkunde, Fach im Stundenplan der Klasse 5-6"
+  - word: mum
+    pos: NN
+    level: A1
+    reason: "britisch für Mama, das erste Familienwort eines Kindes (mom steht im Lexikon auf A1)"
+  - word: grandma
+    pos: NN
+    level: A1
+    reason: "Oma, Familienwort im ersten Jahr; im Lexikon zu selten"
+  - word: grandpa
+    pos: NN
+    level: A1
+    reason: "Opa, Familienwort im ersten Jahr; im Lexikon zu selten"
+  - word: daddy
+    pos: NN
+    level: A1
+    reason: "Papa in der Familiensprache kleiner Kinder; im Lexikon zu selten"
+  - word: pet
+    pos: NN
+    level: A1
+    reason: "Haustier, Strang wortschatz (Freizeit und Hobbys: Haustiere)"
+  - word: hobby
+    pos: NN
+    level: A1
+    reason: "Hobby, Strang wortschatz (Freizeit und Hobbys)"
+  - word: toy
+    pos: NN
+    level: A1
+    reason: "Spielzeug im Alltag von Kindern"
+  - word: biscuit
+    pos: NN
+    level: A1
+    reason: "britisch für Keks (cookie steht im Lexikon nicht auf A1/A2); Alltag und Teatime"
+  - word: juice
+    pos: NN
+    level: A1
+    reason: "Saft, Getränk der Kinder in der Pause und beim Frühstück"
+  - word: bonfire
+    pos: NN
+    level: A2
+    reason: "Bonfire Night, Feuerwerk und Lagerfeuer im britischen Schuljahr (Feste)"
+  - word: neighbourhood
+    pos: NN
+    level: A2
+    reason: "britische Schreibung von neighborhood, Wohnumgebung (Strang wortschatz: Wohnen und Zuhause)"
+  - word: petrol
+    pos: NN
+    level: A2
+    reason: "britisch für gas (Benzin); im Lexikon steht nur die amerikanische Form"
+add:
+  - word: Monday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: Tuesday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: Wednesday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: Thursday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: Friday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: Saturday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: Sunday
+    pos: NNP
+    level: A1
+    reason: "Wochentag, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: January
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: February
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: March
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: April
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: May
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: June
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: July
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: August
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: September
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: October
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: November
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: December
+    pos: NNP
+    level: A1
+    reason: "Monat, Strang wortschatz (Wochentage, Monate und Datum); das Lexikon enthält keine Eigennamen"
+  - word: eleventh
+    pos: JJ
+    level: A2
+    reason: "Ordnungszahlen für das Datum (the eleventh of May); fifth und seventh stehen schon auf A2"
+  - word: pence
+    pos: NN
+    level: A1
+    reason: "Preise in Pfund und Pence (Strang wortschatz, Zahlen und Preise); pound steht auf A1, penny auf A2"
+  - word: pencil case
+    pos: NN
+    level: A1
+    reason: "Federmäppchen, vom ersten Schultag an; das Lexikon enthält zu wenige Zweitwörter"
+  - word: exercise book
+    pos: NN
+    level: A1
+    reason: "Heft, vom ersten Schultag an"
+  - word: PE
+    pos: NN
+    level: A1
+    reason: "Sport als Fach im Stundenplan, britisch"
+  - word: living room
+    pos: NN
+    level: A1
+    reason: "Wohnzimmer, Strang wortschatz (Wohnen und Zuhause)"
+  - word: crisps
+    pos: NN
+    level: A1
+    reason: "britisch für Chips, Pausensnack (chips bedeutet im Britischen Pommes)"
+  - word: sweets
+    pos: NN
+    level: A1
+    reason: "britisch für Süßigkeiten (candy ist amerikanisch)"
+  - word: trainers
+    pos: NN
+    level: A1
+    reason: "britisch für Turnschuhe (sneaker ist amerikanisch), Kleidung und Sport"
+  - word: shorts
+    pos: NN
+    level: A2
+    reason: "kurze Hose, Kleidung im Sommer und im Sportunterricht"
+  - word: pyjamas
+    pos: NN
+    level: A2
+    reason: "Schlafanzug, Kleidung und Tagesablauf (go to bed)"
+  - word: hamster
+    pos: NN
+    level: A2
+    reason: "Haustier, häufigstes Kinderhaustier neben Katze und Hund"
+  - word: guinea pig
+    pos: NN
+    level: A2
+    reason: "Haustier, häufig bei Kindern (Strang wortschatz: Haustiere)"
+  - word: Christmas
+    pos: NNP
+    level: A1
+    reason: "das wichtigste Fest im britischen Schuljahr (Feste)"
+  - word: Easter
+    pos: NNP
+    level: A2
+    reason: "Fest im britischen Schuljahr (Feste)"
+  - word: Halloween
+    pos: NNP
+    level: A2
+    reason: "Fest im britischen Schuljahr (Feste)"
+  - word: Mr
+    pos: NNP
+    level: A1
+    reason: "Anrede der Lehrer in der Schule (Mr Parker), vom ersten Schultag an"
+  - word: Mrs
+    pos: NNP
+    level: A1
+    reason: "Anrede der Lehrerinnen in der Schule (Mrs Smith), vom ersten Schultag an"
+  - word: Miss
+    pos: NNP
+    level: A1
+    reason: "Anrede der Lehrerinnen in britischen Schulen"
+  - word: Ms
+    pos: NNP
+    level: A2
+    reason: "Anrede einer Frau ohne Familienstand; kommt in Briefen und Anreden vor"
+  - word: shopping centre
+    pos: NN
+    level: A2
+    reason: "britisch für mall, Einkaufen (Strang wortschatz: Kleidung und Einkaufen)"
+remove:
+  - word: color
+    pos: NN
+    reason: "amerikanische Schreibung; britisch ist colour (auf A1)"
+  - word: favorite
+    pos: JJ
+    reason: "amerikanische Schreibung; britisch ist favourite (auf A1)"
+  - word: mom
+    pos: NN
+    reason: "amerikanisch; britisch ist mum"
+  - word: vacation
+    pos: NN
+    reason: "amerikanisch; britisch ist holiday (auf A1)"
+  - word: apartment
+    pos: NN
+    reason: "amerikanisch; britisch ist flat (auf A1)"
+  - word: candy
+    pos: NN
+    reason: "amerikanisch; britisch ist sweets"
+  - word: sneaker
+    pos: NN
+    reason: "amerikanisch; britisch ist trainers"
+  - word: gray
+    pos: JJ
+    reason: "amerikanische Schreibung; britisch ist grey"
+  - word: hat-securer
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: animal-man
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: animal-people
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: ape-man
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: e-communication
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: first-born
+    pos: JJ
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: free-diving
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: half-eaten
+    pos: JJ
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: half-life
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: last-born
+    pos: JJ
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: little-known
+    pos: JJ
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: meat-eater
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: pig-man
+    pos: NN
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: silvery-white
+    pos: JJ
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: white-haired
+    pos: JJ
+    reason: "Rest aus den Romanen und Fachtexten des Korpus (Bindestrich-Lemma), kein Wort eines Kindes im ersten Englischjahr"
+  - word: neighborhood
+    pos: NN
+    reason: "amerikanisch; britisch ist neighbourhood"
+  - word: sweater
+    pos: NN
+    reason: "amerikanisch; britisch ist jumper (A2)"
+  - word: movie
+    pos: NN
+    reason: "amerikanisch; britisch ist film (A1)"
+  - word: store
+    pos: NN
+    reason: "amerikanisch; britisch ist shop (A1)"
+  - word: mall
+    pos: NN
+    reason: "amerikanisch; britisch ist shopping centre"
+  - word: subway
+    pos: NN
+    reason: "amerikanisch; britisch ist underground (A2)"
+  - word: gas
+    pos: NN
+    reason: "amerikanisch; britisch ist petrol"
+  - word: cent
+    pos: NN
+    reason: "amerikanisch; britisch ist penny und pence"
+  - word: math
+    pos: NN
+    reason: "amerikanisch; britisch ist maths (A1)"
+  - word: opium
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: signalman
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: pistol
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: perspire
+    pos: VB
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: impeccable
+    pos: JJ
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: erm
+    pos: UH
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: commissionaire
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: mummify
+    pos: VB
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: afterlife
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: crossbone
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: gangway
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: poacher
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: antiquity
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: archeologist
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: blacksmith
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: shapeless
+    pos: JJ
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: revolver
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: undead
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: curator
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
+  - word: medallion
+    pos: NN
+    reason: "kein Kinderwort: Rest aus den Romanen und Lesetexten des Korpus (Wort kommt dort in mindestens zwei Texten vor)"
