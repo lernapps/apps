@@ -12,7 +12,9 @@ Lernlandkarten (Themen mit mehreren Apps) in der Katalogsuche besser darstellen:
 Stand: Ideensammlung, noch keine Entscheidung. Erster Schritt: Ist-Zustand erkunden, dann Ideen vorschlagen.
 
 ## Key Decisions
-*Important decisions will be documented here as they are made*
+- Kein Strang als Ordnungs- oder Filterkriterium für Sprachen (Nutzer, `explainerFocus: competency`: Apps mischen Stränge). Stattdessen: relative Position der App in der Karte des Fachs, abgeleitet aus den Bausteinen, die sie übt.
+- Ansatz (Vorschlag, noch nicht bestätigt): `lib/map.js` liefert je Baustein `steps` (Zeile durch alle Richtstufen) und `places` ({band, step}). Position einer App = Spanne (min..max) und Mitte (Median) der Schritte ihrer geübten Bausteine (`pages[].competencies` oder `competencies`; Recap-Seiten zählen nicht). Normiert auf die Zeilenzahl des Fachs ergibt das 0..1.
+- Beispiel Issue #489 (Englisch): Schichten 0 bis 3 in Welle 1 (Stufe 5-6), danach Wellen 2 und 3; die Schichtung ergibt sich schon aus `requires`. Apps derselben Schicht liegen parallel (gleiche Position ist ehrlich, keine Scheinreihenfolge).
 
 ## Notes
 Ist-Zustand (Explore):
