@@ -23,6 +23,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W7 | Test ohne JS bricht bei `$…$` in `matching`-Seiten (Umgehung: Unicode-Hochzahlen). | #386 | offen |
 | W8 | `definition`-Box wirkt wie ein Link; Zuordnung markiert Fehler nur mit rotem Rand und „×“. | #386 | offen |
 | W9 | „Prüfen“ bei Komponenten ohne Auswahl ist grau ohne Hinweis, bei Fragen klickbar mit „Antworte zuerst“ (uneinheitlich). | #432 | offen |
+| W10 | Der „Lösung“-Knopf nach Fehlversuch bewirkte beim Lernenden-Prüfer nichts Sichtbares (nicht untersucht). | #397 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
