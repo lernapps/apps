@@ -252,6 +252,24 @@ competencies: [laplace, baumdiagramm]              # only for apps that are not 
 | `competencies` | optional; not for an explainer, whose pages name their competencies in `lernapps-pages.json`. With `strand`, ids of that strand; without, ids of several strands, only where the subject has `explainerFocus: competency` (a unit app) |
 | `topics` | stays, for apps that are not explainers; for a format-2 explainer the catalog takes its pages from `lernapps-pages.json` |
 
+A **series** is no part of the map: it is a hand-written order of apps that belong together, for the search (e.g. the
+English explainers around Millbrook). It works for any app, with or without strand or competencies, and does not depend
+on grade bands, so it also fits a second or third foreign language.
+
+```yaml
+series: { title: Millbrook, part: 2, of: 6 }       # optional
+```
+
+| Field | Rule |
+|---|---|
+| `series.title` | text; the same in every entry of the series (the German text groups them) |
+| `series.part` | integer from 1; apps that can be learnt in parallel share a number |
+| `series.of` | optional integer, at least `part`: how many parts the series has in all, planned ones included; the same in every entry that gives it (the catalog fails otherwise) |
+
+The search shows "Millbrook 2/6" on the card ("Teil 2" without `of`), finds the series by its title, and lists the
+apps of a series together in the order of `part`, then by title, where the series' title belongs alphabetically
+(`lib/series.js`).
+
 Checks of the listing (rule `entry-learning-map`, an error): every id exists; every competency of an app belongs to the
 app's strand (KD-19), or, for a unit app, the subject allows several strands; an explainer's `strand` in the entry, if
 given, equals the one in `lernapps-pages.json`, and its `subject` there equals the entry's. Then the pages, as section 1

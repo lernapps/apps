@@ -43,7 +43,15 @@ Eintritt: Nutzerwunsch liegt vor (erfüllt).
 ## Plan
 Eintritt: Der Nutzer hat eine Idee ausgewählt; Ist-Zustand ist verstanden.
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [x] Entwurf festgelegt (siehe unten)
+
+Entwurf:
+- Schema (`schemas/entry.js`): optional `series: { title: Text, part: int >= 1, of?: int >= part }`; Schema-JSON mit `npm run schema` neu erzeugen.
+- Katalog (`src/_data/catalog.js`): `series` an die App geben. Build-Fehler, wenn Einträge derselben Serie (gleicher deutscher Titel) verschiedene `of` nennen. Sortierung je Fach: Gruppenschlüssel (Serientitel oder Apptitel), dann `part`, dann Titel. `part` darf doppelt vorkommen.
+- Karte (`src/_includes/components.njk`, `de.js`, `en.js`): Marke "Serie · part/of" (ohne `of`: "Teil part"), für Screenreader "Teil 2 von 6 der Reihe …". Serientitel in `data-search`, damit die Suche die Reihe findet (`finden.js` bleibt).
+- Doku: `docs/learning-map-contract.md` Abschnitt 4, `src/llms.njk`.
+- Test: Sortierung und Prüfung der Serie (`test/`).
+- Englisch: Serie "Millbrook", `of: 6`. Teile nach den Schichten aus Issue #489: 1 Hello, Millbrook! (#470); 2 Pronomen, Zeiten, Verbketten (#471, #472, #480); 3 Sätze bauen, Dinge/Mengen/Orte, Adjektive/Adverbien, Sätze verbinden (#473, #475, #476, #481); 4 Alltag, Großbritannien, Geschichten, Klang und Schrift (#477, #478, #479, #482); 5 erste Versionen von #484 bis #487; 6 #483. Heute gibt es Einträge für Teil 1 (hello-millbrook), 3 (dinge-mengen-orte, adjektive-adverbien) und 4 (alltag, grossbritannien, geschichten).
 
 ### Completed
 *None yet*
@@ -51,7 +59,12 @@ Eintritt: Der Nutzer hat eine Idee ausgewählt; Ist-Zustand ist verstanden.
 ## Code
 Eintritt: Plan ist vom Nutzer freigegeben.
 ### Tasks
-- [ ] *To be added when this phase becomes active*
+- [x] Schema und Schema-JSON
+- [x] Katalog: Prüfung und Sortierung (`lib/series.js`)
+- [x] Karte und Texte (de, en)
+- [x] Englisch-Einträge anpassen (6 Einträge, Serie Millbrook, `of: 6`)
+- [x] Doku und Test (`docs/learning-map-contract.md`, `test/series.test.mjs`)
+- [x] Build und Tests laufen lassen (Build offline mit `LERNAPPS_PAGES=off`; Unit-Tests, Schema-Check und `find.e2e` grün)
 
 ### Completed
 *None yet*

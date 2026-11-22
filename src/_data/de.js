@@ -68,6 +68,9 @@ const de = {
       who: "Kein Unternehmen, sondern Menschen, denen digitale Bildung wichtig ist. Lehrkräfte, Eltern und andere bauen die Apps und stellen sie hier allen zur Verfügung. Wir verdienen nichts an dir und deinen Daten. Darum gibt es hier keine Werbung und kein Konto.",
     },
     cardLink: (title) => `Mehr zu ${title}`,
+    // The series of an app (entry field series): "Millbrook 2/6", spoken "Reihe Millbrook, Teil 2 von 6".
+    seriesMark: (part, of) => (of ? `${part}/${of}` : `Teil ${part}`),
+    seriesSpoken: (title, part, of) => `Reihe ${title}, Teil ${part}${of ? ` von ${of}` : ""}`,
     chips: ["Ohne Anmeldung", "Ohne Installation", "Kostenlos"],
   },
 
