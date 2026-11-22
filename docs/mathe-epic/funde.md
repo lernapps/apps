@@ -17,6 +17,11 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W1 | CI nutzt Node 26, in den Sessions läuft Node 22 (Warnung). | #385 | offen |
 | W2 | Das alte Repo `bruchrechnung` hatte `tooling 0.2.0` / `app-templates 0.1.0` (aktuell 0.18.5); Format 2 (strand, recap, Bausteine je Seite) ging damit nicht. `lernapps update` als erster Commit. | #389 | in Arbeit |
 | W3 | Die Auto-Mode-Prüfung blockiert `npx --yes @lernapps/tooling init …` in jeder neuen Session trotz Erlaubnis in `.claude/settings.json`; jedes Mal braucht es die Freigabe des Menschen. | alle | offen |
+| W4 | Das Werkzeug verlangt je Frage einen `links:`-Eintrag; unsere Regeln erlauben nur die Kartenseite des Bausteins. Prüfen, ob `links` optional werden kann. | #386 | offen |
+| W5 | „Neue Aufgabe“-Knopf nur als Symbol (ohne Text). | #386 | offen |
+| W6 | Meldung „Antworte zuerst …“ erscheint auch bei falscher Eingabeform im Zahlenfeld. | #386 | offen |
+| W7 | Test ohne JS bricht bei `$…$` in `matching`-Seiten (Umgehung: Unicode-Hochzahlen). | #386 | offen |
+| W8 | `definition`-Box wirkt wie ein Link; Zuordnung markiert Fehler nur mit rotem Rand und „×“. | #386 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
