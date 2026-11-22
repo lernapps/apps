@@ -24,6 +24,10 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W8 | `definition`-Box wirkt wie ein Link; Zuordnung markiert Fehler nur mit rotem Rand und „×“. | #386 | offen |
 | W9 | „Prüfen“ bei Komponenten ohne Auswahl ist grau ohne Hinweis, bei Fragen klickbar mit „Antworte zuerst“ (uneinheitlich). | #432 | offen |
 | W10 | Der „Lösung“-Knopf nach Fehlversuch bewirkte beim Lernenden-Prüfer nichts Sichtbares (nicht untersucht). | #397 | offen |
+| W11 | „Antworte zuerst: Wähle, tippe oder ordne alles zu“ erscheint auch bei einem Textfeld. | #430 | offen |
+| W12 | `generated` startet bei einer zufälligen „Aufgabe Nr.“. | #430 | offen |
+| W13 | Rückmeldung bei falscher Wahr/Falsch-Antwort ist generisch („Lies dazu noch einmal den Text“). | #430 | offen |
+| W14 | `\angle` fehlt in der Formelliste; Umgehung mit Unicode `∠` (U+2220). Betrifft alle Geometrie-Explainer. | #430 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
