@@ -17,6 +17,8 @@ Stand: Ideensammlung, noch keine Entscheidung. Erster Schritt: Ist-Zustand erkun
 - Beispiel Issue #489 (Englisch): Schichten 0 bis 3 in Welle 1 (Stufe 5-6), danach Wellen 2 und 3; die Schichtung ergibt sich schon aus `requires`. Apps derselben Schicht liegen parallel (gleiche Position ist ehrlich, keine Scheinreihenfolge).
 
 ## Notes
+Mockup (Beispielwerte, nicht berechnet): https://claude.ai/artifact/K2ogXmVCCZ4JQXmYrYaKBc mit vier Varianten: A Marke und Nummer auf jeder Karte, B Lernweg-Streifen je Karte, C Ansicht "Lernweg" als Zeitleiste mit parallelen Blöcken und Lücke, D Stufen (5–6, 7–8, 9–10) als Filter über der Liste. Auswahl durch den Nutzer steht aus.
+
 Ist-Zustand (Explore):
 - Suche: `src/index.njk` + `src/assets/finden.js`. Filter: Freitext `thema`, `fach`, `klasse` (URL-Parameter). Karten: `appCard` in `src/_includes/components.njk`. Nur ein Link "Zur Lernlandkarte" unter der Ergebnisliste.
 - Katalog: `src/_data/catalog.js`; je App `subjectId`, `strand` (`<fach>/<strang>`), `pages` (aus `lernapps-pages.json`, mit `competencies`). Apps ohne Format 2 haben keine Kompetenzen.
