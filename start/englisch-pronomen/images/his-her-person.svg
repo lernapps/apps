@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img">
+  <title>Zwei Zeilen: Ellie zeigt auf ihren roten Hut, das Wort ist her. Peter zeigt auf seinen gelben Hut, das Wort ist his. Die Person am Anfang des Pfeils bestimmt das Wort.</title>
+  <defs>
+    <g id="sophie" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#3a9a5b"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M18 54 Q14 14 50 12 Q86 14 82 54 Q80 34 62 28 Q40 36 22 40 Z" fill="#d9b45a"/>
+      <path d="M20 50 C10 70 12 96 22 108" fill="none" stroke="#d9b45a" stroke-width="8"/>
+      <path d="M80 50 C90 70 88 96 78 108" fill="none" stroke="#d9b45a" stroke-width="8"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g>
+    <g id="ellie" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#d33"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M18 54 Q14 14 50 12 Q86 14 82 54 Q80 34 62 28 Q40 36 22 40 Z" fill="#b5501e"/>
+      <path d="M82 30 C104 34 108 70 92 90" fill="none" stroke="#b5501e" stroke-width="10"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g>
+    <g id="peter" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#e0b020"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M18 54 Q14 14 50 12 Q86 14 82 54 Q80 34 62 28 Q40 36 22 40 Z" fill="#6b3f1e"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M40 66 Q50 78 60 66" fill="none"/>
+    </g>
+    <g id="amir" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#3a6fd8"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#c68f62"/>
+      <path d="M18 54 Q10 22 30 14 Q40 6 52 12 Q72 6 82 22 Q92 40 82 54 Q80 34 62 28 Q40 34 22 42 Z" fill="#222"/>
+      <circle cx="39" cy="57" r="8" fill="none"/><circle cx="61" cy="57" r="8" fill="none"/><path d="M47 57 L53 57" fill="none"/>
+      <circle cx="39" cy="57" r="2.5" fill="#222"/><circle cx="61" cy="57" r="2.5" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+  
+    <g id="hill" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M10 168 C4 120 20 88 50 84 C80 88 96 120 90 168 C72 178 28 178 10 168 Z" fill="#8a5a2b"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M18 50 Q14 14 50 12 Q86 14 82 50 Q80 30 62 26 Q40 32 22 38 Z" fill="#9a9a9a"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g><marker id="pf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#333"/></marker></defs>
+  <rect width="640" height="340" fill="#f4efe2"/>
+  <use href="#ellie" transform="translate(20,10) scale(.8)"/>
+  <g stroke="#333" stroke-width="2" stroke-linejoin="round"><ellipse cx="560" cy="102" rx="34" ry="8" fill="#d33"/><path d="M540 102 Q540 66 560 66 Q580 66 580 102 Z" fill="#d33"/></g>
+  <path d="M140 80 H500" stroke="#333" stroke-width="3" marker-end="url(#pf)"/>
+  <text x="320" y="64" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#222">her hat</text>
+  <text x="50" y="170" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222">Mädchen</text>
+  <text x="560" y="150" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222">Hut</text>
+  <use href="#peter" transform="translate(20,195) scale(.6)"/>
+  <g stroke="#333" stroke-width="2" stroke-linejoin="round"><ellipse cx="560" cy="262" rx="34" ry="8" fill="#e0b020"/><path d="M540 262 Q540 226 560 226 Q580 226 580 262 Z" fill="#e0b020"/></g>
+  <path d="M140 250 H500" stroke="#333" stroke-width="3" marker-end="url(#pf)"/>
+  <text x="320" y="234" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#222">his hat</text>
+  <text x="50" y="328" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222">Junge</text>
+  <text x="560" y="320" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222">Hut</text>
+</svg>

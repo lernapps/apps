@@ -1,0 +1,26 @@
+# Die Britischen Inseln
+
+## Das brauchst du hier
+
+Die Seite wiederholt nur einen Baustein aus einer früheren App: Vergleiche mit than, as … as und not as … as. Gebraucht wird er auf der Seite über Stadt und Land. Neue Inhalte und Übungen gibt es nicht.
+
+## Die Karte: UK, Great Britain und Ireland
+
+Die Seite zeigt eine Schemakarte der Britischen Inseln mit den vier Teilen des UK (England, Scotland, Wales, Northern Ireland), ihren Hauptstädten (London, Edinburgh, Cardiff, Belfast) und der Republic of Ireland mit Dublin. Sie unterscheidet UK, Great Britain und Ireland. Typische Fehler sind UK gleich England, Great Britain gleich UK, Ireland gleich Northern Ireland, Dublin und Belfast vertauscht und Wales und Scotland vertauscht. Nicht hier, weil sie auf späteren Seiten folgen: Regionen wie Cornwall, Stadt und Land und London.
+
+## Eine Region vorstellen: Cornwall
+
+Die Seite stellt Cornwall als Beispiel für eine Region vor (Südwesten Englands, Atlantik, Ärmelkanal, Meer, Strände, Küste). Der Lake District (Nordwesten Englands, Seen und Berge) und Wales (Westen von Great Britain, Hauptstadt Cardiff, Welsh) kommen als kurze Steckbriefe dazu. Gelernt werden die Muster It is in the … of …, You can … und It is famous for …. Typische Fehler sind Cornwall und Wales verwechseln, den Lake District im Süden suchen, in the north und in the south-west vertauschen und You can to … mit to. Nicht hier, weil sie auf späteren Seiten folgen: Vergleiche von Stadt und Land und London.
+
+## Stadt und Land vergleichen
+
+Die Seite vergleicht das Leben in einer Großstadt (London, Millbrook) und auf dem Land (Cornwall) mit Adjektiven wie noisy, quiet, busy, crowded, expensive, cheap, fast und slow. Gelernt werden -er … than, more … than, as … as und not as … as. Typische Fehler sind bigger then, more busy statt busier, as busier as und more quiet statt quieter. Es gibt keine Zahlen zu Einwohnern. Nicht hier, weil sie in einem späteren Kapitel folgen: London mit seinen Sehenswürdigkeiten.
+
+## Gehört nicht dazu
+
+- Die Klassenfahrt nach London mit Reisen, Fahrkarten und Klischees (Stufe 7-8, später)
+- Normannen 1066, Tudors und das politische System (Stufe 7-8, später)
+- USA, Kanada und Australien (steht im Explainer „Gesellschaft und Politik“)
+- Politik als Thema für Diskussionen
+
+Die ganze App: [Scope der App](../../scope/)

@@ -1,0 +1,27 @@
+# Was passiert in der Geschichte?
+
+## Das brauchst du hier
+
+Die Seite stellt die Figuren und die Geschichtenwoche kurz vor und wiederholt das simple past mit regelmäßigen Verben (-ed) und häufigen unregelmäßigen Verben (was, went, had, found, saw, took, ran, made, fell, lost, sat, drank, began, flew, hid, left, heard, brought, put, read). Sie sagt, dass Geschichten meist im simple past stehen. Nicht hier, weil es andere Seiten sind. Die Regeln der Zeitformen im Einzelnen, die story map, der Geschichtenberg, Zusammenfassen und Nacherzählen.
+
+## Wer, wo, wann, was: die story map
+
+Die Seite führt die story map mit den vier Feldern who, where, when und what und den Geschichtenberg mit den Stationen beginning, build-up, climax und ending ein. Who sind die Figuren, where ist der Ort der Geschichte, when ist die Zeit und what ist das, was passiert. Die Einträge der Map stehen kurz im simple present. Die Stationen des Berges stehen in der Reihenfolge der Geschichte. Ein Ding ist keine Figur, der Platz eines Dings ist nicht der Ort der Geschichte. Nicht hier, weil sie auf späteren Seiten und in späteren Kapiteln stehen, nämlich Zusammenfassen und Nacherzählen, Verbindungswörter beim Erzählen, eigene Geschichten schreiben sowie die Sicht einer Figur und die Stimmung.
+
+## Zusammenfassen: nur das Wichtigste
+
+Die Seite zeigt, wie man das Wichtigste einer kurzen Geschichte in wenigen Sätzen zusammenfasst. In die Zusammenfassung kommen nur die Hauptereignisse des Geschichtenbergs, in drei Sätzen für Anfang, Problem und Ende (beginning und build-up können in einem Satz stehen). Einzelheiten, eine Meinung und Sätze, die man wörtlich übernimmt, bleiben draußen, und es fehlt kein Teil der Geschichte. Die Sätze stehen im simple past, wie die Geschichte. Nicht hier, weil es spätere Seiten und Kapitel sind, nämlich Nacherzählen in eigenen Worten Station für Station, Verbindungswörter beim Erzählen, eigene Geschichten schreiben und die Zusammenfassung von Sachtexten.
+
+## Nacherzählen: Station für Station
+
+Die Seite zeigt, wie man eine Geschichte nacherzählt. Man geht den Geschichtenberg Station für Station ab (beginning, build-up, climax, ending), erzählt im simple past und in eigenen Worten und lässt keine Station aus. Nicht hier, weil es spätere Seiten sind. Das Zusammenfassen in wenigen Sätzen, Verbindungswörter beim Erzählen (first, then, after that, suddenly, finally), Bilder erzählen, eigene Geschichten schreiben und die Bewertung der Aussprache.
+
+## Gehört nicht dazu
+
+- Die Zeitformen selbst (steht im Explainer „Zeiten auf dem Zeitstrahl“)
+- Kurzgeschichten, Gedichte, Dramen und Filme untersuchen
+- Sachtexte, Bericht und Artikel
+- Eine Geschichte aus der Sicht einer anderen Figur erzählen und Stimmung durch Ort und Sprache (später)
+- Bewertung der Aussprache und der freien Texte durch die App
+
+Die ganze App: [Scope der App](../../scope/)
