@@ -29,6 +29,7 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
 | Mal, geteilt | `·` (Malpunkt) und `:` (Doppelpunkt). Kein `*`, kein `/` als Rechenzeichen. Bruchstrich nur für Brüche. |
 | Einheiten | Zahl, geschütztes Leerzeichen, Einheit: `3 cm`, `2,5 kg`. Einheit nie kursiv. |
 | Prozent | `15 %` mit geschütztem Leerzeichen. „Prozentpunkte“ nie mit „Prozent“ verwechseln. |
+| Brüche | In Text, Aufgaben, Rückmeldungen und Bildbeschriftungen immer gesetzt (Zähler über Nenner, MathML), nie als `3/4`. Eingabefelder dürfen `3/4`, `0,75` und `0.75` akzeptieren, wo die Aufgabe das erlaubt. |
 | Variablen | Kursiv: *x*, *a*. Termumformung zeilenweise, ein Schritt je Zeile, Begründung am Rand. |
 | Fachwörter | Das Wort der Karte (Name des Bausteins) gilt. Neue Wörter werden am Beispiel eingeführt und stehen bei der ersten Verwendung im Text, nicht in einem Glossar allein. |
 | Anrede | „du“. Kurze Sätze. Kein „man“ in Arbeitsaufträgen. Kein Kindchenschema, keine Niedlichkeit. |
