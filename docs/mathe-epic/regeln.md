@@ -31,6 +31,7 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
 | Prozent | `15 %` mit geschütztem Leerzeichen. „Prozentpunkte“ nie mit „Prozent“ verwechseln. |
 | Brüche | In Text, Aufgaben, Rückmeldungen und Bildbeschriftungen immer gesetzt (Zähler über Nenner, MathML), nie als `3/4`. Eingabefelder dürfen `3/4`, `0,75` und `0.75` akzeptieren, wo die Aufgabe das erlaubt. |
 | Variablen | Kursiv: *x*, *a*. Termumformung zeilenweise, ein Schritt je Zeile, Begründung am Rand. |
+| Zahlenstrahl, Zahlengerade | **Zahlenstrahl** für die Darstellung ab 0 nach rechts (nur nicht-negative Zahlen: natürliche Zahlen, Brüche, Dezimalzahlen in 5-6). **Zahlengerade** erst, wenn Zahlen links der Null vorkommen (ab „Zahlen unter null“, #768) und für die Darstellung als Ganzes über die Jahre (Überblick #402). Auf einer Seite wird nicht gewechselt. |
 | Fachwörter | Das Wort der Karte (Name des Bausteins) gilt. Neue Wörter werden am Beispiel eingeführt und stehen bei der ersten Verwendung im Text, nicht in einem Glossar allein. |
 | Anrede | „du“. Kurze Sätze. Kein „man“ in Arbeitsaufträgen. Kein Kindchenschema, keine Niedlichkeit. |
 
