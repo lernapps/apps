@@ -14,6 +14,7 @@ Stand: Ideensammlung, noch keine Entscheidung. Erster Schritt: Ist-Zustand erkun
 ## Key Decisions
 - Kein Strang als Ordnungs- oder Filterkriterium für Sprachen (Nutzer, `explainerFocus: competency`: Apps mischen Stränge). Stattdessen: relative Position der App in der Karte des Fachs, abgeleitet aus den Bausteinen, die sie übt.
 - Ansatz (Vorschlag, noch nicht bestätigt): `lib/map.js` liefert je Baustein `steps` (Zeile durch alle Richtstufen) und `places` ({band, step}). Position einer App = Spanne (min..max) und Mitte (Median) der Schritte ihrer geübten Bausteine (`pages[].competencies` oder `competencies`; Recap-Seiten zählen nicht). Normiert auf die Zeilenzahl des Fachs ergibt das 0..1.
+- Entscheidung Nutzer: Variante B (Lernweg-Streifen je Karte) gefällt; A verworfen, weil Stufenzahlen bei 1./2./3. Fremdsprache verwirren. C (Ansicht Lernweg) später. Filter-Mockups E (Streifen als Filter) und F (Auswahlfeld "Lernweg") mit neutralen Namen Anfang, Mitte, Weiter statt Stufenzahlen; Klasse bleibt eigener Filter. Auswahl E oder F steht aus.
 - Beispiel Issue #489 (Englisch): Schichten 0 bis 3 in Welle 1 (Stufe 5-6), danach Wellen 2 und 3; die Schichtung ergibt sich schon aus `requires`. Apps derselben Schicht liegen parallel (gleiche Position ist ehrlich, keine Scheinreihenfolge).
 
 ## Notes
