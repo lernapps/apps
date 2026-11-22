@@ -1,0 +1,55 @@
+# Hello, Millbrook!
+
+Die App begleitet Kinder der Klassen 5 und 6 durch die ersten Englischstunden. Sie lernen feste englische Ausdrücke für Begrüßung und Höflichkeit, für den Unterricht, für Zahlen, Uhrzeit und Datum sowie für Schule und Feste in Großbritannien. Die Ausdrücke werden gelernt, nicht als Grammatik erklärt.
+
+## Hello! Im Klassenzimmer mitmachen
+
+### Hello! Begrüßen und höflich sein
+
+Die Seite führt die ersten Ausdrücke des Klassenzimmer-Posters ein. Begrüßung nach Tageszeit (Hello, Hi, Good morning, Good afternoon, Good evening), Verabschiedung (Goodbye, Bye, Good night nur zum Schlafengehen), sich vorstellen (I'm Sophie), Höflichkeit (please, thank you, you're welcome, sorry, excuse me) und die Anrede mit Mr und Mrs und dem Nachnamen. Dazu eine kleine Lesehilfe, wie man die Ausdrücke laut liest (gud-BAI, aim), ohne Lautschrift. Das oo in good ist kurz, I'm wird „aim“ gesprochen. Alles wird in festen Ausdrücken gelernt, ohne Grammatikregel.
+
+### Im Unterricht nachfragen
+
+Die Seite führt Ausdrücke für den Englischunterricht ein. Um Hilfe bitten (Can you help me, please?), nicht verstanden haben (I don't understand., Can you say that again, please?), nach einem Wort fragen (What's … in English?, How do you spell it?) und kurze Anweisungen der Lehrkraft verstehen (Open your books., Listen., Stand up., Sit down., Repeat after me.). Dazu die ersten englischen Wörter für Dinge im Klassenzimmer (board, desk, chair, book, pencil, bag). Alles wird in festen Ausdrücken gelernt, ohne Grammatikregel.
+
+### Noun, verb, adjective: die Namen der Wortarten
+
+Die Seite erklärt die englischen Fachbegriffe für Wortarten und Sätze. noun ist ein Nomen (a dog), verb ist ein Verb (jump), adjective ist ein Adjektiv (red), sentence ist ein Satz und tense ist eine Zeitform. Die Kinder ordnen Beispielwörter zu und verstehen die Begriffe, wenn ein Lehrer sie sagt. Keine Regeln der Grammatik; die Begriffe werden in späteren Explainern benutzt.
+
+## Zahlen, Uhr und Kalender
+
+### Zahlen und Preise
+
+Die Seite führt die englischen Grundzahlen von 0 bis 100 ein, mit dem Unterschied zwischen -teen (13 bis 19) und -ty (30 bis 90), und Preise in Pfund und Pence (two pounds fifty, fifty pence). Die Kinder sagen und schreiben Zahlen als Wörter. Die Ordnungszahlen (first, second, third) stehen auf der Seite zum Datum. Alles wird in festen Ausdrücken gelernt.
+
+### Wie spät ist es?
+
+Die Seite führt die englische Uhrzeit ein. What time is it?, It's seven o'clock., It's five past seven., a quarter past, twenty past, half past seven, twenty to eight, a quarter to eight, five to eight. Past nennt die Minuten nach der vollen Stunde, to die Minuten bis zur nächsten. Half past seven ist 7:30 (nicht wie im Deutschen halb sieben). Die Kinder stellen eine Uhr, sagen die Uhrzeit und schreiben sie. Alles wird in festen Ausdrücken gelernt, ohne Grammatikregel.
+
+### Wochentage, Monate und Datum
+
+Die Seite führt die englischen Wochentage (Monday bis Sunday), die zwölf Monate, die Ordnungszahlen bis 31 (first, second, third, fourth, fifth, twelfth, twenty-first) und das Datum (It's the fifth of May., My birthday is on the fifth of May.) ein. Dazu Jahreszahlen wie twenty twenty-five. Alles wird in festen Ausdrücken gelernt. Die Großschreibung von Wochentagen und Monaten kommt kurz vor, ihre Regel steht auf der nächsten Seite.
+
+### Groß oder klein?
+
+Die Seite erklärt die englische Großschreibung. Groß geschrieben werden I, Namen, Wochentage, Monate, Sprachen und Nationalitäten (English) und der Satzanfang. Klein geschrieben werden Nomen (dog, book, school), auch mitten im Satz, anders als im Deutschen. Die Kinder wählen, korrigieren und schreiben Sätze mit den richtigen Großbuchstaben. Hörbar ist die Großschreibung nicht, deshalb hat die Seite keine Sprechaufgabe.
+
+## Ein Schuljahr in Millbrook
+
+### Meine Schule und mein Stundenplan
+
+Die Seite führt die englischen Schulfächer (English, Maths, German, Science, Art, Music, PE, History) ein und die Ausdrücke, mit denen man über die Schule spricht. What's your favourite subject?, My favourite subject is art., We have English on Monday., School starts at a quarter to nine. Die Kinder lesen einen Stundenplan, benennen Fächer und sprechen und schreiben über ihren Schultag. Alles wird in festen Ausdrücken gelernt.
+
+### Feste in Großbritannien
+
+Die Seite stellt drei britische Feste im Jahreslauf vor. Halloween am 31. Oktober (scary), Bonfire Night am 5. November (bonfire, fireworks) und Christmas am 25. Dezember (presents). Die Kinder nennen die Feste mit Datum auf Englisch (Halloween is on the thirty-first of October.), ordnen sie im Jahr und ordnen ihnen einen Brauch zu. Alles wird in festen Ausdrücken gelernt.
+
+### Schule hier und dort
+
+Die Seite beschreibt zwei Merkmale vieler britischer Schulen. Die Schuluniform (uniform) und das house system, bei dem die Schule in Gruppen, den houses, eingeteilt ist und jedes Kind zu einem house gehört. Die Gruppen können zum Beispiel im Sport gegeneinander antreten. Ein house ist hier eine Gruppe von Kindern, kein Gebäude. Die Kinder vergleichen mit ihrer eigenen Schule (At Millbrook we wear a uniform. At my school we don't wear a uniform.). Nicht jede britische Schule hat eine Uniform oder houses; die Seite spricht von Millbrook und von vielen Schulen. Alles wird in festen Ausdrücken gelernt.
+
+## Gehört nicht dazu
+
+- Grammatikregeln wie der Imperativ oder Präpositionen der Zeit (kommen in späteren Explainern)
+- Familie, Zuhause und Freizeit, die Stadt und Großbritannien als Land, die Schule in den USA
+- Bewertung der Aussprache durch die App
