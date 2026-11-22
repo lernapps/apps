@@ -60,6 +60,10 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
 - **Nicht erlaubt:** Texte, Aufgaben, Bilder aus Schulbüchern oder Arbeitsblattseiten übernehmen; KI-generierte
   Aufgaben ohne eigene Rechenprobe; Inhalte mit unklarer Lizenz. Bilder und Animationen entstehen im Explainer selbst
   (SVG, Canvas).
+- **Nachschlagen ist keine Quelle:** Fakten dürfen in anderen öffentlichen Quellen (zum Beispiel Wikipedia) nachgeschlagen
+  werden, wenn du sie danach selbst herleitest oder nachrechnest. Solche Seiten stehen nicht im Explainer (weder in den
+  Quellen noch als „Weiterlesen“-Link), und es werden keine Formulierungen, Aufgaben oder Bilder übernommen. Der
+  fachliche Prüfer rechnet nach.
 - **Keine Dritt-Inhalte nachladen** (Videos, Schriftarten, Skripte von fremden Servern). Ausnahme nur nach Freigabe
   durch den Orchestrator; sie muss im Katalogeintrag stehen (`thirdParty`).
 
