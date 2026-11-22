@@ -1,0 +1,23 @@
+# Funde aus den Sessions (Mathe-Epic #402)
+
+Vom Orchestrator gesammelt. Was Vorlage, Werkzeug oder Karte betrifft, geht am Ende der Welle einmal als Issue an die
+richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wird in den Sessions behoben.
+
+## Karte
+
+| Nr | Fund | Von | Stand |
+|---|---|---|---|
+| K1 | `muster-zahlenfolgen` (5-6) verlangt „mit einem Term beschreiben“, Variablen kommen aber erst in #393. Entschieden: Regel in Worten und mit Platzhalter („Nummer des Bildes“), kein Termumformen. | #386 | offen für #679 |
+| K2 | Karte und Issues sagen „Zahlenstrahl“, Überblick und Regeln sagen „Zahlengerade“. Entschieden in regeln.md Abschnitt 2. | #385 | geklärt, ggf. Überblick nachziehen |
+
+## Werkzeug und Vorlage
+
+| Nr | Fund | Von | Stand |
+|---|---|---|---|
+| W1 | CI nutzt Node 26, in den Sessions läuft Node 22 (Warnung). | #385 | offen |
+| W2 | Das alte Repo `bruchrechnung` hatte `tooling 0.2.0` / `app-templates 0.1.0` (aktuell 0.18.5); Format 2 (strand, recap, Bausteine je Seite) ging damit nicht. `lernapps update` als erster Commit. | #389 | in Arbeit |
+| W3 | Die Auto-Mode-Prüfung blockiert `npx --yes @lernapps/tooling init …` in jeder neuen Session trotz Erlaubnis in `.claude/settings.json`; jedes Mal braucht es die Freigabe des Menschen. | alle | offen |
+
+## Regeln (geklärt, schon in regeln.md)
+
+- Brüche gesetzt statt `3/4`, Zahlenstrahl/Zahlengerade, Nachschlagen ist keine Quelle, keine externen `links:`.

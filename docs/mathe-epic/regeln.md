@@ -63,7 +63,8 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
   (SVG, Canvas).
 - **Nachschlagen ist keine Quelle:** Fakten dürfen in anderen öffentlichen Quellen (zum Beispiel Wikipedia) nachgeschlagen
   werden, wenn du sie danach selbst herleitest oder nachrechnest. Solche Seiten stehen nicht im Explainer (weder in den
-  Quellen noch als „Weiterlesen“-Link), und es werden keine Formulierungen, Aufgaben oder Bilder übernommen. Der
+  Quellen noch als „Weiterlesen“-Link noch als `links:` an einer Aufgabe; verlangt das Werkzeug einen Link, zeige auf die
+  Kartenseite des Bausteins), und es werden keine Formulierungen, Aufgaben oder Bilder übernommen. Der
   fachliche Prüfer rechnet nach.
 - **Keine Dritt-Inhalte nachladen** (Videos, Schriftarten, Skripte von fremden Servern). Ausnahme nur nach Freigabe
   durch den Orchestrator; sie muss im Katalogeintrag stehen (`thirdParty`).
