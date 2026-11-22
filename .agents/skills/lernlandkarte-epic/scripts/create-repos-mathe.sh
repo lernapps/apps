@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Legt die Repositories der Mathe-Explainer (Epic lernapps/apps#402) in der Organisation lernapps an (leer, öffentlich).
-# Aufruf: ./create-repos-mathe.sh            alle 16
+# Legt die Repositories der Mathe-Explainer (Epic lernapps/apps#402; 17 Explainer, davon 3 als Inkrement in schon veröffentlichten Repos) in der Organisation lernapps an (leer, öffentlich).
+# Aufruf: ./create-repos-mathe.sh            alle 14
 #         ./create-repos-mathe.sh 1          nur Schicht 1 (ebenso 2 und 3)
 #         DRY=1 ./create-repos-mathe.sh      zeigt nur, was angelegt würde
 # Voraussetzung: gh angemeldet mit dem Recht, in lernapps Repositories anzulegen.
@@ -69,25 +69,28 @@ ensure_pages() {  # $1 = Repository: Branch gh-pages (zeigt zuerst auf main) und
 }
 
 # Schicht|Issue|Repository|Beschreibung
-# Die Schichten sind ein Vorschlag nach Abhängigkeit (Grundlagen zuerst) und müssen vor dem Start mit den
-# `requires` der Lernlandkarte Mathematik abgeglichen werden: https://lernapps.net/apps/map/mathematik/
+# Die Schichten folgen der Tiefe der Abhängigkeiten zwischen den Explainern (aus den `requires` der Lernlandkarte
+# Mathematik: https://lernapps.net/apps/map/mathematik/): 1 = Tiefe 0-2, 2 = Tiefe 3-4, 3 = Tiefe 5-8.
+# Veröffentlicht wird in der Reihenfolge der Tiefe (docs/mathe-epic/regeln.md, Abschnitt 7).
+# Nicht in der Liste, weil schon veröffentlicht und darum nur als Inkrement (Branch increment/*) weitergeführt:
+#   mathe-arithmetik (#391), mathe-algebra (#393), mathe-stochastik (#401). Das Skript fasst sie nicht an.
+# mathe-brueche-dezimal (#389) war `bruchrechnung` und hat schon main und work: Das Skript legt dort keine
+# Regel-Datei an; das macht repos-umbau-mathe.sh.
 REPOS=(
   "1|385|mathe-grosse-zahlen|Große Zahlen und Rechnen (Explainer Mathematik)"
-  "1|386|mathe-teiler-potenzen-muster|Teiler, Potenzen und Muster (Explainer Mathematik)"
-  "1|389|mathe-brueche-dezimal-negativ|Brüche, Dezimalzahlen und negative Zahlen (Explainer Mathematik)"
-  "1|398|mathe-messen|Messen: Längen, Flächen, Volumen (Explainer Mathematik)"
+  "1|386|mathe-muster-zaehlen|Muster und Zählen (Explainer Mathematik)"
   "1|397|mathe-figuren-abbilden|Figuren zeichnen und abbilden (Explainer Mathematik)"
-  "1|400|mathe-daten|Daten erheben und auswerten (Explainer Mathematik)"
-  "2|391|mathe-prozent-zins|Prozent- und Zinsrechnung (Explainer Mathematik)"
-  "2|392|mathe-potenzen-wurzeln|Potenzen und Wurzeln (Explainer Mathematik)"
-  "2|393|mathe-terme-gleichungen|Terme und Gleichungen (Explainer Mathematik)"
-  "2|429|mathe-kreis-koerper|Kreis und Körper berechnen (Explainer Mathematik)"
-  "2|430|mathe-saetze-entdecken|Dreiecke, Vierecke und Kreise: Sätze entdecken und begründen (Explainer Mathematik)"
-  "2|432|mathe-koerper-bauen|Körper bauen, aufklappen und zeichnen (Explainer Mathematik)"
-  "2|401|mathe-zufall|Zufall und Wahrscheinlichkeit (Explainer Mathematik)"
+  "1|389|mathe-brueche-dezimal|Brüche und Dezimalzahlen (Explainer Mathematik)"
+  "1|430|mathe-saetze-entdecken|Dreiecke, Vierecke und Kreise: Sätze entdecken und begründen (Explainer Mathematik)"
+  "1|432|mathe-koerper-bauen|Körper bauen, aufklappen und zeichnen (Explainer Mathematik)"
+  "2|768|mathe-zahlen-unter-null|Zahlen unter null (Explainer Mathematik)"
+  "2|398|mathe-messen|Messen: Längen, Flächen, Volumen (Explainer Mathematik)"
+  "2|400|mathe-daten|Daten erheben und auswerten (Explainer Mathematik)"
+  "3|392|mathe-wurzeln-potenzgesetze|Wurzeln, reelle Zahlen und Potenzgesetze (Explainer Mathematik)"
   "3|395|mathe-zuordnungen-funktionen|Zuordnungen und lineare Funktionen (Explainer Mathematik)"
-  "3|396|mathe-funktionsfamilien|Funktionsfamilien mit Schiebereglern (Explainer Mathematik)"
   "3|399|mathe-aehnlichkeit-pythagoras|Ähnlichkeit, Pythagoras und Trigonometrie (Explainer Mathematik)"
+  "3|429|mathe-kreis-koerper|Kreis und Körper berechnen (Explainer Mathematik)"
+  "3|396|mathe-funktionsfamilien|Funktionsfamilien mit Schiebereglern (Explainer Mathematik)"
 )
 
 only="${1:-}"   # leer = alle; 1, 2, 3 = Schicht

@@ -15,6 +15,13 @@ Vertretung des Menschen („creator“ in deiner AGENTS.md). Der Mensch prüft d
    Explainer im Format 2 mit dem im Issue genannten `strand`.
 3. Der Name der App: der Repo-Name ohne Organisation. Beim `init` genau diesen Namen verwenden.
 
+## Bestand
+
+Hat dein Repo schon Seiten (siehe Regeln, Abschnitt 6, Punkt 4), ist der erste Schritt in „Recherche“: Bestand lesen,
+jeden Baustein des Issues dem Bestand zuordnen (vorhanden / teilweise / fehlt), Abweichungen von den Regeln nennen
+(Schreibweisen, Aufgaben, Quellen, Dritt-Inhalte) und dem Orchestrator melden. Gebaut wird nur, was fehlt oder gegen
+die Regeln verstößt.
+
 ## Checkpoints
 
 Vier, wie in den Prozessregeln `stop-at-checkpoints`: **Recherche, Plan, Musterseite, Veröffentlichen.**

@@ -76,7 +76,23 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
 3. **`lernapps check` ohne Fehler**, bevor „Veröffentlichen“ gemeldet wird.
 4. **Nichts Ungeprüftes als geprüft melden.**
 
-## 6 Rolle des Orchestrators
+## 6 Schichten und Reihenfolge
+
+1. **Drei Schichten nach Tiefe** der Abhängigkeiten zwischen den Explainern (aus den `requires` der Karte).
+   - Schicht 1: #385, #386, #397, #389, #430, #432.
+   - Schicht 2: #768, #398, #400 (neue Apps) sowie #391, #393, #401 (Inkremente in `mathe-arithmetik`, `mathe-algebra`, `mathe-stochastik`).
+   - Schicht 3: #392, #395, #399, #429, #396.
+2. **Innerhalb einer Schicht bauen die Sessions parallel.** Jede baut gegen die Bausteine der Karte und wiederholt
+   Fremdes in einer Sammel-Wiederholung (`recap`); sie liest die Apps der anderen nicht und verlinkt nicht dorthin.
+3. **Veröffentlicht wird in der Reihenfolge der Tiefe.** Eine Session meldet „Veröffentlichen“ erst, wenn die
+   Explainer, von denen sie abhängt, veröffentlicht sind oder der Orchestrator es freigibt. Die Abhängigkeiten stehen
+   im Plan jeder Session (Orchestrator trägt sie ein).
+4. **Bestand wird nicht überschrieben.** Hat ein Repo schon Seiten (`mathe-brueche-dezimal`, `mathe-arithmetik`,
+   `mathe-algebra`, `mathe-stochastik`), prüft die Session zuerst den Bestand gegen die Bausteine des Issues, nennt
+   die Lücken und baut nur diese. Schon veröffentlichte Apps ändert sie nur als Inkrement auf `increment/*`; die
+   veröffentlichte Version bleibt unberührt.
+
+## 7 Rolle des Orchestrators
 
 Der Orchestrator antwortet an den Checkpoints in Vertretung des Menschen (Berechtigung ausdrücklich erteilt). Er
 vermerkt das in der Retro getrennt von Rückmeldungen des Menschen. **Freigabe zum Veröffentlichen (Merge,
