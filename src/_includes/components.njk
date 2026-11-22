@@ -11,9 +11,10 @@
     data-app
     data-subject="{{ app.subject | tx("de") }}"
     data-grades="{{ app.grades | join(' ') }}"
-    data-search="{{ [app.title | tx(lang), app.subject | tx(lang), app.summary | tx(lang), app.keywords | txAll(lang) | join(' '), app.creator.name] | join(' ') }}">
+    data-search="{{ [app.title | tx(lang), app.subject | tx(lang), app.summary | tx(lang), app.keywords | txAll(lang) | join(' '), app.creator.name, (app.series.title | tx(lang)) if app.series else ''] | join(' ') }}">
   <a href="{{ ('/' + app.id + '/') | inLang(lang) | url }}" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="{{ t.find.cardLink(app.title | tx(lang)) }}">
-    <p class="m-0 text-sm text-slate-500"><span{{ app.subject | fallbackLang(lang) | safe }}>{{ app.subject | tx(lang) }}</span> · {{ app.grades | gradeLabel(lang) }}</p>
+    <p class="m-0 text-sm text-slate-500"><span{{ app.subject | fallbackLang(lang) | safe }}>{{ app.subject | tx(lang) }}</span> · {{ app.grades | gradeLabel(lang) }}
+      {%- if app.series %} · <span class="font-semibold text-blue-800"><span class="sr-only">{{ t.find.seriesSpoken(app.series.title | tx(lang), app.series.part, app.series.of) }}</span><span aria-hidden="true"{{ app.series.title | fallbackLang(lang) | safe }}>{{ app.series.title | tx(lang) }} {{ t.find.seriesMark(app.series.part, app.series.of) }}</span></span>{% endif %}</p>
     <h2 class="m-0 mt-1 text-xl font-bold text-slate-900"{{ app.title | fallbackLang(lang) | safe }}>{{ app.title | tx(lang) }}</h2>
     <p class="m-0 mt-2 text-slate-700"{{ app.summary | fallbackLang(lang) | safe }}>{{ app.summary | tx(lang) }}</p>
     {{ fitnessChips(app) }}

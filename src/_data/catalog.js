@@ -12,6 +12,7 @@ import { load } from "js-yaml";
 import QRCode from "qrcode";
 import { Entry } from "../../schemas/entry.js";
 import { loadMap } from "../../lib/map.js";
+import { checkSeries, compareApps } from "../../lib/series.js";
 import { reserved } from "../../schemas/reserved.js";
 import languages from "./languages.js";
 import site from "./site.js";
@@ -123,7 +124,10 @@ async function build() {
 
   // Order and filter keys are German; the pages show the text of their language (filter "tx" in eleventy.config.js).
   const de = (text) => (typeof text === "string" ? text : text.de);
-  apps.sort((a, b) => de(a.subject).localeCompare(de(b.subject), "de") || de(a.title).localeCompare(de(b.title), "de"));
+  // The apps of a series stand together, by part, where the series' title belongs (lib/series.js).
+  const seriesErrors = checkSeries(apps);
+  if (seriesErrors.length) throw new Error(`entries:\n  - ${seriesErrors.join("\n  - ")}`);
+  apps.sort((a, b) => de(a.subject).localeCompare(de(b.subject), "de") || compareApps(a, b));
   const subjects = [...new Set(apps.map((a) => a.subject))]
     .filter((s, i, all) => all.findIndex((o) => de(o) === de(s)) === i)
     .sort((a, b) => de(a).localeCompare(de(b), "de"));

@@ -65,6 +65,21 @@ export const Entry = z
           "only competencies of that strand; without, competencies of several strands, which the subject's map must allow " +
           "(explainerFocus: competency). An explainer of format 2 names them on its pages",
       ),
+    series: z
+      .strictObject({
+        title: Text.describe("Name of the series the app belongs to, e.g. Millbrook; the same in every entry of the series"),
+        part: z
+          .int()
+          .min(1)
+          .describe("Where in the series the app comes: 1, 2, 3 …; apps that can be learnt in parallel share a number"),
+        of: z
+          .int()
+          .min(1)
+          .optional()
+          .describe("How many parts the series has in all (planned ones included); the same in every entry of the series"),
+      })
+      .optional()
+      .describe("The series of apps this app belongs to, with its part, shown as \"2/6\" and used to sort the series"),
     creator: z
       .strictObject({
         name: z.string().min(1).describe("Name thanks are addressed to"),
@@ -108,6 +123,10 @@ export const Entry = z
   .refine((e) => e.fitness.thirdParty === "none" || e.fitness.thirdPartyNote, {
     message: "fitness.thirdPartyNote: say which servers, and when",
     path: ["fitness", "thirdPartyNote"],
+  })
+  .refine((e) => !e.series?.of || e.series.part <= e.series.of, {
+    message: "series.part is at most series.of",
+    path: ["series", "part"],
   })
   .refine((e) => !e.strand || e.strand.startsWith(`${e.subject}/`), {
     message: "the strand is one of the app's subject: <subject>/<strand>",
