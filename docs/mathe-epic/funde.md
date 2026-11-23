@@ -63,6 +63,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W44 | Seiten-Adressen ohne Schrägstrich am Ende liefern die Startseite. | #392 | offen |
 | W45 | `links` ist in `app-templates` (Schema und Code) schon optional; die Pflicht „ein Link je Frage“ kommt aus den Skills in `lernapps/tooling` (zu klären dort, W4). Offen für `lernapps/tooling`. | app-templates-Session | an tooling |
 | W46 | Entscheidung des Menschen nötig: Lizenz-/Quellzeile unter jedem Bild (W21). `generated`-Startnummer ist Absicht (W12); W34, W22, W24, W37 (nur Hinweis), W27a, W30 (liegt in der App) werden in `app-templates` nicht behoben (Begründung im PR #187). | app-templates-Session | offen |
+| W47 | Bei Toleranz zeigt die Lösungsanzeige nach „Richtig!“ „erlaubte Abweichung: 0,05“ (Fachjargon für Lernende). | #429 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
