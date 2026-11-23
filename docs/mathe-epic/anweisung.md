@@ -22,6 +22,17 @@ jeden Baustein des Issues dem Bestand zuordnen (vorhanden / teilweise / fehlt), 
 (Schreibweisen, Aufgaben, Quellen, Dritt-Inhalte) und dem Orchestrator melden. Gebaut wird nur, was fehlt oder gegen
 die Regeln verstößt.
 
+## Aus Schicht 1 gelernt (gilt für dich)
+
+- **Musterseite:** Lass sie vor deiner Meldung von einem unabhängigen Lernenden-Prüfer (Unteragent, Klasse der Stufe) durchspielen und setze die Befunde um. Erst dann melden.
+- **Prüfer vor „Veröffentlichen“:** fachlicher Prüfer (rechnet alles nach, Stichprobe auf wörtliche Übernahmen) und ein Lernenden-Prüfer über alle Seiten. Schreibe im Plan unter „Review“ auf, was nach dem letzten Prüferlauf noch geändert wurde; war es inhaltlich, prüfe genau diese Stellen noch einmal.
+- **Funde zur Laufzeit** (Knöpfe, Meldungen, Formeln, Tests) behebst du nicht. Sammle sie im Bericht; der Orchestrator führt sie in `docs/mathe-epic/funde.md`.
+- **Links:** keine externen `links:`, auch nicht an Aufgaben. Verlangt das Werkzeug einen, verlinke die Kartenseite des Bausteins. Formeln: kein `\angle` (Unicode `∠`), keine geschützten Leerzeichen oder gruppierten Zahlen in Überschriften.
+- **Plan:** Nutze `lernapps plan` für alle Änderungen an Aufgaben (Hook `plan-file`). Hake nichts vor der Erledigung ab; übersprungene Aufgaben begründest du unter „Notes“.
+- **Push und PR:** Plan und Stand regelmäßig auf `work` bzw. `increment/*` pushen. Den Vorschau-PR öffnest du selbst, sobald du bereit bist; mergen darfst du nie.
+- **Sammel-Wiederholungen** schreibst du nach regeln.md Abschnitt 7, nicht nur als „Ich kann …“-Sätze.
+- **`init`/`npx`:** Wird ein Befehl vom Auto-Modus abgelehnt, umgehe das nicht, sondern melde mir den genauen Befehl; die Freigabe gibt der Mensch.
+
 ## Checkpoints
 
 Vier, wie in den Prozessregeln `stop-at-checkpoints`: **Recherche, Plan, Musterseite, Veröffentlichen.**
