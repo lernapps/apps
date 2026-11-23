@@ -99,7 +99,31 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
    die Lücken und baut nur diese. Schon veröffentlichte Apps ändert sie nur als Inkrement auf `increment/*`; die
    veröffentlichte Version bleibt unberührt.
 
-## 7 Rolle des Orchestrators
+## 7 Sammel-Wiederholung (`recap`)
+
+Eine Sammel-Wiederholung hilft Lernenden zu entscheiden, ob sie die Voraussetzungen für ein Kapitel erfüllen, und
+frischt auf, was sie dafür brauchen. Nur die „Ich kann …“-Sätze der Karte zu wiederholen genügt nicht.
+
+1. **Je Voraussetzung von außen ein eigener, kurzer Abschnitt** (Überschrift = Name des Bausteins in der Wortwahl der
+   Karte), in der Reihenfolge der `requires`. Höchstens ein Bildschirm je Baustein.
+2. **Fachbegriffe werden erklärt**, nicht nur genannt: Jeder Begriff, den das Kapitel voraussetzt und der in einem
+   anderen Explainer eingeführt wurde (z. B. Distributivgesetz, Primfaktor, Stellenwert, Nenner), steht fett mit ein bis
+   zwei Sätzen und einem Beispiel mit Zahlen. Jeder dieser Begriffe kommt auch ins Glossar des Explainers.
+3. **Selbsttest je Baustein:** ein bis zwei Kurzaufgaben mit sofortiger Rückmeldung, die zeigen, ob jemand das kann
+   („Kannst du das?“). Dazu der Satz, was zu tun ist, wenn nicht: Name des Bausteins und seine Kartenseite
+   (`https://lernapps.net/apps/map/mathematik/c/<baustein-id>/`). Kein Link in die App eines anderen Explainers.
+4. **Der Kopf des Recaps sagt**, wofür er ist („Das brauchst du für dieses Kapitel“), und der Schluss fasst als
+   Checkliste zusammen („Du bist bereit, wenn du …“). Die „Ich kann …“-Sätze der Karte eignen sich dafür.
+5. **Format:** eine Überschrift je Baustein, kurze Absätze, Begriffe fett, ein Beispiel im Beispielkasten, der
+   Selbsttest klar abgesetzt (eigener Block). Keine Textwand und keine bloße Liste von Sätzen.
+6. **Wo der Block `recap` das nicht kann** (er zeigt womöglich nur die Karten-Sätze), schreibe den Inhalt mit den
+   normalen Blöcken (Text, Definition, Beispiel, Aufgaben) auf einer Recap-Seite. Melde mir in einer Zeile, was der
+   Block nicht kann (Fund fürs Werkzeug).
+7. **Prüfung:** Der Lernenden-Prüfer beantwortet für jedes Recap: „Kann ich mit dieser Seite beurteilen, ob ich die
+   Voraussetzung erfülle, und verstehe ich die Begriffe?“ Der fachliche Prüfer prüft Definitionen, Beispiele und die
+   Rechnungen der Selbsttests.
+
+## 8 Rolle des Orchestrators
 
 Der Orchestrator antwortet an den Checkpoints in Vertretung des Menschen (Berechtigung ausdrücklich erteilt). Er
 vermerkt das in der Retro getrennt von Rückmeldungen des Menschen. **Freigabe zum Veröffentlichen (Merge,
