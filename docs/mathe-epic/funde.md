@@ -8,6 +8,8 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | Nr | Fund | Von | Stand |
 |---|---|---|---|
 | K1 | `muster-zahlenfolgen` (5-6) verlangt „mit einem Term beschreiben“, Variablen kommen aber erst in #393. Entschieden: Regel in Worten und mit Platzhalter („Nummer des Bildes“), kein Termumformen. | #386 | offen für #679 |
+| K3 | `bruchterme` und `bruchgleichungen` (#393, K4) setzen Bruchrechnen voraus (kürzen/erweitern, multiplizieren/dividieren), die Karte nennt es nicht in `requires`. Die Session baut dafür einen Recap. | #393 | offen für #679 |
+| K4 | Der Karten-Baustein `koordinatensystem` (#397) kennt nur den ersten Quadranten; #395 verlangt „vier Quadranten“ als Seite. | #395 | offen für #679 |
 | K2 | Karte und Issues sagen „Zahlenstrahl“, Überblick und Regeln sagen „Zahlengerade“. Entschieden in regeln.md Abschnitt 2. | #385 | geklärt, ggf. Überblick nachziehen |
 
 ## Werkzeug und Vorlage
