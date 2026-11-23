@@ -10,6 +10,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | K1 | `muster-zahlenfolgen` (5-6) verlangt „mit einem Term beschreiben“, Variablen kommen aber erst in #393. Entschieden: Regel in Worten und mit Platzhalter („Nummer des Bildes“), kein Termumformen. | #386 | offen für #679 |
 | K3 | `bruchterme` und `bruchgleichungen` (#393, K4) setzen Bruchrechnen voraus (kürzen/erweitern, multiplizieren/dividieren), die Karte nennt es nicht in `requires`. Die Session baut dafür einen Recap. | #393 | offen für #679 |
 | K4 | Der Karten-Baustein `koordinatensystem` (#397) kennt nur den ersten Quadranten; #395 verlangt „vier Quadranten“ als Seite. | #395 | offen für #679 |
+| K5 | #397 nutzt Grundrechenarten und die Einheit cm, beides steht nicht in den `requires` der Karte (`natuerliche-zahlen` allein). | #397 | offen für #679 |
 | K2 | Karte und Issues sagen „Zahlenstrahl“, Überblick und Regeln sagen „Zahlengerade“. Entschieden in regeln.md Abschnitt 2. | #385 | geklärt, ggf. Überblick nachziehen |
 
 ## Werkzeug und Vorlage
@@ -48,6 +49,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W30 | `import.meta.glob` mit negativem Muster ließ eine neue Seite im Test aus. | #389 | offen |
 | W31 | Das Schema erlaubt auf Recap-Seiten (`recap:`) keine Aufgaben („descriptive blocks only“). Umgehung: Komponente `Kurztest` in der Recap-Seite (Vorbild #430). Prüfen, ob das Werkzeug einen Kurztest-Block für Recaps anbieten soll. | #393, #386, #430, #392, #768 | offen |
 | W32 | `thirdParty: none` im Katalogeintrag, obwohl die App YouTube-Videos einbindet (mathe-algebra, Bestand). | #393 | Bestand wird bereinigt |
+| W33 | Der Kopf der Runtime-Recap-Seite (Tutor-Link, Inhaltsverzeichnis, technischer Name im Eingangskasten) ist nicht änderbar. | #397 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
