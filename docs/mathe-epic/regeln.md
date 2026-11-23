@@ -63,8 +63,8 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
   (SVG, Canvas).
 - **Nachschlagen ist keine Quelle:** Fakten dürfen in anderen öffentlichen Quellen (zum Beispiel Wikipedia) nachgeschlagen
   werden, wenn du sie danach selbst herleitest oder nachrechnest. Solche Seiten stehen nicht im Explainer (weder in den
-  Quellen noch als „Weiterlesen“-Link noch als `links:` an einer Aufgabe; verlangt das Werkzeug einen Link, zeige auf die
-  Kartenseite des Bausteins), und es werden keine Formulierungen, Aufgaben oder Bilder übernommen. Der
+  Quellen noch als „Weiterlesen“-Link noch als `links:` an einer Aufgabe; lass `links:` an Aufgaben weg, wo `lernapps check` besteht; verlangt
+  das Werkzeug einen Link, zeige auf die Kartenseite des Bausteins und melde es), und es werden keine Formulierungen, Aufgaben oder Bilder übernommen. Der
   fachliche Prüfer rechnet nach.
 - **Keine Dritt-Inhalte nachladen** (Videos, Schriftarten, Skripte von fremden Servern). Ausnahme nur nach Freigabe
   durch den Orchestrator; sie muss im Katalogeintrag stehen (`thirdParty`).
@@ -132,3 +132,21 @@ frischt auf, was sie dafür brauchen. Nur die „Ich kann …“-Sätze der Kart
 Der Orchestrator antwortet an den Checkpoints in Vertretung des Menschen (Berechtigung ausdrücklich erteilt). Er
 vermerkt das in der Retro getrennt von Rückmeldungen des Menschen. **Freigabe zum Veröffentlichen (Merge,
 Katalogeintrag) bleibt beim Menschen.**
+
+## 9 Rückmeldungen des Menschen (gelten für alle Explainer)
+
+Aus der Prüfung der ersten Vorschau; Seite und Anlass stehen im Plan von #385.
+
+1. **Überschrift des Einstiegs:** „Was du hier lernst“, nicht „Was du hier kannst“.
+2. **Nur auf Sichtbares verweisen:** Texte und Aufgaben sagen „der Pfeil“, „das Bild oben“ oder „die Zahl aus dem Schaubild“
+   nur, wenn es das auf der Seite gibt und Lernende es erkennen. Sonst beschreibe es oder nenne die Zahl.
+3. **Vorgänge sind als Vorgang erkennbar:** Verfeinern, Bündeln, Falten, Zoomen und Ähnliches zeigen ein sichtbares
+   Werkzeug (zum Beispiel eine Lupe als Symbol), den betroffenen Abschnitt und die Verbindung zum Ergebnis, nicht nur das
+   Ergebnisbild.
+4. **Selbsttests und „Kannst du das schon?“ sind nicht zu leicht** für die Stufe: Die erste Aufgabe ist eine, die man
+   nicht nebenbei im Kopf löst (zum Beispiel 9 · 12 statt 7 · 8, 48 + 37 statt 8 + 7). Der Hinweis zeigt den Weg
+   (Zerlegen), nicht die Lösung.
+5. **Eine neue Darstellung oder Rechenart wird vor der ersten Aufgabe in Worten eingeführt**, mit ihrem Modell (zum
+   Beispiel: „Anzahl Reihen mal Anzahl Plättchen je Reihe“), nicht erst in der Aufgabe.
+6. **Keine `links:` an Aufgaben.** Der Link auf die Kartenseite hilft Lernenden nicht (Quellen, Abschnitt 4). Wo `lernapps
+   check` ohne `links:` besteht, lass sie überall weg.
