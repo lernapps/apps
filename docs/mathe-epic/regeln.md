@@ -118,9 +118,8 @@ frischt auf, was sie dafür brauchen. Nur die „Ich kann …“-Sätze der Kart
    Selbsttest klar abgesetzt (eigener Block). Keine Textwand und keine bloße Liste von Sätzen.
 6. **Das Schema erlaubt auf einer Seite mit `recap:` nur beschreibende Blöcke, keine Aufgaben.** Der Selbsttest steht
    deshalb als kleine Komponente **`Kurztest`** (eine Frage, eine Auswahl, sofortige Rückmeldung mit Grund, nichts wird
-   gezählt oder gespeichert) direkt in der Recap-Seite. Das Vorbild ist `src/components/Kurztest.*` im Repo
-   `lernapps/mathe-saetze-entdecken` (Branch `work`, #430): kopiere die Komponente von dort und passe sie an, statt
-   eine eigene zu entwerfen. Sie braucht eine Textalternative für die Version ohne JavaScript und Bedienung per
+   gezählt oder gespeichert) direkt in der Recap-Seite. Die Vorlage liegt in `docs/mathe-epic/components/` (aus #430,
+   mit Anleitung): kopiere die drei Dateien nach `src/components/` deines Repos, statt eine eigene zu entwerfen. Sie braucht eine Textalternative für die Version ohne JavaScript und Bedienung per
    Tastatur. Hat dein Repo schon einen anderen Weg, der `lernapps check` besteht und Abschnitt 7 erfüllt, bleibt er.
    Fällt die Komponente aus, gilt als Rückfall eine eigene Kurztest-Seite direkt hinter dem Recap (normale Seite,
    Titel „… Kurztest“). Melde mir in einer Zeile, was nicht ging (Fund fürs Werkzeug, W31).
