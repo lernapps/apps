@@ -50,6 +50,9 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W31 | Das Schema erlaubt auf Recap-Seiten (`recap:`) keine Aufgaben („descriptive blocks only“). Umgehung: Komponente `Kurztest` in der Recap-Seite (Vorbild #430). Prüfen, ob das Werkzeug einen Kurztest-Block für Recaps anbieten soll. | #393, #386, #430, #392, #768 | offen |
 | W32 | `thirdParty: none` im Katalogeintrag, obwohl die App YouTube-Videos einbindet (mathe-algebra, Bestand). | #393 | Bestand wird bereinigt |
 | W33 | Der Kopf der Runtime-Recap-Seite (Tutor-Link, Inhaltsverzeichnis, technischer Name im Eingangskasten) ist nicht änderbar. | #397 | offen |
+| W34 | Ein `term:` darf im Explainer nur einmal als `definition` stehen; wiederholte Begriffe in späteren Recaps stehen nur fett im Text. | #430 | offen |
+| W35 | Die Hinweise `explainer-text-load` und `explainer-repetition` melden Recaps (textlastig, wiederkehrender Satz „Wenn du unsicher warst …“); bleiben stehen. | #430 | offen |
+| W36 | Ein Werkzeug-Baustein für den Recap-Selbsttest (statt Komponente `Kurztest` je Explainer) wäre für alle Explainer sinnvoll; `competencies` darf nicht leer sein, eine Recap-Seite ohne `recap:` geht nicht. | #430 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
