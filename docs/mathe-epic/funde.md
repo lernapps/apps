@@ -57,6 +57,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W38 | Zahlenaufgaben sperren nach der ersten Antwort ohne zweiten Versuch; Enter im Zahlenfeld prüft nicht; „Prüfen“ grau (vgl. W9). | #432 | offen |
 | W39 | Der Link einer Aufgabe ist nach falscher Antwort nicht sichtbar, nur unter „Lösung“; die Standardrückmeldung „Lies dazu noch einmal den Text“ ohne `mistakes` hilft nicht (vgl. W13). | #385, #398 | offen |
 | W40 | Die Lösungsanzeige der Laufzeit schreibt negative Zahlen mit Bindestrich („-3“), unsere Regel verlangt `−` (U+2212); die Komponente `Kurztest` braucht `a/b` in Frage und Optionen (W28). | #768 | offen |
+| W41 | Komponente `Kurztest` (Vorlage in `docs/mathe-epic/components/`, aus #430): Pfeiltasten beantworten beim Durchgehen jede Option (Radio-Verhalten), Radios nur 13 px, eine mehrzeilige Frage schneidet den Rahmen (`legend`), der Kartenlink öffnet eine externe Seite ohne Hinweis. Nach der Welle einmal zentral beheben und in alle Explainer übernehmen. | #389 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
