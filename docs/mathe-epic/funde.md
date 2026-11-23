@@ -41,6 +41,9 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W25 | Lint `explainer-text-load` (350 Wörter) schlägt bei Beweis- und Konstruktionsseiten an. | #430 | offen |
 | W26 | `lernapps plan skip` schreibt Text in die Aufgabe, der Hook `plan-file` wertet das als Umformulierung; die beiden widersprechen sich. | #389 | offen |
 | W27 | `generated` kann nicht zeichnen (z. B. Hunderterfeld); Zuordnung ohne JS zeigt keine Einträge; „85/100“ im Prozentfeld → „Antworte zuerst …“. | #389 | offen |
+| W28 | Rückmeldungen von Komponenten und `generated`-`mistakes` setzen keine Formeln; die Regel „Brüche immer gesetzt“ ist dort nicht erfüllbar (ca. 40 Stellen in #389). Ausnahme in regeln.md. | #389 | offen |
+| W29 | `\overline` fehlt in der Formelliste (Periodenstrich; Umgehung U+0305). | #389 | offen |
+| W30 | `import.meta.glob` mit negativem Muster ließ eine neue Seite im Test aus. | #389 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 

@@ -29,7 +29,7 @@ Hessen (Annahme; bei Abweichung im Lehrplan oder Issue gilt dieser).
 | Mal, geteilt | `·` (Malpunkt) und `:` (Doppelpunkt). Kein `*`, kein `/` als Rechenzeichen. Bruchstrich nur für Brüche. |
 | Einheiten | Zahl, geschütztes Leerzeichen, Einheit: `3 cm`, `2,5 kg`. Einheit nie kursiv. |
 | Prozent | `15 %` mit geschütztem Leerzeichen. „Prozentpunkte“ nie mit „Prozent“ verwechseln. |
-| Brüche | In Text, Aufgaben, Rückmeldungen und Bildbeschriftungen immer gesetzt (Zähler über Nenner, MathML), nie als `3/4`. Eingabefelder dürfen `3/4`, `0,75` und `0.75` akzeptieren, wo die Aufgabe das erlaubt. |
+| Brüche | In Text, Aufgaben, Rückmeldungen und Bildbeschriftungen immer gesetzt (Zähler über Nenner, MathML), nie als `3/4`. Eingabefelder dürfen `3/4`, `0,75` und `0.75` akzeptieren, wo die Aufgabe das erlaubt. **Ausnahme (Stand der Laufzeit):** In Rückmeldungen von Komponenten und in `mistakes` von `generated` können keine Formeln gesetzt werden; dort ist `a/b` erlaubt, bis die Laufzeit es kann (Fund W28). Jede solche Stelle wird im Plan gezählt. |
 | Variablen | Kursiv: *x*, *a*. Termumformung zeilenweise, ein Schritt je Zeile, Begründung am Rand. |
 | Zahlenstrahl, Zahlengerade | **Zahlenstrahl** für die Darstellung ab 0 nach rechts (nur nicht-negative Zahlen: natürliche Zahlen, Brüche, Dezimalzahlen in 5-6). **Zahlengerade** erst, wenn Zahlen links der Null vorkommen (ab „Zahlen unter null“, #768) und für die Darstellung als Ganzes über die Jahre (Überblick #402). Auf einer Seite wird nicht gewechselt. |
 | Fachwörter | Das Wort der Karte (Name des Bausteins) gilt. Neue Wörter werden am Beispiel eingeführt und stehen bei der ersten Verwendung im Text, nicht in einem Glossar allein. |
