@@ -116,11 +116,14 @@ frischt auf, was sie dafür brauchen. Nur die „Ich kann …“-Sätze der Kart
    Checkliste zusammen („Du bist bereit, wenn du …“). Die „Ich kann …“-Sätze der Karte eignen sich dafür.
 5. **Format:** eine Überschrift je Baustein, kurze Absätze, Begriffe fett, ein Beispiel im Beispielkasten, der
    Selbsttest klar abgesetzt (eigener Block). Keine Textwand und keine bloße Liste von Sätzen.
-6. **Das Schema erlaubt auf einer Seite mit `recap:` nur beschreibende Blöcke, keine Aufgaben.** Dann: Der Recap
-   (Seite mit `recap:`) enthält Fachbegriffe, Beispiele, Kopf und Checkliste; der Selbsttest steht auf einer eigenen
-   Kurztest-Seite direkt dahinter (normale Seite ohne `recap:`, Titel „… Kurztest“). Wo die Erklärung des Blocks
-   selbst nicht reicht, schreibe sie mit normalen Blöcken. Melde mir in einer Zeile, was nicht ging (Fund fürs
-   Werkzeug, W31).
+6. **Das Schema erlaubt auf einer Seite mit `recap:` nur beschreibende Blöcke, keine Aufgaben.** Der Selbsttest steht
+   deshalb als kleine Komponente **`Kurztest`** (eine Frage, eine Auswahl, sofortige Rückmeldung mit Grund, nichts wird
+   gezählt oder gespeichert) direkt in der Recap-Seite. Das Vorbild ist `src/components/Kurztest.*` im Repo
+   `lernapps/mathe-saetze-entdecken` (Branch `work`, #430): kopiere die Komponente von dort und passe sie an, statt
+   eine eigene zu entwerfen. Sie braucht eine Textalternative für die Version ohne JavaScript und Bedienung per
+   Tastatur. Hat dein Repo schon einen anderen Weg, der `lernapps check` besteht und Abschnitt 7 erfüllt, bleibt er.
+   Fällt die Komponente aus, gilt als Rückfall eine eigene Kurztest-Seite direkt hinter dem Recap (normale Seite,
+   Titel „… Kurztest“). Melde mir in einer Zeile, was nicht ging (Fund fürs Werkzeug, W31).
 7. **Prüfung:** Der Lernenden-Prüfer beantwortet für jedes Recap: „Kann ich mit dieser Seite beurteilen, ob ich die
    Voraussetzung erfülle, und verstehe ich die Begriffe?“ Der fachliche Prüfer prüft Definitionen, Beispiele und die
    Rechnungen der Selbsttests.

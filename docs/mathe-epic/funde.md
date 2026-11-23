@@ -44,7 +44,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W28 | Rückmeldungen von Komponenten und `generated`-`mistakes` setzen keine Formeln; die Regel „Brüche immer gesetzt“ ist dort nicht erfüllbar (ca. 40 Stellen in #389). Ausnahme in regeln.md. | #389 | offen |
 | W29 | `\overline` fehlt in der Formelliste (Periodenstrich; Umgehung U+0305). | #389 | offen |
 | W30 | `import.meta.glob` mit negativem Muster ließ eine neue Seite im Test aus. | #389 | offen |
-| W31 | Das Schema erlaubt auf Recap-Seiten (`recap:`) keine Aufgaben („descriptive blocks only“); der Selbsttest muss auf eine eigene Kurztest-Seite. Prüfen, ob `recap:` Kurzaufgaben erlauben kann. | #393, #386, #430 | offen |
+| W31 | Das Schema erlaubt auf Recap-Seiten (`recap:`) keine Aufgaben („descriptive blocks only“). Umgehung: Komponente `Kurztest` in der Recap-Seite (Vorbild #430). Prüfen, ob das Werkzeug einen Kurztest-Block für Recaps anbieten soll. | #393, #386, #430, #392, #768 | offen |
 | W32 | `thirdParty: none` im Katalogeintrag, obwohl die App YouTube-Videos einbindet (mathe-algebra, Bestand). | #393 | Bestand wird bereinigt |
 
 ## Regeln (geklärt, schon in regeln.md)
