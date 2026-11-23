@@ -173,6 +173,57 @@
         "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
       }
     },
+    "series": {
+      "description": "The series of apps this app belongs to, with its part, shown as \"2/6\" and used to sort the series",
+      "type": "object",
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "properties": {
+                "de": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "German"
+                },
+                "en": {
+                  "description": "English",
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "de"
+              ],
+              "additionalProperties": false
+            }
+          ],
+          "description": "Name of the series the app belongs to, e.g. Millbrook; the same in every entry of the series"
+        },
+        "part": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991,
+          "description": "Where in the series the app comes: 1, 2, 3 …; apps that can be learnt in parallel share a number"
+        },
+        "of": {
+          "description": "How many parts the series has in all (planned ones included); the same in every entry of the series",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "title",
+        "part"
+      ],
+      "additionalProperties": false
+    },
     "creator": {
       "type": "object",
       "properties": {
