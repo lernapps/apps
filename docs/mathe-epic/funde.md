@@ -28,6 +28,11 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W12 | `generated` startet bei einer zufälligen „Aufgabe Nr.“. | #430 | offen |
 | W13 | Rückmeldung bei falscher Wahr/Falsch-Antwort ist generisch („Lies dazu noch einmal den Text“). | #430 | offen |
 | W14 | `\angle` fehlt in der Formelliste; Umgehung mit Unicode `∠` (U+2220). Betrifft alle Geometrie-Explainer. | #430 | offen |
+| W15 | Die No-JS-Prüfung zählt `<math>` außerhalb beschriebener Aufgaben als Formel des Inhalts; Komponenten setzen Brüche daher in HTML mit `role=math`. | #389 | offen |
+| W16 | Der No-JS-Test vergleicht Überschriften mit normalisiertem Text; ein geschütztes Leerzeichen oder eine gruppierte Zahl in einem Titel lässt ihn scheitern. | #389, #385 | offen |
+| W17 | Die Lösungsanzeige der Laufzeit schreibt Zahlen mit Punkt (2.236), unsere Regel verlangt Komma bzw. Lücke. | #385 | offen |
+| W18 | Eingabe „1/6“ oder Text im Zahlenfeld liefert nur „Antworte zuerst …“ ohne Hinweis (vgl. W6, W11). | #389 | offen |
+| W19 | `gh api` auf Pages ist über den Proxy gesperrt; Pages-Status in Sessions nicht prüfbar. | #385 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
