@@ -59,6 +59,8 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W40 | Die Lösungsanzeige der Laufzeit schreibt negative Zahlen mit Bindestrich („-3“), unsere Regel verlangt `−` (U+2212); die Komponente `Kurztest` braucht `a/b` in Frage und Optionen (W28). | #768 | offen |
 | W41 | Komponente `Kurztest` (Vorlage in `docs/mathe-epic/components/`, aus #430): Pfeiltasten beantworten beim Durchgehen jede Option (Radio-Verhalten), Radios nur 13 px, eine mehrzeilige Frage schneidet den Rahmen (`legend`), der Kartenlink öffnet eine externe Seite ohne Hinweis. Nach der Welle einmal zentral beheben und in alle Explainer übernehmen. | #389 | offen |
 | W42 | Komponente `Kurztest`: `fieldset.kurztest` war bei 360 px 382 px breit (CI `usable-at-360px`, lokal unauffällig). Behoben in der Vorlage `docs/mathe-epic/components/Kurztest.vue` (`min-width: 0`, `max-width: 100%`, Umbruch langer Wörter, `min-height` statt fester Zeilenhöhe); jede Kopie muss es übernehmen, bis der Block in `app-templates` die Komponente ablöst. | #768 | Vorlage behoben, Kopien offen |
+| W43 | `\ldots` ist in der Formelliste nicht erlaubt; Formeln in `matching` erscheinen roh; „.:“ und doppelter Optionstext in der Rückmeldung nach falscher Wahl; Zahlfelder lehnen „1/2“ ab; `generated`-Aufgabentexte nutzen „^“ für Hochzahlen. | #392 | offen |
+| W44 | Seiten-Adressen ohne Schrägstrich am Ende liefern die Startseite. | #392 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
