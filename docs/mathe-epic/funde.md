@@ -39,6 +39,8 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W23 | `max`/`min` fehlen im Ausdrucksparser (generated). | #430 | offen |
 | W24 | Prop-Name = importierte Funktion macht in der Vorlage die Funktion sichtbar (Stolperfalle, im Guide notiert). | #430 | offen |
 | W25 | Lint `explainer-text-load` (350 Wörter) schlägt bei Beweis- und Konstruktionsseiten an. | #430 | offen |
+| W26 | `lernapps plan skip` schreibt Text in die Aufgabe, der Hook `plan-file` wertet das als Umformulierung; die beiden widersprechen sich. | #389 | offen |
+| W27 | `generated` kann nicht zeichnen (z. B. Hunderterfeld); Zuordnung ohne JS zeigt keine Einträge; „85/100“ im Prozentfeld → „Antworte zuerst …“. | #389 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
