@@ -116,9 +116,11 @@ frischt auf, was sie dafür brauchen. Nur die „Ich kann …“-Sätze der Kart
    Checkliste zusammen („Du bist bereit, wenn du …“). Die „Ich kann …“-Sätze der Karte eignen sich dafür.
 5. **Format:** eine Überschrift je Baustein, kurze Absätze, Begriffe fett, ein Beispiel im Beispielkasten, der
    Selbsttest klar abgesetzt (eigener Block). Keine Textwand und keine bloße Liste von Sätzen.
-6. **Wo der Block `recap` das nicht kann** (er zeigt womöglich nur die Karten-Sätze), schreibe den Inhalt mit den
-   normalen Blöcken (Text, Definition, Beispiel, Aufgaben) auf einer Recap-Seite. Melde mir in einer Zeile, was der
-   Block nicht kann (Fund fürs Werkzeug).
+6. **Das Schema erlaubt auf einer Seite mit `recap:` nur beschreibende Blöcke, keine Aufgaben.** Dann: Der Recap
+   (Seite mit `recap:`) enthält Fachbegriffe, Beispiele, Kopf und Checkliste; der Selbsttest steht auf einer eigenen
+   Kurztest-Seite direkt dahinter (normale Seite ohne `recap:`, Titel „… Kurztest“). Wo die Erklärung des Blocks
+   selbst nicht reicht, schreibe sie mit normalen Blöcken. Melde mir in einer Zeile, was nicht ging (Fund fürs
+   Werkzeug, W31).
 7. **Prüfung:** Der Lernenden-Prüfer beantwortet für jedes Recap: „Kann ich mit dieser Seite beurteilen, ob ich die
    Voraussetzung erfülle, und verstehe ich die Begriffe?“ Der fachliche Prüfer prüft Definitionen, Beispiele und die
    Rechnungen der Selbsttests.
