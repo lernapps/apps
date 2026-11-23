@@ -61,6 +61,8 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W42 | Komponente `Kurztest`: `fieldset.kurztest` war bei 360 px 382 px breit (CI `usable-at-360px`, lokal unauffällig). Behoben in der Vorlage `docs/mathe-epic/components/Kurztest.vue` (`min-width: 0`, `max-width: 100%`, Umbruch langer Wörter, `min-height` statt fester Zeilenhöhe); jede Kopie muss es übernehmen, bis der Block in `app-templates` die Komponente ablöst. | #768 | Vorlage behoben, Kopien offen |
 | W43 | `\ldots` ist in der Formelliste nicht erlaubt; Formeln in `matching` erscheinen roh; „.:“ und doppelter Optionstext in der Rückmeldung nach falscher Wahl; Zahlfelder lehnen „1/2“ ab; `generated`-Aufgabentexte nutzen „^“ für Hochzahlen. | #392 | offen |
 | W44 | Seiten-Adressen ohne Schrägstrich am Ende liefern die Startseite. | #392 | offen |
+| W45 | `links` ist in `app-templates` (Schema und Code) schon optional; die Pflicht „ein Link je Frage“ kommt aus den Skills in `lernapps/tooling` (zu klären dort, W4). Offen für `lernapps/tooling`. | app-templates-Session | an tooling |
+| W46 | Entscheidung des Menschen nötig: Lizenz-/Quellzeile unter jedem Bild (W21). `generated`-Startnummer ist Absicht (W12); W34, W22, W24, W37 (nur Hinweis), W27a, W30 (liegt in der App) werden in `app-templates` nicht behoben (Begründung im PR #187). | app-templates-Session | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
