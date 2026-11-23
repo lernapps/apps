@@ -33,6 +33,12 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W17 | Die Lösungsanzeige der Laufzeit schreibt Zahlen mit Punkt (2.236), unsere Regel verlangt Komma bzw. Lücke. | #385 | offen |
 | W18 | Eingabe „1/6“ oder Text im Zahlenfeld liefert nur „Antworte zuerst …“ ohne Hinweis (vgl. W6, W11). | #389 | offen |
 | W19 | `gh api` auf Pages ist über den Proxy gesperrt; Pages-Status in Sessions nicht prüfbar. | #385 | offen |
+| W20 | Zahleneingabe mit Einheit („115 Grad“) wird als leer gewertet („Antworte zuerst“). | #430 | offen |
+| W21 | „Quelle: eigene Zeichnung. Lizenz: CC0-1.0.“ unter jedem Bild ist Lärm; kürzere Darstellung oder einmal pro Seite. | #430 | offen |
+| W22 | Offene Aufgabe: „ja“ reicht fürs Vergleichen, Checkliste = Musterlösung. | #430 | offen |
+| W23 | `max`/`min` fehlen im Ausdrucksparser (generated). | #430 | offen |
+| W24 | Prop-Name = importierte Funktion macht in der Vorlage die Funktion sichtbar (Stolperfalle, im Guide notiert). | #430 | offen |
+| W25 | Lint `explainer-text-load` (350 Wörter) schlägt bei Beweis- und Konstruktionsseiten an. | #430 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
