@@ -56,6 +56,7 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W37 | Der Fachbegriff-Link (`definition`) springt nur auf dieselbe Seite; der KI-Tutor-Block oben ist für Klasse 5 unverständlich; `generated` meldet „fewer than N distinct tasks“ bei kleinem Wertebereich; der Block `recap` zeigt die Karten-Sätze als rohe Pfade („mathematik/natuerliche-zahlen“). | #398, #386 | offen |
 | W38 | Zahlenaufgaben sperren nach der ersten Antwort ohne zweiten Versuch; Enter im Zahlenfeld prüft nicht; „Prüfen“ grau (vgl. W9). | #432 | offen |
 | W39 | Der Link einer Aufgabe ist nach falscher Antwort nicht sichtbar, nur unter „Lösung“; die Standardrückmeldung „Lies dazu noch einmal den Text“ ohne `mistakes` hilft nicht (vgl. W13). | #385, #398 | offen |
+| W40 | Die Lösungsanzeige der Laufzeit schreibt negative Zahlen mit Bindestrich („-3“), unsere Regel verlangt `−` (U+2212); die Komponente `Kurztest` braucht `a/b` in Frage und Optionen (W28). | #768 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
