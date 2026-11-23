@@ -53,6 +53,9 @@ richtige Stelle (Karte: lernapps/apps#679, Label `map-review`). Nichts davon wir
 | W34 | Ein `term:` darf im Explainer nur einmal als `definition` stehen; wiederholte Begriffe in späteren Recaps stehen nur fett im Text. | #430 | offen |
 | W35 | Die Hinweise `explainer-text-load` und `explainer-repetition` melden Recaps (textlastig, wiederkehrender Satz „Wenn du unsicher warst …“); bleiben stehen. | #430 | offen |
 | W36 | Ein Werkzeug-Baustein für den Recap-Selbsttest (statt Komponente `Kurztest` je Explainer) wäre für alle Explainer sinnvoll; `competencies` darf nicht leer sein, eine Recap-Seite ohne `recap:` geht nicht. | #430 | offen |
+| W37 | Der Fachbegriff-Link (`definition`) springt nur auf dieselbe Seite; der KI-Tutor-Block oben ist für Klasse 5 unverständlich; `generated` meldet „fewer than N distinct tasks“ bei kleinem Wertebereich; der Block `recap` zeigt die Karten-Sätze als rohe Pfade („mathematik/natuerliche-zahlen“). | #398, #386 | offen |
+| W38 | Zahlenaufgaben sperren nach der ersten Antwort ohne zweiten Versuch; Enter im Zahlenfeld prüft nicht; „Prüfen“ grau (vgl. W9). | #432 | offen |
+| W39 | Der Link einer Aufgabe ist nach falscher Antwort nicht sichtbar, nur unter „Lösung“; die Standardrückmeldung „Lies dazu noch einmal den Text“ ohne `mistakes` hilft nicht (vgl. W13). | #385, #398 | offen |
 
 ## Regeln (geklärt, schon in regeln.md)
 
