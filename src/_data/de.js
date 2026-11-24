@@ -71,7 +71,13 @@ const de = {
     // The series of an app (entry field series): "Millbrook 2/6", spoken "Reihe Millbrook, Teil 2 von 6".
     seriesMark: (part, of) => (of ? `${part}/${of}` : `Teil ${part}`),
     seriesSpoken: (title, part, of) => `Reihe ${title}, Teil ${part}${of ? ` von ${of}` : ""}`,
-    chips: ["Ohne Anmeldung", "Ohne Installation", "Kostenlos"],
+    // Where an app stands in the learning path of its subject (the strip on the card has no visible text): the three
+    // grade bands of the map, without numbers, because a language may be learnt as first, second or third foreign language.
+    position: {
+      names: ["Anfang", "Mitte", "später"],
+      one: (name) => `Lernweg: ${name}`,
+      range: (from, to) => `Lernweg: von ${from} bis ${to}`,
+    },
   },
 
   // ── App-Seite (x-app-in-minutes: s-fitness-clarity … t-thank-creator-adult, t-give-feedback) ──

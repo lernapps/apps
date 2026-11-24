@@ -270,6 +270,14 @@ The search shows "Millbrook 2/6" on the card ("Teil 2" without `of`), finds the 
 apps of a series together in the order of `part`, then by title, where the series' title belongs alphabetically
 (`lib/series.js`).
 
+The **position** of an app in the map is computed, never written down: from the steps (section 1) of the competencies
+its pages practise (or its entry names; a recap page does not count), `lib/map.js` `positionOf` gives the span of rows
+the app covers, as fractions of the subject's rows, and the first and last grade band it touches. The card in the search
+shows it as a strip of the three grade bands to scale with the span marked, without visible text: the text ("Lernweg:
+von Anfang bis Mitte") is the strip's `aria-label` and `title`. The bands are named Anfang, Mitte and später, not 5–6,
+7–8 and 9–10, because a language may be learnt as first, second or third foreign language. An app without competencies
+has no strip.
+
 Checks of the listing (rule `entry-learning-map`, an error): every id exists; every competency of an app belongs to the
 app's strand (KD-19), or, for a unit app, the subject allows several strands; an explainer's `strand` in the entry, if
 given, equals the one in `lernapps-pages.json`, and its `subject` there equals the entry's. Then the pages, as section 1
