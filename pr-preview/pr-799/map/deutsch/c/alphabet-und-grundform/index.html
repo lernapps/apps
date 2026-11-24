@@ -63,12 +63,6 @@
   </ol>
 </nav>
 
-  
-<aside class="map-status map-status-draft" aria-labelledby="status-deutsch">
-  <p class="m-0"><strong id="status-deutsch" class="map-status-tag map-status-tag-draft">Entwurf</strong> Diese Karte ist nur eine Idee, um das Prinzip zu zeigen. Noch keine Lehrkraft des Fachs hat sie geprüft. Stränge, Bausteine und Pfeile können falsch sein oder fehlen.</p>
-  <p class="m-0 mt-1">Du unterrichtest das Fach? Sieh die Karte durch und sag uns, was fehlt oder falsch ist: <a href="https://github.com/lernapps/apps/issues/new?title=Lernlandkarte%20Deutsch%3A%20Durchsicht" class="underline underline-offset-2 font-semibold">Mithelfen</a> <span class="map-status-note">(GitHub-Issue, braucht ein GitHub-Konto)</span></p>
-</aside>
-
 
   <div class="flex flex-col gap-3 items-start">
     <a href="/apps/pr-preview/pr-799/map/#baustein" class="text-sm text-blue-700 underline underline-offset-2">Baustein · was ist das?</a>
@@ -77,9 +71,13 @@
     <dl class="map-facts w-full mt-2">
       <div><dt>Strang</dt><dd><a href="/apps/pr-preview/pr-799/map/deutsch/schreiben/" class="text-blue-700 underline underline-offset-2">Schreiben</a></dd></div>
       <div><dt>Richtstufe</dt><dd>Klasse 5/6</dd></div>
-      <div><dt>Quelle</dt><dd lang="de"><a href="https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/2022_06_23-Bista-ESA-MSA-Deutsch.pdf" class="text-blue-700 underline underline-offset-2">KMK, Bildungsstandards für das Fach Deutsch, Erster Schulabschluss (ESA) und Mittlerer Schulabschluss (MSA), Beschluss vom 15.10.2004 und vom 04.12.2003 i. d. F. vom 23.06.2022</a></dd></div>
     </dl>
   </div>
+  <section aria-labelledby="wer" class="flex flex-col gap-3">
+    <h2 id="wer" class="m-0 text-xl font-bold text-slate-900">Welche App übt ihn?</h2>
+    <p class="m-0 p-4 rounded-lg map-chip-gap">Noch übt keine App diesen Baustein. Das ist eine Lücke.</p>
+    <p class="m-0 text-slate-700">Du hast eine Idee, wie man das üben kann? <a href="/apps/pr-preview/pr-799/build/" class="text-blue-700 underline underline-offset-2">Baue eine App für diesen Strang</a></p>
+  </section>
   <section class="panel" aria-labelledby="weg">
     <h2 id="weg" class="panel-title">Die Kette</h2>
     <p class="m-0 text-slate-600">Was du vorher brauchst und was danach kommt, Schritt für Schritt.</p>
@@ -89,7 +87,7 @@
         <dl class="map-chain-steps">
           <dt>Klasse 5/6 · Schritt 1</dt>
           <dd><ul><li>
-<a href="/apps/pr-preview/pr-799/map/deutsch/c/verb-konjugieren/" class="text-blue-700 underline underline-offset-2"><span>Verben konjugieren</span></a> <span class="text-slate-600">· Strang Sprache und Sprachgebrauch untersuchen</span>
+<a href="/apps/pr-preview/pr-799/map/deutsch/c/verb-konjugieren/" class="text-blue-700 underline underline-offset-2" title="Verben konjugieren"><span>Verben konjugieren</span></a> <span class="text-slate-600">· Strang Sprache und Sprachgebrauch untersuchen</span>
  <span class="map-direct">direkt</span></li></ul></dd>
         </dl>
       </div>
@@ -104,7 +102,7 @@
         <dl class="map-chain-steps">
           <dt>Klasse 5/6 · Schritt 3</dt>
           <dd><ul><li>
-<a href="/apps/pr-preview/pr-799/map/deutsch/c/im-woerterbuch-nachschlagen/" class="text-blue-700 underline underline-offset-2"><span>Im Wörterbuch nachschlagen</span></a>
+<a href="/apps/pr-preview/pr-799/map/deutsch/c/im-woerterbuch-nachschlagen/" class="text-blue-700 underline underline-offset-2" title="Im Wörterbuch nachschlagen"><span>Im Wörterbuch nachschlagen</span></a>
 </li></ul></dd>
         </dl>
         <p class="m-0 mt-3 text-slate-700">Danach bauen noch 3 Bausteine in 2 weiteren Schritten darauf auf.</p>
@@ -113,9 +111,9 @@
     <p class="m-0 mt-4"><a href="/apps/pr-preview/pr-799/map/deutsch/c/#alphabet-und-grundform" class="text-blue-700 underline underline-offset-2">Die ganze Kette in der Karte nach Klasse und Kette</a></p>
   </section>
 
-  <section class="panel" aria-labelledby="wann">
-    <h2 id="wann" class="panel-title">Wann ist er dran?</h2>
-    <p class="m-0 text-slate-600">Jeder Lehrplan legt selbst fest, in welcher Klasse ein Baustein dran ist. Ohne gewählten Lehrplan zeigt die Karte die Richtstufe.</p>
+  <details class="panel">
+    <summary class="cursor-pointer"><h2 id="wann" class="inline m-0 text-xl font-bold text-slate-900">Wann ist er dran?</h2></summary>
+    <p class="m-0 mt-3 text-slate-600">Jeder Lehrplan legt selbst fest, in welcher Klasse ein Baustein dran ist. Ohne gewählten Lehrplan zeigt die Karte die Richtstufe.</p>
     <div class="map-scroll mt-3" role="region" aria-labelledby="wann" tabindex="0">
       <table class="map-table">
         <thead>
@@ -138,13 +136,12 @@
       </table>
     </div>
     <p class="m-0 mt-3 text-sm text-slate-600">Andere Länder, noch nicht erfasst: Baden-Württemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen</p>
-  </section>
+  </details>
 
-  <section class="panel" aria-labelledby="wer">
-    <h2 id="wer" class="panel-title">Welche App übt ihn?</h2>
-    <p class="m-0 p-4 rounded-lg map-chip-gap">Noch übt keine App diesen Baustein. Das ist eine Lücke.</p>
-    <p class="m-0 mt-4 text-slate-700">Du hast eine Idee, wie man das üben kann? <a href="/apps/pr-preview/pr-799/build/" class="text-blue-700 underline underline-offset-2">Baue eine App für diesen Strang</a></p>
-  </section>
+  <details class="panel">
+    <summary class="cursor-pointer"><h2 id="quelle" class="inline m-0 text-xl font-bold text-slate-900">Quelle</h2></summary>
+    <p class="m-0 mt-3" lang="de"><a href="https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2022/2022_06_23-Bista-ESA-MSA-Deutsch.pdf" class="text-blue-700 underline underline-offset-2">KMK, Bildungsstandards für das Fach Deutsch, Erster Schulabschluss (ESA) und Mittlerer Schulabschluss (MSA), Beschluss vom 15.10.2004 und vom 04.12.2003 i. d. F. vom 23.06.2022</a></p>
+  </details>
 </div>
 
   </main>
