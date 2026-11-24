@@ -1,20 +1,25 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
 title: "Mathe: Stochastik – Wahrscheinlichkeit"
 subject: mathematik
-grades: [7, 8]
+series:
+  title: Mathekarte
+  part: 2
+  of: 3
+grades: [7, 8, 9, 10]
 summary: >-
-  Wahrscheinlichkeit Schritt für Schritt: die Laplace-Formel, Baumdiagramme, die Pfadregeln, das Gegenereignis und
-  Ziehen ohne Zurücklegen. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit
-  Aufgaben, die sofort sagen, ob das Ergebnis stimmt.
+  Zufall und Wahrscheinlichkeit von Klasse 7 bis 10: Zufallsversuche mit der Zufallsmaschine, relative Häufigkeit als
+  Schätzwert, Simulationen, die Laplace-Formel, Baumdiagramme mit beiden Pfadregeln, Gegenereignis und Ziehen ohne
+  Zurücklegen, dazu Vierfeldertafel und bedingte Wahrscheinlichkeit. Jede Seite erklärt, wozu man etwas braucht, mit
+  Regel, Beispiel und Aufgaben, die sofort sagen, ob das Ergebnis stimmt und warum.
 url: https://lernapps.net/mathe-stochastik/
-keywords: [Wahrscheinlichkeit, Stochastik, Zufall, Würfel, Baumdiagramm, Laplace, Pfadregel]
+keywords: [Wahrscheinlichkeit, Stochastik, Zufall, Würfel, Zufallsmaschine, relative Häufigkeit, Simulation, Baumdiagramm, Laplace, Pfadregel, Vierfeldertafel, bedingte Wahrscheinlichkeit]
+strand: mathematik/stochastik
 creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
 source: https://github.com/lernapps/mathe-stochastik
-commit: 0a9fe9a42f59aa8f5e7700a7d476f354b2b79fd1
+commit: f323240e4aa32a93b08b5c6bfe76d27bd977f1bc
 fitness:
   account: false
   install: false
   storage: device
-  thirdParty: on-click
-  thirdPartyNote: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
+  thirdParty: none
   checked: false
