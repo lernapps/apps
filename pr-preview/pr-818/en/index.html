@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en" data-la-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Find learning apps · lernapps.net</title>
+  <meta name="description" content="Find a learning app for your next lesson or for tonight: free, no sign-up, ready right away.">
+  <link rel="canonical" href="https://lernapps.net/apps/en/">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/apps/pr-preview/pr-818/lernapps-tokens.css">
+<link rel="stylesheet" href="/apps/pr-preview/pr-818/lernapps-frame.css">
+<link rel="alternate" hreflang="en" href="/apps/pr-preview/pr-818/en/">
+<link rel="alternate" hreflang="de" href="/apps/pr-preview/pr-818/">
+<script>(() => {
+  const key = "lernapps-lang", here = "en", pages = {"de":"/apps/pr-preview/pr-818/"};
+  const known = ["de","en"];
+  const browser = (navigator.languages || [navigator.language]).map((l) => String(l).slice(0, 2).toLowerCase()).find((l) => known.includes(l));
+  let chosen = null;
+  try { chosen = localStorage.getItem(key); } catch {}
+  const wanted = known.includes(chosen) ? chosen : browser;
+  if (wanted && wanted !== here && pages[wanted] && !/bot|crawl|spider|slurp/i.test(navigator.userAgent)) {
+    location.replace(pages[wanted] + location.search + location.hash);
+    return;
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-la-lang]");
+    if (!a) return;
+    try { a.dataset.laLang === browser ? localStorage.removeItem(key) : localStorage.setItem(key, a.dataset.laLang); } catch {}
+  });
+})();</script>
+  <link rel="stylesheet" href="/apps/pr-preview/pr-818/uno.css">
+  <link rel="stylesheet" href="/apps/pr-preview/pr-818/assets/apps.css">
+  <script src="/apps/pr-preview/pr-818/assets/finden.js" defer></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col" style="font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;">
+  <a class="la-skip" href="#main-content" lang="en">Skip to content</a>
+<p class="la-preview" lang="en">Preview of a change. The real page: <a href="https://lernapps.net/apps/en/">lernapps.net/apps/en/</a></p><header class="la-header" lang="en">
+  <div class="la-header__inner">
+    <a class="la-brand" href="/en/" aria-label="lernapps.net – home page"><img src="/brand/mark-plain.svg" alt=""><span>lernapps<span class="la-brand__tld">.net</span></span></a>
+    <nav class="la-nav la-nav--bar" aria-label="Main navigation"><ul><li><a href="/apps/pr-preview/pr-818/en/" aria-current="page">Catalog</a></li><li><a href="/practice/en/">Practise</a></li><li><a href="/apps/pr-preview/pr-818/en/build/">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li><li><a href="/en/tutor/">Tutor</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">Platform</a></li><li><a href="/en/join/">Get involved</a></li><li class="la-lang"><a href="/apps/pr-preview/pr-818/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav>
+    <details class="la-menu"><summary>Menu</summary><nav class="la-nav la-nav--menu" aria-label="Main navigation"><div class="la-menu__group"><p class="la-menu__title" id="la-menu-0">For learners</p><ul aria-labelledby="la-menu-0"><li><a href="/apps/pr-preview/pr-818/en/" aria-current="page">App catalog</a></li><li><a href="/practice/en/">Practise for a test</a></li></ul></div><div class="la-menu__group"><p class="la-menu__title" id="la-menu-1">For makers</p><ul aria-labelledby="la-menu-1"><li><a href="/apps/pr-preview/pr-818/en/build/">Build an app</a></li><li><a href="/tooling/en/">Tooling</a></li></ul></div><div class="la-menu__group"><p class="la-menu__title" id="la-menu-2">Understand and join in</p><ul aria-labelledby="la-menu-2"><li><a href="/en/tutor/">Tutor</a></li><li><a href="/en/features/">Features</a></li><li><a href="/docs/en/">Platform</a></li><li><a href="/en/join/">Get involved</a></li></ul></div><ul class="la-menu__lang"><li class="la-lang"><a href="/apps/pr-preview/pr-818/" hreflang="de" lang="de" data-la-lang="de" aria-label="Sprache: Deutsch">Deutsch</a></li></ul></nav></details>
+  </div>
+</header>
+
+  <main id="main-content" tabindex="-1" class="flex-1 outline-none">
+    
+<section class="bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-12">
+    <h1 class="m-0 font-extrabold leading-tight tracking-tight" style="font-size: clamp(1.75rem, 5vw, 2.75rem);">A learning app for your next lesson</h1>
+    <p class="m-0 mt-3 text-lg text-slate-300">Free, no sign-up, ready right away. Search by topic and grade.</p>
+    <p class="m-0 mt-1 text-slate-400">A test tomorrow? Your child can start tonight at the kitchen table.</p>
+
+    <form class="mt-8 grid gap-3 sm:grid-cols-[1fr_auto_auto] items-end" role="search" aria-label="Search" data-search-form hidden>
+      <div>
+        <label for="thema" class="block text-sm font-semibold text-slate-300">Topic</label>
+        <input id="thema" name="thema" type="search" autocomplete="off" placeholder="e.g. percent or tree diagram" class="field field-dark mt-1 w-full">
+      </div>
+      <div>
+        <label for="fach" class="block text-sm font-semibold text-slate-300">Subject</label>
+        <select id="fach" name="fach" class="field field-dark mt-1 w-full">
+          <option value="">All subjects</option><option value="Chemie">Chemistry</option><option value="Deutsch">German</option><option value="Englisch">English</option><option value="Erdkunde">Geography</option><option value="Informatik">Computer science</option><option value="Mathematik">Mathematics</option><option value="Musik">Music</option><option value="Physik">Physics</option>
+        </select>
+      </div>
+      <div>
+        <label for="klasse" class="block text-sm font-semibold text-slate-300">Grade</label>
+        <select id="klasse" name="klasse" class="field field-dark mt-1 w-full">
+          <option value="">All grades</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
+  <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 text-sm">
+    <p class="m-0 font-semibold text-slate-600" aria-live="polite" data-count
+       data-none="No app found" data-one="1 app" data-many="{n} apps">31 apps</p>
+    <p class="m-0 text-slate-600" data-hint hidden>Nothing that fits? <a href="/apps/pr-preview/pr-818/en/build/" class="font-semibold text-blue-700 underline underline-offset-2 whitespace-nowrap" data-build-link>Build one yourself <span aria-hidden="true">→</span></a></p>
+  </div>
+
+  <ul class="list-none p-0 m-0 mt-3 grid gap-4" data-results>
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Chemie"
+    data-grades="7 8"
+    data-search="Inorganic chemistry – first steps Chemistry You learn what substances are made of: pure substances and mixtures, particles and atoms, the main groups of the periodic table, symbols and formulas. You match, build atoms and calculate on your own. Atome Periodensystem Stoffe Formeln Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/anorganische-chemie/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Inorganic chemistry – first steps">
+    <p class="m-0 text-sm text-slate-500"><span>Chemistry</span> · Grades 7 and 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">Inorganic chemistry – first steps</h2>
+    <p class="m-0 mt-2 text-slate-700">You learn what substances are made of: pure substances and mixtures, particles and atoms, the main groups of the periodic table, symbols and formulas. You match, build atoms and calculate on your own.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Pure substances and mixtures" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/stoffe/reinstoffe-gemische/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Pure substances and mixtures</a></li>
+      <li data-topic data-search="Properties of substances" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/stoffe/stoffeigenschaften/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Properties of substances</a></li>
+      <li data-topic data-search="Particle model" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/teilchen/teilchenmodell/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Particle model</a></li>
+      <li data-topic data-search="Atomic structure" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/teilchen/atombau/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Atomic structure</a></li>
+      <li data-topic data-search="Reading the periodic table" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/periodensystem/periodensystem-lesen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Reading the periodic table</a></li>
+      <li data-topic data-search="The eight main groups" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/periodensystem/hauptgruppen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">The eight main groups</a></li>
+      <li data-topic data-search="Metals and non-metals" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/periodensystem/metalle-nichtmetalle/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Metals and non-metals</a></li>
+      <li data-topic data-search="Symbols and formulas" hidden><a href="https://lernapps.net/apps/start/anorganische-chemie/formeln/symbole-formeln/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Symbols and formulas</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Chemie"
+    data-grades="7 8"
+    data-search="Chemistry – chemical reactions Chemistry When is something a chemical reaction, and how do you write it down? Learners tell reactions from changes of state and write simple reaction equations. First they briefly go over what they need for it. They practise on every page. chemical reaction reaction equation change of state formulas conservation of mass Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/chemie-reaktionen/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Chemistry – chemical reactions">
+    <p class="m-0 text-sm text-slate-500"><span>Chemistry</span> · Grades 7 and 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">Chemistry – chemical reactions</h2>
+    <p class="m-0 mt-2 text-slate-700">When is something a chemical reaction, and how do you write it down? Learners tell reactions from changes of state and write simple reaction equations. First they briefly go over what they need for it. They practise on every page.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Properties of substances – a short recap" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/vorwissen/stoffeigenschaften/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Properties of substances – a short recap</a></li>
+      <li data-topic data-search="States of matter – a short recap" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/vorwissen/aggregatzustaende/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">States of matter – a short recap</a></li>
+      <li data-topic data-search="Particle model – a short recap" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/vorwissen/teilchenmodell/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Particle model – a short recap</a></li>
+      <li data-topic data-search="Symbols and formulas – a short recap" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/vorwissen/formeln/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Symbols and formulas – a short recap</a></li>
+      <li data-topic data-search="How to recognise a reaction" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/reaktionen/reaktionen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">How to recognise a reaction</a></li>
+      <li data-topic data-search="Reaction or change of state?" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/reaktionen/zustandsaenderung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Reaction or change of state?</a></li>
+      <li data-topic data-search="Mass stays the same" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/reaktionen/massenerhaltung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Mass stays the same</a></li>
+      <li data-topic data-search="Reaction equations" hidden><a href="https://lernapps.net/apps/start/chemie-reaktionen/reaktionen/reaktionsgleichungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Reaction equations</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Deutsch"
+    data-grades="3 4 5 6 7 8 9 10 11 12 13"
+    data-search="Textcheck German Genau lesen üben, auf zwei Arten: Fehler in einem Text finden, von der Rechtschreibung bis zum Widerspruch, oder eine Wiedergabe mit ihrer Quelle vergleichen und Falsches finden, etwa geänderte Zahlen, hinzugefügte Sätze und Meinungen, die wie Tatsachen klingen. Jede Übung hat drei Stufen. Nach dem Prüfen erklärt die App jeden Fehler. Lesen Textverständnis Fehlersuche Korrekturlesen Lesekompetenz genau lesen Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/textcheck/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Textcheck">
+    <p class="m-0 text-sm text-slate-500"><span>German</span> · Grades 3 to 13</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Textcheck</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Genau lesen üben, auf zwei Arten: Fehler in einem Text finden, von der Rechtschreibung bis zum Widerspruch, oder eine Wiedergabe mit ihrer Quelle vergleichen und Falsches finden, etwa geänderte Zahlen, hinzugefügte Sätze und Meinungen, die wie Tatsachen klingen. Jede Übung hat drei Stufen. Nach dem Prüfen erklärt die App jeden Fehler.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Klang und Schrift English Du hörst und sprichst englische Laute. Du lernst die Lautschrift lesen, ähnliche Laute zu unterscheiden und -s und -ed richtig zu sprechen und zu schreiben. Du übst auch Kurzformen und die Melodie von Fragen. Du brauchst Ton. Aussprache Lautschrift th -ed Kurzformen Satzmelodie Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/englisch-klang-schrift/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Klang und Schrift">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Klang und Schrift</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du hörst und sprichst englische Laute. Du lernst die Lautschrift lesen, ähnliche Laute zu unterscheiden und -s und -ed richtig zu sprechen und zu schreiben. Du übst auch Kurzformen und die Melodie von Fragen. Du brauchst Ton.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Lautschrift lesen" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/klaenge/lautschrift/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Lautschrift lesen</a></li>
+      <li data-topic data-search="Kurz oder lang?" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/klaenge/vokale/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Kurz oder lang?</a></li>
+      <li data-topic data-search="th, w, v und r" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/klaenge/konsonanten-th-w/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">th, w, v und r</a></li>
+      <li data-topic data-search="Wo es am Ende summt" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/klaenge/stimmhafte-auslaute/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wo es am Ende summt</a></li>
+      <li data-topic data-search="Buchstaben, die man nicht hört" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/klaenge/silent-letters/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Buchstaben, die man nicht hört</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/endungen/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Wie -s und -ed klingen" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/endungen/endungen-s-ed/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wie -s und -ed klingen</a></li>
+      <li data-topic data-search="Was vor der Endung passiert" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/endungen/rechtschreibung-endungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was vor der Endung passiert</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/gespraech/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Zwei Wörter, ein Klang" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/gespraech/kurzformen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zwei Wörter, ein Klang</a></li>
+      <li data-topic data-search="Wohin geht die Stimme?" hidden><a href="https://lernapps.net/apps/start/englisch-klang-schrift/gespraech/intonation-fragen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wohin geht die Stimme?</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Hello, Millbrook! English Sophie aus Deutschland geht ein Jahr an eine englische Schule. Du erlebst ihre ersten Tage mit. Du übst Begrüßen, Nachfragen im Unterricht, Zahlen, Uhrzeit, Datum, Schule und Feste, mit Hören, Nachsprechen und sofortiger Rückmeldung. Englisch Klasse 5 Begrüßung Uhrzeit Datum Schule in Großbritannien Oliver (@mrsimpson) Millbrook">
+  <a href="/apps/pr-preview/pr-818/en/hello-millbrook/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Hello, Millbrook!">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6 · <span class="font-semibold text-blue-800"><span class="sr-only">Series Millbrook, part 1 of 6</span><span aria-hidden="true" lang="de">Millbrook 1/6</span></span></p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Hello, Millbrook!</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Sophie aus Deutschland geht ein Jahr an eine englische Schule. Du erlebst ihre ersten Tage mit. Du übst Begrüßen, Nachfragen im Unterricht, Zahlen, Uhrzeit, Datum, Schule und Feste, mit Hören, Nachsprechen und sofortiger Rückmeldung.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Hello! Begrüßen und höflich sein" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/hello/begruessung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Hello! Begrüßen und höflich sein</a></li>
+      <li data-topic data-search="Im Unterricht nachfragen" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/hello/classroom/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Im Unterricht nachfragen</a></li>
+      <li data-topic data-search="Noun, verb, adjective: die Namen der Wortarten" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/hello/fachbegriffe/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Noun, verb, adjective: die Namen der Wortarten</a></li>
+      <li data-topic data-search="Zahlen und Preise" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/zahlen-uhr-kalender/zahlen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zahlen und Preise</a></li>
+      <li data-topic data-search="Wie spät ist es?" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/zahlen-uhr-kalender/uhrzeit/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wie spät ist es?</a></li>
+      <li data-topic data-search="Wochentage, Monate und Datum" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/zahlen-uhr-kalender/datum/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wochentage, Monate und Datum</a></li>
+      <li data-topic data-search="Groß oder klein?" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/zahlen-uhr-kalender/grossschreibung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Groß oder klein?</a></li>
+      <li data-topic data-search="Meine Schule und mein Stundenplan" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/schuljahr/schule/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Meine Schule und mein Stundenplan</a></li>
+      <li data-topic data-search="Feste in Großbritannien" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/schuljahr/feste/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Feste in Großbritannien</a></li>
+      <li data-topic data-search="Schule hier und dort" hidden><a href="https://lernapps.net/apps/start/hello-millbrook/schuljahr/schule-uk/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Schule hier und dort</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Beschreiben und vergleichen: Adjektive und Adverbien English Du beschreibst und vergleichst Personen, Dinge und Handlungen. Blaue Anhänger zeigen Adjektive, orange Anhänger zeigen Adverbien. Du lernst die Steigerung, Vergleiche mit than und as … as und den Unterschied zwischen Adjektiv und Adverb. Adjektive Adverbien Steigerung Vergleich than as … as Oliver (@mrsimpson) Millbrook">
+  <a href="/apps/pr-preview/pr-818/en/englisch-adjektive-adverbien/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Beschreiben und vergleichen: Adjektive und Adverbien">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6 · <span class="font-semibold text-blue-800"><span class="sr-only">Series Millbrook, part 3 of 6</span><span aria-hidden="true" lang="de">Millbrook 3/6</span></span></p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Beschreiben und vergleichen: Adjektive und Adverbien</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du beschreibst und vergleichst Personen, Dinge und Handlungen. Blaue Anhänger zeigen Adjektive, orange Anhänger zeigen Adverbien. Du lernst die Steigerung, Vergleiche mit than und as … as und den Unterschied zwischen Adjektiv und Adverb.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/beschreiben-und-vergleichen/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Der blaue Anhänger: Adjektive" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/beschreiben-und-vergleichen/adjektive/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Der blaue Anhänger: Adjektive</a></li>
+      <li data-topic data-search="Die Treppe: Adjektive steigern" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/beschreiben-und-vergleichen/adjektive-steigern/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Die Treppe: Adjektive steigern</a></li>
+      <li data-topic data-search="Zwei Dinge vergleichen: than und as … as" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/beschreiben-und-vergleichen/vergleiche/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zwei Dinge vergleichen: than und as … as</a></li>
+      <li data-topic data-search="Der orangefarbene Anhänger: Adverbien" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/wie-jemand-etwas-tut/adverbien/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Der orangefarbene Anhänger: Adverbien</a></li>
+      <li data-topic data-search="Blau oder orange? Adjektiv oder Adverb" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/wie-jemand-etwas-tut/adjektiv-oder-adverb/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Blau oder orange? Adjektiv oder Adverb</a></li>
+      <li data-topic data-search="Die Treppe, zweite Seite: Adverbien steigern" hidden><a href="https://lernapps.net/apps/start/englisch-adjektive-adverbien/wie-jemand-etwas-tut/adverbien-steigern/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Die Treppe, zweite Seite: Adverbien steigern</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Dinge, Mengen und Orte English Du hilfst, einen Lagerraum zu ordnen. Dabei lernst du, Dinge zu benennen und Mengen anzugeben. Du übst a, an und the, den Plural, much und many, some und any, there is und there are sowie in, on und at. Artikel Plural much many there is there are in on at Oliver (@mrsimpson) Millbrook">
+  <a href="/apps/pr-preview/pr-818/en/englisch-dinge-mengen-orte/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Dinge, Mengen und Orte">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6 · <span class="font-semibold text-blue-800"><span class="sr-only">Series Millbrook, part 3 of 6</span><span aria-hidden="true" lang="de">Millbrook 3/6</span></span></p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Dinge, Mengen und Orte</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du hilfst, einen Lagerraum zu ordnen. Dabei lernst du, Dinge zu benennen und Mengen anzugeben. Du übst a, an und the, den Plural, much und many, some und any, there is und there are sowie in, on und at.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Eine Kiste, ein Etikett: a, an und the" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/ein-ding-viele-dinge/artikel/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine Kiste, ein Etikett: a, an und the</a></li>
+      <li data-topic data-search="Viele Kisten: der Plural" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/ein-ding-viele-dinge/plural/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Viele Kisten: der Plural</a></li>
+      <li data-topic data-search="Wem gehört die Kiste? ’s und of" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/ein-ding-viele-dinge/genitiv/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wem gehört die Kiste? ’s und of</a></li>
+      <li data-topic data-search="Hier und dort: this, these, that, those" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/ein-ding-viele-dinge/demonstrativ/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Hier und dort: this, these, that, those</a></li>
+      <li data-topic data-search="Kisten und Gläser: many, much und a lot of" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wie-viel-wie-viele/much-many/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Kisten und Gläser: many, much und a lot of</a></li>
+      <li data-topic data-search="Aus dem Glas wird etwas Zählbares: a cup of" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wie-viel-wie-viele/mengen-mit-of/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Aus dem Glas wird etwas Zählbares: a cup of</a></li>
+      <li data-topic data-search="Was ist noch da? some, any und no" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wie-viel-wie-viele/some-any/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was ist noch da? some, any und no</a></li>
+      <li data-topic data-search="Etiketten ohne Nomen: somebody, anything, nowhere" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wie-viel-wie-viele/somebody-anything/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Etiketten ohne Nomen: somebody, anything, nowhere</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wo-und-wann/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Wo steht die Kiste? in, on, under, next to, behind" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wo-und-wann/praepositionen-ort/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wo steht die Kiste? in, on, under, next to, behind</a></li>
+      <li data-topic data-search="Was gibt es im Lagerraum? There is und there are" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wo-und-wann/there-is-are/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was gibt es im Lagerraum? There is und there are</a></li>
+      <li data-topic data-search="Wann ist das Schulfest? in, on und at" hidden><a href="https://lernapps.net/apps/start/englisch-dinge-mengen-orte/wo-und-wann/praepositionen-zeit/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wann ist das Schulfest? in, on und at</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Alltag: Ich, meine Familie, mein Zuhause English Du beschreibst auf Englisch dich, deine Familie, dein Zuhause, deinen Tag und deine Freizeit. Du schreibst eine Nachricht, eine Einladung und eine Postkarte. Dein Profil „All about me“ schreibst du Seite für Seite in dein Heft. Familie Zuhause Tagesablauf Hobbys Postkarte All about me Oliver (@mrsimpson) Millbrook">
+  <a href="/apps/pr-preview/pr-818/en/englisch-alltag/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Alltag: Ich, meine Familie, mein Zuhause">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6 · <span class="font-semibold text-blue-800"><span class="sr-only">Series Millbrook, part 4 of 6</span><span aria-hidden="true" lang="de">Millbrook 4/6</span></span></p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Alltag: Ich, meine Familie, mein Zuhause</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du beschreibst auf Englisch dich, deine Familie, dein Zuhause, deinen Tag und deine Freizeit. Du schreibst eine Nachricht, eine Einladung und eine Postkarte. Dein Profil „All about me“ schreibst du Seite für Seite in dein Heft.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/menschen-beschreiben/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Wer ist wer? Familie, Aussehen und Charakter" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/menschen-beschreiben/familie-personen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wer ist wer? Familie, Aussehen und Charakter</a></li>
+      <li data-topic data-search="Ein Text über eine Person und einen Ort" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/menschen-beschreiben/personen-orte-beschreiben/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ein Text über eine Person und einen Ort</a></li>
+      <li data-topic data-search="Gefühle, Freunde und Streit" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/menschen-beschreiben/gefuehle-freundschaft/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Gefühle, Freunde und Streit</a></li>
+      <li data-topic data-search="Wenn etwas wehtut: Beim Arzt" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/menschen-beschreiben/gesundheit/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wenn etwas wehtut: Beim Arzt</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/zuhause-parkers/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Zuhause: Räume, Möbel und Garten" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/zuhause-parkers/wohnen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zuhause: Räume, Möbel und Garten</a></li>
+      <li data-topic data-search="Ellies Tag und mein Tag: Uhrzeit und Tageszeit" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/zuhause-parkers/tagesablauf/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ellies Tag und mein Tag: Uhrzeit und Tageszeit</a></li>
+      <li data-topic data-search="Essen und Trinken: Mahlzeiten und was ich mag" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/zuhause-parkers/essen-trinken/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Essen und Trinken: Mahlzeiten und was ich mag</a></li>
+      <li data-topic data-search="Ellies Alltag und mein Alltag" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/zuhause-parkers/alltag-uk/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ellies Alltag und mein Alltag</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/freizeit-nachrichten/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Was machst du gern? Hobbys und Haustiere" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/freizeit-nachrichten/freizeit-hobbys/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was machst du gern? Hobbys und Haustiere</a></li>
+      <li data-topic data-search="Komm zu meiner Party! Nachricht und Einladung" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/freizeit-nachrichten/kurznachricht/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Komm zu meiner Party! Nachricht und Einladung</a></li>
+      <li data-topic data-search="Liebe Grüße aus Millbrook: E-Mail und Postkarte" hidden><a href="https://lernapps.net/apps/start/englisch-alltag/freizeit-nachrichten/email-postkarte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Liebe Grüße aus Millbrook: E-Mail und Postkarte</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Geschichten lesen, erzählen und weiterschreiben English Du liest kurze englische Geschichten und findest heraus: Wer? Wo? Wann? Was? Du erzählst sie nach, beschreibst Bilder und schreibst eigene Geschichten, ein Tagebuch und einen Dialog. Geschichten Lesen Nacherzählen Schreiben story map Tagebuch Oliver (@mrsimpson) Millbrook">
+  <a href="/apps/pr-preview/pr-818/en/englisch-geschichten/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Geschichten lesen, erzählen und weiterschreiben">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6 · <span class="font-semibold text-blue-800"><span class="sr-only">Series Millbrook, part 4 of 6</span><span aria-hidden="true" lang="de">Millbrook 4/6</span></span></p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Geschichten lesen, erzählen und weiterschreiben</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du liest kurze englische Geschichten und findest heraus: Wer? Wo? Wann? Was? Du erzählst sie nach, beschreibst Bilder und schreibst eigene Geschichten, ein Tagebuch und einen Dialog.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/englisch-geschichten/was-passiert/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Wer, wo, wann, was: die story map" hidden><a href="https://lernapps.net/englisch-geschichten/was-passiert/figuren-ort-handlung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wer, wo, wann, was: die story map</a></li>
+      <li data-topic data-search="Zusammenfassen: nur das Wichtigste" hidden><a href="https://lernapps.net/englisch-geschichten/was-passiert/zusammenfassung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zusammenfassen: nur das Wichtigste</a></li>
+      <li data-topic data-search="Nacherzählen: Station für Station" hidden><a href="https://lernapps.net/englisch-geschichten/was-passiert/nacherzaehlen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Nacherzählen: Station für Station</a></li>
+      <li data-topic data-search="Das brauchst du für Bilder und Bildfolgen" hidden><a href="https://lernapps.net/englisch-geschichten/bilder-erzaehlen/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du für Bilder und Bildfolgen</a></li>
+      <li data-topic data-search="Wegweiser: first, then, after that, suddenly, finally" hidden><a href="https://lernapps.net/englisch-geschichten/bilder-erzaehlen/verbindungswoerter/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wegweiser: first, then, after that, suddenly, finally</a></li>
+      <li data-topic data-search="Ein Bild beschreiben: wo ist was?" hidden><a href="https://lernapps.net/englisch-geschichten/bilder-erzaehlen/bild-beschreiben/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ein Bild beschreiben: wo ist was?</a></li>
+      <li data-topic data-search="Eine Bildergeschichte erzählen" hidden><a href="https://lernapps.net/englisch-geschichten/bilder-erzaehlen/bildergeschichte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine Bildergeschichte erzählen</a></li>
+      <li data-topic data-search="Eine Geschichte planen und schreiben" hidden><a href="https://lernapps.net/englisch-geschichten/selbst-erzaehlen/geschichte-schreiben/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine Geschichte planen und schreiben</a></li>
+      <li data-topic data-search="Eine Geschichte fortsetzen oder anders enden lassen" hidden><a href="https://lernapps.net/englisch-geschichten/selbst-erzaehlen/geschichte-fortsetzen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine Geschichte fortsetzen oder anders enden lassen</a></li>
+      <li data-topic data-search="Ein Tagebucheintrag über deinen Tag" hidden><a href="https://lernapps.net/englisch-geschichten/selbst-erzaehlen/tagebucheintrag/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ein Tagebucheintrag über deinen Tag</a></li>
+      <li data-topic data-search="Eine Spielszene schreiben: Sprecher und Zeilen" hidden><a href="https://lernapps.net/englisch-geschichten/spielen-und-reimen/dialog-schreiben/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine Spielszene schreiben: Sprecher und Zeilen</a></li>
+      <li data-topic data-search="Reime hören, finden und sprechen" hidden><a href="https://lernapps.net/englisch-geschichten/spielen-und-reimen/gedichte-reime/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Reime hören, finden und sprechen</a></li>
+      <li data-topic data-search="Wessen Sicht? Dieselbe Szene, eine andere Brille" hidden><a href="https://lernapps.net/englisch-geschichten/anders-erzaehlen/perspektive-wechseln/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wessen Sicht? Dieselbe Szene, eine andere Brille</a></li>
+      <li data-topic data-search="Wo und wann spielt es, und wie fühlt es sich an?" hidden><a href="https://lernapps.net/englisch-geschichten/anders-erzaehlen/setting-atmosphaere/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wo und wann spielt es, und wie fühlt es sich an?</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Großbritannien: Stadt, Inseln, London English Du findest dich mit Sophie in einer britischen Stadt zurecht. Du fragst nach dem Weg, liest Schilder und kaufst ein. Dann lernst du die Britischen Inseln und London kennen und stellst eine Region vor. Großbritannien London Stadtplan Weg beschreiben Landeskunde Oliver (@mrsimpson) Millbrook">
+  <a href="/apps/pr-preview/pr-818/en/englisch-grossbritannien/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Großbritannien: Stadt, Inseln, London">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6 · <span class="font-semibold text-blue-800"><span class="sr-only">Series Millbrook, part 4 of 6</span><span aria-hidden="true" lang="de">Millbrook 4/6</span></span></p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Großbritannien: Stadt, Inseln, London</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du findest dich mit Sophie in einer britischen Stadt zurecht. Du fragst nach dem Weg, liest Schilder und kaufst ein. Dann lernst du die Britischen Inseln und London kennen und stellst eine Region vor.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/wege-laeden-schilder/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Den Weg beschreiben: Millbrook auf dem Plan" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/wege-laeden-schilder/stadt-wegbeschreibung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Den Weg beschreiben: Millbrook auf dem Plan</a></li>
+      <li data-topic data-search="Schilder, Fahrpläne und Speisekarten lesen" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/wege-laeden-schilder/alltagstexte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Schilder, Fahrpläne und Speisekarten lesen</a></li>
+      <li data-topic data-search="Kleidung kaufen: nach Größe und Preis fragen" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/wege-laeden-schilder/kleidung-einkaufen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Kleidung kaufen: nach Größe und Preis fragen</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/britische-inseln/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Die Karte: UK, Great Britain und Ireland" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/britische-inseln/britische-inseln/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Die Karte: UK, Great Britain und Ireland</a></li>
+      <li data-topic data-search="Eine Region vorstellen: Cornwall" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/britische-inseln/region-uk/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine Region vorstellen: Cornwall</a></li>
+      <li data-topic data-search="Stadt und Land vergleichen" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/britische-inseln/stadt-land-uk/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Stadt und Land vergleichen</a></li>
+      <li data-topic data-search="Die Römer in Britannien" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/london/roemer-in-britannien/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Die Römer in Britannien</a></li>
+      <li data-topic data-search="Sehenswürdigkeiten in London" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/london/london-sehenswuerdigkeiten/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Sehenswürdigkeiten in London</a></li>
+      <li data-topic data-search="Menschen in Großbritannien" hidden><a href="https://lernapps.net/apps/start/englisch-grossbritannien/london/vielfalt-gb/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Menschen in Großbritannien</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Pronomen: I, me, my English Du hilfst Sophie, das richtige Pronomen zu finden. Du fragst: Wer tut es? Wen trifft es? Wem gehört es? Dabei füllst du Schritt für Schritt eine Pronomen-Tabelle mit I, me, my, he, she, it, we und they. Pronomen I me my Possessivbegleiter Englisch Grammatik he she it Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/englisch-pronomen/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Pronomen: I, me, my">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Pronomen: I, me, my</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du hilfst Sophie, das richtige Pronomen zu finden. Du fragst: Wer tut es? Wen trifft es? Wem gehört es? Dabei füllst du Schritt für Schritt eine Pronomen-Tabelle mit I, me, my, he, she, it, we und they.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Wer tut es? I, you, he, she, it, we, they" hidden><a href="https://lernapps.net/apps/start/englisch-pronomen/pronomen-1/wer-tut-es/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wer tut es? I, you, he, she, it, we, they</a></li>
+      <li data-topic data-search="Wen trifft es? me, you, him, her, it, us, them" hidden><a href="https://lernapps.net/apps/start/englisch-pronomen/pronomen-1/wen-trifft-es/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wen trifft es? me, you, him, her, it, us, them</a></li>
+      <li data-topic data-search="Zu wem gehört es? my, your, our, their" hidden><a href="https://lernapps.net/apps/start/englisch-pronomen/pronomen-1/my-your/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zu wem gehört es? my, your, our, their</a></li>
+      <li data-topic data-search="Zu wem gehört es? his, her, its" hidden><a href="https://lernapps.net/apps/start/englisch-pronomen/pronomen-1/his-her/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zu wem gehört es? his, her, its</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Sätze bauen English Du legst englische Sätze mit Satzkarten. Du lernst die Reihenfolge im Satz. Du fragst und verneinst mit do, does und did, antwortest kurz und hängst question tags an. Dazu gibt es Übungen mit Rückmeldung. Satzbau Wortstellung Fragen Verneinung do does did question tags Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/englisch-saetze-bauen/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Sätze bauen">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Sätze bauen</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du legst englische Sätze mit Satzkarten. Du lernst die Reihenfolge im Satz. Du fragst und verneinst mit do, does und did, antwortest kurz und hängst question tags an. Dazu gibt es Übungen mit Rückmeldung.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/aussage-und-aufforderung/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Wer tut was, wo und wann?" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/aussage-und-aufforderung/wortstellung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wer tut was, wo und wann?</a></li>
+      <li data-topic data-search="Open the book! Don&#39;t run!" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/aussage-und-aufforderung/imperativ/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Open the book! Don&#39;t run!</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/fragen-mit-do/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Fragen und verneinen: der Helfer do" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/fragen-mit-do/do-und-does/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Fragen und verneinen: der Helfer do</a></li>
+      <li data-topic data-search="Yes, I do. No, she doesn&#39;t." hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/fragen-mit-do/kurzantworten/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Yes, I do. No, she doesn&#39;t.</a></li>
+      <li data-topic data-search="Who, what, where, when, why, how, whose" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/fragen-mit-do/fragewoerter/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Who, what, where, when, why, how, whose</a></li>
+      <li data-topic data-search="Who likes tea? Wer fragt ohne Helfer?" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/fragen-mit-do/subjektfragen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Who likes tea? Wer fragt ohne Helfer?</a></li>
+      <li data-topic data-search="Who do you talk to?" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/fragen-mit-do/praeposition-am-ende/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Who do you talk to?</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/did-und-tags/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Did you play football yesterday?" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/did-und-tags/did/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Did you play football yesterday?</a></li>
+      <li data-topic data-search="You like it, don&#39;t you?" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-bauen/did-und-tags/question-tags/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">You like it, don&#39;t you?</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Sätze verbinden mit Satzstreifen English Du verbindest kurze englische Sätze mit Satzstreifen und Verbindungskarten. Du übst and, but, or, because, so und when, dazu Sätze mit that, who, which und whose und einfache if-Sätze. Satzverbindung Konjunktionen because Relativsätze if-Sätze Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/englisch-saetze-verbinden/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Sätze verbinden mit Satzstreifen">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Sätze verbinden mit Satzstreifen</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du verbindest kurze englische Sätze mit Satzstreifen und Verbindungskarten. Du übst and, but, or, because, so und when, dazu Sätze mit that, who, which und whose und einfache if-Sätze.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-verbinden/saetze-verbinden/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Zwei Streifen, eine Karte: and, but, or, because, so, when" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-verbinden/saetze-verbinden/konjunktionen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zwei Streifen, eine Karte: and, but, or, because, so, when</a></li>
+      <li data-topic data-search="Was ich denke: der that-Satz" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-verbinden/saetze-verbinden/that-saetze/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was ich denke: der that-Satz</a></li>
+      <li data-topic data-search="Welcher Junge? who, which, that und whose" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-verbinden/saetze-verbinden/relativsaetze/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Welcher Junge? who, which, that und whose</a></li>
+      <li data-topic data-search="Was passiert, wenn …? Die Weiche bei if" hidden><a href="https://lernapps.net/apps/start/englisch-saetze-verbinden/saetze-verbinden/if-satz-1/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was passiert, wenn …? Die Weiche bei if</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Verbketten English Du lernst, wie ein Verb hinter einem anderen Verb steht. Das Bild der Verbkette hilft dir: Lok, Kupplung, Wagen. So sagst du, was jemand kann, muss, sollte oder möchte. Du übst can, must, should, may und I&#39;d like. Modalverben can must should Verbkette Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/englisch-verbketten/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Verbketten">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Verbketten</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du lernst, wie ein Verb hinter einem anderen Verb steht. Das Bild der Verbkette hilft dir: Lok, Kupplung, Wagen. So sagst du, was jemand kann, muss, sollte oder möchte. Du übst can, must, should, may und I&#39;d like.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Can und must: Lok ohne Kupplung" hidden><a href="https://lernapps.net/apps/start/englisch-verbketten/koennen-muessen/can-must/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Can und must: Lok ohne Kupplung</a></li>
+      <li data-topic data-search="Could, might und should: vorschlagen, vermuten, raten" hidden><a href="https://lernapps.net/apps/start/englisch-verbketten/koennen-muessen/modalverben-could-might-should/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Could, might und should: vorschlagen, vermuten, raten</a></li>
+      <li data-topic data-search="Would like: höflich sagen, was du möchtest" hidden><a href="https://lernapps.net/apps/start/englisch-verbketten/koennen-muessen/would-like/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Would like: höflich sagen, was du möchtest</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Englisch"
+    data-grades="5 6"
+    data-search="Zeiten auf dem Zeitstrahl English Du hängst englische Zeitformen auf einen Zeitstrahl. Jede Zeitform hat ein Zeichen und ein Signalwort. Du lernst, wann du simple present, present progressive, simple past, present perfect, will und going to brauchst, und übst sie mit Rückmeldung. Zeitformen simple present simple past present perfect Zeitstrahl unregelmäßige Verben Oliver (@mrsimpson) ">
+  <a href="/apps/pr-preview/pr-818/en/englisch-zeiten/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Zeiten auf dem Zeitstrahl">
+    <p class="m-0 text-sm text-slate-500"><span>English</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Zeiten auf dem Zeitstrahl</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du hängst englische Zeitformen auf einen Zeitstrahl. Jede Zeitform hat ein Zeichen und ein Signalwort. Du lernst, wann du simple present, present progressive, simple past, present perfect, will und going to brauchst, und übst sie mit Rückmeldung.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Wer bist du? Das Verb be" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/to-be/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wer bist du? Das Verb be</a></li>
+      <li data-topic data-search="Was hast du? have got und has got" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/have-got/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was hast du? have got und has got</a></li>
+      <li data-topic data-search="Was du immer tust: das simple present" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/simple-present/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was du immer tust: das simple present</a></li>
+      <li data-topic data-search="Wie oft? Von always bis never" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/haeufigkeit/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wie oft? Von always bis never</a></li>
+      <li data-topic data-search="Was gerade passiert: das present progressive" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/present-progressive/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was gerade passiert: das present progressive</a></li>
+      <li data-topic data-search="Punktreihe oder Welle?" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/immer-oder-jetzt/simple-oder-progressive/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Punktreihe oder Welle?</a></li>
+      <li data-topic data-search="Was gestern war: das simple past" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/gestern-und-schon/simple-past/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was gestern war: das simple past</a></li>
+      <li data-topic data-search="Verben mit drei Formen: sing – sang – sung" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/gestern-und-schon/unregelmaessig/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Verben mit drei Formen: sing – sang – sung</a></li>
+      <li data-topic data-search="Was schon passiert ist: das present perfect" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/gestern-und-schon/present-perfect/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was schon passiert ist: das present perfect</a></li>
+      <li data-topic data-search="Was morgen wird: das will-future" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/morgen-und-spaeter/will/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was morgen wird: das will-future</a></li>
+      <li data-topic data-search="Was du vorhast: going to" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/morgen-und-spaeter/going-to/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Was du vorhast: going to</a></li>
+      <li data-topic data-search="Will oder going to: Pfeil oder Punkt?" hidden><a href="https://lernapps.net/apps/start/englisch-zeiten/morgen-und-spaeter/will-oder-going-to/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Will oder going to: Pfeil oder Punkt?</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Erdkunde"
+    data-grades="5 6"
+    data-search="Geo Quizzer Geography Du übst auf einer Karte von Europa, wie in einem Spiel: Länder, Hauptstädte, Flüsse, Gebirge, Seen, Meere und Teile Europas. Erst wählst du Namen aus, dann klickst du auf der Karte oder tippst die Namen selbst. Liegst du daneben, zeigt dir die Karte, wo es richtig gewesen wäre. Europa Hauptstädte Länder Karte Topographie Erdkunde Geographie Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/geo-quizzer/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Geo Quizzer">
+    <p class="m-0 text-sm text-slate-500"><span>Geography</span> · Grades 5 and 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Geo Quizzer</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du übst auf einer Karte von Europa, wie in einem Spiel: Länder, Hauptstädte, Flüsse, Gebirge, Seen, Meere und Teile Europas. Erst wählst du Namen aus, dann klickst du auf der Karte oder tippst die Namen selbst. Liegst du daneben, zeigt dir die Karte, wo es richtig gewesen wäre.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Stufe 1 · Erkennen" hidden><a href="https://lernapps.net/apps/start/geo-quizzer/app/#stufe-1" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Stufe 1 · Erkennen</a></li>
+      <li data-topic data-search="Stufe 2 · Beziehungen" hidden><a href="https://lernapps.net/apps/start/geo-quizzer/app/#stufe-2" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Stufe 2 · Beziehungen</a></li>
+      <li data-topic data-search="Stufe 3 · Zeigen" hidden><a href="https://lernapps.net/apps/start/geo-quizzer/app/#stufe-3" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Stufe 3 · Zeigen</a></li>
+      <li data-topic data-search="Stufe 4 · Frei" hidden><a href="https://lernapps.net/apps/start/geo-quizzer/app/#stufe-4" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Stufe 4 · Frei</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Erdkunde"
+    data-grades="6"
+    data-search="Klima in Europa Geography Was ist Klima, und warum ist es im Westen Europas milder als im Osten? Die Lernenden lesen Klimadiagramme von Orten in Europa, zeichnen eigene und finden als Klimadetektive heraus, wie das Klima eines Ortes aussieht. Auf jeder Seite üben sie selbst. Klimadiagramm Klima Europa Wetter Klimazonen Seeklima Landklima humid arid Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/klima/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Klima in Europa">
+    <p class="m-0 text-sm text-slate-500"><span>Geography</span> · Grade 6</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Klima in Europa</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Was ist Klima, und warum ist es im Westen Europas milder als im Osten? Die Lernenden lesen Klimadiagramme von Orten in Europa, zeichnen eigene und finden als Klimadetektive heraus, wie das Klima eines Ortes aussieht. Auf jeder Seite üben sie selbst.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Wetter oder Klima?" hidden><a href="https://lernapps.net/apps/start/klima/wetter-klima/wetter-und-klima/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wetter oder Klima?</a></li>
+      <li data-topic data-search="Wetter messen und aufschreiben" hidden><a href="https://lernapps.net/apps/start/klima/wetter-klima/wetter-messen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wetter messen und aufschreiben</a></li>
+      <li data-topic data-search="Ein Klimadiagramm lesen" hidden><a href="https://lernapps.net/apps/start/klima/diagramme/lesen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ein Klimadiagramm lesen</a></li>
+      <li data-topic data-search="Feucht oder trocken? Humid und arid" hidden><a href="https://lernapps.net/apps/start/klima/diagramme/humid-arid/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Feucht oder trocken? Humid und arid</a></li>
+      <li data-topic data-search="Ein Klimadiagramm zeichnen" hidden><a href="https://lernapps.net/apps/start/klima/diagramme/zeichnen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ein Klimadiagramm zeichnen</a></li>
+      <li data-topic data-search="Seeklima und Landklima" hidden><a href="https://lernapps.net/apps/start/klima/europa/see-land/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Seeklima und Landklima</a></li>
+      <li data-topic data-search="Klimazonen im Überblick" hidden><a href="https://lernapps.net/apps/start/klima/europa/zonen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Klimazonen im Überblick</a></li>
+      <li data-topic data-search="Typische Orte der Klimazonen" hidden><a href="https://lernapps.net/apps/start/klima/europa/zonen-orte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Typische Orte der Klimazonen</a></li>
+      <li data-topic data-search="Wie sieht das Diagramm für diesen Ort aus?" hidden><a href="https://lernapps.net/apps/start/klima/detektiv/vorhersage/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Wie sieht das Diagramm für diesen Ort aus?</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Erdkunde"
+    data-grades="5 6 7 8 9 10"
+    data-search="Naturwunder-Quiz Geography In the quiz, students answer questions about natural wonders of the Earth: mountains and volcanoes, waterfalls, deserts, caves, coasts and reefs on all continents. After each answer, they read a short note on every option and can read on in the Wikipedia article. natural wonders geography geography quiz continents world heritage volcanoes deserts waterfalls Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/naturwunder-quiz/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Naturwunder-Quiz">
+    <p class="m-0 text-sm text-slate-500"><span>Geography</span> · Grades 5 to 10</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Naturwunder-Quiz</h2>
+    <p class="m-0 mt-2 text-slate-700">In the quiz, students answer questions about natural wonders of the Earth: mountains and volcanoes, waterfalls, deserts, caves, coasts and reefs on all continents. After each answer, they read a short note on every option and can read on in the Wikipedia article.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Mountains and volcanoes" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-everest-hoehe" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Mountains and volcanoes</a></li>
+      <li data-topic data-search="Waterfalls, rivers and lakes" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-baikalsee" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Waterfalls, rivers and lakes</a></li>
+      <li data-topic data-search="Deserts" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-atacama" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Deserts</a></li>
+      <li data-topic data-search="Caves and gorges" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-hoehlen-rekorde" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Caves and gorges</a></li>
+      <li data-topic data-search="Coasts, islands and reefs" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-great-barrier-reef" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Coasts, islands and reefs</a></li>
+      <li data-topic data-search="Natural wonders by continent" hidden><a href="https://lernapps.net/apps/start/naturwunder-quiz/#frage-kontinente-zuordnen" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Natural wonders by continent</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Informatik"
+    data-grades="3 4 5 6 7 8 9 10 11 12 13"
+    data-search="Typonaut Computer science Learn touch typing on a journey through space. Words fly across the screen in an arc; type them correctly and they turn into stardust. Chapter by chapter new keys are added, from the home row to the whole keyboard, with a German or an English keyboard. touch typing keyboarding learn to type typing practice keyboard game Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/typonaut/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Typonaut">
+    <p class="m-0 text-sm text-slate-500"><span>Computer science</span> · Grades 3 to 13</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Typonaut</h2>
+    <p class="m-0 mt-2 text-slate-700">Learn touch typing on a journey through space. Words fly across the screen in an arc; type them correctly and they turn into stardust. Chapter by chapter new keys are added, from the home row to the whole keyboard, with a German or an English keyboard.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="German with a German keyboard (QWERTZ)" hidden><a href="https://lernapps.net/apps/start/typonaut/app/#de" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">German with a German keyboard (QWERTZ)</a></li>
+      <li data-topic data-search="English with an English keyboard (QWERTY)" hidden><a href="https://lernapps.net/apps/start/typonaut/app/#en" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">English with an English keyboard (QWERTY)</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="7 8"
+    data-search="Yahtzee Trainer Mathematics You play Yahtzee and learn to work out chances as fractions and percentages. In explain mode a coach shows you the chances with every throw and a tree of how they come about. In the game with joker you work out the fractions yourself when you want help. In the plain game you collect points for the high-score list. Wahrscheinlichkeit Würfel Kniffel Yahtzee Chancen Brüche Prozent Baumdiagramm Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/kniffel-trainer/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Yahtzee Trainer">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grades 7 and 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">Yahtzee Trainer</h2>
+    <p class="m-0 mt-2 text-slate-700">You play Yahtzee and learn to work out chances as fractions and percentages. In explain mode a coach shows you the chances with every throw and a tree of how they come about. In the game with joker you work out the fractions yourself when you want help. In the plain game you collect points for the high-score list.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Explain mode with coach and tree" hidden><a href="https://lernapps.net/apps/start/kniffel-trainer/app/#erklaeren" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Explain mode with coach and tree</a></li>
+      <li data-topic data-search="Game with joker" hidden><a href="https://lernapps.net/apps/start/kniffel-trainer/app/#joker" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Game with joker</a></li>
+      <li data-topic data-search="Plain game with high scores" hidden><a href="https://lernapps.net/apps/start/kniffel-trainer/app/#spielen" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Plain game with high scores</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="8"
+    data-search="Mathe-Wettbewerb 8: Brüche, Terme und Gleichungen Mathematics Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Bruchrechnung, Terme und die Wahlaufgabe W1 (Gleichungen und Ungleichungen). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt. Mathewettbewerb Mathe-Wettbewerb Hessen Wettbewerb Klasse 8 Brüche Bruchrechnung Terme Gleichungen Ungleichungen Lösungsmenge Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-wb8-terme/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe-Wettbewerb 8: Brüche, Terme und Gleichungen">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe-Wettbewerb 8: Brüche, Terme und Gleichungen</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Bruchrechnung, Terme und die Wahlaufgabe W1 (Gleichungen und Ungleichungen). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Brüche und Dezimalbrüche addieren und subtrahieren" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/brueche/plus-minus/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Brüche und Dezimalbrüche addieren und subtrahieren</a></li>
+      <li data-topic data-search="Brüche und Dezimalbrüche multiplizieren und dividieren" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/brueche/mal-geteilt/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Brüche und Dezimalbrüche multiplizieren und dividieren</a></li>
+      <li data-topic data-search="Klammern und Punkt vor Strich" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/brueche/rechenregeln/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Klammern und Punkt vor Strich</a></li>
+      <li data-topic data-search="Terme aufstellen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/terme/aufstellen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Terme aufstellen</a></li>
+      <li data-topic data-search="Werte von Termen berechnen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/terme/werte-berechnen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Werte von Termen berechnen</a></li>
+      <li data-topic data-search="Gleichartige Glieder zusammenfassen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/terme/zusammenfassen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Gleichartige Glieder zusammenfassen</a></li>
+      <li data-topic data-search="Produkte von Termen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/terme/produkte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Produkte von Termen</a></li>
+      <li data-topic data-search="Klammern auflösen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/w1-gleichungen/klammern/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Klammern auflösen</a></li>
+      <li data-topic data-search="Gleichungen lösen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/w1-gleichungen/gleichungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Gleichungen lösen</a></li>
+      <li data-topic data-search="Ungleichungen lösen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/w1-gleichungen/ungleichungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ungleichungen lösen</a></li>
+      <li data-topic data-search="Satz vom Nullprodukt" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/w1-gleichungen/nullprodukt/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Satz vom Nullprodukt</a></li>
+      <li data-topic data-search="Lösungsmenge und Grundmenge" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-terme/w1-gleichungen/loesungsmenge/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Lösungsmenge und Grundmenge</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="8"
+    data-search="Mathe-Wettbewerb 8: Geometrie Mathematics Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Flächen und Körper, Winkel, Symmetrie und die Wahlaufgabe W2 (Dreieckskonstruktionen). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt. Mathewettbewerb Mathe-Wettbewerb Hessen Wettbewerb Klasse 8 Flächeninhalt Volumen Winkel Symmetrie Konstruktion Kongruenzsätze Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-wb8-geometrie/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe-Wettbewerb 8: Geometrie">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe-Wettbewerb 8: Geometrie</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Flächen und Körper, Winkel, Symmetrie und die Wahlaufgabe W2 (Dreieckskonstruktionen). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Flächeninhalt und Umfang von Rechteck und Quadrat" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/flaechen/quadrat-rechteck/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Flächeninhalt und Umfang von Rechteck und Quadrat</a></li>
+      <li data-topic data-search="Flächeninhalt und Umfang des Dreiecks" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/flaechen/dreieck/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Flächeninhalt und Umfang des Dreiecks</a></li>
+      <li data-topic data-search="Flächeninhalt und Umfang von Parallelogramm und Trapez" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/flaechen/parallelogramm-trapez/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Flächeninhalt und Umfang von Parallelogramm und Trapez</a></li>
+      <li data-topic data-search="Volumen von Quader und Würfel" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/flaechen/quader-wuerfel/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Volumen von Quader und Würfel</a></li>
+      <li data-topic data-search="Netz und Oberfläche von Quader und Würfel" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/flaechen/netz-oberflaeche/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Netz und Oberfläche von Quader und Würfel</a></li>
+      <li data-topic data-search="Formeln umstellen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/flaechen/formeln-umstellen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Formeln umstellen</a></li>
+      <li data-topic data-search="Winkelsumme in Dreieck und Viereck" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/winkel/winkelsumme/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Winkelsumme in Dreieck und Viereck</a></li>
+      <li data-topic data-search="Winkel an Geradenkreuzungen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/winkel/geradenkreuzungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Winkel an Geradenkreuzungen</a></li>
+      <li data-topic data-search="Achsen- und Punktsymmetrie erkennen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/symmetrie/symmetrie-erkennen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Achsen- und Punktsymmetrie erkennen</a></li>
+      <li data-topic data-search="Spiegeln und Drehen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/symmetrie/spiegeln-drehen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Spiegeln und Drehen</a></li>
+      <li data-topic data-search="Die Planfigur" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/w2-konstruktionen/planfigur/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Die Planfigur</a></li>
+      <li data-topic data-search="Kongruenzsätze" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/w2-konstruktionen/kongruenzsaetze/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Kongruenzsätze</a></li>
+      <li data-topic data-search="Schritte einer Konstruktion" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/w2-konstruktionen/konstruktion-schritte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Schritte einer Konstruktion</a></li>
+      <li data-topic data-search="Winkel berechnen und Konstruktion prüfen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-geometrie/w2-konstruktionen/winkel-pruefen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Winkel berechnen und Konstruktion prüfen</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="8"
+    data-search="Mathe-Wettbewerb 8: Wahrscheinlichkeit Mathematics Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Wahrscheinlichkeit und die Wahlaufgabe W4 (zweistufige Zufallsversuche). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt. Mathewettbewerb Mathe-Wettbewerb Hessen Wettbewerb Klasse 8 Wahrscheinlichkeit Baumdiagramm Pfadregeln Gegenereignis Zufall Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-wb8-zufall/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe-Wettbewerb 8: Wahrscheinlichkeit">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe-Wettbewerb 8: Wahrscheinlichkeit</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Wahrscheinlichkeit und die Wahlaufgabe W4 (zweistufige Zufallsversuche). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Ergebnisraum und Laplace-Wahrscheinlichkeit" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-zufall/wahrscheinlichkeit/laplace/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ergebnisraum und Laplace-Wahrscheinlichkeit</a></li>
+      <li data-topic data-search="Baumdiagramm" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-zufall/wahrscheinlichkeit/baumdiagramm/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Baumdiagramm</a></li>
+      <li data-topic data-search="Pfadregeln" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-zufall/wahrscheinlichkeit/pfadregeln/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Pfadregeln</a></li>
+      <li data-topic data-search="Ziehen ohne Zurücklegen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-zufall/w4-zufall/ohne-zuruecklegen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ziehen ohne Zurücklegen</a></li>
+      <li data-topic data-search="Ereignisse als Pfade" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-zufall/w4-zufall/ereignisse-pfade/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ereignisse als Pfade</a></li>
+      <li data-topic data-search="Das Gegenereignis" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-zufall/w4-zufall/gegenereignis/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das Gegenereignis</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="8"
+    data-search="Mathe-Wettbewerb 8: Zuordnungen und Prozent Mathematics Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Zuordnungen, Prozentrechnung und die Wahlaufgabe W3 (Prozent in mehreren Schritten). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt. Mathewettbewerb Mathe-Wettbewerb Hessen Wettbewerb Klasse 8 Zuordnung proportional antiproportional Prozent Prozentrechnung Grundwert Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-wb8-prozent/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe-Wettbewerb 8: Zuordnungen und Prozent">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe-Wettbewerb 8: Zuordnungen und Prozent</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Vorbereitung auf den Mathematik-Wettbewerb in Hessen, Klasse 8: Zuordnungen, Prozentrechnung und die Wahlaufgabe W3 (Prozent in mehreren Schritten). Jede Seite wiederholt eine Regel mit Beispiel und Bild. Danach rechnen die Lernenden ohne Taschenrechner Aufgaben, die sofort sagen, ob das Ergebnis stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Tabelle und Koordinatensystem" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/zuordnungen/tabelle-koordinaten/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Tabelle und Koordinatensystem</a></li>
+      <li data-topic data-search="Proportionale Zuordnungen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/zuordnungen/proportional/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Proportionale Zuordnungen</a></li>
+      <li data-topic data-search="Antiproportionale Zuordnungen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/zuordnungen/antiproportional/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Antiproportionale Zuordnungen</a></li>
+      <li data-topic data-search="Graphen von Zuordnungen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/zuordnungen/graphen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Graphen von Zuordnungen</a></li>
+      <li data-topic data-search="Den Prozentwert berechnen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/prozent/prozentwert/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Den Prozentwert berechnen</a></li>
+      <li data-topic data-search="Prozentsatz und Grundwert berechnen" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/prozent/prozentsatz-grundwert/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Prozentsatz und Grundwert berechnen</a></li>
+      <li data-topic data-search="Sachaufgaben zur Prozentrechnung" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/prozent/sachaufgaben/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Sachaufgaben zur Prozentrechnung</a></li>
+      <li data-topic data-search="Zunahme und Abnahme mit dem Faktor" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/w3-prozent/zu-abnahme/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zunahme und Abnahme mit dem Faktor</a></li>
+      <li data-topic data-search="Um wie viel Prozent mehr oder weniger?" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/w3-prozent/vergleich/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Um wie viel Prozent mehr oder weniger?</a></li>
+      <li data-topic data-search="Mehrere Änderungen und Prozentpunkte" hidden><a href="https://lernapps.net/apps/start/mathe-wb8-prozent/w3-prozent/mehrere-aenderungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Mehrere Änderungen und Prozentpunkte</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="8"
+    data-search="Mathe: Algebra – Binomische Formeln Mathematics Die binomischen Formeln Schritt für Schritt: zwei Klammern multiplizieren, die drei Formeln anwenden, rückwärts faktorisieren und damit geschickt rechnen. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob der Term stimmt. binomische Formeln Binom Termumformung Faktorisieren Algebra Klammern Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-algebra/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe: Algebra – Binomische Formeln">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe: Algebra – Binomische Formeln</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Die binomischen Formeln Schritt für Schritt: zwei Klammern multiplizieren, die drei Formeln anwenden, rückwärts faktorisieren und damit geschickt rechnen. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob der Term stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Zwei Klammern multiplizieren" hidden><a href="https://lernapps.net/apps/start/mathe-algebra/binom/klammern-multiplizieren/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zwei Klammern multiplizieren</a></li>
+      <li data-topic data-search="Erste binomische Formel" hidden><a href="https://lernapps.net/apps/start/mathe-algebra/binom/erste-binomische/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Erste binomische Formel</a></li>
+      <li data-topic data-search="Zweite binomische Formel" hidden><a href="https://lernapps.net/apps/start/mathe-algebra/binom/zweite-binomische/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zweite binomische Formel</a></li>
+      <li data-topic data-search="Dritte binomische Formel" hidden><a href="https://lernapps.net/apps/start/mathe-algebra/binom/dritte-binomische/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Dritte binomische Formel</a></li>
+      <li data-topic data-search="Binome rückwärts" hidden><a href="https://lernapps.net/apps/start/mathe-algebra/binom/binome-rueckwaerts/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Binome rückwärts</a></li>
+      <li data-topic data-search="Geschickt rechnen" hidden><a href="https://lernapps.net/apps/start/mathe-algebra/binom/geschickt-rechnen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Geschickt rechnen</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="7 8"
+    data-search="Mathe: Arithmetik – Prozentrechnung Mathematics Prozentrechnung Schritt für Schritt: Grundwert, Prozentwert und Prozentsatz erkennen und berechnen, Zunahme und Abnahme, Vergleiche und Sachaufgaben. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob das Ergebnis stimmt. Prozentrechnung Prozent Grundwert Prozentwert Prozentsatz Rabatt Zinsen Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-arithmetik/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe: Arithmetik – Prozentrechnung">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grades 7 and 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe: Arithmetik – Prozentrechnung</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Prozentrechnung Schritt für Schritt: Grundwert, Prozentwert und Prozentsatz erkennen und berechnen, Zunahme und Abnahme, Vergleiche und Sachaufgaben. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob das Ergebnis stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Grundwert, Prozentwert und Prozentsatz erkennen" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/grundbegriffe/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Grundwert, Prozentwert und Prozentsatz erkennen</a></li>
+      <li data-topic data-search="Prozentsatz berechnen" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/prozentsatz/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Prozentsatz berechnen</a></li>
+      <li data-topic data-search="Prozentwert berechnen" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/prozentwert/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Prozentwert berechnen</a></li>
+      <li data-topic data-search="Grundwert berechnen" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/grundwert/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Grundwert berechnen</a></li>
+      <li data-topic data-search="Prozentuale Zunahme und Abnahme" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/veraenderung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Prozentuale Zunahme und Abnahme</a></li>
+      <li data-topic data-search="Zwei Werte vergleichen" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/vergleich/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Zwei Werte vergleichen</a></li>
+      <li data-topic data-search="Sachaufgaben übersetzen" hidden><a href="https://lernapps.net/apps/start/mathe-arithmetik/prozent/sachaufgaben/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Sachaufgaben übersetzen</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Mathematik"
+    data-grades="7 8"
+    data-search="Mathe: Stochastik – Wahrscheinlichkeit Mathematics Wahrscheinlichkeit Schritt für Schritt: die Laplace-Formel, Baumdiagramme, die Pfadregeln, das Gegenereignis und Ziehen ohne Zurücklegen. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob das Ergebnis stimmt. Wahrscheinlichkeit Stochastik Zufall Würfel Baumdiagramm Laplace Pfadregel Ralf D. Müller ">
+  <a href="/apps/pr-preview/pr-818/en/mathe-stochastik/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Mathe: Stochastik – Wahrscheinlichkeit">
+    <p class="m-0 text-sm text-slate-500"><span>Mathematics</span> · Grades 7 and 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Mathe: Stochastik – Wahrscheinlichkeit</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Wahrscheinlichkeit Schritt für Schritt: die Laplace-Formel, Baumdiagramme, die Pfadregeln, das Gegenereignis und Ziehen ohne Zurücklegen. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob das Ergebnis stimmt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Laplace-Formel" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/laplace/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Laplace-Formel</a></li>
+      <li data-topic data-search="Baumdiagramm" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/baumdiagramm/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Baumdiagramm</a></li>
+      <li data-topic data-search="1. Pfadregel" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/pfadregel-1/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">1. Pfadregel</a></li>
+      <li data-topic data-search="Gegenereignis" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/gegenereignis/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Gegenereignis</a></li>
+      <li data-topic data-search="Ohne Zurücklegen" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/ohne-zuruecklegen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ohne Zurücklegen</a></li>
+      <li data-topic data-search="2. Pfadregel" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/pfadregel-2/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">2. Pfadregel</a></li>
+      <li data-topic data-search="Produkt, Summe, Potenz" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/ergebnisformen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Produkt, Summe, Potenz</a></li>
+      <li data-topic data-search="In Pfade übersetzen" hidden><a href="https://lernapps.net/apps/start/mathe-stochastik/zufall/pfade-uebersetzen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">In Pfade übersetzen</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Musik"
+    data-grades="5 6 7"
+    data-search="Musik erleben Music Hören, klatschen, singen und vergleichen: Die Kinder lernen Töne, Rhythmen und Noten kennen und erfinden eigene kleine Stücke. Alle Klänge entstehen im Browser und klingen wie ein Klavier. Das Mikrofon ist freiwillig, und jede Übung geht auch ohne. Noten lesen Rhythmus klatschen Tonleiter Intervalle Klaviatur Instrumente Takt Dur und Moll Oliver Jägle ">
+  <a href="/apps/pr-preview/pr-818/en/musik/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Musik erleben">
+    <p class="m-0 text-sm text-slate-500"><span>Music</span> · Grades 5 to 7</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Musik erleben</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Hören, klatschen, singen und vergleichen: Die Kinder lernen Töne, Rhythmen und Noten kennen und erfinden eigene kleine Stücke. Alle Klänge entstehen im Browser und klingen wie ein Klavier. Das Mikrofon ist freiwillig, und jede Übung geht auch ohne.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Laut und leise" hidden><a href="https://lernapps.net/apps/start/musik/hoeren/laut-leise/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Laut und leise</a></li>
+      <li data-topic data-search="Schnell und langsam" hidden><a href="https://lernapps.net/apps/start/musik/hoeren/schnell-langsam/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Schnell und langsam</a></li>
+      <li data-topic data-search="Klangfarbe und Instrumentenfamilien" hidden><a href="https://lernapps.net/apps/start/musik/hoeren/klangfarbe/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Klangfarbe und Instrumentenfamilien</a></li>
+      <li data-topic data-search="Hoch und tief" hidden><a href="https://lernapps.net/apps/start/musik/tonhoehe/hoch-tief/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Hoch und tief</a></li>
+      <li data-topic data-search="Die Klaviatur" hidden><a href="https://lernapps.net/apps/start/musik/tonhoehe/klaviatur/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Die Klaviatur</a></li>
+      <li data-topic data-search="Meine Stimme hat eine Tonhöhe" hidden><a href="https://lernapps.net/apps/start/musik/tonhoehe/stimme/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Meine Stimme hat eine Tonhöhe</a></li>
+      <li data-topic data-search="Grundschlag und Takt" hidden><a href="https://lernapps.net/apps/start/musik/rhythmus/grundschlag-takt/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Grundschlag und Takt</a></li>
+      <li data-topic data-search="Notenwerte und Pausen" hidden><a href="https://lernapps.net/apps/start/musik/rhythmus/notenwerte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Notenwerte und Pausen</a></li>
+      <li data-topic data-search="Rhythmen klatschen" hidden><a href="https://lernapps.net/apps/start/musik/rhythmus/klatschen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Rhythmen klatschen</a></li>
+      <li data-topic data-search="Notenlinien und Violinschlüssel" hidden><a href="https://lernapps.net/apps/start/musik/noten/linien/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Notenlinien und Violinschlüssel</a></li>
+      <li data-topic data-search="Noten benennen" hidden><a href="https://lernapps.net/apps/start/musik/noten/benennen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Noten benennen</a></li>
+      <li data-topic data-search="Rhythmus und Melodie lesen" hidden><a href="https://lernapps.net/apps/start/musik/noten/lesen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Rhythmus und Melodie lesen</a></li>
+      <li data-topic data-search="Ganzton, Halbton und die Dur-Tonleiter" hidden><a href="https://lernapps.net/apps/start/musik/tonleitern/dur-bauen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ganzton, Halbton und die Dur-Tonleiter</a></li>
+      <li data-topic data-search="Dur und Moll hören" hidden><a href="https://lernapps.net/apps/start/musik/tonleitern/dur-moll/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Dur und Moll hören</a></li>
+      <li data-topic data-search="Intervalle" hidden><a href="https://lernapps.net/apps/start/musik/tonleitern/intervalle/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Intervalle</a></li>
+      <li data-topic data-search="Tonfolgen nachsingen" hidden><a href="https://lernapps.net/apps/start/musik/tonleitern/nachsingen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Tonfolgen nachsingen</a></li>
+      <li data-topic data-search="Ein Lied begleiten" hidden><a href="https://lernapps.net/apps/start/musik/erfinden/begleiten/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Ein Lied begleiten</a></li>
+      <li data-topic data-search="Einen eigenen Rhythmus erfinden" hidden><a href="https://lernapps.net/apps/start/musik/erfinden/rhythmus-erfinden/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Einen eigenen Rhythmus erfinden</a></li>
+      <li data-topic data-search="Eine eigene Melodie erfinden und singen" hidden><a href="https://lernapps.net/apps/start/musik/erfinden/melodie-erfinden/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Eine eigene Melodie erfinden und singen</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Musik"
+    data-grades="8"
+    data-search="Musiklehre: Töne, Intervalle, Dreiklänge Music Du liest und schreibst Töne im Violin- und Bassschlüssel, bestimmst Intervalle grob und fein und baust Dur- und Moll-Dreiklänge. Jede Aufgabe zieht neue Töne, und falsche Antworten sagen dir, was du übersehen hast. Am Ende zeigt ein Probetest, was schon sitzt. Intervalle bestimmen Bassschlüssel üben Dreiklänge Dur Moll Noten lesen Klasse 8 Musiktheorie Lernkontrolle @rdmueller ">
+  <a href="/apps/pr-preview/pr-818/en/musik-tonhoehe-harmonik/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Musiklehre: Töne, Intervalle, Dreiklänge">
+    <p class="m-0 text-sm text-slate-500"><span>Music</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Musiklehre: Töne, Intervalle, Dreiklänge</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du liest und schreibst Töne im Violin- und Bassschlüssel, bestimmst Intervalle grob und fein und baust Dur- und Moll-Dreiklänge. Jede Aufgabe zieht neue Töne, und falsche Antworten sagen dir, was du übersehen hast. Am Ende zeigt ein Probetest, was schon sitzt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Notensystem und Violinschlüssel" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/notensystem/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Notensystem und Violinschlüssel</a></li>
+      <li data-topic data-search="Oktavlagen" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/oktavlagen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Oktavlagen</a></li>
+      <li data-topic data-search="Noten benennen" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/noten-benennen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Noten benennen</a></li>
+      <li data-topic data-search="Bassschlüssel" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/bassschluessel/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Bassschlüssel</a></li>
+      <li data-topic data-search="Halbtonschritte" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/halbtonschritte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Halbtonschritte</a></li>
+      <li data-topic data-search="Vorzeichen" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/toene/vorzeichen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Vorzeichen</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/intervalle/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Intervalle grob bestimmen" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/intervalle/grobbestimmung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Intervalle grob bestimmen</a></li>
+      <li data-topic data-search="Intervalle fein bestimmen" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/intervalle/feinbestimmung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Intervalle fein bestimmen</a></li>
+      <li data-topic data-search="Dreiklänge aufbauen" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/dreiklaenge/dreiklang-aufbauen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Dreiklänge aufbauen</a></li>
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/dreiklaenge/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Dur und Moll in Kurzschrift" hidden><a href="https://lernapps.net/apps/start/musik-tonhoehe-harmonik/dreiklaenge/dur-moll-kurzschrift/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Dur und Moll in Kurzschrift</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Musik"
+    data-grades="8"
+    data-search="Notation: Notenwerte, Pausen, Takt Music Du erkennst Notenwerte und Pausen von der ganzen bis zur Sechzehntel, rechnest mit Punkten und Triolen und füllst und gliederst Takte, auch im 6/8-Takt. Jede Aufgabe zieht neue Werte, und falsche Antworten sagen dir, was du übersehen hast. Am Ende zeigt ein Probetest, was schon sitzt. Notenwerte üben Pausen Noten punktierte Noten berechnen Taktarten 6/8 Triolen Notation Klasse 8 @rdmueller ">
+  <a href="/apps/pr-preview/pr-818/en/musik-rhythmus-takt/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Notation: Notenwerte, Pausen, Takt">
+    <p class="m-0 text-sm text-slate-500"><span>Music</span> · Grade 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900" lang="de">Notation: Notenwerte, Pausen, Takt</h2>
+    <p class="m-0 mt-2 text-slate-700" lang="de">Du erkennst Notenwerte und Pausen von der ganzen bis zur Sechzehntel, rechnest mit Punkten und Triolen und füllst und gliederst Takte, auch im 6/8-Takt. Jede Aufgabe zieht neue Werte, und falsche Antworten sagen dir, was du übersehen hast. Am Ende zeigt ein Probetest, was schon sitzt.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="Das brauchst du hier" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/das-brauchst-du/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Das brauchst du hier</a></li>
+      <li data-topic data-search="Notenwerte" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/notenwerte/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Notenwerte</a></li>
+      <li data-topic data-search="Pausen" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/pausen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Pausen</a></li>
+      <li data-topic data-search="Punktierung" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/punktierung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Punktierung</a></li>
+      <li data-topic data-search="Notenwerte im Takt" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/notenwerte-im-takt/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Notenwerte im Takt</a></li>
+      <li data-topic data-search="Der 6/8-Takt" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/sechs-achtel-takt/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Der 6/8-Takt</a></li>
+      <li data-topic data-search="Triolen" hidden><a href="https://lernapps.net/apps/start/musik-rhythmus-takt/rhythmus/triolen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2" lang="de">Triolen</a></li>
+    </ul>
+  </div>
+</li>
+
+    
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+    data-app
+    data-subject="Physik"
+    data-grades="5 6 7 8"
+    data-search="Electricity Physics Learners work out step by step how a circuit works, which materials conduct electricity and how series and parallel circuits differ. In grades 7 and 8, current, voltage, resistance and Ohm&#39;s law follow. On every page they practise with a circuit in which you can see the current flow, build circuits and measure. The app is available in German and English. circuit conductor insulator switch series circuit parallel circuit circuit diagram short circuit electricity current voltage resistance Ohm&#39;s law direct current ammeter voltmeter Oliver ">
+  <a href="/apps/pr-preview/pr-818/en/elektrizitaet/" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="More about Electricity">
+    <p class="m-0 text-sm text-slate-500"><span>Physics</span> · Grades 5 to 8</p>
+    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900">Electricity</h2>
+    <p class="m-0 mt-2 text-slate-700">Learners work out step by step how a circuit works, which materials conduct electricity and how series and parallel circuits differ. In grades 7 and 8, current, voltage, resistance and Ohm&#39;s law follow. On every page they practise with a circuit in which you can see the current flow, build circuits and measure. The app is available in German and English.</p>
+    
+<ul class="list-none p-0 m-0 mt-3 flex flex-wrap gap-2 text-sm" aria-label="The most important points at a glance:">
+  <li class="chip">✓ No sign-up</li>
+  <li class="chip">✓ No installation</li>
+  <li class="chip">✓ Free</li>
+</ul>
+
+  </a>
+  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+    <p class="m-0 text-sm font-semibold text-slate-600">Matches your search:</p>
+    <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
+      <li data-topic data-search="The simple circuit" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/stromkreis/einfacher-stromkreis/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">The simple circuit</a></li>
+      <li data-topic data-search="Conductors and insulators" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/stromkreis/leiter-nichtleiter/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Conductors and insulators</a></li>
+      <li data-topic data-search="Switches and circuit symbols" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/schaltungen/schalter-schaltzeichen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Switches and circuit symbols</a></li>
+      <li data-topic data-search="Series circuit" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/schaltungen/reihenschaltung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Series circuit</a></li>
+      <li data-topic data-search="Parallel circuit" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/schaltungen/parallelschaltung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Parallel circuit</a></li>
+      <li data-topic data-search="Effects of electric current" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/alltag/wirkungen/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Effects of electric current</a></li>
+      <li data-topic data-search="Staying safe with electricity" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/alltag/sicherheit/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Staying safe with electricity</a></li>
+      <li data-topic data-search="Current" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/groessen/stromstaerke/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Current</a></li>
+      <li data-topic data-search="Voltage" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/groessen/spannung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Voltage</a></li>
+      <li data-topic data-search="Resistance" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/groessen/widerstand/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Resistance</a></li>
+      <li data-topic data-search="Ohm&#39;s law" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/groessen/ohmsches-gesetz/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Ohm&#39;s law</a></li>
+      <li data-topic data-search="Series circuit with meters" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/schaltungen-messen/reihenschaltung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Series circuit with meters</a></li>
+      <li data-topic data-search="Parallel circuit with meters" hidden><a href="https://lernapps.net/apps/start/elektrizitaet/schaltungen-messen/parallelschaltung/" target="_blank" rel="noopener" class="text-blue-700 underline underline-offset-2">Parallel circuit with meters</a></li>
+    </ul>
+  </div>
+</li>
+
+  </ul>
+
+  <div class="mt-4 p-5 rounded-xl border border-dashed border-slate-300 grid gap-2" data-empty hidden>
+    <h2 class="m-0 text-lg font-bold text-slate-900" data-empty-headline data-searched="There is no app {suche} yet. Not yet."
+        data-topic="on “{v}”" data-subject="in {v}" data-grade="for grade {v}">There is no app for this yet. Not yet.</h2>
+    <p class="m-0 text-slate-700">There is no company and no editorial team behind lernapps.net. Every app here was built by a person who cares about good digital education. That is why a lot is still missing, and some grades hardly appear.</p>
+    <p class="m-0 text-slate-700">The good news: your AI assistant already knows the subject matter. You know what learners in this grade need. Together you build the app, and then everyone finds it here. You don&#39;t have to program.</p>
+    <div class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-3">
+      <a href="/apps/pr-preview/pr-818/en/build/" class="btn btn-primary" data-build-link>Build an app yourself</a>
+    </div>
+    <p class="m-0 mt-1 text-sm text-slate-600">Only want to practise for a test with your own material? <a href="/practice/en/" class="text-blue-700 underline underline-offset-2">Then have a look at Practise <span aria-hidden="true">→</span></a></p>
+  </div>
+
+  <p class="m-0 mt-8 text-slate-700">What is there to learn in your subject, and which app already practises it? <a href="/apps/pr-preview/pr-818/en/map/" class="font-semibold text-blue-700 underline underline-offset-2">To the learning map <span aria-hidden="true">→</span></a></p>
+
+  <div class="mt-8 p-5 rounded-xl border border-slate-200 bg-white flex flex-wrap items-center gap-x-6 gap-y-3" data-build>
+    <p class="m-0 text-slate-700 flex-1 min-w-0 basis-80"><strong class="text-slate-900">Nothing that fits?</strong> No editorial team writes here; people like you build the apps. What is missing, you can build yourself. Then everyone else who looks for it finds it too.</p>
+    <a href="/apps/pr-preview/pr-818/en/build/" class="btn btn-primary" data-build-link>Build an app yourself</a>
+    <p class="m-0 basis-full text-sm text-slate-600">Only want to practise for a test with your own material? <a href="/practice/en/" class="text-blue-700 underline underline-offset-2">Then have a look at Practise <span aria-hidden="true">→</span></a></p>
+  </div>
+
+  <section class="mt-12 p-5 rounded-xl bg-blue-50 border border-blue-100" aria-labelledby="vertrauen">
+    <h2 id="vertrauen" class="m-0 text-lg font-bold text-slate-900">Which apps are listed here</h2>
+    <p class="m-0 mt-2 text-slate-700">Only apps that run in the browser, without sign-up and without installation. They are free, have no ads and collect nothing in secret. So you can use them without a long check. <a href="/apps/pr-preview/pr-818/en/enter/#bedingungen" class="text-blue-700 underline underline-offset-2">What exactly we require</a></p>
+    <h2 class="m-0 mt-5 text-lg font-bold text-slate-900">Who is behind lernapps.net</h2>
+    <p class="m-0 mt-2 text-slate-700">Not a company, but people who care about digital education. Teachers, parents and others build the apps and offer them here to everyone. We earn nothing from you or your data. That is why there are no ads and no accounts here.</p>
+  </section>
+</div>
+
+  </main>
+
+  <footer class="la-footer" lang="en">
+  <div class="la-footer__inner">
+    <p>lernapps.net is free and has no ads. It lives on your thanks.</p>
+    <nav aria-label="Footer"><ul><li><a href="/en/privacy/">Privacy</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/docs/en/platform-design/">Platform design</a></li><li><a href="https://github.com/lernapps/apps">Source code</a></li></ul></nav>
+  </div>
+</footer>
+</body>
+</html>
