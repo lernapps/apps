@@ -10,9 +10,9 @@ eleventyComputed:
   description: "{{ view.competency.iCan | tx(lang) }}"
 ---
 {#-
-  A competency (feat/learning-map, B10): "Ich kann …", strand and source; its chain (feat/map-steps, by grade and step since feat/map-chains KD-17: every ancestor
-  and the direct descendants by step, also across strands); when each captured curriculum places it ("Wann ist er dran?"); the apps and pages
-  that practise it, or that it is a gap.
+  A competency (feat/learning-map, B10): "Ich kann …", strand; the apps and pages that practise it, or that it is a gap, first; then its chain
+  (feat/map-steps, by grade and step since feat/map-chains KD-17: every ancestor and the direct descendants by step, also across strands);
+  when each captured curriculum places it ("Wann ist er dran?") and the source, both folded away.
 -#}
 {%- set K = t.map.competency %}
 {%- set subject = view.subject %}
@@ -37,12 +37,36 @@ eleventyComputed:
     <dl class="map-facts w-full mt-2">
       <div><dt>{{ K.strand }}</dt><dd><a href="{{ c.mapUrl(subject.id + '/' + strand.id + '/') | trim }}" class="text-blue-700 underline underline-offset-2"{{ strand.name | fallbackLang(lang) | safe }}>{{ strand.name | tx(lang) }}</a></dd></div>
       <div><dt>{{ K.richtstufe }}</dt><dd>{{ t.map.grade(comp.gradeBand | band) }}</dd></div>
-      {%- if subject.vocabulary and comp.strand == "wortschatz" %}
-      <div><dt>{{ t.map.vocabulary.link }}</dt><dd>{{ t.map.vocabulary.linkLead }} <a href="{{ c.mapUrl(subject.id + '/grundwortschatz/') | trim }}" class="text-blue-700 underline underline-offset-2">{{ t.map.vocabulary.link }} {{ subject.name | tx(lang) }}</a></dd></div>
-      {%- endif %}
-      <div><dt>{{ K.source }}</dt><dd lang="de">{% if subject.source.url %}<a href="{{ subject.source.url }}" class="text-blue-700 underline underline-offset-2">{{ subject.source.title }}</a>{% else %}{{ subject.source.title }}{% endif %}</dd></div>
     </dl>
   </div>
+
+  {#- The apps come first (feat/app-first-competency): which app practises it is what a visitor looks for; the placement follows. #}
+  <section aria-labelledby="wer" class="flex flex-col gap-3">
+    {%- set A = K.apps %}
+    <h2 id="wer" class="m-0 text-xl font-bold text-slate-900">{{ A.headline }}</h2>
+    {%- if comp.practisedBy.length %}
+    <ul class="list-none p-0 m-0 flex flex-col gap-3">
+      {%- for p in comp.practisedBy %}
+      <li class="panel panel-main min-w-0 flex flex-wrap items-center justify-between gap-4">
+        <div class="min-w-0 flex-[1_1_18rem]">
+          <h3 class="m-0 text-2xl font-extrabold leading-tight text-slate-900"{{ p.app.title | fallbackLang(lang) | safe }}>{{ p.app.title | tx(lang) }}</h3>
+          <p class="m-0 mt-1 text-slate-600">{{ p.app.grades | gradeLabel(lang) }}</p>
+          {%- if p.pages.length %}
+          <p class="m-0 mt-3 text-sm text-slate-700">{{ A.pages }}</p>
+          <ul class="list-none p-0 m-0 mt-1 flex flex-wrap gap-x-4 gap-y-1">
+            {%- for page in p.pages %}<li><a href="{{ page.url }}" class="text-blue-700 underline underline-offset-2"{{ page.title | fallbackLang(lang) | safe }}>{{ page.title | tx(lang) }}</a></li>{% endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+        <a href="{{ ('/' + p.app.id + '/') | inLang(lang) | url }}" class="btn btn-primary btn-lg">{{ A.appLink }} <span aria-hidden="true">→</span></a>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <p class="m-0 p-4 rounded-lg map-chip-gap">{{ A["none"] }}</p>
+    {%- endif %}
+    <p class="m-0 text-slate-700">{{ A.build }} <a href="{{ '/build/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ A.buildLink }}</a></p>
+  </section>
 
   {#- The chain (feat/map-steps, KD-06, KD-09): every ancestor by step, the direct ones marked; the direct descendants
       by step, and how many more build on it, with a link to the map by steps. #}
@@ -84,12 +108,15 @@ eleventyComputed:
       </div>
     </div>
     <p class="m-0 mt-4"><a href="{{ c.mapUrl(subject.id + '/c/') | trim }}#{{ comp.id }}" class="text-blue-700 underline underline-offset-2">{{ P.furtherLink }}</a></p>
+    {%- if subject.vocabulary and comp.strand == "wortschatz" %}
+    <p class="m-0 mt-3 text-slate-700">{{ t.map.vocabulary.linkLead }} <a href="{{ c.mapUrl(subject.id + '/grundwortschatz/') | trim }}" class="text-blue-700 underline underline-offset-2">{{ t.map.vocabulary.link }} {{ subject.name | tx(lang) }}</a></p>
+    {%- endif %}
   </section>
 
-  <section class="panel" aria-labelledby="wann">
+  <details class="panel">
     {%- set W = K.when %}
-    <h2 id="wann" class="panel-title">{{ W.headline }}</h2>
-    <p class="m-0 text-slate-600">{{ W.body }}</p>
+    <summary class="cursor-pointer"><h2 id="wann" class="inline m-0 text-xl font-bold text-slate-900">{{ W.headline }}</h2></summary>
+    <p class="m-0 mt-3 text-slate-600">{{ W.body }}</p>
     <div class="map-scroll mt-3" role="region" aria-labelledby="wann" tabindex="0">
       <table class="map-table">
         <thead>
@@ -132,29 +159,10 @@ eleventyComputed:
     {%- if missing.length %}
     <p class="m-0 mt-3 text-sm text-slate-600">{{ W.others }}, {{ W.missing }}: {{ missing | join(", ") }}</p>
     {%- endif %}
-  </section>
+  </details>
 
-  <section class="panel" aria-labelledby="wer">
-    {%- set A = K.apps %}
-    <h2 id="wer" class="panel-title">{{ A.headline }}</h2>
-    {%- if comp.practisedBy.length %}
-    <ul class="list-none p-0 m-0 flex flex-col gap-3">
-      {%- for p in comp.practisedBy %}
-      <li class="p-4 rounded-lg border border-slate-200">
-        <h3 class="m-0 text-base font-bold"><a href="{{ ('/' + p.app.id + '/') | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2"{{ p.app.title | fallbackLang(lang) | safe }}>{{ p.app.title | tx(lang) }}</a></h3>
-        <p class="m-0 mt-1 text-sm text-slate-600">{{ p.app.grades | gradeLabel(lang) }}</p>
-        {%- if p.pages.length %}
-        <p class="m-0 mt-2 text-sm">{{ A.pages }}</p>
-        <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
-          {%- for page in p.pages %}<li><a href="{{ page.url }}" class="text-blue-700 underline underline-offset-2"{{ page.title | fallbackLang(lang) | safe }}>{{ page.title | tx(lang) }}</a></li>{% endfor %}
-        </ul>
-        {%- endif %}
-      </li>
-      {%- endfor %}
-    </ul>
-    {%- else %}
-    <p class="m-0 p-4 rounded-lg map-chip-gap">{{ A["none"] }}</p>
-    {%- endif %}
-    <p class="m-0 mt-4 text-slate-700">{{ A.build }} <a href="{{ '/build/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ A.buildLink }}</a></p>
-  </section>
+  <details class="panel">
+    <summary class="cursor-pointer"><h2 id="quelle" class="inline m-0 text-xl font-bold text-slate-900">{{ K.source }}</h2></summary>
+    <p class="m-0 mt-3" lang="de">{% if subject.source.url %}<a href="{{ subject.source.url }}" class="text-blue-700 underline underline-offset-2">{{ subject.source.title }}</a>{% else %}{{ subject.source.title }}{% endif %}</p>
+  </details>
 </div>

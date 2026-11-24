@@ -128,6 +128,17 @@ describe("the built pages", () => {
     assert.match(read("map/mathematik/c/zufall-laplace/index.html"), /Noch übt keine App diesen Baustein/);
   });
 
+  test("the page of a competency leads with its app, then the chain; the curricula and the source are folded away", () => {
+    const page = read("map/physik/c/einfacher-stromkreis/index.html");
+    const at = (text) => page.indexOf(text);
+    assert.ok(at('id="wer"') > 0 && at('id="wer"') < at('id="weg"'), "the app comes before the chain");
+    assert.match(page, /<li class="panel panel-main[^"]*"[^]*?<a href="\/apps\/elektrizitaet\/" class="btn btn-primary btn-lg">Zur App/);
+    assert.match(page, /<details class="panel">\s*<summary[^>]*>\s*<h2 id="wann"/);
+    assert.match(page, /<details class="panel">\s*<summary[^>]*>\s*<h2 id="quelle"/);
+    const gap = read("map/mathematik/c/zufall-laplace/index.html");
+    assert.ok(gap.indexOf('id="wer"') < gap.indexOf('id="weg"'), "a gap is named before the chain, too");
+  });
+
   test("the start of the maps shows the maps first and the model last, and asks for feedback as an issue", () => {
     const html = read("map/index.html");
     const at = (text) => {
