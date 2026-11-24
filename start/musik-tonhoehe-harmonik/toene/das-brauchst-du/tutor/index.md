@@ -37,7 +37,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du hier“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/musik/c/tonhoehe-hoch-tief/, https://lernapps.net/apps/map/musik/c/klaviatur-tasten/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/musik/c/tonhoehe-hoch-tief/, https://lernapps.net/apps/map/musik/c/klaviatur-tasten/
 
 Kurz wiederholt: hohe und tiefe Töne, die Tasten der Klaviatur und wo das c liegt.
 

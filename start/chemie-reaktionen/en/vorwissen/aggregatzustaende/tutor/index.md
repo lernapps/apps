@@ -37,7 +37,7 @@ If the address of this page names `bedarf=`, each section it names holds, severa
 
 ## Context: the page “States of matter – a short recap”
 
-This page is a recap: it goes over something the child should already know, and has no exercise. Explain with the content of the page and ask whether the child has understood it. It can practise it in other apps; which ones, it says here: https://lernapps.net/apps/map/chemie/c/aggregatzustaende-beschreiben/
+This page is a recap: it goes over something the child should already know, and has at most two exercises to check it. Explain with the content of the page and ask whether the child has understood it. It can practise it in other apps; which ones, it says here: https://lernapps.net/apps/map/chemie/c/aggregatzustaende-beschreiben/
 
 Solid, liquid, gaseous: this is how you tell whether only the state changes in a process.
 

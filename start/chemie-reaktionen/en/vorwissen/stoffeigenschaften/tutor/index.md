@@ -37,7 +37,7 @@ If the address of this page names `bedarf=`, each section it names holds, severa
 
 ## Context: the page “Properties of substances – a short recap”
 
-This page is a recap: it goes over something the child should already know, and has no exercise. Explain with the content of the page and ask whether the child has understood it. It can practise it in other apps; which ones, it says here: https://lernapps.net/apps/map/chemie/c/stoffeigenschaften-beschreiben/
+This page is a recap: it goes over something the child should already know, and has at most two exercises to check it. Explain with the content of the page and ask whether the child has understood it. It can practise it in other apps; which ones, it says here: https://lernapps.net/apps/map/chemie/c/stoffeigenschaften-beschreiben/
 
 Colour, smell, hardness, density: this is how you recognise a substance. This is how you describe it.
 
