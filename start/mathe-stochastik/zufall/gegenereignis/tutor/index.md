@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -92,18 +89,31 @@ Ohne den Trick müsstest du 7 Pfade addieren. Mit dem Trick ist es eine Rechnung
 
 ### Bild
 
-Bild: Baumdiagramm zum dreimaligen Würfeln; orange ist der einzige Pfad von „kein einziges Mal 6“. Bildunterschrift: Der Baum zum dreimaligen Würfeln. Auf jeder Stufe gibt es zwei Zweige: 6 mit 1/6 und „keine 6“ (K) mit 5/6. Orange ist der einzige Pfad des Gegenereignisses „kein einziges Mal 6“: keine 6, keine 6, keine 6, also 5/6 · 5/6 · 5/6 = 125/216. Unter den acht Enden stehen die Pfadwahrscheinlichkeiten: 1/216, 5/216, 5/216, 25/216, 5/216, 25/216, 25/216 und 125/216.
-
-### Video dazu
-
-- Zu dieser Seite gibt es kein eigenes Video. Wie man Pfade multipliziert, zeigt das Video auf der Seite 1. Pfadregel.
-- Noch eine Erklärung: [Gegenereignis](https://de.serlo.org/mathe/1691/gegenereignis) bei serlo.org
+Bild: Baumdiagramm zum dreimaligen Würfeln; orange ist der einzige Pfad von „kein einziges Mal 6“. Bildunterschrift: Der Baum zum dreimaligen Würfeln. Auf jeder Stufe gibt es zwei Zweige: 6 mit $\frac{1}{6}$ und „keine 6“ (K) mit $\frac{5}{6}$. Orange ist der einzige Pfad des Gegenereignisses „kein einziges Mal 6“: keine 6, keine 6, keine 6, also $\frac{5}{6} \cdot \frac{5}{6} \cdot \frac{5}{6} = \frac{125}{216}$. Unter den acht Enden stehen die Pfadwahrscheinlichkeiten: $\frac{1}{216}$, $\frac{5}{216}$, $\frac{5}{216}$, $\frac{25}{216}$, $\frac{5}{216}$, $\frac{25}{216}$, $\frac{25}{216}$ und $\frac{125}{216}$.
 
 ### Übung
+
+- Aufgabe `gegen-erkennen` (unten)
 
 - Aufgabe `gegenwahrscheinlichkeit` (unten)
 
 - Aufgabe `gegenereignis-direkt` (unten)
+
+- Aufgabe `gegen-gluecksrad` (unten)
+
+### Aufgabe gegen-erkennen
+
+- Aufgabe: Du würfelst dreimal. Was ist das Gegenereignis von „mindestens eine 6“?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ keine 6 in allen drei Würfen – „Mindestens eine 6“ heißt eine, zwei oder drei Sechsen. Alles andere ist das Gegenereignis, also keine einzige 6.
+  - ✗ genau eine 6 – Das ist nur ein Teil von „mindestens eine 6“. Auch zwei oder drei Sechsen gehören dazu, dann ist die Bedingung ebenfalls erfüllt.
+  - ✗ höchstens eine 6 – Dazu gehört auch „genau eine 6“, und die zählt schon zu „mindestens eine 6“. Ein Gegenereignis darf sich nicht mit dem Ereignis überschneiden.
+  - ✗ dreimal eine 6 – Das ist nur ein Fall von „mindestens eine 6“, nämlich der mit den meisten Sechsen.
+- Lösung: keine 6 in allen drei Würfen
+- Erklärung: Ereignis und Gegenereignis zusammen decken alle Ergebnisse ab, ohne sich zu überschneiden. Für „mindestens eine 6“ bleibt nur der eine Fall übrig, dass keine einzige 6 fällt.
+- Tipp der App: Das Gegenereignis enthält alle Ergebnisse, die nicht zum Ereignis gehören. Welche Ergebnisse sind das?
+- Link: [../?via=tutor#gegen-erkennen](../?via=tutor#gegen-erkennen)
 
 ### Aufgabe gegenwahrscheinlichkeit
 
@@ -221,3 +231,15 @@ Nr. | p | Lösung | F1
 17 | 0,25 | 0,75 | 0,25
 18 | 0,4 | 0,6 | 0,4
 ```
+
+### Aufgabe gegen-gluecksrad
+
+- Aufgabe: Bei einem Glücksrad gewinnst du mit der Wahrscheinlichkeit 0,2. Du drehst zweimal. Wie groß ist die Wahrscheinlichkeit, dass du mindestens einmal gewinnst? Gib sie in Prozent an.
+- Antwortformat: eine Zahl eintippen (%)
+- Lösung: 36 %
+- Erklärung: Kein Gewinn hat bei einer Drehung die Wahrscheinlichkeit $1 - 0{,}2 = 0{,}8$. Beide Male kein Gewinn: $0{,}8 \cdot 0{,}8 = 0{,}64$. Mindestens einmal gewinnen ist das Gegenereignis: $1 - 0{,}64 = 0{,}36 = 36\,\%$.
+- Tipp der App: Rechne erst die Wahrscheinlichkeit für „beide Male kein Gewinn“ aus. Wie groß ist sie bei einer Drehung?
+- Typische Fehler und was die App sagt:
+  - 40: Du hast die beiden Gewinnwahrscheinlichkeiten addiert. Bei „mindestens einmal“ ist das Gegenereignis der bessere Weg.
+  - 64: Das ist die Wahrscheinlichkeit, dass du gar nicht gewinnst. Gefragt ist das Gegenteil davon.
+- Link: [../?via=tutor#gegen-gluecksrad](../?via=tutor#gegen-gluecksrad)

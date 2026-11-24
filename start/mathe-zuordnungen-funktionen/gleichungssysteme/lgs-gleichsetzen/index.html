@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Das Gleichsetzungsverfahren – Zuordnungen und lineare Funktionen</title>
+    <meta name="description" content="Du löst ein Gleichungssystem rechnerisch, indem du die beiden Terme für y gleichsetzt." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../gleichungssysteme/lgs-gleichsetzen/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../gleichungssysteme/">Zwei Geraden, ein Schnittpunkt</a></li><li aria-current="page">Das Gleichsetzungsverfahren</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Das Gleichsetzungsverfahren</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../gleichungssysteme/lgs-gleichsetzen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧gleichungssysteme/lgs-gleichsetzen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"lgs-gleichsetzen","title":"Das Gleichsetzungsverfahren","exercises":[{"id":"gleichsetzen-reihenfolge","section":"uebung","numbered":false},{"id":"gleichsetzen-x","section":"uebung","numbered":true},{"id":"gleichsetzen-y","section":"uebung","numbered":true},{"id":"tarife-gleich","section":"uebung","numbered":false},{"id":"gleichsetzen-erster-schritt","section":"uebung","numbered":false}],"sections":["einstieg","erklaerung","beispiel","uebung"]},"tutor":"gleichungssysteme/lgs-gleichsetzen/tutor/","markdown":"gleichungssysteme/lgs-gleichsetzen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wann kosten beide gleich viel?</a></li><li><a href="#erklaerung">Gleichsetzen in drei Schritten</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wann kosten beide gleich viel?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="35e3dc85" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Auf der Seite davor hast du aus dem Graphen für Tarif A (<math><mi>y</mi></math> = <math><mi>x</mi></math> + 6) und Tarif B (<math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 2) den Schnittpunkt abgelesen. Das war nur so genau, wie du den
+Graphen lesen kannst. Jetzt berechnest du ihn. Beide Gleichungen sind schon nach <math><mi>y</mi></math> aufgelöst. Dann müssen die rechten Seiten gleich
+sein, wenn die Kosten gleich sind. Für A und B: <math><mi>x</mi></math> + 6 = 2 · <math><mi>x</mi></math> + 2.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="erklaerung">Gleichsetzen in drei Schritten</h2>
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="76d80f39" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Wenn du den Tarif-Wechsel genau berechnen willst, statt ihn abzulesen, und in beiden Gleichungen schon <math><mi>y</mi></math> allein steht, setzt du die Terme gleich.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="edba8129" data-block-type="definition" data-block-order="3">
+<dl class="explainer-definition"><dt><dfn id="begriff-gleichsetzungsverfahren"><a href="../../glossar/#gleichsetzungsverfahren">Gleichsetzungsverfahren</a></dfn></dt><dd><p>Beim Gleichsetzungsverfahren setzt du die beiden Terme für <math><mi>y</mi></math> gleich, löst nach <math><mi>x</mi></math> auf und rechnest <math><mi>y</mi></math> aus. Beispiel: <math><mi>x</mi></math> + 6 = 2 · <math><mi>x</mi></math> + 2 gibt <math><mi>x</mi></math> = 4, dann <math><mi>y</mi></math> = 4 + 6 = 10.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="9d821415" data-block-type="text" data-block-order="4">
+<div class="block-text"><p><strong>Schritt 1:</strong> Beide Terme für <math><mi>y</mi></math> gleichsetzen. <strong>Schritt 2:</strong> Die entstandene Gleichung nach <math><mi>x</mi></math> lösen. <strong>Schritt 3:</strong> <math><mi>x</mi></math> in eine
+Gleichung einsetzen und <math><mi>y</mi></math> berechnen. Dann die <strong>Probe</strong> in beiden Gleichungen.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/4" data-block-id="7f65aa13" data-block-type="note" data-block-order="5">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="erklaerung/4/1" data-block-id="dc34bd61" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Schreibe jede Umformung in eine neue Zeile und mache die Probe in <strong>beiden</strong> Gleichungen, nicht nur in einer.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="983dfac8" data-block-type="example" data-block-order="7">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Tarif A und Tarif B</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="7594b5f7" data-block-type="table" data-block-order="8">
+<div class="block-table" role="region" aria-label="Rechenweg zeilenweise" tabindex="0"><table><caption>Rechenweg zeilenweise</caption><thead><tr><th scope="col">Schritt</th><th scope="col">Rechnung</th><th scope="col">Begründung</th></tr></thead><tbody><tr><td>1</td><td><math><mi>x</mi></math> + 6 = 2 · <math><mi>x</mi></math> + 2</td><td>beide Terme für <math><mi>y</mi></math> gleichsetzen</td></tr><tr><td>2</td><td>6 = <math><mi>x</mi></math> + 2</td><td><math><mi>x</mi></math> auf beiden Seiten abziehen</td></tr><tr><td>3</td><td>4 = <math><mi>x</mi></math></td><td>2 auf beiden Seiten abziehen</td></tr><tr><td>4</td><td><math><mi>y</mi></math> = 4 + 6 = 10</td><td><math><mi>x</mi></math> = 4 in die erste Gleichung einsetzen</td></tr><tr><td>5</td><td>4 + 6 = 10 und 2 · 4 + 2 = 10</td><td>Probe in beiden Gleichungen</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="356fefab" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Die Lösung ist (4|10): Nach 4 Stunden kosten beide Tarife 10 €.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="0f161b75" data-block-type="ordering" data-block-order="10">
+<div class="explainer-exercise explainer-question" id="gleichsetzen-reihenfolge">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gleichsetzen-reihenfolge" data-id="gleichsetzen-reihenfolge" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bring die Schritte des Gleichsetzungsverfahrens in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>x in eine Gleichung einsetzen und y berechnen.</span> <select name="frage-gleichsetzen-reihenfolge-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Die Gleichung nach x auflösen.</span> <select name="frage-gleichsetzen-reihenfolge-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Beide Terme für y gleichsetzen.</span> <select name="frage-gleichsetzen-reihenfolge-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Die Probe in beiden Gleichungen machen.</span> <select name="frage-gleichsetzen-reihenfolge-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Beide Terme für y gleichsetzen., 2. Die Gleichung nach x auflösen., 3. x in eine Gleichung einsetzen und y berechnen., 4. Die Probe in beiden Gleichungen machen.</p>
+<p class="question-explanation">Erst gleichsetzen, dann <math><mi>x</mi></math> bestimmen, dann <math><mi>y</mi></math> berechnen, am Ende prüfen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Beide Terme für y gleichsetzen., 2. Die Gleichung nach x auflösen., 3. x in eine Gleichung einsetzen und y berechnen., 4. Die Probe in beiden Gleichungen machen.</p>
+<p class="question-explanation">Erst gleichsetzen, dann <math><mi>x</mi></math> bestimmen, dann <math><mi>y</mi></math> berechnen, am Ende prüfen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gleichsetzen-reihenfolge","text":"Bring die Schritte des Gleichsetzungsverfahrens in die richtige Reihenfolge.","explanation":"Erst gleichsetzen, dann $x$ bestimmen, dann $y$ berechnen, am Ende prüfen.","links":[],"type":"ordering","items":["Beide Terme für y gleichsetzen.","Die Gleichung nach x auflösen.","x in eine Gleichung einsetzen und y berechnen.","Die Probe in beiden Gleichungen machen."]},"rendered":{"Erst gleichsetzen, dann $x$ bestimmen, dann $y$ berechnen, am Ende prüfen.":"Erst gleichsetzen, dann \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> bestimmen, dann \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> berechnen, am Ende prüfen."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="691e1d80" data-block-type="generated" data-block-order="11">
+<div class="explainer-exercise explainer-generated" id="gleichsetzen-x">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Löse das System mit dem Gleichsetzungsverfahren: <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 2 und <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 6. Wie groß ist <math><mi>x</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze 4 · x + 2 = 2 · x + 6. Bringe alle x auf eine Seite, alle Zahlen auf die andere.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>4 · <math><mi>x</mi></math> + 2 = 2 · <math><mi>x</mi></math> + 6</li><li>(2) · <math><mi>x</mi></math> = 4</li><li><math><mi>x</mi></math> = 4 : 2 = 2.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Löse das System mit dem Gleichsetzungsverfahren: <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 1 und <math><mi>y</mi></math> = 1 · <math><mi>x</mi></math> + 10. Wie groß ist <math><mi>x</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze 4 · x + 1 = 1 · x + 10. Bringe alle x auf eine Seite, alle Zahlen auf die andere.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>4 · <math><mi>x</mi></math> + 1 = 1 · <math><mi>x</mi></math> + 10</li><li>(3) · <math><mi>x</mi></math> = 9</li><li><math><mi>x</mi></math> = 9 : 3 = 3.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Löse das System mit dem Gleichsetzungsverfahren: <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 1 und <math><mi>y</mi></math> = 1 · <math><mi>x</mi></math> + 4. Wie groß ist <math><mi>x</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze 2 · x + 1 = 1 · x + 4. Bringe alle x auf eine Seite, alle Zahlen auf die andere.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>2 · <math><mi>x</mi></math> + 1 = 1 · <math><mi>x</mi></math> + 4</li><li>(1) · <math><mi>x</mi></math> = 3</li><li><math><mi>x</mi></math> = 3 : 1 = 3.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"gleichsetzen-x","given":{"e":{"pick":1,"from":{"data":"schnittpunkte"}}},"task":{"text":"Löse das System mit dem Gleichsetzungsverfahren: $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}}. Wie groß ist $x$?"},"answer":{"value":"e.x","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"e.y","message":"Das ist der y-Wert der Lösung. Gefragt ist x: Setze die Terme gleich und löse nach x."}],"hint":"Setze {{e.m1}} · x + {{e.b1}} = {{e.m2}} · x + {{e.b2}}. Bringe alle x auf eine Seite, alle Zahlen auf die andere.","steps":["{{e.m1}} · $x$ + {{e.b1}} = {{e.m2}} · $x$ + {{e.b2}}","({{e.dm}}) · $x$ = {{e.db}}","$x$ = {{e.db}} : {{e.dm}} = {{answer}}."]},"templates":{"de":{"task":"Löse das System mit dem Gleichsetzungsverfahren: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦e.m1⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦e.b1⟧ und \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦e.m2⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦e.b2⟧. Wie groß ist \u003cmath>\u003cmi>x\u003c/mi>\u003c/math>?","steps":["⟦e.m1⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦e.b1⟧ = ⟦e.m2⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦e.b2⟧","(⟦e.dm⟧) · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = ⟦e.db⟧","\u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = ⟦e.db⟧ : ⟦e.dm⟧ = ⟦answer⟧."],"hint":"Setze ⟦e.m1⟧ · x + ⟦e.b1⟧ = ⟦e.m2⟧ · x + ⟦e.b2⟧. Bringe alle x auf eine Seite, alle Zahlen auf die andere.","messages":["Das ist der y-Wert der Lösung. Gefragt ist x: Setze die Terme gleich und löse nach x."]}},"data":{"schnittpunkte":[{"m1":3,"b1":0,"m2":1,"b2":6,"dm":2,"db":6,"x":3,"y":9},{"m1":2,"b1":1,"m2":1,"b2":4,"dm":1,"db":3,"x":3,"y":7},{"m1":4,"b1":2,"m2":2,"b2":6,"dm":2,"db":4,"x":2,"y":10},{"m1":3,"b1":1,"m2":1,"b2":5,"dm":2,"db":4,"x":2,"y":7},{"m1":5,"b1":0,"m2":2,"b2":6,"dm":3,"db":6,"x":2,"y":10},{"m1":4,"b1":1,"m2":1,"b2":10,"dm":3,"db":9,"x":3,"y":13},{"m1":3,"b1":2,"m2":1,"b2":6,"dm":2,"db":4,"x":2,"y":8},{"m1":2,"b1":0,"m2":1,"b2":5,"dm":1,"db":5,"x":5,"y":10}]},"seeds":[1,2,4,9,10,12,24,32],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="94da529d" data-block-type="generated" data-block-order="12">
+<div class="explainer-exercise explainer-generated" id="gleichsetzen-y">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Das System <math><mi>y</mi></math> = 5 · <math><mi>x</mi></math> + 0 und <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 6 hat bei <math><mi>x</mi></math> = 2 seine Lösung. Berechne <math><mi>y</mi></math>.</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze x in eine der beiden Gleichungen ein.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mi>y</mi></math> = 5 · 2 + 0</li><li><math><mi>y</mi></math> = 10. Probe: 2 · 2 + 6 = 10.</li></ol><p><strong>Richtige Antwort:</strong> 10</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Das System <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 0 und <math><mi>y</mi></math> = 1 · <math><mi>x</mi></math> + 5 hat bei <math><mi>x</mi></math> = 5 seine Lösung. Berechne <math><mi>y</mi></math>.</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze x in eine der beiden Gleichungen ein.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mi>y</mi></math> = 2 · 5 + 0</li><li><math><mi>y</mi></math> = 10. Probe: 1 · 5 + 5 = 10.</li></ol><p><strong>Richtige Antwort:</strong> 10</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Das System <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 1 und <math><mi>y</mi></math> = 1 · <math><mi>x</mi></math> + 10 hat bei <math><mi>x</mi></math> = 3 seine Lösung. Berechne <math><mi>y</mi></math>.</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze x in eine der beiden Gleichungen ein.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mi>y</mi></math> = 4 · 3 + 1</li><li><math><mi>y</mi></math> = 13. Probe: 1 · 3 + 10 = 13.</li></ol><p><strong>Richtige Antwort:</strong> 13</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"gleichsetzen-y","given":{"e":{"pick":1,"from":{"data":"schnittpunkte"}}},"task":{"text":"Das System $y$ = {{e.m1}} · $x$ + {{e.b1}} und $y$ = {{e.m2}} · $x$ + {{e.b2}} hat bei $x$ = {{e.x}} seine Lösung. Berechne $y$."},"answer":{"value":"e.y","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"e.x","message":"{{e.x}} ist schon der x-Wert. Setze ihn in eine der Gleichungen ein, um y zu berechnen."},{"value":"e.m2 * e.x","message":"Du hast + {{e.b2}} vergessen. y = {{e.m2}} · x + {{e.b2}}."}],"hint":"Setze x in eine der beiden Gleichungen ein.","steps":["$y$ = {{e.m1}} · {{e.x}} + {{e.b1}}","$y$ = {{answer}}. Probe: {{e.m2}} · {{e.x}} + {{e.b2}} = {{answer}}."]},"templates":{"de":{"task":"Das System \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦e.m1⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦e.b1⟧ und \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦e.m2⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦e.b2⟧ hat bei \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = ⟦e.x⟧ seine Lösung. Berechne \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>.","steps":["\u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦e.m1⟧ · ⟦e.x⟧ + ⟦e.b1⟧","\u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦answer⟧. Probe: ⟦e.m2⟧ · ⟦e.x⟧ + ⟦e.b2⟧ = ⟦answer⟧."],"hint":"Setze x in eine der beiden Gleichungen ein.","messages":["⟦e.x⟧ ist schon der x-Wert. Setze ihn in eine der Gleichungen ein, um y zu berechnen.","Du hast + ⟦e.b2⟧ vergessen. y = ⟦e.m2⟧ · x + ⟦e.b2⟧."]}},"data":{"schnittpunkte":[{"m1":3,"b1":0,"m2":1,"b2":6,"dm":2,"db":6,"x":3,"y":9},{"m1":2,"b1":1,"m2":1,"b2":4,"dm":1,"db":3,"x":3,"y":7},{"m1":4,"b1":2,"m2":2,"b2":6,"dm":2,"db":4,"x":2,"y":10},{"m1":3,"b1":1,"m2":1,"b2":5,"dm":2,"db":4,"x":2,"y":7},{"m1":5,"b1":0,"m2":2,"b2":6,"dm":3,"db":6,"x":2,"y":10},{"m1":4,"b1":1,"m2":1,"b2":10,"dm":3,"db":9,"x":3,"y":13},{"m1":3,"b1":2,"m2":1,"b2":6,"dm":2,"db":4,"x":2,"y":8},{"m1":2,"b1":0,"m2":1,"b2":5,"dm":1,"db":5,"x":5,"y":10}]},"seeds":[1,2,4,5,7,8,10,13],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="5118c548" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="tarife-gleich">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-tarife-gleich" data-id="tarife-gleich" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Tarif A: <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 4. Tarif B: <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 2. Bei welchem <math><mi>x</mi></math> kosten beide gleich viel?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-tarife-gleich">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1</p>
+<p class="question-explanation"><math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>2</mn></mrow></math>, also <math><mrow><mn>2</mn><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>x</mi></mrow></math> und <math><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>. Dann <math><mrow><mi>y</mi><mo>=</mo><mn>6</mn></mrow></math>.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1</p>
+<p class="question-explanation"><math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>2</mn></mrow></math>, also <math><mrow><mn>2</mn><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>x</mi></mrow></math> und <math><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>. Dann <math><mrow><mi>y</mi><mo>=</mo><mn>6</mn></mrow></math>.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"tarife-gleich","text":"Tarif A: $y$ = 2 · $x$ + 4. Tarif B: $y$ = 4 · $x$ + 2. Bei welchem $x$ kosten beide gleich viel?","explanation":"$2 \\cdot x + 4 = 4 \\cdot x + 2$, also $2 = 2 \\cdot x$ und $x = 1$. Dann $y = 6$.","links":[],"type":"number","answer":1,"tolerance":0,"mistakes":[{"answer":6,"message":"6 ist der Preis, also y. Gefragt ist x: Setze die Terme gleich, 2 · x + 4 = 4 · x + 2, und löse nach x."}]},"rendered":{"Tarif A: $y$ = 2 · $x$ + 4. Tarif B: $y$ = 4 · $x$ + 2. Bei welchem $x$ kosten beide gleich viel?":"Tarif A: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 2 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 4. Tarif B: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 4 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 2. Bei welchem \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> kosten beide gleich viel?","$2 \\cdot x + 4 = 4 \\cdot x + 2$, also $2 = 2 \\cdot x$ und $x = 1$. Dann $y = 6$.":"\u003cmath>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math> und \u003cmath>\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/math>. Dann \u003cmath>\u003cmrow>\u003cmi>y\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>6\u003c/mn>\u003c/mrow>\u003c/math>."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="3490dec4" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="gleichsetzen-erster-schritt">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gleichsetzen-erster-schritt" data-id="gleichsetzen-erster-schritt" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Das System lautet <math><mi>y</mi></math> = 3 · <math><mi>x</mi></math> + 1 und <math><mi>y</mi></math> = <math><mi>x</mi></math> + 7. Was ist der erste Schritt beim Gleichsetzen?</legend>
+<label class="question-option"><input type="radio" name="frage-gleichsetzen-erster-schritt" value="0"> <span>3 · x + 1 = x + 7 aufschreiben</span></label>
+<label class="question-option"><input type="radio" name="frage-gleichsetzen-erster-schritt" value="1"> <span>3 · x + 1 + x + 7 rechnen</span></label>
+<label class="question-option"><input type="radio" name="frage-gleichsetzen-erster-schritt" value="2"> <span>y = 0 setzen</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>3 · x + 1 = x + 7 aufschreiben</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beide Terme sind für das gleiche <math><mi>y</mi></math> gleich groß. Daraus entsteht eine Gleichung nur mit <math><mi>x</mi></math>.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>3 · x + 1 + x + 7 rechnen</strong></p><p>Addieren gehört zu einem anderen Verfahren. Hier setzt du die Terme gleich.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>y = 0 setzen</strong></p><p><math><mi>y</mi></math> = 0 liefert die Nullstelle, nicht die Lösung des Systems.</p></li>
+</ul>
+<p class="question-explanation">Beim Gleichsetzen schreibst du beide Terme als Gleichung auf.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>3 · x + 1 = x + 7 aufschreiben</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beide Terme sind für das gleiche <math><mi>y</mi></math> gleich groß. Daraus entsteht eine Gleichung nur mit <math><mi>x</mi></math>.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>3 · x + 1 + x + 7 rechnen</strong></p><p>Addieren gehört zu einem anderen Verfahren. Hier setzt du die Terme gleich.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>y = 0 setzen</strong></p><p><math><mi>y</mi></math> = 0 liefert die Nullstelle, nicht die Lösung des Systems.</p></li>
+</ul>
+<p class="question-explanation">Beim Gleichsetzen schreibst du beide Terme als Gleichung auf.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gleichsetzen-erster-schritt","text":"Das System lautet $y$ = 3 · $x$ + 1 und $y$ = $x$ + 7. Was ist der erste Schritt beim Gleichsetzen?","explanation":"Beim Gleichsetzen schreibst du beide Terme als Gleichung auf.","links":[],"type":"single-choice","options":[{"text":"3 · x + 1 = x + 7 aufschreiben","correct":true,"info":"Beide Terme sind für das gleiche $y$ gleich groß. Daraus entsteht eine Gleichung nur mit $x$."},{"text":"3 · x + 1 + x + 7 rechnen","correct":false,"info":"Addieren gehört zu einem anderen Verfahren. Hier setzt du die Terme gleich."},{"text":"y = 0 setzen","correct":false,"info":"$y$ = 0 liefert die Nullstelle, nicht die Lösung des Systems."}]},"rendered":{"Das System lautet $y$ = 3 · $x$ + 1 und $y$ = $x$ + 7. Was ist der erste Schritt beim Gleichsetzen?":"Das System lautet \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 1 und \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 7. Was ist der erste Schritt beim Gleichsetzen?","Beide Terme sind für das gleiche $y$ gleich groß. Daraus entsteht eine Gleichung nur mit $x$.":"Beide Terme sind für das gleiche \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> gleich groß. Daraus entsteht eine Gleichung nur mit \u003cmath>\u003cmi>x\u003c/mi>\u003c/math>.","$y$ = 0 liefert die Nullstelle, nicht die Lösung des Systems.":"\u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 0 liefert die Nullstelle, nicht die Lösung des Systems."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="96cfe397" data-block-type="text" data-block-order="15">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du löst ein Gleichungssystem mit dem Gleichsetzungsverfahren und machst die Probe. Als Nächstes setzt du einen Term in die
+andere Gleichung ein.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Zuordnungen und lineare Funktionen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"08e1261","page":{"title":"Das Gleichsetzungsverfahren","order":24}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungssysteme/lgs-loesungszahl/">Zurück: Wie viele Lösungen gibt es?</a><a rel="next" href="../../gleichungssysteme/lgs-einsetzen/">Weiter: Das Einsetzungsverfahren</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

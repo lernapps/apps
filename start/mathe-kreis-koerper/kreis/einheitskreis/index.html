@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Das Bogenmaß am Einheitskreis – Kreis und Körper berechnen</title>
+    <meta name="description" content="Ein Winkel lässt sich mit der Länge eines Bogens messen. Am Einheitskreis ist der Bogen selbst das Winkelmaß." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../kreis/einheitskreis/" />
+    <script type="module" crossorigin src="../../assets/islands-C8L28Da2.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../kreis/">Kreis, π und Bogenmaß</a></li><li aria-current="page">Das Bogenmaß am Einheitskreis</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Das Bogenmaß am Einheitskreis</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../kreis/einheitskreis/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧kreis/einheitskreis/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"einheitskreis","title":"Das Bogenmaß am Einheitskreis","exercises":[{"id":"radiusstuecke","section":"einstieg","numbered":false},{"id":"bogen-und-radius","section":"uebung","numbered":false},{"id":"bogenmass-aus-bogen","section":"uebung","numbered":true},{"id":"halbkreis","section":"uebung","numbered":false},{"id":"einheit-bogenmass","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"kreis/einheitskreis/tutor/","markdown":"kreis/einheitskreis/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Der Kreisrand in Radiusstücken</a></li><li><a href="#herleitung">Einen Winkel mit einem Bogen messen</a></li><li><a href="#beispiel">Der Winkel 60°</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Der Kreisrand in Radiusstücken</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="69f63d29" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du einen Winkel mit einer Länge messen willst, brauchst du ein Maß, das nicht von der Größe des Kreises abhängt. Dafür vergleichst du den Kreisrand mit dem Radius.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="bd922f5c" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Ein Kreis hat den Radius r = 5 cm. Du schneidest Schnurstücke, die so lang sind wie der Radius, also 5 cm. Dann legst du sie nacheinander auf den Kreisrand. Der Umfang ist U = 2 · π · r ≈ 31,4 cm (mit π ≈ 3,14).</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="01dc1c7b" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="radiusstuecke">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-radiusstuecke" data-id="radiusstuecke" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Stücke der Länge r passen auf den Kreisrand? Gib die Zahl mit zwei Stellen nach dem Komma an.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-radiusstuecke">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 6,28 (erlaubte Abweichung: 0,01)</p>
+<p class="question-explanation">31,4 : 5 = 6,28. Auf den Kreisrand passen gut sechs Radiusstücke, genauer 2 · π Stück. Diese Zahl hängt nicht von der Größe des Kreises ab.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 6,28 (erlaubte Abweichung: 0,01)</p>
+<p class="question-explanation">31,4 : 5 = 6,28. Auf den Kreisrand passen gut sechs Radiusstücke, genauer 2 · π Stück. Diese Zahl hängt nicht von der Größe des Kreises ab.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"radiusstuecke","text":"Wie viele Stücke der Länge r passen auf den Kreisrand? Gib die Zahl mit zwei Stellen nach dem Komma an.","explanation":"31,4 : 5 = 6,28. Auf den Kreisrand passen gut sechs Radiusstücke, genauer 2 · π Stück. Diese Zahl hängt nicht von der Größe des Kreises ab.","links":[],"type":"number","answer":6.28,"tolerance":0.01},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Einen Winkel mit einem Bogen messen</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="111b7f6e" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du einen Winkel nicht in Grad angeben willst, zum Beispiel am Taschenrechner im Modus RAD, brauchst du ein Winkelmaß, das aus einer Länge entsteht. Es heißt Bogenmaß.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="95a6162a" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Bisher misst du Winkel in Grad. Der Vollwinkel, einmal ganz um den Mittelpunkt herum, hat 360°. Das ist eine Verabredung. Es geht auch mit einer Länge: Ein Winkel mit der Spitze im Mittelpunkt schneidet aus dem Kreis einen <strong>Bogen</strong> aus. Je größer der Winkel, desto länger der Bogen. Damit das Maß nicht von der Größe des Kreises abhängt, teilst du die Bogenlänge b durch den Radius r.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="92d5abbc" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-bogenmass"><a href="../../glossar/#bogenmass">Bogenmaß</a></dfn></dt><dd><p>Das Bogenmaß eines Winkels ist die Länge <math><mi>b</mi></math> des Bogens, den er aus einem Kreis ausschneidet, geteilt durch den Radius <math><mi>r</mi></math>: <math><mrow><mi>x</mi><mo>=</mo><mi>b</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>r</mi></mrow></math>. Es hat keine Einheit, denn Länge durch Länge ergibt eine reine Zahl.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="e085e4b1" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-einheitskreis"><a href="../../glossar/#einheitskreis">Einheitskreis</a></dfn></dt><dd><p>Der Einheitskreis ist ein Kreis mit dem Radius 1 um den Mittelpunkt. An ihm ist <math><mrow><mi>x</mi><mo>=</mo><mi>b</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>1</mn></mrow></math>, das Bogenmaß ist also genau die Länge des Bogens.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="87214365" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Im Bild unten ist der Einheitskreis. Mit dem Regler stellst du den Winkel ein. Der dicke rote Bogen ist der Teil des Kreises, den der Winkel ausschneidet. Der blaue Strahl führt zum Punkt P am Ende des Bogens. Unter dem Bild steht die Länge des Bogens, als Dezimalzahl und als Vielfaches von π (ein Vielfaches von π ist π mal eine Zahl, zum Beispiel 2 π).</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/6" data-block-id="6e6d8397" data-block-type="vue-component" data-block-order="9">
+<div class="explainer-component" id="einheitskreis" data-component="Einheitskreis">
+<div class="explainer-island" hidden><div class="einheitskreis" data-v-2d471bcc><label class="ek-regler" data-v-2d471bcc><span data-v-2d471bcc>Winkel: <strong data-v-2d471bcc>30°</strong></span><input value="2" type="range" min="0" max="24" step="1" aria-valuetext="30°" data-v-2d471bcc></label><svg viewBox="0 0 300 300" role="img" aria-label="Der Einheitskreis mit einem Winkel von 30 Grad. Der Bogen vom Winkel 0 bis zum Winkel {grad} ist dick gezeichnet." class="ek-bild" data-v-2d471bcc><line x1="20" y1="150" x2="280" y2="150" stroke="var(--page-muted)" stroke-width="1" data-v-2d471bcc></line><line x1="150" y1="20" x2="150" y2="280" stroke="var(--page-muted)" stroke-width="1" data-v-2d471bcc></line><circle cx="150" cy="150" r="110" fill="none" stroke="var(--page-text)" stroke-width="1.5" data-v-2d471bcc></circle><path d="M260.00,150.00 A110,110 0 0 0 245.26,95.00" fill="none" stroke="var(--page-wrong)" stroke-width="6" stroke-linecap="butt" data-v-2d471bcc></path><line x1="150" y1="150" x2="245.26279441628827" y2="95" stroke="var(--page-accent)" stroke-width="2" data-v-2d471bcc></line><circle cx="245.26279441628827" cy="95" r="5" fill="var(--page-accent)" data-v-2d471bcc></circle><text x="190" y="143" font-size="13" fill="var(--page-text)" data-v-2d471bcc>r = 1</text></svg><p class="ek-ergebnis" aria-live="polite" data-v-2d471bcc>Winkel 30°: Der Bogen hat die Länge 0,524. Als Vielfaches von π: <span class="ek-bruch" role="math" aria-label="π durch 6" data-v-2d471bcc><span class="ek-zaehler" data-v-2d471bcc>π</span><span class="ek-nenner" data-v-2d471bcc>6</span></span>. </p></div></div>
+<div class="explainer-nojs"><p>Der Einheitskreis hat den Radius 1. Ein Winkel mit der Spitze im Mittelpunkt schneidet einen Bogen aus. Die Länge des Bogens ist das Bogenmaß des Winkels. Einige Winkel:</p>
+<ul>
+<li>30°: Bogenlänge 0,524, das ist <math><mfrac><mi>π</mi><mn>6</mn></mfrac></math>.</li>
+<li>60°: Bogenlänge 1,047, das ist <math><mfrac><mi>π</mi><mn>3</mn></mfrac></math>.</li>
+<li>90°: Bogenlänge 1,571, das ist <math><mfrac><mi>π</mi><mn>2</mn></mfrac></math>.</li>
+<li>180°: Bogenlänge 3,142, das ist <math><mi>π</mi></math>.</li>
+<li>270°: Bogenlänge 4,712, das ist <math><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></math>.</li>
+<li>360°: Bogenlänge 6,283, das ist <math><mrow><mn>2</mn><mi>π</mi></mrow></math>.</li>
+</ul></div>
+<script type="application/json" class="explainer-component-props">{"label":"Winkel","ergebnis":"Winkel {grad}°: Der Bogen hat die Länge {bogen}","exaktText":"Als Vielfaches von π:","bild":"Der Einheitskreis mit einem Winkel von {grad} Grad. Der Bogen vom Winkel 0 bis zum Winkel {grad} ist dick gezeichnet."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="herleitung/7" data-block-id="2d876f07" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Der ganze Kreisrand ist der Bogen zum Vollwinkel. Am Einheitskreis hat er die Länge U = 2 · π · 1. Der Halbkreis ist die Hälfte davon, der Viertelkreis ein Viertel.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/8" data-block-id="3660f80c" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn du dir die wichtigsten Winkel merken willst, hilft diese Tabelle.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/9" data-block-id="97d5a76c" data-block-type="table" data-block-order="12">
+<div class="block-table" role="region" aria-label="Wichtige Winkel im Gradmaß und im Bogenmaß" tabindex="0"><table><caption>Wichtige Winkel im Gradmaß und im Bogenmaß</caption><thead><tr><th scope="col">Winkel</th><th scope="col">Bogenmaß</th></tr></thead><tbody><tr><td>90°</td><td><math><mfrac><mi>π</mi><mn>2</mn></mfrac></math> ≈ 1,57</td></tr><tr><td>180°</td><td>π ≈ 3,14</td></tr><tr><td>270°</td><td><math><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></math> ≈ 4,71</td></tr><tr><td>360°</td><td>2π ≈ 6,28</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Der Winkel 60°</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="e7b468e0" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Wenn du ein Bogenmaß konkret ausrechnen willst, gehst du vom Anteil am Vollwinkel aus.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="45ff7092" data-block-type="example" data-block-order="14">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Von Grad zum Bogenmaß</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="60652bd2" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>60° sind <math><mrow><mfrac><mn>60</mn><mn>360</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></math> des Vollwinkels. Der Bogen ist also ein Sechstel des Kreisrands, am Einheitskreis ein Sechstel von 2π.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="0e6bd291" data-block-type="formula" data-block-order="16">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>⋅</mo><mn>2</mn><mi>π</mi><mo>=</mo><mfrac><mi>π</mi><mn>3</mn></mfrac><mo>≈</mo><mn>1,047</mn></mrow></math></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="6fefdb56" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="bogen-und-radius">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-bogen-und-radius" data-id="bogen-und-radius" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Winkel schneidet aus einem Kreis mit r = 4 cm einen Bogen der Länge b = 6 cm aus. Wie groß ist sein Bogenmaß?</legend>
+<label class="question-option"><input type="radio" name="frage-bogen-und-radius" value="0"> <span>1,5</span></label>
+<label class="question-option"><input type="radio" name="frage-bogen-und-radius" value="1"> <span>1,5 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-bogen-und-radius" value="2"> <span>24</span></label>
+<label class="question-option"><input type="radio" name="frage-bogen-und-radius" value="3"> <span>0,67</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>1,5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>x = b : r = 6 : 4 = 1,5. Es gibt keine Einheit, weil cm durch cm geteilt wird.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1,5 cm</strong></p><p>Die Zahl stimmt, aber das Bogenmaß hat keine Einheit: Länge durch Länge ergibt eine reine Zahl.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>24</strong></p><p>Du hast b mit r multipliziert. Das Bogenmaß ist der Quotient b : r.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>0,67</strong></p><p>Du hast r : b gerechnet. Das Bogenmaß ist b : r: erst der Bogen, dann der Radius.</p></li>
+</ul>
+<p class="question-explanation">Das Bogenmaß ist die Bogenlänge geteilt durch den Radius. Es hängt nicht von der Größe des Kreises ab.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>1,5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>x = b : r = 6 : 4 = 1,5. Es gibt keine Einheit, weil cm durch cm geteilt wird.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1,5 cm</strong></p><p>Die Zahl stimmt, aber das Bogenmaß hat keine Einheit: Länge durch Länge ergibt eine reine Zahl.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>24</strong></p><p>Du hast b mit r multipliziert. Das Bogenmaß ist der Quotient b : r.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>0,67</strong></p><p>Du hast r : b gerechnet. Das Bogenmaß ist b : r: erst der Bogen, dann der Radius.</p></li>
+</ul>
+<p class="question-explanation">Das Bogenmaß ist die Bogenlänge geteilt durch den Radius. Es hängt nicht von der Größe des Kreises ab.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"bogen-und-radius","text":"Ein Winkel schneidet aus einem Kreis mit r = 4 cm einen Bogen der Länge b = 6 cm aus. Wie groß ist sein Bogenmaß?","explanation":"Das Bogenmaß ist die Bogenlänge geteilt durch den Radius. Es hängt nicht von der Größe des Kreises ab.","links":[],"type":"single-choice","options":[{"text":"1,5","correct":true,"info":"x = b : r = 6 : 4 = 1,5. Es gibt keine Einheit, weil cm durch cm geteilt wird."},{"text":"1,5 cm","correct":false,"info":"Die Zahl stimmt, aber das Bogenmaß hat keine Einheit: Länge durch Länge ergibt eine reine Zahl."},{"text":"24","correct":false,"info":"Du hast b mit r multipliziert. Das Bogenmaß ist der Quotient b : r."},{"text":"0,67","correct":false,"info":"Du hast r : b gerechnet. Das Bogenmaß ist b : r: erst der Bogen, dann der Radius."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="c41bcf25" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="bogenmass-aus-bogen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Winkel schneidet aus einem Kreis mit dem Radius r = 10 cm einen Bogen der Länge b = 4 cm aus. Gib den Winkel im Bogenmaß an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die Bogenlänge 4 durch den Radius 10.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><mi>b</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>r</mi><mo>=</mo><mn>4</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>10</mn><mo>=</mo><mn>0,4</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,4</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Winkel schneidet aus einem Kreis mit dem Radius r = 2 cm einen Bogen der Länge b = 5 cm aus. Gib den Winkel im Bogenmaß an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die Bogenlänge 5 durch den Radius 2.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><mi>b</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>r</mi><mo>=</mo><mn>5</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>2</mn><mo>=</mo><mn>2,5</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 2,5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Winkel schneidet aus einem Kreis mit dem Radius r = 10 cm einen Bogen der Länge b = 17 cm aus. Gib den Winkel im Bogenmaß an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die Bogenlänge 17 durch den Radius 10.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><mi>b</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>r</mi><mo>=</mo><mn>17</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>10</mn><mo>=</mo><mn>1,7</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1,7</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"bogenmass-aus-bogen","given":{"r":{"oneOf":[2,4,5,8,10]},"b":{"int":[3,30],"step":1}},"where":["decimals(b / r) \u003c= 2 and b != r and b \u003c 6 * r"],"task":{"text":"Ein Winkel schneidet aus einem Kreis mit dem Radius r = {{r}} cm einen Bogen der Länge b = {{b}} cm aus. Gib den Winkel im Bogenmaß an."},"answer":{"value":"b / r","compare":{"number":{"decimals":2,"tolerance":0}}},"mistakes":[{"value":"r / b","message":"Du hast r : b gerechnet. Das Bogenmaß ist b : r, die Bogenlänge geteilt durch den Radius."},{"value":"b * r","message":"Du hast b und r multipliziert. Das Bogenmaß ist der Quotient b : r."}],"hint":"Teile die Bogenlänge {{b}} durch den Radius {{r}}.","steps":["$x = b : r = {{b}} : {{r}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Winkel schneidet aus einem Kreis mit dem Radius r = ⟦r⟧ cm einen Bogen der Länge b = ⟦b⟧ cm aus. Gib den Winkel im Bogenmaß an.","steps":["\u003cmath>\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>b\u003c/mi>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmi>r\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Teile die Bogenlänge ⟦b⟧ durch den Radius ⟦r⟧.","messages":["Du hast r : b gerechnet. Das Bogenmaß ist b : r, die Bogenlänge geteilt durch den Radius.","Du hast b und r multipliziert. Das Bogenmaß ist der Quotient b : r."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,21,23,24,25,26,28,29,30,31,34,35,36,37,38,39,40,41,44,45,46,48,49,50,52,53,54,58,61,64,66,68,69,70,72,73,74,76,79,80,81,86,91,96,98,102,103,106,107,110],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="467d0535" data-block-type="single-choice" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="halbkreis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-halbkreis" data-id="halbkreis" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welches Bogenmaß hat der Winkel 180°?</legend>
+<label class="question-option"><input type="radio" name="frage-halbkreis" value="0"> <span>π</span></label>
+<label class="question-option"><input type="radio" name="frage-halbkreis" value="1"> <span>2π</span></label>
+<label class="question-option"><input type="radio" name="frage-halbkreis" value="2"> <span>180</span></label>
+<label class="question-option"><input type="radio" name="frage-halbkreis" value="3" aria-label="pi geteilt durch 2"> <span><math><mfrac><mi>π</mi><mn>2</mn></mfrac></math></span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>π</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>180° sind ein halber Vollwinkel. Der halbe Kreisrand am Einheitskreis hat die Länge 2π : 2 = π.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>2π</strong></p><p>2π ist der ganze Kreisrand, also 360°.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>180</strong></p><p>180 ist die Gradzahl. Im Bogenmaß ist das die Länge eines Bogens, und die ist hier viel kleiner.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong><math><mfrac><mi>π</mi><mn>2</mn></mfrac></math></strong></p><p>Das ist ein Viertelkreis, also 90°.</p></li>
+</ul>
+<p class="question-explanation">Der Halbkreis ist die Hälfte des Kreisrands mit der Länge 2π, also π.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>π</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>180° sind ein halber Vollwinkel. Der halbe Kreisrand am Einheitskreis hat die Länge 2π : 2 = π.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>2π</strong></p><p>2π ist der ganze Kreisrand, also 360°.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>180</strong></p><p>180 ist die Gradzahl. Im Bogenmaß ist das die Länge eines Bogens, und die ist hier viel kleiner.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong><math><mfrac><mi>π</mi><mn>2</mn></mfrac></math></strong></p><p>Das ist ein Viertelkreis, also 90°.</p></li>
+</ul>
+<p class="question-explanation">Der Halbkreis ist die Hälfte des Kreisrands mit der Länge 2π, also π.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"halbkreis","text":"Welches Bogenmaß hat der Winkel 180°?","explanation":"Der Halbkreis ist die Hälfte des Kreisrands mit der Länge 2π, also π.","links":[],"type":"single-choice","options":[{"text":"π","correct":true,"info":"180° sind ein halber Vollwinkel. Der halbe Kreisrand am Einheitskreis hat die Länge 2π : 2 = π."},{"text":"2π","correct":false,"info":"2π ist der ganze Kreisrand, also 360°."},{"text":"180","correct":false,"info":"180 ist die Gradzahl. Im Bogenmaß ist das die Länge eines Bogens, und die ist hier viel kleiner."},{"text":"$\\frac{\\pi}{2}$","correct":false,"info":"Das ist ein Viertelkreis, also 90°."}]},"rendered":{"$\\frac{\\pi}{2}$":"\u003cmath>\u003cmfrac>\u003cmi>π\u003c/mi>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/math>"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="c4be9df4" data-block-type="true-false" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="einheit-bogenmass">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-einheit-bogenmass" data-id="einheit-bogenmass" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Das Bogenmaß hat keine Einheit, auch wenn Bogen und Radius in Zentimetern gemessen werden.</legend>
+<label class="question-option"><input type="radio" name="frage-einheit-bogenmass" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-einheit-bogenmass" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">x = b : r. Zentimeter geteilt durch Zentimeter kürzt sich weg. Darum ist das Bogenmaß eine reine Zahl und passt an jeden Kreis.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">x = b : r. Zentimeter geteilt durch Zentimeter kürzt sich weg. Darum ist das Bogenmaß eine reine Zahl und passt an jeden Kreis.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"einheit-bogenmass","text":"Das Bogenmaß hat keine Einheit, auch wenn Bogen und Radius in Zentimetern gemessen werden.","explanation":"x = b : r. Zentimeter geteilt durch Zentimeter kürzt sich weg. Darum ist das Bogenmaß eine reine Zahl und passt an jeden Kreis.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="f76237a5" data-block-type="text" data-block-order="21">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst ein Bogenmaß aus Bogen und Radius bestimmen und die Winkel 90°, 180°, 270° und 360° am Einheitskreis im Bogenmaß angeben.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Das Bogenmaß am Einheitskreis","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../kreis/flaeche/">Zurück: Die Fläche des Kreises</a><a rel="next" href="../../kreis/bogenmass/">Weiter: Zwischen Grad und Bogenmaß wechseln</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

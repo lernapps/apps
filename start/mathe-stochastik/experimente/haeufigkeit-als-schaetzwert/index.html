@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Relative Häufigkeit als Schätzwert – Mathe: Stochastik – Wahrscheinlichkeit</title>
+    <meta name="description" content="Wo du nicht rechnen kannst, wirfst du oft und zählst: die relative Häufigkeit als Schätzwert, und warum sie bei vielen Versuchen verlässlicher wird." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../experimente/haeufigkeit-als-schaetzwert/" />
+    <script type="module" crossorigin src="../../assets/islands-Bi5pcRrb.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../experimente/">Experimentieren mit dem Zufall</a></li><li aria-current="page">Relative Häufigkeit als Schätzwert</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Relative Häufigkeit als Schätzwert</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../experimente/haeufigkeit-als-schaetzwert/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧experimente/haeufigkeit-als-schaetzwert/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-stochastik","page":{"id":"haeufigkeit-als-schaetzwert","title":"Relative Häufigkeit als Schätzwert","exercises":[{"id":"stein-herausfinden","section":"warum","numbered":false},{"id":"reihen-vergleichen","section":"beispiel","numbered":false},{"id":"genauer-wert","section":"uebung","numbered":false},{"id":"begriffe-zuordnen","section":"uebung","numbered":false},{"id":"im-verhaeltnis","section":"uebung","numbered":false},{"id":"zu-wenige-wuerfe","section":"uebung","numbered":false},{"id":"wie-oft-oben","section":"uebung","numbered":false},{"id":"legostein-dezimal","section":"uebung","numbered":true},{"id":"legostein-prozent","section":"uebung","numbered":true}],"sections":["warum","regel","beispiel","uebung","abschluss"]},"tutor":"experimente/haeufigkeit-als-schaetzwert/tutor/","markdown":"experimente/haeufigkeit-als-schaetzwert/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#warum">Der Steckstein am Spieleabend</a></li><li><a href="#regel">Aus Würfen einen Schätzwert gewinnen</a></li><li><a href="#beispiel">Reißzwecke und Steckstein</a></li><li><a href="#uebung">Übung</a></li><li><a href="#abschluss">Das hast du gelernt</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="warum">Der Steckstein am Spieleabend</h2>
+<div class="explainer-block" data-block="warum/1" data-block-id="9abe8d5c" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du nicht ausrechnen kannst, wie oft etwas passiert, musst du es ausprobieren. Mia, Jonas und Lena spielen am Spieleabend. Beim Würfel wissen sie: Auf lange Sicht kommt jede Zahl
+in etwa einem von sechs Würfen vor, bei der Münze kommt Kopf in etwa einem von zwei Würfen vor. Heute hat Lena einen
+Steckstein mitgebracht. Er wird geworfen wie ein Würfel und kann mit den Noppen nach oben, mit den Noppen nach
+unten oder auf der Seite landen. Wie oft was kommt, weiß niemand.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/2" data-block-id="9a8ac7bd" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="stein-herausfinden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-stein-herausfinden" data-id="stein-herausfinden" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Lena möchte wissen, wie oft der Stein mit den Noppen nach oben liegt. Was können die drei tun?</legend>
+<label class="question-option"><input type="radio" name="frage-stein-herausfinden" value="0"> <span>Den Stein einmal werfen und das Ergebnis merken.</span></label>
+<label class="question-option"><input type="radio" name="frage-stein-herausfinden" value="1"> <span>Den Stein 5-mal werfen und das Ergebnis als sicher festhalten.</span></label>
+<label class="question-option"><input type="radio" name="frage-stein-herausfinden" value="2"> <span>Den Stein sehr oft werfen und zählen, in welchem Anteil der Würfe die Noppen oben liegen.</span></label>
+<label class="question-option"><input type="radio" name="frage-stein-herausfinden" value="3"> <span>Darüber nachdenken, denn beim Würfel geht das ja auch, also geht es hier genauso.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Den Stein einmal werfen und das Ergebnis merken.</strong></p><p>Ein einzelner Wurf ist Zufall. Er sagt kaum etwas darüber, wie oft die Noppen oben liegen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Den Stein 5-mal werfen und das Ergebnis als sicher festhalten.</strong></p><p>Fünf Würfe sind noch Zufall. Mit zehn weiteren Würfen kann sich das Bild deutlich ändern.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Den Stein sehr oft werfen und zählen, in welchem Anteil der Würfe die Noppen oben liegen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>So gewinnt man eine Zahl aus vielen Würfen. Das ist der Weg, wenn man nicht ausrechnen kann, was herauskommt.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Darüber nachdenken, denn beim Würfel geht das ja auch, also geht es hier genauso.</strong></p><p>Der Würfel ist ganz gleichmäßig gebaut. Der Steckstein ist es nicht, darum gibt es keinen Grund für eine bestimmte Zahl.</p></li>
+</ul>
+<p class="question-explanation">Wenn du nicht ausrechnen kannst, wie oft etwas vorkommt, hilft nur, oft zu werfen und zu zählen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Den Stein einmal werfen und das Ergebnis merken.</strong></p><p>Ein einzelner Wurf ist Zufall. Er sagt kaum etwas darüber, wie oft die Noppen oben liegen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Den Stein 5-mal werfen und das Ergebnis als sicher festhalten.</strong></p><p>Fünf Würfe sind noch Zufall. Mit zehn weiteren Würfen kann sich das Bild deutlich ändern.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Den Stein sehr oft werfen und zählen, in welchem Anteil der Würfe die Noppen oben liegen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>So gewinnt man eine Zahl aus vielen Würfen. Das ist der Weg, wenn man nicht ausrechnen kann, was herauskommt.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Darüber nachdenken, denn beim Würfel geht das ja auch, also geht es hier genauso.</strong></p><p>Der Würfel ist ganz gleichmäßig gebaut. Der Steckstein ist es nicht, darum gibt es keinen Grund für eine bestimmte Zahl.</p></li>
+</ul>
+<p class="question-explanation">Wenn du nicht ausrechnen kannst, wie oft etwas vorkommt, hilft nur, oft zu werfen und zu zählen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"stein-herausfinden","text":"Lena möchte wissen, wie oft der Stein mit den Noppen nach oben liegt. Was können die drei tun?","explanation":"Wenn du nicht ausrechnen kannst, wie oft etwas vorkommt, hilft nur, oft zu werfen und zu zählen.","links":[],"type":"single-choice","options":[{"text":"Den Stein einmal werfen und das Ergebnis merken.","correct":false,"info":"Ein einzelner Wurf ist Zufall. Er sagt kaum etwas darüber, wie oft die Noppen oben liegen."},{"text":"Den Stein 5-mal werfen und das Ergebnis als sicher festhalten.","correct":false,"info":"Fünf Würfe sind noch Zufall. Mit zehn weiteren Würfen kann sich das Bild deutlich ändern."},{"text":"Den Stein sehr oft werfen und zählen, in welchem Anteil der Würfe die Noppen oben liegen.","correct":true,"info":"So gewinnt man eine Zahl aus vielen Würfen. Das ist der Weg, wenn man nicht ausrechnen kann, was herauskommt."},{"text":"Darüber nachdenken, denn beim Würfel geht das ja auch, also geht es hier genauso.","correct":false,"info":"Der Würfel ist ganz gleichmäßig gebaut. Der Steckstein ist es nicht, darum gibt es keinen Grund für eine bestimmte Zahl."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Aus Würfen einen Schätzwert gewinnen</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="e84efbd7" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du nicht ausrechnen kannst, wie oft etwas passiert, musst du es ausprobieren und zählen. Die drei werfen den
+Stein 20-mal, die Noppen liegen 9-mal oben. Aus der relativen Häufigkeit machst du einen Schätzwert.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="f052c928" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-schaetzwert"><a href="../../glossar/#schaetzwert">Schätzwert</a></dfn></dt><dd><p>Eine Zahl, die du aus Versuchen gewinnst und als Näherung dafür nimmst, wie oft etwas auf lange Sicht vorkommt. Die relative Häufigkeit aus deinen Würfen ist so ein Schätzwert. Er ist nicht der genaue Wert.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="c1537ab7" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-schwankung"><a href="../../glossar/#schwankung">Schwankung</a></dfn></dt><dd><p>Wie stark die relative Häufigkeit von Reihe zu Reihe abweicht. Wirfst du zweimal je 10-mal, können ganz verschiedene Zahlen herauskommen.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="95be8850" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="regel/4/1" data-block-id="89a8e46c" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Je mehr Würfe, desto kleiner die Schwankung und desto verlässlicher der Schätzwert. Sicher ist er nie, auch nach sehr vielen Würfen nicht.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Reißzwecke und Steckstein</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="a78c0300" data-block-type="example" data-block-order="8">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Beispiel</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="e8ec05eb" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Jonas wirft eine Reißzwecke 40-mal. Er zählt und rechnet die relative Häufigkeit aus.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="528d23b9" data-block-type="table" data-block-order="10">
+<div class="block-table" role="region" aria-label="40 Würfe mit der Reißzwecke, relativ = absolut geteilt durch 40" tabindex="0"><table><caption>40 Würfe mit der Reißzwecke, relativ = absolut geteilt durch 40</caption><thead><tr><th scope="col">Ergebnis</th><th scope="col">absolut</th><th scope="col">relativ</th></tr></thead><tbody><tr><td>Spitze oben</td><td>15</td><td>0,375</td></tr><tr><td>Spitze unten</td><td>25</td><td>0,625</td></tr><tr><td>alle Würfe</td><td>40</td><td>1</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="3b6905b5" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Die beiden relativen Häufigkeiten ergeben zusammen 1, denn jeder Wurf hat genau ein Ergebnis. Fehlt dir ein Ergebnis in einer Aufgabe, ist es der Rest: alle Würfe minus die anderen Ergebnisse. Für Prozent rechnest du die Dezimalzahl mal 100. Jonas nimmt 0,375 als Schätzwert dafür, wie oft die Spitze auf lange Sicht oben liegt.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="fd2f9629" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Jetzt zurück zum Steckstein. Die Zufallsmaschine wirft ihn für dich. Mit jedem Knopf wirft sie mehrmals und zählt
+in der Tabelle mit. Die Zeile „Noppen oben“ ist mit ◄ markiert. So gehst du vor: Drücke einmal „10 Würfe“ und
+lies in dieser Zeile die relative Häufigkeit ab. Drücke „Zurücksetzen“ und mache es noch einmal. Das sind zwei
+Reihen mit je 10 Würfen. Mach dann zwei Reihen mit je 1000 Würfen (zehnmal „100 Würfe“ oder einmal „1000 Würfe“).
+Vergleiche, welche beiden Zahlen näher beieinander liegen. Die Linie zeigt dir dasselbe: Sie
+wackelt am Anfang stark und wird ruhiger.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="eb99d45f" data-block-type="vue-component" data-block-order="13">
+<div class="explainer-component" id="maschine-legostein" data-component="ZufallMaschine">
+<div class="explainer-island" hidden><div class="maschine" data-v-e54758cf><p class="maschine-geraet" data-v-e54758cf> Gerät: <strong data-v-e54758cf>Steckstein</strong>. Beobachtet wird: <strong data-v-e54758cf>Noppen oben</strong> (in der Tabelle mit ◄ markiert). </p><p class="maschine-letzter" aria-live="polite" data-v-e54758cf> Letzter Wurf: <strong data-v-e54758cf>–</strong></p><div class="maschine-knoepfe" data-v-e54758cf><!--[--><button type="button" data-v-e54758cf>1 Wurf</button><button type="button" data-v-e54758cf>10 Würfe</button><button type="button" data-v-e54758cf>100 Würfe</button><button type="button" data-v-e54758cf>1000 Würfe</button><!--]--><button type="button" class="maschine-zurueck" disabled data-v-e54758cf> Zurücksetzen </button></div><svg class="maschine-bild" viewBox="-18 -8 324 188" role="img" aria-label="Linie der relativen Häufigkeit von Noppen oben. Noch kein Wurf." data-v-e54758cf><text x="-4" y="4" text-anchor="end" class="maschine-achse" data-v-e54758cf>1</text><text x="-4" y="164" text-anchor="end" class="maschine-achse" data-v-e54758cf>0</text><text x="300" y="176" text-anchor="end" class="maschine-achse" data-v-e54758cf>Würfe →</text><rect x="0" y="0" width="300" height="160" class="maschine-rahmen" data-v-e54758cf></rect><!----><!----></svg><p class="maschine-erklaerung" data-v-e54758cf> Die Linie zeigt die relative Häufigkeit von „Noppen oben“ nach jedem Wurf: waagerecht die Würfe, senkrecht von 0 (unten) bis 1 (oben). <!----></p><p class="maschine-satz" aria-live="polite" data-v-e54758cf>Noch kein Wurf. <!----></p><table class="maschine-tabelle" data-v-e54758cf><caption data-v-e54758cf> Häufigkeiten nach 0 Würfen</caption><thead data-v-e54758cf><tr data-v-e54758cf><th scope="col" data-v-e54758cf>Ergebnis</th><th scope="col" data-v-e54758cf>absolute Häufigkeit</th><th scope="col" data-v-e54758cf>relative Häufigkeit</th></tr></thead><tbody data-v-e54758cf><!--[--><tr class="beobachtet" data-v-e54758cf><th scope="row" data-v-e54758cf>Noppen oben</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>Noppen unten</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>Auf der Seite</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><!--]--></tbody></table></div></div>
+<div class="explainer-nojs"><p>Die Zufallsmaschine wirft einen Steckstein so oft, wie du willst. Die Ergebnisse sind „Noppen oben“, „Noppen
+unten“ und „Auf der Seite“. Ein Beispiel mit vier Reihen: Bei zwei Reihen mit je 10 Würfen lagen die Noppen 5-mal
+und 4-mal oben, die relativen Häufigkeiten sind 0,5 und 0,4. Bei zwei Reihen mit je 1000 Würfen lagen die Noppen
+458-mal und 467-mal oben, die relativen Häufigkeiten sind 0,458 und 0,467.</p></div>
+<script type="application/json" class="explainer-component-props">{"geraet":"legostein","beobachte":"Noppen oben"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/4" data-block-id="771e186e" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="reihen-vergleichen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-reihen-vergleichen" data-id="reihen-vergleichen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du hast zwei Reihen mit je 10 Würfen und zwei Reihen mit je 1000 Würfen gemacht. Was fällt bei den relativen Häufigkeiten von „Noppen oben“ auf?</legend>
+<label class="question-option"><input type="radio" name="frage-reihen-vergleichen" value="0"> <span>Bei 10 Würfen liegen die beiden Zahlen näher beieinander als bei 1000 Würfen.</span></label>
+<label class="question-option"><input type="radio" name="frage-reihen-vergleichen" value="1"> <span>In beiden Fällen kommt jedes Mal genau dieselbe Zahl heraus.</span></label>
+<label class="question-option"><input type="radio" name="frage-reihen-vergleichen" value="2"> <span>Bei 1000 Würfen liegen die beiden Zahlen näher beieinander als bei 10 Würfen.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Bei 10 Würfen liegen die beiden Zahlen näher beieinander als bei 1000 Würfen.</strong></p><p>Es ist umgekehrt. Bei wenigen Würfen kann ein einzelner Wurf die Zahl stark ändern.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>In beiden Fällen kommt jedes Mal genau dieselbe Zahl heraus.</strong></p><p>Das stimmt nicht. Auch bei 1000 Würfen unterscheiden sich zwei Reihen noch ein wenig, nur weniger als bei 10 Würfen.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Bei 1000 Würfen liegen die beiden Zahlen näher beieinander als bei 10 Würfen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei vielen Würfen fällt ein einzelner Wurf kaum noch ins Gewicht. Die Schwankung ist kleiner.</p></li>
+</ul>
+<p class="question-explanation">Je mehr Würfe, desto kleiner die Schwankung von Reihe zu Reihe. Darum ist der Schätzwert aus 1000 Würfen verlässlicher als der aus 10 Würfen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Bei 10 Würfen liegen die beiden Zahlen näher beieinander als bei 1000 Würfen.</strong></p><p>Es ist umgekehrt. Bei wenigen Würfen kann ein einzelner Wurf die Zahl stark ändern.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>In beiden Fällen kommt jedes Mal genau dieselbe Zahl heraus.</strong></p><p>Das stimmt nicht. Auch bei 1000 Würfen unterscheiden sich zwei Reihen noch ein wenig, nur weniger als bei 10 Würfen.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Bei 1000 Würfen liegen die beiden Zahlen näher beieinander als bei 10 Würfen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei vielen Würfen fällt ein einzelner Wurf kaum noch ins Gewicht. Die Schwankung ist kleiner.</p></li>
+</ul>
+<p class="question-explanation">Je mehr Würfe, desto kleiner die Schwankung von Reihe zu Reihe. Darum ist der Schätzwert aus 1000 Würfen verlässlicher als der aus 10 Würfen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"reihen-vergleichen","text":"Du hast zwei Reihen mit je 10 Würfen und zwei Reihen mit je 1000 Würfen gemacht. Was fällt bei den relativen Häufigkeiten von „Noppen oben“ auf?","explanation":"Je mehr Würfe, desto kleiner die Schwankung von Reihe zu Reihe. Darum ist der Schätzwert aus 1000 Würfen verlässlicher als der aus 10 Würfen.","links":[],"type":"single-choice","options":[{"text":"Bei 10 Würfen liegen die beiden Zahlen näher beieinander als bei 1000 Würfen.","correct":false,"info":"Es ist umgekehrt. Bei wenigen Würfen kann ein einzelner Wurf die Zahl stark ändern."},{"text":"In beiden Fällen kommt jedes Mal genau dieselbe Zahl heraus.","correct":false,"info":"Das stimmt nicht. Auch bei 1000 Würfen unterscheiden sich zwei Reihen noch ein wenig, nur weniger als bei 10 Würfen."},{"text":"Bei 1000 Würfen liegen die beiden Zahlen näher beieinander als bei 10 Würfen.","correct":true,"info":"Bei vielen Würfen fällt ein einzelner Wurf kaum noch ins Gewicht. Die Schwankung ist kleiner."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="f10d4bdd" data-block-type="true-false" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="genauer-wert">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-genauer-wert" data-id="genauer-wert" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Lena hat einen Steckstein aus ihrer Kiste 1000-mal geworfen. Die relative Häufigkeit von „Noppen oben“ ist 0,571. Lena sagt, jetzt sei 0,571 der genaue Wert für den Stein und weitere Würfe seien nicht nötig. Stimmt das?</legend>
+<label class="question-option"><input type="radio" name="frage-genauer-wert" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-genauer-wert" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Die relative Häufigkeit ist nur ein Schätzwert. Eine neue Reihe mit 1000 Würfen würde etwas anderes liefern, zum Beispiel 0,58, bei einem anderen Stein ebenso eine andere Zahl. Mit vielen Würfen ist der Schätzwert verlässlich, aber nie genau.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Die relative Häufigkeit ist nur ein Schätzwert. Eine neue Reihe mit 1000 Würfen würde etwas anderes liefern, zum Beispiel 0,58, bei einem anderen Stein ebenso eine andere Zahl. Mit vielen Würfen ist der Schätzwert verlässlich, aber nie genau.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"genauer-wert","text":"Lena hat einen Steckstein aus ihrer Kiste 1000-mal geworfen. Die relative Häufigkeit von „Noppen oben“ ist 0,571. Lena sagt, jetzt sei 0,571 der genaue Wert für den Stein und weitere Würfe seien nicht nötig. Stimmt das?","explanation":"Die relative Häufigkeit ist nur ein Schätzwert. Eine neue Reihe mit 1000 Würfen würde etwas anderes liefern, zum Beispiel 0,58, bei einem anderen Stein ebenso eine andere Zahl. Mit vielen Würfen ist der Schätzwert verlässlich, aber nie genau.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="b3872a93" data-block-type="matching" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="begriffe-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-begriffe-zuordnen" data-id="begriffe-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jeder Angabe zu, was sie ist.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Die Reißzwecke fiel 9-mal mit der Spitze nach oben.</span> <select name="frage-begriffe-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="2">Schätzwert</option><option value="0">absolute Häufigkeit</option><option value="1">relative Häufigkeit</option></select></label></li>
+<li><label><span>9 von 30 Würfen, also 0,3</span> <select name="frage-begriffe-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="2">Schätzwert</option><option value="0">absolute Häufigkeit</option><option value="1">relative Häufigkeit</option></select></label></li>
+<li><label><span>Wir nehmen 0,3 als Zahl dafür, wie oft die Spitze auf lange Sicht oben liegt.</span> <select name="frage-begriffe-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="2">Schätzwert</option><option value="0">absolute Häufigkeit</option><option value="1">relative Häufigkeit</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Reißzwecke fiel 9-mal mit der Spitze nach oben. – absolute Häufigkeit; 9 von 30 Würfen, also 0,3 – relative Häufigkeit; Wir nehmen 0,3 als Zahl dafür, wie oft die Spitze auf lange Sicht oben liegt. – Schätzwert</p>
+<p class="question-explanation">Die absolute Häufigkeit zählt, wie oft etwas vorkam. Die relative Häufigkeit setzt das ins Verhältnis zu allen Würfen. Wenn du sie als Näherung für lange Sicht nimmst, ist sie ein Schätzwert.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Reißzwecke fiel 9-mal mit der Spitze nach oben. – absolute Häufigkeit; 9 von 30 Würfen, also 0,3 – relative Häufigkeit; Wir nehmen 0,3 als Zahl dafür, wie oft die Spitze auf lange Sicht oben liegt. – Schätzwert</p>
+<p class="question-explanation">Die absolute Häufigkeit zählt, wie oft etwas vorkam. Die relative Häufigkeit setzt das ins Verhältnis zu allen Würfen. Wenn du sie als Näherung für lange Sicht nimmst, ist sie ein Schätzwert.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"begriffe-zuordnen","text":"Ordne jeder Angabe zu, was sie ist.","explanation":"Die absolute Häufigkeit zählt, wie oft etwas vorkam. Die relative Häufigkeit setzt das ins Verhältnis zu allen Würfen. Wenn du sie als Näherung für lange Sicht nimmst, ist sie ein Schätzwert.","links":[],"type":"matching","pairs":[{"left":"Die Reißzwecke fiel 9-mal mit der Spitze nach oben.","right":"absolute Häufigkeit"},{"left":"9 von 30 Würfen, also 0,3","right":"relative Häufigkeit"},{"left":"Wir nehmen 0,3 als Zahl dafür, wie oft die Spitze auf lange Sicht oben liegt.","right":"Schätzwert"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="a1c06542" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="im-verhaeltnis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-im-verhaeltnis" data-id="im-verhaeltnis" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Jonas hat den Steckstein 20-mal geworfen, die Noppen lagen 12-mal oben. Lena hat ihn 50-mal geworfen, bei ihr lagen die Noppen 25-mal oben. Bei wem kam „Noppen oben“ im Verhältnis zu allen Würfen häufiger vor?</legend>
+<label class="question-option"><input type="radio" name="frage-im-verhaeltnis" value="0"> <span>Bei Jonas, denn 12 von 20 sind 0,6 und 25 von 50 sind nur 0,5.</span></label>
+<label class="question-option"><input type="radio" name="frage-im-verhaeltnis" value="1"> <span>Bei Lena, denn 25 ist mehr als 12.</span></label>
+<label class="question-option"><input type="radio" name="frage-im-verhaeltnis" value="2"> <span>Bei beiden gleich oft, denn beide haben die Noppen oft oben gesehen.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Bei Jonas, denn 12 von 20 sind 0,6 und 25 von 50 sind nur 0,5.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst der Anteil an allen Würfen macht beide Reihen vergleichbar, auch wenn Jonas weniger geworfen hat.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Bei Lena, denn 25 ist mehr als 12.</strong></p><p>Du hast die absoluten Häufigkeiten verglichen. Lena hat aber mehr als doppelt so oft geworfen, darum sind ihre 25 nicht mehr wert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Bei beiden gleich oft, denn beide haben die Noppen oft oben gesehen.</strong></p><p>Das lässt sich nachrechnen. Bei Lena war es genau die Hälfte der Würfe, bei Jonas mehr als die Hälfte.</p></li>
+</ul>
+<p class="question-explanation">Reihen mit verschieden vielen Würfen vergleichst du mit der relativen Häufigkeit, nicht mit der absoluten.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Bei Jonas, denn 12 von 20 sind 0,6 und 25 von 50 sind nur 0,5.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst der Anteil an allen Würfen macht beide Reihen vergleichbar, auch wenn Jonas weniger geworfen hat.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Bei Lena, denn 25 ist mehr als 12.</strong></p><p>Du hast die absoluten Häufigkeiten verglichen. Lena hat aber mehr als doppelt so oft geworfen, darum sind ihre 25 nicht mehr wert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Bei beiden gleich oft, denn beide haben die Noppen oft oben gesehen.</strong></p><p>Das lässt sich nachrechnen. Bei Lena war es genau die Hälfte der Würfe, bei Jonas mehr als die Hälfte.</p></li>
+</ul>
+<p class="question-explanation">Reihen mit verschieden vielen Würfen vergleichst du mit der relativen Häufigkeit, nicht mit der absoluten.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"im-verhaeltnis","text":"Jonas hat den Steckstein 20-mal geworfen, die Noppen lagen 12-mal oben. Lena hat ihn 50-mal geworfen, bei ihr lagen die Noppen 25-mal oben. Bei wem kam „Noppen oben“ im Verhältnis zu allen Würfen häufiger vor?","explanation":"Reihen mit verschieden vielen Würfen vergleichst du mit der relativen Häufigkeit, nicht mit der absoluten.","links":[],"type":"single-choice","options":[{"text":"Bei Jonas, denn 12 von 20 sind 0,6 und 25 von 50 sind nur 0,5.","correct":true,"info":"Erst der Anteil an allen Würfen macht beide Reihen vergleichbar, auch wenn Jonas weniger geworfen hat."},{"text":"Bei Lena, denn 25 ist mehr als 12.","correct":false,"info":"Du hast die absoluten Häufigkeiten verglichen. Lena hat aber mehr als doppelt so oft geworfen, darum sind ihre 25 nicht mehr wert."},{"text":"Bei beiden gleich oft, denn beide haben die Noppen oft oben gesehen.","correct":false,"info":"Das lässt sich nachrechnen. Bei Lena war es genau die Hälfte der Würfe, bei Jonas mehr als die Hälfte."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="3b05995e" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="zu-wenige-wuerfe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zu-wenige-wuerfe" data-id="zu-wenige-wuerfe" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia wirft die Reißzwecke fünfmal, die Spitze liegt 4-mal oben. Mia sagt, damit stehe fest, dass die Spitze bei 80 % der Würfe oben liegt. Was antwortest du?</legend>
+<label class="question-option"><input type="radio" name="frage-zu-wenige-wuerfe" value="0"> <span>Du hast recht, 4 von 5 sind 0,8, und das gilt jetzt für alle weiteren Würfe.</span></label>
+<label class="question-option"><input type="radio" name="frage-zu-wenige-wuerfe" value="1"> <span>Das hängt von der absoluten Häufigkeit ab, nimm lieber die 4 als Schätzwert.</span></label>
+<label class="question-option"><input type="radio" name="frage-zu-wenige-wuerfe" value="2"> <span>Fünf Würfe sind zu wenig, wirf viel öfter, dann ist der Schätzwert verlässlicher.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Du hast recht, 4 von 5 sind 0,8, und das gilt jetzt für alle weiteren Würfe.</strong></p><p>Nach nur 5 Würfen kann sich die Zahl mit jedem weiteren Wurf noch stark ändern. Festlegen darfst du dich so früh nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Das hängt von der absoluten Häufigkeit ab, nimm lieber die 4 als Schätzwert.</strong></p><p>Die 4 sagt allein nichts über den Anteil. Der Schätzwert ist die relative Häufigkeit, nicht die absolute.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Fünf Würfe sind zu wenig, wirf viel öfter, dann ist der Schätzwert verlässlicher.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Mit mehr Würfen schwankt die relative Häufigkeit weniger. Ganz sicher wird sie aber auch dann nicht.</p></li>
+</ul>
+<p class="question-explanation">Nach wenigen Würfen kann die relative Häufigkeit noch weit vom Wert auf lange Sicht entfernt sein. Erst viele Würfe machen den Schätzwert verlässlich.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Du hast recht, 4 von 5 sind 0,8, und das gilt jetzt für alle weiteren Würfe.</strong></p><p>Nach nur 5 Würfen kann sich die Zahl mit jedem weiteren Wurf noch stark ändern. Festlegen darfst du dich so früh nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Das hängt von der absoluten Häufigkeit ab, nimm lieber die 4 als Schätzwert.</strong></p><p>Die 4 sagt allein nichts über den Anteil. Der Schätzwert ist die relative Häufigkeit, nicht die absolute.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Fünf Würfe sind zu wenig, wirf viel öfter, dann ist der Schätzwert verlässlicher.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Mit mehr Würfen schwankt die relative Häufigkeit weniger. Ganz sicher wird sie aber auch dann nicht.</p></li>
+</ul>
+<p class="question-explanation">Nach wenigen Würfen kann die relative Häufigkeit noch weit vom Wert auf lange Sicht entfernt sein. Erst viele Würfe machen den Schätzwert verlässlich.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zu-wenige-wuerfe","text":"Mia wirft die Reißzwecke fünfmal, die Spitze liegt 4-mal oben. Mia sagt, damit stehe fest, dass die Spitze bei 80 % der Würfe oben liegt. Was antwortest du?","explanation":"Nach wenigen Würfen kann die relative Häufigkeit noch weit vom Wert auf lange Sicht entfernt sein. Erst viele Würfe machen den Schätzwert verlässlich.","links":[],"type":"single-choice","options":[{"text":"Du hast recht, 4 von 5 sind 0,8, und das gilt jetzt für alle weiteren Würfe.","correct":false,"info":"Nach nur 5 Würfen kann sich die Zahl mit jedem weiteren Wurf noch stark ändern. Festlegen darfst du dich so früh nicht."},{"text":"Das hängt von der absoluten Häufigkeit ab, nimm lieber die 4 als Schätzwert.","correct":false,"info":"Die 4 sagt allein nichts über den Anteil. Der Schätzwert ist die relative Häufigkeit, nicht die absolute."},{"text":"Fünf Würfe sind zu wenig, wirf viel öfter, dann ist der Schätzwert verlässlicher.","correct":true,"info":"Mit mehr Würfen schwankt die relative Häufigkeit weniger. Ganz sicher wird sie aber auch dann nicht."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="51c8a6db" data-block-type="number" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="wie-oft-oben">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-wie-oft-oben" data-id="wie-oft-oben" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia hat die Reißzwecke 200-mal geworfen. Die relative Häufigkeit von „Spitze oben“ ist 0,36. Wie oft lag die Spitze oben?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-wie-oft-oben">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 72</p>
+<p class="question-explanation">Die relative Häufigkeit ist die absolute geteilt durch die Zahl aller Würfe. Umgekehrt ergibt 0,36 von 200 Würfen 72 Würfe.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 72</p>
+<p class="question-explanation">Die relative Häufigkeit ist die absolute geteilt durch die Zahl aller Würfe. Umgekehrt ergibt 0,36 von 200 Würfen 72 Würfe.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wie-oft-oben","text":"Mia hat die Reißzwecke 200-mal geworfen. Die relative Häufigkeit von „Spitze oben“ ist 0,36. Wie oft lag die Spitze oben?","explanation":"Die relative Häufigkeit ist die absolute geteilt durch die Zahl aller Würfe. Umgekehrt ergibt 0,36 von 200 Würfen 72 Würfe.","links":[],"hint":"Die relative Häufigkeit entsteht, indem du die absolute durch 200 teilst. Wie kommst du zurück?","type":"number","answer":72,"tolerance":0,"mistakes":[{"answer":128,"message":"Das ist die Zahl der Würfe mit „Spitze unten“. Gefragt ist „Spitze oben“."},{"answer":36,"message":"Das ist die Prozentzahl, keine Anzahl von Würfen. Bei 200 Würfen ist eine Anzahl gesucht."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="4905bf0a" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="legostein-dezimal">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Lena wirft einen Steckstein aus ihrer Kiste 200-mal. Die Noppen liegen 84-mal oben, 87-mal unten, und den Rest fällt er auf die Seite. Wie groß ist die relative Häufigkeit von „Noppen oben“? Gib sie als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die absolute Häufigkeit durch die Zahl aller Würfe. Wie viele Würfe waren es insgesamt?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mtext>absolute Häufigkeit</mtext><mtext>Zahl aller Würfe</mtext></mfrac></mrow></math></li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mn>84</mn><mn>200</mn></mfrac><mo>=</mo><mn>0,42</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,42</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Lena wirft einen Steckstein aus ihrer Kiste 250-mal. Die Noppen liegen 132-mal oben, 83-mal unten, und den Rest fällt er auf die Seite. Wie groß ist die relative Häufigkeit von „Noppen oben“? Gib sie als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die absolute Häufigkeit durch die Zahl aller Würfe. Wie viele Würfe waren es insgesamt?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mtext>absolute Häufigkeit</mtext><mtext>Zahl aller Würfe</mtext></mfrac></mrow></math></li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mn>132</mn><mn>250</mn></mfrac><mo>=</mo><mn>0,528</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,528</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Lena wirft einen Steckstein aus ihrer Kiste 500-mal. Die Noppen liegen 126-mal oben, 70-mal unten, und den Rest fällt er auf die Seite. Wie groß ist die relative Häufigkeit von „Noppen oben“? Gib sie als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die absolute Häufigkeit durch die Zahl aller Würfe. Wie viele Würfe waren es insgesamt?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mtext>absolute Häufigkeit</mtext><mtext>Zahl aller Würfe</mtext></mfrac></mrow></math></li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mn>126</mn><mn>500</mn></mfrac><mo>=</mo><mn>0,252</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,252</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"legostein-dezimal","given":{"n":{"oneOf":[200,250,500]},"a":{"int":[80,140]},"b":{"int":[50,120]}},"where":["a + b \u003c= n - 20","a != b"],"task":{"text":"Lena wirft einen Steckstein aus ihrer Kiste {{n}}-mal. Die Noppen liegen {{a}}-mal oben, {{b}}-mal unten, und den Rest fällt er auf die Seite. Wie groß ist die relative Häufigkeit von „Noppen oben“? Gib sie als Dezimalzahl an."},"answer":{"value":"a / n","compare":{"number":{"format":"decimal","decimals":3}}},"mistakes":[{"value":"a","message":"Das ist die absolute Häufigkeit: wie oft. Gefragt ist der Anteil an allen Würfen."},{"value":"a * 100 / n","message":"Das ist die Prozentzahl. Gefragt ist die Dezimalzahl."},{"value":"a / (a + b)","message":"Auch die Würfe auf die Seite zählen zu allen Würfen. Du hast sie nicht mitgezählt."},{"value":"b / n","message":"Das ist die relative Häufigkeit von „Noppen unten“. Gefragt ist „Noppen oben“."}],"hint":"Teile die absolute Häufigkeit durch die Zahl aller Würfe. Wie viele Würfe waren es insgesamt?","steps":["$h = \\frac{\\text{absolute Häufigkeit}}{\\text{Zahl aller Würfe}}$","$h = \\frac{{{a}}}{{{n}}} = {{answer}}$"]},"templates":{"de":{"task":"Lena wirft einen Steckstein aus ihrer Kiste ⟦n⟧-mal. Die Noppen liegen ⟦a⟧-mal oben, ⟦b⟧-mal unten, und den Rest fällt er auf die Seite. Wie groß ist die relative Häufigkeit von „Noppen oben“? Gib sie als Dezimalzahl an.","steps":["\u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>absolute Häufigkeit\u003c/mtext>\u003cmtext>Zahl aller Würfe\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext>⟦n⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Teile die absolute Häufigkeit durch die Zahl aller Würfe. Wie viele Würfe waren es insgesamt?","messages":["Das ist die absolute Häufigkeit: wie oft. Gefragt ist der Anteil an allen Würfen.","Das ist die Prozentzahl. Gefragt ist die Dezimalzahl.","Auch die Würfe auf die Seite zählen zu allen Würfen. Du hast sie nicht mitgezählt.","Das ist die relative Häufigkeit von „Noppen unten“. Gefragt ist „Noppen oben“."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="c6d3b7c7" data-block-type="generated" data-block-order="21">
+<div class="explainer-exercise explainer-generated" id="legostein-prozent">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Lena wirft einen Steckstein aus ihrer Kiste 500-mal. Die Noppen liegen 134-mal oben, 66-mal unten, und den Rest fällt er auf die Seite. Wie viel Prozent der Würfe sind „Auf der Seite“?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie oft lag der Stein auf der Seite? Das ist, was von allen Würfen übrig bleibt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Würfe „Auf der Seite“ sind der Rest: alle 500 Würfe ohne die 134 und die 66 Würfe der anderen Ergebnisse.</li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>500</mn><mo>−</mo><mn>134</mn><mo>−</mo><mn>66</mn></mrow><mn>500</mn></mfrac><mo>⋅</mo><mn>100</mn><mspace width="0.1667em"></mspace><mi>%</mi><mo>=</mo><mn>60</mn></mrow></math></li><li>Probe: Die drei relativen Häufigkeiten ergeben zusammen 100 %.</li></ol><p><strong>Richtige Antwort:</strong> 60 %</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Lena wirft einen Steckstein aus ihrer Kiste 200-mal. Die Noppen liegen 81-mal oben, 88-mal unten, und den Rest fällt er auf die Seite. Wie viel Prozent der Würfe sind „Auf der Seite“?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie oft lag der Stein auf der Seite? Das ist, was von allen Würfen übrig bleibt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Würfe „Auf der Seite“ sind der Rest: alle 200 Würfe ohne die 81 und die 88 Würfe der anderen Ergebnisse.</li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>200</mn><mo>−</mo><mn>81</mn><mo>−</mo><mn>88</mn></mrow><mn>200</mn></mfrac><mo>⋅</mo><mn>100</mn><mspace width="0.1667em"></mspace><mi>%</mi><mo>=</mo><mn>15,5</mn></mrow></math></li><li>Probe: Die drei relativen Häufigkeiten ergeben zusammen 100 %.</li></ol><p><strong>Richtige Antwort:</strong> 15,5 %</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Lena wirft einen Steckstein aus ihrer Kiste 200-mal. Die Noppen liegen 83-mal oben, 58-mal unten, und den Rest fällt er auf die Seite. Wie viel Prozent der Würfe sind „Auf der Seite“?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie oft lag der Stein auf der Seite? Das ist, was von allen Würfen übrig bleibt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Würfe „Auf der Seite“ sind der Rest: alle 200 Würfe ohne die 83 und die 58 Würfe der anderen Ergebnisse.</li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>200</mn><mo>−</mo><mn>83</mn><mo>−</mo><mn>58</mn></mrow><mn>200</mn></mfrac><mo>⋅</mo><mn>100</mn><mspace width="0.1667em"></mspace><mi>%</mi><mo>=</mo><mn>29,5</mn></mrow></math></li><li>Probe: Die drei relativen Häufigkeiten ergeben zusammen 100 %.</li></ol><p><strong>Richtige Antwort:</strong> 29,5 %</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"legostein-prozent","given":{"n":{"oneOf":[200,250,500]},"a":{"int":[80,140]},"b":{"int":[50,120]}},"where":["a + b \u003c= n - 20","a + b != n / 2","decimals((n - a - b) * 100 / n) \u003c= 1"],"task":{"text":"Lena wirft einen Steckstein aus ihrer Kiste {{n}}-mal. Die Noppen liegen {{a}}-mal oben, {{b}}-mal unten, und den Rest fällt er auf die Seite. Wie viel Prozent der Würfe sind „Auf der Seite“?"},"answer":{"value":"(n - a - b) * 100 / n","compare":{"number":{"format":"percent","decimals":1}}},"mistakes":[{"value":"n - a - b","message":"Das ist die absolute Häufigkeit: wie oft der Stein auf der Seite lag. Gefragt ist der Anteil in Prozent."},{"value":"(a + b) * 100 / n","message":"Das ist der Anteil von „Noppen oben“ und „Noppen unten“ zusammen. Gesucht ist der Rest."},{"value":"(n - a - b) / n","message":"Das ist die Dezimalzahl. Gefragt ist die Angabe in Prozent."}],"hint":"Wie oft lag der Stein auf der Seite? Das ist, was von allen Würfen übrig bleibt.","steps":["Die Würfe „Auf der Seite“ sind der Rest: alle {{n}} Würfe ohne die {{a}} und die {{b}} Würfe der anderen Ergebnisse.","$h = \\frac{{{n}} - {{a}} - {{b}}}{{{n}}} \\cdot 100\\,\\% = {{answer}}$","Probe: Die drei relativen Häufigkeiten ergeben zusammen 100 %."]},"templates":{"de":{"task":"Lena wirft einen Steckstein aus ihrer Kiste ⟦n⟧-mal. Die Noppen liegen ⟦a⟧-mal oben, ⟦b⟧-mal unten, und den Rest fällt er auf die Seite. Wie viel Prozent der Würfe sind „Auf der Seite“?","steps":["Die Würfe „Auf der Seite“ sind der Rest: alle ⟦n⟧ Würfe ohne die ⟦a⟧ und die ⟦b⟧ Würfe der anderen Ergebnisse.","\u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦n⟧\u003c/mtext>\u003cmo>−\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>−\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003c/mrow>\u003cmtext>⟦n⟧\u003c/mtext>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmn>100\u003c/mn>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003cmi>%\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>","Probe: Die drei relativen Häufigkeiten ergeben zusammen 100 %."],"hint":"Wie oft lag der Stein auf der Seite? Das ist, was von allen Würfen übrig bleibt.","messages":["Das ist die absolute Häufigkeit: wie oft der Stein auf der Seite lag. Gefragt ist der Anteil in Prozent.","Das ist der Anteil von „Noppen oben“ und „Noppen unten“ zusammen. Gesucht ist der Rest.","Das ist die Dezimalzahl. Gefragt ist die Angabe in Prozent."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="abschluss">Das hast du gelernt</h2>
+<div class="explainer-block" data-block="abschluss/1" data-block-id="fbd16603" data-block-type="note" data-block-order="22">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Zusammenfassung</h3>
+<div class="explainer-block" data-block="abschluss/1/1" data-block-id="1e3abaca" data-block-type="text" data-block-order="23">
+<div class="block-text"><ul>
+<li>Wo du nicht rechnen kannst, wirfst du oft und zählst.</li>
+<li>Sie ist ein Schätzwert: Je mehr Würfe, desto kleiner die Schwankung und desto verlässlicher die Zahl, aber sicher ist sie nie.</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="abschluss/2" data-block-id="4a17c662" data-block-type="text" data-block-order="24">
+<div class="block-text"><p>Auf der nächsten Seite geht es um den Begriff Wahrscheinlichkeit.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe: Stochastik – Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-stochastik","app":"Mathe: Stochastik – Wahrscheinlichkeit","root":"../../","repository":"lernapps/mathe-stochastik","revision":"f323240","page":{"title":"Relative Häufigkeit als Schätzwert","order":2}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../experimente/zufallserscheinungen/">Zurück: Zufallsversuche</a><a rel="next" href="../../experimente/wahrscheinlichkeitsbegriff/">Weiter: Wahrscheinlichkeitsbegriff</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

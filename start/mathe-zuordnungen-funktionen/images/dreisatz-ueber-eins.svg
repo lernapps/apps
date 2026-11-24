@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 15px sans-serif; }
+    .lab { font-weight: 600; }
+    .arc { fill: none; stroke: currentColor; stroke-width: 2; }
+  </style>
+  <text class="lab" x="8" y="76">Karten</text>
+  <text class="lab" x="8" y="136">Preis in €</text>
+  <line x1="8" y1="92" x2="352" y2="92" stroke="currentColor" stroke-width="1"/>
+  <text x="140" y="76" text-anchor="middle">4</text>
+  <text x="230" y="76" text-anchor="middle">1</text>
+  <text x="318" y="76" text-anchor="middle">7</text>
+  <text x="140" y="136" text-anchor="middle">12</text>
+  <text x="230" y="136" text-anchor="middle">?</text>
+  <text x="318" y="136" text-anchor="middle">?</text>
+  <path class="arc" d="M 140 58 Q 185 34 224 56"/>
+  <path class="arc" d="M 218 52 L 224 56 L 216 60"/>
+  <text x="184" y="34" text-anchor="middle">: 4</text>
+  <path class="arc" d="M 236 56 Q 278 34 312 56"/>
+  <path class="arc" d="M 306 52 L 312 56 L 304 60"/>
+  <text x="274" y="34" text-anchor="middle">· 7</text>
+  <path class="arc" d="M 140 148 Q 185 172 224 150"/>
+  <path class="arc" d="M 218 154 L 224 150 L 216 146"/>
+  <text x="184" y="176" text-anchor="middle">: 4</text>
+  <path class="arc" d="M 236 150 Q 278 172 312 150"/>
+  <path class="arc" d="M 306 154 L 312 150 L 304 146"/>
+  <text x="274" y="176" text-anchor="middle">· 7</text>
+</svg>

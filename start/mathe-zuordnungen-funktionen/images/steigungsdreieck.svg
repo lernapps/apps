@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" width="340" height="260" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 13px sans-serif; }
+    .ax { stroke: currentColor; stroke-width: 1.6; fill: none; }
+    .gr { stroke: currentColor; stroke-width: 0.5; opacity: 0.4; }
+    .k { stroke: currentColor; stroke-width: 3; fill: none; }
+    .d { stroke: currentColor; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+  </style>
+  <line class="gr" x1="50" y1="230" x2="50" y2="32"/><text x="50" y="246" text-anchor="middle">0</text>
+  <line class="gr" x1="110" y1="230" x2="110" y2="32"/><text x="110" y="246" text-anchor="middle">1</text>
+  <line class="gr" x1="170" y1="230" x2="170" y2="32"/><text x="170" y="246" text-anchor="middle">2</text>
+  <line class="gr" x1="230" y1="230" x2="230" y2="32"/><text x="230" y="246" text-anchor="middle">3</text>
+  <line class="gr" x1="290" y1="230" x2="290" y2="32"/><text x="290" y="246" text-anchor="middle">4</text>
+  <line class="gr" x1="50" y1="230" x2="290" y2="230"/><text x="44" y="234" text-anchor="end">0</text>
+  <line class="gr" x1="50" y1="208" x2="290" y2="208"/>
+  <line class="gr" x1="50" y1="186" x2="290" y2="186"/><text x="44" y="190" text-anchor="end">2</text>
+  <line class="gr" x1="50" y1="164" x2="290" y2="164"/>
+  <line class="gr" x1="50" y1="142" x2="290" y2="142"/><text x="44" y="146" text-anchor="end">4</text>
+  <line class="gr" x1="50" y1="120" x2="290" y2="120"/>
+  <line class="gr" x1="50" y1="98" x2="290" y2="98"/><text x="44" y="102" text-anchor="end">6</text>
+  <line class="gr" x1="50" y1="76" x2="290" y2="76"/>
+  <line class="gr" x1="50" y1="54" x2="290" y2="54"/><text x="44" y="58" text-anchor="end">8</text>
+  <line class="gr" x1="50" y1="32" x2="290" y2="32"/>
+  <line class="ax" x1="50" y1="230" x2="304" y2="230"/><line class="ax" x1="50" y1="230" x2="50" y2="20"/>
+  <line class="k" x1="50" y1="208" x2="290" y2="32"/>
+  <polyline class="d" points="110,164 230,164 230,76"/>
+  <text x="170" y="180" text-anchor="middle">Δx = 2</text><text x="238" y="124">Δy = 4</text>
+  <text x="304" y="224" text-anchor="end">x</text><text x="56" y="30">y</text>
+</svg>

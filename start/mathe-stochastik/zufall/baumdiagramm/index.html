@@ -10,10 +10,10 @@
     <meta name="description" content="Ein Baumdiagramm zu einem mehrstufigen Zufallsversuch zeichnen, mit den Wahrscheinlichkeiten an den Zweigen, mit und ohne Zurücklegen." />
     <meta name="lernapps-archetype" content="explainer" />
     <link rel="alternate" hreflang="de" href="../../zufall/baumdiagramm/" />
-    <script type="module" crossorigin src="../../assets/islands-Ny_Sk5Fh.js"></script>
+    <script type="module" crossorigin src="../../assets/islands-Bi5pcRrb.js"></script>
   </head>
   <body>
-    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li aria-current="page">Baumdiagramm</li></ol></nav>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../zufall/">Wahrscheinlichkeit</a></li><li aria-current="page">Baumdiagramm</li></ol></nav>
 <main class="explainer" id="inhalt-der-seite">
 <div class="explainer-title-row">
 <h1>Baumdiagramm</h1>
@@ -28,10 +28,10 @@
 </details>
 <p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
 <p class="explainer-tutor-status" role="status" aria-live="polite"></p>
-<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧zufall/baumdiagramm/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-stochastik","page":{"id":"baumdiagramm","title":"Baumdiagramm","exercises":[{"id":"baum-ergaenzen","section":"uebung","numbered":true},{"id":"baumdiagramm-nenner","section":"uebung","numbered":true}],"sections":["warum","regel","beispiel","bild","video","uebung"]},"tutor":"zufall/baumdiagramm/tutor/","markdown":"zufall/baumdiagramm/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧zufall/baumdiagramm/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-stochastik","page":{"id":"baumdiagramm","title":"Baumdiagramm","exercises":[{"id":"baum-pfade-zaehlen","section":"uebung","numbered":false},{"id":"baum-begriffe","section":"uebung","numbered":false},{"id":"baum-ergaenzen","section":"uebung","numbered":true},{"id":"baumdiagramm-nenner","section":"uebung","numbered":true}],"sections":["warum","regel","beispiel","bild","uebung"]},"tutor":"zufall/baumdiagramm/tutor/","markdown":"zufall/baumdiagramm/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
 </div>
 </div>
-<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#warum">Warum?</a></li><li><a href="#regel">Regel</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#bild">Bild</a></li><li><a href="#video">Video dazu</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#warum">Warum?</a></li><li><a href="#regel">Regel</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#bild">Bild</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
 <section class="explainer-section">
 <h2 id="warum">Warum?</h2>
 <div class="explainer-block" data-block="warum/1" data-block-id="ca8a94d5" data-block-type="text" data-block-order="1">
@@ -43,11 +43,9 @@
 <div class="explainer-block" data-block="regel/1" data-block-id="e7e77c35" data-block-type="definition" data-block-order="2">
 <dl class="explainer-definition"><dt><dfn id="begriff-mehrstufiger-zufallsversuch"><a href="../../glossar/#mehrstufiger-zufallsversuch">mehrstufiger Zufallsversuch</a></dfn></dt><dd><p>Ein Zufallsversuch aus mehreren Zügen (Stufen), zum Beispiel zweimal aus einer Urne ziehen oder dreimal eine Münze werfen.</p></dd></dl>
 </div>
-<div class="explainer-block" data-block="regel/2" data-block-id="eed7a3f3" data-block-type="text" data-block-order="3">
-<div class="block-text"><p>Für jede Stufe zeichnest du <strong>Zweige</strong> zu allen möglichen Ergebnissen.</p></div>
-</div>
-<div class="explainer-block" data-block="regel/3" data-block-id="7bbd80dc" data-block-type="text" data-block-order="4">
-<div class="block-text"><ul>
+<div class="explainer-block" data-block="regel/2" data-block-id="73bd4d4c" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Für jede Stufe zeichnest du <strong>Zweige</strong> zu allen möglichen Ergebnissen.</p>
+<ul>
 <li>An jeden Zweig schreibst du seine <strong>Wahrscheinlichkeit</strong> (Laplace: günstig durch möglich).</li>
 <li>Die Zweige an einem Knoten ergeben zusammen immer <strong>1</strong>.</li>
 <li>Reihenfolge beim Zeichnen: erst alle Zweige, dann die Kugeln, dann die Brüche.</li>
@@ -55,58 +53,99 @@
 <a href="../../zufall/ohne-zuruecklegen/">Ohne Zurücklegen</a>).</li>
 </ul></div>
 </div>
-<div class="explainer-block" data-block="regel/4" data-block-id="086169b1" data-block-type="formula" data-block-order="5">
+<div class="explainer-block" data-block="regel/3" data-block-id="086169b1" data-block-type="formula" data-block-order="4">
 <div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>Zweig 1</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>Zweig 2</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>+</mo><mtext>…</mtext><mo>=</mo><mn>1</mn></mrow></math></div>
 </div>
-<div class="explainer-block" data-block="regel/5" data-block-id="c9a1e0c7" data-block-type="definition" data-block-order="6">
+<div class="explainer-block" data-block="regel/4" data-block-id="c9a1e0c7" data-block-type="definition" data-block-order="5">
 <dl class="explainer-definition"><dt><dfn id="begriff-pfad"><a href="../../glossar/#pfad">Pfad</a></dfn></dt><dd><p>Ein Weg im Baumdiagramm vom Start bis zu einem Ende.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="b94eaa39" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-zweig"><a href="../../glossar/#zweig">Zweig</a></dfn></dt><dd><p>Eine Linie im Baumdiagramm. An jedem Zweig steht, wie wahrscheinlich dieser Schritt ist.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="d6508687" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-knoten"><a href="../../glossar/#knoten">Knoten</a></dfn></dt><dd><p>Ein Punkt im Baumdiagramm, an dem sich der Baum verzweigt oder ein Pfad endet.</p></dd></dl>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="beispiel">Beispiel</h2>
-<div class="explainer-block" data-block="beispiel/1" data-block-id="5366df00" data-block-type="example" data-block-order="7">
+<div class="explainer-block" data-block="beispiel/1" data-block-id="31ac6e02" data-block-type="example" data-block-order="8">
 <div class="explainer-box explainer-example">
 <h3 class="explainer-box-title">Zweimal ziehen ohne Zurücklegen</h3>
-<div class="explainer-block" data-block="beispiel/1/1" data-block-id="2db7af16" data-block-type="text" data-block-order="8">
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="2db7af16" data-block-type="text" data-block-order="9">
 <div class="block-text"><p>In einer Urne liegen 3 rote und 2 blaue Kugeln. Du ziehst zweimal <strong>ohne Zurücklegen</strong>. Das Bild unten zeigt den fertigen Baum.</p></div>
 </div>
-<div class="explainer-block" data-block="beispiel/1/2" data-block-id="1d7c5dc0" data-block-type="text" data-block-order="9">
-<div class="block-text"><ol>
-<li><strong>1. Stufe:</strong> 5 Kugeln. <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>rot</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></math>, <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>blau</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></mrow></math>. Zusammen 1.</li>
-<li><strong>2. Stufe nach rot:</strong> nur noch 4 Kugeln, davon 2 rote. <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>rot</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>4</mn></mfrac></mrow></math>,
-<math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>blau</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>4</mn></mfrac></mrow></math>.</li>
-<li><strong>2. Stufe nach blau:</strong> 4 Kugeln, 3 rote, 1 blaue. <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>rot</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></math>,
-<math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>blau</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>.</li>
-<li>Unter den Enden stehen schon die Pfadwahrscheinlichkeiten (siehe
-<a href="../../zufall/pfadregel-1/">1. Pfadregel</a>). Ihre Summe ist 1 – ein guter Test für jeden Baum.</li>
-</ol></div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="df97172b" data-block-type="table" data-block-order="10">
+<div class="block-table" role="region" aria-label="Die Zweige des Baums, Stufe für Stufe" tabindex="0"><table><caption>Die Zweige des Baums, Stufe für Stufe</caption><thead><tr><th scope="col">Stufe</th><th scope="col">Zweige</th></tr></thead><tbody><tr><th scope="row">1. Stufe</th><td>5 Kugeln: <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>rot</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></math> und <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>blau</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></mrow></math>. Zusammen 1.</td></tr><tr><th scope="row">2. Stufe nach rot</th><td>Nur noch 4 Kugeln, 2 rote und 2 blaue: <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>rot</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>4</mn></mfrac></mrow></math> und <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>blau</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>4</mn></mfrac></mrow></math>.</td></tr><tr><th scope="row">2. Stufe nach blau</th><td>4 Kugeln, 3 rote und 1 blaue: <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>rot</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></math> und <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>blau</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>.</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="6d02a3d9" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Unter den Enden stehen die Pfadwahrscheinlichkeiten (siehe <a href="../../zufall/pfadregel-1/">1. Pfadregel</a>). Ihre Summe ist 1 – ein guter Test für jeden Baum.</p></div>
 </div>
 </div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="bild">Bild</h2>
-<div class="explainer-block" data-block="bild/1" data-block-id="22d441d5" data-block-type="figure" data-block-order="10">
-<figure class="block-figure"><div class="block-image-credit"><img src="../../images/zufall-baumdiagramm.svg" alt="Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen" loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: Eigene Darstellung der Mathe-Karte. Lizenz: MIT." aria-label="Quelle: Eigene Darstellung der Mathe-Karte. Lizenz: MIT.">© MIT</span></div><figcaption><p>Ein Baumdiagramm zur Urne mit 3 roten (R) und 2 blauen (B) Kugeln, zweimal ohne Zurücklegen. Vom Start
-gehen zwei Zweige aus: rot mit 3/5 und blau mit 2/5. Nach rot folgen rot mit 2/4 und blau mit 2/4, nach blau
-folgen rot mit 3/4 und blau mit 1/4. Unter den vier Enden stehen die Pfadwahrscheinlichkeiten:
-rot-rot 3/10, rot-blau 3/10, blau-rot 3/10, blau-blau 1/10. Zusammen ergeben sie 1.</p></figcaption></figure>
-</div>
-</section>
-<section class="explainer-section">
-<h2 id="video">Video dazu</h2>
-<div class="explainer-block" data-block="video/1" data-block-id="0d56b9f0" data-block-type="video" data-block-order="11">
-<figure class="explainer-video" data-youtube="mBknBnww5fA" data-storage="mathe-stochastik"><figcaption><a class="explainer-video-link" href="https://www.youtube.com/watch?v=mBknBnww5fA" rel="noopener">Baumdiagramm | mehrstufiger Zufallsversuch | Wahrscheinlichkeit | Stochastik</a> <span class="explainer-video-channel">Lehrerschmidt · YouTube</span></figcaption><p class="explainer-video-note">Beim Abspielen gehen Daten an YouTube/Google, darunter deine IP-Adresse.</p><p class="explainer-video-controls" hidden><button type="button" class="explainer-video-play">Video abspielen</button> <label class="explainer-video-always"><input type="checkbox"> Videos immer direkt laden</label></p></figure>
-</div>
-<div class="explainer-block" data-block="video/2" data-block-id="fe12a77c" data-block-type="text" data-block-order="12">
-<div class="block-text"><ul>
-<li>Noch eine Erklärung: <a href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener">Mehrstufige Zufallsexperimente</a> bei serlo.org</li>
-</ul></div>
+<div class="explainer-block" data-block="bild/1" data-block-id="4a7253eb" data-block-type="figure" data-block-order="12">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/zufall-baumdiagramm.svg" alt="Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen" loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: Eigene Darstellung der Mathe-Karte. Lizenz: MIT." aria-label="Quelle: Eigene Darstellung der Mathe-Karte. Lizenz: MIT.">© MIT</span></div><figcaption><p>Ein Baumdiagramm zur Urne mit 3 roten (R) und 2 blauen (B) Kugeln, zweimal ohne Zurücklegen. Vom Start gehen zwei Zweige aus: rot mit <math><mfrac><mn>3</mn><mn>5</mn></mfrac></math> und blau mit <math><mfrac><mn>2</mn><mn>5</mn></mfrac></math>. Nach rot folgen rot mit <math><mfrac><mn>2</mn><mn>4</mn></mfrac></math> und blau mit <math><mfrac><mn>2</mn><mn>4</mn></mfrac></math>, nach blau folgen rot mit <math><mfrac><mn>3</mn><mn>4</mn></mfrac></math> und blau mit <math><mfrac><mn>1</mn><mn>4</mn></mfrac></math>. Unter den vier Enden stehen die Pfadwahrscheinlichkeiten: rot-rot <math><mfrac><mn>3</mn><mn>10</mn></mfrac></math>, rot-blau <math><mfrac><mn>3</mn><mn>10</mn></mfrac></math>, blau-rot <math><mfrac><mn>3</mn><mn>10</mn></mfrac></math>, blau-blau <math><mfrac><mn>1</mn><mn>10</mn></mfrac></math>. Zusammen ergeben sie 1.</p></figcaption></figure>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="uebung">Übung</h2>
-<div class="explainer-block" data-block="uebung/1" data-block-id="8c580497" data-block-type="vue-component" data-block-order="13">
+<div class="explainer-block" data-block="uebung/1" data-block-id="75b8f7da" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="baum-pfade-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-baum-pfade-zaehlen" data-id="baum-pfade-zaehlen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du wirfst eine Münze dreimal hintereinander und zeichnest dazu ein Baumdiagramm. Wie viele Pfade hat es, vom Start bis zu den Enden gezählt?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-baum-pfade-zaehlen">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 8</p>
+<p class="question-explanation">Jede Stufe verdoppelt die Pfade, denn an jedes Ende kommen zwei neue Zweige. Nach drei Würfen sind es 2 · 2 · 2 = 8 Pfade.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 8</p>
+<p class="question-explanation">Jede Stufe verdoppelt die Pfade, denn an jedes Ende kommen zwei neue Zweige. Nach drei Würfen sind es 2 · 2 · 2 = 8 Pfade.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"baum-pfade-zaehlen","text":"Du wirfst eine Münze dreimal hintereinander und zeichnest dazu ein Baumdiagramm. Wie viele Pfade hat es, vom Start bis zu den Enden gezählt?","explanation":"Jede Stufe verdoppelt die Pfade, denn an jedes Ende kommen zwei neue Zweige. Nach drei Würfen sind es 2 · 2 · 2 = 8 Pfade.","links":[],"hint":"Zeichne den Baum. Nach dem ersten Wurf gibt es 2 Zweige, jeder teilt sich beim nächsten Wurf wieder in 2.","type":"number","answer":8,"tolerance":0,"mistakes":[{"answer":6,"message":"Bei jeder Stufe verdoppelt sich die Zahl der Pfade. Du hast zu wenige gezählt."},{"answer":3,"message":"Das ist die Zahl der Stufen, nicht die Zahl der Pfade. Jeder Pfad geht durch alle drei Stufen."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="3b8414c8" data-block-type="matching" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="baum-begriffe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-baum-begriffe" data-id="baum-begriffe" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Begriff aus dem Baumdiagramm seine Bedeutung zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Stufe</span> <select name="frage-baum-begriffe-0" data-left="0"><option value="">bitte wählen</option><option value="3">ihre Wahrscheinlichkeiten ergeben zusammen immer 1</option><option value="1">eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit</option><option value="0">ein Zug des Versuchs, zum Beispiel der erste Wurf</option><option value="2">ein Weg vom Start bis zu einem Ende des Baums</option><option value="4">die Zahl der Kugeln in der Urne</option></select></label></li>
+<li><label><span>Zweig</span> <select name="frage-baum-begriffe-1" data-left="1"><option value="">bitte wählen</option><option value="3">ihre Wahrscheinlichkeiten ergeben zusammen immer 1</option><option value="1">eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit</option><option value="0">ein Zug des Versuchs, zum Beispiel der erste Wurf</option><option value="2">ein Weg vom Start bis zu einem Ende des Baums</option><option value="4">die Zahl der Kugeln in der Urne</option></select></label></li>
+<li><label><span>Pfad</span> <select name="frage-baum-begriffe-2" data-left="2"><option value="">bitte wählen</option><option value="3">ihre Wahrscheinlichkeiten ergeben zusammen immer 1</option><option value="1">eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit</option><option value="0">ein Zug des Versuchs, zum Beispiel der erste Wurf</option><option value="2">ein Weg vom Start bis zu einem Ende des Baums</option><option value="4">die Zahl der Kugeln in der Urne</option></select></label></li>
+<li><label><span>Zweige an einem Knoten</span> <select name="frage-baum-begriffe-3" data-left="3"><option value="">bitte wählen</option><option value="3">ihre Wahrscheinlichkeiten ergeben zusammen immer 1</option><option value="1">eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit</option><option value="0">ein Zug des Versuchs, zum Beispiel der erste Wurf</option><option value="2">ein Weg vom Start bis zu einem Ende des Baums</option><option value="4">die Zahl der Kugeln in der Urne</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Stufe – ein Zug des Versuchs, zum Beispiel der erste Wurf; Zweig – eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit; Pfad – ein Weg vom Start bis zu einem Ende des Baums; Zweige an einem Knoten – ihre Wahrscheinlichkeiten ergeben zusammen immer 1</p>
+<p class="question-explanation">Ein Baum hat Stufen, Zweige und Pfade. An jedem Zweig steht eine Wahrscheinlichkeit, entlang eines Pfades verläuft die Rechnung, und die Zweige eines Knotens decken alle Möglichkeiten dieser Stufe ab.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Stufe – ein Zug des Versuchs, zum Beispiel der erste Wurf; Zweig – eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit; Pfad – ein Weg vom Start bis zu einem Ende des Baums; Zweige an einem Knoten – ihre Wahrscheinlichkeiten ergeben zusammen immer 1</p>
+<p class="question-explanation">Ein Baum hat Stufen, Zweige und Pfade. An jedem Zweig steht eine Wahrscheinlichkeit, entlang eines Pfades verläuft die Rechnung, und die Zweige eines Knotens decken alle Möglichkeiten dieser Stufe ab.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"baum-begriffe","text":"Ordne jedem Begriff aus dem Baumdiagramm seine Bedeutung zu.","explanation":"Ein Baum hat Stufen, Zweige und Pfade. An jedem Zweig steht eine Wahrscheinlichkeit, entlang eines Pfades verläuft die Rechnung, und die Zweige eines Knotens decken alle Möglichkeiten dieser Stufe ab.","links":[],"hint":"Lies noch einmal die Regel und die Begriffe Pfad und Zweig.","type":"matching","pairs":[{"left":"Stufe","right":"ein Zug des Versuchs, zum Beispiel der erste Wurf"},{"left":"Zweig","right":"eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit"},{"left":"Pfad","right":"ein Weg vom Start bis zu einem Ende des Baums"},{"left":"Zweige an einem Knoten","right":"ihre Wahrscheinlichkeiten ergeben zusammen immer 1"}],"distractors":["die Zahl der Kugeln in der Urne"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="eb2f21a3" data-block-type="vue-component" data-block-order="15">
 <div class="explainer-component" id="baum-ergaenzen" data-component="ZufallBaumLuecken" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,48,49,51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67,68,69,72,73,74,75]" data-checked>
 <p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Aufgabe Nr. {n}">Aufgabe Nr. 1</span> <button type="button" class="explainer-new-task" title="Neue Aufgabe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">Neue Aufgabe</span></button></p>
 <form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="question"><p>Du wirfst eine Münze zweimal. Im Baumdiagramm fehlen 3 Zweigwahrscheinlichkeiten (a, b, c). Trag sie ein.</p><div class="zufall-bild" data-v-3d0c2db3><svg viewBox="0 0 320 204" width="320" height="204" role="img" aria-label="Baumdiagramm mit fehlenden Zweigwahrscheinlichkeiten" data-v-3d0c2db3><title data-v-3d0c2db3>Baumdiagramm mit fehlenden Zweigwahrscheinlichkeiten</title><circle cx="160" cy="22" r="6" class="zb-wurzel" data-v-3d0c2db3></circle><g fill="none" data-v-3d0c2db3><!--[--><path d="M160 28 C 160 55, 79 55, 79 82" class="zb-zweig" data-v-3d0c2db3></path><path d="M79 106 C 79 130, 41.5 130, 41.5 154" class="zb-zweig" data-v-3d0c2db3></path><path d="M79 106 C 79 130, 116.5 130, 116.5 154" class="zb-zweig" data-v-3d0c2db3></path><path d="M160 28 C 160 55, 241 55, 241 82" class="zb-zweig" data-v-3d0c2db3></path><path d="M241 106 C 241 130, 203.5 130, 203.5 154" class="zb-zweig" data-v-3d0c2db3></path><path d="M241 106 C 241 130, 278.5 130, 278.5 154" class="zb-zweig" data-v-3d0c2db3></path><!--]--></g><!--[--><g transform="translate(79 94)" data-v-3d0c2db3><circle r="12" fill="#eceff1" class="zb-knoten" data-v-3d0c2db3></circle><text y="4" text-anchor="middle" font-weight="700" font-size="13" fill="#1a1a1a" data-v-3d0c2db3>K</text><title data-v-3d0c2db3>Kopf</title></g><g transform="translate(41.5 166)" data-v-3d0c2db3><circle r="12" fill="#eceff1" class="zb-knoten" data-v-3d0c2db3></circle><text y="4" text-anchor="middle" font-weight="700" font-size="13" fill="#1a1a1a" data-v-3d0c2db3>K</text><title data-v-3d0c2db3>Kopf</title></g><g transform="translate(116.5 166)" data-v-3d0c2db3><circle r="12" fill="#eceff1" class="zb-knoten" data-v-3d0c2db3></circle><text y="4" text-anchor="middle" font-weight="700" font-size="13" fill="#1a1a1a" data-v-3d0c2db3>Z</text><title data-v-3d0c2db3>Zahl</title></g><g transform="translate(241 94)" data-v-3d0c2db3><circle r="12" fill="#eceff1" class="zb-knoten" data-v-3d0c2db3></circle><text y="4" text-anchor="middle" font-weight="700" font-size="13" fill="#1a1a1a" data-v-3d0c2db3>Z</text><title data-v-3d0c2db3>Zahl</title></g><g transform="translate(203.5 166)" data-v-3d0c2db3><circle r="12" fill="#eceff1" class="zb-knoten" data-v-3d0c2db3></circle><text y="4" text-anchor="middle" font-weight="700" font-size="13" fill="#1a1a1a" data-v-3d0c2db3>K</text><title data-v-3d0c2db3>Kopf</title></g><g transform="translate(278.5 166)" data-v-3d0c2db3><circle r="12" fill="#eceff1" class="zb-knoten" data-v-3d0c2db3></circle><text y="4" text-anchor="middle" font-weight="700" font-size="13" fill="#1a1a1a" data-v-3d0c2db3>Z</text><title data-v-3d0c2db3>Zahl</title></g><!--]--><g class="zb-labels" font-size="13" text-anchor="middle" data-v-3d0c2db3><!--[--><!--[--><text x="79" y="76" class="" data-v-3d0c2db3>1/2 <title data-v-3d0c2db3>P(Kopf) = 1/2</title></text><!----><!--]--><!--[--><text x="41.5" y="148" class="zb-fehlt" data-v-3d0c2db3>? <title data-v-3d0c2db3>Zweig a: fehlt</title></text><text x="41.5" y="134" class="zb-fehlt" font-weight="700" data-v-3d0c2db3>a</text><!--]--><!--[--><text x="116.5" y="148" class="" data-v-3d0c2db3>1/2 <title data-v-3d0c2db3>P(Zahl) = 1/2</title></text><!----><!--]--><!--[--><text x="241" y="76" class="zb-fehlt" data-v-3d0c2db3>? <title data-v-3d0c2db3>Zweig b: fehlt</title></text><text x="241" y="62" class="zb-fehlt" font-weight="700" data-v-3d0c2db3>b</text><!--]--><!--[--><text x="203.5" y="148" class="" data-v-3d0c2db3>1/2 <title data-v-3d0c2db3>P(Kopf) = 1/2</title></text><!----><!--]--><!--[--><text x="278.5" y="148" class="zb-fehlt" data-v-3d0c2db3>? <title data-v-3d0c2db3>Zweig c: fehlt</title></text><text x="278.5" y="134" class="zb-fehlt" font-weight="700" data-v-3d0c2db3>c</text><!--]--><!--]--></g><!--[--><g class="" data-v-3d0c2db3><rect x="5" y="152" width="73" height="28" rx="6" class="zb-treffer" data-v-3d0c2db3></rect><!----></g><g class="" data-v-3d0c2db3><rect x="80" y="152" width="73" height="28" rx="6" class="zb-treffer" data-v-3d0c2db3></rect><!----></g><g class="" data-v-3d0c2db3><rect x="167" y="152" width="73" height="28" rx="6" class="zb-treffer" data-v-3d0c2db3></rect><!----></g><g class="" data-v-3d0c2db3><rect x="242" y="152" width="73" height="28" rx="6" class="zb-treffer" data-v-3d0c2db3></rect><!----></g><!--]--><text x="4" y="198" font-size="13" class="zb-text" data-v-3d0c2db3>K = Kopf · Z = Zahl</text></svg></div><div class="zufall-antwort" data-v-35a6d0ff><!--[--><p class="question-number" data-v-35a6d0ff><label for="v-0-a" data-v-35a6d0ff>a) 2. Wurf: Kopf (nach Kopf) =</label>   <input id="v-0-a" value="" type="text" inputmode="text" autocomplete="off" spellcheck="false" data-v-35a6d0ff></p><p class="question-number" data-v-35a6d0ff><label for="v-0-b" data-v-35a6d0ff>b) 1. Wurf: Zahl =</label>   <input id="v-0-b" value="" type="text" inputmode="text" autocomplete="off" spellcheck="false" data-v-35a6d0ff></p><p class="question-number" data-v-35a6d0ff><label for="v-0-c" data-v-35a6d0ff>c) 2. Wurf: Zahl (nach Zahl) =</label>   <input id="v-0-c" value="" type="text" inputmode="text" autocomplete="off" spellcheck="false" data-v-35a6d0ff></p><!--]--><p class="question-hint" data-v-35a6d0ff>Bruch, Dezimalzahl oder Prozent, z. B. 1/6, 0,17 oder 17 %. Ein Term wie 3/6*2/5 geht auch.</p><!----><!----></div></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p></form>
@@ -122,7 +161,7 @@ rot-rot 3/10, rot-blau 3/10, blau-rot 3/10, blau-blau 1/10. Zusammen ergeben sie
 <script type="application/json" class="explainer-component-props">{}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/2" data-block-id="bdd8b710" data-block-type="generated" data-block-order="14">
+<div class="explainer-block" data-block="uebung/4" data-block-id="bdd8b710" data-block-type="generated" data-block-order="16">
 <div class="explainer-exercise explainer-generated" id="baumdiagramm-nenner">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="explainer-live" hidden></div>
@@ -172,7 +211,7 @@ rot-rot 3/10, rot-blau 3/10, blau-rot 3/10, blau-blau 1/10. Zusammen ergeben sie
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-stochastik","app":"Mathe: Stochastik – Wahrscheinlichkeit","root":"../../","repository":"lernapps/mathe-stochastik","revision":"0a9fe9a","page":{"title":"Baumdiagramm","order":1}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-stochastik","app":"Mathe: Stochastik – Wahrscheinlichkeit","root":"../../","repository":"lernapps/mathe-stochastik","revision":"f323240","page":{"title":"Baumdiagramm","order":7}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../zufall/laplace/">Zurück: Laplace-Formel</a><a rel="next" href="../../zufall/pfadregel-1/">Weiter: 1. Pfadregel</a></nav>

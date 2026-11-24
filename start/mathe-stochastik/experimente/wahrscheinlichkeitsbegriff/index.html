@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Wahrscheinlichkeitsbegriff – Mathe: Stochastik – Wahrscheinlichkeit</title>
+    <meta name="description" content="Erklären, was Wahrscheinlichkeit bedeutet, und Wahrscheinlichkeiten auf einer Skala von 0 bis 1 einordnen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../experimente/wahrscheinlichkeitsbegriff/" />
+    <script type="module" crossorigin src="../../assets/islands-Bi5pcRrb.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../experimente/">Experimentieren mit dem Zufall</a></li><li aria-current="page">Wahrscheinlichkeitsbegriff</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Wahrscheinlichkeitsbegriff</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../experimente/wahrscheinlichkeitsbegriff/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧experimente/wahrscheinlichkeitsbegriff/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-stochastik","page":{"id":"wahrscheinlichkeitsbegriff","title":"Wahrscheinlichkeitsbegriff","exercises":[{"id":"wahrscheinlich-ordnen","section":"warum","numbered":false},{"id":"gluecksrad-deuten","section":"beispiel","numbered":false},{"id":"keine-wahrscheinlichkeit","section":"uebung","numbered":false},{"id":"genau-fuenfmal","section":"uebung","numbered":false},{"id":"ereignis-wert","section":"uebung","numbered":false},{"id":"regen-deuten","section":"uebung","numbered":true}],"sections":["warum","regel","beispiel","uebung"]},"tutor":"experimente/wahrscheinlichkeitsbegriff/tutor/","markdown":"experimente/wahrscheinlichkeitsbegriff/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#warum">Wie wahrscheinlich ist das?</a></li><li><a href="#regel">Wahrscheinlichkeit ist eine Zahl von 0 bis 1</a></li><li><a href="#beispiel">Das Glücksrad ausprobieren</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="warum">Wie wahrscheinlich ist das?</h2>
+<div class="explainer-block" data-block="warum/1" data-block-id="e8357a00" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn jemand „unmöglich“ oder „ziemlich sicher“ sagt, willst du das genau sagen können. Lena sagt am Spieleabend: „Dass der Würfel eine 7 zeigt, ist unmöglich. Dass er keine 6 zeigt, ist ziemlich
+sicher.“ Mia widerspricht: „Ziemlich sicher ist nicht sicher.“ Mit Zahlen kann man das genauer sagen. Probiere
+zuerst, was du dir denkst.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/2" data-block-id="380bea3a" data-block-type="ordering" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="wahrscheinlich-ordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-wahrscheinlich-ordnen" data-id="wahrscheinlich-ordnen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne die Ereignisse. Oben steht das, was am seltensten passiert, unten das, was immer passiert.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Ein Würfel zeigt die 7.</span> <select name="frage-wahrscheinlich-ordnen-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Ein Würfel zeigt keine 6.</span> <select name="frage-wahrscheinlich-ordnen-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Auf Montag folgt Dienstag.</span> <select name="frage-wahrscheinlich-ordnen-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Eine Münze zeigt Zahl.</span> <select name="frage-wahrscheinlich-ordnen-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Ein Würfel zeigt die 6.</span> <select name="frage-wahrscheinlich-ordnen-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Ein Würfel zeigt die 7., 2. Ein Würfel zeigt die 6., 3. Eine Münze zeigt Zahl., 4. Ein Würfel zeigt keine 6., 5. Auf Montag folgt Dienstag.</p>
+<p class="question-explanation">Die 7 gibt es auf dem Würfel nicht, die 6 ist eine von sechs Zahlen, Zahl ist eine von zwei Seiten, „keine 6“ passiert bei fünf von sechs Zahlen, und Dienstag folgt immer.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Ein Würfel zeigt die 7., 2. Ein Würfel zeigt die 6., 3. Eine Münze zeigt Zahl., 4. Ein Würfel zeigt keine 6., 5. Auf Montag folgt Dienstag.</p>
+<p class="question-explanation">Die 7 gibt es auf dem Würfel nicht, die 6 ist eine von sechs Zahlen, Zahl ist eine von zwei Seiten, „keine 6“ passiert bei fünf von sechs Zahlen, und Dienstag folgt immer.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wahrscheinlich-ordnen","text":"Ordne die Ereignisse. Oben steht das, was am seltensten passiert, unten das, was immer passiert.","explanation":"Die 7 gibt es auf dem Würfel nicht, die 6 ist eine von sechs Zahlen, Zahl ist eine von zwei Seiten, „keine 6“ passiert bei fünf von sechs Zahlen, und Dienstag folgt immer.","links":[],"type":"ordering","items":["Ein Würfel zeigt die 7.","Ein Würfel zeigt die 6.","Eine Münze zeigt Zahl.","Ein Würfel zeigt keine 6.","Auf Montag folgt Dienstag."]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Wahrscheinlichkeit ist eine Zahl von 0 bis 1</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="dfd57289" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du sagen willst, wie sicher oder wie selten etwas ist, brauchst du dafür eine Zahl. Sie heißt Wahrscheinlichkeit, und es gibt feste Wörter dafür.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="45c688c2" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-ereignis"><a href="../../glossar/#ereignis">Ereignis</a></dfn></dt><dd><p>Eine Aussage über das Ergebnis eines Zufallsversuchs, die eintreten kann oder nicht. Beim Würfel ist „Die Augenzahl ist gerade“ ein Ereignis. Es trifft bei den Ergebnissen 2, 4 und 6 zu.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="03e9016f" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-wahrscheinlichkeit"><a href="../../glossar/#wahrscheinlichkeit">Wahrscheinlichkeit</a></dfn></dt><dd><p>Eine Zahl zwischen 0 und 1, die sagt, wie oft ein Ereignis auf lange Sicht eintritt. Man schreibt <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math>.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="0ce9b506" data-block-type="formula" data-block-order="6">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mn>0</mn><mo>≤</mo><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="07fba20f" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Damit du eine Wahrscheinlichkeit einordnen kannst, zeigt die Tabelle die Skala von 0 bis 1.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="8b0bb5b8" data-block-type="table" data-block-order="8">
+<div class="block-table" role="region" aria-label="Die Skala der Wahrscheinlichkeit" tabindex="0"><table><caption>Die Skala der Wahrscheinlichkeit</caption><thead><tr><th scope="col">Wert</th><th scope="col">Bedeutung</th><th scope="col">Beispiel</th></tr></thead><tbody><tr><td>0</td><td>unmöglich</td><td>Aus einer Urne mit nur blauen Kugeln ziehst du eine rote.</td></tr><tr><td>nahe bei 0</td><td>sehr selten</td><td>Beim Würfeln fällt zehnmal hintereinander die Sechs.</td></tr><tr><td>0,5 oder 50 %</td><td>genauso oft wie nicht</td><td>Eine Münze zeigt Kopf.</td></tr><tr><td>nahe bei 1</td><td>sehr oft</td><td>Beim Würfeln fällt nicht gleich zweimal die Sechs.</td></tr><tr><td>1</td><td>sicher</td><td>Aus einer Urne mit nur roten Kugeln ziehst du eine rote.</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="regel/7" data-block-id="d9be7362" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="regel/7/1" data-block-id="7ff64671" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wahrscheinlichkeit sagt etwas über viele Versuche, nicht über einen einzelnen. Die relative Häufigkeit bei vielen Versuchen ist ein Schätzwert dafür.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Das Glücksrad ausprobieren</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="57cd65b5" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn du sehen willst, was eine Wahrscheinlichkeit bedeutet, lass ein Glücksrad oft drehen. Es hat vier gleich große Felder: zwei rot, eins blau, eins gelb. Beobachtet wird Blau. Drehe
+100- und 1000-mal. Achte darauf, bei welcher Zahl sich die Linie einpendelt.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="93ca883e" data-block-type="vue-component" data-block-order="12">
+<div class="explainer-component" id="maschine-gluecksrad" data-component="ZufallMaschine">
+<div class="explainer-island" hidden><div class="maschine" data-v-e54758cf><p class="maschine-geraet" data-v-e54758cf> Gerät: <strong data-v-e54758cf>Glücksrad</strong>. Beobachtet wird: <strong data-v-e54758cf>Blau</strong> (in der Tabelle mit ◄ markiert). </p><p class="maschine-letzter" aria-live="polite" data-v-e54758cf> Letzter Wurf: <strong data-v-e54758cf>–</strong></p><div class="maschine-knoepfe" data-v-e54758cf><!--[--><button type="button" data-v-e54758cf>1 Wurf</button><button type="button" data-v-e54758cf>10 Würfe</button><button type="button" data-v-e54758cf>100 Würfe</button><button type="button" data-v-e54758cf>1000 Würfe</button><!--]--><button type="button" class="maschine-zurueck" disabled data-v-e54758cf> Zurücksetzen </button></div><svg class="maschine-bild" viewBox="-18 -8 324 188" role="img" aria-label="Linie der relativen Häufigkeit von Blau. Noch kein Wurf." data-v-e54758cf><text x="-4" y="4" text-anchor="end" class="maschine-achse" data-v-e54758cf>1</text><text x="-4" y="164" text-anchor="end" class="maschine-achse" data-v-e54758cf>0</text><text x="300" y="176" text-anchor="end" class="maschine-achse" data-v-e54758cf>Würfe →</text><rect x="0" y="0" width="300" height="160" class="maschine-rahmen" data-v-e54758cf></rect><!----><!----></svg><p class="maschine-erklaerung" data-v-e54758cf> Die Linie zeigt die relative Häufigkeit von „Blau“ nach jedem Wurf: waagerecht die Würfe, senkrecht von 0 (unten) bis 1 (oben). <!----></p><p class="maschine-satz" aria-live="polite" data-v-e54758cf>Noch kein Wurf. <!----></p><table class="maschine-tabelle" data-v-e54758cf><caption data-v-e54758cf> Häufigkeiten nach 0 Würfen</caption><thead data-v-e54758cf><tr data-v-e54758cf><th scope="col" data-v-e54758cf>Ergebnis</th><th scope="col" data-v-e54758cf>absolute Häufigkeit</th><th scope="col" data-v-e54758cf>relative Häufigkeit</th></tr></thead><tbody data-v-e54758cf><!--[--><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>Rot</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="beobachtet" data-v-e54758cf><th scope="row" data-v-e54758cf>Blau</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>Gelb</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><!--]--></tbody></table></div></div>
+<div class="explainer-nojs"><p>Die Zufallsmaschine dreht ein Glücksrad mit vier gleich großen Feldern: zwei rot, eins blau, eins gelb. Beobachtet
+wird Blau. Ein Beispiel mit 1000 Drehungen: Rot 497-mal, Blau 252-mal, Gelb 251-mal. Die relative Häufigkeit
+von Blau ist 0,252 und liegt nahe bei 0,25. Die Wahrscheinlichkeit für Blau ist ein Viertel, also 0,25 oder
+25 %.</p></div>
+<script type="application/json" class="explainer-component-props">{"geraet":"gluecksrad","beobachte":"Blau","zeigeWert":true}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="3dcf9863" data-block-type="single-choice" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="gluecksrad-deuten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gluecksrad-deuten" data-id="gluecksrad-deuten" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die Linie pendelt sich bei 0,25 ein. Was bedeutet das für Blau?</legend>
+<label class="question-option"><input type="radio" name="frage-gluecksrad-deuten" value="0"> <span>Blau kommt bei jeder vierten Drehung.</span></label>
+<label class="question-option"><input type="radio" name="frage-gluecksrad-deuten" value="1"> <span>Auf lange Sicht ist ungefähr jede vierte Drehung Blau.</span></label>
+<label class="question-option"><input type="radio" name="frage-gluecksrad-deuten" value="2"> <span>Nach vier Drehungen ist genau einmal Blau dabei.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Blau kommt bei jeder vierten Drehung.</strong></p><p>Das stimmt nicht. Jede Drehung bleibt Zufall. Du kannst nicht sagen, bei welcher Drehung Blau kommt.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Auf lange Sicht ist ungefähr jede vierte Drehung Blau.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Genau das sagt die Wahrscheinlichkeit 0,25. Bei vielen Drehungen liegt der Anteil von Blau nahe bei 25 %.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nach vier Drehungen ist genau einmal Blau dabei.</strong></p><p>Auch das stimmt nicht. Bei vier Drehungen kann Blau keinmal oder mehrmals kommen.</p></li>
+</ul>
+<p class="question-explanation">Wahrscheinlichkeit beschreibt, wie oft etwas auf lange Sicht passiert, nicht, was beim nächsten Versuch passiert.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Blau kommt bei jeder vierten Drehung.</strong></p><p>Das stimmt nicht. Jede Drehung bleibt Zufall. Du kannst nicht sagen, bei welcher Drehung Blau kommt.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Auf lange Sicht ist ungefähr jede vierte Drehung Blau.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Genau das sagt die Wahrscheinlichkeit 0,25. Bei vielen Drehungen liegt der Anteil von Blau nahe bei 25 %.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nach vier Drehungen ist genau einmal Blau dabei.</strong></p><p>Auch das stimmt nicht. Bei vier Drehungen kann Blau keinmal oder mehrmals kommen.</p></li>
+</ul>
+<p class="question-explanation">Wahrscheinlichkeit beschreibt, wie oft etwas auf lange Sicht passiert, nicht, was beim nächsten Versuch passiert.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gluecksrad-deuten","text":"Die Linie pendelt sich bei 0,25 ein. Was bedeutet das für Blau?","explanation":"Wahrscheinlichkeit beschreibt, wie oft etwas auf lange Sicht passiert, nicht, was beim nächsten Versuch passiert.","links":[],"type":"single-choice","options":[{"text":"Blau kommt bei jeder vierten Drehung.","correct":false,"info":"Das stimmt nicht. Jede Drehung bleibt Zufall. Du kannst nicht sagen, bei welcher Drehung Blau kommt."},{"text":"Auf lange Sicht ist ungefähr jede vierte Drehung Blau.","correct":true,"info":"Genau das sagt die Wahrscheinlichkeit 0,25. Bei vielen Drehungen liegt der Anteil von Blau nahe bei 25 %."},{"text":"Nach vier Drehungen ist genau einmal Blau dabei.","correct":false,"info":"Auch das stimmt nicht. Bei vier Drehungen kann Blau keinmal oder mehrmals kommen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="5f25c851" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="keine-wahrscheinlichkeit">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-keine-wahrscheinlichkeit" data-id="keine-wahrscheinlichkeit" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Zahl kann keine Wahrscheinlichkeit sein?</legend>
+<label class="question-option"><input type="radio" name="frage-keine-wahrscheinlichkeit" value="0"> <span>0</span></label>
+<label class="question-option"><input type="radio" name="frage-keine-wahrscheinlichkeit" value="1"> <span>1,2</span></label>
+<label class="question-option"><input type="radio" name="frage-keine-wahrscheinlichkeit" value="2"> <span>0,35</span></label>
+<label class="question-option"><input type="radio" name="frage-keine-wahrscheinlichkeit" value="3"> <span>1</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>0</strong></p><p>0 ist erlaubt. Es ist die Wahrscheinlichkeit eines unmöglichen Ereignisses.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>1,2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Wahrscheinlichkeiten liegen zwischen 0 und 1. Mehr als sicher geht nicht.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>0,35</strong></p><p>0,35 liegt zwischen 0 und 1 und ist erlaubt.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>1</strong></p><p>1 ist erlaubt. Es ist die Wahrscheinlichkeit eines sicheren Ereignisses.</p></li>
+</ul>
+<p class="question-explanation">Eine Wahrscheinlichkeit ist nie kleiner als 0 und nie größer als 1.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>0</strong></p><p>0 ist erlaubt. Es ist die Wahrscheinlichkeit eines unmöglichen Ereignisses.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>1,2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Wahrscheinlichkeiten liegen zwischen 0 und 1. Mehr als sicher geht nicht.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>0,35</strong></p><p>0,35 liegt zwischen 0 und 1 und ist erlaubt.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>1</strong></p><p>1 ist erlaubt. Es ist die Wahrscheinlichkeit eines sicheren Ereignisses.</p></li>
+</ul>
+<p class="question-explanation">Eine Wahrscheinlichkeit ist nie kleiner als 0 und nie größer als 1.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"keine-wahrscheinlichkeit","text":"Welche Zahl kann keine Wahrscheinlichkeit sein?","explanation":"Eine Wahrscheinlichkeit ist nie kleiner als 0 und nie größer als 1.","links":[],"type":"single-choice","options":[{"text":"0","correct":false,"info":"0 ist erlaubt. Es ist die Wahrscheinlichkeit eines unmöglichen Ereignisses."},{"text":"1,2","correct":true,"info":"Wahrscheinlichkeiten liegen zwischen 0 und 1. Mehr als sicher geht nicht."},{"text":"0,35","correct":false,"info":"0,35 liegt zwischen 0 und 1 und ist erlaubt."},{"text":"1","correct":false,"info":"1 ist erlaubt. Es ist die Wahrscheinlichkeit eines sicheren Ereignisses."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="16c39a64" data-block-type="true-false" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="genau-fuenfmal">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-genau-fuenfmal" data-id="genau-fuenfmal" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die Wahrscheinlichkeit für Kopf ist 0,5. Darum kommt bei 10 Münzwürfen genau 5-mal Kopf.</legend>
+<label class="question-option"><input type="radio" name="frage-genau-fuenfmal" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-genau-fuenfmal" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Bei 10 Würfen schwankt die Zahl der Kopfwürfe. Erst bei sehr vielen Würfen liegt der Anteil nahe bei 0,5. Genau fünfmal Kopf kann passieren, muss aber nicht.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Bei 10 Würfen schwankt die Zahl der Kopfwürfe. Erst bei sehr vielen Würfen liegt der Anteil nahe bei 0,5. Genau fünfmal Kopf kann passieren, muss aber nicht.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"genau-fuenfmal","text":"Die Wahrscheinlichkeit für Kopf ist 0,5. Darum kommt bei 10 Münzwürfen genau 5-mal Kopf.","explanation":"Bei 10 Würfen schwankt die Zahl der Kopfwürfe. Erst bei sehr vielen Würfen liegt der Anteil nahe bei 0,5. Genau fünfmal Kopf kann passieren, muss aber nicht.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="48ed8a3b" data-block-type="matching" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="ereignis-wert">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ereignis-wert" data-id="ereignis-wert" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Ereignis seine Wahrscheinlichkeit zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Ein Würfel zeigt eine Zahl von 1 bis 6.</span> <select name="frage-ereignis-wert-0" data-left="0"><option value="">bitte wählen</option><option value="2">0,5</option><option value="3">2</option><option value="1">0</option><option value="0">1</option></select></label></li>
+<li><label><span>Ein Würfel zeigt die 9.</span> <select name="frage-ereignis-wert-1" data-left="1"><option value="">bitte wählen</option><option value="2">0,5</option><option value="3">2</option><option value="1">0</option><option value="0">1</option></select></label></li>
+<li><label><span>Eine Münze zeigt Kopf.</span> <select name="frage-ereignis-wert-2" data-left="2"><option value="">bitte wählen</option><option value="2">0,5</option><option value="3">2</option><option value="1">0</option><option value="0">1</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Ein Würfel zeigt eine Zahl von 1 bis 6. – 1; Ein Würfel zeigt die 9. – 0; Eine Münze zeigt Kopf. – 0,5</p>
+<p class="question-explanation">Sicher ist 1, unmöglich ist 0, und eine faire Münze zeigt Kopf auf lange Sicht in der Hälfte der Würfe.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Ein Würfel zeigt eine Zahl von 1 bis 6. – 1; Ein Würfel zeigt die 9. – 0; Eine Münze zeigt Kopf. – 0,5</p>
+<p class="question-explanation">Sicher ist 1, unmöglich ist 0, und eine faire Münze zeigt Kopf auf lange Sicht in der Hälfte der Würfe.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ereignis-wert","text":"Ordne jedem Ereignis seine Wahrscheinlichkeit zu.","explanation":"Sicher ist 1, unmöglich ist 0, und eine faire Münze zeigt Kopf auf lange Sicht in der Hälfte der Würfe.","links":[],"type":"matching","pairs":[{"left":"Ein Würfel zeigt eine Zahl von 1 bis 6.","right":"1"},{"left":"Ein Würfel zeigt die 9.","right":"0"},{"left":"Eine Münze zeigt Kopf.","right":"0,5"}],"distractors":["2"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="a5046077" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="regen-deuten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Die Wahrscheinlichkeit für Regen ist 25 % an einem Tag in dieser Jahreszeit. Du schaust auf 20 Tage dieser Jahreszeit. An wie vielen davon erwartest du ungefähr Regen?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Tage sind 1 % von allen Tagen? Rechne dann auf p % hoch.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mn>25</mn><mn>100</mn></mfrac><mo>⋅</mo><mn>20</mn><mo>=</mo><mn>5</mn></mrow></math>, also ungefähr 5 Tage mit Regen.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Die Wahrscheinlichkeit für Regen ist 20 % an einem Tag in dieser Jahreszeit. Du schaust auf 200 Tage dieser Jahreszeit. An wie vielen davon erwartest du ungefähr Regen?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Tage sind 1 % von allen Tagen? Rechne dann auf p % hoch.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mn>20</mn><mn>100</mn></mfrac><mo>⋅</mo><mn>200</mn><mo>=</mo><mn>40</mn></mrow></math>, also ungefähr 40 Tage mit Regen.</li></ol><p><strong>Richtige Antwort:</strong> 40</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Die Wahrscheinlichkeit für Regen ist 10 % an einem Tag in dieser Jahreszeit. Du schaust auf 40 Tage dieser Jahreszeit. An wie vielen davon erwartest du ungefähr Regen?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Tage sind 1 % von allen Tagen? Rechne dann auf p % hoch.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mn>10</mn><mn>100</mn></mfrac><mo>⋅</mo><mn>40</mn><mo>=</mo><mn>4</mn></mrow></math>, also ungefähr 4 Tage mit Regen.</li></ol><p><strong>Richtige Antwort:</strong> 4</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"regen-deuten","given":{"n":{"oneOf":[20,40,200]},"p":{"oneOf":[10,20,25,30,40,60,75]}},"task":{"text":"Die Wahrscheinlichkeit für Regen ist {{p}} % an einem Tag in dieser Jahreszeit. Du schaust auf {{n}} Tage dieser Jahreszeit. An wie vielen davon erwartest du ungefähr Regen?"},"answer":{"value":"p * n / 100","compare":"number"},"mistakes":[{"value":"p","message":"Du hast die Prozentzahl als Anzahl der Tage genommen. {{p}} % von {{n}} Tagen heißt {{p}} von 100 Tagen. Rechne das auf {{n}} Tage um."},{"value":"n - p * n / 100","message":"Das sind die Tage ohne Regen. Gefragt sind die Tage mit Regen."}],"hint":"Wie viele Tage sind 1 % von allen Tagen? Rechne dann auf p % hoch.","steps":["$\\frac{{{p}}}{100} \\cdot {{n}} = {{answer}}$, also ungefähr {{answer}} Tage mit Regen."]},"templates":{"de":{"task":"Die Wahrscheinlichkeit für Regen ist ⟦p⟧ % an einem Tag in dieser Jahreszeit. Du schaust auf ⟦n⟧ Tage dieser Jahreszeit. An wie vielen davon erwartest du ungefähr Regen?","steps":["\u003cmath>\u003cmrow>\u003cmfrac>\u003cmtext>⟦p⟧\u003c/mtext>\u003cmn>100\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦n⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ungefähr ⟦answer⟧ Tage mit Regen."],"hint":"Wie viele Tage sind 1 % von allen Tagen? Rechne dann auf p % hoch.","messages":["Du hast die Prozentzahl als Anzahl der Tage genommen. ⟦p⟧ % von ⟦n⟧ Tagen heißt ⟦p⟧ von 100 Tagen. Rechne das auf ⟦n⟧ Tage um.","Das sind die Tage ohne Regen. Gefragt sind die Tage mit Regen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,9,10,12,13,14,15,16,22,26,32,36,47,53,70],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe: Stochastik – Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-stochastik","app":"Mathe: Stochastik – Wahrscheinlichkeit","root":"../../","repository":"lernapps/mathe-stochastik","revision":"f323240","page":{"title":"Wahrscheinlichkeitsbegriff","order":3}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../experimente/haeufigkeit-als-schaetzwert/">Zurück: Relative Häufigkeit als Schätzwert</a><a rel="next" href="../../experimente/simulationen/">Weiter: Simulationen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

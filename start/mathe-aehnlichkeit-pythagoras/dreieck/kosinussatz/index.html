@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Der Kosinussatz – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Den Kosinussatz aus Pythagoras herleiten und damit Seiten und Winkel berechnen, wenn kein Paar aus Seite und gegenüberliegendem Winkel bekannt ist." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../dreieck/kosinussatz/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../dreieck/">Das rechtwinklige Dreieck</a></li><li aria-current="page">Der Kosinussatz</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Der Kosinussatz</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../dreieck/kosinussatz/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧dreieck/kosinussatz/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"kosinussatz","title":"Der Kosinussatz","exercises":[{"id":"warum-nicht-pythagoras","section":"einstieg","numbered":false},{"id":"welcher-satz","section":"uebung","numbered":false},{"id":"satz-zuordnen","section":"uebung","numbered":false},{"id":"dritte-seite","section":"uebung","numbered":true},{"id":"winkel-drei-seiten","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","rueckblick"]},"tutor":"dreieck/kosinussatz/tutor/","markdown":"dreieck/kosinussatz/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Pythagoras mit einem Korrekturglied</a></li><li><a href="#beispiel">Zwei Beispiele</a></li><li><a href="#uebung">Übung</a></li><li><a href="#rueckblick">Das kannst du jetzt</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="92eb782d" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du in einem Dreieck zwei Seiten und den Winkel dazwischen kennst, aber kein Paar aus Seite und Gegenwinkel, brauchst du den Kosinussatz. Du lernst den Kosinussatz. Er ist der Satz des Pythagoras für Dreiecke ohne rechten Winkel. Damit berechnest du die dritte Seite aus zwei Seiten und dem eingeschlossenen Winkel, und Winkel aus drei Seiten. Danach weißt du, wann du Sinussatz und wann Kosinussatz brauchst.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="e7560ac5" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Zwei gerade Wege führen von der Schule aus zu einem Spielplatz und zu einem Teich. Sie sind 120 m und 150 m lang und schließen einen Winkel von 70° ein. Wie weit liegen Spielplatz und Teich auseinander? Ein Paar aus Seite und gegenüberliegendem Winkel ist nicht bekannt.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="2cdd0790" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="warum-nicht-pythagoras">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-warum-nicht-pythagoras" data-id="warum-nicht-pythagoras" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Kannst du den Abstand zwischen Spielplatz und Teich mit dem Satz des Pythagoras ausrechnen?</legend>
+<label class="question-option"><input type="radio" name="frage-warum-nicht-pythagoras" value="0"> <span>Ja, die beiden Wege sind die Katheten.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-nicht-pythagoras" value="1"> <span>Nein, der Winkel zwischen den Wegen ist nicht 90°.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-nicht-pythagoras" value="2"> <span>Ja, aber man muss zuerst die Wege addieren.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ja, die beiden Wege sind die Katheten.</strong></p><p>Nur wenn sie senkrecht aufeinander stehen. Bei 70° ist der Abstand kleiner als √(120² + 150²).</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Nein, der Winkel zwischen den Wegen ist nicht 90°.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Satz gilt nur im rechtwinkligen Dreieck. Hier misst der Winkel 70°, die Rechnung √(120² + 150²) wäre zu groß.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Ja, aber man muss zuerst die Wege addieren.</strong></p><p>Die Wege addieren gibt die Länge des Umwegs über die Schule, nicht den Abstand.</p></li>
+</ul>
+<p class="question-explanation">Pythagoras braucht einen rechten Winkel. Für beliebige Winkel brauchst du den Kosinussatz.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ja, die beiden Wege sind die Katheten.</strong></p><p>Nur wenn sie senkrecht aufeinander stehen. Bei 70° ist der Abstand kleiner als √(120² + 150²).</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Nein, der Winkel zwischen den Wegen ist nicht 90°.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Satz gilt nur im rechtwinkligen Dreieck. Hier misst der Winkel 70°, die Rechnung √(120² + 150²) wäre zu groß.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Ja, aber man muss zuerst die Wege addieren.</strong></p><p>Die Wege addieren gibt die Länge des Umwegs über die Schule, nicht den Abstand.</p></li>
+</ul>
+<p class="question-explanation">Pythagoras braucht einen rechten Winkel. Für beliebige Winkel brauchst du den Kosinussatz.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"warum-nicht-pythagoras","text":"Kannst du den Abstand zwischen Spielplatz und Teich mit dem Satz des Pythagoras ausrechnen?","explanation":"Pythagoras braucht einen rechten Winkel. Für beliebige Winkel brauchst du den Kosinussatz.","links":[],"type":"single-choice","options":[{"text":"Ja, die beiden Wege sind die Katheten.","correct":false,"info":"Nur wenn sie senkrecht aufeinander stehen. Bei 70° ist der Abstand kleiner als √(120² + 150²)."},{"text":"Nein, der Winkel zwischen den Wegen ist nicht 90°.","correct":true,"info":"Der Satz gilt nur im rechtwinkligen Dreieck. Hier misst der Winkel 70°, die Rechnung √(120² + 150²) wäre zu groß."},{"text":"Ja, aber man muss zuerst die Wege addieren.","correct":false,"info":"Die Wege addieren gibt die Länge des Umwegs über die Schule, nicht den Abstand."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Pythagoras mit einem Korrekturglied</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="f8ed845b" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn der Winkel nicht 90° ist, stimmt Pythagoras nicht mehr. Der Kosinussatz sagt, wie viel fehlt. Du zerlegst das Dreieck wieder mit einer Höhe. Im Bild unten fällt die Höhe <em>h</em> von B senkrecht auf die Seite <em>b</em>. Der Punkt D teilt <em>b</em> in <em>x</em> und <em>b</em> − <em>x</em>. Im Dreieck ABD gilt <math><mrow><mi>x</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math> und <math><mrow><mi>h</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="7f0bc8a9" data-block-type="figure" data-block-order="5">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/dreieck-hoehe-b.svg" alt="Spitzwinkliges Dreieck ABC mit der gestrichelten Höhe h von B auf die Seite b. Der Fußpunkt D teilt b in die Strecken x und b minus x. Der Winkel bei A ist α." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Die Höhe h von B teilt b in x und b − x.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="38d22bfc" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Im Dreieck DBC ist <em>a</em> die Hypotenuse, mit Pythagoras gilt <math><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mi>h</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>b</mi><mo>−</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math>. Setze <em>h</em> und <em>x</em> ein (erste Zeile). Multiplizierst du die Klammer aus und sammelst die Glieder mit <em>c</em>², entsteht die zweite Zeile.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="725eb4ac" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn class="tml-sml-pad">2</mn></msup><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mspace width="0.1667em"></mspace><mi>α</mi><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>b</mi><mo>−</mo><mi>c</mi><mrow><mspace width="0.1667em"></mspace><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="50bebd4e" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>b</mi><mi>c</mi><mrow><mspace width="0.1667em"></mspace><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>+</mo><msup><mi>c</mi><mn class="tml-sml-pad">2</mn></msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mspace width="0.1667em"></mspace><mi>α</mi><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mspace width="0.1667em"></mspace><mi>α</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="9742ade1" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Es gilt <math><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mspace width="0.1667em"></mspace><mi>α</mi><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mspace width="0.1667em"></mspace><mi>α</mi><mo>=</mo><mn>1</mn></mrow></math>. Das folgt aus dem Satz des Pythagoras im Dreieck ABD mit <math><mrow><msup><mi>h</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><msup><mi>c</mi><mn class="tml-sml-pad">2</mn></msup></mrow></math>, geteilt durch <math><msup><mi>c</mi><mn class="tml-sml-pad">2</mn></msup></math>: <math><mrow><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mi>h</mi><mi>c</mi></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mi>x</mi><mi>c</mi></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow></math>, und <math><mrow><mfrac><mi>h</mi><mi>c</mi></mfrac><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math>, <math><mrow><mfrac><mi>x</mi><mi>c</mi></mfrac><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math>. Dann bleibt:</p></div>
+</div>
+<div class="explainer-block" data-block="idee/7" data-block-id="661297f3" data-block-type="definition" data-block-order="10">
+<dl class="explainer-definition"><dt><dfn id="begriff-kosinussatz"><a href="../../glossar/#kosinussatz">Kosinussatz</a></dfn></dt><dd><p>In jedem Dreieck ist das Quadrat einer Seite gleich der Summe der Quadrate der beiden anderen Seiten minus dem doppelten Produkt dieser Seiten und dem Kosinus des eingeschlossenen Winkels.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/8" data-block-id="a519d089" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>2</mn><mi>b</mi><mi>c</mi><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/9" data-block-id="b5a4c6d4" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Der Winkel <em>α</em> liegt zwischen den Seiten <em>b</em> und <em>c</em>. Bei <em>α</em> = 90° ist der Kosinus 0, und der Kosinussatz wird zum Satz des Pythagoras. Bei stumpfem Winkel ist der Kosinus negativ, dann wird die Seite <em>a</em> größer. Das Bild zeigt ein spitzwinkliges Dreieck. Ist α stumpf, liegt der Fußpunkt D außerhalb der Seite <em>b</em>, und cos α ist negativ. Die Rechnung bleibt dieselbe.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/10" data-block-id="fa12269b" data-block-type="note" data-block-order="13">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/10/1" data-block-id="e9b40a70" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Im Kosinussatz steht auf der linken Seite die Seite <em>a</em> gegenüber von <em>α</em>. Rechts stehen die beiden anderen Seiten und der Winkel dazwischen. Willst du den Winkel, stellst du nach dem Kosinus um und nutzt cos⁻¹.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/11" data-block-id="a21bb209" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Damit du bei einer Aufgabe nicht raten musst, welcher der beiden Sätze passt, hilft diese Übersicht.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/12" data-block-id="8d81bc98" data-block-type="table" data-block-order="16">
+<div class="block-table" role="region" aria-label="Welcher Satz passt zu welcher Angabe?" tabindex="0"><table><caption>Welcher Satz passt zu welcher Angabe?</caption><thead><tr><th scope="col">Gegeben</th><th scope="col">Satz</th></tr></thead><tbody><tr><td>Zwei Winkel und eine Seite</td><td>Sinussatz</td></tr><tr><td>Zwei Seiten und der Winkel gegenüber einer von ihnen</td><td>Sinussatz</td></tr><tr><td>Zwei Seiten und der eingeschlossene Winkel</td><td>Kosinussatz</td></tr><tr><td>Alle drei Seiten</td><td>Kosinussatz</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Zwei Beispiele</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="ece72cee" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Wenn du den Kosinussatz anwenden willst, brauchst du zwei Fälle: die dritte Seite aus zwei Seiten und dem Winkel dazwischen und einen Winkel aus drei Seiten.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="09bb1d97" data-block-type="example" data-block-order="18">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Abstand von Spielplatz und Teich</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="4d2ea195" data-block-type="text" data-block-order="19">
+<div class="block-text"><p>Wenn du den Abstand zweier Orte brauchst und nur die Wege und den Winkel kennst, setzt du sie in den Kosinussatz ein. Gegeben: <math><mrow><mi>b</mi><mo>=</mo><mn>120</mn></mrow></math> m, <math><mrow><mi>c</mi><mo>=</mo><mn>150</mn></mrow></math> m und <math><mrow><mi>α</mi><mo>=</mo><msup><mn>70</mn><mo>∘</mo></msup></mrow></math> zwischen ihnen.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="59e7de22" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Es ist <math><mrow><msup><mn>120</mn><mn>2</mn></msup><mo>=</mo><mn>14</mn><mspace width="0.1667em"></mspace><mn>400</mn></mrow></math>, <math><mrow><msup><mn>150</mn><mn>2</mn></msup><mo>=</mo><mn>22</mn><mspace width="0.1667em"></mspace><mn>500</mn></mrow></math> und <math><mrow><mn>2</mn><mo>⋅</mo><mn>120</mn><mo>⋅</mo><mn>150</mn><mo>=</mo><mn>36</mn><mspace width="0.1667em"></mspace><mn>000</mn></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="29915230" data-block-type="formula" data-block-order="21">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mn>14</mn><mspace width="0.1667em"></mspace><mn>400</mn><mo>+</mo><mn>22</mn><mspace width="0.1667em"></mspace><mn>500</mn><mo>−</mo><mn>36</mn><mspace width="0.1667em"></mspace><mn>000</mn><mrow><mspace width="0.1667em"></mspace><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>70</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/4" data-block-id="ce8b0ee6" data-block-type="formula" data-block-order="22">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>≈</mo><mn>36</mn><mspace width="0.1667em"></mspace><mn>900</mn><mo>−</mo><mn>12</mn><mspace width="0.1667em"></mspace><mn>313</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/5" data-block-id="7ebf7eeb" data-block-type="formula" data-block-order="23">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>≈</mo><mn>24</mn><mspace width="0.1667em"></mspace><mn>587</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/6" data-block-id="615898d4" data-block-type="text" data-block-order="24">
+<div class="block-text"><p>Der Abstand ist <math><mrow><mi>a</mi><mo>=</mo><msqrt><mrow><mn>24</mn><mspace width="0.1667em"></mspace><mn>587</mn></mrow></msqrt><mo>≈</mo><mn>156,8</mn></mrow></math> m. Ohne den Winkel hätte Pythagoras <math><mrow><msqrt><mrow><mn>36</mn><mspace width="0.1667em"></mspace><mn>900</mn></mrow></msqrt><mo>≈</mo><mn>192,1</mn></mrow></math> m ergeben.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="2e5ca76a" data-block-type="example" data-block-order="25">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Einen Winkel aus drei Seiten</h3>
+<div class="explainer-block" data-block="beispiel/3/1" data-block-id="8b23f4c0" data-block-type="text" data-block-order="26">
+<div class="block-text"><p>Wenn alle drei Seiten bekannt sind und du einen Winkel brauchst, stellst du den Kosinussatz nach dem Kosinus um. Ein Dreieck hat die Seiten <math><mrow><mi>a</mi><mo>=</mo><mn>7</mn></mrow></math> cm, <math><mrow><mi>b</mi><mo>=</mo><mn>8</mn></mrow></math> cm und <math><mrow><mi>c</mi><mo>=</mo><mn>9</mn></mrow></math> cm. Gesucht ist <math><mi>α</mi></math>. Im Zähler steht <math><mrow><mn>64</mn><mo>+</mo><mn>81</mn><mo>−</mo><mn>49</mn><mo>=</mo><mn>96</mn></mrow></math>, im Nenner <math><mrow><mn>2</mn><mo>⋅</mo><mn>8</mn><mo>⋅</mo><mn>9</mn><mo>=</mo><mn>144</mn></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/2" data-block-id="7137031d" data-block-type="formula" data-block-order="27">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>b</mi><mi>c</mi></mrow></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/3" data-block-id="2feeb5f9" data-block-type="formula" data-block-order="28">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>96</mn><mn>144</mn></mfrac><mo>≈</mo><mn>0,667</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/4" data-block-id="37522f9e" data-block-type="formula" data-block-order="29">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><msup><mi>cos</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>0,667</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>≈</mo><msup><mn>48,2</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="cbb0c1c1" data-block-type="single-choice" data-block-order="30">
+<div class="explainer-exercise explainer-question" id="welcher-satz">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welcher-satz" data-id="welcher-satz" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Von einem Dreieck sind zwei Seiten und der Winkel bekannt, den diese beiden Seiten einschließen. Du suchst die dritte Seite. Welchen Satz nimmst du?</legend>
+<label class="question-option"><input type="radio" name="frage-welcher-satz" value="0"> <span>den Sinussatz</span></label>
+<label class="question-option"><input type="radio" name="frage-welcher-satz" value="1"> <span>den Satz des Pythagoras</span></label>
+<label class="question-option"><input type="radio" name="frage-welcher-satz" value="2"> <span>den Kosinussatz</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>den Sinussatz</strong></p><p>Der Sinussatz braucht ein Paar aus Seite und gegenüberliegendem Winkel. Das gibt es hier nicht, der Winkel liegt zwischen den Seiten.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>den Satz des Pythagoras</strong></p><p>Der gilt nur im rechtwinkligen Dreieck. Ist der Winkel nicht 90°, gibt er einen falschen Wert.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>den Kosinussatz</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zwei Seiten und der eingeschlossene Winkel sind genau die Angaben, für die der Kosinussatz gebaut ist.</p></li>
+</ul>
+<p class="question-explanation">Zwei Seiten und der eingeschlossene Winkel führen zum Kosinussatz.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>den Sinussatz</strong></p><p>Der Sinussatz braucht ein Paar aus Seite und gegenüberliegendem Winkel. Das gibt es hier nicht, der Winkel liegt zwischen den Seiten.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>den Satz des Pythagoras</strong></p><p>Der gilt nur im rechtwinkligen Dreieck. Ist der Winkel nicht 90°, gibt er einen falschen Wert.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>den Kosinussatz</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zwei Seiten und der eingeschlossene Winkel sind genau die Angaben, für die der Kosinussatz gebaut ist.</p></li>
+</ul>
+<p class="question-explanation">Zwei Seiten und der eingeschlossene Winkel führen zum Kosinussatz.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welcher-satz","text":"Von einem Dreieck sind zwei Seiten und der Winkel bekannt, den diese beiden Seiten einschließen. Du suchst die dritte Seite. Welchen Satz nimmst du?","explanation":"Zwei Seiten und der eingeschlossene Winkel führen zum Kosinussatz.","links":[],"type":"single-choice","options":[{"text":"den Sinussatz","correct":false,"info":"Der Sinussatz braucht ein Paar aus Seite und gegenüberliegendem Winkel. Das gibt es hier nicht, der Winkel liegt zwischen den Seiten."},{"text":"den Satz des Pythagoras","correct":false,"info":"Der gilt nur im rechtwinkligen Dreieck. Ist der Winkel nicht 90°, gibt er einen falschen Wert."},{"text":"den Kosinussatz","correct":true,"info":"Zwei Seiten und der eingeschlossene Winkel sind genau die Angaben, für die der Kosinussatz gebaut ist."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="cd095f7b" data-block-type="matching" data-block-order="31">
+<div class="explainer-exercise explainer-question" id="satz-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-satz-zuordnen" data-id="satz-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jeder Aufgabe den passenden Satz zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Zwei Winkel und eine Seite gegeben (Seite liegt einem Winkel gegenüber)</span> <select name="frage-satz-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="1">Kosinussatz für die dritte Seite</option><option value="0">Sinussatz mit Seite und Gegenwinkel</option><option value="2">Kosinussatz nach dem Winkel umgestellt</option></select></label></li>
+<li><label><span>Zwei Seiten und der Winkel dazwischen gegeben (dritte Seite gesucht)</span> <select name="frage-satz-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="1">Kosinussatz für die dritte Seite</option><option value="0">Sinussatz mit Seite und Gegenwinkel</option><option value="2">Kosinussatz nach dem Winkel umgestellt</option></select></label></li>
+<li><label><span>Alle drei Seiten gegeben (Winkel gesucht)</span> <select name="frage-satz-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="1">Kosinussatz für die dritte Seite</option><option value="0">Sinussatz mit Seite und Gegenwinkel</option><option value="2">Kosinussatz nach dem Winkel umgestellt</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Zwei Winkel und eine Seite gegeben (Seite liegt einem Winkel gegenüber) – Sinussatz mit Seite und Gegenwinkel; Zwei Seiten und der Winkel dazwischen gegeben (dritte Seite gesucht) – Kosinussatz für die dritte Seite; Alle drei Seiten gegeben (Winkel gesucht) – Kosinussatz nach dem Winkel umgestellt</p>
+<p class="question-explanation">Ein Paar aus Seite und gegenüberliegendem Winkel führt zum Sinussatz. Fehlt es, brauchst du den Kosinussatz.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Zwei Winkel und eine Seite gegeben (Seite liegt einem Winkel gegenüber) – Sinussatz mit Seite und Gegenwinkel; Zwei Seiten und der Winkel dazwischen gegeben (dritte Seite gesucht) – Kosinussatz für die dritte Seite; Alle drei Seiten gegeben (Winkel gesucht) – Kosinussatz nach dem Winkel umgestellt</p>
+<p class="question-explanation">Ein Paar aus Seite und gegenüberliegendem Winkel führt zum Sinussatz. Fehlt es, brauchst du den Kosinussatz.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"satz-zuordnen","text":"Ordne jeder Aufgabe den passenden Satz zu.","explanation":"Ein Paar aus Seite und gegenüberliegendem Winkel führt zum Sinussatz. Fehlt es, brauchst du den Kosinussatz.","links":[],"type":"matching","pairs":[{"left":"Zwei Winkel und eine Seite gegeben (Seite liegt einem Winkel gegenüber)","right":"Sinussatz mit Seite und Gegenwinkel"},{"left":"Zwei Seiten und der Winkel dazwischen gegeben (dritte Seite gesucht)","right":"Kosinussatz für die dritte Seite"},{"left":"Alle drei Seiten gegeben (Winkel gesucht)","right":"Kosinussatz nach dem Winkel umgestellt"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="0c111a5f" data-block-type="generated" data-block-order="32">
+<div class="explainer-exercise explainer-generated" id="dritte-seite">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Zwei gerade Wege gehen von der Schule aus. Sie sind 50 m und 100 m lang und schließen den Winkel α = 120° ein. Wie weit sind ihre Enden voneinander entfernt? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Kosinussatz: a² = b² + c² − 2 · b · c · cos α. Am Ende die Wurzel ziehen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mn>50</mn><mn>2</mn></msup><mo>+</mo><msup><mn>100</mn><mn>2</mn></msup><mo>−</mo><mn>2</mn><mo>⋅</mo><mn>50</mn><mo>⋅</mo><mn>100</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>120</mn><mo>∘</mo></msup></mrow></math>, also <math><mrow><mi>a</mi><mo>≈</mo><mn>132,3</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 132,3 m (erlaubte Abweichung: 0,05 m)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Zwei gerade Wege gehen von der Schule aus. Sie sind 120 m und 90 m lang und schließen den Winkel α = 40° ein. Wie weit sind ihre Enden voneinander entfernt? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Kosinussatz: a² = b² + c² − 2 · b · c · cos α. Am Ende die Wurzel ziehen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mn>120</mn><mn>2</mn></msup><mo>+</mo><msup><mn>90</mn><mn>2</mn></msup><mo>−</mo><mn>2</mn><mo>⋅</mo><mn>120</mn><mo>⋅</mo><mn>90</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>40</mn><mo>∘</mo></msup></mrow></math>, also <math><mrow><mi>a</mi><mo>≈</mo><mn>77,2</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 77,2 m (erlaubte Abweichung: 0,05 m)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Zwei gerade Wege gehen von der Schule aus. Sie sind 80 m und 130 m lang und schließen den Winkel α = 50° ein. Wie weit sind ihre Enden voneinander entfernt? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Kosinussatz: a² = b² + c² − 2 · b · c · cos α. Am Ende die Wurzel ziehen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><msup><mn>80</mn><mn>2</mn></msup><mo>+</mo><msup><mn>130</mn><mn>2</mn></msup><mo>−</mo><mn>2</mn><mo>⋅</mo><mn>80</mn><mo>⋅</mo><mn>130</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>50</mn><mo>∘</mo></msup></mrow></math>, also <math><mrow><mi>a</mi><mo>≈</mo><mn>99,6</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 99,6 m (erlaubte Abweichung: 0,05 m)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"dritte-seite","given":{"b":{"int":[40,120],"step":10},"c":{"int":[50,150],"step":10},"alpha":{"oneOf":[40,50,60,70,110,120,130]}},"where":["b != c"],"task":{"text":"Zwei gerade Wege gehen von der Schule aus. Sie sind {{b}} m und {{c}} m lang und schließen den Winkel α = {{alpha}}° ein. Wie weit sind ihre Enden voneinander entfernt? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(sqrt(b * b + c * c - 2 * b * c * cos(alpha)), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05,"unit":"m"}}},"mistakes":[{"value":"round(sqrt(b * b + c * c), 1)","message":"Das ist der Satz des Pythagoras. Er gilt nur bei 90°. Beim Kosinussatz kommt noch minus 2 · b · c · cos α dazu."},{"value":"round(sqrt(b * b + c * c + 2 * b * c * cos(alpha)), 1)","message":"Das Vorzeichen stimmt nicht. Im Kosinussatz wird 2 · b · c · cos α subtrahiert."},{"value":"round(b * b + c * c - 2 * b * c * cos(alpha), 1)","message":"Das ist a², noch nicht a. Zieh die Wurzel."}],"hint":"Kosinussatz: a² = b² + c² − 2 · b · c · cos α. Am Ende die Wurzel ziehen.","steps":["$a^2 = {{b}}^2 + {{c}}^2 - 2 \\cdot {{b}} \\cdot {{c}} \\cdot \\cos {{alpha}}^\\circ$, also $a \\approx {{answer}}$ m."]},"templates":{"de":{"task":"Zwei gerade Wege gehen von der Schule aus. Sie sind ⟦b⟧ m und ⟦c⟧ m lang und schließen den Winkel α = ⟦alpha⟧° ein. Wie weit sind ihre Enden voneinander entfernt? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmsup>\u003cmi>a\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmsup>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>−\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>cos\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmsup>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>a\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math> m."],"hint":"Kosinussatz: a² = b² + c² − 2 · b · c · cos α. Am Ende die Wurzel ziehen.","messages":["Das ist der Satz des Pythagoras. Er gilt nur bei 90°. Beim Kosinussatz kommt noch minus 2 · b · c · cos α dazu.","Das Vorzeichen stimmt nicht. Im Kosinussatz wird 2 · b · c · cos α subtrahiert.","Das ist a², noch nicht a. Zieh die Wurzel."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,49,50,51,52,53,54,55,56,58,59,60,61,62,63,65,66,67,68,69,70,71,72],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="0860cb90" data-block-type="generated" data-block-order="33">
+<div class="explainer-exercise explainer-generated" id="winkel-drei-seiten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Dreieck hat die Seiten a = 10 cm, b = 11 cm und c = 14 cm. Wie groß ist der Winkel α, der der Seite a gegenüberliegt? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Stelle den Kosinussatz nach cos α um: cos α = (b² + c² − a²) : (2 · b · c). Dann cos⁻¹.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mrow><msup><mn>11</mn><mn>2</mn></msup><mo>+</mo><msup><mn>14</mn><mn>2</mn></msup><mo>−</mo><msup><mn>10</mn><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⋅</mo><mn>11</mn><mo>⋅</mo><mn>14</mn></mrow></mfrac></mrow></math>, also <math><mrow><mi>α</mi><mo>≈</mo><msup><mn>45,2</mn><mo>∘</mo></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 45,2 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Dreieck hat die Seiten a = 6 cm, b = 8 cm und c = 9 cm. Wie groß ist der Winkel α, der der Seite a gegenüberliegt? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Stelle den Kosinussatz nach cos α um: cos α = (b² + c² − a²) : (2 · b · c). Dann cos⁻¹.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mrow><msup><mn>8</mn><mn>2</mn></msup><mo>+</mo><msup><mn>9</mn><mn>2</mn></msup><mo>−</mo><msup><mn>6</mn><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⋅</mo><mn>8</mn><mo>⋅</mo><mn>9</mn></mrow></mfrac></mrow></math>, also <math><mrow><mi>α</mi><mo>≈</mo><msup><mn>40,8</mn><mo>∘</mo></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 40,8 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Dreieck hat die Seiten a = 6 cm, b = 11 cm und c = 12 cm. Wie groß ist der Winkel α, der der Seite a gegenüberliegt? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Stelle den Kosinussatz nach cos α um: cos α = (b² + c² − a²) : (2 · b · c). Dann cos⁻¹.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mrow><msup><mn>11</mn><mn>2</mn></msup><mo>+</mo><msup><mn>12</mn><mn>2</mn></msup><mo>−</mo><msup><mn>6</mn><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⋅</mo><mn>11</mn><mo>⋅</mo><mn>12</mn></mrow></mfrac></mrow></math>, also <math><mrow><mi>α</mi><mo>≈</mo><msup><mn>29,8</mn><mo>∘</mo></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 29,8 (erlaubte Abweichung: 0,05)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-drei-seiten","given":{"a":{"int":[5,10]},"b":{"int":[6,12]},"c":{"int":[7,14]}},"where":["a \u003c b","b \u003c c","c \u003c a + b","(b * b + c * c - a * a) / (2 * b * c) \u003c 0.99"],"task":{"text":"Ein Dreieck hat die Seiten a = {{a}} cm, b = {{b}} cm und c = {{c}} cm. Wie groß ist der Winkel α, der der Seite a gegenüberliegt? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(acos((b * b + c * c - a * a) / (2 * b * c)), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05}}},"mistakes":[{"value":"round(asin((b * b + c * c - a * a) / (2 * b * c)), 1)","message":"Du hast sin⁻¹ statt cos⁻¹ benutzt. Der Kosinussatz liefert den Kosinus des Winkels."},{"value":"round(acos((a * a + b * b - c * c) / (2 * a * b)), 1)","message":"Das ist der Winkel γ gegenüber von c. Gesucht ist α gegenüber von a, also steht a² allein und wird subtrahiert."}],"hint":"Stelle den Kosinussatz nach cos α um: cos α = (b² + c² − a²) : (2 · b · c). Dann cos⁻¹.","steps":["$\\cos \\alpha = \\frac{{{b}}^2 + {{c}}^2 - {{a}}^2}{2 \\cdot {{b}} \\cdot {{c}}}$, also $\\alpha \\approx {{answer}}^\\circ$."]},"templates":{"de":{"task":"Ein Dreieck hat die Seiten a = ⟦a⟧ cm, b = ⟦b⟧ cm und c = ⟦c⟧ cm. Wie groß ist der Winkel α, der der Seite a gegenüberliegt? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmrow>\u003cmi>cos\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmsup>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmsup>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>−\u003c/mo>\u003cmsup>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>α\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmsup>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Stelle den Kosinussatz nach cos α um: cos α = (b² + c² − a²) : (2 · b · c). Dann cos⁻¹.","messages":["Du hast sin⁻¹ statt cos⁻¹ benutzt. Der Kosinussatz liefert den Kosinus des Winkels.","Das ist der Winkel γ gegenüber von c. Gesucht ist α gegenüber von a, also steht a² allein und wird subtrahiert."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,43,45,46,47,48,50,52,56,57,60,61,62,64,67,69,70,71,74,78,81,83,87,90,93,96,98,99,100],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="rueckblick">Das kannst du jetzt</h2>
+<div class="explainer-block" data-block="rueckblick/1" data-block-id="3c4f3811" data-block-type="text" data-block-order="34">
+<div class="block-text"><ul>
+<li>Du erkennst im rechtwinkligen Dreieck Katheten und Hypotenuse und rechnest mit dem Satz des Pythagoras.</li>
+<li>Du kennst Sinus, Kosinus und Tangens als Seitenverhältnisse und berechnest damit Seiten und Winkel.</li>
+<li>In Dreiecken ohne rechten Winkel wählst du zwischen Sinussatz und Kosinussatz und berechnest Seiten und Winkel.</li>
+</ul></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Der Kosinussatz","order":12}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../dreieck/sinussatz/">Zurück: Der Sinussatz</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Das Steigungsdreieck – Zuordnungen und lineare Funktionen</title>
+    <meta name="description" content="Du bestimmst die Steigung einer Geraden mit einem Steigungsdreieck und deutest sie im Sachzusammenhang." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../geraden/steigung-deuten/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../geraden/">Geraden mit Schiebereglern</a></li><li aria-current="page">Das Steigungsdreieck</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Das Steigungsdreieck</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../geraden/steigung-deuten/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧geraden/steigung-deuten/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"steigung-deuten","title":"Das Steigungsdreieck","exercises":[{"id":"steigung-steigend","section":"uebung","numbered":true},{"id":"steigung-fallend","section":"uebung","numbered":true},{"id":"becken-steigung","section":"uebung","numbered":false},{"id":"m-deuten","section":"uebung","numbered":false}],"sections":["einstieg","erklaerung","beispiel","uebung"]},"tutor":"geraden/steigung-deuten/tutor/","markdown":"geraden/steigung-deuten/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wie steil ist die Gerade?</a></li><li><a href="#erklaerung">Δy durch Δx</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wie steil ist die Gerade?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="25a48873" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Der Handyvertrag von Jonas ist eine Gerade: Sie steigt von links unten nach rechts oben. Wie steil, sagt die Steigung <math><mi>m</mi></math>. Nach dieser Seite liest du
+<math><mi>m</mi></math> mit einem <strong>Steigungsdreieck</strong> aus dem Graphen und sagst, was <math><mi>m</mi></math> bedeutet.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="3c1d2796" data-block-type="figure" data-block-order="2">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/steigungsdreieck.svg" alt="Koordinatensystem mit einer steigenden Geraden. Ein gestricheltes Dreieck liegt an der Geraden: zwei Einheiten nach rechts, vier nach oben." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Das gestrichelte Dreieck: Δx = 2 nach rechts, Δy = 4 nach oben.</p></figcaption></figure>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="erklaerung">Δy durch Δx</h2>
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="316dbdcc" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du wissen willst, wie schnell sich etwas ändert, zum Beispiel der Preis pro Kilometer, misst du die Steigung.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="d8a57730" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Gehe auf der Geraden von einem Punkt ein Stück nach rechts (<math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math>) und miss, wie weit es nach oben geht (<math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math>). Die Steigung ist
+<math><mi>m</mi></math> = <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> : <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math>. Im Bild: 4 : 2 = 2. Bei jedem Schritt nach rechts steigt die Gerade um 2.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="d3dee034" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>m</mi><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/4" data-block-id="af8b53c7" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="erklaerung/4/1" data-block-id="cdee3a11" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Geht die Gerade nach rechts <strong>nach unten</strong>, ist <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> negativ und <math><mi>m</mi></math> negativ. In Sachaufgaben sagt <math><mi>m</mi></math>, wie sich <math><mi>y</mi></math> <strong>pro Einheit von <math><mi>x</mi></math></strong>
+ändert, zum Beispiel Liter pro Minute.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="edaf65b2" data-block-type="example" data-block-order="8">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Das Becken leert sich</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="a22618db" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Ein Becken hat 60 Liter. Nach 2 Minuten sind es 50 Liter. <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> = 2 min, <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> = −10 Liter. Also <math><mrow><mi>m</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>10</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>2</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>5</mn></mrow></math>. Das Becken verliert 5 Liter pro Minute.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="6b554572" data-block-type="generated" data-block-order="10">
+<div class="explainer-exercise explainer-generated" id="steigung-steigend">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Steigungsdreieck geht 2 nach rechts und 6 nach oben. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>m = Δy : Δx. Welche Zahl gehört nach oben, welche nach rechts?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mi>m</mi></math> = <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> : <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> = 6 : 2 = 3.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Steigungsdreieck geht 5 nach rechts und 5 nach oben. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>m = Δy : Δx. Welche Zahl gehört nach oben, welche nach rechts?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mi>m</mi></math> = <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> : <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> = 5 : 5 = 1.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Steigungsdreieck geht 2 nach rechts und 8 nach oben. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>m = Δy : Δx. Welche Zahl gehört nach oben, welche nach rechts?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mi>m</mi></math> = <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> : <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> = 8 : 2 = 4.</li></ol><p><strong>Richtige Antwort:</strong> 4</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"steigung-steigend","given":{"e":{"pick":1,"from":{"data":"steigung-dreiecke"}}},"task":{"text":"Ein Steigungsdreieck geht {{e.dx}} nach rechts und {{e.dy}} nach oben. Wie groß ist die Steigung $m$?"},"answer":{"value":"e.m","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"e.dy - e.dx","message":"Du hast subtrahiert. Die Steigung ist der Quotient: Δy geteilt durch Δx."},{"value":"e.dx * e.dy","message":"Du hast malgenommen. Die Steigung ist Δy geteilt durch Δx."}],"hint":"m = Δy : Δx. Welche Zahl gehört nach oben, welche nach rechts?","steps":["$m$ = $\\Delta y$ : $\\Delta x$ = {{e.dy}} : {{e.dx}} = {{e.m}}."]},"templates":{"de":{"task":"Ein Steigungsdreieck geht ⟦e.dx⟧ nach rechts und ⟦e.dy⟧ nach oben. Wie groß ist die Steigung \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>?","steps":["\u003cmath>\u003cmi>m\u003c/mi>\u003c/math> = \u003cmath>\u003cmrow>\u003cmrow>\u003cmi mathvariant=\"normal\">Δ\u003c/mi>\u003cmspace>\u003c/mspace>\u003c/mrow>\u003cmi>y\u003c/mi>\u003c/mrow>\u003c/math> : \u003cmath>\u003cmrow>\u003cmrow>\u003cmi mathvariant=\"normal\">Δ\u003c/mi>\u003cmspace>\u003c/mspace>\u003c/mrow>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math> = ⟦e.dy⟧ : ⟦e.dx⟧ = ⟦e.m⟧."],"hint":"m = Δy : Δx. Welche Zahl gehört nach oben, welche nach rechts?","messages":["Du hast subtrahiert. Die Steigung ist der Quotient: Δy geteilt durch Δx.","Du hast malgenommen. Die Steigung ist Δy geteilt durch Δx."]}},"data":{"steigung-dreiecke":[{"dx":2,"dy":6,"m":3},{"dx":3,"dy":6,"m":2},{"dx":4,"dy":12,"m":3},{"dx":2,"dy":8,"m":4},{"dx":5,"dy":5,"m":1},{"dx":3,"dy":9,"m":3},{"dx":4,"dy":8,"m":2}]},"seeds":[1,2,3,5,7,15,18],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="c9835238" data-block-type="generated" data-block-order="11">
+<div class="explainer-exercise explainer-generated" id="steigung-fallend">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Gerade fällt: Von einem Punkt geht es 2 nach rechts und 6 nach unten. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Nach unten heißt: Δy ist negativ. Teile Δy durch Δx.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> ist negativ, <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> ist positiv. Der Quotient hat ein Minus.</li></ol><p><strong>Richtige Antwort:</strong> −3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Gerade fällt: Von einem Punkt geht es 2 nach rechts und 8 nach unten. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Nach unten heißt: Δy ist negativ. Teile Δy durch Δx.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> ist negativ, <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> ist positiv. Der Quotient hat ein Minus.</li></ol><p><strong>Richtige Antwort:</strong> −4</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Gerade fällt: Von einem Punkt geht es 3 nach rechts und 9 nach unten. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Nach unten heißt: Δy ist negativ. Teile Δy durch Δx.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi></mrow></math> ist negativ, <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi></mrow></math> ist positiv. Der Quotient hat ein Minus.</li></ol><p><strong>Richtige Antwort:</strong> −3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"steigung-fallend","given":{"e":{"pick":1,"from":{"data":"steigung-dreiecke"}}},"task":{"text":"Eine Gerade fällt: Von einem Punkt geht es {{e.dx}} nach rechts und {{e.dy}} nach unten. Wie groß ist die Steigung $m$?"},"answer":{"value":"0 - e.m","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"e.m","message":"Die Gerade fällt, also ist m negativ. Es geht nach unten: Δy ist negativ."}],"hint":"Nach unten heißt: Δy ist negativ. Teile Δy durch Δx.","steps":["$\\Delta y$ ist negativ, $\\Delta x$ ist positiv. Der Quotient hat ein Minus."]},"templates":{"de":{"task":"Eine Gerade fällt: Von einem Punkt geht es ⟦e.dx⟧ nach rechts und ⟦e.dy⟧ nach unten. Wie groß ist die Steigung \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>?","steps":["\u003cmath>\u003cmrow>\u003cmrow>\u003cmi mathvariant=\"normal\">Δ\u003c/mi>\u003cmspace>\u003c/mspace>\u003c/mrow>\u003cmi>y\u003c/mi>\u003c/mrow>\u003c/math> ist negativ, \u003cmath>\u003cmrow>\u003cmrow>\u003cmi mathvariant=\"normal\">Δ\u003c/mi>\u003cmspace>\u003c/mspace>\u003c/mrow>\u003cmi>x\u003c/mi>\u003c/mrow>\u003c/math> ist positiv. Der Quotient hat ein Minus."],"hint":"Nach unten heißt: Δy ist negativ. Teile Δy durch Δx.","messages":["Die Gerade fällt, also ist m negativ. Es geht nach unten: Δy ist negativ."]}},"data":{"steigung-dreiecke":[{"dx":2,"dy":6,"m":3},{"dx":3,"dy":6,"m":2},{"dx":4,"dy":12,"m":3},{"dx":2,"dy":8,"m":4},{"dx":5,"dy":5,"m":1},{"dx":3,"dy":9,"m":3},{"dx":4,"dy":8,"m":2}]},"seeds":[1,2,3,5,6,7,21],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="46f9568a" data-block-type="number" data-block-order="12">
+<div class="explainer-exercise explainer-question" id="becken-steigung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-becken-steigung" data-id="becken-steigung" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung <math><mi>m</mi></math> in Liter pro Minute?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-becken-steigung" aria-describedby="frage-becken-steigung-unit"> <span id="frage-becken-steigung-unit">Liter pro Minute</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> −5 Liter pro Minute</p>
+<p class="question-explanation"><math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi><mo>=</mo><mn>60</mn><mo>−</mo><mn>80</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>20</mn></mrow></math> Liter in <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math> Minuten: <math><mrow><mi>m</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>20</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>4</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>5</mn></mrow></math>.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> −5 Liter pro Minute</p>
+<p class="question-explanation"><math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>y</mi><mo>=</mo><mn>60</mn><mo>−</mo><mn>80</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>20</mn></mrow></math> Liter in <math><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace></mspace></mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math> Minuten: <math><mrow><mi>m</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>20</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>4</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>5</mn></mrow></math>.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"becken-steigung","text":"Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung $m$ in Liter pro Minute?","explanation":"$\\Delta y = 60 - 80 = -20$ Liter in $\\Delta x = 4$ Minuten: $m = -20 : 4 = -5$.","links":[],"type":"number","answer":-5,"tolerance":0,"unit":"Liter pro Minute","mistakes":[{"answer":5,"message":"Der Tank wird leerer, y wird kleiner: Δy = −20. Darum ist m negativ."},{"answer":-20,"message":"−20 ist Δy, die Änderung insgesamt. Teile noch durch Δx = 4 Minuten."}]},"rendered":{"Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung $m$ in Liter pro Minute?":"Ein Tank hat 80 Liter. Nach 4 Minuten sind es 60 Liter. Wie groß ist die Steigung \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> in Liter pro Minute?","$\\Delta y = 60 - 80 = -20$ Liter in $\\Delta x = 4$ Minuten: $m = -20 : 4 = -5$.":"\u003cmath>\u003cmrow>\u003cmrow>\u003cmi mathvariant=\"normal\">Δ\u003c/mi>\u003cmspace>\u003c/mspace>\u003c/mrow>\u003cmi>y\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>60\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>80\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo form=\"prefix\" stretchy=\"false\">−\u003c/mo>\u003cmn>20\u003c/mn>\u003c/mrow>\u003c/math> Liter in \u003cmath>\u003cmrow>\u003cmrow>\u003cmi mathvariant=\"normal\">Δ\u003c/mi>\u003cmspace>\u003c/mspace>\u003c/mrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/math> Minuten: \u003cmath>\u003cmrow>\u003cmi>m\u003c/mi>\u003cmo>=\u003c/mo>\u003cmo form=\"prefix\" stretchy=\"false\">−\u003c/mo>\u003cmn>20\u003c/mn>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo form=\"prefix\" stretchy=\"false\">−\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="92f6a081" data-block-type="single-choice" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="m-deuten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-m-deuten" data-id="m-deuten" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei einem Wasserbecken ist <math><mi>m</mi></math> = −3 (Liter pro Minute). Was bedeutet das?</legend>
+<label class="question-option"><input type="radio" name="frage-m-deuten" value="0"> <span>Das Becken verliert 3 Liter pro Minute.</span></label>
+<label class="question-option"><input type="radio" name="frage-m-deuten" value="1"> <span>Das Becken füllt sich mit 3 Litern pro Minute.</span></label>
+<label class="question-option"><input type="radio" name="frage-m-deuten" value="2"> <span>Das Becken hat anfangs 3 Liter.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Das Becken verliert 3 Liter pro Minute.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Negatives <math><mi>m</mi></math> heißt: <math><mi>y</mi></math> wird kleiner, hier der Wasserstand.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Das Becken füllt sich mit 3 Litern pro Minute.</strong></p><p>Beim Füllen wäre <math><mi>m</mi></math> positiv. Das Minus heißt: Es geht abwärts.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Das Becken hat anfangs 3 Liter.</strong></p><p>Die Anfangsmenge ist der <math><mi>y</mi></math>-Achsenabschnitt <math><mi>b</mi></math>, nicht die Steigung <math><mi>m</mi></math>.</p></li>
+</ul>
+<p class="question-explanation"><math><mi>m</mi></math> sagt, wie <math><mi>y</mi></math> sich pro Einheit von <math><mi>x</mi></math> ändert, mit Vorzeichen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Das Becken verliert 3 Liter pro Minute.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Negatives <math><mi>m</mi></math> heißt: <math><mi>y</mi></math> wird kleiner, hier der Wasserstand.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Das Becken füllt sich mit 3 Litern pro Minute.</strong></p><p>Beim Füllen wäre <math><mi>m</mi></math> positiv. Das Minus heißt: Es geht abwärts.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Das Becken hat anfangs 3 Liter.</strong></p><p>Die Anfangsmenge ist der <math><mi>y</mi></math>-Achsenabschnitt <math><mi>b</mi></math>, nicht die Steigung <math><mi>m</mi></math>.</p></li>
+</ul>
+<p class="question-explanation"><math><mi>m</mi></math> sagt, wie <math><mi>y</mi></math> sich pro Einheit von <math><mi>x</mi></math> ändert, mit Vorzeichen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"m-deuten","text":"Bei einem Wasserbecken ist $m$ = −3 (Liter pro Minute). Was bedeutet das?","explanation":"$m$ sagt, wie $y$ sich pro Einheit von $x$ ändert, mit Vorzeichen.","links":[],"type":"single-choice","options":[{"text":"Das Becken verliert 3 Liter pro Minute.","correct":true,"info":"Negatives $m$ heißt: $y$ wird kleiner, hier der Wasserstand."},{"text":"Das Becken füllt sich mit 3 Litern pro Minute.","correct":false,"info":"Beim Füllen wäre $m$ positiv. Das Minus heißt: Es geht abwärts."},{"text":"Das Becken hat anfangs 3 Liter.","correct":false,"info":"Die Anfangsmenge ist der $y$-Achsenabschnitt $b$, nicht die Steigung $m$."}]},"rendered":{"Bei einem Wasserbecken ist $m$ = −3 (Liter pro Minute). Was bedeutet das?":"Bei einem Wasserbecken ist \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> = −3 (Liter pro Minute). Was bedeutet das?","$m$ sagt, wie $y$ sich pro Einheit von $x$ ändert, mit Vorzeichen.":"\u003cmath>\u003cmi>m\u003c/mi>\u003c/math> sagt, wie \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> sich pro Einheit von \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> ändert, mit Vorzeichen.","Negatives $m$ heißt: $y$ wird kleiner, hier der Wasserstand.":"Negatives \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> heißt: \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> wird kleiner, hier der Wasserstand.","Beim Füllen wäre $m$ positiv. Das Minus heißt: Es geht abwärts.":"Beim Füllen wäre \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> positiv. Das Minus heißt: Es geht abwärts.","Die Anfangsmenge ist der $y$-Achsenabschnitt $b$, nicht die Steigung $m$.":"Die Anfangsmenge ist der \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Achsenabschnitt \u003cmath>\u003cmi>b\u003c/mi>\u003c/math>, nicht die Steigung \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="4de9e51c" data-block-type="text" data-block-order="14">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du bestimmst die Steigung mit dem Steigungsdreieck und deutest <math><mi>m</mi></math> im Sachzusammenhang. Als Nächstes stellst du
+selbst Geradengleichungen auf.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Zuordnungen und lineare Funktionen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"08e1261","page":{"title":"Das Steigungsdreieck","order":18}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../geraden/m-und-b/">Zurück: Steigung m und Achsenabschnitt b</a><a rel="next" href="../../geraden/gerade-zwei-punkte/">Weiter: Gerade durch zwei Punkte</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

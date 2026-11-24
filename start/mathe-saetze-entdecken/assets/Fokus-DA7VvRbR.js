@@ -1,0 +1,1 @@
+function e(e){((e.currentTarget?.closest(`div`))?.querySelector(`[role=slider]`))?.focus()}export{e as t};

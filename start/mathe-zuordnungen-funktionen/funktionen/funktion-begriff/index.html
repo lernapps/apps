@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Was eine Funktion ist – Zuordnungen und lineare Funktionen</title>
+    <meta name="description" content="Eine Funktion ordnet jedem x genau ein y zu. Du prüfst Zuordnungen auf diese Eindeutigkeit." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../funktionen/funktion-begriff/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../funktionen/">Was eine Funktion ist</a></li><li aria-current="page">Was eine Funktion ist</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Was eine Funktion ist</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../funktionen/funktion-begriff/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧funktionen/funktion-begriff/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"funktion-begriff","title":"Was eine Funktion ist","exercises":[{"id":"ein-pfeil","section":"einstieg","numbered":false},{"id":"gleiches-y","section":"uebung","numbered":false},{"id":"welche-funktionen","section":"uebung","numbered":false},{"id":"zwei-y","section":"uebung","numbered":false},{"id":"tabelle-funktion","section":"uebung","numbered":false}],"sections":["einstieg","erklaerung","beispiel","uebung"]},"tutor":"funktionen/funktion-begriff/tutor/","markdown":"funktionen/funktion-begriff/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Geburtsmonate der Klasse</a></li><li><a href="#erklaerung">Genau ein y zu jedem x</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Geburtsmonate der Klasse</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="c821ea0b" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Die Klasse sammelt Geburtsmonate. Links stehen die Schüler, rechts die Monate. Jeder Pfeil verbindet einen Schüler mit seinem
+Geburtsmonat. Nach dieser Seite weißt du, was eine <strong>Funktion</strong> ist.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="45ca14a4" data-block-type="figure" data-block-order="2">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/pfeildiagramm-schueler.svg" alt="Pfeildiagramm. Links die Schüler Mia, Ben, Elif und Jonas, rechts die Monate März, Mai und Juli. Mia und Ben zeigen auf Mai, Elif auf März, Jonas auf Juli." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Von jedem Schüler geht genau ein Pfeil aus. Zwei Schüler dürfen auf denselben Monat zeigen.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="7f4b94d6" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="ein-pfeil">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ein-pfeil" data-id="ein-pfeil" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Pfeile gehen von Elif aus?</legend>
+<label class="question-option"><input type="radio" name="frage-ein-pfeil" value="0"> <span>Genau einer</span></label>
+<label class="question-option"><input type="radio" name="frage-ein-pfeil" value="1"> <span>Zwei</span></label>
+<label class="question-option"><input type="radio" name="frage-ein-pfeil" value="2"> <span>Keiner</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Genau einer</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Elif zeigt nur auf März. Jeder Schüler hat genau einen Geburtsmonat.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Zwei</strong></p><p>Bei Elif ist nur ein Pfeil gezeichnet. Zwei Pfeile hätte jemand mit zwei Geburtsmonaten.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Keiner</strong></p><p>Von jedem Schüler geht ein Pfeil aus, auch von Elif.</p></li>
+</ul>
+<p class="question-explanation">Zu jedem Schüler gehört genau ein Monat.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Genau einer</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Elif zeigt nur auf März. Jeder Schüler hat genau einen Geburtsmonat.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Zwei</strong></p><p>Bei Elif ist nur ein Pfeil gezeichnet. Zwei Pfeile hätte jemand mit zwei Geburtsmonaten.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Keiner</strong></p><p>Von jedem Schüler geht ein Pfeil aus, auch von Elif.</p></li>
+</ul>
+<p class="question-explanation">Zu jedem Schüler gehört genau ein Monat.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ein-pfeil","text":"Wie viele Pfeile gehen von Elif aus?","explanation":"Zu jedem Schüler gehört genau ein Monat.","links":[],"type":"single-choice","options":[{"text":"Genau einer","correct":true,"info":"Elif zeigt nur auf März. Jeder Schüler hat genau einen Geburtsmonat."},{"text":"Zwei","correct":false,"info":"Bei Elif ist nur ein Pfeil gezeichnet. Zwei Pfeile hätte jemand mit zwei Geburtsmonaten."},{"text":"Keiner","correct":false,"info":"Von jedem Schüler geht ein Pfeil aus, auch von Elif."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="erklaerung">Genau ein y zu jedem x</h2>
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="3c3dda67" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du sicher einen Wert ausrechnen willst, muss er eindeutig sein. Dafür gibt es den Begriff Funktion.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="b52d3d99" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-funktion"><a href="../../glossar/#funktion">Funktion</a></dfn></dt><dd><p>Eine Funktion ist eine Zuordnung, die jedem <math><mi>x</mi></math> genau ein <math><mi>y</mi></math> zuordnet. Beispiel: Jeder Strecke wird genau ein Fahrpreis zugeordnet.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="5ea3cc42" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Zwei verschiedene <math><mi>x</mi></math> dürfen <strong>dasselbe</strong> <math><mi>y</mi></math> haben (Mia und Ben haben beide Mai). Ein <math><mi>x</mi></math> darf aber <strong>nicht zwei verschiedene</strong> <math><mi>y</mi></math>
+haben. Dreht man die Pfeile um, gehen von „Mai“ zwei Pfeile aus. Das ist keine Funktion. Die proportionalen und antiproportionalen
+Zuordnungen aus Kapitel 2 sind dagegen Funktionen: Zu jedem Wert links gehört genau ein Wert rechts.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/4" data-block-id="b45da2bf" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/pfeildiagramm-monat.svg" alt="Pfeildiagramm. Links die Monate März, Mai und Juli, rechts die Schüler Mia, Ben, Elif und Jonas. Von Mai gehen zwei Pfeile aus, zu Mia und zu Ben." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Von Mai gehen zwei Pfeile aus: zu Mia und zu Ben. Diese Zuordnung ist keine Funktion.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="erklaerung/5" data-block-id="edc62670" data-block-type="note" data-block-order="8">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="erklaerung/5/1" data-block-id="e8384e85" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Wichtig ist die <strong>Richtung</strong>. Schüler → Monat ist eine Funktion, Monat → Schüler nicht. Prüfe immer: Geht von jedem
+Wert links genau ein Pfeil aus?</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="b7d8fb85" data-block-type="example" data-block-order="10">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Strecke und Fahrpreis</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="06928f91" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Beim Taxi gehört zu 2 km genau ein Preis, zu 3 km genau ein anderer. Strecke → Preis ist eine Funktion.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="4ded0381" data-block-type="table" data-block-order="12">
+<div class="block-table" role="region" aria-label="Strecke und Preis" tabindex="0"><table><caption>Strecke und Preis</caption><tbody><tr><th scope="row">Strecke in km</th><td>1</td><td>2</td><td>3</td></tr><tr><th scope="row">Preis in €</th><td>5</td><td>7</td><td>9</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="4f9de1c5" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Jede Strecke kommt nur einmal vor und hat ein <math><mi>y</mi></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="89bc94bc" data-block-type="true-false" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="gleiches-y">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gleiches-y" data-id="gleiches-y" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei einer Funktion dürfen zwei verschiedene <math><mi>x</mi></math> denselben <math><mi>y</mi></math>-Wert haben.</legend>
+<label class="question-option"><input type="radio" name="frage-gleiches-y" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-gleiches-y" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein <math><mi>x</mi></math> zwei verschiedene <math><mi>y</mi></math> hat.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein <math><mi>x</mi></math> zwei verschiedene <math><mi>y</mi></math> hat.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gleiches-y","text":"Bei einer Funktion dürfen zwei verschiedene $x$ denselben $y$-Wert haben.","explanation":"Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein $x$ zwei verschiedene $y$ hat.","links":[],"type":"true-false","answer":true},"rendered":{"Bei einer Funktion dürfen zwei verschiedene $x$ denselben $y$-Wert haben.":"Bei einer Funktion dürfen zwei verschiedene \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> denselben \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Wert haben.","Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein $x$ zwei verschiedene $y$ hat.":"Das ist erlaubt. Mia und Ben haben beide Mai. Nicht erlaubt ist nur, dass ein \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> zwei verschiedene \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> hat."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="be8c8b58" data-block-type="multiple-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="welche-funktionen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welche-funktionen" data-id="welche-funktionen" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Zuordnungen sind Funktionen? Wähle alle richtigen.</legend>
+<label class="question-option"><input type="checkbox" name="frage-welche-funktionen" value="0"> <span>Schüler → Geburtsmonat</span></label>
+<label class="question-option"><input type="checkbox" name="frage-welche-funktionen" value="1"> <span>Geburtsmonat → Schüler der Klasse</span></label>
+<label class="question-option"><input type="checkbox" name="frage-welche-funktionen" value="2"> <span>Strecke → Fahrpreis beim Taxi</span></label>
+<label class="question-option"><input type="checkbox" name="frage-welche-funktionen" value="3"> <span>Mensch → Geschwister</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Schüler → Geburtsmonat</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Jeder Schüler hat genau einen Geburtsmonat.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Geburtsmonat → Schüler der Klasse</strong></p><p>Zu Mai gehören mehrere Schüler. Ein <math><mi>x</mi></math> hat mehrere <math><mi>y</mi></math>.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Strecke → Fahrpreis beim Taxi</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zu jeder Strecke gehört genau ein Preis.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Mensch → Geschwister</strong></p><p>Ein Mensch kann mehrere Geschwister haben, oder keines. Das ist kein einzelner Wert.</p></li>
+</ul>
+<p class="question-explanation">Prüfe, ob zu jedem Wert links genau ein Wert rechts gehört.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Schüler → Geburtsmonat</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Jeder Schüler hat genau einen Geburtsmonat.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Geburtsmonat → Schüler der Klasse</strong></p><p>Zu Mai gehören mehrere Schüler. Ein <math><mi>x</mi></math> hat mehrere <math><mi>y</mi></math>.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Strecke → Fahrpreis beim Taxi</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zu jeder Strecke gehört genau ein Preis.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Mensch → Geschwister</strong></p><p>Ein Mensch kann mehrere Geschwister haben, oder keines. Das ist kein einzelner Wert.</p></li>
+</ul>
+<p class="question-explanation">Prüfe, ob zu jedem Wert links genau ein Wert rechts gehört.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welche-funktionen","text":"Welche Zuordnungen sind Funktionen? Wähle alle richtigen.","explanation":"Prüfe, ob zu jedem Wert links genau ein Wert rechts gehört.","links":[],"type":"multiple-choice","options":[{"text":"Schüler → Geburtsmonat","correct":true,"info":"Jeder Schüler hat genau einen Geburtsmonat."},{"text":"Geburtsmonat → Schüler der Klasse","correct":false,"info":"Zu Mai gehören mehrere Schüler. Ein $x$ hat mehrere $y$."},{"text":"Strecke → Fahrpreis beim Taxi","correct":true,"info":"Zu jeder Strecke gehört genau ein Preis."},{"text":"Mensch → Geschwister","correct":false,"info":"Ein Mensch kann mehrere Geschwister haben, oder keines. Das ist kein einzelner Wert."}]},"rendered":{"Zu Mai gehören mehrere Schüler. Ein $x$ hat mehrere $y$.":"Zu Mai gehören mehrere Schüler. Ein \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> hat mehrere \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="d2039e06" data-block-type="number" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="zwei-y">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zwei-y" data-id="zwei-y" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Zuordnung hat die Paare (1|5), (2|6), (2|7), (3|8). Wie viele <math><mi>y</mi></math>-Werte gehören zu <math><mi>x</mi></math> = 2?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-zwei-y">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 2</p>
+<p class="question-explanation">Zu <math><mi>x</mi></math> = 2 gehören 6 und 7. Das sind zwei <math><mi>y</mi></math>-Werte, also ist die Zuordnung keine Funktion.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 2</p>
+<p class="question-explanation">Zu <math><mi>x</mi></math> = 2 gehören 6 und 7. Das sind zwei <math><mi>y</mi></math>-Werte, also ist die Zuordnung keine Funktion.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zwei-y","text":"Eine Zuordnung hat die Paare (1|5), (2|6), (2|7), (3|8). Wie viele $y$-Werte gehören zu $x$ = 2?","explanation":"Zu $x$ = 2 gehören 6 und 7. Das sind zwei $y$-Werte, also ist die Zuordnung keine Funktion.","links":[],"type":"number","answer":2,"tolerance":0,"mistakes":[{"answer":1,"message":"Schau noch einmal in die Paare: zu x = 2 stehen (2|6) und (2|7). Das sind zwei verschiedene y-Werte."}]},"rendered":{"Eine Zuordnung hat die Paare (1|5), (2|6), (2|7), (3|8). Wie viele $y$-Werte gehören zu $x$ = 2?":"Eine Zuordnung hat die Paare (1|5), (2|6), (2|7), (3|8). Wie viele \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Werte gehören zu \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 2?","Zu $x$ = 2 gehören 6 und 7. Das sind zwei $y$-Werte, also ist die Zuordnung keine Funktion.":"Zu \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 2 gehören 6 und 7. Das sind zwei \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Werte, also ist die Zuordnung keine Funktion."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="8a340ae9" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="tabelle-funktion">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-tabelle-funktion" data-id="tabelle-funktion" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Tabelle gehört zu einer Funktion? (Paare <math><mi>x</mi></math> | <math><mi>y</mi></math>)</legend>
+<label class="question-option"><input type="radio" name="frage-tabelle-funktion" value="0"> <span>(1|3), (2|3), (3|3)</span></label>
+<label class="question-option"><input type="radio" name="frage-tabelle-funktion" value="1"> <span>(1|3), (1|4), (2|5)</span></label>
+<label class="question-option"><input type="radio" name="frage-tabelle-funktion" value="2"> <span>(2|1), (3|1), (2|2)</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>(1|3), (2|3), (3|3)</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Jedes <math><mi>x</mi></math> kommt nur einmal vor. Dass das <math><mi>y</mi></math> immer 3 ist, stört nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>(1|3), (1|4), (2|5)</strong></p><p>Zu <math><mi>x</mi></math> = 1 gehören 3 und 4. Das ist zweimal ein anderer <math><mi>y</mi></math>-Wert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>(2|1), (3|1), (2|2)</strong></p><p>Zu <math><mi>x</mi></math> = 2 gehören 1 und 2. Das ist keine Funktion.</p></li>
+</ul>
+<p class="question-explanation">Entscheidend ist, dass jedes <math><mi>x</mi></math> nur ein <math><mi>y</mi></math> hat.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>(1|3), (2|3), (3|3)</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Jedes <math><mi>x</mi></math> kommt nur einmal vor. Dass das <math><mi>y</mi></math> immer 3 ist, stört nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>(1|3), (1|4), (2|5)</strong></p><p>Zu <math><mi>x</mi></math> = 1 gehören 3 und 4. Das ist zweimal ein anderer <math><mi>y</mi></math>-Wert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>(2|1), (3|1), (2|2)</strong></p><p>Zu <math><mi>x</mi></math> = 2 gehören 1 und 2. Das ist keine Funktion.</p></li>
+</ul>
+<p class="question-explanation">Entscheidend ist, dass jedes <math><mi>x</mi></math> nur ein <math><mi>y</mi></math> hat.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"tabelle-funktion","text":"Welche Tabelle gehört zu einer Funktion? (Paare $x$ | $y$)","explanation":"Entscheidend ist, dass jedes $x$ nur ein $y$ hat.","links":[],"type":"single-choice","options":[{"text":"(1|3), (2|3), (3|3)","correct":true,"info":"Jedes $x$ kommt nur einmal vor. Dass das $y$ immer 3 ist, stört nicht."},{"text":"(1|3), (1|4), (2|5)","correct":false,"info":"Zu $x$ = 1 gehören 3 und 4. Das ist zweimal ein anderer $y$-Wert."},{"text":"(2|1), (3|1), (2|2)","correct":false,"info":"Zu $x$ = 2 gehören 1 und 2. Das ist keine Funktion."}]},"rendered":{"Welche Tabelle gehört zu einer Funktion? (Paare $x$ | $y$)":"Welche Tabelle gehört zu einer Funktion? (Paare \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> | \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>)","Entscheidend ist, dass jedes $x$ nur ein $y$ hat.":"Entscheidend ist, dass jedes \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> nur ein \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> hat.","Jedes $x$ kommt nur einmal vor. Dass das $y$ immer 3 ist, stört nicht.":"Jedes \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> kommt nur einmal vor. Dass das \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> immer 3 ist, stört nicht.","Zu $x$ = 1 gehören 3 und 4. Das ist zweimal ein anderer $y$-Wert.":"Zu \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 1 gehören 3 und 4. Das ist zweimal ein anderer \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Wert.","Zu $x$ = 2 gehören 1 und 2. Das ist keine Funktion.":"Zu \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 2 gehören 1 und 2. Das ist keine Funktion."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a72304c5" data-block-type="text" data-block-order="18">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du prüfst, ob eine Zuordnung eine Funktion ist: Jedes <math><mi>x</mi></math> hat genau ein <math><mi>y</mi></math>. Als Nächstes lernst du, wie du
+eine Funktion mit Term und Graph beschreibst.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Zuordnungen und lineare Funktionen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"08e1261","page":{"title":"Was eine Funktion ist","order":11}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../zuordnungen/proportional-oder-anti/">Zurück: Proportional oder antiproportional?</a><a rel="next" href="../../funktionen/funktion-term-graph/">Weiter: Funktionsterm, Graph und Mengen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

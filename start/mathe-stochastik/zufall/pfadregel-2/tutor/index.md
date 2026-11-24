@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -76,30 +73,54 @@ Mehr dazu: Wahrscheinlichkeiten als Produkt, Summe oder Potenz angeben und Ereig
 
 Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal ziehen **ohne Zurücklegen**. Wie groß ist $P(\text{genau einmal rot})$?
 
-1. Pfade finden: rot-blau, rot-gelb, blau-rot, gelb-rot. (rot-rot ist *zweimal* rot, gehört nicht dazu.)
-2. Jeden Pfad multiplizieren: $\frac{3}{6} \cdot \frac{2}{5}$, $\frac{3}{6} \cdot \frac{1}{5}$,
-   $\frac{2}{6} \cdot \frac{3}{5}$, $\frac{1}{6} \cdot \frac{3}{5}$.
-3. Addieren: $\frac{6}{30} + \frac{3}{30} + \frac{6}{30} + \frac{3}{30}$ $= \frac{18}{30} = \frac{3}{5}$.
+Genau einmal rot, Schritt für Schritt:
+- Pfad | Rechnung
+- rot-blau | $\frac{3}{6} \cdot \frac{2}{5} = \frac{6}{30}$
+- rot-gelb | $\frac{3}{6} \cdot \frac{1}{5} = \frac{3}{30}$
+- blau-rot | $\frac{2}{6} \cdot \frac{3}{5} = \frac{6}{30}$
+- gelb-rot | $\frac{1}{6} \cdot \frac{3}{5} = \frac{3}{30}$
+- Summe | $\frac{18}{30} = \frac{3}{5}$
+
+Rot-rot gehört nicht dazu, denn das ist zweimal rot.
 
 Kürzer: „genau einmal rot“ = rot-nicht rot + nicht rot-rot: $\frac{3}{6} \cdot \frac{3}{5} + \frac{3}{6} \cdot \frac{3}{5}$ $= 2 \cdot \frac{9}{30} = \frac{3}{5}$.
 
 ### Bild
 
-Bild: Baumdiagramm zur Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal ohne Zurücklegen; orange sind die vier Pfade von „genau einmal rot“. Bildunterschrift: Der Baum aus dem Beispiel: 3 rote (R), 2 blaue (B) und 1 gelbe (G) Kugel, zweimal ohne Zurücklegen. Erste Stufe: rot 3/6, blau 2/6, gelb 1/6. Nach rot: rot 2/5, blau 2/5, gelb 1/5; nach blau: rot 3/5, blau 1/5, gelb 1/5; nach gelb: rot 3/5, blau 2/5 (gelb ist leer). Orange sind die vier Pfade von „genau einmal rot“: rot-blau 1/5, rot-gelb 1/10, blau-rot 1/5, gelb-rot 1/10. Zusammen 3/5.
-
-### Video dazu
-
-Video: [Summenregel | Wahrscheinlichkeitsrechnung | Mathematik](https://www.youtube.com/watch?v=Pi1M1F2l024), Lehrerschmidt (YouTube)
-
-- Noch eine Erklärung: [Pfadregeln](https://de.serlo.org/mathe/189811/pfadregeln) bei serlo.org
+Bild: Baumdiagramm zur Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal ohne Zurücklegen; orange sind die vier Pfade von „genau einmal rot“. Bildunterschrift: Der Baum aus dem Beispiel: 3 rote (R), 2 blaue (B) und 1 gelbe (G) Kugel, zweimal ohne Zurücklegen. Erste Stufe: rot $\frac{3}{6}$, blau $\frac{2}{6}$, gelb $\frac{1}{6}$. Nach rot: rot $\frac{2}{5}$, blau $\frac{2}{5}$, gelb $\frac{1}{5}$; nach blau: rot $\frac{3}{5}$, blau $\frac{1}{5}$, gelb $\frac{1}{5}$; nach gelb: rot $\frac{3}{5}$, blau $\frac{2}{5}$ (gelb ist leer). Orange sind die vier Pfade von „genau einmal rot“: rot-blau $\frac{1}{5}$, rot-gelb $\frac{1}{10}$, blau-rot $\frac{1}{5}$, gelb-rot $\frac{1}{10}$. Zusammen $\frac{3}{5}$.
 
 ### Übung
+
+- Aufgabe `pfade-muenze-einmal` (unten)
+
+- Aufgabe `pfadregeln-zuordnen` (unten)
 
 - Aufgabe `pfade-addieren` (unten)
 
 - Aufgabe `term-zur-summe` (unten)
 
 - Aufgabe `genau-einmal-rot` (unten)
+
+### Aufgabe pfade-muenze-einmal
+
+- Aufgabe: Du wirfst eine Münze zweimal. Wie groß ist die Wahrscheinlichkeit für genau einmal Zahl? Gib sie in Prozent an.
+- Antwortformat: eine Zahl eintippen (%)
+- Lösung: 50 %
+- Erklärung: Die Pfade sind Zahl-Kopf und Kopf-Zahl. Jeder hat $\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}$. Zusammen: $\frac{1}{4} + \frac{1}{4} = \frac{1}{2} = 50\,\%$.
+- Tipp der App: Welche zwei Pfade gehören zu „genau einmal Zahl“? Rechne jeden mit der 1. Pfadregel und addiere dann.
+- Typische Fehler und was die App sagt:
+  - 25: Das ist nur ein Pfad. Zu „genau einmal Zahl“ gehören zwei Pfade, die du addieren musst.
+  - 75: Das ist die Wahrscheinlichkeit für mindestens einmal Zahl. Zweimal Zahl gehört nicht zu „genau einmal“.
+- Link: [../?via=tutor#pfade-muenze-einmal](../?via=tutor#pfade-muenze-einmal)
+
+### Aufgabe pfadregeln-zuordnen
+
+- Aufgabe: Was geschieht in einem Baumdiagramm mit diesen Wahrscheinlichkeiten? Ordne zu.
+- Antwortformat: jedem Eintrag links den passenden rechts zuordnen
+- Lösung: Die Zweige eines Pfades – werden multipliziert; Die Pfade eines Ereignisses – werden addiert; Die Zweige an einem Knoten – ergeben zusammen 1
+- Erklärung: Entlang eines Pfades gilt die 1. Pfadregel, also wird multipliziert. Gehören mehrere Pfade zu einem Ereignis, gilt die 2. Pfadregel, also wird addiert. Die Zweige an einem Knoten decken alle Möglichkeiten der Stufe ab und ergeben zusammen immer 1.
+- Tipp der App: Denke an die Merkhilfe: entlang des Pfades mal, über mehrere Pfade plus.
+- Link: [../?via=tutor#pfadregeln-zuordnen](../?via=tutor#pfadregeln-zuordnen)
 
 ### Aufgabe pfade-addieren
 

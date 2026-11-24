@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Seiten mit Sinus, Kosinus und Tangens berechnen – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Mit dem Taschenrechner aus einem Winkel und einer Seite eine fehlende Seite eines rechtwinkligen Dreiecks bestimmen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../dreieck/seiten-berechnen/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../dreieck/">Das rechtwinklige Dreieck</a></li><li aria-current="page">Seiten mit Sinus, Kosinus und Tangens berechnen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Seiten mit Sinus, Kosinus und Tangens berechnen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../dreieck/seiten-berechnen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧dreieck/seiten-berechnen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"seiten-berechnen","title":"Seiten mit Sinus, Kosinus und Tangens berechnen","exercises":[{"id":"rechner-modus","section":"einstieg","numbered":false},{"id":"welches-verhaeltnis","section":"uebung","numbered":false},{"id":"reihenfolge","section":"uebung","numbered":false},{"id":"gegenkathete","section":"uebung","numbered":true},{"id":"ankathete","section":"uebung","numbered":true},{"id":"hoehe-tangens","section":"uebung","numbered":true},{"id":"rampe-laenge","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","weiter"]},"tutor":"dreieck/seiten-berechnen/tutor/","markdown":"dreieck/seiten-berechnen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Das passende Verhältnis wählen</a></li><li><a href="#beispiel">Beispiele</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Wie es weitergeht</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="1ba49ab4" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du eine Höhe oder Länge brauchst, die du nicht messen kannst, aber einen Winkel kennst (zum Beispiel wie hoch eine Rampe steigt), berechnest du aus Winkel und Seite die fehlende Seite eines rechtwinkligen Dreiecks. Du wählst dafür Sinus, Kosinus oder Tangens und bedienst den Taschenrechner richtig.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="6dc725fe" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Die Klasse will die Höhe einer Rampe wissen. Gemessen sind die Länge der Rampe und der Winkel, den sie mit dem Boden bildet. Dafür brauchst du den Sinus eines Winkels, und den liefert der Taschenrechner. Er muss dabei auf Grad stehen, im Display steht oft DEG. Umstellen kannst du das meist mit der Taste MODE, SETUP oder DRG.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="5796ea13" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="rechner-modus">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-rechner-modus" data-id="rechner-modus" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du tippst sin 30° in den Taschenrechner. Er steht auf Grad (DEG). Was zeigt er?</legend>
+<label class="question-option"><input type="radio" name="frage-rechner-modus" value="0"> <span>−0,988</span></label>
+<label class="question-option"><input type="radio" name="frage-rechner-modus" value="1"> <span>0,5</span></label>
+<label class="question-option"><input type="radio" name="frage-rechner-modus" value="2"> <span>30</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>−0,988</strong></p><p>Das zeigt ein Rechner im Bogenmaß (RAD), wenn du 30 eintippst. Stelle ihn auf DEG.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>0,5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>In einem Dreieck mit 30° ist die Gegenkathete halb so lang wie die Hypotenuse. Der Sinus ist 0,5.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>30</strong></p><p>Der Rechner liefert nicht den Winkel zurück, sondern das Verhältnis Gegenkathete durch Hypotenuse.</p></li>
+</ul>
+<p class="question-explanation">Im Gradmaß (DEG) ist sin 30° = 0,5. Prüfe vor jeder Rechnung den Modus.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>−0,988</strong></p><p>Das zeigt ein Rechner im Bogenmaß (RAD), wenn du 30 eintippst. Stelle ihn auf DEG.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>0,5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>In einem Dreieck mit 30° ist die Gegenkathete halb so lang wie die Hypotenuse. Der Sinus ist 0,5.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>30</strong></p><p>Der Rechner liefert nicht den Winkel zurück, sondern das Verhältnis Gegenkathete durch Hypotenuse.</p></li>
+</ul>
+<p class="question-explanation">Im Gradmaß (DEG) ist sin 30° = 0,5. Prüfe vor jeder Rechnung den Modus.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"rechner-modus","text":"Du tippst sin 30° in den Taschenrechner. Er steht auf Grad (DEG). Was zeigt er?","explanation":"Im Gradmaß (DEG) ist sin 30° = 0,5. Prüfe vor jeder Rechnung den Modus.","links":[],"type":"single-choice","options":[{"text":"−0,988","correct":false,"info":"Das zeigt ein Rechner im Bogenmaß (RAD), wenn du 30 eintippst. Stelle ihn auf DEG."},{"text":"0,5","correct":true,"info":"In einem Dreieck mit 30° ist die Gegenkathete halb so lang wie die Hypotenuse. Der Sinus ist 0,5."},{"text":"30","correct":false,"info":"Der Rechner liefert nicht den Winkel zurück, sondern das Verhältnis Gegenkathete durch Hypotenuse."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Das passende Verhältnis wählen</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="4bf1dab8" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du aus Winkel und Seite eine zweite Seite berechnen willst, musst du entscheiden, welches der drei Verhältnisse passt. Du kennst den Winkel <em>α</em> und eine Seite und willst eine zweite Seite. Welches Verhältnis du brauchst, hängt davon ab, welche zwei Seiten im Spiel sind: die gegebene und die gesuchte.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="9dca67fa" data-block-type="table" data-block-order="5">
+<div class="block-table" role="region" aria-label="Welches Verhältnis passt zu welchen Seiten?" tabindex="0"><table><caption>Welches Verhältnis passt zu welchen Seiten?</caption><thead><tr><th scope="col">Seiten im Spiel</th><th scope="col">Verhältnis</th></tr></thead><tbody><tr><td>Gegenkathete und Hypotenuse</td><td>Sinus</td></tr><tr><td>Ankathete und Hypotenuse</td><td>Kosinus</td></tr><tr><td>Gegenkathete und Ankathete</td><td>Tangens</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="a0656bc7" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Dann stellst du die Gleichung nach der gesuchten Seite um. Ist die gesuchte Seite im Zähler, multiplizierst du. Steht sie im Nenner, teilst du.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="0d8e616b" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mtext>Gegenkathete</mtext><mrow><mspace width="0.2778em"></mspace><mo>=</mo><mspace width="0.2778em"></mspace></mrow><mtext>Hypotenuse</mtext><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="783ab4bf" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mtext>Ankathete</mtext><mrow><mspace width="0.2778em"></mspace><mo>=</mo><mspace width="0.2778em"></mspace></mrow><mtext>Hypotenuse</mtext><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="6c04ae76" data-block-type="formula" data-block-order="9">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mtext>Gegenkathete</mtext><mrow><mspace width="0.2778em"></mspace><mo>=</mo><mspace width="0.2778em"></mspace></mrow><mtext>Ankathete</mtext><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/7" data-block-id="17951cfe" data-block-type="note" data-block-order="10">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/7/1" data-block-id="56364dea" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Zeichne zuerst eine Skizze und benenne die Seiten vom Winkel <em>α</em> aus. Schreibe dann das passende Verhältnis auf, bevor du rechnest. Der Rechner muss auf Grad (DEG) stehen.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiele</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="5e6402b4" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Wenn du sehen willst, wie du das passende Verhältnis wählst, helfen zwei Fälle: Die Höhe einer Rampe ist gesucht, und ihre Länge ist gesucht.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="d4f325d7" data-block-type="example" data-block-order="13">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Rampenhöhe</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="9a6a9baf" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Eine Rampe ist 5 m lang und bildet mit dem Boden den Winkel 8°. Gesucht ist die Höhe, also die Gegenkathete. Die Rampe ist die Hypotenuse, also gilt Sinus.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="4affffa7" data-block-type="formula" data-block-order="15">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>h</mi><mo>=</mo><mn>5</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>8</mn><mo form="prefix" stretchy="false">∘</mo></msup><mo>≈</mo><mn>5</mn><mo>⋅</mo><mn>0,139</mn><mo>=</mo><mn>0,70</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="a4cca50a" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Die Rampe überwindet etwa 0,70 m Höhe.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="606bbdb2" data-block-type="example" data-block-order="17">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Hypotenuse gesucht</h3>
+<div class="explainer-block" data-block="beispiel/3/1" data-block-id="ab229dda" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>Eine Rampe soll 0,8 m Höhe überwinden und 6° steigen. Die gesuchte Hypotenuse steht im Nenner, also wird geteilt.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/2" data-block-id="5397a774" data-block-type="formula" data-block-order="19">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>c</mi><mo>=</mo><mfrac><mn>0,8</mn><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>6</mn><mo form="prefix" stretchy="false">∘</mo></msup></mrow></mfrac><mo>≈</mo><mn>7,65</mn></mrow></math></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="a110d78e" data-block-type="single-choice" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="welches-verhaeltnis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welches-verhaeltnis" data-id="welches-verhaeltnis" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Gegeben sind die Hypotenuse und der Winkel α, gesucht ist die Ankathete von α. Mit welcher Gleichung rechnest du?</legend>
+<label class="question-option"><input type="radio" name="frage-welches-verhaeltnis" value="0"> <span>Ankathete = Hypotenuse · sin α</span></label>
+<label class="question-option"><input type="radio" name="frage-welches-verhaeltnis" value="1"> <span>Ankathete = Hypotenuse : cos α</span></label>
+<label class="question-option"><input type="radio" name="frage-welches-verhaeltnis" value="2"> <span>Ankathete = Hypotenuse · cos α</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ankathete = Hypotenuse · sin α</strong></p><p>Der Sinus gehört zur Gegenkathete. Die Ankathete liegt an α an, dafür brauchst du den Kosinus.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Ankathete = Hypotenuse : cos α</strong></p><p>Die richtige Funktion, aber falsch herum. Cos α = Ankathete : Hypotenuse, nach der Ankathete aufgelöst wird multipliziert.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Ankathete = Hypotenuse · cos α</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ankathete und Hypotenuse gehören zum Kosinus. Die gesuchte Seite steht im Zähler, also wird multipliziert.</p></li>
+</ul>
+<p class="question-explanation">Die Ankathete liegt an α an. Ankathete und Hypotenuse gehören zum Kosinus.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ankathete = Hypotenuse · sin α</strong></p><p>Der Sinus gehört zur Gegenkathete. Die Ankathete liegt an α an, dafür brauchst du den Kosinus.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Ankathete = Hypotenuse : cos α</strong></p><p>Die richtige Funktion, aber falsch herum. Cos α = Ankathete : Hypotenuse, nach der Ankathete aufgelöst wird multipliziert.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Ankathete = Hypotenuse · cos α</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ankathete und Hypotenuse gehören zum Kosinus. Die gesuchte Seite steht im Zähler, also wird multipliziert.</p></li>
+</ul>
+<p class="question-explanation">Die Ankathete liegt an α an. Ankathete und Hypotenuse gehören zum Kosinus.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welches-verhaeltnis","text":"Gegeben sind die Hypotenuse und der Winkel α, gesucht ist die Ankathete von α. Mit welcher Gleichung rechnest du?","explanation":"Die Ankathete liegt an α an. Ankathete und Hypotenuse gehören zum Kosinus.","links":[],"type":"single-choice","options":[{"text":"Ankathete = Hypotenuse · sin α","correct":false,"info":"Der Sinus gehört zur Gegenkathete. Die Ankathete liegt an α an, dafür brauchst du den Kosinus."},{"text":"Ankathete = Hypotenuse : cos α","correct":false,"info":"Die richtige Funktion, aber falsch herum. Cos α = Ankathete : Hypotenuse, nach der Ankathete aufgelöst wird multipliziert."},{"text":"Ankathete = Hypotenuse · cos α","correct":true,"info":"Ankathete und Hypotenuse gehören zum Kosinus. Die gesuchte Seite steht im Zähler, also wird multipliziert."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="d831dafa" data-block-type="ordering" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="reihenfolge">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-reihenfolge" data-id="reihenfolge" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bringe die Schritte einer Rechnung mit Winkel und Seite in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Das Verhältnis wählen, in dem gegebene und gesuchte Seite vorkommen</span> <select name="frage-reihenfolge-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Den Taschenrechner auf Grad (DEG) stellen und einsetzen</span> <select name="frage-reihenfolge-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Das Ergebnis mit Einheit angeben und prüfen, ob es zur Skizze passt</span> <select name="frage-reihenfolge-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Skizze zeichnen und die Seiten vom Winkel aus benennen</span> <select name="frage-reihenfolge-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Die Gleichung nach der gesuchten Seite umstellen</span> <select name="frage-reihenfolge-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Skizze zeichnen und die Seiten vom Winkel aus benennen, 2. Das Verhältnis wählen, in dem gegebene und gesuchte Seite vorkommen, 3. Die Gleichung nach der gesuchten Seite umstellen, 4. Den Taschenrechner auf Grad (DEG) stellen und einsetzen, 5. Das Ergebnis mit Einheit angeben und prüfen, ob es zur Skizze passt</p>
+<p class="question-explanation">Erst die Skizze und das passende Verhältnis, dann umstellen, dann rechnen. Zum Schluss prüfst du, ob die Seite zur Skizze passt, zum Beispiel ob die Hypotenuse die längste ist.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Skizze zeichnen und die Seiten vom Winkel aus benennen, 2. Das Verhältnis wählen, in dem gegebene und gesuchte Seite vorkommen, 3. Die Gleichung nach der gesuchten Seite umstellen, 4. Den Taschenrechner auf Grad (DEG) stellen und einsetzen, 5. Das Ergebnis mit Einheit angeben und prüfen, ob es zur Skizze passt</p>
+<p class="question-explanation">Erst die Skizze und das passende Verhältnis, dann umstellen, dann rechnen. Zum Schluss prüfst du, ob die Seite zur Skizze passt, zum Beispiel ob die Hypotenuse die längste ist.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"reihenfolge","text":"Bringe die Schritte einer Rechnung mit Winkel und Seite in die richtige Reihenfolge.","explanation":"Erst die Skizze und das passende Verhältnis, dann umstellen, dann rechnen. Zum Schluss prüfst du, ob die Seite zur Skizze passt, zum Beispiel ob die Hypotenuse die längste ist.","links":[],"type":"ordering","items":["Skizze zeichnen und die Seiten vom Winkel aus benennen","Das Verhältnis wählen, in dem gegebene und gesuchte Seite vorkommen","Die Gleichung nach der gesuchten Seite umstellen","Den Taschenrechner auf Grad (DEG) stellen und einsetzen","Das Ergebnis mit Einheit angeben und prüfen, ob es zur Skizze passt"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="c348c989" data-block-type="generated" data-block-order="22">
+<div class="explainer-exercise explainer-generated" id="gegenkathete">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Hypotenuse c = 10 cm lang und der Winkel α = 25°. Wie lang ist die Gegenkathete von α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gegenkathete und Hypotenuse gehören zum Sinus. Rechne Hypotenuse mal sin α.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>a</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>10</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>25</mn><mo>∘</mo></msup><mo>≈</mo><mn>4,2</mn></mrow></math>, also 4,2 cm.</li></ol><p><strong>Richtige Antwort:</strong> 4,2 cm (erlaubte Abweichung: 0,05 cm)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Hypotenuse c = 14 cm lang und der Winkel α = 70°. Wie lang ist die Gegenkathete von α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gegenkathete und Hypotenuse gehören zum Sinus. Rechne Hypotenuse mal sin α.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>a</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>14</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>70</mn><mo>∘</mo></msup><mo>≈</mo><mn>13,2</mn></mrow></math>, also 13,2 cm.</li></ol><p><strong>Richtige Antwort:</strong> 13,2 cm (erlaubte Abweichung: 0,05 cm)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Hypotenuse c = 7 cm lang und der Winkel α = 40°. Wie lang ist die Gegenkathete von α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gegenkathete und Hypotenuse gehören zum Sinus. Rechne Hypotenuse mal sin α.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>a</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>7</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>40</mn><mo>∘</mo></msup><mo>≈</mo><mn>4,5</mn></mrow></math>, also 4,5 cm.</li></ol><p><strong>Richtige Antwort:</strong> 4,5 cm (erlaubte Abweichung: 0,05 cm)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"gegenkathete","given":{"c":{"int":[4,20]},"alpha":{"oneOf":[15,20,25,30,35,40,50,55,60,65,70,75]}},"task":{"text":"In einem rechtwinkligen Dreieck ist die Hypotenuse c = {{c}} cm lang und der Winkel α = {{alpha}}°. Wie lang ist die Gegenkathete von α? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(c * sin(alpha), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05,"unit":"cm"}}},"mistakes":[{"value":"round(c * cos(alpha), 1)","message":"Das ist die Ankathete. Die Gegenkathete liegt α gegenüber, dafür brauchst du den Sinus."},{"value":"round(c / sin(alpha), 1)","message":"Du hast geteilt. Sin α = Gegenkathete : Hypotenuse, nach der Gegenkathete aufgelöst wird multipliziert."},{"value":"round(c * sin(alpha * 57.29578), 1)","message":"Dein Taschenrechner rechnet im Bogenmaß (RAD). Stelle ihn auf Grad (DEG)."}],"hint":"Gegenkathete und Hypotenuse gehören zum Sinus. Rechne Hypotenuse mal sin α.","steps":["$a = c \\cdot \\sin \\alpha = {{c}} \\cdot \\sin {{alpha}}^\\circ \\approx {{answer}}$, also {{answer}} cm."]},"templates":{"de":{"task":"In einem rechtwinkligen Dreieck ist die Hypotenuse c = ⟦c⟧ cm lang und der Winkel α = ⟦alpha⟧°. Wie lang ist die Gegenkathete von α? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>a\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>c\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmsup>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm."],"hint":"Gegenkathete und Hypotenuse gehören zum Sinus. Rechne Hypotenuse mal sin α.","messages":["Das ist die Ankathete. Die Gegenkathete liegt α gegenüber, dafür brauchst du den Sinus.","Du hast geteilt. Sin α = Gegenkathete : Hypotenuse, nach der Gegenkathete aufgelöst wird multipliziert.","Dein Taschenrechner rechnet im Bogenmaß (RAD). Stelle ihn auf Grad (DEG)."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,19,20,21,22,24,25,26,27,28,29,30,31,32,34,35,36,37,38,39,40,42,45,46,47,48,49,51,52,53,54,55,56,57,58,59,60,61,63,66,67,68,69,70,71,73,76,77,79,81,83],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="1e1ceb1f" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="ankathete">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Hypotenuse c = 6 cm lang und der Winkel α = 70°. Wie lang ist die Ankathete von α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Ankathete und Hypotenuse gehören zum Kosinus.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>b</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>6</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>70</mn><mo>∘</mo></msup><mo>≈</mo><mn>2,1</mn></mrow></math>, also 2,1 cm.</li></ol><p><strong>Richtige Antwort:</strong> 2,1 cm (erlaubte Abweichung: 0,05 cm)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Hypotenuse c = 14 cm lang und der Winkel α = 60°. Wie lang ist die Ankathete von α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Ankathete und Hypotenuse gehören zum Kosinus.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>b</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>14</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>60</mn><mo>∘</mo></msup><mo>≈</mo><mn>7</mn></mrow></math>, also 7 cm.</li></ol><p><strong>Richtige Antwort:</strong> 7 cm (erlaubte Abweichung: 0,05 cm)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Hypotenuse c = 7 cm lang und der Winkel α = 35°. Wie lang ist die Ankathete von α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Ankathete und Hypotenuse gehören zum Kosinus.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>b</mi><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>7</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>35</mn><mo>∘</mo></msup><mo>≈</mo><mn>5,7</mn></mrow></math>, also 5,7 cm.</li></ol><p><strong>Richtige Antwort:</strong> 5,7 cm (erlaubte Abweichung: 0,05 cm)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"ankathete","given":{"c":{"int":[4,20]},"alpha":{"oneOf":[15,20,25,30,35,40,50,55,60,65,70,75]}},"task":{"text":"In einem rechtwinkligen Dreieck ist die Hypotenuse c = {{c}} cm lang und der Winkel α = {{alpha}}°. Wie lang ist die Ankathete von α? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(c * cos(alpha), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05,"unit":"cm"}}},"mistakes":[{"value":"round(c * sin(alpha), 1)","message":"Das ist die Gegenkathete. Die Ankathete liegt an α an, dafür brauchst du den Kosinus."},{"value":"round(c / cos(alpha), 1)","message":"Du hast geteilt. Cos α = Ankathete : Hypotenuse, nach der Ankathete aufgelöst wird multipliziert."}],"hint":"Ankathete und Hypotenuse gehören zum Kosinus.","steps":["$b = c \\cdot \\cos \\alpha = {{c}} \\cdot \\cos {{alpha}}^\\circ \\approx {{answer}}$, also {{answer}} cm."]},"templates":{"de":{"task":"In einem rechtwinkligen Dreieck ist die Hypotenuse c = ⟦c⟧ cm lang und der Winkel α = ⟦alpha⟧°. Wie lang ist die Ankathete von α? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>b\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>c\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>cos\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>cos\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmsup>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm."],"hint":"Ankathete und Hypotenuse gehören zum Kosinus.","messages":["Das ist die Gegenkathete. Die Ankathete liegt an α an, dafür brauchst du den Kosinus.","Du hast geteilt. Cos α = Ankathete : Hypotenuse, nach der Ankathete aufgelöst wird multipliziert."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,39,40,41,42,43,44,45,46,47,48,49,50,51,52,55,56,57,58,60,61,62,64,65,67,68,69,70,71,72,74],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="1cc8b926" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="hoehe-tangens">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Du stehst 50 m von einem Turm entfernt auf ebenem Boden. Die Turmspitze siehst du unter dem Höhenwinkel α = 50°. Wie hoch ist der Turm über deiner Augenhöhe? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Entfernung ist die Ankathete, Höhe die Gegenkathete: Tangens.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>h</mi><mo>=</mo><mi>d</mi><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>50</mn><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>50</mn><mo>∘</mo></msup><mo>≈</mo><mn>59,6</mn></mrow></math>, also 59,6 m.</li></ol><p><strong>Richtige Antwort:</strong> 59,6 m (erlaubte Abweichung: 0,05 m)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Du stehst 50 m von einem Turm entfernt auf ebenem Boden. Die Turmspitze siehst du unter dem Höhenwinkel α = 20°. Wie hoch ist der Turm über deiner Augenhöhe? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Entfernung ist die Ankathete, Höhe die Gegenkathete: Tangens.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>h</mi><mo>=</mo><mi>d</mi><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>50</mn><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>20</mn><mo>∘</mo></msup><mo>≈</mo><mn>18,2</mn></mrow></math>, also 18,2 m.</li></ol><p><strong>Richtige Antwort:</strong> 18,2 m (erlaubte Abweichung: 0,05 m)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Du stehst 50 m von einem Turm entfernt auf ebenem Boden. Die Turmspitze siehst du unter dem Höhenwinkel α = 35°. Wie hoch ist der Turm über deiner Augenhöhe? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Entfernung ist die Ankathete, Höhe die Gegenkathete: Tangens.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>h</mi><mo>=</mo><mi>d</mi><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mn>50</mn><mo>⋅</mo><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>35</mn><mo>∘</mo></msup><mo>≈</mo><mn>35</mn></mrow></math>, also 35 m.</li></ol><p><strong>Richtige Antwort:</strong> 35 m (erlaubte Abweichung: 0,05 m)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"hoehe-tangens","given":{"d":{"int":[20,80],"step":5},"alpha":{"oneOf":[20,25,30,35,40,50,55,60]}},"where":["d * tan(alpha) \u003c= 60"],"task":{"text":"Du stehst {{d}} m von einem Turm entfernt auf ebenem Boden. Die Turmspitze siehst du unter dem Höhenwinkel α = {{alpha}}°. Wie hoch ist der Turm über deiner Augenhöhe? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(d * tan(alpha), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05,"unit":"m"}}},"mistakes":[{"value":"round(d * sin(alpha), 1)","message":"Der Sinus braucht die Hypotenuse. Hier sind Entfernung (Ankathete) und Höhe (Gegenkathete) im Spiel, das ist der Tangens."},{"value":"round(d / tan(alpha), 1)","message":"Du hast geteilt. Tan α = Höhe : Entfernung, nach der Höhe aufgelöst wird multipliziert."}],"hint":"Entfernung ist die Ankathete, Höhe die Gegenkathete: Tangens.","steps":["$h = d \\cdot \\tan \\alpha = {{d}} \\cdot \\tan {{alpha}}^\\circ \\approx {{answer}}$, also {{answer}} m."]},"templates":{"de":{"task":"Du stehst ⟦d⟧ m von einem Turm entfernt auf ebenem Boden. Die Turmspitze siehst du unter dem Höhenwinkel α = ⟦alpha⟧°. Wie hoch ist der Turm über deiner Augenhöhe? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>d\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>tan\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦d⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>tan\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmsup>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ m."],"hint":"Entfernung ist die Ankathete, Höhe die Gegenkathete: Tangens.","messages":["Der Sinus braucht die Hypotenuse. Hier sind Entfernung (Ankathete) und Höhe (Gegenkathete) im Spiel, das ist der Tangens.","Du hast geteilt. Tan α = Höhe : Entfernung, nach der Höhe aufgelöst wird multipliziert."]}},"data":{},"seeds":[1,2,3,4,6,7,8,9,10,11,12,14,15,16,17,18,19,20,22,24,25,26,27,29,30,31,32,35,36,37,39,40,41,43,47,49,51,55,56,60,61,65,68,76,77,82,85,89,96,97,98,100,104,107,108,112,116,117,120,122,124,127,128,129,141,148,163],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="2950e412" data-block-type="generated" data-block-order="25">
+<div class="explainer-exercise explainer-generated" id="rampe-laenge">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Rampe soll 0,6 m Höhe überwinden und mit dem Boden den Winkel α = 8° bilden. Wie lang wird die Rampe? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Höhe ist die Gegenkathete, die Rampe die Hypotenuse. Löse sin α = Höhe : Länge nach der Länge auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>c</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></mfrac><mo>=</mo><mfrac><mn>0,6</mn><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>8</mn><mo>∘</mo></msup></mrow></mfrac><mo>≈</mo><mn>4,3</mn></mrow></math>, also 4,3 m.</li></ol><p><strong>Richtige Antwort:</strong> 4,3 m (erlaubte Abweichung: 0,05 m)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Rampe soll 0,8 m Höhe überwinden und mit dem Boden den Winkel α = 4° bilden. Wie lang wird die Rampe? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Höhe ist die Gegenkathete, die Rampe die Hypotenuse. Löse sin α = Höhe : Länge nach der Länge auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>c</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></mfrac><mo>=</mo><mfrac><mn>0,8</mn><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>4</mn><mo>∘</mo></msup></mrow></mfrac><mo>≈</mo><mn>11,5</mn></mrow></math>, also 11,5 m.</li></ol><p><strong>Richtige Antwort:</strong> 11,5 m (erlaubte Abweichung: 0,05 m)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Rampe soll 0,4 m Höhe überwinden und mit dem Boden den Winkel α = 10° bilden. Wie lang wird die Rampe? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Höhe ist die Gegenkathete, die Rampe die Hypotenuse. Löse sin α = Höhe : Länge nach der Länge auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>c</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi></mrow></mfrac><mo>=</mo><mfrac><mn>0,4</mn><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>10</mn><mo>∘</mo></msup></mrow></mfrac><mo>≈</mo><mn>2,3</mn></mrow></math>, also 2,3 m.</li></ol><p><strong>Richtige Antwort:</strong> 2,3 m (erlaubte Abweichung: 0,05 m)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"rampe-laenge","given":{"h":{"oneOf":[0.4,0.6,0.8,1,1.2]},"alpha":{"oneOf":[4,5,6,8,10]}},"task":{"text":"Eine Rampe soll {{h}} m Höhe überwinden und mit dem Boden den Winkel α = {{alpha}}° bilden. Wie lang wird die Rampe? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(h / sin(alpha), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05,"unit":"m"}}},"mistakes":[{"value":"round(h * sin(alpha), 1)","message":"Du hast multipliziert. Die gesuchte Rampe ist die Hypotenuse, sie steht im Nenner: Länge = Höhe durch sin α."},{"value":"round(h / cos(alpha), 1)","message":"Der Kosinus gehört zur Ankathete. Die Höhe ist die Gegenkathete, also brauchst du den Sinus."}],"hint":"Höhe ist die Gegenkathete, die Rampe die Hypotenuse. Löse sin α = Höhe : Länge nach der Länge auf.","steps":["$c = \\frac{h}{\\sin \\alpha} = \\frac{{{h}}}{\\sin {{alpha}}^\\circ} \\approx {{answer}}$, also {{answer}} m."]},"templates":{"de":{"task":"Eine Rampe soll ⟦h⟧ m Höhe überwinden und mit dem Boden den Winkel α = ⟦alpha⟧° bilden. Wie lang wird die Rampe? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>c\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmi>h\u003c/mi>\u003cmrow>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦h⟧\u003c/mtext>\u003cmrow>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmsup>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/mfrac>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ m."],"hint":"Höhe ist die Gegenkathete, die Rampe die Hypotenuse. Löse sin α = Höhe : Länge nach der Länge auf.","messages":["Du hast multipliziert. Die gesuchte Rampe ist die Hypotenuse, sie steht im Nenner: Länge = Höhe durch sin α.","Der Kosinus gehört zur Ankathete. Die Höhe ist die Gegenkathete, also brauchst du den Sinus."]}},"data":{},"seeds":[1,2,3,5,6,7,8,9,11,12,13,14,15,17,18,20,22,24,25,34,36,44,47,61,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Wie es weitergeht</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="7e200d3d" data-block-type="text" data-block-order="26">
+<div class="block-text"><p>Das kannst du jetzt: Aus einem Winkel und einer Seite eine zweite Seite berechnen. Auf der nächsten Seite drehst du die Frage um: Du kennst zwei Seiten und suchst den Winkel.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Seiten mit Sinus, Kosinus und Tangens berechnen","order":9}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../dreieck/verhaeltnisse/">Zurück: Seitenverhältnisse im rechtwinkligen Dreieck</a><a rel="next" href="../../dreieck/winkel-berechnen/">Weiter: Winkel mit Sinus, Kosinus und Tangens berechnen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

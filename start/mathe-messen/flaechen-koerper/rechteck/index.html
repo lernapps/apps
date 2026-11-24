@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Fläche und Umfang: Rechteck, Quadrat – Messen: Längen, Flächen, Volumen</title>
+    <meta name="description" content="Flächeninhalt und Umfang von Rechteck und Quadrat berechnen: aus dem Auslegen mit Einheitsquadraten wird die Formel." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../flaechen-koerper/rechteck/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../flaechen-koerper/">Flächen auslegen, Körper füllen</a></li><li aria-current="page">Fläche und Umfang: Rechteck, Quadrat</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Fläche und Umfang: Rechteck, Quadrat</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../flaechen-koerper/rechteck/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧flaechen-koerper/rechteck/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-messen","page":{"id":"rechteck","title":"Fläche und Umfang: Rechteck, Quadrat","exercises":[{"id":"reihen-zaehlen","section":"einstieg","numbered":false},{"id":"flaeche-oder-umfang","section":"uebung","numbered":false},{"id":"rechteck-flaeche","section":"uebung","numbered":true},{"id":"rechteck-umfang","section":"uebung","numbered":true},{"id":"quadrat-flaeche","section":"uebung","numbered":true},{"id":"seite-gesucht","section":"uebung","numbered":true},{"id":"quadrat-umfang","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung"]},"tutor":"flaechen-koerper/rechteck/tutor/","markdown":"flaechen-koerper/rechteck/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Reihen mal Quadrate je Reihe</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="d0840db2" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel Rasen ein Beet braucht oder wie viel Zaun darum herum, zählst du nicht jedes
+Quadrat einzeln. Nach dieser Seite berechnest du Flächeninhalt und Umfang von Rechteck und Quadrat. Das Modell
+dahinter: Ein Rechteck legst du in Reihen aus. Die Zahl der Quadrate ist die Zahl der Reihen mal die Zahl der
+Quadrate je Reihe.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="9b1a0258" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="reihen-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-reihen-zaehlen" data-id="reihen-zaehlen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Rechteck ist 5 cm breit und 3 cm hoch. Die oberste Reihe ist mit Einheitsquadraten ausgelegt. Wie viele Einheitsquadrate passen insgesamt hinein?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/rechteck-eine-reihe.svg" alt="Ein Rechteck, 5 cm breit und 3 cm hoch. Die oberste Reihe ist mit 5 Einheitsquadraten ausgelegt, der Rest ist leer." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Eine Reihe liegt schon. Wie viele Reihen passen insgesamt hinein?</p></figcaption></figure></div>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-reihen-zaehlen">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 15</p>
+<p class="question-explanation">Es gibt 3 Reihen mit je 5 Quadraten: <math><mrow><mn>3</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>15</mn></mrow></math> Einheitsquadrate.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 15</p>
+<p class="question-explanation">Es gibt 3 Reihen mit je 5 Quadraten: <math><mrow><mn>3</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>15</mn></mrow></math> Einheitsquadrate.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"reihen-zaehlen","text":"Ein Rechteck ist 5 cm breit und 3 cm hoch. Die oberste Reihe ist mit Einheitsquadraten ausgelegt. Wie viele Einheitsquadrate passen insgesamt hinein?","explanation":"Es gibt 3 Reihen mit je 5 Quadraten: $3 \\cdot 5 = 15$ Einheitsquadrate.","links":[],"hint":"Wie viele Reihen gibt es? In jeder Reihe liegen gleich viele Quadrate.","material":[{"type":"figure","image":"images/rechteck-eine-reihe.svg","alt":"Ein Rechteck, 5 cm breit und 3 cm hoch. Die oberste Reihe ist mit 5 Einheitsquadraten ausgelegt, der Rest ist leer.","caption":"Eine Reihe liegt schon. Wie viele Reihen passen insgesamt hinein?","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"number","answer":15,"tolerance":0,"mistakes":[{"answer":8,"message":"Du hast 5 und 3 addiert. Jede der Reihen hat gleich viele Quadrate."},{"answer":5,"message":"So viele liegen schon in der obersten Reihe. Es gibt aber mehr Reihen."}]},"rendered":{"Es gibt 3 Reihen mit je 5 Quadraten: $3 \\cdot 5 = 15$ Einheitsquadrate.":"Es gibt 3 Reihen mit je 5 Quadraten: \u003cmath>\u003cmrow>\u003cmn>3\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>15\u003c/mn>\u003c/mrow>\u003c/math> Einheitsquadrate."}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Reihen mal Quadrate je Reihe</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="0f732b98" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du die Quadrate nicht einzeln zählen willst, hilft dir das Rechteckmodell. Im <strong>Rechteckmodell</strong> liegen Einheitsquadrate in Reihen. Jede Reihe hat so viele Quadrate, wie die Seite <math><mi>a</mi></math>
+lang ist, und es gibt so viele Reihen, wie die Seite <math><mi>b</mi></math> lang ist. Das Auslegen kürzt du mit Mal ab.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="034911ad" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/rechteckmodell.svg" alt="Ein Rechteck aus Einheitsquadraten, 6 Quadrate in jeder Reihe und 4 Reihen. Die waagerechte Seite heißt a, die senkrechte Seite heißt b." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Seite <math><mi>a</mi></math> sagt, wie viele Quadrate in einer Reihe liegen. Seite <math><mi>b</mi></math> sagt, wie viele Reihen es sind.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="0f0fb8d6" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-flaecheninhalt"><a href="../../glossar/#flaecheninhalt">Flächeninhalt</a></dfn></dt><dd><p>Der Flächeninhalt sagt, wie viele Einheitsquadrate in eine Figur passen. Beim Rechteck mit 6 cm und 4 cm sind es 24 cm².</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="4c0049a9" data-block-type="formula" data-block-order="6">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="16d28251" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-umfang"><a href="../../glossar/#umfang">Umfang</a></dfn></dt><dd><p>Der Umfang ist die Länge des Weges einmal um die Figur herum. Beim Rechteck mit 6 cm und 4 cm sind es 20 cm.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="6fabab38" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>a</mi><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>b</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/7" data-block-id="80bc0d11" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/7/1" data-block-id="5b02a55b" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Der Flächeninhalt hat die Einheit cm², m² und so weiter, der Umfang die Einheit cm, m und so weiter. Bei
+einem Quadrat ist <math><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, also <math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math> und <math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>a</mi></mrow></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="a8e6b509" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Ein Beet</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="9b01a29b" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Ein Beet ist 8 m lang und 5 m breit. Der Flächeninhalt ist <math><mrow><mi>A</mi><mo>=</mo><mn>8</mn><mtext> </mtext><mtext>m</mtext><mo>⋅</mo><mn>5</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>40</mn><mtext> </mtext><msup><mtext>m</mtext><mn>2</mn></msup></mrow></math>.
+Der Umfang ist <math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>8</mn><mtext> </mtext><mtext>m</mtext><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>5</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>26</mn><mtext> </mtext><mtext>m</mtext></mrow></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="d9ee57ee" data-block-type="single-choice" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="flaeche-oder-umfang">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-flaeche-oder-umfang" data-id="flaeche-oder-umfang" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du willst einen Zaun um ein Rechteck bauen. Was berechnest du?</legend>
+<label class="question-option"><input type="radio" name="frage-flaeche-oder-umfang" value="0"> <span>den Flächeninhalt</span></label>
+<label class="question-option"><input type="radio" name="frage-flaeche-oder-umfang" value="1"> <span>den Umfang</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>den Flächeninhalt</strong></p><p>Der Flächeninhalt sagt, wie viel Platz im Rechteck ist, zum Beispiel für Rasen. Der Zaun steht am Rand.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>den Umfang</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Zaun geht einmal um das Rechteck herum. Das ist der Umfang.</p></li>
+</ul>
+<p class="question-explanation">Der Zaun läuft am Rand entlang, also brauchst du den Umfang.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>den Flächeninhalt</strong></p><p>Der Flächeninhalt sagt, wie viel Platz im Rechteck ist, zum Beispiel für Rasen. Der Zaun steht am Rand.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>den Umfang</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Zaun geht einmal um das Rechteck herum. Das ist der Umfang.</p></li>
+</ul>
+<p class="question-explanation">Der Zaun läuft am Rand entlang, also brauchst du den Umfang.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"flaeche-oder-umfang","text":"Du willst einen Zaun um ein Rechteck bauen. Was berechnest du?","explanation":"Der Zaun läuft am Rand entlang, also brauchst du den Umfang.","links":[],"type":"single-choice","options":[{"text":"den Flächeninhalt","correct":false,"info":"Der Flächeninhalt sagt, wie viel Platz im Rechteck ist, zum Beispiel für Rasen. Der Zaun steht am Rand."},{"text":"den Umfang","correct":true,"info":"Der Zaun geht einmal um das Rechteck herum. Das ist der Umfang."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="4ebe36de" data-block-type="generated" data-block-order="14">
+<div class="explainer-exercise explainer-generated" id="rechteck-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Rechteck ist 11 m lang und 9 m breit. Berechne den Flächeninhalt in m².</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mn>11</mn><mtext> </mtext><mtext>m</mtext><mo>⋅</mo><mn>9</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>99</mn><mtext> </mtext><msup><mtext>m</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 99 m²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Rechteck ist 3 m lang und 4 m breit. Berechne den Flächeninhalt in m².</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mn>3</mn><mtext> </mtext><mtext>m</mtext><mo>⋅</mo><mn>4</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>12</mn><mtext> </mtext><msup><mtext>m</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 12 m²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Rechteck ist 12 m lang und 3 m breit. Berechne den Flächeninhalt in m².</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mn>12</mn><mtext> </mtext><mtext>m</mtext><mo>⋅</mo><mn>3</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>36</mn><mtext> </mtext><msup><mtext>m</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 36 m²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"rechteck-flaeche","given":{"a":{"int":[3,15]},"b":{"int":[2,12]}},"where":["a != b","a * b != 2 * a + 2 * b"],"task":{"text":"Ein Rechteck ist {{a}} m lang und {{b}} m breit. Berechne den Flächeninhalt in m²."},"answer":{"value":"a * b","compare":{"number":{"format":"integer","unit":"m²"}}},"mistakes":[{"value":"2 * a + 2 * b","message":"Das ist der Umfang. Gefragt ist der Flächeninhalt: Wie viele Einheitsquadrate passen hinein?"},{"value":"a + b","message":"Du hast addiert. Die Quadrate liegen in Reihen, also mal."}],"hint":"Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?","steps":["$A = a \\cdot b$","$A = {{a}}\\ \\text{m} \\cdot {{b}}\\ \\text{m} = {{answer}}\\ \\text{m}^2$."]},"templates":{"de":{"task":"Ein Rechteck ist ⟦a⟧ m lang und ⟦b⟧ m breit. Berechne den Flächeninhalt in m².","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>b\u003c/mi>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>m\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>m\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>m\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?","messages":["Das ist der Umfang. Gefragt ist der Flächeninhalt: Wie viele Einheitsquadrate passen hinein?","Du hast addiert. Die Quadrate liegen in Reihen, also mal."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,14,15,16,17,18,20,21,22,23,24,25,26,27,30,31,32,34,35,36,37,38,39,40,41,42,45,46,47,50,51,52,54,55,57,59,60,61,62,65,68,69,70,73,74,75,78,79,80,81,82,84,92,94,95,96,97],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="4b4c70d0" data-block-type="generated" data-block-order="15">
+<div class="explainer-exercise explainer-generated" id="rechteck-umfang">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Rechteck ist 13 m lang und 8 m breit. Berechne den Umfang in m.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gehe einmal am Rand des Rechtecks entlang. Wie viele Seiten kommen vor, und wie lang sind sie?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>a</mi><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>b</mi></mrow></math></li><li><math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>13</mn><mtext> </mtext><mtext>m</mtext><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>8</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>42</mn><mtext> </mtext><mtext>m</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 42 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Rechteck ist 14 m lang und 4 m breit. Berechne den Umfang in m.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gehe einmal am Rand des Rechtecks entlang. Wie viele Seiten kommen vor, und wie lang sind sie?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>a</mi><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>b</mi></mrow></math></li><li><math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>14</mn><mtext> </mtext><mtext>m</mtext><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>4</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>36</mn><mtext> </mtext><mtext>m</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 36 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Rechteck ist 12 m lang und 5 m breit. Berechne den Umfang in m.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gehe einmal am Rand des Rechtecks entlang. Wie viele Seiten kommen vor, und wie lang sind sie?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>a</mi><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>b</mi></mrow></math></li><li><math><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>12</mn><mtext> </mtext><mtext>m</mtext><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>5</mn><mtext> </mtext><mtext>m</mtext><mo>=</mo><mn>34</mn><mtext> </mtext><mtext>m</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 34 m</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"rechteck-umfang","given":{"a":{"int":[3,15]},"b":{"int":[2,12]}},"where":["a != b","a * b != 2 * a + 2 * b"],"task":{"text":"Ein Rechteck ist {{a}} m lang und {{b}} m breit. Berechne den Umfang in m."},"answer":{"value":"2 * a + 2 * b","compare":{"number":{"format":"integer","unit":"m"}}},"mistakes":[{"value":"a * b","message":"Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand des Rechtecks."},{"value":"a + b","message":"Das ist erst der halbe Rand: Du musst alle vier Seiten zählen."}],"hint":"Gehe einmal am Rand des Rechtecks entlang. Wie viele Seiten kommen vor, und wie lang sind sie?","steps":["$u = 2 \\cdot a + 2 \\cdot b$","$u = 2 \\cdot {{a}}\\ \\text{m} + 2 \\cdot {{b}}\\ \\text{m} = {{answer}}\\ \\text{m}$."]},"templates":{"de":{"task":"Ein Rechteck ist ⟦a⟧ m lang und ⟦b⟧ m breit. Berechne den Umfang in m.","steps":["\u003cmath>\u003cmrow>\u003cmi>u\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>b\u003c/mi>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>u\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>m\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>m\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>m\u003c/mtext>\u003c/mrow>\u003c/math>."],"hint":"Gehe einmal am Rand des Rechtecks entlang. Wie viele Seiten kommen vor, und wie lang sind sie?","messages":["Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand des Rechtecks.","Das ist erst der halbe Rand: Du musst alle vier Seiten zählen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,21,22,23,24,25,28,29,30,31,32,34,35,36,37,38,39,40,41,42,43,45,46,47,48,51,52,53,54,56,59,61,62,63,64,65,66,68,73,76,79,81,83,84,87,88,89,90,93],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="a426b2a7" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="quadrat-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Quadrat hat die Seitenlänge 11 cm. Berechne den Flächeninhalt in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Beim Quadrat sind beide Seiten gleich lang. Wie viele Reihen mit wie vielen Quadraten?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mn>11</mn><mtext> </mtext><mtext>cm</mtext><mo>⋅</mo><mn>11</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>121</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 121 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Quadrat hat die Seitenlänge 7 cm. Berechne den Flächeninhalt in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Beim Quadrat sind beide Seiten gleich lang. Wie viele Reihen mit wie vielen Quadraten?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mn>7</mn><mtext> </mtext><mtext>cm</mtext><mo>⋅</mo><mn>7</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>49</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 49 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Quadrat hat die Seitenlänge 13 cm. Berechne den Flächeninhalt in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Beim Quadrat sind beide Seiten gleich lang. Wie viele Reihen mit wie vielen Quadraten?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mn>13</mn><mtext> </mtext><mtext>cm</mtext><mo>⋅</mo><mn>13</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>169</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 169 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"quadrat-flaeche","given":{"a":{"int":[3,14]}},"where":["a != 4"],"task":{"text":"Ein Quadrat hat die Seitenlänge {{a}} cm. Berechne den Flächeninhalt in cm²."},"answer":{"value":"a * a","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"4 * a","message":"Das ist der Umfang. Gefragt ist der Flächeninhalt."},{"value":"2 * a","message":"Du hast die Seitenlänge verdoppelt. Beim Quadrat gibt es so viele Reihen wie Quadrate je Reihe."}],"hint":"Beim Quadrat sind beide Seiten gleich lang. Wie viele Reihen mit wie vielen Quadraten?","steps":["$A = a \\cdot a$","$A = {{a}}\\ \\text{cm} \\cdot {{a}}\\ \\text{cm} = {{answer}}\\ \\text{cm}^2$."]},"templates":{"de":{"task":"Ein Quadrat hat die Seitenlänge ⟦a⟧ cm. Berechne den Flächeninhalt in cm².","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>cm\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>cm\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>cm\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Beim Quadrat sind beide Seiten gleich lang. Wie viele Reihen mit wie vielen Quadraten?","messages":["Das ist der Umfang. Gefragt ist der Flächeninhalt.","Du hast die Seitenlänge verdoppelt. Beim Quadrat gibt es so viele Reihen wie Quadrate je Reihe."]}},"data":{},"seeds":[1,2,3,4,6,8,12,13,15,17,19],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="9a820142" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="seite-gesucht">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Rechteck hat den Flächeninhalt 64 cm². Eine Seite ist 4 cm lang. Wie lang ist die andere Seite in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Flächeninhalt ist Seite mal Seite. Mit welcher Zahl mal 4 kommst du auf 64?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math>, also <math><mrow><mi>b</mi><mo>=</mo><mi>A</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>a</mi></mrow></math>.</li><li><math><mrow><mi>b</mi><mo>=</mo><mn>64</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>4</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>16</mn><mtext> </mtext><mtext>cm</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 16 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Rechteck hat den Flächeninhalt 42 cm². Eine Seite ist 6 cm lang. Wie lang ist die andere Seite in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Flächeninhalt ist Seite mal Seite. Mit welcher Zahl mal 6 kommst du auf 42?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math>, also <math><mrow><mi>b</mi><mo>=</mo><mi>A</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>a</mi></mrow></math>.</li><li><math><mrow><mi>b</mi><mo>=</mo><mn>42</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>6</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>7</mn><mtext> </mtext><mtext>cm</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 7 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Rechteck hat den Flächeninhalt 48 cm². Eine Seite ist 4 cm lang. Wie lang ist die andere Seite in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Flächeninhalt ist Seite mal Seite. Mit welcher Zahl mal 4 kommst du auf 48?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math>, also <math><mrow><mi>b</mi><mo>=</mo><mi>A</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>a</mi></mrow></math>.</li><li><math><mrow><mi>b</mi><mo>=</mo><mn>48</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>4</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>12</mn><mtext> </mtext><mtext>cm</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 12 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"seite-gesucht","given":{"A":{"int":[24,150]},"a":{"int":[4,12]}},"where":["decimals(A / a) == 0","A / a != a","A / a >= 2","A / a \u003c= 20"],"task":{"text":"Ein Rechteck hat den Flächeninhalt {{A}} cm². Eine Seite ist {{a}} cm lang. Wie lang ist die andere Seite in cm?"},"answer":{"value":"A / a","compare":{"number":{"format":"integer","unit":"cm"}}},"mistakes":[{"value":"A - a","message":"Du hast die Seite abgezogen. Der Flächeninhalt ist ein Produkt, also teilst du."},{"value":"A * a","message":"Du hast mal gerechnet. Der Flächeninhalt ist schon das Produkt der beiden Seiten."}],"hint":"Der Flächeninhalt ist Seite mal Seite. Mit welcher Zahl mal {{a}} kommst du auf {{A}}?","steps":["$A = a \\cdot b$, also $b = A : a$.","$b = {{A}}\\ \\text{cm}^2 : {{a}}\\ \\text{cm} = {{answer}}\\ \\text{cm}$."]},"templates":{"de":{"task":"Ein Rechteck hat den Flächeninhalt ⟦A⟧ cm². Eine Seite ist ⟦a⟧ cm lang. Wie lang ist die andere Seite in cm?","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>b\u003c/mi>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>b\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>A\u003c/mi>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmi>a\u003c/mi>\u003c/mrow>\u003c/math>.","\u003cmath>\u003cmrow>\u003cmi>b\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦A⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>cm\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>cm\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>cm\u003c/mtext>\u003c/mrow>\u003c/math>."],"hint":"Der Flächeninhalt ist Seite mal Seite. Mit welcher Zahl mal ⟦a⟧ kommst du auf ⟦A⟧?","messages":["Du hast die Seite abgezogen. Der Flächeninhalt ist ein Produkt, also teilst du.","Du hast mal gerechnet. Der Flächeninhalt ist schon das Produkt der beiden Seiten."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,27,29,30,31,32,34,39,40,43,44,45,47,49,51,52,53,54,55,57,58,59,60,61,65,66,67,68,69,70,73,74,76,77,78,81,87,94,97,99,100,104,105],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="adebe7c8" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="quadrat-umfang">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Quadrat hat die Seitenlänge 6 cm. Berechne den Umfang in cm.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Rand des Quadrats führt an vier gleich langen Seiten entlang.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Ein Quadrat hat vier gleich lange Seiten: <math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>a</mi></mrow></math>.</li><li><math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>6</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>24</mn><mtext> </mtext><mtext>cm</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 24 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Quadrat hat die Seitenlänge 15 cm. Berechne den Umfang in cm.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Rand des Quadrats führt an vier gleich langen Seiten entlang.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Ein Quadrat hat vier gleich lange Seiten: <math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>a</mi></mrow></math>.</li><li><math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>15</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>60</mn><mtext> </mtext><mtext>cm</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 60 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Quadrat hat die Seitenlänge 9 cm. Berechne den Umfang in cm.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Rand des Quadrats führt an vier gleich langen Seiten entlang.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Ein Quadrat hat vier gleich lange Seiten: <math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>a</mi></mrow></math>.</li><li><math><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>9</mn><mtext> </mtext><mtext>cm</mtext><mo>=</mo><mn>36</mn><mtext> </mtext><mtext>cm</mtext></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 36 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"quadrat-umfang","given":{"a":{"int":[3,15]}},"where":["a != 4","a != 2"],"task":{"text":"Ein Quadrat hat die Seitenlänge {{a}} cm. Berechne den Umfang in cm."},"answer":{"value":"4 * a","compare":{"number":{"format":"integer","unit":"cm"}}},"mistakes":[{"value":"a * a","message":"Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand des Quadrats."},{"value":"2 * a","message":"Du hast nur zwei Seiten gezählt. Ein Quadrat hat vier Seiten."}],"hint":"Der Rand des Quadrats führt an vier gleich langen Seiten entlang.","steps":["Ein Quadrat hat vier gleich lange Seiten: $u = 4 \\cdot a$.","$u = 4 \\cdot {{a}}\\ \\text{cm} = {{answer}}\\ \\text{cm}$."]},"templates":{"de":{"task":"Ein Quadrat hat die Seitenlänge ⟦a⟧ cm. Berechne den Umfang in cm.","steps":["Ein Quadrat hat vier gleich lange Seiten: \u003cmath>\u003cmrow>\u003cmi>u\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003c/mrow>\u003c/math>.","\u003cmath>\u003cmrow>\u003cmi>u\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>cm\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmtext>cm\u003c/mtext>\u003c/mrow>\u003c/math>."],"hint":"Der Rand des Quadrats führt an vier gleich langen Seiten entlang.","messages":["Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand des Quadrats.","Du hast nur zwei Seiten gezählt. Ein Quadrat hat vier Seiten."]}},"data":{},"seeds":[1,2,3,4,6,7,8,9,10,12,17,40],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Messen: Längen, Flächen, Volumen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-messen","app":"Messen: Längen, Flächen, Volumen","root":"../../","repository":"lernapps/mathe-messen","revision":"51b22cd","page":{"title":"Fläche und Umfang: Rechteck, Quadrat","order":5}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../flaechen-koerper/einheiten/">Zurück: Flächen- und Volumeneinheiten</a><a rel="next" href="../../flaechen-koerper/zusammengesetzt/">Weiter: Zusammengesetzte Figuren</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

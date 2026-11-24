@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -84,19 +81,38 @@ $\frac{3}{6} + \frac{2}{6} = \frac{5}{6}$ wäre größer als jede der beiden ein
 
 ### Bild
 
-Bild: Baumdiagramm zur Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal mit Zurücklegen; der Pfad rot-blau ist orange. Bildunterschrift: Der Baum aus dem Beispiel: Urne mit 3 roten (R), 2 blauen (B) und 1 gelben (G) Kugel, zweimal mit Zurücklegen. Auf beiden Stufen stehen dieselben Zweige: rot 3/6, blau 2/6, gelb 1/6. Der Pfad rot-blau ist orange. Unter den neun Enden stehen die Pfadwahrscheinlichkeiten: rot-rot 1/4, rot-blau 1/6, rot-gelb 1/12, blau-rot 1/6, blau-blau 1/9, blau-gelb 1/18, gelb-rot 1/12, gelb-blau 1/18, gelb-gelb 1/36.
-
-### Video dazu
-
-Video: [Produktregel | Wahrscheinlichkeitsrechnung - einfach erklärt](https://www.youtube.com/watch?v=fLPxMfgUxVk), Lehrerschmidt (YouTube)
-
-- Noch eine Erklärung: [Pfadregeln](https://de.serlo.org/mathe/189811/pfadregeln) bei serlo.org
+Bild: Baumdiagramm zur Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal mit Zurücklegen; der Pfad rot-blau ist orange. Bildunterschrift: Der Baum aus dem Beispiel: Urne mit 3 roten (R), 2 blauen (B) und 1 gelben (G) Kugel, zweimal mit Zurücklegen. Auf beiden Stufen stehen dieselben Zweige: rot $\frac{3}{6}$, blau $\frac{2}{6}$, gelb $\frac{1}{6}$. Der Pfad rot-blau ist orange. Unter den neun Enden stehen die Pfadwahrscheinlichkeiten: rot-rot $\frac{1}{4}$, rot-blau $\frac{1}{6}$, rot-gelb $\frac{1}{12}$, blau-rot $\frac{1}{6}$, blau-blau $\frac{1}{9}$, blau-gelb $\frac{1}{18}$, gelb-rot $\frac{1}{12}$, gelb-blau $\frac{1}{18}$, gelb-gelb $\frac{1}{36}$.
 
 ### Übung
+
+- Aufgabe `pfad-muenze` (unten)
+
+- Aufgabe `pfad-nie-groesser` (unten)
 
 - Aufgabe `pfad-im-baum` (unten)
 
 - Aufgabe `pfadregel-1-urne` (unten)
+
+### Aufgabe pfad-muenze
+
+- Aufgabe: Du wirfst eine Münze zweimal. Wie groß ist die Wahrscheinlichkeit für zweimal Zahl? Gib sie in Prozent an.
+- Antwortformat: eine Zahl eintippen (%)
+- Lösung: 25 %
+- Erklärung: Der Pfad hat zwei Zweige mit je $\frac{1}{2}$. Die Wahrscheinlichkeit des Pfades ist das Produkt: $\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} = 25\,\%$.
+- Tipp der App: Schreibe die Wahrscheinlichkeit für einen Wurf als Bruch. Für „erst Zahl, dann Zahl“ rechnest du entlang des Pfades.
+- Typische Fehler und was die App sagt:
+  - 100: Du hast die Wahrscheinlichkeiten addiert. Entlang eines Pfades wird multipliziert (1. Pfadregel).
+  - 50: Das ist die Wahrscheinlichkeit für einen einzelnen Wurf. Für den zweiten Wurf kommt noch ein Faktor dazu.
+- Link: [../?via=tutor#pfad-muenze](../?via=tutor#pfad-muenze)
+
+### Aufgabe pfad-nie-groesser
+
+- Aufgabe: Aussage: Ein Pfad kann wahrscheinlicher sein als einer seiner Zweige.
+- Antwortformat: „Stimmt“ oder „Stimmt nicht“ wählen
+- Lösung: Die Aussage stimmt nicht.
+- Erklärung: Die Aussage ist falsch. Zweige haben Wahrscheinlichkeiten zwischen 0 und 1, und Multiplizieren mit so einer Zahl macht das Ergebnis kleiner. Ein Beispiel: $\frac{3}{6} \cdot \frac{2}{6} = \frac{1}{6}$ ist kleiner als $\frac{3}{6}$ und kleiner als $\frac{2}{6}$.
+- Tipp der App: Denke an die Rechnung entlang des Pfades. Was passiert, wenn du Zahlen zwischen 0 und 1 multiplizierst?
+- Link: [../?via=tutor#pfad-nie-groesser](../?via=tutor#pfad-nie-groesser)
 
 ### Aufgabe pfad-im-baum
 

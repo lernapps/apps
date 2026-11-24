@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Die Fläche des Kreises – Kreis und Körper berechnen</title>
+    <meta name="description" content="Du schneidest einen Kreis in Tortenstücke und legst sie zu einem Fast-Rechteck. Daraus entsteht A = π · r²." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../kreis/flaeche/" />
+    <script type="module" crossorigin src="../../assets/islands-C8L28Da2.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../kreis/">Kreis, π und Bogenmaß</a></li><li aria-current="page">Die Fläche des Kreises</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Die Fläche des Kreises</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../kreis/flaeche/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧kreis/flaeche/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"flaeche","title":"Die Fläche des Kreises","exercises":[{"id":"torte-schaetzen","section":"einstieg","numbered":false},{"id":"flaeche-aus-radius","section":"uebung","numbered":true},{"id":"flaeche-aus-durchmesser","section":"uebung","numbered":true},{"id":"radius-aus-flaeche","section":"uebung","numbered":false},{"id":"radius-verdoppeln-flaeche","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"kreis/flaeche/tutor/","markdown":"kreis/flaeche/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wie groß ist die Fläche einer runden Torte?</a></li><li><a href="#herleitung">Aus Tortenstücken wird ein Rechteck</a></li><li><a href="#beispiel">Die runde Torte</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wie groß ist die Fläche einer runden Torte?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="e14b1975" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel Platz oder Material ein Kreis braucht, zum Beispiel für eine Torte, eine Tischplatte oder ein Beet, brauchst du seine Fläche.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="65d00268" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Eine runde Torte hat den Radius r = 10 cm. Zwei Quadrate helfen dir beim Schätzen. Das große Quadrat umschließt die Torte und hat die Seitenlänge 20 cm, also die Fläche 400 cm². Das kleine Quadrat liegt in der Torte, seine Ecken liegen auf dem Rand. Es hat die Fläche 200 cm².</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="92d826bd" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="torte-schaetzen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-torte-schaetzen" data-id="torte-schaetzen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Fläche kann die Torte haben?</legend>
+<label class="question-option"><input type="radio" name="frage-torte-schaetzen" value="0"> <span>150 cm²</span></label>
+<label class="question-option"><input type="radio" name="frage-torte-schaetzen" value="1"> <span>330 cm²</span></label>
+<label class="question-option"><input type="radio" name="frage-torte-schaetzen" value="2"> <span>450 cm²</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>150 cm²</strong></p><p>Das ist weniger als das kleine Quadrat in der Torte (200 cm²). Die Torte ist größer.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>330 cm²</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Fläche liegt zwischen dem kleinen Quadrat (200 cm²) und dem großen (400 cm²).</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>450 cm²</strong></p><p>Das ist mehr als das große Quadrat (400 cm²), das die Torte umschließt.</p></li>
+</ul>
+<p class="question-explanation">Die Torte füllt das kleine Quadrat und liegt im großen. Ihre Fläche muss zwischen 200 cm² und 400 cm² liegen. Genau rechnest du sie gleich aus.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>150 cm²</strong></p><p>Das ist weniger als das kleine Quadrat in der Torte (200 cm²). Die Torte ist größer.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>330 cm²</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Fläche liegt zwischen dem kleinen Quadrat (200 cm²) und dem großen (400 cm²).</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>450 cm²</strong></p><p>Das ist mehr als das große Quadrat (400 cm²), das die Torte umschließt.</p></li>
+</ul>
+<p class="question-explanation">Die Torte füllt das kleine Quadrat und liegt im großen. Ihre Fläche muss zwischen 200 cm² und 400 cm² liegen. Genau rechnest du sie gleich aus.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"torte-schaetzen","text":"Welche Fläche kann die Torte haben?","explanation":"Die Torte füllt das kleine Quadrat und liegt im großen. Ihre Fläche muss zwischen 200 cm² und 400 cm² liegen. Genau rechnest du sie gleich aus.","links":[],"type":"single-choice","options":[{"text":"150 cm²","correct":false,"info":"Das ist weniger als das kleine Quadrat in der Torte (200 cm²). Die Torte ist größer."},{"text":"330 cm²","correct":true,"info":"Die Fläche liegt zwischen dem kleinen Quadrat (200 cm²) und dem großen (400 cm²)."},{"text":"450 cm²","correct":false,"info":"Das ist mehr als das große Quadrat (400 cm²), das die Torte umschließt."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Aus Tortenstücken wird ein Rechteck</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="fdf8d50a" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du die Fläche eines Kreises ausrechnen willst, hilft ein Trick: Du verwandelst den Kreis in eine Figur, deren Fläche du schon berechnen kannst, ein Rechteck.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="b46160cd" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Schneide den Kreis in gleich große Tortenstücke. Lege sie abwechselnd nebeneinander, eines mit der Spitze nach oben, das nächste nach unten. Mit dem Regler änderst du die Zahl der Stücke, der Knopf legt sie um. Die Stücke sind abwechselnd rosa mit gestricheltem Rand und grau, damit du sie auseinanderhältst.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="0bd52049" data-block-type="vue-component" data-block-order="6">
+<div class="explainer-component" id="torte" data-component="Torte">
+<div class="explainer-island" hidden><div class="torte" data-v-c283af8c><label class="torte-regler" data-v-c283af8c><span data-v-c283af8c>Anzahl der Stücke: <strong data-v-c283af8c>4</strong></span><input value="0" type="range" min="0" max="3" step="1" aria-valuetext="4" data-v-c283af8c></label><button type="button" class="torte-knopf" aria-pressed="false" data-v-c283af8c>Stücke umlegen</button><svg viewBox="0 0 300 140" role="img" aria-label="Ein Kreis, in 4 gleich große Stücke geteilt." class="torte-bild" data-v-c283af8c><!--[--><path d="M150.00,70.00 L150.00,10.00 A60.00,60.00 0 0 1 210.00,70.00 Z" fill="var(--page-wrong-background)" stroke="var(--page-text)" stroke-width="1.2" stroke-dasharray="4 2" data-v-c283af8c></path><path d="M150.00,70.00 L210.00,70.00 A60.00,60.00 0 0 1 150.00,130.00 Z" fill="var(--page-surface)" stroke="var(--page-text)" stroke-width="1.2" stroke-dasharray="0" data-v-c283af8c></path><path d="M150.00,70.00 L150.00,130.00 A60.00,60.00 0 0 1 90.00,70.00 Z" fill="var(--page-wrong-background)" stroke="var(--page-text)" stroke-width="1.2" stroke-dasharray="4 2" data-v-c283af8c></path><path d="M150.00,70.00 L90.00,70.00 A60.00,60.00 0 0 1 150.00,10.00 Z" fill="var(--page-surface)" stroke="var(--page-text)" stroke-width="1.2" stroke-dasharray="0" data-v-c283af8c></path><!--]--></svg><p class="torte-ergebnis" aria-live="polite" data-v-c283af8c>Bei 4 Stücken ist die Figur etwa 2,828 · r breit und fast r hoch. Je mehr Stücke, desto näher kommt die Breite an π · r ≈ 3,14 · r.</p></div></div>
+<div class="explainer-nojs"><p>Ein Kreis mit dem Radius r wird in n gleich große Stücke geteilt. Die Stücke liegen abwechselnd mit der Spitze nach oben und nach unten nebeneinander. Je mehr Stücke es sind, desto mehr sieht die Figur wie ein Rechteck aus. Die Länge der oberen Kante in Vielfachen von r (sie wird immer näher an π · r):</p>
+<ul>
+<li>4 Stücke: 2,828 · r.</li>
+<li>8 Stücke: 3,061 · r.</li>
+<li>16 Stücke: 3,121 · r.</li>
+<li>32 Stücke: 3,137 · r.</li>
+</ul>
+<p>Die Höhe ist etwas kleiner als r und kommt mit mehr Stücken immer näher an r.</p></div>
+<script type="application/json" class="explainer-component-props">{"label":"Anzahl der Stücke","umlegen":"Stücke umlegen","zurueck":"Zurück zum Kreis","ergebnis":"Bei {n} Stücken ist die Figur etwa {b} · r breit und fast r hoch. Je mehr Stücke, desto näher kommt die Breite an π · r ≈ 3,14 · r.","bildKreis":"Ein Kreis, in {n} gleich große Stücke geteilt.","bildRechteck":"Die {n} Stücke nebeneinander, abwechselnd mit der Spitze nach oben und nach unten. Die Figur ist fast ein Rechteck."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="8dbffeab" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Die Figur ist fast ein Rechteck. Seine Höhe ist der Radius r. Seine Breite ist die Hälfte des Kreisumfangs, denn oben liegt der halbe Rand und unten der andere halbe Rand. Mit U = 2 · π · r ist die Breite also π · r. Die Fläche des Rechtecks ist Breite mal Höhe.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="1a9db775" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>r</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/6" data-block-id="08e0cacf" data-block-type="definition" data-block-order="9">
+<dl class="explainer-definition"><dt><dfn id="begriff-kreisflaeche"><a href="../../glossar/#kreisflaeche">Kreisfläche</a></dfn></dt><dd><p>Die Kreisfläche mit dem Radius <math><mi>r</mi></math> ist <math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup></mrow></math>. Der Radius wird mit sich selbst multipliziert, nicht mit 2.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Die runde Torte</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="e1ba2e0b" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn du die Formel ausprobieren willst, rechne die Fläche der Torte genau aus.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="7b8961ee" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Radius 10 cm</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="1319b1df" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="4d99b571" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>10</mn><mn>2</mn></msup><mo>=</mo><mn>314</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="8bd4d61f" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Die Torte hat eine Fläche von etwa 314 cm². Das liegt zwischen 200 cm² und 400 cm², wie geschätzt.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/4" data-block-id="2dea6056" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Rückwärts geht es so: Aus A = π · r² folgt r² = A : π. Dann ziehst du die Wurzel. Aus A = 314 cm² wird r² = 100 und r = 10 cm.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="867bcfff" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="flaeche-aus-radius">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kreis hat den Radius r = 17 cm. Berechne seine Fläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst r² = r · r, dann mal 3,14.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>17</mn><mn>2</mn></msup><mo>=</mo><mn>907,46</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 907,46 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kreis hat den Radius r = 19 cm. Berechne seine Fläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst r² = r · r, dann mal 3,14.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>19</mn><mn>2</mn></msup><mo>=</mo><mn>1133,54</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1133,54 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kreis hat den Radius r = 14 cm. Berechne seine Fläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst r² = r · r, dann mal 3,14.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>14</mn><mn>2</mn></msup><mo>=</mo><mn>615,44</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 615,44 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"flaeche-aus-radius","given":{"r":{"int":[3,20],"step":1}},"task":{"text":"Ein Kreis hat den Radius r = {{r}} cm. Berechne seine Fläche mit π ≈ 3,14."},"answer":{"value":"3.14 * r * r","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"2 * 3.14 * r","message":"Das ist der Umfang 2 · π · r, eine Länge. Für die Fläche multiplizierst du r mit sich selbst: π · r²."},{"value":"3.14 * r","message":"Du hast r nicht quadriert. Die Fläche ist π · r², also π · r · r."},{"value":"3.14 * (2 * r) * (2 * r)","message":"Du hast den Durchmesser statt des Radius eingesetzt. In π · r² steht der Radius."}],"hint":"Rechne erst r² = r · r, dann mal 3,14.","steps":["$A = \\pi \\cdot r^2 \\approx 3,14 \\cdot {{r}}^2 = {{answer}}$"]},"templates":{"de":{"task":"Ein Kreis hat den Radius r = ⟦r⟧ cm. Berechne seine Fläche mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Rechne erst r² = r · r, dann mal 3,14.","messages":["Das ist der Umfang 2 · π · r, eine Länge. Für die Fläche multiplizierst du r mit sich selbst: π · r².","Du hast r nicht quadriert. Die Fläche ist π · r², also π · r · r.","Du hast den Durchmesser statt des Radius eingesetzt. In π · r² steht der Radius."]}},"data":{},"seeds":[1,2,3,4,6,8,9,11,12,19,20,23,25,26,39,55,69,75],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="2cfcbcb2" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="flaeche-aus-durchmesser">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine runde Tischplatte hat den Durchmesser d = 20 cm. Berechne ihre Fläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Radius ist die Hälfte von 20 cm. Dann rechnest du π · r².</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>r</mi><mo>=</mo><mn>20</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>2</mn></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><mn>314</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 314 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine runde Tischplatte hat den Durchmesser d = 22 cm. Berechne ihre Fläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Radius ist die Hälfte von 22 cm. Dann rechnest du π · r².</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>r</mi><mo>=</mo><mn>22</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>2</mn></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><mn>379,94</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 379,94 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine runde Tischplatte hat den Durchmesser d = 18 cm. Berechne ihre Fläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Radius ist die Hälfte von 18 cm. Dann rechnest du π · r².</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>r</mi><mo>=</mo><mn>18</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>2</mn></mrow></math></li><li><math><mrow><mi>A</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><mn>254,34</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 254,34 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"flaeche-aus-durchmesser","given":{"d":{"int":[6,30],"step":2}},"task":{"text":"Eine runde Tischplatte hat den Durchmesser d = {{d}} cm. Berechne ihre Fläche mit π ≈ 3,14."},"answer":{"value":"3.14 * (d / 2) * (d / 2)","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"3.14 * d * d","message":"Du hast den Durchmesser statt des Radius quadriert. Der Radius ist halb so lang wie der Durchmesser: r = d : 2."},{"value":"3.14 * d","message":"Das ist der Umfang π · d. Für die Fläche brauchst du den Radius, quadriert, mal π."}],"hint":"Der Radius ist die Hälfte von {{d}} cm. Dann rechnest du π · r².","steps":["$r = {{d}} : 2$","$A = \\pi \\cdot r^2 \\approx 3,14 \\cdot r^2 = {{answer}}$"]},"templates":{"de":{"task":"Eine runde Tischplatte hat den Durchmesser d = ⟦d⟧ cm. Berechne ihre Fläche mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>r\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦d⟧\u003c/mtext>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Der Radius ist die Hälfte von ⟦d⟧ cm. Dann rechnest du π · r².","messages":["Du hast den Durchmesser statt des Radius quadriert. Der Radius ist halb so lang wie der Durchmesser: r = d : 2.","Das ist der Umfang π · d. Für die Fläche brauchst du den Radius, quadriert, mal π."]}},"data":{},"seeds":[1,2,6,7,9,11,12,14,28,36,38,40,41],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="54694f17" data-block-type="number" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="radius-aus-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-radius-aus-flaeche" data-id="radius-aus-flaeche" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Kreis hat die Fläche 314 cm². Wie groß ist sein Radius? Rechne mit π ≈ 3,14.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-radius-aus-flaeche" aria-describedby="frage-radius-aus-flaeche-unit"> <span id="frage-radius-aus-flaeche-unit">cm</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 10 cm</p>
+<p class="question-explanation">A = π · r² = 314, also r² = 314 : 3,14 = 100. Die Zahl, die mit sich selbst multipliziert 100 ergibt, ist 10. Der Radius ist 10 cm.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 10 cm</p>
+<p class="question-explanation">A = π · r² = 314, also r² = 314 : 3,14 = 100. Die Zahl, die mit sich selbst multipliziert 100 ergibt, ist 10. Der Radius ist 10 cm.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"radius-aus-flaeche","text":"Ein Kreis hat die Fläche 314 cm². Wie groß ist sein Radius? Rechne mit π ≈ 3,14.","explanation":"A = π · r² = 314, also r² = 314 : 3,14 = 100. Die Zahl, die mit sich selbst multipliziert 100 ergibt, ist 10. Der Radius ist 10 cm.","links":[],"type":"number","answer":10,"tolerance":0,"unit":"cm"},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="bd6b242b" data-block-type="single-choice" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="radius-verdoppeln-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-radius-verdoppeln-flaeche" data-id="radius-verdoppeln-flaeche" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Radius eines Kreises wird verdoppelt. Was passiert mit seiner Fläche?</legend>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln-flaeche" value="0"> <span>Sie wird doppelt so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln-flaeche" value="1"> <span>Sie wird viermal so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln-flaeche" value="2"> <span>Sie wird achtmal so groß.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Sie wird doppelt so groß.</strong></p><p>Das gilt für den Umfang. Die Fläche enthält r², und 2² ist 4.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Sie wird viermal so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>A = π · r². Mit 2 · r wird daraus π · (2 · r)² = π · 4 · r², also das Vierfache.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie wird achtmal so groß.</strong></p><p>Achtmal wäre r³ wie beim Volumen. Die Fläche hat nur r².</p></li>
+</ul>
+<p class="question-explanation">Weil r quadriert wird, wächst die Fläche schneller als der Radius: doppelter Radius, vierfache Fläche.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Sie wird doppelt so groß.</strong></p><p>Das gilt für den Umfang. Die Fläche enthält r², und 2² ist 4.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Sie wird viermal so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>A = π · r². Mit 2 · r wird daraus π · (2 · r)² = π · 4 · r², also das Vierfache.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie wird achtmal so groß.</strong></p><p>Achtmal wäre r³ wie beim Volumen. Die Fläche hat nur r².</p></li>
+</ul>
+<p class="question-explanation">Weil r quadriert wird, wächst die Fläche schneller als der Radius: doppelter Radius, vierfache Fläche.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"radius-verdoppeln-flaeche","text":"Der Radius eines Kreises wird verdoppelt. Was passiert mit seiner Fläche?","explanation":"Weil r quadriert wird, wächst die Fläche schneller als der Radius: doppelter Radius, vierfache Fläche.","links":[],"type":"single-choice","options":[{"text":"Sie wird doppelt so groß.","correct":false,"info":"Das gilt für den Umfang. Die Fläche enthält r², und 2² ist 4."},{"text":"Sie wird viermal so groß.","correct":true,"info":"A = π · r². Mit 2 · r wird daraus π · (2 · r)² = π · 4 · r², also das Vierfache."},{"text":"Sie wird achtmal so groß.","correct":false,"info":"Achtmal wäre r³ wie beim Volumen. Die Fläche hat nur r²."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="88f1a76b" data-block-type="text" data-block-order="20">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst die Fläche eines Kreises aus Radius oder Durchmesser berechnen und weißt, warum der Radius quadriert wird.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Die Fläche des Kreises","order":3}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../kreis/umfang/">Zurück: Der Umfang des Kreises</a><a rel="next" href="../../kreis/einheitskreis/">Weiter: Das Bogenmaß am Einheitskreis</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

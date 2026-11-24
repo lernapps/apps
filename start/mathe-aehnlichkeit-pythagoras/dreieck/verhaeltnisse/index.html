@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Seitenverhältnisse im rechtwinkligen Dreieck – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Gleicher Winkel, gleiche Verhältnisse. Daraus entstehen Sinus, Kosinus und Tangens." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../dreieck/verhaeltnisse/" />
+    <script type="module" crossorigin src="../../assets/islands-KuEnNupN.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../dreieck/">Das rechtwinklige Dreieck</a></li><li aria-current="page">Seitenverhältnisse im rechtwinkligen Dreieck</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Seitenverhältnisse im rechtwinkligen Dreieck</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../dreieck/verhaeltnisse/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧dreieck/verhaeltnisse/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"verhaeltnisse","title":"Seitenverhältnisse im rechtwinkligen Dreieck","exercises":[{"id":"gegenkathete-von-alpha","section":"uebung","numbered":false},{"id":"kathete-von-beta","section":"uebung","numbered":false},{"id":"sinus-verhaeltnis","section":"uebung","numbered":true},{"id":"tangens-verhaeltnis","section":"uebung","numbered":true},{"id":"gleicher-winkel","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","weiter"]},"tutor":"dreieck/verhaeltnisse/tutor/","markdown":"dreieck/verhaeltnisse/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Gleicher Winkel, gleiche Verhältnisse</a></li><li><a href="#beispiel">Ein Beispiel mit 30°</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Wie es weitergeht</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="cd8cbdca" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du die Neigung einer Rampe beschreiben willst, ohne die Rampe zu vermessen, brauchst du Seitenverhältnisse, die nur vom Winkel abhängen. Du lernst, warum in rechtwinkligen Dreiecken mit demselben Winkel die Seitenverhältnisse gleich sind, und wie diese Verhältnisse heißen: Sinus, Kosinus und Tangens.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="579112ee" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Die Klasse will die Neigung einer Rampe beschreiben, ohne die Rampe zu vermessen. Mira zeichnet zwei rechtwinklige Dreiecke mit dem Winkel 35° bei A. Das erste hat die Hypotenuse 5 cm und die Gegenkathete 2,87 cm. Das zweite hat die Hypotenuse 10 cm. Ob dann auch die Gegenkathete doppelt so lang ist, findest du auf dieser Seite heraus.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Gleicher Winkel, gleiche Verhältnisse</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="d9428068" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du Winkel und Seitenlängen verbinden willst, brauchst du Verhältnisse, die nur vom Winkel abhängen. Zwei rechtwinklige Dreiecke mit demselben spitzen Winkel <em>α</em> haben zwei gleiche Winkel. Sie sind ähnlich, ihre Seiten wachsen mit demselben Faktor. Dann sind auch die Verhältnisse zweier Seiten in beiden Dreiecken gleich. Sie hängen nur vom Winkel <em>α</em> ab.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="6d85018b" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Dafür brauchst du Namen, die vom Winkel <em>α</em> ausgehen. Die <strong>Gegenkathete</strong> liegt <em>α</em> gegenüber, die <strong>Ankathete</strong> liegt an <em>α</em> an, und die Hypotenuse bleibt die Seite gegenüber dem rechten Winkel.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="57f78b25" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-gegenkathete"><a href="../../glossar/#gegenkathete">Gegenkathete</a></dfn></dt><dd><p>Die Kathete, die dem betrachteten spitzen Winkel gegenüberliegt.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="d787d2aa" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-ankathete"><a href="../../glossar/#ankathete">Ankathete</a></dfn></dt><dd><p>Die Kathete, die an dem betrachteten spitzen Winkel anliegt, neben der Hypotenuse.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="7590cb22" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Im Bild unten stellst du mit zwei Reglern den Winkel <em>α</em> und die Länge der Hypotenuse ein. Die Tabelle zeigt die Gegenkathete und die Ankathete und drei Verhältnisse. Verändere zuerst nur die Hypotenuse und beobachte, welche Zahlen gleich bleiben. Verändere danach den Winkel.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="33027c0f" data-block-type="vue-component" data-block-order="8">
+<div class="explainer-component" id="winkel-bild" data-component="WinkelRegler">
+<div class="explainer-island" hidden><div class="winkel" data-v-aeddcc14><svg viewBox="0 0 320 272" role="img" aria-label="Winkel α = 30°, Hypotenuse 8 cm. Gegenkathete 4,00 cm, Ankathete 6,93 cm. Gegenkathete durch Hypotenuse 0,500, Ankathete durch Hypotenuse 0,866, Gegenkathete durch Ankathete 0,577." class="winkel-svg" data-v-aeddcc14><polygon points="20,232 172.42047106606122,232 172.42047106606122,144" class="tri" data-v-aeddcc14></polygon><polyline points="162.42047106606122,232 162.42047106606122,222 172.42047106606122,222" class="rechts" data-v-aeddcc14></polyline><path d="M 50,232 A 30,30 0 0 0 45.98076211353316,217" class="bogen" data-v-aeddcc14></path><text x="56" y="226" class="lab" data-v-aeddcc14> α </text><text x="6" y="248" class="lab" data-v-aeddcc14>A</text><text x="176.42047106606122" y="248" class="lab" data-v-aeddcc14>C</text><text x="176.42047106606122" y="140" class="lab" data-v-aeddcc14>B</text><text x="178.42047106606122" y="192" class="side" data-v-aeddcc14>Gegenkathete</text><text x="72.21023553303061" y="262" class="side" data-v-aeddcc14>Ankathete</text><text x="34.21023553303061" y="176" class="side" data-v-aeddcc14>Hypotenuse</text></svg><div class="controls" data-v-aeddcc14><label for="winkel-alpha" data-v-aeddcc14>Winkel <i data-v-aeddcc14>α</i>: 30°</label><input id="winkel-alpha" type="range" min="10" max="80" step="1" value="30" data-v-aeddcc14><label for="winkel-size" data-v-aeddcc14>Hypotenuse: 8 cm</label><input id="winkel-size" type="range" min="4" max="10" step="1" value="8" data-v-aeddcc14></div><table class="values" data-v-aeddcc14><caption data-v-aeddcc14> Seiten und Verhältnisse </caption><thead data-v-aeddcc14><tr data-v-aeddcc14><th scope="col" data-v-aeddcc14>Größe</th><th scope="col" data-v-aeddcc14>Wert</th></tr></thead><tbody data-v-aeddcc14><tr data-v-aeddcc14><th scope="row" data-v-aeddcc14>Gegenkathete</th><td data-v-aeddcc14>4,00 cm</td></tr><tr data-v-aeddcc14><th scope="row" data-v-aeddcc14>Ankathete</th><td data-v-aeddcc14>6,93 cm</td></tr><tr data-v-aeddcc14><th scope="row" data-v-aeddcc14>Gegenkathete : Hypotenuse</th><td data-v-aeddcc14>0,500</td></tr><tr data-v-aeddcc14><th scope="row" data-v-aeddcc14>Ankathete : Hypotenuse</th><td data-v-aeddcc14>0,866</td></tr><tr data-v-aeddcc14><th scope="row" data-v-aeddcc14>Gegenkathete : Ankathete</th><td data-v-aeddcc14>0,577</td></tr></tbody></table><p class="sr" aria-live="polite" data-v-aeddcc14>Winkel α = 30°, Hypotenuse 8 cm. Gegenkathete 4,00 cm, Ankathete 6,93 cm. Gegenkathete durch Hypotenuse 0,500, Ankathete durch Hypotenuse 0,866, Gegenkathete durch Ankathete 0,577.</p></div></div>
+<div class="explainer-nojs"><p>Ein rechtwinkliges Dreieck mit dem Winkel α bei A, der Gegenkathete, der Ankathete und der Hypotenuse. Bei α = 30° und der Hypotenuse 4 cm ist die Gegenkathete 2 cm und die Ankathete 3,46 cm. Bei der Hypotenuse 8 cm sind es 4 cm und 6,93 cm.
+Gegenkathete durch Hypotenuse ist in beiden Fällen 0,500, Ankathete durch Hypotenuse 0,866, Gegenkathete durch Ankathete 0,577. Bei α = 60° ist Gegenkathete durch Hypotenuse 0,866 und Ankathete durch Hypotenuse 0,500.</p></div>
+<script type="application/json" class="explainer-component-props">{}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/7" data-block-id="0f91d3a6" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Jedes Verhältnis hat einen Namen. Sie gelten für den Winkel <em>α</em> im rechtwinkligen Dreieck.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/8" data-block-id="855eb0a5" data-block-type="definition" data-block-order="10">
+<dl class="explainer-definition"><dt><dfn id="begriff-sinus"><a href="../../glossar/#sinus">Sinus</a></dfn></dt><dd><p>Das Verhältnis von Gegenkathete zu Hypotenuse, <math><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mtext>Gegenkathete</mtext><mtext>Hypotenuse</mtext></mfrac></mrow></math>.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/9" data-block-id="891c2347" data-block-type="definition" data-block-order="11">
+<dl class="explainer-definition"><dt><dfn id="begriff-kosinus"><a href="../../glossar/#kosinus">Kosinus</a></dfn></dt><dd><p>Das Verhältnis von Ankathete zu Hypotenuse, <math><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mtext>Ankathete</mtext><mtext>Hypotenuse</mtext></mfrac></mrow></math>.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/10" data-block-id="a9185b53" data-block-type="definition" data-block-order="12">
+<dl class="explainer-definition"><dt><dfn id="begriff-tangens"><a href="../../glossar/#tangens">Tangens</a></dfn></dt><dd><p>Das Verhältnis von Gegenkathete zu Ankathete, <math><mrow><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mtext>Gegenkathete</mtext><mtext>Ankathete</mtext></mfrac></mrow></math>.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/11" data-block-id="ffefd02d" data-block-type="note" data-block-order="13">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/11/1" data-block-id="d1bc94a4" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Die Namen Gegenkathete und Ankathete gehören zu einem Winkel. Wechselst du zum anderen spitzen Winkel, tauschen sie ihre Rolle.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel mit 30°</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="712b3460" data-block-type="example" data-block-order="15">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Die drei Verhältnisse bei 30°</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="5da2e780" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Wenn du wissen willst, wie groß Sinus, Kosinus und Tangens bei einem bestimmten Winkel sind, rechnest du die Verhältnisse in einem Dreieck mit diesem Winkel aus. Ein Dreieck hat den Winkel <math><mrow><mi>α</mi><mo>=</mo><msup><mn>30</mn><mo>∘</mo></msup></mrow></math> und die Hypotenuse 8 cm. Die Gegenkathete ist 4 cm, die Ankathete etwa 6,93 cm.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="5a8d51b6" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><mfrac><mn>4</mn><mn>8</mn></mfrac><mo>=</mo><mn>0,5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="ea0b3a14" data-block-type="formula" data-block-order="18">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><mfrac><mn>6,93</mn><mn>8</mn></mfrac><mo>≈</mo><mn>0,866</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="1f4b7510" data-block-type="formula" data-block-order="19">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><mfrac><mn>4</mn><mn>6,93</mn></mfrac><mo>≈</mo><mn>0,577</mn></mrow></math></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="6312d41e" data-block-type="single-choice" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="gegenkathete-von-alpha">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gegenkathete-von-alpha" data-id="gegenkathete-von-alpha" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Das Dreieck ABC hat bei C den rechten Winkel. Welche Seite ist die Gegenkathete von α?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit"><img src="../../images/dreieck-seiten.svg" alt="Rechtwinkliges Dreieck ABC mit dem rechten Winkel bei C, dem Winkel α bei A und β bei B. Die Seite a liegt gegenüber von A, b gegenüber von B, c gegenüber von C." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Das Dreieck ABC mit den Seiten a, b und c.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-gegenkathete-von-alpha" value="0"> <span>die Seite a</span></label>
+<label class="question-option"><input type="radio" name="frage-gegenkathete-von-alpha" value="1"> <span>die Seite b</span></label>
+<label class="question-option"><input type="radio" name="frage-gegenkathete-von-alpha" value="2"> <span>die Seite c</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>die Seite a</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seite a liegt gegenüber von A, also gegenüber von α.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>die Seite b</strong></p><p>Die Seite b liegt am Winkel α an, sie ist die Ankathete von α.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>die Seite c</strong></p><p>Die Seite c liegt dem rechten Winkel gegenüber, sie ist die Hypotenuse.</p></li>
+</ul>
+<p class="question-explanation">Die Gegenkathete liegt dem Winkel gegenüber, hier ist es a.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>die Seite a</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seite a liegt gegenüber von A, also gegenüber von α.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>die Seite b</strong></p><p>Die Seite b liegt am Winkel α an, sie ist die Ankathete von α.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>die Seite c</strong></p><p>Die Seite c liegt dem rechten Winkel gegenüber, sie ist die Hypotenuse.</p></li>
+</ul>
+<p class="question-explanation">Die Gegenkathete liegt dem Winkel gegenüber, hier ist es a.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gegenkathete-von-alpha","text":"Das Dreieck ABC hat bei C den rechten Winkel. Welche Seite ist die Gegenkathete von α?","explanation":"Die Gegenkathete liegt dem Winkel gegenüber, hier ist es a.","links":[],"material":[{"type":"figure","image":"images/dreieck-seiten.svg","alt":"Rechtwinkliges Dreieck ABC mit dem rechten Winkel bei C, dem Winkel α bei A und β bei B. Die Seite a liegt gegenüber von A, b gegenüber von B, c gegenüber von C.","caption":"Das Dreieck ABC mit den Seiten a, b und c.","source":"eigene Zeichnung","licence":"CC0-1.0"}],"type":"single-choice","options":[{"text":"die Seite a","correct":true,"info":"Die Seite a liegt gegenüber von A, also gegenüber von α."},{"text":"die Seite b","correct":false,"info":"Die Seite b liegt am Winkel α an, sie ist die Ankathete von α."},{"text":"die Seite c","correct":false,"info":"Die Seite c liegt dem rechten Winkel gegenüber, sie ist die Hypotenuse."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="46b04800" data-block-type="single-choice" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="kathete-von-beta">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-kathete-von-beta" data-id="kathete-von-beta" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Dasselbe Dreieck ABC. Welche Seite ist die Gegenkathete des Winkels β bei B?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit"><img src="../../images/dreieck-seiten.svg" alt="Rechtwinkliges Dreieck ABC mit dem rechten Winkel bei C, dem Winkel α bei A und β bei B. Die Seite a liegt gegenüber von A, b gegenüber von B, c gegenüber von C." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Dasselbe Dreieck ABC.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-kathete-von-beta" value="0"> <span>die Seite a</span></label>
+<label class="question-option"><input type="radio" name="frage-kathete-von-beta" value="1"> <span>die Seite b</span></label>
+<label class="question-option"><input type="radio" name="frage-kathete-von-beta" value="2"> <span>die Seite c</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>die Seite a</strong></p><p>Das ist die Gegenkathete von α. Für β tauschen die Katheten ihre Rolle.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>die Seite b</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seite b liegt gegenüber von B, also gegenüber von β. Für β ist a die Ankathete.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>die Seite c</strong></p><p>Die Seite c ist immer die Hypotenuse, egal von welchem Winkel du ausgehst.</p></li>
+</ul>
+<p class="question-explanation">Für β liegt b gegenüber, a liegt an.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>die Seite a</strong></p><p>Das ist die Gegenkathete von α. Für β tauschen die Katheten ihre Rolle.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>die Seite b</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seite b liegt gegenüber von B, also gegenüber von β. Für β ist a die Ankathete.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>die Seite c</strong></p><p>Die Seite c ist immer die Hypotenuse, egal von welchem Winkel du ausgehst.</p></li>
+</ul>
+<p class="question-explanation">Für β liegt b gegenüber, a liegt an.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"kathete-von-beta","text":"Dasselbe Dreieck ABC. Welche Seite ist die Gegenkathete des Winkels β bei B?","explanation":"Für β liegt b gegenüber, a liegt an.","links":[],"material":[{"type":"figure","image":"images/dreieck-seiten.svg","alt":"Rechtwinkliges Dreieck ABC mit dem rechten Winkel bei C, dem Winkel α bei A und β bei B. Die Seite a liegt gegenüber von A, b gegenüber von B, c gegenüber von C.","caption":"Dasselbe Dreieck ABC.","source":"eigene Zeichnung","licence":"CC0-1.0"}],"type":"single-choice","options":[{"text":"die Seite a","correct":false,"info":"Das ist die Gegenkathete von α. Für β tauschen die Katheten ihre Rolle."},{"text":"die Seite b","correct":true,"info":"Die Seite b liegt gegenüber von B, also gegenüber von β. Für β ist a die Ankathete."},{"text":"die Seite c","correct":false,"info":"Die Seite c ist immer die Hypotenuse, egal von welchem Winkel du ausgehst."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6784a7d1" data-block-type="generated" data-block-order="22">
+<div class="explainer-exercise explainer-generated" id="sinus-verhaeltnis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 7 cm und die Hypotenuse 11 cm lang. Wie groß ist sin α? Runde auf drei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Sinus ist Gegenkathete durch Hypotenuse.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>7</mn><mn>11</mn></mfrac><mo>≈</mo><mn>0,636</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,636 (erlaubte Abweichung: 0,0005)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 4 cm und die Hypotenuse 11 cm lang. Wie groß ist sin α? Runde auf drei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Sinus ist Gegenkathete durch Hypotenuse.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>4</mn><mn>11</mn></mfrac><mo>≈</mo><mn>0,364</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,364 (erlaubte Abweichung: 0,0005)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 8 cm und die Hypotenuse 13 cm lang. Wie groß ist sin α? Runde auf drei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Sinus ist Gegenkathete durch Hypotenuse.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>8</mn><mn>13</mn></mfrac><mo>≈</mo><mn>0,615</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,615 (erlaubte Abweichung: 0,0005)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"sinus-verhaeltnis","given":{"g":{"int":[4,9]},"h":{"int":[10,13]}},"task":{"text":"In einem rechtwinkligen Dreieck ist die Gegenkathete von α {{g}} cm und die Hypotenuse {{h}} cm lang. Wie groß ist sin α? Runde auf drei Stellen nach dem Komma."},"answer":{"value":"round(g / h, 3)","compare":{"number":{"format":"decimal","decimals":3,"tolerance":0.0005}}},"mistakes":[{"value":"round(h / g, 3)","message":"Du hast den Kehrwert gebildet. Der Sinus ist Gegenkathete durch Hypotenuse, und die Hypotenuse ist die längste Seite, also ist der Sinus kleiner als 1."},{"value":"round(g / sqrt(h * h - g * g), 3)","message":"Du hast durch die Ankathete geteilt, das ist der Tangens. Der Sinus teilt durch die Hypotenuse."}],"hint":"Sinus ist Gegenkathete durch Hypotenuse.","steps":["$\\sin \\alpha = \\frac{{{g}}}{{{h}}} \\approx {{answer}}$"]},"templates":{"de":{"task":"In einem rechtwinkligen Dreieck ist die Gegenkathete von α ⟦g⟧ cm und die Hypotenuse ⟦h⟧ cm lang. Wie groß ist sin α? Runde auf drei Stellen nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mfrac>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Sinus ist Gegenkathete durch Hypotenuse.","messages":["Du hast den Kehrwert gebildet. Der Sinus ist Gegenkathete durch Hypotenuse, und die Hypotenuse ist die längste Seite, also ist der Sinus kleiner als 1.","Du hast durch die Ankathete geteilt, das ist der Tangens. Der Sinus teilt durch die Hypotenuse."]}},"data":{},"seeds":[1,2,3,4,5,6,7,10,11,12,13,14,18,19,20,22,27,28,38,39,43,48,57,93],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="abf030f8" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="tangens-verhaeltnis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 4 cm und die Ankathete 3 cm lang. Wie groß ist tan α? Runde auf drei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Tangens ist Gegenkathete durch Ankathete.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>≈</mo><mn>1,333</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1,333 (erlaubte Abweichung: 0,0005)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 2 cm und die Ankathete 5 cm lang. Wie groß ist tan α? Runde auf drei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Tangens ist Gegenkathete durch Ankathete.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>≈</mo><mn>0,4</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,4 (erlaubte Abweichung: 0,0005)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 9 cm und die Ankathete 6 cm lang. Wie groß ist tan α? Runde auf drei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Tangens ist Gegenkathete durch Ankathete.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mrow><mi>tan</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mfrac><mn>9</mn><mn>6</mn></mfrac><mo>≈</mo><mn>1,5</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1,5 (erlaubte Abweichung: 0,0005)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"tangens-verhaeltnis","given":{"g":{"int":[2,9]},"k":{"int":[3,12]}},"where":["g != k"],"task":{"text":"In einem rechtwinkligen Dreieck ist die Gegenkathete von α {{g}} cm und die Ankathete {{k}} cm lang. Wie groß ist tan α? Runde auf drei Stellen nach dem Komma."},"answer":{"value":"round(g / k, 3)","compare":{"number":{"format":"decimal","decimals":3,"tolerance":0.0005}}},"mistakes":[{"value":"round(k / g, 3)","message":"Du hast den Kehrwert gebildet. Der Tangens ist Gegenkathete durch Ankathete."},{"value":"round(g / sqrt(g * g + k * k), 3)","message":"Du hast durch die Hypotenuse geteilt, das ist der Sinus. Der Tangens teilt durch die Ankathete."}],"hint":"Tangens ist Gegenkathete durch Ankathete.","steps":["$\\tan \\alpha = \\frac{{{g}}}{{{k}}} \\approx {{answer}}$"]},"templates":{"de":{"task":"In einem rechtwinkligen Dreieck ist die Gegenkathete von α ⟦g⟧ cm und die Ankathete ⟦k⟧ cm lang. Wie groß ist tan α? Runde auf drei Stellen nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmrow>\u003cmi>tan\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmtext>⟦k⟧\u003c/mtext>\u003c/mfrac>\u003cmo>≈\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Tangens ist Gegenkathete durch Ankathete.","messages":["Du hast den Kehrwert gebildet. Der Tangens ist Gegenkathete durch Ankathete.","Du hast durch die Hypotenuse geteilt, das ist der Sinus. Der Tangens teilt durch die Ankathete."]}},"data":{},"seeds":[1,2,3,4,5,6,7,10,11,12,13,15,16,17,18,20,21,22,23,24,25,26,27,29,31,34,35,37,38,39,40,42,44,46,47,50,57,59,65,69,70,73,78,85,86,87,93,96,97,103,105,107,108,110,117,118,119,123,127,142,147,161,168,169,186,197,198],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a4d45782" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="gleicher-winkel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Zwei rechtwinklige Dreiecke haben denselben Winkel α. Im ersten sind die Gegenkathete 5 cm und die Hypotenuse 10 cm lang. Im zweiten ist die Hypotenuse 15 cm lang. Wie lang ist dort die Gegenkathete?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Sinus ist in beiden Dreiecken gleich: Gegenkathete durch Hypotenuse. Stelle eine Gleichung auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><msub><mi>g</mi><mn>2</mn></msub><mn>15</mn></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>10</mn></mfrac></mrow></math>, also <math><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>5</mn><mo>⋅</mo><mn>15</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>7,5</mn></mrow></math> cm.</li></ol><p><strong>Richtige Antwort:</strong> 7,5 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Zwei rechtwinklige Dreiecke haben denselben Winkel α. Im ersten sind die Gegenkathete 2 cm und die Hypotenuse 10 cm lang. Im zweiten ist die Hypotenuse 22 cm lang. Wie lang ist dort die Gegenkathete?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Sinus ist in beiden Dreiecken gleich: Gegenkathete durch Hypotenuse. Stelle eine Gleichung auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><msub><mi>g</mi><mn>2</mn></msub><mn>22</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>10</mn></mfrac></mrow></math>, also <math><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mn>22</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>4,4</mn></mrow></math> cm.</li></ol><p><strong>Richtige Antwort:</strong> 4,4 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Zwei rechtwinklige Dreiecke haben denselben Winkel α. Im ersten sind die Gegenkathete 3 cm und die Hypotenuse 9 cm lang. Im zweiten ist die Hypotenuse 21 cm lang. Wie lang ist dort die Gegenkathete?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Sinus ist in beiden Dreiecken gleich: Gegenkathete durch Hypotenuse. Stelle eine Gleichung auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><msub><mi>g</mi><mn>2</mn></msub><mn>21</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>9</mn></mfrac></mrow></math>, also <math><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>3</mn><mo>⋅</mo><mn>21</mn></mrow><mn>9</mn></mfrac><mo>=</mo><mn>7</mn></mrow></math> cm.</li></ol><p><strong>Richtige Antwort:</strong> 7 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"gleicher-winkel","given":{"g1":{"int":[2,9]},"h1":{"int":[4,12]},"h2":{"int":[8,30]}},"where":["g1 \u003c h1","h2 > h1","decimals(g1 * h2 / h1) \u003c= 1","g1 + h2 - h1 != g1 * h2 / h1","g1 * h1 / h2 != g1 * h2 / h1"],"task":{"text":"Zwei rechtwinklige Dreiecke haben denselben Winkel α. Im ersten sind die Gegenkathete {{g1}} cm und die Hypotenuse {{h1}} cm lang. Im zweiten ist die Hypotenuse {{h2}} cm lang. Wie lang ist dort die Gegenkathete?"},"answer":{"value":"g1 * h2 / h1","compare":{"number":{"format":"decimal","decimals":1,"unit":"cm"}}},"mistakes":[{"value":"g1 + h2 - h1","message":"Du hast den Unterschied der Hypotenusen zur Gegenkathete addiert. Bei gleichem Winkel bleibt das Verhältnis gleich, du rechnest mit einem Faktor."},{"value":"g1 * h1 / h2","message":"Du hast den Faktor umgedreht. Das zweite Dreieck ist größer, also ist auch die Gegenkathete länger."}],"hint":"Der Sinus ist in beiden Dreiecken gleich: Gegenkathete durch Hypotenuse. Stelle eine Gleichung auf.","steps":["$\\frac{g_2}{{{h2}}} = \\frac{{{g1}}}{{{h1}}}$, also $g_2 = \\frac{{{g1}} \\cdot {{h2}}}{{{h1}}} = {{answer}}$ cm."]},"templates":{"de":{"task":"Zwei rechtwinklige Dreiecke haben denselben Winkel α. Im ersten sind die Gegenkathete ⟦g1⟧ cm und die Hypotenuse ⟦h1⟧ cm lang. Im zweiten ist die Hypotenuse ⟦h2⟧ cm lang. Wie lang ist dort die Gegenkathete?","steps":["\u003cmath>\u003cmrow>\u003cmfrac>\u003cmsub>\u003cmi>g\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msub>\u003cmtext>⟦h2⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦g1⟧\u003c/mtext>\u003cmtext>⟦h1⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmsub>\u003cmi>g\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msub>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦g1⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h2⟧\u003c/mtext>\u003c/mrow>\u003cmtext>⟦h1⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math> cm."],"hint":"Der Sinus ist in beiden Dreiecken gleich: Gegenkathete durch Hypotenuse. Stelle eine Gleichung auf.","messages":["Du hast den Unterschied der Hypotenusen zur Gegenkathete addiert. Bei gleichem Winkel bleibt das Verhältnis gleich, du rechnest mit einem Faktor.","Du hast den Faktor umgedreht. Das zweite Dreieck ist größer, also ist auch die Gegenkathete länger."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,66,67,68,69,70,71],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Wie es weitergeht</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="d15d3835" data-block-type="text" data-block-order="25">
+<div class="block-text"><p>Das kannst du jetzt: Gegenkathete, Ankathete und Hypotenuse vom Winkel aus benennen und Sinus, Kosinus und Tangens als Seitenverhältnisse bestimmen. Auf der nächsten Seite berechnest du mit dem Taschenrechner fehlende Seiten.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Seitenverhältnisse im rechtwinkligen Dreieck","order":8}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../dreieck/pythagoras-rechnen/">Zurück: Mit Pythagoras rechnen</a><a rel="next" href="../../dreieck/seiten-berechnen/">Weiter: Seiten mit Sinus, Kosinus und Tangens berechnen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

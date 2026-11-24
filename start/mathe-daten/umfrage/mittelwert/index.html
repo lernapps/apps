@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Der Mittelwert – gerecht verteilen – Daten erheben und auswerten</title>
+    <meta name="description" content="Den Mittelwert berechnen und deuten: erst Würfeltürme gleich hoch machen, dann Summe geteilt durch Anzahl." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../umfrage/mittelwert/" />
+    <script type="module" crossorigin src="../../assets/islands-N7J8lq4Y.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../umfrage/">Unsere Umfrage</a></li><li aria-current="page">Der Mittelwert – gerecht verteilen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Der Mittelwert – gerecht verteilen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../umfrage/mittelwert/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧umfrage/mittelwert/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-daten","page":{"id":"mittelwert","title":"Der Mittelwert – gerecht verteilen","exercises":[{"id":"summe-bilden","section":"einstieg","numbered":false},{"id":"mittelwert-berechnen","section":"uebung","numbered":true},{"id":"mittelwert-deuten","section":"uebung","numbered":false},{"id":"mittelwert-zwischen","section":"uebung","numbered":false},{"id":"fehlenden-wert-finden","section":"uebung","numbered":true}],"sections":["einstieg","erklaerung","beispiel","uebung"]},"tutor":"umfrage/mittelwert/tutor/","markdown":"umfrage/mittelwert/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wer braucht wie lange?</a></li><li><a href="#erklaerung">Aus den Türmen wird eine Rechnung</a></li><li><a href="#beispiel">Ein Beispiel Schritt für Schritt</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wer braucht wie lange?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="6eee44fd" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Fünf Kinder der 6a haben ihre Schulwegzeit gemessen: Mira 3 Minuten, Jonas 9, Ayşe 6, Tom 12 und Lena 5. Mira
+fragt: „Wie lang ist der Weg bei uns <strong>im Durchschnitt</strong>?“ Stell dir vor, jede Minute ist ein Würfel und jedes
+Kind hat einen Turm. Mit den Pfeilen unter jedem Turm gibst du einen Würfel an den linken oder rechten Nachbarn ab. Mach alle Türme gleich hoch. <strong>Nach dieser Seite kannst du den Mittelwert berechnen und sagen, was er bedeutet.</strong></p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="5e016ad3" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" id="tuerme-einebnen" data-component="WuerfelTuerme">
+<div class="explainer-island" hidden><div class="wuerfel-tuerme" data-v-55aa0ae6><div class="wuerfel-tuerme-row" style="grid-template-columns:repeat(5, minmax(0, 1fr));" data-v-55aa0ae6><!--[--><div class="wuerfel-tuerme-column" data-v-55aa0ae6><div class="wuerfel-tuerme-field" style="height:224px;" data-v-55aa0ae6><!--[--><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><!--]--></div><p class="wuerfel-tuerme-label" data-v-55aa0ae6>Mira: 3 min</p><div class="wuerfel-tuerme-buttons" data-v-55aa0ae6><button type="button" aria-label="Mira gibt einen Würfel nach links ab" disabled data-v-55aa0ae6> ← </button><button type="button" aria-label="Mira gibt einen Würfel nach rechts ab" data-v-55aa0ae6> → </button></div></div><div class="wuerfel-tuerme-column" data-v-55aa0ae6><div class="wuerfel-tuerme-field" style="height:224px;" data-v-55aa0ae6><!--[--><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><!--]--></div><p class="wuerfel-tuerme-label" data-v-55aa0ae6>Jonas: 9 min</p><div class="wuerfel-tuerme-buttons" data-v-55aa0ae6><button type="button" aria-label="Jonas gibt einen Würfel nach links ab" data-v-55aa0ae6> ← </button><button type="button" aria-label="Jonas gibt einen Würfel nach rechts ab" data-v-55aa0ae6> → </button></div></div><div class="wuerfel-tuerme-column" data-v-55aa0ae6><div class="wuerfel-tuerme-field" style="height:224px;" data-v-55aa0ae6><!--[--><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><!--]--></div><p class="wuerfel-tuerme-label" data-v-55aa0ae6>Ayşe: 6 min</p><div class="wuerfel-tuerme-buttons" data-v-55aa0ae6><button type="button" aria-label="Ayşe gibt einen Würfel nach links ab" data-v-55aa0ae6> ← </button><button type="button" aria-label="Ayşe gibt einen Würfel nach rechts ab" data-v-55aa0ae6> → </button></div></div><div class="wuerfel-tuerme-column" data-v-55aa0ae6><div class="wuerfel-tuerme-field" style="height:224px;" data-v-55aa0ae6><!--[--><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><!--]--></div><p class="wuerfel-tuerme-label" data-v-55aa0ae6>Tom: 12 min</p><div class="wuerfel-tuerme-buttons" data-v-55aa0ae6><button type="button" aria-label="Tom gibt einen Würfel nach links ab" data-v-55aa0ae6> ← </button><button type="button" aria-label="Tom gibt einen Würfel nach rechts ab" data-v-55aa0ae6> → </button></div></div><div class="wuerfel-tuerme-column" data-v-55aa0ae6><div class="wuerfel-tuerme-field" style="height:224px;" data-v-55aa0ae6><!--[--><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><div class="wuerfel-tuerme-cube" style="height:16px;" data-v-55aa0ae6></div><!--]--></div><p class="wuerfel-tuerme-label" data-v-55aa0ae6>Lena: 5 min</p><div class="wuerfel-tuerme-buttons" data-v-55aa0ae6><button type="button" aria-label="Lena gibt einen Würfel nach links ab" data-v-55aa0ae6> ← </button><button type="button" aria-label="Lena gibt einen Würfel nach rechts ab" disabled data-v-55aa0ae6> → </button></div></div><!--]--></div><p class="wuerfel-tuerme-status" aria-live="polite" data-v-55aa0ae6>Gib mit den Pfeilen Würfel an den Nachbarn ab, bis alle Türme gleich hoch sind. Ausgegraute Pfeile gehen nicht: Am Rand gibt es keinen Nachbarn, und ein leerer Turm hat nichts abzugeben.</p><button type="button" class="wuerfel-tuerme-reset" disabled data-v-55aa0ae6>Von vorn</button></div></div>
+<div class="explainer-nojs"><p>Fünf Türme aus Würfeln, jeder Würfel ist eine Minute: Mira 3, Jonas 9, Ayşe 6, Tom 12 und Lena 5. Gibt man Würfel an
+den Nachbarn ab, bis alle Türme gleich hoch sind, hat jeder Turm 7 Würfel. Es sind immer 35 Würfel, weil nichts
+dazukommt oder wegfällt.</p></div>
+<script type="application/json" class="explainer-component-props">{"values":[3,9,6,12,5],"names":["Mira","Jonas","Ayşe","Tom","Lena"],"tower":"{name}: {n} min","left":"{name} gibt einen Würfel nach links ab","right":"{name} gibt einen Würfel nach rechts ab","hint":"Gib mit den Pfeilen Würfel an den Nachbarn ab, bis alle Türme gleich hoch sind. Ausgegraute Pfeile gehen nicht: Am Rand gibt es keinen Nachbarn, und ein leerer Turm hat nichts abzugeben.","done":"Alle {k} Türme sind gleich hoch: {h} Würfel.","reset":"Von vorn"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="1a812e5c" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="summe-bilden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-summe-bilden" data-id="summe-bilden" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Würfel sind es bei den fünf Türmen zusammen?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-summe-bilden" aria-describedby="frage-summe-bilden-unit"> <span id="frage-summe-bilden-unit">Würfel</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 35 Würfel</p>
+<p class="question-explanation">3 + 9 + 6 + 12 + 5 = 35. Beim Abgeben von Würfeln bleibt die Summe gleich.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 35 Würfel</p>
+<p class="question-explanation">3 + 9 + 6 + 12 + 5 = 35. Beim Abgeben von Würfeln bleibt die Summe gleich.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"summe-bilden","text":"Wie viele Würfel sind es bei den fünf Türmen zusammen?","explanation":"3 + 9 + 6 + 12 + 5 = 35. Beim Abgeben von Würfeln bleibt die Summe gleich.","links":[],"hint":"Zähle die Würfel aller Türme zusammen, also die Minuten von Mira, Jonas, Ayşe, Tom und Lena.","type":"number","answer":35,"tolerance":0,"unit":"Würfel","mistakes":[{"answer":5,"message":"Das ist die Anzahl der Türme. Gesucht sind alle Würfel zusammen."},{"answer":7,"message":"Das ist die Höhe eines Turms, wenn alle gleich hoch sind. Gesucht ist die Gesamtzahl der Würfel."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="erklaerung">Aus den Türmen wird eine Rechnung</h2>
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="146e7c29" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du eine einzige Zahl für alle Werte brauchst, zum Beispiel „Wie lang ist der Schulweg im Durchschnitt?“, rechnest du den Mittelwert aus.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="ee2321b7" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-mittelwert"><a href="../../glossar/#mittelwert">Mittelwert</a></dfn></dt><dd><p>Der Mittelwert (genauer das arithmetische Mittel, im Alltag auch Durchschnitt genannt) ist der Wert, den jedes Kind hätte, wenn man alle Werte gerecht verteilt. Du rechnest ihn aus, indem du die Summe aller Werte durch ihre Anzahl teilst.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="41b76212" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Beim Einebnen sind 35 Würfel auf 5 Türme verteilt worden. Jeder Turm hat danach 35 : 5 = 7 Würfel. Das ist der
+Mittelwert, hier 7 Minuten.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/4" data-block-id="6c0fdabe" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mtext>Mittelwert</mtext><mo>=</mo><mfrac><mtext>Summe aller Werte</mtext><mtext>Anzahl der Werte</mtext></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/5" data-block-id="cdb1d40c" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Du kannst auch rückwärts rechnen: Kennst du den Mittelwert und die Anzahl der Werte, ist die Summe aller Werte der Mittelwert mal die Anzahl. Bei 5 Kindern und dem Mittelwert 7 Minuten sind es 5 · 7 = 35 Minuten zusammen.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/6" data-block-id="9a412e21" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="erklaerung/6/1" data-block-id="55c51dfa" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Der Mittelwert liegt immer zwischen dem kleinsten und dem größten Wert. Er muss kein Wert der Liste sein: Hier hat kein Kind genau 7 Minuten. Ein sehr großer Wert zieht den Mittelwert nach oben. Der Mittelwert sagt nur: So viel hätte
+jedes Kind, wenn alle gleich lang brauchten und die Summe dieselbe bliebe.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel Schritt für Schritt</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="c7179f15" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn du den Mittelwert ohne Würfel ausrechnen willst, brauchst du eine Rechnung, die immer funktioniert. Hier ist sie:</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="52aa2b06" data-block-type="example" data-block-order="12">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Die Schulwegzeiten von fünf Kindern</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="643ceef8" data-block-type="text" data-block-order="13">
+<div class="block-text"><ol>
+<li>Alle Werte addieren: 3 + 9 + 6 + 12 + 5 = 35.</li>
+<li>Die Anzahl der Werte zählen: 5 Kinder.</li>
+<li>Die Summe durch die Anzahl teilen: 35 : 5 = 7.</li>
+<li>Antwort: Im Mittel brauchen die Kinder 7 Minuten.</li>
+</ol></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="a3ce57a2" data-block-type="generated" data-block-order="14">
+<div class="explainer-exercise explainer-generated" id="mittelwert-berechnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Vier Kinder brauchen für ihren Schulweg 10, 12, 8 und 12 Minuten. Wie viele Minuten sind das im Mittel? Gib das Ergebnis genau an, wenn nötig mit Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Addiere die vier Zeiten und teile die Summe durch 4.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Summe: 10 + 12 + 8 + 12.</li><li>Die Anzahl der Werte ist 4.</li><li>Der Mittelwert: Summe : 4 = 10,5 Minuten.</li></ol><p><strong>Richtige Antwort:</strong> 10,5 min</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Vier Kinder brauchen für ihren Schulweg 19, 6, 2 und 19 Minuten. Wie viele Minuten sind das im Mittel? Gib das Ergebnis genau an, wenn nötig mit Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Addiere die vier Zeiten und teile die Summe durch 4.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Summe: 19 + 6 + 2 + 19.</li><li>Die Anzahl der Werte ist 4.</li><li>Der Mittelwert: Summe : 4 = 11,5 Minuten.</li></ol><p><strong>Richtige Antwort:</strong> 11,5 min</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Vier Kinder brauchen für ihren Schulweg 15, 12, 19 und 18 Minuten. Wie viele Minuten sind das im Mittel? Gib das Ergebnis genau an, wenn nötig mit Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Addiere die vier Zeiten und teile die Summe durch 4.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Summe: 15 + 12 + 19 + 18.</li><li>Die Anzahl der Werte ist 4.</li><li>Der Mittelwert: Summe : 4 = 16 Minuten.</li></ol><p><strong>Richtige Antwort:</strong> 16 min</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"mittelwert-berechnen","given":{"a":{"int":[2,20]},"b":{"int":[2,20]},"c":{"int":[2,20]},"d":{"int":[2,20]}},"where":["decimals((a + b + c + d) / 4) \u003c= 2"],"task":{"text":"Vier Kinder brauchen für ihren Schulweg {{a}}, {{b}}, {{c}} und {{d}} Minuten. Wie viele Minuten sind das im Mittel? Gib das Ergebnis genau an, wenn nötig mit Komma."},"answer":{"value":"(a + b + c + d) / 4","compare":{"number":{"format":"decimal","decimals":2,"unit":"min"}}},"mistakes":[{"value":"a + b + c + d","message":"Du hast nur addiert. Teile die Summe noch durch die Anzahl der Werte."},{"value":"(a + b + c + d) / 3","message":"Du hast durch 3 geteilt. Es sind vier Kinder, also teilst du durch 4."}],"hint":"Addiere die vier Zeiten und teile die Summe durch 4.","steps":["Die Summe: {{a}} + {{b}} + {{c}} + {{d}}.","Die Anzahl der Werte ist 4.","Der Mittelwert: Summe : 4 = {{answer}} Minuten."]},"templates":{"de":{"task":"Vier Kinder brauchen für ihren Schulweg ⟦a⟧, ⟦b⟧, ⟦c⟧ und ⟦d⟧ Minuten. Wie viele Minuten sind das im Mittel? Gib das Ergebnis genau an, wenn nötig mit Komma.","steps":["Die Summe: ⟦a⟧ + ⟦b⟧ + ⟦c⟧ + ⟦d⟧.","Die Anzahl der Werte ist 4.","Der Mittelwert: Summe : 4 = ⟦answer⟧ Minuten."],"hint":"Addiere die vier Zeiten und teile die Summe durch 4.","messages":["Du hast nur addiert. Teile die Summe noch durch die Anzahl der Werte.","Du hast durch 3 geteilt. Es sind vier Kinder, also teilst du durch 4."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="9fbd710e" data-block-type="single-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="mittelwert-deuten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-mittelwert-deuten" data-id="mittelwert-deuten" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Mittelwert der Schulwege von Mira, Jonas, Ayşe, Tom und Lena ist 7 Minuten. Was sagt das?</legend>
+<label class="question-option"><input type="radio" name="frage-mittelwert-deuten" value="0"> <span>Das ist die Zeit des Kindes mit dem längsten Weg</span></label>
+<label class="question-option"><input type="radio" name="frage-mittelwert-deuten" value="1"> <span>Mindestens ein Kind braucht genau 7 Minuten</span></label>
+<label class="question-option"><input type="radio" name="frage-mittelwert-deuten" value="2"> <span>So lang wäre der Weg für jedes Kind, wenn alle gleich lang brauchten und die Summe dieselbe bliebe</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Das ist die Zeit des Kindes mit dem längsten Weg</strong></p><p>Das längste Kind ist Tom mit 12 Minuten. Der Mittelwert liegt zwischen dem kleinsten und dem größten Wert.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Mindestens ein Kind braucht genau 7 Minuten</strong></p><p>Die Zeiten sind 3, 9, 6, 12 und 5 Minuten. Keines davon ist 7. Der Mittelwert muss kein Wert der Liste sein.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>So lang wäre der Weg für jedes Kind, wenn alle gleich lang brauchten und die Summe dieselbe bliebe</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ist die Idee vom Einebnen der Türme. Die Summe von 35 Minuten wird gerecht auf 5 Kinder verteilt.</p></li>
+</ul>
+<p class="question-explanation">Der Mittelwert beschreibt die gleichmäßig verteilte Menge, nicht ein Kind und nicht den größten Wert.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Das ist die Zeit des Kindes mit dem längsten Weg</strong></p><p>Das längste Kind ist Tom mit 12 Minuten. Der Mittelwert liegt zwischen dem kleinsten und dem größten Wert.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Mindestens ein Kind braucht genau 7 Minuten</strong></p><p>Die Zeiten sind 3, 9, 6, 12 und 5 Minuten. Keines davon ist 7. Der Mittelwert muss kein Wert der Liste sein.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>So lang wäre der Weg für jedes Kind, wenn alle gleich lang brauchten und die Summe dieselbe bliebe</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ist die Idee vom Einebnen der Türme. Die Summe von 35 Minuten wird gerecht auf 5 Kinder verteilt.</p></li>
+</ul>
+<p class="question-explanation">Der Mittelwert beschreibt die gleichmäßig verteilte Menge, nicht ein Kind und nicht den größten Wert.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"mittelwert-deuten","text":"Der Mittelwert der Schulwege von Mira, Jonas, Ayşe, Tom und Lena ist 7 Minuten. Was sagt das?","explanation":"Der Mittelwert beschreibt die gleichmäßig verteilte Menge, nicht ein Kind und nicht den größten Wert.","links":[],"type":"single-choice","options":[{"text":"Das ist die Zeit des Kindes mit dem längsten Weg","correct":false,"info":"Das längste Kind ist Tom mit 12 Minuten. Der Mittelwert liegt zwischen dem kleinsten und dem größten Wert."},{"text":"Mindestens ein Kind braucht genau 7 Minuten","correct":false,"info":"Die Zeiten sind 3, 9, 6, 12 und 5 Minuten. Keines davon ist 7. Der Mittelwert muss kein Wert der Liste sein."},{"text":"So lang wäre der Weg für jedes Kind, wenn alle gleich lang brauchten und die Summe dieselbe bliebe","correct":true,"info":"Das ist die Idee vom Einebnen der Türme. Die Summe von 35 Minuten wird gerecht auf 5 Kinder verteilt."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="0226c847" data-block-type="true-false" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="mittelwert-zwischen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-mittelwert-zwischen" data-id="mittelwert-zwischen" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Mittelwert von 3, 9, 6, 12 und 5 kann 15 sein.</legend>
+<label class="question-option"><input type="radio" name="frage-mittelwert-zwischen" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-mittelwert-zwischen" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Der größte Wert ist 12. Der Mittelwert liegt zwischen dem kleinsten und dem größten Wert, hier zwischen 3 und 12. Würden alle Kinder gleich lang brauchen, wäre es nicht mehr als beim langsamsten Kind.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Der größte Wert ist 12. Der Mittelwert liegt zwischen dem kleinsten und dem größten Wert, hier zwischen 3 und 12. Würden alle Kinder gleich lang brauchen, wäre es nicht mehr als beim langsamsten Kind.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"mittelwert-zwischen","text":"Der Mittelwert von 3, 9, 6, 12 und 5 kann 15 sein.","explanation":"Der größte Wert ist 12. Der Mittelwert liegt zwischen dem kleinsten und dem größten Wert, hier zwischen 3 und 12. Würden alle Kinder gleich lang brauchen, wäre es nicht mehr als beim langsamsten Kind.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="76579bdf" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="fehlenden-wert-finden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Der Mittelwert der Schulwege von fünf Kindern ist 8 Minuten. Vier von ihnen brauchen 6, 10, 3 und 11 Minuten. Wie viele Minuten braucht das fünfte Kind?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle fünf Werte zusammen sind 5 mal der Mittelwert. Ziehe die vier bekannten Werte davon ab.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Alle fünf Zeiten zusammen: 5 · 8 Minuten.</li><li>Die vier bekannten Zeiten sind zusammen 6 + 10 + 3 + 11 Minuten.</li><li>Das fünfte Kind braucht die Differenz: 10 Minuten.</li></ol><p><strong>Richtige Antwort:</strong> 10 min</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Der Mittelwert der Schulwege von fünf Kindern ist 12 Minuten. Vier von ihnen brauchen 11, 4, 10 und 15 Minuten. Wie viele Minuten braucht das fünfte Kind?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle fünf Werte zusammen sind 5 mal der Mittelwert. Ziehe die vier bekannten Werte davon ab.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Alle fünf Zeiten zusammen: 5 · 12 Minuten.</li><li>Die vier bekannten Zeiten sind zusammen 11 + 4 + 10 + 15 Minuten.</li><li>Das fünfte Kind braucht die Differenz: 20 Minuten.</li></ol><p><strong>Richtige Antwort:</strong> 20 min</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Der Mittelwert der Schulwege von fünf Kindern ist 9 Minuten. Vier von ihnen brauchen 13, 9, 10 und 10 Minuten. Wie viele Minuten braucht das fünfte Kind?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle fünf Werte zusammen sind 5 mal der Mittelwert. Ziehe die vier bekannten Werte davon ab.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Alle fünf Zeiten zusammen: 5 · 9 Minuten.</li><li>Die vier bekannten Zeiten sind zusammen 13 + 9 + 10 + 10 Minuten.</li><li>Das fünfte Kind braucht die Differenz: 3 Minuten.</li></ol><p><strong>Richtige Antwort:</strong> 3 min</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"fehlenden-wert-finden","given":{"m":{"int":[6,12]},"a":{"int":[3,15]},"b":{"int":[3,15]},"c":{"int":[3,15]},"d":{"int":[3,15]}},"where":["5 * m - (a + b + c + d) >= 2","5 * m - (a + b + c + d) \u003c= 20","5 * m - (a + b + c + d) != m","5 * m - (a + b + c + d) != 2 * m"],"task":{"text":"Der Mittelwert der Schulwege von fünf Kindern ist {{m}} Minuten. Vier von ihnen brauchen {{a}}, {{b}}, {{c}} und {{d}} Minuten. Wie viele Minuten braucht das fünfte Kind?"},"answer":{"value":"5 * m - (a + b + c + d)","compare":{"number":{"format":"integer","unit":"min"}}},"mistakes":[{"value":"m","message":"Das ist der Mittelwert, nicht die Zeit des fünften Kindes. Rechne erst aus, wie viele Minuten alle fünf zusammen haben."},{"value":"4 * m - (a + b + c + d)","message":"Es sind fünf Kinder. Die Summe aller Werte ist 5 mal der Mittelwert, nicht 4 mal."}],"hint":"Alle fünf Werte zusammen sind 5 mal der Mittelwert. Ziehe die vier bekannten Werte davon ab.","steps":["Alle fünf Zeiten zusammen: 5 · {{m}} Minuten.","Die vier bekannten Zeiten sind zusammen {{a}} + {{b}} + {{c}} + {{d}} Minuten.","Das fünfte Kind braucht die Differenz: {{answer}} Minuten."]},"templates":{"de":{"task":"Der Mittelwert der Schulwege von fünf Kindern ist ⟦m⟧ Minuten. Vier von ihnen brauchen ⟦a⟧, ⟦b⟧, ⟦c⟧ und ⟦d⟧ Minuten. Wie viele Minuten braucht das fünfte Kind?","steps":["Alle fünf Zeiten zusammen: 5 · ⟦m⟧ Minuten.","Die vier bekannten Zeiten sind zusammen ⟦a⟧ + ⟦b⟧ + ⟦c⟧ + ⟦d⟧ Minuten.","Das fünfte Kind braucht die Differenz: ⟦answer⟧ Minuten."],"hint":"Alle fünf Werte zusammen sind 5 mal der Mittelwert. Ziehe die vier bekannten Werte davon ab.","messages":["Das ist der Mittelwert, nicht die Zeit des fünften Kindes. Rechne erst aus, wie viele Minuten alle fünf zusammen haben.","Es sind fünf Kinder. Die Summe aller Werte ist 5 mal der Mittelwert, nicht 4 mal."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Daten erheben und auswerten“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-daten","app":"Daten erheben und auswerten","root":"../../","repository":"lernapps/mathe-daten","revision":"5c62e91","page":{"title":"Der Mittelwert – gerecht verteilen","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../umfrage/umfrage-durchfuehren/">Zurück: Eine eigene Umfrage durchführen</a><a rel="next" href="../../umfrage/diagramme-kritisch-lesen/">Weiter: Wie Diagramme täuschen können</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

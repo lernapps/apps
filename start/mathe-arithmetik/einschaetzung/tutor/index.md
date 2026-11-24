@@ -29,16 +29,15 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Selbsteinschätzu
 
 - Gerechnet wird auf Papier und in der App, nicht im Chat. Das Ergebnis tippt das Kind in die App; im Chat
   stellst du Überschlags- und Warum-Fragen.
-- Erklär am Bild der Seite (Abschnitt „Bild“), nicht abstrakt: Frag zuerst „Was siehst du?“.
+- Erklär am Prozentstreifen der Seite, nicht abstrakt: Frag zuerst „Was siehst du? Welche Stelle fehlt?“.
 - Macht das Kind einen typischen Fehler, benenne die Idee hinter dem Fehler, nicht nur „falsch“. Zum Beispiel:
   „Du hast den Unterschied durch den falschen Wert geteilt. Welcher Wert ist hier 100 %?“
 - Eine Seite ist erst geschafft, wenn drei Aufgaben richtig waren und das Kind eine davon erklären kann. Dann
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
+- Fehlt dem Kind die Erklärung, geh noch einmal Schritt für Schritt durch Regel und Beispiel der Seite, bevor du
+  neue Aufgaben stellst.
 
 ## Besondere Anforderungen
 
@@ -56,25 +55,33 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 ### Kapitel „Prozentrechnung“
 
 - Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
 - „Grundwert, Prozentwert und Prozentsatz erkennen“ · nicht abgefragt
-- „Prozentsatz berechnen“ · Aufgaben A1, A2
-- „Prozentwert berechnen“ · Aufgaben A3, A4
-- „Grundwert berechnen“ · Aufgaben A5, A6
-- „Prozentuale Zunahme und Abnahme“ · Aufgaben A7, A8
-- „Zwei Werte vergleichen“ · Aufgaben A9, A10
-- „Sachaufgaben übersetzen“ · Aufgaben A11, A12
+- „Drei Grundaufgaben am Prozentstreifen – Prozentwert berechnen“ · Aufgaben A1, A2
+- „Drei Grundaufgaben am Prozentstreifen – Prozentsatz berechnen“ · Aufgaben A3, A4
+- „Drei Grundaufgaben am Prozentstreifen – Grundwert berechnen“ · Aufgaben A5, A6
+- „Zwei Werte am Prozentstreifen vergleichen“ · Aufgaben A7, A8
+- „Sachaufgaben mit Prozentstreifen lösen“ · Aufgaben A9, A10
+- „Prozentuale Zunahme und Abnahme“ · Aufgaben A11, A12, A13
+- „Prozentpunkte und mehrfache Änderungen“ · Aufgaben A14, A15
+- „Zinsen berechnen“ · Aufgaben A16, A17
 
 ## Die Aufgaben dieser Selbsteinschätzung
 
-- A1: Aufgabe prozentsatz-aufgabe der Seite „Prozentsatz berechnen“
-- A2: Aufgabe prozentsatz-rechnen der Seite „Prozentsatz berechnen“
-- A3: Aufgabe prozentwert-aufgabe der Seite „Prozentwert berechnen“
-- A4: Aufgabe prozentwert-rechnen der Seite „Prozentwert berechnen“
-- A5: Aufgabe grundwert-aufgabe der Seite „Grundwert berechnen“
-- A6: Aufgabe grundwert-rechnen der Seite „Grundwert berechnen“
-- A7: Aufgabe veraenderung-aufgabe der Seite „Prozentuale Zunahme und Abnahme“
-- A8: Aufgabe veraenderung-rueckwaerts der Seite „Prozentuale Zunahme und Abnahme“
-- A9: Aufgabe vergleich-aufgabe der Seite „Zwei Werte vergleichen“
-- A10: Aufgabe vergleich-rechnen der Seite „Zwei Werte vergleichen“
-- A11: Aufgabe sachaufgaben-aufgabe der Seite „Sachaufgaben übersetzen“
-- A12: Aufgabe sachaufgaben-aufgabe der Seite „Sachaufgaben übersetzen“
+- A1: Aufgabe prozentwert-aufgabe der Seite „Drei Grundaufgaben am Prozentstreifen – Prozentwert berechnen“
+- A2: Aufgabe prozentwert-rechnen der Seite „Drei Grundaufgaben am Prozentstreifen – Prozentwert berechnen“
+- A3: Aufgabe prozentsatz-aufgabe der Seite „Drei Grundaufgaben am Prozentstreifen – Prozentsatz berechnen“
+- A4: Aufgabe prozentsatz-rechnen der Seite „Drei Grundaufgaben am Prozentstreifen – Prozentsatz berechnen“
+- A5: Aufgabe grundwert-aufgabe der Seite „Drei Grundaufgaben am Prozentstreifen – Grundwert berechnen“
+- A6: Aufgabe grundwert-rechnen der Seite „Drei Grundaufgaben am Prozentstreifen – Grundwert berechnen“
+- A7: Aufgabe vergleich-aufgabe der Seite „Zwei Werte am Prozentstreifen vergleichen“
+- A8: Aufgabe vergleich-rechnen der Seite „Zwei Werte am Prozentstreifen vergleichen“
+- A9: Aufgabe sachaufgaben-aufgabe der Seite „Sachaufgaben mit Prozentstreifen lösen“
+- A10: Aufgabe sachaufgaben-dreisatz der Seite „Sachaufgaben mit Prozentstreifen lösen“
+- A11: Aufgabe veraenderung-aufgabe der Seite „Prozentuale Zunahme und Abnahme“
+- A12: Aufgabe veraenderung-senkung der Seite „Prozentuale Zunahme und Abnahme“
+- A13: Aufgabe veraenderung-rueckwaerts der Seite „Prozentuale Zunahme und Abnahme“
+- A14: Aufgabe gesamtfaktor-ueben der Seite „Prozentpunkte und mehrfache Änderungen“
+- A15: Aufgabe endwert-ueben der Seite „Prozentpunkte und mehrfache Änderungen“
+- A16: Aufgabe jahreszinsen-ueben der Seite „Zinsen berechnen“
+- A17: Aufgabe monatszinsen-ueben der Seite „Zinsen berechnen“

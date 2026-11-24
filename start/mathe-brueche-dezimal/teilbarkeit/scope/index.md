@@ -1,0 +1,25 @@
+# Teilbarkeit nutzen
+
+## Das brauchst du für dieses Kapitel
+
+Wiederholung von Vorrangregeln, Rechengesetzen (Vertauschungs-, Verbindungs-, Distributivgesetz) und Potenzen (Basis, Exponent, Zehnerpotenz) als Voraussetzung für Teiler und Primfaktoren, mit Selbsttest.
+
+## Teiler, Vielfache und Teilbarkeitsregeln
+
+Faktor, Produkt, Teiler und Vielfaches an Reihen von Bauklötzen erläutern: Ein Teiler teilt eine Zahl ohne Rest, ein Vielfaches entsteht durch Malnehmen mit 1, 2, 3, … . Alle Teiler einer Zahl als Paare von Malaufgaben finden. Teilbarkeitsregeln für 2, 3, 4, 5, 9, 10, 25 und 100 anwenden: letzte Ziffer, letzte zwei Ziffern, Quersumme. Typische Fehler: bei 3 und 9 nur die letzte Ziffer prüfen, die Quersumme falsch addieren, bei 4 nur die letzte Ziffer ansehen. Primzahlen und Primfaktoren gehören erst zur nächsten Seite.
+
+## Primzahlen und Primfaktoren
+
+Zusammengesetzte Zahlen wiederholt in Faktoren größer als 1 zerlegen; am Ende bleiben Primzahlen. Primzahlen größer als 1 haben genau zwei positive Teiler, 1 ist keine Primzahl. Die Zerlegung im Faktorbaum darstellen und gleiche Primfaktoren als Potenz zusammenfassen, zum Beispiel 24 = 2 · 2 · 2 · 3 = 2^3 · 3. Typische Fehler: 1 als Faktor, ein Faktor, der nicht prim ist (4, 6, 9), Exponenten falsch gezählt. ggT und kgV gehören erst zur nächsten Seite.
+
+## ggT und kgV
+
+Teiler teilen eine Zahl ohne Rest, Vielfache entstehen durch Malnehmen mit 1, 2, 3, … (beides von der Seite Teiler und Vielfache bekannt). Der ggT (größter gemeinsamer Teiler) ist der größte gemeinsame positive Teiler, das kgV (kleinstes gemeinsames Vielfaches) das kleinste gemeinsame positive Vielfache. Bestimmen durch Auflisten und aus den Primfaktorzerlegungen: ggT mit den gemeinsamen Primfaktoren und den kleinsten Exponenten, kgV mit allen Primfaktoren und den größten Exponenten. Beispiel 36 = 2^2 · 3^2 und 48 = 2^4 · 3: ggT 12, kgV 144. Alltag: Fahrplan (kgV) und Fliesen (ggT). Beide kehren beim Kürzen (ggT) und beim gemeinsamen Nenner (kgV) wieder; Brüche selbst gehören nicht auf diese Seite. Typische Fehler: Produkt der Zahlen statt kgV, ggT und kgV vertauscht, bei den Primfaktoren die falschen Exponenten.
+
+## Gehört nicht dazu
+
+- Negative Brüche
+- Doppelbrüche
+- Algebraische Umwandlung periodischer Dezimalzahlen
+
+Die ganze App: [Scope der App](../../scope/)

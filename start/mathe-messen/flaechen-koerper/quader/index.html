@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Volumen und Oberfläche: Quader, Würfel – Messen: Längen, Flächen, Volumen</title>
+    <meta name="description" content="Volumen und Oberfläche von Quader und Würfel berechnen: Würfel in Schichten stapeln und das Netz auslegen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../flaechen-koerper/quader/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../flaechen-koerper/">Flächen auslegen, Körper füllen</a></li><li aria-current="page">Volumen und Oberfläche: Quader, Würfel</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Volumen und Oberfläche: Quader, Würfel</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../flaechen-koerper/quader/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧flaechen-koerper/quader/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-messen","page":{"id":"quader","title":"Volumen und Oberfläche: Quader, Würfel","exercises":[{"id":"schachtel-wuerfel","section":"einstieg","numbered":false},{"id":"quader-volumen","section":"uebung","numbered":true},{"id":"quader-oberflaeche","section":"uebung","numbered":true},{"id":"wuerfel-volumen","section":"uebung","numbered":true},{"id":"hoehe-gesucht","section":"uebung","numbered":true},{"id":"wuerfel-oberflaeche","section":"rueckblick","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","rueckblick"]},"tutor":"flaechen-koerper/quader/tutor/","markdown":"flaechen-koerper/quader/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Schichten stapeln, Netz auslegen</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li><li><a href="#rueckblick">Das kannst du jetzt</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="a69af999" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in eine Schachtel passt oder wie viel Papier du zum Einpacken brauchst, brauchst du
+Volumen und Oberfläche. Nach dieser Seite berechnest du beides für Quader und Würfel. Das Modell dahinter: Du
+stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der
+Schichten.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="db0027fa" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="schachtel-wuerfel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-schachtel-wuerfel" data-id="schachtel-wuerfel" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Schachtel ist innen 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-schachtel-wuerfel">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 30</p>
+<p class="question-explanation">Auf dem Boden liegen <math><mrow><mn>5</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>15</mn></mrow></math> Würfel. Es passen 2 Schichten hinein: <math><mrow><mn>15</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>30</mn></mrow></math> Würfel.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 30</p>
+<p class="question-explanation">Auf dem Boden liegen <math><mrow><mn>5</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>15</mn></mrow></math> Würfel. Es passen 2 Schichten hinein: <math><mrow><mn>15</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>30</mn></mrow></math> Würfel.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"schachtel-wuerfel","text":"Eine Schachtel ist innen 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?","explanation":"Auf dem Boden liegen $5 \\cdot 3 = 15$ Würfel. Es passen 2 Schichten hinein: $15 \\cdot 2 = 30$ Würfel.","links":[],"hint":"Wie viele Würfel liegen auf dem Boden? Wie viele Schichten passen übereinander?","type":"number","answer":30,"tolerance":0,"mistakes":[{"answer":10,"message":"Du hast die drei Maße addiert. Die Würfel füllen die Schachtel in Schichten."},{"answer":15,"message":"So viele Würfel passen in eine Schicht auf den Boden. Die Schachtel ist aber höher."}]},"rendered":{"Auf dem Boden liegen $5 \\cdot 3 = 15$ Würfel. Es passen 2 Schichten hinein: $15 \\cdot 2 = 30$ Würfel.":"Auf dem Boden liegen \u003cmath>\u003cmrow>\u003cmn>5\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>15\u003c/mn>\u003c/mrow>\u003c/math> Würfel. Es passen 2 Schichten hinein: \u003cmath>\u003cmrow>\u003cmn>15\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>30\u003c/mn>\u003c/mrow>\u003c/math> Würfel."}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Schichten stapeln, Netz auslegen</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="edba68bc" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das <strong>Volumen</strong> sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
+Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="170a185d" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/quader-schicht.svg" alt="Eine Schicht aus Einheitswürfeln, 4 Würfel lang und 3 Würfel breit, nur 1 Würfel hoch." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Eine Schicht: 4 mal 3 Würfel. Das ist die Grundfläche, mit Würfeln belegt.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="e0f0ae4d" data-block-type="figure" data-block-order="5">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/quader-aus-wuerfeln.svg" alt="Ein Quader aus Einheitswürfeln, 4 Würfel lang, 3 Würfel breit und 2 Schichten hoch." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Eine Schicht hat 4 mal 3 Würfel. Es gibt 2 Schichten.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="d67848ca" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-grundflaeche"><a href="../../glossar/#grundflaeche">Grundfläche</a></dfn></dt><dd><p>Die Grundfläche ist die Fläche, auf der ein Körper steht. Beim Quader mit 4 cm Länge und 3 cm Breite ist sie 12 cm² groß.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="b73301b7" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-volumen"><a href="../../glossar/#volumen">Volumen</a></dfn></dt><dd><p>Das Volumen sagt, wie viele Einheitswürfel in einen Körper passen. Es hat Einheiten wie cm³ oder m³.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="d32cfa48" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>⋅</mo><mi>c</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/7" data-block-id="5c9cdb47" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Dabei ist <math><mi>a</mi></math> die Länge, <math><mi>b</mi></math> die Breite und <math><mi>c</mi></math> die Höhe des Quaders, <math><mi>G</mi></math> die Grundfläche und <math><mi>h</mi></math> die Höhe.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/8" data-block-id="d63c392c" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn du wissen willst, wie viel Papier du zum Einpacken brauchst, brauchst du die <strong>Oberfläche</strong>. Sie ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
+immer zwei gleich große.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/9" data-block-id="369773ad" data-block-type="figure" data-block-order="11">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/quader-netz.svg" alt="Das Netz eines Quaders mit 4 cm Länge, 3 cm Breite und 2 cm Höhe: sechs Rechtecke in Kreuzform. Maße in cm." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Das Netz hat drei Paare gleich großer Rechtecke: Boden und Deckel, vorne und hinten, links und rechts.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/10" data-block-id="39cfa085" data-block-type="definition" data-block-order="12">
+<dl class="explainer-definition"><dt><dfn id="begriff-netz"><a href="../../glossar/#netz">Netz</a></dfn></dt><dd><p>Ein Netz entsteht, wenn du einen Körper an Kanten aufschneidest und flach hinlegst. Das Netz eines Quaders besteht aus sechs Rechtecken.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/11" data-block-id="90bd3c62" data-block-type="definition" data-block-order="13">
+<dl class="explainer-definition"><dt><dfn id="begriff-oberflaeche"><a href="../../glossar/#oberflaeche">Oberfläche</a></dfn></dt><dd><p>Die Oberfläche ist die Summe der Flächen aller Seitenflächen eines Körpers. Sie hat Einheiten wie cm² oder m².</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/12" data-block-id="27a88323" data-block-type="formula" data-block-order="14">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>+</mo><mi>a</mi><mo>⋅</mo><mi>c</mi><mo>+</mo><mi>b</mi><mo>⋅</mo><mi>c</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/13" data-block-id="16cf71d0" data-block-type="note" data-block-order="15">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/13/1" data-block-id="cd294db8" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Das Volumen hat die Einheit cm³, die Oberfläche cm². Beim Würfel mit der Kantenlänge <math><mi>a</mi></math> gilt
+<math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math> und <math><mrow><mi>O</mi><mo>=</mo><mn>6</mn><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="44613407" data-block-type="example" data-block-order="17">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Der Quader aus dem Netz</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="cdc20b3a" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Das Volumen berechnest du so.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="f0c29057" data-block-type="formula" data-block-order="19">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>24</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="6fb2f3c8" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Für die Oberfläche addierst du die drei Paare des Netzes: Boden und Deckel je 4 · 3 = 12, vorne und hinten je 4 · 2 = 8, links und rechts je 2 · 3 = 6.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="fc964a08" data-block-type="formula" data-block-order="21">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>12</mn><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>8</mn><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>6</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/5" data-block-id="fba88ac2" data-block-type="formula" data-block-order="22">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>24</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>12</mn><mo>=</mo><mn>52</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="1880b870" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="quader-volumen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Quader ist 7 cm lang, 6 cm breit und 4 cm hoch. Berechne das Volumen in cm³.</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>⋅</mo><mi>c</mi></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mn>7</mn><mo>⋅</mo><mn>6</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>168</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 168 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Quader ist 6 cm lang, 5 cm breit und 6 cm hoch. Berechne das Volumen in cm³.</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>⋅</mo><mi>c</mi></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mn>6</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>6</mn><mo>=</mo><mn>180</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 180 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Quader ist 7 cm lang, 3 cm breit und 2 cm hoch. Berechne das Volumen in cm³.</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>⋅</mo><mi>c</mi></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mn>7</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>42</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 42 cm³</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"quader-volumen","given":{"a":{"int":[3,9]},"b":{"int":[2,8]},"c":{"int":[2,6]}},"where":["a != b","b != c","a * b * c != 2 * (a * b + a * c + b * c)"],"task":{"text":"Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne das Volumen in cm³."},"answer":{"value":"a * b * c","compare":{"number":{"format":"integer","unit":"cm³"}}},"mistakes":[{"value":"a + b + c","message":"Du hast die Maße addiert. Die Würfel liegen in Reihen und Schichten, also mal."},{"value":"2 * (a * b + a * c + b * c)","message":"Das ist die Oberfläche. Gefragt ist, wie viele Würfel hineinpassen."}],"hint":"Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?","steps":["$V = a \\cdot b \\cdot c$","$V = {{a}} \\cdot {{b}} \\cdot {{c}} = {{answer}}\\ \\text{cm}^3$."]},"templates":{"de":{"task":"Ein Quader ist ⟦a⟧ cm lang, ⟦b⟧ cm breit und ⟦c⟧ cm hoch. Berechne das Volumen in cm³.","steps":["\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>b\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>c\u003c/mi>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>cm\u003c/mtext>\u003cmn>3\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?","messages":["Du hast die Maße addiert. Die Würfel liegen in Reihen und Schichten, also mal.","Das ist die Oberfläche. Gefragt ist, wie viele Würfel hineinpassen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,32,33,34,35,36,37,38,40,41,42,44,45,46,47,48,49,50,51,53,54,55,57,59,61,62,65,67,68,69,70,71,73,76,77,81,84,85,86,87],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="3d6ddd3a" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="quader-oberflaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Quader ist 5 cm lang, 7 cm breit und 3 cm hoch. Berechne die Oberfläche in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Netz hat sechs Rechtecke. Je zwei sind gleich groß: Boden und Deckel, vorne und hinten, links und rechts.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Boden und Deckel: <math><mrow><mn>2</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>7</mn></mrow></math>.</li><li>Vorne und hinten: <math><mrow><mn>2</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>3</mn></mrow></math>. Links und rechts: <math><mrow><mn>2</mn><mo>⋅</mo><mn>7</mn><mo>⋅</mo><mn>3</mn></mrow></math>.</li><li>Zusammen: <math><mrow><mn>142</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 142 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Quader ist 4 cm lang, 8 cm breit und 4 cm hoch. Berechne die Oberfläche in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Netz hat sechs Rechtecke. Je zwei sind gleich groß: Boden und Deckel, vorne und hinten, links und rechts.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Boden und Deckel: <math><mrow><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>8</mn></mrow></math>.</li><li>Vorne und hinten: <math><mrow><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>4</mn></mrow></math>. Links und rechts: <math><mrow><mn>2</mn><mo>⋅</mo><mn>8</mn><mo>⋅</mo><mn>4</mn></mrow></math>.</li><li>Zusammen: <math><mrow><mn>160</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 160 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Quader ist 6 cm lang, 3 cm breit und 6 cm hoch. Berechne die Oberfläche in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Netz hat sechs Rechtecke. Je zwei sind gleich groß: Boden und Deckel, vorne und hinten, links und rechts.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Boden und Deckel: <math><mrow><mn>2</mn><mo>⋅</mo><mn>6</mn><mo>⋅</mo><mn>3</mn></mrow></math>.</li><li>Vorne und hinten: <math><mrow><mn>2</mn><mo>⋅</mo><mn>6</mn><mo>⋅</mo><mn>6</mn></mrow></math>. Links und rechts: <math><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>6</mn></mrow></math>.</li><li>Zusammen: <math><mrow><mn>144</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 144 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"quader-oberflaeche","given":{"a":{"int":[3,9]},"b":{"int":[2,8]},"c":{"int":[2,6]}},"where":["a != b","b != c","a * b * c != 2 * (a * b + a * c + b * c)","a * b + a * c + b * c != a * b * c"],"task":{"text":"Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne die Oberfläche in cm²."},"answer":{"value":"2 * (a * b + a * c + b * c)","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"a * b + a * c + b * c","message":"Du hast nur drei Seitenflächen gezählt. Jede Fläche gibt es zweimal."},{"value":"a * b * c","message":"Das ist das Volumen. Gefragt ist die Fläche aller Seiten."}],"hint":"Das Netz hat sechs Rechtecke. Je zwei sind gleich groß: Boden und Deckel, vorne und hinten, links und rechts.","steps":["Boden und Deckel: $2 \\cdot {{a}} \\cdot {{b}}$.","Vorne und hinten: $2 \\cdot {{a}} \\cdot {{c}}$. Links und rechts: $2 \\cdot {{b}} \\cdot {{c}}$.","Zusammen: ${{answer}}\\ \\text{cm}^2$."]},"templates":{"de":{"task":"Ein Quader ist ⟦a⟧ cm lang, ⟦b⟧ cm breit und ⟦c⟧ cm hoch. Berechne die Oberfläche in cm².","steps":["Boden und Deckel: \u003cmath>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003c/mrow>\u003c/math>.","Vorne und hinten: \u003cmath>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003c/mrow>\u003c/math>. Links und rechts: \u003cmath>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003c/mrow>\u003c/math>.","Zusammen: \u003cmath>\u003cmrow>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>cm\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Das Netz hat sechs Rechtecke. Je zwei sind gleich groß: Boden und Deckel, vorne und hinten, links und rechts.","messages":["Du hast nur drei Seitenflächen gezählt. Jede Fläche gibt es zweimal.","Das ist das Volumen. Gefragt ist die Fläche aller Seiten."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,23,24,25,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,49,50,51,52,54,56,57,58,59,63,64,67,69,71,73,75,76,77,78,79,82,83,86,87,89,90],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="aa999216" data-block-type="generated" data-block-order="25">
+<div class="explainer-exercise explainer-generated" id="wuerfel-volumen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Würfel hat die Kantenlänge 9 cm. Berechne das Volumen in cm³.</p><details class="explainer-hint"><summary>Tipp</summary><p>Beim Würfel sind Länge, Breite und Höhe gleich.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mn>9</mn><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>9</mn><mo>=</mo><mn>729</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 729 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Würfel hat die Kantenlänge 5 cm. Berechne das Volumen in cm³.</p><details class="explainer-hint"><summary>Tipp</summary><p>Beim Würfel sind Länge, Breite und Höhe gleich.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mn>5</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>125</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 125 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Würfel hat die Kantenlänge 4 cm. Berechne das Volumen in cm³.</p><details class="explainer-hint"><summary>Tipp</summary><p>Beim Würfel sind Länge, Breite und Höhe gleich.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>64</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>3</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 64 cm³</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"wuerfel-volumen","given":{"a":{"int":[2,9]}},"where":["a != 3"],"task":{"text":"Ein Würfel hat die Kantenlänge {{a}} cm. Berechne das Volumen in cm³."},"answer":{"value":"a * a * a","compare":{"number":{"format":"integer","unit":"cm³"}}},"mistakes":[{"value":"a * a","message":"Das ist die Fläche einer Seite. Für das Volumen brauchst du noch die Höhe."},{"value":"3 * a","message":"Du hast die Kantenlänge verdreifacht. Beim Würfel multiplizierst du drei gleiche Maße."}],"hint":"Beim Würfel sind Länge, Breite und Höhe gleich.","steps":["$V = a \\cdot a \\cdot a$","$V = {{a}} \\cdot {{a}} \\cdot {{a}} = {{answer}}\\ \\text{cm}^3$."]},"templates":{"de":{"task":"Ein Würfel hat die Kantenlänge ⟦a⟧ cm. Berechne das Volumen in cm³.","steps":["\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>cm\u003c/mtext>\u003cmn>3\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Beim Würfel sind Länge, Breite und Höhe gleich.","messages":["Das ist die Fläche einer Seite. Für das Volumen brauchst du noch die Höhe.","Du hast die Kantenlänge verdreifacht. Beim Würfel multiplizierst du drei gleiche Maße."]}},"data":{},"seeds":[1,2,4,5,6,7,10],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="1aef143a" data-block-type="generated" data-block-order="26">
+<div class="explainer-exercise explainer-generated" id="hoehe-gesucht">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Schachtel hat eine Grundfläche von 12 cm². Ihr Volumen ist 48 cm³. Wie hoch ist die Schachtel in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Volumen ist Grundfläche mal Höhe. Mit welcher Zahl mal 12 kommst du auf 48?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi></mrow></math>, also <math><mrow><mi>h</mi><mo>=</mo><mi>V</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>G</mi></mrow></math>.</li><li><math><mrow><mi>h</mi><mo>=</mo><mn>48</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>12</mn><mo>=</mo><mn>4</mn></mrow></math>, also 4 cm.</li></ol><p><strong>Richtige Antwort:</strong> 4 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Schachtel hat eine Grundfläche von 20 cm². Ihr Volumen ist 120 cm³. Wie hoch ist die Schachtel in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Volumen ist Grundfläche mal Höhe. Mit welcher Zahl mal 20 kommst du auf 120?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi></mrow></math>, also <math><mrow><mi>h</mi><mo>=</mo><mi>V</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>G</mi></mrow></math>.</li><li><math><mrow><mi>h</mi><mo>=</mo><mn>120</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>20</mn><mo>=</mo><mn>6</mn></mrow></math>, also 6 cm.</li></ol><p><strong>Richtige Antwort:</strong> 6 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Schachtel hat eine Grundfläche von 24 cm². Ihr Volumen ist 144 cm³. Wie hoch ist die Schachtel in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Volumen ist Grundfläche mal Höhe. Mit welcher Zahl mal 24 kommst du auf 144?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi></mrow></math>, also <math><mrow><mi>h</mi><mo>=</mo><mi>V</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>G</mi></mrow></math>.</li><li><math><mrow><mi>h</mi><mo>=</mo><mn>144</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>24</mn><mo>=</mo><mn>6</mn></mrow></math>, also 6 cm.</li></ol><p><strong>Richtige Antwort:</strong> 6 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"hoehe-gesucht","given":{"G":{"oneOf":[12,16,20,24]},"V":{"oneOf":[48,60,72,80,96,120,144,160,180]}},"where":["decimals(V / G) == 0","V / G >= 2","V / G \u003c= 9","V / G != G"],"task":{"text":"Eine Schachtel hat eine Grundfläche von {{G}} cm². Ihr Volumen ist {{V}} cm³. Wie hoch ist die Schachtel in cm?"},"answer":{"value":"V / G","compare":{"number":{"format":"integer","unit":"cm"}}},"mistakes":[{"value":"V - G","message":"Du hast abgezogen. Das Volumen ist Grundfläche mal Höhe, also teilst du."},{"value":"V * G","message":"Du hast mal gerechnet. Das Volumen ist schon Grundfläche mal Höhe."}],"hint":"Das Volumen ist Grundfläche mal Höhe. Mit welcher Zahl mal {{G}} kommst du auf {{V}}?","steps":["$V = G \\cdot h$, also $h = V : G$.","$h = {{V}} : {{G}} = {{answer}}$, also {{answer}} cm."]},"templates":{"de":{"task":"Eine Schachtel hat eine Grundfläche von ⟦G⟧ cm². Ihr Volumen ist ⟦V⟧ cm³. Wie hoch ist die Schachtel in cm?","steps":["\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>G\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>h\u003c/mi>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>V\u003c/mi>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmi>G\u003c/mi>\u003c/mrow>\u003c/math>.","\u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦V⟧\u003c/mtext>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmtext>⟦G⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm."],"hint":"Das Volumen ist Grundfläche mal Höhe. Mit welcher Zahl mal ⟦G⟧ kommst du auf ⟦V⟧?","messages":["Du hast abgezogen. Das Volumen ist Grundfläche mal Höhe, also teilst du.","Du hast mal gerechnet. Das Volumen ist schon Grundfläche mal Höhe."]}},"data":{},"seeds":[1,2,3,4,5,9,11,12,17,18,21,24,27,28,31,37,44,47],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="rueckblick">Das kannst du jetzt</h2>
+<div class="explainer-block" data-block="rueckblick/1" data-block-id="5d722b9c" data-block-type="text" data-block-order="27">
+<div class="block-text"><ul>
+<li>Flächen- und Volumeneinheiten mit 100 und 1000 umrechnen,</li>
+<li>Fläche und Umfang von Rechteck, Quadrat und zusammengesetzten Figuren berechnen,</li>
+<li>Volumen und Oberfläche von Quader und Würfel berechnen.</li>
+</ul></div>
+</div>
+<div class="explainer-block" data-block="rueckblick/2" data-block-id="0d58d79d" data-block-type="generated" data-block-order="28">
+<div class="explainer-exercise explainer-generated" id="wuerfel-oberflaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Würfel hat die Kantenlänge 3 cm. Berechne die Oberfläche in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle sechs Seitenflächen sind gleich große Quadrate. Wie groß ist eines?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Eine Seitenfläche: <math><mrow><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math>. Es gibt sechs.</li><li><math><mrow><mi>O</mi><mo>=</mo><mn>6</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>54</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 54 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Würfel hat die Kantenlänge 2 cm. Berechne die Oberfläche in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle sechs Seitenflächen sind gleich große Quadrate. Wie groß ist eines?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Eine Seitenfläche: <math><mrow><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math>. Es gibt sechs.</li><li><math><mrow><mi>O</mi><mo>=</mo><mn>6</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>24</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 24 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Würfel hat die Kantenlänge 4 cm. Berechne die Oberfläche in cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle sechs Seitenflächen sind gleich große Quadrate. Wie groß ist eines?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Eine Seitenfläche: <math><mrow><mi>a</mi><mo>⋅</mo><mi>a</mi></mrow></math>. Es gibt sechs.</li><li><math><mrow><mi>O</mi><mo>=</mo><mn>6</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>96</mn><mtext> </mtext><msup><mtext>cm</mtext><mn>2</mn></msup></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 96 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"wuerfel-oberflaeche","given":{"a":{"int":[2,9]}},"where":["a != 6"],"task":{"text":"Ein Würfel hat die Kantenlänge {{a}} cm. Berechne die Oberfläche in cm²."},"answer":{"value":"6 * a * a","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"a * a","message":"Das ist die Fläche einer einzigen Seite. Ein Würfel hat sechs gleich große Seitenflächen."},{"value":"a * a * a","message":"Das ist das Volumen. Gefragt ist die Fläche aller Seiten."}],"hint":"Alle sechs Seitenflächen sind gleich große Quadrate. Wie groß ist eines?","steps":["Eine Seitenfläche: $a \\cdot a$. Es gibt sechs.","$O = 6 \\cdot {{a}} \\cdot {{a}} = {{answer}}\\ \\text{cm}^2$."]},"templates":{"de":{"task":"Ein Würfel hat die Kantenlänge ⟦a⟧ cm. Berechne die Oberfläche in cm².","steps":["Eine Seitenfläche: \u003cmath>\u003cmrow>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003c/mrow>\u003c/math>. Es gibt sechs.","\u003cmath>\u003cmrow>\u003cmi>O\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>6\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmtext> \u003c/mtext>\u003cmsup>\u003cmtext>cm\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>."],"hint":"Alle sechs Seitenflächen sind gleich große Quadrate. Wie groß ist eines?","messages":["Das ist die Fläche einer einzigen Seite. Ein Würfel hat sechs gleich große Seitenflächen.","Das ist das Volumen. Gefragt ist die Fläche aller Seiten."]}},"data":{},"seeds":[1,2,3,6,7,14,20],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Messen: Längen, Flächen, Volumen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-messen","app":"Messen: Längen, Flächen, Volumen","root":"../../","repository":"lernapps/mathe-messen","revision":"51b22cd","page":{"title":"Volumen und Oberfläche: Quader, Würfel","order":7}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../flaechen-koerper/zusammengesetzt/">Zurück: Zusammengesetzte Figuren</a><a rel="next" href="../../zerlegen/voraussetzungen/">Weiter: Das brauchst du für dieses Kapitel</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

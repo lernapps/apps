@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -76,35 +73,58 @@ $P(\text{Zweig 1}) + P(\text{Zweig 2}) + \text{…} = 1$
 
 - **Pfad**: Ein Weg im Baumdiagramm vom Start bis zu einem Ende.
 
+- **Zweig**: Eine Linie im Baumdiagramm. An jedem Zweig steht, wie wahrscheinlich dieser Schritt ist.
+
+- **Knoten**: Ein Punkt im Baumdiagramm, an dem sich der Baum verzweigt oder ein Pfad endet.
+
 ### Beispiel
 
 **Beispiel: Zweimal ziehen ohne Zurücklegen**
 
 In einer Urne liegen 3 rote und 2 blaue Kugeln. Du ziehst zweimal **ohne Zurücklegen**. Das Bild unten zeigt den fertigen Baum.
 
-1. **1. Stufe:** 5 Kugeln. $P(\text{rot}) = \frac{3}{5}$, $P(\text{blau}) = \frac{2}{5}$. Zusammen 1.
-2. **2. Stufe nach rot:** nur noch 4 Kugeln, davon 2 rote. $P(\text{rot}) = \frac{2}{4}$,
-   $P(\text{blau}) = \frac{2}{4}$.
-3. **2. Stufe nach blau:** 4 Kugeln, 3 rote, 1 blaue. $P(\text{rot}) = \frac{3}{4}$,
-   $P(\text{blau}) = \frac{1}{4}$.
-4. Unter den Enden stehen schon die Pfadwahrscheinlichkeiten (siehe
-   1. Pfadregel). Ihre Summe ist 1 – ein guter Test für jeden Baum.
+Die Zweige des Baums, Stufe für Stufe:
+- Stufe | Zweige
+- 1. Stufe | 5 Kugeln: $P(\text{rot}) = \frac{3}{5}$ und $P(\text{blau}) = \frac{2}{5}$. Zusammen 1.
+- 2. Stufe nach rot | Nur noch 4 Kugeln, 2 rote und 2 blaue: $P(\text{rot}) = \frac{2}{4}$ und $P(\text{blau}) = \frac{2}{4}$.
+- 2. Stufe nach blau | 4 Kugeln, 3 rote und 1 blaue: $P(\text{rot}) = \frac{3}{4}$ und $P(\text{blau}) = \frac{1}{4}$.
+
+Unter den Enden stehen die Pfadwahrscheinlichkeiten (siehe 1. Pfadregel). Ihre Summe ist 1 – ein guter Test für jeden Baum.
 
 ### Bild
 
-Bild: Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen. Bildunterschrift: Ein Baumdiagramm zur Urne mit 3 roten (R) und 2 blauen (B) Kugeln, zweimal ohne Zurücklegen. Vom Start gehen zwei Zweige aus: rot mit 3/5 und blau mit 2/5. Nach rot folgen rot mit 2/4 und blau mit 2/4, nach blau folgen rot mit 3/4 und blau mit 1/4. Unter den vier Enden stehen die Pfadwahrscheinlichkeiten: rot-rot 3/10, rot-blau 3/10, blau-rot 3/10, blau-blau 1/10. Zusammen ergeben sie 1.
-
-### Video dazu
-
-Video: [Baumdiagramm | mehrstufiger Zufallsversuch | Wahrscheinlichkeit | Stochastik](https://www.youtube.com/watch?v=mBknBnww5fA), Lehrerschmidt (YouTube)
-
-- Noch eine Erklärung: [Mehrstufige Zufallsexperimente](https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente) bei serlo.org
+Bild: Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen. Bildunterschrift: Ein Baumdiagramm zur Urne mit 3 roten (R) und 2 blauen (B) Kugeln, zweimal ohne Zurücklegen. Vom Start gehen zwei Zweige aus: rot mit $\frac{3}{5}$ und blau mit $\frac{2}{5}$. Nach rot folgen rot mit $\frac{2}{4}$ und blau mit $\frac{2}{4}$, nach blau folgen rot mit $\frac{3}{4}$ und blau mit $\frac{1}{4}$. Unter den vier Enden stehen die Pfadwahrscheinlichkeiten: rot-rot $\frac{3}{10}$, rot-blau $\frac{3}{10}$, blau-rot $\frac{3}{10}$, blau-blau $\frac{1}{10}$. Zusammen ergeben sie 1.
 
 ### Übung
+
+- Aufgabe `baum-pfade-zaehlen` (unten)
+
+- Aufgabe `baum-begriffe` (unten)
 
 - Aufgabe `baum-ergaenzen` (unten)
 
 - Aufgabe `baumdiagramm-nenner` (unten)
+
+### Aufgabe baum-pfade-zaehlen
+
+- Aufgabe: Du wirfst eine Münze dreimal hintereinander und zeichnest dazu ein Baumdiagramm. Wie viele Pfade hat es, vom Start bis zu den Enden gezählt?
+- Antwortformat: eine Zahl eintippen
+- Lösung: 8
+- Erklärung: Jede Stufe verdoppelt die Pfade, denn an jedes Ende kommen zwei neue Zweige. Nach drei Würfen sind es 2 · 2 · 2 = 8 Pfade.
+- Tipp der App: Zeichne den Baum. Nach dem ersten Wurf gibt es 2 Zweige, jeder teilt sich beim nächsten Wurf wieder in 2.
+- Typische Fehler und was die App sagt:
+  - 6: Bei jeder Stufe verdoppelt sich die Zahl der Pfade. Du hast zu wenige gezählt.
+  - 3: Das ist die Zahl der Stufen, nicht die Zahl der Pfade. Jeder Pfad geht durch alle drei Stufen.
+- Link: [../?via=tutor#baum-pfade-zaehlen](../?via=tutor#baum-pfade-zaehlen)
+
+### Aufgabe baum-begriffe
+
+- Aufgabe: Ordne jedem Begriff aus dem Baumdiagramm seine Bedeutung zu.
+- Antwortformat: jedem Eintrag links den passenden rechts zuordnen
+- Lösung: Stufe – ein Zug des Versuchs, zum Beispiel der erste Wurf; Zweig – eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit; Pfad – ein Weg vom Start bis zu einem Ende des Baums; Zweige an einem Knoten – ihre Wahrscheinlichkeiten ergeben zusammen immer 1
+- Erklärung: Ein Baum hat Stufen, Zweige und Pfade. An jedem Zweig steht eine Wahrscheinlichkeit, entlang eines Pfades verläuft die Rechnung, und die Zweige eines Knotens decken alle Möglichkeiten dieser Stufe ab.
+- Tipp der App: Lies noch einmal die Regel und die Begriffe Pfad und Zweig.
+- Link: [../?via=tutor#baum-begriffe](../?via=tutor#baum-begriffe)
 
 ### Aufgabe baum-ergaenzen
 

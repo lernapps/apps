@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Zwischen Grad und Bogenmaß wechseln – Kreis und Körper berechnen</title>
+    <meta name="description" content="Mit einer Verhältnisgleichung rechnest du Winkel vom Gradmaß ins Bogenmaß um und zurück. Dazu der Taschenrechner im richtigen Modus." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../kreis/bogenmass/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../kreis/">Kreis, π und Bogenmaß</a></li><li aria-current="page">Zwischen Grad und Bogenmaß wechseln</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Zwischen Grad und Bogenmaß wechseln</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../kreis/bogenmass/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧kreis/bogenmass/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"bogenmass","title":"Zwischen Grad und Bogenmaß wechseln","exercises":[{"id":"achtel","section":"einstieg","numbered":false},{"id":"grad-zu-bogenmass","section":"uebung","numbered":true},{"id":"vielfaches-von-pi","section":"uebung","numbered":true},{"id":"bogenmass-zu-grad","section":"uebung","numbered":true},{"id":"modus","section":"uebung","numbered":false},{"id":"winkel-zuordnen","section":"uebung","numbered":false},{"id":"neunzig-grad","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"kreis/bogenmass/tutor/","markdown":"kreis/bogenmass/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Ein Achtel des Vollkreises</a></li><li><a href="#herleitung">Eine Verhältnisgleichung für beide Richtungen</a></li><li><a href="#beispiel">Hin und zurück</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Ein Achtel des Vollkreises</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="14bd96e8" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du Winkel in zwei Maßen kennst, Grad und Bogenmaß, musst du von einem ins andere wechseln können, zum Beispiel am Taschenrechner.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="d5d4c8df" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Der Winkel 45° ist ein Achtel von 360°. Der Vollkreis hat im Bogenmaß den Wert 2π.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="2c5deb38" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="achtel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-achtel" data-id="achtel" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie groß ist 45° im Bogenmaß? Rechne mit π ≈ 3,14 und gib das Ergebnis mit zwei Stellen nach dem Komma an.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-achtel">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 0,79 (erlaubte Abweichung: 0,005)</p>
+<p class="question-explanation">Ein Achtel von 2π ist 2 · 3,14 : 8 = 0,785. Gerundet sind das 0,79. Das ist π : 4.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 0,79 (erlaubte Abweichung: 0,005)</p>
+<p class="question-explanation">Ein Achtel von 2π ist 2 · 3,14 : 8 = 0,785. Gerundet sind das 0,79. Das ist π : 4.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"achtel","text":"Wie groß ist 45° im Bogenmaß? Rechne mit π ≈ 3,14 und gib das Ergebnis mit zwei Stellen nach dem Komma an.","explanation":"Ein Achtel von 2π ist 2 · 3,14 : 8 = 0,785. Gerundet sind das 0,79. Das ist π : 4.","links":[],"type":"number","answer":0.79,"tolerance":0.005},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Eine Verhältnisgleichung für beide Richtungen</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="1a62fdfa" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du von Grad ins Bogenmaß oder zurück wechseln willst, gibt es einen Weg für beide Richtungen: Der Anteil am Vollkreis ist in beiden Maßen gleich.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="45274fe5" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Der Winkel α hat im Gradmaß denselben Anteil am Vollwinkel 360° wie sein Bogenmaß x am Vollkreis 2π. Aus dieser Gleichheit der Anteile lässt sich in beide Richtungen umrechnen.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="72afba34" data-block-type="formula" data-block-order="6">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mi>α</mi><msup><mn>360</mn><mo>∘</mo></msup></mfrac><mo>=</mo><mfrac><mi>x</mi><mrow><mn>2</mn><mi>π</mi></mrow></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="cf702e3a" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>x</mi><mo>=</mo><mi>α</mi><mo>⋅</mo><mfrac><mi>π</mi><msup><mn>180</mn><mo>∘</mo></msup></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="441e6984" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><mi>x</mi><mo>⋅</mo><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>π</mi></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/6" data-block-id="e5cb32ff" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Von Grad ins Bogenmaß multiplizierst du mit π und teilst durch 180°. Vom Bogenmaß in Grad multiplizierst du mit 180° und teilst durch π. Wenn du das Ergebnis als Vielfaches von π schreiben willst, lässt du π stehen: Aus 90° wird 90 : 180 = 0,5, also 0,5 mal π.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/7" data-block-id="bf292911" data-block-type="note" data-block-order="10">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Der Taschenrechner</h3>
+<div class="explainer-block" data-block="herleitung/7/1" data-block-id="28141279" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn du einen Winkel in den Taschenrechner eingibst, musst du ihm sagen, in welchem Maß er gemeint ist.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/7/2" data-block-id="b2226e4c" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Dein Taschenrechner hat einen Modus für Winkel: DEG für Grad, RAD für Bogenmaß. Rechnest du sin(30) und erhältst −0,988, steht er auf RAD. Auf DEG ist sin(30) = 0,5. Mit π : 6 und Modus RAD kommt ebenfalls 0,5 heraus.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Hin und zurück</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="8c9024d4" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Wenn du beide Richtungen sehen willst, rechne einen Winkel hin und einen zurück.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="22ad284b" data-block-type="example" data-block-order="14">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">225° und x = 2</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="49b53d4e" data-block-type="formula" data-block-order="15">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>x</mi><mo>=</mo><msup><mn>225</mn><mo>∘</mo></msup><mo>⋅</mo><mfrac><mi>π</mi><msup><mn>180</mn><mo>∘</mo></msup></mfrac><mo>=</mo><mfrac><mn>225</mn><mn>180</mn></mfrac><mspace width="0.1667em"></mspace><mi>π</mi><mo>=</mo><mfrac><mn>5</mn><mn>4</mn></mfrac><mspace width="0.1667em"></mspace><mi>π</mi><mo>≈</mo><mn>3,93</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="8358a693" data-block-type="formula" data-block-order="16">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>π</mi></mfrac><mo>≈</mo><msup><mn>114,6</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="14fc75aa" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>225° sind also fünf Viertel von π im Bogenmaß. Das Bogenmaß 2 gehört zu einem Winkel von etwa 114,6°. Das ist nicht 2 als Gradzahl.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="6e8000a8" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="grad-zu-bogenmass">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Gib 300° im Bogenmaß an, als Dezimalzahl mit zwei Stellen nach dem Komma. Rechne mit der π-Taste.</p><details class="explainer-hint"><summary>Tipp</summary><p>x = α · π : 180°. Erst α mit π multiplizieren, dann durch 180 teilen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><msup><mn>300</mn><mo>∘</mo></msup><mo>⋅</mo><mfrac><mi>π</mi><msup><mn>180</mn><mo>∘</mo></msup></mfrac><mo>=</mo><mn>5,24</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 5,24 (erlaubte Abweichung: 0,01)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Gib 240° im Bogenmaß an, als Dezimalzahl mit zwei Stellen nach dem Komma. Rechne mit der π-Taste.</p><details class="explainer-hint"><summary>Tipp</summary><p>x = α · π : 180°. Erst α mit π multiplizieren, dann durch 180 teilen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><msup><mn>240</mn><mo>∘</mo></msup><mo>⋅</mo><mfrac><mi>π</mi><msup><mn>180</mn><mo>∘</mo></msup></mfrac><mo>=</mo><mn>4,19</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 4,19 (erlaubte Abweichung: 0,01)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Gib 60° im Bogenmaß an, als Dezimalzahl mit zwei Stellen nach dem Komma. Rechne mit der π-Taste.</p><details class="explainer-hint"><summary>Tipp</summary><p>x = α · π : 180°. Erst α mit π multiplizieren, dann durch 180 teilen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><msup><mn>60</mn><mo>∘</mo></msup><mo>⋅</mo><mfrac><mi>π</mi><msup><mn>180</mn><mo>∘</mo></msup></mfrac><mo>=</mo><mn>1,05</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1,05 (erlaubte Abweichung: 0,01)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"grad-zu-bogenmass","given":{"alpha":{"oneOf":[30,45,60,120,135,150,210,240,300]}},"task":{"text":"Gib {{alpha}}° im Bogenmaß an, als Dezimalzahl mit zwei Stellen nach dem Komma. Rechne mit der π-Taste."},"answer":{"value":"round(alpha * 3.14159265358979 / 180, 2)","compare":{"number":{"decimals":2,"tolerance":0.01}}},"mistakes":[{"value":"round(alpha / 180, 2)","message":"Du hast nur durch 180 geteilt. Es fehlt der Faktor π: x = α · π : 180°."},{"value":"round(alpha * 180 / 3.14159265358979, 2)","message":"Du hast in die falsche Richtung umgerechnet. Von Grad ins Bogenmaß multiplizierst du mit π : 180°."}],"hint":"x = α · π : 180°. Erst α mit π multiplizieren, dann durch 180 teilen.","steps":["$x = {{alpha}}^\\circ \\cdot \\frac{\\pi}{180^\\circ} = {{answer}}$"]},"templates":{"de":{"task":"Gib ⟦alpha⟧° im Bogenmaß an, als Dezimalzahl mit zwei Stellen nach dem Komma. Rechne mit der π-Taste.","steps":["\u003cmath>\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmfrac>\u003cmi>π\u003c/mi>\u003cmsup>\u003cmn>180\u003c/mn>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"x = α · π : 180°. Erst α mit π multiplizieren, dann durch 180 teilen.","messages":["Du hast nur durch 180 geteilt. Es fehlt der Faktor π: x = α · π : 180°.","Du hast in die falsche Richtung umgerechnet. Von Grad ins Bogenmaß multiplizierst du mit π : 180°."]}},"data":{},"seeds":[1,2,3,4,5,8,10,13,16],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="b6230138" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="vielfaches-von-pi">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Das Bogenmaß von 360° ist x = k · π. Wie groß ist k? Gib k als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Halbkreis hat 180° und das Bogenmaß π. Welchen Anteil von 180° ist 360°?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mn>360</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>180</mn><mo>=</mo><mn>2</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Das Bogenmaß von 72° ist x = k · π. Wie groß ist k? Gib k als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Halbkreis hat 180° und das Bogenmaß π. Welchen Anteil von 180° ist 72°?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mn>72</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>180</mn><mo>=</mo><mn>0,4</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,4</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Das Bogenmaß von 45° ist x = k · π. Wie groß ist k? Gib k als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Halbkreis hat 180° und das Bogenmaß π. Welchen Anteil von 180° ist 45°?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mn>45</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>180</mn><mo>=</mo><mn>0,25</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,25</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"vielfaches-von-pi","given":{"alpha":{"oneOf":[18,36,45,72,90,135,144,180,225,270,360]}},"task":{"text":"Das Bogenmaß von {{alpha}}° ist x = k · π. Wie groß ist k? Gib k als Dezimalzahl an."},"answer":{"value":"alpha / 180","compare":{"number":{"decimals":2,"tolerance":0}}},"mistakes":[{"value":"alpha / 360","message":"Du hast durch 360 geteilt. Das ist der Anteil am Vollwinkel. Der Vollwinkel hat aber das Bogenmaß 2π, darum teilst du durch 180."}],"hint":"Der Halbkreis hat 180° und das Bogenmaß π. Welchen Anteil von 180° ist {{alpha}}°?","steps":["$k = {{alpha}} : 180 = {{answer}}$"]},"templates":{"de":{"task":"Das Bogenmaß von ⟦alpha⟧° ist x = k · π. Wie groß ist k? Gib k als Dezimalzahl an.","steps":["\u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦alpha⟧\u003c/mtext>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmn>180\u003c/mn>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Der Halbkreis hat 180° und das Bogenmaß π. Welchen Anteil von 180° ist ⟦alpha⟧°?","messages":["Du hast durch 360 geteilt. Das ist der Anteil am Vollwinkel. Der Vollwinkel hat aber das Bogenmaß 2π, darum teilst du durch 180."]}},"data":{},"seeds":[1,2,4,7,10,12,16,18,23,25,29],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="a1202772" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="bogenmass-zu-grad">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Winkel hat das Bogenmaß x = 4 · π : 6. Gib ihn in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>π entspricht 180°. Dann ist π : 6 gleich 180° : 6.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>120</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 120 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Winkel hat das Bogenmaß x = 2 · π : 6. Gib ihn in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>π entspricht 180°. Dann ist π : 6 gleich 180° : 6.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>60</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 60 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Winkel hat das Bogenmaß x = 7 · π : 6. Gib ihn in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>π entspricht 180°. Dann ist π : 6 gleich 180° : 6.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>x</mi><mo>=</mo><mn>7</mn><mo>⋅</mo><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>210</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 210 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"bogenmass-zu-grad","given":{"n":{"int":[1,11],"step":1}},"where":["n != 6"],"task":{"text":"Ein Winkel hat das Bogenmaß x = {{n}} · π : 6. Gib ihn in Grad an."},"answer":{"value":"n * 30","compare":{"number":{"decimals":0,"tolerance":0,"unit":"°"}}},"mistakes":[{"value":"n * 60","message":"Du hast π mit 360° gleichgesetzt. π entspricht aber 180°."},{"value":"n * 180","message":"Du hast π durch 180° ersetzt, aber das Teilen durch 6 vergessen. π : 6 ist 180° : 6 = 30°, also n mal 30°."}],"hint":"π entspricht 180°. Dann ist π : 6 gleich 180° : 6.","steps":["$x = {{n}} \\cdot 30^\\circ = {{answer}}^\\circ$"]},"templates":{"de":{"task":"Ein Winkel hat das Bogenmaß x = ⟦n⟧ · π : 6. Gib ihn in Grad an.","steps":["\u003cmath>\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦n⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmn>30\u003c/mn>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>"],"hint":"π entspricht 180°. Dann ist π : 6 gleich 180° : 6.","messages":["Du hast π mit 360° gleichgesetzt. π entspricht aber 180°.","Du hast π durch 180° ersetzt, aber das Teilen durch 6 vergessen. π : 6 ist 180° : 6 = 30°, also n mal 30°."]}},"data":{},"seeds":[1,2,3,5,6,8,13,14,16,28],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="23343489" data-block-type="single-choice" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="modus">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-modus" data-id="modus" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du tippst sin(30) in den Taschenrechner und erhältst −0,988. Was ist passiert?</legend>
+<label class="question-option"><input type="radio" name="frage-modus" value="0"> <span>Der Rechner steht auf RAD.</span></label>
+<label class="question-option"><input type="radio" name="frage-modus" value="1"> <span>Der Rechner steht auf DEG.</span></label>
+<label class="question-option"><input type="radio" name="frage-modus" value="2"> <span>Der Sinus von 30° ist −0,988.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Der Rechner steht auf RAD.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Im Modus RAD ist 30 ein Bogenmaß, also knapp fünf Umdrehungen. Der Sinus davon ist −0,988. Für 30° brauchst du den Modus DEG.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Der Rechner steht auf DEG.</strong></p><p>Im Modus DEG rechnet der Rechner mit Grad und liefert sin(30°) = 0,5.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Der Sinus von 30° ist −0,988.</strong></p><p>Der Sinus von 30° ist 0,5. Bei einem Winkel zwischen 0° und 90° ist der Sinus nie negativ.</p></li>
+</ul>
+<p class="question-explanation">Prüfe immer den Modus: DEG für Grad, RAD für Bogenmaß. Mit dem falschen Modus bekommst du eine falsche, aber echte Zahl.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Der Rechner steht auf RAD.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Im Modus RAD ist 30 ein Bogenmaß, also knapp fünf Umdrehungen. Der Sinus davon ist −0,988. Für 30° brauchst du den Modus DEG.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Der Rechner steht auf DEG.</strong></p><p>Im Modus DEG rechnet der Rechner mit Grad und liefert sin(30°) = 0,5.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Der Sinus von 30° ist −0,988.</strong></p><p>Der Sinus von 30° ist 0,5. Bei einem Winkel zwischen 0° und 90° ist der Sinus nie negativ.</p></li>
+</ul>
+<p class="question-explanation">Prüfe immer den Modus: DEG für Grad, RAD für Bogenmaß. Mit dem falschen Modus bekommst du eine falsche, aber echte Zahl.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"modus","text":"Du tippst sin(30) in den Taschenrechner und erhältst −0,988. Was ist passiert?","explanation":"Prüfe immer den Modus: DEG für Grad, RAD für Bogenmaß. Mit dem falschen Modus bekommst du eine falsche, aber echte Zahl.","links":[],"type":"single-choice","options":[{"text":"Der Rechner steht auf RAD.","correct":true,"info":"Im Modus RAD ist 30 ein Bogenmaß, also knapp fünf Umdrehungen. Der Sinus davon ist −0,988. Für 30° brauchst du den Modus DEG."},{"text":"Der Rechner steht auf DEG.","correct":false,"info":"Im Modus DEG rechnet der Rechner mit Grad und liefert sin(30°) = 0,5."},{"text":"Der Sinus von 30° ist −0,988.","correct":false,"info":"Der Sinus von 30° ist 0,5. Bei einem Winkel zwischen 0° und 90° ist der Sinus nie negativ."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="4d707c13" data-block-type="matching" data-block-order="22">
+<div class="explainer-exercise explainer-question" id="winkel-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-zuordnen" data-id="winkel-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Winkel im Gradmaß sein Bogenmaß zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>30°</span> <select name="frage-winkel-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="3">2π : 3</option><option value="0">π : 6</option><option value="1">π : 4</option><option value="2">π : 3</option></select></label></li>
+<li><label><span>45°</span> <select name="frage-winkel-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="3">2π : 3</option><option value="0">π : 6</option><option value="1">π : 4</option><option value="2">π : 3</option></select></label></li>
+<li><label><span>60°</span> <select name="frage-winkel-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="3">2π : 3</option><option value="0">π : 6</option><option value="1">π : 4</option><option value="2">π : 3</option></select></label></li>
+<li><label><span>120°</span> <select name="frage-winkel-zuordnen-3" data-left="3"><option value="">bitte wählen</option><option value="3">2π : 3</option><option value="0">π : 6</option><option value="1">π : 4</option><option value="2">π : 3</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 30° – π : 6; 45° – π : 4; 60° – π : 3; 120° – 2π : 3</p>
+<p class="question-explanation">Von Grad ins Bogenmaß: Der Winkel geteilt durch 180° ist der Faktor vor π. 30° sind ein Sechstel von 180°, 45° ein Viertel, 60° ein Drittel, 120° zwei Drittel.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 30° – π : 6; 45° – π : 4; 60° – π : 3; 120° – 2π : 3</p>
+<p class="question-explanation">Von Grad ins Bogenmaß: Der Winkel geteilt durch 180° ist der Faktor vor π. 30° sind ein Sechstel von 180°, 45° ein Viertel, 60° ein Drittel, 120° zwei Drittel.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-zuordnen","text":"Ordne jedem Winkel im Gradmaß sein Bogenmaß zu.","explanation":"Von Grad ins Bogenmaß: Der Winkel geteilt durch 180° ist der Faktor vor π. 30° sind ein Sechstel von 180°, 45° ein Viertel, 60° ein Drittel, 120° zwei Drittel.","links":[],"type":"matching","pairs":[{"left":"30°","right":"π : 6"},{"left":"45°","right":"π : 4"},{"left":"60°","right":"π : 3"},{"left":"120°","right":"2π : 3"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="83b26da8" data-block-type="true-false" data-block-order="23">
+<div class="explainer-exercise explainer-question" id="neunzig-grad">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-neunzig-grad" data-id="neunzig-grad" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Winkel 90° und der Winkel mit dem Bogenmaß π : 2 beschreiben denselben Winkel.</legend>
+<label class="question-option"><input type="radio" name="frage-neunzig-grad" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-neunzig-grad" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">90° ist ein Viertel des Vollwinkels. Ein Viertel von 2π ist π : 2, also derselbe Winkel.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">90° ist ein Viertel des Vollwinkels. Ein Viertel von 2π ist π : 2, also derselbe Winkel.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"neunzig-grad","text":"Der Winkel 90° und der Winkel mit dem Bogenmaß π : 2 beschreiben denselben Winkel.","explanation":"90° ist ein Viertel des Vollwinkels. Ein Viertel von 2π ist π : 2, also derselbe Winkel.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="80932cd4" data-block-type="text" data-block-order="24">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst Winkel vom Gradmaß ins Bogenmaß und zurück umrechnen, als Dezimalzahl und als Vielfaches von π, und du stellst den Taschenrechner richtig ein.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Zwischen Grad und Bogenmaß wechseln","order":5}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../kreis/einheitskreis/">Zurück: Das Bogenmaß am Einheitskreis</a><a rel="next" href="../../koerper/start/">Weiter: Das brauchst du für die Körper</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

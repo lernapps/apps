@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 185" role="img" aria-labelledby="t d">
+  <title id="t">Kegel, Kugel und Zylinder mit demselben Radius</title>
+  <desc id="d">Drei Körper nebeneinander, alle 2 mal r breit und 2 mal r hoch. Links ein Kegel mit der Spitze unten, in der Mitte eine Kugel, rechts ein Zylinder.</desc>
+  <g fill="none" stroke="#222" stroke-width="2">
+    <polygon points="10,20 110,20 60,120" />
+    <circle cx="170" cy="70" r="50" />
+    <rect x="230" y="20" width="100" height="100" />
+  </g>
+  <line x1="280" y1="70" x2="330" y2="70" stroke="#1a56c4" stroke-width="2.5" />
+  <text x="300" y="64" font-size="13" fill="#1a56c4" font-family="sans-serif">r</text>
+  <line x1="170" y1="70" x2="220" y2="70" stroke="#1a56c4" stroke-width="2.5" />
+  <text x="190" y="64" font-size="13" fill="#1a56c4" font-family="sans-serif">r</text>
+  <text x="52" y="150" font-size="14" fill="#222" font-family="sans-serif">Kegel</text>
+  <text x="146" y="150" font-size="14" fill="#222" font-family="sans-serif">Kugel</text>
+  <text x="262" y="150" font-size="14" fill="#222" font-family="sans-serif">Zylinder</text>
+</svg>

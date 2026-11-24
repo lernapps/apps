@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Sehne, Sekante und Tangente – Sätze entdecken und begründen: Vierecke, Winkel, Dreiecke und Kreise</title>
+    <meta name="description" content="Eine Gerade am Kreis verschieben, gemeinsame Punkte zählen und Sehne, Sekante und Tangente unterscheiden." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../winkel/sehne-tangente/" />
+    <script type="module" crossorigin src="../../assets/islands-5ijkmisj.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../winkel/">Winkelsätze und der Satz des Thales</a></li><li aria-current="page">Sehne, Sekante und Tangente</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Sehne, Sekante und Tangente</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../winkel/sehne-tangente/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧winkel/sehne-tangente/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-saetze-entdecken","page":{"id":"sehne-tangente","title":"Sehne, Sekante und Tangente","exercises":[{"id":"gemeinsame-punkte","section":"einstieg","numbered":false},{"id":"wann-beruehrt","section":"vermutung","numbered":false},{"id":"tangente-winkel","section":"vermutung","numbered":false},{"id":"begriffe-zuordnen","section":"uebung","numbered":false},{"id":"lage-erkennen","section":"uebung","numbered":false},{"id":"laengste-sehne","section":"uebung","numbered":true},{"id":"tangente-zeichnen","section":"uebung","numbered":false},{"id":"tangente-begruenden","section":"begruendung","numbered":false}],"sections":["einstieg","entdecken","vermutung","warum","merke","uebung","begruendung"]},"tutor":"winkel/sehne-tangente/tutor/","markdown":"winkel/sehne-tangente/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#entdecken">Die Gerade verschieben</a></li><li><a href="#vermutung">Was fällt auf?</a></li><li><a href="#warum">Warum steht die Tangente senkrecht?</a></li><li><a href="#merke">Merke</a></li><li><a href="#uebung">Übung</a></li><li><a href="#begruendung">Begründe in eigenen Worten</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="5657c5bb" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Du kannst gleich Sehne, Sekante und Tangente unterscheiden und eine Tangente zeichnen.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="3efb7af4" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Selin:</strong> Ich lege eine Schnur über den runden Teich.</p>
+<p><strong>Piet:</strong> Mal trifft sie den Rand zweimal, mal nur einmal, mal gar nicht.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="28850b21" data-block-type="multiple-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="gemeinsame-punkte">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gemeinsame-punkte" data-id="gemeinsame-punkte" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele gemeinsame Punkte können eine Gerade und ein Kreis haben? Wähle alle Möglichkeiten.</legend>
+<label class="question-option"><input type="checkbox" name="frage-gemeinsame-punkte" value="0"> <span>keinen</span></label>
+<label class="question-option"><input type="checkbox" name="frage-gemeinsame-punkte" value="1"> <span>genau einen</span></label>
+<label class="question-option"><input type="checkbox" name="frage-gemeinsame-punkte" value="2"> <span>genau zwei</span></label>
+<label class="question-option"><input type="checkbox" name="frage-gemeinsame-punkte" value="3"> <span>drei</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>keinen</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Gerade kann am Kreis vorbeilaufen.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>genau einen</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Gerade kann den Kreis gerade berühren.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>genau zwei</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Gerade kann durch den Kreis laufen und ihn zweimal treffen.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>drei</strong></p><p>Eine Gerade ist gerade. Sie kann einen Kreis höchstens zweimal treffen.</p></li>
+</ul>
+<p class="question-explanation">Null, ein oder zwei gemeinsame Punkte. Welche Lage welchen Namen hat, siehst du gleich.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>keinen</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Gerade kann am Kreis vorbeilaufen.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>genau einen</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Gerade kann den Kreis gerade berühren.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>genau zwei</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Gerade kann durch den Kreis laufen und ihn zweimal treffen.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>drei</strong></p><p>Eine Gerade ist gerade. Sie kann einen Kreis höchstens zweimal treffen.</p></li>
+</ul>
+<p class="question-explanation">Null, ein oder zwei gemeinsame Punkte. Welche Lage welchen Namen hat, siehst du gleich.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gemeinsame-punkte","text":"Wie viele gemeinsame Punkte können eine Gerade und ein Kreis haben? Wähle alle Möglichkeiten.","explanation":"Null, ein oder zwei gemeinsame Punkte. Welche Lage welchen Namen hat, siehst du gleich.","links":[],"type":"multiple-choice","options":[{"text":"keinen","correct":true,"info":"Die Gerade kann am Kreis vorbeilaufen."},{"text":"genau einen","correct":true,"info":"Die Gerade kann den Kreis gerade berühren."},{"text":"genau zwei","correct":true,"info":"Die Gerade kann durch den Kreis laufen und ihn zweimal treffen."},{"text":"drei","correct":false,"info":"Eine Gerade ist gerade. Sie kann einen Kreis höchstens zweimal treffen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="entdecken">Die Gerade verschieben</h2>
+<div class="explainer-block" data-block="entdecken/1" data-block-id="26dea184" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du eine Gerade und einen Kreis zusammen zeichnest, fragst du dich: Wann treffen sie sich, und wie oft? Das probierst du aus.</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/2" data-block-id="27b2e1a4" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Der Kreis hat den Radius 4 cm. Die Gerade liegt im Abstand <em>d</em> vom Mittelpunkt <em>M</em>. Verschiebe sie mit den
+Pfeiltasten (Tabulatortaste zum Punkt rechts) oder mit der Maus. Stelle <em>d</em> auf 0 cm, 2 cm, 4 cm und 5 cm ein
+und lies jedes Mal die gemeinsamen Punkte ab.</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/3" data-block-id="a3ce9fea" data-block-type="vue-component" data-block-order="6">
+<div class="explainer-component" id="zug-kreisgerade" data-component="Kreisgerade">
+<div class="explainer-island" hidden><div class="kreisgerade" data-v-e6356ca3><svg viewBox="0 0 320 190" class="kreisgerade-figure" data-v-e6356ca3><g aria-hidden="true" data-v-e6356ca3><circle cx="160" cy="118" r="68" class="kreisgerade-circle" data-v-e6356ca3></circle><circle cx="160" cy="118" r="3" class="kreisgerade-dot" data-v-e6356ca3></circle><text x="166" y="134" class="kreisgerade-label" data-v-e6356ca3>M</text><line x1="10" y1="84" x2="310" y2="84" class="kreisgerade-line" data-v-e6356ca3></line><!--[--><circle cx="101.11027254265818" cy="84" r="4.5" class="kreisgerade-point" data-v-e6356ca3></circle><circle cx="218.88972745734182" cy="84" r="4.5" class="kreisgerade-point" data-v-e6356ca3></circle><!--]--><line x1="160" y1="118" x2="160" y2="84" class="kreisgerade-radius" data-v-e6356ca3></line></g><circle cx="296" cy="84" r="18" class="kreisgerade-hit" role="slider" tabindex="0" aria-label="Abstand der Geraden vom Mittelpunkt, mit den Pfeiltasten ändern" aria-valuemin="0" aria-valuemax="6" aria-valuenow="2" aria-valuetext="Abstand 2 cm, 2 gemeinsame Punkte" data-v-e6356ca3></circle></svg><p class="kreisgerade-measure" aria-live="polite" data-v-e6356ca3>Abstand d = 2 cm · gemeinsame Punkte: 2 · Strecke zwischen ihnen: 6,9 cm</p><button type="button" class="kreisgerade-reset" disabled data-v-e6356ca3>Gerade zurück auf den Start</button><span class="kreisgerade-note" data-v-e6356ca3>Die Figur steht am Start.</span></div></div>
+<div class="explainer-nojs"><p>Ein Kreis mit Radius 4 cm und eine waagerechte Gerade im Abstand <em>d</em> vom Mittelpunkt. Bei d = 0 cm gibt es zwei
+gemeinsame Punkte, die Strecke zwischen ihnen ist 8 cm lang. Bei d = 2 cm sind es zwei Punkte, die Strecke ist
+6,9 cm lang. Bei d = 4 cm gibt es genau einen gemeinsamen Punkt, die Gerade berührt den Kreis. Bei d = 5 cm gibt
+es keinen gemeinsamen Punkt.</p></div>
+<script type="application/json" class="explainer-component-props">{"handle":"Abstand der Geraden vom Mittelpunkt, mit den Pfeiltasten ändern","position":"Abstand {d} cm, {n} gemeinsame Punkte","measure":"Abstand d = {d} cm · gemeinsame Punkte: {n} · Strecke zwischen ihnen: {s}","reset":"Gerade zurück auf den Start","atStart":"Die Figur steht am Start."}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="vermutung">Was fällt auf?</h2>
+<div class="explainer-block" data-block="vermutung/1" data-block-id="c16633be" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Wenn du an der Figur etwas entdeckt hast, hältst du es als Vermutung fest und prüfst sie dann.</p></div>
+</div>
+<div class="explainer-block" data-block="vermutung/2" data-block-id="dacf0612" data-block-type="single-choice" data-block-order="8">
+<div class="explainer-exercise explainer-question" id="wann-beruehrt">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-wann-beruehrt" data-id="wann-beruehrt" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei welchem Abstand d berührt die Gerade den Kreis in genau einem Punkt?</legend>
+<label class="question-option"><input type="radio" name="frage-wann-beruehrt" value="0"> <span>d = 2 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-wann-beruehrt" value="1"> <span>d = 4 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-wann-beruehrt" value="2"> <span>d = 5 cm</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>d = 2 cm</strong></p><p>Bei 2 cm gibt es zwei gemeinsame Punkte, die Gerade läuft durch den Kreis.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>d = 4 cm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>4 cm ist der Radius. Dann berührt die Gerade den Kreis genau einmal.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>d = 5 cm</strong></p><p>Bei 5 cm gibt es keinen gemeinsamen Punkt, die Gerade liegt außerhalb.</p></li>
+</ul>
+<p class="question-explanation">Abstand gleich Radius: Die Gerade berührt den Kreis.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>d = 2 cm</strong></p><p>Bei 2 cm gibt es zwei gemeinsame Punkte, die Gerade läuft durch den Kreis.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>d = 4 cm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>4 cm ist der Radius. Dann berührt die Gerade den Kreis genau einmal.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>d = 5 cm</strong></p><p>Bei 5 cm gibt es keinen gemeinsamen Punkt, die Gerade liegt außerhalb.</p></li>
+</ul>
+<p class="question-explanation">Abstand gleich Radius: Die Gerade berührt den Kreis.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wann-beruehrt","text":"Bei welchem Abstand d berührt die Gerade den Kreis in genau einem Punkt?","explanation":"Abstand gleich Radius: Die Gerade berührt den Kreis.","links":[],"type":"single-choice","options":[{"text":"d = 2 cm","correct":false,"info":"Bei 2 cm gibt es zwei gemeinsame Punkte, die Gerade läuft durch den Kreis."},{"text":"d = 4 cm","correct":true,"info":"4 cm ist der Radius. Dann berührt die Gerade den Kreis genau einmal."},{"text":"d = 5 cm","correct":false,"info":"Bei 5 cm gibt es keinen gemeinsamen Punkt, die Gerade liegt außerhalb."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="vermutung/3" data-block-id="5662f7fd" data-block-type="single-choice" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="tangente-winkel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-tangente-winkel" data-id="tangente-winkel" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei d = 4 cm zeigt die gestrichelte Strecke vom Mittelpunkt M zum Berührpunkt. Welchen Winkel bildet sie mit der Geraden?</legend>
+<label class="question-option"><input type="radio" name="frage-tangente-winkel" value="0"> <span>45°</span></label>
+<label class="question-option"><input type="radio" name="frage-tangente-winkel" value="1"> <span>60°</span></label>
+<label class="question-option"><input type="radio" name="frage-tangente-winkel" value="2"> <span>90°</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>45°</strong></p><p>Die Strecke steht im Bild nicht schräg zur Geraden.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>60°</strong></p><p>Im Bild steht die Strecke nicht schief zur Geraden.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>90°</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Strecke steht senkrecht auf der Geraden, im Bild ein rechter Winkel.</p></li>
+</ul>
+<p class="question-explanation">Die Tangente steht im Berührpunkt senkrecht auf dem Radius.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>45°</strong></p><p>Die Strecke steht im Bild nicht schräg zur Geraden.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>60°</strong></p><p>Im Bild steht die Strecke nicht schief zur Geraden.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>90°</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Strecke steht senkrecht auf der Geraden, im Bild ein rechter Winkel.</p></li>
+</ul>
+<p class="question-explanation">Die Tangente steht im Berührpunkt senkrecht auf dem Radius.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"tangente-winkel","text":"Bei d = 4 cm zeigt die gestrichelte Strecke vom Mittelpunkt M zum Berührpunkt. Welchen Winkel bildet sie mit der Geraden?","explanation":"Die Tangente steht im Berührpunkt senkrecht auf dem Radius.","links":[],"type":"single-choice","options":[{"text":"45°","correct":false,"info":"Die Strecke steht im Bild nicht schräg zur Geraden."},{"text":"60°","correct":false,"info":"Im Bild steht die Strecke nicht schief zur Geraden."},{"text":"90°","correct":true,"info":"Die Strecke steht senkrecht auf der Geraden, im Bild ein rechter Winkel."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="warum">Warum steht die Tangente senkrecht?</h2>
+<div class="explainer-block" data-block="warum/1" data-block-id="52335511" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn du eine Tangente zeichnen willst, musst du wissen, wie sie zum Radius liegt.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/2" data-block-id="9a7ac20c" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Angenommen, der Radius steht nicht senkrecht auf der Geraden. Dann kannst du den Berührpunkt am Lot von <em>M</em> auf
+die Gerade spiegeln (das Lot ist die Senkrechte von <em>M</em> auf die Gerade). Er ist ein anderer Punkt, weil der Berührpunkt nicht auf dem Lot liegt. Der Spiegelpunkt liegt auch auf dem Kreis und auf der Geraden. Dann gäbe es zwei gemeinsame
+Punkte, und die Gerade wäre keine Tangente. Also muss der Radius senkrecht stehen.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Merke</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="a05c5c7b" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Wenn du den Satz später wieder brauchst, findest du ihn hier kurz zusammengefasst.</p></div>
+</div>
+<div class="explainer-block" data-block="merke/2" data-block-id="ea6eea28" data-block-type="definition" data-block-order="13">
+<dl class="explainer-definition"><dt><dfn id="begriff-sekante"><a href="../../glossar/#sekante">Sekante</a></dfn></dt><dd><p>Eine Gerade, die den Kreis in zwei Punkten schneidet.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="merke/3" data-block-id="b000f975" data-block-type="definition" data-block-order="14">
+<dl class="explainer-definition"><dt><dfn id="begriff-sehne"><a href="../../glossar/#sehne">Sehne</a></dfn></dt><dd><p>Die Strecke zwischen den beiden Schnittpunkten einer Sekante. Die längste Sehne ist der Durchmesser.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="merke/4" data-block-id="2c51952a" data-block-type="definition" data-block-order="15">
+<dl class="explainer-definition"><dt><dfn id="begriff-tangente"><a href="../../glossar/#tangente">Tangente</a></dfn></dt><dd><p>Eine Gerade, die den Kreis in genau einem Punkt berührt. Sie steht dort senkrecht auf dem Radius.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="be587bc6" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Wenn du prüfen willst, ob du das anwenden kannst, löst du Aufgaben mit neuen Zahlen und neuen Fällen.</p></div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="ced8a1bf" data-block-type="matching" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="begriffe-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-begriffe-zuordnen" data-id="begriffe-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Begriff die passende Beschreibung zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Sekante</span> <select name="frage-begriffe-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="2">Gerade mit genau einem gemeinsamen Punkt</option><option value="0">Gerade mit zwei gemeinsamen Punkten</option><option value="1">Strecke zwischen zwei Punkten auf dem Kreis</option></select></label></li>
+<li><label><span>Sehne</span> <select name="frage-begriffe-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="2">Gerade mit genau einem gemeinsamen Punkt</option><option value="0">Gerade mit zwei gemeinsamen Punkten</option><option value="1">Strecke zwischen zwei Punkten auf dem Kreis</option></select></label></li>
+<li><label><span>Tangente</span> <select name="frage-begriffe-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="2">Gerade mit genau einem gemeinsamen Punkt</option><option value="0">Gerade mit zwei gemeinsamen Punkten</option><option value="1">Strecke zwischen zwei Punkten auf dem Kreis</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Sekante – Gerade mit zwei gemeinsamen Punkten; Sehne – Strecke zwischen zwei Punkten auf dem Kreis; Tangente – Gerade mit genau einem gemeinsamen Punkt</p>
+<p class="question-explanation">Sekante und Tangente sind Geraden, die Sehne eine Strecke.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Sekante – Gerade mit zwei gemeinsamen Punkten; Sehne – Strecke zwischen zwei Punkten auf dem Kreis; Tangente – Gerade mit genau einem gemeinsamen Punkt</p>
+<p class="question-explanation">Sekante und Tangente sind Geraden, die Sehne eine Strecke.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"begriffe-zuordnen","text":"Ordne jedem Begriff die passende Beschreibung zu.","explanation":"Sekante und Tangente sind Geraden, die Sehne eine Strecke.","links":[],"type":"matching","pairs":[{"left":"Sekante","right":"Gerade mit zwei gemeinsamen Punkten"},{"left":"Sehne","right":"Strecke zwischen zwei Punkten auf dem Kreis"},{"left":"Tangente","right":"Gerade mit genau einem gemeinsamen Punkt"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="d9e422ba" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="lage-erkennen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-lage-erkennen" data-id="lage-erkennen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Kreis hat den Radius 3 cm. Eine Gerade hat vom Mittelpunkt den Abstand 3 cm. Was ist die Gerade?</legend>
+<label class="question-option"><input type="radio" name="frage-lage-erkennen" value="0"> <span>eine Sekante</span></label>
+<label class="question-option"><input type="radio" name="frage-lage-erkennen" value="1"> <span>eine Tangente</span></label>
+<label class="question-option"><input type="radio" name="frage-lage-erkennen" value="2"> <span>eine Sehne</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>eine Sekante</strong></p><p>Eine Sekante schneidet den Kreis zweimal, dann wäre der Abstand kleiner als 3 cm.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>eine Tangente</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Abstand ist so groß wie der Radius, die Gerade berührt den Kreis genau einmal.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>eine Sehne</strong></p><p>Eine Sehne ist eine Strecke, keine Gerade.</p></li>
+</ul>
+<p class="question-explanation">Abstand gleich Radius: Tangente.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>eine Sekante</strong></p><p>Eine Sekante schneidet den Kreis zweimal, dann wäre der Abstand kleiner als 3 cm.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>eine Tangente</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Abstand ist so groß wie der Radius, die Gerade berührt den Kreis genau einmal.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>eine Sehne</strong></p><p>Eine Sehne ist eine Strecke, keine Gerade.</p></li>
+</ul>
+<p class="question-explanation">Abstand gleich Radius: Tangente.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"lage-erkennen","text":"Ein Kreis hat den Radius 3 cm. Eine Gerade hat vom Mittelpunkt den Abstand 3 cm. Was ist die Gerade?","explanation":"Abstand gleich Radius: Tangente.","links":[],"type":"single-choice","options":[{"text":"eine Sekante","correct":false,"info":"Eine Sekante schneidet den Kreis zweimal, dann wäre der Abstand kleiner als 3 cm."},{"text":"eine Tangente","correct":true,"info":"Der Abstand ist so groß wie der Radius, die Gerade berührt den Kreis genau einmal."},{"text":"eine Sehne","correct":false,"info":"Eine Sehne ist eine Strecke, keine Gerade."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="58290843" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="laengste-sehne">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kreis hat den Radius 11 cm. Wie lang ist seine längste Sehne? Gib die Länge in cm an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die längste Sehne geht durch den Mittelpunkt M.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die längste Sehne ist der Durchmesser.</li><li>Durchmesser = 2 · Radius = 2 · 11 cm = 22 cm.</li></ol><p><strong>Richtige Antwort:</strong> 22 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kreis hat den Radius 9 cm. Wie lang ist seine längste Sehne? Gib die Länge in cm an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die längste Sehne geht durch den Mittelpunkt M.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die längste Sehne ist der Durchmesser.</li><li>Durchmesser = 2 · Radius = 2 · 9 cm = 18 cm.</li></ol><p><strong>Richtige Antwort:</strong> 18 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kreis hat den Radius 3 cm. Wie lang ist seine längste Sehne? Gib die Länge in cm an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die längste Sehne geht durch den Mittelpunkt M.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die längste Sehne ist der Durchmesser.</li><li>Durchmesser = 2 · Radius = 2 · 3 cm = 6 cm.</li></ol><p><strong>Richtige Antwort:</strong> 6 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"laengste-sehne","given":{"r":{"int":[2,12]}},"task":{"text":"Ein Kreis hat den Radius {{r}} cm. Wie lang ist seine längste Sehne? Gib die Länge in cm an."},"answer":{"value":"2 * r","compare":{"number":{"format":"integer","unit":"cm"}}},"mistakes":[{"value":"r","message":"Das ist der Radius. Die längste Sehne geht durch den Mittelpunkt, sie ist der Durchmesser."}],"hint":"Die längste Sehne geht durch den Mittelpunkt M.","steps":["Die längste Sehne ist der Durchmesser.","Durchmesser = 2 · Radius = 2 · {{r}} cm = {{answer}} cm."]},"templates":{"de":{"task":"Ein Kreis hat den Radius ⟦r⟧ cm. Wie lang ist seine längste Sehne? Gib die Länge in cm an.","steps":["Die längste Sehne ist der Durchmesser.","Durchmesser = 2 · Radius = 2 · ⟦r⟧ cm = ⟦answer⟧ cm."],"hint":"Die längste Sehne geht durch den Mittelpunkt M.","messages":["Das ist der Radius. Die längste Sehne geht durch den Mittelpunkt, sie ist der Durchmesser."]}},"data":{},"seeds":[1,2,4,5,6,7,8,9,16,19,36],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="888d3a31" data-block-type="ordering" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="tangente-zeichnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-tangente-zeichnen" data-id="tangente-zeichnen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du sollst die Tangente an einen Punkt P auf dem Kreis zeichnen. Bringe die Schritte in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Zeichne den Kreis um M und markiere P auf dem Kreis.</span> <select name="frage-tangente-zeichnen-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Zeichne die Gerade durch P. Sie ist die Tangente.</span> <select name="frage-tangente-zeichnen-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Zeichne den Radius von M nach P.</span> <select name="frage-tangente-zeichnen-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Lege das Geodreieck so an, dass es im Punkt P senkrecht zum Radius steht.</span> <select name="frage-tangente-zeichnen-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Zeichne den Kreis um M und markiere P auf dem Kreis., 2. Zeichne den Radius von M nach P., 3. Lege das Geodreieck so an, dass es im Punkt P senkrecht zum Radius steht., 4. Zeichne die Gerade durch P. Sie ist die Tangente.</p>
+<p class="question-explanation">Die Tangente steht in P senkrecht auf dem Radius, darum brauchst du erst den Radius.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Zeichne den Kreis um M und markiere P auf dem Kreis., 2. Zeichne den Radius von M nach P., 3. Lege das Geodreieck so an, dass es im Punkt P senkrecht zum Radius steht., 4. Zeichne die Gerade durch P. Sie ist die Tangente.</p>
+<p class="question-explanation">Die Tangente steht in P senkrecht auf dem Radius, darum brauchst du erst den Radius.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"tangente-zeichnen","text":"Du sollst die Tangente an einen Punkt P auf dem Kreis zeichnen. Bringe die Schritte in die richtige Reihenfolge.","explanation":"Die Tangente steht in P senkrecht auf dem Radius, darum brauchst du erst den Radius.","links":[],"type":"ordering","items":["Zeichne den Kreis um M und markiere P auf dem Kreis.","Zeichne den Radius von M nach P.","Lege das Geodreieck so an, dass es im Punkt P senkrecht zum Radius steht.","Zeichne die Gerade durch P. Sie ist die Tangente."]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="begruendung">Begründe in eigenen Worten</h2>
+<div class="explainer-block" data-block="begruendung/1" data-block-id="70afe46c" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Wenn du einen Satz wirklich verstanden hast, kannst du ihn mit eigenen Worten begründen.</p></div>
+</div>
+<div class="explainer-block" data-block="begruendung/2" data-block-id="02dcf58b" data-block-type="open-task" data-block-order="22">
+<div class="explainer-exercise explainer-open-task" id="tangente-begruenden" data-storage="mathe-saetze-entdecken">
+<p class="explainer-exercise-label">Offene Aufgabe</p>
+<div class="explainer-open-task-text"><p>Erkläre in zwei bis vier Sätzen, warum die Tangente im Berührpunkt senkrecht auf dem Radius steht.</p></div>
+<div class="explainer-open-live" hidden></div>
+<div class="explainer-open-points">
+<p class="explainer-open-points-intro">Eine gute Antwort enthält:</p>
+<ul><li>Stünde der Radius schief, ließe sich der Berührpunkt am Lot von M auf die Gerade spiegeln. <a class="explainer-open-source" href="../../winkel/sehne-tangente/#warum">Nachlesen</a></li><li>Der Spiegelpunkt läge auch auf dem Kreis und auf der Geraden, es gäbe zwei gemeinsame Punkte. <a class="explainer-open-source" href="../../winkel/sehne-tangente/#warum">Nachlesen</a></li><li>Eine Tangente hat aber nur einen gemeinsamen Punkt, also steht der Radius senkrecht. <a class="explainer-open-source" href="../../winkel/sehne-tangente/#merke">Nachlesen</a></li><li>Ganze Sätze mit einer Begründung (weil …, darum …). <span class="explainer-open-kind">(Form)</span></li></ul>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<div class="explainer-open-solution"><p>Wenn der Radius nicht senkrecht auf der Geraden stünde, könnte ich den Berührpunkt am Lot von M auf die Gerade
+spiegeln. Der Spiegelpunkt läge auch auf dem Kreis und auf der Geraden. Dann hätten die Gerade und der Kreis
+zwei gemeinsame Punkte, aber eine Tangente hat nur einen. Darum steht der Radius senkrecht.</p></div>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"open","lang":"de","id":"tangente-begruenden","task":"\u003cp>Erkläre in zwei bis vier Sätzen, warum die Tangente im Berührpunkt senkrecht auf dem Radius steht.\u003c/p>","answer":["text","photo"],"points":[{"text":"Stünde der Radius schief, ließe sich der Berührpunkt am Lot von M auf die Gerade spiegeln.","kind":"content","href":"../../winkel/sehne-tangente/#warum"},{"text":"Der Spiegelpunkt läge auch auf dem Kreis und auf der Geraden, es gäbe zwei gemeinsame Punkte.","kind":"content","href":"../../winkel/sehne-tangente/#warum"},{"text":"Eine Tangente hat aber nur einen gemeinsamen Punkt, also steht der Radius senkrecht.","kind":"content","href":"../../winkel/sehne-tangente/#merke"},{"text":"Ganze Sätze mit einer Begründung (weil …, darum …).","kind":"form"}],"solution":"\u003cp>Wenn der Radius nicht senkrecht auf der Geraden stünde, könnte ich den Berührpunkt am Lot von M auf die Gerade\nspiegeln. Der Spiegelpunkt läge auch auf dem Kreis und auf der Geraden. Dann hätten die Gerade und der Kreis\nzwei gemeinsame Punkte, aber eine Tangente hat nur einen. Darum steht der Radius senkrecht.\u003c/p>"}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Sätze entdecken und begründen: Vierecke, Winkel, Dreiecke und Kreise“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-saetze-entdecken","app":"Sätze entdecken und begründen: Vierecke, Winkel, Dreiecke und Kreise","root":"../../","repository":"lernapps/mathe-saetze-entdecken","revision":"b8215ec","page":{"title":"Sehne, Sekante und Tangente","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../winkel/winkelsaetze/">Zurück: Winkelsätze an Geraden und im Dreieck</a><a rel="next" href="../../winkel/thales/">Weiter: Der Satz des Thales</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

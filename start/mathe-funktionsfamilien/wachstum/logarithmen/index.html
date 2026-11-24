@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Logarithmen – Funktionsfamilien mit Schiebereglern</title>
+    <meta name="description" content="Der Logarithmus beantwortet die Frage, wann ein Guthaben doppelt so hoch ist: Er ist die Umkehrung des Potenzierens." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../wachstum/logarithmen/" />
+    <script type="module" crossorigin src="../../assets/islands-BIU8JAVh.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../wachstum/">Wachstum und Zerfall</a></li><li aria-current="page">Logarithmen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Logarithmen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../wachstum/logarithmen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧wachstum/logarithmen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"logarithmen","title":"Logarithmen","exercises":[{"id":"bedeutung","section":"uebung","numbered":false},{"id":"logarithmus-berechnen","section":"uebung","numbered":true},{"id":"verdopplung","section":"uebung","numbered":true},{"id":"umkehrung","section":"uebung","numbered":false}],"sections":["einstieg","modell","beispiel","uebung"]},"tutor":"wachstum/logarithmen/tutor/","markdown":"wachstum/logarithmen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#modell">Wann ist es doppelt so viel?</a></li><li><a href="#beispiel">Vom Potenzieren zum Logarithmus</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="b4485c65" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie lange es dauert, bis sich etwas verdoppelt, suchst du einen Exponenten.</p>
+<p>Du kannst danach den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache
+Exponentialgleichungen lösen. Die Frage dazu ist: Nach wie vielen Jahren ist mein Guthaben doppelt so hoch?</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="modell">Wann ist es doppelt so viel?</h2>
+<div class="explainer-block" data-block="modell/1" data-block-id="d1d67b91" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Wenn du den Exponenten <math><mi>x</mi></math> in <math><mrow><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup><mo>=</mo><mn>2</mn></mrow></math> suchst, kannst du probieren oder rechnen.</p>
+<p>Ein Konto mit 1000 € wächst mit dem Faktor <math><mi>q</mi></math> pro Jahr. Es ist doppelt so hoch, wenn <math><mrow><mn>1000</mn><mo>⋅</mo><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup><mo>=</mo><mn>2000</mn></mrow></math>
+ist, also <math><mrow><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup><mo>=</mo><mn>2</mn></mrow></math>. Gesucht ist der Exponent <math><mi>x</mi></math>. Probiere ihn zuerst in der Tabelle aus.</p></div>
+</div>
+<div class="explainer-block" data-block="modell/2" data-block-id="364cbd6a" data-block-type="vue-component" data-block-order="3">
+<div class="explainer-component" id="regler-verdopplung" data-component="FunktionsGraph">
+<div class="explainer-island" hidden><div class="fg" data-v-4746bd28><p class="fg-term" aria-live="polite" data-v-4746bd28>f(x) = 1000 · 1,05^x</p><!----><div class="fg-view" data-v-4746bd28><svg viewBox="0 0 340 250" role="img" aria-label="Guthaben über die Jahre: f(x) = 1000 · 1,05^x. bei x = 0 ist f(x) = 1000; bei x = 20 ist f(x) = 2653,3; bei x = 40 ist f(x) = 7039,99." class="fg-svg" data-v-4746bd28><defs data-v-4746bd28><clipPath id="clip-v-0" data-v-4746bd28><rect x="34" y="10" width="296" height="214" data-v-4746bd28></rect></clipPath></defs><g class="fg-grid" data-v-4746bd28><!--[--><line x1="34" x2="34" y1="10" y2="224" data-v-4746bd28></line><line x1="108" x2="108" y1="10" y2="224" data-v-4746bd28></line><line x1="182" x2="182" y1="10" y2="224" data-v-4746bd28></line><line x1="256" x2="256" y1="10" y2="224" data-v-4746bd28></line><line x1="330" x2="330" y1="10" y2="224" data-v-4746bd28></line><!--]--><!--[--><line x1="34" x2="330" y1="224" y2="224" data-v-4746bd28></line><line x1="34" x2="330" y1="188.33333333333334" y2="188.33333333333334" data-v-4746bd28></line><line x1="34" x2="330" y1="152.66666666666669" y2="152.66666666666669" data-v-4746bd28></line><line x1="34" x2="330" y1="117" y2="117" data-v-4746bd28></line><line x1="34" x2="330" y1="81.33333333333334" y2="81.33333333333334" data-v-4746bd28></line><line x1="34" x2="330" y1="45.66666666666666" y2="45.66666666666666" data-v-4746bd28></line><line x1="34" x2="330" y1="10" y2="10" data-v-4746bd28></line><!--]--></g><g class="fg-axes" data-v-4746bd28><line x1="34" x2="330" y1="224" y2="224" data-v-4746bd28></line><line x1="34" x2="34" y1="10" y2="224" data-v-4746bd28></line></g><g class="fg-labels" data-v-4746bd28><!--[--><text x="34" y="238" text-anchor="middle" data-v-4746bd28>0</text><text x="108" y="238" text-anchor="middle" data-v-4746bd28>10</text><text x="182" y="238" text-anchor="middle" data-v-4746bd28>20</text><text x="256" y="238" text-anchor="middle" data-v-4746bd28>30</text><text x="330" y="238" text-anchor="middle" data-v-4746bd28>40</text><!--]--><!--[--><text x="30" y="228" text-anchor="end" data-v-4746bd28>0</text><text x="30" y="192.33333333333334" text-anchor="end" data-v-4746bd28>1000</text><text x="30" y="156.66666666666669" text-anchor="end" data-v-4746bd28>2000</text><text x="30" y="121" text-anchor="end" data-v-4746bd28>3000</text><text x="30" y="85.33333333333334" text-anchor="end" data-v-4746bd28>4000</text><text x="30" y="49.66666666666666" text-anchor="end" data-v-4746bd28>5000</text><text x="30" y="14" text-anchor="end" data-v-4746bd28>6000</text><!--]--><text x="330" y="220" text-anchor="end" data-v-4746bd28><tspan font-style="italic" data-v-4746bd28>x</tspan></text><text x="38" y="20" data-v-4746bd28>f(x)</text></g><g clip-path="url(#clip-v-0)" data-v-4746bd28><!----><path d="M34.0 188.3 L35.2 188.0 L36.5 187.7 L37.7 187.5 L38.9 187.2 L40.2 186.9 L41.4 186.6 L42.6 186.2 L43.9 185.9 L45.1 185.6 L46.3 185.3 L47.6 185.0 L48.8 184.7 L50.0 184.4 L51.3 184.0 L52.5 183.7 L53.7 183.4 L55.0 183.0 L56.2 182.7 L57.4 182.4 L58.7 182.0 L59.9 181.7 L61.1 181.3 L62.4 181.0 L63.6 180.6 L64.8 180.3 L66.1 179.9 L67.3 179.6 L68.5 179.2 L69.8 178.8 L71.0 178.5 L72.2 178.1 L73.5 177.7 L74.7 177.4 L75.9 177.0 L77.2 176.6 L78.4 176.2 L79.6 175.8 L80.9 175.4 L82.1 175.0 L83.3 174.6 L84.6 174.2 L85.8 173.8 L87.0 173.4 L88.3 173.0 L89.5 172.6 L90.7 172.2 L92.0 171.7 L93.2 171.3 L94.4 170.9 L95.7 170.4 L96.9 170.0 L98.1 169.6 L99.4 169.1 L100.6 168.7 L101.8 168.2 L103.1 167.8 L104.3 167.3 L105.5 166.8 L106.8 166.4 L108.0 165.9 L109.2 165.4 L110.5 165.0 L111.7 164.5 L112.9 164.0 L114.2 163.5 L115.4 163.0 L116.6 162.5 L117.9 162.0 L119.1 161.5 L120.3 161.0 L121.6 160.5 L122.8 159.9 L124.0 159.4 L125.3 158.9 L126.5 158.4 L127.7 157.8 L129.0 157.3 L130.2 156.7 L131.4 156.2 L132.7 155.6 L133.9 155.1 L135.1 154.5 L136.4 154.0 L137.6 153.4 L138.8 152.8 L140.1 152.2 L141.3 151.6 L142.5 151.0 L143.8 150.5 L145.0 149.9 L146.2 149.2 L147.5 148.6 L148.7 148.0 L149.9 147.4 L151.2 146.8 L152.4 146.1 L153.6 145.5 L154.9 144.9 L156.1 144.2 L157.3 143.6 L158.6 142.9 L159.8 142.3 L161.0 141.6 L162.3 140.9 L163.5 140.2 L164.7 139.5 L166.0 138.9 L167.2 138.2 L168.4 137.5 L169.7 136.8 L170.9 136.0 L172.1 135.3 L173.4 134.6 L174.6 133.9 L175.8 133.1 L177.1 132.4 L178.3 131.6 L179.5 130.9 L180.8 130.1 L182.0 129.4 L183.2 128.6 L184.5 127.8 L185.7 127.0 L186.9 126.2 L188.2 125.4 L189.4 124.6 L190.6 123.8 L191.9 123.0 L193.1 122.2 L194.3 121.3 L195.6 120.5 L196.8 119.7 L198.0 118.8 L199.3 118.0 L200.5 117.1 L201.7 116.2 L203.0 115.3 L204.2 114.4 L205.4 113.6 L206.7 112.7 L207.9 111.7 L209.1 110.8 L210.4 109.9 L211.6 109.0 L212.8 108.0 L214.1 107.1 L215.3 106.1 L216.5 105.2 L217.8 104.2 L219.0 103.2 L220.2 102.2 L221.5 101.2 L222.7 100.2 L223.9 99.2 L225.2 98.2 L226.4 97.2 L227.6 96.1 L228.9 95.1 L230.1 94.0 L231.3 93.0 L232.6 91.9 L233.8 90.8 L235.0 89.8 L236.3 88.7 L237.5 87.6 L238.7 86.4 L240.0 85.3 L241.2 84.2 L242.4 83.0 L243.7 81.9 L244.9 80.7 L246.1 79.6 L247.4 78.4 L248.6 77.2 L249.8 76.0 L251.1 74.8 L252.3 73.6 L253.5 72.3 L254.8 71.1 L256.0 69.9 L257.2 68.6 L258.5 67.3 L259.7 66.0 L260.9 64.8 L262.2 63.5 L263.4 62.1 L264.6 60.8 L265.9 59.5 L267.1 58.1 L268.3 56.8 L269.6 55.4 L270.8 54.1 L272.0 52.7 L273.3 51.3 L274.5 49.9 L275.7 48.4 L277.0 47.0 L278.2 45.6 L279.4 44.1 L280.7 42.6 L281.9 41.1 L283.1 39.7 L284.4 38.1 L285.6 36.6 L286.8 35.1 L288.1 33.6 L289.3 32.0 L290.5 30.4 L291.8 28.9 L293.0 27.3 L294.2 25.7 L295.5 24.0 L296.7 22.4 L297.9 20.8 L299.2 19.1 L300.4 17.4 L301.6 15.7 L302.9 14.0 L304.1 12.3 L305.3 10.6 L306.6 8.9 L307.8 7.1 L309.0 5.3 L310.3 3.5 L311.5 1.7 L312.7 -0.1 L314.0 -1.9 L315.2 -3.7 L316.4 -5.6 L317.7 -7.5 L318.9 -9.4 L320.1 -10.0 L321.4 -10.0 L322.6 -10.0 L323.8 -10.0 L325.1 -10.0 L326.3 -10.0 L327.5 -10.0 L328.8 -10.0 L330.0 -10.0" class="fg-curve" data-v-4746bd28></path></g><!----></svg><table class="fg-table" data-v-4746bd28><caption data-v-4746bd28>Guthaben in Euro</caption><thead data-v-4746bd28><tr data-v-4746bd28><th scope="col" data-v-4746bd28>Jahre</th><th scope="col" data-v-4746bd28>Guthaben</th><!----></tr></thead><tbody data-v-4746bd28><!--[--><tr data-v-4746bd28><td data-v-4746bd28>6</td><td data-v-4746bd28>1340,10</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>8</td><td data-v-4746bd28>1477,46</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>10</td><td data-v-4746bd28>1628,89</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>12</td><td data-v-4746bd28>1795,86</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>14</td><td data-v-4746bd28>1979,93</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>15</td><td data-v-4746bd28>2078,93</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>16</td><td data-v-4746bd28>2182,87</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>20</td><td data-v-4746bd28>2653,30</td><!----></tr><!--]--></tbody></table></div><!----><!----><div class="fg-sliders" data-v-4746bd28><!--[--><label class="fg-slider" data-v-4746bd28><span class="fg-slider-label" data-v-4746bd28>q: Wachstumsfaktor pro Jahr</span><input type="range" min="1.02" max="1.1" step="0.01" value="1.05" aria-valuetext="1,05" data-v-4746bd28><output class="fg-slider-value" data-v-4746bd28>1,05</output></label><!--]--></div><!----></div></div>
+<div class="explainer-nojs"><p>Graph des Guthabens <math><mrow><mn>1000</mn><mo>⋅</mo><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup></mrow></math> mit Regler für <math><mi>q</mi></math> von 1,02 bis 1,10. Beim Start ist <math><mrow><mi>q</mi><mo>=</mo><mn>1,05</mn></mrow></math>: nach 10, 12,
+14, 15, 16 und 20 Jahren sind es 1628,89, 1795,86, 1979,93, 2078,93, 2182,87 und 2653,30 €. Bei 14 Jahren fehlt
+noch ein wenig zur 2000, bei 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.</p></div>
+<script type="application/json" class="explainer-component-props">{"family":"exponential","fest":[{"key":"a","value":1000}],"regler":[{"key":"b","label":"q: Wachstumsfaktor pro Jahr","min":1.02,"max":1.1,"step":0.01,"start":1.05}],"fenster":{"xmin":0,"xmax":40,"ymin":0,"ymax":6000},"tabelleX":[6,8,10,12,14,15,16,20],"labels":{"graph":"Guthaben über die Jahre","tabelle":"Guthaben in Euro","reset":"Regler zurücksetzen","grundform":"Vergleich","x":"Jahre","y":"Guthaben","undefinedValue":"nicht definiert"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="modell/3" data-block-id="8dd2f7b3" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Das Probieren geht, ist aber mühsam. Der <strong>Logarithmus</strong> rechnet es direkt: <math><mrow><msub><mtext>log</mtext><mi>b</mi></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>y</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math> ist der Exponent <math><mi>x</mi></math>, für den
+<math><mrow><msup><mi>b</mi><mi>x</mi></msup><mo>=</mo><mi>y</mi></mrow></math> gilt. Er ist die Umkehrung des Potenzierens.</p></div>
+</div>
+<div class="explainer-block" data-block="modell/4" data-block-id="d30aad2c" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-logarithmus"><a href="../../glossar/#logarithmus">Logarithmus</a></dfn></dt><dd><p>Der Logarithmus zur Basis b von y ist der Exponent, mit dem man b potenzieren muss, um y zu erhalten. Zum Beispiel ist log zur Basis 2 von 8 gleich 3, denn 2³ = 8.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Vom Potenzieren zum Logarithmus</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="510d93a3" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Wenn du die Verdopplungszeit schnell ausrechnen willst, nutzt du den Logarithmus und den Taschenrechner.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="7a389218" data-block-type="example" data-block-order="7">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Hin und zurück</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="fa8ec1e8" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>=</mo><mn>8</mn><mspace width="1em"></mspace><mo stretchy="false">⇔</mo><mspace width="1em"></mspace><msub><mtext>log</mtext><mn>2</mn></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>8</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>3</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="6f5163ff" data-block-type="formula" data-block-order="9">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mn>10</mn><mn>3</mn></msup><mo>=</mo><mn>1000</mn><mspace width="1em"></mspace><mo stretchy="false">⇔</mo><mspace width="1em"></mspace><msub><mtext>log</mtext><mn>10</mn></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>1000</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>3</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="2b583d27" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Der Logarithmus fragt: „Hoch wie viel?“ Zur Basis 2 ist die Antwort für 8 die Zahl 3, zur Basis 10 für 1000 ebenfalls die 3.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="1d1215ca" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Verdopplungszeit bei 5 %</h3>
+<div class="explainer-block" data-block="beispiel/3/1" data-block-id="09503f2d" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mn>1,05</mn><mi>x</mi></msup><mo>=</mo><mn>2</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/2" data-block-id="94f8dcd8" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mtext>lg</mtext><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>2</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow><mrow><mtext>lg</mtext><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>1,05</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/3" data-block-id="33f7e5b2" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Dabei ist lg der Logarithmus zur Basis 10, den dein Taschenrechner kann (Taste lg oder log). Du kannst den Bruch auch mit jedem anderen Logarithmus des Taschenrechners bilden. Es ist etwa 14,2. Der Bruch geht, weil man den Exponenten vor den Logarithmus ziehen darf: <math><mrow><mtext>lg</mtext><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><msup><mn>1,05</mn><mi>x</mi></msup><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mi>x</mi><mo>⋅</mo><mtext>lg</mtext><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>1,05</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math>. Nach 14 Jahren ist das Guthaben noch nicht das Doppelte, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="c1ede7ee" data-block-type="single-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="bedeutung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-bedeutung" data-id="bedeutung" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was bedeutet log₂(8) = 3?</legend>
+<label class="question-option"><input type="radio" name="frage-bedeutung" value="0"> <span>2 · 3 = 8</span></label>
+<label class="question-option"><input type="radio" name="frage-bedeutung" value="1"> <span>8 : 2 = 3</span></label>
+<label class="question-option"><input type="radio" name="frage-bedeutung" value="2"> <span>2³ = 8</span></label>
+<label class="question-option"><input type="radio" name="frage-bedeutung" value="3"> <span>3² = 8</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>2 · 3 = 8</strong></p><p>Es wird potenziert, nicht multipliziert. 2 · 3 ist 6.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>8 : 2 = 3</strong></p><p>Der Logarithmus ist kein Teilen. 8 : 2 ist 4.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>2³ = 8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Logarithmus ist der Exponent. Zur Basis 2 braucht man den Exponenten 3, um 8 zu erhalten.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>3² = 8</strong></p><p>Dann wären Basis und Exponent vertauscht. 3² ist 9, nicht 8.</p></li>
+</ul>
+<p class="question-explanation">log₂(8) = 3 ist eine andere Schreibweise für 2³ = 8.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>2 · 3 = 8</strong></p><p>Es wird potenziert, nicht multipliziert. 2 · 3 ist 6.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>8 : 2 = 3</strong></p><p>Der Logarithmus ist kein Teilen. 8 : 2 ist 4.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>2³ = 8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Logarithmus ist der Exponent. Zur Basis 2 braucht man den Exponenten 3, um 8 zu erhalten.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>3² = 8</strong></p><p>Dann wären Basis und Exponent vertauscht. 3² ist 9, nicht 8.</p></li>
+</ul>
+<p class="question-explanation">log₂(8) = 3 ist eine andere Schreibweise für 2³ = 8.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"bedeutung","text":"Was bedeutet log₂(8) = 3?","explanation":"log₂(8) = 3 ist eine andere Schreibweise für 2³ = 8.","links":[],"type":"single-choice","options":[{"text":"2 · 3 = 8","correct":false,"info":"Es wird potenziert, nicht multipliziert. 2 · 3 ist 6."},{"text":"8 : 2 = 3","correct":false,"info":"Der Logarithmus ist kein Teilen. 8 : 2 ist 4."},{"text":"2³ = 8","correct":true,"info":"Der Logarithmus ist der Exponent. Zur Basis 2 braucht man den Exponenten 3, um 8 zu erhalten."},{"text":"3² = 8","correct":false,"info":"Dann wären Basis und Exponent vertauscht. 3² ist 9, nicht 8."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="4ba03f04" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="logarithmus-berechnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Berechne <math><mrow><msub><mtext>log</mtext><mn>2</mn></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>32</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math>. Mit welchem Exponenten musst du 2 potenzieren, um 32 zu erhalten?</p><details class="explainer-hint"><summary>Tipp</summary><p>Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Gesucht ist <math><mi>x</mi></math> mit <math><mrow><msup><mn>2</mn><mi>x</mi></msup><mo>=</mo><mn>32</mn></mrow></math>.</li><li>Das gilt für <math><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Berechne <math><mrow><msub><mtext>log</mtext><mn>6</mn></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>36</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math>. Mit welchem Exponenten musst du 6 potenzieren, um 36 zu erhalten?</p><details class="explainer-hint"><summary>Tipp</summary><p>Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Gesucht ist <math><mi>x</mi></math> mit <math><mrow><msup><mn>6</mn><mi>x</mi></msup><mo>=</mo><mn>36</mn></mrow></math>.</li><li>Das gilt für <math><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Berechne <math><mrow><msub><mtext>log</mtext><mn>10</mn></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>1000</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math>. Mit welchem Exponenten musst du 10 potenzieren, um 1000 zu erhalten?</p><details class="explainer-hint"><summary>Tipp</summary><p>Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Gesucht ist <math><mi>x</mi></math> mit <math><mrow><msup><mn>10</mn><mi>x</mi></msup><mo>=</mo><mn>1000</mn></mrow></math>.</li><li>Das gilt für <math><mrow><mi>x</mi><mo>=</mo><mn>3</mn></mrow></math>.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"logarithmus-berechnen","given":{"r":{"pick":1,"from":{"data":"logarithmen"}}},"task":{"text":"Berechne $\\text{log}_{{{r.b}}}({{r.y}})$. Mit welchem Exponenten musst du {{r.b}} potenzieren, um {{r.y}} zu erhalten?"},"answer":{"value":"r.n","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"r.b","message":"Das ist die Basis. Gesucht ist der Exponent, mit dem du die Basis potenzierst."},{"value":"r.y","message":"Das ist die Zahl, die herauskommen soll. Gesucht ist der Exponent."}],"hint":"Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren.","steps":["Gesucht ist $x$ mit ${{r.b}}^x = {{r.y}}$.","Das gilt für $x = {{answer}}$."]},"templates":{"de":{"task":"Berechne \u003cmath>\u003cmrow>\u003cmsub>\u003cmtext>log\u003c/mtext>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003c/msub>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"false\">(\u003c/mo>\u003cmtext>⟦r.y⟧\u003c/mtext>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"false\">)\u003c/mo>\u003c/mrow>\u003c/mrow>\u003c/math>. Mit welchem Exponenten musst du ⟦r.b⟧ potenzieren, um ⟦r.y⟧ zu erhalten?","steps":["Gesucht ist \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> mit \u003cmath>\u003cmrow>\u003cmsup>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003cmi>x\u003c/mi>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.y⟧\u003c/mtext>\u003c/mrow>\u003c/math>.","Das gilt für \u003cmath>\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>."],"hint":"Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren.","messages":["Das ist die Basis. Gesucht ist der Exponent, mit dem du die Basis potenzierst.","Das ist die Zahl, die herauskommen soll. Gesucht ist der Exponent."]}},"data":{"logarithmen":[{"b":2,"n":3,"y":8},{"b":2,"n":4,"y":16},{"b":2,"n":5,"y":32},{"b":3,"n":2,"y":9},{"b":3,"n":4,"y":81},{"b":10,"n":2,"y":100},{"b":10,"n":3,"y":1000},{"b":5,"n":2,"y":25},{"b":5,"n":3,"y":125},{"b":4,"n":3,"y":64},{"b":6,"n":2,"y":36}]},"seeds":[1,2,3,4,5,6,7,12,22,23,36],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="c0e9ac29" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="verdopplung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Guthaben wächst mit 3 % pro Jahr (Faktor 1,03). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne <math><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup></math> für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt. Gib eine ganze Zahl an, denn gefragt sind volle Jahre.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Nach 23 Jahren: <math><mrow><msup><mi>q</mi><mtext class="tml-med-pad">23</mtext></msup><mo>=</mo><mtext>1,97</mtext></mrow></math>, noch nicht das Doppelte.</li><li>Nach 24 Jahren: <math><mrow><msup><mi>q</mi><mtext class="tml-med-pad">24</mtext></msup><mo>=</mo><mtext>2,03</mtext></mrow></math>, mehr als das Doppelte. Das ist nach 24 Jahren.</li></ol><p><strong>Richtige Antwort:</strong> 24</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Guthaben wächst mit 7 % pro Jahr (Faktor 1,07). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne <math><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup></math> für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt. Gib eine ganze Zahl an, denn gefragt sind volle Jahre.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Nach 10 Jahren: <math><mrow><msup><mi>q</mi><mtext class="tml-med-pad">10</mtext></msup><mo>=</mo><mtext>1,97</mtext></mrow></math>, noch nicht das Doppelte.</li><li>Nach 11 Jahren: <math><mrow><msup><mi>q</mi><mtext class="tml-med-pad">11</mtext></msup><mo>=</mo><mtext>2,10</mtext></mrow></math>, mehr als das Doppelte. Das ist nach 11 Jahren.</li></ol><p><strong>Richtige Antwort:</strong> 11</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Guthaben wächst mit 4 % pro Jahr (Faktor 1,04). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne <math><msup><mi>q</mi><mi class="tml-med-pad">x</mi></msup></math> für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt. Gib eine ganze Zahl an, denn gefragt sind volle Jahre.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Nach 17 Jahren: <math><mrow><msup><mi>q</mi><mtext class="tml-med-pad">17</mtext></msup><mo>=</mo><mtext>1,95</mtext></mrow></math>, noch nicht das Doppelte.</li><li>Nach 18 Jahren: <math><mrow><msup><mi>q</mi><mtext class="tml-med-pad">18</mtext></msup><mo>=</mo><mtext>2,03</mtext></mrow></math>, mehr als das Doppelte. Das ist nach 18 Jahren.</li></ol><p><strong>Richtige Antwort:</strong> 18</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"verdopplung","given":{"r":{"pick":1,"from":{"data":"verdopplung"}}},"task":{"text":"Ein Guthaben wächst mit {{r.p}} % pro Jahr (Faktor {{r.q}}). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus."},"answer":{"value":"r.jahre","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"r.vorjahr","message":"Nach {{r.vorjahr}} Jahren ist das Guthaben erst das {{r.davor}}-Fache des Anfangs. Es muss mehr als das Doppelte sein, also ein Jahr länger."}],"hint":"Rechne $q^x$ für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt. Gib eine ganze Zahl an, denn gefragt sind volle Jahre.","steps":["Nach {{r.vorjahr}} Jahren: $q^{{{r.vorjahr}}} = {{r.davor}}$, noch nicht das Doppelte.","Nach {{r.jahre}} Jahren: $q^{{{r.jahre}}} = {{r.danach}}$, mehr als das Doppelte. Das ist nach {{answer}} Jahren."]},"templates":{"de":{"task":"Ein Guthaben wächst mit ⟦r.p⟧ % pro Jahr (Faktor ⟦r.q⟧). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus.","steps":["Nach ⟦r.vorjahr⟧ Jahren: \u003cmath>\u003cmrow>\u003cmsup>\u003cmi>q\u003c/mi>\u003cmtext class=\"tml-med-pad\">⟦r.vorjahr⟧\u003c/mtext>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.davor⟧\u003c/mtext>\u003c/mrow>\u003c/math>, noch nicht das Doppelte.","Nach ⟦r.jahre⟧ Jahren: \u003cmath>\u003cmrow>\u003cmsup>\u003cmi>q\u003c/mi>\u003cmtext class=\"tml-med-pad\">⟦r.jahre⟧\u003c/mtext>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.danach⟧\u003c/mtext>\u003c/mrow>\u003c/math>, mehr als das Doppelte. Das ist nach ⟦answer⟧ Jahren."],"hint":"Rechne \u003cmath>\u003cmsup>\u003cmi>q\u003c/mi>\u003cmi class=\"tml-med-pad\">x\u003c/mi>\u003c/msup>\u003c/math> für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt. Gib eine ganze Zahl an, denn gefragt sind volle Jahre.","messages":["Nach ⟦r.vorjahr⟧ Jahren ist das Guthaben erst das ⟦r.davor⟧-Fache des Anfangs. Es muss mehr als das Doppelte sein, also ein Jahr länger."]}},"data":{"verdopplung":[{"p":3,"q":"1,03","jahre":24,"davor":"1,97","danach":"2,03","vorjahr":23},{"p":4,"q":"1,04","jahre":18,"davor":"1,95","danach":"2,03","vorjahr":17},{"p":5,"q":"1,05","jahre":15,"davor":"1,98","danach":"2,08","vorjahr":14},{"p":6,"q":"1,06","jahre":12,"davor":"1,90","danach":"2,01","vorjahr":11},{"p":7,"q":"1,07","jahre":11,"davor":"1,97","danach":"2,10","vorjahr":10},{"p":10,"q":"1,10","jahre":8,"davor":"1,95","danach":"2,14","vorjahr":7}]},"seeds":[1,2,3,8,12,22],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="d4a443fc" data-block-type="true-false" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="umkehrung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-umkehrung" data-id="umkehrung" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Aus log₁₀(1000) = 3 folgt 10³ = 1000.</legend>
+<label class="question-option"><input type="radio" name="frage-umkehrung" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-umkehrung" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Der Logarithmus und das Potenzieren heben sich auf. Der Exponent 3, mit dem man 10 potenziert, ergibt 1000.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Der Logarithmus und das Potenzieren heben sich auf. Der Exponent 3, mit dem man 10 potenziert, ergibt 1000.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"umkehrung","text":"Aus log₁₀(1000) = 3 folgt 10³ = 1000.","explanation":"Der Logarithmus und das Potenzieren heben sich auf. Der Exponent 3, mit dem man 10 potenziert, ergibt 1000.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Funktionsfamilien mit Schiebereglern“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"3b8ef72","page":{"title":"Logarithmen","order":11}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../wachstum/exponentialfunktionen/">Zurück: Exponentialfunktionen</a><a rel="next" href="../../sinus/recap/">Weiter: Das brauchst du für dieses Kapitel</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

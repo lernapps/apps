@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Teiler, Vielfache und Teilbarkeitsregeln – Brüche und Dezimalzahlen</title>
+    <meta name="description" content="Teiler und Vielfache finden und mit Teilbarkeitsregeln schnell prüfen, ob eine Zahl teilbar ist." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../teilbarkeit/regeln/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../teilbarkeit/">Teilbarkeit nutzen</a></li><li aria-current="page">Teiler, Vielfache und Teilbarkeitsregeln</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Teiler, Vielfache und Teilbarkeitsregeln</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../teilbarkeit/regeln/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧teilbarkeit/regeln/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-brueche-dezimal","page":{"id":"regeln","title":"Teiler, Vielfache und Teilbarkeitsregeln","exercises":[{"id":"aufgaben","section":"ueben","numbered":true},{"id":"teiler-zaehlen","section":"ueben","numbered":false},{"id":"vielfache","section":"ueben","numbered":false},{"id":"regeln-zuordnen","section":"ueben","numbered":false},{"id":"durch-3","section":"ueben","numbered":false},{"id":"ziffer-ergaenzen","section":"ueben","numbered":true},{"id":"durch-4","section":"ueben","numbered":false}],"sections":["regel","entdecken","entdecken/abkuerzungen","beispiel","ueben"]},"tutor":"teilbarkeit/regeln/tutor/","markdown":"teilbarkeit/regeln/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#regel">Zwölf Bauklötze in Reihen</a></li><li><a href="#entdecken">Alle Teiler finden</a><ol><li><a href="#entdecken/abkuerzungen">Abkürzungen: Teilbarkeitsregeln</a></li></ol></li><li><a href="#beispiel">Am Beispiel nachvollziehen</a></li><li><a href="#ueben">Üben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="regel">Zwölf Bauklötze in Reihen</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="9ece3759" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Nach dieser Seite kannst du alle Teiler und Vielfache einer Zahl finden. Mit Teilbarkeitsregeln erkennst du außerdem schnell, ob eine Zahl durch 2, 3, 4, 5, 9, 10, 25 oder 100 teilbar ist. Du brauchst dafür nur das Malnehmen und das Teilen.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="95175653" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Zwölf Bauklötze kannst du in gleich lange Reihen legen: eine Reihe mit 12, zwei Reihen mit je 6 oder drei Reihen mit je 4. Jede Anordnung ist eine Malaufgabe.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="76560bd3" data-block-type="figure" data-block-order="3">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/teiler-rechtecke.svg" alt="Dreimal zwölf gleich große Quadrate. Oben liegen sie in einer Reihe mit 12, in der Mitte in 2 Reihen mit je 6, unten in 3 Reihen mit je 4. Neben jeder Anordnung steht die Malaufgabe." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: MIT." aria-label="Quelle: eigene Zeichnung. Lizenz: MIT.">© MIT</span></div><figcaption><p>Zwölf Klötze, drei Anordnungen: 1 · 12, 2 · 6 und 3 · 4.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="e3820f13" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-faktor"><a href="../../glossar/#faktor">Faktor</a></dfn></dt><dd><p>Die Zahlen, die du miteinander multiplizierst, heißen Faktoren. Das Ergebnis heißt Produkt. Bei 3 · 4 = 12 sind 3 und 4 die Faktoren.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="5a30b8c9" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-teiler"><a href="../../glossar/#teiler">Teiler</a></dfn></dt><dd><p>Eine Zahl ist ein Teiler einer anderen, wenn sie diese ohne Rest teilt. 3 ist ein Teiler von 12, denn 12 : 3 = 4 ohne Rest. 5 ist kein Teiler von 12, denn es bleibt der Rest 2.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="00195ab0" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-vielfaches"><a href="../../glossar/#vielfaches">Vielfaches</a></dfn></dt><dd><p>Ein Vielfaches von 3 entsteht, wenn du 3 mit 1, 2, 3, … malnimmst: 3, 6, 9, 12, … Die 12 ist also ein Vielfaches von 3.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/7" data-block-id="01a9c649" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Teiler und Vielfache gehören zusammen. Aus 3 · 4 = 12 liest du ab: 3 und 4 sind Teiler von 12, und 12 ist ein Vielfaches von 3 und von 4.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="entdecken">Alle Teiler finden</h2>
+<div class="explainer-block" data-block="entdecken/1" data-block-id="da37c480" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Wenn du alle Zahlen finden willst, die in eine Zahl passen, suchst du ihre Teiler. So gehst du vor: Suche alle Malaufgaben mit dem Ergebnis dieser Zahl. Jede Malaufgabe liefert zwei Teiler. Nur bei einer Aufgabe wie 4 · 4 ergibt sich bloß ein Teiler. Du musst nur bis zu dem Faktor suchen, bei dem sich die Paare wiederholen.</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/2" data-block-id="068f5cb3" data-block-type="table" data-block-order="9">
+<div class="block-table" role="region" aria-label="Alle Malaufgaben und alle Teiler von drei Zahlen" tabindex="0"><table><caption>Alle Malaufgaben und alle Teiler von drei Zahlen</caption><thead><tr><th scope="col">Zahl</th><th scope="col">Malaufgaben</th><th scope="col">Alle Teiler</th></tr></thead><tbody><tr><td>12</td><td>1 · 12, 2 · 6, 3 · 4</td><td>1, 2, 3, 4, 6, 12</td></tr><tr><td>18</td><td>1 · 18, 2 · 9, 3 · 6</td><td>1, 2, 3, 6, 9, 18</td></tr><tr><td>16</td><td>1 · 16, 2 · 8, 4 · 4</td><td>1, 2, 4, 8, 16</td></tr></tbody></table></div>
+</div>
+<section class="explainer-section">
+<h3 id="entdecken/abkuerzungen">Abkürzungen: Teilbarkeitsregeln</h3>
+<div class="explainer-block" data-block="entdecken/abkuerzungen/1" data-block-id="cb135a11" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Bei großen Zahlen ist das Suchen mühsam. Für einige Teiler verrät dir eine Regel sofort, ob sie passen. Die Quersumme ist die Summe aller Ziffern einer Zahl: 351 hat die Quersumme 3 + 5 + 1 = 9.</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/abkuerzungen/2" data-block-id="9331f10f" data-block-type="table" data-block-order="11">
+<div class="block-table" role="region" aria-label="Teilbarkeitsregeln mit je einem Beispiel" tabindex="0"><table><caption>Teilbarkeitsregeln mit je einem Beispiel</caption><thead><tr><th scope="col">Teilbar durch</th><th scope="col">Woran du es erkennst</th><th scope="col">Beispiel</th></tr></thead><tbody><tr><td>2</td><td>Die letzte Ziffer ist gerade (0, 2, 4, 6 oder 8)</td><td>478 endet auf 8</td></tr><tr><td>5</td><td>Die letzte Ziffer ist 0 oder 5</td><td>435 endet auf 5</td></tr><tr><td>10</td><td>Die letzte Ziffer ist 0</td><td>370 endet auf 0</td></tr><tr><td>4</td><td>Die letzten zwei Ziffern bilden eine durch 4 teilbare Zahl</td><td>1316: 16 : 4 = 4 ohne Rest</td></tr><tr><td>25</td><td>Die letzten zwei Ziffern sind 00, 25, 50 oder 75</td><td>1375 endet auf 75</td></tr><tr><td>100</td><td>Die Zahl endet auf 00</td><td>2500 endet auf 00</td></tr><tr><td>3</td><td>Die Quersumme ist durch 3 teilbar</td><td>123: 1 + 2 + 3 = 6</td></tr><tr><td>9</td><td>Die Quersumme ist durch 9 teilbar</td><td>477: 4 + 7 + 7 = 18</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="entdecken/abkuerzungen/3" data-block-id="66d3b7c3" data-block-type="note" data-block-order="12">
+<div class="explainer-box explainer-note">
+<h4 class="explainer-box-title">Merke</h4>
+<div class="explainer-block" data-block="entdecken/abkuerzungen/3/1" data-block-id="7bbd1897" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Bei 3 und 9 entscheidet die Quersumme, nicht die letzte Ziffer: 703 endet auf 3, aber die Quersumme 10 ist nicht durch 3 teilbar. Bei 4 reicht die letzte Ziffer auch nicht: 14 endet auf 4, ist aber nicht durch 4 teilbar.</p>
+<p>Bei 2, 5 und 10 genügt die letzte Ziffer, weil 10 durch 2, 5 und 10 teilbar ist. Alle Zehner davor sind dann schon teilbar. Genauso genügen bei 4, 25 und 100 die letzten zwei Ziffern, weil 100 durch 4, 25 und 100 teilbar ist.</p></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Am Beispiel nachvollziehen</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="a9dd3fde" data-block-type="example" data-block-order="14">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Wodurch ist 2376 teilbar?</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="6ab11607" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Prüfe 2376 nacheinander mit den Regeln:</p>
+<ul>
+<li>Die letzte Ziffer 6 ist gerade: durch 2 teilbar.</li>
+<li>Die letzte Ziffer ist weder 0 noch 5: nicht durch 5 teilbar.</li>
+<li>Die letzten zwei Ziffern 76: 76 : 4 = 19 ohne Rest, also durch 4 teilbar.</li>
+<li>Die Quersumme von 2376 ist:</li>
+</ul></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="5cbb0662" data-block-type="formula" data-block-order="16">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>7</mn><mo>+</mo><mn>6</mn><mo>=</mo><mn>18</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="084cfc93" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>18 ist durch 3 und durch 9 teilbar. Also ist 2376 durch 3 und durch 9 teilbar. Zur Probe: 2376 : 9 = 264 ohne Rest.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ueben">Üben</h2>
+<div class="explainer-block" data-block="ueben/1" data-block-id="02a9141a" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="aufgaben">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">30 Gegenstände werden gleichmäßig auf 3 Gruppen verteilt. Wie viele sind in einer Gruppe?</p><details class="explainer-hint"><summary>Tipp</summary><p>Verteile gleichmäßig: Teile die Anzahl durch 3. Es bleibt kein Rest, also ist 3 ein Teiler der Anzahl.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die 30 Gegenstände werden auf drei gleich große Gruppen verteilt.</li><li>30 : 3 = 10. So viele Gegenstände liegen in jeder Gruppe. Es bleibt kein Rest, darum ist 3 ein Teiler von 30.</li></ol><p><strong>Richtige Antwort:</strong> 10</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">15 Gegenstände werden gleichmäßig auf 3 Gruppen verteilt. Wie viele sind in einer Gruppe?</p><details class="explainer-hint"><summary>Tipp</summary><p>Verteile gleichmäßig: Teile die Anzahl durch 3. Es bleibt kein Rest, also ist 3 ein Teiler der Anzahl.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die 15 Gegenstände werden auf drei gleich große Gruppen verteilt.</li><li>15 : 3 = 5. So viele Gegenstände liegen in jeder Gruppe. Es bleibt kein Rest, darum ist 3 ein Teiler von 15.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">12 Gegenstände werden gleichmäßig auf 3 Gruppen verteilt. Wie viele sind in einer Gruppe?</p><details class="explainer-hint"><summary>Tipp</summary><p>Verteile gleichmäßig: Teile die Anzahl durch 3. Es bleibt kein Rest, also ist 3 ein Teiler der Anzahl.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die 12 Gegenstände werden auf drei gleich große Gruppen verteilt.</li><li>12 : 3 = 4. So viele Gegenstände liegen in jeder Gruppe. Es bleibt kein Rest, darum ist 3 ein Teiler von 12.</li></ol><p><strong>Richtige Antwort:</strong> 4</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"aufgaben","given":{"e":{"pick":1,"from":{"data":"grundzahlen"}}},"task":{"text":"{{e.dreifach}} Gegenstände werden gleichmäßig auf 3 Gruppen verteilt. Wie viele sind in einer Gruppe?"},"answer":{"value":"e.dreifach / 3","compare":"number"},"mistakes":[{"value":"e.dreifach","message":"Das ist die Gesamtmenge, nicht die Menge in einer Gruppe."},{"value":"1","message":"Teile die gesamte Menge in drei gleich große Gruppen."}],"hint":"Verteile gleichmäßig: Teile die Anzahl durch 3. Es bleibt kein Rest, also ist 3 ein Teiler der Anzahl.","steps":["Die {{e.dreifach}} Gegenstände werden auf drei gleich große Gruppen verteilt.","{{e.dreifach}} : 3 = {{answer}}. So viele Gegenstände liegen in jeder Gruppe. Es bleibt kein Rest, darum ist 3 ein Teiler von {{e.dreifach}}."]},"templates":{"de":{"task":"⟦e.dreifach⟧ Gegenstände werden gleichmäßig auf 3 Gruppen verteilt. Wie viele sind in einer Gruppe?","steps":["Die ⟦e.dreifach⟧ Gegenstände werden auf drei gleich große Gruppen verteilt.","⟦e.dreifach⟧ : 3 = ⟦answer⟧. So viele Gegenstände liegen in jeder Gruppe. Es bleibt kein Rest, darum ist 3 ein Teiler von ⟦e.dreifach⟧."],"hint":"Verteile gleichmäßig: Teile die Anzahl durch 3. Es bleibt kein Rest, also ist 3 ein Teiler der Anzahl.","messages":["Das ist die Gesamtmenge, nicht die Menge in einer Gruppe.","Teile die gesamte Menge in drei gleich große Gruppen."]}},"data":{"grundzahlen":[{"basis":3,"dreifach":9,"vierfach":12,"doppelt":6,"sechsfach":18,"rundungszahl":0.346},{"basis":4,"dreifach":12,"vierfach":16,"doppelt":8,"sechsfach":24,"rundungszahl":0.446},{"basis":5,"dreifach":15,"vierfach":20,"doppelt":10,"sechsfach":30,"rundungszahl":0.546},{"basis":6,"dreifach":18,"vierfach":24,"doppelt":12,"sechsfach":36,"rundungszahl":0.646},{"basis":8,"dreifach":24,"vierfach":32,"doppelt":16,"sechsfach":48,"rundungszahl":0.846},{"basis":10,"dreifach":30,"vierfach":40,"doppelt":20,"sechsfach":60,"rundungszahl":1.046}]},"seeds":[1,2,3,4,6,25],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/2" data-block-id="e82ecda5" data-block-type="number" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="teiler-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-teiler-zaehlen" data-id="teiler-zaehlen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Teiler hat die Zahl 18? Zähle 1 und 18 mit.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-teiler-zaehlen">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 6</p>
+<p class="question-explanation">Die Malaufgaben 1 · 18, 2 · 9 und 3 · 6 liefern die sechs Teiler 1, 2, 3, 6, 9 und 18. Wer nur 4 oder 5 nennt, hat meist nur die kleinen Faktoren gezählt und die großen Partner 18, 9 und 6 vergessen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 6</p>
+<p class="question-explanation">Die Malaufgaben 1 · 18, 2 · 9 und 3 · 6 liefern die sechs Teiler 1, 2, 3, 6, 9 und 18. Wer nur 4 oder 5 nennt, hat meist nur die kleinen Faktoren gezählt und die großen Partner 18, 9 und 6 vergessen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"teiler-zaehlen","text":"Wie viele Teiler hat die Zahl 18? Zähle 1 und 18 mit.","explanation":"Die Malaufgaben 1 · 18, 2 · 9 und 3 · 6 liefern die sechs Teiler 1, 2, 3, 6, 9 und 18. Wer nur 4 oder 5 nennt, hat meist nur die kleinen Faktoren gezählt und die großen Partner 18, 9 und 6 vergessen.","links":[],"type":"number","answer":6,"tolerance":0},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/3" data-block-id="f11bf860" data-block-type="multiple-choice" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="vielfache">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-vielfache" data-id="vielfache" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Zahlen sind Vielfache von 6?</legend>
+<label class="question-option"><input type="checkbox" name="frage-vielfache" value="0"> <span>18</span></label>
+<label class="question-option"><input type="checkbox" name="frage-vielfache" value="1"> <span>36</span></label>
+<label class="question-option"><input type="checkbox" name="frage-vielfache" value="2"> <span>3</span></label>
+<label class="question-option"><input type="checkbox" name="frage-vielfache" value="3"> <span>16</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>18</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>18 = 3 · 6, also ein Vielfaches von 6.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>36</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>36 = 6 · 6, also ein Vielfaches von 6.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>3</strong></p><p>3 ist ein Teiler von 6, kein Vielfaches. Vielfache von 6 sind mindestens so groß wie 6.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>16</strong></p><p>16 steht nicht in der Reihe 6, 12, 18, 24, … .</p></li>
+</ul>
+<p class="question-explanation">Die Vielfachen von 6 sind 6, 12, 18, 24, 30, 36, … Teiler sind kleiner oder gleich der Zahl, Vielfache größer oder gleich.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>18</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>18 = 3 · 6, also ein Vielfaches von 6.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>36</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>36 = 6 · 6, also ein Vielfaches von 6.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>3</strong></p><p>3 ist ein Teiler von 6, kein Vielfaches. Vielfache von 6 sind mindestens so groß wie 6.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>16</strong></p><p>16 steht nicht in der Reihe 6, 12, 18, 24, … .</p></li>
+</ul>
+<p class="question-explanation">Die Vielfachen von 6 sind 6, 12, 18, 24, 30, 36, … Teiler sind kleiner oder gleich der Zahl, Vielfache größer oder gleich.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"vielfache","text":"Welche Zahlen sind Vielfache von 6?","explanation":"Die Vielfachen von 6 sind 6, 12, 18, 24, 30, 36, … Teiler sind kleiner oder gleich der Zahl, Vielfache größer oder gleich.","links":[],"type":"multiple-choice","options":[{"text":"18","correct":true,"info":"18 = 3 · 6, also ein Vielfaches von 6."},{"text":"36","correct":true,"info":"36 = 6 · 6, also ein Vielfaches von 6."},{"text":"3","correct":false,"info":"3 ist ein Teiler von 6, kein Vielfaches. Vielfache von 6 sind mindestens so groß wie 6."},{"text":"16","correct":false,"info":"16 steht nicht in der Reihe 6, 12, 18, 24, … ."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/4" data-block-id="5f34d20a" data-block-type="matching" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="regeln-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-regeln-zuordnen" data-id="regeln-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jeder Regel zu, wofür sie gilt.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Die letzte Ziffer ist 0 oder 5</span> <select name="frage-regeln-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="2">durch 4 teilbar</option><option value="1">durch 3 teilbar</option><option value="0">durch 5 teilbar</option><option value="3">durch 100 teilbar</option></select></label></li>
+<li><label><span>Die Quersumme ist durch 3 teilbar</span> <select name="frage-regeln-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="2">durch 4 teilbar</option><option value="1">durch 3 teilbar</option><option value="0">durch 5 teilbar</option><option value="3">durch 100 teilbar</option></select></label></li>
+<li><label><span>Die letzten zwei Ziffern bilden eine durch 4 teilbare Zahl</span> <select name="frage-regeln-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="2">durch 4 teilbar</option><option value="1">durch 3 teilbar</option><option value="0">durch 5 teilbar</option><option value="3">durch 100 teilbar</option></select></label></li>
+<li><label><span>Die Zahl endet auf 00</span> <select name="frage-regeln-zuordnen-3" data-left="3"><option value="">bitte wählen</option><option value="2">durch 4 teilbar</option><option value="1">durch 3 teilbar</option><option value="0">durch 5 teilbar</option><option value="3">durch 100 teilbar</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die letzte Ziffer ist 0 oder 5 – durch 5 teilbar; Die Quersumme ist durch 3 teilbar – durch 3 teilbar; Die letzten zwei Ziffern bilden eine durch 4 teilbare Zahl – durch 4 teilbar; Die Zahl endet auf 00 – durch 100 teilbar</p>
+<p class="question-explanation">Die Endziffer entscheidet bei 2, 5 und 10, die letzten zwei Ziffern bei 4, 25 und 100 und die Quersumme bei 3 und 9. Für 8 gibt es hier keine Regel.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die letzte Ziffer ist 0 oder 5 – durch 5 teilbar; Die Quersumme ist durch 3 teilbar – durch 3 teilbar; Die letzten zwei Ziffern bilden eine durch 4 teilbare Zahl – durch 4 teilbar; Die Zahl endet auf 00 – durch 100 teilbar</p>
+<p class="question-explanation">Die Endziffer entscheidet bei 2, 5 und 10, die letzten zwei Ziffern bei 4, 25 und 100 und die Quersumme bei 3 und 9. Für 8 gibt es hier keine Regel.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"regeln-zuordnen","text":"Ordne jeder Regel zu, wofür sie gilt.","explanation":"Die Endziffer entscheidet bei 2, 5 und 10, die letzten zwei Ziffern bei 4, 25 und 100 und die Quersumme bei 3 und 9. Für 8 gibt es hier keine Regel.","links":[],"type":"matching","pairs":[{"left":"Die letzte Ziffer ist 0 oder 5","right":"durch 5 teilbar"},{"left":"Die Quersumme ist durch 3 teilbar","right":"durch 3 teilbar"},{"left":"Die letzten zwei Ziffern bilden eine durch 4 teilbare Zahl","right":"durch 4 teilbar"},{"left":"Die Zahl endet auf 00","right":"durch 100 teilbar"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/5" data-block-id="8cb9a5d2" data-block-type="multiple-choice" data-block-order="22">
+<div class="explainer-exercise explainer-question" id="durch-3">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-durch-3" data-id="durch-3" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche dieser Zahlen sind durch 3 teilbar?</legend>
+<label class="question-option"><input type="checkbox" name="frage-durch-3" value="0"> <span>123</span></label>
+<label class="question-option"><input type="checkbox" name="frage-durch-3" value="1"> <span>703</span></label>
+<label class="question-option"><input type="checkbox" name="frage-durch-3" value="2"> <span>351</span></label>
+<label class="question-option"><input type="checkbox" name="frage-durch-3" value="3"> <span>245</span></label>
+<label class="question-option"><input type="checkbox" name="frage-durch-3" value="4"> <span>1002</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>123</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Quersumme 1 + 2 + 3 = 6 ist durch 3 teilbar.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>703</strong></p><p>Die letzte Ziffer 3 entscheidet nicht. Die Quersumme 7 + 0 + 3 = 10 ist nicht durch 3 teilbar.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>351</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Quersumme 3 + 5 + 1 = 9 ist durch 3 teilbar.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>245</strong></p><p>Die Quersumme 2 + 4 + 5 = 11 ist nicht durch 3 teilbar.</p></li>
+<li class="question-info question-info-right" data-option="4"><p class="question-info-head"><strong>1002</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Quersumme 1 + 0 + 0 + 2 = 3 ist durch 3 teilbar. Auch Nullen zählen mit, sie ändern die Summe nur nicht.</p></li>
+</ul>
+<p class="question-explanation">Du zählst alle Ziffern zusammen und prüfst die Summe. Nur die letzte Ziffer anzusehen führt bei 3 in die Irre.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>123</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Quersumme 1 + 2 + 3 = 6 ist durch 3 teilbar.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>703</strong></p><p>Die letzte Ziffer 3 entscheidet nicht. Die Quersumme 7 + 0 + 3 = 10 ist nicht durch 3 teilbar.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>351</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Quersumme 3 + 5 + 1 = 9 ist durch 3 teilbar.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>245</strong></p><p>Die Quersumme 2 + 4 + 5 = 11 ist nicht durch 3 teilbar.</p></li>
+<li class="question-info question-info-right" data-option="4"><p class="question-info-head"><strong>1002</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Quersumme 1 + 0 + 0 + 2 = 3 ist durch 3 teilbar. Auch Nullen zählen mit, sie ändern die Summe nur nicht.</p></li>
+</ul>
+<p class="question-explanation">Du zählst alle Ziffern zusammen und prüfst die Summe. Nur die letzte Ziffer anzusehen führt bei 3 in die Irre.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"durch-3","text":"Welche dieser Zahlen sind durch 3 teilbar?","explanation":"Du zählst alle Ziffern zusammen und prüfst die Summe. Nur die letzte Ziffer anzusehen führt bei 3 in die Irre.","links":[],"type":"multiple-choice","options":[{"text":"123","correct":true,"info":"Die Quersumme 1 + 2 + 3 = 6 ist durch 3 teilbar."},{"text":"703","correct":false,"info":"Die letzte Ziffer 3 entscheidet nicht. Die Quersumme 7 + 0 + 3 = 10 ist nicht durch 3 teilbar."},{"text":"351","correct":true,"info":"Die Quersumme 3 + 5 + 1 = 9 ist durch 3 teilbar."},{"text":"245","correct":false,"info":"Die Quersumme 2 + 4 + 5 = 11 ist nicht durch 3 teilbar."},{"text":"1002","correct":true,"info":"Die Quersumme 1 + 0 + 0 + 2 = 3 ist durch 3 teilbar. Auch Nullen zählen mit, sie ändern die Summe nur nicht."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/6" data-block-id="a6a28000" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="ziffer-ergaenzen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Die Zahl 25□ hat als letzte Ziffer ein leeres Kästchen. Welche ist die kleinste Ziffer, die du einsetzen kannst, damit die Zahl durch 9 teilbar wird?</p><details class="explainer-hint"><summary>Tipp</summary><p>Berechne die Quersumme von 25. Welche Ziffer musst du dazuzählen, damit die Summe in der 9er-Reihe steht?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Quersumme von 25 ist 2 + 5 = 7.</li><li>7 steht noch nicht in der 9er-Reihe. Mit der Ziffer 2 wird die Quersumme 9, und die steht drin.</li><li>Die Zahl 252 ist also durch 9 teilbar, und keine kleinere Ziffer passt.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Die Zahl 58□ hat als letzte Ziffer ein leeres Kästchen. Welche ist die kleinste Ziffer, die du einsetzen kannst, damit die Zahl durch 3 teilbar wird?</p><details class="explainer-hint"><summary>Tipp</summary><p>Berechne die Quersumme von 58. Welche Ziffer musst du dazuzählen, damit die Summe in der 3er-Reihe steht?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Quersumme von 58 ist 5 + 8 = 13.</li><li>13 steht noch nicht in der 3er-Reihe. Mit der Ziffer 2 wird die Quersumme 15, und die steht drin.</li><li>Die Zahl 582 ist also durch 3 teilbar, und keine kleinere Ziffer passt.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Die Zahl 134□ hat als letzte Ziffer ein leeres Kästchen. Welche ist die kleinste Ziffer, die du einsetzen kannst, damit die Zahl durch 9 teilbar wird?</p><details class="explainer-hint"><summary>Tipp</summary><p>Berechne die Quersumme von 134. Welche Ziffer musst du dazuzählen, damit die Summe in der 9er-Reihe steht?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Quersumme von 134 ist 1 + 3 + 4 = 8.</li><li>8 steht noch nicht in der 9er-Reihe. Mit der Ziffer 1 wird die Quersumme 9, und die steht drin.</li><li>Die Zahl 1341 ist also durch 9 teilbar, und keine kleinere Ziffer passt.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"ziffer-ergaenzen","given":{"e":{"pick":1,"from":{"data":"ziffernergaenzen"}}},"task":{"text":"Die Zahl {{e.zahl}}□ hat als letzte Ziffer ein leeres Kästchen. Welche ist die kleinste Ziffer, die du einsetzen kannst, damit die Zahl durch {{e.d}} teilbar wird?"},"answer":{"value":"e.ziffer","compare":"number"},"mistakes":[{"value":"e.rest","message":"Das ist der Rest, der bei der Quersumme von {{e.zahl}} bleibt. Gesucht ist die Ziffer, die bis zum nächsten Vielfachen von {{e.d}} fehlt."},{"value":"e.slip","message":"Du hast eine Ziffer gewählt, die selbst durch {{e.d}} teilbar ist. Bei {{e.d}} entscheidet aber die Quersumme aller Ziffern, nicht die letzte Ziffer allein."}],"hint":"Berechne die Quersumme von {{e.zahl}}. Welche Ziffer musst du dazuzählen, damit die Summe in der {{e.d}}er-Reihe steht?","steps":["Die Quersumme von {{e.zahl}} ist {{e.rechnung}} = {{e.q}}.","{{e.q}} steht noch nicht in der {{e.d}}er-Reihe. Mit der Ziffer {{answer}} wird die Quersumme {{e.qneu}}, und die steht drin.","Die Zahl {{e.neu}} ist also durch {{e.d}} teilbar, und keine kleinere Ziffer passt."]},"templates":{"de":{"task":"Die Zahl ⟦e.zahl⟧□ hat als letzte Ziffer ein leeres Kästchen. Welche ist die kleinste Ziffer, die du einsetzen kannst, damit die Zahl durch ⟦e.d⟧ teilbar wird?","steps":["Die Quersumme von ⟦e.zahl⟧ ist ⟦e.rechnung⟧ = ⟦e.q⟧.","⟦e.q⟧ steht noch nicht in der ⟦e.d⟧er-Reihe. Mit der Ziffer ⟦answer⟧ wird die Quersumme ⟦e.qneu⟧, und die steht drin.","Die Zahl ⟦e.neu⟧ ist also durch ⟦e.d⟧ teilbar, und keine kleinere Ziffer passt."],"hint":"Berechne die Quersumme von ⟦e.zahl⟧. Welche Ziffer musst du dazuzählen, damit die Summe in der ⟦e.d⟧er-Reihe steht?","messages":["Das ist der Rest, der bei der Quersumme von ⟦e.zahl⟧ bleibt. Gesucht ist die Ziffer, die bis zum nächsten Vielfachen von ⟦e.d⟧ fehlt.","Du hast eine Ziffer gewählt, die selbst durch ⟦e.d⟧ teilbar ist. Bei ⟦e.d⟧ entscheidet aber die Quersumme aller Ziffern, nicht die letzte Ziffer allein."]}},"data":{"ziffernergaenzen":[{"zahl":25,"d":3,"q":7,"rechnung":"2 + 5","rest":1,"ziffer":2,"neu":252,"qneu":9,"slip":3},{"zahl":41,"d":3,"q":5,"rechnung":"4 + 1","rest":2,"ziffer":1,"neu":411,"qneu":6,"slip":3},{"zahl":58,"d":3,"q":13,"rechnung":"5 + 8","rest":1,"ziffer":2,"neu":582,"qneu":15,"slip":3},{"zahl":64,"d":3,"q":10,"rechnung":"6 + 4","rest":1,"ziffer":2,"neu":642,"qneu":12,"slip":3},{"zahl":86,"d":3,"q":14,"rechnung":"8 + 6","rest":2,"ziffer":1,"neu":861,"qneu":15,"slip":3},{"zahl":215,"d":3,"q":8,"rechnung":"2 + 1 + 5","rest":2,"ziffer":1,"neu":2151,"qneu":9,"slip":3},{"zahl":347,"d":3,"q":14,"rechnung":"3 + 4 + 7","rest":2,"ziffer":1,"neu":3471,"qneu":15,"slip":3},{"zahl":25,"d":9,"q":7,"rechnung":"2 + 5","rest":7,"ziffer":2,"neu":252,"qneu":9,"slip":9},{"zahl":47,"d":9,"q":11,"rechnung":"4 + 7","rest":2,"ziffer":7,"neu":477,"qneu":18,"slip":9},{"zahl":58,"d":9,"q":13,"rechnung":"5 + 8","rest":4,"ziffer":5,"neu":585,"qneu":18,"slip":9},{"zahl":134,"d":9,"q":8,"rechnung":"1 + 3 + 4","rest":8,"ziffer":1,"neu":1341,"qneu":9,"slip":9},{"zahl":62,"d":9,"q":8,"rechnung":"6 + 2","rest":8,"ziffer":1,"neu":621,"qneu":9,"slip":9},{"zahl":71,"d":9,"q":8,"rechnung":"7 + 1","rest":8,"ziffer":1,"neu":711,"qneu":9,"slip":9},{"zahl":236,"d":9,"q":11,"rechnung":"2 + 3 + 6","rest":2,"ziffer":7,"neu":2367,"qneu":18,"slip":9}]},"seeds":[1,2,4,5,6,7,8,12,13,15,26,29,41,53],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/7" data-block-id="2d4f6788" data-block-type="single-choice" data-block-order="24">
+<div class="explainer-exercise explainer-question" id="durch-4">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-durch-4" data-id="durch-4" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia sagt: „2154 ist durch 4 teilbar, weil die letzte Ziffer 4 durch 4 teilbar ist.“ Stimmt das?</legend>
+<label class="question-option"><input type="radio" name="frage-durch-4" value="0"> <span>Nein, denn die letzten zwei Ziffern 54 sind nicht durch 4 teilbar.</span></label>
+<label class="question-option"><input type="radio" name="frage-durch-4" value="1"> <span>Ja, die letzte Ziffer genügt.</span></label>
+<label class="question-option"><input type="radio" name="frage-durch-4" value="2"> <span>Nein, denn die Zahl ist ungerade.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Nein, denn die letzten zwei Ziffern 54 sind nicht durch 4 teilbar.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>54 : 4 = 13 Rest 2. Bei 4 prüfst du die letzten zwei Ziffern.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Ja, die letzte Ziffer genügt.</strong></p><p>Für 4 genügt die letzte Ziffer nicht. Dann wäre auch 14 durch 4 teilbar, aber 14 : 4 hat den Rest 2.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nein, denn die Zahl ist ungerade.</strong></p><p>2154 endet auf 4 und ist gerade. Gerade Zahlen sind durch 2 teilbar, für 4 braucht es mehr.</p></li>
+</ul>
+<p class="question-explanation">Für die Teilbarkeit durch 4 zählen die letzten zwei Ziffern. 54 ist nicht durch 4 teilbar, also ist auch 2154 nicht durch 4 teilbar.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Nein, denn die letzten zwei Ziffern 54 sind nicht durch 4 teilbar.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>54 : 4 = 13 Rest 2. Bei 4 prüfst du die letzten zwei Ziffern.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Ja, die letzte Ziffer genügt.</strong></p><p>Für 4 genügt die letzte Ziffer nicht. Dann wäre auch 14 durch 4 teilbar, aber 14 : 4 hat den Rest 2.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nein, denn die Zahl ist ungerade.</strong></p><p>2154 endet auf 4 und ist gerade. Gerade Zahlen sind durch 2 teilbar, für 4 braucht es mehr.</p></li>
+</ul>
+<p class="question-explanation">Für die Teilbarkeit durch 4 zählen die letzten zwei Ziffern. 54 ist nicht durch 4 teilbar, also ist auch 2154 nicht durch 4 teilbar.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"durch-4","text":"Mia sagt: „2154 ist durch 4 teilbar, weil die letzte Ziffer 4 durch 4 teilbar ist.“ Stimmt das?","explanation":"Für die Teilbarkeit durch 4 zählen die letzten zwei Ziffern. 54 ist nicht durch 4 teilbar, also ist auch 2154 nicht durch 4 teilbar.","links":[],"type":"single-choice","options":[{"text":"Nein, denn die letzten zwei Ziffern 54 sind nicht durch 4 teilbar.","correct":true,"info":"54 : 4 = 13 Rest 2. Bei 4 prüfst du die letzten zwei Ziffern."},{"text":"Ja, die letzte Ziffer genügt.","correct":false,"info":"Für 4 genügt die letzte Ziffer nicht. Dann wäre auch 14 durch 4 teilbar, aber 14 : 4 hat den Rest 2."},{"text":"Nein, denn die Zahl ist ungerade.","correct":false,"info":"2154 endet auf 4 und ist gerade. Gerade Zahlen sind durch 2 teilbar, für 4 braucht es mehr."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Brüche und Dezimalzahlen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-brueche-dezimal","app":"Brüche und Dezimalzahlen","root":"../../","repository":"lernapps/mathe-brueche-dezimal","revision":"7209c01","page":{"title":"Teiler, Vielfache und Teilbarkeitsregeln","order":5}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../teilbarkeit/recap/">Zurück: Das brauchst du für dieses Kapitel</a><a rel="next" href="../../teilbarkeit/primfaktoren/">Weiter: Primzahlen und Primfaktoren</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

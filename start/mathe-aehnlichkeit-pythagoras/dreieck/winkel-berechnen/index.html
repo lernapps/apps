@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Winkel mit Sinus, Kosinus und Tangens berechnen – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Aus zwei Seiten eines rechtwinkligen Dreiecks mit den Umkehrfunktionen des Taschenrechners einen Winkel bestimmen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../dreieck/winkel-berechnen/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../dreieck/">Das rechtwinklige Dreieck</a></li><li aria-current="page">Winkel mit Sinus, Kosinus und Tangens berechnen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Winkel mit Sinus, Kosinus und Tangens berechnen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../dreieck/winkel-berechnen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧dreieck/winkel-berechnen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"winkel-berechnen","title":"Winkel mit Sinus, Kosinus und Tangens berechnen","exercises":[{"id":"winkel-aus-sinus","section":"einstieg","numbered":false},{"id":"welche-funktion","section":"uebung","numbered":false},{"id":"winkel-sinus","section":"uebung","numbered":true},{"id":"winkel-tangens","section":"uebung","numbered":true},{"id":"beide-winkel","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","weiter"]},"tutor":"dreieck/winkel-berechnen/tutor/","markdown":"dreieck/winkel-berechnen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Die Umkehrfunktionen</a></li><li><a href="#beispiel">Beispiele</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Wie es weitergeht</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="7064484d" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie steil etwas ist (eine Rampe, ein Dach), brauchst du den Winkel. Du berechnest einen Winkel, wenn zwei Seiten eines rechtwinkligen Dreiecks bekannt sind. Dafür nutzt du die Umkehrfunktionen auf dem Taschenrechner.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="349b0762" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Die Rampe der Klasse ist 4 m lang und überwindet 0,5 m Höhe. Wie stark steigt sie? Mira rechnet die Gegenkathete durch die Hypotenuse und bekommt 0,125. Das ist der Sinus des gesuchten Winkels, nicht der Winkel selbst.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="86d2566b" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="winkel-aus-sinus">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-aus-sinus" data-id="winkel-aus-sinus" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Es gilt sin α = 0,5. Wie groß ist α?</legend>
+<label class="question-option"><input type="radio" name="frage-winkel-aus-sinus" value="0"> <span>0,5°</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-aus-sinus" value="1"> <span>60°</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-aus-sinus" value="2"> <span>30°</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>0,5°</strong></p><p>Die Zahl 0,5 ist das Seitenverhältnis, nicht der Winkel. Den Winkel liefert die Umkehrfunktion sin⁻¹.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>60°</strong></p><p>Bei 60° ist der Sinus 0,866. 60° ist der andere spitze Winkel des 30°-Dreiecks, für ihn ist 0,5 der Kosinus.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>30°</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>In einem Dreieck mit 30° ist die Gegenkathete halb so lang wie die Hypotenuse. Der Rechner liefert mit sin⁻¹ (0,5) genau 30°.</p></li>
+</ul>
+<p class="question-explanation">Die Umkehrfunktion sin⁻¹ gibt den Winkel zurück, dessen Sinus bekannt ist.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>0,5°</strong></p><p>Die Zahl 0,5 ist das Seitenverhältnis, nicht der Winkel. Den Winkel liefert die Umkehrfunktion sin⁻¹.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>60°</strong></p><p>Bei 60° ist der Sinus 0,866. 60° ist der andere spitze Winkel des 30°-Dreiecks, für ihn ist 0,5 der Kosinus.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>30°</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>In einem Dreieck mit 30° ist die Gegenkathete halb so lang wie die Hypotenuse. Der Rechner liefert mit sin⁻¹ (0,5) genau 30°.</p></li>
+</ul>
+<p class="question-explanation">Die Umkehrfunktion sin⁻¹ gibt den Winkel zurück, dessen Sinus bekannt ist.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-aus-sinus","text":"Es gilt sin α = 0,5. Wie groß ist α?","explanation":"Die Umkehrfunktion sin⁻¹ gibt den Winkel zurück, dessen Sinus bekannt ist.","links":[],"type":"single-choice","options":[{"text":"0,5°","correct":false,"info":"Die Zahl 0,5 ist das Seitenverhältnis, nicht der Winkel. Den Winkel liefert die Umkehrfunktion sin⁻¹."},{"text":"60°","correct":false,"info":"Bei 60° ist der Sinus 0,866. 60° ist der andere spitze Winkel des 30°-Dreiecks, für ihn ist 0,5 der Kosinus."},{"text":"30°","correct":true,"info":"In einem Dreieck mit 30° ist die Gegenkathete halb so lang wie die Hypotenuse. Der Rechner liefert mit sin⁻¹ (0,5) genau 30°."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Die Umkehrfunktionen</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="de1fb44e" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn zwei Seiten bekannt sind und der Winkel gesucht wird, kehrst du Sinus, Kosinus oder Tangens um. Der Sinus macht aus einem Winkel ein Verhältnis. Die Umkehrfunktion macht aus dem Verhältnis wieder den Winkel. Auf dem Taschenrechner heißt sie sin⁻¹, cos⁻¹ und tan⁻¹ (oft über den Tasten sin, cos, tan, erreichbar mit SHIFT oder 2nd). Für spitze Winkel gilt: Ist <math><mrow><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mi>α</mi><mo>=</mo><mi>x</mi></mrow></math>, dann ist <math><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="a5fa06a9" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mtext>Gegenkathete</mtext><mtext>Hypotenuse</mtext></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="173ef9ce" data-block-type="formula" data-block-order="6">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><msup><mi>cos</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mtext>Ankathete</mtext><mtext>Hypotenuse</mtext></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="0a7c2892" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mtext>Gegenkathete</mtext><mtext>Ankathete</mtext></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="505d5513" data-block-type="note" data-block-order="8">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/5/1" data-block-id="2f71c34c" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>sin⁻¹ ist keine Division. Es bedeutet nicht 1 durch sin, sondern die Umkehrfunktion. Wähle wie bei den Seiten das Verhältnis, in dem die beiden bekannten Seiten vorkommen.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiele</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="d21e948e" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn du sehen willst, wie die Umkehrfunktion einen Winkel liefert, helfen zwei Fälle: die Neigung einer Rampe und beide Winkel eines Dreiecks.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="2504e486" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Neigung der Rampe</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="c121db6a" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Die Rampe ist 4 m lang und überwindet 0,5 m. Bekannt sind Gegenkathete und Hypotenuse, also Sinus.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="812778f3" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>0,5</mn><mn>4</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="0e9aeb8f" data-block-type="formula" data-block-order="14">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>0,125</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>≈</mo><msup><mn>7,2</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="085438e3" data-block-type="example" data-block-order="15">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Beide Winkel eines Dreiecks</h3>
+<div class="explainer-block" data-block="beispiel/3/1" data-block-id="0f78e698" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Wenn du beide spitzen Winkel brauchst, berechnest du einen und ergänzt den anderen zu 90°. Ein rechtwinkliges Dreieck hat die Katheten 5 cm und 12 cm. Der Winkel, der der 12 gegenüberliegt, ist <math><mrow><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>12</mn><mn>5</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>67,4</mn><mo>∘</mo></msup></mrow></math>. Der andere spitze Winkel ist <math><mrow><msup><mn>90</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>67,4</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>22,6</mn><mo>∘</mo></msup></mrow></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="f53d4ce6" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="welche-funktion">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welche-funktion" data-id="welche-funktion" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Gegeben sind die Ankathete 6 cm und die Hypotenuse 10 cm. Wie berechnest du α?</legend>
+<label class="question-option"><input type="radio" name="frage-welche-funktion" value="0"> <span>α = cos⁻¹(6 : 10)</span></label>
+<label class="question-option"><input type="radio" name="frage-welche-funktion" value="1"> <span>α = sin⁻¹(6 : 10)</span></label>
+<label class="question-option"><input type="radio" name="frage-welche-funktion" value="2"> <span>α = 10 : 6 · cos</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>α = cos⁻¹(6 : 10)</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ankathete und Hypotenuse gehören zum Kosinus. Das Verhältnis 6 : 10 ist 0,6, und cos⁻¹(0,6) ist etwa 53,1°.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>α = sin⁻¹(6 : 10)</strong></p><p>Der Sinus gehört zur Gegenkathete. Hier ist die Ankathete gegeben, also brauchst du den Kosinus.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>α = 10 : 6 · cos</strong></p><p>So kommt kein Winkel heraus. Du bildest das Verhältnis der Seiten und wendest dann die Umkehrfunktion an.</p></li>
+</ul>
+<p class="question-explanation">Zu Ankathete und Hypotenuse gehört der Kosinus, für den Winkel die Umkehrfunktion cos⁻¹.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>α = cos⁻¹(6 : 10)</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ankathete und Hypotenuse gehören zum Kosinus. Das Verhältnis 6 : 10 ist 0,6, und cos⁻¹(0,6) ist etwa 53,1°.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>α = sin⁻¹(6 : 10)</strong></p><p>Der Sinus gehört zur Gegenkathete. Hier ist die Ankathete gegeben, also brauchst du den Kosinus.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>α = 10 : 6 · cos</strong></p><p>So kommt kein Winkel heraus. Du bildest das Verhältnis der Seiten und wendest dann die Umkehrfunktion an.</p></li>
+</ul>
+<p class="question-explanation">Zu Ankathete und Hypotenuse gehört der Kosinus, für den Winkel die Umkehrfunktion cos⁻¹.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welche-funktion","text":"Gegeben sind die Ankathete 6 cm und die Hypotenuse 10 cm. Wie berechnest du α?","explanation":"Zu Ankathete und Hypotenuse gehört der Kosinus, für den Winkel die Umkehrfunktion cos⁻¹.","links":[],"type":"single-choice","options":[{"text":"α = cos⁻¹(6 : 10)","correct":true,"info":"Ankathete und Hypotenuse gehören zum Kosinus. Das Verhältnis 6 : 10 ist 0,6, und cos⁻¹(0,6) ist etwa 53,1°."},{"text":"α = sin⁻¹(6 : 10)","correct":false,"info":"Der Sinus gehört zur Gegenkathete. Hier ist die Ankathete gegeben, also brauchst du den Kosinus."},{"text":"α = 10 : 6 · cos","correct":false,"info":"So kommt kein Winkel heraus. Du bildest das Verhältnis der Seiten und wendest dann die Umkehrfunktion an."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="c24b89f2" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="winkel-sinus">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 8 cm und die Hypotenuse 12 cm lang. Wie groß ist α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gegenkathete durch Hypotenuse ist sin α. Drücke dann sin⁻¹.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>8</mn><mn>12</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>41,8</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 41,8 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 4 cm und die Hypotenuse 10 cm lang. Wie groß ist α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gegenkathete durch Hypotenuse ist sin α. Drücke dann sin⁻¹.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>4</mn><mn>10</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>23,6</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 23,6 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem rechtwinkligen Dreieck ist die Gegenkathete von α 7 cm und die Hypotenuse 10 cm lang. Wie groß ist α? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Gegenkathete durch Hypotenuse ist sin α. Drücke dann sin⁻¹.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>sin</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>7</mn><mn>10</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>44,4</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 44,4 (erlaubte Abweichung: 0,05)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-sinus","given":{"g":{"int":[4,8]},"h":{"int":[9,12]}},"task":{"text":"In einem rechtwinkligen Dreieck ist die Gegenkathete von α {{g}} cm und die Hypotenuse {{h}} cm lang. Wie groß ist α? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(asin(g / h), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05}}},"mistakes":[{"value":"round(acos(g / h), 1)","message":"Du hast cos⁻¹ benutzt. Gegenkathete und Hypotenuse gehören zum Sinus, also sin⁻¹. Cos⁻¹ liefert hier den anderen spitzen Winkel."},{"value":"round(atan(g / h), 1)","message":"Du hast tan⁻¹ benutzt. Der Tangens teilt Gegenkathete durch Ankathete, hier ist die Hypotenuse gegeben."},{"value":"round(g / h, 1)","message":"Das ist nur das Verhältnis, noch nicht der Winkel. Wende sin⁻¹ darauf an."}],"hint":"Gegenkathete durch Hypotenuse ist sin α. Drücke dann sin⁻¹.","steps":["$\\alpha = \\sin^{-1}\\left(\\frac{{{g}}}{{{h}}}\\right) \\approx {{answer}}^\\circ$"]},"templates":{"de":{"task":"In einem rechtwinkligen Dreieck ist die Gegenkathete von α ⟦g⟧ cm und die Hypotenuse ⟦h⟧ cm lang. Wie groß ist α? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmi>sin\u003c/mi>\u003cmrow>\u003cmo form=\"prefix\" stretchy=\"false\" lspace=\"0em\" rspace=\"0em\">−\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>⁡\u003c/mo>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"true\">(\u003c/mo>\u003cmfrac>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mfrac>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"true\">)\u003c/mo>\u003c/mrow>\u003cmo>≈\u003c/mo>\u003cmsup>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>"],"hint":"Gegenkathete durch Hypotenuse ist sin α. Drücke dann sin⁻¹.","messages":["Du hast cos⁻¹ benutzt. Gegenkathete und Hypotenuse gehören zum Sinus, also sin⁻¹. Cos⁻¹ liefert hier den anderen spitzen Winkel.","Du hast tan⁻¹ benutzt. Der Tangens teilt Gegenkathete durch Ankathete, hier ist die Hypotenuse gegeben.","Das ist nur das Verhältnis, noch nicht der Winkel. Wende sin⁻¹ darauf an."]}},"data":{},"seeds":[1,2,4,5,6,8,10,13,14,15,16,17,19,23,24,27,46,54,57,72],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="ac79c445" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="winkel-tangens">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Pultdach steigt auf 6 m waagerechter Länge um 3 m an. Welchen Winkel α bildet das Dach mit der Waagerechten? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Anstieg ist die Gegenkathete, die waagerechte Länge die Ankathete: Tangens.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>26,6</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 26,6 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Pultdach steigt auf 8 m waagerechter Länge um 4 m an. Welchen Winkel α bildet das Dach mit der Waagerechten? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Anstieg ist die Gegenkathete, die waagerechte Länge die Ankathete: Tangens.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>4</mn><mn>8</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>26,6</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 26,6 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Pultdach steigt auf 7 m waagerechter Länge um 5 m an. Welchen Winkel α bildet das Dach mit der Waagerechten? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Anstieg ist die Gegenkathete, die waagerechte Länge die Ankathete: Tangens.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>5</mn><mn>7</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>35,5</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 35,5 (erlaubte Abweichung: 0,05)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-tangens","given":{"g":{"int":[3,6]},"k":{"int":[5,10]}},"where":["g \u003c k"],"task":{"text":"Ein Pultdach steigt auf {{k}} m waagerechter Länge um {{g}} m an. Welchen Winkel α bildet das Dach mit der Waagerechten? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(atan(g / k), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05}}},"mistakes":[{"value":"round(atan(k / g), 1)","message":"Du hast den Bruch umgedreht. Der Tangens ist Höhe durch waagerechte Länge, und das ist der Winkel zur Waagerechten."},{"value":"round(asin(g / k), 1)","message":"Du hast sin⁻¹ benutzt. Die waagerechte Länge ist nicht die Hypotenuse. Anstieg und waagerechte Länge gehören zum Tangens."}],"hint":"Der Anstieg ist die Gegenkathete, die waagerechte Länge die Ankathete: Tangens.","steps":["$\\alpha = \\tan^{-1}\\left(\\frac{{{g}}}{{{k}}}\\right) \\approx {{answer}}^\\circ$"]},"templates":{"de":{"task":"Ein Pultdach steigt auf ⟦k⟧ m waagerechter Länge um ⟦g⟧ m an. Welchen Winkel α bildet das Dach mit der Waagerechten? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmi>tan\u003c/mi>\u003cmrow>\u003cmo form=\"prefix\" stretchy=\"false\" lspace=\"0em\" rspace=\"0em\">−\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>⁡\u003c/mo>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"true\">(\u003c/mo>\u003cmfrac>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmtext>⟦k⟧\u003c/mtext>\u003c/mfrac>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"true\">)\u003c/mo>\u003c/mrow>\u003cmo>≈\u003c/mo>\u003cmsup>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>"],"hint":"Der Anstieg ist die Gegenkathete, die waagerechte Länge die Ankathete: Tangens.","messages":["Du hast den Bruch umgedreht. Der Tangens ist Höhe durch waagerechte Länge, und das ist der Winkel zur Waagerechten.","Du hast sin⁻¹ benutzt. Die waagerechte Länge ist nicht die Hypotenuse. Anstieg und waagerechte Länge gehören zum Tangens."]}},"data":{},"seeds":[1,2,4,6,8,9,10,12,13,14,16,18,19,21,29,32,38,51,53,66,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="3c914ead" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="beide-winkel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein rechtwinkliges Dreieck hat die Katheten 8 cm und 10 cm. Wie groß ist der größere der beiden spitzen Winkel? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der größere Winkel liegt der längeren Kathete gegenüber. Welches Verhältnis passt zu den Katheten?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>10</mn><mn>8</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>51,3</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 51,3 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein rechtwinkliges Dreieck hat die Katheten 3 cm und 7 cm. Wie groß ist der größere der beiden spitzen Winkel? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der größere Winkel liegt der längeren Kathete gegenüber. Welches Verhältnis passt zu den Katheten?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>7</mn><mn>3</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>66,8</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 66,8 (erlaubte Abweichung: 0,05)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein rechtwinkliges Dreieck hat die Katheten 4 cm und 5 cm. Wie groß ist der größere der beiden spitzen Winkel? Runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der größere Winkel liegt der längeren Kathete gegenüber. Welches Verhältnis passt zu den Katheten?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>α</mi><mo>=</mo><msup><mi>tan</mi><mrow><mo form="prefix" stretchy="false" lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>5</mn><mn>4</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msup><mn>51,3</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 51,3 (erlaubte Abweichung: 0,05)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"beide-winkel","given":{"a":{"int":[3,12]},"b":{"int":[3,12]}},"where":["a \u003c b","atan(a / b) != 45"],"task":{"text":"Ein rechtwinkliges Dreieck hat die Katheten {{a}} cm und {{b}} cm. Wie groß ist der größere der beiden spitzen Winkel? Runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(atan(b / a), 1)","compare":{"number":{"format":"decimal","decimals":1,"tolerance":0.05}}},"mistakes":[{"value":"round(atan(a / b), 1)","message":"Das ist der kleinere Winkel, er liegt der kürzeren Kathete gegenüber. Der größere liegt der längeren Kathete gegenüber."},{"value":"round(90 - atan(b / a), 1)","message":"Das ist der kleinere Winkel. Du hast ihn aus 90° minus dem größeren berechnet, aber die Frage war nach dem größeren."}],"hint":"Der größere Winkel liegt der längeren Kathete gegenüber. Welches Verhältnis passt zu den Katheten?","steps":["$\\alpha = \\tan^{-1}\\left(\\frac{{{b}}}{{{a}}}\\right) \\approx {{answer}}^\\circ$"]},"templates":{"de":{"task":"Ein rechtwinkliges Dreieck hat die Katheten ⟦a⟧ cm und ⟦b⟧ cm. Wie groß ist der größere der beiden spitzen Winkel? Runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>α\u003c/mi>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmi>tan\u003c/mi>\u003cmrow>\u003cmo form=\"prefix\" stretchy=\"false\" lspace=\"0em\" rspace=\"0em\">−\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/msup>\u003cmo>⁡\u003c/mo>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"true\">(\u003c/mo>\u003cmfrac>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmtext>⟦a⟧\u003c/mtext>\u003c/mfrac>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"true\">)\u003c/mo>\u003c/mrow>\u003cmo>≈\u003c/mo>\u003cmsup>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>"],"hint":"Der größere Winkel liegt der längeren Kathete gegenüber. Welches Verhältnis passt zu den Katheten?","messages":["Das ist der kleinere Winkel, er liegt der kürzeren Kathete gegenüber. Der größere liegt der längeren Kathete gegenüber.","Das ist der kleinere Winkel. Du hast ihn aus 90° minus dem größeren berechnet, aber die Frage war nach dem größeren."]}},"data":{},"seeds":[1,2,3,5,6,7,9,10,11,13,14,15,16,17,18,19,20,21,25,26,28,29,30,31,34,35,36,41,46,47,49,50,53,56,70,76,79,90,92,95,100,111,116,174,181],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Wie es weitergeht</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="6f2f3024" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Das kannst du jetzt: Aus zwei Seiten eines rechtwinkligen Dreiecks einen Winkel berechnen. Auf der nächsten Seite arbeitest du in Dreiecken ohne rechten Winkel.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Winkel mit Sinus, Kosinus und Tangens berechnen","order":10}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../dreieck/seiten-berechnen/">Zurück: Seiten mit Sinus, Kosinus und Tangens berechnen</a><a rel="next" href="../../dreieck/sinussatz/">Weiter: Der Sinussatz</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

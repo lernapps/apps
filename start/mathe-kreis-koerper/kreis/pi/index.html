@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Die Zahl π – Kreis und Körper berechnen</title>
+    <meta name="description" content="Der Umfang eines Kreises ist immer gleich oft so lang wie sein Durchmesser. Du schließt diese Zahl mit Vielecken von innen und außen ein." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../kreis/pi/" />
+    <script type="module" crossorigin src="../../assets/islands-C8L28Da2.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../kreis/">Kreis, π und Bogenmaß</a></li><li aria-current="page">Die Zahl π</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Die Zahl π</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../kreis/pi/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧kreis/pi/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"pi","title":"Die Zahl π","exercises":[{"id":"teller-verhaeltnis","section":"einstieg","numbered":false},{"id":"obere-grenze-96","section":"herleitung","numbered":false},{"id":"was-ist-pi","section":"uebung","numbered":false},{"id":"verhaeltnis-messen","section":"uebung","numbered":true},{"id":"sechseck-umfang","section":"uebung","numbered":true},{"id":"pi-genau","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"kreis/pi/tutor/","markdown":"kreis/pi/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wie oft passt der Durchmesser in den Umfang?</a></li><li><a href="#herleitung">Den Kreis von zwei Seiten einschließen</a></li><li><a href="#beispiel">Das Sechseck von Hand</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wie oft passt der Durchmesser in den Umfang?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="9f3ebffe" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie lang der Rand eines Kreises ist, musst du ihn nicht abrollen und messen. Zwischen Rand und Durchmesser gibt es eine feste Beziehung. Du findest sie, indem du einige runde Dinge misst.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="b72da315" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Auf dem Schulhof misst du vier runde Dinge. Den Umfang U legst du mit einer Schnur und misst die Schnur. Den Durchmesser d misst du quer durch den Kreis. Wie oft der Durchmesser in den Umfang passt, rechnest du mit einer Division: U : d.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="fe5261dd" data-block-type="table" data-block-order="3">
+<div class="block-table" role="region" aria-label="Vier Messungen (d: Durchmesser, U: Umfang)" tabindex="0"><table><caption>Vier Messungen (d: Durchmesser, U: Umfang)</caption><thead><tr><th scope="col">Gegenstand</th><th scope="col">d</th><th scope="col">U</th></tr></thead><tbody><tr><td>Dose</td><td>7,5 cm</td><td>23,6 cm</td></tr><tr><td>Teller</td><td>26 cm</td><td>81,7 cm</td></tr><tr><td>Brunnenrand</td><td>1,20 m</td><td>3,77 m</td></tr><tr><td>Fahrradreifen</td><td>70 cm</td><td>219,9 cm</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="einstieg/4" data-block-id="04cae780" data-block-type="number" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="teller-verhaeltnis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-teller-verhaeltnis" data-id="teller-verhaeltnis" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie oft passt beim Teller der Durchmesser in den Umfang? Rechne U : d und runde auf zwei Stellen nach dem Komma.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-teller-verhaeltnis">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3,14 (erlaubte Abweichung: 0,005)</p>
+<p class="question-explanation">81,7 : 26 = 3,142, gerundet 3,14. Der Umfang ist also gut dreimal so lang wie der Durchmesser. Das gilt auch für die Dose (23,6 : 7,5 ≈ 3,15) und die anderen Messungen. Die Werte weichen ein wenig voneinander ab, weil man mit Schnur und Zollstock nie ganz genau misst.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3,14 (erlaubte Abweichung: 0,005)</p>
+<p class="question-explanation">81,7 : 26 = 3,142, gerundet 3,14. Der Umfang ist also gut dreimal so lang wie der Durchmesser. Das gilt auch für die Dose (23,6 : 7,5 ≈ 3,15) und die anderen Messungen. Die Werte weichen ein wenig voneinander ab, weil man mit Schnur und Zollstock nie ganz genau misst.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"teller-verhaeltnis","text":"Wie oft passt beim Teller der Durchmesser in den Umfang? Rechne U : d und runde auf zwei Stellen nach dem Komma.","explanation":"81,7 : 26 = 3,142, gerundet 3,14. Der Umfang ist also gut dreimal so lang wie der Durchmesser. Das gilt auch für die Dose (23,6 : 7,5 ≈ 3,15) und die anderen Messungen. Die Werte weichen ein wenig voneinander ab, weil man mit Schnur und Zollstock nie ganz genau misst.","links":[],"type":"number","answer":3.14,"tolerance":0.005},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Den Kreis von zwei Seiten einschließen</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="565d22a8" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Bei jedem Gegenstand kommt fast dieselbe Zahl heraus. Das ist kein Zufall. Wenn du diese Zahl genauer wissen willst, als Schnur und Zollstock sie zeigen, <strong>schließt</strong> du den Kreis <strong>ein</strong>: Du zeichnest ein Vieleck innen und eines außen, beide mit gleich langen Seiten. Eine gerade Strecke ist der kürzeste Weg zwischen zwei Punkten. Darum ist der Kreisumfang länger als der Umfang des inneren Vielecks. Der Kreis liegt ganz im äußeren Vieleck, und jedes Stück des Kreises ist kürzer als der Weg außen herum. Darum ist der Kreisumfang kürzer als der Umfang des äußeren Vielecks.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="7463483f" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-kreiszahl"><a href="../../glossar/#kreiszahl">Kreiszahl π</a></dfn></dt><dd><p>π (sprich „Pi“) ist das Verhältnis von Umfang und Durchmesser eines Kreises: <math><mrow><mi>π</mi><mo>=</mo><mi>U</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>d</mi></mrow></math>. Es ist für jeden Kreis gleich.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="485b8272" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Der <strong>Radius</strong> r ist der halbe Durchmesser. Im Bild hat der Kreis den Radius 1, also den Durchmesser 2. Weil π = U : d ist, teilst du jeden Vielecksumfang durch 2 und bekommst eine Grenze für π. Der Kreis ist schwarz, das innere Vieleck blau und durchgezogen, das äußere rot und gestrichelt. Mit dem Regler änderst du die Zahl der Ecken. Die Lupe zeigt den kleinen Kasten oben am Kreis vergrößert. Ab etwa 48 Ecken siehst du die Vielecke kaum noch vom Kreis. Der Satz unter dem Bild zeigt den Unterschied weiter.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="4ff90263" data-block-type="vue-component" data-block-order="8">
+<div class="explainer-component" id="vieleck" data-component="Vieleck">
+<div class="explainer-island" hidden><div class="vieleck" data-v-f175f388><label class="vieleck-regler" data-v-f175f388><span data-v-f175f388>Anzahl der Ecken: <strong data-v-f175f388>6</strong></span><input value="0" type="range" min="0" max="4" step="1" aria-valuetext="6" data-v-f175f388></label><div class="vieleck-bilder" data-v-f175f388><svg viewBox="0 0 160 160" role="img" aria-label="Ein Kreis mit einem Vieleck mit 6 Ecken innen (durchgezogene Linie) und einem außen (gestrichelte Linie)." class="vieleck-gross" data-v-f175f388><circle cx="80" cy="80" r="60" fill="none" stroke="var(--page-text)" stroke-width="1.5" data-v-f175f388></circle><polygon points="114.64,20.00 149.28,80.00 114.64,140.00 45.36,140.00 10.72,80.00 45.36,20.00" fill="none" stroke="var(--page-wrong)" stroke-width="1.5" stroke-dasharray="5 3" data-v-f175f388></polygon><polygon points="80.00,20.00 131.96,50.00 131.96,110.00 80.00,140.00 28.04,110.00 28.04,50.00" fill="none" stroke="var(--page-accent)" stroke-width="1.5" data-v-f175f388></polygon><rect x="53" y="12.8" width="54" height="24" fill="none" stroke="var(--page-muted)" stroke-width="1" data-v-f175f388></rect></svg><svg viewBox="-45 -112 90 40" role="img" aria-label="Lupe: der oberste Teil des Kreises, vergrößert" class="vieleck-lupe" data-v-f175f388><title data-v-f175f388>Lupe: der oberste Teil des Kreises, vergrößert</title><circle cx="0" cy="0" r="100" fill="none" stroke="var(--page-text)" stroke-width="1" data-v-f175f388></circle><polygon points="57.74,-100.00 115.47,-0.00 57.74,100.00 -57.74,100.00 -115.47,0.00 -57.74,-100.00" fill="none" stroke="var(--page-wrong)" stroke-width="1" stroke-dasharray="5 3" data-v-f175f388></polygon><polygon points="0.00,-100.00 86.60,-50.00 86.60,50.00 0.00,100.00 -86.60,50.00 -86.60,-50.00" fill="none" stroke="var(--page-accent)" stroke-width="1" data-v-f175f388></polygon></svg></div><p class="vieleck-ergebnis" aria-live="polite" data-v-f175f388>Mit 6 Ecken liegt π zwischen 3,0000 und 3,4641.</p><!----></div></div>
+<div class="explainer-nojs"><p>Ein Kreis mit Radius 1 und dem Durchmesser 2. Innen und außen liegt je ein regelmäßiges Vieleck. Der Umfang jedes Vielecks, geteilt durch 2, ist eine Grenze für π:</p>
+<ul>
+<li>6 Ecken: π liegt zwischen 3,0000 und 3,4641.</li>
+<li>12 Ecken: π liegt zwischen 3,1058 und 3,2154.</li>
+<li>24 Ecken: π liegt zwischen 3,1326 und 3,1597.</li>
+<li>48 Ecken: π liegt zwischen 3,1394 und 3,1461.</li>
+<li>96 Ecken: π liegt zwischen 3,1410 und 3,1427.</li>
+</ul>
+<p>Mit jeder Verdopplung der Ecken liegen die beiden Vielecke näher am Kreis.</p></div>
+<script type="application/json" class="explainer-component-props">{"label":"Anzahl der Ecken","ergebnis":"Mit {n} Ecken liegt π zwischen {innen} und {aussen}.","bild":"Ein Kreis mit einem Vieleck mit {n} Ecken innen (durchgezogene Linie) und einem außen (gestrichelte Linie).","lupe":"Lupe: der oberste Teil des Kreises, vergrößert","fein":"Ab 48 Ecken siehst du im Bild kaum noch einen Unterschied zwischen Vieleck und Kreis. Die beiden Zahlen unterscheiden sich weiter, und genau das engt π ein."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="13f0a13d" data-block-type="number" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="obere-grenze-96">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-obere-grenze-96" data-id="obere-grenze-96" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Stelle 96 Ecken ein. Wie groß ist die obere Grenze für π? Runde auf drei Stellen nach dem Komma.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-obere-grenze-96">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3,143 (erlaubte Abweichung: 0,0005)</p>
+<p class="question-explanation">Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427, die obere Grenze ist also 3,143 (gerundet). Auf zwei Stellen nach dem Komma ist π ≈ 3,14. Mehr Ecken engen π weiter ein. Das Vieleck wird nie ganz zum Kreis, aber der Abstand wird immer kleiner.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3,143 (erlaubte Abweichung: 0,0005)</p>
+<p class="question-explanation">Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427, die obere Grenze ist also 3,143 (gerundet). Auf zwei Stellen nach dem Komma ist π ≈ 3,14. Mehr Ecken engen π weiter ein. Das Vieleck wird nie ganz zum Kreis, aber der Abstand wird immer kleiner.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"obere-grenze-96","text":"Stelle 96 Ecken ein. Wie groß ist die obere Grenze für π? Runde auf drei Stellen nach dem Komma.","explanation":"Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427, die obere Grenze ist also 3,143 (gerundet). Auf zwei Stellen nach dem Komma ist π ≈ 3,14. Mehr Ecken engen π weiter ein. Das Vieleck wird nie ganz zum Kreis, aber der Abstand wird immer kleiner.","links":[],"type":"number","answer":3.143,"tolerance":0.0005},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Das Sechseck von Hand</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="7a78d5ba" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn du sehen willst, wie so eine Grenze entsteht, rechne sie für das Sechseck von Hand.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="bffb393f" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Die untere Grenze 3</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="2fdc097d" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Ein Sechseck innen im Kreis mit dem Radius r besteht aus sechs Dreiecken mit dem Mittelpunkt als Spitze. Der Winkel dort ist 360° : 6 = 60°, und zwei Seiten jedes Dreiecks sind Radien, also gleich lang. Die Dreiecke sind gleichschenklig, darum sind die beiden anderen Winkel gleich groß. Zusammen sind sie 180° − 60° = 120°, also je 60°. Alle drei Winkel sind 60°, die Dreiecke sind gleichseitig. Jede Sechseckseite ist so lang wie der Radius. Der Umfang des Sechsecks ist 6 · r, der Durchmesser des Kreises 2 · r.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="4846cd5a" data-block-type="figure" data-block-order="13">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/sechseck-dreiecke.svg" alt="Ein Kreis mit einem Sechseck innen. Sechs gestrichelte Strecken vom Mittelpunkt zu den Ecken zerlegen es in sechs Dreiecke. Eine Strecke ist mit r beschriftet, der Winkel in der Mitte mit 60 Grad." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Sechs gleichseitige Dreiecke mit der Seitenlänge r bilden das Sechseck.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="73220a4d" data-block-type="formula" data-block-order="14">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mrow><mn>6</mn><mo>⋅</mo><mi>r</mi></mrow><mrow><mn>2</mn><mo>⋅</mo><mi>r</mi></mrow></mfrac><mo>=</mo><mn>3</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/4" data-block-id="5e93f39b" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Der Kreisumfang ist länger als der Sechsecksumfang. Also ist U : d größer als 3, und das gilt für jeden Radius r. Die obere Grenze 3,4641 für 6 Ecken zeigt dir der Regler.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="9f6e9c37" data-block-type="single-choice" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="was-ist-pi">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-was-ist-pi" data-id="was-ist-pi" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Aussage über π stimmt für jeden Kreis?</legend>
+<label class="question-option"><input type="radio" name="frage-was-ist-pi" value="0"> <span>Umfang geteilt durch Durchmesser ist π.</span></label>
+<label class="question-option"><input type="radio" name="frage-was-ist-pi" value="1"> <span>Umfang geteilt durch Radius ist π.</span></label>
+<label class="question-option"><input type="radio" name="frage-was-ist-pi" value="2"> <span>Umfang minus Durchmesser ist π.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Umfang geteilt durch Durchmesser ist π.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ist die Erklärung von π. Es ist für große und kleine Kreise gleich.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Umfang geteilt durch Radius ist π.</strong></p><p>Der Radius ist halb so lang wie der Durchmesser. Darum ergibt U : r etwa 6,28, also 2 · π.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Umfang minus Durchmesser ist π.</strong></p><p>Bei der Dose ergibt 23,6 − 7,5 etwa 16,1. Bei einem größeren Kreis kommt etwas anderes heraus. Nur das Teilen gibt immer dieselbe Zahl.</p></li>
+</ul>
+<p class="question-explanation">π ist ein Verhältnis, also eine Division, und hängt nicht von der Größe des Kreises ab.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Umfang geteilt durch Durchmesser ist π.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ist die Erklärung von π. Es ist für große und kleine Kreise gleich.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Umfang geteilt durch Radius ist π.</strong></p><p>Der Radius ist halb so lang wie der Durchmesser. Darum ergibt U : r etwa 6,28, also 2 · π.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Umfang minus Durchmesser ist π.</strong></p><p>Bei der Dose ergibt 23,6 − 7,5 etwa 16,1. Bei einem größeren Kreis kommt etwas anderes heraus. Nur das Teilen gibt immer dieselbe Zahl.</p></li>
+</ul>
+<p class="question-explanation">π ist ein Verhältnis, also eine Division, und hängt nicht von der Größe des Kreises ab.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"was-ist-pi","text":"Welche Aussage über π stimmt für jeden Kreis?","explanation":"π ist ein Verhältnis, also eine Division, und hängt nicht von der Größe des Kreises ab.","links":[],"type":"single-choice","options":[{"text":"Umfang geteilt durch Durchmesser ist π.","correct":true,"info":"Das ist die Erklärung von π. Es ist für große und kleine Kreise gleich."},{"text":"Umfang geteilt durch Radius ist π.","correct":false,"info":"Der Radius ist halb so lang wie der Durchmesser. Darum ergibt U : r etwa 6,28, also 2 · π."},{"text":"Umfang minus Durchmesser ist π.","correct":false,"info":"Bei der Dose ergibt 23,6 − 7,5 etwa 16,1. Bei einem größeren Kreis kommt etwas anderes heraus. Nur das Teilen gibt immer dieselbe Zahl."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="338c378f" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="verhaeltnis-messen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Dose hat den Durchmesser 10 cm. Die Schnur um die Dose ist 31 cm lang. Berechne U : d und runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile den Umfang U durch den Durchmesser d: 31 : 10.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>d</mi><mo>=</mo><mn>31</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>10</mn><mo>=</mo><mn>3,1</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 3,1</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Dose hat den Durchmesser 21 cm. Die Schnur um die Dose ist 66 cm lang. Berechne U : d und runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile den Umfang U durch den Durchmesser d: 66 : 21.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>d</mi><mo>=</mo><mn>66</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>21</mn><mo>=</mo><mn>3,14</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 3,14</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Dose hat den Durchmesser 13 cm. Die Schnur um die Dose ist 41 cm lang. Berechne U : d und runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile den Umfang U durch den Durchmesser d: 41 : 13.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo lspace="0.2222em" rspace="0.2222em">:</mo><mi>d</mi><mo>=</mo><mn>41</mn><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>13</mn><mo>=</mo><mn>3,15</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 3,15</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"verhaeltnis-messen","given":{"m":{"pick":1,"from":{"data":"messungen"}}},"task":{"text":"Eine Dose hat den Durchmesser {{m.durchmesser}} cm. Die Schnur um die Dose ist {{m.umfang}} cm lang. Berechne U : d und runde auf zwei Stellen nach dem Komma."},"answer":{"value":"round(m.umfang / m.durchmesser, 2)","compare":{"number":{"decimals":2,"tolerance":0}}},"mistakes":[{"value":"round(m.durchmesser / m.umfang, 2)","message":"Du hast d : U gerechnet. π ist der Umfang geteilt durch den Durchmesser, also U : d."},{"value":"round(m.umfang / (m.durchmesser / 2), 2)","message":"Du hast durch den Radius geteilt. Das ergibt 2 · π. Teile durch den Durchmesser d."}],"hint":"Teile den Umfang U durch den Durchmesser d: {{m.umfang}} : {{m.durchmesser}}.","steps":["$U : d = {{m.umfang}} : {{m.durchmesser}} = {{answer}}$"]},"templates":{"de":{"task":"Eine Dose hat den Durchmesser ⟦m.durchmesser⟧ cm. Die Schnur um die Dose ist ⟦m.umfang⟧ cm lang. Berechne U : d und runde auf zwei Stellen nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>U\u003c/mi>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmi>d\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦m.umfang⟧\u003c/mtext>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmtext>⟦m.durchmesser⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Teile den Umfang U durch den Durchmesser d: ⟦m.umfang⟧ : ⟦m.durchmesser⟧.","messages":["Du hast d : U gerechnet. π ist der Umfang geteilt durch den Durchmesser, also U : d.","Du hast durch den Radius geteilt. Das ergibt 2 · π. Teile durch den Durchmesser d."]}},"data":{"messungen":[{"durchmesser":7,"umfang":22},{"durchmesser":10,"umfang":31},{"durchmesser":14,"umfang":44},{"durchmesser":21,"umfang":66},{"durchmesser":22,"umfang":69},{"durchmesser":28,"umfang":88},{"durchmesser":35,"umfang":110},{"durchmesser":40,"umfang":126},{"durchmesser":13,"umfang":41},{"durchmesser":17,"umfang":53},{"durchmesser":25,"umfang":79},{"durchmesser":30,"umfang":94}]},"seeds":[1,2,3,4,5,8,13,14,19,21,22,41],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="4f97a9e2" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="sechseck-umfang">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einen Kreis mit dem Radius r = 2 cm ist ein regelmäßiges Sechseck gezeichnet. Alle sechs Ecken liegen auf dem Kreis, und jede Seite ist so lang wie der Radius. Wie lang ist der Umfang des Sechsecks in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Umfang ist die Summe aller sechs Seiten. Jede ist 2 cm lang.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mn>6</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>12</mn></mrow></math></li><li>Der Umfang des Sechsecks ist 12 cm.</li></ol><p><strong>Richtige Antwort:</strong> 12 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einen Kreis mit dem Radius r = 16 cm ist ein regelmäßiges Sechseck gezeichnet. Alle sechs Ecken liegen auf dem Kreis, und jede Seite ist so lang wie der Radius. Wie lang ist der Umfang des Sechsecks in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Umfang ist die Summe aller sechs Seiten. Jede ist 16 cm lang.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mn>6</mn><mo>⋅</mo><mn>16</mn><mo>=</mo><mn>96</mn></mrow></math></li><li>Der Umfang des Sechsecks ist 96 cm.</li></ol><p><strong>Richtige Antwort:</strong> 96 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einen Kreis mit dem Radius r = 28 cm ist ein regelmäßiges Sechseck gezeichnet. Alle sechs Ecken liegen auf dem Kreis, und jede Seite ist so lang wie der Radius. Wie lang ist der Umfang des Sechsecks in cm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Umfang ist die Summe aller sechs Seiten. Jede ist 28 cm lang.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mn>6</mn><mo>⋅</mo><mn>28</mn><mo>=</mo><mn>168</mn></mrow></math></li><li>Der Umfang des Sechsecks ist 168 cm.</li></ol><p><strong>Richtige Antwort:</strong> 168 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"sechseck-umfang","given":{"r":{"int":[2,30],"step":1}},"task":{"text":"In einen Kreis mit dem Radius r = {{r}} cm ist ein regelmäßiges Sechseck gezeichnet. Alle sechs Ecken liegen auf dem Kreis, und jede Seite ist so lang wie der Radius. Wie lang ist der Umfang des Sechsecks in cm?"},"answer":{"value":"6 * r","compare":{"number":{"unit":"cm"}}},"mistakes":[{"value":"12 * r","message":"Du hast die Seite so lang wie den Durchmesser gerechnet. Sie ist aber so lang wie der Radius."},{"value":"3 * r","message":"Das sind nur drei Seiten. Ein Sechseck hat sechs Seiten."}],"hint":"Der Umfang ist die Summe aller sechs Seiten. Jede ist {{r}} cm lang.","steps":["$6 \\cdot {{r}} = {{answer}}$","Der Umfang des Sechsecks ist {{answer}} cm."]},"templates":{"de":{"task":"In einen Kreis mit dem Radius r = ⟦r⟧ cm ist ein regelmäßiges Sechseck gezeichnet. Alle sechs Ecken liegen auf dem Kreis, und jede Seite ist so lang wie der Radius. Wie lang ist der Umfang des Sechsecks in cm?","steps":["\u003cmath>\u003cmrow>\u003cmn>6\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>","Der Umfang des Sechsecks ist ⟦answer⟧ cm."],"hint":"Der Umfang ist die Summe aller sechs Seiten. Jede ist ⟦r⟧ cm lang.","messages":["Du hast die Seite so lang wie den Durchmesser gerechnet. Sie ist aber so lang wie der Radius.","Das sind nur drei Seiten. Ein Sechseck hat sechs Seiten."]}},"data":{},"seeds":[1,2,4,6,8,9,10,11,12,13,14,16,18,19,21,26,27,37,39,40,44,45,48,49,58,59,60,61,82],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="ebf846de" data-block-type="true-false" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="pi-genau">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-pi-genau" data-id="pi-genau" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mit 96 Ecken hat man π genau bestimmt: π = 3,1410.</legend>
+<label class="question-option"><input type="radio" name="frage-pi-genau" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-pi-genau" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427. Das ist eine Einschließung, kein genauer Wert. Mehr Ecken machen sie nur enger.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427. Das ist eine Einschließung, kein genauer Wert. Mehr Ecken machen sie nur enger.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"pi-genau","text":"Mit 96 Ecken hat man π genau bestimmt: π = 3,1410.","explanation":"Mit 96 Ecken liegt π zwischen 3,1410 und 3,1427. Das ist eine Einschließung, kein genauer Wert. Mehr Ecken machen sie nur enger.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a99f3e0b" data-block-type="text" data-block-order="20">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst erklären, was π ist, und du weißt: Vielecke schließen π von zwei Seiten ein, sie treffen es nie genau.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Die Zahl π","order":1}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../kreis/start/">Zurück: Das brauchst du hier</a><a rel="next" href="../../kreis/umfang/">Weiter: Der Umfang des Kreises</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

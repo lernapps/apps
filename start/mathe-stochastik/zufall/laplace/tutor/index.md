@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -78,9 +75,11 @@ Die Wahrscheinlichkeit ist immer eine Zahl zwischen 0 (unmöglich) und 1 (sicher
 
 Du würfelst einmal. Wie groß ist die Wahrscheinlichkeit für eine gerade Zahl?
 
-1. Mögliche Ergebnisse: 1, 2, 3, 4, 5, 6 – das sind **6**.
-2. Günstige Ergebnisse (gerade Zahl): 2, 4, 6 – das sind **3**.
-3. $P(\text{gerade Zahl}) = \frac{3}{6} = \frac{1}{2} = 0{,}5 = 50\,\%$.
+Eine gerade Zahl würfeln, Schritt für Schritt:
+- Schritt | Ergebnis
+- Mögliche Ergebnisse | 1, 2, 3, 4, 5, 6 – das sind **6**.
+- Günstige Ergebnisse | 2, 4, 6 – das sind **3**.
+- Wahrscheinlichkeit | $P = \frac{3}{6} = 0{,}5$
 
 **Beispiel: Eine blaue Kugel ziehen**
 
@@ -88,25 +87,33 @@ In einer Urne liegen 3 rote, 2 blaue und 1 gelbe Kugel. Du ziehst blind eine Kug
 
 **Merke: Achtung**
 
-Die Farben sind nicht die Ergebnisse! Jede einzelne Kugel ist ein Ergebnis. Es gibt 6 Kugeln, nicht 3 Farben – sonst würdest du $\frac{1}{3}$ für jede Farbe rechnen, und das ist falsch.
+Für die Laplace-Formel brauchst du Ergebnisse, die alle gleich wahrscheinlich sind. Das sind hier die einzelnen Kugeln, nicht die Farben. Es gibt 6 Kugeln, nicht 3 Farben – sonst würdest du für jede Farbe $\frac{1}{3}$ rechnen. Das stimmt nur für Blau, für Rot ($\frac{1}{2}$) und Gelb ($\frac{1}{6}$) ist es falsch.
 
 ### Bild
 
 Bild: Die Kugeln in der Urne: die zwei blauen Kugeln sind orange umrandet. Bildunterschrift: Die Urne aus dem zweiten Beispiel: 6 Kugeln nebeneinander, 3 rote, 2 blaue und 1 gelbe. Die zwei blauen Kugeln sind orange umrandet. Also ist $P(\text{blau}) = \frac{2}{6}$.
 
-### Video dazu
-
-Video: [einstufiger Zufallsversuch | Wahrscheinlichkeitsrechnung - einfach erklärt](https://www.youtube.com/watch?v=rkLmLaFHodo), Lehrerschmidt (YouTube)
-
-Im Video heißt das „einstufiger Zufallsversuch“ – gemeint ist dasselbe.
-
-- Noch eine Erklärung: [Laplace-Experiment](https://de.serlo.org/mathe/1755/laplace-experiment) bei serlo.org
-
 ### Übung
+
+- Aufgabe `laplace-gluecksrad` (unten)
 
 - Aufgabe `laplace-zaehlen` (unten)
 
+- Aufgabe `laplace-ordnen` (unten)
+
 - Aufgabe `laplace-urne` (unten)
+
+### Aufgabe laplace-gluecksrad
+
+- Aufgabe: Ein Glücksrad hat 10 gleich große Felder. 3 davon sind rot. Du drehst einmal. Wie groß ist die Wahrscheinlichkeit für rot? Gib sie in Prozent an.
+- Antwortformat: eine Zahl eintippen (%)
+- Lösung: 30 %
+- Erklärung: Es gibt 3 günstige und 10 mögliche Ergebnisse: $\frac{3}{10} = 0{,}3 = 30\,\%$.
+- Tipp der App: Wie viele Felder sind günstig, wie viele sind möglich? Dann teilst du und schreibst das Ergebnis als Prozent.
+- Typische Fehler und was die App sagt:
+  - 70: Das sind die Felder, die nicht rot sind. Gefragt ist die Wahrscheinlichkeit für rot.
+  - 3: Das ist nur die Zahl der günstigen Felder. Teile sie durch die Zahl aller Felder.
+- Link: [../?via=tutor#laplace-gluecksrad](../?via=tutor#laplace-gluecksrad)
 
 ### Aufgabe laplace-zaehlen
 
@@ -190,6 +197,15 @@ Nr. | Aufgabe | möglich | günstig (verdeckt) | Lösung | F1 | F2
 66 | Beim Klassenfest gibt es 10 Lose, davon sind 2 Gewinne. Du kaufst ein Los. Wie groß ist die Wahrscheinlichkeit, dass du einen Gewinn ziehst? | 10 | 2 | 1/5 | – | 1/4
 67 | Ein Glücksrad hat 5 gleich große Felder: 2 rot und 3 blau. Du drehst einmal. Wie groß ist die Wahrscheinlichkeit, dass du ein rotes Feld drehst? | 5 | 2 | 2/5 | – | 2/3
 ```
+
+### Aufgabe laplace-ordnen
+
+- Aufgabe: Du würfelst einmal mit einem normalen Würfel. Ordne die Ereignisse von der kleinsten zur größten Wahrscheinlichkeit.
+- Antwortformat: die Einträge in die richtige Reihenfolge bringen (die App zeigt sie gemischt)
+- Lösung: 1. eine Zahl größer als 6, 2. eine 6, 3. eine Zahl größer als 3, 4. eine Zahl kleiner als 6, 5. eine Zahl von 1 bis 6
+- Erklärung: Günstig sind 0, 1, 3, 5 und 6 von 6 Ergebnissen: $\frac{0}{6}$, $\frac{1}{6}$, $\frac{3}{6}$, $\frac{5}{6}$ und $\frac{6}{6}$. Bei gleich vielen möglichen Ergebnissen ist die Wahrscheinlichkeit größer, wenn mehr Ergebnisse günstig sind.
+- Tipp der App: Zähle bei jedem Ereignis die günstigen Ergebnisse. Die möglichen Ergebnisse sind immer 6.
+- Link: [../?via=tutor#laplace-ordnen](../?via=tutor#laplace-ordnen)
 
 ### Aufgabe laplace-urne
 

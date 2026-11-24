@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Primzahlen und Primfaktoren – Brüche und Dezimalzahlen</title>
+    <meta name="description" content="Zahlen im Faktorbaum in Primfaktoren zerlegen und das Ergebnis mit Potenzen kurz schreiben." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../teilbarkeit/primfaktoren/" />
+    <script type="module" crossorigin src="../../assets/islands-JzyX8FpW.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../teilbarkeit/">Teilbarkeit nutzen</a></li><li aria-current="page">Primzahlen und Primfaktoren</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Primzahlen und Primfaktoren</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../teilbarkeit/primfaktoren/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧teilbarkeit/primfaktoren/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-brueche-dezimal","page":{"id":"primfaktoren","title":"Primzahlen und Primfaktoren","exercises":[{"id":"verstehen","section":"ueben","numbered":false},{"id":"primzahlen-finden","section":"ueben","numbered":false},{"id":"primfaktoren","section":"ueben","numbered":true},{"id":"primfaktor-zaehlen","section":"ueben","numbered":true},{"id":"potenz-ausrechnen","section":"ueben","numbered":true},{"id":"zerlegung-360","section":"ueben","numbered":false}],"sections":["regel","entdecken","entdecken/primzahlen","faktorbaum","potenzen","beispiel","ueben"]},"tutor":"teilbarkeit/primfaktoren/tutor/","markdown":"teilbarkeit/primfaktoren/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#regel">Zerlegen, bis nur Primzahlen übrig sind</a></li><li><a href="#entdecken">Ausprobieren</a><ol><li><a href="#entdecken/primzahlen">Wo das Zerlegen endet</a></li></ol></li><li><a href="#faktorbaum">Der Faktorbaum</a></li><li><a href="#potenzen">Kurz schreiben mit Potenzen</a></li><li><a href="#beispiel">Am Beispiel nachvollziehen</a></li><li><a href="#ueben">Üben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="regel">Zerlegen, bis nur Primzahlen übrig sind</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="a85b2a9a" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Nach dieser Seite kannst du jede Zahl in Primfaktoren zerlegen, im Faktorbaum aufschreiben und mit Potenzen kurz schreiben. Du brauchst dafür Teiler aus der Seite davor und Potenzen aus dem Rückblick am Kapitelanfang.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="f46ea909" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Du kannst 12 als 3 · 4 schreiben. Die 4 lässt sich weiter zerlegen: 4 = 2 · 2. Bei 12 = 3 · 2 · 2 geht es nicht weiter, wenn alle Faktoren größer als 1 sein sollen.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="entdecken">Ausprobieren</h2>
+<div class="explainer-block" data-block="entdecken/1" data-block-id="c39c4240" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Unten zerlegst du eine Zahl Schritt für Schritt. Mit dem Regler wählst du die Zahl. Tippst du auf einen Faktor, dann bietet dir die Anzeige darunter alle Möglichkeiten an, ihn in zwei Faktoren größer als 1 aufzuteilen; jede Möglichkeit steht nur einmal da, denn 3 · 4 und 4 · 3 sind dieselbe Zerlegung. Die neuen Faktoren ersetzen den alten, das Produkt bleibt gleich. Ein Stern ★ bedeutet: Dieser Faktor lässt sich nicht weiter zerlegen. Sind alle Faktoren markiert, schreibt die Anzeige das Ergebnis mit Potenzen. Probiere für dieselbe Zahl verschiedene Wege aus und vergleiche, wo du landest.</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/2" data-block-id="91f2e20d" data-block-type="vue-component" data-block-order="4">
+<div class="explainer-component" data-component="FaktorEntdecken" data-nojs="caption" data-caption="Beschreibung als Text">
+<div class="explainer-island" hidden><div class="factor-lab" data-v-ee19cfa4><p data-v-ee19cfa4>Wähle eine Zahl. Tippe dann auf einen Faktor, den du weiter zerlegen möchtest, und wähle eine passende Malaufgabe. Was bleibt am Ende übrig?</p><label data-v-ee19cfa4>Deine Zahl: 12<input value="12" type="range" min="2" max="48" data-v-ee19cfa4></label><p class="product" data-v-ee19cfa4><strong data-v-ee19cfa4>12 = </strong><!--[--><!--[--><!----><button type="button" aria-pressed="true" aria-label="Faktor 12 untersuchen" data-v-ee19cfa4>12<!----></button><!--]--><!--]--></p><p data-v-ee19cfa4>So kannst du den gewählten Faktor zerlegen:</p><div class="choices" data-v-ee19cfa4><!--[--><button type="button" data-v-ee19cfa4>2 · 6</button><button type="button" data-v-ee19cfa4>3 · 4</button><!--]--></div><!----><!----><!----><p class="reset-actions" data-v-ee19cfa4><button type="button" data-v-ee19cfa4>Noch einmal zerlegen</button></p></div></div>
+<div class="explainer-nojs"><p>Eine Zahl wird Schritt für Schritt in Faktoren zerlegt, bis keiner der Faktoren mehr in zwei Faktoren größer als 1 zerlegt werden kann. Jede Zerlegung steht nur einmal zur Auswahl: 3 · 4 und 4 · 3 sind dieselbe.</p>
+<p>Beispiel: 12 = 3 · 4 = 3 · 2 · 2. Die Faktoren 3, 2 und 2 lassen sich nicht weiter zerlegen. Kurz mit Potenzen: 12 = 2² · 3.</p></div>
+<script type="application/json" class="explainer-component-props">{"numberLabel":"Deine Zahl","instruction":"Wähle eine Zahl. Tippe dann auf einen Faktor, den du weiter zerlegen möchtest, und wähle eine passende Malaufgabe. Was bleibt am Ende übrig?","chooseLabel":"Faktor {n} untersuchen","splitLabel":"So kannst du den gewählten Faktor zerlegen:","primeLabel":"{n} lässt sich nicht in zwei ganze Faktoren größer als 1 zerlegen. Mit solchen Zahlen endet das Zerlegen.","finishedLabel":"Jetzt lässt sich keiner der Faktoren weiter zerlegen. Alle sind Primzahlen; die Sterne markieren diese Endpunkte.","resetLabel":"Noch einmal zerlegen","powerLabel":"Kurz mit Potenzen:","powerSpoken":"{base} hoch {exponent}"}</script>
+</div>
+</div>
+<section class="explainer-section">
+<h3 id="entdecken/primzahlen">Wo das Zerlegen endet</h3>
+<div class="explainer-block" data-block="entdecken/primzahlen/1" data-block-id="c0776bd9" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-primzahl"><a href="../../glossar/#primzahl">Primzahl</a></dfn></dt><dd><p>Eine Primzahl ist eine natürliche Zahl größer als 1, die genau zwei positive Teiler hat: 1 und sich selbst. Sie lässt sich nicht in zwei ganze Faktoren größer als 1 zerlegen. Die Zahlen 2, 3, 5, 7, 11, 13 sind Primzahlen. Die 1 ist keine Primzahl, denn sie hat nur einen Teiler.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="entdecken/primzahlen/2" data-block-id="a1ee6cb6" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-primfaktorzerlegung"><a href="../../glossar/#primfaktorzerlegung">Primfaktorzerlegung</a></dfn></dt><dd><p>Bei einer Primfaktorzerlegung wird eine Zahl als Produkt von Primzahlen geschrieben. Du zerlegst zusammengesetzte Faktoren weiter, bis nur noch Primzahlen übrig sind.</p></dd></dl>
+</div>
+</section>
+</section>
+<section class="explainer-section">
+<h2 id="faktorbaum">Der Faktorbaum</h2>
+<div class="explainer-block" data-block="faktorbaum/1" data-block-id="74afb89c" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Damit du bei einer langen Zerlegung nichts übersiehst, zeichnest du den Weg als Faktorbaum. Oben steht die Zahl. Von jeder Zahl, die sich zerlegen lässt, gehen zwei Äste zu den Faktoren. Ein Faktor, der eine Primzahl ist, bekommt keine Äste mehr.</p></div>
+</div>
+<div class="explainer-block" data-block="faktorbaum/2" data-block-id="4511f976" data-block-type="figure" data-block-order="8">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/faktorbaum-24.svg" alt="Faktorbaum von 24. Oben steht 24, darunter 4 und 6. Unter der 4 stehen 2 und 2, unter der 6 stehen 2 und 3. Die Primzahlen 2, 2, 2 und 3 am unteren Ende sind ausgefüllt." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: MIT." aria-label="Quelle: eigene Zeichnung. Lizenz: MIT.">© MIT</span></div><figcaption><p>24 = 4 · 6, dann 4 = 2 · 2 und 6 = 2 · 3. Ausgefüllte Kreise sind Primzahlen, die Enden der Äste.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="faktorbaum/3" data-block-id="46b08f5e" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="faktorbaum/3/1" data-block-id="c41b84e0" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Zerlege nie mit der 1: 24 = 1 · 24 ändert nichts, und die 1 ist keine Primzahl. Ein Faktor wie 4, 6 oder 9 ist noch nicht fertig, denn 4 = 2 · 2, 6 = 2 · 3 und 9 = 3 · 3. Du darfst auch mit 24 = 2 · 12 beginnen: Am Ende stehen immer dieselben Primfaktoren, nur in anderer Reihenfolge.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="potenzen">Kurz schreiben mit Potenzen</h2>
+<div class="explainer-block" data-block="potenzen/1" data-block-id="9456068e" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn derselbe Faktor oft vorkommt, wird die Zerlegung lang. Im Faktorbaum von 24 steht die 2 dreimal. Gleiche Faktoren schreibst du als Potenz: Die Basis ist der Faktor, der Exponent zählt, wie oft er vorkommt.</p></div>
+</div>
+<div class="explainer-block" data-block="potenzen/2" data-block-id="9d13ad91" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mn>24</mn><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><mn>3</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="potenzen/3" data-block-id="63eaba3c" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Die 3 kommt nur einmal vor und bekommt keinen Exponenten. Die Potenz <math><msup><mn>2</mn><mn>3</mn></msup></math> spricht man „2 hoch 3“. Sie bedeutet 2 · 2 · 2 = 8, nicht 2 · 3.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Am Beispiel nachvollziehen</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="c1c46034" data-block-type="example" data-block-order="14">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">360 im Faktorbaum zerlegen</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="0f6821b0" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Bei großen Zahlen hilft eine Teilbarkeitsregel für den ersten Schritt: 360 endet auf 0, ist also durch 10 teilbar. Mit 360 = 36 · 10 geht es weiter: 36 = 6 · 6, 6 = 2 · 3 und 10 = 2 · 5.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="0f371168" data-block-type="figure" data-block-order="16">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/faktorbaum-360.svg" alt="Faktorbaum von 360. Oben steht 360, darunter 36 und 10. Unter der 36 stehen zwei Sechser, unter jeder 6 stehen 2 und 3. Unter der 10 stehen 2 und 5. Die Primzahlen 2, 3, 2, 3, 2 und 5 am Ende der Äste sind ausgefüllt." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: MIT." aria-label="Quelle: eigene Zeichnung. Lizenz: MIT.">© MIT</span></div><figcaption><p>Am Ende der Äste stehen die Primzahlen 2, 3, 2, 3, 2 und 5.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="7feaf572" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Zähle, wie oft jeder Primfaktor vorkommt: die 2 dreimal, die 3 zweimal, die 5 einmal.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="622336fd" data-block-type="formula" data-block-order="18">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mn>360</mn><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/5" data-block-id="357fd173" data-block-type="text" data-block-order="19">
+<div class="block-text"><p>Zur Probe rechnest du zurück: <math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>8</mn><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>360</mn></mrow></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ueben">Üben</h2>
+<div class="explainer-block" data-block="ueben/1" data-block-id="5b7c8606" data-block-type="single-choice" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="verstehen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-verstehen" data-id="verstehen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Zahl ist eine Primzahl?</legend>
+<label class="question-option"><input type="radio" name="frage-verstehen" value="0"> <span>13</span></label>
+<label class="question-option"><input type="radio" name="frage-verstehen" value="1"> <span>1</span></label>
+<label class="question-option"><input type="radio" name="frage-verstehen" value="2"> <span>15</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>13</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>13 ist nur durch 1 und 13 teilbar, denn 2, 3, 5, 7 und 11 teilen sie nicht. Sie hat also genau zwei Teiler.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1</strong></p><p>Die 1 hat nur einen positiven Teiler. Eine Primzahl braucht genau zwei.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>15</strong></p><p>15 hat außer 1 und 15 auch die Teiler 3 und 5.</p></li>
+</ul>
+<p class="question-explanation">13 ist nur durch 1 und 13 teilbar, denn 2, 3, 5, 7 und 11 teilen sie nicht. Sie hat also genau zwei Teiler.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>13</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>13 ist nur durch 1 und 13 teilbar, denn 2, 3, 5, 7 und 11 teilen sie nicht. Sie hat also genau zwei Teiler.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1</strong></p><p>Die 1 hat nur einen positiven Teiler. Eine Primzahl braucht genau zwei.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>15</strong></p><p>15 hat außer 1 und 15 auch die Teiler 3 und 5.</p></li>
+</ul>
+<p class="question-explanation">13 ist nur durch 1 und 13 teilbar, denn 2, 3, 5, 7 und 11 teilen sie nicht. Sie hat also genau zwei Teiler.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"verstehen","text":"Welche Zahl ist eine Primzahl?","explanation":"13 ist nur durch 1 und 13 teilbar, denn 2, 3, 5, 7 und 11 teilen sie nicht. Sie hat also genau zwei Teiler.","links":[],"type":"single-choice","options":[{"text":"13","correct":true,"info":"13 ist nur durch 1 und 13 teilbar, denn 2, 3, 5, 7 und 11 teilen sie nicht. Sie hat also genau zwei Teiler."},{"text":"1","correct":false,"info":"Die 1 hat nur einen positiven Teiler. Eine Primzahl braucht genau zwei."},{"text":"15","correct":false,"info":"15 hat außer 1 und 15 auch die Teiler 3 und 5."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/2" data-block-id="8f36251d" data-block-type="multiple-choice" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="primzahlen-finden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-primzahlen-finden" data-id="primzahlen-finden" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche dieser Zahlen sind Primzahlen?</legend>
+<label class="question-option"><input type="checkbox" name="frage-primzahlen-finden" value="0"> <span>2</span></label>
+<label class="question-option"><input type="checkbox" name="frage-primzahlen-finden" value="1"> <span>9</span></label>
+<label class="question-option"><input type="checkbox" name="frage-primzahlen-finden" value="2"> <span>11</span></label>
+<label class="question-option"><input type="checkbox" name="frage-primzahlen-finden" value="3"> <span>21</span></label>
+<label class="question-option"><input type="checkbox" name="frage-primzahlen-finden" value="4"> <span>23</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>2 hat genau zwei Teiler, 1 und 2. Sie ist sogar die einzige gerade Primzahl.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>9</strong></p><p>9 = 3 · 3, also ist 3 ein Teiler. 9 hat drei Teiler: 1, 3 und 9.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>11</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>11 ist nur durch 1 und 11 teilbar.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>21</strong></p><p>21 = 3 · 7. Mit der Quersumme 3 siehst du schnell, dass 3 ein Teiler ist.</p></li>
+<li class="question-info question-info-right" data-option="4"><p class="question-info-head"><strong>23</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>23 ist nur durch 1 und 23 teilbar: 2, 3, 5 und 7 teilen sie nicht.</p></li>
+</ul>
+<p class="question-explanation">Eine Primzahl hat genau zwei Teiler. 9 und 21 haben mehr, 2, 11 und 23 haben genau zwei.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>2 hat genau zwei Teiler, 1 und 2. Sie ist sogar die einzige gerade Primzahl.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>9</strong></p><p>9 = 3 · 3, also ist 3 ein Teiler. 9 hat drei Teiler: 1, 3 und 9.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>11</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>11 ist nur durch 1 und 11 teilbar.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>21</strong></p><p>21 = 3 · 7. Mit der Quersumme 3 siehst du schnell, dass 3 ein Teiler ist.</p></li>
+<li class="question-info question-info-right" data-option="4"><p class="question-info-head"><strong>23</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>23 ist nur durch 1 und 23 teilbar: 2, 3, 5 und 7 teilen sie nicht.</p></li>
+</ul>
+<p class="question-explanation">Eine Primzahl hat genau zwei Teiler. 9 und 21 haben mehr, 2, 11 und 23 haben genau zwei.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"primzahlen-finden","text":"Welche dieser Zahlen sind Primzahlen?","explanation":"Eine Primzahl hat genau zwei Teiler. 9 und 21 haben mehr, 2, 11 und 23 haben genau zwei.","links":[],"type":"multiple-choice","options":[{"text":"2","correct":true,"info":"2 hat genau zwei Teiler, 1 und 2. Sie ist sogar die einzige gerade Primzahl."},{"text":"9","correct":false,"info":"9 = 3 · 3, also ist 3 ein Teiler. 9 hat drei Teiler: 1, 3 und 9."},{"text":"11","correct":true,"info":"11 ist nur durch 1 und 11 teilbar."},{"text":"21","correct":false,"info":"21 = 3 · 7. Mit der Quersumme 3 siehst du schnell, dass 3 ein Teiler ist."},{"text":"23","correct":true,"info":"23 ist nur durch 1 und 23 teilbar: 2, 3, 5 und 7 teilen sie nicht."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/3" data-block-id="67b2a8ec" data-block-type="generated" data-block-order="22">
+<div class="explainer-exercise explainer-generated" id="primfaktoren">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Zerlege 26 vollständig in Primfaktoren. Eine 2 ist schon gefunden: 26 = 2 · … . Welcher Primfaktor fehlt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Suche die Zahl, die mit 2 multipliziert die Ausgangszahl ergibt. Prüfe danach, ob sie selbst prim ist.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Teile 26 durch den schon gefundenen Primfaktor 2. Das ergibt 13.</li><li>13 ist eine Primzahl. Damit ist 26 = 2 · 13 vollständig in Primfaktoren zerlegt.</li></ol><p><strong>Richtige Antwort:</strong> 13</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Zerlege 4 vollständig in Primfaktoren. Eine 2 ist schon gefunden: 4 = 2 · … . Welcher Primfaktor fehlt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Suche die Zahl, die mit 2 multipliziert die Ausgangszahl ergibt. Prüfe danach, ob sie selbst prim ist.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Teile 4 durch den schon gefundenen Primfaktor 2. Das ergibt 2.</li><li>2 ist eine Primzahl. Damit ist 4 = 2 · 2 vollständig in Primfaktoren zerlegt.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Zerlege 10 vollständig in Primfaktoren. Eine 2 ist schon gefunden: 10 = 2 · … . Welcher Primfaktor fehlt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Suche die Zahl, die mit 2 multipliziert die Ausgangszahl ergibt. Prüfe danach, ob sie selbst prim ist.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Teile 10 durch den schon gefundenen Primfaktor 2. Das ergibt 5.</li><li>5 ist eine Primzahl. Damit ist 10 = 2 · 5 vollständig in Primfaktoren zerlegt.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"primfaktoren","given":{"e":{"pick":1,"from":{"data":"primfaktoren"}}},"task":{"text":"Zerlege {{e.zahl}} vollständig in Primfaktoren. Eine 2 ist schon gefunden: {{e.zahl}} = 2 · … . Welcher Primfaktor fehlt?"},"answer":{"value":"e.prime","compare":"number"},"mistakes":[{"value":"1","message":"Mit 1 bleibt der andere Faktor unverändert. Gesucht ist ein Primfaktor größer als 1."},{"value":"e.zahl","message":"Das ist die Ausgangszahl. Teile sie durch den schon gefundenen Faktor 2."}],"hint":"Suche die Zahl, die mit 2 multipliziert die Ausgangszahl ergibt. Prüfe danach, ob sie selbst prim ist.","steps":["Teile {{e.zahl}} durch den schon gefundenen Primfaktor 2. Das ergibt {{answer}}.","{{answer}} ist eine Primzahl. Damit ist {{e.zahl}} = 2 · {{answer}} vollständig in Primfaktoren zerlegt."]},"templates":{"de":{"task":"Zerlege ⟦e.zahl⟧ vollständig in Primfaktoren. Eine 2 ist schon gefunden: ⟦e.zahl⟧ = 2 · … . Welcher Primfaktor fehlt?","steps":["Teile ⟦e.zahl⟧ durch den schon gefundenen Primfaktor 2. Das ergibt ⟦answer⟧.","⟦answer⟧ ist eine Primzahl. Damit ist ⟦e.zahl⟧ = 2 · ⟦answer⟧ vollständig in Primfaktoren zerlegt."],"hint":"Suche die Zahl, die mit 2 multipliziert die Ausgangszahl ergibt. Prüfe danach, ob sie selbst prim ist.","messages":["Mit 1 bleibt der andere Faktor unverändert. Gesucht ist ein Primfaktor größer als 1.","Das ist die Ausgangszahl. Teile sie durch den schon gefundenen Faktor 2."]}},"data":{"primfaktoren":[{"zahl":4,"prime":2},{"zahl":6,"prime":3},{"zahl":10,"prime":5},{"zahl":14,"prime":7},{"zahl":22,"prime":11},{"zahl":26,"prime":13},{"zahl":34,"prime":17},{"zahl":38,"prime":19},{"zahl":46,"prime":23},{"zahl":58,"prime":29}]},"seeds":[1,2,4,5,14,16,18,19,20,29],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/4" data-block-id="1b4b830e" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="primfaktor-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Zerlege 252 in Primfaktoren, zum Beispiel mit einem Faktorbaum. Wie oft kommt der Primfaktor 3 in der Zerlegung vor?</p><details class="explainer-hint"><summary>Tipp</summary><p>Zerlege 252 weiter, bis nur Primzahlen übrig sind. Zähle dann nur die Faktoren 3.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Zerlegt in Primfaktoren: 252 = 2 · 2 · 3 · 3 · 7.</li><li>Der Faktor 3 steht 2-mal da. Mit Potenzen: 252 = 2² · 3² · 7.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Zerlege 50 in Primfaktoren, zum Beispiel mit einem Faktorbaum. Wie oft kommt der Primfaktor 5 in der Zerlegung vor?</p><details class="explainer-hint"><summary>Tipp</summary><p>Zerlege 50 weiter, bis nur Primzahlen übrig sind. Zähle dann nur die Faktoren 5.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Zerlegt in Primfaktoren: 50 = 2 · 5 · 5.</li><li>Der Faktor 5 steht 2-mal da. Mit Potenzen: 50 = 2 · 5².</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Zerlege 56 in Primfaktoren, zum Beispiel mit einem Faktorbaum. Wie oft kommt der Primfaktor 2 in der Zerlegung vor?</p><details class="explainer-hint"><summary>Tipp</summary><p>Zerlege 56 weiter, bis nur Primzahlen übrig sind. Zähle dann nur die Faktoren 2.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Zerlegt in Primfaktoren: 56 = 2 · 2 · 2 · 7.</li><li>Der Faktor 2 steht 3-mal da. Mit Potenzen: 56 = 2³ · 7.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"primfaktor-zaehlen","given":{"e":{"pick":1,"from":{"data":"primzerlegungen"}}},"task":{"text":"Zerlege {{e.zahl}} in Primfaktoren, zum Beispiel mit einem Faktorbaum. Wie oft kommt der Primfaktor {{e.p}} in der Zerlegung vor?"},"answer":{"value":"e.e","compare":"number"},"mistakes":[{"value":"e.gesamt","message":"Du hast alle Primfaktoren gezählt. Gefragt ist nur, wie oft der Faktor {{e.p}} vorkommt."},{"value":"e.p","message":"Das ist der Primfaktor selbst. Gefragt ist, wie oft er in der Zerlegung steht; diese Zahl wird später der Exponent."}],"hint":"Zerlege {{e.zahl}} weiter, bis nur Primzahlen übrig sind. Zähle dann nur die Faktoren {{e.p}}.","steps":["Zerlegt in Primfaktoren: {{e.zahl}} = {{e.produkt}}.","Der Faktor {{e.p}} steht {{answer}}-mal da. Mit Potenzen: {{e.zahl}} = {{e.potenz}}."]},"templates":{"de":{"task":"Zerlege ⟦e.zahl⟧ in Primfaktoren, zum Beispiel mit einem Faktorbaum. Wie oft kommt der Primfaktor ⟦e.p⟧ in der Zerlegung vor?","steps":["Zerlegt in Primfaktoren: ⟦e.zahl⟧ = ⟦e.produkt⟧.","Der Faktor ⟦e.p⟧ steht ⟦answer⟧-mal da. Mit Potenzen: ⟦e.zahl⟧ = ⟦e.potenz⟧."],"hint":"Zerlege ⟦e.zahl⟧ weiter, bis nur Primzahlen übrig sind. Zähle dann nur die Faktoren ⟦e.p⟧.","messages":["Du hast alle Primfaktoren gezählt. Gefragt ist nur, wie oft der Faktor ⟦e.p⟧ vorkommt.","Das ist der Primfaktor selbst. Gefragt ist, wie oft er in der Zerlegung steht; diese Zahl wird später der Exponent."]}},"data":{"primzerlegungen":[{"zahl":24,"p":2,"e":3,"gesamt":4,"produkt":"2 · 2 · 2 · 3","potenz":"2³ · 3"},{"zahl":40,"p":2,"e":3,"gesamt":4,"produkt":"2 · 2 · 2 · 5","potenz":"2³ · 5"},{"zahl":56,"p":2,"e":3,"gesamt":4,"produkt":"2 · 2 · 2 · 7","potenz":"2³ · 7"},{"zahl":90,"p":3,"e":2,"gesamt":4,"produkt":"2 · 3 · 3 · 5","potenz":"2 · 3² · 5"},{"zahl":126,"p":3,"e":2,"gesamt":4,"produkt":"2 · 3 · 3 · 7","potenz":"2 · 3² · 7"},{"zahl":252,"p":3,"e":2,"gesamt":5,"produkt":"2 · 2 · 3 · 3 · 7","potenz":"2² · 3² · 7"},{"zahl":50,"p":5,"e":2,"gesamt":3,"produkt":"2 · 5 · 5","potenz":"2 · 5²"},{"zahl":150,"p":5,"e":2,"gesamt":4,"produkt":"2 · 3 · 5 · 5","potenz":"2 · 3 · 5²"},{"zahl":98,"p":7,"e":2,"gesamt":3,"produkt":"2 · 7 · 7","potenz":"2 · 7²"}]},"seeds":[1,2,3,5,6,7,8,13,18],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/5" data-block-id="7e1e1684" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="potenz-ausrechnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Primfaktorzerlegung lautet 2³ · 5. Welche Zahl wurde zerlegt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Schreibe jede Potenz als Produkt gleicher Faktoren und multipliziere dann alles.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Ausgeschrieben: 2 · 2 · 2 · 5.</li><li>Das Produkt ist 40. Die zerlegte Zahl ist 40.</li></ol><p><strong>Richtige Antwort:</strong> 40</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Primfaktorzerlegung lautet 2³ · 7. Welche Zahl wurde zerlegt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Schreibe jede Potenz als Produkt gleicher Faktoren und multipliziere dann alles.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Ausgeschrieben: 2 · 2 · 2 · 7.</li><li>Das Produkt ist 56. Die zerlegte Zahl ist 56.</li></ol><p><strong>Richtige Antwort:</strong> 56</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Primfaktorzerlegung lautet 3² · 5. Welche Zahl wurde zerlegt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Schreibe jede Potenz als Produkt gleicher Faktoren und multipliziere dann alles.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Ausgeschrieben: 3 · 3 · 5.</li><li>Das Produkt ist 45. Die zerlegte Zahl ist 45.</li></ol><p><strong>Richtige Antwort:</strong> 45</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"potenz-ausrechnen","given":{"e":{"pick":1,"from":{"data":"potenzprodukte"}}},"task":{"text":"Eine Primfaktorzerlegung lautet {{e.tex}}. Welche Zahl wurde zerlegt?"},"answer":{"value":"e.wert","compare":"number"},"mistakes":[{"value":"e.mal","message":"Du hast Basis mal Exponent gerechnet. Der Exponent sagt, wie oft die Basis mit sich selbst multipliziert wird: 2³ ist 2 · 2 · 2, nicht 2 · 3."},{"value":"e.summe","message":"Du hast die beiden Potenzen addiert. Zwischen ihnen steht ein Malpunkt: Rechne beide Potenzen aus und multipliziere sie."}],"hint":"Schreibe jede Potenz als Produkt gleicher Faktoren und multipliziere dann alles.","steps":["Ausgeschrieben: {{e.ausgeschrieben}}.","Das Produkt ist {{answer}}. Die zerlegte Zahl ist {{answer}}."]},"templates":{"de":{"task":"Eine Primfaktorzerlegung lautet ⟦e.tex⟧. Welche Zahl wurde zerlegt?","steps":["Ausgeschrieben: ⟦e.ausgeschrieben⟧.","Das Produkt ist ⟦answer⟧. Die zerlegte Zahl ist ⟦answer⟧."],"hint":"Schreibe jede Potenz als Produkt gleicher Faktoren und multipliziere dann alles.","messages":["Du hast Basis mal Exponent gerechnet. Der Exponent sagt, wie oft die Basis mit sich selbst multipliziert wird: 2³ ist 2 · 2 · 2, nicht 2 · 3.","Du hast die beiden Potenzen addiert. Zwischen ihnen steht ein Malpunkt: Rechne beide Potenzen aus und multipliziere sie."]}},"data":{"potenzprodukte":[{"tex":"2³ · 3²","wert":72,"mal":36,"summe":17,"ausgeschrieben":"2 · 2 · 2 · 3 · 3"},{"tex":"2² · 3²","wert":36,"mal":24,"summe":13,"ausgeschrieben":"2 · 2 · 3 · 3"},{"tex":"2³ · 5","wert":40,"mal":30,"summe":13,"ausgeschrieben":"2 · 2 · 2 · 5"},{"tex":"3² · 5","wert":45,"mal":30,"summe":14,"ausgeschrieben":"3 · 3 · 5"},{"tex":"2⁴ · 3","wert":48,"mal":24,"summe":19,"ausgeschrieben":"2 · 2 · 2 · 2 · 3"},{"tex":"2² · 5²","wert":100,"mal":40,"summe":29,"ausgeschrieben":"2 · 2 · 5 · 5"},{"tex":"3² · 7","wert":63,"mal":42,"summe":16,"ausgeschrieben":"3 · 3 · 7"},{"tex":"2³ · 7","wert":56,"mal":42,"summe":15,"ausgeschrieben":"2 · 2 · 2 · 7"}]},"seeds":[1,2,4,5,7,8,10,16],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ueben/6" data-block-id="f1ca24f7" data-block-type="single-choice" data-block-order="25">
+<div class="explainer-exercise explainer-question" id="zerlegung-360">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zerlegung-360" data-id="zerlegung-360" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Primfaktorzerlegung von 360 ist richtig und vollständig?</legend>
+<label class="question-option"><input type="radio" name="frage-zerlegung-360" value="0" aria-label="2 Kubik mal 3 Quadrat mal 5"> <span><math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></span></label>
+<label class="question-option"><input type="radio" name="frage-zerlegung-360" value="1" aria-label="2 mal 3 mal 5"> <span><math><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>5</mn></mrow></math></span></label>
+<label class="question-option"><input type="radio" name="frage-zerlegung-360" value="2" aria-label="2 Kubik mal 9 mal 5"> <span><math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>5</mn></mrow></math></span></label>
+<label class="question-option"><input type="radio" name="frage-zerlegung-360" value="3" aria-label="1 mal 2 Kubik mal 3 Quadrat mal 5"> <span><math><mrow><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></span></label>
+<label class="question-option"><input type="radio" name="frage-zerlegung-360" value="4" aria-label="2 Quadrat mal 3 Quadrat mal 5"> <span><math><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong><math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ergibt 8 · 9 · 5 = 360, und 2, 3 und 5 sind Primzahlen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong><math><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das ergibt nur 30. Die 2 kommt in 360 dreimal vor, die 3 zweimal. Diese Wiederholungen fehlen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong><math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das Produkt stimmt, aber 9 ist keine Primzahl: 9 = 3 · 3. Zerlege weiter und schreibe <math><msup><mn>3</mn><mn>2</mn></msup></math>.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong><math><mrow><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das Produkt stimmt, aber die 1 ist keine Primzahl und gehört nicht in die Zerlegung.</p></li>
+<li class="question-info" data-option="4"><p class="question-info-head"><strong><math><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das ergibt nur 4 · 9 · 5 = 180. Die 2 kommt dreimal vor, nicht zweimal.</p></li>
+</ul>
+<p class="question-explanation">360 = 36 · 10 = 2 · 2 · 3 · 3 · 2 · 5. Die 2 steht dreimal, die 3 zweimal, die 5 einmal: <math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math>.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong><math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ergibt 8 · 9 · 5 = 360, und 2, 3 und 5 sind Primzahlen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong><math><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das ergibt nur 30. Die 2 kommt in 360 dreimal vor, die 3 zweimal. Diese Wiederholungen fehlen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong><math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das Produkt stimmt, aber 9 ist keine Primzahl: 9 = 3 · 3. Zerlege weiter und schreibe <math><msup><mn>3</mn><mn>2</mn></msup></math>.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong><math><mrow><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das Produkt stimmt, aber die 1 ist keine Primzahl und gehört nicht in die Zerlegung.</p></li>
+<li class="question-info" data-option="4"><p class="question-info-head"><strong><math><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math></strong></p><p>Das ergibt nur 4 · 9 · 5 = 180. Die 2 kommt dreimal vor, nicht zweimal.</p></li>
+</ul>
+<p class="question-explanation">360 = 36 · 10 = 2 · 2 · 3 · 3 · 2 · 5. Die 2 steht dreimal, die 3 zweimal, die 5 einmal: <math><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow></math>.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zerlegung-360","text":"Welche Primfaktorzerlegung von 360 ist richtig und vollständig?","explanation":"360 = 36 · 10 = 2 · 2 · 3 · 3 · 2 · 5. Die 2 steht dreimal, die 3 zweimal, die 5 einmal: $2^3 \\cdot 3^2 \\cdot 5$.","links":[],"type":"single-choice","options":[{"text":"$2^3 \\cdot 3^2 \\cdot 5$","correct":true,"info":"Das ergibt 8 · 9 · 5 = 360, und 2, 3 und 5 sind Primzahlen."},{"text":"$2 \\cdot 3 \\cdot 5$","correct":false,"info":"Das ergibt nur 30. Die 2 kommt in 360 dreimal vor, die 3 zweimal. Diese Wiederholungen fehlen."},{"text":"$2^3 \\cdot 9 \\cdot 5$","correct":false,"info":"Das Produkt stimmt, aber 9 ist keine Primzahl: 9 = 3 · 3. Zerlege weiter und schreibe $3^2$."},{"text":"$1 \\cdot 2^3 \\cdot 3^2 \\cdot 5$","correct":false,"info":"Das Produkt stimmt, aber die 1 ist keine Primzahl und gehört nicht in die Zerlegung."},{"text":"$2^2 \\cdot 3^2 \\cdot 5$","correct":false,"info":"Das ergibt nur 4 · 9 · 5 = 180. Die 2 kommt dreimal vor, nicht zweimal."}]},"rendered":{"360 = 36 · 10 = 2 · 2 · 3 · 3 · 2 · 5. Die 2 steht dreimal, die 3 zweimal, die 5 einmal: $2^3 \\cdot 3^2 \\cdot 5$.":"360 = 36 · 10 = 2 · 2 · 3 · 3 · 2 · 5. Die 2 steht dreimal, die 3 zweimal, die 5 einmal: \u003cmath>\u003cmrow>\u003cmsup>\u003cmn>2\u003c/mn>\u003cmn>3\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmn>3\u003c/mn>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>.","$2^3 \\cdot 3^2 \\cdot 5$":"\u003cmath>\u003cmrow>\u003cmsup>\u003cmn>2\u003c/mn>\u003cmn>3\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmn>3\u003c/mn>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>","$2 \\cdot 3 \\cdot 5$":"\u003cmath>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>","$2^3 \\cdot 9 \\cdot 5$":"\u003cmath>\u003cmrow>\u003cmsup>\u003cmn>2\u003c/mn>\u003cmn>3\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmn>9\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>","Das Produkt stimmt, aber 9 ist keine Primzahl: 9 = 3 · 3. Zerlege weiter und schreibe $3^2$.":"Das Produkt stimmt, aber 9 ist keine Primzahl: 9 = 3 · 3. Zerlege weiter und schreibe \u003cmath>\u003cmsup>\u003cmn>3\u003c/mn>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/math>.","$1 \\cdot 2^3 \\cdot 3^2 \\cdot 5$":"\u003cmath>\u003cmrow>\u003cmn>1\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmn>2\u003c/mn>\u003cmn>3\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmn>3\u003c/mn>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>","$2^2 \\cdot 3^2 \\cdot 5$":"\u003cmath>\u003cmrow>\u003cmsup>\u003cmn>2\u003c/mn>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmn>3\u003c/mn>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmn>5\u003c/mn>\u003c/mrow>\u003c/math>"}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Brüche und Dezimalzahlen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-brueche-dezimal","app":"Brüche und Dezimalzahlen","root":"../../","repository":"lernapps/mathe-brueche-dezimal","revision":"7209c01","page":{"title":"Primzahlen und Primfaktoren","order":6}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../teilbarkeit/regeln/">Zurück: Teiler, Vielfache und Teilbarkeitsregeln</a><a rel="next" href="../../teilbarkeit/teiler-vielfache/">Weiter: ggT und kgV</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

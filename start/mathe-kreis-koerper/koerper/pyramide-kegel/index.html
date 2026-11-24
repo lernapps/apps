@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Kegel und Pyramide – Kreis und Körper berechnen</title>
+    <meta name="description" content="Ein Kegel fasst ein Drittel eines Zylinders mit gleicher Grundfläche und Höhe. Für den Mantel suchst du das rechtwinklige Dreieck, das im Körper steckt." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../koerper/pyramide-kegel/" />
+    <script type="module" crossorigin src="../../assets/islands-C8L28Da2.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../koerper/">Zylinder, Kegel, Kugel und Vielecke berechnen</a></li><li aria-current="page">Kegel und Pyramide</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Kegel und Pyramide</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../koerper/pyramide-kegel/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧koerper/pyramide-kegel/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"pyramide-kegel","title":"Kegel und Pyramide","exercises":[{"id":"kegel-zylinder","section":"einstieg","numbered":false},{"id":"kegel-volumen","section":"uebung","numbered":true},{"id":"mantellinie","section":"uebung","numbered":true},{"id":"kegel-oberflaeche","section":"uebung","numbered":true},{"id":"pyramide-volumen","section":"uebung","numbered":true},{"id":"pyramide-oberflaeche","section":"uebung","numbered":true},{"id":"seitenhoehe","section":"uebung","numbered":false},{"id":"kegel-drittel","section":"uebung","numbered":false}],"sections":["einstieg","volumen","dreieck","beispiel","uebung"]},"tutor":"koerper/pyramide-kegel/tutor/","markdown":"koerper/pyramide-kegel/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Kegel in den Zylinder schütten</a></li><li><a href="#volumen">Ein Drittel des Prismas</a></li><li><a href="#dreieck">Das versteckte Dreieck im Kegel</a></li><li><a href="#beispiel">Ein Kegel mit r = 3 cm</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Kegel in den Zylinder schütten</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="23322040" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in einen Kegel oder eine Pyramide passt, vergleichst du sie mit einem Zylinder oder Prisma. Probiere es mit Wasser aus.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="62c6dde7" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist mit Wasser gefüllt, der Zylinder noch leer. Mit dem Knopf füllst du den Kegel und schüttest ihn in den Zylinder, jedes Mal ein Kegel voll. Der blaue Teil zeigt das Wasser.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="f88252c2" data-block-type="vue-component" data-block-order="3">
+<div class="explainer-component" id="umschuetten" data-component="Umschuetten">
+<div class="explainer-island" hidden><div class="umschuetten" data-v-b3206a0c><svg viewBox="0 0 300 130" role="img" aria-label="Links ein Kegel mit der Spitze unten, rechts ein Zylinder. Der Kegel wurde 0 mal in den Zylinder umgeschüttet." class="us-bild" data-v-b3206a0c><polygon points="30,20 130,20 80,110" fill="none" stroke="var(--page-text)" stroke-width="1.5" data-v-b3206a0c></polygon><polygon points="30,20 130,20 80,110" fill="var(--page-accent)" fill-opacity="0.45" stroke="var(--page-text)" stroke-width="1.5" data-v-b3206a0c></polygon><rect x="180" y="20" width="100" height="90" fill="none" stroke="var(--page-text)" stroke-width="1.5" data-v-b3206a0c></rect><!----><line x1="180" y1="80" x2="280" y2="80" stroke="var(--page-muted)" stroke-width="1" stroke-dasharray="4 3" data-v-b3206a0c></line><line x1="180" y1="50" x2="280" y2="50" stroke="var(--page-muted)" stroke-width="1" stroke-dasharray="4 3" data-v-b3206a0c></line></svg><div class="us-knoepfe" data-v-b3206a0c><button type="button" class="us-knopf" data-v-b3206a0c>Kegel füllen und umschütten</button><!----></div><p class="us-ergebnis" aria-live="polite" data-v-b3206a0c>Der Kegel wurde 0 mal gefüllt und umgeschüttet. Der Zylinder ist zu 0 von 3 Teilen gefüllt.</p></div></div>
+<div class="explainer-nojs"><p>Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Kegel ist voll Wasser. Du schüttest ihn in den Zylinder:</p>
+<ul>
+<li>Nach 1 Mal ist der Zylinder zu einem Drittel gefüllt.</li>
+<li>Nach 2 Mal ist er zu zwei Dritteln gefüllt.</li>
+<li>Nach 3 Mal ist er ganz voll.</li>
+</ul>
+<p>Der Kegel fasst also ein Drittel des Zylinders.</p></div>
+<script type="application/json" class="explainer-component-props">{"weiter":"Kegel füllen und umschütten","neu":"Von vorn beginnen","voll":"Der Zylinder ist voll: Der Kegel fasst genau ein Drittel.","ergebnis":"Der Kegel wurde {k} mal gefüllt und umgeschüttet. Der Zylinder ist zu {k} von 3 Teilen gefüllt.","bild":"Links ein Kegel mit der Spitze unten, rechts ein Zylinder. Der Kegel wurde {k} mal in den Zylinder umgeschüttet."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/4" data-block-id="88cba71f" data-block-type="number" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="kegel-zylinder">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-kegel-zylinder" data-id="kegel-zylinder" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Zylinder fasst 300 cm³. Wie viel Wasser fasst der Kegel mit derselben Grundfläche und derselben Höhe?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-kegel-zylinder" aria-describedby="frage-kegel-zylinder-unit"> <span id="frage-kegel-zylinder-unit">cm³</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 100 cm³</p>
+<p class="question-explanation">Dreimal Umschütten füllt den Zylinder, also fasst der Kegel ein Drittel: 300 : 3 = 100 cm³.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 100 cm³</p>
+<p class="question-explanation">Dreimal Umschütten füllt den Zylinder, also fasst der Kegel ein Drittel: 300 : 3 = 100 cm³.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"kegel-zylinder","text":"Der Zylinder fasst 300 cm³. Wie viel Wasser fasst der Kegel mit derselben Grundfläche und derselben Höhe?","explanation":"Dreimal Umschütten füllt den Zylinder, also fasst der Kegel ein Drittel: 300 : 3 = 100 cm³.","links":[],"type":"number","answer":100,"tolerance":0,"unit":"cm³"},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="volumen">Ein Drittel des Prismas</h2>
+<div class="explainer-block" data-block="volumen/1" data-block-id="a24a345d" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn du das Volumen ausrechnen willst, ohne umzuschütten, nutzt du das Ergebnis des Versuchs als Formel.</p></div>
+</div>
+<div class="explainer-block" data-block="volumen/2" data-block-id="2e95f98c" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Das Umschütten zeigt, wie das Volumen eines Kegels entsteht: ein Drittel des Zylinders mit derselben Grundfläche G und derselben Höhe h. Für die Pyramide gilt dasselbe, wenn du sie mit einem Prisma gleicher Grundfläche und Höhe vergleichst. Das nimmst du hier als gegeben.</p></div>
+</div>
+<div class="explainer-block" data-block="volumen/3" data-block-id="ca19feb7" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>V</mi><mrow><mi>K</mi><mi>e</mi><mi>g</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="volumen/4" data-block-id="69e60df3" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>V</mi><mrow><mi>P</mi><mi>y</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>i</mi><mi>d</mi><mi>e</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>G</mi><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="dreieck">Das versteckte Dreieck im Kegel</h2>
+<div class="explainer-block" data-block="dreieck/1" data-block-id="b6fab60c" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Wenn du die Oberfläche brauchst, zum Beispiel für das Papier einer Tüte, brauchst du die Länge der Mantellinie. Du findest sie in einem Dreieck, das im Körper steckt.</p></div>
+</div>
+<div class="explainer-block" data-block="dreieck/2" data-block-id="46bf3172" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Für den Mantel brauchst du die <strong>Mantellinie</strong> s. Der Kegel ist gerade: Seine Spitze liegt senkrecht über dem Mittelpunkt des Grundkreises. Im Bild liegen Höhe h, Radius r und Mantellinie s in einem rechtwinkligen Dreieck. Der rechte Winkel liegt am Mittelpunkt des Grundkreises.</p></div>
+</div>
+<div class="explainer-block" data-block="dreieck/3" data-block-id="310a5020" data-block-type="definition" data-block-order="11">
+<dl class="explainer-definition"><dt><dfn id="begriff-mantellinie"><a href="../../glossar/#mantellinie">Mantellinie</a></dfn></dt><dd><p>Die Mantellinie eines Kegels ist die Strecke von der Spitze zu einem Punkt am Rand des Grundkreises. Sie ist länger als die Höhe und länger als der Radius.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="dreieck/4" data-block-id="ae6d0aa4" data-block-type="figure" data-block-order="12">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/kegel-dreieck.svg" alt="Ein Kegel. Die gestrichelte Höhe h, der Radius r in der Grundfläche und die Mantellinie s bilden ein blau markiertes rechtwinkliges Dreieck." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Das blaue Dreieck hat die Katheten h und r und die Hypotenuse s.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="dreieck/5" data-block-id="1245250a" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>s</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="dreieck/6" data-block-id="5ac9a79a" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Das ist der Satz des Pythagoras: Die Katheten sind r und h, die Hypotenuse ist s.</p></div>
+</div>
+<div class="explainer-block" data-block="dreieck/7" data-block-id="13c41268" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Rollst du den Mantel ab, entsteht ein Kreisausschnitt mit dem Radius s. Sein Bogen ist so lang wie der Umfang des Grundkreises, 2 · π · r. Für seine Fläche gilt dasselbe wie bei den Tortenstücken auf der Seite „Die Fläche des Kreises“: Die Fläche ist die Hälfte von Bogen mal Radius.</p></div>
+</div>
+<div class="explainer-block" data-block="dreieck/8" data-block-id="bb022b06" data-block-type="formula" data-block-order="16">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>M</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mn>2</mn><mi>π</mi><mi>r</mi><mo>⋅</mo><mi>s</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>s</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="dreieck/9" data-block-id="ed4a741a" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>s</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="dreieck/10" data-block-id="62c47cd8" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>Wenn du die Oberfläche einer Pyramide brauchst, suchst du dasselbe Dreieck wie beim Kegel. Die Pyramide ist gerade und ihr Boden ein Quadrat mit der Kante a. Die Höhe h trifft die Mitte des Bodens. Von dort geht eine Strecke der Länge a : 2 zur Mitte einer Kante. Die <strong>Seitenhöhe</strong> <math><msub><mi>h</mi><mi>s</mi></msub></math> geht von der Spitze zur Mitte dieser Kante, sie ist die Hypotenuse.</p></div>
+</div>
+<div class="explainer-block" data-block="dreieck/11" data-block-id="60f8695c" data-block-type="figure" data-block-order="19">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/pyramide-dreieck.svg" alt="Eine Pyramide mit quadratischer Grundfläche. Die gestrichelte Höhe, die halbe Grundkante und die Seitenhöhe bilden ein blau markiertes rechtwinkliges Dreieck." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Höhe, halbe Grundkante und Seitenhöhe: das blaue Dreieck hat einen rechten Winkel am Boden-Mittelpunkt.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="dreieck/12" data-block-id="493243a4" data-block-type="formula" data-block-order="20">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msubsup><mi>h</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><msup><mi>h</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mi>a</mi><mn>2</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="dreieck/13" data-block-id="2a5bbcdf" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Der Mantel der Pyramide besteht aus vier gleichen Dreiecken mit der Grundseite a und der Höhe <math><msub><mi>h</mi><mi>s</mi></msub></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="dreieck/14" data-block-id="45d61680" data-block-type="formula" data-block-order="22">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>M</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mi>a</mi><mo>⋅</mo><msub><mi>h</mi><mi>s</mi></msub><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>a</mi><mo>⋅</mo><msub><mi>h</mi><mi>s</mi></msub></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="dreieck/15" data-block-id="e87418f4" data-block-type="formula" data-block-order="23">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>a</mi><mo>⋅</mo><msub><mi>h</mi><mi>s</mi></msub></mrow></math></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Kegel mit r = 3 cm</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="1727d361" data-block-type="text" data-block-order="24">
+<div class="block-text"><p>Wenn du die Formeln an einem Kegel prüfen willst, rechne ihn mit r = 3 cm durch.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="27a725a7" data-block-type="example" data-block-order="25">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Radius 3 cm, Höhe 4 cm</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="1fcca639" data-block-type="formula" data-block-order="26">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>s</mi><mo>=</mo><msqrt><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><msup><mn>4</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><mn>25</mn></msqrt><mo>=</mo><mn>5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="247104db" data-block-type="formula" data-block-order="27">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>37,68</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="1e956722" data-block-type="formula" data-block-order="28">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>M</mi><mo>=</mo><mn>3,14</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>47,1</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/4" data-block-id="d5455672" data-block-type="formula" data-block-order="29">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><mn>47,1</mn><mo>=</mo><mn>75,36</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/5" data-block-id="b6cfe2f5" data-block-type="text" data-block-order="30">
+<div class="block-text"><p>Mantellinie 5 cm, Volumen 37,68 cm³, Oberfläche 75,36 cm². Die Mantellinie nimmst du für den Mantel, nicht die Höhe.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="c5bedc64" data-block-type="generated" data-block-order="31">
+<div class="explainer-exercise explainer-generated" id="kegel-volumen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kegel hat den Radius r = 6 cm und die Höhe h = 11 cm. Berechne sein Volumen mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst das Volumen des Zylinders π · r² · h, dann ein Drittel davon.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>⋅</mo><mi>h</mi><mo>≈</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>6</mn><mn>2</mn></msup><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>414,48</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 414,48 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kegel hat den Radius r = 3 cm und die Höhe h = 11 cm. Berechne sein Volumen mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst das Volumen des Zylinders π · r² · h, dann ein Drittel davon.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>⋅</mo><mi>h</mi><mo>≈</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>103,62</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 103,62 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kegel hat den Radius r = 3 cm und die Höhe h = 5 cm. Berechne sein Volumen mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst das Volumen des Zylinders π · r² · h, dann ein Drittel davon.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>⋅</mo><mi>h</mi><mo>≈</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>47,1</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 47,1 cm³</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"kegel-volumen","given":{"r":{"int":[3,9],"step":1},"h":{"int":[3,12],"step":1}},"where":["decimals(3.14 * r * r * h / 3) \u003c= 2"],"task":{"text":"Ein Kegel hat den Radius r = {{r}} cm und die Höhe h = {{h}} cm. Berechne sein Volumen mit π ≈ 3,14."},"answer":{"value":"3.14 * r * r * h / 3","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm³"}}},"mistakes":[{"value":"3.14 * r * r * h","message":"Du hast den Zylinder gerechnet. Der Kegel fasst nur ein Drittel davon."},{"value":"3.14 * (2 * r) * (2 * r) * h / 3","message":"Du hast den Durchmesser statt des Radius quadriert. In π · r² steht der Radius."},{"value":"3.14 * r * h / 3","message":"Du hast r nicht quadriert. Die Grundfläche ist π · r²."}],"hint":"Rechne erst das Volumen des Zylinders π · r² · h, dann ein Drittel davon.","steps":["$V = \\frac{1}{3} \\cdot \\pi \\cdot r^2 \\cdot h \\approx \\frac{1}{3} \\cdot 3,14 \\cdot {{r}}^2 \\cdot {{h}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Kegel hat den Radius r = ⟦r⟧ cm und die Höhe h = ⟦h⟧ cm. Berechne sein Volumen mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmn>3\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmi>h\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmn>3\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Rechne erst das Volumen des Zylinders π · r² · h, dann ein Drittel davon.","messages":["Du hast den Zylinder gerechnet. Der Kegel fasst nur ein Drittel davon.","Du hast den Durchmesser statt des Radius quadriert. In π · r² steht der Radius.","Du hast r nicht quadriert. Die Grundfläche ist π · r²."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,21,22,23,24,25,27,28,31,34,36,37,42,43,45,46,47,50,55,58,67,83,85,88,94,128,134,143,164],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="79d14029" data-block-type="generated" data-block-order="32">
+<div class="explainer-exercise explainer-generated" id="mantellinie">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kegel hat den Radius r = 4 cm und die Höhe h = 3 cm. Wie lang ist die Mantellinie s?</p><details class="explainer-hint"><summary>Tipp</summary><p>Höhe, Radius und Mantellinie bilden ein rechtwinkliges Dreieck. Die Mantellinie liegt gegenüber dem rechten Winkel.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>s</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><msup><mi>h</mi><mn>2</mn></msup><mo>=</mo><msup><mn>4</mn><mn>2</mn></msup><mo>+</mo><msup><mn>3</mn><mn>2</mn></msup></mrow></math></li><li>Die Wurzel daraus ist 5.</li></ol><p><strong>Richtige Antwort:</strong> 5 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kegel hat den Radius r = 12 cm und die Höhe h = 16 cm. Wie lang ist die Mantellinie s?</p><details class="explainer-hint"><summary>Tipp</summary><p>Höhe, Radius und Mantellinie bilden ein rechtwinkliges Dreieck. Die Mantellinie liegt gegenüber dem rechten Winkel.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>s</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><msup><mi>h</mi><mn>2</mn></msup><mo>=</mo><msup><mn>12</mn><mn>2</mn></msup><mo>+</mo><msup><mn>16</mn><mn>2</mn></msup></mrow></math></li><li>Die Wurzel daraus ist 20.</li></ol><p><strong>Richtige Antwort:</strong> 20 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kegel hat den Radius r = 9 cm und die Höhe h = 12 cm. Wie lang ist die Mantellinie s?</p><details class="explainer-hint"><summary>Tipp</summary><p>Höhe, Radius und Mantellinie bilden ein rechtwinkliges Dreieck. Die Mantellinie liegt gegenüber dem rechten Winkel.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>s</mi><mn class="tml-sml-pad">2</mn></msup><mo>=</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><msup><mi>h</mi><mn>2</mn></msup><mo>=</mo><msup><mn>9</mn><mn>2</mn></msup><mo>+</mo><msup><mn>12</mn><mn>2</mn></msup></mrow></math></li><li>Die Wurzel daraus ist 15.</li></ol><p><strong>Richtige Antwort:</strong> 15 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"mantellinie","given":{"t":{"pick":1,"from":{"data":"tripel"}}},"task":{"text":"Ein Kegel hat den Radius r = {{t.radius}} cm und die Höhe h = {{t.hoehe}} cm. Wie lang ist die Mantellinie s?"},"answer":{"value":"t.mantellinie","compare":{"number":{"decimals":0,"tolerance":0,"unit":"cm"}}},"mistakes":[{"value":"t.radius + t.hoehe","message":"Du hast r und h addiert. Beim Satz des Pythagoras addierst du die Quadrate und ziehst die Wurzel."},{"value":"t.radius * t.radius + t.hoehe * t.hoehe","message":"Das ist s². Es fehlt die Wurzel."}],"hint":"Höhe, Radius und Mantellinie bilden ein rechtwinkliges Dreieck. Die Mantellinie liegt gegenüber dem rechten Winkel.","steps":["$s^2 = r^2 + h^2 = {{t.radius}}^2 + {{t.hoehe}}^2$","Die Wurzel daraus ist {{answer}}."]},"templates":{"de":{"task":"Ein Kegel hat den Radius r = ⟦t.radius⟧ cm und die Höhe h = ⟦t.hoehe⟧ cm. Wie lang ist die Mantellinie s?","steps":["\u003cmath>\u003cmrow>\u003cmsup>\u003cmi>s\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmsup>\u003cmi>h\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦t.radius⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmsup>\u003cmtext>⟦t.hoehe⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>","Die Wurzel daraus ist ⟦answer⟧."],"hint":"Höhe, Radius und Mantellinie bilden ein rechtwinkliges Dreieck. Die Mantellinie liegt gegenüber dem rechten Winkel.","messages":["Du hast r und h addiert. Beim Satz des Pythagoras addierst du die Quadrate und ziehst die Wurzel.","Das ist s². Es fehlt die Wurzel."]}},"data":{"tripel":[{"radius":3,"hoehe":4,"mantellinie":5},{"radius":6,"hoehe":8,"mantellinie":10},{"radius":5,"hoehe":12,"mantellinie":13},{"radius":9,"hoehe":12,"mantellinie":15},{"radius":8,"hoehe":15,"mantellinie":17},{"radius":12,"hoehe":16,"mantellinie":20},{"radius":4,"hoehe":3,"mantellinie":5},{"radius":12,"hoehe":5,"mantellinie":13},{"radius":15,"hoehe":8,"mantellinie":17},{"radius":8,"hoehe":6,"mantellinie":10}]},"seeds":[1,2,3,4,5,6,7,8,9,18],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="0de5fdb0" data-block-type="generated" data-block-order="33">
+<div class="explainer-exercise explainer-generated" id="kegel-oberflaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kegel hat den Radius r = 12 cm, die Höhe h = 16 cm und die Mantellinie s = 20 cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Oberfläche ist die Grundfläche π · r² plus der Mantel π · r · s.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>s</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>12</mn><mn>2</mn></msup><mo>+</mo><mn>3,14</mn><mo>⋅</mo><mn>12</mn><mo>⋅</mo><mn>20</mn><mo>=</mo><mn>1205,76</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1205,76 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kegel hat den Radius r = 15 cm, die Höhe h = 8 cm und die Mantellinie s = 17 cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Oberfläche ist die Grundfläche π · r² plus der Mantel π · r · s.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>s</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>15</mn><mn>2</mn></msup><mo>+</mo><mn>3,14</mn><mo>⋅</mo><mn>15</mn><mo>⋅</mo><mn>17</mn><mo>=</mo><mn>1507,2</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1507,2 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kegel hat den Radius r = 12 cm, die Höhe h = 5 cm und die Mantellinie s = 13 cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Oberfläche ist die Grundfläche π · r² plus der Mantel π · r · s.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>s</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>12</mn><mn>2</mn></msup><mo>+</mo><mn>3,14</mn><mo>⋅</mo><mn>12</mn><mo>⋅</mo><mn>13</mn><mo>=</mo><mn>942</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 942 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"kegel-oberflaeche","given":{"t":{"pick":1,"from":{"data":"tripel"}}},"task":{"text":"Ein Kegel hat den Radius r = {{t.radius}} cm, die Höhe h = {{t.hoehe}} cm und die Mantellinie s = {{t.mantellinie}} cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14."},"answer":{"value":"3.14 * t.radius * t.radius + 3.14 * t.radius * t.mantellinie","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"3.14 * t.radius * t.mantellinie","message":"Du hast nur den Mantel gerechnet. Der Kreis am Boden fehlt."},{"value":"3.14 * t.radius * t.radius + 3.14 * t.radius * t.hoehe","message":"Du hast die Höhe statt der Mantellinie in den Mantel eingesetzt. Der Mantel ist π · r · s."}],"hint":"Die Oberfläche ist die Grundfläche π · r² plus der Mantel π · r · s.","steps":["$O = \\pi \\cdot r^2 + \\pi \\cdot r \\cdot s \\approx 3,14 \\cdot {{t.radius}}^2 + 3,14 \\cdot {{t.radius}} \\cdot {{t.mantellinie}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Kegel hat den Radius r = ⟦t.radius⟧ cm, die Höhe h = ⟦t.hoehe⟧ cm und die Mantellinie s = ⟦t.mantellinie⟧ cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>O\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>r\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>s\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦t.radius⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦t.radius⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦t.mantellinie⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Die Oberfläche ist die Grundfläche π · r² plus der Mantel π · r · s.","messages":["Du hast nur den Mantel gerechnet. Der Kreis am Boden fehlt.","Du hast die Höhe statt der Mantellinie in den Mantel eingesetzt. Der Mantel ist π · r · s."]}},"data":{"tripel":[{"radius":3,"hoehe":4,"mantellinie":5},{"radius":6,"hoehe":8,"mantellinie":10},{"radius":5,"hoehe":12,"mantellinie":13},{"radius":9,"hoehe":12,"mantellinie":15},{"radius":8,"hoehe":15,"mantellinie":17},{"radius":12,"hoehe":16,"mantellinie":20},{"radius":4,"hoehe":3,"mantellinie":5},{"radius":12,"hoehe":5,"mantellinie":13},{"radius":15,"hoehe":8,"mantellinie":17},{"radius":8,"hoehe":6,"mantellinie":10}]},"seeds":[1,2,3,7,9,15,16,18,35,52],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="7a67b8c1" data-block-type="generated" data-block-order="34">
+<div class="explainer-exercise explainer-generated" id="pyramide-volumen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Pyramide hat ein Quadrat mit der Kante a = 12 cm als Grundfläche und die Höhe h = 11 cm. Berechne ihr Volumen.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Grundfläche ist a · a. Das Volumen ist ein Drittel von Grundfläche mal Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><msup><mn>12</mn><mn>2</mn></msup><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>528</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 528 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Pyramide hat ein Quadrat mit der Kante a = 12 cm als Grundfläche und die Höhe h = 9 cm. Berechne ihr Volumen.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Grundfläche ist a · a. Das Volumen ist ein Drittel von Grundfläche mal Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><msup><mn>12</mn><mn>2</mn></msup><mo>⋅</mo><mn>9</mn><mo>=</mo><mn>432</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 432 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Pyramide hat ein Quadrat mit der Kante a = 10 cm als Grundfläche und die Höhe h = 6 cm. Berechne ihr Volumen.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Grundfläche ist a · a. Das Volumen ist ein Drittel von Grundfläche mal Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><msup><mn>10</mn><mn>2</mn></msup><mo>⋅</mo><mn>6</mn><mo>=</mo><mn>200</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 200 cm³</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"pyramide-volumen","given":{"a":{"int":[4,12],"step":2},"h":{"int":[3,12],"step":1}},"where":["decimals(a * a * h / 3) \u003c= 2"],"task":{"text":"Eine Pyramide hat ein Quadrat mit der Kante a = {{a}} cm als Grundfläche und die Höhe h = {{h}} cm. Berechne ihr Volumen."},"answer":{"value":"a * a * h / 3","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm³"}}},"mistakes":[{"value":"a * a * h","message":"Du hast das Volumen des Prismas gerechnet. Die Pyramide fasst nur ein Drittel davon."},{"value":"a * h / 3","message":"Die Grundfläche ist ein Quadrat: a · a, nicht nur a."}],"hint":"Die Grundfläche ist a · a. Das Volumen ist ein Drittel von Grundfläche mal Höhe.","steps":["$V = \\frac{1}{3} \\cdot G \\cdot h = \\frac{1}{3} \\cdot {{a}}^2 \\cdot {{h}} = {{answer}}$"]},"templates":{"de":{"task":"Eine Pyramide hat ein Quadrat mit der Kante a = ⟦a⟧ cm als Grundfläche und die Höhe h = ⟦h⟧ cm. Berechne ihr Volumen.","steps":["\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmn>3\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmi>G\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmn>3\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Die Grundfläche ist a · a. Das Volumen ist ein Drittel von Grundfläche mal Höhe.","messages":["Du hast das Volumen des Prismas gerechnet. Die Pyramide fasst nur ein Drittel davon.","Die Grundfläche ist ein Quadrat: a · a, nicht nur a."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,12,13,16,17,18,20,22,23,24,26,27,30,36,39,41,46,54,59,61,62,64,73],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="0a61245e" data-block-type="generated" data-block-order="35">
+<div class="explainer-exercise explainer-generated" id="pyramide-oberflaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine gerade Pyramide hat ein Quadrat mit der Kante a = 10 cm als Grundfläche und die Höhe h = 12 cm. Berechne ihre Oberfläche. Die Seitenhöhe kommt als ganze Zahl heraus.</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst die Seitenhöhe: h² plus (a : 2)², dann die Wurzel. Dann O = a² + 2 · a · Seitenhöhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msubsup><mi>h</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><msup><mn>12</mn><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>10</mn><mn>2</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></math></li><li>Die Seitenhöhe ist 13 cm. Dann ist die Oberfläche 360 cm².</li></ol><p><strong>Richtige Antwort:</strong> 360 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine gerade Pyramide hat ein Quadrat mit der Kante a = 8 cm als Grundfläche und die Höhe h = 3 cm. Berechne ihre Oberfläche. Die Seitenhöhe kommt als ganze Zahl heraus.</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst die Seitenhöhe: h² plus (a : 2)², dann die Wurzel. Dann O = a² + 2 · a · Seitenhöhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msubsup><mi>h</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>8</mn><mn>2</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></math></li><li>Die Seitenhöhe ist 5 cm. Dann ist die Oberfläche 144 cm².</li></ol><p><strong>Richtige Antwort:</strong> 144 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine gerade Pyramide hat ein Quadrat mit der Kante a = 6 cm als Grundfläche und die Höhe h = 4 cm. Berechne ihre Oberfläche. Die Seitenhöhe kommt als ganze Zahl heraus.</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst die Seitenhöhe: h² plus (a : 2)², dann die Wurzel. Dann O = a² + 2 · a · Seitenhöhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msubsup><mi>h</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><msup><mn>4</mn><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mn>6</mn><mn>2</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></math></li><li>Die Seitenhöhe ist 5 cm. Dann ist die Oberfläche 96 cm².</li></ol><p><strong>Richtige Antwort:</strong> 96 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"pyramide-oberflaeche","given":{"p":{"pick":1,"from":{"data":"pyramiden"}}},"task":{"text":"Eine gerade Pyramide hat ein Quadrat mit der Kante a = {{p.kante}} cm als Grundfläche und die Höhe h = {{p.hoehe}} cm. Berechne ihre Oberfläche. Die Seitenhöhe kommt als ganze Zahl heraus."},"answer":{"value":"p.kante * p.kante + 2 * p.kante * p.seitenhoehe","compare":{"number":{"decimals":0,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"2 * p.kante * p.seitenhoehe","message":"Du hast nur den Mantel gerechnet. Das Quadrat am Boden fehlt."},{"value":"p.kante * p.kante + 2 * p.kante * p.hoehe","message":"Du hast die Höhe statt der Seitenhöhe in den Mantel eingesetzt. Die Dreiecke des Mantels haben die Seitenhöhe als Höhe."},{"value":"p.kante * p.kante + 4 * p.kante * p.seitenhoehe","message":"Jedes Mantel-Dreieck hat die Fläche ein halb mal a mal Seitenhöhe. Du hast das Halbieren vergessen."}],"hint":"Erst die Seitenhöhe: h² plus (a : 2)², dann die Wurzel. Dann O = a² + 2 · a · Seitenhöhe.","steps":["$h_s^2 = {{p.hoehe}}^2 + \\left( \\frac{{{p.kante}}}{2} \\right)^2$","Die Seitenhöhe ist {{p.seitenhoehe}} cm. Dann ist die Oberfläche {{answer}} cm²."]},"templates":{"de":{"task":"Eine gerade Pyramide hat ein Quadrat mit der Kante a = ⟦p.kante⟧ cm als Grundfläche und die Höhe h = ⟦p.hoehe⟧ cm. Berechne ihre Oberfläche. Die Seitenhöhe kommt als ganze Zahl heraus.","steps":["\u003cmath>\u003cmrow>\u003cmsubsup>\u003cmi>h\u003c/mi>\u003cmi>s\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msubsup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦p.hoehe⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmsup>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"true\">(\u003c/mo>\u003cmfrac>\u003cmtext>⟦p.kante⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"true\">)\u003c/mo>\u003c/mrow>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>","Die Seitenhöhe ist ⟦p.seitenhoehe⟧ cm. Dann ist die Oberfläche ⟦answer⟧ cm²."],"hint":"Erst die Seitenhöhe: h² plus (a : 2)², dann die Wurzel. Dann O = a² + 2 · a · Seitenhöhe.","messages":["Du hast nur den Mantel gerechnet. Das Quadrat am Boden fehlt.","Du hast die Höhe statt der Seitenhöhe in den Mantel eingesetzt. Die Dreiecke des Mantels haben die Seitenhöhe als Höhe.","Jedes Mantel-Dreieck hat die Fläche ein halb mal a mal Seitenhöhe. Du hast das Halbieren vergessen."]}},"data":{"pyramiden":[{"kante":6,"hoehe":4,"seitenhoehe":5},{"kante":10,"hoehe":12,"seitenhoehe":13},{"kante":16,"hoehe":15,"seitenhoehe":17},{"kante":12,"hoehe":8,"seitenhoehe":10},{"kante":24,"hoehe":5,"seitenhoehe":13},{"kante":18,"hoehe":12,"seitenhoehe":15},{"kante":8,"hoehe":3,"seitenhoehe":5},{"kante":14,"hoehe":24,"seitenhoehe":25},{"kante":30,"hoehe":8,"seitenhoehe":17}]},"seeds":[1,2,4,5,7,12,19,30,34],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="fb243abf" data-block-type="number" data-block-order="36">
+<div class="explainer-exercise explainer-question" id="seitenhoehe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-seitenhoehe" data-id="seitenhoehe" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Pyramide hat ein Quadrat mit der Kante a = 10 cm als Grundfläche und die Höhe h = 12 cm. Wie lang ist die Seitenhöhe?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-seitenhoehe" aria-describedby="frage-seitenhoehe-unit"> <span id="frage-seitenhoehe-unit">cm</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 13 cm</p>
+<p class="question-explanation">Das Dreieck hat die Katheten h = 12 cm und a : 2 = 5 cm. Dann ist die Seitenhöhe zum Quadrat 12² + 5² = 169, also 13 cm.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 13 cm</p>
+<p class="question-explanation">Das Dreieck hat die Katheten h = 12 cm und a : 2 = 5 cm. Dann ist die Seitenhöhe zum Quadrat 12² + 5² = 169, also 13 cm.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"seitenhoehe","text":"Eine Pyramide hat ein Quadrat mit der Kante a = 10 cm als Grundfläche und die Höhe h = 12 cm. Wie lang ist die Seitenhöhe?","explanation":"Das Dreieck hat die Katheten h = 12 cm und a : 2 = 5 cm. Dann ist die Seitenhöhe zum Quadrat 12² + 5² = 169, also 13 cm.","links":[],"type":"number","answer":13,"tolerance":0,"unit":"cm"},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="581829c2" data-block-type="single-choice" data-block-order="37">
+<div class="explainer-exercise explainer-question" id="kegel-drittel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-kegel-drittel" data-id="kegel-drittel" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Zylinder hat das Volumen 90 cm³. Welches Volumen hat der Kegel?</legend>
+<label class="question-option"><input type="radio" name="frage-kegel-drittel" value="0"> <span>30 cm³</span></label>
+<label class="question-option"><input type="radio" name="frage-kegel-drittel" value="1"> <span>45 cm³</span></label>
+<label class="question-option"><input type="radio" name="frage-kegel-drittel" value="2"> <span>270 cm³</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>30 cm³</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Kegel fasst ein Drittel des Zylinders: 90 : 3 = 30.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>45 cm³</strong></p><p>Das wäre die Hälfte. Beim Umschütten brauchst du aber drei Kegel, nicht zwei.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>270 cm³</strong></p><p>Du hast mit 3 multipliziert. Der Kegel ist der kleinere Körper und fasst weniger.</p></li>
+</ul>
+<p class="question-explanation">Drei Kegelfüllungen ergeben einen Zylinder, also ist der Kegel ein Drittel des Zylinders.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>30 cm³</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Kegel fasst ein Drittel des Zylinders: 90 : 3 = 30.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>45 cm³</strong></p><p>Das wäre die Hälfte. Beim Umschütten brauchst du aber drei Kegel, nicht zwei.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>270 cm³</strong></p><p>Du hast mit 3 multipliziert. Der Kegel ist der kleinere Körper und fasst weniger.</p></li>
+</ul>
+<p class="question-explanation">Drei Kegelfüllungen ergeben einen Zylinder, also ist der Kegel ein Drittel des Zylinders.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"kegel-drittel","text":"Ein Kegel und ein Zylinder haben dieselbe Grundfläche und dieselbe Höhe. Der Zylinder hat das Volumen 90 cm³. Welches Volumen hat der Kegel?","explanation":"Drei Kegelfüllungen ergeben einen Zylinder, also ist der Kegel ein Drittel des Zylinders.","links":[],"type":"single-choice","options":[{"text":"30 cm³","correct":true,"info":"Der Kegel fasst ein Drittel des Zylinders: 90 : 3 = 30."},{"text":"45 cm³","correct":false,"info":"Das wäre die Hälfte. Beim Umschütten brauchst du aber drei Kegel, nicht zwei."},{"text":"270 cm³","correct":false,"info":"Du hast mit 3 multipliziert. Der Kegel ist der kleinere Körper und fasst weniger."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/8" data-block-id="359d0089" data-block-type="text" data-block-order="38">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst Volumen und Oberfläche von Kegel und Pyramide berechnen und das rechtwinklige Dreieck für Mantellinie und Seitenhöhe im Körper finden.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Kegel und Pyramide","order":8}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../koerper/zylinder/">Zurück: Der Zylinder</a><a rel="next" href="../../koerper/kugel/">Weiter: Die Kugel nach Archimedes</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

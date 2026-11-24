@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 215" role="img" aria-labelledby="t d">
+  <title id="t">Regelmäßiges Fünfeck mit verstecktem rechtwinkligem Dreieck</title>
+  <desc id="d">Ein regelmäßiges Fünfeck, dessen Ecken auf einem Kreis mit dem Radius r um den Mittelpunkt M liegen. Fünf Strecken vom Mittelpunkt zu den Ecken zerlegen es in fünf gleichschenklige Dreiecke mit dem Winkel 72 Grad an der Spitze. Eines davon ist halbiert: Es entsteht ein rechtwinkliges Dreieck mit der Hypotenuse r, der Ankathete rho und der Gegenkathete halbe Seite. Der Winkel an der Spitze dort ist 36 Grad.</desc>
+  <circle cx="110" cy="105" r="85" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3 3"/>
+  <polygon points="110.0,20.0 190.8,78.7 160.0,173.8 60.0,173.8 29.2,78.7" fill="none" stroke="#222" stroke-width="2"/>
+  <g stroke="#222" stroke-width="1" stroke-dasharray="4 3">
+    <line x1="110" y1="105" x2="110.0" y2="20.0"/>
+    <line x1="110" y1="105" x2="190.8" y2="78.7"/>
+    <line x1="110" y1="105" x2="160.0" y2="173.8"/>
+    <line x1="110" y1="105" x2="60.0" y2="173.8"/>
+    <line x1="110" y1="105" x2="29.2" y2="78.7"/>
+  </g>
+  <polygon points="110,105 150.4,49.4 190.8,78.7" fill="#1a56c4" fill-opacity="0.18"/>
+  <line x1="110" y1="105" x2="190.8" y2="78.7" stroke="#1a56c4" stroke-width="2.5"/>
+  <line x1="110" y1="105" x2="150.4" y2="49.4" stroke="#1a56c4" stroke-width="2.5"/>
+  <line x1="150.4" y1="49.4" x2="190.8" y2="78.7" stroke="#1a56c4" stroke-width="2.5"/>
+  <path d="M144.5,57.5 L152.6,63.3 L158.5,55.2" fill="none" stroke="#222" stroke-width="1.2"/>
+  <path d="M124.1,85.6 A24,24 0 0 1 132.8,97.6" fill="none" stroke="#222" stroke-width="1.2"/>
+  <circle cx="110" cy="105" r="3" fill="#222"/>
+  <text x="96" y="121" font-size="13" fill="#222" font-family="sans-serif">M</text>
+  <text x="156" y="106" font-size="14" fill="#222" font-family="sans-serif">r</text>
+  <text x="134" y="81" font-size="14" fill="#222" font-family="sans-serif">ρ</text>
+  <text x="175" y="58" font-size="12" fill="#222" font-family="sans-serif">a : 2</text>
+  <text x="137" y="93" font-size="12" fill="#222" font-family="sans-serif">36°</text>
+</svg>

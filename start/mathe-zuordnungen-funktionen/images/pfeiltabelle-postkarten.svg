@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 190" width="360" height="190" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 15px sans-serif; }
+    .lab { font-weight: 600; }
+    .arc { fill: none; stroke: currentColor; stroke-width: 2; }
+  </style>
+  <text class="lab" x="8" y="70">Postkarten</text>
+  <text class="lab" x="8" y="130">Preis in €</text>
+  <line x1="8" y1="86" x2="352" y2="86" stroke="currentColor" stroke-width="1"/>
+  <text x="170" y="70" text-anchor="middle">3</text>
+  <text x="290" y="70" text-anchor="middle">6</text>
+  <text x="170" y="130" text-anchor="middle">6</text>
+  <text x="290" y="130" text-anchor="middle">?</text>
+  <path class="arc" d="M 170 52 Q 230 20 284 50"/>
+  <path class="arc" d="M 278 46 L 284 50 L 276 54"/>
+  <text x="230" y="26" text-anchor="middle">· 2</text>
+  <path class="arc" d="M 170 142 Q 230 172 284 144"/>
+  <path class="arc" d="M 278 148 L 284 144 L 276 140"/>
+  <text x="230" y="178" text-anchor="middle">· 2</text>
+</svg>

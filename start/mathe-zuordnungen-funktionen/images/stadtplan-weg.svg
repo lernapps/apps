@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 14px sans-serif; }
+    .weg { stroke: currentColor; stroke-width: 3; fill: none; stroke-dasharray: 8 4; }
+    .block { fill: none; stroke: currentColor; stroke-width: 1; }
+  </style>
+  <rect class="block" x="8" y="8" width="344" height="184"/>
+  <rect class="block" x="60" y="30" width="60" height="40"/>
+  <rect class="block" x="150" y="30" width="80" height="40"/>
+  <rect class="block" x="260" y="30" width="70" height="40"/>
+  <rect class="block" x="60" y="130" width="90" height="40"/>
+  <rect class="block" x="200" y="130" width="130" height="40"/>
+  <rect x="38" y="92" width="16" height="16" fill="currentColor"/>
+  <text x="26" y="86">Schule</text>
+  <circle cx="346" cy="100" r="9" fill="none" stroke="currentColor" stroke-width="3"/>
+  <text x="352" y="86" text-anchor="end">Haltestelle</text>
+  <path class="weg" d="M 46 100 L 346 100"/>
+  <text x="170" y="120" text-anchor="middle">Weg: 6 cm auf der Karte</text>
+  <line x1="20" y1="184" x2="70" y2="184" stroke="currentColor" stroke-width="3"/>
+  <line x1="20" y1="179" x2="20" y2="189" stroke="currentColor" stroke-width="2"/>
+  <line x1="70" y1="179" x2="70" y2="189" stroke="currentColor" stroke-width="2"/>
+  <text x="80" y="188">1 cm auf der Karte</text>
+  <text x="250" y="188">Maßstab 1 : 5000</text>
+</svg>

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Kongruenz und die Kongruenzsätze – Sätze entdecken und begründen: Vierecke, Winkel, Dreiecke und Kreise</title>
+    <meta name="description" content="Herausfinden, bei welchen drei Stücken zwei Dreiecke immer gleich sind, und daraus die Kongruenzsätze ableiten." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../dreiecke/kongruenz/" />
+    <script type="module" crossorigin src="../../assets/islands-5ijkmisj.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../dreiecke/">Dreiecke konstruieren und vergleichen</a></li><li aria-current="page">Kongruenz und die Kongruenzsätze</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Kongruenz und die Kongruenzsätze</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../dreiecke/kongruenz/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧dreiecke/kongruenz/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-saetze-entdecken","page":{"id":"kongruenz","title":"Kongruenz und die Kongruenzsätze","exercises":[{"id":"deckungsgleich","section":"einstieg","numbered":false},{"id":"welche-stuecke","section":"vermutung","numbered":false},{"id":"satz-zuordnen","section":"uebung","numbered":false},{"id":"gleiche-winkel","section":"uebung","numbered":false},{"id":"ssa-kleinere-seite","section":"uebung","numbered":false},{"id":"winkel-kongruent","section":"uebung","numbered":true},{"id":"www-begruenden","section":"begruendung","numbered":false}],"sections":["einstieg","entdecken","vermutung","warum","merke","uebung","begruendung"]},"tutor":"dreiecke/kongruenz/tutor/","markdown":"dreiecke/kongruenz/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#entdecken">Stücke vergleichen</a></li><li><a href="#vermutung">Was fällt auf?</a></li><li><a href="#warum">Warum gilt das?</a></li><li><a href="#merke">Merke</a></li><li><a href="#uebung">Übung</a></li><li><a href="#begruendung">Begründe in eigenen Worten</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="21a503e2" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Du kannst gleich begründen, dass zwei Dreiecke deckungsgleich sind, und die Kongruenzsätze nutzen.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="9c376355" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Piet:</strong> Wir brauchen zwei gleiche Beete. Reicht es, wenn ich wenige Maße vergleiche?</p>
+<p><strong>Selin:</strong> Welche Maße reichen? Das finden wir heraus.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="e5f08ca6" data-block-type="multiple-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="deckungsgleich">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-deckungsgleich" data-id="deckungsgleich" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Zwei Dreiecke passen genau aufeinander. Was stimmt dann?</legend>
+<label class="question-option"><input type="checkbox" name="frage-deckungsgleich" value="0"> <span>Ihre Seiten sind paarweise gleich lang.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-deckungsgleich" value="1"> <span>Ihre Winkel sind paarweise gleich groß.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-deckungsgleich" value="2"> <span>Sie haben dieselbe Lage auf dem Blatt.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Ihre Seiten sind paarweise gleich lang.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim Aufeinanderlegen decken sich auch die Seiten, sie sind gleich lang.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Ihre Winkel sind paarweise gleich groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Auch die Winkel decken sich, sie sind gleich groß.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie haben dieselbe Lage auf dem Blatt.</strong></p><p>Man darf ein Dreieck verschieben, drehen und spiegeln, ohne dass es sich ändert.</p></li>
+</ul>
+<p class="question-explanation">Deckungsgleiche Dreiecke stimmen in allen Seiten und Winkeln überein, nur die Lage darf verschieden sein.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Ihre Seiten sind paarweise gleich lang.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim Aufeinanderlegen decken sich auch die Seiten, sie sind gleich lang.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Ihre Winkel sind paarweise gleich groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Auch die Winkel decken sich, sie sind gleich groß.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie haben dieselbe Lage auf dem Blatt.</strong></p><p>Man darf ein Dreieck verschieben, drehen und spiegeln, ohne dass es sich ändert.</p></li>
+</ul>
+<p class="question-explanation">Deckungsgleiche Dreiecke stimmen in allen Seiten und Winkeln überein, nur die Lage darf verschieden sein.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"deckungsgleich","text":"Zwei Dreiecke passen genau aufeinander. Was stimmt dann?","explanation":"Deckungsgleiche Dreiecke stimmen in allen Seiten und Winkeln überein, nur die Lage darf verschieden sein.","links":[],"type":"multiple-choice","options":[{"text":"Ihre Seiten sind paarweise gleich lang.","correct":true,"info":"Beim Aufeinanderlegen decken sich auch die Seiten, sie sind gleich lang."},{"text":"Ihre Winkel sind paarweise gleich groß.","correct":true,"info":"Auch die Winkel decken sich, sie sind gleich groß."},{"text":"Sie haben dieselbe Lage auf dem Blatt.","correct":false,"info":"Man darf ein Dreieck verschieben, drehen und spiegeln, ohne dass es sich ändert."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="entdecken">Stücke vergleichen</h2>
+<div class="explainer-block" data-block="entdecken/1" data-block-id="b9670670" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du zwei Dreiecke vergleichen willst, möchtest du möglichst wenig messen. Welche Stücke reichen?</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/2" data-block-id="32b1d2b3" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wähle gegebene Stücke (S steht für eine Seite, W für einen Winkel, SWS heißt Seite, Winkel, Seite) und verschiebe den Regler. Die Anzeige zählt, wie viele verschiedene Dreiecke zu den Stücken
+passen. Zähle bei jeder Einstellung mit. Probiere SSS, SWS, WSW, SSA und WWW.</p></div>
+</div>
+<div class="explainer-block" data-block="entdecken/3" data-block-id="d58b716a" data-block-type="vue-component" data-block-order="6">
+<div class="explainer-component" id="zug-stuecke-kongruenz" data-component="Dreiecksstuecke">
+<div class="explainer-island" hidden><div class="stuecke" data-v-b885a922><fieldset class="stuecke-modes" data-v-b885a922><legend data-v-b885a922>Gegebene Stücke</legend><!--[--><label class="stuecke-mode" data-v-b885a922><input type="radio" name="stuecke-mode" checked data-v-b885a922> SSS: drei Seiten</label><label class="stuecke-mode" data-v-b885a922><input type="radio" name="stuecke-mode" data-v-b885a922> SWS: zwei Seiten und der Winkel dazwischen</label><label class="stuecke-mode" data-v-b885a922><input type="radio" name="stuecke-mode" data-v-b885a922> WSW: eine Seite und die zwei Winkel daran</label><label class="stuecke-mode" data-v-b885a922><input type="radio" name="stuecke-mode" data-v-b885a922> SSA: zwei Seiten und ein Winkel gegenüber einer Seite</label><label class="stuecke-mode" data-v-b885a922><input type="radio" name="stuecke-mode" data-v-b885a922> WWW: drei Winkel</label><!--]--></fieldset><p class="stuecke-given" data-v-b885a922>Gegeben: a = 4 cm, b = 6 cm, c = 5 cm</p><label class="stuecke-slider" data-v-b885a922>Seite c in cm <input value="5" type="range" min="1" max="11" step="1" data-v-b885a922></label><svg viewBox="0 0 330 190" class="stuecke-figure" aria-hidden="true" data-v-b885a922><line x1="30" y1="165" x2="320" y2="165" class="stuecke-axis" data-v-b885a922></line><!--[--><g data-v-b885a922><polygon points="30,165 130,165 120,85.62746066806228" class="stuecke-shape" data-v-b885a922></polygon><circle cx="120" cy="85.62746066806228" r="4" class="stuecke-dot" data-v-b885a922></circle><text x="128" y="79.62746066806228" class="stuecke-label" data-v-b885a922>C</text><text x="136" y="179" class="stuecke-label" data-v-b885a922>B</text><text x="76" y="179" class="stuecke-label" data-v-b885a922>c</text><text x="131" y="125.31373033403113" class="stuecke-label" data-v-b885a922>a</text><text x="63" y="121.31373033403113" class="stuecke-label" data-v-b885a922>b</text><text x="44" y="160" class="stuecke-label" data-v-b885a922>α</text></g><!--]--><text x="14" y="182" class="stuecke-label" data-v-b885a922>A</text></svg><p class="stuecke-result" aria-live="polite" data-v-b885a922>Anzahl verschiedener Dreiecke: eins</p></div></div>
+<div class="explainer-nojs"><p>Gegebene Stücke und die Zahl der Dreiecke, die dazu passen. SSS (a = 4 cm, b = 6 cm, c = 5 cm): ein Dreieck. SWS
+(b = 5 cm, c = 6 cm, α = 60°): ein Dreieck. WSW (c = 6 cm, α = 50°, β = 60°): ein Dreieck. SSA (b = 5 cm,
+α = 40°, a = 4 cm): zwei Dreiecke, bei a = 5 cm ein Dreieck. WWW (α = 50°, β = 60°, γ = 70°): unendlich viele
+Dreiecke, jede Größe passt.</p></div>
+<script type="application/json" class="explainer-component-props">{"modes":["sss","sws","wsw","ssa","www"],"labels":["SSS: drei Seiten","SWS: zwei Seiten und der Winkel dazwischen","WSW: eine Seite und die zwei Winkel daran","SSA: zwei Seiten und ein Winkel gegenüber einer Seite","WWW: drei Winkel"],"given":["Gegeben: a = 4 cm, b = 6 cm, c = {v} cm","Gegeben: b = 5 cm, c = 6 cm, α = {v}°","Gegeben: c = 6 cm, α = 50°, β = {v}°","Gegeben: b = 5 cm, α = 40°, a = {v} cm (a liegt α gegenüber)","Gegeben: α = 50°, β = 60°, γ = 70°, die Seite c ist {v} cm lang"],"slider":["Seite c in cm","Winkel α in Grad","Winkel β in Grad","Seite a in cm","Seite c in cm"],"result":"Anzahl verschiedener Dreiecke: {n}","words":["keins","eins","zwei","unendlich viele"],"legend":"Gegebene Stücke"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="vermutung">Was fällt auf?</h2>
+<div class="explainer-block" data-block="vermutung/1" data-block-id="c16633be" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Wenn du an der Figur etwas entdeckt hast, hältst du es als Vermutung fest und prüfst sie dann.</p></div>
+</div>
+<div class="explainer-block" data-block="vermutung/2" data-block-id="c7de66d8" data-block-type="multiple-choice" data-block-order="8">
+<div class="explainer-exercise explainer-question" id="welche-stuecke">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welche-stuecke" data-id="welche-stuecke" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei welchen Stücken passt immer nur ein Dreieck, wenn die Stücke ein Dreieck erlauben?</legend>
+<label class="question-option"><input type="checkbox" name="frage-welche-stuecke" value="0"> <span>SSS</span></label>
+<label class="question-option"><input type="checkbox" name="frage-welche-stuecke" value="1"> <span>SWS</span></label>
+<label class="question-option"><input type="checkbox" name="frage-welche-stuecke" value="2"> <span>WSW</span></label>
+<label class="question-option"><input type="checkbox" name="frage-welche-stuecke" value="3"> <span>WWW</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>SSS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die drei Seiten legen die Winkel fest, es passt genau ein Dreieck.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>SWS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seiten und der Winkel dazwischen legen die dritte Seite fest.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>WSW</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seite und die zwei Winkel daran legen die anderen Ecken fest.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>WWW</strong></p><p>Es passen unendlich viele Dreiecke, jedes größere hat dieselben Winkel.</p></li>
+</ul>
+<p class="question-explanation">SSS, SWS und WSW legen ein Dreieck fest. WWW nicht, und SSA nur manchmal.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>SSS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die drei Seiten legen die Winkel fest, es passt genau ein Dreieck.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>SWS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seiten und der Winkel dazwischen legen die dritte Seite fest.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>WSW</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Seite und die zwei Winkel daran legen die anderen Ecken fest.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>WWW</strong></p><p>Es passen unendlich viele Dreiecke, jedes größere hat dieselben Winkel.</p></li>
+</ul>
+<p class="question-explanation">SSS, SWS und WSW legen ein Dreieck fest. WWW nicht, und SSA nur manchmal.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welche-stuecke","text":"Bei welchen Stücken passt immer nur ein Dreieck, wenn die Stücke ein Dreieck erlauben?","explanation":"SSS, SWS und WSW legen ein Dreieck fest. WWW nicht, und SSA nur manchmal.","links":[],"type":"multiple-choice","options":[{"text":"SSS","correct":true,"info":"Die drei Seiten legen die Winkel fest, es passt genau ein Dreieck."},{"text":"SWS","correct":true,"info":"Die Seiten und der Winkel dazwischen legen die dritte Seite fest."},{"text":"WSW","correct":true,"info":"Die Seite und die zwei Winkel daran legen die anderen Ecken fest."},{"text":"WWW","correct":false,"info":"Es passen unendlich viele Dreiecke, jedes größere hat dieselben Winkel."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="warum">Warum gilt das?</h2>
+<div class="explainer-block" data-block="warum/1" data-block-id="8eb7f36f" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Wenn du sicher sein willst, dass drei solche Stücke reichen, hilft dir die Konstruktion.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/2" data-block-id="e7a44636" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Legen drei Stücke das Dreieck fest, dann kannst du es nur auf eine Art konstruieren. Zwei Dreiecke, die in diesen
+Stücken übereinstimmen, entstehen aus derselben Konstruktion. Die Konstruktion liefert dasselbe Dreieck, nur an
+einem anderen Ort. Also passen die Dreiecke aufeinander. Bei SSA liegt der Winkel α bei <em>A</em> und der Seite <em>a</em> gegenüber. Ist <em>a</em> kleiner als <em>b</em>, aber größer als der Abstand von
+<em>C</em> zur Seite <em>AB</em>, gibt es zwei Konstruktionen. Ist <em>a</em> mindestens so lang wie <em>b</em>, ist die Konstruktion eindeutig. Das ist der Satz SsW: zwei Seiten und der Winkel, der der größeren Seite gegenüberliegt.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Merke</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="a05c5c7b" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn du den Satz später wieder brauchst, findest du ihn hier kurz zusammengefasst.</p></div>
+</div>
+<div class="explainer-block" data-block="merke/2" data-block-id="8a1d1059" data-block-type="definition" data-block-order="12">
+<dl class="explainer-definition"><dt><dfn id="begriff-kongruent"><a href="../../glossar/#kongruent">Kongruent</a></dfn></dt><dd><p>Zwei Figuren sind kongruent (deckungsgleich), wenn sie sich durch Verschieben, Drehen und Spiegeln genau aufeinanderlegen lassen. Beispiel: Zwei Dreiecke mit den Seiten 3 cm, 4 cm und 5 cm sind kongruent.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="merke/3" data-block-id="1a27cd27" data-block-type="table" data-block-order="13">
+<div class="block-table" role="region" aria-label="Die Kongruenzsätze für Dreiecke" tabindex="0"><table><caption>Die Kongruenzsätze für Dreiecke</caption><thead><tr><th scope="col">Satz</th><th scope="col">Stücke</th></tr></thead><tbody><tr><td>SSS</td><td>drei Seiten</td></tr><tr><td>SWS</td><td>zwei Seiten und der Winkel dazwischen</td></tr><tr><td>WSW</td><td>eine Seite und die zwei Winkel daran</td></tr><tr><td>SsW</td><td>zwei Seiten und der Winkel, der der größeren Seite gegenüberliegt</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="merke/4" data-block-id="f86d7198" data-block-type="note" data-block-order="14">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Achtung</h3>
+<div class="explainer-block" data-block="merke/4/1" data-block-id="85f31909" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>WWW ist kein Kongruenzsatz. Dreiecke mit gleichen Winkeln können verschieden groß sein.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="be587bc6" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Wenn du prüfen willst, ob du das anwenden kannst, löst du Aufgaben mit neuen Zahlen und neuen Fällen.</p></div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="9381589f" data-block-type="matching" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="satz-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-satz-zuordnen" data-id="satz-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne den Angaben den passenden Kongruenzsatz zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>a = 5 cm, b = 6 cm, c = 7 cm</span> <select name="frage-satz-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="0">SSS</option><option value="3">SsW</option><option value="2">WSW</option><option value="1">SWS</option><option value="4">kein Kongruenzsatz</option></select></label></li>
+<li><label><span>b = 5 cm, c = 6 cm, α = 40° (α liegt zwischen b und c)</span> <select name="frage-satz-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="0">SSS</option><option value="3">SsW</option><option value="2">WSW</option><option value="1">SWS</option><option value="4">kein Kongruenzsatz</option></select></label></li>
+<li><label><span>c = 6 cm, α = 50°, β = 60°</span> <select name="frage-satz-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="0">SSS</option><option value="3">SsW</option><option value="2">WSW</option><option value="1">SWS</option><option value="4">kein Kongruenzsatz</option></select></label></li>
+<li><label><span>a = 7 cm, b = 5 cm, α = 60° (α liegt der längeren Seite a gegenüber)</span> <select name="frage-satz-zuordnen-3" data-left="3"><option value="">bitte wählen</option><option value="0">SSS</option><option value="3">SsW</option><option value="2">WSW</option><option value="1">SWS</option><option value="4">kein Kongruenzsatz</option></select></label></li>
+<li><label><span>α = 50°, β = 60°, γ = 70°</span> <select name="frage-satz-zuordnen-4" data-left="4"><option value="">bitte wählen</option><option value="0">SSS</option><option value="3">SsW</option><option value="2">WSW</option><option value="1">SWS</option><option value="4">kein Kongruenzsatz</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> a = 5 cm, b = 6 cm, c = 7 cm – SSS; b = 5 cm, c = 6 cm, α = 40° (α liegt zwischen b und c) – SWS; c = 6 cm, α = 50°, β = 60° – WSW; a = 7 cm, b = 5 cm, α = 60° (α liegt der längeren Seite a gegenüber) – SsW; α = 50°, β = 60°, γ = 70° – kein Kongruenzsatz</p>
+<p class="question-explanation">Wichtig ist, wo der Winkel liegt. Bei drei Winkeln fehlt eine Seite.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> a = 5 cm, b = 6 cm, c = 7 cm – SSS; b = 5 cm, c = 6 cm, α = 40° (α liegt zwischen b und c) – SWS; c = 6 cm, α = 50°, β = 60° – WSW; a = 7 cm, b = 5 cm, α = 60° (α liegt der längeren Seite a gegenüber) – SsW; α = 50°, β = 60°, γ = 70° – kein Kongruenzsatz</p>
+<p class="question-explanation">Wichtig ist, wo der Winkel liegt. Bei drei Winkeln fehlt eine Seite.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"satz-zuordnen","text":"Ordne den Angaben den passenden Kongruenzsatz zu.","explanation":"Wichtig ist, wo der Winkel liegt. Bei drei Winkeln fehlt eine Seite.","links":[],"type":"matching","pairs":[{"left":"a = 5 cm, b = 6 cm, c = 7 cm","right":"SSS"},{"left":"b = 5 cm, c = 6 cm, α = 40° (α liegt zwischen b und c)","right":"SWS"},{"left":"c = 6 cm, α = 50°, β = 60°","right":"WSW"},{"left":"a = 7 cm, b = 5 cm, α = 60° (α liegt der längeren Seite a gegenüber)","right":"SsW"},{"left":"α = 50°, β = 60°, γ = 70°","right":"kein Kongruenzsatz"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="c06bba28" data-block-type="true-false" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="gleiche-winkel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gleiche-winkel" data-id="gleiche-winkel" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Zwei Dreiecke mit denselben drei Winkeln sind immer kongruent.</legend>
+<label class="question-option"><input type="radio" name="frage-gleiche-winkel" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-gleiche-winkel" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Ein Dreieck lässt sich vergrößern, ohne dass sich die Winkel ändern. WWW ist kein Kongruenzsatz.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Ein Dreieck lässt sich vergrößern, ohne dass sich die Winkel ändern. WWW ist kein Kongruenzsatz.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gleiche-winkel","text":"Zwei Dreiecke mit denselben drei Winkeln sind immer kongruent.","explanation":"Ein Dreieck lässt sich vergrößern, ohne dass sich die Winkel ändern. WWW ist kein Kongruenzsatz.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="bab3465a" data-block-type="single-choice" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="ssa-kleinere-seite">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ssa-kleinere-seite" data-id="ssa-kleinere-seite" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Zwei Dreiecke stimmen in zwei Seiten und in einem Winkel überein. Der Winkel liegt der kürzeren der beiden Seiten gegenüber. Sind sie kongruent?</legend>
+<label class="question-option"><input type="radio" name="frage-ssa-kleinere-seite" value="0"> <span>Ja, immer.</span></label>
+<label class="question-option"><input type="radio" name="frage-ssa-kleinere-seite" value="1"> <span>Nicht unbedingt.</span></label>
+<label class="question-option"><input type="radio" name="frage-ssa-kleinere-seite" value="2"> <span>Nein, nie.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ja, immer.</strong></p><p>Hier passen manchmal zwei Dreiecke zu den Stücken, die Dreiecke können verschieden sein.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Nicht unbedingt.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Kreis um C schneidet den Schenkel zweimal, es können zwei verschiedene Dreiecke entstehen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nein, nie.</strong></p><p>Es kann sein, dass die Dreiecke kongruent sind, es ist aber nicht sicher.</p></li>
+</ul>
+<p class="question-explanation">Liegt der Winkel der kürzeren Seite gegenüber, ist das kein Kongruenzsatz.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Ja, immer.</strong></p><p>Hier passen manchmal zwei Dreiecke zu den Stücken, die Dreiecke können verschieden sein.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Nicht unbedingt.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Kreis um C schneidet den Schenkel zweimal, es können zwei verschiedene Dreiecke entstehen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Nein, nie.</strong></p><p>Es kann sein, dass die Dreiecke kongruent sind, es ist aber nicht sicher.</p></li>
+</ul>
+<p class="question-explanation">Liegt der Winkel der kürzeren Seite gegenüber, ist das kein Kongruenzsatz.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ssa-kleinere-seite","text":"Zwei Dreiecke stimmen in zwei Seiten und in einem Winkel überein. Der Winkel liegt der kürzeren der beiden Seiten gegenüber. Sind sie kongruent?","explanation":"Liegt der Winkel der kürzeren Seite gegenüber, ist das kein Kongruenzsatz.","links":[],"type":"single-choice","options":[{"text":"Ja, immer.","correct":false,"info":"Hier passen manchmal zwei Dreiecke zu den Stücken, die Dreiecke können verschieden sein."},{"text":"Nicht unbedingt.","correct":true,"info":"Der Kreis um C schneidet den Schenkel zweimal, es können zwei verschiedene Dreiecke entstehen."},{"text":"Nein, nie.","correct":false,"info":"Es kann sein, dass die Dreiecke kongruent sind, es ist aber nicht sicher."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a263c153" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="winkel-kongruent">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Die Dreiecke ABC und DEF sind kongruent, dabei gehören A zu D, B zu E und C zu F. Im Dreieck ABC sind α = 45° und β = 50°. Wie groß ist der Winkel bei F?</p><details class="explainer-hint"><summary>Tipp</summary><p>Kongruente Dreiecke haben gleiche Winkel an passenden Ecken. Rechne γ mit der Winkelsumme.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Bei C ist γ = 180° − 45° − 50° = 85°.</li><li>C gehört zu F, der Winkel bei F ist 85°.</li></ol><p><strong>Richtige Antwort:</strong> 85 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Die Dreiecke ABC und DEF sind kongruent, dabei gehören A zu D, B zu E und C zu F. Im Dreieck ABC sind α = 70° und β = 75°. Wie groß ist der Winkel bei F?</p><details class="explainer-hint"><summary>Tipp</summary><p>Kongruente Dreiecke haben gleiche Winkel an passenden Ecken. Rechne γ mit der Winkelsumme.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Bei C ist γ = 180° − 70° − 75° = 35°.</li><li>C gehört zu F, der Winkel bei F ist 35°.</li></ol><p><strong>Richtige Antwort:</strong> 35 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Die Dreiecke ABC und DEF sind kongruent, dabei gehören A zu D, B zu E und C zu F. Im Dreieck ABC sind α = 50° und β = 30°. Wie groß ist der Winkel bei F?</p><details class="explainer-hint"><summary>Tipp</summary><p>Kongruente Dreiecke haben gleiche Winkel an passenden Ecken. Rechne γ mit der Winkelsumme.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Bei C ist γ = 180° − 50° − 30° = 100°.</li><li>C gehört zu F, der Winkel bei F ist 100°.</li></ol><p><strong>Richtige Antwort:</strong> 100 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-kongruent","given":{"a":{"int":[30,80],"step":5},"b":{"int":[30,80],"step":5}},"where":["a + b != 90"],"task":{"text":"Die Dreiecke ABC und DEF sind kongruent, dabei gehören A zu D, B zu E und C zu F. Im Dreieck ABC sind α = {{a}}° und β = {{b}}°. Wie groß ist der Winkel bei F?"},"answer":{"value":"180 - a - b","compare":{"number":{"format":"integer","unit":"°"}}},"mistakes":[{"value":"a + b","message":"Das ist die Summe von α und β. Der Winkel bei F ist so groß wie γ bei C, also 180° − α − β."},{"value":"180 - a","message":"Das ist die Summe von β und γ. Der Winkel bei F ist nur γ, so groß wie der Winkel bei C."}],"hint":"Kongruente Dreiecke haben gleiche Winkel an passenden Ecken. Rechne γ mit der Winkelsumme.","steps":["Bei C ist γ = 180° − {{a}}° − {{b}}° = {{answer}}°.","C gehört zu F, der Winkel bei F ist {{answer}}°."]},"templates":{"de":{"task":"Die Dreiecke ABC und DEF sind kongruent, dabei gehören A zu D, B zu E und C zu F. Im Dreieck ABC sind α = ⟦a⟧° und β = ⟦b⟧°. Wie groß ist der Winkel bei F?","steps":["Bei C ist γ = 180° − ⟦a⟧° − ⟦b⟧° = ⟦answer⟧°.","C gehört zu F, der Winkel bei F ist ⟦answer⟧°."],"hint":"Kongruente Dreiecke haben gleiche Winkel an passenden Ecken. Rechne γ mit der Winkelsumme.","messages":["Das ist die Summe von α und β. Der Winkel bei F ist so groß wie γ bei C, also 180° − α − β.","Das ist die Summe von β und γ. Der Winkel bei F ist nur γ, so groß wie der Winkel bei C."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,10,11,13,14,15,16,17,18,20,21,22,23,24,25,26,27,28,29,30,32,33,37,38,39,40,41,42,45,47,48,49,50,51,52,53,54,55,56,57,58,60,64,65,67,69,71,72,73,74,76,79,80,82,87,88,92,94,95,100],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="begruendung">Begründe in eigenen Worten</h2>
+<div class="explainer-block" data-block="begruendung/1" data-block-id="70afe46c" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Wenn du einen Satz wirklich verstanden hast, kannst du ihn mit eigenen Worten begründen.</p></div>
+</div>
+<div class="explainer-block" data-block="begruendung/2" data-block-id="8edf6736" data-block-type="open-task" data-block-order="22">
+<div class="explainer-exercise explainer-open-task" id="www-begruenden" data-storage="mathe-saetze-entdecken">
+<p class="explainer-exercise-label">Offene Aufgabe</p>
+<div class="explainer-open-task-text"><p>Erkläre in zwei bis vier Sätzen, warum drei gleiche Winkel nicht reichen, damit zwei Dreiecke kongruent sind.</p></div>
+<div class="explainer-open-live" hidden></div>
+<div class="explainer-open-points">
+<p class="explainer-open-points-intro">Eine gute Antwort enthält:</p>
+<ul><li>Ein Dreieck lässt sich vergrößern, ohne dass sich seine Winkel ändern. <a class="explainer-open-source" href="../../dreiecke/kongruenz/#entdecken">Nachlesen</a></li><li>Das größere Dreieck hat dieselben Winkel, aber längere Seiten. <a class="explainer-open-source" href="../../dreiecke/kongruenz/#merke">Nachlesen</a></li><li>Kongruente Dreiecke müssen auch gleich lange Seiten haben, darum reicht WWW nicht. <a class="explainer-open-source" href="../../dreiecke/kongruenz/#warum">Nachlesen</a></li><li>Ganze Sätze mit einer Begründung (weil …, darum …). <span class="explainer-open-kind">(Form)</span></li></ul>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<div class="explainer-open-solution"><p>Ich kann ein Dreieck vergrößern, ohne dass sich seine Winkel ändern. Das größere Dreieck hat dieselben drei
+Winkel, aber längere Seiten. Kongruente Dreiecke müssen auch in den Seiten übereinstimmen, darum reichen drei
+gleiche Winkel nicht.</p></div>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"open","lang":"de","id":"www-begruenden","task":"\u003cp>Erkläre in zwei bis vier Sätzen, warum drei gleiche Winkel nicht reichen, damit zwei Dreiecke kongruent sind.\u003c/p>","answer":["text","photo"],"points":[{"text":"Ein Dreieck lässt sich vergrößern, ohne dass sich seine Winkel ändern.","kind":"content","href":"../../dreiecke/kongruenz/#entdecken"},{"text":"Das größere Dreieck hat dieselben Winkel, aber längere Seiten.","kind":"content","href":"../../dreiecke/kongruenz/#merke"},{"text":"Kongruente Dreiecke müssen auch gleich lange Seiten haben, darum reicht WWW nicht.","kind":"content","href":"../../dreiecke/kongruenz/#warum"},{"text":"Ganze Sätze mit einer Begründung (weil …, darum …).","kind":"form"}],"solution":"\u003cp>Ich kann ein Dreieck vergrößern, ohne dass sich seine Winkel ändern. Das größere Dreieck hat dieselben drei\nWinkel, aber längere Seiten. Kongruente Dreiecke müssen auch in den Seiten übereinstimmen, darum reichen drei\ngleiche Winkel nicht.\u003c/p>"}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Sätze entdecken und begründen: Vierecke, Winkel, Dreiecke und Kreise“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-saetze-entdecken","app":"Sätze entdecken und begründen: Vierecke, Winkel, Dreiecke und Kreise","root":"../../","repository":"lernapps/mathe-saetze-entdecken","revision":"b8215ec","page":{"title":"Kongruenz und die Kongruenzsätze","order":8}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../dreiecke/konstruktion/">Zurück: Dreiecke konstruieren</a><a rel="next" href="../../dreiecke/linien/">Weiter: Besondere Linien im Dreieck</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

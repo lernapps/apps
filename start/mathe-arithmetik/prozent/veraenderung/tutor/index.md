@@ -22,16 +22,15 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 - Gerechnet wird auf Papier und in der App, nicht im Chat. Das Ergebnis tippt das Kind in die App; im Chat
   stellst du Überschlags- und Warum-Fragen.
-- Erklär am Bild der Seite (Abschnitt „Bild“), nicht abstrakt: Frag zuerst „Was siehst du?“.
+- Erklär am Prozentstreifen der Seite, nicht abstrakt: Frag zuerst „Was siehst du? Welche Stelle fehlt?“.
 - Macht das Kind einen typischen Fehler, benenne die Idee hinter dem Fehler, nicht nur „falsch“. Zum Beispiel:
   „Du hast den Unterschied durch den falschen Wert geteilt. Welcher Wert ist hier 100 %?“
 - Eine Seite ist erst geschafft, wenn drei Aufgaben richtig waren und das Kind eine davon erklären kann. Dann
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
+- Fehlt dem Kind die Erklärung, geh noch einmal Schritt für Schritt durch Regel und Beispiel der Seite, bevor du
+  neue Aufgaben stellst.
 
 ## Wo das Kind gerade ist
 
@@ -54,27 +53,30 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Prozentuale Zunahme und Abnahme“
 
-Den neuen Wert nach einer Erhöhung oder Senkung um p % berechnen, und rückwärts den alten Wert: Faktor-Methode, Beispiele, Balkenbild und Übungen.
+Den neuen Wert nach einer Erhöhung oder Senkung um p % berechnen, und rückwärts den alten Wert: mit dem Faktor, am Prozentstreifen, mit Beispielen und Übungen.
 
 ### Warum?
 
-Preise steigen, Rabatte senken, Gehälter wachsen, die Mehrwertsteuer kommt obendrauf: Fast jede Prozentaufgabe im Alltag ist eine Veränderung. Der Trick ist der Faktor – mit ihm rechnest du eine Erhöhung oder Senkung in einem Schritt, und du kannst sie auch rückwärts rechnen.
+Eine Hose kostet 80 €. Der Preis steigt um 25 %. Was kostet sie danach? Am **Prozentstreifen** siehst du: Bei einer Zunahme wird der Streifen länger als 100 %: Das gestrichelte Stück ist die Zunahme. Der Pfeil darunter führt vom alten zum neuen Wert.
+
+Interaktiv: Prozentstreifen: Der Streifen reicht über 100 % hinaus bis 125 %. Unten steht der alte Preis 80 € bei 100 %, der neue Preis ist gesucht. Ein Pfeil zeigt den Faktor 1,25.
+
+Die 80 € sind 100 %. Der neue Preis ist 125 % davon. 125 % sind 125 Hundertstel, also 1,25. Der **Faktor** ist die Zahl, mit der du malnimmst. Der Pfeil zeigt ihn: Er führt vom alten zum neuen Wert. Mit ihm rechnest du in einem Schritt: 80 € · 1,25 = 100 €. Ohne Faktor wären es zwei Schritte: erst 25 % von 80 € ausrechnen (20 €), dann addieren.
 
 ### Regel
 
-Bei einer **Erhöhung** um $p\,\%$:
+Wenn ein Wert um einen Prozentsatz steigt oder sinkt und du den neuen Wert in einem Schritt brauchst, rechnest du mit einem Faktor. Bei einer **Zunahme** um $p\,\%$ rechnest du mit dem Faktor $1 + \frac{p}{100}$, bei einer **Abnahme** mit $1 - \frac{p}{100}$.
 
-$\text{neuer Wert} = \text{alter Wert} \cdot (1 + \frac{p}{100})$
+$\text{neuer Wert} = \text{alter Wert} \cdot \text{Faktor}$
 
-Bei einer **Senkung** um $p\,\%$:
+Zunahme und Abnahme um 25 %:
+- Änderung | Anteil vom alten Wert | Faktor
+- Zunahme um 25 % | 125 % | 1,25
+- Abnahme um 25 % | 75 % | 0,75
 
-$\text{neuer Wert} = \text{alter Wert} \cdot (1 - \frac{p}{100})$
+- **vermehrter Grundwert**: Der neue Wert nach einer Zunahme um $p\,\%$, also $(100 + p)\,\%$ des alten Werts.
 
-Der alte Wert ist der Grundwert (100 %). Nach einer Erhöhung um 25 % sind es 125 %, also Faktor 1,25. Nach einer Senkung um 25 % sind es 75 %, also Faktor 0,75.
-
-- **vermehrter Grundwert**: Der neue Wert nach einer Erhöhung um $p\,\%$, also $(100 + p)\,\%$ des alten Werts.
-
-- **verminderter Grundwert**: Der neue Wert nach einer Senkung um $p\,\%$, also $(100 - p)\,\%$ des alten Werts.
+- **verminderter Grundwert**: Der neue Wert nach einer Abnahme um $p\,\%$, also $(100 - p)\,\%$ des alten Werts.
 
 **Rückwärts** (alter Wert gesucht) teilst du durch den Faktor:
 
@@ -82,60 +84,78 @@ $\text{alter Wert} = \text{neuer Wert} : \text{Faktor}$
 
 **Merke: Typischer Fehler**
 
-Die Prozente auf den neuen Wert beziehen. Die 25 % Rabatt beziehen sich immer auf den alten Preis – der neue Preis ist nicht 100 %.
+Die Prozente auf den neuen Wert beziehen. Sie gehören immer zum alten Wert, denn der ist 100 %.
 
 ### Beispiel
 
 **Beispiel: Neuer Wert gesucht**
 
-Eine Hose kostet 80 €. Im Ausverkauf gibt es 25 % Rabatt. Was kostet sie jetzt?
+Eine Hose kostet 80 €. Im Ausverkauf gibt es 25 % Rabatt. Was kostet sie jetzt?
 
-Senkung um 25 % mit dem Faktor:
+Interaktiv: Prozentstreifen: Der Streifen reicht nur bis 75 %. Unten steht der alte Preis 80 € bei 100 %, der neue Preis ist 60 €. Ein Pfeil zeigt den Faktor 0,75.
+
+Abnahme um 25 %. Der Streifen endet bei 75 %, der Rest bis 100 % ist der Rabatt. Der Pfeil zeigt den Faktor.:
 - Alter Wert | 80 € = 100 %
 - Faktor | $1 - \frac{25}{100} = 0{,}75$
 - Neuer Wert | $80 \cdot 0{,}75 = 60$, also **60 €**
 
 **Beispiel: Alter Wert gesucht**
 
-Nach einer Preiserhöhung um 25 % kostet ein Ticket 100 €. Was hat es vorher gekostet?
+Nach einer Erhöhung um 25 % kostet ein Ticket 150 €. Was hat es vorher gekostet?
+
+Interaktiv: Prozentstreifen: Der Streifen reicht bis 125 %. Der neue Preis 150 € steht unten bei 125 %, der alte Preis bei 100 % ist gesucht. Ein Pfeil zeigt den Faktor 1,25.
 
 Rückwärts rechnen durch den Faktor:
-- Neuer Wert | 100 € = 125 % des alten Preises
+- Neuer Wert | 150 € = 125 % des alten Preises
 - Faktor | $1 + \frac{25}{100} = 1{,}25$
-- Alter Wert | $100 : 1{,}25 = 80$, also **80 €**
+- Alter Wert | $150 : 1{,}25 = 120$, also **120 €**
 
-Falsch wäre: 100 € − 25 % von 100 € = 75 €. Die 25 % beziehen sich auf den alten Preis, nicht auf 100 €.
-
-### Bild
-
-Bild: Ein ganz blauer Balken für den alten Preis 80 €, das sind 100 %. Bildunterschrift: Der alte Preis 80 € ist der Grundwert: 100 %.
-
-Bild: Ein Balken für 80 €, davon 60 € blau, das sind 75 %. Bildunterschrift: Der neue Preis 60 € nach 25 % Rabatt, gemessen am alten Preis: 75 %. Der Faktor 0,75 führt vom oberen zum unteren Balken.
-
-### Video dazu
-
-Senkung:
-
-Video: [Rabatt, Nachlass, Preissenkung berechnen | Prozentrechnung - einfach erklärt | Lehrerschmidt](https://www.youtube.com/watch?v=7qPr-ik4wp8), Lehrerschmidt (YouTube)
-
-Erhöhung:
-
-Video: [Preiserhöhung, Aufschlag berechnen | Prozentrechnung - einfach erklärt | Lehrerschmidt](https://www.youtube.com/watch?v=hyKgJKGCjHc), Lehrerschmidt (YouTube)
-
-Noch eine Erklärung in anderen Worten: [Der verminderte und vermehrte Grundwert](https://de.serlo.org/mathe/116824/der-verminderte-und-vermehrte-grundwert) bei serlo.org.
+Falsch wäre: 150 € − 25 % von 150 € = 112,50 €. Die 25 % gehören zum alten Preis, nicht zu 150 €.
 
 ### Übung
+
+Interaktiv: Prozentstreifen: Der Streifen reicht über 100 % hinaus bis 120 %. Unten steht 50 € bei 100 % und 60 € am Ende des Streifens.
+
+- Aufgabe `streifen-lesen` (unten)
+
+- Aufgabe `faktor-waehlen` (unten)
 
 - Aufgabe `veraenderung-aufgabe` (unten)
 
 - Aufgabe `veraenderung-senkung` (unten)
 
+- Aufgabe `alter-preis-falsch` (unten)
+
 - Aufgabe `veraenderung-rueckwaerts` (unten)
+
+### Aufgabe streifen-lesen
+
+- Aufgabe: Ein Pullover kostete 50 €. Der Streifen zeigt den neuen Preis von 60 €. Was ist passiert?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Der Preis ist um 20 % gestiegen – Der Streifen ragt 20 % über die 100 % hinaus. Das sind 10 € mehr als vorher.
+  - ✗ Der Preis ist um 120 % gestiegen – 120 % ist der neue Preis, gemessen am alten. Gestiegen ist er nur um den Teil über 100 %, also um 20 %.
+  - ✗ Der Preis ist um 20 % gesunken – Der Streifen ist länger als 100 %. Bei einer Abnahme wäre er kürzer.
+- Lösung: Der Preis ist um 20 % gestiegen
+- Erklärung: Reicht der Streifen über 100 % hinaus, ist der Wert gestiegen, und zwar um den Teil über 100 %.
+- Link: [../?via=tutor#streifen-lesen](../?via=tutor#streifen-lesen)
+
+### Aufgabe faktor-waehlen
+
+- Aufgabe: Ein Rabatt von 20 % senkt einen Preis. Mit welchem Faktor rechnest du den neuen Preis aus?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 0,8 – Nach 20 % Rabatt bleiben 80 % des Preises übrig. 80 % sind der Faktor 0,8.
+  - ✗ 0,2 – 0,2 sind die 20 % Rabatt selbst. Damit rechnest du den Abzug aus, nicht den neuen Preis.
+  - ✗ 1,2 – Der Faktor 1,2 gehört zu einer Zunahme um 20 %. Bei einem Rabatt ist der Faktor kleiner als 1.
+- Lösung: 0,8
+- Erklärung: Bei einer Abnahme um 20 % bleiben 100 % − 20 % = 80 % übrig. Der Faktor ist 0,8.
+- Link: [../?via=tutor#faktor-waehlen](../?via=tutor#faktor-waehlen)
 
 ### Aufgabe veraenderung-aufgabe
 
-- Was zu tun ist: Eine Textaufgabe zu einer Erhöhung oder Senkung um p %: entweder der neue Wert gesucht (alter Wert gegeben) oder der alte Wert gesucht (neuer Wert gegeben). Das Bild zur Aufgabe zeigt alten und neuen Wert als Balken, der gesuchte mit „?“.
-- Aufgabe: „Der Text der Aufgabe ist je nach {Fassung} einer von diesen: ticket-neu: „Ein Konzertticket kostet {Wert} €. Der Preis steigt um {p} %. Wie viel kostet es danach?“ ticket-alt: „Der Preis eines Konzerttickets steigt um {p} %. Danach kostet es {Wert} €. Wie viel hat es vorher gekostet?“ rabatt-neu: „Eine Hose kostet {Wert} €. Im Ausverkauf gibt es {p} % Rabatt. Wie viel kostet sie jetzt?“ rabatt-alt: „Nach {p} % Rabatt kostet eine Hose {Wert} €. Wie viel hat sie vorher gekostet?“ mwst-neu: „Ein Fahrrad kostet netto {Wert} €. Dazu kommen 19 % Mehrwertsteuer. Wie viel kostet es brutto?“ mwst-alt: „Ein Fahrrad kostet brutto {Wert} €. Darin sind 19 % Mehrwertsteuer enthalten. Wie hoch ist der Nettopreis?“ gehalt-neu: „Frau Berg verdient {Wert} € im Monat. Sie bekommt {p} % mehr. Wie viel verdient sie danach?“ gehalt-alt: „Nach einer Gehaltserhöhung um {p} % verdient Frau Berg {Wert} € im Monat. Wie viel hat sie vorher verdient?“ verein-neu: „Ein Sportverein hat {Wert} Mitglieder. Im nächsten Jahr sinkt die Zahl um {p} %. Wie viele Mitglieder hat er dann?“ verein-alt: „Die Mitgliederzahl eines Sportvereins ist um {p} % gesunken. Jetzt hat er {Wert} Mitglieder. Wie viele Mitglieder hatte er vorher?“ Gesucht ist bei „…-neu“ der neue Wert, bei „…-alt“ der alte Wert.“
+- Was zu tun ist: Eine Textaufgabe zu einer Erhöhung oder Senkung um p %: entweder der neue Wert gesucht (alter Wert gegeben) oder der alte Wert gesucht (neuer Wert gegeben). Das Bild zur Aufgabe ist ein Prozentstreifen: der alte Wert ist 100 %, der neue Wert liegt bei 100 ± p, der Pfeil zeigt den Faktor, der gesuchte Wert steht als „?“.
+- Aufgabe: „Der Text der Aufgabe ist je nach {Fassung} einer von diesen: ticket-neu: „Ein Konzertticket kostet {Wert} €. Der Preis steigt um {p} %. Wie viel kostet es danach?“ ticket-alt: „Der Preis eines Konzerttickets steigt um {p} %. Danach kostet es {Wert} €. Wie viel hat es vorher gekostet?“ rabatt-neu: „Eine Hose kostet {Wert} €. Im Ausverkauf gibt es {p} % Rabatt. Wie viel kostet sie jetzt?“ rabatt-alt: „Nach {p} % Rabatt kostet eine Hose {Wert} €. Wie viel hat sie vorher gekostet?“ mwst-neu: „Ein Fahrrad kostet ohne Steuer {Wert} €. Dazu kommen 19 % Mehrwertsteuer. Wie viel kostet es mit Steuer?“ mwst-alt: „Ein Fahrrad kostet mit Steuer {Wert} €. Darin sind 19 % Mehrwertsteuer enthalten. Wie hoch ist der Preis ohne Steuer?“ gehalt-neu: „Frau Berg verdient {Wert} € im Monat. Sie bekommt {p} % mehr. Wie viel verdient sie danach?“ gehalt-alt: „Nach einer Gehaltserhöhung um {p} % verdient Frau Berg {Wert} € im Monat. Wie viel hat sie vorher verdient?“ verein-neu: „Ein Sportverein hat {Wert} Mitglieder. Im nächsten Jahr sinkt die Zahl um {p} %. Wie viele Mitglieder hat er dann?“ verein-alt: „Die Mitgliederzahl eines Sportvereins ist um {p} % gesunken. Jetzt hat er {Wert} Mitglieder. Wie viele Mitglieder hatte er vorher?“ Gesucht ist bei „…-neu“ der neue Wert, bei „…-alt“ der alte Wert.“
 - Antwortformat: Eine Zahl in der Einheit des Textes (Euro oder Mitglieder), ins Feld getippt, dann „Prüfen“ unter der Aufgabe; Komma oder Punkt, ein Bruch oder ein Term gehen auch.
 - Was als richtig zählt: Neuer Wert = alter Wert · (1 ± p/100), alter Wert = neuer Wert : (1 ± p/100); exakt oder kaufmännisch gerundet (Euro auf Cent).
 - Typische Fehler (die Meldung der App passt zu einem davon):
@@ -220,13 +240,13 @@ Nr. | Fassung | Wert | p | Lösung | F1 | F2 | F3
 
 - Aufgabe: „Ein Preis von {alt} € wird um {p} % gesenkt. Wie hoch ist der neue Preis?“
 - Antwortformat: eine Zahl eintippen (€)
-- Tipp der App: „Nach der Senkung sind es 100 % − {p} % des alten Preises. Rechne mit dem Faktor 1 − {p}/100.“
+- Tipp der App: „Nach der Senkung sind es 100 % − {p} % des alten Preises. Rechne mit dem Faktor 1 − {p} : 100.“
 - Lösungsweg:
   - $\text{neuer Wert} = \text{alter Wert} \cdot (1 - \frac{p}{100})$
   - $\text{neuer Wert} = {alt} \cdot (1 - \frac{{p}}{100}) = {answer}$, also {answer} €.
 - Typische Fehler und was die App sagt:
   - F1: „Du hast in die falsche Richtung gerechnet. Der Preis sinkt, also ist der Faktor kleiner als 1.“
-  - F2: „Das ist nur die Senkung (der Prozentwert). Gefragt ist der neue Preis: alter Preis minus Senkung.“
+  - F2: „Das ist nur die Senkung. Gefragt ist der neue Preis: alter Preis minus Senkung.“
 - Link zu Nummer n: `../?veraenderung-senkung=n&via=tutor#veraenderung-senkung`
 - Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt. `{answer}` ist die Lösung.
 
@@ -301,17 +321,25 @@ Nr. | alt | p | Lösung | F1 | F2
 67 | 145 | 10 | 130,5 € | 159,5 | 14,5
 ```
 
+### Aufgabe alter-preis-falsch
+
+- Aufgabe: Ein Preis ist um 20 % gestiegen und kostet jetzt 60 €. Der alte Preis war dann 60 € − 20 % von 60 € = 48 €.
+- Antwortformat: „Stimmt“ oder „Stimmt nicht“ wählen
+- Lösung: Die Aussage stimmt nicht.
+- Erklärung: Die 20 % gehören zum alten Preis, nicht zum neuen. Rückwärts teilst du durch den Faktor: 60 € : 1,2 = 50 €. Zur Probe: 50 € · 1,2 = 60 €.
+- Link: [../?via=tutor#alter-preis-falsch](../?via=tutor#alter-preis-falsch)
+
 ### Aufgabe veraenderung-rueckwaerts
 
 - Aufgabe: „Nach einer Erhöhung um {p} % beträgt ein Preis {neu} €. Wie hoch war er vorher?“
 - Antwortformat: eine Zahl eintippen (€)
-- Tipp der App: „{neu} € sind 100 % + {p} % des alten Preises. Teile durch den Faktor 1 + {p}/100.“
+- Tipp der App: „{neu} € sind 100 % + {p} % des alten Preises. Teile durch den Faktor 1 + {p} : 100.“
 - Lösungsweg:
   - $\text{alter Wert} = \text{neuer Wert} : (1 + \frac{p}{100})$
   - $\text{alter Wert} = {neu} : (1 + \frac{{p}}{100}) = {answer}$, also {answer} €.
 - Typische Fehler und was die App sagt:
-  - F1: „Die {p} % beziehen sich auf den alten Preis, nicht auf {neu} €. Der neue Preis ist nicht 100 %.“
-  - F2: „Du hast noch einmal erhöht. Rückwärts teilst du durch den Faktor, statt mit ihm zu multiplizieren.“
+  - F1: „Die {p} % gehören zum alten Preis, nicht zu {neu} €. Der neue Preis ist nicht 100 %.“
+  - F2: „Du hast noch einmal erhöht. Rückwärts teilst du durch den Faktor, statt mit ihm zu malnehmen.“
 - Link zu Nummer n: `../?veraenderung-rueckwaerts=n&via=tutor#veraenderung-rueckwaerts`
 - Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt. `{answer}` ist die Lösung.
 

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Bedingte Wahrscheinlichkeit – Mathe: Stochastik – Wahrscheinlichkeit</title>
+    <meta name="description" content="Bedingte Wahrscheinlichkeiten am Baumdiagramm oder in der Vierfeldertafel erkennen und berechnen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../vierfeldertafel/bedingt/" />
+    <script type="module" crossorigin src="../../assets/islands-Bi5pcRrb.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../vierfeldertafel/">Vierfeldertafel und bedingte Wahrscheinlichkeit</a></li><li aria-current="page">Bedingte Wahrscheinlichkeit</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Bedingte Wahrscheinlichkeit</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../vierfeldertafel/bedingt/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧vierfeldertafel/bedingt/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-stochastik","page":{"id":"bedingt","title":"Bedingte Wahrscheinlichkeit","exercises":[{"id":"nenner-wahl","section":"warum","numbered":false},{"id":"bedingt-tafel","section":"uebung","numbered":true},{"id":"richtung","section":"uebung","numbered":false},{"id":"zahlen-zuordnen","section":"uebung","numbered":false},{"id":"sicherheit","section":"uebung","numbered":false}],"sections":["warum","regel","beispiel","uebung","abschluss"]},"tutor":"vierfeldertafel/bedingt/tutor/","markdown":"vierfeldertafel/bedingt/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#warum">Was du hier lernst</a></li><li><a href="#regel">Die Bedingung bestimmt den Nenner</a></li><li><a href="#beispiel">Zwei Fragen, zwei Antworten</a></li><li><a href="#uebung">Übung</a></li><li><a href="#abschluss">Das nimmst du mit</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="warum">Was du hier lernst</h2>
+<div class="explainer-block" data-block="warum/1" data-block-id="118e4a93" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Dein Schnelltest ist positiv. Wie sicher bist du jetzt krank? Dafür brauchst du eine Wahrscheinlichkeit unter einer <strong>Bedingung</strong>. Das Beispiel ist ein Schnelltest. Von
+1000 Personen sind 40 krank. Der Test zeigt bei 36 Kranken ein positives Ergebnis und bei 48 Gesunden auch, obwohl
+sie gesund sind. Tippe in der Tafel auf die Zelle „krank, Test positiv“. Lies dann im Baum ab, welche Zahlen an
+den Zweigen stehen, wenn du mit „krank“ beginnst und wenn du mit „Test positiv“ beginnst.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/2" data-block-id="7b61b6a9" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" id="tafel-schnelltest" data-component="Vierfeldertafel">
+<div class="explainer-island" hidden><div class="tafel" data-v-7af85d39><table class="tafel-tabelle" data-v-7af85d39><caption data-v-7af85d39> Vierfeldertafel: Zeilen krank und gesund, Spalten Test positiv und Test negativ</caption><thead data-v-7af85d39><tr data-v-7af85d39><td data-v-7af85d39></td><!--[--><th scope="col" data-v-7af85d39>Test positiv</th><th scope="col" data-v-7af85d39>Test negativ</th><th scope="col" data-v-7af85d39>Summe</th><!--]--></tr></thead><tbody data-v-7af85d39><!--[--><tr data-v-7af85d39><th scope="row" data-v-7af85d39>krank</th><!--[--><td data-v-7af85d39><button type="button" class="tafel-zelle" aria-pressed="false" data-v-7af85d39>36</button></td><td data-v-7af85d39><button type="button" class="tafel-zelle" aria-pressed="false" data-v-7af85d39>4</button></td><!--]--><td class="summe" data-v-7af85d39>40</td></tr><tr data-v-7af85d39><th scope="row" data-v-7af85d39>gesund</th><!--[--><td data-v-7af85d39><button type="button" class="tafel-zelle" aria-pressed="false" data-v-7af85d39>48</button></td><td data-v-7af85d39><button type="button" class="tafel-zelle" aria-pressed="false" data-v-7af85d39>912</button></td><!--]--><td class="summe" data-v-7af85d39>960</td></tr><!--]--><tr class="summe" data-v-7af85d39><th scope="row" data-v-7af85d39>Summe</th><td data-v-7af85d39>84</td><td data-v-7af85d39>916</td><td data-v-7af85d39>1000</td></tr></tbody></table><p class="tafel-satz" aria-live="polite" data-v-7af85d39>Tippe auf eine Zelle der Tafel.</p><fieldset class="tafel-wahl" data-v-7af85d39><legend data-v-7af85d39>Baum lesen mit</legend><label data-v-7af85d39><input checked type="radio" value="A" data-v-7af85d39> krank zuerst</label><label data-v-7af85d39><input type="radio" value="B" data-v-7af85d39> Test positiv zuerst</label></fieldset><svg class="tafel-baum" viewBox="0 0 320 210" role="img" aria-label="Baum mit zwei Stufen. Erste Stufe: krank und gesund. Zweite Stufe: Test positiv und Test negativ. Die Zahlen an den Zweigen stehen auch in der Tafel." data-v-7af85d39><g class="kante" data-v-7af85d39><line x1="160" y1="22" x2="80" y2="88" data-v-7af85d39></line><line x1="160" y1="22" x2="240" y2="88" data-v-7af85d39></line><!--[--><line x1="80" y1="104" x2="40" y2="170" data-v-7af85d39></line><line x1="80" y1="104" x2="120" y2="170" data-v-7af85d39></line><line x1="240" y1="104" x2="200" y2="170" data-v-7af85d39></line><line x1="240" y1="104" x2="280" y2="170" data-v-7af85d39></line><!--]--></g><!--[--><g transform="translate(120, 55)" class="bruch" data-v-7af85d39><rect x="-16" y="-17" width="32" height="34" class="hinter" data-v-7af85d39></rect><text y="-4" text-anchor="middle" data-v-7af85d39>40</text><line x1="-11" x2="11" y1="1" y2="1" data-v-7af85d39></line><text y="13" text-anchor="middle" data-v-7af85d39>1000</text></g><g transform="translate(200, 55)" class="bruch" data-v-7af85d39><rect x="-16" y="-17" width="32" height="34" class="hinter" data-v-7af85d39></rect><text y="-4" text-anchor="middle" data-v-7af85d39>960</text><line x1="-11" x2="11" y1="1" y2="1" data-v-7af85d39></line><text y="13" text-anchor="middle" data-v-7af85d39>1000</text></g><!--]--><!--[--><g transform="translate(60, 137)" class="bruch" data-v-7af85d39><rect x="-16" y="-17" width="32" height="34" class="hinter" data-v-7af85d39></rect><text y="-4" text-anchor="middle" data-v-7af85d39>36</text><line x1="-11" x2="11" y1="1" y2="1" data-v-7af85d39></line><text y="13" text-anchor="middle" data-v-7af85d39>40</text></g><g transform="translate(100, 137)" class="bruch" data-v-7af85d39><rect x="-16" y="-17" width="32" height="34" class="hinter" data-v-7af85d39></rect><text y="-4" text-anchor="middle" data-v-7af85d39>4</text><line x1="-11" x2="11" y1="1" y2="1" data-v-7af85d39></line><text y="13" text-anchor="middle" data-v-7af85d39>40</text></g><g transform="translate(220, 137)" class="bruch" data-v-7af85d39><rect x="-16" y="-17" width="32" height="34" class="hinter" data-v-7af85d39></rect><text y="-4" text-anchor="middle" data-v-7af85d39>48</text><line x1="-11" x2="11" y1="1" y2="1" data-v-7af85d39></line><text y="13" text-anchor="middle" data-v-7af85d39>960</text></g><g transform="translate(260, 137)" class="bruch" data-v-7af85d39><rect x="-16" y="-17" width="32" height="34" class="hinter" data-v-7af85d39></rect><text y="-4" text-anchor="middle" data-v-7af85d39>912</text><line x1="-11" x2="11" y1="1" y2="1" data-v-7af85d39></line><text y="13" text-anchor="middle" data-v-7af85d39>960</text></g><!--]--><g class="knoten" data-v-7af85d39><circle cx="160" cy="16" r="9" data-v-7af85d39></circle><!--[--><g data-v-7af85d39><circle cx="80" cy="96" r="12" data-v-7af85d39></circle><text x="80" y="100" text-anchor="middle" data-v-7af85d39>K</text></g><g data-v-7af85d39><circle cx="240" cy="96" r="12" data-v-7af85d39></circle><text x="240" y="100" text-anchor="middle" data-v-7af85d39>G</text></g><!--]--><!--[--><g data-v-7af85d39><circle cx="40" cy="178" r="12" class="" data-v-7af85d39></circle><text x="40" y="182" text-anchor="middle" data-v-7af85d39>T</text></g><g data-v-7af85d39><circle cx="120" cy="178" r="12" class="" data-v-7af85d39></circle><text x="120" y="182" text-anchor="middle" data-v-7af85d39>N</text></g><g data-v-7af85d39><circle cx="200" cy="178" r="12" class="" data-v-7af85d39></circle><text x="200" y="182" text-anchor="middle" data-v-7af85d39>T</text></g><g data-v-7af85d39><circle cx="280" cy="178" r="12" class="" data-v-7af85d39></circle><text x="280" y="182" text-anchor="middle" data-v-7af85d39>N</text></g><!--]--></g><g class="pfad" data-v-7af85d39><!--[--><text x="40" y="204" text-anchor="middle" class="" data-v-7af85d39>0,036</text><text x="120" y="204" text-anchor="middle" class="" data-v-7af85d39>0,004</text><text x="200" y="204" text-anchor="middle" class="" data-v-7af85d39>0,048</text><text x="280" y="204" text-anchor="middle" class="" data-v-7af85d39>0,912</text><!--]--></g></svg><p class="tafel-legende" data-v-7af85d39> Buchstaben im Baum: K = krank, G = gesund, T = Test positiv, N = Test negativ. Die Zahl unter jedem Blatt ist der Anteil an allen 1000. </p></div></div>
+<div class="explainer-nojs"><p>Die Tafel zählt 1000 Personen: 36 sind krank und haben einen positiven Test, 4 sind krank mit negativem Test, 48
+sind gesund mit positivem Test, 912 sind gesund mit negativem Test. Die Summen: 40 krank, 960 gesund, 84 positiv,
+916 negativ. Im Baum mit „krank“ zuerst gehen von den 40 Kranken 36 zu „positiv“. Mit „Test positiv“ zuerst gehen
+von den 84 Positiven 36 zu „krank“.</p></div>
+<script type="application/json" class="explainer-component-props">{"a":"krank","na":"gesund","b":"Test positiv","nb":"Test negativ","ka":"K","kna":"G","kb":"T","knb":"N","ab":36,"anb":4,"nab":48,"nanb":912}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="warum/3" data-block-id="8bfa8c0c" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="nenner-wahl">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-nenner-wahl" data-id="nenner-wahl" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Dein Test ist positiv. Du willst wissen, wie wahrscheinlich es ist, dass du krank bist. Durch welche Zahl teilst du?</legend>
+<label class="question-option"><input type="radio" name="frage-nenner-wahl" value="0"> <span>Durch 40, die Zahl aller Kranken.</span></label>
+<label class="question-option"><input type="radio" name="frage-nenner-wahl" value="1"> <span>Durch 1000, die Zahl aller Personen.</span></label>
+<label class="question-option"><input type="radio" name="frage-nenner-wahl" value="2"> <span>Durch 84, die Zahl aller Personen mit positivem Test.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Durch 40, die Zahl aller Kranken.</strong></p><p>Das wäre die Frage in die andere Richtung, wie wahrscheinlich ein positiver Test bei Kranken ist.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Durch 1000, die Zahl aller Personen.</strong></p><p>Das gibt die Wahrscheinlichkeit, krank und positiv zugleich zu sein. Du weißt aber schon, dass dein Test positiv ist.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Durch 84, die Zahl aller Personen mit positivem Test.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Du weißt, dass der Test positiv ist. Darum zählen nur die Personen mit positivem Test, das sind 84.</p></li>
+</ul>
+<p class="question-explanation">Die Bedingung, hier „Test positiv“, legt fest, durch welche Zahl du teilst. Nur ihre Fälle zählen als Gesamtheit.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Durch 40, die Zahl aller Kranken.</strong></p><p>Das wäre die Frage in die andere Richtung, wie wahrscheinlich ein positiver Test bei Kranken ist.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Durch 1000, die Zahl aller Personen.</strong></p><p>Das gibt die Wahrscheinlichkeit, krank und positiv zugleich zu sein. Du weißt aber schon, dass dein Test positiv ist.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Durch 84, die Zahl aller Personen mit positivem Test.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Du weißt, dass der Test positiv ist. Darum zählen nur die Personen mit positivem Test, das sind 84.</p></li>
+</ul>
+<p class="question-explanation">Die Bedingung, hier „Test positiv“, legt fest, durch welche Zahl du teilst. Nur ihre Fälle zählen als Gesamtheit.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"nenner-wahl","text":"Dein Test ist positiv. Du willst wissen, wie wahrscheinlich es ist, dass du krank bist. Durch welche Zahl teilst du?","explanation":"Die Bedingung, hier „Test positiv“, legt fest, durch welche Zahl du teilst. Nur ihre Fälle zählen als Gesamtheit.","links":[],"type":"single-choice","options":[{"text":"Durch 40, die Zahl aller Kranken.","correct":false,"info":"Das wäre die Frage in die andere Richtung, wie wahrscheinlich ein positiver Test bei Kranken ist."},{"text":"Durch 1000, die Zahl aller Personen.","correct":false,"info":"Das gibt die Wahrscheinlichkeit, krank und positiv zugleich zu sein. Du weißt aber schon, dass dein Test positiv ist."},{"text":"Durch 84, die Zahl aller Personen mit positivem Test.","correct":true,"info":"Du weißt, dass der Test positiv ist. Darum zählen nur die Personen mit positivem Test, das sind 84."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Die Bedingung bestimmt den Nenner</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="6ae49f37" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du schon weißt, dass etwas eingetreten ist, zum Beispiel ein positiver Test, fragst du anders als vorher. Dann rechnest du mit einer bedingten Wahrscheinlichkeit.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="757efcf4" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-bedingte-wahrscheinlichkeit"><a href="../../glossar/#bedingte-wahrscheinlichkeit">bedingte Wahrscheinlichkeit</a></dfn></dt><dd><p>Die Wahrscheinlichkeit eines Ereignisses A, wenn du schon weißt, dass ein Ereignis B eingetreten ist. Du schreibst <math><mrow><msub><mi>P</mi><mi>B</mi></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>A</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math> und liest „P von A unter der Bedingung B“.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="ee4832df" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>In der Tafel liest du sie in der Zeile oder Spalte der Bedingung ab. Die Zahl im Feld kommt in den Zähler, die Summe der Bedingung in den Nenner.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="014afafe" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>P</mi><mi>T</mi></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>K</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>36</mn><mn>84</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>7</mn></mfrac><mo>≈</mo><mn>0,43</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="7d970748" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>P</mi><mi>K</mi></msub><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>T</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>36</mn><mn>40</mn></mfrac><mo>=</mo><mn>0,9</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="d8d98ae5" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="regel/6/1" data-block-id="81da1126" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn du A und B vertauschst, ändert sich die Gesamtheit und damit der Nenner. Die zwei Wahrscheinlichkeiten sind meist verschieden und können weit auseinanderliegen.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Zwei Fragen, zwei Antworten</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="4a99502d" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Beispiel</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="2b03a03d" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Wenn du dieselbe Tafel aus zwei Richtungen liest, bekommst du zwei verschiedene Antworten. Der Vergleich zeigt, warum die Bedingung zählt.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="b0bcebb1" data-block-type="table" data-block-order="13">
+<div class="block-table" role="region" aria-label="Zwei Richtungen aus einer Tafel" tabindex="0"><table><caption>Zwei Richtungen aus einer Tafel</caption><thead><tr><th scope="col">Frage</th><th scope="col">Teilen durch</th><th scope="col">Ergebnis</th></tr></thead><tbody><tr><td>Positiver Test, wenn krank?</td><td>40 Kranke</td><td>36 von 40 = 0,9</td></tr><tr><td>Krank, wenn Test positiv?</td><td>84 Positive</td><td>36 von 84 ≈ 0,43</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="b0ebf6ce" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Der Test erkennt 9 von 10 Kranken. Trotzdem ist bei einem positiven Test weniger als die Hälfte der Personen wirklich krank, weil es viele Gesunde gibt.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="f09ff8c2" data-block-type="generated" data-block-order="15">
+<div class="explainer-exercise explainer-generated" id="bedingt-tafel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einer Tafel mit 200 Personen sind 12 krank und haben einen positiven Test. Insgesamt sind 40 Personen positiv getestet. Wie wahrscheinlich ist es, krank zu sein, wenn der Test positiv ist? Gib die Wahrscheinlichkeit als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche Gruppe weißt du schon? Nur die zählt als Gesamtheit.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>P</mi><mo>=</mo><mfrac><mn>12</mn><mn>40</mn></mfrac><mo>=</mo><mn>0,3</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einer Tafel mit 400 Personen sind 8 krank und haben einen positiven Test. Insgesamt sind 25 Personen positiv getestet. Wie wahrscheinlich ist es, krank zu sein, wenn der Test positiv ist? Gib die Wahrscheinlichkeit als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche Gruppe weißt du schon? Nur die zählt als Gesamtheit.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>P</mi><mo>=</mo><mfrac><mn>8</mn><mn>25</mn></mfrac><mo>=</mo><mn>0,32</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,32</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einer Tafel mit 400 Personen sind 14 krank und haben einen positiven Test. Insgesamt sind 40 Personen positiv getestet. Wie wahrscheinlich ist es, krank zu sein, wenn der Test positiv ist? Gib die Wahrscheinlichkeit als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche Gruppe weißt du schon? Nur die zählt als Gesamtheit.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>P</mi><mo>=</mo><mfrac><mn>14</mn><mn>40</mn></mfrac><mo>=</mo><mn>0,35</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,35</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"bedingt-tafel","given":{"n":{"oneOf":[200,400]},"x":{"oneOf":[8,10,12,14,16]},"p":{"oneOf":[20,25,40,50]}},"where":["x \u003c p","x * n != p * p"],"task":{"text":"In einer Tafel mit {{n}} Personen sind {{x}} krank und haben einen positiven Test. Insgesamt sind {{p}} Personen positiv getestet. Wie wahrscheinlich ist es, krank zu sein, wenn der Test positiv ist? Gib die Wahrscheinlichkeit als Dezimalzahl an."},"answer":{"value":"x / p","compare":"number"},"mistakes":[{"value":"x / n","message":"Du hast durch alle Personen geteilt. Die Bedingung ist der positive Test, also teilst du durch die Zahl der positiv Getesteten."},{"value":"p / n","message":"Das ist der Anteil der positiven Tests an allen Personen. Gefragt ist der Anteil der Kranken unter den Positiven."}],"hint":"Welche Gruppe weißt du schon? Nur die zählt als Gesamtheit.","steps":["$P = \\frac{{{x}}}{{{p}}} = {{answer}}$"]},"templates":{"de":{"task":"In einer Tafel mit ⟦n⟧ Personen sind ⟦x⟧ krank und haben einen positiven Test. Insgesamt sind ⟦p⟧ Personen positiv getestet. Wie wahrscheinlich ist es, krank zu sein, wenn der Test positiv ist? Gib die Wahrscheinlichkeit als Dezimalzahl an.","steps":["\u003cmath>\u003cmrow>\u003cmi>P\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦x⟧\u003c/mtext>\u003cmtext>⟦p⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Welche Gruppe weißt du schon? Nur die zählt als Gesamtheit.","messages":["Du hast durch alle Personen geteilt. Die Bedingung ist der positive Test, also teilst du durch die Zahl der positiv Getesteten.","Das ist der Anteil der positiven Tests an allen Personen. Gefragt ist der Anteil der Kranken unter den Positiven."]}},"data":{},"seeds":[1,2,3,4,5,6,7,10,11,12,13,14,15,16,17,18,19,22,26,27,28,29,32,35,37,45,46,47,48,52,54,56,64,67,83,84,149,170,180],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="34c756aa" data-block-type="true-false" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="richtung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-richtung" data-id="richtung" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wenn ein Test 9 von 10 Kranken erkennt, sind 9 von 10 Personen mit positivem Test krank.</legend>
+<label class="question-option"><input type="radio" name="frage-richtung" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-richtung" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Das sind zwei verschiedene Fragen. Die 9 von 10 gelten unter den Kranken. Bei den Personen mit positivem Test gehören auch viele Gesunde dazu, darum kann der Anteil der Kranken dort viel kleiner sein.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Das sind zwei verschiedene Fragen. Die 9 von 10 gelten unter den Kranken. Bei den Personen mit positivem Test gehören auch viele Gesunde dazu, darum kann der Anteil der Kranken dort viel kleiner sein.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"richtung","text":"Wenn ein Test 9 von 10 Kranken erkennt, sind 9 von 10 Personen mit positivem Test krank.","explanation":"Das sind zwei verschiedene Fragen. Die 9 von 10 gelten unter den Kranken. Bei den Personen mit positivem Test gehören auch viele Gesunde dazu, darum kann der Anteil der Kranken dort viel kleiner sein.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6ce97b26" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="zahlen-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zahlen-zuordnen" data-id="zahlen-zuordnen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Rechnung gibt die Wahrscheinlichkeit, dass ein positiver Test bei einer kranken Person herauskommt?</legend>
+<label class="question-option"><input type="radio" name="frage-zahlen-zuordnen" value="0"> <span>36 durch 84</span></label>
+<label class="question-option"><input type="radio" name="frage-zahlen-zuordnen" value="1"> <span>36 durch 1000</span></label>
+<label class="question-option"><input type="radio" name="frage-zahlen-zuordnen" value="2"> <span>36 durch 40</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>36 durch 84</strong></p><p>Das ist der Anteil der Kranken unter den Positiven, also die Frage in die andere Richtung.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>36 durch 1000</strong></p><p>Das ist der Anteil von Personen, die krank sind und positiv testen, an allen Personen.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>36 durch 40</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Bedingung ist „krank“. Von den 40 Kranken testen 36 positiv.</p></li>
+</ul>
+<p class="question-explanation">Die Bedingung, nach der gefragt wird („bei Kranken“), bestimmt die Gesamtheit im Nenner.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>36 durch 84</strong></p><p>Das ist der Anteil der Kranken unter den Positiven, also die Frage in die andere Richtung.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>36 durch 1000</strong></p><p>Das ist der Anteil von Personen, die krank sind und positiv testen, an allen Personen.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>36 durch 40</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Bedingung ist „krank“. Von den 40 Kranken testen 36 positiv.</p></li>
+</ul>
+<p class="question-explanation">Die Bedingung, nach der gefragt wird („bei Kranken“), bestimmt die Gesamtheit im Nenner.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zahlen-zuordnen","text":"Welche Rechnung gibt die Wahrscheinlichkeit, dass ein positiver Test bei einer kranken Person herauskommt?","explanation":"Die Bedingung, nach der gefragt wird („bei Kranken“), bestimmt die Gesamtheit im Nenner.","links":[],"type":"single-choice","options":[{"text":"36 durch 84","correct":false,"info":"Das ist der Anteil der Kranken unter den Positiven, also die Frage in die andere Richtung."},{"text":"36 durch 1000","correct":false,"info":"Das ist der Anteil von Personen, die krank sind und positiv testen, an allen Personen."},{"text":"36 durch 40","correct":true,"info":"Die Bedingung ist „krank“. Von den 40 Kranken testen 36 positiv."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="c83c7d56" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="sicherheit">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-sicherheit" data-id="sicherheit" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Dein Schnelltest ist positiv, der Test erkennt 90 % der Kranken. Was sagt das über die Wahrscheinlichkeit, krank zu sein?</legend>
+<label class="question-option"><input type="radio" name="frage-sicherheit" value="0"> <span>Sie beträgt 90 %.</span></label>
+<label class="question-option"><input type="radio" name="frage-sicherheit" value="1"> <span>Sie hängt davon ab, wie viele Gesunde ebenfalls positiv testen.</span></label>
+<label class="question-option"><input type="radio" name="frage-sicherheit" value="2"> <span>Sie beträgt 10 %.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Sie beträgt 90 %.</strong></p><p>Die 90 % gelten unter den Kranken. Du weißt aber nur, dass dein Test positiv ist.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Sie hängt davon ab, wie viele Gesunde ebenfalls positiv testen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Je mehr gesunde Personen ein positives Ergebnis bekommen, desto kleiner ist der Anteil der Kranken unter den Positiven. Wie viele Personen überhaupt krank sind, spielt ebenfalls eine Rolle.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie beträgt 10 %.</strong></p><p>Die 10 % sind der Anteil der Kranken, die der Test übersieht. Sie sagen nichts über positive Tests.</p></li>
+</ul>
+<p class="question-explanation">Die Wahrscheinlichkeit, krank zu sein, wenn der Test positiv ist, rechnest du mit den Positiven als Gesamtheit. Dort zählen Kranke und Gesunde.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Sie beträgt 90 %.</strong></p><p>Die 90 % gelten unter den Kranken. Du weißt aber nur, dass dein Test positiv ist.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Sie hängt davon ab, wie viele Gesunde ebenfalls positiv testen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Je mehr gesunde Personen ein positives Ergebnis bekommen, desto kleiner ist der Anteil der Kranken unter den Positiven. Wie viele Personen überhaupt krank sind, spielt ebenfalls eine Rolle.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie beträgt 10 %.</strong></p><p>Die 10 % sind der Anteil der Kranken, die der Test übersieht. Sie sagen nichts über positive Tests.</p></li>
+</ul>
+<p class="question-explanation">Die Wahrscheinlichkeit, krank zu sein, wenn der Test positiv ist, rechnest du mit den Positiven als Gesamtheit. Dort zählen Kranke und Gesunde.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"sicherheit","text":"Dein Schnelltest ist positiv, der Test erkennt 90 % der Kranken. Was sagt das über die Wahrscheinlichkeit, krank zu sein?","explanation":"Die Wahrscheinlichkeit, krank zu sein, wenn der Test positiv ist, rechnest du mit den Positiven als Gesamtheit. Dort zählen Kranke und Gesunde.","links":[],"type":"single-choice","options":[{"text":"Sie beträgt 90 %.","correct":false,"info":"Die 90 % gelten unter den Kranken. Du weißt aber nur, dass dein Test positiv ist."},{"text":"Sie hängt davon ab, wie viele Gesunde ebenfalls positiv testen.","correct":true,"info":"Je mehr gesunde Personen ein positives Ergebnis bekommen, desto kleiner ist der Anteil der Kranken unter den Positiven. Wie viele Personen überhaupt krank sind, spielt ebenfalls eine Rolle."},{"text":"Sie beträgt 10 %.","correct":false,"info":"Die 10 % sind der Anteil der Kranken, die der Test übersieht. Sie sagen nichts über positive Tests."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="abschluss">Das nimmst du mit</h2>
+<div class="explainer-block" data-block="abschluss/1" data-block-id="a25c27dd" data-block-type="note" data-block-order="19">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Rückblick auf das Kapitel</h3>
+<div class="explainer-block" data-block="abschluss/1/1" data-block-id="b80633cb" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Mit der Vierfeldertafel zählst du zwei Merkmale gemeinsam. Der Baum zeigt dieselben Zahlen in zwei Richtungen. Bei
+einer bedingten Wahrscheinlichkeit legt die Bedingung fest, durch welche Summe du teilst. Wenn du die Richtung
+der Bedingung vertauschst, ändert sich das Ergebnis meist stark.</p></div>
+</div>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe: Stochastik – Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-stochastik","app":"Mathe: Stochastik – Wahrscheinlichkeit","root":"../../","repository":"lernapps/mathe-stochastik","revision":"f323240","page":{"title":"Bedingte Wahrscheinlichkeit","order":15}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../vierfeldertafel/tafel/">Zurück: Vierfeldertafel</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Turmhöhe und Flussbreite – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Mit den Strahlensätzen Höhen und Breiten bestimmen, die man nicht direkt messen kann." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../vergroessern/turmhoehe/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../vergroessern/">Vergrößern und verkleinern</a></li><li aria-current="page">Turmhöhe und Flussbreite</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Turmhöhe und Flussbreite</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../vergroessern/turmhoehe/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧vergroessern/turmhoehe/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"turmhoehe","title":"Turmhöhe und Flussbreite","exercises":[{"id":"turm-vorab","section":"einstieg","numbered":false},{"id":"parallel-warum","section":"uebung","numbered":false},{"id":"turm-hoehe","section":"uebung","numbered":true},{"id":"fluss-breite","section":"uebung","numbered":true},{"id":"stab-schatten","section":"uebung","numbered":true}],"sections":["einstieg","idee","fluss","uebung","weiter"]},"tutor":"vergroessern/turmhoehe/tutor/","markdown":"vergroessern/turmhoehe/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Wo die Strahlensätze stecken</a></li><li><a href="#fluss">Die Breite eines Flusses</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Wie es weitergeht</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="335db331" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wie hoch ist ein Turm, wie breit ist ein Fluss, ohne hinaufzuklettern oder hinüberzuschwimmen? Mit den Strahlensätzen rechnest du es aus. Du wendest die Strahlensätze auf Vermessungen an: auf die Höhe eines Turms mit dem Schatten und auf die Breite eines Flusses. Du erkennst, wo in einer Sachaufgabe die Parallelen und das Zentrum stecken.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="5a082a8c" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Die Klasse von Mira und Jonas misst den Turm im Park. Hinaufklettern geht nicht. Jonas stellt einen Stab von 1,5 m Höhe senkrecht auf. Er verschiebt ihn so lange, bis sein Schatten genau am Ende des Turmschattens aufhört.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="2f8e9892" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="turm-vorab">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-turm-vorab" data-id="turm-vorab" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Turmschatten ist 8-mal so lang wie der Stabschatten. Was folgt daraus für die Höhen?</legend>
+<label class="question-option"><input type="radio" name="frage-turm-vorab" value="0"> <span>Der Turm ist 8 m höher als der Stab.</span></label>
+<label class="question-option"><input type="radio" name="frage-turm-vorab" value="1"> <span>Turm und Stab sind gleich hoch.</span></label>
+<label class="question-option"><input type="radio" name="frage-turm-vorab" value="2"> <span>Der Turm ist 8-mal so hoch wie der Stab.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Der Turm ist 8 m höher als der Stab.</strong></p><p>Das wäre ein Zuschlag. Streckungen arbeiten mit einem Faktor, nicht mit einer Differenz.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Turm und Stab sind gleich hoch.</strong></p><p>Dann wären auch ihre Schatten gleich lang. Ein längerer Schatten gehört zu einem höheren Gegenstand.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Der Turm ist 8-mal so hoch wie der Stab.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beide Schatten gehören zur gleichen Streckung, mit dem Faktor 8. Dieser Faktor gilt auch für die Höhen.</p></li>
+</ul>
+<p class="question-explanation">Wie bei jeder Streckung wachsen alle Längen mit demselben Faktor, auch die Höhen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Der Turm ist 8 m höher als der Stab.</strong></p><p>Das wäre ein Zuschlag. Streckungen arbeiten mit einem Faktor, nicht mit einer Differenz.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Turm und Stab sind gleich hoch.</strong></p><p>Dann wären auch ihre Schatten gleich lang. Ein längerer Schatten gehört zu einem höheren Gegenstand.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Der Turm ist 8-mal so hoch wie der Stab.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beide Schatten gehören zur gleichen Streckung, mit dem Faktor 8. Dieser Faktor gilt auch für die Höhen.</p></li>
+</ul>
+<p class="question-explanation">Wie bei jeder Streckung wachsen alle Längen mit demselben Faktor, auch die Höhen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"turm-vorab","text":"Der Turmschatten ist 8-mal so lang wie der Stabschatten. Was folgt daraus für die Höhen?","explanation":"Wie bei jeder Streckung wachsen alle Längen mit demselben Faktor, auch die Höhen.","links":[],"type":"single-choice","options":[{"text":"Der Turm ist 8 m höher als der Stab.","correct":false,"info":"Das wäre ein Zuschlag. Streckungen arbeiten mit einem Faktor, nicht mit einer Differenz."},{"text":"Turm und Stab sind gleich hoch.","correct":false,"info":"Dann wären auch ihre Schatten gleich lang. Ein längerer Schatten gehört zu einem höheren Gegenstand."},{"text":"Der Turm ist 8-mal so hoch wie der Stab.","correct":true,"info":"Beide Schatten gehören zur gleichen Streckung, mit dem Faktor 8. Dieser Faktor gilt auch für die Höhen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Wo die Strahlensätze stecken</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="02dbed79" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Damit die Strahlensätze greifen, suchst du in jeder Sachaufgabe zuerst zwei Parallelen und das Zentrum Z. Im Bild stehen Turm und Stab beide senkrecht, sie sind also parallel. Die Sonnenlinie von der Turmspitze über die Stabspitze bis zum Schattenende Z ist der eine Strahl, der Boden ist der andere. Z ist das Streckzentrum.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="bba9be0e" data-block-type="figure" data-block-order="5">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/turm-schatten.svg" alt="Ein Turm der gesuchten Höhe und ein 1,5 m hoher Stab stehen senkrecht auf dem Boden. Der Stab hat 3 m Schatten, der Turm 24 m. Die Sonnenlinie geht von der Turmspitze über die Stabspitze zum Schattenende Z." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Skizze, nicht maßstabsgetreu: Turm, Stab und Sonnenlinie bilden eine Figur mit Z und zwei Parallelen.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="8c1eee3d" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Gegeben sind der Stab mit 1,5 m und 3 m Schatten und der Turmschatten mit 24 m. Stab und Turm sind die parallelen Strecken, die Schatten sind die Abstände von Z. Der zweite Strahlensatz sagt: Turmhöhe durch Stabhöhe ist gleich Turmschatten durch Stabschatten.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="623f787a" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mi>h</mi><mn>1,5</mn></mfrac><mo>=</mo><mfrac><mn>24</mn><mn>3</mn></mfrac><mspace width="1em"></mspace><mi>|</mi><mo>⋅</mo><mn>1,5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="5ed77ca7" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>24</mn><mo>⋅</mo><mn>1,5</mn></mrow><mn>3</mn></mfrac><mo>=</mo><mn>12</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="133a0ef5" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Der Turm ist 12 m hoch.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/7" data-block-id="7570cd37" data-block-type="note" data-block-order="10">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/7/1" data-block-id="506bb25c" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Du brauchst zwei parallele Strecken (hier senkrecht stehende Gegenstände) und gemeinsame Strahlen, die von einem Punkt Z ausgehen. Erst dann gelten die Strahlensätze.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="fluss">Die Breite eines Flusses</h2>
+<div class="explainer-block" data-block="fluss/1" data-block-id="201debba" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Wenn du die Breite eines Flusses brauchst, ohne ihn zu überqueren, misst du am Ufer und nutzt ähnliche Dreiecke. Ein Baum S steht am anderen Ufer genau gegenüber von P. Du willst die Breite <em>w</em> = SP des Flusses wissen. Am nahen Ufer gehst du von P nach Q und steckst dabei in M einen Pflock. Bei Q gehst du im rechten Winkel zum Ufer von dir weg, bis Pflock M und Baum S in einer Linie liegen. Das ist Punkt R. Du misst PM = 30 m, MQ = 10 m und QR = 12 m.</p></div>
+</div>
+<div class="explainer-block" data-block="fluss/2" data-block-id="db53681c" data-block-type="figure" data-block-order="13">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/fluss-x.svg" alt="Ein Fluss liegt zwischen dem Baum S und dem Ufer mit den Punkten P, M und Q. Die Strecken SP und QR sind parallel. Eine Gerade geht von S über M nach R. Gesucht ist die Breite w des Flusses. Es ist PM = 30 m, MQ = 10 m und QR = 12 m." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Skizze, nicht maßstabsgetreu: Die Strecken SP und QR sind parallel, M ist das Zentrum.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="fluss/3" data-block-id="2500347d" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Hier liegt M zwischen den Parallelen: Die Figur ist ein X statt eines V. Die Strahlensätze gelten genauso: Die Dreiecke MPS und MQR sind ähnlich, es gelten dieselben Verhältnisse. Die parallelen Strecken SP und QR verhalten sich wie die Abstände MP und MQ der Fußpunkte von M: SP : QR = MP : MQ.</p></div>
+</div>
+<div class="explainer-block" data-block="fluss/4" data-block-id="090d5309" data-block-type="formula" data-block-order="15">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mi>w</mi><mn>12</mn></mfrac><mo>=</mo><mfrac><mn>30</mn><mn>10</mn></mfrac><mspace width="1em"></mspace><mi>|</mi><mo>⋅</mo><mn>12</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="fluss/5" data-block-id="5c37fdd3" data-block-type="formula" data-block-order="16">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>w</mi><mo>=</mo><mfrac><mrow><mn>30</mn><mo>⋅</mo><mn>12</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>36</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="fluss/6" data-block-id="87f44618" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Der Fluss ist 36 m breit.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="e894eb10" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="parallel-warum">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-parallel-warum" data-id="parallel-warum" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Warum darfst du bei Stab und Turm die Strahlensätze benutzen?</legend>
+<label class="question-option"><input type="radio" name="frage-parallel-warum" value="0"> <span>Stab und Turm stehen beide senkrecht, sind also parallel, und die Sonnenlinie geht durch beide Spitzen.</span></label>
+<label class="question-option"><input type="radio" name="frage-parallel-warum" value="1"> <span>Stab und Turm sind gleich hoch.</span></label>
+<label class="question-option"><input type="radio" name="frage-parallel-warum" value="2"> <span>Die Sonne steht senkrecht über dem Turm.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Stab und Turm stehen beide senkrecht, sind also parallel, und die Sonnenlinie geht durch beide Spitzen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zwei parallele Strecken und zwei Strahlen von Z aus, mehr braucht der Satz nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Stab und Turm sind gleich hoch.</strong></p><p>Sie sind sogar sehr verschieden hoch. Entscheidend ist nicht die Höhe, sondern dass die Strecken parallel sind.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Sonne steht senkrecht über dem Turm.</strong></p><p>Dann gäbe es keinen Schatten. Die Sonnenlinie läuft schräg.</p></li>
+</ul>
+<p class="question-explanation">Nur Parallelität und ein gemeinsames Zentrum zählen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Stab und Turm stehen beide senkrecht, sind also parallel, und die Sonnenlinie geht durch beide Spitzen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zwei parallele Strecken und zwei Strahlen von Z aus, mehr braucht der Satz nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Stab und Turm sind gleich hoch.</strong></p><p>Sie sind sogar sehr verschieden hoch. Entscheidend ist nicht die Höhe, sondern dass die Strecken parallel sind.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Sonne steht senkrecht über dem Turm.</strong></p><p>Dann gäbe es keinen Schatten. Die Sonnenlinie läuft schräg.</p></li>
+</ul>
+<p class="question-explanation">Nur Parallelität und ein gemeinsames Zentrum zählen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"parallel-warum","text":"Warum darfst du bei Stab und Turm die Strahlensätze benutzen?","explanation":"Nur Parallelität und ein gemeinsames Zentrum zählen.","links":[],"type":"single-choice","options":[{"text":"Stab und Turm stehen beide senkrecht, sind also parallel, und die Sonnenlinie geht durch beide Spitzen.","correct":true,"info":"Zwei parallele Strecken und zwei Strahlen von Z aus, mehr braucht der Satz nicht."},{"text":"Stab und Turm sind gleich hoch.","correct":false,"info":"Sie sind sogar sehr verschieden hoch. Entscheidend ist nicht die Höhe, sondern dass die Strecken parallel sind."},{"text":"Die Sonne steht senkrecht über dem Turm.","correct":false,"info":"Dann gäbe es keinen Schatten. Die Sonnenlinie läuft schräg."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="0dc94eaa" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="turm-hoehe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Stab von 2 m Höhe wirft einen Schatten von 4 m. Gleichzeitig reicht der Schatten eines Turms bis zum selben Schattenende und ist 12 m lang. Wie hoch ist der Turm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Turmhöhe durch Stabhöhe ist Turmschatten durch Stabschatten.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>h</mi><mn>2</mn></mfrac><mo>=</mo><mfrac><mn>12</mn><mn>4</mn></mfrac></mrow></math>, also <math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>12</mn><mo>⋅</mo><mn>2</mn></mrow><mn>4</mn></mfrac><mo>=</mo><mn>6</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 6 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Stab von 2 m Höhe wirft einen Schatten von 4 m. Gleichzeitig reicht der Schatten eines Turms bis zum selben Schattenende und ist 13 m lang. Wie hoch ist der Turm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Turmhöhe durch Stabhöhe ist Turmschatten durch Stabschatten.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>h</mi><mn>2</mn></mfrac><mo>=</mo><mfrac><mn>13</mn><mn>4</mn></mfrac></mrow></math>, also <math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>13</mn><mo>⋅</mo><mn>2</mn></mrow><mn>4</mn></mfrac><mo>=</mo><mn>6,5</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 6,5 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Stab von 1,5 m Höhe wirft einen Schatten von 5 m. Gleichzeitig reicht der Schatten eines Turms bis zum selben Schattenende und ist 38 m lang. Wie hoch ist der Turm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Turmhöhe durch Stabhöhe ist Turmschatten durch Stabschatten.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>h</mi><mn>1,5</mn></mfrac><mo>=</mo><mfrac><mn>38</mn><mn>5</mn></mfrac></mrow></math>, also <math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>38</mn><mo>⋅</mo><mn>1,5</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>11,4</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 11,4 m</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"turm-hoehe","given":{"hs":{"oneOf":[1,1.5,2]},"ss":{"int":[2,6]},"ts":{"int":[8,40]}},"where":["ts > ss","hs * ts / ss >= 6","hs * ts / ss \u003c= 60","decimals(hs * ts / ss) \u003c= 1","hs + ts - ss != hs * ts / ss","hs * ss / ts != hs * ts / ss"],"task":{"text":"Ein Stab von {{hs}} m Höhe wirft einen Schatten von {{ss}} m. Gleichzeitig reicht der Schatten eines Turms bis zum selben Schattenende und ist {{ts}} m lang. Wie hoch ist der Turm?"},"answer":{"value":"hs * ts / ss","compare":{"number":{"format":"decimal","decimals":1,"unit":"m"}}},"mistakes":[{"value":"hs + ts - ss","message":"Du hast addiert und subtrahiert. Höhen und Schatten hängen über einen Faktor zusammen: Es wird multipliziert und geteilt."},{"value":"hs * ss / ts","message":"Du hast den Faktor umgedreht. Der Turm ist höher als der Stab, weil sein Schatten länger ist."}],"hint":"Turmhöhe durch Stabhöhe ist Turmschatten durch Stabschatten.","steps":["$\\frac{h}{{{hs}}} = \\frac{{{ts}}}{{{ss}}}$, also $h = \\frac{{{ts}} \\cdot {{hs}}}{{{ss}}} = {{answer}}$ m."]},"templates":{"de":{"task":"Ein Stab von ⟦hs⟧ m Höhe wirft einen Schatten von ⟦ss⟧ m. Gleichzeitig reicht der Schatten eines Turms bis zum selben Schattenende und ist ⟦ts⟧ m lang. Wie hoch ist der Turm?","steps":["\u003cmath>\u003cmrow>\u003cmfrac>\u003cmi>h\u003c/mi>\u003cmtext>⟦hs⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦ts⟧\u003c/mtext>\u003cmtext>⟦ss⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦ts⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦hs⟧\u003c/mtext>\u003c/mrow>\u003cmtext>⟦ss⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math> m."],"hint":"Turmhöhe durch Stabhöhe ist Turmschatten durch Stabschatten.","messages":["Du hast addiert und subtrahiert. Höhen und Schatten hängen über einen Faktor zusammen: Es wird multipliziert und geteilt.","Du hast den Faktor umgedreht. Der Turm ist höher als der Stab, weil sein Schatten länger ist."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20,21,23,24,25,26,27,28,29,30,31,32,33,35,36,37,38,40,42,43,45,47,48,49,50,51,53,55,56,57,58,60,62,63,64,65,66,67,71,74,76,77,79,80,81,82,83,84,85],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="8cf01c87" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="fluss-breite">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Am Ufer eines Flusses liegen P, M und Q in einer Reihe, es ist PM = 10 m und MQ = 20 m. Der Baum S steht gegenüber von P. Bei Q geht jemand rechtwinklig zum Ufer, bis M, S und er in einer Linie liegen. Dort ist QR = 13 m. Wie breit ist der Fluss (SP)?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der zweite Strahlensatz mit dem Zentrum M: SP : QR = PM : MQ.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>w</mi><mn>13</mn></mfrac><mo>=</mo><mfrac><mn>10</mn><mn>20</mn></mfrac></mrow></math>, also <math><mrow><mi>w</mi><mo>=</mo><mfrac><mrow><mn>10</mn><mo>⋅</mo><mn>13</mn></mrow><mn>20</mn></mfrac><mo>=</mo><mn>6,5</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 6,5 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Am Ufer eines Flusses liegen P, M und Q in einer Reihe, es ist PM = 20 m und MQ = 5 m. Der Baum S steht gegenüber von P. Bei Q geht jemand rechtwinklig zum Ufer, bis M, S und er in einer Linie liegen. Dort ist QR = 8 m. Wie breit ist der Fluss (SP)?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der zweite Strahlensatz mit dem Zentrum M: SP : QR = PM : MQ.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>w</mi><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>20</mn><mn>5</mn></mfrac></mrow></math>, also <math><mrow><mi>w</mi><mo>=</mo><mfrac><mrow><mn>20</mn><mo>⋅</mo><mn>8</mn></mrow><mn>5</mn></mfrac><mo>=</mo><mn>32</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 32 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Am Ufer eines Flusses liegen P, M und Q in einer Reihe, es ist PM = 30 m und MQ = 15 m. Der Baum S steht gegenüber von P. Bei Q geht jemand rechtwinklig zum Ufer, bis M, S und er in einer Linie liegen. Dort ist QR = 16 m. Wie breit ist der Fluss (SP)?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der zweite Strahlensatz mit dem Zentrum M: SP : QR = PM : MQ.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>w</mi><mn>16</mn></mfrac><mo>=</mo><mfrac><mn>30</mn><mn>15</mn></mfrac></mrow></math>, also <math><mrow><mi>w</mi><mo>=</mo><mfrac><mrow><mn>30</mn><mo>⋅</mo><mn>16</mn></mrow><mn>15</mn></mfrac><mo>=</mo><mn>32</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 32 m</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"fluss-breite","given":{"pm":{"int":[10,40],"step":5},"mq":{"int":[5,20],"step":5},"qr":{"int":[6,20]}},"where":["qr * pm / mq >= 6","qr * pm / mq \u003c= 60","decimals(qr * pm / mq) \u003c= 1","qr * mq / pm != qr * pm / mq","pm + qr - mq != qr * pm / mq"],"task":{"text":"Am Ufer eines Flusses liegen P, M und Q in einer Reihe, es ist PM = {{pm}} m und MQ = {{mq}} m. Der Baum S steht gegenüber von P. Bei Q geht jemand rechtwinklig zum Ufer, bis M, S und er in einer Linie liegen. Dort ist QR = {{qr}} m. Wie breit ist der Fluss (SP)?"},"answer":{"value":"qr * pm / mq","compare":{"number":{"format":"decimal","decimals":1,"unit":"m"}}},"mistakes":[{"value":"qr * mq / pm","message":"Du hast den Bruch umgedreht. Es gilt SP : QR = PM : MQ, also SP = QR · PM : MQ."},{"value":"pm + qr - mq","message":"Du hast addiert und subtrahiert. Parallele Strecken verhalten sich wie die Abstände von M, es wird multipliziert und geteilt."}],"hint":"Der zweite Strahlensatz mit dem Zentrum M: SP : QR = PM : MQ.","steps":["$\\frac{w}{{{qr}}} = \\frac{{{pm}}}{{{mq}}}$, also $w = \\frac{{{pm}} \\cdot {{qr}}}{{{mq}}} = {{answer}}$ m."]},"templates":{"de":{"task":"Am Ufer eines Flusses liegen P, M und Q in einer Reihe, es ist PM = ⟦pm⟧ m und MQ = ⟦mq⟧ m. Der Baum S steht gegenüber von P. Bei Q geht jemand rechtwinklig zum Ufer, bis M, S und er in einer Linie liegen. Dort ist QR = ⟦qr⟧ m. Wie breit ist der Fluss (SP)?","steps":["\u003cmath>\u003cmrow>\u003cmfrac>\u003cmi>w\u003c/mi>\u003cmtext>⟦qr⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦pm⟧\u003c/mtext>\u003cmtext>⟦mq⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>w\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦pm⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦qr⟧\u003c/mtext>\u003c/mrow>\u003cmtext>⟦mq⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math> m."],"hint":"Der zweite Strahlensatz mit dem Zentrum M: SP : QR = PM : MQ.","messages":["Du hast den Bruch umgedreht. Es gilt SP : QR = PM : MQ, also SP = QR · PM : MQ.","Du hast addiert und subtrahiert. Parallele Strecken verhalten sich wie die Abstände von M, es wird multipliziert und geteilt."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,50,51,52,53,54,55,56,57,58,59,60,63,64,67,69,70,71,72,73,76,78,79],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="37905fbe" data-block-type="generated" data-block-order="21">
+<div class="explainer-exercise explainer-generated" id="stab-schatten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Turm ist 12 m hoch und wirft einen Schatten von 24 m. Ein Stab von 1 m Höhe soll so stehen, dass sein Schatten am selben Ende aufhört. Wie lang ist der Schatten des Stabs?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Stab verhält sich zum Turm wie sein Schatten zum Turmschatten. Löse nach dem Stabschatten auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>s</mi><mn>24</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>12</mn></mfrac></mrow></math>, also <math><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mn>24</mn><mo>⋅</mo><mn>1</mn></mrow><mn>12</mn></mfrac><mo>=</mo><mn>2</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 2 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Turm ist 10 m hoch und wirft einen Schatten von 14 m. Ein Stab von 1 m Höhe soll so stehen, dass sein Schatten am selben Ende aufhört. Wie lang ist der Schatten des Stabs?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Stab verhält sich zum Turm wie sein Schatten zum Turmschatten. Löse nach dem Stabschatten auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>s</mi><mn>14</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>10</mn></mfrac></mrow></math>, also <math><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mn>14</mn><mo>⋅</mo><mn>1</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>1,4</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 1,4 m</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Turm ist 10 m hoch und wirft einen Schatten von 22 m. Ein Stab von 1 m Höhe soll so stehen, dass sein Schatten am selben Ende aufhört. Wie lang ist der Schatten des Stabs?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Stab verhält sich zum Turm wie sein Schatten zum Turmschatten. Löse nach dem Stabschatten auf.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mfrac><mi>s</mi><mn>22</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>10</mn></mfrac></mrow></math>, also <math><mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mn>22</mn><mo>⋅</mo><mn>1</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>2,2</mn></mrow></math> m.</li></ol><p><strong>Richtige Antwort:</strong> 2,2 m</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"stab-schatten","given":{"h":{"int":[6,30]},"hs":{"oneOf":[1,1.5,2]},"ts":{"int":[8,40]}},"where":["ts \u003c= 5 * h","decimals(hs * ts / h) \u003c= 1","ts * h / hs != hs * ts / h","ts - (h - hs) != hs * ts / h"],"task":{"text":"Ein Turm ist {{h}} m hoch und wirft einen Schatten von {{ts}} m. Ein Stab von {{hs}} m Höhe soll so stehen, dass sein Schatten am selben Ende aufhört. Wie lang ist der Schatten des Stabs?"},"answer":{"value":"hs * ts / h","compare":{"number":{"format":"decimal","decimals":1,"unit":"m"}}},"mistakes":[{"value":"ts * h / hs","message":"Du hast den Faktor umgedreht. Der Stab ist niedriger als der Turm, also ist sein Schatten kürzer als der Turmschatten."},{"value":"ts - (h - hs)","message":"Du hast die Höhendifferenz vom Schatten abgezogen. Höhe und Schatten hängen über einen Faktor zusammen."}],"hint":"Der Stab verhält sich zum Turm wie sein Schatten zum Turmschatten. Löse nach dem Stabschatten auf.","steps":["$\\frac{s}{{{ts}}} = \\frac{{{hs}}}{{{h}}}$, also $s = \\frac{{{ts}} \\cdot {{hs}}}{{{h}}} = {{answer}}$ m."]},"templates":{"de":{"task":"Ein Turm ist ⟦h⟧ m hoch und wirft einen Schatten von ⟦ts⟧ m. Ein Stab von ⟦hs⟧ m Höhe soll so stehen, dass sein Schatten am selben Ende aufhört. Wie lang ist der Schatten des Stabs?","steps":["\u003cmath>\u003cmrow>\u003cmfrac>\u003cmi>s\u003c/mi>\u003cmtext>⟦ts⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦hs⟧\u003c/mtext>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmrow>\u003cmi>s\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦ts⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦hs⟧\u003c/mtext>\u003c/mrow>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math> m."],"hint":"Der Stab verhält sich zum Turm wie sein Schatten zum Turmschatten. Löse nach dem Stabschatten auf.","messages":["Du hast den Faktor umgedreht. Der Stab ist niedriger als der Turm, also ist sein Schatten kürzer als der Turmschatten.","Du hast die Höhendifferenz vom Schatten abgezogen. Höhe und Schatten hängen über einen Faktor zusammen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,45,46,47,48,49,50,51,52,53,54,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Wie es weitergeht</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="0f351fad" data-block-type="text" data-block-order="22">
+<div class="block-text"><p>Das kannst du jetzt: Parallelen und ein gemeinsames Zentrum erkennen, den Streckfaktor aufstellen und damit unzugängliche Strecken berechnen. Im nächsten Kapitel geht es um das rechtwinklige Dreieck und den Satz des Pythagoras.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Turmhöhe und Flussbreite","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../vergroessern/strahlensaetze/">Zurück: Strahlensätze</a><a rel="next" href="../../dreieck/recap/">Weiter: Das brauchst du für dieses Kapitel</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

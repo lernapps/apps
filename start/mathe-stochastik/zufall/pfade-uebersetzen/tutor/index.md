@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -83,17 +80,26 @@ Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal ziehen **mit Zurücklegen
 
 ### Bild
 
-Bild: Baumdiagramm zur Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal mit Zurücklegen; orange sind die drei Pfade von „beide gleich“. Bildunterschrift: Der Baum aus dem Beispiel: 3 rote (R), 2 blaue (B) und 1 gelbe (G) Kugel, zweimal mit Zurücklegen. Auf beiden Stufen: rot 3/6, blau 2/6, gelb 1/6. Orange sind die drei Pfade von „beide gleich“: rot-rot 1/4, blau-blau 1/9 und gelb-gelb 1/36. Unter den übrigen Enden stehen rot-blau 1/6, rot-gelb 1/12, blau-rot 1/6, blau-gelb 1/18, gelb-rot 1/12, gelb-blau 1/18.
-
-### Video dazu
-
-Video: [Summenregel | Wahrscheinlichkeitsrechnung | Mathematik](https://www.youtube.com/watch?v=Pi1M1F2l024), Lehrerschmidt (YouTube)
+Bild: Baumdiagramm zur Urne mit 3 roten, 2 blauen und 1 gelben Kugel, zweimal mit Zurücklegen; orange sind die drei Pfade von „beide gleich“. Bildunterschrift: Der Baum aus dem Beispiel: 3 rote (R), 2 blaue (B) und 1 gelbe (G) Kugel, zweimal mit Zurücklegen. Auf beiden Stufen: rot $\frac{3}{6}$, blau $\frac{2}{6}$, gelb $\frac{1}{6}$. Orange sind die drei Pfade von „beide gleich“: rot-rot $\frac{1}{4}$, blau-blau $\frac{1}{9}$ und gelb-gelb $\frac{1}{36}$. Unter den übrigen Enden stehen rot-blau $\frac{1}{6}$, rot-gelb $\frac{1}{12}$, blau-rot $\frac{1}{6}$, blau-gelb $\frac{1}{18}$, gelb-rot $\frac{1}{12}$, gelb-blau $\frac{1}{18}$.
 
 ### Übung
+
+- Aufgabe `ereignis-pfade-zuordnen` (unten)
 
 - Aufgabe `pfade-finden` (unten)
 
 - Aufgabe `beide-gleich` (unten)
+
+- Aufgabe `beide-gleich-ohne` (unten)
+
+### Aufgabe ereignis-pfade-zuordnen
+
+- Aufgabe: Du wirfst eine Münze zweimal (Z für Zahl, K für Kopf). Welche Pfade gehören zu welchem Ereignis? Ordne zu.
+- Antwortformat: jedem Eintrag links den passenden rechts zuordnen
+- Lösung: genau einmal Zahl – ZK und KZ; zweimal dasselbe – ZZ und KK; mindestens einmal Zahl – ZZ, ZK und KZ; höchstens einmal Zahl – ZK, KZ und KK
+- Erklärung: Bei zwei Münzwürfen gibt es die vier Pfade ZZ, ZK, KZ und KK. „Genau einmal“ lässt nur die zwei gemischten übrig. „Mindestens einmal“ nimmt alle Pfade mit einer Zahl dazu, auch ZZ. „Höchstens einmal“ nimmt alle Pfade mit höchstens einer Zahl, auch KK.
+- Tipp der App: Schreibe alle vier Pfade der zwei Würfe auf und streiche, was nicht zum Ereignis passt.
+- Link: [../?via=tutor#ereignis-pfade-zuordnen](../?via=tutor#ereignis-pfade-zuordnen)
 
 ### Aufgabe pfade-finden
 
@@ -183,3 +189,16 @@ Nr. | r | b | Lösung | F1 | F2
 27 | 3 | 6 | 0,56 | 0,11 | 0,44
 28 | 4 | 6 | 0,52 | 0,16 | 0,48
 ```
+
+### Aufgabe beide-gleich-ohne
+
+- Aufgabe: In einer Urne liegen 3 rote und 3 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie groß ist die Wahrscheinlichkeit, dass beide Kugeln dieselbe Farbe haben? Gib sie in Prozent an.
+- Antwortformat: eine Zahl eintippen (%)
+- Lösung: 40 %
+- Erklärung: Rot-rot: $\frac{3}{6} \cdot \frac{2}{5} = \frac{1}{5}$. Blau-blau hat dieselbe Wahrscheinlichkeit. Zusammen: $\frac{1}{5} + \frac{1}{5} = \frac{2}{5} = 40\,\%$.
+- Tipp der App: Welche zwei Pfade gehören zu „beide gleich“? Rechne beim zweiten Zug mit 5 Kugeln.
+- Typische Fehler und was die App sagt:
+  - 20: Das ist nur ein Pfad. „Beide gleich“ heißt rot-rot oder blau-blau, also zwei Pfade.
+  - 50: So rechnest du mit Zurücklegen. Ohne Zurücklegen bleibt nach dem ersten Zug eine Kugel weniger in der Urne.
+  - 60: Das ist die Wahrscheinlichkeit für verschiedene Farben, also das Gegenereignis.
+- Link: [../?via=tutor#beide-gleich-ohne](../?via=tutor#beide-gleich-ohne)

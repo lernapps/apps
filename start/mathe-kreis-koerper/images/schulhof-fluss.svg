@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 195" role="img" aria-labelledby="t d">
+  <title id="t">Die Breite eines Flusses von oben</title>
+  <desc id="d">Ein Fluss fließt zwischen zwei geraden Ufern. Am anderen Ufer steht ein Baum. Am eigenen Ufer liegt der Punkt A genau gegenüber dem Baum. Der Punkt B liegt auf dem eigenen Ufer im Abstand s von A. Von B aus ist der Winkel beta zwischen der Strecke nach A und der Blicklinie zum Baum gemessen. A, B und der Baum bilden ein rechtwinkliges Dreieck, der rechte Winkel liegt bei A. Die Flussbreite w ist die Strecke von A zum Baum.</desc>
+  <rect x="10" y="55" width="270" height="65" fill="#9cc5f0" fill-opacity="0.5"/>
+  <line x1="10" y1="55" x2="280" y2="55" stroke="#222" stroke-width="2"/>
+  <line x1="10" y1="120" x2="280" y2="120" stroke="#222" stroke-width="2"/>
+  <circle cx="70" cy="55" r="8" fill="#7ab87a" stroke="#222" stroke-width="1.5"/>
+  <text x="58" y="40" font-size="13" fill="#222" font-family="sans-serif">Baum</text>
+  <polygon points="70,55 70,120 210,120" fill="#1a56c4" fill-opacity="0.15"/>
+  <line x1="70" y1="55" x2="70" y2="120" stroke="#1a56c4" stroke-width="2.5" stroke-dasharray="6 3"/>
+  <line x1="70" y1="120" x2="210" y2="120" stroke="#1a56c4" stroke-width="2.5"/>
+  <line x1="70" y1="55" x2="210" y2="120" stroke="#1a56c4" stroke-width="2.5"/>
+  <path d="M70,108 H82 V120" fill="none" stroke="#222" stroke-width="1.2"/>
+  <path d="M180,120 A30,30 0 0 0 183.5,105" fill="none" stroke="#222" stroke-width="1.2"/>
+  <text x="56" y="138" font-size="13" fill="#222" font-family="sans-serif">A</text>
+  <text x="206" y="138" font-size="13" fill="#222" font-family="sans-serif">B</text>
+  <text x="124" y="138" font-size="13" fill="#222" font-family="sans-serif">s</text>
+  <text x="52" y="92" font-size="13" fill="#222" font-family="sans-serif">w</text>
+  <text x="156" y="113" font-size="13" fill="#222" font-family="sans-serif">β</text>
+  <text x="200" y="160" font-size="12" fill="#222" font-family="sans-serif">eigenes Ufer</text>
+</svg>

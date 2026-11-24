@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Ähnliche Figuren – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Erkennen, wann zwei Figuren ähnlich sind, und mit dem Streckfaktor Längen und Flächen berechnen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../vergroessern/aehnliche-figuren/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../vergroessern/">Vergrößern und verkleinern</a></li><li aria-current="page">Ähnliche Figuren</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Ähnliche Figuren</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../vergroessern/aehnliche-figuren/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧vergroessern/aehnliche-figuren/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"aehnliche-figuren","title":"Ähnliche Figuren","exercises":[{"id":"foto-hoehe","section":"einstieg","numbered":false},{"id":"aehnliche-rechtecke","section":"uebung","numbered":false},{"id":"aehnliche-dreiecke","section":"uebung","numbered":false},{"id":"aehnliches-rechteck","section":"uebung","numbered":true},{"id":"flaeche-faktor","section":"uebung","numbered":true},{"id":"modell-flaeche","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","flaeche","uebung","weiter"]},"tutor":"vergroessern/aehnliche-figuren/tutor/","markdown":"vergroessern/aehnliche-figuren/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Wann Figuren ähnlich sind</a></li><li><a href="#beispiel">Ähnlich oder nicht?</a></li><li><a href="#flaeche">Was mit der Fläche passiert</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Wie es weitergeht</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="223a3f34" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du ein Foto auf ein Poster vergrößerst, ohne es zu verzerren, müssen Foto und Poster ähnlich sein. Du lernst, wann zwei Figuren ähnlich sind: wenn alle Winkel gleich sind und alle Längen mit demselben Faktor wachsen. Damit berechnest du fehlende Längen und die Fläche vergrößerter Figuren.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="2bd2ec59" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Jonas und Mira drucken ein Foto für das Klassenposter. Das Foto ist 9 cm breit und 6 cm hoch. Auf dem Poster soll es 27 cm breit sein, ohne verzerrt zu werden.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="26749aa0" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="foto-hoehe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-foto-hoehe" data-id="foto-hoehe" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie hoch ist das Foto auf dem Poster?</legend>
+<label class="question-option"><input type="radio" name="frage-foto-hoehe" value="0"> <span>24 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-foto-hoehe" value="1"> <span>18 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-foto-hoehe" value="2"> <span>12 cm</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>24 cm</strong></p><p>Die Breite wächst um 18 cm, du hast 18 cm zur Höhe addiert. Dann wäre das Foto verzerrt. Die Höhe wird mit demselben Faktor multipliziert wie die Breite.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>18 cm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Breite wird mit 27 : 9 = 3 multipliziert. Die Höhe auch, also 3 · 6 cm = 18 cm.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>12 cm</strong></p><p>Du hast die Höhe mit 2 multipliziert. Der Faktor für die Breite ist aber 27 : 9 = 3.</p></li>
+</ul>
+<p class="question-explanation">Ohne Verzerrung wachsen Breite und Höhe mit demselben Faktor. Hier ist er 3.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>24 cm</strong></p><p>Die Breite wächst um 18 cm, du hast 18 cm zur Höhe addiert. Dann wäre das Foto verzerrt. Die Höhe wird mit demselben Faktor multipliziert wie die Breite.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>18 cm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Breite wird mit 27 : 9 = 3 multipliziert. Die Höhe auch, also 3 · 6 cm = 18 cm.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>12 cm</strong></p><p>Du hast die Höhe mit 2 multipliziert. Der Faktor für die Breite ist aber 27 : 9 = 3.</p></li>
+</ul>
+<p class="question-explanation">Ohne Verzerrung wachsen Breite und Höhe mit demselben Faktor. Hier ist er 3.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"foto-hoehe","text":"Wie hoch ist das Foto auf dem Poster?","explanation":"Ohne Verzerrung wachsen Breite und Höhe mit demselben Faktor. Hier ist er 3.","links":[],"type":"single-choice","options":[{"text":"24 cm","correct":false,"info":"Die Breite wächst um 18 cm, du hast 18 cm zur Höhe addiert. Dann wäre das Foto verzerrt. Die Höhe wird mit demselben Faktor multipliziert wie die Breite."},{"text":"18 cm","correct":true,"info":"Die Breite wird mit 27 : 9 = 3 multipliziert. Die Höhe auch, also 3 · 6 cm = 18 cm."},{"text":"12 cm","correct":false,"info":"Du hast die Höhe mit 2 multipliziert. Der Faktor für die Breite ist aber 27 : 9 = 3."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Wann Figuren ähnlich sind</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="ab250611" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du prüfen willst, ob ein Bild verzerrt wurde, vergleichst du Winkel und Faktoren. Das Foto und das Poster haben dieselbe Form, nur eine andere Größe. Eine Figur ist die zentrische Streckung der anderen, vielleicht noch verschoben, gedreht oder gespiegelt. Solche Figuren heißen <strong>ähnlich</strong>.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="1d56800b" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-aehnlich"><a href="../../glossar/#aehnlich">ähnlich</a></dfn></dt><dd><p>Zwei Figuren sind ähnlich, wenn alle Winkel übereinstimmen und alle Längen mit demselben Faktor <math><mi>k</mi></math> zusammenhängen.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="9c1bdd42" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/3/1" data-block-id="0dd8d629" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Bei Rechtecken musst du Breite und Höhe vergleichen: Beide Faktoren müssen gleich sein. Ein Rechteck von 3 cm × 5 cm und eines von 5 cm × 7 cm (beide Seiten 2 cm länger) sind nicht ähnlich, denn 2 cm dazuzählen ist kein Faktor.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="94b62eb4" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Bei Dreiecken genügt es, zwei Winkel zu vergleichen. Den dritten kennst du aus der Winkelsumme von 180°. Stimmen zwei Winkel überein, stimmt auch der dritte überein, und die Dreiecke sind ähnlich.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ähnlich oder nicht?</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="b7518c35" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Zwei Rechtecke prüfen</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="bbfdfaef" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn die Maße zweier Rechtecke gegeben sind und du wissen willst, ob sie ähnlich sind, rechnest du beide Faktoren aus. Ein Rechteck ist 4 cm breit und 6 cm hoch. Ein anderes ist 10 cm breit und 15 cm hoch. Die Winkel sind in beiden 90°. Prüfe die Faktoren.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="16069fdf" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>k</mi><mtext>Breite</mtext></msub><mo>=</mo><mfrac><mn>10</mn><mn>4</mn></mfrac><mo>=</mo><mn>2,5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="53f2f57f" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>k</mi><mtext>Höhe</mtext></msub><mo>=</mo><mfrac><mn>15</mn><mn>6</mn></mfrac><mo>=</mo><mn>2,5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="e3910d30" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Beide Faktoren sind gleich, die Rechtecke sind ähnlich. Ist das zweite 10 cm breit und 14 cm hoch, ist der Faktor der Höhe <math><mfrac><mn>14</mn><mn>6</mn></mfrac></math>, also etwa 2,33. Dann sind sie nicht ähnlich.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="flaeche">Was mit der Fläche passiert</h2>
+<div class="explainer-block" data-block="flaeche/1" data-block-id="bc07f948" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Wenn du wissen willst, wie viel Fläche ein vergrößertes Bild braucht (zum Beispiel Farbe für das Poster), brauchst du den Flächenfaktor. Das Bild zeigt ein Quadrat mit der Seite 1 cm und ein Quadrat mit der Seite 2 cm. Das ist eine Streckung mit <math><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></math>. Wie viele kleine Quadrate passen in das große? Zähle die Teile.</p></div>
+</div>
+<div class="explainer-block" data-block="flaeche/2" data-block-id="b074c3c8" data-block-type="figure" data-block-order="15">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/flaeche-faktor.svg" alt="Links ein kleines Quadrat mit der Seite 1 cm und der Fläche 1 cm². Rechts ein Quadrat mit der Seite 2 cm, das durch gestrichelte Linien in vier kleine Quadrate geteilt ist." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Doppelte Seitenlänge, vierfache Fläche.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="flaeche/3" data-block-id="fee788f7" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Es sind vier. Die Fläche wächst nicht mit <math><mi>k</mi></math>, sondern mit <math><mrow><mi>k</mi><mo>⋅</mo><mi>k</mi></mrow></math>, denn sie hat zwei Längen: Breite und Höhe werden beide mit <math><mi>k</mi></math> multipliziert.</p></div>
+</div>
+<div class="explainer-block" data-block="flaeche/4" data-block-id="dc629e33" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⋅</mo><mi>A</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="flaeche/5" data-block-id="0406a458" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>Auch ein Maßstab ist eine Streckung: Bei 1 : 100 wird vom Plan zur Wirklichkeit mit <math><mrow><mi>k</mi><mo>=</mo><mn>100</mn></mrow></math> gestreckt. Längen werden mit 100 multipliziert, Flächen mit <math><msup><mn>100</mn><mn>2</mn></msup></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="flaeche/6" data-block-id="e4fbc2bc" data-block-type="example" data-block-order="19">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Fläche eines Posters</h3>
+<div class="explainer-block" data-block="flaeche/6/1" data-block-id="25de3cff" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Das Foto hat 54 cm². Das Poster ist eine Streckung mit <math><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></math>. Seine Fläche ist <math><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>54</mn><mo>=</mo><mn>9</mn><mo>⋅</mo><mn>54</mn><mo>=</mo><mn>486</mn></mrow></math> cm².</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="91255ee0" data-block-type="single-choice" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="aehnliche-rechtecke">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-aehnliche-rechtecke" data-id="aehnliche-rechtecke" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche zwei Rechtecke sind ähnlich?</legend>
+<label class="question-option"><input type="radio" name="frage-aehnliche-rechtecke" value="0"> <span>3 cm × 5 cm und 6 cm × 8 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-aehnliche-rechtecke" value="1"> <span>3 cm × 5 cm und 5 cm × 7 cm</span></label>
+<label class="question-option"><input type="radio" name="frage-aehnliche-rechtecke" value="2"> <span>3 cm × 5 cm und 6 cm × 10 cm</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3 cm × 5 cm und 6 cm × 8 cm</strong></p><p>Die Breite wird mit 2 multipliziert, die Höhe aber nicht, denn 5 cm · 2 = 10 cm. Die Faktoren sind verschieden.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>3 cm × 5 cm und 5 cm × 7 cm</strong></p><p>Beide Seiten sind um 2 cm länger. Das ist ein Zuschlag, kein Faktor. Die Faktoren 5 : 3 und 7 : 5 sind verschieden.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>3 cm × 5 cm und 6 cm × 10 cm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Breite 3 cm wird 6 cm, Höhe 5 cm wird 10 cm. Beide Faktoren sind 2.</p></li>
+</ul>
+<p class="question-explanation">Ähnliche Rechtecke haben denselben Faktor für Breite und Höhe.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3 cm × 5 cm und 6 cm × 8 cm</strong></p><p>Die Breite wird mit 2 multipliziert, die Höhe aber nicht, denn 5 cm · 2 = 10 cm. Die Faktoren sind verschieden.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>3 cm × 5 cm und 5 cm × 7 cm</strong></p><p>Beide Seiten sind um 2 cm länger. Das ist ein Zuschlag, kein Faktor. Die Faktoren 5 : 3 und 7 : 5 sind verschieden.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>3 cm × 5 cm und 6 cm × 10 cm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Breite 3 cm wird 6 cm, Höhe 5 cm wird 10 cm. Beide Faktoren sind 2.</p></li>
+</ul>
+<p class="question-explanation">Ähnliche Rechtecke haben denselben Faktor für Breite und Höhe.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"aehnliche-rechtecke","text":"Welche zwei Rechtecke sind ähnlich?","explanation":"Ähnliche Rechtecke haben denselben Faktor für Breite und Höhe.","links":[],"type":"single-choice","options":[{"text":"3 cm × 5 cm und 6 cm × 8 cm","correct":false,"info":"Die Breite wird mit 2 multipliziert, die Höhe aber nicht, denn 5 cm · 2 = 10 cm. Die Faktoren sind verschieden."},{"text":"3 cm × 5 cm und 5 cm × 7 cm","correct":false,"info":"Beide Seiten sind um 2 cm länger. Das ist ein Zuschlag, kein Faktor. Die Faktoren 5 : 3 und 7 : 5 sind verschieden."},{"text":"3 cm × 5 cm und 6 cm × 10 cm","correct":true,"info":"Breite 3 cm wird 6 cm, Höhe 5 cm wird 10 cm. Beide Faktoren sind 2."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="d6e69f4c" data-block-type="single-choice" data-block-order="22">
+<div class="explainer-exercise explainer-question" id="aehnliche-dreiecke">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-aehnliche-dreiecke" data-id="aehnliche-dreiecke" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Dreieck 1 hat die Winkel 40° und 75°. Dreieck 2 hat die Winkel 75° und 65°. Was gilt?</legend>
+<label class="question-option"><input type="radio" name="frage-aehnliche-dreiecke" value="0"> <span>Die Dreiecke sind ähnlich.</span></label>
+<label class="question-option"><input type="radio" name="frage-aehnliche-dreiecke" value="1"> <span>Die Dreiecke sind nicht ähnlich, weil die Winkel nicht in derselben Reihenfolge stehen.</span></label>
+<label class="question-option"><input type="radio" name="frage-aehnliche-dreiecke" value="2"> <span>Das lässt sich ohne die Seitenlängen nicht sagen.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Die Dreiecke sind ähnlich.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Dreieck 1 hat als dritten Winkel 180° − 40° − 75° = 65°, Dreieck 2 hat 180° − 75° − 65° = 40°. Beide haben die Winkel 40°, 65° und 75°.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Die Dreiecke sind nicht ähnlich, weil die Winkel nicht in derselben Reihenfolge stehen.</strong></p><p>Auf die Reihenfolge kommt es nicht an. Du kannst ein Dreieck drehen oder spiegeln.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Das lässt sich ohne die Seitenlängen nicht sagen.</strong></p><p>Bei Dreiecken genügen zwei Winkel. Der dritte folgt aus der Winkelsumme.</p></li>
+</ul>
+<p class="question-explanation">Zwei übereinstimmende Winkel reichen bei Dreiecken, der dritte ergibt sich aus 180°.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Die Dreiecke sind ähnlich.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Dreieck 1 hat als dritten Winkel 180° − 40° − 75° = 65°, Dreieck 2 hat 180° − 75° − 65° = 40°. Beide haben die Winkel 40°, 65° und 75°.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Die Dreiecke sind nicht ähnlich, weil die Winkel nicht in derselben Reihenfolge stehen.</strong></p><p>Auf die Reihenfolge kommt es nicht an. Du kannst ein Dreieck drehen oder spiegeln.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Das lässt sich ohne die Seitenlängen nicht sagen.</strong></p><p>Bei Dreiecken genügen zwei Winkel. Der dritte folgt aus der Winkelsumme.</p></li>
+</ul>
+<p class="question-explanation">Zwei übereinstimmende Winkel reichen bei Dreiecken, der dritte ergibt sich aus 180°.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"aehnliche-dreiecke","text":"Dreieck 1 hat die Winkel 40° und 75°. Dreieck 2 hat die Winkel 75° und 65°. Was gilt?","explanation":"Zwei übereinstimmende Winkel reichen bei Dreiecken, der dritte ergibt sich aus 180°.","links":[],"type":"single-choice","options":[{"text":"Die Dreiecke sind ähnlich.","correct":true,"info":"Dreieck 1 hat als dritten Winkel 180° − 40° − 75° = 65°, Dreieck 2 hat 180° − 75° − 65° = 40°. Beide haben die Winkel 40°, 65° und 75°."},{"text":"Die Dreiecke sind nicht ähnlich, weil die Winkel nicht in derselben Reihenfolge stehen.","correct":false,"info":"Auf die Reihenfolge kommt es nicht an. Du kannst ein Dreieck drehen oder spiegeln."},{"text":"Das lässt sich ohne die Seitenlängen nicht sagen.","correct":false,"info":"Bei Dreiecken genügen zwei Winkel. Der dritte folgt aus der Winkelsumme."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="5a7c11b3" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="aehnliches-rechteck">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Rechteck ist 2 cm breit und 11 cm hoch. Ein ähnliches Rechteck ist 27 cm breit. Wie hoch ist es?</p><details class="explainer-hint"><summary>Tipp</summary><p>Bestimme den Faktor k aus den Breiten (neu durch alt) und multipliziere die Höhe damit.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mn>27</mn><mn>2</mn></mfrac></mrow></math>, dann <math><mrow><mi>k</mi><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>148,5</mn></mrow></math>, also 148,5 cm.</li></ol><p><strong>Richtige Antwort:</strong> 148,5 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Rechteck ist 4 cm breit und 5 cm hoch. Ein ähnliches Rechteck ist 12 cm breit. Wie hoch ist es?</p><details class="explainer-hint"><summary>Tipp</summary><p>Bestimme den Faktor k aus den Breiten (neu durch alt) und multipliziere die Höhe damit.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mn>12</mn><mn>4</mn></mfrac></mrow></math>, dann <math><mrow><mi>k</mi><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>15</mn></mrow></math>, also 15 cm.</li></ol><p><strong>Richtige Antwort:</strong> 15 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Rechteck ist 2 cm breit und 11 cm hoch. Ein ähnliches Rechteck ist 7 cm breit. Wie hoch ist es?</p><details class="explainer-hint"><summary>Tipp</summary><p>Bestimme den Faktor k aus den Breiten (neu durch alt) und multipliziere die Höhe damit.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mn>7</mn><mn>2</mn></mfrac></mrow></math>, dann <math><mrow><mi>k</mi><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>38,5</mn></mrow></math>, also 38,5 cm.</li></ol><p><strong>Richtige Antwort:</strong> 38,5 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"aehnliches-rechteck","given":{"a":{"int":[2,10]},"b":{"int":[3,12]},"c":{"int":[4,30]}},"where":["c > a","decimals(c / a) \u003c= 1","decimals(b * c / a) \u003c= 1","b + c - a != b * c / a","a * b / c != b * c / a","b != a"],"task":{"text":"Ein Rechteck ist {{a}} cm breit und {{b}} cm hoch. Ein ähnliches Rechteck ist {{c}} cm breit. Wie hoch ist es?"},"answer":{"value":"b * c / a","compare":{"number":{"format":"decimal","decimals":1,"unit":"cm"}}},"mistakes":[{"value":"b + c - a","message":"Du hast den Zuwachs der Breite zur Höhe addiert. Ähnlich heißt: dieselbe Zahl als Faktor, nicht als Zuschlag."},{"value":"a * b / c","message":"Du hast den Faktor umgedreht. Das größere Rechteck ist breiter, also auch höher."}],"hint":"Bestimme den Faktor k aus den Breiten (neu durch alt) und multipliziere die Höhe damit.","steps":["$k = \\frac{{{c}}}{{{a}}}$, dann $k \\cdot {{b}} = {{answer}}$, also {{answer}} cm."]},"templates":{"de":{"task":"Ein Rechteck ist ⟦a⟧ cm breit und ⟦b⟧ cm hoch. Ein ähnliches Rechteck ist ⟦c⟧ cm breit. Wie hoch ist es?","steps":["\u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmtext>⟦a⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, dann \u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm."],"hint":"Bestimme den Faktor k aus den Breiten (neu durch alt) und multipliziere die Höhe damit.","messages":["Du hast den Zuwachs der Breite zur Höhe addiert. Ähnlich heißt: dieselbe Zahl als Faktor, nicht als Zuschlag.","Du hast den Faktor umgedreht. Das größere Rechteck ist breiter, also auch höher."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="c2367769" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="flaeche-faktor">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Foto hat eine Fläche von 15 cm². Das Poster ist eine Streckung des Fotos mit dem Faktor k = 4. Wie groß ist die Fläche des Posters in cm²?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Flächenfaktor ist k mal k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⋅</mo><mi>A</mi><mo>=</mo><msup><mn>4</mn><mn>2</mn></msup><mo>⋅</mo><mn>15</mn><mo>=</mo><mn>240</mn></mrow></math>, also 240 cm².</li></ol><p><strong>Richtige Antwort:</strong> 240 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Foto hat eine Fläche von 4 cm². Das Poster ist eine Streckung des Fotos mit dem Faktor k = 4. Wie groß ist die Fläche des Posters in cm²?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Flächenfaktor ist k mal k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⋅</mo><mi>A</mi><mo>=</mo><msup><mn>4</mn><mn>2</mn></msup><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>64</mn></mrow></math>, also 64 cm².</li></ol><p><strong>Richtige Antwort:</strong> 64 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Foto hat eine Fläche von 15 cm². Das Poster ist eine Streckung des Fotos mit dem Faktor k = 3. Wie groß ist die Fläche des Posters in cm²?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Flächenfaktor ist k mal k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⋅</mo><mi>A</mi><mo>=</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>15</mn><mo>=</mo><mn>135</mn></mrow></math>, also 135 cm².</li></ol><p><strong>Richtige Antwort:</strong> 135 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"flaeche-faktor","given":{"k":{"oneOf":[2,3,4]},"A":{"int":[3,25]}},"where":["A + k * k != A * k"],"task":{"text":"Ein Foto hat eine Fläche von {{A}} cm². Das Poster ist eine Streckung des Fotos mit dem Faktor k = {{k}}. Wie groß ist die Fläche des Posters in cm²?"},"answer":{"value":"A * k * k","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"A * k","message":"Du hast die Fläche nur mit k multipliziert. Breite und Höhe wachsen beide mit k, die Fläche also mit k · k."},{"value":"A + k * k","message":"Du hast k · k addiert. Die Fläche wird mit k · k multipliziert."}],"hint":"Der Flächenfaktor ist k mal k.","steps":["$A' = k^2 \\cdot A = {{k}}^2 \\cdot {{A}} = {{answer}}$, also {{answer}} cm²."]},"templates":{"de":{"task":"Ein Foto hat eine Fläche von ⟦A⟧ cm². Das Poster ist eine Streckung des Fotos mit dem Faktor k = ⟦k⟧. Wie groß ist die Fläche des Posters in cm²?","steps":["\u003cmath>\u003cmrow>\u003cmsup>\u003cmi>A\u003c/mi>\u003cmo lspace=\"0em\" rspace=\"0em\" class=\"tml-prime tml-lrg-pad\">′\u003c/mo>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmi>k\u003c/mi>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦k⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦A⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm²."],"hint":"Der Flächenfaktor ist k mal k.","messages":["Du hast die Fläche nur mit k multipliziert. Breite und Höhe wachsen beide mit k, die Fläche also mit k · k.","Du hast k · k addiert. Die Fläche wird mit k · k multipliziert."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,19,20,21,22,23,24,25,26,27,28,30,32,33,34,35,36,37,39,40,43,44,45,46,47,48,49,53,61,62,65,68,70,81,87,89,95,96,99,102,105,110,111,121,135,140,156,160,186,188,208,268],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a57d3f57" data-block-type="generated" data-block-order="25">
+<div class="explainer-exercise explainer-generated" id="modell-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Modellhaus im Maßstab 1 : 200 hat eine Grundfläche von 49 cm². Wie groß ist die Grundfläche des echten Hauses in m²? Es gilt 1 m² = 10 000 cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst die Fläche in cm² mit dem Quadrat des Faktors vergrößern, dann in m² umrechnen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mn>200</mn><mn>2</mn></msup><mo>⋅</mo><mn>49</mn></mrow></math> cm² <math><mrow><mo>=</mo><mn>196</mn></mrow></math> m².</li></ol><p><strong>Richtige Antwort:</strong> 196 m²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Modellhaus im Maßstab 1 : 200 hat eine Grundfläche von 14 cm². Wie groß ist die Grundfläche des echten Hauses in m²? Es gilt 1 m² = 10 000 cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst die Fläche in cm² mit dem Quadrat des Faktors vergrößern, dann in m² umrechnen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mn>200</mn><mn>2</mn></msup><mo>⋅</mo><mn>14</mn></mrow></math> cm² <math><mrow><mo>=</mo><mn>56</mn></mrow></math> m².</li></ol><p><strong>Richtige Antwort:</strong> 56 m²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Modellhaus im Maßstab 1 : 200 hat eine Grundfläche von 12 cm². Wie groß ist die Grundfläche des echten Hauses in m²? Es gilt 1 m² = 10 000 cm².</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst die Fläche in cm² mit dem Quadrat des Faktors vergrößern, dann in m² umrechnen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><mo>=</mo><msup><mn>200</mn><mn>2</mn></msup><mo>⋅</mo><mn>12</mn></mrow></math> cm² <math><mrow><mo>=</mo><mn>48</mn></mrow></math> m².</li></ol><p><strong>Richtige Antwort:</strong> 48 m²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"modell-flaeche","given":{"m":{"oneOf":[50,200]},"A":{"int":[10,60]}},"where":["A * m * m / 10000 >= 10"],"task":{"text":"Ein Modellhaus im Maßstab 1 : {{m}} hat eine Grundfläche von {{A}} cm². Wie groß ist die Grundfläche des echten Hauses in m²? Es gilt 1 m² = 10 000 cm²."},"answer":{"value":"A * m * m / 10000","compare":{"number":{"format":"decimal","decimals":2,"unit":"m²"}}},"mistakes":[{"value":"A * m / 10000","message":"Du hast die Fläche nur mit dem Maßstabsfaktor multipliziert. Die Fläche wächst mit dem Quadrat des Faktors."},{"value":"A * m * m / 100","message":"Du hast cm² mit 100 in m² umgerechnet. Ein m² sind 100 · 100 = 10 000 cm²."},{"value":"A * m * m","message":"Das sind noch cm². Rechne in m² um: durch 10 000."}],"hint":"Erst die Fläche in cm² mit dem Quadrat des Faktors vergrößern, dann in m² umrechnen.","steps":["$A' = {{m}}^2 \\cdot {{A}}$ cm² $= {{answer}}$ m²."]},"templates":{"de":{"task":"Ein Modellhaus im Maßstab 1 : ⟦m⟧ hat eine Grundfläche von ⟦A⟧ cm². Wie groß ist die Grundfläche des echten Hauses in m²? Es gilt 1 m² = 10 000 cm².","steps":["\u003cmath>\u003cmrow>\u003cmsup>\u003cmi>A\u003c/mi>\u003cmo lspace=\"0em\" rspace=\"0em\" class=\"tml-prime tml-lrg-pad\">′\u003c/mo>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦m⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦A⟧\u003c/mtext>\u003c/mrow>\u003c/math> cm² \u003cmath>\u003cmrow>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math> m²."],"hint":"Erst die Fläche in cm² mit dem Quadrat des Faktors vergrößern, dann in m² umrechnen.","messages":["Du hast die Fläche nur mit dem Maßstabsfaktor multipliziert. Die Fläche wächst mit dem Quadrat des Faktors.","Du hast cm² mit 100 in m² umgerechnet. Ein m² sind 100 · 100 = 10 000 cm².","Das sind noch cm². Rechne in m² um: durch 10 000."]}},"data":{},"seeds":[1,2,3,5,6,7,8,9,10,11,12,13,14,17,18,20,21,22,23,24,25,26,27,28,29,31,33,34,39,41,42,48,49,52,55,58,59,62,63,66,67,69,70,71,72,74,77,81,83,86,88,96,97,100,101,113,115,116,126,135,141,155,164,174,198,218,221],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Wie es weitergeht</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="c6820b02" data-block-type="text" data-block-order="26">
+<div class="block-text"><p>Das kannst du jetzt: Ähnliche Figuren haben gleiche Winkel und denselben Faktor für alle Längen. Flächen wachsen mit <math><msup><mi>k</mi><mn>2</mn></msup></math>. Auf der nächsten Seite findest du in einer Figur mit zwei Parallelen ähnliche Dreiecke und lernst die Strahlensätze.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Ähnliche Figuren","order":2}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../vergroessern/streckung/">Zurück: Zentrische Streckung</a><a rel="next" href="../../vergroessern/strahlensaetze/">Weiter: Strahlensätze</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

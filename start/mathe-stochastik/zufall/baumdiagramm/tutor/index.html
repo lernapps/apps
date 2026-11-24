@@ -37,9 +37,6 @@ stellst du Überschlags- und Warum-Fragen.</li>
 bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
 falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.</li>
 <li>Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.</li>
-<li>Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-Regel, Beispiel und Video nicht gereicht haben.</li>
 </ul>
 <h2>Wo das Kind gerade ist</h2>
 <ul>
@@ -77,35 +74,68 @@ Ohne Zurücklegen).</li>
 </ul>
 <p>$P(\text{Zweig 1}) + P(\text{Zweig 2}) + \text{…} = 1$</p>
 <ul>
-<li><strong>Pfad</strong>: Ein Weg im Baumdiagramm vom Start bis zu einem Ende.</li>
+<li><p><strong>Pfad</strong>: Ein Weg im Baumdiagramm vom Start bis zu einem Ende.</p>
+</li>
+<li><p><strong>Zweig</strong>: Eine Linie im Baumdiagramm. An jedem Zweig steht, wie wahrscheinlich dieser Schritt ist.</p>
+</li>
+<li><p><strong>Knoten</strong>: Ein Punkt im Baumdiagramm, an dem sich der Baum verzweigt oder ein Pfad endet.</p>
+</li>
 </ul>
 <h3>Beispiel</h3>
 <p><strong>Beispiel: Zweimal ziehen ohne Zurücklegen</strong></p>
 <p>In einer Urne liegen 3 rote und 2 blaue Kugeln. Du ziehst zweimal <strong>ohne Zurücklegen</strong>. Das Bild unten zeigt den fertigen Baum.</p>
-<ol>
-<li><strong>1. Stufe:</strong> 5 Kugeln. $P(\text{rot}) = \frac{3}{5}$, $P(\text{blau}) = \frac{2}{5}$. Zusammen 1.</li>
-<li><strong>2. Stufe nach rot:</strong> nur noch 4 Kugeln, davon 2 rote. $P(\text{rot}) = \frac{2}{4}$,
-$P(\text{blau}) = \frac{2}{4}$.</li>
-<li><strong>2. Stufe nach blau:</strong> 4 Kugeln, 3 rote, 1 blaue. $P(\text{rot}) = \frac{3}{4}$,
-$P(\text{blau}) = \frac{1}{4}$.</li>
-<li>Unter den Enden stehen schon die Pfadwahrscheinlichkeiten (siehe<ol>
-<li>Pfadregel). Ihre Summe ist 1 – ein guter Test für jeden Baum.</li>
+<p>Die Zweige des Baums, Stufe für Stufe:</p>
+<ul>
+<li>Stufe | Zweige</li>
+<li><ol>
+<li>Stufe | 5 Kugeln: $P(\text{rot}) = \frac{3}{5}$ und $P(\text{blau}) = \frac{2}{5}$. Zusammen 1.</li>
 </ol>
 </li>
+<li><ol start="2">
+<li>Stufe nach rot | Nur noch 4 Kugeln, 2 rote und 2 blaue: $P(\text{rot}) = \frac{2}{4}$ und $P(\text{blau}) = \frac{2}{4}$.</li>
 </ol>
-<h3>Bild</h3>
-<p>Bild: Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen. Bildunterschrift: Ein Baumdiagramm zur Urne mit 3 roten (R) und 2 blauen (B) Kugeln, zweimal ohne Zurücklegen. Vom Start gehen zwei Zweige aus: rot mit 3/5 und blau mit 2/5. Nach rot folgen rot mit 2/4 und blau mit 2/4, nach blau folgen rot mit 3/4 und blau mit 1/4. Unter den vier Enden stehen die Pfadwahrscheinlichkeiten: rot-rot 3/10, rot-blau 3/10, blau-rot 3/10, blau-blau 1/10. Zusammen ergeben sie 1.</p>
-<h3>Video dazu</h3>
-<p>Video: <a href="https://www.youtube.com/watch?v=mBknBnww5fA">Baumdiagramm | mehrstufiger Zufallsversuch | Wahrscheinlichkeit | Stochastik</a>, Lehrerschmidt (YouTube)</p>
-<ul>
-<li>Noch eine Erklärung: <a href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente">Mehrstufige Zufallsexperimente</a> bei serlo.org</li>
+</li>
+<li><ol start="2">
+<li>Stufe nach blau | 4 Kugeln, 3 rote und 1 blaue: $P(\text{rot}) = \frac{3}{4}$ und $P(\text{blau}) = \frac{1}{4}$.</li>
+</ol>
+</li>
 </ul>
+<p>Unter den Enden stehen die Pfadwahrscheinlichkeiten (siehe 1. Pfadregel). Ihre Summe ist 1 – ein guter Test für jeden Baum.</p>
+<h3>Bild</h3>
+<p>Bild: Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen. Bildunterschrift: Ein Baumdiagramm zur Urne mit 3 roten (R) und 2 blauen (B) Kugeln, zweimal ohne Zurücklegen. Vom Start gehen zwei Zweige aus: rot mit $\frac{3}{5}$ und blau mit $\frac{2}{5}$. Nach rot folgen rot mit $\frac{2}{4}$ und blau mit $\frac{2}{4}$, nach blau folgen rot mit $\frac{3}{4}$ und blau mit $\frac{1}{4}$. Unter den vier Enden stehen die Pfadwahrscheinlichkeiten: rot-rot $\frac{3}{10}$, rot-blau $\frac{3}{10}$, blau-rot $\frac{3}{10}$, blau-blau $\frac{1}{10}$. Zusammen ergeben sie 1.</p>
 <h3>Übung</h3>
 <ul>
+<li><p>Aufgabe <code>baum-pfade-zaehlen</code> (unten)</p>
+</li>
+<li><p>Aufgabe <code>baum-begriffe</code> (unten)</p>
+</li>
 <li><p>Aufgabe <code>baum-ergaenzen</code> (unten)</p>
 </li>
 <li><p>Aufgabe <code>baumdiagramm-nenner</code> (unten)</p>
 </li>
+</ul>
+<h3>Aufgabe baum-pfade-zaehlen</h3>
+<ul>
+<li>Aufgabe: Du wirfst eine Münze dreimal hintereinander und zeichnest dazu ein Baumdiagramm. Wie viele Pfade hat es, vom Start bis zu den Enden gezählt?</li>
+<li>Antwortformat: eine Zahl eintippen</li>
+<li>Lösung: 8</li>
+<li>Erklärung: Jede Stufe verdoppelt die Pfade, denn an jedes Ende kommen zwei neue Zweige. Nach drei Würfen sind es 2 · 2 · 2 = 8 Pfade.</li>
+<li>Tipp der App: Zeichne den Baum. Nach dem ersten Wurf gibt es 2 Zweige, jeder teilt sich beim nächsten Wurf wieder in 2.</li>
+<li>Typische Fehler und was die App sagt:<ul>
+<li>6: Bei jeder Stufe verdoppelt sich die Zahl der Pfade. Du hast zu wenige gezählt.</li>
+<li>3: Das ist die Zahl der Stufen, nicht die Zahl der Pfade. Jeder Pfad geht durch alle drei Stufen.</li>
+</ul>
+</li>
+<li>Link: <a href="../?via=tutor#baum-pfade-zaehlen">../?via=tutor#baum-pfade-zaehlen</a></li>
+</ul>
+<h3>Aufgabe baum-begriffe</h3>
+<ul>
+<li>Aufgabe: Ordne jedem Begriff aus dem Baumdiagramm seine Bedeutung zu.</li>
+<li>Antwortformat: jedem Eintrag links den passenden rechts zuordnen</li>
+<li>Lösung: Stufe – ein Zug des Versuchs, zum Beispiel der erste Wurf; Zweig – eine Linie zu einem möglichen Ergebnis, mit seiner Wahrscheinlichkeit; Pfad – ein Weg vom Start bis zu einem Ende des Baums; Zweige an einem Knoten – ihre Wahrscheinlichkeiten ergeben zusammen immer 1</li>
+<li>Erklärung: Ein Baum hat Stufen, Zweige und Pfade. An jedem Zweig steht eine Wahrscheinlichkeit, entlang eines Pfades verläuft die Rechnung, und die Zweige eines Knotens decken alle Möglichkeiten dieser Stufe ab.</li>
+<li>Tipp der App: Lies noch einmal die Regel und die Begriffe Pfad und Zweig.</li>
+<li>Link: <a href="../?via=tutor#baum-begriffe">../?via=tutor#baum-begriffe</a></li>
 </ul>
 <h3>Aufgabe baum-ergaenzen</h3>
 <ul>

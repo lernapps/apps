@@ -1,0 +1,133 @@
+# Brüche und Dezimalzahlen
+
+Bruchrechnung mit anschaulichen Modellen. Hilf zuerst mit einer Frage zum nächsten Schritt. Zeige auf Wunsch einen Lösungsweg. Unterscheide Anteil, Bruchteil und Ganzes, prüfe Einheiten und erkenne gleichwertige Brüche an.
+
+## Anteile darstellen
+
+### Das brauchst du für dieses Kapitel
+
+Wiederholung der natürlichen Zahlen im Stellenwertsystem (Stellenwert, Ziffer) als Voraussetzung für Brüche, mit Selbsttest.
+
+### Was bedeutet ein Bruch?
+
+Der Nenner nennt die Anzahl gleich großer Teile **pro Ganzem**. Der Zähler nennt die ausgewählten Teile. Der Bruchstrich bedeutet auch geteilt durch. Ein Ganzes muss feststehen: Ein Viertel einer großen Tafel kann mehr sein als ein Viertel einer kleinen Tafel. Ein Streifen besteht aus vier gleich großen Feldern. Drei sind markiert: $\frac{3}{4}$. Die 4 unter dem Bruchstrich sagt: Vier gleich große Teile bilden das Ganze. Die 3 darüber sagt: Drei davon sind ausgewählt.
+
+### Brüche auf dem Zahlenstrahl
+
+Teile jede Einheit in so viele gleich große **Abstände**, wie der Nenner angibt. Vom Nullpunkt gehst du so viele Schritte nach rechts, wie der Zähler angibt. Teile die Strecke von 0 bis 1 in vier gleich große Abstände. Der erste Schritt führt zu 1/4, der zweite zu 2/4 und der dritte zu 3/4. Vier Schritte führen zu 4/4, also zur 1.
+
+### Mehr als ein Ganzes
+
+Ein unechter Bruch hat den Wert 1 oder mehr: Sein Zähler ist mindestens so groß wie sein Nenner. Eine gemischte Zahl besteht aus einer ganzen Zahl und einem echten Bruch, also einem Bruch, der kleiner als 1 ist. Beim Umwandeln teilst du den Zähler durch den Nenner: Ganze plus Rest. 7/3 sind zwei Ganze und ein Drittel: 2 + 1/3. Umgekehrt ergeben 2 · 3 + 1 insgesamt sieben Drittel.
+
+## Teilbarkeit nutzen
+
+### Das brauchst du für dieses Kapitel
+
+Wiederholung von Vorrangregeln, Rechengesetzen (Vertauschungs-, Verbindungs-, Distributivgesetz) und Potenzen (Basis, Exponent, Zehnerpotenz) als Voraussetzung für Teiler und Primfaktoren, mit Selbsttest.
+
+### Teiler, Vielfache und Teilbarkeitsregeln
+
+Faktor, Produkt, Teiler und Vielfaches an Reihen von Bauklötzen erläutern: Ein Teiler teilt eine Zahl ohne Rest, ein Vielfaches entsteht durch Malnehmen mit 1, 2, 3, … . Alle Teiler einer Zahl als Paare von Malaufgaben finden. Teilbarkeitsregeln für 2, 3, 4, 5, 9, 10, 25 und 100 anwenden: letzte Ziffer, letzte zwei Ziffern, Quersumme. Typische Fehler: bei 3 und 9 nur die letzte Ziffer prüfen, die Quersumme falsch addieren, bei 4 nur die letzte Ziffer ansehen. Primzahlen und Primfaktoren gehören erst zur nächsten Seite.
+
+### Primzahlen und Primfaktoren
+
+Zusammengesetzte Zahlen wiederholt in Faktoren größer als 1 zerlegen; am Ende bleiben Primzahlen. Primzahlen größer als 1 haben genau zwei positive Teiler, 1 ist keine Primzahl. Die Zerlegung im Faktorbaum darstellen und gleiche Primfaktoren als Potenz zusammenfassen, zum Beispiel 24 = 2 · 2 · 2 · 3 = 2^3 · 3. Typische Fehler: 1 als Faktor, ein Faktor, der nicht prim ist (4, 6, 9), Exponenten falsch gezählt. ggT und kgV gehören erst zur nächsten Seite.
+
+### ggT und kgV
+
+Teiler teilen eine Zahl ohne Rest, Vielfache entstehen durch Malnehmen mit 1, 2, 3, … (beides von der Seite Teiler und Vielfache bekannt). Der ggT (größter gemeinsamer Teiler) ist der größte gemeinsame positive Teiler, das kgV (kleinstes gemeinsames Vielfaches) das kleinste gemeinsame positive Vielfache. Bestimmen durch Auflisten und aus den Primfaktorzerlegungen: ggT mit den gemeinsamen Primfaktoren und den kleinsten Exponenten, kgV mit allen Primfaktoren und den größten Exponenten. Beispiel 36 = 2^2 · 3^2 und 48 = 2^4 · 3: ggT 12, kgV 144. Alltag: Fahrplan (kgV) und Fliesen (ggT). Beide kehren beim Kürzen (ggT) und beim gemeinsamen Nenner (kgV) wieder; Brüche selbst gehören nicht auf diese Seite. Typische Fehler: Produkt der Zahlen statt kgV, ggT und kgV vertauscht, bei den Primfaktoren die falschen Exponenten.
+
+## Umformen und vergleichen
+
+### Brüche erweitern
+
+Erweitern wird am gleichmäßigen Unterteilen aller Kuchenstücke hergeleitet. Zwei Drittel bleiben derselbe Anteil, wenn jedes der drei Stücke in gleich viele kleinere Stücke geteilt wird. Zähler und Nenner werden mit demselben Faktor multipliziert; die Fläche bleibt gleich.
+
+### Brüche kürzen
+
+Beim Kürzen teilst du Zähler und Nenner durch denselben gemeinsamen Teiler. Der Anteil bleibt gleich. Vollständig gekürzt ist ein Bruch, wenn Zähler und Nenner außer 1 keinen gemeinsamen positiven Teiler mehr haben. Aus Summen darfst du keine einzelnen Summanden kürzen. 6/8 mit 2 kürzen: 6 : 2 = 3 und 8 : 2 = 4. Also 6/8 = 3/4. Je zwei Achtel werden zu einem Viertel gebündelt.
+
+### Brüche vergleichen
+
+Bei gleichem Nenner entscheidet der Zähler. Bei gleichem positiven Zähler ist der Bruch mit kleinerem Nenner größer. Sonst kannst du auf einen gemeinsamen Nenner erweitern. Auf dem Zahlenstrahl liegt der größere Bruch weiter rechts. 2/3 = 8/12 und 3/4 = 9/12. Daher ist 2/3 kleiner als 3/4. Die Bezugs-Ganzen müssen gleich groß sein, wenn du die Flächen vergleichst.
+
+## Anteil, Bruchteil, Ganzes
+
+### Den Bruchteil berechnen
+
+Den Bruchteil einer Menge in zwei Schritten herleiten: Das Ganze durch den Nenner teilen, dann die Gruppengröße mit dem Zähler multiplizieren. 12 Plättchen werden erst auf vier Gruppen verteilt, dann werden drei Gruppen ausgewählt. Selbstständige Aufgaben nennen eine andere Menge und fragen nach der Anzahl der entnommenen Plättchen.
+
+### Das Ganze berechnen
+
+Ganzes = Bruchteil : Anteil. Du kannst zuerst durch den Zähler teilen und dann mit dem Nenner multiplizieren. So schließt du von den ausgewählten Gruppen auf alle Gruppen. 9 Plättchen sind 3/4. Ein Viertel sind 9 : 3 = 3 Plättchen. Vier Viertel sind 3 · 4 = 12 Plättchen.
+
+### Den Anteil berechnen
+
+Anteil = Bruchteil : Ganzes. Schreibe den Bruchteil in den Zähler und das Ganze in den Nenner. Bei Größen brauchst du zuerst dieselbe Einheit. Eine relative Häufigkeit ist ebenfalls ein Anteil: Zahl der Treffer geteilt durch Zahl der Versuche. 6 von 8 sind 6/8 = 3/4. 50 cm von 2 m sind 50 cm von 200 cm, also 50/200 = 1/4.
+
+## Mit Brüchen rechnen
+
+### Das brauchst du für dieses Kapitel
+
+Kurze Wiederholung von Klammern, Vorrangregeln und Distributivgesetz als Voraussetzung für Rechnungen mit Brüchen in mehreren Schritten, mit Selbsttest.
+
+### Addieren und subtrahieren
+
+Zum Addieren oder Subtrahieren brauchst du gleich große Bruchstücke. Bei verschiedenen Nennern bringst du beide Brüche auf den kleinsten gemeinsamen Nenner, das ist das kgV der Nenner. Dann rechnest du nur mit den Zählern, der Nenner bleibt. Zähler und Nenner dürfen nie einzeln addiert oder subtrahiert werden: 1/2 + 1/3 ist nicht 2/5. Danach kürzt du das Ergebnis vollständig. Ist die Summe größer als 1, schreibst du sie als unechten Bruch oder als gemischte Zahl. Beispiele: 1/2 + 1/3 = 3/6 + 2/6 = 5/6. 3/4 − 1/6 = 9/12 − 2/12 = 7/12. 3/4 + 5/6 = 9/12 + 10/12 = 19/12 = 1 7/12. Mit dem Produkt der Nenner statt dem kgV rechnest du auch richtig, musst dann aber mehr kürzen: 1/4 + 1/6 = 6/24 + 4/24 = 10/24 = 5/12.
+
+### Brüche multiplizieren
+
+Brüche multiplizieren lässt sich auf zwei Arten vorstellen. Kuchenmodell: Drei Viertel eines Kuchens sind ausgewählt. Jedes ausgewählte Viertel wird in drei gleich große Stücke geteilt; davon werden jeweils zwei genommen. Das ergibt sechs von zwölf Stücken des ganzen Kuchens: 2/3 · 3/4 = 6/12 = 1/2. Rechteckmodell: Ein Einheitsquadrat steht für eine Flächeneinheit. Ein Rechteck mit Breite 3/4 und Höhe 2/3 umfasst sechs von zwölf gleich großen Teilflächen des Einheitsquadrats und hat die Fläche 1/2. In beiden Modellen werden Zähler und Nenner multipliziert. Gemeinsame Faktoren dürfen vor dem Multiplizieren gekürzt werden. Bei einem positiven Faktor zwischen 0 und 1 wird eine positive Zahl kleiner. Mal eine natürliche Zahl: 3 · 2/5 = 2/5 + 2/5 + 2/5 = 6/5 = 1 1/5; die natürliche Zahl ist ein Bruch mit Nenner 1, nur der Zähler wird mit ihr multipliziert. Kürzen vor dem Multiplizieren: 4/9 · 3/8 = (4 : 4)/(9 : 3) · (3 : 3)/(8 : 4) = 1/3 · 1/2 = 1/6; gekürzt wird ein Zähler mit einem Nenner, nie zwei Zähler oder zwei Nenner. Das Ergebnis ist vollständig gekürzt anzugeben.
+
+### Durch Brüche dividieren
+
+Division kann fragen: Wie oft passt der Divisor in den Dividenden? Zum Dividieren durch einen Bruch multiplizierst du mit seinem Kehrbruch. Nur der **zweite** Bruch, der Divisor, wird umgekehrt; der Dividend bleibt. Durch 0 darfst du nicht teilen. 3/4 sind 6/8. Daher passen sechs Achtel in drei Viertel: 3/4 : 1/8 = 3/4 · 8/1 = 6. Durch eine natürliche Zahl teilen: Die Zahl ist ein Bruch mit Nenner 1, ihr Kehrbruch ist 1 durch die Zahl. 3/4 : 2 = 3/4 · 1/2 = 3/8. Der Nenner wird mit der Zahl multipliziert. Durch einen Bruch mit größerem Zähler teilen: 3/4 : 3/8 = 3/4 · 8/3 = 24/12 = 2; zwei Stücke der Größe 3/8 passen in 3/4. Dividend und Divisor dürfen nicht vertauscht werden: 3/8 : 3/4 = 1/2, nicht 2. Das Ergebnis ist vollständig gekürzt anzugeben.
+
+### Rechenregeln und Klammern
+
+Klammern zuerst, dann Punktrechnung vor Strichrechnung. Addition und Multiplikation sind vertauschbar und dürfen umgruppiert werden. Das Distributivgesetz verteilt eine Multiplikation auf eine Summe: a · (b + c) = a · b + a · c. Beim Subtrahieren und Dividieren darfst du die Zahlen nicht vertauschen oder umgruppieren: 8 − 3 ist nicht 3 − 8, und 12 : 4 ist nicht 4 : 12. 1/2 + 1/3 · 3 = 1/2 + 1 = 3/2. Mit Klammern: (1/2 + 1/3) · 3 = 5/6 · 3 = 5/2. Die Klammer verändert die Reihenfolge. Verteilen: 12 · (1/3 + 1/4) = 12 · 1/3 + 12 · 1/4 = 4 + 3 = 7; der Faktor gehört zu jedem Summanden der Klammer. Geschickt umgruppieren: 1/4 + 3/5 + 3/4 = (1/4 + 3/4) + 3/5 = 1 3/5. Ohne Klammer gilt Punkt vor Strich: 1/2 + 2/3 · 3 = 1/2 + 2 = 5/2. Mit Klammer: (1/2 + 2/3) · 3 = 7/6 · 3 = 7/2.
+
+### Eine fehlende Zahl finden
+
+Bei einer Gleichung soll links und rechts derselbe Wert stehen. Finde die fehlende Zahl mit der Umkehrrechnung (Plus und Minus heben sich auf, Mal und Geteilt auch) und setze sie zur Probe ein. Ein fehlender Summand entsteht durch Subtraktion, ein fehlender Faktor durch Division. x + 1/4 = 3/4. Also x = 3/4 − 1/4 = 2/4 = 1/2. Probe: 1/2 + 1/4 = 3/4. Ein fehlender Faktor: x · 3/8 = 3/4, also x = 3/4 : 3/8 = 3/4 · 8/3 = 2. Probe: 2 · 3/8 = 3/4. Mit verschiedenen Nennern: x + 1/6 = 3/4, also x = 3/4 − 1/6 = 9/12 − 2/12 = 7/12.
+
+## Dezimalzahlen und Anwendungen
+
+### Das brauchst du für dieses Kapitel
+
+Wiederholung der schriftlichen Verfahren mit natürlichen Zahlen (Übertrag, Rest) als Voraussetzung für das Rechnen mit Dezimalzahlen, mit Selbsttest.
+
+### Bruch und Dezimalzahl
+
+Ein Bruch lässt sich als Dezimalzahl schreiben. Zehntel, Hundertstel und Tausendstel sind die Stellen rechts vom Komma, die Stellenwerttafel zeigt sie, und zehn Hundertstel werden zu einem Zehntel gebündelt. Auf dem Zahlenstrahl von 0 bis 1 vergrößert die Lupe einen Abschnitt auf das Zehnfache. Zwei Wege vom Bruch zur Dezimalzahl, zum Beispiel 3/4 = 75/100 = 0,75 durch Erweitern auf den Nenner 10, 100 oder 1000 und 3/8 = 3 : 8 = 0,375 durch schriftliches Teilen. Brüche, bei denen das Teilen nie endet wie 1/3, gehören zur Seite "periode". Prozent gehört nicht zu dieser Seite.
+
+### Wenn das Teilen nie endet
+
+Beim schriftlichen Teilen des Zählers durch den Nenner wird der Rest irgendwann 0, dann bricht die Dezimalzahl ab, oder ein Rest kehrt wieder, dann wiederholen sich Ziffern und die Dezimalzahl ist periodisch. Die sich wiederholenden Ziffern heißen Periode und bekommen einen Periodenstrich, zum Beispiel 1/3 = 0,3 mit Strich über der 3 und 5/6 = 0,83 mit Strich nur über der 3. Ein vollständig gekürzter Bruch hat eine abbrechende Dezimalzahl genau dann, wenn der Nenner nur die Primfaktoren 2 und 5 hat, zum Beispiel 1/8 und 1/20, aber nicht 1/3, 1/6 oder 1/7. 0,33 ist nur eine Näherung von 1/3. Das algebraische Rückumwandeln periodischer Dezimalzahlen gehört nicht dazu.
+
+### Prozent heißt Hundertstel
+
+Prozent heißt Hundertstel: 1 % ist 1/100 vom Ganzen. Ein Anteil lässt sich als Bruch, als Dezimalzahl und in Prozent schreiben, zum Beispiel 3/4 = 75/100 = 0,75 = 75 %. Um einen Bruch in Prozent zu schreiben, erweiterst du ihn auf den Nenner 100; dann steht die Prozentzahl im Zähler. Die Prozentrechnung mit Grundwert, Prozentwert und Prozentsatz gehört nicht zu dieser Seite.
+
+### Dezimalzahlen addieren und subtrahieren
+
+Addition und Subtraktion von Dezimalzahlen werden getrennt hergeleitet. Gleiche Stellenwerte stehen untereinander, Komma unter Komma. Endnullen hinter dem Komma ändern den Wert nicht. Bei der Addition werden zehn Hundertstel zu einem Zehntel und zehn Zehntel zu einem Ganzen gebündelt. 0,75 + 0,50 = 1,25. Bei der Subtraktion können größere Stellenwerte in zehn kleinere getauscht werden. 1,20 sind 11 Zehntel und 10 Hundertstel; davon 3 Zehntel und 5 Hundertstel weggenommen ergeben 0,85. Also 1,20 − 0,35 = 0,85. Die Übungen enthalten ausschließlich Addition und Subtraktion, keine Punktrechnung.
+
+### Dezimalzahlen multiplizieren und dividieren
+
+Diese Lernseite behandelt nur Multiplikation und Division von Dezimalzahlen. Bei der Multiplikation werden die Zahlen zunächst ohne Komma multipliziert. Zusammen so viele Nachkommastellen wie die Faktoren werden im Ergebnis gesetzt; Endnullen dürfen entfallen. Begründung am Einheitsquadrat: 0,2 · 0,3 sind 2/10 · 3/10 = 6/100 = 0,06. Multiplizieren mit einer positiven Zahl kleiner als 1 verkleinert. Beim Dividieren werden beide Zahlen mit derselben Zehnerpotenz multipliziert, bis die zweite Zahl ganzzahlig ist; das Verhältnis bleibt unverändert. 0,75 Liter geteilt durch 0,25 Liter pro Portion ergibt drei Portionen; in Zentilitern 75 : 25 = 3. Addition und Subtraktion stehen auf der vorherigen Seite.
+
+### Dezimalzahlen runden
+
+Bestimme zuerst die Rundungsstelle: Zehntel, Hundertstel oder eine ganze Zahl. Entscheidend ist die Ziffer direkt rechts davon: Bei 0 bis 4 bleibt die Rundungsziffer (abrunden), bei 5 bis 9 wird sie um 1 erhöht (aufrunden). Die folgenden Stellen entfallen. Auf dem Zahlenstrahl liegt eine Zahl zwischen zwei Nachbarn; die Mitte entscheidet: Rechts von der Mitte wird aufgerundet, links davon abgerundet. Gerundet wird immer von der Ausgangszahl aus, nie in Schritten. Runden und Abschneiden sind verschieden. Das Zeichen ≈ liest du als ungefähr: 0,746 ≈ 0,75. 0,746 auf Hundertstel: Die Hundertstelziffer ist 4, danach steht 6, also 0,75. 0,743 auf Hundertstel: danach steht 3, also 0,74. 3,47 auf Zehntel: 3,5. 18,46 auf eine ganze Zahl: 18, weil nur die Zehntelziffer 4 zählt; 18,46 wird nicht erst zu 18,5.
+
+### Brüche und Dezimalzahlen im Alltag
+
+Ordne die Angaben: Ganzes, Bruchteil oder Anteil. Entscheide dann, welche Rechnung die Frage beantwortet. Nenne die Einheit und prüfe durch Schätzen, ob das Ergebnis sinnvoll ist. Beim Vergleichen von Anteilen brauchst du dieselbe Bezugsgröße. 3/4 Liter Saft werden gleich auf zwei Gefäße verteilt: 3/4 : 2 = 3/8 Liter pro Gefäß. Bei 20 Würfen fällt 5-mal eine Sechs: relative Häufigkeit 5/20 = 1/4 = 25 %. Das beschreibt die beobachteten Würfe und keine sichere Vorhersage. Auch mit Dezimalzahlen und Einheiten: Ein Heft kostet 1,60 €, vier Hefte kosten 4 · 1,60 € = 6,40 €. 1,2 Liter auf 4 Gläser: 1,2 : 4 = 0,3 Liter pro Glas. 2,5 Kilometer von 7,8 Kilometern gefahren: 7,8 − 2,5 = 5,3 Kilometer bleiben. Ein Tank mit 40 Litern ist zu 2/5 gefüllt: 40 : 5 · 2 = 16 Liter. Schätze vorher und nenne zum Ergebnis die Einheit.
+
+## Gehört nicht dazu
+
+- Negative Brüche
+- Doppelbrüche
+- Algebraische Umwandlung periodischer Dezimalzahlen

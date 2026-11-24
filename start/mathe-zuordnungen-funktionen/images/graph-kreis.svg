@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 260" width="280" height="260" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 12px sans-serif; }
+    .ax { stroke: currentColor; stroke-width: 1.5; }
+    .gr { stroke: currentColor; stroke-width: 0.5; opacity: 0.45; }
+    .k { fill: none; stroke: currentColor; stroke-width: 3; }
+  </style>
+  <g class="gr">
+    <line x1="60" y1="20" x2="60" y2="230"/><line x1="100" y1="20" x2="100" y2="230"/><line x1="140" y1="20" x2="140" y2="230"/><line x1="180" y1="20" x2="180" y2="230"/><line x1="220" y1="20" x2="220" y2="230"/><line x1="260" y1="20" x2="260" y2="230"/>
+    <line x1="20" y1="70" x2="270" y2="70"/><line x1="20" y1="110" x2="270" y2="110"/><line x1="20" y1="150" x2="270" y2="150"/><line x1="20" y1="190" x2="270" y2="190"/>
+  </g>
+  <line class="ax" x1="20" y1="230" x2="270" y2="230"/><line class="ax" x1="20" y1="230" x2="20" y2="14"/>
+  <circle class="k" cx="140" cy="150" r="80"/>
+  <g text-anchor="middle"><text x="60" y="246">1</text><text x="100" y="246">2</text><text x="140" y="246">3</text><text x="180" y="246">4</text><text x="220" y="246">5</text><text x="260" y="246">6</text></g>
+  <g text-anchor="end"><text x="14" y="194">1</text><text x="14" y="154">2</text><text x="14" y="114">3</text><text x="14" y="74">4</text></g>
+  <text x="264" y="226" text-anchor="end">x</text><text x="28" y="22">y</text>
+</svg>

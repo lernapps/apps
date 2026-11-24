@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Zentrische Streckung – Ähnlichkeit, Pythagoras und Trigonometrie</title>
+    <meta name="description" content="Eine Figur vom Streckzentrum aus vergrößern oder verkleinern und sehen, was dabei gleich bleibt." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../vergroessern/streckung/" />
+    <script type="module" crossorigin src="../../assets/islands-KuEnNupN.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../vergroessern/">Vergrößern und verkleinern</a></li><li aria-current="page">Zentrische Streckung</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Zentrische Streckung</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../vergroessern/streckung/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧vergroessern/streckung/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-aehnlichkeit-pythagoras","page":{"id":"streckung","title":"Zentrische Streckung","exercises":[{"id":"schatten-gleich","section":"einstieg","numbered":false},{"id":"winkel-streckung","section":"uebung","numbered":false},{"id":"bildlaenge","section":"uebung","numbered":true},{"id":"faktor-bestimmen","section":"uebung","numbered":true},{"id":"abstand-streckung","section":"uebung","numbered":true},{"id":"winkel-schatten","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","weiter"]},"tutor":"vergroessern/streckung/tutor/","markdown":"vergroessern/streckung/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">So wird gestreckt</a></li><li><a href="#beispiel">Den Streckfaktor bestimmen</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Wie es weitergeht</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="310c48f3" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn ein Foto größer wird oder dein Schatten an der Wand wächst, fragst du: Was bleibt gleich, und wie hängen die Längen zusammen? Die zentrische Streckung beantwortet das. Du lernst, wie eine Figur von einem Punkt aus vergrößert oder verkleinert wird. Du erkennst, was dabei gleich bleibt und was sich ändert, und kannst aus zwei Längen den Streckfaktor bestimmen.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="303e286e" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Mira hält ein Pappdreieck vor eine kleine Lampe. An der Wand erscheint der Schatten: ein größeres Dreieck mit derselben Form.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="9d621d1d" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="schatten-gleich">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-schatten-gleich" data-id="schatten-gleich" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was ist im Pappdreieck und in seinem Schatten gleich?</legend>
+<label class="question-option"><input type="radio" name="frage-schatten-gleich" value="0"> <span>die Winkel</span></label>
+<label class="question-option"><input type="radio" name="frage-schatten-gleich" value="1"> <span>die Seitenlängen</span></label>
+<label class="question-option"><input type="radio" name="frage-schatten-gleich" value="2"> <span>der Umfang</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>die Winkel</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Schatten hat dieselbe Form wie die Pappe. Die Ecken sind gleich spitz oder stumpf.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>die Seitenlängen</strong></p><p>Der Schatten ist größer, also sind seine Seiten länger als die der Pappe.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>der Umfang</strong></p><p>Wenn alle Seiten länger sind, ist auch der Umfang größer.</p></li>
+</ul>
+<p class="question-explanation">Schatten und Pappe haben dieselbe Form. Die Winkel bleiben gleich, die Längen ändern sich.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>die Winkel</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Schatten hat dieselbe Form wie die Pappe. Die Ecken sind gleich spitz oder stumpf.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>die Seitenlängen</strong></p><p>Der Schatten ist größer, also sind seine Seiten länger als die der Pappe.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>der Umfang</strong></p><p>Wenn alle Seiten länger sind, ist auch der Umfang größer.</p></li>
+</ul>
+<p class="question-explanation">Schatten und Pappe haben dieselbe Form. Die Winkel bleiben gleich, die Längen ändern sich.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"schatten-gleich","text":"Was ist im Pappdreieck und in seinem Schatten gleich?","explanation":"Schatten und Pappe haben dieselbe Form. Die Winkel bleiben gleich, die Längen ändern sich.","links":[],"type":"single-choice","options":[{"text":"die Winkel","correct":true,"info":"Der Schatten hat dieselbe Form wie die Pappe. Die Ecken sind gleich spitz oder stumpf."},{"text":"die Seitenlängen","correct":false,"info":"Der Schatten ist größer, also sind seine Seiten länger als die der Pappe."},{"text":"der Umfang","correct":false,"info":"Wenn alle Seiten länger sind, ist auch der Umfang größer."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">So wird gestreckt</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="4d2b5876" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du genau beschreiben willst, wie eine Figur von einem Punkt aus größer oder kleiner wird, brauchst du diesen Punkt und eine Zahl. Die Lampe ist das <strong>Streckzentrum</strong> Z. Von Z aus geht ein Strahl (eine Linie, die in Z beginnt und unbegrenzt weiterläuft) durch jede Ecke der Pappe. Der Schatten dieser Ecke liegt auf demselben Strahl, weiter weg von Z. Ist der Schatten einer Ecke doppelt so weit von Z entfernt wie die Ecke selbst, gilt das für jede Ecke. Diese Zahl, hier 2, heißt <strong>Streckfaktor</strong> <em>k</em>: Bild-Abstand zu Z durch Original-Abstand zu Z.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="c8846c3c" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-zentrische-streckung"><a href="../../glossar/#zentrische-streckung">Zentrische Streckung</a></dfn></dt><dd><p>Jedem Punkt <math><mi>P</mi></math> wird ein Bildpunkt <math><msup><mi>P</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup></math> auf dem Strahl von <math><mi>Z</mi></math> durch <math><mi>P</mi></math> zugeordnet. Seine Entfernung von <math><mi>Z</mi></math> ist das <math><mi>k</mi></math>-Fache der Entfernung von <math><mi>P</mi></math>.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="b92fea9a" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-streckfaktor"><a href="../../glossar/#streckfaktor">Streckfaktor</a></dfn></dt><dd><p>Die Zahl <math><mi>k</mi></math>, mit der alle Abstände zum Streckzentrum multipliziert werden. Bei <math><mrow><mi>k</mi><mo>&gt;</mo><mn>1</mn></mrow></math> wird die Figur größer, bei <math><mrow><mi>k</mi><mo>&lt;</mo><mn>1</mn></mrow></math> kleiner. Bei <math><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math> liegt das Bild genau auf dem Original.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="884d381d" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Das Bild unten zeigt ein Dreieck ABC mit dem rechten Winkel bei A (durchgezogen) und sein Bild A′B′C′ (gestrichelt). Die grauen Linien verbinden Z mit den Ecken des Bildes. Mit dem Regler stellst du den Streckfaktor <em>k</em> ein (0,5 bis 2,5). Die Tabelle zeigt den Abstand von Z zu A, drei Seitenlängen und den Winkel bei A, jeweils vorher und nachher. Beobachte, was sich ändert und was nicht.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="62ab9846" data-block-type="vue-component" data-block-order="8">
+<div class="explainer-component" id="streckung-bild" data-component="Streckung">
+<div class="explainer-island" hidden><div class="streckung" data-v-7631fb31><svg viewBox="0 0 320 280" role="img" aria-label="Streckfaktor k = 1. Der Abstand von Z zu A ist 5 cm, zu A′ 5 cm. Die Strecke AB ist 3 cm lang, ihr Bild A′B′ 3 cm. Der Winkel bei A misst vorher 90° und nachher 90°." class="streckung-svg" data-v-7631fb31><line x1="30" y1="255" x2="82" y2="216" class="ray" data-v-7631fb31></line><line x1="30" y1="255" x2="121" y2="216" class="ray" data-v-7631fb31></line><line x1="30" y1="255" x2="82" y2="164" class="ray" data-v-7631fb31></line><polygon points="82,216 121,216 82,164" class="image" data-v-7631fb31></polygon><polygon points="82,216 121,216 82,164" class="orig" data-v-7631fb31></polygon><polyline points="91.1,216 91.1,206.9 82,206.9" class="rechts" data-v-7631fb31></polyline><circle cx="30" cy="255" r="3.5" class="dot" data-v-7631fb31></circle><text x="16" y="269" class="lab" data-v-7631fb31>Z</text><text x="66" y="232" class="lab" data-v-7631fb31>A</text><text x="125" y="230" class="lab" data-v-7631fb31>B</text><text x="66" y="164" class="lab" data-v-7631fb31>C</text><text x="88" y="208" class="lab2" data-v-7631fb31>A′</text><text x="127" y="208" class="lab2" data-v-7631fb31>B′</text><text x="88" y="168" class="lab2" data-v-7631fb31>C′</text></svg><div class="controls" data-v-7631fb31><label for="streckung-k" data-v-7631fb31>Streckfaktor <i data-v-7631fb31>k</i>: <output for="streckung-k" data-v-7631fb31>1</output></label><input id="streckung-k" type="range" min="0.5" max="2.5" step="0.1" value="1" aria-describedby="streckung-live" data-v-7631fb31><button type="button" class="knopf" disabled data-v-7631fb31>Zurück auf k = 1</button><p class="knopf-grund" data-v-7631fb31>Der Regler steht schon auf k = 1.</p></div><table class="values" data-v-7631fb31><caption data-v-7631fb31> Vorher und nachher </caption><thead data-v-7631fb31><tr data-v-7631fb31><th scope="col" data-v-7631fb31>Größe</th><th scope="col" data-v-7631fb31>Dreieck ABC</th><th scope="col" data-v-7631fb31>Bild A′B′C′</th></tr></thead><tbody data-v-7631fb31><tr data-v-7631fb31><th scope="row" data-v-7631fb31>Abstand von Z zu A</th><td data-v-7631fb31>5 cm</td><td data-v-7631fb31>5 cm</td></tr><tr data-v-7631fb31><th scope="row" data-v-7631fb31>Länge AB</th><td data-v-7631fb31>3 cm</td><td data-v-7631fb31>3 cm</td></tr><tr data-v-7631fb31><th scope="row" data-v-7631fb31>Länge AC</th><td data-v-7631fb31>4 cm</td><td data-v-7631fb31>4 cm</td></tr><tr data-v-7631fb31><th scope="row" data-v-7631fb31>Länge BC</th><td data-v-7631fb31>5 cm</td><td data-v-7631fb31>5 cm</td></tr><tr data-v-7631fb31><th scope="row" data-v-7631fb31>Winkel bei A</th><td data-v-7631fb31>90°</td><td data-v-7631fb31>90°</td></tr></tbody></table><p id="streckung-live" class="sr" aria-live="polite" data-v-7631fb31>Streckfaktor k = 1. Der Abstand von Z zu A ist 5 cm, zu A′ 5 cm. Die Strecke AB ist 3 cm lang, ihr Bild A′B′ 3 cm. Der Winkel bei A misst vorher 90° und nachher 90°.</p></div></div>
+<div class="explainer-nojs"><p>Dreieck ABC mit dem rechten Winkel bei A, AB = 3 cm, AC = 4 cm, BC = 5 cm, wird von Z aus gestreckt.
+Der Abstand von Z zu A ist 5 cm.
+Bei k = 0,5 sind der Abstand und die Seiten 2,5 cm, 1,5 cm, 2 cm und 2,5 cm. Bei k = 1 bleibt alles gleich.
+Bei k = 2 sind sie 10 cm, 6 cm, 8 cm und 10 cm. Der Winkel bei A misst in jedem Fall 90°.</p></div>
+<script type="application/json" class="explainer-component-props">{}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="32e5b548" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/6/1" data-block-id="b64fb654" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Bei einer zentrischen Streckung mit dem Faktor <em>k</em> bleiben alle Winkel gleich. Jede Länge wird mit <em>k</em> multipliziert, nicht um <em>k</em> verlängert: Bei <math><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></math> wird aus 3 cm die Länge 6 cm, nicht 5 cm.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Den Streckfaktor bestimmen</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="5231c975" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Aus zwei Längen den Faktor berechnen</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="6ae99bf5" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Wenn Original und Bild gegeben sind und du wissen willst, wie stark gestreckt wurde, bestimmst du den Faktor. Eine Strecke AB ist 3 cm lang, ihr Bild A′B′ ist 7,5 cm lang. Der Faktor ist Bildlänge durch Originallänge.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="9d2067cc" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>k</mi><mo>=</mo><mfrac><mn>7,5</mn><mn>3</mn></mfrac><mo>=</mo><mn>2,5</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="3fe0d5fd" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Probe: Rechne mit dem Ergebnis zurück. Mit <em>k</em> = 2,5 wird 3 cm zu 2,5 · 3 cm = 7,5 cm. Das stimmt.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="5c88f95d" data-block-type="single-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="winkel-streckung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-streckung" data-id="winkel-streckung" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Dreieck wird mit <math><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></math> gestreckt. Was ist richtig?</legend>
+<label class="question-option"><input type="radio" name="frage-winkel-streckung" value="0"> <span>Auch die Winkel werden doppelt so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-streckung" value="1"> <span>Die Winkel bleiben gleich, die Längen werden doppelt so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-streckung" value="2"> <span>Jede Länge wird um 2 cm größer.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Auch die Winkel werden doppelt so groß.</strong></p><p>Aus einem 40°-Winkel würde 80°, die Form wäre eine andere. Beim Strecken bleibt die Form gleich, also bleiben die Winkel gleich.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Die Winkel bleiben gleich, die Längen werden doppelt so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ist die Eigenschaft der zentrischen Streckung. Winkel ändern sich nicht, Längen werden mit <math><mi>k</mi></math> multipliziert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Jede Länge wird um 2 cm größer.</strong></p><p>Das wäre Addieren. Beim Strecken wird mit dem Faktor multipliziert, aus 3 cm werden 6 cm, nicht 5 cm.</p></li>
+</ul>
+<p class="question-explanation">Die Winkel bleiben bei jeder zentrischen Streckung gleich. Nur die Längen ändern sich, und zwar mit dem Faktor <math><mi>k</mi></math>.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Auch die Winkel werden doppelt so groß.</strong></p><p>Aus einem 40°-Winkel würde 80°, die Form wäre eine andere. Beim Strecken bleibt die Form gleich, also bleiben die Winkel gleich.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Die Winkel bleiben gleich, die Längen werden doppelt so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das ist die Eigenschaft der zentrischen Streckung. Winkel ändern sich nicht, Längen werden mit <math><mi>k</mi></math> multipliziert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Jede Länge wird um 2 cm größer.</strong></p><p>Das wäre Addieren. Beim Strecken wird mit dem Faktor multipliziert, aus 3 cm werden 6 cm, nicht 5 cm.</p></li>
+</ul>
+<p class="question-explanation">Die Winkel bleiben bei jeder zentrischen Streckung gleich. Nur die Längen ändern sich, und zwar mit dem Faktor <math><mi>k</mi></math>.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-streckung","text":"Ein Dreieck wird mit $k = 2$ gestreckt. Was ist richtig?","explanation":"Die Winkel bleiben bei jeder zentrischen Streckung gleich. Nur die Längen ändern sich, und zwar mit dem Faktor $k$.","links":[],"type":"single-choice","options":[{"text":"Auch die Winkel werden doppelt so groß.","correct":false,"info":"Aus einem 40°-Winkel würde 80°, die Form wäre eine andere. Beim Strecken bleibt die Form gleich, also bleiben die Winkel gleich."},{"text":"Die Winkel bleiben gleich, die Längen werden doppelt so groß.","correct":true,"info":"Das ist die Eigenschaft der zentrischen Streckung. Winkel ändern sich nicht, Längen werden mit $k$ multipliziert."},{"text":"Jede Länge wird um 2 cm größer.","correct":false,"info":"Das wäre Addieren. Beim Strecken wird mit dem Faktor multipliziert, aus 3 cm werden 6 cm, nicht 5 cm."}]},"rendered":{"Ein Dreieck wird mit $k = 2$ gestreckt. Was ist richtig?":"Ein Dreieck wird mit \u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math> gestreckt. Was ist richtig?","Die Winkel bleiben bei jeder zentrischen Streckung gleich. Nur die Längen ändern sich, und zwar mit dem Faktor $k$.":"Die Winkel bleiben bei jeder zentrischen Streckung gleich. Nur die Längen ändern sich, und zwar mit dem Faktor \u003cmath>\u003cmi>k\u003c/mi>\u003c/math>.","Das ist die Eigenschaft der zentrischen Streckung. Winkel ändern sich nicht, Längen werden mit $k$ multipliziert.":"Das ist die Eigenschaft der zentrischen Streckung. Winkel ändern sich nicht, Längen werden mit \u003cmath>\u003cmi>k\u003c/mi>\u003c/math> multipliziert."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="31f51d90" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="bildlaenge">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Dreieck wird vom Zentrum Z aus mit dem Faktor k = 2,5 gestreckt. Die Seite AB ist 12 cm lang. Wie lang ist die Seite A′B′ des Bildes?</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Bild ist k-mal so lang wie das Original: Länge mal k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><msup><mi>B</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup><mo>=</mo><mi>k</mi><mo>⋅</mo><mi>A</mi><mi>B</mi><mo>=</mo><mn>2,5</mn><mo>⋅</mo><mn>12</mn><mo>=</mo><mn>30</mn></mrow></math>, also 30 cm.</li></ol><p><strong>Richtige Antwort:</strong> 30 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Dreieck wird vom Zentrum Z aus mit dem Faktor k = 2,5 gestreckt. Die Seite AB ist 8 cm lang. Wie lang ist die Seite A′B′ des Bildes?</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Bild ist k-mal so lang wie das Original: Länge mal k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><msup><mi>B</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup><mo>=</mo><mi>k</mi><mo>⋅</mo><mi>A</mi><mi>B</mi><mo>=</mo><mn>2,5</mn><mo>⋅</mo><mn>8</mn><mo>=</mo><mn>20</mn></mrow></math>, also 20 cm.</li></ol><p><strong>Richtige Antwort:</strong> 20 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Dreieck wird vom Zentrum Z aus mit dem Faktor k = 1,5 gestreckt. Die Seite AB ist 10 cm lang. Wie lang ist die Seite A′B′ des Bildes?</p><details class="explainer-hint"><summary>Tipp</summary><p>Das Bild ist k-mal so lang wie das Original: Länge mal k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><msup><mi>B</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup><mo>=</mo><mi>k</mi><mo>⋅</mo><mi>A</mi><mi>B</mi><mo>=</mo><mn>1,5</mn><mo>⋅</mo><mn>10</mn><mo>=</mo><mn>15</mn></mrow></math>, also 15 cm.</li></ol><p><strong>Richtige Antwort:</strong> 15 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"bildlaenge","given":{"k":{"oneOf":[0.5,1.5,2,2.5,3]},"a":{"int":[2,12]}},"where":["decimals(a * k) \u003c= 1","a + k != a * k"],"task":{"text":"Ein Dreieck wird vom Zentrum Z aus mit dem Faktor k = {{k}} gestreckt. Die Seite AB ist {{a}} cm lang. Wie lang ist die Seite A′B′ des Bildes?"},"answer":{"value":"a * k","compare":{"number":{"format":"decimal","decimals":1,"unit":"cm"}}},"mistakes":[{"value":"a + k","message":"Du hast {{k}} addiert. Beim Strecken wird mit dem Faktor multipliziert."},{"value":"a / k","message":"Du hast geteilt. Bei k = {{k}} wird die Länge mit {{k}} multipliziert."}],"hint":"Das Bild ist k-mal so lang wie das Original: Länge mal k.","steps":["$A' B' = k \\cdot AB = {{k}} \\cdot {{a}} = {{answer}}$, also {{answer}} cm."]},"templates":{"de":{"task":"Ein Dreieck wird vom Zentrum Z aus mit dem Faktor k = ⟦k⟧ gestreckt. Die Seite AB ist ⟦a⟧ cm lang. Wie lang ist die Seite A′B′ des Bildes?","steps":["\u003cmath>\u003cmrow>\u003cmsup>\u003cmi>A\u003c/mi>\u003cmo lspace=\"0em\" rspace=\"0em\" class=\"tml-prime tml-lrg-pad\">′\u003c/mo>\u003c/msup>\u003cmsup>\u003cmi>B\u003c/mi>\u003cmo lspace=\"0em\" rspace=\"0em\" class=\"tml-prime tml-med-pad\">′\u003c/mo>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmi>k\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>A\u003c/mi>\u003cmi>B\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦k⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm."],"hint":"Das Bild ist k-mal so lang wie das Original: Länge mal k.","messages":["Du hast ⟦k⟧ addiert. Beim Strecken wird mit dem Faktor multipliziert.","Du hast geteilt. Bei k = ⟦k⟧ wird die Länge mit ⟦k⟧ multipliziert."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,21,23,24,27,28,29,30,32,34,39,42,44,45,46,47,49,52,53,54,55,59,64,65,67,68,69,76,87,90,91,109,120,156,226,348],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6d656cb3" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="faktor-bestimmen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Die Strecke AB ist 6 cm lang, ihr Bild A′B′ ist 18 cm lang. Bestimme den Streckfaktor k.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die Länge des Bildes durch die Länge des Originals.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><msup><mi>B</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup></mrow><mrow><mi>A</mi><mi>B</mi></mrow></mfrac><mo>=</mo><mfrac><mn>18</mn><mn>6</mn></mfrac><mo>=</mo><mn>3</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Die Strecke AB ist 10 cm lang, ihr Bild A′B′ ist 30 cm lang. Bestimme den Streckfaktor k.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die Länge des Bildes durch die Länge des Originals.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><msup><mi>B</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup></mrow><mrow><mi>A</mi><mi>B</mi></mrow></mfrac><mo>=</mo><mfrac><mn>30</mn><mn>10</mn></mfrac><mo>=</mo><mn>3</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Die Strecke AB ist 10 cm lang, ihr Bild A′B′ ist 8 cm lang. Bestimme den Streckfaktor k.</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile die Länge des Bildes durch die Länge des Originals.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mrow><msup><mi>A</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-lrg-pad">′</mo></msup><msup><mi>B</mi><mo lspace="0em" rspace="0em" class="tml-prime tml-med-pad">′</mo></msup></mrow><mrow><mi>A</mi><mi>B</mi></mrow></mfrac><mo>=</mo><mfrac><mn>8</mn><mn>10</mn></mfrac><mo>=</mo><mn>0,8</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 0,8</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"faktor-bestimmen","given":{"a":{"int":[2,10]},"b":{"int":[1,30]}},"where":["b != a","decimals(b / a) \u003c= 1","b / a \u003c= 4","b - a != b / a"],"task":{"text":"Die Strecke AB ist {{a}} cm lang, ihr Bild A′B′ ist {{b}} cm lang. Bestimme den Streckfaktor k."},"answer":{"value":"b / a","compare":{"number":{"format":"decimal","decimals":1}}},"mistakes":[{"value":"round(a / b, 1)","message":"Du hast das Original durch das Bild geteilt. Der Faktor ist Bildlänge durch Originallänge."},{"value":"b - a","message":"Du hast die Längen subtrahiert. Der Faktor ist ein Verhältnis: Bildlänge durch Originallänge."}],"hint":"Teile die Länge des Bildes durch die Länge des Originals.","steps":["$k = \\frac{A'B'}{AB} = \\frac{{{b}}}{{{a}}} = {{answer}}$"]},"templates":{"de":{"task":"Die Strecke AB ist ⟦a⟧ cm lang, ihr Bild A′B′ ist ⟦b⟧ cm lang. Bestimme den Streckfaktor k.","steps":["\u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmsup>\u003cmi>A\u003c/mi>\u003cmo lspace=\"0em\" rspace=\"0em\" class=\"tml-prime tml-lrg-pad\">′\u003c/mo>\u003c/msup>\u003cmsup>\u003cmi>B\u003c/mi>\u003cmo lspace=\"0em\" rspace=\"0em\" class=\"tml-prime tml-med-pad\">′\u003c/mo>\u003c/msup>\u003c/mrow>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmi>B\u003c/mi>\u003c/mrow>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmtext>⟦a⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Teile die Länge des Bildes durch die Länge des Originals.","messages":["Du hast das Original durch das Bild geteilt. Der Faktor ist Bildlänge durch Originallänge.","Du hast die Längen subtrahiert. Der Faktor ist ein Verhältnis: Bildlänge durch Originallänge."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,20,21,22,23,24,25,26,27,29,30,31,33,35,36,37,39,40,42,43,45,48,49,53,56,58,59,60,65,66,70,71,74,77,81,83,85,87,94,98,105,107,108,110,111,114,119,120,121,124,130],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="c48499db" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="abstand-streckung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Beim Strecken vom Zentrum Z aus liegt der Punkt P 7 cm von Z entfernt, sein Bildpunkt P′ liegt 14 cm von Z entfernt. Eine Strecke ist 5 cm lang. Wie lang ist ihr Bild?</p><details class="explainer-hint"><summary>Tipp</summary><p>Bestimme zuerst den Faktor k aus den Abständen zu Z: Bild-Abstand durch Original-Abstand. Dann multiplizierst du die Länge mit k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mn>14</mn><mn>7</mn></mfrac></mrow></math>, dann <math><mrow><mi>k</mi><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>10</mn></mrow></math>, also 10 cm.</li></ol><p><strong>Richtige Antwort:</strong> 10 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Beim Strecken vom Zentrum Z aus liegt der Punkt P 10 cm von Z entfernt, sein Bildpunkt P′ liegt 26 cm von Z entfernt. Eine Strecke ist 5 cm lang. Wie lang ist ihr Bild?</p><details class="explainer-hint"><summary>Tipp</summary><p>Bestimme zuerst den Faktor k aus den Abständen zu Z: Bild-Abstand durch Original-Abstand. Dann multiplizierst du die Länge mit k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mn>26</mn><mn>10</mn></mfrac></mrow></math>, dann <math><mrow><mi>k</mi><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>13</mn></mrow></math>, also 13 cm.</li></ol><p><strong>Richtige Antwort:</strong> 13 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Beim Strecken vom Zentrum Z aus liegt der Punkt P 6 cm von Z entfernt, sein Bildpunkt P′ liegt 12 cm von Z entfernt. Eine Strecke ist 3 cm lang. Wie lang ist ihr Bild?</p><details class="explainer-hint"><summary>Tipp</summary><p>Bestimme zuerst den Faktor k aus den Abständen zu Z: Bild-Abstand durch Original-Abstand. Dann multiplizierst du die Länge mit k.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>k</mi><mo>=</mo><mfrac><mn>12</mn><mn>6</mn></mfrac></mrow></math>, dann <math><mrow><mi>k</mi><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>6</mn></mrow></math>, also 6 cm.</li></ol><p><strong>Richtige Antwort:</strong> 6 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"abstand-streckung","given":{"zp":{"int":[2,10]},"zq":{"int":[3,30]},"a":{"int":[2,10]}},"where":["zq != zp","decimals(zq / zp) \u003c= 1","zq / zp \u003c= 4","decimals(a * zq / zp) \u003c= 1","a + zq - zp != a * zq / zp","zq / zp != a","a * zp / zq != a * zq / zp"],"task":{"text":"Beim Strecken vom Zentrum Z aus liegt der Punkt P {{zp}} cm von Z entfernt, sein Bildpunkt P′ liegt {{zq}} cm von Z entfernt. Eine Strecke ist {{a}} cm lang. Wie lang ist ihr Bild?"},"answer":{"value":"a * zq / zp","compare":{"number":{"format":"decimal","decimals":1,"unit":"cm"}}},"mistakes":[{"value":"zq / zp","message":"Das ist der Streckfaktor, noch nicht die Länge. Multipliziere ihn mit {{a}} cm."},{"value":"a * zp / zq","message":"Du hast den Faktor umgedreht. Er ist Bild-Abstand durch Original-Abstand, die Strecke wird mit diesem Faktor multipliziert."},{"value":"a + zq - zp","message":"Du hast die Differenz der Abstände addiert. Gestreckt wird mit einem Faktor, nicht durch Dazuzählen."}],"hint":"Bestimme zuerst den Faktor k aus den Abständen zu Z: Bild-Abstand durch Original-Abstand. Dann multiplizierst du die Länge mit k.","steps":["$k = \\frac{{{zq}}}{{{zp}}}$, dann $k \\cdot {{a}} = {{answer}}$, also {{answer}} cm."]},"templates":{"de":{"task":"Beim Strecken vom Zentrum Z aus liegt der Punkt P ⟦zp⟧ cm von Z entfernt, sein Bildpunkt P′ liegt ⟦zq⟧ cm von Z entfernt. Eine Strecke ist ⟦a⟧ cm lang. Wie lang ist ihr Bild?","steps":["\u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦zq⟧\u003c/mtext>\u003cmtext>⟦zp⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, dann \u003cmath>\u003cmrow>\u003cmi>k\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also ⟦answer⟧ cm."],"hint":"Bestimme zuerst den Faktor k aus den Abständen zu Z: Bild-Abstand durch Original-Abstand. Dann multiplizierst du die Länge mit k.","messages":["Das ist der Streckfaktor, noch nicht die Länge. Multipliziere ihn mit ⟦a⟧ cm.","Du hast den Faktor umgedreht. Er ist Bild-Abstand durch Original-Abstand, die Strecke wird mit diesem Faktor multipliziert.","Du hast die Differenz der Abstände addiert. Gestreckt wird mit einem Faktor, nicht durch Dazuzählen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="8eebbe6d" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="winkel-schatten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Pappdreieck hat bei einer Ecke einen Winkel von 50°. Sein Schatten an der Wand ist 3-mal so groß wie die Pappe. Wie groß ist der Winkel an der entsprechenden Ecke des Schattens? Gib die Zahl in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Überlege: Was bleibt beim Strecken gleich, die Längen oder die Winkel?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Winkel bleiben beim Strecken gleich: 50°.</li></ol><p><strong>Richtige Antwort:</strong> 50</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Pappdreieck hat bei einer Ecke einen Winkel von 30°. Sein Schatten an der Wand ist 2-mal so groß wie die Pappe. Wie groß ist der Winkel an der entsprechenden Ecke des Schattens? Gib die Zahl in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Überlege: Was bleibt beim Strecken gleich, die Längen oder die Winkel?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Winkel bleiben beim Strecken gleich: 30°.</li></ol><p><strong>Richtige Antwort:</strong> 30</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Pappdreieck hat bei einer Ecke einen Winkel von 55°. Sein Schatten an der Wand ist 3-mal so groß wie die Pappe. Wie groß ist der Winkel an der entsprechenden Ecke des Schattens? Gib die Zahl in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Überlege: Was bleibt beim Strecken gleich, die Längen oder die Winkel?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Winkel bleiben beim Strecken gleich: 55°.</li></ol><p><strong>Richtige Antwort:</strong> 55</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-schatten","given":{"w":{"int":[30,80],"step":5},"k":{"oneOf":[1.5,2,2.5,3]}},"task":{"text":"Ein Pappdreieck hat bei einer Ecke einen Winkel von {{w}}°. Sein Schatten an der Wand ist {{k}}-mal so groß wie die Pappe. Wie groß ist der Winkel an der entsprechenden Ecke des Schattens? Gib die Zahl in Grad an."},"answer":{"value":"w","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"w * k","message":"Der Faktor {{k}} gilt für Längen, nicht für Winkel. Die Form bleibt gleich, also bleibt der Winkel gleich."}],"hint":"Überlege: Was bleibt beim Strecken gleich, die Längen oder die Winkel?","steps":["Winkel bleiben beim Strecken gleich: {{answer}}°."]},"templates":{"de":{"task":"Ein Pappdreieck hat bei einer Ecke einen Winkel von ⟦w⟧°. Sein Schatten an der Wand ist ⟦k⟧-mal so groß wie die Pappe. Wie groß ist der Winkel an der entsprechenden Ecke des Schattens? Gib die Zahl in Grad an.","steps":["Winkel bleiben beim Strecken gleich: ⟦answer⟧°."],"hint":"Überlege: Was bleibt beim Strecken gleich, die Längen oder die Winkel?","messages":["Der Faktor ⟦k⟧ gilt für Längen, nicht für Winkel. Die Form bleibt gleich, also bleibt der Winkel gleich."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,16,21,22,23,24,25,27,28,30,31,32,33,35,36,37,38,42,44,50,52,55,75,76,83,89,90,94,102,104,117,197],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Wie es weitergeht</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="54dedcd6" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Das kannst du jetzt: Winkel bleiben gleich. Längen werden mit <em>k</em> multipliziert. Der Faktor ist Bildlänge durch Originallänge. Auf der nächsten Seite fragst du, wann zwei Figuren ähnlich sind und was mit den Flächen passiert.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Ähnlichkeit, Pythagoras und Trigonometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-aehnlichkeit-pythagoras","app":"Ähnlichkeit, Pythagoras und Trigonometrie","root":"../../","repository":"lernapps/mathe-aehnlichkeit-pythagoras","revision":"c14bddb","page":{"title":"Zentrische Streckung","order":1}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../vergroessern/recap/">Zurück: Das brauchst du für dieses Kapitel</a><a rel="next" href="../../vergroessern/aehnliche-figuren/">Weiter: Ähnliche Figuren</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

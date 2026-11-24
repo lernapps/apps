@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Regelmäßige Vielecke – Kreis und Körper berechnen</title>
+    <meta name="description" content="In jedem regelmäßigen Vieleck steckt ein rechtwinkliges Dreieck. Damit berechnest du Seitenlänge, Winkel und Fläche und siehst, wie das Vieleck zum Kreis wird." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../koerper/vielecke/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../koerper/">Zylinder, Kegel, Kugel und Vielecke berechnen</a></li><li aria-current="page">Regelmäßige Vielecke</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Regelmäßige Vielecke</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../koerper/vielecke/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧koerper/vielecke/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"vielecke","title":"Regelmäßige Vielecke","exercises":[{"id":"winkel-mitte","section":"einstieg","numbered":false},{"id":"innenwinkel","section":"uebung","numbered":true},{"id":"seitenlaenge","section":"uebung","numbered":true},{"id":"vieleck-flaeche","section":"uebung","numbered":true},{"id":"apothem","section":"uebung","numbered":false},{"id":"welches-dreieck","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"koerper/vielecke/tutor/","markdown":"koerper/vielecke/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Winkel am Mittelpunkt</a></li><li><a href="#herleitung">Das Dreieck halbieren</a></li><li><a href="#beispiel">Das Fünfeck</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Winkel am Mittelpunkt</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="c0997998" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du bei einem regelmäßigen Vieleck Seite, Winkel oder Fläche ausrechnen willst, zum Beispiel für ein Sechseck-Pflaster, hilft dir ein Dreieck im Vieleck.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="ec19a864" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Ein regelmäßiges Vieleck hat lauter gleich lange Seiten und gleich große Winkel. Seine Ecken liegen alle auf einem Kreis um den Mittelpunkt M. Verbindest du jede Ecke mit M, zerlegst du das Vieleck in gleiche Dreiecke.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="a788a949" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="winkel-mitte">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-mitte" data-id="winkel-mitte" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein regelmäßiges Achteck wird so in acht gleiche Dreiecke zerlegt. Wie groß ist der Winkel jedes Dreiecks bei M?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-winkel-mitte" aria-describedby="frage-winkel-mitte-unit"> <span id="frage-winkel-mitte-unit">°</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 45 °</p>
+<p class="question-explanation">Um den Mittelpunkt herum liegt der Vollwinkel 360°. Geteilt auf 8 gleiche Dreiecke sind das 360° : 8 = 45° je Dreieck.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 45 °</p>
+<p class="question-explanation">Um den Mittelpunkt herum liegt der Vollwinkel 360°. Geteilt auf 8 gleiche Dreiecke sind das 360° : 8 = 45° je Dreieck.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-mitte","text":"Ein regelmäßiges Achteck wird so in acht gleiche Dreiecke zerlegt. Wie groß ist der Winkel jedes Dreiecks bei M?","explanation":"Um den Mittelpunkt herum liegt der Vollwinkel 360°. Geteilt auf 8 gleiche Dreiecke sind das 360° : 8 = 45° je Dreieck.","links":[],"type":"number","answer":45,"tolerance":0,"unit":"°"},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Das Dreieck halbieren</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="56bc2ac2" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du Seite und Fläche aus dem Radius ausrechnen willst, brauchst du ein rechtwinkliges Dreieck. Du erzeugst es, indem du ein Teildreieck halbierst.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="d4f2eb9e" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Jedes dieser Dreiecke ist gleichschenklig: Zwei Seiten sind Radien r des Kreises, die dritte ist eine Seite a des Vielecks. Du halbierst es mit der Höhe. So entsteht ein rechtwinkliges Dreieck. Im Bild ist es für ein Fünfeck blau markiert.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="fe841a17" data-block-type="figure" data-block-order="6">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/vieleck-dreieck.svg" alt="Ein regelmäßiges Fünfeck in einem Kreis um den Mittelpunkt M, in fünf gleichschenklige Dreiecke zerlegt. Eines davon ist halbiert. Das blaue rechtwinklige Dreieck hat die Hypotenuse r, die Kathete ρ von M zur Mitte der Seite und die Kathete a : 2, die halbe Seite. Der Winkel bei M ist 36 Grad." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Das blaue Dreieck: Hypotenuse r, Ankathete ρ, Gegenkathete a : 2. Der Winkel bei M ist die Hälfte von 72°.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="9b26eee2" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Der Winkel bei M ist im halbierten Dreieck nur halb so groß: 180° : n. Die Strecke ρ (sprich „Rho“) von M zur Mitte einer Seite heißt <strong>Apothem</strong>. Sie ist die Höhe des Teildreiecks.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="6bb206c1" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-apothem"><a href="../../glossar/#apothem">Apothem</a></dfn></dt><dd><p>Das Apothem ρ eines regelmäßigen Vielecks ist der Abstand vom Mittelpunkt zur Mitte einer Seite. Es steht senkrecht auf der Seite.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="herleitung/6" data-block-id="01b4d12a" data-block-type="formula" data-block-order="9">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>n</mi></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/7" data-block-id="237f6195" data-block-type="formula" data-block-order="10">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>ρ</mi><mo>=</mo><mi>r</mi><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>n</mi></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/8" data-block-id="42afe73e" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Die Fläche besteht aus n Teildreiecken. Jedes hat die Grundseite a und die Höhe ρ.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/9" data-block-id="c62ad757" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mi>n</mi><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>ρ</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/10" data-block-id="989abfd3" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Der Innenwinkel des Vielecks ist an jeder Ecke zweimal der Winkel an der Basis des Teildreiecks, also 180° − 360° : n.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Das Fünfeck</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="d9a2ee7b" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Wenn du die Formeln an einem Vieleck prüfen willst, rechne ein Fünfeck durch.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="395faee1" data-block-type="example" data-block-order="15">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Fünfeck mit r = 5 cm</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="59825fe0" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Der Winkel im halbierten Dreieck ist 180° : 5 = 36°.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="65d7e5a3" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>36</mn><mo>∘</mo></msup><mo>≈</mo><mn>5,88</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="97499c0e" data-block-type="formula" data-block-order="18">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>ρ</mi><mo>=</mo><mn>5</mn><mo>⋅</mo><mrow><mi>cos</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><msup><mn>36</mn><mo>∘</mo></msup><mo>≈</mo><mn>4,05</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/4" data-block-id="f6279e48" data-block-type="formula" data-block-order="19">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mn>5</mn><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mn>5,88</mn><mo>⋅</mo><mn>4,05</mn><mo>≈</mo><mn>59,4</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/5" data-block-id="f0462077" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Die Seite ist etwa 5,88 cm lang, das Apothem 4,05 cm, die Fläche etwa 59,4 cm². (Mit den hier gerundeten Werten 5,88 und 4,05 kommt 59,5 heraus. Mit den genauen Zwischenwerten ist es 59,4.) Der Innenwinkel ist 180° − 72° = 108°.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="07da4834" data-block-type="note" data-block-order="21">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Vom Vieleck zum Kreis</h3>
+<div class="explainer-block" data-block="beispiel/3/1" data-block-id="1b52f00b" data-block-type="text" data-block-order="22">
+<div class="block-text"><p>Wenn du dich fragst, was ein Vieleck mit dem Kreis zu tun hat, rechne den Umfang eines Vielecks mit sehr vielen Ecken.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3/2" data-block-id="6692d182" data-block-type="text" data-block-order="23">
+<div class="block-text"><p>Bei 96 Ecken ist der Umfang des Vielecks mit r = 1 etwa 6,282. Das ist fast 2 · π ≈ 6,283. Das ist dasselbe Annähern wie auf der ersten Seite: Je mehr Ecken, desto mehr gleicht das Vieleck dem Kreis.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="adec7f5f" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="innenwinkel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Wie groß ist der Innenwinkel eines regelmäßigen Vielecks mit 12 Ecken? Gib ihn in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mn>180</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>360</mn><mo>∘</mo></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>12</mn><mo>=</mo><msup><mn>150</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 150 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Wie groß ist der Innenwinkel eines regelmäßigen Vielecks mit 10 Ecken? Gib ihn in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mn>180</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>360</mn><mo>∘</mo></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>10</mn><mo>=</mo><msup><mn>144</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 144 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Wie groß ist der Innenwinkel eines regelmäßigen Vielecks mit 5 Ecken? Gib ihn in Grad an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><msup><mn>180</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>360</mn><mo>∘</mo></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>5</mn><mo>=</mo><msup><mn>108</mn><mo>∘</mo></msup></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 108 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"innenwinkel","given":{"n":{"oneOf":[5,6,8,9,10,12]}},"task":{"text":"Wie groß ist der Innenwinkel eines regelmäßigen Vielecks mit {{n}} Ecken? Gib ihn in Grad an."},"answer":{"value":"180 - 360 / n","compare":{"number":{"decimals":0,"tolerance":0,"unit":"°"}}},"mistakes":[{"value":"360 / n","message":"Das ist der Winkel bei M im Teildreieck, nicht der Innenwinkel des Vielecks. Der Innenwinkel ist 180° minus dieser Winkel."},{"value":"180 / n","message":"Das ist der halbe Winkel bei M. Der Innenwinkel ist 180° − 360° : n."}],"hint":"Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°.","steps":["$180^\\circ - 360^\\circ : {{n}} = {{answer}}^\\circ$"]},"templates":{"de":{"task":"Wie groß ist der Innenwinkel eines regelmäßigen Vielecks mit ⟦n⟧ Ecken? Gib ihn in Grad an.","steps":["\u003cmath>\u003cmrow>\u003cmsup>\u003cmn>180\u003c/mn>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo>−\u003c/mo>\u003cmsup>\u003cmn>360\u003c/mn>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmo lspace=\"0.2222em\" rspace=\"0.2222em\">:\u003c/mo>\u003cmtext>⟦n⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmsup>\u003cmtext>⟦answer⟧\u003c/mtext>\u003cmo>∘\u003c/mo>\u003c/msup>\u003c/mrow>\u003c/math>"],"hint":"Der Innenwinkel und der Winkel bei M im Teildreieck, 360° : n, ergeben zusammen 180°.","messages":["Das ist der Winkel bei M im Teildreieck, nicht der Innenwinkel des Vielecks. Der Innenwinkel ist 180° minus dieser Winkel.","Das ist der halbe Winkel bei M. Der Innenwinkel ist 180° − 360° : n."]}},"data":{},"seeds":[1,2,3,7,9,17],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="bb344815" data-block-type="generated" data-block-order="25">
+<div class="explainer-exercise explainer-generated" id="seitenlaenge">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein regelmäßiges Vieleck mit 6 Ecken liegt in einem Kreis mit dem Radius r = 4 cm. Wie lang ist eine Seite? Runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>n</mi></mfrac><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mn>6</mn></mfrac><mo>=</mo><mn>4</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 4 cm (erlaubte Abweichung: 0,01 cm)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein regelmäßiges Vieleck mit 8 Ecken liegt in einem Kreis mit dem Radius r = 7 cm. Wie lang ist eine Seite? Runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>n</mi></mfrac><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>7</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mn>8</mn></mfrac><mo>=</mo><mn>5,36</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 5,36 cm (erlaubte Abweichung: 0,01 cm)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein regelmäßiges Vieleck mit 8 Ecken liegt in einem Kreis mit dem Radius r = 6 cm. Wie lang ist eine Seite? Runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mi>n</mi></mfrac><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>6</mn><mo>⋅</mo><mrow><mi>sin</mi><mo>⁡</mo><mspace width="0.1667em"></mspace></mrow><mfrac><msup><mn>180</mn><mo>∘</mo></msup><mn>8</mn></mfrac><mo>=</mo><mn>4,59</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 4,59 cm (erlaubte Abweichung: 0,01 cm)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"seitenlaenge","given":{"n":{"oneOf":[5,6,8,10]},"r":{"int":[4,12],"step":1}},"task":{"text":"Ein regelmäßiges Vieleck mit {{n}} Ecken liegt in einem Kreis mit dem Radius r = {{r}} cm. Wie lang ist eine Seite? Runde auf zwei Stellen nach dem Komma."},"answer":{"value":"round(2 * r * sin(180 / n), 2)","compare":{"number":{"decimals":2,"tolerance":0.01,"unit":"cm"}}},"mistakes":[{"value":"round(r * sin(180 / n), 2)","message":"Das ist die halbe Seite a : 2. Die Seite ist doppelt so lang: a = 2 · r · sin(180° : n)."},{"value":"round(2 * r * sin(360 / n), 2)","message":"Im rechtwinkligen Dreieck ist der Winkel bei M nur halb so groß wie im Teildreieck: 180° : n, nicht 360° : n."}],"hint":"Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n.","steps":["$a = 2 \\cdot r \\cdot \\sin \\frac{180^\\circ}{n} = 2 \\cdot {{r}} \\cdot \\sin \\frac{180^\\circ}{{{n}}} = {{answer}}$"]},"templates":{"de":{"task":"Ein regelmäßiges Vieleck mit ⟦n⟧ Ecken liegt in einem Kreis mit dem Radius r = ⟦r⟧ cm. Wie lang ist eine Seite? Runde auf zwei Stellen nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>a\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>r\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmfrac>\u003cmsup>\u003cmn>180\u003c/mn>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmi>n\u003c/mi>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmrow>\u003cmi>sin\u003c/mi>\u003cmo>⁡\u003c/mo>\u003cmspace width=\"0.1667em\">\u003c/mspace>\u003c/mrow>\u003cmfrac>\u003cmsup>\u003cmn>180\u003c/mn>\u003cmo>∘\u003c/mo>\u003c/msup>\u003cmtext>⟦n⟧\u003c/mtext>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Im rechtwinkligen Dreieck ist r die Hypotenuse und a : 2 die Gegenkathete zu 180° : n.","messages":["Das ist die halbe Seite a : 2. Die Seite ist doppelt so lang: a = 2 · r · sin(180° : n).","Im rechtwinkligen Dreieck ist der Winkel bei M nur halb so groß wie im Teildreieck: 180° : n, nicht 360° : n."]}},"data":{},"seeds":[1,2,3,4,5,6,7,9,10,12,13,14,15,17,18,22,23,25,26,27,28,29,30,31,32,35,38,39,42,44,45,46,87,105,109,126],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="8a0a7260" data-block-type="generated" data-block-order="26">
+<div class="explainer-exercise explainer-generated" id="vieleck-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein regelmäßiges Vieleck mit 8 Ecken liegt in einem Kreis mit dem Radius r = 7 cm. Berechne seine Fläche und runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Berechne erst a und ρ. Jedes Teildreieck hat die Fläche ein halb mal a mal ρ, und es gibt n davon.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>n</mi><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>ρ</mi></mrow></math></li><li>Mit a = 2 · r · sin(180° : n) und ρ = r · cos(180° : n) ergibt das 138,6 cm².</li></ol><p><strong>Richtige Antwort:</strong> 138,6 cm² (erlaubte Abweichung: 0,1 cm²)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein regelmäßiges Vieleck mit 10 Ecken liegt in einem Kreis mit dem Radius r = 10 cm. Berechne seine Fläche und runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Berechne erst a und ρ. Jedes Teildreieck hat die Fläche ein halb mal a mal ρ, und es gibt n davon.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>n</mi><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>ρ</mi></mrow></math></li><li>Mit a = 2 · r · sin(180° : n) und ρ = r · cos(180° : n) ergibt das 293,9 cm².</li></ol><p><strong>Richtige Antwort:</strong> 293,9 cm² (erlaubte Abweichung: 0,1 cm²)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein regelmäßiges Vieleck mit 5 Ecken liegt in einem Kreis mit dem Radius r = 9 cm. Berechne seine Fläche und runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Berechne erst a und ρ. Jedes Teildreieck hat die Fläche ein halb mal a mal ρ, und es gibt n davon.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mi>n</mi><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mi>a</mi><mo>⋅</mo><mi>ρ</mi></mrow></math></li><li>Mit a = 2 · r · sin(180° : n) und ρ = r · cos(180° : n) ergibt das 192,6 cm².</li></ol><p><strong>Richtige Antwort:</strong> 192,6 cm² (erlaubte Abweichung: 0,1 cm²)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"vieleck-flaeche","given":{"n":{"oneOf":[5,6,8,10]},"r":{"int":[4,10],"step":1}},"task":{"text":"Ein regelmäßiges Vieleck mit {{n}} Ecken liegt in einem Kreis mit dem Radius r = {{r}} cm. Berechne seine Fläche und runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(n * (2 * r * sin(180 / n)) * (r * cos(180 / n)) / 2, 1)","compare":{"number":{"decimals":1,"tolerance":0.1,"unit":"cm²"}}},"mistakes":[{"value":"round(n * (2 * r * sin(180 / n)) * r / 2, 1)","message":"Du hast r als Höhe der Teildreiecke genommen. Die Höhe ist das Apothem ρ = r · cos(180° : n), und das ist kürzer als r."},{"value":"round(n * (r * sin(180 / n)) * (r * cos(180 / n)) / 2, 1)","message":"Du hast die halbe Seite a : 2 als Grundseite genommen. Die Teildreiecke haben die ganze Seite a als Grundseite."}],"hint":"Berechne erst a und ρ. Jedes Teildreieck hat die Fläche ein halb mal a mal ρ, und es gibt n davon.","steps":["$A = n \\cdot \\frac{1}{2} \\cdot a \\cdot \\rho$","Mit a = 2 · r · sin(180° : n) und ρ = r · cos(180° : n) ergibt das {{answer}} cm²."]},"templates":{"de":{"task":"Ein regelmäßiges Vieleck mit ⟦n⟧ Ecken liegt in einem Kreis mit dem Radius r = ⟦r⟧ cm. Berechne seine Fläche und runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>n\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmfrac>\u003cmn>1\u003c/mn>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmi>a\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>ρ\u003c/mi>\u003c/mrow>\u003c/math>","Mit a = 2 · r · sin(180° : n) und ρ = r · cos(180° : n) ergibt das ⟦answer⟧ cm²."],"hint":"Berechne erst a und ρ. Jedes Teildreieck hat die Fläche ein halb mal a mal ρ, und es gibt n davon.","messages":["Du hast r als Höhe der Teildreiecke genommen. Die Höhe ist das Apothem ρ = r · cos(180° : n), und das ist kürzer als r.","Du hast die halbe Seite a : 2 als Grundseite genommen. Die Teildreiecke haben die ganze Seite a als Grundseite."]}},"data":{},"seeds":[1,2,3,4,6,7,8,9,10,11,13,14,16,17,18,19,20,21,23,29,33,41,43,44,45,63,74,90],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="0c7fb4fe" data-block-type="number" data-block-order="27">
+<div class="explainer-exercise explainer-question" id="apothem">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-apothem" data-id="apothem" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein regelmäßiges Sechseck liegt in einem Kreis mit dem Radius 10 cm. Wie lang ist sein Apothem ρ? Runde auf eine Stelle nach dem Komma.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-apothem" aria-describedby="frage-apothem-unit"> <span id="frage-apothem-unit">cm</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 8,7 cm (erlaubte Abweichung: 0,05 cm)</p>
+<p class="question-explanation">Im Teildreieck ist der Winkel 180° : 6 = 30°. Dann ist ρ = r · cos 30° = 10 · 0,866 ≈ 8,7 cm. Du kannst es auch mit Pythagoras prüfen: Die halbe Seite ist 5 cm, also ρ² = 10² − 5² = 75, und die Wurzel daraus ist etwa 8,7.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 8,7 cm (erlaubte Abweichung: 0,05 cm)</p>
+<p class="question-explanation">Im Teildreieck ist der Winkel 180° : 6 = 30°. Dann ist ρ = r · cos 30° = 10 · 0,866 ≈ 8,7 cm. Du kannst es auch mit Pythagoras prüfen: Die halbe Seite ist 5 cm, also ρ² = 10² − 5² = 75, und die Wurzel daraus ist etwa 8,7.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"apothem","text":"Ein regelmäßiges Sechseck liegt in einem Kreis mit dem Radius 10 cm. Wie lang ist sein Apothem ρ? Runde auf eine Stelle nach dem Komma.","explanation":"Im Teildreieck ist der Winkel 180° : 6 = 30°. Dann ist ρ = r · cos 30° = 10 · 0,866 ≈ 8,7 cm. Du kannst es auch mit Pythagoras prüfen: Die halbe Seite ist 5 cm, also ρ² = 10² − 5² = 75, und die Wurzel daraus ist etwa 8,7.","links":[],"type":"number","answer":8.7,"tolerance":0.05,"unit":"cm"},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="2736cdb4" data-block-type="single-choice" data-block-order="28">
+<div class="explainer-exercise explainer-question" id="welches-dreieck">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welches-dreieck" data-id="welches-dreieck" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du willst die Seite eines regelmäßigen Zehnecks aus dem Radius r berechnen. In welchem Dreieck rechnest du?</legend>
+<label class="question-option"><input type="radio" name="frage-welches-dreieck" value="0"> <span>Im halbierten Teildreieck mit dem Winkel 18° bei M</span></label>
+<label class="question-option"><input type="radio" name="frage-welches-dreieck" value="1"> <span>Im Teildreieck mit dem Winkel 36° bei M, ohne es zu halbieren</span></label>
+<label class="question-option"><input type="radio" name="frage-welches-dreieck" value="2"> <span>Im Dreieck aus drei Ecken des Vielecks</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Im halbierten Teildreieck mit dem Winkel 18° bei M</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Winkel bei M im Teildreieck ist 360° : 10 = 36°, halbiert 18°. Im rechtwinkligen Dreieck liegt a : 2 diesem Winkel gegenüber.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Im Teildreieck mit dem Winkel 36° bei M, ohne es zu halbieren</strong></p><p>Dieses Dreieck ist nicht rechtwinklig, du kannst den Sinus nicht direkt benutzen. Erst halbieren, dann hast du einen rechten Winkel.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Im Dreieck aus drei Ecken des Vielecks</strong></p><p>Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite. Mit ihm kommst du an die Seite a nicht direkt heran.</p></li>
+</ul>
+<p class="question-explanation">Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Im halbierten Teildreieck mit dem Winkel 18° bei M</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Winkel bei M im Teildreieck ist 360° : 10 = 36°, halbiert 18°. Im rechtwinkligen Dreieck liegt a : 2 diesem Winkel gegenüber.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Im Teildreieck mit dem Winkel 36° bei M, ohne es zu halbieren</strong></p><p>Dieses Dreieck ist nicht rechtwinklig, du kannst den Sinus nicht direkt benutzen. Erst halbieren, dann hast du einen rechten Winkel.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Im Dreieck aus drei Ecken des Vielecks</strong></p><p>Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite. Mit ihm kommst du an die Seite a nicht direkt heran.</p></li>
+</ul>
+<p class="question-explanation">Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welches-dreieck","text":"Du willst die Seite eines regelmäßigen Zehnecks aus dem Radius r berechnen. In welchem Dreieck rechnest du?","explanation":"Das versteckte rechtwinklige Dreieck entsteht, wenn du das Teildreieck mit seiner Höhe halbierst. Der Winkel dort ist 180° : n.","links":[],"type":"single-choice","options":[{"text":"Im halbierten Teildreieck mit dem Winkel 18° bei M","correct":true,"info":"Der Winkel bei M im Teildreieck ist 360° : 10 = 36°, halbiert 18°. Im rechtwinkligen Dreieck liegt a : 2 diesem Winkel gegenüber."},{"text":"Im Teildreieck mit dem Winkel 36° bei M, ohne es zu halbieren","correct":false,"info":"Dieses Dreieck ist nicht rechtwinklig, du kannst den Sinus nicht direkt benutzen. Erst halbieren, dann hast du einen rechten Winkel."},{"text":"Im Dreieck aus drei Ecken des Vielecks","correct":false,"info":"Auch dieses Dreieck ist im Allgemeinen nicht rechtwinklig und hat r nicht als Seite. Mit ihm kommst du an die Seite a nicht direkt heran."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="cd66ffd2" data-block-type="text" data-block-order="29">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du findest in einem regelmäßigen Vieleck das rechtwinklige Dreieck und berechnest Seite, Winkel und Fläche.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Regelmäßige Vielecke","order":12}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../koerper/schulhof/">Zurück: Messtag auf dem Schulhof</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

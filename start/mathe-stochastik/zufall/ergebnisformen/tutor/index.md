@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -68,6 +65,8 @@ Ein Term für $P(E)$ hat immer denselben Aufbau:
 - Die Produkte aller passenden Pfade werden **addiert** (2. Pfadregel).
 - Kommt derselbe Faktor mehrmals vor, darfst du eine **Potenz** schreiben.
 
+- **Potenz**: Eine Kurzschreibweise für ein Produkt aus gleichen Faktoren. Die Hochzahl sagt, wie oft der Faktor vorkommt, zum Beispiel $2^3 = 2 \cdot 2 \cdot 2 = 8$.
+
 $\frac{5}{6} \cdot \frac{5}{6} \cdot \frac{5}{6} = (\frac{5}{6})^3$
 
 **Merke: Typische falsche Terme**
@@ -83,21 +82,32 @@ Urne mit 3 roten und 2 blauen Kugeln, zweimal ziehen **ohne Zurücklegen**. Erei
 Ein richtiger und zwei falsche Terme für P(genau einmal rot):
 - Richtig | $\frac{3}{5} \cdot \frac{2}{4} + \frac{2}{5} \cdot \frac{3}{4}$ $= \frac{12}{20} = \frac{3}{5}$
 - Nur ein Pfad | $\frac{3}{5} \cdot \frac{2}{4}$ – blau-rot fehlt
-- Mit Zurücklegen | $\frac{3}{5} \cdot \frac{2}{5} + \frac{2}{5} \cdot \frac{3}{5}$ – der Nenner muss kleiner werden
+- Mit Zurücklegen | $\frac{3}{5} \cdot \frac{2}{5} + \frac{2}{5} \cdot \frac{3}{5}$ – im zweiten Zug liegen nur noch 4 Kugeln, nicht mehr 5
 
 ### Bild
 
-Bild: Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen; orange sind die zwei Pfade von „genau einmal rot“. Bildunterschrift: Der Baum aus dem Beispiel: 3 rote (R) und 2 blaue (B) Kugeln, zweimal ohne Zurücklegen. Erste Stufe: rot 3/5, blau 2/5. Nach rot: rot 2/4, blau 2/4; nach blau: rot 3/4, blau 1/4. Orange sind die zwei Pfade von „genau einmal rot“: rot-blau 3/10 und blau-rot 3/10. Zusammen 3/5.
-
-### Video dazu
-
-Video: [Summenregel | Wahrscheinlichkeitsrechnung | Mathematik](https://www.youtube.com/watch?v=Pi1M1F2l024), Lehrerschmidt (YouTube)
+Bild: Baumdiagramm zur Urne mit 3 roten und 2 blauen Kugeln, zweimal ohne Zurücklegen; orange sind die zwei Pfade von „genau einmal rot“. Bildunterschrift: Der Baum aus dem Beispiel: 3 rote (R) und 2 blaue (B) Kugeln, zweimal ohne Zurücklegen. Erste Stufe: rot $\frac{3}{5}$, blau $\frac{2}{5}$. Nach rot: rot $\frac{2}{4}$, blau $\frac{2}{4}$; nach blau: rot $\frac{3}{4}$, blau $\frac{1}{4}$. Orange sind die zwei Pfade von „genau einmal rot“: rot-blau $\frac{3}{10}$ und blau-rot $\frac{3}{10}$. Zusammen $\frac{3}{5}$.
 
 ### Übung
+
+- Aufgabe `ergebnisform-zuordnen` (unten)
 
 - Aufgabe `term-waehlen` (unten)
 
 - Aufgabe `potenz-erkennen` (unten)
+
+- Aufgabe `ergebnisform-muenze` (unten)
+
+- Aufgabe `ergebnisform-wechseln` (unten)
+
+### Aufgabe ergebnisform-zuordnen
+
+- Aufgabe: Welche Form hat der Term für diese Wahrscheinlichkeit? Ordne zu.
+- Antwortformat: jedem Eintrag links den passenden rechts zuordnen
+- Lösung: fünfmal hintereinander Zahl – eine Potenz; erst rot, dann blau (ein Pfad) – ein Produkt; genau einmal rot in zwei Zügen (zwei Pfade) – eine Summe aus Produkten; mindestens einmal eine 6 in drei Würfen – eins minus eine Potenz
+- Erklärung: Ein Pfad mit verschiedenen Zweigen ist ein Produkt. Wiederholt sich der Faktor, schreibst du eine Potenz. Gehören mehrere Pfade dazu, addierst du ihre Produkte. Bei „mindestens einmal“ rechnest du 1 minus die Wahrscheinlichkeit des Gegenereignisses, und die ist eine Potenz.
+- Tipp der App: Frage dich bei jedem Ereignis, wie viele Pfade dazugehören und ob sich ein Faktor wiederholt.
+- Link: [../?via=tutor#ergebnisform-zuordnen](../?via=tutor#ergebnisform-zuordnen)
 
 ### Aufgabe term-waehlen
 
@@ -189,10 +199,61 @@ Nr. | Versuch | Ereignis | A | B | C | Lösung | F1 | F2 | F3 | F4
 - Aufgabe: Du würfelst dreimal und rechnest P(keine 6, keine 6, keine 6). Welcher Term ist gleich dem Produkt?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ fünf Sechstel hoch drei – Derselbe Faktor dreimal multipliziert ist die dritte Potenz. Ausgerechnet sind das 125 Zweihundertsechzehntel.
-  - ✗ drei mal fünf Sechstel – Das ist fünf Sechstel plus fünf Sechstel plus fünf Sechstel, also eine Summe. Sie ist größer als 1 und keine Wahrscheinlichkeit.
-  - ✗ fünf hoch drei durch sechs – Hier ist nur der Zähler hoch drei genommen. Bei der Potenz eines Bruchs kommt auch der Nenner hoch drei.
-  - ✗ fünfzehn Achtzehntel – Das sind nur fünf Sechstel, erweitert mit 3. Beim Multiplizieren werden die Zähler und die Nenner miteinander multipliziert.
+  - ✓ fünf Sechstel hoch drei – Derselbe Faktor dreimal multipliziert ist die dritte Potenz. Ausgerechnet sind das $\frac{125}{216}$.
+  - ✗ drei mal fünf Sechstel – Das ist $\frac{5}{6} + \frac{5}{6} + \frac{5}{6}$, also eine Summe. Sie ist größer als 1 und keine Wahrscheinlichkeit.
+  - ✗ fünf hoch drei durch sechs – Hier ist nur der Zähler hoch drei genommen. Bei der Potenz eines Bruchs kommt auch der Nenner hoch drei, also $\frac{5^3}{6^3}$.
+  - ✗ fünfzehn Achtzehntel – Das sind nur $\frac{5}{6}$, erweitert mit 3. Beim Multiplizieren werden die Zähler und die Nenner miteinander multipliziert.
 - Lösung: fünf Sechstel hoch drei
-- Erklärung: Kommt derselbe Faktor mehrmals vor, darfst du eine Potenz schreiben: fünf Sechstel mal fünf Sechstel mal fünf Sechstel ist fünf Sechstel hoch drei, ausgerechnet 125 Zweihundertsechzehntel.
+- Erklärung: Kommt derselbe Faktor mehrmals vor, darfst du eine Potenz schreiben: $\frac{5}{6} \cdot \frac{5}{6} \cdot \frac{5}{6} = \left(\frac{5}{6}\right)^3$. Ausgerechnet ist das $\frac{125}{216}$.
 - Link: [../?via=tutor#potenz-erkennen](../?via=tutor#potenz-erkennen)
+
+### Aufgabe ergebnisform-muenze
+
+- Aufgabe: Du wirfst eine Münze dreimal. Schreibe die Wahrscheinlichkeit für dreimal Zahl als Potenz und rechne sie aus. Gib sie in Prozent an.
+- Antwortformat: eine Zahl eintippen (%)
+- Lösung: 12,5 %
+- Erklärung: Der Pfad hat drei gleiche Zweige: $\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \left(\frac{1}{2}\right)^3 = \frac{1}{8} = 12{,}5\,\%$.
+- Tipp der App: Jeder Wurf hat die Wahrscheinlichkeit ein Halb. Wie oft kommt dieser Faktor im Pfad vor?
+- Typische Fehler und was die App sagt:
+  - 150: Du hast dreimal ein Halb addiert. Die Hochzahl sagt, wie oft der Faktor mit sich selbst multipliziert wird.
+  - 25: Das sind nur zwei Würfe. Für drei Würfe kommt ein dritter Faktor dazu.
+- Link: [../?via=tutor#ergebnisform-muenze](../?via=tutor#ergebnisform-muenze)
+
+### Aufgabe ergebnisform-wechseln
+
+- Aufgabe: „Eine Wahrscheinlichkeit ist als Bruch {z} von {n} gegeben. Gib sie in Prozent an.“
+- Antwortformat: eine Zahl eintippen (%)
+- Tipp der App: „Wandle den Bruch zuerst in eine Dezimalzahl um. Wie rechnest du dann auf Prozent?“
+- Lösungsweg:
+  - $\frac{{z}}{{n}} = {z} : {n}$
+  - Mal 100 gerechnet ergibt das {answer} %.
+- Typische Fehler und was die App sagt:
+  - F1: „Das ist die Dezimalzahl. Für Prozent musst du sie noch mit 100 multiplizieren.“
+  - F2: „Du hast den Nenner vergessen. Teile zuerst die Zahl im Zähler durch den Nenner.“
+- Link zu Nummer n: `../?ergebnisform-wechseln=n&via=tutor#ergebnisform-wechseln`
+- Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt. `{answer}` ist die Lösung.
+
+```
+Nr. | z | n | Lösung | F1 | F2
+1 | 6 | 25 | 24 % | 0,24 | 600
+2 | 7 | 20 | 35 % | 0,35 | 700
+3 | 7 | 8 | 87,5 % | 0,875 | 700
+4 | 1 | 8 | 12,5 % | 0,125 | 100
+5 | 2 | 25 | 8 % | 0,08 | 200
+6 | 5 | 20 | 25 % | 0,25 | 500
+7 | 4 | 25 | 16 % | 0,16 | 400
+8 | 1 | 25 | 4 % | 0,04 | 100
+9 | 1 | 20 | 5 % | 0,05 | 100
+10 | 6 | 8 | 75 % | 0,75 | 600
+11 | 7 | 25 | 28 % | 0,28 | 700
+12 | 3 | 25 | 12 % | 0,12 | 300
+13 | 6 | 20 | 30 % | 0,3 | 600
+14 | 2 | 8 | 25 % | 0,25 | 200
+15 | 3 | 20 | 15 % | 0,15 | 300
+16 | 5 | 25 | 20 % | 0,2 | 500
+17 | 4 | 20 | 20 % | 0,2 | 400
+18 | 4 | 8 | 50 % | 0,5 | 400
+19 | 2 | 20 | 10 % | 0,1 | 200
+20 | 3 | 8 | 37,5 % | 0,375 | 300
+21 | 5 | 8 | 62,5 % | 0,625 | 500
+```

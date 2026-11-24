@@ -29,9 +29,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Wo das Kind gerade ist
 
@@ -66,10 +63,10 @@ Ob eine gezogene Kugel zurück in die Urne kommt oder nicht, ändert die ganze R
 
 - **ohne Zurücklegen**: Die gezogene Kugel bleibt draußen. Nach jedem Zug ist eine Kugel weniger in der Urne.
 
-Ohne Zurücklegen gilt:
-
-- Der **Nenner** wird bei jedem Zug um 1 kleiner (6 → 5 → 4).
-- Der **Zähler** einer Farbe wird nur dann um 1 kleiner, wenn vorher eine Kugel dieser Farbe gezogen wurde.
+Was sich beim zweiten Zug ändert:
+- Was | mit | ohne
+- Nenner | bleibt | wird kleiner (6, 5, 4)
+- Zähler | bleibt | wird kleiner, wenn diese Farbe gezogen wurde
 
 Die Zweige der zweiten Stufe hängen also davon ab, was in der ersten Stufe passiert ist.
 
@@ -81,9 +78,9 @@ Urne mit 3 roten, 2 blauen und 1 gelben Kugel (6 Kugeln). Die erste gezogene Kug
 
 Wahrscheinlichkeit für die 2. Kugel mit und ohne Zurücklegen, wenn die erste rot war:
 - 2. Kugel | mit | ohne
-- rot | 3/6 | **2/5**
-- blau | 2/6 | **2/5**
-- gelb | 1/6 | **1/5**
+- rot | $\frac{3}{6}$ | $\frac{2}{5}$
+- blau | $\frac{2}{6}$ | $\frac{2}{5}$
+- gelb | $\frac{1}{6}$ | $\frac{1}{5}$
 
 Ohne Zurücklegen fehlt eine rote Kugel: Bei rot werden Zähler und Nenner kleiner, bei blau und gelb nur der Nenner.
 
@@ -98,18 +95,35 @@ Bild: Urne vorher mit 6 Kugeln und nachher mit 5 Kugeln; dazwischen die gezogene
 
 Bild: Baum mit Zurücklegen, der Pfad rot-blau ist orange. Bildunterschrift: Mit Zurücklegen
 
-Bild: Baum ohne Zurücklegen, der Pfad rot-blau ist orange. Bildunterschrift: Ohne Zurücklegen. Oben die Urne vor dem ersten Zug mit 6 Kugeln (3 rote, 2 blaue, 1 gelbe), daneben die gezogene rote Kugel und die Urne danach mit 5 Kugeln (2 rote, 2 blaue, 1 gelbe). Darunter zwei Bäume. Mit Zurücklegen hat die zweite Stufe dieselben Zweige wie die erste: rot 3/6, blau 2/6, gelb 1/6. Ohne Zurücklegen steht nach rot: rot 2/5, blau 2/5, gelb 1/5. Der Pfad rot-blau ist in beiden Bäumen orange: mit Zurücklegen 3/6 · 2/6 = 1/6, ohne Zurücklegen 3/6 · 2/5 = 1/5.
-
-### Video dazu
-
-- Wie man einen Baum aufbaut, zeigt das Video auf der Seite Baumdiagramm.
-- Noch eine Erklärung: [Pfadregeln](https://de.serlo.org/mathe/189811/pfadregeln) bei serlo.org
+Bild: Baum ohne Zurücklegen, der Pfad rot-blau ist orange. Bildunterschrift: Ohne Zurücklegen. Oben die Urne vor dem ersten Zug mit 6 Kugeln (3 rote, 2 blaue, 1 gelbe), daneben die gezogene rote Kugel und die Urne danach mit 5 Kugeln (2 rote, 2 blaue, 1 gelbe). Darunter zwei Bäume. Mit Zurücklegen hat die zweite Stufe dieselben Zweige wie die erste: rot $\frac{3}{6}$, blau $\frac{2}{6}$, gelb $\frac{1}{6}$. Ohne Zurücklegen steht nach rot: rot $\frac{2}{5}$, blau $\frac{2}{5}$, gelb $\frac{1}{5}$. Der Pfad rot-blau ist in beiden Bäumen orange: mit Zurücklegen $\frac{3}{6} \cdot \frac{2}{6} = \frac{1}{6}$, ohne Zurücklegen $\frac{3}{6} \cdot \frac{2}{5} = \frac{1}{5}$.
 
 ### Übung
+
+- Aufgabe `ohne-aussage` (unten)
+
+- Aufgabe `ohne-schritte` (unten)
 
 - Aufgabe `mit-und-ohne` (unten)
 
 - Aufgabe `zweite-kugel-ohne` (unten)
+
+### Aufgabe ohne-aussage
+
+- Aufgabe: In einer Urne liegen 3 rote und 3 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen, die erste Kugel ist rot. Aussage: Die zweite Kugel ist mit der Wahrscheinlichkeit 50 % ebenfalls rot.
+- Antwortformat: „Stimmt“ oder „Stimmt nicht“ wählen
+- Lösung: Die Aussage stimmt nicht.
+- Erklärung: Die Aussage ist falsch. Beim ersten Zug sind es $\frac{3}{6} = 50\,\%$. Danach liegen nur noch 5 Kugeln in der Urne, davon 2 rote. Beim zweiten Zug sind es also $\frac{2}{5} = 40\,\%$.
+- Tipp der App: Wie viele Kugeln liegen nach dem ersten Zug noch in der Urne, und wie viele davon sind rot?
+- Link: [../?via=tutor#ohne-aussage](../?via=tutor#ohne-aussage)
+
+### Aufgabe ohne-schritte
+
+- Aufgabe: Du berechnest, wie wahrscheinlich es ist, erst eine rote und dann eine blaue Kugel zu ziehen, ohne Zurücklegen. Bringe die Schritte in die richtige Reihenfolge.
+- Antwortformat: die Einträge in die richtige Reihenfolge bringen (die App zeigt sie gemischt)
+- Lösung: 1. Die Wahrscheinlichkeit für rot beim ersten Zug bestimmen, 2. Die gezogene rote Kugel aus der Urne nehmen, 3. Die Wahrscheinlichkeit für blau mit der neuen Kugelzahl bestimmen, 4. Beide Wahrscheinlichkeiten entlang des Pfades multiplizieren
+- Erklärung: Erst kommt der erste Zug, dann verändert sich die Urne, dann folgt der zweite Zug. Zum Schluss multiplizierst du entlang des Pfades (1. Pfadregel). Mit 3 roten, 2 blauen und 1 gelben Kugel ergibt das $\frac{3}{6} \cdot \frac{2}{5} = \frac{1}{5}$.
+- Tipp der App: Die Urne verändert sich nach dem ersten Zug. Was muss vor der zweiten Wahrscheinlichkeit geschehen sein?
+- Link: [../?via=tutor#ohne-schritte](../?via=tutor#ohne-schritte)
 
 ### Aufgabe mit-und-ohne
 

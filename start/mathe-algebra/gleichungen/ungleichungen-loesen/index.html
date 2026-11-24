@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Lineare Ungleichungen lösen – Mathe: Algebra – Terme und Gleichungen</title>
+    <meta name="description" content="Wenn die Waage kippt: Du löst eine Ungleichung wie 2x + 3 &gt; 11 mit Tabelle und Umformen und zeigst die Lösungsmenge auf der Zahlengerade. Mit dem Trick bei negativen Zahlen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../gleichungen/ungleichungen-loesen/" />
+    <script type="module" crossorigin src="../../assets/islands-CH_JAFmq.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../gleichungen/">Lineare Gleichungen</a></li><li aria-current="page">Lineare Ungleichungen lösen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Lineare Ungleichungen lösen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../gleichungen/ungleichungen-loesen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧gleichungen/ungleichungen-loesen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-algebra","page":{"id":"ungleichungen-loesen","title":"Lineare Ungleichungen lösen","exercises":[{"id":"waage-schwerer","section":"einstieg","numbered":false},{"id":"zeichen-nach-umformung","section":"uebung","numbered":false},{"id":"loesungsmenge-zuordnen","section":"uebung","numbered":false},{"id":"gerade-lesen","section":"uebung","numbered":false},{"id":"grenzzahl-positiv","section":"uebung","numbered":true},{"id":"zeichen-nicht-gedreht","section":"uebung","numbered":false},{"id":"grenzzahl-negativ","section":"uebung","numbered":true},{"id":"grenzzahl-zwei-schritte","section":"uebung","numbered":true}],"sections":["einstieg","kippen","umformen","zahlengerade","negativ","uebung"]},"tutor":"gleichungen/ungleichungen-loesen/tutor/","markdown":"gleichungen/ungleichungen-loesen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Welche Seite ist schwerer?</a></li><li><a href="#kippen">Die Waage kippt</a></li><li><a href="#umformen">Auf beiden Seiten dasselbe tun</a></li><li><a href="#zahlengerade">Die Lösungsmenge auf der Zahlengerade</a></li><li><a href="#negativ">Mal oder geteilt durch eine negative Zahl</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Welche Seite ist schwerer?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="38cee674" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Manchmal fragst du nicht nach einer einzigen Zahl, sondern: Für welche Zahlen ist etwas größer oder kleiner? Das beantwortet eine Ungleichung. Zuerst vergleichst du zwei Seiten einer Waage.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="6ef5ff4a" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="waage-schwerer">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-waage-schwerer" data-id="waage-schwerer" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Links liegen 2 Päckchen mit je 5 Gewichten und noch 3 einzelne Gewichte. Rechts liegen 11 Gewichte. Wie steht die Waage?</legend>
+<label class="question-option"><input type="radio" name="frage-waage-schwerer" value="0"> <span>Sie kippt nach links.</span></label>
+<label class="question-option"><input type="radio" name="frage-waage-schwerer" value="1"> <span>Sie ist im Gleichgewicht.</span></label>
+<label class="question-option"><input type="radio" name="frage-waage-schwerer" value="2"> <span>Sie kippt nach rechts.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Sie kippt nach links.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Links liegen 2 · 5 + 3 = 13 Gewichte, rechts 11. Links ist mehr Gewicht, also kippt die Waage nach links.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Sie ist im Gleichgewicht.</strong></p><p>Im Gleichgewicht wären beide Seiten gleich schwer. Links sind es aber 2 · 5 + 3 = 13, rechts nur 11.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie kippt nach rechts.</strong></p><p>Rechts liegen 11 Gewichte, links 13. Die schwerere Seite geht nach unten, das ist hier die linke.</p></li>
+</ul>
+<p class="question-explanation">Du rechnest erst jede Seite aus und vergleichst dann: 13 ist größer als 11, also ist die linke Seite schwerer.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Sie kippt nach links.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Links liegen 2 · 5 + 3 = 13 Gewichte, rechts 11. Links ist mehr Gewicht, also kippt die Waage nach links.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Sie ist im Gleichgewicht.</strong></p><p>Im Gleichgewicht wären beide Seiten gleich schwer. Links sind es aber 2 · 5 + 3 = 13, rechts nur 11.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie kippt nach rechts.</strong></p><p>Rechts liegen 11 Gewichte, links 13. Die schwerere Seite geht nach unten, das ist hier die linke.</p></li>
+</ul>
+<p class="question-explanation">Du rechnest erst jede Seite aus und vergleichst dann: 13 ist größer als 11, also ist die linke Seite schwerer.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"waage-schwerer","text":"Links liegen 2 Päckchen mit je 5 Gewichten und noch 3 einzelne Gewichte. Rechts liegen 11 Gewichte. Wie steht die Waage?","explanation":"Du rechnest erst jede Seite aus und vergleichst dann: 13 ist größer als 11, also ist die linke Seite schwerer.","links":[],"type":"single-choice","options":[{"text":"Sie kippt nach links.","correct":true,"info":"Links liegen 2 · 5 + 3 = 13 Gewichte, rechts 11. Links ist mehr Gewicht, also kippt die Waage nach links."},{"text":"Sie ist im Gleichgewicht.","correct":false,"info":"Im Gleichgewicht wären beide Seiten gleich schwer. Links sind es aber 2 · 5 + 3 = 13, rechts nur 11."},{"text":"Sie kippt nach rechts.","correct":false,"info":"Rechts liegen 11 Gewichte, links 13. Die schwerere Seite geht nach unten, das ist hier die linke."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="kippen">Die Waage kippt</h2>
+<div class="explainer-block" data-block="kippen/1" data-block-id="d00cb927" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du wissen willst, für welche Zahlen eine Seite schwerer ist, hast du eine Ungleichung. Bei einer Gleichung ist die Waage im Gleichgewicht, bei einer <strong>Ungleichung</strong> kippt sie. Die Ungleichung <math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>&gt;</mo><mn>11</mn></mrow></math> sagt: Links ist mehr Gewicht als rechts. Die offene Seite des Zeichens zeigt zur schwereren Seite.</p></div>
+</div>
+<div class="explainer-block" data-block="kippen/2" data-block-id="e7177e59" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/gleichungen-ungleichungen-loesen-waage.svg" alt="Eine Waage kippt nach links. Links liegen zwei Päckchen x und drei Gewichte, für x = 5 sind das 13 Gewichte. Rechts liegen 11 Gewichte. Links ist schwerer: 13 &gt; 11." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: Eigene Darstellung. Lizenz: MIT." aria-label="Quelle: Eigene Darstellung. Lizenz: MIT.">© MIT</span></div><figcaption><p>Für <math><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></math> wiegt die linke Seite <math><mrow><mn>2</mn><mo>⋅</mo><mn>5</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>13</mn></mrow></math>, die rechte 11. Die Waage kippt nach links: <math><mrow><mn>13</mn><mo>&gt;</mo><mn>11</mn></mrow></math>.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="kippen/3" data-block-id="df203e59" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-loesungsmenge"><a href="../../glossar/#loesungsmenge">Lösungsmenge</a></dfn></dt><dd><p>Die Lösungsmenge einer Ungleichung sind alle Zahlen für <math><mi>x</mi></math>, bei denen sie stimmt. Bei <math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>&gt;</mo><mn>11</mn></mrow></math> ist das nicht eine Zahl, sondern ganz viele.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="kippen/4" data-block-id="cac7199e" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Für welche Zahlen kippt die Waage nach links? Probieren in der Tabelle passt, um ein Gefühl für die Lösungen zu bekommen, zeigt aber nur einzelne Zahlen. Die Spalte Vergleich zeigt dir: bei „&gt;“ ist links schwerer, bei „=“ sind beide Seiten gleich, bei „&lt;“ ist links leichter.</p></div>
+</div>
+<div class="explainer-block" data-block="kippen/5" data-block-id="48eb622d" data-block-type="vue-component" data-block-order="7">
+<div class="explainer-component" id="tabelle-ungleichung" data-component="RaetselTabelle">
+<div class="explainer-island" hidden><div class="tabelle-probieren" data-v-9519168b><p class="tabelle-gleichung" data-v-9519168b><strong data-v-9519168b>2 · x + 3 gegen 11</strong></p><div class="tabelle-eingabe" data-v-9519168b><label for="v-0-x" data-v-9519168b>Zahl für x</label><input id="v-0-x" value="" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" data-v-9519168b><button type="button" class="tabelle-knopf" data-v-9519168b>In die Tabelle</button><!----></div><p class="tabelle-hinweis" aria-live="polite" data-v-9519168b>Trag eine Zahl für x ein.</p><div class="tabelle-scroll" tabindex="0" role="region" aria-label="Vergleich" data-v-9519168b><!----></div></div></div>
+<div class="explainer-nojs"><p>Tabelle zum Probieren für 2 · x + 3 &gt; 11. Für x = 2 ist die linke Seite 7: kleiner als 11. Für x = 4 ist sie 11:
+beide Seiten sind gleich. Für x = 5 ist sie 13: links ist größer. Zur Lösungsmenge gehören alle Zahlen, bei denen
+links größer ist, also alle Zahlen über 4.</p></div>
+<script type="application/json" class="explainer-component-props">{"a":2,"b":3,"c":11,"eingabeLabel":"Zahl für x","eintragen":"In die Tabelle","neuAnfangen":"Neu anfangen","spalteX":"x","spalteLinks":"2 · x + 3","spalteRechts":"Rechts","spalteVergleich":"Vergleich","ungleichung":true}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="umformen">Auf beiden Seiten dasselbe tun</h2>
+<div class="explainer-block" data-block="umformen/1" data-block-id="e16bf95b" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Willst du alle Lösungen sicher finden, ohne unendlich viele Zahlen zu probieren, formst du um wie bei einer Gleichung. Wenn du auf beiden Seiten dasselbe tust, bleibt die Waage in der Schieflage und das Zeichen bleibt. Das gilt für plus, minus, mal und geteilt durch eine <strong>positive</strong> Zahl.</p></div>
+</div>
+<div class="explainer-block" data-block="umformen/2" data-block-id="9575b497" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Löse 2 · x + 3 &gt; 11</h3>
+<div class="explainer-block" data-block="umformen/2/1" data-block-id="8be3369c" data-block-type="table" data-block-order="10">
+<div class="block-table" role="region" aria-label="Links die Ungleichung, rechts, was du auf beiden Seiten tust" tabindex="0"><table><caption>Links die Ungleichung, rechts, was du auf beiden Seiten tust</caption><thead><tr><th scope="col">Ungleichung</th><th scope="col">Du tust</th></tr></thead><tbody><tr><td><math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo>&gt;</mo><mn>11</mn></mrow></math></td><td>Start</td></tr><tr><td><math><mrow><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>&gt;</mo><mn>8</mn></mrow></math></td><td>auf beiden Seiten − 3</td></tr><tr><td><math><mrow><mi>x</mi><mo>&gt;</mo><mn>4</mn></mrow></math></td><td>beide Seiten : 2</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="umformen/2/2" data-block-id="edf3a234" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Die Tabelle und das Umformen sagen dasselbe: <math><mrow><mi>x</mi><mo>&gt;</mo><mn>4</mn></mrow></math>. Die 4 gehört nicht dazu, denn <math><mrow><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>11</mn></mrow></math> und 11 ist nicht größer als 11.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="zahlengerade">Die Lösungsmenge auf der Zahlengerade</h2>
+<div class="explainer-block" data-block="zahlengerade/1" data-block-id="e630f077" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Willst du alle Lösungen auf einen Blick zeigen, zeichnest du die Lösungsmenge auf der <strong>Zahlengerade</strong>. Der Punkt an der Grenzzahl ist <strong>offen</strong>, wenn sie nicht dazugehört (bei &lt; und &gt;), und <strong>gefüllt</strong>, wenn sie dazugehört (bei ≤ und ≥). Der Strahl zeigt zu den Lösungen. Teste Zahlen: Gehören sie dazu?</p></div>
+</div>
+<div class="explainer-block" data-block="zahlengerade/2" data-block-id="76a720af" data-block-type="vue-component" data-block-order="13">
+<div class="explainer-component" id="gerade-groesser-4" data-component="GleichungenGerade">
+<div class="explainer-island" hidden><div class="gerade" data-v-10c007d1><svg viewBox="0 0 360 124" role="img" aria-label="Zahlengerade, die Lösungsmenge x &gt; 4: alle Zahlen rechts der 4, also größer als 4. Die 4 gehört nicht dazu: Der Punkt ist offen." class="gerade-bild" data-v-10c007d1><line x1="16" y1="66" x2="344" y2="66" class="gerade-achse" data-v-10c007d1></line><!--[--><g data-v-10c007d1><line x1="24" y1="61" x2="24" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="24" y="88" class="gerade-zahl" data-v-10c007d1>−3</text></g><g data-v-10c007d1><line x1="55.2" y1="61" x2="55.2" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="55.2" y="88" class="gerade-zahl" data-v-10c007d1>−2</text></g><g data-v-10c007d1><line x1="86.4" y1="61" x2="86.4" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="86.4" y="88" class="gerade-zahl" data-v-10c007d1>−1</text></g><g data-v-10c007d1><line x1="117.6" y1="61" x2="117.6" y2="71" class="gerade-strich gerade-null" data-v-10c007d1></line><text x="117.6" y="88" class="gerade-null-text gerade-zahl" data-v-10c007d1>0</text></g><g data-v-10c007d1><line x1="148.8" y1="61" x2="148.8" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="148.8" y="88" class="gerade-zahl" data-v-10c007d1>1</text></g><g data-v-10c007d1><line x1="180" y1="61" x2="180" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="180" y="88" class="gerade-zahl" data-v-10c007d1>2</text></g><g data-v-10c007d1><line x1="211.2" y1="61" x2="211.2" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="211.2" y="88" class="gerade-zahl" data-v-10c007d1>3</text></g><g data-v-10c007d1><line x1="242.39999999999998" y1="61" x2="242.39999999999998" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="242.39999999999998" y="88" class="gerade-zahl" data-v-10c007d1>4</text></g><g data-v-10c007d1><line x1="273.6" y1="61" x2="273.6" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="273.6" y="88" class="gerade-zahl" data-v-10c007d1>5</text></g><g data-v-10c007d1><line x1="304.8" y1="61" x2="304.8" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="304.8" y="88" class="gerade-zahl" data-v-10c007d1>6</text></g><g data-v-10c007d1><line x1="336" y1="61" x2="336" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="336" y="88" class="gerade-zahl" data-v-10c007d1>7</text></g><!--]--><line x1="242.39999999999998" y1="66" x2="344" y2="66" class="gerade-strahl" data-v-10c007d1></line><polygon points="344,66 335,59 335,73" class="gerade-pfeil" data-v-10c007d1></polygon><circle cx="242.39999999999998" cy="66" r="7" class="gerade-offen" data-v-10c007d1></circle><text x="242.39999999999998" y="34" text-anchor="middle" class="gerade-rand" data-v-10c007d1>ohne die 4</text><text x="289.2" y="16" text-anchor="middle" class="gerade-menge" data-v-10c007d1>x &gt; 4</text><!----><!----></svg><div class="gerade-eingabe" data-v-10c007d1><label for="v-0-x" data-v-10c007d1>Probezahl</label><input id="v-0-x" value="" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" data-v-10c007d1><button type="button" class="gerade-knopf" data-v-10c007d1>Gehört sie dazu?</button><!----></div><p class="gerade-hinweis" aria-live="polite" data-v-10c007d1></p></div></div>
+<div class="explainer-nojs"><p>Zahlengerade für x &gt; 4. Der Punkt bei der 4 ist offen, die Beschriftung sagt „ohne die 4“. Der Strahl geht von der 4
+nach rechts. Zur Lösungsmenge gehören alle Zahlen rechts der 4, zum Beispiel 5 und 4,5. Die 4 gehört nicht dazu.</p></div>
+<script type="application/json" class="explainer-component-props">{"grenze":4,"zeichen":">","eingabeLabel":"Probezahl","pruefenKnopf":"Gehört sie dazu?","neuAnfangen":"Neu anfangen"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="negativ">Mal oder geteilt durch eine negative Zahl</h2>
+<div class="explainer-block" data-block="negativ/1" data-block-id="36cd24cf" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Beim Umformen kommt es vor, dass du durch eine negative Zahl teilen musst, etwa bei <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>&gt;</mo><mn>6</mn></mrow></math>. Dann musst du wissen, was mit dem Zeichen passiert. Das Zeichen bleibt aber nicht immer, bei einer <strong>negativen</strong> Zahl ist es anders. Es gilt <math><mrow><mn>2</mn><mo>&lt;</mo><mn>5</mn></mrow></math>. Rechne beide Zahlen mal <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>2</mn></mrow></math>: Du bekommst <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>4</mn></mrow></math> und <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>10</mn></mrow></math>. Auf der Zahlengerade liegt <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>4</mn></mrow></math> rechts von <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>10</mn></mrow></math>, also gilt <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>4</mn><mo>&gt;</mo><mo form="prefix" stretchy="false">−</mo><mn>10</mn></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="negativ/2" data-block-id="94339945" data-block-type="table" data-block-order="15">
+<div class="block-table" role="region" aria-label="Die Reihenfolge dreht sich um" tabindex="0"><table><caption>Die Reihenfolge dreht sich um</caption><thead><tr><th scope="col">Was</th><th scope="col">Vorher</th><th scope="col">Nach · (−2)</th></tr></thead><tbody><tr><th scope="row">Zahlen</th><td>2 und 5</td><td>−4 und −10</td></tr><tr><th scope="row">Vergleich</th><td>2 &lt; 5</td><td>−4 &gt; −10</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="negativ/3" data-block-id="bb8d349c" data-block-type="note" data-block-order="16">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Zeichen umdrehen</h3>
+<div class="explainer-block" data-block="negativ/3/1" data-block-id="d867dbb6" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Mal oder geteilt durch eine negative Zahl <strong>dreht das Zeichen um</strong>: Aus <math><mo lspace="0em" rspace="0em">&lt;</mo></math> wird <math><mo lspace="0em" rspace="0em">&gt;</mo></math>, aus <math><mo lspace="0em" rspace="0em">≤</mo></math> wird <math><mo lspace="0em" rspace="0em">≥</mo></math>, und umgekehrt.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="negativ/4" data-block-id="93696db4" data-block-type="example" data-block-order="18">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Löse −2 · x &gt; 6</h3>
+<div class="explainer-block" data-block="negativ/4/1" data-block-id="45494a9d" data-block-type="text" data-block-order="19">
+<div class="block-text"><p>Du teilst beide Seiten durch <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>2</mn></mrow></math> und drehst das Zeichen um: <math><mrow><mi>x</mi><mo>&lt;</mo><mo form="prefix" stretchy="false">−</mo><mn>3</mn></mrow></math>. Probe mit <math><mrow><mi>x</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>5</mn></mrow></math>: Es ist <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>2</mn><mo>⋅</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mo form="prefix" stretchy="false">−</mo><mn>5</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>10</mn></mrow></math> und <math><mrow><mn>10</mn><mo>&gt;</mo><mn>6</mn></mrow></math> stimmt. Mit <math><mrow><mi>x</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>1</mn></mrow></math> ist <math><mrow><mo form="prefix" stretchy="false">−</mo><mn>2</mn><mo>⋅</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mo form="prefix" stretchy="false">−</mo><mn>1</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>2</mn></mrow></math>, und <math><mrow><mn>2</mn><mo>&gt;</mo><mn>6</mn></mrow></math> stimmt nicht.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="negativ/5" data-block-id="9826207f" data-block-type="vue-component" data-block-order="20">
+<div class="explainer-component" id="gerade-kleiner-minus-3" data-component="GleichungenGerade">
+<div class="explainer-island" hidden><div class="gerade" data-v-10c007d1><svg viewBox="0 0 360 124" role="img" aria-label="Zahlengerade, die Lösungsmenge x &lt; −3: alle Zahlen links der −3, also kleiner als −3. Die −3 gehört nicht dazu: Der Punkt ist offen." class="gerade-bild" data-v-10c007d1><line x1="16" y1="66" x2="344" y2="66" class="gerade-achse" data-v-10c007d1></line><!--[--><g data-v-10c007d1><line x1="24" y1="61" x2="24" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="24" y="88" class="gerade-zahl" data-v-10c007d1>−6</text></g><g data-v-10c007d1><line x1="58.666666666666664" y1="61" x2="58.666666666666664" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="58.666666666666664" y="88" class="gerade-zahl" data-v-10c007d1>−5</text></g><g data-v-10c007d1><line x1="93.33333333333333" y1="61" x2="93.33333333333333" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="93.33333333333333" y="88" class="gerade-zahl" data-v-10c007d1>−4</text></g><g data-v-10c007d1><line x1="128" y1="61" x2="128" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="128" y="88" class="gerade-zahl" data-v-10c007d1>−3</text></g><g data-v-10c007d1><line x1="162.66666666666666" y1="61" x2="162.66666666666666" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="162.66666666666666" y="88" class="gerade-zahl" data-v-10c007d1>−2</text></g><g data-v-10c007d1><line x1="197.33333333333334" y1="61" x2="197.33333333333334" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="197.33333333333334" y="88" class="gerade-zahl" data-v-10c007d1>−1</text></g><g data-v-10c007d1><line x1="232" y1="61" x2="232" y2="71" class="gerade-strich gerade-null" data-v-10c007d1></line><text x="232" y="88" class="gerade-null-text gerade-zahl" data-v-10c007d1>0</text></g><g data-v-10c007d1><line x1="266.66666666666663" y1="61" x2="266.66666666666663" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="266.66666666666663" y="88" class="gerade-zahl" data-v-10c007d1>1</text></g><g data-v-10c007d1><line x1="301.3333333333333" y1="61" x2="301.3333333333333" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="301.3333333333333" y="88" class="gerade-zahl" data-v-10c007d1>2</text></g><g data-v-10c007d1><line x1="336" y1="61" x2="336" y2="71" class="gerade-strich" data-v-10c007d1></line><text x="336" y="88" class="gerade-zahl" data-v-10c007d1>3</text></g><!--]--><line x1="128" y1="66" x2="16" y2="66" class="gerade-strahl" data-v-10c007d1></line><polygon points="16,66 25,59 25,73" class="gerade-pfeil" data-v-10c007d1></polygon><circle cx="128" cy="66" r="7" class="gerade-offen" data-v-10c007d1></circle><text x="128" y="34" text-anchor="middle" class="gerade-rand" data-v-10c007d1>ohne die −3</text><text x="76" y="16" text-anchor="middle" class="gerade-menge" data-v-10c007d1>x &lt; −3</text><!----><!----></svg><div class="gerade-eingabe" data-v-10c007d1><label for="v-0-x" data-v-10c007d1>Probezahl</label><input id="v-0-x" value="" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" data-v-10c007d1><button type="button" class="gerade-knopf" data-v-10c007d1>Gehört sie dazu?</button><!----></div><p class="gerade-hinweis" aria-live="polite" data-v-10c007d1></p></div></div>
+<div class="explainer-nojs"><p>Zahlengerade für x &lt; −3. Der Punkt bei der −3 ist offen, die Beschriftung sagt „ohne die −3“. Der Strahl geht von
+der −3 nach links. Zur Lösungsmenge gehören alle Zahlen links der −3, zum Beispiel −5. Die −3 gehört nicht dazu.</p></div>
+<script type="application/json" class="explainer-component-props">{"grenze":-3,"zeichen":"\u003c","eingabeLabel":"Probezahl","pruefenKnopf":"Gehört sie dazu?","neuAnfangen":"Neu anfangen"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="3c397d35" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Hier entscheidest du, wann das Zeichen bleibt und wann es sich dreht, und liest Lösungsmengen von der Zahlengerade ab.</p></div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="adf1986e" data-block-type="single-choice" data-block-order="22">
+<div class="explainer-exercise explainer-question" id="zeichen-nach-umformung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zeichen-nach-umformung" data-id="zeichen-nach-umformung" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du löst 3x + 2 &lt; 14. Nach „minus 2“ steht 3 · x &lt; 12. Du teilst beide Seiten durch 3. Was steht dann?</legend>
+<label class="question-option"><input type="radio" name="frage-zeichen-nach-umformung" value="0"> <span>x &lt; 4</span></label>
+<label class="question-option"><input type="radio" name="frage-zeichen-nach-umformung" value="1"> <span>x &gt; 4</span></label>
+<label class="question-option"><input type="radio" name="frage-zeichen-nach-umformung" value="2"> <span>x &lt; 36</span></label>
+<label class="question-option"><input type="radio" name="frage-zeichen-nach-umformung" value="3"> <span>x &lt; 10</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>x &lt; 4</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>12 : 3 = 4. Du teilst durch eine positive Zahl, also bleibt das Zeichen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>x &gt; 4</strong></p><p>Das Zeichen dreht sich nur um, wenn du mit einer negativen Zahl malst oder durch sie teilst. 3 ist positiv.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>x &lt; 36</strong></p><p>36 ist 12 · 3. Du musst aber durch 3 teilen: 12 : 3.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>x &lt; 10</strong></p><p>10 ist 12 − 2. Die 2 hast du schon im ersten Schritt abgezogen. Jetzt fehlt nur noch das Teilen durch 3.</p></li>
+</ul>
+<p class="question-explanation">Teilen durch eine positive Zahl lässt die Waage in der Schieflage: Das Zeichen bleibt, aus 3 · x &lt; 12 wird x &lt; 4.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>x &lt; 4</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>12 : 3 = 4. Du teilst durch eine positive Zahl, also bleibt das Zeichen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>x &gt; 4</strong></p><p>Das Zeichen dreht sich nur um, wenn du mit einer negativen Zahl malst oder durch sie teilst. 3 ist positiv.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>x &lt; 36</strong></p><p>36 ist 12 · 3. Du musst aber durch 3 teilen: 12 : 3.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>x &lt; 10</strong></p><p>10 ist 12 − 2. Die 2 hast du schon im ersten Schritt abgezogen. Jetzt fehlt nur noch das Teilen durch 3.</p></li>
+</ul>
+<p class="question-explanation">Teilen durch eine positive Zahl lässt die Waage in der Schieflage: Das Zeichen bleibt, aus 3 · x &lt; 12 wird x &lt; 4.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zeichen-nach-umformung","text":"Du löst 3x + 2 \u003c 14. Nach „minus 2“ steht 3 · x \u003c 12. Du teilst beide Seiten durch 3. Was steht dann?","explanation":"Teilen durch eine positive Zahl lässt die Waage in der Schieflage: Das Zeichen bleibt, aus 3 · x \u003c 12 wird x \u003c 4.","links":[],"type":"single-choice","options":[{"text":"x \u003c 4","correct":true,"info":"12 : 3 = 4. Du teilst durch eine positive Zahl, also bleibt das Zeichen."},{"text":"x > 4","correct":false,"info":"Das Zeichen dreht sich nur um, wenn du mit einer negativen Zahl malst oder durch sie teilst. 3 ist positiv."},{"text":"x \u003c 36","correct":false,"info":"36 ist 12 · 3. Du musst aber durch 3 teilen: 12 : 3."},{"text":"x \u003c 10","correct":false,"info":"10 ist 12 − 2. Die 2 hast du schon im ersten Schritt abgezogen. Jetzt fehlt nur noch das Teilen durch 3."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="cd4c8a1f" data-block-type="matching" data-block-order="23">
+<div class="explainer-exercise explainer-question" id="loesungsmenge-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-loesungsmenge-zuordnen" data-id="loesungsmenge-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jeder Ungleichung ihre Lösungsmenge auf der Zahlengerade zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>x &gt; 2</span> <select name="frage-loesungsmenge-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="2">Alle Zahlen links der −1, ohne die −1</option><option value="0">Alle Zahlen rechts der 2, ohne die 2</option><option value="3">Alle Zahlen links der −1, mit der −1</option><option value="4">Alle Zahlen links der 2, ohne die 2</option><option value="1">Alle Zahlen rechts der 2, mit der 2</option></select></label></li>
+<li><label><span>x ≥ 2</span> <select name="frage-loesungsmenge-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="2">Alle Zahlen links der −1, ohne die −1</option><option value="0">Alle Zahlen rechts der 2, ohne die 2</option><option value="3">Alle Zahlen links der −1, mit der −1</option><option value="4">Alle Zahlen links der 2, ohne die 2</option><option value="1">Alle Zahlen rechts der 2, mit der 2</option></select></label></li>
+<li><label><span>x &lt; −1</span> <select name="frage-loesungsmenge-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="2">Alle Zahlen links der −1, ohne die −1</option><option value="0">Alle Zahlen rechts der 2, ohne die 2</option><option value="3">Alle Zahlen links der −1, mit der −1</option><option value="4">Alle Zahlen links der 2, ohne die 2</option><option value="1">Alle Zahlen rechts der 2, mit der 2</option></select></label></li>
+<li><label><span>x ≤ −1</span> <select name="frage-loesungsmenge-zuordnen-3" data-left="3"><option value="">bitte wählen</option><option value="2">Alle Zahlen links der −1, ohne die −1</option><option value="0">Alle Zahlen rechts der 2, ohne die 2</option><option value="3">Alle Zahlen links der −1, mit der −1</option><option value="4">Alle Zahlen links der 2, ohne die 2</option><option value="1">Alle Zahlen rechts der 2, mit der 2</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> x &gt; 2 – Alle Zahlen rechts der 2, ohne die 2; x ≥ 2 – Alle Zahlen rechts der 2, mit der 2; x &lt; −1 – Alle Zahlen links der −1, ohne die −1; x ≤ −1 – Alle Zahlen links der −1, mit der −1</p>
+<p class="question-explanation">Das Zeichen sagt die Richtung: &gt; und ≥ zeigen nach rechts, &lt; und ≤ nach links. Ein Gleichheitsstrich (≥ und ≤) heißt: Die Grenzzahl gehört dazu, der Punkt ist gefüllt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> x &gt; 2 – Alle Zahlen rechts der 2, ohne die 2; x ≥ 2 – Alle Zahlen rechts der 2, mit der 2; x &lt; −1 – Alle Zahlen links der −1, ohne die −1; x ≤ −1 – Alle Zahlen links der −1, mit der −1</p>
+<p class="question-explanation">Das Zeichen sagt die Richtung: &gt; und ≥ zeigen nach rechts, &lt; und ≤ nach links. Ein Gleichheitsstrich (≥ und ≤) heißt: Die Grenzzahl gehört dazu, der Punkt ist gefüllt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"loesungsmenge-zuordnen","text":"Ordne jeder Ungleichung ihre Lösungsmenge auf der Zahlengerade zu.","explanation":"Das Zeichen sagt die Richtung: > und ≥ zeigen nach rechts, \u003c und ≤ nach links. Ein Gleichheitsstrich (≥ und ≤) heißt: Die Grenzzahl gehört dazu, der Punkt ist gefüllt.","links":[],"type":"matching","pairs":[{"left":"x > 2","right":"Alle Zahlen rechts der 2, ohne die 2"},{"left":"x ≥ 2","right":"Alle Zahlen rechts der 2, mit der 2"},{"left":"x \u003c −1","right":"Alle Zahlen links der −1, ohne die −1"},{"left":"x ≤ −1","right":"Alle Zahlen links der −1, mit der −1"}],"distractors":["Alle Zahlen links der 2, ohne die 2"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="6d2265a5" data-block-type="single-choice" data-block-order="24">
+<div class="explainer-exercise explainer-question" id="gerade-lesen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gerade-lesen" data-id="gerade-lesen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Ungleichung gehört zur Zahlengerade im Bild?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/gleichungen-ungleichungen-loesen-gerade.svg" alt="Zahlengerade von −5 bis 3. Bei der −2 liegt ein gefüllter Punkt mit der Beschriftung „mit der −2“. Von dort geht ein dicker Strahl nach rechts." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: Eigene Darstellung. Lizenz: MIT." aria-label="Quelle: Eigene Darstellung. Lizenz: MIT.">© MIT</span></div><figcaption><p>Achte auf den Punkt und auf die Richtung des Strahls.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-gerade-lesen" value="0"> <span>x ≥ −2</span></label>
+<label class="question-option"><input type="radio" name="frage-gerade-lesen" value="1"> <span>x &gt; −2</span></label>
+<label class="question-option"><input type="radio" name="frage-gerade-lesen" value="2"> <span>x ≤ −2</span></label>
+<label class="question-option"><input type="radio" name="frage-gerade-lesen" value="3"> <span>x ≥ 2</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>x ≥ −2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Strahl geht nach rechts, also größer, und der Punkt ist gefüllt: Die −2 gehört dazu.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>x &gt; −2</strong></p><p>Der Strahl stimmt, aber bei &gt; wäre der Punkt offen („ohne die −2“). Hier ist er gefüllt.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>x ≤ −2</strong></p><p>Der Punkt stimmt, aber bei ≤ ginge der Strahl nach links, zu den kleineren Zahlen.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>x ≥ 2</strong></p><p>Der Punkt liegt bei der −2, links der Null, nicht bei der 2.</p></li>
+</ul>
+<p class="question-explanation">Erst die Richtung, dann der Rand: Strahl nach rechts heißt &gt; oder ≥, gefüllter Punkt heißt ≥.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>x ≥ −2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Strahl geht nach rechts, also größer, und der Punkt ist gefüllt: Die −2 gehört dazu.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>x &gt; −2</strong></p><p>Der Strahl stimmt, aber bei &gt; wäre der Punkt offen („ohne die −2“). Hier ist er gefüllt.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>x ≤ −2</strong></p><p>Der Punkt stimmt, aber bei ≤ ginge der Strahl nach links, zu den kleineren Zahlen.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>x ≥ 2</strong></p><p>Der Punkt liegt bei der −2, links der Null, nicht bei der 2.</p></li>
+</ul>
+<p class="question-explanation">Erst die Richtung, dann der Rand: Strahl nach rechts heißt &gt; oder ≥, gefüllter Punkt heißt ≥.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gerade-lesen","text":"Welche Ungleichung gehört zur Zahlengerade im Bild?","explanation":"Erst die Richtung, dann der Rand: Strahl nach rechts heißt > oder ≥, gefüllter Punkt heißt ≥.","links":[],"material":[{"type":"figure","image":"images/gleichungen-ungleichungen-loesen-gerade.svg","alt":"Zahlengerade von −5 bis 3. Bei der −2 liegt ein gefüllter Punkt mit der Beschriftung „mit der −2“. Von dort geht ein dicker Strahl nach rechts.","caption":"Achte auf den Punkt und auf die Richtung des Strahls.","source":"Eigene Darstellung","licence":"MIT"}],"type":"single-choice","options":[{"text":"x ≥ −2","correct":true,"info":"Der Strahl geht nach rechts, also größer, und der Punkt ist gefüllt: Die −2 gehört dazu."},{"text":"x > −2","correct":false,"info":"Der Strahl stimmt, aber bei > wäre der Punkt offen („ohne die −2“). Hier ist er gefüllt."},{"text":"x ≤ −2","correct":false,"info":"Der Punkt stimmt, aber bei ≤ ginge der Strahl nach links, zu den kleineren Zahlen."},{"text":"x ≥ 2","correct":false,"info":"Der Punkt liegt bei der −2, links der Null, nicht bei der 2."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="1d708ca0" data-block-type="generated" data-block-order="25">
+<div class="explainer-exercise explainer-generated" id="grenzzahl-positiv">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Löse 7 · x + 14 &gt; 49. Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie bei einer Gleichung: Erst auf beiden Seiten 14 abziehen, dann beide Seiten durch 7 teilen. Das Zeichen bleibt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Auf beiden Seiten − 14: 7 · x &gt; 49 − 14.</li><li>Beide Seiten durch 7 (positiv, das Zeichen bleibt): x &gt; (49 − 14) : 7.</li><li>Die Grenzzahl ist 5, also x &gt; 5.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Löse 5 · x + 2 &gt; 42. Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie bei einer Gleichung: Erst auf beiden Seiten 2 abziehen, dann beide Seiten durch 5 teilen. Das Zeichen bleibt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Auf beiden Seiten − 2: 5 · x &gt; 42 − 2.</li><li>Beide Seiten durch 5 (positiv, das Zeichen bleibt): x &gt; (42 − 2) : 5.</li><li>Die Grenzzahl ist 8, also x &gt; 8.</li></ol><p><strong>Richtige Antwort:</strong> 8</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Löse 5 · x + 13 &gt; 18. Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie bei einer Gleichung: Erst auf beiden Seiten 13 abziehen, dann beide Seiten durch 5 teilen. Das Zeichen bleibt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Auf beiden Seiten − 13: 5 · x &gt; 18 − 13.</li><li>Beide Seiten durch 5 (positiv, das Zeichen bleibt): x &gt; (18 − 13) : 5.</li><li>Die Grenzzahl ist 1, also x &gt; 1.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"grenzzahl-positiv","given":{"a":{"int":[2,9]},"b":{"int":[1,20]},"c":{"int":[10,80]}},"where":["c > b","decimals((c - b) / a) == 0"],"task":{"text":"Löse {{a}} · x + {{b}} > {{c}}. Die Lösung heißt x > Grenzzahl. Welche Zahl ist die Grenzzahl?"},"answer":{"value":"(c - b) / a","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"c - b","message":"Du hast {{b}} abgezogen, aber noch nicht durch {{a}} geteilt."},{"value":"c / a - b","message":"Du hast zuerst durch {{a}} geteilt und dann {{b}} abgezogen. Erst minus {{b}}, dann geteilt durch {{a}}: Auf beiden Seiten gilt dieselbe Reihenfolge."},{"value":"(c + b) / a","message":"Du hast {{b}} addiert. Um {{b}} loszuwerden, ziehst du auf beiden Seiten {{b}} ab."}],"hint":"Wie bei einer Gleichung: Erst auf beiden Seiten {{b}} abziehen, dann beide Seiten durch {{a}} teilen. Das Zeichen bleibt.","steps":["Auf beiden Seiten − {{b}}: {{a}} · x > {{c}} − {{b}}.","Beide Seiten durch {{a}} (positiv, das Zeichen bleibt): x > ({{c}} − {{b}}) : {{a}}.","Die Grenzzahl ist {{answer}}, also x > {{answer}}."]},"templates":{"de":{"task":"Löse ⟦a⟧ · x + ⟦b⟧ &gt; ⟦c⟧. Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?","steps":["Auf beiden Seiten − ⟦b⟧: ⟦a⟧ · x &gt; ⟦c⟧ − ⟦b⟧.","Beide Seiten durch ⟦a⟧ (positiv, das Zeichen bleibt): x &gt; (⟦c⟧ − ⟦b⟧) : ⟦a⟧.","Die Grenzzahl ist ⟦answer⟧, also x &gt; ⟦answer⟧."],"hint":"Wie bei einer Gleichung: Erst auf beiden Seiten ⟦b⟧ abziehen, dann beide Seiten durch ⟦a⟧ teilen. Das Zeichen bleibt.","messages":["Du hast ⟦b⟧ abgezogen, aber noch nicht durch ⟦a⟧ geteilt.","Du hast zuerst durch ⟦a⟧ geteilt und dann ⟦b⟧ abgezogen. Erst minus ⟦b⟧, dann geteilt durch ⟦a⟧: Auf beiden Seiten gilt dieselbe Reihenfolge.","Du hast ⟦b⟧ addiert. Um ⟦b⟧ loszuwerden, ziehst du auf beiden Seiten ⟦b⟧ ab."]}},"data":{},"seeds":[1,2,3,4,5,6,7,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="022bf665" data-block-type="single-choice" data-block-order="26">
+<div class="explainer-exercise explainer-question" id="zeichen-nicht-gedreht">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zeichen-nicht-gedreht" data-id="zeichen-nicht-gedreht" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia löst −4 · x &lt; 20. Sie teilt beide Seiten durch −4 und schreibt x &lt; −5. Was stimmt?</legend>
+<label class="question-option"><input type="radio" name="frage-zeichen-nicht-gedreht" value="0"> <span>Das Zeichen muss sich umdrehen: x &gt; −5</span></label>
+<label class="question-option"><input type="radio" name="frage-zeichen-nicht-gedreht" value="1"> <span>Es muss x &lt; 5 heißen.</span></label>
+<label class="question-option"><input type="radio" name="frage-zeichen-nicht-gedreht" value="2"> <span>Mias Lösung stimmt.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Das Zeichen muss sich umdrehen: x &gt; −5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Mia teilt durch eine negative Zahl. Dann dreht sich das Zeichen um: aus &lt; wird &gt;.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Es muss x &lt; 5 heißen.</strong></p><p>20 : (−4) ist −5, nicht 5. Die Zahl hat Mia richtig, nur das Zeichen fehlt.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Mias Lösung stimmt.</strong></p><p>Probe mit x = −6: Es ist −4 · (−6) = 24, und 24 &lt; 20 stimmt nicht. Die −6 gehört nicht zur Lösung, obwohl sie zu x &lt; −5 passt.</p></li>
+</ul>
+<p class="question-explanation">Der typische Fehler: Das Zeichen bleibt, obwohl durch eine negative Zahl geteilt wird. Die Probe mit einer Zahl aus der Lösungsmenge deckt ihn auf: x = −4 gibt −4 · (−4) = 16, und 16 &lt; 20 stimmt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Das Zeichen muss sich umdrehen: x &gt; −5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Mia teilt durch eine negative Zahl. Dann dreht sich das Zeichen um: aus &lt; wird &gt;.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Es muss x &lt; 5 heißen.</strong></p><p>20 : (−4) ist −5, nicht 5. Die Zahl hat Mia richtig, nur das Zeichen fehlt.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Mias Lösung stimmt.</strong></p><p>Probe mit x = −6: Es ist −4 · (−6) = 24, und 24 &lt; 20 stimmt nicht. Die −6 gehört nicht zur Lösung, obwohl sie zu x &lt; −5 passt.</p></li>
+</ul>
+<p class="question-explanation">Der typische Fehler: Das Zeichen bleibt, obwohl durch eine negative Zahl geteilt wird. Die Probe mit einer Zahl aus der Lösungsmenge deckt ihn auf: x = −4 gibt −4 · (−4) = 16, und 16 &lt; 20 stimmt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zeichen-nicht-gedreht","text":"Mia löst −4 · x \u003c 20. Sie teilt beide Seiten durch −4 und schreibt x \u003c −5. Was stimmt?","explanation":"Der typische Fehler: Das Zeichen bleibt, obwohl durch eine negative Zahl geteilt wird. Die Probe mit einer Zahl aus der Lösungsmenge deckt ihn auf: x = −4 gibt −4 · (−4) = 16, und 16 \u003c 20 stimmt.","links":[],"type":"single-choice","options":[{"text":"Das Zeichen muss sich umdrehen: x > −5","correct":true,"info":"Mia teilt durch eine negative Zahl. Dann dreht sich das Zeichen um: aus \u003c wird >."},{"text":"Es muss x \u003c 5 heißen.","correct":false,"info":"20 : (−4) ist −5, nicht 5. Die Zahl hat Mia richtig, nur das Zeichen fehlt."},{"text":"Mias Lösung stimmt.","correct":false,"info":"Probe mit x = −6: Es ist −4 · (−6) = 24, und 24 \u003c 20 stimmt nicht. Die −6 gehört nicht zur Lösung, obwohl sie zu x \u003c −5 passt."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="07c84680" data-block-type="generated" data-block-order="27">
+<div class="explainer-exercise explainer-generated" id="grenzzahl-negativ">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Löse −4 · x &lt; −20. Beim Teilen durch −4 dreht sich das Zeichen um: Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile beide Seiten durch −4. Eine positive Zahl durch eine negative geteilt gibt eine negative Zahl, und umgekehrt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Beide Seiten durch −4: x &gt; −20 : (−4).</li><li>Das Zeichen dreht sich um, weil du durch eine negative Zahl teilst.</li><li>Die Grenzzahl ist 5, also x &gt; 5.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Löse −2 · x &lt; −4. Beim Teilen durch −2 dreht sich das Zeichen um: Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile beide Seiten durch −2. Eine positive Zahl durch eine negative geteilt gibt eine negative Zahl, und umgekehrt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Beide Seiten durch −2: x &gt; −4 : (−2).</li><li>Das Zeichen dreht sich um, weil du durch eine negative Zahl teilst.</li><li>Die Grenzzahl ist 2, also x &gt; 2.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Löse −2 · x &lt; 18. Beim Teilen durch −2 dreht sich das Zeichen um: Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Teile beide Seiten durch −2. Eine positive Zahl durch eine negative geteilt gibt eine negative Zahl, und umgekehrt.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Beide Seiten durch −2: x &gt; 18 : (−2).</li><li>Das Zeichen dreht sich um, weil du durch eine negative Zahl teilst.</li><li>Die Grenzzahl ist −9, also x &gt; −9.</li></ol><p><strong>Richtige Antwort:</strong> −9</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"grenzzahl-negativ","given":{"a":{"oneOf":[2,3,4,5]},"c":{"int":[-40,40]}},"where":["c != 0","decimals(c / a) == 0"],"task":{"text":"Löse −{{a}} · x \u003c {{c}}. Beim Teilen durch −{{a}} dreht sich das Zeichen um: Die Lösung heißt x > Grenzzahl. Welche Zahl ist die Grenzzahl?"},"answer":{"value":"(0 - c) / a","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"c / a","message":"Du hast durch {{a}} geteilt, aber die Teilung geht durch −{{a}}. Die Grenzzahl bekommt das andere Vorzeichen."},{"value":"0 - c * a","message":"Du hast mit {{a}} multipliziert. Wenn −{{a}} · x dasteht, teilst du durch −{{a}}."}],"hint":"Teile beide Seiten durch −{{a}}. Eine positive Zahl durch eine negative geteilt gibt eine negative Zahl, und umgekehrt.","steps":["Beide Seiten durch −{{a}}: x > {{c}} : (−{{a}}).","Das Zeichen dreht sich um, weil du durch eine negative Zahl teilst.","Die Grenzzahl ist {{answer}}, also x > {{answer}}."]},"templates":{"de":{"task":"Löse −⟦a⟧ · x &lt; ⟦c⟧. Beim Teilen durch −⟦a⟧ dreht sich das Zeichen um: Die Lösung heißt x &gt; Grenzzahl. Welche Zahl ist die Grenzzahl?","steps":["Beide Seiten durch −⟦a⟧: x &gt; ⟦c⟧ : (−⟦a⟧).","Das Zeichen dreht sich um, weil du durch eine negative Zahl teilst.","Die Grenzzahl ist ⟦answer⟧, also x &gt; ⟦answer⟧."],"hint":"Teile beide Seiten durch −⟦a⟧. Eine positive Zahl durch eine negative geteilt gibt eine negative Zahl, und umgekehrt.","messages":["Du hast durch ⟦a⟧ geteilt, aber die Teilung geht durch −⟦a⟧. Die Grenzzahl bekommt das andere Vorzeichen.","Du hast mit ⟦a⟧ multipliziert. Wenn −⟦a⟧ · x dasteht, teilst du durch −⟦a⟧."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,12,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,39,40,41,43,44,47,48,49,50,51,52,53,55,57,61,65,67,70,74,78,83,84,85,91,92,98,101,102,104,106,107,108,113,114,117,118],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/8" data-block-id="633ca998" data-block-type="generated" data-block-order="28">
+<div class="explainer-exercise explainer-generated" id="grenzzahl-zwei-schritte">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Löse 13 − 2 · x &gt; 9. Die Lösung heißt x &lt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst auf beiden Seiten 13 abziehen. Dann steht links −2 · x. Teile durch −2 und drehe das Zeichen um.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Auf beiden Seiten − 13: −2 · x &gt; 9 − 13.</li><li>Beide Seiten durch −2, das Zeichen dreht um: x &lt; (13 − 9) : 2.</li><li>Die Grenzzahl ist 2, also x &lt; 2.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Löse 14 − 3 · x &gt; 29. Die Lösung heißt x &lt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst auf beiden Seiten 14 abziehen. Dann steht links −3 · x. Teile durch −3 und drehe das Zeichen um.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Auf beiden Seiten − 14: −3 · x &gt; 29 − 14.</li><li>Beide Seiten durch −3, das Zeichen dreht um: x &lt; (14 − 29) : 3.</li><li>Die Grenzzahl ist −5, also x &lt; −5.</li></ol><p><strong>Richtige Antwort:</strong> −5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Löse 12 − 5 · x &gt; 27. Die Lösung heißt x &lt; Grenzzahl. Welche Zahl ist die Grenzzahl?</p><details class="explainer-hint"><summary>Tipp</summary><p>Erst auf beiden Seiten 12 abziehen. Dann steht links −5 · x. Teile durch −5 und drehe das Zeichen um.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Auf beiden Seiten − 12: −5 · x &gt; 27 − 12.</li><li>Beide Seiten durch −5, das Zeichen dreht um: x &lt; (12 − 27) : 5.</li><li>Die Grenzzahl ist −3, also x &lt; −3.</li></ol><p><strong>Richtige Antwort:</strong> −3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"grenzzahl-zwei-schritte","given":{"a":{"int":[2,6]},"b":{"int":[1,30]},"c":{"int":[1,30]}},"where":["b != c","decimals((b - c) / a) == 0"],"task":{"text":"Löse {{b}} − {{a}} · x > {{c}}. Die Lösung heißt x \u003c Grenzzahl. Welche Zahl ist die Grenzzahl?"},"answer":{"value":"(b - c) / a","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"(c - b) / a","message":"Du hast durch {{a}} geteilt statt durch −{{a}}. Das Minus vor dem x gehört zur Zahl, durch die du teilst: Dann ändert sich das Vorzeichen der Grenzzahl."},{"value":"(b + c) / a","message":"Du hast {{c}} addiert. Du ziehst auf beiden Seiten {{b}} ab, dann steht rechts {{c}} − {{b}}."}],"hint":"Erst auf beiden Seiten {{b}} abziehen. Dann steht links −{{a}} · x. Teile durch −{{a}} und drehe das Zeichen um.","steps":["Auf beiden Seiten − {{b}}: −{{a}} · x > {{c}} − {{b}}.","Beide Seiten durch −{{a}}, das Zeichen dreht um: x \u003c ({{b}} − {{c}}) : {{a}}.","Die Grenzzahl ist {{answer}}, also x \u003c {{answer}}."]},"templates":{"de":{"task":"Löse ⟦b⟧ − ⟦a⟧ · x &gt; ⟦c⟧. Die Lösung heißt x &lt; Grenzzahl. Welche Zahl ist die Grenzzahl?","steps":["Auf beiden Seiten − ⟦b⟧: −⟦a⟧ · x &gt; ⟦c⟧ − ⟦b⟧.","Beide Seiten durch −⟦a⟧, das Zeichen dreht um: x &lt; (⟦b⟧ − ⟦c⟧) : ⟦a⟧.","Die Grenzzahl ist ⟦answer⟧, also x &lt; ⟦answer⟧."],"hint":"Erst auf beiden Seiten ⟦b⟧ abziehen. Dann steht links −⟦a⟧ · x. Teile durch −⟦a⟧ und drehe das Zeichen um.","messages":["Du hast durch ⟦a⟧ geteilt statt durch −⟦a⟧. Das Minus vor dem x gehört zur Zahl, durch die du teilst: Dann ändert sich das Vorzeichen der Grenzzahl.","Du hast ⟦c⟧ addiert. Du ziehst auf beiden Seiten ⟦b⟧ ab, dann steht rechts ⟦c⟧ − ⟦b⟧."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/9" data-block-id="29d8b06f" data-block-type="text" data-block-order="29">
+<div class="block-text"><p>Das kannst du jetzt: Du löst eine lineare Ungleichung wie eine Gleichung, drehst das Zeichen um, wenn du mit einer negativen Zahl malst oder durch sie teilst, und zeigst die Lösungsmenge auf der Zahlengerade mit offenem oder gefülltem Punkt.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe: Algebra – Terme und Gleichungen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-algebra","app":"Mathe: Algebra – Terme und Gleichungen","root":"../../","repository":"lernapps/mathe-algebra","revision":"1530f2b","page":{"title":"Lineare Ungleichungen lösen","order":18}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungen/formeln-umstellen/">Zurück: Formeln umstellen</a><a rel="next" href="../../bruchterme/recap-brueche/">Weiter: Das brauchst du für dieses Kapitel</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

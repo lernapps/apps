@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Quadratische Gleichungen auf drei Wegen – Funktionsfamilien mit Schiebereglern</title>
+    <meta name="description" content="Quadratische Gleichungen am Graphen, mit einer Wertetabelle und mit Rechnung lösen: quadratische Ergänzung und Lösungsformel, und wie viele Lösungen es gibt." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../gleichungen/drei-wege/" />
+    <script type="module" crossorigin src="../../assets/islands-BIU8JAVh.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../gleichungen/">Quadratische Gleichungen auf drei Wegen</a></li><li aria-current="page">Quadratische Gleichungen auf drei Wegen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Quadratische Gleichungen auf drei Wegen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../gleichungen/drei-wege/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧gleichungen/drei-wege/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"drei-wege","title":"Quadratische Gleichungen auf drei Wegen","exercises":[{"id":"ergaenzung-zahl","section":"uebung","numbered":false},{"id":"formel-anwenden","section":"uebung","numbered":true},{"id":"anzahl-loesungen","section":"uebung","numbered":true},{"id":"ergaenzung-schritte","section":"uebung","numbered":false},{"id":"negative-diskriminante","section":"uebung","numbered":false},{"id":"wege-vergleichen","section":"uebung","numbered":false}],"sections":["einstieg","modell","ergaenzung","formel","beispiel","uebung"]},"tutor":"gleichungen/drei-wege/tutor/","markdown":"gleichungen/drei-wege/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#modell">Zwei, eine oder keine Lösung</a></li><li><a href="#ergaenzung">Quadratische Ergänzung</a></li><li><a href="#formel">Die Lösungsformel</a></li><li><a href="#beispiel">Dieselbe Gleichung auf drei Wegen</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was du hier lernst</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="e8b556b1" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn eine quadratische Gleichung nicht auf den ersten Blick einfach ist, etwa x² + 6x − 7 = 0, brauchst du ein Verfahren, das immer funktioniert.</p>
+<p>Du kannst danach jede quadratische Gleichung in der Normalform <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>p</mi><mi>x</mi><mo>+</mo><mi>q</mi><mo>=</mo><mn>0</mn></mrow></math> (vor dem <math><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup></math> steht nur die 1) lösen und vorher sagen, ob sie zwei, eine
+oder keine Lösung hat. Dafür gehst du drei Wege: am Graphen, mit einer Wertetabelle und durch Rechnen mit quadratischer Ergänzung oder Lösungsformel.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="modell">Zwei, eine oder keine Lösung</h2>
+<div class="explainer-block" data-block="modell/1" data-block-id="b55f951a" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Wenn du schon vor dem Rechnen wissen willst, ob es sich lohnt, schau, wie die Parabel zur x-Achse liegt.</p>
+<p>Die Lösungen von <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> sind die Nullstellen der Parabel. Verschiebe sie mit den Reglern und
+achte darauf, wie oft sie die x-Achse trifft.</p></div>
+</div>
+<div class="explainer-block" data-block="modell/2" data-block-id="7d780519" data-block-type="vue-component" data-block-order="3">
+<div class="explainer-component" id="regler-anzahl" data-component="FunktionsGraph">
+<div class="explainer-island" hidden><div class="fg" data-v-4746bd28><p class="fg-term" aria-live="polite" data-v-4746bd28>f(x) = (x − 2)² − 1</p><!----><div class="fg-view" data-v-4746bd28><svg viewBox="0 0 340 250" role="img" aria-label="Graph der Parabel: f(x) = (x − 2)² − 1. Scheitel bei (2 | −1), nach oben geöffnet, Faktor a = 1. bei x = −6 ist f(x) = 63; bei x = 0 ist f(x) = 3; bei x = 6 ist f(x) = 15." class="fg-svg" data-v-4746bd28><defs data-v-4746bd28><clipPath id="clip-v-0" data-v-4746bd28><rect x="34" y="10" width="296" height="214" data-v-4746bd28></rect></clipPath></defs><g class="fg-grid" data-v-4746bd28><!--[--><line x1="34" x2="34" y1="10" y2="224" data-v-4746bd28></line><line x1="58.666666666666664" x2="58.666666666666664" y1="10" y2="224" data-v-4746bd28></line><line x1="83.33333333333333" x2="83.33333333333333" y1="10" y2="224" data-v-4746bd28></line><line x1="108" x2="108" y1="10" y2="224" data-v-4746bd28></line><line x1="132.66666666666666" x2="132.66666666666666" y1="10" y2="224" data-v-4746bd28></line><line x1="157.33333333333334" x2="157.33333333333334" y1="10" y2="224" data-v-4746bd28></line><line x1="182" x2="182" y1="10" y2="224" data-v-4746bd28></line><line x1="206.66666666666669" x2="206.66666666666669" y1="10" y2="224" data-v-4746bd28></line><line x1="231.33333333333331" x2="231.33333333333331" y1="10" y2="224" data-v-4746bd28></line><line x1="256" x2="256" y1="10" y2="224" data-v-4746bd28></line><line x1="280.6666666666667" x2="280.6666666666667" y1="10" y2="224" data-v-4746bd28></line><line x1="305.3333333333333" x2="305.3333333333333" y1="10" y2="224" data-v-4746bd28></line><line x1="330" x2="330" y1="10" y2="224" data-v-4746bd28></line><!--]--><!--[--><line x1="34" x2="330" y1="224" y2="224" data-v-4746bd28></line><line x1="34" x2="330" y1="197.25" y2="197.25" data-v-4746bd28></line><line x1="34" x2="330" y1="170.5" y2="170.5" data-v-4746bd28></line><line x1="34" x2="330" y1="143.75" y2="143.75" data-v-4746bd28></line><line x1="34" x2="330" y1="117" y2="117" data-v-4746bd28></line><line x1="34" x2="330" y1="90.25" y2="90.25" data-v-4746bd28></line><line x1="34" x2="330" y1="63.5" y2="63.5" data-v-4746bd28></line><line x1="34" x2="330" y1="36.75" y2="36.75" data-v-4746bd28></line><line x1="34" x2="330" y1="10" y2="10" data-v-4746bd28></line><!--]--></g><g class="fg-axes" data-v-4746bd28><line x1="34" x2="330" y1="143.75" y2="143.75" data-v-4746bd28></line><line x1="182" x2="182" y1="10" y2="224" data-v-4746bd28></line></g><g class="fg-labels" data-v-4746bd28><!--[--><text x="34" y="238" text-anchor="middle" data-v-4746bd28>−6</text><text x="58.666666666666664" y="238" text-anchor="middle" data-v-4746bd28>−5</text><text x="83.33333333333333" y="238" text-anchor="middle" data-v-4746bd28>−4</text><text x="108" y="238" text-anchor="middle" data-v-4746bd28>−3</text><text x="132.66666666666666" y="238" text-anchor="middle" data-v-4746bd28>−2</text><text x="157.33333333333334" y="238" text-anchor="middle" data-v-4746bd28>−1</text><text x="182" y="238" text-anchor="middle" data-v-4746bd28>0</text><text x="206.66666666666669" y="238" text-anchor="middle" data-v-4746bd28>1</text><text x="231.33333333333331" y="238" text-anchor="middle" data-v-4746bd28>2</text><text x="256" y="238" text-anchor="middle" data-v-4746bd28>3</text><text x="280.6666666666667" y="238" text-anchor="middle" data-v-4746bd28>4</text><text x="305.3333333333333" y="238" text-anchor="middle" data-v-4746bd28>5</text><text x="330" y="238" text-anchor="middle" data-v-4746bd28>6</text><!--]--><!--[--><text x="30" y="228" text-anchor="end" data-v-4746bd28>−6</text><text x="30" y="201.25" text-anchor="end" data-v-4746bd28>−4</text><text x="30" y="174.5" text-anchor="end" data-v-4746bd28>−2</text><text x="30" y="147.75" text-anchor="end" data-v-4746bd28>0</text><text x="30" y="121" text-anchor="end" data-v-4746bd28>2</text><text x="30" y="94.25" text-anchor="end" data-v-4746bd28>4</text><text x="30" y="67.5" text-anchor="end" data-v-4746bd28>6</text><text x="30" y="40.75" text-anchor="end" data-v-4746bd28>8</text><text x="30" y="14" text-anchor="end" data-v-4746bd28>10</text><!--]--><text x="330" y="220" text-anchor="end" data-v-4746bd28><tspan font-style="italic" data-v-4746bd28>x</tspan></text><text x="38" y="20" data-v-4746bd28>f(x)</text></g><g clip-path="url(#clip-v-0)" data-v-4746bd28><!----><path d="M104.3 -10.0 L105.5 -10.0 L106.8 -10.0 L108.0 -10.0 L109.2 -10.0 L110.5 -10.0 L111.7 -10.0 L112.9 -10.0 L114.2 -10.0 L115.4 -10.0 L116.6 -10.0 L117.9 -10.0 L119.1 -10.0 L120.3 -10.0 L121.6 -10.0 L122.8 -10.0 L124.0 -10.0 L125.3 -10.0 L126.5 -10.0 L127.7 -10.0 L129.0 -10.0 L130.2 -10.0 L131.4 -10.0 L132.7 -10.0 L133.9 -10.0 L135.1 -10.0 L136.4 -10.0 L137.6 -10.0 L138.8 -10.0 L140.1 -10.0 L141.3 -10.0 L142.5 -10.0 L143.8 -10.0 L145.0 -6.7 L146.2 -2.1 L147.5 2.5 L148.7 7.0 L149.9 11.5 L151.2 15.9 L152.4 20.2 L153.6 24.4 L154.9 28.6 L156.1 32.7 L157.3 36.8 L158.6 40.7 L159.8 44.6 L161.0 48.5 L162.3 52.3 L163.5 56.0 L164.7 59.6 L166.0 63.2 L167.2 66.7 L168.4 70.2 L169.7 73.5 L170.9 76.8 L172.1 80.1 L173.4 83.3 L174.6 86.4 L175.8 89.4 L177.1 92.4 L178.3 95.3 L179.5 98.1 L180.8 100.9 L182.0 103.6 L183.2 106.3 L184.5 108.8 L185.7 111.3 L186.9 113.8 L188.2 116.2 L189.4 118.5 L190.6 120.7 L191.9 122.9 L193.1 125.0 L194.3 127.0 L195.6 129.0 L196.8 130.9 L198.0 132.7 L199.3 134.5 L200.5 136.2 L201.7 137.9 L203.0 139.4 L204.2 140.9 L205.4 142.4 L206.7 143.8 L207.9 145.1 L209.1 146.3 L210.4 147.5 L211.6 148.6 L212.8 149.6 L214.1 150.6 L215.3 151.5 L216.5 152.3 L217.8 153.1 L219.0 153.8 L220.2 154.4 L221.5 155.0 L222.7 155.5 L223.9 155.9 L225.2 156.3 L226.4 156.6 L227.6 156.8 L228.9 157.0 L230.1 157.1 L231.3 157.1 L232.6 157.1 L233.8 157.0 L235.0 156.8 L236.3 156.6 L237.5 156.3 L238.7 155.9 L240.0 155.5 L241.2 155.0 L242.4 154.4 L243.7 153.8 L244.9 153.1 L246.1 152.3 L247.4 151.5 L248.6 150.6 L249.8 149.6 L251.1 148.6 L252.3 147.5 L253.5 146.3 L254.8 145.1 L256.0 143.8 L257.2 142.4 L258.5 140.9 L259.7 139.4 L260.9 137.9 L262.2 136.2 L263.4 134.5 L264.6 132.7 L265.9 130.9 L267.1 129.0 L268.3 127.0 L269.6 125.0 L270.8 122.9 L272.0 120.7 L273.3 118.5 L274.5 116.2 L275.7 113.8 L277.0 111.3 L278.2 108.8 L279.4 106.3 L280.7 103.6 L281.9 100.9 L283.1 98.1 L284.4 95.3 L285.6 92.4 L286.8 89.4 L288.1 86.4 L289.3 83.3 L290.5 80.1 L291.8 76.8 L293.0 73.5 L294.2 70.2 L295.5 66.7 L296.7 63.2 L297.9 59.6 L299.2 56.0 L300.4 52.3 L301.6 48.5 L302.9 44.6 L304.1 40.7 L305.3 36.8 L306.6 32.7 L307.8 28.6 L309.0 24.4 L310.3 20.2 L311.5 15.9 L312.7 11.5 L314.0 7.0 L315.2 2.5 L316.4 -2.1 L317.7 -6.7 L318.9 -10.0 L320.1 -10.0 L321.4 -10.0 L322.6 -10.0 L323.8 -10.0 L325.1 -10.0 L326.3 -10.0 L327.5 -10.0 L328.8 -10.0 L330.0 -10.0" class="fg-curve" data-v-4746bd28></path></g><!----></svg><table class="fg-table" data-v-4746bd28><caption data-v-4746bd28>Wertetabelle</caption><thead data-v-4746bd28><tr data-v-4746bd28><th scope="col" data-v-4746bd28>x</th><th scope="col" data-v-4746bd28>f(x)</th><!----></tr></thead><tbody data-v-4746bd28><!--[--><tr data-v-4746bd28><td data-v-4746bd28>−3</td><td data-v-4746bd28>24</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>−2</td><td data-v-4746bd28>15</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>−1</td><td data-v-4746bd28>8</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>0</td><td data-v-4746bd28>3</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>1</td><td data-v-4746bd28>0</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>2</td><td data-v-4746bd28>−1</td><!----></tr><tr data-v-4746bd28><td data-v-4746bd28>3</td><td data-v-4746bd28>0</td><!----></tr><!--]--></tbody></table></div><!----><!----><div class="fg-sliders" data-v-4746bd28><!--[--><label class="fg-slider" data-v-4746bd28><span class="fg-slider-label" data-v-4746bd28>d: nach rechts oder links</span><input type="range" min="-4" max="4" step="1" value="2" aria-valuetext="2" data-v-4746bd28><output class="fg-slider-value" data-v-4746bd28>2</output></label><label class="fg-slider" data-v-4746bd28><span class="fg-slider-label" data-v-4746bd28>e: nach oben oder unten</span><input type="range" min="-5" max="5" step="1" value="-1" aria-valuetext="−1" data-v-4746bd28><output class="fg-slider-value" data-v-4746bd28>−1</output></label><!--]--></div><!----></div></div>
+<div class="explainer-nojs"><p>Graph von <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>d</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mi>e</mi></mrow></math> mit Reglern für <math><mi>d</mi></math> und <math><mi>e</mi></math>. Beim Start ist <math><mrow><mi>d</mi><mo>=</mo><mn>2</mn></mrow></math>, <math><mrow><mi>e</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>1</mn></mrow></math>: Die Kurve
+schneidet die x-Achse bei x = 1 und x = 3 (zwei Lösungen). Bei <math><mrow><mi>e</mi><mo>=</mo><mn>0</mn></mrow></math> berührt sie die Achse nur im
+Scheitel (eine Lösung). Bei <math><mrow><mi>e</mi><mo>=</mo><mn>1</mn></mrow></math> liegt sie ganz über der Achse (keine Lösung).</p></div>
+<script type="application/json" class="explainer-component-props">{"family":"quadratic","fest":[{"key":"a","value":1}],"regler":[{"key":"d","label":"d: nach rechts oder links","min":-4,"max":4,"step":1,"start":2},{"key":"e","label":"e: nach oben oder unten","min":-5,"max":5,"step":1,"start":-1}],"fenster":{"xmin":-6,"xmax":6,"ymin":-6,"ymax":10},"tabelleX":[-3,-2,-1,0,1,2,3],"labels":{"graph":"Graph der Parabel","tabelle":"Wertetabelle","reset":"Regler zurücksetzen","grundform":"Vergleich","x":"x","y":"f(x)","undefinedValue":"nicht definiert"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="modell/3" data-block-id="5345c213" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Der Scheitel liegt bei (d | e). Eine nach oben geöffnete Parabel hat zwei Nullstellen, wenn ihr Scheitel
+unter der x-Achse liegt, eine, wenn er darauf liegt, und keine, wenn er darüber liegt.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ergaenzung">Quadratische Ergänzung</h2>
+<div class="explainer-block" data-block="ergaenzung/1" data-block-id="f4cd50d2" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn ein Term wie x² + 6x kein fertiges Quadrat ist, kannst du ihn mit einer Ergänzung dazu machen. Das ist der Weg zur Lösung.</p>
+<p>Die <strong>quadratische Ergänzung</strong> macht aus <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>6</mn><mi>x</mi></mrow></math> ein Quadrat. Im Rechteckmodell ist <math><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup></math> ein Quadrat und
+<math><mrow><mn>6</mn><mi>x</mi></mrow></math> besteht aus zwei Rechtecken mit den Seiten <math><mi>x</mi></math> und 3. Zum großen Quadrat fehlt noch die Ecke <math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>9</mn></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/2" data-block-id="7915913c" data-block-type="figure" data-block-order="6">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/quadratische-ergaenzung.svg" alt="Ein Quadrat mit der Seite x. Rechts daneben und darunter liegt je ein Rechteck mit den Seiten 3 und x. In der Ecke fehlt ein gestricheltes Quadrat mit der Seite 3 und der Fläche 9." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Die gestrichelte Ecke 9 ergänzt x² + 6x zum Quadrat (x + 3)².</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="ergaenzung/3" data-block-id="58062926" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>=</mo><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/4" data-block-id="07c3698a" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Du ergänzt immer das Quadrat der halben Zahl vor dem <math><mi>x</mi></math>. Bei einer Gleichung ergänzt du auf beiden Seiten dasselbe, damit sie gleich bleibt.</p></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/5" data-block-id="9253df66" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">x² + 6x − 7 = 0 mit quadratischer Ergänzung</h3>
+<div class="explainer-block" data-block="ergaenzung/5/1" data-block-id="fe8c53df" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Die Schritte: 7 auf beide Seiten addieren, das Quadrat der halben Zahl ergänzen, die binomische Formel rückwärts anwenden, die Wurzel ziehen, nach x auflösen.</p></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/5/2" data-block-id="a48534f4" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>6</mn><mi>x</mi><mo>=</mo><mn>7</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/5/3" data-block-id="c0a0dd2c" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>=</mo><mn>7</mn><mo>+</mo><mn>9</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/5/4" data-block-id="bb5af5ff" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>16</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/5/5" data-block-id="eadb2250" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Dann ziehst du die Wurzel, <math><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mo>=</mo><mn>4</mn></mrow></math> oder <math><mrow><mi>x</mi><mo>+</mo><mn>3</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>4</mn></mrow></math>, also <math><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> oder <math><mrow><mi>x</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>7</mn></mrow></math>.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="ergaenzung/6" data-block-id="9762402b" data-block-type="definition" data-block-order="15">
+<dl class="explainer-definition"><dt><dfn id="begriff-quadratische-ergaenzung"><a href="../../glossar/#quadratische-ergaenzung">Quadratische Ergänzung</a></dfn></dt><dd><p>Das Ergänzen von <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>p</mi><mi>x</mi></mrow></math> um das Quadrat der halben Zahl vor dem x, damit ein Quadrat einer Klammer entsteht. Aus <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>6</mn><mi>x</mi></mrow></math> wird mit 9 das Quadrat <math><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup></math>.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="formel">Die Lösungsformel</h2>
+<div class="explainer-block" data-block="formel/1" data-block-id="340c7b4f" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Wenn du nicht jedes Mal neu ergänzen willst, rechne die Ergänzung einmal allgemein durch. Das Ergebnis ist die Lösungsformel.</p>
+<p>Wenn du die quadratische Ergänzung allgemein für <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>p</mi><mi>x</mi><mo>+</mo><mi>q</mi><mo>=</mo><mn>0</mn></mrow></math> machst, entsteht die <strong>Lösungsformel</strong>
+(auch p-q-Formel genannt):</p></div>
+</div>
+<div class="explainer-block" data-block="formel/2" data-block-id="8b1ac4c0" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>x</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mfrac><mi>p</mi><mn>2</mn></mfrac><mo>±</mo><msqrt><mrow><msup><mrow><mo fence="true" form="prefix" stretchy="true">(</mo><mfrac><mi>p</mi><mn>2</mn></mfrac><mo fence="true" form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mi>q</mi></mrow></msqrt></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="formel/3" data-block-id="93e847a0" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>Der Term unter der Wurzel heißt <strong>Diskriminante</strong> <math><mrow><mi>D</mi><mo>=</mo><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mfrac><mi>p</mi><mn>2</mn></mfrac><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mi>q</mi></mrow></math>. Ist <math><mrow><mi>D</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, gibt es zwei
+Lösungen, bei <math><mrow><mi>D</mi><mo>=</mo><mn>0</mn></mrow></math> eine und bei <math><mrow><mi>D</mi><mo>&lt;</mo><mn>0</mn></mrow></math> keine, denn aus einer negativen Zahl kannst du keine Wurzel ziehen.</p></div>
+</div>
+<div class="explainer-block" data-block="formel/4" data-block-id="ba5bbec9" data-block-type="definition" data-block-order="19">
+<dl class="explainer-definition"><dt><dfn id="begriff-loesungsformel"><a href="../../glossar/#loesungsformel">Lösungsformel</a></dfn></dt><dd><p>Die Formel, die für <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>p</mi><mi>x</mi><mo>+</mo><mi>q</mi><mo>=</mo><mn>0</mn></mrow></math> die Lösungen liefert. Sie heißt auch p-q-Formel.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="formel/5" data-block-id="d19198e4" data-block-type="definition" data-block-order="20">
+<dl class="explainer-definition"><dt><dfn id="begriff-diskriminante"><a href="../../glossar/#diskriminante">Diskriminante</a></dfn></dt><dd><p>Der Term unter der Wurzel der Lösungsformel. Sein Vorzeichen entscheidet, ob es zwei, eine oder keine Lösung gibt.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Dieselbe Gleichung auf drei Wegen</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="a167c3d8" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Wenn du sicher sein willst, dass dein Ergebnis stimmt, prüfst du es auf einem zweiten Weg.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="71e6ca97" data-block-type="example" data-block-order="22">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">x² − 6x + 5 = 0</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="21546c95" data-block-type="text" data-block-order="23">
+<div class="block-text"><p><strong>Grafisch:</strong> Stelle im ersten Abschnitt oben die Regler auf <math><mrow><mi>d</mi><mo>=</mo><mn>3</mn></mrow></math> und <math><mrow><mi>e</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>4</mn></mrow></math>. Das ist die Scheitelform <math><mrow><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow></math>, ausmultipliziert <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></math>. Der Graph schneidet die x-Achse bei <math><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> und <math><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="b0d8bf11" data-block-type="table" data-block-order="24">
+<div class="block-table" role="region" aria-label="Numerisch: Wertetabelle von f(x) = x² − 6x + 5" tabindex="0"><table><caption>Numerisch: Wertetabelle von f(x) = x² − 6x + 5</caption><thead><tr><th scope="col">x</th><th scope="col">f(x)</th></tr></thead><tbody><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>−3</td></tr><tr><td>3</td><td>−4</td></tr><tr><td>4</td><td>−3</td></tr><tr><td>5</td><td>0</td></tr><tr><td>6</td><td>5</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="c67f2f80" data-block-type="text" data-block-order="25">
+<div class="block-text"><p><strong>Algebraisch:</strong> Mit <math><mrow><mi>p</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>6</mn></mrow></math> und <math><mrow><mi>q</mi><mo>=</mo><mn>5</mn></mrow></math> ist <math><mrow><mi>D</mi><mo>=</mo><msup><mn>3</mn><mn>2</mn></msup><mo>−</mo><mn>5</mn><mo>=</mo><mn>4</mn></mrow></math> und <math><mrow><mi>x</mi><mo>=</mo><mn>3</mn><mo>±</mo><mn>2</mn></mrow></math>, also <math><mrow><mi>x</mi><mo>=</mo><mn>5</mn></mrow></math> oder <math><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>. Alle drei Wege geben dieselben Lösungen.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="cd42af6e" data-block-type="single-choice" data-block-order="26">
+<div class="explainer-exercise explainer-question" id="ergaenzung-zahl">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ergaenzung-zahl" data-id="ergaenzung-zahl" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Zahl ergänzt x² + 8x zu einem Quadrat?</legend>
+<label class="question-option"><input type="radio" name="frage-ergaenzung-zahl" value="0"> <span>64</span></label>
+<label class="question-option"><input type="radio" name="frage-ergaenzung-zahl" value="1"> <span>4</span></label>
+<label class="question-option"><input type="radio" name="frage-ergaenzung-zahl" value="2"> <span>16</span></label>
+<label class="question-option"><input type="radio" name="frage-ergaenzung-zahl" value="3"> <span>8</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>64</strong></p><p>Das ist 8². Ergänzt wird aber das Quadrat der Hälfte von 8, also 4².</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>4</strong></p><p>Das ist die Hälfte von 8. Sie steht in der Klammer, ergänzt wird ihr Quadrat.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>16</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Hälfte von 8 ist 4, und 4² = 16. Es ist x² + 8x + 16 = (x + 4)².</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>8</strong></p><p>Das ist die Zahl vor dem x selbst. Ergänzt wird das Quadrat ihrer Hälfte.</p></li>
+</ul>
+<p class="question-explanation">Zur quadratischen Ergänzung brauchst du die Hälfte der Zahl vor dem x und davon das Quadrat.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>64</strong></p><p>Das ist 8². Ergänzt wird aber das Quadrat der Hälfte von 8, also 4².</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>4</strong></p><p>Das ist die Hälfte von 8. Sie steht in der Klammer, ergänzt wird ihr Quadrat.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>16</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Hälfte von 8 ist 4, und 4² = 16. Es ist x² + 8x + 16 = (x + 4)².</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>8</strong></p><p>Das ist die Zahl vor dem x selbst. Ergänzt wird das Quadrat ihrer Hälfte.</p></li>
+</ul>
+<p class="question-explanation">Zur quadratischen Ergänzung brauchst du die Hälfte der Zahl vor dem x und davon das Quadrat.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ergaenzung-zahl","text":"Welche Zahl ergänzt x² + 8x zu einem Quadrat?","explanation":"Zur quadratischen Ergänzung brauchst du die Hälfte der Zahl vor dem x und davon das Quadrat.","links":[],"type":"single-choice","options":[{"text":"64","correct":false,"info":"Das ist 8². Ergänzt wird aber das Quadrat der Hälfte von 8, also 4²."},{"text":"4","correct":false,"info":"Das ist die Hälfte von 8. Sie steht in der Klammer, ergänzt wird ihr Quadrat."},{"text":"16","correct":true,"info":"Die Hälfte von 8 ist 4, und 4² = 16. Es ist x² + 8x + 16 = (x + 4)²."},{"text":"8","correct":false,"info":"Das ist die Zahl vor dem x selbst. Ergänzt wird das Quadrat ihrer Hälfte."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="182c7f28" data-block-type="generated" data-block-order="27">
+<div class="explainer-exercise explainer-generated" id="formel-anwenden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Löse <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>12</mn><mo>=</mo><mn>0</mn></mrow></math> mit der Lösungsformel. Wie lautet die größere der beiden Lösungen?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze p und q ein: p ist die Zahl vor x mit ihrem Vorzeichen, q die Zahl am Ende.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mo form="prefix" stretchy="false">−</mo><mfrac><mi>p</mi><mn>2</mn></mfrac><mo>=</mo><mn>4</mn></mrow></math> und <math><mrow><mi>D</mi><mo>=</mo><mn>16</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>4</mn></mrow></math></li><li><math><mrow><mi>x</mi><mo>=</mo><mn>4</mn><mo>±</mo><msqrt><mn>4</mn></msqrt><mo>=</mo><mn>4</mn><mo>±</mo><mn>2</mn></mrow></math></li><li>Die Lösungen sind 2 und 6. Die größere ist 6.</li></ol><p><strong>Richtige Antwort:</strong> 6</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Löse <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>5</mn><mo>=</mo><mn>0</mn></mrow></math> mit der Lösungsformel. Wie lautet die größere der beiden Lösungen?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze p und q ein: p ist die Zahl vor x mit ihrem Vorzeichen, q die Zahl am Ende.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mo form="prefix" stretchy="false">−</mo><mfrac><mi>p</mi><mn>2</mn></mfrac><mo>=</mo><mn>3</mn></mrow></math> und <math><mrow><mi>D</mi><mo>=</mo><mn>9</mn><mo>−</mo><mn>5</mn><mo>=</mo><mn>4</mn></mrow></math></li><li><math><mrow><mi>x</mi><mo>=</mo><mn>3</mn><mo>±</mo><msqrt><mn>4</mn></msqrt><mo>=</mo><mn>3</mn><mo>±</mo><mn>2</mn></mrow></math></li><li>Die Lösungen sind 1 und 5. Die größere ist 5.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Löse <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>8</mn><mo>=</mo><mn>0</mn></mrow></math> mit der Lösungsformel. Wie lautet die größere der beiden Lösungen?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze p und q ein: p ist die Zahl vor x mit ihrem Vorzeichen, q die Zahl am Ende.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mo form="prefix" stretchy="false">−</mo><mfrac><mi>p</mi><mn>2</mn></mfrac><mo>=</mo><mn>3</mn></mrow></math> und <math><mrow><mi>D</mi><mo>=</mo><mn>9</mn><mo>−</mo><mn>8</mn><mo>=</mo><mn>1</mn></mrow></math></li><li><math><mrow><mi>x</mi><mo>=</mo><mn>3</mn><mo>±</mo><msqrt><mn>1</mn></msqrt><mo>=</mo><mn>3</mn><mo>±</mo><mn>1</mn></mrow></math></li><li>Die Lösungen sind 2 und 4. Die größere ist 4.</li></ol><p><strong>Richtige Antwort:</strong> 4</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"formel-anwenden","given":{"r":{"pick":1,"from":{"data":"gleichungen"}}},"task":{"text":"Löse $x^2 - {{r.b}}x + {{r.q}} = 0$ mit der Lösungsformel. Wie lautet die größere der beiden Lösungen?"},"answer":{"value":"r.x2","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"r.x1","message":"Das ist die kleinere Lösung, mit minus vor der Wurzel. Gefragt ist die größere, mit plus."},{"value":"r.m","message":"Das ist nur −p : 2. Die Wurzel der Diskriminante wird noch dazugerechnet."},{"value":"r.s","message":"Das ist nur die Wurzel. Davor steht noch −p : 2, hier also {{r.m}}."}],"hint":"Setze p und q ein: p ist die Zahl vor x mit ihrem Vorzeichen, q die Zahl am Ende.","steps":["$−\\frac{p}{2} = {{r.m}}$ und $D = {{r.mm}} - {{r.q}} = {{r.diskr}}$","$x = {{r.m}} \\pm \\sqrt{{{r.diskr}}} = {{r.m}} \\pm {{r.s}}$","Die Lösungen sind {{r.x1}} und {{r.x2}}. Die größere ist {{answer}}."]},"templates":{"de":{"task":"Löse \u003cmath>\u003cmrow>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>−\u003c/mo>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmtext>⟦r.q⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math> mit der Lösungsformel. Wie lautet die größere der beiden Lösungen?","steps":["\u003cmath>\u003cmrow>\u003cmo form=\"prefix\" stretchy=\"false\">−\u003c/mo>\u003cmfrac>\u003cmi>p\u003c/mi>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.m⟧\u003c/mtext>\u003c/mrow>\u003c/math> und \u003cmath>\u003cmrow>\u003cmi>D\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.mm⟧\u003c/mtext>\u003cmo>−\u003c/mo>\u003cmtext>⟦r.q⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.diskr⟧\u003c/mtext>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>x\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.m⟧\u003c/mtext>\u003cmo>±\u003c/mo>\u003cmsqrt>\u003cmtext>⟦r.diskr⟧\u003c/mtext>\u003c/msqrt>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.m⟧\u003c/mtext>\u003cmo>±\u003c/mo>\u003cmtext>⟦r.s⟧\u003c/mtext>\u003c/mrow>\u003c/math>","Die Lösungen sind ⟦r.x1⟧ und ⟦r.x2⟧. Die größere ist ⟦answer⟧."],"hint":"Setze p und q ein: p ist die Zahl vor x mit ihrem Vorzeichen, q die Zahl am Ende.","messages":["Das ist die kleinere Lösung, mit minus vor der Wurzel. Gefragt ist die größere, mit plus.","Das ist nur −p : 2. Die Wurzel der Diskriminante wird noch dazugerechnet.","Das ist nur die Wurzel. Davor steht noch −p : 2, hier also ⟦r.m⟧."]}},"data":{"gleichungen":[{"b":6,"q":5,"m":3,"mm":9,"diskr":4,"s":2,"x1":1,"x2":5},{"b":6,"q":8,"m":3,"mm":9,"diskr":1,"s":1,"x1":2,"x2":4},{"b":8,"q":7,"m":4,"mm":16,"diskr":9,"s":3,"x1":1,"x2":7},{"b":8,"q":15,"m":4,"mm":16,"diskr":1,"s":1,"x1":3,"x2":5},{"b":10,"q":16,"m":5,"mm":25,"diskr":9,"s":3,"x1":2,"x2":8},{"b":10,"q":24,"m":5,"mm":25,"diskr":1,"s":1,"x1":4,"x2":6},{"b":4,"q":3,"m":2,"mm":4,"diskr":1,"s":1,"x1":1,"x2":3},{"b":12,"q":27,"m":6,"mm":36,"diskr":9,"s":3,"x1":3,"x2":9},{"b":8,"q":12,"m":4,"mm":16,"diskr":4,"s":2,"x1":2,"x2":6},{"b":10,"q":9,"m":5,"mm":25,"diskr":16,"s":4,"x1":1,"x2":9}]},"seeds":[1,2,3,5,8,9,13,18,36,43],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="c0a5ea23" data-block-type="generated" data-block-order="28">
+<div class="explainer-exercise explainer-generated" id="anzahl-loesungen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Wie viele Lösungen hat <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>10</mn><mo>=</mo><mn>0</mn></mrow></math>? Gib 0, 1 oder 2 an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne D = (p : 2)² − q aus. Dann entscheidet das Vorzeichen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>p</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>6</mn></mrow></math>, also <math><mfrac><mi>p</mi><mn>2</mn></mfrac></math> im Quadrat ist 9.</li><li><math><mrow><mi>D</mi><mo>=</mo><mn>9</mn><mo>−</mo><mn>10</mn><mo>=</mo><mtext>−1</mtext></mrow></math></li><li>Mit diesem D gibt es 0 Lösungen.</li></ol><p><strong>Richtige Antwort:</strong> 0</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Wie viele Lösungen hat <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>=</mo><mn>0</mn></mrow></math>? Gib 0, 1 oder 2 an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne D = (p : 2)² − q aus. Dann entscheidet das Vorzeichen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>p</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>4</mn></mrow></math>, also <math><mfrac><mi>p</mi><mn>2</mn></mfrac></math> im Quadrat ist 4.</li><li><math><mrow><mi>D</mi><mo>=</mo><mn>4</mn><mo>−</mo><mn>4</mn><mo>=</mo><mtext>0</mtext></mrow></math></li><li>Mit diesem D gibt es 1 Lösungen.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Wie viele Lösungen hat <math><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>12</mn><mo>=</mo><mn>0</mn></mrow></math>? Gib 0, 1 oder 2 an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne D = (p : 2)² − q aus. Dann entscheidet das Vorzeichen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>p</mi><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>8</mn></mrow></math>, also <math><mfrac><mi>p</mi><mn>2</mn></mfrac></math> im Quadrat ist 16.</li><li><math><mrow><mi>D</mi><mo>=</mo><mn>16</mn><mo>−</mo><mn>12</mn><mo>=</mo><mtext>4</mtext></mrow></math></li><li>Mit diesem D gibt es 2 Lösungen.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"anzahl-loesungen","given":{"r":{"pick":1,"from":{"data":"anzahl-loesungen"}}},"task":{"text":"Wie viele Lösungen hat $x^2 - {{r.b}}x + {{r.q}} = 0$? Gib 0, 1 oder 2 an."},"answer":{"value":"r.anzahl","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"r.anzahl + 1","message":"Du hast eine Lösung zu viel gezählt: Prüfe das Vorzeichen der Diskriminante."}],"hint":"Rechne D = (p : 2)² − q aus. Dann entscheidet das Vorzeichen.","steps":["$p = −{{r.b}}$, also $\\frac{p}{2}$ im Quadrat ist {{r.mm}}.","$D = {{r.mm}} - {{r.q}} = {{r.dtext}}$","Mit diesem D gibt es {{answer}} Lösungen."]},"templates":{"de":{"task":"Wie viele Lösungen hat \u003cmath>\u003cmrow>\u003cmsup>\u003cmi>x\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>−\u003c/mo>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003cmi>x\u003c/mi>\u003cmo>+\u003c/mo>\u003cmtext>⟦r.q⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmn>0\u003c/mn>\u003c/mrow>\u003c/math>? Gib 0, 1 oder 2 an.","steps":["\u003cmath>\u003cmrow>\u003cmi>p\u003c/mi>\u003cmo>=\u003c/mo>\u003cmo form=\"prefix\" stretchy=\"false\">−\u003c/mo>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003c/mrow>\u003c/math>, also \u003cmath>\u003cmfrac>\u003cmi>p\u003c/mi>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/math> im Quadrat ist ⟦r.mm⟧.","\u003cmath>\u003cmrow>\u003cmi>D\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.mm⟧\u003c/mtext>\u003cmo>−\u003c/mo>\u003cmtext>⟦r.q⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.dtext⟧\u003c/mtext>\u003c/mrow>\u003c/math>","Mit diesem D gibt es ⟦answer⟧ Lösungen."],"hint":"Rechne D = (p : 2)² − q aus. Dann entscheidet das Vorzeichen.","messages":["Du hast eine Lösung zu viel gezählt: Prüfe das Vorzeichen der Diskriminante."]}},"data":{"anzahl-loesungen":[{"b":4,"q":3,"m":2,"mm":4,"dtext":"1","anzahl":2},{"b":4,"q":4,"m":2,"mm":4,"dtext":"0","anzahl":1},{"b":4,"q":5,"m":2,"mm":4,"dtext":"−1","anzahl":0},{"b":6,"q":5,"m":3,"mm":9,"dtext":"4","anzahl":2},{"b":6,"q":9,"m":3,"mm":9,"dtext":"0","anzahl":1},{"b":6,"q":10,"m":3,"mm":9,"dtext":"−1","anzahl":0},{"b":8,"q":12,"m":4,"mm":16,"dtext":"4","anzahl":2},{"b":8,"q":16,"m":4,"mm":16,"dtext":"0","anzahl":1},{"b":8,"q":17,"m":4,"mm":16,"dtext":"−1","anzahl":0},{"b":10,"q":26,"m":5,"mm":25,"dtext":"−1","anzahl":0},{"b":10,"q":25,"m":5,"mm":25,"dtext":"0","anzahl":1},{"b":10,"q":16,"m":5,"mm":25,"dtext":"9","anzahl":2}]},"seeds":[1,2,3,4,5,10,11,13,14,15,19,20],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="acfb41e6" data-block-type="ordering" data-block-order="29">
+<div class="explainer-exercise explainer-question" id="ergaenzung-schritte">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ergaenzung-schritte" data-id="ergaenzung-schritte" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Löse x² + 6x − 7 = 0 mit der quadratischen Ergänzung. Bringe die Schritte in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>7 auf beide Seiten addieren: x² + 6x = 7</span> <select name="frage-ergaenzung-schritte-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Nach x auflösen: x = 1 oder x = −7</span> <select name="frage-ergaenzung-schritte-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Binomische Formel rückwärts: (x + 3)² = 16</span> <select name="frage-ergaenzung-schritte-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Wurzel ziehen: x + 3 = 4 oder x + 3 = −4</span> <select name="frage-ergaenzung-schritte-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Das Quadrat der Hälfte von 6 ergänzen: x² + 6x + 9 = 16</span> <select name="frage-ergaenzung-schritte-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. 7 auf beide Seiten addieren: x² + 6x = 7, 2. Das Quadrat der Hälfte von 6 ergänzen: x² + 6x + 9 = 16, 3. Binomische Formel rückwärts: (x + 3)² = 16, 4. Wurzel ziehen: x + 3 = 4 oder x + 3 = −4, 5. Nach x auflösen: x = 1 oder x = −7</p>
+<p class="question-explanation">Erst die Zahl auf die rechte Seite, dann auf beiden Seiten das Quadrat der halben Zahl vor x ergänzen, die linke Seite als Quadrat schreiben, die Wurzel ziehen und nach x auflösen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. 7 auf beide Seiten addieren: x² + 6x = 7, 2. Das Quadrat der Hälfte von 6 ergänzen: x² + 6x + 9 = 16, 3. Binomische Formel rückwärts: (x + 3)² = 16, 4. Wurzel ziehen: x + 3 = 4 oder x + 3 = −4, 5. Nach x auflösen: x = 1 oder x = −7</p>
+<p class="question-explanation">Erst die Zahl auf die rechte Seite, dann auf beiden Seiten das Quadrat der halben Zahl vor x ergänzen, die linke Seite als Quadrat schreiben, die Wurzel ziehen und nach x auflösen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ergaenzung-schritte","text":"Löse x² + 6x − 7 = 0 mit der quadratischen Ergänzung. Bringe die Schritte in die richtige Reihenfolge.","explanation":"Erst die Zahl auf die rechte Seite, dann auf beiden Seiten das Quadrat der halben Zahl vor x ergänzen, die linke Seite als Quadrat schreiben, die Wurzel ziehen und nach x auflösen.","links":[],"type":"ordering","items":["7 auf beide Seiten addieren: x² + 6x = 7","Das Quadrat der Hälfte von 6 ergänzen: x² + 6x + 9 = 16","Binomische Formel rückwärts: (x + 3)² = 16","Wurzel ziehen: x + 3 = 4 oder x + 3 = −4","Nach x auflösen: x = 1 oder x = −7"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="ad6e1760" data-block-type="true-false" data-block-order="30">
+<div class="explainer-exercise explainer-question" id="negative-diskriminante">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-negative-diskriminante" data-id="negative-diskriminante" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ist die Diskriminante einer quadratischen Gleichung negativ, dann schneidet die zugehörige nach oben geöffnete Parabel die x-Achse nicht.</legend>
+<label class="question-option"><input type="radio" name="frage-negative-diskriminante" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-negative-diskriminante" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Keine Lösung heißt keine Nullstelle. Der Scheitel liegt dann über der x-Achse und die Parabel öffnet sich nach oben, ohne sie zu treffen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Keine Lösung heißt keine Nullstelle. Der Scheitel liegt dann über der x-Achse und die Parabel öffnet sich nach oben, ohne sie zu treffen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"negative-diskriminante","text":"Ist die Diskriminante einer quadratischen Gleichung negativ, dann schneidet die zugehörige nach oben geöffnete Parabel die x-Achse nicht.","explanation":"Keine Lösung heißt keine Nullstelle. Der Scheitel liegt dann über der x-Achse und die Parabel öffnet sich nach oben, ohne sie zu treffen.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="16c0a849" data-block-type="single-choice" data-block-order="31">
+<div class="explainer-exercise explainer-question" id="wege-vergleichen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-wege-vergleichen" data-id="wege-vergleichen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du hast die Gleichung x² − 4x + 3 = 0 gelöst. Welche Lösungen passen zur Wertetabelle mit f(1) = 0 und f(3) = 0?</legend>
+<label class="question-option"><input type="radio" name="frage-wege-vergleichen" value="0"> <span>x = −1 und x = −3</span></label>
+<label class="question-option"><input type="radio" name="frage-wege-vergleichen" value="1"> <span>x = 4 und x = 3</span></label>
+<label class="question-option"><input type="radio" name="frage-wege-vergleichen" value="2"> <span>x = 1 und x = 3</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>x = −1 und x = −3</strong></p><p>Bei x = −1 ist f(−1) = 1 + 4 + 3 = 8, nicht 0. Das Vorzeichen der Lösungen ist umgekehrt.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>x = 4 und x = 3</strong></p><p>Die 4 steht nur als Zahl in der Gleichung. Bei x = 4 ist f(4) = 3, nicht 0.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>x = 1 und x = 3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>In der Tabelle ist f(x) bei x = 1 und x = 3 gleich 0. Das sind die Nullstellen.</p></li>
+</ul>
+<p class="question-explanation">Aus der Wertetabelle liest du die Lösungen ab, wo f(x) = 0 ist. Die Rechnung mit der Formel liefert dasselbe.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>x = −1 und x = −3</strong></p><p>Bei x = −1 ist f(−1) = 1 + 4 + 3 = 8, nicht 0. Das Vorzeichen der Lösungen ist umgekehrt.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>x = 4 und x = 3</strong></p><p>Die 4 steht nur als Zahl in der Gleichung. Bei x = 4 ist f(4) = 3, nicht 0.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>x = 1 und x = 3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>In der Tabelle ist f(x) bei x = 1 und x = 3 gleich 0. Das sind die Nullstellen.</p></li>
+</ul>
+<p class="question-explanation">Aus der Wertetabelle liest du die Lösungen ab, wo f(x) = 0 ist. Die Rechnung mit der Formel liefert dasselbe.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wege-vergleichen","text":"Du hast die Gleichung x² − 4x + 3 = 0 gelöst. Welche Lösungen passen zur Wertetabelle mit f(1) = 0 und f(3) = 0?","explanation":"Aus der Wertetabelle liest du die Lösungen ab, wo f(x) = 0 ist. Die Rechnung mit der Formel liefert dasselbe.","links":[],"type":"single-choice","options":[{"text":"x = −1 und x = −3","correct":false,"info":"Bei x = −1 ist f(−1) = 1 + 4 + 3 = 8, nicht 0. Das Vorzeichen der Lösungen ist umgekehrt."},{"text":"x = 4 und x = 3","correct":false,"info":"Die 4 steht nur als Zahl in der Gleichung. Bei x = 4 ist f(4) = 3, nicht 0."},{"text":"x = 1 und x = 3","correct":true,"info":"In der Tabelle ist f(x) bei x = 1 und x = 3 gleich 0. Das sind die Nullstellen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Funktionsfamilien mit Schiebereglern“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"3b8ef72","page":{"title":"Quadratische Gleichungen auf drei Wegen","order":6}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungen/einfache-gleichungen/">Zurück: Einfache quadratische Gleichungen</a><a rel="next" href="../../gleichungen/anwendungen/">Weiter: Quadratische Funktionen anwenden</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

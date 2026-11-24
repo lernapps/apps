@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Der Zylinder – Kreis und Körper berechnen</title>
+    <meta name="description" content="Ein Zylinder ist ein Prisma mit einem Kreis als Grundfläche. Du berechnest sein Volumen, seinen abgerollten Mantel und seine Oberfläche." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../koerper/zylinder/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../koerper/">Zylinder, Kegel, Kugel und Vielecke berechnen</a></li><li aria-current="page">Der Zylinder</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Der Zylinder</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../koerper/zylinder/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧koerper/zylinder/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"zylinder","title":"Der Zylinder","exercises":[{"id":"dose-schaetzen","section":"einstieg","numbered":false},{"id":"zylinder-volumen","section":"uebung","numbered":true},{"id":"zylinder-mantel","section":"uebung","numbered":true},{"id":"zylinder-oberflaeche","section":"uebung","numbered":true},{"id":"zylinder-hoehe","section":"uebung","numbered":false},{"id":"radius-doppelt","section":"uebung","numbered":false},{"id":"oberflaeche-schritte","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"koerper/zylinder/tutor/","markdown":"koerper/zylinder/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Eine runde Dose</a></li><li><a href="#herleitung">Ein Prisma mit einem Kreis</a></li><li><a href="#beispiel">Eine Dose mit r = 4 cm</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Eine runde Dose</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="4dd5c859" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in eine Dose passt oder wie viel Blech sie braucht, brauchst du Volumen und Oberfläche eines Zylinders.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="7b0a0052" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Eine runde Dose hat den Radius 4 cm und ist 10 cm hoch. Sie steht in einer quadratischen Schachtel mit der Kantenlänge 8 cm und der Höhe 10 cm. Die Schachtel fasst 640 cm³.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="c570cb2f" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="dose-schaetzen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-dose-schaetzen" data-id="dose-schaetzen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viel passt in die Dose im Vergleich zur Schachtel?</legend>
+<label class="question-option"><input type="radio" name="frage-dose-schaetzen" value="0"> <span>Weniger als in die Schachtel.</span></label>
+<label class="question-option"><input type="radio" name="frage-dose-schaetzen" value="1"> <span>Genauso viel wie in die Schachtel.</span></label>
+<label class="question-option"><input type="radio" name="frage-dose-schaetzen" value="2"> <span>Mehr als in die Schachtel.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Weniger als in die Schachtel.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Dose steht ganz in der Schachtel und lässt in den vier Ecken Platz frei. Also fasst sie weniger als 640 cm³.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Genauso viel wie in die Schachtel.</strong></p><p>Dann müsste die Dose die Ecken der Schachtel ausfüllen. Sie ist aber rund, in den Ecken bleibt Platz.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Mehr als in die Schachtel.</strong></p><p>Die Dose steht innerhalb der Schachtel. Was in sie passt, passt auch in die Schachtel.</p></li>
+</ul>
+<p class="question-explanation">Die Dose ist ein Teil der Schachtel. Wie groß dieser Teil ist, rechnest du gleich aus.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Weniger als in die Schachtel.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Dose steht ganz in der Schachtel und lässt in den vier Ecken Platz frei. Also fasst sie weniger als 640 cm³.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Genauso viel wie in die Schachtel.</strong></p><p>Dann müsste die Dose die Ecken der Schachtel ausfüllen. Sie ist aber rund, in den Ecken bleibt Platz.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Mehr als in die Schachtel.</strong></p><p>Die Dose steht innerhalb der Schachtel. Was in sie passt, passt auch in die Schachtel.</p></li>
+</ul>
+<p class="question-explanation">Die Dose ist ein Teil der Schachtel. Wie groß dieser Teil ist, rechnest du gleich aus.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"dose-schaetzen","text":"Wie viel passt in die Dose im Vergleich zur Schachtel?","explanation":"Die Dose ist ein Teil der Schachtel. Wie groß dieser Teil ist, rechnest du gleich aus.","links":[],"type":"single-choice","options":[{"text":"Weniger als in die Schachtel.","correct":true,"info":"Die Dose steht ganz in der Schachtel und lässt in den vier Ecken Platz frei. Also fasst sie weniger als 640 cm³."},{"text":"Genauso viel wie in die Schachtel.","correct":false,"info":"Dann müsste die Dose die Ecken der Schachtel ausfüllen. Sie ist aber rund, in den Ecken bleibt Platz."},{"text":"Mehr als in die Schachtel.","correct":false,"info":"Die Dose steht innerhalb der Schachtel. Was in sie passt, passt auch in die Schachtel."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Ein Prisma mit einem Kreis</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="12a3d353" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in eine Dose passt, rechnest du mit der Grundfläche und der Höhe.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="32995386" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Ein <strong>Zylinder</strong> ist wie ein Prisma, nur mit einem Kreis als Grundfläche. Mit dem Radius r hat die Grundfläche den Flächeninhalt π · r². Das Volumen ist wieder Grundfläche mal Höhe.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="4fa15c8f" data-block-type="formula" data-block-order="6">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="514a7395" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Wenn du die Oberfläche brauchst, musst du auch die gekrümmte Fläche außen herum kennen: den Mantel.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="0c537e53" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-mantel"><a href="../../glossar/#mantel">Mantel</a></dfn></dt><dd><p>Der Mantel eines Körpers ist seine gekrümmte oder seitliche Fläche ohne Grundfläche und Deckfläche. Beim Zylinder ist er die Fläche, die um die Dose herum liegt.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="herleitung/6" data-block-id="634e7f72" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Für die Oberfläche brauchst du den Mantel. Stell dir das Etikett einer Dose vor. Du schneidest es senkrecht auf und rollst es ab. Es wird ein Rechteck. Seine Höhe ist die Höhe h der Dose. Seine Breite ist der Umfang des Kreises, also 2 · π · r.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/7" data-block-id="869fce6a" data-block-type="figure" data-block-order="10">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/zylinder-mantel.svg" alt="Links ein Zylinder mit Radius r und Höhe h. Rechts der abgerollte Mantel als Rechteck mit der Breite 2 mal Pi mal r und der Höhe h." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Das Etikett ist abgerollt ein Rechteck: so breit wie der Kreisumfang, so hoch wie der Zylinder.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="herleitung/8" data-block-id="29ead69b" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>M</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/9" data-block-id="ac2e4ce2" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mi>M</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/10" data-block-id="5f5c263f" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Die Oberfläche besteht aus zwei Kreisen (Boden und Deckel) und dem Mantel.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Eine Dose mit r = 4 cm</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="cdd2bb5d" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Wenn du die drei Formeln an einer Dose prüfen willst, rechne sie für r = 4 cm.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="0cfa4db6" data-block-type="example" data-block-order="15">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Radius 4 cm, Höhe 10 cm</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="2751d77f" data-block-type="formula" data-block-order="16">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="f2a2c628" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><mn>16</mn><mo>⋅</mo><mn>10</mn><mo>=</mo><mn>502,4</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="29ead69b" data-block-type="formula" data-block-order="18">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>M</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/4" data-block-id="aa6fa568" data-block-type="formula" data-block-order="19">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>M</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>10</mn><mo>=</mo><mn>251,2</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/5" data-block-id="99aa53b2" data-block-type="formula" data-block-order="20">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>16</mn><mo>+</mo><mn>251,2</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/6" data-block-id="cba9dcbd" data-block-type="formula" data-block-order="21">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>100,48</mn><mo>+</mo><mn>251,2</mn><mo>=</mo><mn>351,68</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/7" data-block-id="f6de671d" data-block-type="text" data-block-order="22">
+<div class="block-text"><p>Volumen 502,4 cm³, Mantel 251,2 cm², Oberfläche 351,68 cm². Beachte die Einheiten: Das Volumen hat cm³, Mantel und Oberfläche haben cm².</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="7fffaa5c" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="zylinder-volumen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Zylinder hat den Radius r = 9 cm und die Höhe h = 10 cm. Berechne sein Volumen mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst die Grundfläche π · r², dann mal die Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>G</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>9</mn><mn>2</mn></msup></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>9</mn><mn>2</mn></msup><mo>⋅</mo><mn>10</mn><mo>=</mo><mn>2543,4</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 2543,4 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Zylinder hat den Radius r = 3 cm und die Höhe h = 3 cm. Berechne sein Volumen mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst die Grundfläche π · r², dann mal die Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>G</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>84,78</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 84,78 cm³</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Zylinder hat den Radius r = 7 cm und die Höhe h = 9 cm. Berechne sein Volumen mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst die Grundfläche π · r², dann mal die Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>G</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>7</mn><mn>2</mn></msup></mrow></math></li><li><math><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>7</mn><mn>2</mn></msup><mo>⋅</mo><mn>9</mn><mo>=</mo><mn>1384,74</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1384,74 cm³</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"zylinder-volumen","given":{"r":{"int":[3,10],"step":1},"h":{"int":[3,20],"step":1}},"task":{"text":"Ein Zylinder hat den Radius r = {{r}} cm und die Höhe h = {{h}} cm. Berechne sein Volumen mit π ≈ 3,14."},"answer":{"value":"3.14 * r * r * h","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm³"}}},"mistakes":[{"value":"3.14 * (2 * r) * (2 * r) * h","message":"Du hast den Durchmesser statt des Radius quadriert. In π · r² steht der Radius."},{"value":"3.14 * r * h","message":"Du hast r nicht quadriert. Die Grundfläche ist π · r², nicht π · r."},{"value":"2 * 3.14 * r * h","message":"Das ist der Mantel, eine Fläche. Das Volumen ist Grundfläche mal Höhe: π · r² · h."}],"hint":"Rechne erst die Grundfläche π · r², dann mal die Höhe.","steps":["$G = \\pi \\cdot r^2 \\approx 3,14 \\cdot {{r}}^2$","$V = G \\cdot h \\approx 3,14 \\cdot {{r}}^2 \\cdot {{h}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Zylinder hat den Radius r = ⟦r⟧ cm und die Höhe h = ⟦h⟧ cm. Berechne sein Volumen mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>G\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>G\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>h\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Rechne erst die Grundfläche π · r², dann mal die Höhe.","messages":["Du hast den Durchmesser statt des Radius quadriert. In π · r² steht der Radius.","Du hast r nicht quadriert. Die Grundfläche ist π · r², nicht π · r.","Das ist der Mantel, eine Fläche. Das Volumen ist Grundfläche mal Höhe: π · r² · h."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,12,13,14,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,36,39,40,41,43,44,45,46,47,49,50,51,52,53,54,55,56,57,61,62,63,65,66,67,69,70,71,72,73,75,76,77,82,87,88],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="4aa26459" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="zylinder-mantel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Das Etikett einer Dose hat die Höhe h = 15 cm. Die Dose hat den Radius r = 8 cm. Wie groß ist der Flächeninhalt des Etiketts? Rechne mit π ≈ 3,14 und nimm an, dass es genau um die Dose passt.</p><details class="explainer-hint"><summary>Tipp</summary><p>Das abgerollte Etikett ist ein Rechteck. Seine Breite ist der Umfang des Kreises.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>M</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>8</mn><mo>⋅</mo><mn>15</mn><mo>=</mo><mn>753,6</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 753,6 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Das Etikett einer Dose hat die Höhe h = 12 cm. Die Dose hat den Radius r = 5 cm. Wie groß ist der Flächeninhalt des Etiketts? Rechne mit π ≈ 3,14 und nimm an, dass es genau um die Dose passt.</p><details class="explainer-hint"><summary>Tipp</summary><p>Das abgerollte Etikett ist ein Rechteck. Seine Breite ist der Umfang des Kreises.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>M</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>12</mn><mo>=</mo><mn>376,8</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 376,8 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Das Etikett einer Dose hat die Höhe h = 5 cm. Die Dose hat den Radius r = 7 cm. Wie groß ist der Flächeninhalt des Etiketts? Rechne mit π ≈ 3,14 und nimm an, dass es genau um die Dose passt.</p><details class="explainer-hint"><summary>Tipp</summary><p>Das abgerollte Etikett ist ein Rechteck. Seine Breite ist der Umfang des Kreises.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>M</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>7</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>219,8</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 219,8 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"zylinder-mantel","given":{"r":{"int":[3,10],"step":1},"h":{"int":[3,20],"step":1}},"task":{"text":"Das Etikett einer Dose hat die Höhe h = {{h}} cm. Die Dose hat den Radius r = {{r}} cm. Wie groß ist der Flächeninhalt des Etiketts? Rechne mit π ≈ 3,14 und nimm an, dass es genau um die Dose passt."},"answer":{"value":"2 * 3.14 * r * h","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"3.14 * r * h","message":"Es fehlt der Faktor 2. Das Etikett ist so breit wie der Umfang 2 · π · r."},{"value":"3.14 * r * r * h","message":"Das ist das Volumen. Das Etikett ist ein Rechteck mit Breite 2 · π · r und Höhe h."}],"hint":"Das abgerollte Etikett ist ein Rechteck. Seine Breite ist der Umfang des Kreises.","steps":["$M = 2 \\cdot \\pi \\cdot r \\cdot h \\approx 2 \\cdot 3,14 \\cdot {{r}} \\cdot {{h}} = {{answer}}$"]},"templates":{"de":{"task":"Das Etikett einer Dose hat die Höhe h = ⟦h⟧ cm. Die Dose hat den Radius r = ⟦r⟧ cm. Wie groß ist der Flächeninhalt des Etiketts? Rechne mit π ≈ 3,14 und nimm an, dass es genau um die Dose passt.","steps":["\u003cmath>\u003cmrow>\u003cmi>M\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>r\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>h\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Das abgerollte Etikett ist ein Rechteck. Seine Breite ist der Umfang des Kreises.","messages":["Es fehlt der Faktor 2. Das Etikett ist so breit wie der Umfang 2 · π · r.","Das ist das Volumen. Das Etikett ist ein Rechteck mit Breite 2 · π · r und Höhe h."]}},"data":{},"seeds":[1,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22,23,24,26,27,28,29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,47,49,50,52,55,56,59,60,62,64,66,67,68,70,71,74,75,76,77,78,79,80,82,83,84,86],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="1ee9f238" data-block-type="generated" data-block-order="25">
+<div class="explainer-exercise explainer-generated" id="zylinder-oberflaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Zylinder hat den Radius r = 3 cm und die Höhe h = 13 cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Zähle die Flächen: zwei Kreise (Boden und Deckel) und der Mantel.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi></mrow></math></li><li><math><mrow><mi>O</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>13</mn><mo>=</mo><mn>301,44</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 301,44 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Zylinder hat den Radius r = 8 cm und die Höhe h = 7 cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Zähle die Flächen: zwei Kreise (Boden und Deckel) und der Mantel.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi></mrow></math></li><li><math><mrow><mi>O</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>8</mn><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>8</mn><mo>⋅</mo><mn>7</mn><mo>=</mo><mn>753,6</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 753,6 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Zylinder hat den Radius r = 4 cm und die Höhe h = 3 cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Zähle die Flächen: zwei Kreise (Boden und Deckel) und der Mantel.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>⋅</mo><mi>h</mi></mrow></math></li><li><math><mrow><mi>O</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>4</mn><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>175,84</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 175,84 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"zylinder-oberflaeche","given":{"r":{"int":[3,10],"step":1},"h":{"int":[3,20],"step":1}},"where":["r * h != 2 * r + 2 * h"],"task":{"text":"Ein Zylinder hat den Radius r = {{r}} cm und die Höhe h = {{h}} cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14."},"answer":{"value":"2 * 3.14 * r * r + 2 * 3.14 * r * h","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"2 * 3.14 * r * h","message":"Du hast nur den Mantel gerechnet. Boden und Deckel fehlen."},{"value":"3.14 * r * r + 2 * 3.14 * r * h","message":"Du hast nur einen Kreis gezählt. Boden und Deckel sind zwei Kreise."},{"value":"3.14 * r * r * h","message":"Das ist das Volumen. Die Oberfläche ist die Summe der Flächen: zwei Kreise und der Mantel."}],"hint":"Zähle die Flächen: zwei Kreise (Boden und Deckel) und der Mantel.","steps":["$O = 2 \\cdot \\pi \\cdot r^2 + 2 \\cdot \\pi \\cdot r \\cdot h$","$O \\approx 2 \\cdot 3,14 \\cdot {{r}}^2 + 2 \\cdot 3,14 \\cdot {{r}} \\cdot {{h}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Zylinder hat den Radius r = ⟦r⟧ cm und die Höhe h = ⟦h⟧ cm. Berechne seine gesamte Oberfläche mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>O\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>r\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>h\u003c/mi>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>O\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>+\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Zähle die Flächen: zwei Kreise (Boden und Deckel) und der Mantel.","messages":["Du hast nur den Mantel gerechnet. Boden und Deckel fehlen.","Du hast nur einen Kreis gezählt. Boden und Deckel sind zwei Kreise.","Das ist das Volumen. Die Oberfläche ist die Summe der Flächen: zwei Kreise und der Mantel."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,19,20,22,23,24,26,27,28,29,30,31,32,33,34,35,36,37,39,40,41,42,44,47,48,52,53,55,57,58,59,60,63,64,65,67,69,74,75,76,78,80,82,83,84,86,87,89,90,92,94],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="939cdec4" data-block-type="number" data-block-order="26">
+<div class="explainer-exercise explainer-question" id="zylinder-hoehe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zylinder-hoehe" data-id="zylinder-hoehe" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Zylinder hat den Radius 5 cm und das Volumen 628 cm³. Wie hoch ist er? Rechne mit π ≈ 3,14.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-zylinder-hoehe" aria-describedby="frage-zylinder-hoehe-unit"> <span id="frage-zylinder-hoehe-unit">cm</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 8 cm</p>
+<p class="question-explanation">V = π · r² · h, also h = V : (π · r²) = 628 : (3,14 · 25) = 628 : 78,5 = 8. Der Zylinder ist 8 cm hoch.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 8 cm</p>
+<p class="question-explanation">V = π · r² · h, also h = V : (π · r²) = 628 : (3,14 · 25) = 628 : 78,5 = 8. Der Zylinder ist 8 cm hoch.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zylinder-hoehe","text":"Ein Zylinder hat den Radius 5 cm und das Volumen 628 cm³. Wie hoch ist er? Rechne mit π ≈ 3,14.","explanation":"V = π · r² · h, also h = V : (π · r²) = 628 : (3,14 · 25) = 628 : 78,5 = 8. Der Zylinder ist 8 cm hoch.","links":[],"type":"number","answer":8,"tolerance":0,"unit":"cm"},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="ffc845ce" data-block-type="single-choice" data-block-order="27">
+<div class="explainer-exercise explainer-question" id="radius-doppelt">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-radius-doppelt" data-id="radius-doppelt" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Zylinder bekommt den doppelten Radius, die Höhe bleibt gleich. Was passiert mit dem Volumen?</legend>
+<label class="question-option"><input type="radio" name="frage-radius-doppelt" value="0"> <span>Es wird doppelt so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-doppelt" value="1"> <span>Es wird viermal so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-doppelt" value="2"> <span>Es wird achtmal so groß.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Es wird doppelt so groß.</strong></p><p>Das gilt, wenn die Höhe verdoppelt wird. Der Radius steht im Quadrat.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Es wird viermal so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>V = π · r² · h. Mit 2 · r wird daraus π · 4 · r² · h, also das Vierfache.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Es wird achtmal so groß.</strong></p><p>Achtmal wäre es, wenn alle drei Längen (r, r und h) doppelt so groß würden. Hier ändert sich nur der Radius, und der steht zweimal im Produkt.</p></li>
+</ul>
+<p class="question-explanation">Die Grundfläche wächst mit dem Quadrat des Radius. Doppelter Radius ergibt vierfache Grundfläche und bei gleicher Höhe vierfaches Volumen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Es wird doppelt so groß.</strong></p><p>Das gilt, wenn die Höhe verdoppelt wird. Der Radius steht im Quadrat.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Es wird viermal so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>V = π · r² · h. Mit 2 · r wird daraus π · 4 · r² · h, also das Vierfache.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Es wird achtmal so groß.</strong></p><p>Achtmal wäre es, wenn alle drei Längen (r, r und h) doppelt so groß würden. Hier ändert sich nur der Radius, und der steht zweimal im Produkt.</p></li>
+</ul>
+<p class="question-explanation">Die Grundfläche wächst mit dem Quadrat des Radius. Doppelter Radius ergibt vierfache Grundfläche und bei gleicher Höhe vierfaches Volumen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"radius-doppelt","text":"Ein Zylinder bekommt den doppelten Radius, die Höhe bleibt gleich. Was passiert mit dem Volumen?","explanation":"Die Grundfläche wächst mit dem Quadrat des Radius. Doppelter Radius ergibt vierfache Grundfläche und bei gleicher Höhe vierfaches Volumen.","links":[],"type":"single-choice","options":[{"text":"Es wird doppelt so groß.","correct":false,"info":"Das gilt, wenn die Höhe verdoppelt wird. Der Radius steht im Quadrat."},{"text":"Es wird viermal so groß.","correct":true,"info":"V = π · r² · h. Mit 2 · r wird daraus π · 4 · r² · h, also das Vierfache."},{"text":"Es wird achtmal so groß.","correct":false,"info":"Achtmal wäre es, wenn alle drei Längen (r, r und h) doppelt so groß würden. Hier ändert sich nur der Radius, und der steht zweimal im Produkt."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="a1b1a1e8" data-block-type="ordering" data-block-order="28">
+<div class="explainer-exercise explainer-question" id="oberflaeche-schritte">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-oberflaeche-schritte" data-id="oberflaeche-schritte" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bringe die Schritte zur Oberfläche eines Zylinders in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Grundfläche π · r² und Mantel 2 · π · r · h berechnen</span> <select name="frage-oberflaeche-schritte-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+<li><label><span>Radius r und Höhe h ablesen</span> <select name="frage-oberflaeche-schritte-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+<li><label><span>Zwei Grundflächen und den Mantel addieren</span> <select name="frage-oberflaeche-schritte-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Radius r und Höhe h ablesen, 2. Grundfläche π · r² und Mantel 2 · π · r · h berechnen, 3. Zwei Grundflächen und den Mantel addieren</p>
+<p class="question-explanation">Erst die Maße, dann die einzelnen Flächen, zuletzt die Summe. Die Grundfläche brauchst du zweimal, für Boden und Deckel.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Radius r und Höhe h ablesen, 2. Grundfläche π · r² und Mantel 2 · π · r · h berechnen, 3. Zwei Grundflächen und den Mantel addieren</p>
+<p class="question-explanation">Erst die Maße, dann die einzelnen Flächen, zuletzt die Summe. Die Grundfläche brauchst du zweimal, für Boden und Deckel.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"oberflaeche-schritte","text":"Bringe die Schritte zur Oberfläche eines Zylinders in die richtige Reihenfolge.","explanation":"Erst die Maße, dann die einzelnen Flächen, zuletzt die Summe. Die Grundfläche brauchst du zweimal, für Boden und Deckel.","links":[],"type":"ordering","items":["Radius r und Höhe h ablesen","Grundfläche π · r² und Mantel 2 · π · r · h berechnen","Zwei Grundflächen und den Mantel addieren"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="d4a56c43" data-block-type="text" data-block-order="29">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst Volumen, Mantel und Oberfläche eines Zylinders berechnen und weißt, woher der Faktor 2 · π · r im Mantel kommt.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Der Zylinder","order":7}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../koerper/start/">Zurück: Das brauchst du für die Körper</a><a rel="next" href="../../koerper/pyramide-kegel/">Weiter: Kegel und Pyramide</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

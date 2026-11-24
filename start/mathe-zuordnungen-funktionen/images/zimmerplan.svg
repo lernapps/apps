@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" width="360" height="250" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 14px sans-serif; }
+    .wand { fill: none; stroke: currentColor; stroke-width: 3; }
+    .maß { stroke: currentColor; stroke-width: 1; }
+  </style>
+  <rect class="wand" x="60" y="40" width="240" height="180"/>
+  <rect x="70" y="50" width="120" height="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="130" y="85" text-anchor="middle">Bett</text>
+  <line class="maß" x1="60" y1="24" x2="300" y2="24"/><line class="maß" x1="60" y1="19" x2="60" y2="29"/><line class="maß" x1="300" y1="19" x2="300" y2="29"/>
+  <text x="180" y="18" text-anchor="middle">8 cm</text>
+  <line class="maß" x1="320" y1="40" x2="320" y2="220"/><line class="maß" x1="315" y1="40" x2="325" y2="40"/><line class="maß" x1="315" y1="220" x2="325" y2="220"/>
+  <text x="330" y="135">6 cm</text>
+  <text x="180" y="165" text-anchor="middle">Zimmer</text>
+  <text x="180" y="244" text-anchor="middle">Maßstab 1 : 50</text>
+</svg>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-bwXa1Sl3.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Zählen mit dem Baum – Muster und Zählen</title>
+    <meta name="description" content="Du zählst Möglichkeiten mit einem Baumdiagramm, auch wenn es mehr als zwei Auswahlen gibt." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../muster/baum/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li aria-current="page">Zählen mit dem Baum</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Zählen mit dem Baum</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../muster/baum/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧muster/baum/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-muster-zaehlen","page":{"id":"baum","title":"Zählen mit dem Baum","exercises":[{"id":"dritte-hose","section":"einstieg","numbered":false},{"id":"fruehstueck-ueben","section":"uebung","numbered":true},{"id":"aeste-stufe-zwei","section":"uebung","numbered":false},{"id":"enden-zaehlen","section":"uebung","numbered":false},{"id":"mittlere-stufe","section":"uebung","numbered":false}],"sections":["einstieg","darstellung","merke","uebung","weiter"]},"tutor":"muster/baum/tutor/","markdown":"muster/baum/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was tust du bei mehr als zwei Auswahlen?</a></li><li><a href="#darstellung">Wie zählst du mit mehreren Stufen?</a></li><li><a href="#merke">Was tust du bei jeder Stufe?</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Das kannst du jetzt</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Was tust du bei mehr als zwei Auswahlen?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="82ed7caa" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Dann wird ein Feld unübersichtlich, und ein Baum ist besser. Dieselben Outfits wie auf der Seite davor, jetzt als Baum. Er beginnt links an der Wurzel. Jeder Ast ist eine
+Auswahl, jeder Weg von links bis zu einem Ende ist ein Outfit.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="a5838254" data-block-type="figure" data-block-order="2">
+<figure class="block-figure"><div class="block-image-credit"><img src="../../images/baum-outfits.svg" alt="Ein Baumdiagramm von links nach rechts. Von der Wurzel gehen 3 Äste zu Shirt 1, Shirt 2 und Shirt 3. Von jedem Shirt gehen 2 Äste zu Hose 1 und Hose 2." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Der Baum hat zwei Stufen. In der ersten wird das Shirt gewählt, in der zweiten die Hose.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="feba27b0" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="dritte-hose">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-dritte-hose" data-id="dritte-hose" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mira kauft eine dritte Hose. Wie viele Outfits gibt es jetzt mit ihren 3 Shirts?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-dritte-hose">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 9</p>
+<p class="question-explanation">An jedem der 3 Shirt-Äste hängen jetzt 3 Hosen-Äste. Das sind 3 · 3 = 9 Wege.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 9</p>
+<p class="question-explanation">An jedem der 3 Shirt-Äste hängen jetzt 3 Hosen-Äste. Das sind 3 · 3 = 9 Wege.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"dritte-hose","text":"Mira kauft eine dritte Hose. Wie viele Outfits gibt es jetzt mit ihren 3 Shirts?","explanation":"An jedem der 3 Shirt-Äste hängen jetzt 3 Hosen-Äste. Das sind 3 · 3 = 9 Wege.","links":[],"type":"number","answer":9,"tolerance":0,"mistakes":[{"answer":6,"message":"Das sind die Outfits mit 2 Hosen. Die dritte Hose gibt jedem Shirt einen weiteren Ast."},{"answer":8,"message":"Du hast 6 + 2 gerechnet. Die neue Hose passt zu jedem der 3 Shirts, nicht nur zu zweien."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="darstellung">Wie zählst du mit mehreren Stufen?</h2>
+<div class="explainer-block" data-block="darstellung/1" data-block-id="9e3fed83" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du wissen willst, wie viele Möglichkeiten es bei mehreren Stufen gibt, zeichnest du den Baum oder rechnest mit den Zahlen der Stufen. Bei zwei Stufen sagt das Zählprinzip: erste Stufe mal zweite Stufe. Bei drei Stufen nimmst du alle drei
+Zahlen mal. Den Baum kannst du dir dann vorstellen, ohne ihn ganz zu zeichnen.</p></div>
+</div>
+<div class="explainer-block" data-block="darstellung/2" data-block-id="f2f18cac" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-baumdiagramm"><a href="../../glossar/#baumdiagramm">Baumdiagramm</a></dfn></dt><dd><p>Ein Baumdiagramm zeigt Auswahlen Stufe für Stufe. Jede Stufe hat Äste für die Möglichkeiten, jeder Weg von der Wurzel bis zu einem Ende ist eine Möglichkeit insgesamt.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="darstellung/3" data-block-id="0c886b37" data-block-type="example" data-block-order="6">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Ein Frühstück in drei Stufen</h3>
+<div class="explainer-block" data-block="darstellung/3/1" data-block-id="9dbc6470" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Probiere das Zählprinzip mit drei Stufen aus, mit einem Frühstück. Beim Fest in der Spielecke gibt es ein Frühstück mit 2 Broten, 3 Aufstrichen und 2 Getränken. Du wählst ein Brot, einen Aufstrich und ein Getränk. Das sind 2 · 3 · 2 = 12 Möglichkeiten.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Was tust du bei jeder Stufe?</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="64fc12dd" data-block-type="note" data-block-order="8">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="338e18d0" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Zähle bei jeder Stufe, wie viele Äste von einem Punkt ausgehen, und nimm alle Stufen mal.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="2b4169bc" data-block-type="generated" data-block-order="10">
+<div class="explainer-exercise explainer-generated" id="fruehstueck-ueben">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Beim Fest gibt es zum Frühstück 3 Brote, 2 Aufstriche und 2 Getränke. Du wählst von jedem eines. Wie viele Möglichkeiten gibt es?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Stufen hat der Baum, und wie viele Äste hat jede?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Der Baum hat drei Stufen mit 3, 2 und 2 Ästen.</li><li>Das sind 3 · 2 · 2 = 12 Wege.</li></ol><p><strong>Richtige Antwort:</strong> 12</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Beim Fest gibt es zum Frühstück 2 Brote, 3 Aufstriche und 2 Getränke. Du wählst von jedem eines. Wie viele Möglichkeiten gibt es?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Stufen hat der Baum, und wie viele Äste hat jede?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Der Baum hat drei Stufen mit 2, 3 und 2 Ästen.</li><li>Das sind 2 · 3 · 2 = 12 Wege.</li></ol><p><strong>Richtige Antwort:</strong> 12</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Beim Fest gibt es zum Frühstück 2 Brote, 2 Aufstriche und 3 Getränke. Du wählst von jedem eines. Wie viele Möglichkeiten gibt es?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Stufen hat der Baum, und wie viele Äste hat jede?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Der Baum hat drei Stufen mit 2, 2 und 3 Ästen.</li><li>Das sind 2 · 2 · 3 = 12 Wege.</li></ol><p><strong>Richtige Antwort:</strong> 12</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"fruehstueck-ueben","given":{"a":{"int":[2,4]},"b":{"int":[2,4]},"c":{"int":[2,3]}},"where":["a * b != a + b + c"],"task":{"text":"Beim Fest gibt es zum Frühstück {{a}} Brote, {{b}} Aufstriche und {{c}} Getränke. Du wählst von jedem eines. Wie viele Möglichkeiten gibt es?"},"answer":{"value":"a * b * c","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"a * b","message":"Du hast die Getränke vergessen. Jede Stufe wird malgenommen, hier sind es drei."},{"value":"a + b + c","message":"Du hast die Auswahlen addiert. Jede Auswahl lässt sich mit allen anderen verbinden, darum wird malgenommen."}],"hint":"Wie viele Stufen hat der Baum, und wie viele Äste hat jede?","steps":["Der Baum hat drei Stufen mit {{a}}, {{b}} und {{c}} Ästen.","Das sind {{a}} · {{b}} · {{c}} = {{answer}} Wege."]},"templates":{"de":{"task":"Beim Fest gibt es zum Frühstück ⟦a⟧ Brote, ⟦b⟧ Aufstriche und ⟦c⟧ Getränke. Du wählst von jedem eines. Wie viele Möglichkeiten gibt es?","steps":["Der Baum hat drei Stufen mit ⟦a⟧, ⟦b⟧ und ⟦c⟧ Ästen.","Das sind ⟦a⟧ · ⟦b⟧ · ⟦c⟧ = ⟦answer⟧ Wege."],"hint":"Wie viele Stufen hat der Baum, und wie viele Äste hat jede?","messages":["Du hast die Getränke vergessen. Jede Stufe wird malgenommen, hier sind es drei.","Du hast die Auswahlen addiert. Jede Auswahl lässt sich mit allen anderen verbinden, darum wird malgenommen."]}},"data":{},"seeds":[1,2,4,5,6,8,9,12,13,14,16,18,19,20,30],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="9d0299c6" data-block-type="number" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="aeste-stufe-zwei">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-aeste-stufe-zwei" data-id="aeste-stufe-zwei" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In der ersten Stufe eines Baums gibt es 3 Äste. An jedem hängen 4 Äste. Wie viele Äste hat die zweite Stufe insgesamt?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-aeste-stufe-zwei">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 12</p>
+<p class="question-explanation">An jedem der 3 Äste hängen 4 weitere. Das sind 3 · 4 = 12 Äste in der zweiten Stufe.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 12</p>
+<p class="question-explanation">An jedem der 3 Äste hängen 4 weitere. Das sind 3 · 4 = 12 Äste in der zweiten Stufe.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"aeste-stufe-zwei","text":"In der ersten Stufe eines Baums gibt es 3 Äste. An jedem hängen 4 Äste. Wie viele Äste hat die zweite Stufe insgesamt?","explanation":"An jedem der 3 Äste hängen 4 weitere. Das sind 3 · 4 = 12 Äste in der zweiten Stufe.","links":[],"type":"number","answer":12,"tolerance":0,"mistakes":[{"answer":7,"message":"Du hast 3 + 4 gerechnet. An jedem Ast hängen 4 weitere, darum wird malgenommen."},{"answer":4,"message":"Das sind die Äste an einem einzigen Ast. Es gibt 3 Äste mit je 4."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="7faefe34" data-block-type="true-false" data-block-order="12">
+<div class="explainer-exercise explainer-question" id="enden-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-enden-zaehlen" data-id="enden-zaehlen" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du kannst die Möglichkeiten eines Baums bestimmen, indem du seine Enden zählst.</legend>
+<label class="question-option"><input type="radio" name="frage-enden-zaehlen" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-enden-zaehlen" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Jeder Weg von der Wurzel zu einem Ende ist eine Möglichkeit, und jedes Ende gehört zu genau einem Weg.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Jeder Weg von der Wurzel zu einem Ende ist eine Möglichkeit, und jedes Ende gehört zu genau einem Weg.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"enden-zaehlen","text":"Du kannst die Möglichkeiten eines Baums bestimmen, indem du seine Enden zählst.","explanation":"Jeder Weg von der Wurzel zu einem Ende ist eine Möglichkeit, und jedes Ende gehört zu genau einem Weg.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="f0fdbf3c" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="mittlere-stufe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-mittlere-stufe" data-id="mittlere-stufe" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Baum hat drei Stufen. Die erste Stufe hat 2 Äste, die dritte hat 4 Äste. Es gibt insgesamt 24 Wege. Wie viele Äste hat die zweite Stufe?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-mittlere-stufe">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3</p>
+<p class="question-explanation">Die erste und die dritte Stufe geben 2 · 4 = 8. Weil 8 · 3 = 24 ist, hat die zweite Stufe 3 Äste.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3</p>
+<p class="question-explanation">Die erste und die dritte Stufe geben 2 · 4 = 8. Weil 8 · 3 = 24 ist, hat die zweite Stufe 3 Äste.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"mittlere-stufe","text":"Ein Baum hat drei Stufen. Die erste Stufe hat 2 Äste, die dritte hat 4 Äste. Es gibt insgesamt 24 Wege. Wie viele Äste hat die zweite Stufe?","explanation":"Die erste und die dritte Stufe geben 2 · 4 = 8. Weil 8 · 3 = 24 ist, hat die zweite Stufe 3 Äste.","links":[],"hint":"Rechne zuerst die Zahlen der beiden bekannten Stufen mal.","type":"number","answer":3,"tolerance":0,"mistakes":[{"answer":12,"message":"Du hast 24 : 2 gerechnet. Auch die dritte Stufe mit 4 Ästen gehört zur Rechnung."},{"answer":6,"message":"Du hast 24 : 4 gerechnet. Auch die erste Stufe mit 2 Ästen gehört zur Rechnung."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Das kannst du jetzt</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="6cb98694" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Du kannst Möglichkeiten mit Plättchenfeld, Tabelle und Baum zählen. Das Zählprinzip heißt: Alle Stufen werden
+malgenommen.</p></div>
+</div>
+<div class="explainer-block" data-block="weiter/2" data-block-id="29e084f7" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Rückblick auf das Kapitel: Du hast Muster fortgesetzt und ihre Regel mit einem Platzhalter beschrieben. Du
+hast Quadrat- und Kubikzahlen gelegt, Potenzen als gleiche Faktoren gelesen und Zehnerpotenzen geschrieben. Und du hast Möglichkeiten gezählt.
+Die Spielecke ist fertig, das Fest kann beginnen.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Muster und Zählen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-muster-zaehlen","app":"Muster und Zählen","root":"../../","repository":"lernapps/mathe-muster-zaehlen","revision":"07bcc1d","page":{"title":"Zählen mit dem Baum","order":6}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../muster/tabelle/">Zurück: Zählen mit der Tabelle</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

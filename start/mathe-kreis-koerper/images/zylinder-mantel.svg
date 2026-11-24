@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 190" role="img" aria-labelledby="t d">
+  <title id="t">Zylinder und sein abgerollter Mantel</title>
+  <desc id="d">Links ein Zylinder mit dem Radius r und der Höhe h. Rechts der abgerollte Mantel als Rechteck. Die Breite des Rechtecks ist 2 mal Pi mal r, seine Höhe ist h.</desc>
+  <g fill="none" stroke="#222" stroke-width="2">
+    <ellipse cx="60" cy="40" rx="45" ry="14" />
+    <path d="M15,40 V130 A45,14 0 0 0 105,130 V40" />
+    <path d="M15,130 A45,14 0 0 1 105,130" stroke-dasharray="4 3" />
+  </g>
+  <line x1="60" y1="40" x2="105" y2="40" stroke="#1a56c4" stroke-width="2.5" />
+  <text x="76" y="35" font-size="13" fill="#222" font-family="sans-serif">r</text>
+  <line x1="118" y1="40" x2="118" y2="130" stroke="#222" stroke-width="1.2" />
+  <text x="124" y="88" font-size="13" fill="#222" font-family="sans-serif">h</text>
+  <rect x="160" y="40" width="150" height="90" fill="none" stroke="#a40" stroke-width="2.5" />
+  <text x="190" y="30" font-size="13" fill="#222" font-family="sans-serif">Breite: 2 · π · r</text>
+  <text x="206" y="90" font-size="13" fill="#222" font-family="sans-serif">Mantel</text>
+  <text x="268" y="152" font-size="13" fill="#222" font-family="sans-serif">Höhe: h</text>
+</svg>

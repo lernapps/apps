@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Steigung m und Achsenabschnitt b – Zuordnungen und lineare Funktionen</title>
+    <meta name="description" content="Mit den Reglern m und b bewegst du eine Gerade. Du erkennst, was m und b in Term, Tabelle und Graph bedeuten." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../geraden/m-und-b/" />
+    <script type="module" crossorigin src="../../assets/islands-C1c1HARk.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../geraden/">Geraden mit Schiebereglern</a></li><li aria-current="page">Steigung m und Achsenabschnitt b</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Steigung m und Achsenabschnitt b</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../geraden/m-und-b/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧geraden/m-und-b/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"m-und-b","title":"Steigung m und Achsenabschnitt b","exercises":[{"id":"steigung-ablesen","section":"uebung","numbered":true},{"id":"achsenabschnitt-ablesen","section":"uebung","numbered":true},{"id":"b-negativ","section":"uebung","numbered":false},{"id":"gleichung-beschreibung","section":"uebung","numbered":false},{"id":"groesseres-b-steiler","section":"uebung","numbered":false}],"sections":["einstieg","erklaerung","beispiel","uebung"]},"tutor":"geraden/m-und-b/tutor/","markdown":"geraden/m-und-b/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Zwei Regler für eine Gerade</a></li><li><a href="#erklaerung">Was m und b bewirken</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Zwei Regler für eine Gerade</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="f84bc7ed" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du einen Tarif mit Grundpreis und Preis je Stunde als Gerade beschreiben willst, brauchst du eine Gleichung mit zwei Zahlen: <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math> + <math><mi>b</mi></math>. Das ist eine <strong>lineare Funktion</strong>. Hier ist <math><mi>x</mi></math> die Zahl der Stunden und <math><mi>y</mi></math> die Kosten in Euro; Jonas wechselt zu einem Handyvertrag. Nach dieser Seite
+weißt du, was <math><mi>m</mi></math> und <math><mi>b</mi></math> bedeuten. Schiebe jeden Regler einzeln und beobachte Term, Tabelle und Graph: Was macht <math><mi>m</mi></math>? Was macht <math><mi>b</mi></math>?</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="22e95666" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" id="m-b-regler" data-component="Dreifachansicht">
+<div class="explainer-island" hidden><div class="dreifach" data-v-040b3e2d><p class="dreifach-term" aria-live="polite" data-v-040b3e2d><span class="dreifach-title" data-v-040b3e2d>Term:</span> <strong data-v-040b3e2d>y = 2 · x + 1</strong></p><!----><p class="dreifach-hint" data-v-040b3e2d>Bewege einen Regler: Term, Tabelle und Graph ändern sich gleichzeitig. </p><div class="dreifach-sliders" data-v-040b3e2d><label class="dreifach-slider" data-v-040b3e2d><span data-v-040b3e2d>m (Steigung) = 2</span><input value="2" type="range" min="-3" max="3" step="0.5" aria-valuetext="m (Steigung) = 2" data-v-040b3e2d><span class="dreifach-ends" data-v-040b3e2d><span data-v-040b3e2d>−3</span><span data-v-040b3e2d>3</span></span></label><label class="dreifach-slider" data-v-040b3e2d><span data-v-040b3e2d>b (y-Achsenabschnitt) = 1</span><input value="1" type="range" min="-4" max="4" step="1" aria-valuetext="b (y-Achsenabschnitt) = 1" data-v-040b3e2d><span class="dreifach-ends" data-v-040b3e2d><span data-v-040b3e2d>−4</span><span data-v-040b3e2d>4</span></span></label><!----><!----></div><div class="dreifach-scroll" tabindex="0" role="region" aria-label="Tabelle der Werte" data-v-040b3e2d><table class="dreifach-table" data-v-040b3e2d><caption data-v-040b3e2d> Tabelle </caption><tbody data-v-040b3e2d><tr data-v-040b3e2d><th scope="row" data-v-040b3e2d>x</th><!--[--><td data-v-040b3e2d>−2</td><td data-v-040b3e2d>−1</td><td data-v-040b3e2d>0</td><td data-v-040b3e2d>1</td><td data-v-040b3e2d>2</td><!--]--></tr><tr data-v-040b3e2d><th scope="row" data-v-040b3e2d>y</th><!--[--><td data-v-040b3e2d>−3</td><td data-v-040b3e2d>−1</td><td data-v-040b3e2d>1</td><td data-v-040b3e2d>3</td><td data-v-040b3e2d>5</td><!--]--></tr><!----></tbody></table></div><svg class="dreifach-graph" viewBox="0 0 320 240" role="img" aria-label="Graph. Die Gerade steigt: Zu 1 mehr gehören 2 mehr. Sie schneidet die y-Achse bei 1. Punkte: (−2|−3), (−1|−1), (0|1), (1|3), (2|5)." data-v-040b3e2d><g class="dreifach-grid" data-v-040b3e2d><!--[--><line x1="40" x2="40" y1="26" y2="206" data-v-040b3e2d></line><line x1="73.25" x2="73.25" y1="26" y2="206" data-v-040b3e2d></line><line x1="106.5" x2="106.5" y1="26" y2="206" data-v-040b3e2d></line><line x1="139.75" x2="139.75" y1="26" y2="206" data-v-040b3e2d></line><line x1="173" x2="173" y1="26" y2="206" data-v-040b3e2d></line><line x1="206.25" x2="206.25" y1="26" y2="206" data-v-040b3e2d></line><line x1="239.5" x2="239.5" y1="26" y2="206" data-v-040b3e2d></line><line x1="272.75" x2="272.75" y1="26" y2="206" data-v-040b3e2d></line><line x1="306" x2="306" y1="26" y2="206" data-v-040b3e2d></line><!--]--><!--[--><line x1="40" x2="306" y1="206" y2="206" data-v-040b3e2d></line><line x1="40" x2="306" y1="183.5" y2="183.5" data-v-040b3e2d></line><line x1="40" x2="306" y1="161" y2="161" data-v-040b3e2d></line><line x1="40" x2="306" y1="138.5" y2="138.5" data-v-040b3e2d></line><line x1="40" x2="306" y1="116" y2="116" data-v-040b3e2d></line><line x1="40" x2="306" y1="93.5" y2="93.5" data-v-040b3e2d></line><line x1="40" x2="306" y1="71" y2="71" data-v-040b3e2d></line><line x1="40" x2="306" y1="48.5" y2="48.5" data-v-040b3e2d></line><line x1="40" x2="306" y1="26" y2="26" data-v-040b3e2d></line><!--]--></g><g class="dreifach-axes" data-v-040b3e2d><line x1="40" x2="306" y1="116" y2="116" data-v-040b3e2d></line><line x1="173" x2="173" y1="26" y2="206" data-v-040b3e2d></line></g><g class="dreifach-ticks" data-v-040b3e2d><!--[--><text x="40" y="220" text-anchor="middle" data-v-040b3e2d>−4</text><text x="73.25" y="220" text-anchor="middle" data-v-040b3e2d>−3</text><text x="106.5" y="220" text-anchor="middle" data-v-040b3e2d>−2</text><text x="139.75" y="220" text-anchor="middle" data-v-040b3e2d>−1</text><text x="173" y="220" text-anchor="middle" data-v-040b3e2d>0</text><text x="206.25" y="220" text-anchor="middle" data-v-040b3e2d>1</text><text x="239.5" y="220" text-anchor="middle" data-v-040b3e2d>2</text><text x="272.75" y="220" text-anchor="middle" data-v-040b3e2d>3</text><text x="306" y="220" text-anchor="middle" data-v-040b3e2d>4</text><!--]--><!--[--><text x="34" y="210" text-anchor="end" data-v-040b3e2d>−8</text><text x="34" y="187.5" text-anchor="end" data-v-040b3e2d>−6</text><text x="34" y="165" text-anchor="end" data-v-040b3e2d>−4</text><text x="34" y="142.5" text-anchor="end" data-v-040b3e2d>−2</text><text x="34" y="120" text-anchor="end" data-v-040b3e2d>0</text><text x="34" y="97.5" text-anchor="end" data-v-040b3e2d>2</text><text x="34" y="75" text-anchor="end" data-v-040b3e2d>4</text><text x="34" y="52.5" text-anchor="end" data-v-040b3e2d>6</text><text x="34" y="30" text-anchor="end" data-v-040b3e2d>8</text><!--]--><text x="306" y="236" text-anchor="end" data-v-040b3e2d>x</text><text x="10" y="14" data-v-040b3e2d>y</text></g><polyline class="dreifach-line" points="40.0,194.8 289.4,26.0" fill="none" data-v-040b3e2d></polyline><!----><!--[--><circle class="dreifach-dot" cx="106.5" cy="149.75" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="139.75" cy="127.25" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="173" cy="104.75" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="206.25" cy="82.25" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="239.5" cy="59.75" r="4" data-v-040b3e2d></circle><!--]--><!--[--><!--]--></svg><!----><p class="dreifach-words" aria-live="polite" data-v-040b3e2d>Die Gerade steigt: Zu 1 mehr gehören 2 mehr. Sie schneidet die y-Achse bei 1.</p></div></div>
+<div class="explainer-nojs"><p>Die Gleichung <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math> + <math><mi>b</mi></math> mit den Reglern <math><mi>m</mi></math> (von −3 bis 3) und <math><mi>b</mi></math> (von −4 bis 4). Für <math><mi>m</mi></math> = 2 und <math><mi>b</mi></math> = 1 gehören zu <math><mi>x</mi></math> = −2, −1, 0, 1, 2 die
+<math><mi>y</mi></math>-Werte −3, −1, 1, 3, 5. <math><mi>m</mi></math> dreht die Gerade: Für größeres <math><mi>m</mi></math> wird sie steiler, für negatives <math><mi>m</mi></math> fällt sie. <math><mi>b</mi></math> verschiebt sie nach oben oder
+unten: Sie schneidet die <math><mi>y</mi></math>-Achse bei <math><mi>b</mi></math>.</p></div>
+<script type="application/json" class="explainer-component-props">{"kind":"linear","xLabel":"x","yLabel":"y","xUnit":"","yUnit":"","xs":[-2,-1,0,1,2],"xMin":-4,"xMax":4,"yMin":-8,"yMax":8,"tickX":1,"tickY":2,"a":2,"aMin":-3,"aMax":3,"aStep":0.5,"aName":"m (Steigung)","b":1,"bMin":-4,"bMax":4,"bStep":1,"bName":"b (y-Achsenabschnitt)"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="erklaerung">Was m und b bewirken</h2>
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="cc2c566a" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du eine Gerade genau treffen willst, musst du wissen, welche Zahl in der Gleichung was bewirkt.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="efb583a1" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-lineare-funktion"><a href="../../glossar/#lineare-funktion">lineare Funktion</a></dfn></dt><dd><p>Eine lineare Funktion hat die Gleichung <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math> + <math><mi>b</mi></math>. Ihr Graph ist eine Gerade. Beispiel: <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 1 ist linear, <math><mi>y</mi></math> = 12 : <math><mi>x</mi></math> ist es nicht.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="4de45cdd" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-steigung"><a href="../../glossar/#steigung">Steigung</a></dfn></dt><dd><p>Die Steigung <math><mi>m</mi></math> sagt, wie sich <math><mi>y</mi></math> ändert, wenn <math><mi>x</mi></math> um 1 größer wird. Beispiel: Bei <math><mi>m</mi></math> = 2 steigt <math><mi>y</mi></math> um 2 pro Schritt nach rechts. Ist <math><mi>m</mi></math> negativ, fällt die Gerade.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="erklaerung/4" data-block-id="886b8d93" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-y-achsenabschnitt"><a href="../../glossar/#y-achsenabschnitt">y-Achsenabschnitt</a></dfn></dt><dd><p>Der <math><mi>y</mi></math>-Achsenabschnitt <math><mi>b</mi></math> ist der <math><mi>y</mi></math>-Wert bei <math><mi>x</mi></math> = 0. Dort schneidet die Gerade die <math><mi>y</mi></math>-Achse. Beispiel: Bei <math><mi>b</mi></math> = 1 geht die Gerade durch (0|1).</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="erklaerung/5" data-block-id="988f26ca" data-block-type="note" data-block-order="7">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="erklaerung/5/1" data-block-id="952af86e" data-block-type="text" data-block-order="8">
+<div class="block-text"><p><math><mi>m</mi></math> <strong>dreht</strong> die Gerade, <math><mi>b</mi></math> <strong>verschiebt</strong> sie. Bei <math><mi>m</mi></math> = 0 ist die Gerade waagerecht. Der <math><mi>y</mi></math>-Achsenabschnitt <math><mi>b</mi></math> ist nicht die Steigung,
+sondern der <math><mi>y</mi></math>-Wert des Punktes (0|<math><mi>b</mi></math>) auf der <math><mi>y</mi></math>-Achse. Bei <math><mi>b</mi></math> = 0 gilt <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math>: Das ist die proportionale Zuordnung aus
+Kapitel 2, mit <math><mi>k</mi></math> = <math><mi>m</mi></math>.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="d9b32b87" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Handytarif</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="5f8ab2d3" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Der Tarif kostet 5 € Grundpreis (<math><mi>b</mi></math> = 5) und 2 € je Stunde (<math><mi>m</mi></math> = 2): <math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>5</mn></mrow></math>. Bei 0 Stunden zahlst du 5 €, bei 3 Stunden <math><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>+</mo><mn>5</mn><mo>=</mo><mn>11</mn></mrow></math> €.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="f1b11038" data-block-type="generated" data-block-order="11">
+<div class="explainer-exercise explainer-generated" id="steigung-ablesen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 6. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Steigung steht vor dem x.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>In <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math> + <math><mi>b</mi></math> ist <math><mi>m</mi></math> die Zahl vor <math><mi>x</mi></math>: <math><mi>m</mi></math> = 4.</li></ol><p><strong>Richtige Antwort:</strong> 4</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 5 · <math><mi>x</mi></math> + 3. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Steigung steht vor dem x.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>In <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math> + <math><mi>b</mi></math> ist <math><mi>m</mi></math> die Zahl vor <math><mi>x</mi></math>: <math><mi>m</mi></math> = 5.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 3 · <math><mi>x</mi></math> + 5. Wie groß ist die Steigung <math><mi>m</mi></math>?</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Steigung steht vor dem x.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>In <math><mi>y</mi></math> = <math><mi>m</mi></math> · <math><mi>x</mi></math> + <math><mi>b</mi></math> ist <math><mi>m</mi></math> die Zahl vor <math><mi>x</mi></math>: <math><mi>m</mi></math> = 3.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"steigung-ablesen","given":{"m":{"int":[2,5]},"b":{"int":[1,6]}},"where":["m != b"],"task":{"text":"Eine Gerade hat die Gleichung $y$ = {{m}} · $x$ + {{b}}. Wie groß ist die Steigung $m$?"},"answer":{"value":"m","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"b","message":"{{b}} ist der y-Achsenabschnitt b. Die Steigung m ist die Zahl, die mit x malgenommen wird."}],"hint":"Die Steigung steht vor dem x.","steps":["In $y$ = $m$ · $x$ + $b$ ist $m$ die Zahl vor $x$: $m$ = {{m}}."]},"templates":{"de":{"task":"Eine Gerade hat die Gleichung \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦m⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦b⟧. Wie groß ist die Steigung \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>?","steps":["In \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + \u003cmath>\u003cmi>b\u003c/mi>\u003c/math> ist \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> die Zahl vor \u003cmath>\u003cmi>x\u003c/mi>\u003c/math>: \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> = ⟦m⟧."],"hint":"Die Steigung steht vor dem x.","messages":["⟦b⟧ ist der y-Achsenabschnitt b. Die Steigung m ist die Zahl, die mit x malgenommen wird."]}},"data":{},"seeds":[1,2,3,5,6,7,9,10,11,12,14,15,16,20,21,22,23,25,28,42],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="91684949" data-block-type="generated" data-block-order="12">
+<div class="explainer-exercise explainer-generated" id="achsenabschnitt-ablesen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 1. Bei welchem <math><mi>y</mi></math>-Wert schneidet sie die <math><mi>y</mi></math>-Achse?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze x = 0 ein. Was bleibt übrig?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Bei <math><mi>x</mi></math> = 0 ist <math><mi>y</mi></math> = 4 · 0 + 1 = 1.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 5 · <math><mi>x</mi></math> + 3. Bei welchem <math><mi>y</mi></math>-Wert schneidet sie die <math><mi>y</mi></math>-Achse?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze x = 0 ein. Was bleibt übrig?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Bei <math><mi>x</mi></math> = 0 ist <math><mi>y</mi></math> = 5 · 0 + 3 = 3.</li></ol><p><strong>Richtige Antwort:</strong> 3</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 5. Bei welchem <math><mi>y</mi></math>-Wert schneidet sie die <math><mi>y</mi></math>-Achse?</p><details class="explainer-hint"><summary>Tipp</summary><p>Setze x = 0 ein. Was bleibt übrig?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Bei <math><mi>x</mi></math> = 0 ist <math><mi>y</mi></math> = 4 · 0 + 5 = 5.</li></ol><p><strong>Richtige Antwort:</strong> 5</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"achsenabschnitt-ablesen","given":{"m":{"int":[2,5]},"b":{"int":[1,6]}},"where":["m != b"],"task":{"text":"Eine Gerade hat die Gleichung $y$ = {{m}} · $x$ + {{b}}. Bei welchem $y$-Wert schneidet sie die $y$-Achse?"},"answer":{"value":"b","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"m","message":"{{m}} ist die Steigung. Der y-Achsenabschnitt ist die Zahl, die ohne x dasteht."}],"hint":"Setze x = 0 ein. Was bleibt übrig?","steps":["Bei $x$ = 0 ist $y$ = {{m}} · 0 + {{b}} = {{b}}."]},"templates":{"de":{"task":"Eine Gerade hat die Gleichung \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦m⟧ · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + ⟦b⟧. Bei welchem \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Wert schneidet sie die \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Achse?","steps":["Bei \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 0 ist \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = ⟦m⟧ · 0 + ⟦b⟧ = ⟦b⟧."],"hint":"Setze x = 0 ein. Was bleibt übrig?","messages":["⟦m⟧ ist die Steigung. Der y-Achsenabschnitt ist die Zahl, die ohne x dasteht."]}},"data":{},"seeds":[1,2,3,4,5,6,8,9,10,15,16,17,20,21,24,25,28,33,61,64],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="d79ee307" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="b-negativ">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-b-negativ" data-id="b-negativ" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Gerade hat die Gleichung <math><mi>y</mi></math> = 3 · <math><mi>x</mi></math> − 2. Wie groß ist der <math><mi>y</mi></math>-Achsenabschnitt <math><mi>b</mi></math>?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-b-negativ">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> −2</p>
+<p class="question-explanation">Bei <math><mi>x</mi></math> = 0 ist <math><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>0</mn><mo>−</mo><mn>2</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>2</mn></mrow></math>. Die Gerade schneidet die <math><mi>y</mi></math>-Achse bei −2.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> −2</p>
+<p class="question-explanation">Bei <math><mi>x</mi></math> = 0 ist <math><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>0</mn><mo>−</mo><mn>2</mn><mo>=</mo><mo form="prefix" stretchy="false">−</mo><mn>2</mn></mrow></math>. Die Gerade schneidet die <math><mi>y</mi></math>-Achse bei −2.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"b-negativ","text":"Eine Gerade hat die Gleichung $y$ = 3 · $x$ − 2. Wie groß ist der $y$-Achsenabschnitt $b$?","explanation":"Bei $x$ = 0 ist $y = 3 \\cdot 0 - 2 = -2$. Die Gerade schneidet die $y$-Achse bei −2.","links":[],"type":"number","answer":-2,"tolerance":0,"mistakes":[{"answer":2,"message":"Das Vorzeichen gehört zu b. In y = 3 · x − 2 steht ein Minus, also ist b = −2."},{"answer":3,"message":"3 ist die Steigung m. Der y-Achsenabschnitt ist die Zahl ohne x."}]},"rendered":{"Eine Gerade hat die Gleichung $y$ = 3 · $x$ − 2. Wie groß ist der $y$-Achsenabschnitt $b$?":"Eine Gerade hat die Gleichung \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> − 2. Wie groß ist der \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Achsenabschnitt \u003cmath>\u003cmi>b\u003c/mi>\u003c/math>?","Bei $x$ = 0 ist $y = 3 \\cdot 0 - 2 = -2$. Die Gerade schneidet die $y$-Achse bei −2.":"Bei \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 0 ist \u003cmath>\u003cmrow>\u003cmi>y\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>3\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo>−\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>=\u003c/mo>\u003cmo form=\"prefix\" stretchy=\"false\">−\u003c/mo>\u003cmn>2\u003c/mn>\u003c/mrow>\u003c/math>. Die Gerade schneidet die \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Achse bei −2."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="ca1385ee" data-block-type="matching" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="gleichung-beschreibung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-gleichung-beschreibung" data-id="gleichung-beschreibung" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jeder Gleichung die passende Beschreibung zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>y = 2 · x</span> <select name="frage-gleichung-beschreibung-0" data-left="0"><option value="">bitte wählen</option><option value="0">steigt und geht durch den Ursprung</option><option value="2">steigt und schneidet die y-Achse bei −2</option><option value="1">fällt und schneidet die y-Achse bei 3</option></select></label></li>
+<li><label><span>y = −x + 3</span> <select name="frage-gleichung-beschreibung-1" data-left="1"><option value="">bitte wählen</option><option value="0">steigt und geht durch den Ursprung</option><option value="2">steigt und schneidet die y-Achse bei −2</option><option value="1">fällt und schneidet die y-Achse bei 3</option></select></label></li>
+<li><label><span>y = 3 · x − 2</span> <select name="frage-gleichung-beschreibung-2" data-left="2"><option value="">bitte wählen</option><option value="0">steigt und geht durch den Ursprung</option><option value="2">steigt und schneidet die y-Achse bei −2</option><option value="1">fällt und schneidet die y-Achse bei 3</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> y = 2 · x – steigt und geht durch den Ursprung; y = −x + 3 – fällt und schneidet die y-Achse bei 3; y = 3 · x − 2 – steigt und schneidet die y-Achse bei −2</p>
+<p class="question-explanation">Das Vorzeichen von <math><mi>m</mi></math> sagt steigend (positiv) oder fallend (negativ). <math><mi>b</mi></math> ist der <math><mi>y</mi></math>-Wert bei <math><mi>x</mi></math> = 0.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> y = 2 · x – steigt und geht durch den Ursprung; y = −x + 3 – fällt und schneidet die y-Achse bei 3; y = 3 · x − 2 – steigt und schneidet die y-Achse bei −2</p>
+<p class="question-explanation">Das Vorzeichen von <math><mi>m</mi></math> sagt steigend (positiv) oder fallend (negativ). <math><mi>b</mi></math> ist der <math><mi>y</mi></math>-Wert bei <math><mi>x</mi></math> = 0.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"gleichung-beschreibung","text":"Ordne jeder Gleichung die passende Beschreibung zu.","explanation":"Das Vorzeichen von $m$ sagt steigend (positiv) oder fallend (negativ). $b$ ist der $y$-Wert bei $x$ = 0.","links":[],"type":"matching","pairs":[{"left":"y = 2 · x","right":"steigt und geht durch den Ursprung"},{"left":"y = −x + 3","right":"fällt und schneidet die y-Achse bei 3"},{"left":"y = 3 · x − 2","right":"steigt und schneidet die y-Achse bei −2"}]},"rendered":{"Das Vorzeichen von $m$ sagt steigend (positiv) oder fallend (negativ). $b$ ist der $y$-Wert bei $x$ = 0.":"Das Vorzeichen von \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> sagt steigend (positiv) oder fallend (negativ). \u003cmath>\u003cmi>b\u003c/mi>\u003c/math> ist der \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Wert bei \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> = 0."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="9a31fc3a" data-block-type="true-false" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="groesseres-b-steiler">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-groesseres-b-steiler" data-id="groesseres-b-steiler" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Je größer <math><mi>b</mi></math> ist, desto steiler ist die Gerade.</legend>
+<label class="question-option"><input type="radio" name="frage-groesseres-b-steiler" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-groesseres-b-steiler" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation"><math><mi>b</mi></math> verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht <math><mi>m</mi></math>.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation"><math><mi>b</mi></math> verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht <math><mi>m</mi></math>.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"groesseres-b-steiler","text":"Je größer $b$ ist, desto steiler ist die Gerade.","explanation":"$b$ verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht $m$.","links":[],"type":"true-false","answer":false},"rendered":{"Je größer $b$ ist, desto steiler ist die Gerade.":"Je größer \u003cmath>\u003cmi>b\u003c/mi>\u003c/math> ist, desto steiler ist die Gerade.","$b$ verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht $m$.":"\u003cmath>\u003cmi>b\u003c/mi>\u003c/math> verschiebt die Gerade nach oben oder unten, ohne sie zu drehen. Steil oder flach macht \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="75040d07" data-block-type="text" data-block-order="16">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du weißt, dass <math><mi>m</mi></math> die Gerade dreht und <math><mi>b</mi></math> sie verschiebt, und liest <math><mi>m</mi></math> und <math><mi>b</mi></math> aus der Gleichung. Als Nächstes
+zeichnest du ein Steigungsdreieck.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Zuordnungen und lineare Funktionen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"08e1261","page":{"title":"Steigung m und Achsenabschnitt b","order":17}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../geraden/das-brauchst-du/">Zurück: Das brauchst du hier</a><a rel="next" href="../../geraden/steigung-deuten/">Weiter: Das Steigungsdreieck</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

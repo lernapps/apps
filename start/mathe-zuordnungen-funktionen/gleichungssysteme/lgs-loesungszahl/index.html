@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Wie viele Lösungen gibt es? – Zuordnungen und lineare Funktionen</title>
+    <meta name="description" content="Du erkennst, ob ein Gleichungssystem keine, genau eine oder unendlich viele Lösungen hat, an der Lage der beiden Geraden." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../gleichungssysteme/lgs-loesungszahl/" />
+    <script type="module" crossorigin src="../../assets/islands-C1c1HARk.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../gleichungssysteme/">Zwei Geraden, ein Schnittpunkt</a></li><li aria-current="page">Wie viele Lösungen gibt es?</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Wie viele Lösungen gibt es?</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../gleichungssysteme/lgs-loesungszahl/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧gleichungssysteme/lgs-loesungszahl/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-zuordnungen-funktionen","page":{"id":"lgs-loesungszahl","title":"Wie viele Lösungen gibt es?","exercises":[{"id":"system-anzahl","section":"uebung","numbered":false},{"id":"parallele-geraden","section":"uebung","numbered":false},{"id":"verschiedene-steigung","section":"uebung","numbered":false},{"id":"parallele-schneiden","section":"uebung","numbered":false}],"sections":["einstieg","erklaerung","beispiel","uebung"]},"tutor":"gleichungssysteme/lgs-loesungszahl/tutor/","markdown":"gleichungssysteme/lgs-loesungszahl/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Zwei Tarife mit Reglern</a></li><li><a href="#erklaerung">Keine, eine oder unendlich viele</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Zwei Tarife mit Reglern</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="68233b35" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Zwei Taxis haben jeweils einen Grundpreis (<math><mi>b</mi></math>) und einen Preis je Kilometer (<math><mi>m</mi></math>). Beide Geraden kannst du mit den Reglern verändern.
+Stelle sie so ein, dass sie <strong>parallel</strong> sind, und dann so, dass sie <strong>aufeinander</strong> liegen. Wie viele Schnittpunkte gibt es jeweils?</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="313977fb" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" id="zwei-taxis" data-component="Dreifachansicht">
+<div class="explainer-island" hidden><div class="dreifach" data-v-040b3e2d><!----><p class="dreifach-term" aria-live="polite" data-v-040b3e2d><span class="dreifach-title" data-v-040b3e2d>Taxi A:</span> <strong data-v-040b3e2d>y = 2 · x + 1</strong><br data-v-040b3e2d><span class="dreifach-title" data-v-040b3e2d>Taxi B:</span> <strong data-v-040b3e2d>y = 1 · x + 5</strong></p><p class="dreifach-hint" data-v-040b3e2d>Bewege einen Regler: Term, Tabelle und Graph ändern sich gleichzeitig. </p><div class="dreifach-sliders" data-v-040b3e2d><label class="dreifach-slider" data-v-040b3e2d><span data-v-040b3e2d>m von Taxi A = 2</span><input value="2" type="range" min="0" max="3" step="1" aria-valuetext="m von Taxi A = 2" data-v-040b3e2d><span class="dreifach-ends" data-v-040b3e2d><span data-v-040b3e2d>0</span><span data-v-040b3e2d>3</span></span></label><label class="dreifach-slider" data-v-040b3e2d><span data-v-040b3e2d>b von Taxi A = 1</span><input value="1" type="range" min="0" max="8" step="1" aria-valuetext="b von Taxi A = 1" data-v-040b3e2d><span class="dreifach-ends" data-v-040b3e2d><span data-v-040b3e2d>0</span><span data-v-040b3e2d>8</span></span></label><label class="dreifach-slider" data-v-040b3e2d><span data-v-040b3e2d>m von Taxi B = 1</span><input value="1" type="range" min="0" max="3" step="1" aria-valuetext="m von Taxi B = 1" data-v-040b3e2d><span class="dreifach-ends" data-v-040b3e2d><span data-v-040b3e2d>0</span><span data-v-040b3e2d>3</span></span></label><label class="dreifach-slider" data-v-040b3e2d><span data-v-040b3e2d>b von Taxi B = 5</span><input value="5" type="range" min="0" max="8" step="1" aria-valuetext="b von Taxi B = 5" data-v-040b3e2d><span class="dreifach-ends" data-v-040b3e2d><span data-v-040b3e2d>0</span><span data-v-040b3e2d>8</span></span></label></div><div class="dreifach-scroll" tabindex="0" role="region" aria-label="Tabelle der Werte" data-v-040b3e2d><table class="dreifach-table" data-v-040b3e2d><caption data-v-040b3e2d> Tabelle </caption><tbody data-v-040b3e2d><tr data-v-040b3e2d><th scope="row" data-v-040b3e2d>Strecke (km)</th><!--[--><td data-v-040b3e2d>0</td><td data-v-040b3e2d>1</td><td data-v-040b3e2d>2</td><td data-v-040b3e2d>3</td><!--]--></tr><tr data-v-040b3e2d><th scope="row" data-v-040b3e2d>Preis (€), Taxi A</th><!--[--><td data-v-040b3e2d>1</td><td data-v-040b3e2d>3</td><td data-v-040b3e2d>5</td><td data-v-040b3e2d>7</td><!--]--></tr><tr data-v-040b3e2d><th scope="row" data-v-040b3e2d>Preis (€), Taxi B</th><!--[--><td data-v-040b3e2d>5</td><td data-v-040b3e2d>6</td><td data-v-040b3e2d>7</td><td data-v-040b3e2d>8</td><!--]--></tr></tbody></table></div><svg class="dreifach-graph" viewBox="0 0 320 240" role="img" aria-label="Graph. Taxi A: Die Gerade steigt: Zu 1 km mehr gehören 2 € mehr. Sie schneidet die y-Achse bei 1 €. Taxi B: Die Gerade steigt: Zu 1 km mehr gehören 1 € mehr. Sie schneidet die y-Achse bei 5 €. Punkte: Taxi A (0|1), (1|3), (2|5), (3|7); Taxi B (0|5), (1|6), (2|7), (3|8)." data-v-040b3e2d><g class="dreifach-grid" data-v-040b3e2d><!--[--><line x1="40" x2="40" y1="26" y2="206" data-v-040b3e2d></line><line x1="84.33333333333333" x2="84.33333333333333" y1="26" y2="206" data-v-040b3e2d></line><line x1="128.66666666666666" x2="128.66666666666666" y1="26" y2="206" data-v-040b3e2d></line><line x1="173" x2="173" y1="26" y2="206" data-v-040b3e2d></line><line x1="217.33333333333331" x2="217.33333333333331" y1="26" y2="206" data-v-040b3e2d></line><line x1="261.6666666666667" x2="261.6666666666667" y1="26" y2="206" data-v-040b3e2d></line><line x1="306" x2="306" y1="26" y2="206" data-v-040b3e2d></line><!--]--><!--[--><line x1="40" x2="306" y1="206" y2="206" data-v-040b3e2d></line><line x1="40" x2="306" y1="180.28571428571428" y2="180.28571428571428" data-v-040b3e2d></line><line x1="40" x2="306" y1="154.57142857142858" y2="154.57142857142858" data-v-040b3e2d></line><line x1="40" x2="306" y1="128.85714285714283" y2="128.85714285714283" data-v-040b3e2d></line><line x1="40" x2="306" y1="103.14285714285714" y2="103.14285714285714" data-v-040b3e2d></line><line x1="40" x2="306" y1="77.42857142857142" y2="77.42857142857142" data-v-040b3e2d></line><line x1="40" x2="306" y1="51.71428571428571" y2="51.71428571428571" data-v-040b3e2d></line><line x1="40" x2="306" y1="26" y2="26" data-v-040b3e2d></line><!--]--></g><g class="dreifach-axes" data-v-040b3e2d><line x1="40" x2="306" y1="206" y2="206" data-v-040b3e2d></line><line x1="40" x2="40" y1="26" y2="206" data-v-040b3e2d></line></g><g class="dreifach-ticks" data-v-040b3e2d><!--[--><text x="40" y="220" text-anchor="middle" data-v-040b3e2d>0</text><text x="84.33333333333333" y="220" text-anchor="middle" data-v-040b3e2d>1</text><text x="128.66666666666666" y="220" text-anchor="middle" data-v-040b3e2d>2</text><text x="173" y="220" text-anchor="middle" data-v-040b3e2d>3</text><text x="217.33333333333331" y="220" text-anchor="middle" data-v-040b3e2d>4</text><text x="261.6666666666667" y="220" text-anchor="middle" data-v-040b3e2d>5</text><text x="306" y="220" text-anchor="middle" data-v-040b3e2d>6</text><!--]--><!--[--><text x="34" y="210" text-anchor="end" data-v-040b3e2d>0</text><text x="34" y="184.28571428571428" text-anchor="end" data-v-040b3e2d>2</text><text x="34" y="158.57142857142858" text-anchor="end" data-v-040b3e2d>4</text><text x="34" y="132.85714285714283" text-anchor="end" data-v-040b3e2d>6</text><text x="34" y="107.14285714285714" text-anchor="end" data-v-040b3e2d>8</text><text x="34" y="81.42857142857142" text-anchor="end" data-v-040b3e2d>10</text><text x="34" y="55.71428571428571" text-anchor="end" data-v-040b3e2d>12</text><text x="34" y="30" text-anchor="end" data-v-040b3e2d>14</text><!--]--><text x="306" y="236" text-anchor="end" data-v-040b3e2d>Strecke (km)</text><text x="10" y="14" data-v-040b3e2d>Preis (€)</text></g><polyline class="dreifach-line" points="40.0,193.1 306.0,38.9" fill="none" data-v-040b3e2d></polyline><polyline class="dreifach-line dreifach-line2" points="40.0,141.7 306.0,64.6" fill="none" data-v-040b3e2d></polyline><!--[--><circle class="dreifach-dot" cx="40" cy="193.14285714285714" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="84.33333333333333" cy="167.42857142857142" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="128.66666666666666" cy="141.71428571428572" r="4" data-v-040b3e2d></circle><circle class="dreifach-dot" cx="173" cy="116" r="4" data-v-040b3e2d></circle><!--]--><!--[--><!--]--></svg><p class="dreifach-legend" data-v-040b3e2d>Durchgezogen: Taxi A. Gestrichelt: Taxi B.</p><p class="dreifach-words" aria-live="polite" data-v-040b3e2d>Taxi A: Die Gerade steigt: Zu 1 km mehr gehören 2 € mehr. Sie schneidet die y-Achse bei 1 €. Taxi B: Die Gerade steigt: Zu 1 km mehr gehören 1 € mehr. Sie schneidet die y-Achse bei 5 €.</p></div></div>
+<div class="explainer-nojs"><p>Zwei Geraden mit je zwei Reglern: Taxi A (<math><mi>m</mi></math> und <math><mi>b</mi></math>) und Taxi B (<math><mi>m</mi></math> und <math><mi>b</mi></math>). Zu Beginn ist Taxi A <math><mi>y</mi></math> = 2 · <math><mi>x</mi></math> + 1 und Taxi B <math><mi>y</mi></math> = <math><mi>x</mi></math> + 5. Für <math><mi>x</mi></math> = 0, 1, 2, 3 ist <math><mi>y</mi></math> bei Taxi A 1, 3, 5, 7 und bei Taxi B 5, 6, 7, 8. Sind beide <math><mi>m</mi></math> gleich und die <math><mi>b</mi></math> verschieden, laufen die Geraden parallel und
+haben keinen gemeinsamen Punkt. Sind <math><mi>m</mi></math> und <math><mi>b</mi></math> beide gleich, liegen sie aufeinander. Sonst schneiden sie sich in genau einem Punkt.</p></div>
+<script type="application/json" class="explainer-component-props">{"kind":"linear","xLabel":"Strecke (km)","yLabel":"Preis (€)","xUnit":"km","yUnit":"€","xs":[0,1,2,3],"xMin":0,"xMax":6,"yMin":0,"yMax":14,"tickX":1,"tickY":2,"a":2,"aMin":0,"aMax":3,"aStep":1,"aName":"m von Taxi A","b":1,"bMin":0,"bMax":8,"bStep":1,"bName":"b von Taxi A","a2":1,"a2Min":0,"a2Max":3,"a2Step":1,"a2Name":"m von Taxi B","b2":5,"b2Min":0,"b2Max":8,"b2Step":1,"b2Name":"b von Taxi B","lineName":"Taxi A","line2Name":"Taxi B"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="erklaerung">Keine, eine oder unendlich viele</h2>
+<div class="explainer-block" data-block="erklaerung/1" data-block-id="f66fb168" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du zwei Tarife vergleichst, kann es sein, dass sie sich nie, genau einmal oder immer treffen. Das siehst du an der Lage der Geraden.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/2" data-block-id="709b6210" data-block-type="table" data-block-order="4">
+<div class="block-table" role="region" aria-label="Lage der Geraden und Zahl der Lösungen" tabindex="0"><table><caption>Lage der Geraden und Zahl der Lösungen</caption><thead><tr><th scope="col">Lage</th><th scope="col"><math><mi>m</mi></math></th><th scope="col"><math><mi>b</mi></math></th><th scope="col">Lösungen</th></tr></thead><tbody><tr><th scope="row">schneiden sich</th><td>verschieden</td><td>egal</td><td>genau eine</td></tr><tr><th scope="row">parallel</th><td>gleich</td><td>verschieden</td><td>keine</td></tr><tr><th scope="row">aufeinander</th><td>gleich</td><td>gleich</td><td>unendlich viele</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/3" data-block-id="39c2b311" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Jeder gemeinsame Punkt der beiden Geraden ist eine Lösung. Bei Parallelen gibt es keinen gemeinsamen Punkt. Liegen die Geraden
+aufeinander, ist jeder Punkt der Geraden eine Lösung.</p></div>
+</div>
+<div class="explainer-block" data-block="erklaerung/4" data-block-id="db5043c2" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="erklaerung/4/1" data-block-id="97432ddf" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Schaue zuerst auf <math><mi>m</mi></math>. Sind die Steigungen verschieden, gibt es <strong>genau eine</strong> Lösung. Nur bei gleichem <math><mi>m</mi></math> hängt es von <math><mi>b</mi></math> ab.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="14ab5c88" data-block-type="example" data-block-order="8">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Zwei Taxis</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="fd57a408" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Taxi A: <math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>. Taxi B: <math><mrow><mi>y</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>x</mi><mo>+</mo><mn>5</mn></mrow></math>. Beide haben <math><mi>m</mi></math> = 2, aber <math><mi>b</mi></math> = 1 und <math><mi>b</mi></math> = 5. Die Geraden sind parallel: Taxi B ist immer um 4 € teurer, es gibt keine Lösung.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="05011ba9" data-block-type="matching" data-block-order="10">
+<div class="explainer-exercise explainer-question" id="system-anzahl">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-system-anzahl" data-id="system-anzahl" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Gleichungssystem die Zahl der Lösungen zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>y = 2 · x + 1 und y = 2 · x + 5</span> <select name="frage-system-anzahl-0" data-left="0"><option value="">bitte wählen</option><option value="1">genau eine Lösung</option><option value="2">unendlich viele Lösungen</option><option value="0">keine Lösung</option></select></label></li>
+<li><label><span>y = 2 · x + 1 und y = 3 · x + 1</span> <select name="frage-system-anzahl-1" data-left="1"><option value="">bitte wählen</option><option value="1">genau eine Lösung</option><option value="2">unendlich viele Lösungen</option><option value="0">keine Lösung</option></select></label></li>
+<li><label><span>y = 2 · x + 1 und y = 2 · x + 1</span> <select name="frage-system-anzahl-2" data-left="2"><option value="">bitte wählen</option><option value="1">genau eine Lösung</option><option value="2">unendlich viele Lösungen</option><option value="0">keine Lösung</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> y = 2 · x + 1 und y = 2 · x + 5 – keine Lösung; y = 2 · x + 1 und y = 3 · x + 1 – genau eine Lösung; y = 2 · x + 1 und y = 2 · x + 1 – unendlich viele Lösungen</p>
+<p class="question-explanation">Gleiches <math><mi>m</mi></math> und verschiedenes <math><mi>b</mi></math>: parallel, keine Lösung. Verschiedenes <math><mi>m</mi></math>: genau ein Schnittpunkt. Gleiches <math><mi>m</mi></math> und gleiches <math><mi>b</mi></math>: dieselbe Gerade.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> y = 2 · x + 1 und y = 2 · x + 5 – keine Lösung; y = 2 · x + 1 und y = 3 · x + 1 – genau eine Lösung; y = 2 · x + 1 und y = 2 · x + 1 – unendlich viele Lösungen</p>
+<p class="question-explanation">Gleiches <math><mi>m</mi></math> und verschiedenes <math><mi>b</mi></math>: parallel, keine Lösung. Verschiedenes <math><mi>m</mi></math>: genau ein Schnittpunkt. Gleiches <math><mi>m</mi></math> und gleiches <math><mi>b</mi></math>: dieselbe Gerade.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"system-anzahl","text":"Ordne jedem Gleichungssystem die Zahl der Lösungen zu.","explanation":"Gleiches $m$ und verschiedenes $b$: parallel, keine Lösung. Verschiedenes $m$: genau ein Schnittpunkt. Gleiches $m$ und gleiches $b$: dieselbe Gerade.","links":[],"type":"matching","pairs":[{"left":"y = 2 · x + 1 und y = 2 · x + 5","right":"keine Lösung"},{"left":"y = 2 · x + 1 und y = 3 · x + 1","right":"genau eine Lösung"},{"left":"y = 2 · x + 1 und y = 2 · x + 1","right":"unendlich viele Lösungen"}]},"rendered":{"Gleiches $m$ und verschiedenes $b$: parallel, keine Lösung. Verschiedenes $m$: genau ein Schnittpunkt. Gleiches $m$ und gleiches $b$: dieselbe Gerade.":"Gleiches \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> und verschiedenes \u003cmath>\u003cmi>b\u003c/mi>\u003c/math>: parallel, keine Lösung. Verschiedenes \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>: genau ein Schnittpunkt. Gleiches \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> und gleiches \u003cmath>\u003cmi>b\u003c/mi>\u003c/math>: dieselbe Gerade."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="94e093a3" data-block-type="single-choice" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="parallele-geraden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-parallele-geraden" data-id="parallele-geraden" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die Geraden <math><mi>y</mi></math> = 3 · <math><mi>x</mi></math> + 2 und <math><mi>y</mi></math> = 3 · <math><mi>x</mi></math> − 4 sind gegeben. Wie viele Lösungen hat das System?</legend>
+<label class="question-option"><input type="radio" name="frage-parallele-geraden" value="0"> <span>keine</span></label>
+<label class="question-option"><input type="radio" name="frage-parallele-geraden" value="1"> <span>genau eine</span></label>
+<label class="question-option"><input type="radio" name="frage-parallele-geraden" value="2"> <span>unendlich viele</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>keine</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beide haben <math><mi>m</mi></math> = 3, aber <math><mi>b</mi></math> = 2 und <math><mi>b</mi></math> = −4. Sie sind parallel und treffen sich nie.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>genau eine</strong></p><p>Genau eine Lösung gibt es nur bei verschiedenen Steigungen. Hier sind beide <math><mi>m</mi></math> gleich 3.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>unendlich viele</strong></p><p>Dafür müssten auch die <math><mi>b</mi></math> gleich sein. Hier sind sie verschieden: 2 und −4.</p></li>
+</ul>
+<p class="question-explanation">Gleiches <math><mi>m</mi></math>, verschiedenes <math><mi>b</mi></math>: die Geraden sind parallel.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>keine</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beide haben <math><mi>m</mi></math> = 3, aber <math><mi>b</mi></math> = 2 und <math><mi>b</mi></math> = −4. Sie sind parallel und treffen sich nie.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>genau eine</strong></p><p>Genau eine Lösung gibt es nur bei verschiedenen Steigungen. Hier sind beide <math><mi>m</mi></math> gleich 3.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>unendlich viele</strong></p><p>Dafür müssten auch die <math><mi>b</mi></math> gleich sein. Hier sind sie verschieden: 2 und −4.</p></li>
+</ul>
+<p class="question-explanation">Gleiches <math><mi>m</mi></math>, verschiedenes <math><mi>b</mi></math>: die Geraden sind parallel.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"parallele-geraden","text":"Die Geraden $y$ = 3 · $x$ + 2 und $y$ = 3 · $x$ − 4 sind gegeben. Wie viele Lösungen hat das System?","explanation":"Gleiches $m$, verschiedenes $b$: die Geraden sind parallel.","links":[],"type":"single-choice","options":[{"text":"keine","correct":true,"info":"Beide haben $m$ = 3, aber $b$ = 2 und $b$ = −4. Sie sind parallel und treffen sich nie."},{"text":"genau eine","correct":false,"info":"Genau eine Lösung gibt es nur bei verschiedenen Steigungen. Hier sind beide $m$ gleich 3."},{"text":"unendlich viele","correct":false,"info":"Dafür müssten auch die $b$ gleich sein. Hier sind sie verschieden: 2 und −4."}]},"rendered":{"Die Geraden $y$ = 3 · $x$ + 2 und $y$ = 3 · $x$ − 4 sind gegeben. Wie viele Lösungen hat das System?":"Die Geraden \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 2 und \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 3 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> − 4 sind gegeben. Wie viele Lösungen hat das System?","Gleiches $m$, verschiedenes $b$: die Geraden sind parallel.":"Gleiches \u003cmath>\u003cmi>m\u003c/mi>\u003c/math>, verschiedenes \u003cmath>\u003cmi>b\u003c/mi>\u003c/math>: die Geraden sind parallel.","Beide haben $m$ = 3, aber $b$ = 2 und $b$ = −4. Sie sind parallel und treffen sich nie.":"Beide haben \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> = 3, aber \u003cmath>\u003cmi>b\u003c/mi>\u003c/math> = 2 und \u003cmath>\u003cmi>b\u003c/mi>\u003c/math> = −4. Sie sind parallel und treffen sich nie.","Genau eine Lösung gibt es nur bei verschiedenen Steigungen. Hier sind beide $m$ gleich 3.":"Genau eine Lösung gibt es nur bei verschiedenen Steigungen. Hier sind beide \u003cmath>\u003cmi>m\u003c/mi>\u003c/math> gleich 3.","Dafür müssten auch die $b$ gleich sein. Hier sind sie verschieden: 2 und −4.":"Dafür müssten auch die \u003cmath>\u003cmi>b\u003c/mi>\u003c/math> gleich sein. Hier sind sie verschieden: 2 und −4."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6911ee20" data-block-type="single-choice" data-block-order="12">
+<div class="explainer-exercise explainer-question" id="verschiedene-steigung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-verschiedene-steigung" data-id="verschiedene-steigung" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die Geraden <math><mi>y</mi></math> = <math><mi>x</mi></math> + 7 und <math><mi>y</mi></math> = 4 · <math><mi>x</mi></math> + 7 sind gegeben. Wie viele Lösungen hat das System?</legend>
+<label class="question-option"><input type="radio" name="frage-verschiedene-steigung" value="0"> <span>genau eine</span></label>
+<label class="question-option"><input type="radio" name="frage-verschiedene-steigung" value="1"> <span>keine</span></label>
+<label class="question-option"><input type="radio" name="frage-verschiedene-steigung" value="2"> <span>unendlich viele</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>genau eine</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Steigungen 1 und 4 sind verschieden. Beide Geraden gehen durch (0|7): das ist die Lösung.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>keine</strong></p><p>Keine Lösung gibt es nur bei Parallelen. Hier sind die Steigungen verschieden.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>unendlich viele</strong></p><p>Unendlich viele gibt es nur, wenn es dieselbe Gerade ist. Hier sind die Steigungen verschieden.</p></li>
+</ul>
+<p class="question-explanation">Verschiedene Steigungen führen immer zu genau einem Schnittpunkt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>genau eine</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Steigungen 1 und 4 sind verschieden. Beide Geraden gehen durch (0|7): das ist die Lösung.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>keine</strong></p><p>Keine Lösung gibt es nur bei Parallelen. Hier sind die Steigungen verschieden.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>unendlich viele</strong></p><p>Unendlich viele gibt es nur, wenn es dieselbe Gerade ist. Hier sind die Steigungen verschieden.</p></li>
+</ul>
+<p class="question-explanation">Verschiedene Steigungen führen immer zu genau einem Schnittpunkt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"verschiedene-steigung","text":"Die Geraden $y$ = $x$ + 7 und $y$ = 4 · $x$ + 7 sind gegeben. Wie viele Lösungen hat das System?","explanation":"Verschiedene Steigungen führen immer zu genau einem Schnittpunkt.","links":[],"type":"single-choice","options":[{"text":"genau eine","correct":true,"info":"Die Steigungen 1 und 4 sind verschieden. Beide Geraden gehen durch (0|7): das ist die Lösung."},{"text":"keine","correct":false,"info":"Keine Lösung gibt es nur bei Parallelen. Hier sind die Steigungen verschieden."},{"text":"unendlich viele","correct":false,"info":"Unendlich viele gibt es nur, wenn es dieselbe Gerade ist. Hier sind die Steigungen verschieden."}]},"rendered":{"Die Geraden $y$ = $x$ + 7 und $y$ = 4 · $x$ + 7 sind gegeben. Wie viele Lösungen hat das System?":"Die Geraden \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 7 und \u003cmath>\u003cmi>y\u003c/mi>\u003c/math> = 4 · \u003cmath>\u003cmi>x\u003c/mi>\u003c/math> + 7 sind gegeben. Wie viele Lösungen hat das System?"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="c95638f1" data-block-type="true-false" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="parallele-schneiden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-parallele-schneiden" data-id="parallele-schneiden" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Zwei Geraden mit der gleichen Steigung und verschiedenem <math><mi>y</mi></math>-Achsenabschnitt schneiden sich genau einmal.</legend>
+<label class="question-option"><input type="radio" name="frage-parallele-schneiden" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-parallele-schneiden" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Sie sind parallel und haben keinen gemeinsamen Punkt, also keine Lösung.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Sie sind parallel und haben keinen gemeinsamen Punkt, also keine Lösung.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"parallele-schneiden","text":"Zwei Geraden mit der gleichen Steigung und verschiedenem $y$-Achsenabschnitt schneiden sich genau einmal.","explanation":"Sie sind parallel und haben keinen gemeinsamen Punkt, also keine Lösung.","links":[],"type":"true-false","answer":false},"rendered":{"Zwei Geraden mit der gleichen Steigung und verschiedenem $y$-Achsenabschnitt schneiden sich genau einmal.":"Zwei Geraden mit der gleichen Steigung und verschiedenem \u003cmath>\u003cmi>y\u003c/mi>\u003c/math>-Achsenabschnitt schneiden sich genau einmal."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="11b9cce1" data-block-type="text" data-block-order="14">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du löst ein Gleichungssystem zeichnerisch und sagst, ob es keine, eine oder unendlich viele Lösungen hat. Als
+Nächstes rechnest du die Lösung genau aus.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Zuordnungen und lineare Funktionen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-zuordnungen-funktionen","app":"Zuordnungen und lineare Funktionen","root":"../../","repository":"lernapps/mathe-zuordnungen-funktionen","revision":"08e1261","page":{"title":"Wie viele Lösungen gibt es?","order":23}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungssysteme/lgs-zwei-geraden/">Zurück: Zwei Tarife, ein Schnittpunkt</a><a rel="next" href="../../gleichungssysteme/lgs-gleichsetzen/">Weiter: Das Gleichsetzungsverfahren</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

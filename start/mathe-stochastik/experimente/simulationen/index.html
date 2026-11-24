@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Simulationen – Mathe: Stochastik – Wahrscheinlichkeit</title>
+    <meta name="description" content="Zufallsversuche mit Zufallszahlen und einer Zuordnung nachspielen und auswerten, mit der Zufallsmaschine zum Ausprobieren." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../experimente/simulationen/" />
+    <script type="module" crossorigin src="../../assets/islands-Bi5pcRrb.js"></script>
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../experimente/">Experimentieren mit dem Zufall</a></li><li aria-current="page">Simulationen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Simulationen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../experimente/simulationen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧experimente/simulationen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-stochastik","page":{"id":"simulationen","title":"Simulationen","exercises":[{"id":"durchlaeufe-vergleichen","section":"warum","numbered":false},{"id":"muenze-durchlaeufe","section":"beispiel","numbered":false},{"id":"durchschnitt-durchlaeufe","section":"uebung","numbered":false},{"id":"zuordnung-zuordnen","section":"uebung","numbered":false},{"id":"zuordnung-gleich-gross","section":"uebung","numbered":false},{"id":"durchlauf-zaehlen","section":"uebung","numbered":false},{"id":"treffer-festlegen","section":"uebung","numbered":false},{"id":"reihe-auswerten","section":"uebung","numbered":true},{"id":"schaetzwert-nicht-beweis","section":"uebung","numbered":false}],"sections":["warum","regel","beispiel","uebung","abschluss"]},"tutor":"experimente/simulationen/tutor/","markdown":"experimente/simulationen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#warum">Wann kommt die erste Sechs?</a></li><li><a href="#regel">Zufallszahlen und Zuordnung</a></li><li><a href="#beispiel">Eine Zahlenreihe auswerten</a></li><li><a href="#uebung">Übung</a></li><li><a href="#abschluss">Das nimmst du mit</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="warum">Wann kommt die erste Sechs?</h2>
+<div class="explainer-block" data-block="warum/1" data-block-id="ded01741" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Mia, Jonas und Lena spielen am Spieleabend ein Würfelspiel. Wer zuerst eine Sechs würfelt, darf anfangen. Lena
+fragt: „Wie oft muss man würfeln, bis zum ersten Mal eine Sechs kommt?“ Das echt auszuprobieren dauert lange.
+Darum ersetzt du den echten Versuch durch eine <strong>Simulation</strong>: ein Versuch, der sich genauso verhält, aber
+schneller geht. Hier würfelt die Zufallsmaschine für dich: Bei jedem Klick zieht sie eine Zufallszahl von 1 bis 6, und diese Zahl ist die Augenzahl. Du siehst sie bei „Letzter Wurf“.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/2" data-block-id="8e4b5d38" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Ein <strong>Durchlauf</strong> ist einmal von vorn bis zum Ziel: Du würfelst, bis die erste Sechs kommt, und zählst die
+Würfe. Klicke auf „1 Wurf“, bis beim letzten Wurf eine 6 steht. Über der Tabelle der Maschine steht, nach
+wie vielen Würfen die Zahlen gezählt sind: So siehst du, wie viele Würfe du gebraucht hast. Setze zurück und mache drei Durchläufe.</p></div>
+</div>
+<div class="explainer-block" data-block="warum/3" data-block-id="1235b0f6" data-block-type="vue-component" data-block-order="3">
+<div class="explainer-component" id="maschine-erste-sechs" data-component="ZufallMaschine">
+<div class="explainer-island" hidden><div class="maschine" data-v-e54758cf><p class="maschine-geraet" data-v-e54758cf> Gerät: <strong data-v-e54758cf>Würfel</strong>. Beobachtet wird: <strong data-v-e54758cf>6</strong> (in der Tabelle mit ◄ markiert). </p><p class="maschine-letzter" aria-live="polite" data-v-e54758cf> Letzter Wurf: <strong data-v-e54758cf>–</strong></p><div class="maschine-knoepfe" data-v-e54758cf><!--[--><button type="button" data-v-e54758cf>1 Wurf</button><button type="button" data-v-e54758cf>10 Würfe</button><button type="button" data-v-e54758cf>100 Würfe</button><button type="button" data-v-e54758cf>1000 Würfe</button><!--]--><button type="button" class="maschine-zurueck" disabled data-v-e54758cf> Zurücksetzen </button></div><svg class="maschine-bild" viewBox="-18 -8 324 188" role="img" aria-label="Linie der relativen Häufigkeit von 6. Noch kein Wurf." data-v-e54758cf><text x="-4" y="4" text-anchor="end" class="maschine-achse" data-v-e54758cf>1</text><text x="-4" y="164" text-anchor="end" class="maschine-achse" data-v-e54758cf>0</text><text x="300" y="176" text-anchor="end" class="maschine-achse" data-v-e54758cf>Würfe →</text><rect x="0" y="0" width="300" height="160" class="maschine-rahmen" data-v-e54758cf></rect><!----><!----></svg><p class="maschine-erklaerung" data-v-e54758cf> Die Linie zeigt die relative Häufigkeit von „6“ nach jedem Wurf: waagerecht die Würfe, senkrecht von 0 (unten) bis 1 (oben). <!----></p><p class="maschine-satz" aria-live="polite" data-v-e54758cf>Noch kein Wurf. <!----></p><table class="maschine-tabelle" data-v-e54758cf><caption data-v-e54758cf> Häufigkeiten nach 0 Würfen</caption><thead data-v-e54758cf><tr data-v-e54758cf><th scope="col" data-v-e54758cf>Ergebnis</th><th scope="col" data-v-e54758cf>absolute Häufigkeit</th><th scope="col" data-v-e54758cf>relative Häufigkeit</th></tr></thead><tbody data-v-e54758cf><!--[--><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>1</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>2</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>3</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>4</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>5</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="beobachtet" data-v-e54758cf><th scope="row" data-v-e54758cf>6</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><!--]--></tbody></table></div></div>
+<div class="explainer-nojs"><p>Die Zufallsmaschine wirft einen Würfel und zählt die Ergebnisse 1 bis 6. Du klickst auf „1 Wurf“, bis die
+erste Sechs kommt, und liest über der Tabelle ab, wie viele Würfe das waren. Ein Beispiel mit drei
+Durchläufen: Beim ersten Durchlauf kam die Sechs nach 3 Würfen, beim zweiten nach 8 Würfen und beim dritten
+nach 5 Würfen.</p></div>
+<script type="application/json" class="explainer-component-props">{"geraet":"wuerfel","beobachte":"6"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="warum/4" data-block-id="b8833f63" data-block-type="single-choice" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="durchlaeufe-vergleichen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-durchlaeufe-vergleichen" data-id="durchlaeufe-vergleichen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du hast mehrere Durchläufe gemacht. Was fällt dir an der Zahl der Würfe bis zur ersten Sechs auf?</legend>
+<label class="question-option"><input type="radio" name="frage-durchlaeufe-vergleichen" value="0"> <span>Jeder Durchlauf dauert genau gleich viele Würfe.</span></label>
+<label class="question-option"><input type="radio" name="frage-durchlaeufe-vergleichen" value="1"> <span>Mal kommt die Sechs früh, mal spät, die Zahl der Würfe ist jedes Mal anders.</span></label>
+<label class="question-option"><input type="radio" name="frage-durchlaeufe-vergleichen" value="2"> <span>Die erste Sechs kommt immer beim sechsten Wurf.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Jeder Durchlauf dauert genau gleich viele Würfe.</strong></p><p>Das stimmt nicht. Der Zufall entscheidet bei jedem Wurf neu, darum dauern die Durchläufe verschieden lang.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Mal kommt die Sechs früh, mal spät, die Zahl der Würfe ist jedes Mal anders.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Genau das beobachtest du. Wie lange es dauert, lässt sich vorher nicht sicher sagen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die erste Sechs kommt immer beim sechsten Wurf.</strong></p><p>Das stimmt nicht. Die Würfe merken sich nichts, die Sechs kann gleich beim ersten Wurf kommen.</p></li>
+</ul>
+<p class="question-explanation">Ein einzelner Durchlauf sagt wenig. Erst viele Durchläufe zeigen, wie lange es meistens dauert.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Jeder Durchlauf dauert genau gleich viele Würfe.</strong></p><p>Das stimmt nicht. Der Zufall entscheidet bei jedem Wurf neu, darum dauern die Durchläufe verschieden lang.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Mal kommt die Sechs früh, mal spät, die Zahl der Würfe ist jedes Mal anders.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Genau das beobachtest du. Wie lange es dauert, lässt sich vorher nicht sicher sagen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die erste Sechs kommt immer beim sechsten Wurf.</strong></p><p>Das stimmt nicht. Die Würfe merken sich nichts, die Sechs kann gleich beim ersten Wurf kommen.</p></li>
+</ul>
+<p class="question-explanation">Ein einzelner Durchlauf sagt wenig. Erst viele Durchläufe zeigen, wie lange es meistens dauert.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"durchlaeufe-vergleichen","text":"Du hast mehrere Durchläufe gemacht. Was fällt dir an der Zahl der Würfe bis zur ersten Sechs auf?","explanation":"Ein einzelner Durchlauf sagt wenig. Erst viele Durchläufe zeigen, wie lange es meistens dauert.","links":[],"type":"single-choice","options":[{"text":"Jeder Durchlauf dauert genau gleich viele Würfe.","correct":false,"info":"Das stimmt nicht. Der Zufall entscheidet bei jedem Wurf neu, darum dauern die Durchläufe verschieden lang."},{"text":"Mal kommt die Sechs früh, mal spät, die Zahl der Würfe ist jedes Mal anders.","correct":true,"info":"Genau das beobachtest du. Wie lange es dauert, lässt sich vorher nicht sicher sagen."},{"text":"Die erste Sechs kommt immer beim sechsten Wurf.","correct":false,"info":"Das stimmt nicht. Die Würfe merken sich nichts, die Sechs kann gleich beim ersten Wurf kommen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Zufallszahlen und Zuordnung</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="71bcf7bd" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn echtes Würfeln zu lange dauert, ersetzt du den Versuch durch eine Simulation. Du brauchst dafür zwei Dinge. Denke dir die Zufallszahlen wie Lose in einer Trommel: Du ziehst
+ein Los, und eine Regel sagt dir, welches Ergebnis dieses Los bedeutet.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="5f49b747" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-zufallszahl"><a href="../../glossar/#zufallszahl">Zufallszahl</a></dfn></dt><dd><p>Eine Zahl, die der Zufall aus einem Bereich zieht, zum Beispiel aus 1 bis 6. Jede Zahl des Bereichs ist gleich wahrscheinlich.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="1d0970b3" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-zuordnung"><a href="../../glossar/#zuordnung">Zuordnung</a></dfn></dt><dd><p>Die Regel, die sagt, welches Ergebnis des Versuchs zu welcher Zufallszahl gehört.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="37ac110d" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-treffer"><a href="../../glossar/#treffer">Treffer</a></dfn></dt><dd><p>Das Ergebnis, auf das du bei einer Simulation achtest und das du zählst, zum Beispiel die Sechs.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="462fcf48" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Damit eine Zufallszahl ein Ergebnis bedeutet, brauchst du eine feste Zuordnung. Die Tabelle zeigt drei Beispiele.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="001d660f" data-block-type="table" data-block-order="10">
+<div class="block-table" role="region" aria-label="So ordnest du Zufallszahlen zu" tabindex="0"><table><caption>So ordnest du Zufallszahlen zu</caption><thead><tr><th scope="col">Versuch</th><th scope="col">Zufallszahl</th><th scope="col">Zuordnung</th></tr></thead><tbody><tr><td>Würfel</td><td>1 bis 6</td><td>Die Zahl ist die Augenzahl.</td></tr><tr><td>Münze</td><td>1 bis 6</td><td>gerade = Kopf, ungerade = Zahl</td></tr><tr><td>Urne mit 3 roten und 1 blauen Kugel</td><td>1 bis 4</td><td>1 bis 3 = rot, 4 = blau</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="regel/7" data-block-id="7db31ff4" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Wenn du viele Durchläufe brauchst, gehst du jedes Mal gleich vor. Eine Simulation läuft in vier Schritten: Zufallszahl ziehen, Zuordnung anwenden, Ergebnis notieren, alles
+oft wiederholen und die Treffer zählen. So sieht das für die Urne mit 3 roten und 1 blauen Kugel aus.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/8" data-block-id="ac3a29c9" data-block-type="table" data-block-order="12">
+<div class="block-table" role="region" aria-label="Fünf Durchgänge mit der Urne" tabindex="0"><table><caption>Fünf Durchgänge mit der Urne</caption><thead><tr><th scope="col">Zufallszahl</th><th scope="col">Zuordnung</th><th scope="col">Ergebnis</th></tr></thead><tbody><tr><td>4</td><td>4 = blau</td><td>blau</td></tr><tr><td>1</td><td>1 bis 3 = rot</td><td>rot</td></tr><tr><td>3</td><td>1 bis 3 = rot</td><td>rot</td></tr><tr><td>2</td><td>1 bis 3 = rot</td><td>rot</td></tr><tr><td>4</td><td>4 = blau</td><td>blau</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="regel/9" data-block-id="b58d87be" data-block-type="note" data-block-order="13">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="regel/9/1" data-block-id="773df101" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Jedes Ergebnis bekommt so viele Zufallszahlen, wie zu seiner Wahrscheinlichkeit passt. In der Urne ist rot
+dreimal so wahrscheinlich wie blau, darum hat rot drei Zahlen und blau eine. Die relative Häufigkeit der
+Treffer schätzt dann die Wahrscheinlichkeit, und mehr Durchläufe machen die Schätzung verlässlicher.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="regel/10" data-block-id="7cb09e13" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Mit einer Tabellenkalkulation kannst du Zufallszahlen am Rechner erzeugen. Eine Tabellenkalkulation hat diese
+App nicht; das Prinzip ist dasselbe. Hier simulierst du mit der Zufallsmaschine und mit Zahlenreihen auf dieser
+Seite.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Eine Zahlenreihe auswerten</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="f40e20db" data-block-type="example" data-block-order="16">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Beispiel</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="c7a919a4" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Wenn eine Simulation fertig ist, willst du wissen, wie oft der Treffer vorkam. Lena simuliert 20 Würfe mit Zufallszahlen von 1 bis 6. Die Zahl ist die Augenzahl. Ihre Reihe: 3, 6, 1,
+4, 6, 2, 5, 3, 6, 1, 2, 4, 4, 6, 5, 3, 1, 6, 2, 4. Sie zählt jede Zahl mit einer Strichliste.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="9d4c316d" data-block-type="table" data-block-order="18">
+<div class="block-table" role="region" aria-label="Strichliste der 20 Zufallszahlen" tabindex="0"><table><caption>Strichliste der 20 Zufallszahlen</caption><thead><tr><th scope="col">Zahl</th><th scope="col">Strichliste</th><th scope="col">Anzahl</th></tr></thead><tbody><tr><td>1</td><td>|||</td><td>3</td></tr><tr><td>2</td><td>|||</td><td>3</td></tr><tr><td>3</td><td>|||</td><td>3</td></tr><tr><td>4</td><td>||||</td><td>4</td></tr><tr><td>5</td><td>||</td><td>2</td></tr><tr><td>6</td><td>|||||</td><td>5</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="f9e7e889" data-block-type="formula" data-block-order="19">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mn>3</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>5</mn><mo>=</mo><mn>20</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="35d5d6d3" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Die relative Häufigkeit der Sechs ist 5 von 20.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/5" data-block-id="acc4161c" data-block-type="formula" data-block-order="21">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>h</mi><mo>=</mo><mfrac><mn>5</mn><mn>20</mn></mfrac><mo>=</mo><mn>0,25</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/6" data-block-id="1a7dee0d" data-block-type="text" data-block-order="22">
+<div class="block-text"><p>Lena liest die Reihe auch als Durchläufe bis zur ersten Sechs: Der erste Durchlauf endet nach 2 Würfen
+(3, 6), der zweite nach 3 Würfen (1, 4, 6), die nächsten nach 4, 5 und 4 Würfen. Die letzten zwei Zahlen
+(2, 4) gehören zu einem Durchlauf, der noch nicht fertig ist. Zum Vergleich: Bei einem Würfel erwartest du
+für die Sechs <math><mfrac><mn>1</mn><mn>6</mn></mfrac></math>, ungefähr 0,17.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="f81fd4d7" data-block-type="text" data-block-order="23">
+<div class="block-text"><p>Jetzt simulierst du eine Münze. Die Zufallsmaschine übernimmt die Zuordnung für dich. Wirf 100-mal und lies
+die relative Häufigkeit von Kopf ab. Setze zurück und wiederhole das noch zweimal. Vergleiche die drei Werte.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="6da5feab" data-block-type="vue-component" data-block-order="24">
+<div class="explainer-component" id="maschine-muenze-simulation" data-component="ZufallMaschine">
+<div class="explainer-island" hidden><div class="maschine" data-v-e54758cf><p class="maschine-geraet" data-v-e54758cf> Gerät: <strong data-v-e54758cf>Münze</strong>. Beobachtet wird: <strong data-v-e54758cf>Kopf</strong> (in der Tabelle mit ◄ markiert). </p><p class="maschine-letzter" aria-live="polite" data-v-e54758cf> Letzter Wurf: <strong data-v-e54758cf>–</strong></p><div class="maschine-knoepfe" data-v-e54758cf><!--[--><button type="button" data-v-e54758cf>1 Wurf</button><button type="button" data-v-e54758cf>10 Würfe</button><button type="button" data-v-e54758cf>100 Würfe</button><button type="button" data-v-e54758cf>1000 Würfe</button><!--]--><button type="button" class="maschine-zurueck" disabled data-v-e54758cf> Zurücksetzen </button></div><svg class="maschine-bild" viewBox="-18 -8 324 188" role="img" aria-label="Linie der relativen Häufigkeit von Kopf. Noch kein Wurf." data-v-e54758cf><text x="-4" y="4" text-anchor="end" class="maschine-achse" data-v-e54758cf>1</text><text x="-4" y="164" text-anchor="end" class="maschine-achse" data-v-e54758cf>0</text><text x="300" y="176" text-anchor="end" class="maschine-achse" data-v-e54758cf>Würfe →</text><rect x="0" y="0" width="300" height="160" class="maschine-rahmen" data-v-e54758cf></rect><!----><!----></svg><p class="maschine-erklaerung" data-v-e54758cf> Die Linie zeigt die relative Häufigkeit von „Kopf“ nach jedem Wurf: waagerecht die Würfe, senkrecht von 0 (unten) bis 1 (oben). <!----></p><p class="maschine-satz" aria-live="polite" data-v-e54758cf>Noch kein Wurf. <!----></p><table class="maschine-tabelle" data-v-e54758cf><caption data-v-e54758cf> Häufigkeiten nach 0 Würfen</caption><thead data-v-e54758cf><tr data-v-e54758cf><th scope="col" data-v-e54758cf>Ergebnis</th><th scope="col" data-v-e54758cf>absolute Häufigkeit</th><th scope="col" data-v-e54758cf>relative Häufigkeit</th></tr></thead><tbody data-v-e54758cf><!--[--><tr class="beobachtet" data-v-e54758cf><th scope="row" data-v-e54758cf>Kopf</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><tr class="" data-v-e54758cf><th scope="row" data-v-e54758cf>Zahl</th><td data-v-e54758cf>0</td><td data-v-e54758cf>–</td></tr><!--]--></tbody></table></div></div>
+<div class="explainer-nojs"><p>Die Zufallsmaschine wirft eine Münze so oft, wie du willst, und zählt Kopf und Zahl. Ein Beispiel mit drei
+Durchläufen zu je 100 Würfen: Kopf hatte die relative Häufigkeit 0,47, dann 0,53 und dann 0,5.</p></div>
+<script type="application/json" class="explainer-component-props">{"geraet":"muenze","beobachte":"Kopf"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="beispiel/4" data-block-id="2e3ea3ff" data-block-type="single-choice" data-block-order="25">
+<div class="explainer-exercise explainer-question" id="muenze-durchlaeufe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-muenze-durchlaeufe" data-id="muenze-durchlaeufe" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du hast dreimal 100 Münzwürfe simuliert. Was zeigen die drei Werte für Kopf?</legend>
+<label class="question-option"><input type="radio" name="frage-muenze-durchlaeufe" value="0"> <span>Alle drei Werte sind ähnlich, aber nicht genau gleich.</span></label>
+<label class="question-option"><input type="radio" name="frage-muenze-durchlaeufe" value="1"> <span>Alle drei Werte sind genau gleich.</span></label>
+<label class="question-option"><input type="radio" name="frage-muenze-durchlaeufe" value="2"> <span>Die Werte liegen weit auseinander, einer nahe 0 und einer nahe 1.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Alle drei Werte sind ähnlich, aber nicht genau gleich.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>So ist es. Jeder Durchlauf hat seinen eigenen Zufall, darum weichen die Werte ein wenig voneinander ab.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Alle drei Werte sind genau gleich.</strong></p><p>Das stimmt nicht. Bei Zufall kommt es selten vor, dass zwei Durchläufe genau dasselbe ergeben.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Werte liegen weit auseinander, einer nahe 0 und einer nahe 1.</strong></p><p>Das stimmt nicht. Bei 100 Würfen liegen die Werte meist nahe beieinander.</p></li>
+</ul>
+<p class="question-explanation">Jede Simulation liefert nur einen Schätzwert, der etwas schwankt. Du kannst ihn damit nicht als genauen Wert ausgeben.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Alle drei Werte sind ähnlich, aber nicht genau gleich.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>So ist es. Jeder Durchlauf hat seinen eigenen Zufall, darum weichen die Werte ein wenig voneinander ab.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Alle drei Werte sind genau gleich.</strong></p><p>Das stimmt nicht. Bei Zufall kommt es selten vor, dass zwei Durchläufe genau dasselbe ergeben.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Werte liegen weit auseinander, einer nahe 0 und einer nahe 1.</strong></p><p>Das stimmt nicht. Bei 100 Würfen liegen die Werte meist nahe beieinander.</p></li>
+</ul>
+<p class="question-explanation">Jede Simulation liefert nur einen Schätzwert, der etwas schwankt. Du kannst ihn damit nicht als genauen Wert ausgeben.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"muenze-durchlaeufe","text":"Du hast dreimal 100 Münzwürfe simuliert. Was zeigen die drei Werte für Kopf?","explanation":"Jede Simulation liefert nur einen Schätzwert, der etwas schwankt. Du kannst ihn damit nicht als genauen Wert ausgeben.","links":[],"type":"single-choice","options":[{"text":"Alle drei Werte sind ähnlich, aber nicht genau gleich.","correct":true,"info":"So ist es. Jeder Durchlauf hat seinen eigenen Zufall, darum weichen die Werte ein wenig voneinander ab."},{"text":"Alle drei Werte sind genau gleich.","correct":false,"info":"Das stimmt nicht. Bei Zufall kommt es selten vor, dass zwei Durchläufe genau dasselbe ergeben."},{"text":"Die Werte liegen weit auseinander, einer nahe 0 und einer nahe 1.","correct":false,"info":"Das stimmt nicht. Bei 100 Würfen liegen die Werte meist nahe beieinander."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="1cfdc9ea" data-block-type="number" data-block-order="26">
+<div class="explainer-exercise explainer-question" id="durchschnitt-durchlaeufe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-durchschnitt-durchlaeufe" data-id="durchschnitt-durchlaeufe" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia hat drei Durchläufe gemacht. Bis zur ersten Sechs brauchte sie 4, 9 und 2 Würfe. Wie viele Würfe sind das im Durchschnitt pro Durchlauf? Der Durchschnitt ist die Summe aller Würfe geteilt durch die Zahl der Durchläufe.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-durchschnitt-durchlaeufe">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 5</p>
+<p class="question-explanation">Zusammen sind es 4 + 9 + 2 = 15 Würfe in 3 Durchläufen. Das sind 15 geteilt durch 3, also 5 Würfe pro Durchlauf. Mit nur drei Durchläufen ist das aber erst ein grober Schätzwert.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 5</p>
+<p class="question-explanation">Zusammen sind es 4 + 9 + 2 = 15 Würfe in 3 Durchläufen. Das sind 15 geteilt durch 3, also 5 Würfe pro Durchlauf. Mit nur drei Durchläufen ist das aber erst ein grober Schätzwert.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"durchschnitt-durchlaeufe","text":"Mia hat drei Durchläufe gemacht. Bis zur ersten Sechs brauchte sie 4, 9 und 2 Würfe. Wie viele Würfe sind das im Durchschnitt pro Durchlauf? Der Durchschnitt ist die Summe aller Würfe geteilt durch die Zahl der Durchläufe.","explanation":"Zusammen sind es 4 + 9 + 2 = 15 Würfe in 3 Durchläufen. Das sind 15 geteilt durch 3, also 5 Würfe pro Durchlauf. Mit nur drei Durchläufen ist das aber erst ein grober Schätzwert.","links":[],"hint":"Addiere zuerst die Würfe aller Durchläufe. Durch welche Zahl musst du dann teilen?","type":"number","answer":5,"tolerance":0,"mistakes":[{"answer":15,"message":"Das ist die Summe aller Würfe. Der Durchschnitt gilt für einen einzelnen Durchlauf."},{"answer":9,"message":"Das ist der längste Durchlauf, nicht der Durchschnitt."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="a7ae964e" data-block-type="matching" data-block-order="27">
+<div class="explainer-exercise explainer-question" id="zuordnung-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zuordnung-zuordnen" data-id="zuordnung-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Versuch die passende Zuordnung zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Würfel, Zufallszahl 1 bis 6</span> <select name="frage-zuordnung-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="2">1 = rot, 2 bis 4 = blau</option><option value="1">1 bis 4 = Kopf, 5 bis 8 = Zahl</option><option value="0">Die Zahl ist die Augenzahl.</option></select></label></li>
+<li><label><span>Münze, Zufallszahl 1 bis 8</span> <select name="frage-zuordnung-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="2">1 = rot, 2 bis 4 = blau</option><option value="1">1 bis 4 = Kopf, 5 bis 8 = Zahl</option><option value="0">Die Zahl ist die Augenzahl.</option></select></label></li>
+<li><label><span>Urne mit 1 roten und 3 blauen Kugeln, Zufallszahl 1 bis 4</span> <select name="frage-zuordnung-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="2">1 = rot, 2 bis 4 = blau</option><option value="1">1 bis 4 = Kopf, 5 bis 8 = Zahl</option><option value="0">Die Zahl ist die Augenzahl.</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Würfel, Zufallszahl 1 bis 6 – Die Zahl ist die Augenzahl.; Münze, Zufallszahl 1 bis 8 – 1 bis 4 = Kopf, 5 bis 8 = Zahl; Urne mit 1 roten und 3 blauen Kugeln, Zufallszahl 1 bis 4 – 1 = rot, 2 bis 4 = blau</p>
+<p class="question-explanation">Jedes Ergebnis bekommt so viele Zufallszahlen, wie zu seiner Wahrscheinlichkeit passt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Würfel, Zufallszahl 1 bis 6 – Die Zahl ist die Augenzahl.; Münze, Zufallszahl 1 bis 8 – 1 bis 4 = Kopf, 5 bis 8 = Zahl; Urne mit 1 roten und 3 blauen Kugeln, Zufallszahl 1 bis 4 – 1 = rot, 2 bis 4 = blau</p>
+<p class="question-explanation">Jedes Ergebnis bekommt so viele Zufallszahlen, wie zu seiner Wahrscheinlichkeit passt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zuordnung-zuordnen","text":"Ordne jedem Versuch die passende Zuordnung zu.","explanation":"Jedes Ergebnis bekommt so viele Zufallszahlen, wie zu seiner Wahrscheinlichkeit passt.","links":[],"type":"matching","pairs":[{"left":"Würfel, Zufallszahl 1 bis 6","right":"Die Zahl ist die Augenzahl."},{"left":"Münze, Zufallszahl 1 bis 8","right":"1 bis 4 = Kopf, 5 bis 8 = Zahl"},{"left":"Urne mit 1 roten und 3 blauen Kugeln, Zufallszahl 1 bis 4","right":"1 = rot, 2 bis 4 = blau"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6653d1f4" data-block-type="true-false" data-block-order="28">
+<div class="explainer-exercise explainer-question" id="zuordnung-gleich-gross">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zuordnung-gleich-gross" data-id="zuordnung-gleich-gross" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Münze soll mit einer Zufallszahl von 1 bis 6 simuliert werden. Die Zuordnung lautet: 1 und 2 = Kopf, 3 bis 6 = Zahl. Stellt das eine Münze richtig dar?</legend>
+<label class="question-option"><input type="radio" name="frage-zuordnung-gleich-gross" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-zuordnung-gleich-gross" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Kopf und Zahl sind bei einer Münze gleich wahrscheinlich, brauchen also gleich viele Zufallszahlen. Hier hat Kopf nur 2 von 6 Zahlen und Zahl hat 4. Das ist eine ungleiche Zuordnung für gleich wahrscheinliche Ergebnisse. Richtig wäre zum Beispiel 1 bis 3 = Kopf und 4 bis 6 = Zahl.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Kopf und Zahl sind bei einer Münze gleich wahrscheinlich, brauchen also gleich viele Zufallszahlen. Hier hat Kopf nur 2 von 6 Zahlen und Zahl hat 4. Das ist eine ungleiche Zuordnung für gleich wahrscheinliche Ergebnisse. Richtig wäre zum Beispiel 1 bis 3 = Kopf und 4 bis 6 = Zahl.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zuordnung-gleich-gross","text":"Eine Münze soll mit einer Zufallszahl von 1 bis 6 simuliert werden. Die Zuordnung lautet: 1 und 2 = Kopf, 3 bis 6 = Zahl. Stellt das eine Münze richtig dar?","explanation":"Kopf und Zahl sind bei einer Münze gleich wahrscheinlich, brauchen also gleich viele Zufallszahlen. Hier hat Kopf nur 2 von 6 Zahlen und Zahl hat 4. Das ist eine ungleiche Zuordnung für gleich wahrscheinliche Ergebnisse. Richtig wäre zum Beispiel 1 bis 3 = Kopf und 4 bis 6 = Zahl.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="73c6ae2c" data-block-type="number" data-block-order="29">
+<div class="explainer-exercise explainer-question" id="durchlauf-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-durchlauf-zaehlen" data-id="durchlauf-zaehlen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia simuliert mit Zufallszahlen von 1 bis 6. Die 6 bedeutet „Sechs“. Ihre Reihe: 2, 5, 1, 4, 4, 6, 3, 1, 6, 5. Der erste Durchlauf endet bei der ersten Sechs, der zweite bei der nächsten. Wie viele Würfe dauert der zweite Durchlauf, die Sechs mitgezählt?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-durchlauf-zaehlen">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3</p>
+<p class="question-explanation">Die erste Sechs steht an 6. Stelle. Danach kommen 3, 1 und 6. Der zweite Durchlauf dauert also 3 Würfe.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3</p>
+<p class="question-explanation">Die erste Sechs steht an 6. Stelle. Danach kommen 3, 1 und 6. Der zweite Durchlauf dauert also 3 Würfe.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"durchlauf-zaehlen","text":"Mia simuliert mit Zufallszahlen von 1 bis 6. Die 6 bedeutet „Sechs“. Ihre Reihe: 2, 5, 1, 4, 4, 6, 3, 1, 6, 5. Der erste Durchlauf endet bei der ersten Sechs, der zweite bei der nächsten. Wie viele Würfe dauert der zweite Durchlauf, die Sechs mitgezählt?","explanation":"Die erste Sechs steht an 6. Stelle. Danach kommen 3, 1 und 6. Der zweite Durchlauf dauert also 3 Würfe.","links":[],"hint":"Wo steht die erste Sechs? Ab welcher Zahl beginnt der zweite Durchlauf?","type":"number","answer":3,"tolerance":0,"mistakes":[{"answer":2,"message":"Du hast die Sechs nicht mitgezählt. Der Durchlauf endet mit dem Wurf, der die Sechs zeigt."},{"answer":9,"message":"Du hast von Anfang der Reihe gezählt. Der zweite Durchlauf beginnt erst nach der ersten Sechs."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a1ef0551" data-block-type="multiple-choice" data-block-order="30">
+<div class="explainer-exercise explainer-question" id="treffer-festlegen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-treffer-festlegen" data-id="treffer-festlegen" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Zufallszahl von 1 bis 10 soll einen Versuch darstellen, bei dem ein Treffer die Wahrscheinlichkeit 30 % hat. Welche Zuordnungen passen? Wähle alle richtigen.</legend>
+<label class="question-option"><input type="checkbox" name="frage-treffer-festlegen" value="0"> <span>Treffer sind 4, 7 und 10.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-treffer-festlegen" value="1"> <span>Treffer ist nur die 3.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-treffer-festlegen" value="2"> <span>Treffer sind 1, 2, 3 und 4.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-treffer-festlegen" value="3"> <span>Treffer sind 1, 2 und 3.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Treffer sind 4, 7 und 10.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das sind 3 von 10 Zahlen, also 30 %. Es kommt nur auf die Anzahl der Treffer-Zahlen an, nicht darauf, welche es sind.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Treffer ist nur die 3.</strong></p><p>Das ist 1 von 10 Zahlen, also nur 10 %. Der Treffer bekommt zu wenige Zahlen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Treffer sind 1, 2, 3 und 4.</strong></p><p>Das sind 4 von 10 Zahlen, also 40 %. Der Treffer bekommt zu viele Zahlen.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>Treffer sind 1, 2 und 3.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das sind 3 von 10 Zahlen, also 30 %. Alle anderen Zahlen bedeuten dann kein Treffer.</p></li>
+</ul>
+<p class="question-explanation">Die Treffer bekommen so viele der 10 Zahlen, wie 30 % von 10 sind. Welche Zahlen es sind, ist egal.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Treffer sind 4, 7 und 10.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das sind 3 von 10 Zahlen, also 30 %. Es kommt nur auf die Anzahl der Treffer-Zahlen an, nicht darauf, welche es sind.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Treffer ist nur die 3.</strong></p><p>Das ist 1 von 10 Zahlen, also nur 10 %. Der Treffer bekommt zu wenige Zahlen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Treffer sind 1, 2, 3 und 4.</strong></p><p>Das sind 4 von 10 Zahlen, also 40 %. Der Treffer bekommt zu viele Zahlen.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>Treffer sind 1, 2 und 3.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das sind 3 von 10 Zahlen, also 30 %. Alle anderen Zahlen bedeuten dann kein Treffer.</p></li>
+</ul>
+<p class="question-explanation">Die Treffer bekommen so viele der 10 Zahlen, wie 30 % von 10 sind. Welche Zahlen es sind, ist egal.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"treffer-festlegen","text":"Eine Zufallszahl von 1 bis 10 soll einen Versuch darstellen, bei dem ein Treffer die Wahrscheinlichkeit 30 % hat. Welche Zuordnungen passen? Wähle alle richtigen.","explanation":"Die Treffer bekommen so viele der 10 Zahlen, wie 30 % von 10 sind. Welche Zahlen es sind, ist egal.","links":[],"type":"multiple-choice","options":[{"text":"Treffer sind 4, 7 und 10.","correct":true,"info":"Das sind 3 von 10 Zahlen, also 30 %. Es kommt nur auf die Anzahl der Treffer-Zahlen an, nicht darauf, welche es sind."},{"text":"Treffer ist nur die 3.","correct":false,"info":"Das ist 1 von 10 Zahlen, also nur 10 %. Der Treffer bekommt zu wenige Zahlen."},{"text":"Treffer sind 1, 2, 3 und 4.","correct":false,"info":"Das sind 4 von 10 Zahlen, also 40 %. Der Treffer bekommt zu viele Zahlen."},{"text":"Treffer sind 1, 2 und 3.","correct":true,"info":"Das sind 3 von 10 Zahlen, also 30 %. Alle anderen Zahlen bedeuten dann kein Treffer."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="619ccc2f" data-block-type="generated" data-block-order="31">
+<div class="explainer-exercise explainer-generated" id="reihe-auswerten">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Mia hat einen Würfel mit Zufallszahlen von 1 bis 6 simuliert, insgesamt 20 Würfe. Ihre Strichliste zeigt: 1 kam 3-mal, 2 kam 3-mal, 3 kam 4-mal, 4 kam 2-mal und 5 kam 3-mal. Die Sechs fehlt noch in der Liste. Wie groß ist die relative Häufigkeit der Sechs? Gib sie als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle sechs Anzahlen zusammen müssen 20 ergeben. Wie viele Würfe bleiben für die Sechs übrig?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Zahlen 1 bis 5 kamen zusammen 3 + 3 + 4 + 2 + 3 mal. Die übrigen der 20 Würfe sind Sechsen.</li><li><math><mrow><mfrac><mrow><mn>20</mn><mo>−</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>3</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow><mn>20</mn></mfrac><mo>=</mo><mn>0,25</mn></mrow></math></li><li>Rechenprobe: Die Anzahl der Sechsen und die der Zahlen 1 bis 5 ergeben zusammen 20.</li></ol><p><strong>Richtige Antwort:</strong> 0,25</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Mia hat einen Würfel mit Zufallszahlen von 1 bis 6 simuliert, insgesamt 20 Würfe. Ihre Strichliste zeigt: 1 kam 4-mal, 2 kam 2-mal, 3 kam 2-mal, 4 kam 2-mal und 5 kam 3-mal. Die Sechs fehlt noch in der Liste. Wie groß ist die relative Häufigkeit der Sechs? Gib sie als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle sechs Anzahlen zusammen müssen 20 ergeben. Wie viele Würfe bleiben für die Sechs übrig?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Zahlen 1 bis 5 kamen zusammen 4 + 2 + 2 + 2 + 3 mal. Die übrigen der 20 Würfe sind Sechsen.</li><li><math><mrow><mfrac><mrow><mn>20</mn><mo>−</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>4</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow><mn>20</mn></mfrac><mo>=</mo><mn>0,35</mn></mrow></math></li><li>Rechenprobe: Die Anzahl der Sechsen und die der Zahlen 1 bis 5 ergeben zusammen 20.</li></ol><p><strong>Richtige Antwort:</strong> 0,35</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Mia hat einen Würfel mit Zufallszahlen von 1 bis 6 simuliert, insgesamt 20 Würfe. Ihre Strichliste zeigt: 1 kam 3-mal, 2 kam 2-mal, 3 kam 3-mal, 4 kam 2-mal und 5 kam 4-mal. Die Sechs fehlt noch in der Liste. Wie groß ist die relative Häufigkeit der Sechs? Gib sie als Dezimalzahl an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle sechs Anzahlen zusammen müssen 20 ergeben. Wie viele Würfe bleiben für die Sechs übrig?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Zahlen 1 bis 5 kamen zusammen 3 + 2 + 3 + 2 + 4 mal. Die übrigen der 20 Würfe sind Sechsen.</li><li><math><mrow><mfrac><mrow><mn>20</mn><mo>−</mo><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mn>3</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>4</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow><mn>20</mn></mfrac><mo>=</mo><mn>0,3</mn></mrow></math></li><li>Rechenprobe: Die Anzahl der Sechsen und die der Zahlen 1 bis 5 ergeben zusammen 20.</li></ol><p><strong>Richtige Antwort:</strong> 0,3</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"reihe-auswerten","given":{"a":{"int":[2,4]},"b":{"int":[2,4]},"c":{"int":[2,4]},"d":{"int":[2,4]},"e":{"int":[2,4]}},"where":["a + b + c + d + e >= 12","a + b + c + d + e \u003c= 19"],"task":{"text":"Mia hat einen Würfel mit Zufallszahlen von 1 bis 6 simuliert, insgesamt 20 Würfe. Ihre Strichliste zeigt: 1 kam {{a}}-mal, 2 kam {{b}}-mal, 3 kam {{c}}-mal, 4 kam {{d}}-mal und 5 kam {{e}}-mal. Die Sechs fehlt noch in der Liste. Wie groß ist die relative Häufigkeit der Sechs? Gib sie als Dezimalzahl an."},"answer":{"value":"(20 - a - b - c - d - e) / 20","compare":{"number":{"format":"decimal","decimals":2}}},"mistakes":[{"value":"20 - a - b - c - d - e","message":"Das ist die Zahl der Sechsen. Die relative Häufigkeit setzt sie ins Verhältnis zu allen Würfen."},{"value":"(a + b + c + d + e) / 20","message":"Das ist die relative Häufigkeit der Zahlen 1 bis 5 zusammen, nicht die der Sechs."}],"hint":"Alle sechs Anzahlen zusammen müssen 20 ergeben. Wie viele Würfe bleiben für die Sechs übrig?","steps":["Die Zahlen 1 bis 5 kamen zusammen {{a}} + {{b}} + {{c}} + {{d}} + {{e}} mal. Die übrigen der 20 Würfe sind Sechsen.","$\\frac{20 - ({{a}} + {{b}} + {{c}} + {{d}} + {{e}})}{20} = {{answer}}$","Rechenprobe: Die Anzahl der Sechsen und die der Zahlen 1 bis 5 ergeben zusammen 20."]},"templates":{"de":{"task":"Mia hat einen Würfel mit Zufallszahlen von 1 bis 6 simuliert, insgesamt 20 Würfe. Ihre Strichliste zeigt: 1 kam ⟦a⟧-mal, 2 kam ⟦b⟧-mal, 3 kam ⟦c⟧-mal, 4 kam ⟦d⟧-mal und 5 kam ⟦e⟧-mal. Die Sechs fehlt noch in der Liste. Wie groß ist die relative Häufigkeit der Sechs? Gib sie als Dezimalzahl an.","steps":["Die Zahlen 1 bis 5 kamen zusammen ⟦a⟧ + ⟦b⟧ + ⟦c⟧ + ⟦d⟧ + ⟦e⟧ mal. Die übrigen der 20 Würfe sind Sechsen.","\u003cmath>\u003cmrow>\u003cmfrac>\u003cmrow>\u003cmn>20\u003c/mn>\u003cmo>−\u003c/mo>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"false\">(\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmtext>⟦d⟧\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmtext>⟦e⟧\u003c/mtext>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"false\">)\u003c/mo>\u003c/mrow>\u003c/mrow>\u003cmn>20\u003c/mn>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>","Rechenprobe: Die Anzahl der Sechsen und die der Zahlen 1 bis 5 ergeben zusammen 20."],"hint":"Alle sechs Anzahlen zusammen müssen 20 ergeben. Wie viele Würfe bleiben für die Sechs übrig?","messages":["Das ist die Zahl der Sechsen. Die relative Häufigkeit setzt sie ins Verhältnis zu allen Würfen.","Das ist die relative Häufigkeit der Zahlen 1 bis 5 zusammen, nicht die der Sechs."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,59,60,61,62,63,65,66,67,68,69,71],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="f19b2468" data-block-type="single-choice" data-block-order="32">
+<div class="explainer-exercise explainer-question" id="schaetzwert-nicht-beweis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-schaetzwert-nicht-beweis" data-id="schaetzwert-nicht-beweis" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Lena simuliert 20 Würfe und bekommt 4-mal die Sechs. Jonas sagt: „Also hat die Sechs genau die Wahrscheinlichkeit 20 %. Die Simulation hat es bewiesen.“ Was antwortest du?</legend>
+<label class="question-option"><input type="radio" name="frage-schaetzwert-nicht-beweis" value="0"> <span>Stimmt, denn die Simulation zeigt immer die genaue Wahrscheinlichkeit.</span></label>
+<label class="question-option"><input type="radio" name="frage-schaetzwert-nicht-beweis" value="1"> <span>Das ist nur ein Schätzwert aus 20 Würfen. Mit viel mehr Würfen wird er verlässlicher.</span></label>
+<label class="question-option"><input type="radio" name="frage-schaetzwert-nicht-beweis" value="2"> <span>Die relative Häufigkeit sagt gar nichts über die Wahrscheinlichkeit.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Stimmt, denn die Simulation zeigt immer die genaue Wahrscheinlichkeit.</strong></p><p>Das stimmt nicht. Eine Simulation beweist nichts, sie liefert nur einen Schätzwert.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Das ist nur ein Schätzwert aus 20 Würfen. Mit viel mehr Würfen wird er verlässlicher.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei wenigen Durchläufen kann der Zufall den Wert stark verschieben. Viele Durchläufe machen die Schätzung besser, beweisen aber auch nichts.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die relative Häufigkeit sagt gar nichts über die Wahrscheinlichkeit.</strong></p><p>Das stimmt nicht. Die relative Häufigkeit schätzt die Wahrscheinlichkeit, vor allem bei vielen Durchläufen.</p></li>
+</ul>
+<p class="question-explanation">Eine Simulation ersetzt den echten Versuch und liefert einen Schätzwert. Zu wenige Durchläufe sind nur ein Anhaltspunkt, und auch viele beweisen nichts.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Stimmt, denn die Simulation zeigt immer die genaue Wahrscheinlichkeit.</strong></p><p>Das stimmt nicht. Eine Simulation beweist nichts, sie liefert nur einen Schätzwert.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Das ist nur ein Schätzwert aus 20 Würfen. Mit viel mehr Würfen wird er verlässlicher.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei wenigen Durchläufen kann der Zufall den Wert stark verschieben. Viele Durchläufe machen die Schätzung besser, beweisen aber auch nichts.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die relative Häufigkeit sagt gar nichts über die Wahrscheinlichkeit.</strong></p><p>Das stimmt nicht. Die relative Häufigkeit schätzt die Wahrscheinlichkeit, vor allem bei vielen Durchläufen.</p></li>
+</ul>
+<p class="question-explanation">Eine Simulation ersetzt den echten Versuch und liefert einen Schätzwert. Zu wenige Durchläufe sind nur ein Anhaltspunkt, und auch viele beweisen nichts.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"schaetzwert-nicht-beweis","text":"Lena simuliert 20 Würfe und bekommt 4-mal die Sechs. Jonas sagt: „Also hat die Sechs genau die Wahrscheinlichkeit 20 %. Die Simulation hat es bewiesen.“ Was antwortest du?","explanation":"Eine Simulation ersetzt den echten Versuch und liefert einen Schätzwert. Zu wenige Durchläufe sind nur ein Anhaltspunkt, und auch viele beweisen nichts.","links":[],"type":"single-choice","options":[{"text":"Stimmt, denn die Simulation zeigt immer die genaue Wahrscheinlichkeit.","correct":false,"info":"Das stimmt nicht. Eine Simulation beweist nichts, sie liefert nur einen Schätzwert."},{"text":"Das ist nur ein Schätzwert aus 20 Würfen. Mit viel mehr Würfen wird er verlässlicher.","correct":true,"info":"Bei wenigen Durchläufen kann der Zufall den Wert stark verschieben. Viele Durchläufe machen die Schätzung besser, beweisen aber auch nichts."},{"text":"Die relative Häufigkeit sagt gar nichts über die Wahrscheinlichkeit.","correct":false,"info":"Das stimmt nicht. Die relative Häufigkeit schätzt die Wahrscheinlichkeit, vor allem bei vielen Durchläufen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="abschluss">Das nimmst du mit</h2>
+<div class="explainer-block" data-block="abschluss/1" data-block-id="17f3feef" data-block-type="note" data-block-order="33">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="abschluss/1/1" data-block-id="2ab2b8a9" data-block-type="text" data-block-order="34">
+<div class="block-text"><ul>
+<li>Eine Simulation ersetzt den echten Versuch durch Zufallszahlen und eine Zuordnung.</li>
+<li>Gleich wahrscheinliche Ergebnisse bekommen gleich viele Zufallszahlen.</li>
+<li>Zähle die Treffer und rechne die relative Häufigkeit aus: Anzahl der Treffer durch Anzahl der Durchläufe.</li>
+<li>Wenige Durchläufe sind nur ein Anhaltspunkt. Eine Simulation liefert einen Schätzwert, keinen Beweis.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe: Stochastik – Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-stochastik","app":"Mathe: Stochastik – Wahrscheinlichkeit","root":"../../","repository":"lernapps/mathe-stochastik","revision":"f323240","page":{"title":"Simulationen","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../experimente/wahrscheinlichkeitsbegriff/">Zurück: Wahrscheinlichkeitsbegriff</a><a rel="next" href="../../zufall/start/">Weiter: Das brauchst du hier</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

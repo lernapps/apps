@@ -36,9 +36,6 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Selbsteinschätzu
   bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
   falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
 - Brüche wie 3/8 sind in der Eingabe erlaubt, gekürzt oder ungekürzt.
-- Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
-  zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
-  Regel, Beispiel und Video nicht gereicht haben.
 
 ## Besondere Anforderungen
 
@@ -53,29 +50,58 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Die Kapitel und ihre Seiten, in ihrer Reihenfolge
 
+### Kapitel „Experimentieren mit dem Zufall“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Zufallsversuche“ · Aufgaben A1, A2
+- „Relative Häufigkeit als Schätzwert“ · Aufgaben A3, A4
+- „Wahrscheinlichkeitsbegriff“ · Aufgaben A5, A6
+- „Simulationen“ · Aufgaben A7, A8
+
 ### Kapitel „Wahrscheinlichkeit“
 
 - Selbsteinschätzung des Kapitels
-- „Laplace-Formel“ · Aufgaben A1, A2
-- „Baumdiagramm“ · Aufgaben A3, A4
-- „1. Pfadregel“ · Aufgaben A5, A6
-- „Gegenereignis“ · Aufgaben A7, A8
-- „Ohne Zurücklegen“ · Aufgaben A9, A10
-- „2. Pfadregel“ · Aufgaben A11, A12
+- „Das brauchst du hier“
+- „Laplace-Formel“ · Aufgaben A9, A10
+- „Baumdiagramm“ · Aufgaben A11, A12
+- „1. Pfadregel“ · Aufgaben A13, A14
+- „Gegenereignis“ · Aufgaben A15, A16
+- „Ohne Zurücklegen“ · Aufgaben A17, A18
+- „2. Pfadregel“ · Aufgaben A19, A20
 - „Produkt, Summe, Potenz“ · nicht abgefragt
 - „In Pfade übersetzen“ · nicht abgefragt
 
+### Kapitel „Vierfeldertafel und bedingte Wahrscheinlichkeit“
+
+- Selbsteinschätzung des Kapitels
+- „Vierfeldertafel“ · Aufgaben A21, A22
+- „Bedingte Wahrscheinlichkeit“ · Aufgaben A23, A24, A25
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
-- A1: Aufgabe laplace-zaehlen der Seite „Laplace-Formel“
-- A2: Aufgabe laplace-urne der Seite „Laplace-Formel“
-- A3: Aufgabe baum-ergaenzen der Seite „Baumdiagramm“
-- A4: Aufgabe baum-ergaenzen der Seite „Baumdiagramm“
-- A5: Aufgabe pfad-im-baum der Seite „1. Pfadregel“
-- A6: Aufgabe pfadregel-1-urne der Seite „1. Pfadregel“
-- A7: Aufgabe gegenwahrscheinlichkeit der Seite „Gegenereignis“
-- A8: Aufgabe gegenereignis-direkt der Seite „Gegenereignis“
-- A9: Aufgabe mit-und-ohne der Seite „Ohne Zurücklegen“
-- A10: Aufgabe zweite-kugel-ohne der Seite „Ohne Zurücklegen“
-- A11: Aufgabe pfade-addieren der Seite „2. Pfadregel“
-- A12: Aufgabe genau-einmal-rot der Seite „2. Pfadregel“
+- A1: Aufgabe gluecksrad-ergebnisse der Seite „Zufallsversuche“
+- A2: Aufgabe kein-ausgleich der Seite „Zufallsversuche“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A3: Aufgabe legostein-dezimal der Seite „Relative Häufigkeit als Schätzwert“
+- A4: Aufgabe wie-oft-oben der Seite „Relative Häufigkeit als Schätzwert“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A5: Aufgabe regen-deuten der Seite „Wahrscheinlichkeitsbegriff“
+- A6: Aufgabe keine-wahrscheinlichkeit der Seite „Wahrscheinlichkeitsbegriff“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A7: Aufgabe reihe-auswerten der Seite „Simulationen“
+- A8: Aufgabe durchschnitt-durchlaeufe der Seite „Simulationen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A9: Aufgabe laplace-zaehlen der Seite „Laplace-Formel“
+- A10: Aufgabe laplace-urne der Seite „Laplace-Formel“
+- A11: Aufgabe baum-ergaenzen der Seite „Baumdiagramm“
+- A12: Aufgabe baum-ergaenzen der Seite „Baumdiagramm“
+- A13: Aufgabe pfad-im-baum der Seite „1. Pfadregel“
+- A14: Aufgabe pfadregel-1-urne der Seite „1. Pfadregel“
+- A15: Aufgabe gegenwahrscheinlichkeit der Seite „Gegenereignis“
+- A16: Aufgabe gegenereignis-direkt der Seite „Gegenereignis“
+- A17: Aufgabe mit-und-ohne der Seite „Ohne Zurücklegen“
+- A18: Aufgabe zweite-kugel-ohne der Seite „Ohne Zurücklegen“
+- A19: Aufgabe pfade-addieren der Seite „2. Pfadregel“
+- A20: Aufgabe genau-einmal-rot der Seite „2. Pfadregel“
+- A21: Aufgabe nur-karten der Seite „Vierfeldertafel“
+- A22: Aufgabe tafel-wahrscheinlichkeit der Seite „Vierfeldertafel“
+- A23: Aufgabe bedingt-tafel der Seite „Bedingte Wahrscheinlichkeit“
+- A24: Aufgabe bedingt-tafel der Seite „Bedingte Wahrscheinlichkeit“
+- A25: Aufgabe sicherheit der Seite „Bedingte Wahrscheinlichkeit“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

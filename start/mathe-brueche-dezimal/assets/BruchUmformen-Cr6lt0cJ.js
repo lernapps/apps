@@ -1,0 +1,1 @@
+export{t as about,n as check,r as describe,i as generate,a as mistakes,o as params,s as reason,c as show,l as solution,u as template,d as wrong}from"./BruchAufgaben-CRTOjDoH.js";

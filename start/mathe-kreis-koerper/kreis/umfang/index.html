@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Der Umfang des Kreises – Kreis und Körper berechnen</title>
+    <meta name="description" content="Aus π = U : d wird eine Formel für den Umfang: U = π · d und U = 2 · π · r. Du rechnest damit vorwärts und rückwärts." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../kreis/umfang/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../kreis/">Kreis, π und Bogenmaß</a></li><li aria-current="page">Der Umfang des Kreises</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Der Umfang des Kreises</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../kreis/umfang/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧kreis/umfang/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"umfang","title":"Der Umfang des Kreises","exercises":[{"id":"brunnen-schaetzen","section":"einstieg","numbered":false},{"id":"umfang-aus-durchmesser","section":"uebung","numbered":true},{"id":"umfang-aus-radius","section":"uebung","numbered":true},{"id":"durchmesser-aus-umfang","section":"uebung","numbered":true},{"id":"fehler-finden","section":"uebung","numbered":false},{"id":"radius-verdoppeln","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"kreis/umfang/tutor/","markdown":"kreis/umfang/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Die Schnur um den Brunnen</a></li><li><a href="#herleitung">Von π zur Formel</a></li><li><a href="#beispiel">Der Brunnenrand</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Die Schnur um den Brunnen</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="1b63c891" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du für einen Kreis die Länge des Randes brauchst, zum Beispiel für eine Schnur, ein Band oder einen Zaun, willst du sie ausrechnen, ohne zu messen.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="56027765" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Der Rand eines runden Brunnens hat den Durchmesser 1,20 m. Du willst eine Schnur einmal um den Rand legen. Du weißt: Der Umfang ist ungefähr dreimal so lang wie der Durchmesser.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="cdadb561" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="brunnen-schaetzen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-brunnen-schaetzen" data-id="brunnen-schaetzen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie lang ist die Schnur ungefähr? Rechne mit 3 statt mit π und gib das Ergebnis in Metern an.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-brunnen-schaetzen" aria-describedby="frage-brunnen-schaetzen-unit"> <span id="frage-brunnen-schaetzen-unit">m</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3,6 m (erlaubte Abweichung: 0,01 m)</p>
+<p class="question-explanation">3 · 1,20 m = 3,6 m. Das ist eine Schätzung, denn der Faktor ist nicht genau 3, sondern π ≈ 3,14.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3,6 m (erlaubte Abweichung: 0,01 m)</p>
+<p class="question-explanation">3 · 1,20 m = 3,6 m. Das ist eine Schätzung, denn der Faktor ist nicht genau 3, sondern π ≈ 3,14.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"brunnen-schaetzen","text":"Wie lang ist die Schnur ungefähr? Rechne mit 3 statt mit π und gib das Ergebnis in Metern an.","explanation":"3 · 1,20 m = 3,6 m. Das ist eine Schätzung, denn der Faktor ist nicht genau 3, sondern π ≈ 3,14.","links":[],"type":"number","answer":3.6,"tolerance":0.01,"unit":"m"},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Von π zur Formel</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="55d0ceb7" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Wenn du den Umfang ausrechnen willst, stellst du die Gleichung für π um: Aus π = U : d wird U = π · d, du multiplizierst mit d. Der Durchmesser ist doppelt so lang wie der Radius, d = 2 · r. So entsteht die zweite Form.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="efe44bba" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>π</mi><mo>=</mo><mfrac><mi>U</mi><mi>d</mi></mfrac><mspace width="1em"></mspace><mo stretchy="false">⇒</mo><mspace width="1em"></mspace><mi>U</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>d</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="00a61703" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Mit welchem Wert für π?</h3>
+<div class="explainer-block" data-block="herleitung/3/1" data-block-id="a8509d08" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Wenn du mit π rechnest, musst du dich für einen Wert entscheiden.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3/2" data-block-id="35232e05" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>In diesem Kapitel rechnest du mit π ≈ 3,14, wenn die Aufgabe es sagt. Dann ist das Ergebnis eindeutig vorgegeben. Die π-Taste deines Taschenrechners nutzt mehr Stellen. Das Ergebnis weicht dann ein wenig ab und gilt auf den Seiten zum Umfang, zur Fläche und zu den Körpern als falsch, wenn die Aufgabe 3,14 verlangt.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Der Brunnenrand</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="ad76edb5" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Wenn du die Formel an einem echten Maß prüfen willst, nimm den Brunnenrand von der letzten Seite.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="41d8c211" data-block-type="example" data-block-order="10">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Durchmesser 1,20 m</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="1019dc5b" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>U</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>d</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><mn>1,20</mn><mo>=</mo><mn>3,768</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="96f258e6" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Die Schnur muss etwa 3,77 m lang sein. Das passt zu den Messwerten der letzten Seite (3,77 m).</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="87953981" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Rückwärts: Ist der Umfang 44 cm, dann ist der Durchmesser d = U : π ≈ 44 : 3,14 ≈ 14,0 cm.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="1f3ac9b9" data-block-type="generated" data-block-order="14">
+<div class="explainer-exercise explainer-generated" id="umfang-aus-durchmesser">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kreis hat den Durchmesser d = 4 cm. Berechne seinen Umfang mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>d</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>12,56</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 12,56 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kreis hat den Durchmesser d = 40 cm. Berechne seinen Umfang mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>d</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><mn>40</mn><mo>=</mo><mn>125,6</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 125,6 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kreis hat den Durchmesser d = 11 cm. Berechne seinen Umfang mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo>=</mo><mi>π</mi><mo>⋅</mo><mi>d</mi><mo>≈</mo><mn>3,14</mn><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>34,54</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 34,54 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"umfang-aus-durchmesser","given":{"d":{"int":[4,40],"step":1}},"task":{"text":"Ein Kreis hat den Durchmesser d = {{d}} cm. Berechne seinen Umfang mit π ≈ 3,14."},"answer":{"value":"3.14 * d","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm"}}},"mistakes":[{"value":"3.14 * d / 2","message":"Du hast durch 2 geteilt. Bei gegebenem Durchmesser rechnest du U = π · d, ohne 2."},{"value":"3.14 * d * d","message":"Du hast den Durchmesser zweimal genommen. Das ist π · d², eine Fläche. Der Umfang ist π · d."}],"hint":"Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14.","steps":["$U = \\pi \\cdot d \\approx 3,14 \\cdot {{d}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Kreis hat den Durchmesser d = ⟦d⟧ cm. Berechne seinen Umfang mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>U\u003c/mi>\u003cmo>=\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>d\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦d⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Der Durchmesser ist gegeben. Multipliziere ihn mit π ≈ 3,14.","messages":["Du hast durch 2 geteilt. Bei gegebenem Durchmesser rechnest du U = π · d, ohne 2.","Du hast den Durchmesser zweimal genommen. Das ist π · d², eine Fläche. Der Umfang ist π · d."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,15,16,17,18,19,20,21,22,24,25,27,29,41,45,46,48,61,64,76,92,103,116,128,130,198],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="26a92139" data-block-type="generated" data-block-order="15">
+<div class="explainer-exercise explainer-generated" id="umfang-aus-radius">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Kreis hat den Radius r = 15 cm. Berechne seinen Umfang mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>15</mn><mo>=</mo><mn>94,2</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 94,2 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Kreis hat den Radius r = 3 cm. Berechne seinen Umfang mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>18,84</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 18,84 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Kreis hat den Radius r = 7 cm. Berechne seinen Umfang mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>U</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><mi>r</mi><mo>≈</mo><mn>2</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><mn>7</mn><mo>=</mo><mn>43,96</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 43,96 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"umfang-aus-radius","given":{"r":{"int":[3,25],"step":1}},"task":{"text":"Ein Kreis hat den Radius r = {{r}} cm. Berechne seinen Umfang mit π ≈ 3,14."},"answer":{"value":"2 * 3.14 * r","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm"}}},"mistakes":[{"value":"3.14 * r","message":"Du hast den Radius wie einen Durchmesser behandelt. Der Durchmesser ist 2 · r, also U = 2 · π · r. So bekommst du nur den halben Umfang."},{"value":"3.14 * r * r","message":"Das ist die Fläche π · r², keine Länge. Der Umfang ist 2 · π · r."}],"hint":"Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d.","steps":["$U = 2 \\cdot \\pi \\cdot r \\approx 2 \\cdot 3,14 \\cdot {{r}} = {{answer}}$"]},"templates":{"de":{"task":"Ein Kreis hat den Radius r = ⟦r⟧ cm. Berechne seinen Umfang mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>U\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmi>r\u003c/mi>\u003cmo>≈\u003c/mo>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Der Radius ist halb so lang wie der Durchmesser. Erst d = 2 · r, dann U = π · d.","messages":["Du hast den Radius wie einen Durchmesser behandelt. Der Durchmesser ist 2 · r, also U = 2 · π · r. So bekommst du nur den halben Umfang.","Das ist die Fläche π · r², keine Länge. Der Umfang ist 2 · π · r."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,10,12,13,14,15,19,23,24,25,26,36,41,44,54,77],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="ffd03bd7" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="durchmesser-aus-umfang">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Um einen runden Baumstamm legst du ein Maßband: Der Umfang ist 44 cm. Wie groß ist der Durchmesser des Stamms? Rechne mit π ≈ 3,14 und runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>U = π · d. Stelle die Gleichung nach d um.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>d</mi><mo>=</mo><mfrac><mi>U</mi><mi>π</mi></mfrac><mo>≈</mo><mfrac><mn>44</mn><mn>3,14</mn></mfrac><mo>=</mo><mn>14</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 14 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Um einen runden Baumstamm legst du ein Maßband: Der Umfang ist 32 cm. Wie groß ist der Durchmesser des Stamms? Rechne mit π ≈ 3,14 und runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>U = π · d. Stelle die Gleichung nach d um.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>d</mi><mo>=</mo><mfrac><mi>U</mi><mi>π</mi></mfrac><mo>≈</mo><mfrac><mn>32</mn><mn>3,14</mn></mfrac><mo>=</mo><mn>10,2</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 10,2 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Um einen runden Baumstamm legst du ein Maßband: Der Umfang ist 192 cm. Wie groß ist der Durchmesser des Stamms? Rechne mit π ≈ 3,14 und runde auf eine Stelle nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>U = π · d. Stelle die Gleichung nach d um.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>d</mi><mo>=</mo><mfrac><mi>U</mi><mi>π</mi></mfrac><mo>≈</mo><mfrac><mn>192</mn><mn>3,14</mn></mfrac><mo>=</mo><mn>61,1</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 61,1 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"durchmesser-aus-umfang","given":{"U":{"int":[20,200],"step":1}},"task":{"text":"Um einen runden Baumstamm legst du ein Maßband: Der Umfang ist {{U}} cm. Wie groß ist der Durchmesser des Stamms? Rechne mit π ≈ 3,14 und runde auf eine Stelle nach dem Komma."},"answer":{"value":"round(U / 3.14, 1)","compare":{"number":{"decimals":1,"tolerance":0,"unit":"cm"}}},"mistakes":[{"value":"round(U / 3.14 / 2, 1)","message":"Das ist der Radius r = U : (2 · π). Gefragt ist der Durchmesser d = U : π."},{"value":"round(U * 3.14, 1)","message":"Du hast multipliziert. Der Umfang ist U = π · d, also musst du durch π teilen, um d zu bekommen."}],"hint":"U = π · d. Stelle die Gleichung nach d um.","steps":["$d = \\frac{U}{\\pi} \\approx \\frac{{{U}}}{3,14} = {{answer}}$"]},"templates":{"de":{"task":"Um einen runden Baumstamm legst du ein Maßband: Der Umfang ist ⟦U⟧ cm. Wie groß ist der Durchmesser des Stamms? Rechne mit π ≈ 3,14 und runde auf eine Stelle nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>d\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmi>U\u003c/mi>\u003cmi>π\u003c/mi>\u003c/mfrac>\u003cmo>≈\u003c/mo>\u003cmfrac>\u003cmtext>⟦U⟧\u003c/mtext>\u003cmn>3,14\u003c/mn>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"U = π · d. Stelle die Gleichung nach d um.","messages":["Das ist der Radius r = U : (2 · π). Gefragt ist der Durchmesser d = U : π.","Du hast multipliziert. Der Umfang ist U = π · d, also musst du durch π teilen, um d zu bekommen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,23,25,26,27,29,30,31,32,34,35,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,54,55,56,57,58,60,63,64,65,66,67,68,69,70,71,73,75,76,77,79,81],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="cd0dcc3f" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="fehler-finden">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-fehler-finden" data-id="fehler-finden" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Jemand rechnet für einen Kreis mit dem Radius r = 5 cm: U = π · 5 ≈ 15,7 cm. Was ist falsch?</legend>
+<label class="question-option"><input type="radio" name="frage-fehler-finden" value="0"> <span>Es fehlt der Faktor 2.</span></label>
+<label class="question-option"><input type="radio" name="frage-fehler-finden" value="1"> <span>Sie muss r quadrieren.</span></label>
+<label class="question-option"><input type="radio" name="frage-fehler-finden" value="2"> <span>Sie muss durch π teilen.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Es fehlt der Faktor 2.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Mit dem Radius gilt U = 2 · π · r = 2 · 3,14 · 5 = 31,4 cm. Die Formel π · d braucht den Durchmesser, und der ist 10 cm.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Sie muss r quadrieren.</strong></p><p>Das Quadrieren gehört zur Fläche (π · r²). Der Umfang ist eine Länge.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie muss durch π teilen.</strong></p><p>Durch π teilst du, wenn der Umfang gegeben ist und du d suchst. Hier ist der Radius gegeben und der Umfang gesucht.</p></li>
+</ul>
+<p class="question-explanation">Mit dem Radius braucht der Umfang den Faktor 2, weil d = 2 · r ist.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Es fehlt der Faktor 2.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Mit dem Radius gilt U = 2 · π · r = 2 · 3,14 · 5 = 31,4 cm. Die Formel π · d braucht den Durchmesser, und der ist 10 cm.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Sie muss r quadrieren.</strong></p><p>Das Quadrieren gehört zur Fläche (π · r²). Der Umfang ist eine Länge.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Sie muss durch π teilen.</strong></p><p>Durch π teilst du, wenn der Umfang gegeben ist und du d suchst. Hier ist der Radius gegeben und der Umfang gesucht.</p></li>
+</ul>
+<p class="question-explanation">Mit dem Radius braucht der Umfang den Faktor 2, weil d = 2 · r ist.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"fehler-finden","text":"Jemand rechnet für einen Kreis mit dem Radius r = 5 cm: U = π · 5 ≈ 15,7 cm. Was ist falsch?","explanation":"Mit dem Radius braucht der Umfang den Faktor 2, weil d = 2 · r ist.","links":[],"type":"single-choice","options":[{"text":"Es fehlt der Faktor 2.","correct":true,"info":"Mit dem Radius gilt U = 2 · π · r = 2 · 3,14 · 5 = 31,4 cm. Die Formel π · d braucht den Durchmesser, und der ist 10 cm."},{"text":"Sie muss r quadrieren.","correct":false,"info":"Das Quadrieren gehört zur Fläche (π · r²). Der Umfang ist eine Länge."},{"text":"Sie muss durch π teilen.","correct":false,"info":"Durch π teilst du, wenn der Umfang gegeben ist und du d suchst. Hier ist der Radius gegeben und der Umfang gesucht."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="7cc8a474" data-block-type="true-false" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="radius-verdoppeln">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-radius-verdoppeln" data-id="radius-verdoppeln" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wenn du den Radius eines Kreises verdoppelst, verdoppelt sich auch sein Umfang.</legend>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">U = 2 · π · r. Wenn r doppelt so groß wird, wird auch U doppelt so groß: Der Umfang wächst im gleichen Verhältnis wie der Radius.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">U = 2 · π · r. Wenn r doppelt so groß wird, wird auch U doppelt so groß: Der Umfang wächst im gleichen Verhältnis wie der Radius.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"radius-verdoppeln","text":"Wenn du den Radius eines Kreises verdoppelst, verdoppelt sich auch sein Umfang.","explanation":"U = 2 · π · r. Wenn r doppelt so groß wird, wird auch U doppelt so groß: Der Umfang wächst im gleichen Verhältnis wie der Radius.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="0caf2fd1" data-block-type="text" data-block-order="19">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst den Umfang aus Durchmesser oder Radius berechnen und aus dem Umfang den Durchmesser bestimmen.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Der Umfang des Kreises","order":2}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../kreis/pi/">Zurück: Die Zahl π</a><a rel="next" href="../../kreis/flaeche/">Weiter: Die Fläche des Kreises</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

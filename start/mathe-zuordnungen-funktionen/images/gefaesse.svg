@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170" width="360" height="170" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 13px sans-serif; }
+    .ax { stroke: currentColor; stroke-width: 1.6; fill: none; }
+    .gr { stroke: currentColor; stroke-width: 0.5; opacity: 0.4; }
+    .k { stroke: currentColor; stroke-width: 3; fill: none; }
+    .v { stroke: currentColor; stroke-width: 2.5; fill: none; }
+  </style>
+  <path class="v" d="M 30 20 L 30 120 L 90 120 L 90 20"/>
+  <text x="60" y="145" text-anchor="middle">Gefäß 1</text>
+  <path class="v" d="M 125 20 L 150 120 L 190 120 L 215 20"/>
+  <text x="170" y="145" text-anchor="middle">Gefäß 2</text>
+  <path class="v" d="M 250 120 L 330 120 L 305 20 M 250 120 L 275 20"/>
+  <text x="290" y="145" text-anchor="middle">Gefäß 3</text>
+</svg>

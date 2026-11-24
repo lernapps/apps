@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
+    <title>Die Kugel nach Archimedes – Kreis und Körper berechnen</title>
+    <meta name="description" content="Kegel, Kugel und Zylinder mit gleichem Radius und der Höhe 2 · r verhalten sich im Volumen wie 1 zu 2 zu 3. Daraus folgen Volumen und Oberfläche der Kugel." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../koerper/kugel/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../koerper/">Zylinder, Kegel, Kugel und Vielecke berechnen</a></li><li aria-current="page">Die Kugel nach Archimedes</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Die Kugel nach Archimedes</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../koerper/kugel/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧koerper/kugel/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-kreis-koerper","page":{"id":"kugel","title":"Die Kugel nach Archimedes","exercises":[{"id":"kugel-im-zylinder","section":"einstieg","numbered":false},{"id":"kugel-volumen","section":"uebung","numbered":true},{"id":"kugel-oberflaeche","section":"uebung","numbered":true},{"id":"eistuete","section":"uebung","numbered":false},{"id":"verhaeltnis","section":"uebung","numbered":false},{"id":"radius-verdoppeln-kugel","section":"uebung","numbered":false}],"sections":["einstieg","herleitung","beispiel","uebung"]},"tutor":"koerper/kugel/tutor/","markdown":"koerper/kugel/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Drei Körper, ein Radius</a></li><li><a href="#herleitung">Archimedes' Vergleich</a></li><li><a href="#beispiel">Eine Kugel mit r = 6 cm</a></li><li><a href="#uebung">Aufgaben</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Drei Körper, ein Radius</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="bf195d3e" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in eine Kugel passt oder wie viel Material ihre Oberfläche braucht, hilft ein Vergleich mit Kegel und Zylinder. Archimedes hat ihn vor über 2000 Jahren gefunden.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="cc1ecbbb" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Ein Kegel, eine Kugel und ein Zylinder haben alle denselben Radius r. Kegel und Zylinder sind so hoch wie die Kugel dick ist, also 2 · r. Die Kugel passt genau in den Zylinder.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="d15ce4af" data-block-type="figure" data-block-order="3">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/kugel-archimedes.svg" alt="Ein Kegel, eine Kugel und ein Zylinder nebeneinander, alle mit dem Radius r und der Höhe 2 mal r." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Kegel, Kugel und Zylinder mit gleichem Radius und gleicher Höhe 2 · r.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/4" data-block-id="9d092616" data-block-type="single-choice" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="kugel-im-zylinder">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-kugel-im-zylinder" data-id="kugel-im-zylinder" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welchen Anteil des Zylinders füllt die Kugel etwa?</legend>
+<label class="question-option"><input type="radio" name="frage-kugel-im-zylinder" value="0"> <span>Etwa ein Drittel.</span></label>
+<label class="question-option"><input type="radio" name="frage-kugel-im-zylinder" value="1"> <span>Etwa die Hälfte.</span></label>
+<label class="question-option"><input type="radio" name="frage-kugel-im-zylinder" value="2"> <span>Etwa zwei Drittel.</span></label>
+<label class="question-option"><input type="radio" name="frage-kugel-im-zylinder" value="3"> <span>Fast alles.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Etwa ein Drittel.</strong></p><p>Die Kugel berührt den Zylinder rundum und füllt mehr als ein Drittel.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Etwa die Hälfte.</strong></p><p>Das ist zu wenig. Die Kugel füllt etwas mehr als die Hälfte des Zylinders.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Etwa zwei Drittel.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Genau zwei Drittel. Das hat Archimedes herausgefunden, und du rechnest es gleich nach.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Fast alles.</strong></p><p>In den Ecken des Zylinders oben und unten bleibt viel Platz. Es ist deutlich weniger als alles.</p></li>
+</ul>
+<p class="question-explanation">Die Kugel füllt zwei Drittel des Zylinders. Wie man darauf kommt, zeigt der nächste Abschnitt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Etwa ein Drittel.</strong></p><p>Die Kugel berührt den Zylinder rundum und füllt mehr als ein Drittel.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Etwa die Hälfte.</strong></p><p>Das ist zu wenig. Die Kugel füllt etwas mehr als die Hälfte des Zylinders.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Etwa zwei Drittel.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Genau zwei Drittel. Das hat Archimedes herausgefunden, und du rechnest es gleich nach.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Fast alles.</strong></p><p>In den Ecken des Zylinders oben und unten bleibt viel Platz. Es ist deutlich weniger als alles.</p></li>
+</ul>
+<p class="question-explanation">Die Kugel füllt zwei Drittel des Zylinders. Wie man darauf kommt, zeigt der nächste Abschnitt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"kugel-im-zylinder","text":"Welchen Anteil des Zylinders füllt die Kugel etwa?","explanation":"Die Kugel füllt zwei Drittel des Zylinders. Wie man darauf kommt, zeigt der nächste Abschnitt.","links":[],"type":"single-choice","options":[{"text":"Etwa ein Drittel.","correct":false,"info":"Die Kugel berührt den Zylinder rundum und füllt mehr als ein Drittel."},{"text":"Etwa die Hälfte.","correct":false,"info":"Das ist zu wenig. Die Kugel füllt etwas mehr als die Hälfte des Zylinders."},{"text":"Etwa zwei Drittel.","correct":true,"info":"Genau zwei Drittel. Das hat Archimedes herausgefunden, und du rechnest es gleich nach."},{"text":"Fast alles.","correct":false,"info":"In den Ecken des Zylinders oben und unten bleibt viel Platz. Es ist deutlich weniger als alles."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="herleitung">Archimedes' Vergleich</h2>
+<div class="explainer-block" data-block="herleitung/1" data-block-id="a9a13a3c" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn du das Volumen einer Kugel ausrechnen willst, hilft ein Vergleich: Kegel und Kugel zusammen füllen den Zylinder.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/2" data-block-id="9984fe37" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Archimedes fand: Das Volumen der Kugel ist so groß wie der Zylinder minus der Kegel. Mit den Formeln für Zylinder und Kegel kannst du die Rechnung nachvollziehen. Der Kegel fasst ein Drittel des Zylinders, also <math><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>2</mn><mi>π</mi><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup></mrow></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/3" data-block-id="955a31f6" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>V</mi><mrow><mi>Z</mi><mi>y</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>r</mi></mrow></msub><mo>=</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/4" data-block-id="1f7bd9d5" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>V</mi><mrow><mi>K</mi><mi>e</mi><mi>g</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/5" data-block-id="7a4af62e" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Für die Kugel bleibt der Rest übrig. Das Verhältnis von Kegel, Kugel und Zylinder ist 1 zu 2 zu 3. Dieses Ergebnis nimmst du hier als gegeben. Die Begründung dafür führen wir hier nicht aus.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/6" data-block-id="bba7b872" data-block-type="formula" data-block-order="10">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>V</mi><mrow><mi>K</mi><mi>u</mi><mi>g</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>Z</mi><mi>y</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>r</mi></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>K</mi><mi>e</mi><mi>g</mi><mi>e</mi><mi>l</mi></mrow></msub></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/7" data-block-id="6e5db4a8" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>V</mi><mrow><mi>K</mi><mi>u</mi><mi>g</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><mn>2</mn><mi>π</mi><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>π</mi><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mi>π</mi><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/8" data-block-id="148e605b" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Auch die Oberfläche geht auf Archimedes zurück. Sie ist so groß wie der Mantel des Zylinders um die Kugel. Das nimmst du hier als gegeben. Der Mantel ist 2 · π · r mal 2 · r.</p></div>
+</div>
+<div class="explainer-block" data-block="herleitung/9" data-block-id="cad3ab9c" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msub><mi>O</mi><mrow><mi>K</mi><mi>u</mi><mi>g</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><mn>2</mn><mi>π</mi><mi>r</mi><mo>⋅</mo><mn>2</mn><mi>r</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="herleitung/10" data-block-id="0d10e9b6" data-block-type="definition" data-block-order="14">
+<dl class="explainer-definition"><dt><dfn id="begriff-kugel-formeln"><a href="../../glossar/#kugel-formeln">Kugel (Formeln)</a></dfn></dt><dd><p>Für die Kugel mit dem Radius <math><mi>r</mi></math> gilt <math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup></mrow></math> und <math><mrow><mi>O</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup></mrow></math>. Die Oberfläche ist das Vierfache der Fläche eines Kreises mit demselben Radius.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Eine Kugel mit r = 6 cm</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="a2208e2b" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Wenn du die Formeln an einer Kugel prüfen willst, rechne sie für r = 6 cm.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="572e38f5" data-block-type="example" data-block-order="16">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Radius 6 cm</h3>
+<div class="explainer-block" data-block="beispiel/2/1" data-block-id="e95d0300" data-block-type="formula" data-block-order="17">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>6</mn><mn>3</mn></msup><mo>=</mo><mn>904,32</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/2" data-block-id="95e6f1d0" data-block-type="formula" data-block-order="18">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>O</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>6</mn><mn>2</mn></msup><mo>=</mo><mn>452,16</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2/3" data-block-id="3dd2b718" data-block-type="text" data-block-order="19">
+<div class="block-text"><p>Volumen 904,32 cm³, Oberfläche 452,16 cm². Das Volumen wächst mit r³, die Oberfläche mit r².</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Aufgaben</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="bc05936f" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="kugel-volumen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Kugel hat den Radius r = 6 cm. Berechne ihr Volumen mit π ≈ 3,14 und runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst r³ = r · r · r, dann mal 4 · π, dann durch 3.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup><mo>≈</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>6</mn><mn>3</mn></msup><mo>=</mo><mn>904,32</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 904,32 cm³ (erlaubte Abweichung: 0,01 cm³)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Kugel hat den Radius r = 8 cm. Berechne ihr Volumen mit π ≈ 3,14 und runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst r³ = r · r · r, dann mal 4 · π, dann durch 3.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup><mo>≈</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>8</mn><mn>3</mn></msup><mo>=</mo><mn>2143,57</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 2143,57 cm³ (erlaubte Abweichung: 0,01 cm³)</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Kugel hat den Radius r = 12 cm. Berechne ihr Volumen mit π ≈ 3,14 und runde auf zwei Stellen nach dem Komma.</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst r³ = r · r · r, dann mal 4 · π, dann durch 3.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>V</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">3</mn></msup><mo>≈</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>12</mn><mn>3</mn></msup><mo>=</mo><mn>7234,56</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 7234,56 cm³ (erlaubte Abweichung: 0,01 cm³)</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"kugel-volumen","given":{"r":{"int":[4,12],"step":1}},"task":{"text":"Eine Kugel hat den Radius r = {{r}} cm. Berechne ihr Volumen mit π ≈ 3,14 und runde auf zwei Stellen nach dem Komma."},"answer":{"value":"round(4 * 3.14 * r * r * r / 3, 2)","compare":{"number":{"decimals":2,"tolerance":0.01,"unit":"cm³"}}},"mistakes":[{"value":"round(4 * 3.14 * r * r, 2)","message":"Das ist die Oberfläche, eine Fläche. Das Volumen hat r³ und den Faktor ein Drittel."},{"value":"round(4 * 3.14 * r * r * r, 2)","message":"Es fehlt das Drittel. Das Volumen ist vier Drittel mal π mal r³."},{"value":"round(4 * 3.14 * (2 * r) * (2 * r) * (2 * r) / 3, 2)","message":"Du hast den Durchmesser statt des Radius eingesetzt. In der Formel steht der Radius."}],"hint":"Rechne erst r³ = r · r · r, dann mal 4 · π, dann durch 3.","steps":["$V = \\frac{4}{3} \\cdot \\pi \\cdot r^3 \\approx \\frac{4}{3} \\cdot 3,14 \\cdot {{r}}^3 = {{answer}}$"]},"templates":{"de":{"task":"Eine Kugel hat den Radius r = ⟦r⟧ cm. Berechne ihr Volumen mit π ≈ 3,14 und runde auf zwei Stellen nach dem Komma.","steps":["\u003cmath>\u003cmrow>\u003cmi>V\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmn>4\u003c/mn>\u003cmn>3\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">3\u003c/mn>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmfrac>\u003cmn>4\u003c/mn>\u003cmn>3\u003c/mn>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>3\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Rechne erst r³ = r · r · r, dann mal 4 · π, dann durch 3.","messages":["Das ist die Oberfläche, eine Fläche. Das Volumen hat r³ und den Faktor ein Drittel.","Es fehlt das Drittel. Das Volumen ist vier Drittel mal π mal r³.","Du hast den Durchmesser statt des Radius eingesetzt. In der Formel steht der Radius."]}},"data":{},"seeds":[1,2,4,5,6,9,11,15,28],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="5236249e" data-block-type="generated" data-block-order="21">
+<div class="explainer-exercise explainer-generated" id="kugel-oberflaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine Kugel hat den Radius r = 9 cm. Berechne ihre Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Oberfläche der Kugel ist das Vierfache der Kreisfläche π · r².</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>4</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>9</mn><mn>2</mn></msup><mo>=</mo><mn>1017,36</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1017,36 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine Kugel hat den Radius r = 11 cm. Berechne ihre Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Oberfläche der Kugel ist das Vierfache der Kreisfläche π · r².</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>4</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>11</mn><mn>2</mn></msup><mo>=</mo><mn>1519,76</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 1519,76 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine Kugel hat den Radius r = 6 cm. Berechne ihre Oberfläche mit π ≈ 3,14.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Oberfläche der Kugel ist das Vierfache der Kreisfläche π · r².</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>O</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mi>π</mi><mo>⋅</mo><msup><mi>r</mi><mn class="tml-sml-pad">2</mn></msup><mo>≈</mo><mn>4</mn><mo>⋅</mo><mn>3,14</mn><mo>⋅</mo><msup><mn>6</mn><mn>2</mn></msup><mo>=</mo><mn>452,16</mn></mrow></math></li></ol><p><strong>Richtige Antwort:</strong> 452,16 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"kugel-oberflaeche","given":{"r":{"int":[2,15],"step":1}},"task":{"text":"Eine Kugel hat den Radius r = {{r}} cm. Berechne ihre Oberfläche mit π ≈ 3,14."},"answer":{"value":"4 * 3.14 * r * r","compare":{"number":{"decimals":2,"tolerance":0,"unit":"cm²"}}},"mistakes":[{"value":"3.14 * r * r","message":"Das ist nur die Fläche eines Kreises. Die Oberfläche der Kugel ist viermal so groß."},{"value":"4 * 3.14 * (2 * r) * (2 * r)","message":"Du hast den Durchmesser statt des Radius quadriert. In 4 · π · r² steht der Radius."},{"value":"2 * 3.14 * r","message":"Das ist der Umfang eines Kreises, eine Länge. Die Oberfläche braucht r²."}],"hint":"Die Oberfläche der Kugel ist das Vierfache der Kreisfläche π · r².","steps":["$O = 4 \\cdot \\pi \\cdot r^2 \\approx 4 \\cdot 3,14 \\cdot {{r}}^2 = {{answer}}$"]},"templates":{"de":{"task":"Eine Kugel hat den Radius r = ⟦r⟧ cm. Berechne ihre Oberfläche mit π ≈ 3,14.","steps":["\u003cmath>\u003cmrow>\u003cmi>O\u003c/mi>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>π\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmi>r\u003c/mi>\u003cmn class=\"tml-sml-pad\">2\u003c/mn>\u003c/msup>\u003cmo>≈\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>3,14\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r⟧\u003c/mtext>\u003cmn>2\u003c/mn>\u003c/msup>\u003cmo>=\u003c/mo>\u003cmtext>⟦answer⟧\u003c/mtext>\u003c/mrow>\u003c/math>"],"hint":"Die Oberfläche der Kugel ist das Vierfache der Kreisfläche π · r².","messages":["Das ist nur die Fläche eines Kreises. Die Oberfläche der Kugel ist viermal so groß.","Du hast den Durchmesser statt des Radius quadriert. In 4 · π · r² steht der Radius.","Das ist der Umfang eines Kreises, eine Länge. Die Oberfläche braucht r²."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,10,11,17,18,21,32],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="b1a640f6" data-block-type="number" data-block-order="22">
+<div class="explainer-exercise explainer-question" id="eistuete">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-eistuete" data-id="eistuete" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Eistüte besteht aus einem Kegel mit dem Radius 3 cm und der Höhe 8 cm. Oben sitzt eine Halbkugel mit demselben Radius. Wie groß ist das gesamte Volumen? Rechne mit π ≈ 3,14.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-eistuete" aria-describedby="frage-eistuete-unit"> <span id="frage-eistuete-unit">cm³</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 131,88 cm³ (erlaubte Abweichung: 0,01 cm³)</p>
+<p class="question-explanation">Kegel: ein Drittel mal 3,14 mal 3² mal 8 = 75,36. Halbkugel: die Hälfte der Kugel, also zwei Drittel mal 3,14 mal 3³ = 56,52. Zusammen 75,36 + 56,52 = 131,88 cm³.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 131,88 cm³ (erlaubte Abweichung: 0,01 cm³)</p>
+<p class="question-explanation">Kegel: ein Drittel mal 3,14 mal 3² mal 8 = 75,36. Halbkugel: die Hälfte der Kugel, also zwei Drittel mal 3,14 mal 3³ = 56,52. Zusammen 75,36 + 56,52 = 131,88 cm³.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"eistuete","text":"Eine Eistüte besteht aus einem Kegel mit dem Radius 3 cm und der Höhe 8 cm. Oben sitzt eine Halbkugel mit demselben Radius. Wie groß ist das gesamte Volumen? Rechne mit π ≈ 3,14.","explanation":"Kegel: ein Drittel mal 3,14 mal 3² mal 8 = 75,36. Halbkugel: die Hälfte der Kugel, also zwei Drittel mal 3,14 mal 3³ = 56,52. Zusammen 75,36 + 56,52 = 131,88 cm³.","links":[],"type":"number","answer":131.88,"tolerance":0.01,"unit":"cm³"},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="155a52f8" data-block-type="single-choice" data-block-order="23">
+<div class="explainer-exercise explainer-question" id="verhaeltnis">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-verhaeltnis" data-id="verhaeltnis" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Kegel, Kugel und Zylinder haben denselben Radius r, Kegel und Zylinder die Höhe 2 · r. In welchem Verhältnis stehen ihre Volumen (Kegel : Kugel : Zylinder)?</legend>
+<label class="question-option"><input type="radio" name="frage-verhaeltnis" value="0"> <span>1 : 2 : 3</span></label>
+<label class="question-option"><input type="radio" name="frage-verhaeltnis" value="1"> <span>1 : 3 : 3</span></label>
+<label class="question-option"><input type="radio" name="frage-verhaeltnis" value="2"> <span>1 : 2 : 4</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>1 : 2 : 3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Kegel: zwei Drittel mal π mal r³, Kugel: vier Drittel mal π mal r³, Zylinder: zwei mal π mal r³. Mit Drittel gerechnet sind das 2 : 4 : 6, also 1 : 2 : 3.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1 : 3 : 3</strong></p><p>Die Kugel fasst nicht so viel wie der Zylinder. Sie liegt im Zylinder und lässt Platz in den Ecken.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1 : 2 : 4</strong></p><p>Der Zylinder ist genau Kegel plus Kugel, also 1 + 2 = 3 Teile.</p></li>
+</ul>
+<p class="question-explanation">Kegel und Kugel zusammen füllen den Zylinder: 1 + 2 = 3. Das war Archimedes' Entdeckung.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>1 : 2 : 3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Kegel: zwei Drittel mal π mal r³, Kugel: vier Drittel mal π mal r³, Zylinder: zwei mal π mal r³. Mit Drittel gerechnet sind das 2 : 4 : 6, also 1 : 2 : 3.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1 : 3 : 3</strong></p><p>Die Kugel fasst nicht so viel wie der Zylinder. Sie liegt im Zylinder und lässt Platz in den Ecken.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1 : 2 : 4</strong></p><p>Der Zylinder ist genau Kegel plus Kugel, also 1 + 2 = 3 Teile.</p></li>
+</ul>
+<p class="question-explanation">Kegel und Kugel zusammen füllen den Zylinder: 1 + 2 = 3. Das war Archimedes' Entdeckung.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"verhaeltnis","text":"Kegel, Kugel und Zylinder haben denselben Radius r, Kegel und Zylinder die Höhe 2 · r. In welchem Verhältnis stehen ihre Volumen (Kegel : Kugel : Zylinder)?","explanation":"Kegel und Kugel zusammen füllen den Zylinder: 1 + 2 = 3. Das war Archimedes' Entdeckung.","links":[],"type":"single-choice","options":[{"text":"1 : 2 : 3","correct":true,"info":"Kegel: zwei Drittel mal π mal r³, Kugel: vier Drittel mal π mal r³, Zylinder: zwei mal π mal r³. Mit Drittel gerechnet sind das 2 : 4 : 6, also 1 : 2 : 3."},{"text":"1 : 3 : 3","correct":false,"info":"Die Kugel fasst nicht so viel wie der Zylinder. Sie liegt im Zylinder und lässt Platz in den Ecken."},{"text":"1 : 2 : 4","correct":false,"info":"Der Zylinder ist genau Kegel plus Kugel, also 1 + 2 = 3 Teile."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="ebb30d2e" data-block-type="single-choice" data-block-order="24">
+<div class="explainer-exercise explainer-question" id="radius-verdoppeln-kugel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-radius-verdoppeln-kugel" data-id="radius-verdoppeln-kugel" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Radius einer Kugel wird verdoppelt. Wie ändert sich ihr Volumen?</legend>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln-kugel" value="0"> <span>Es wird doppelt so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln-kugel" value="1"> <span>Es wird viermal so groß.</span></label>
+<label class="question-option"><input type="radio" name="frage-radius-verdoppeln-kugel" value="2"> <span>Es wird achtmal so groß.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Es wird doppelt so groß.</strong></p><p>Das gilt für eine Länge wie den Umfang. Das Volumen enthält r³.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Es wird viermal so groß.</strong></p><p>Viermal ist die Flächenvergrößerung (r²). Für das Volumen kommt noch ein Faktor 2 dazu.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Es wird achtmal so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>V enthält r³. Mit 2 · r wird daraus 2³ · r³ = 8 · r³.</p></li>
+</ul>
+<p class="question-explanation">Das Volumen wächst mit der dritten Potenz des Radius: Doppelter Radius ergibt achtfaches Volumen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Es wird doppelt so groß.</strong></p><p>Das gilt für eine Länge wie den Umfang. Das Volumen enthält r³.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Es wird viermal so groß.</strong></p><p>Viermal ist die Flächenvergrößerung (r²). Für das Volumen kommt noch ein Faktor 2 dazu.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Es wird achtmal so groß.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>V enthält r³. Mit 2 · r wird daraus 2³ · r³ = 8 · r³.</p></li>
+</ul>
+<p class="question-explanation">Das Volumen wächst mit der dritten Potenz des Radius: Doppelter Radius ergibt achtfaches Volumen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"radius-verdoppeln-kugel","text":"Der Radius einer Kugel wird verdoppelt. Wie ändert sich ihr Volumen?","explanation":"Das Volumen wächst mit der dritten Potenz des Radius: Doppelter Radius ergibt achtfaches Volumen.","links":[],"type":"single-choice","options":[{"text":"Es wird doppelt so groß.","correct":false,"info":"Das gilt für eine Länge wie den Umfang. Das Volumen enthält r³."},{"text":"Es wird viermal so groß.","correct":false,"info":"Viermal ist die Flächenvergrößerung (r²). Für das Volumen kommt noch ein Faktor 2 dazu."},{"text":"Es wird achtmal so groß.","correct":true,"info":"V enthält r³. Mit 2 · r wird daraus 2³ · r³ = 8 · r³."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="93b9ab0c" data-block-type="text" data-block-order="25">
+<div class="block-text"><p><strong>Das kannst du jetzt:</strong> Du kannst Volumen und Oberfläche einer Kugel berechnen und kennst die Idee von Archimedes. Damit bist du am Ende der Körper und gehst zu Dreiecken und Vielecken über.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Kreis und Körper berechnen“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-kreis-koerper","app":"Kreis und Körper berechnen","root":"../../","repository":"lernapps/mathe-kreis-koerper","revision":"76f4a3d","page":{"title":"Die Kugel nach Archimedes","order":9}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../koerper/pyramide-kegel/">Zurück: Kegel und Pyramide</a><a rel="next" href="../../koerper/dreiecke-start/">Weiter: Das brauchst du für Dreiecke und Vielecke</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

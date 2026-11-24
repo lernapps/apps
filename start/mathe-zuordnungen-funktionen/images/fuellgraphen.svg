@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170" width="360" height="170" role="img">
+  <style>
+    :root { color: #1f2328; }
+    @media (prefers-color-scheme: dark) { :root { color: #e6edf3; } }
+    text { fill: currentColor; font: 13px sans-serif; }
+    .ax { stroke: currentColor; stroke-width: 1.6; fill: none; }
+    .gr { stroke: currentColor; stroke-width: 0.5; opacity: 0.4; }
+    .k { stroke: currentColor; stroke-width: 3; fill: none; }
+    .v { stroke: currentColor; stroke-width: 2.5; fill: none; }
+  </style>
+  <line class="ax" x1="20" y1="125" x2="118" y2="125"/><line class="ax" x1="20" y1="125" x2="20" y2="27"/>
+  <polyline class="k" points="20.0,125.0 24.5,120.5 29.0,116.0 33.5,111.5 38.0,107.0 42.5,102.5 47.0,98.0 51.5,93.5 56.0,89.0 60.5,84.5 65.0,80.0 69.5,75.5 74.0,71.0 78.5,66.5 83.0,62.0 87.5,57.5 92.0,53.0 96.5,48.5 101.0,44.0 105.5,39.5 110.0,35.0"/>
+  <text x="65.0" y="150" text-anchor="middle">Graph A</text>
+  <text x="118" y="138" text-anchor="end">Zeit</text><text x="24" y="23">Höhe</text>
+  <line class="ax" x1="135" y1="125" x2="233" y2="125"/><line class="ax" x1="135" y1="125" x2="135" y2="27"/>
+  <polyline class="k" points="135.0,125.0 139.5,104.9 144.0,96.5 148.5,90.1 153.0,84.8 157.5,80.0 162.0,75.7 166.5,71.8 171.0,68.1 175.5,64.6 180.0,61.4 184.5,58.3 189.0,55.3 193.5,52.4 198.0,49.7 202.5,47.1 207.0,44.5 211.5,42.0 216.0,39.6 220.5,37.3 225.0,35.0"/>
+  <text x="180.0" y="150" text-anchor="middle">Graph B</text>
+  <text x="233" y="138" text-anchor="end">Zeit</text><text x="139" y="23">Höhe</text>
+  <line class="ax" x1="250" y1="125" x2="348" y2="125"/><line class="ax" x1="250" y1="125" x2="250" y2="27"/>
+  <polyline class="k" points="250.0,125.0 254.5,124.8 259.0,124.1 263.5,123.0 268.0,121.4 272.5,119.4 277.0,116.9 281.5,114.0 286.0,110.6 290.5,106.8 295.0,102.5 299.5,97.8 304.0,92.6 308.5,87.0 313.0,80.9 317.5,74.4 322.0,67.4 326.5,60.0 331.0,52.1 335.5,43.8 340.0,35.0"/>
+  <text x="295.0" y="150" text-anchor="middle">Graph C</text>
+  <text x="348" y="138" text-anchor="end">Zeit</text><text x="254" y="23">Höhe</text>
+</svg>
