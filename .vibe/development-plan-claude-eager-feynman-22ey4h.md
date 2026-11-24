@@ -13,7 +13,7 @@ Stand: Drei Mockups (A Banner, B Zwei Spalten, C Schmale App-Leiste) liegen als 
 - Reihenfolge der Seite: Titel mit Strang und Richtstufe, App, Einordnung (Kette), Lehrplan eingeklappt, Quelle eingeklappt.
 - Jede App ist eine Karte (`panel panel-main`) mit Titel, Klassen, Knopf „Zur App“ und den Seiten, die den Baustein üben. Ohne App bleibt die gestrichelte Lücke mit Link zum Bauen.
 - Nicht übernommen: „Daten bleiben auf dem Gerät“ (kein Feld im Datenmodell), Vorschaubild (nicht im Datenmodell).
-- Der Prüfstatus des Fachs und der Hinweis auf den Grundwortschatz bleiben auf der Seite.
+- Der Prüfstatus des Fachs (Hinweis „Entwurf“) steht unter der App-Karte, nicht über dem Titel, weil er sonst zu dominant ist. Der Hinweis auf den Grundwortschatz bleibt auf der Seite.
 - Nutzer arbeitet autonom bis zum Pull Request: keine Stopps an den Phasengrenzen.
 
 ## Notes

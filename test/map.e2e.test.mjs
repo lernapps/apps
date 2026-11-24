@@ -133,6 +133,7 @@ describe("the built pages", () => {
     const at = (text) => page.indexOf(text);
     assert.ok(at('id="wer"') > 0 && at('id="wer"') < at('id="weg"'), "the app comes before the chain");
     assert.match(page, /<li class="panel panel-main[^"]*"[^]*?<a href="\/apps\/elektrizitaet\/" class="btn btn-primary btn-lg">Zur App/);
+    assert.ok(at('class="map-status ') > at('panel panel-main') && at('class="map-status ') < at('id="weg"'), "the status notice stands under the app card, not above the title");
     assert.match(page, /<details class="panel">\s*<summary[^>]*>\s*<h2 id="wann"/);
     assert.match(page, /<details class="panel">\s*<summary[^>]*>\s*<h2 id="quelle"/);
     const gap = read("map/mathematik/c/zufall-laplace/index.html");
