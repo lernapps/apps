@@ -109,20 +109,18 @@ frischt auf, was sie dafür brauchen. Nur die „Ich kann …“-Sätze der Kart
 2. **Fachbegriffe werden erklärt**, nicht nur genannt: Jeder Begriff, den das Kapitel voraussetzt und der in einem
    anderen Explainer eingeführt wurde (z. B. Distributivgesetz, Primfaktor, Stellenwert, Nenner), steht fett mit ein bis
    zwei Sätzen und einem Beispiel mit Zahlen. Jeder dieser Begriffe kommt auch ins Glossar des Explainers.
-3. **Selbsttest je Baustein:** ein bis zwei Kurzaufgaben mit sofortiger Rückmeldung, die zeigen, ob jemand das kann
-   („Kannst du das?“). Dazu der Satz, was zu tun ist, wenn nicht: Name des Bausteins und seine Kartenseite
+3. **Selbsttest:** höchstens zwei Übungen je Recap-Seite mit sofortiger Rückmeldung, die zusammen zeigen, ob jemand
+   die Voraussetzungen kann („Kannst du das?“). Dazu der Satz, was zu tun ist, wenn nicht: Name des Bausteins und seine Kartenseite
    (`https://lernapps.net/apps/map/mathematik/c/<baustein-id>/`). Kein Link in die App eines anderen Explainers.
 4. **Der Kopf des Recaps sagt**, wofür er ist („Das brauchst du für dieses Kapitel“), und der Schluss fasst als
    Checkliste zusammen („Du bist bereit, wenn du …“). Die „Ich kann …“-Sätze der Karte eignen sich dafür.
 5. **Format:** eine Überschrift je Baustein, kurze Absätze, Begriffe fett, ein Beispiel im Beispielkasten, der
    Selbsttest klar abgesetzt (eigener Block). Keine Textwand und keine bloße Liste von Sätzen.
-6. **Das Schema erlaubt auf einer Seite mit `recap:` nur beschreibende Blöcke, keine Aufgaben.** Der Selbsttest steht
-   deshalb als kleine Komponente **`Kurztest`** (eine Frage, eine Auswahl, sofortige Rückmeldung mit Grund, nichts wird
-   gezählt oder gespeichert) direkt in der Recap-Seite. Die Vorlage liegt in `docs/mathe-epic/components/` (aus #430,
-   mit Anleitung): kopiere die drei Dateien nach `src/components/` deines Repos, statt eine eigene zu entwerfen. Sie braucht eine Textalternative für die Version ohne JavaScript und Bedienung per
-   Tastatur. Hat dein Repo schon einen anderen Weg, der `lernapps check` besteht und Abschnitt 7 erfüllt, bleibt er.
-   Fällt die Komponente aus, gilt als Rückfall eine eigene Kurztest-Seite direkt hinter dem Recap (normale Seite,
-   Titel „… Kurztest“). Melde mir in einer Zeile, was nicht ging (Fund fürs Werkzeug, W31).
+6. **Eine Recap-Seite erlaubt bis zu zwei Übungen** (neue Version von `app-templates`, 0.19.0, mit `@lernapps/tooling`
+   0.18.6; `lernapps update` holt sie). Mehr braucht man zum Erinnern nicht. Die Selbsttests stehen als normale Übungen
+   auf der Recap-Seite, höchstens zwei je Seite (nicht je Baustein), mit sofortiger Rückmeldung mit Grund. Die kopierte
+   Komponente `Kurztest` (Vorlage in `docs/mathe-epic/components/`) entfällt: Sie wird nach dem Update gelöscht und
+   durch diese Übungen ersetzt. Wähle die zwei Übungen so, dass sie zusammen die wichtigsten Voraussetzungen prüfen.
 7. **Prüfung:** Der Lernenden-Prüfer beantwortet für jedes Recap: „Kann ich mit dieser Seite beurteilen, ob ich die
    Voraussetzung erfülle, und verstehe ich die Begriffe?“ Der fachliche Prüfer prüft Definitionen, Beispiele und die
    Rechnungen der Selbsttests.
@@ -150,3 +148,17 @@ Aus der Prüfung der ersten Vorschau; Seite und Anlass stehen im Plan von #385.
    Beispiel: „Anzahl Reihen mal Anzahl Plättchen je Reihe“), nicht erst in der Aufgabe.
 6. **Keine `links:` an Aufgaben.** Der Link auf die Kartenseite hilft Lernenden nicht (Quellen, Abschnitt 4). Wo `lernapps
    check` ohne `links:` besteht, lass sie überall weg.
+7. **Wiederholungen stehen nur auf Recap-Seiten.** Inhaltsseiten wiederholen nichts Früheres: kein Abschnitt „Kannst du
+   das schon?“, keine Wiederholungsaufgaben und keine Auffrischungstexte zwischen den neuen Inhalten. Was Lernende
+   vorher können müssen, steht im Recap vor dem Kapitel (Abschnitt 7).
+8. **Erst das Wozu, dann das Wie.** Jede Seite, jeder Abschnitt und jedes Verfahren beginnt in ein bis zwei Sätzen mit
+   dem Anlass: Welche Frage oder welches Problem hat man, das das Verfahren löst? Erst danach kommt die Methode.
+   Aufbau: *Wenn du wissen willst/musst …, dann hast du … Wege/diesen Weg.* Beispiel: Statt „Drei Wege“ zu nennen,
+   schreibe „Wenn du wissen willst, wo eine Parabel die x-Achse schneidet, suchst du eine Nullstelle. Alle drei Wege
+   haben gemeinsam, dass man überlegt, wann eine Seite der Gleichung Null werden kann.“ Prüffrage für jede Überschrift
+   und jede Aufzählung von Wegen, Regeln oder Begriffen: Weiß ein Kind, wozu es das braucht?
+9. **Buttons nur mit echter Wirkung und gestaltet.** Eigene Komponenten haben Buttons nur, wo sie etwas bewirken, das
+   man sieht (zum Beispiel ein Punkt wird hervorgehoben, ein Abschnitt wechselt). Stufen oder Schalter, die beim letzten
+   Zustand nichts mehr ändern (zum Beispiel alle Stufen der feinsten Auflösung einer Lupe), werden ausgeblendet oder
+   deaktiviert mit sichtbarem Grund. Alle Buttons nutzen die Gestaltung der Laufzeit (die Klassen und Variablen der
+   Laufzeit), nicht den Browser-Standard.
