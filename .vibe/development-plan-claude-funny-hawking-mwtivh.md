@@ -30,12 +30,27 @@ Ist-Zustand (Explore):
 - Daten reichen schon aus, um jede App zu einer Lernreihenfolge zu ordnen (frühester Schritt/Richtstufe ihrer Kompetenzen). Gilt nur für Apps mit `strand`, `competencies` oder Format-2-Seiten; `entries/` hat 18 Apps, davon nur wenige mit Strang (englisch-grammatik, klima, geo-quizzer).
 - Offene Frage: Apps ohne Strang haben keine Reihenfolge; `grades` allein ist grob.
 
+## Feature 2 (2026-11-24): Position der App in der Karte, Pillen entfernen
+Auftrag (Nutzer): Auf der Karte in der Suche die berechnete Position der App in der Lernlandkarte zeigen, "wie wir das mal dachten" (Mockup-Variante B: Streifen mit Anfang, Mitte, Später, ohne Stufenzahlen). Dafür die Pillen "Ohne Anmeldung, Ohne Installation, Kostenlos" von den Karten entfernen, weil alle Apps das erfüllen. Kein Filter. Zweiter Schritt nach PR #769 (Serien). Branch von `main` neu gestartet (main enthält inzwischen weitere Einträge, u. a. zwölf Englisch-Apps mit Serie).
+
+Befunde:
+- Die Pillen kommen aus `fitnessChips` in `src/_includes/components.njk`, Texte `t.find.chips` in `de.js`/`en.js`, Stil `.chip` in `src/assets/apps.css` (zwei Regeln). Kein Test prüft sie. Die App-Seite behält das volle Signal (`fitness`-Macro); die Seite "Finden" nennt die Bedingungen schon im Abschnitt "Welche Apps hier stehen".
+- `src/_data/map.js` hat schon `byApp[app.id]` mit den geübten Bausteinen je App (auch von `app.njk` gelesen). Dort lässt sich `position` ergänzen. `lib/map.js` kennt je Baustein `steps` (Zeile durch alle Richtstufen) und `places` ({ band, step }).
+- Nur Apps mit Bausteinen (Format-2-Seiten oder `competencies`) haben eine Position; Apps nur mit `strand` oder ohne bleiben ohne Streifen.
+
+Entwurf (zur Bestätigung):
+- `lib/map.js`: `positionOf(subject, ids)` liefert `{ from, to, bands: [erste, letzte], cuts }`; `from`/`to` als Anteile der Zeilen des Fachs (min..max der `steps` der geübten Bausteine); `cuts` die Grenzen zwischen den drei Richtstufen als Anteile, damit der Streifen die Richtstufen maßstäblich zeigt. Recap-Seiten zählen nicht (sie stehen nicht in `competencies`).
+- `src/_data/map.js`: `byApp[id].position`.
+- Karte: Streifen unter der Zusammenfassung (Variante B), darunter eine Textzeile "Lernweg: Anfang bis Mitte" und `role="img"` mit demselben Text. Namen der Richtstufen: Anfang, Mitte, Später (keine Zahlen). Eine kurze Erklärung ("So lesen") einmal über der Liste, nur wenn ein Fach mit Karte gezeigt wird.
+- Pillen, `t.find.chips`, `.chip` entfernen.
+- Test: `positionOf` in `test/map.test.mjs` auf dem Fixture-Fach; Sicht-Test der Karte in `find.e2e`.
+
 ## Explore
 Eintritt: Nutzerwunsch liegt vor (erfüllt).
 ### Tasks
 - [x] Ist-Zustand der Suche und der Lernlandkarten (`map/`, `src/`, `lib/`) erkunden
 - [x] Ideen mit Vor- und Nachteilen vorschlagen (Chat, Nutzer wählt)
-- [ ] Nutzerentscheidung zu Ideen und offenen Fragen abwarten
+- [x] Feature 2: Pillen, `byApp`, Schritte und Richtstufen in `lib/map.js` erkundet
 
 ### Completed
 - [x] Created development plan file
