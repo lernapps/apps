@@ -1,20 +1,20 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
-title: "Mathe: Algebra – Binomische Formeln"
+title: "Mathe: Algebra – Terme und Gleichungen"
 subject: mathematik
-grades: [8]
+grades: [5, 6, 7, 8]
 summary: >-
-  Die binomischen Formeln Schritt für Schritt: zwei Klammern multiplizieren, die drei Formeln anwenden, rückwärts
-  faktorisieren und damit geschickt rechnen. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben
-  die Lernenden mit Aufgaben, die sofort sagen, ob der Term stimmt.
+  Von Zahlenrätseln mit Platzhaltern über Terme und binomische Formeln bis zu linearen Gleichungen, Ungleichungen und
+  Bruchtermen: Jede Seite erklärt erst, wozu man ein Verfahren braucht, und zeigt es mit Waage, Tabelle oder
+  Rechteckmodell. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob und warum eine Antwort stimmt.
 url: https://lernapps.net/mathe-algebra/
-keywords: [binomische Formeln, Binom, Termumformung, Faktorisieren, Algebra, Klammern]
+keywords: [Gleichungen, Terme, Variable, Platzhalter, Äquivalenzumformung, Waage, Ungleichungen, Bruchterme, Bruchgleichungen, Formeln umstellen, binomische Formeln, Termumformung, Klammern, Algebra]
+strand: mathematik/algebra
 creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
 source: https://github.com/lernapps/mathe-algebra
-commit: 722f0de9ce836bc61f20c4d011147f3f39cc40a3
+commit: 1530f2bccfa3b6eb48983048af8837a04bfe824f
 fitness:
   account: false
   install: false
   storage: device
-  thirdParty: on-click
-  thirdPartyNote: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
+  thirdParty: none
   checked: false

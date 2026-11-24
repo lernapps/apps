@@ -1,20 +1,21 @@
 # yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
-title: "Mathe: Arithmetik – Prozentrechnung"
+title: "Mathe: Arithmetik – Prozent- und Zinsrechnung"
 subject: mathematik
 grades: [7, 8]
 summary: >-
-  Prozentrechnung Schritt für Schritt: Grundwert, Prozentwert und Prozentsatz erkennen und berechnen, Zunahme und
-  Abnahme, Vergleiche und Sachaufgaben. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild. Danach üben die
-  Lernenden mit Aufgaben, die sofort sagen, ob das Ergebnis stimmt.
+  Prozent- und Zinsrechnung am Prozentstreifen: Grundwert, Prozentwert und Prozentsatz erkennen und berechnen,
+  Anteile vergleichen, Sachaufgaben lösen, Zunahme und Abnahme, Prozentpunkte und einfache Zinsen. Jede Seite erklärt
+  erst, wozu man es braucht, dann den Weg mit Beispiel. Danach üben die Lernenden mit Aufgaben, die sofort sagen, ob das
+  Ergebnis stimmt und warum.
 url: https://lernapps.net/mathe-arithmetik/
-keywords: [Prozentrechnung, Prozent, Grundwert, Prozentwert, Prozentsatz, Rabatt, Zinsen]
+keywords: [Prozentrechnung, Prozent, Prozentstreifen, Grundwert, Prozentwert, Prozentsatz, Prozentpunkte, Rabatt, Zinsen, Zinsrechnung, Dreisatz, Zunahme, Abnahme]
+strand: mathematik/arithmetik
 creator: { name: "Ralf D. Müller", url: "https://github.com/raifdmueller" }
 source: https://github.com/lernapps/mathe-arithmetik
-commit: 48714e3e2ca8b3a6cb2ede990475b234caa1e95c
+commit: 6933b5c6835d708c380b0cc25a7621502117fb3b
 fitness:
   account: false
   install: false
   storage: device
-  thirdParty: on-click
-  thirdPartyNote: Erst wenn jemand ein Erklärvideo startet, lädt es von YouTube.
+  thirdParty: none
   checked: false
