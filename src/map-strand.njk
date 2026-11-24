@@ -43,7 +43,7 @@ eleventyComputed:
     <div class="map-strand">
       {%- for b in strand.bands %}
       <section aria-labelledby="stufe-{{ b.band }}" style="grid-column: {{ loop.index }}; grid-row: 1;" class="flex flex-col">
-        <h2 id="stufe-{{ b.band }}" class="map-strand-head m-0 text-base text-slate-900">{{ t.map.grade(b.band | band) }}</h2>
+        <h2 id="stufe-{{ b.band }}" class="map-strand-head m-0 text-base text-slate-900">{{ b.band | bandLabel(subject, lang) }}</h2>
         <ul class="map-cell">
           {%- for id in b.competencies %}
           {{ c.mapChip(subject, subject.competencies | byId(id), [], false) }}
@@ -57,11 +57,11 @@ eleventyComputed:
       {%- for bar in strand.bars %}
       <a href="{{ ('/' + bar.app.id + '/') | inLang(lang) | url }}" class="map-appbar" style="grid-column: {{ bar.from + 1 }} / {{ bar.to + 2 }}; grid-row: {{ row + loop.index0 }};">
         <strong{{ bar.app.title | fallbackLang(lang) | safe }}>{{ bar.app.title | tx(lang) }}</strong>
-        <span class="text-slate-300">{{ T.barCount(bar.count, strand.total) }} · {{ t.map.grade((strand.bands[bar.from].band | band) if bar.from == bar.to else ((strand.bands[bar.from].band.split('-')[0]) + '–' + (strand.bands[bar.to].band.split('-')[1]))) }}</span>
+        <span class="text-slate-300">{{ T.barCount(bar.count, strand.total) }} · {{ (strand.bands[bar.from].band | bandLabel(subject, lang)) if bar.from == bar.to else (((strand.bands[bar.from].band | bandShort(subject, lang)) + '–' + (strand.bands[bar.to].band | bandShort(subject, lang))) if subject.bandLabels else t.map.grade((strand.bands[bar.from].band.split('-')[0]) + '–' + (strand.bands[bar.to].band.split('-')[1]))) }}</span>
       </a>
       {%- endfor %}
       {%- for i in strand.gaps %}
-      <p class="map-gapbar m-0" style="grid-column: {{ i + 1 }}; grid-row: {{ row + strand.bars.length }};">{{ T.gap }} <span class="sr-only">({{ t.map.grade(strand.bands[i].band | band) }})</span></p>
+      <p class="map-gapbar m-0" style="grid-column: {{ i + 1 }}; grid-row: {{ row + strand.bars.length }};">{{ T.gap }} <span class="sr-only">({{ strand.bands[i].band | bandLabel(subject, lang) }})</span></p>
       {%- endfor %}
     </div>
   </div>

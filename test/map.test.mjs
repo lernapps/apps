@@ -219,3 +219,49 @@ test("the position leaves out ids that are no competency of the subject, and is 
   assert.equal(positionOf(subject, []), undefined);
   assert.equal(positionOf(subject, ["gibt-es-nicht"]), undefined);
 });
+
+test("bandLabels and English-only competency name/iCan are accepted and validated", async () => {
+  const { Subject } = await import("../schemas/map.js");
+  const valid = Subject.safeParse({
+    name: { de: "Deutsch als Fremdsprache", en: "German as a Foreign Language" },
+    source: { title: "ZfA Rahmenplan DaF (2009)" },
+    status: "draft",
+    explainerFocus: "competency",
+    bandLabels: { "5-6": { en: "A1" }, "7-8": { en: "A2" }, "9-10": { en: "B1" } },
+    strands: [
+      {
+        id: "grammatik",
+        name: { de: "Grammatik", en: "Grammar" },
+        competencies: [
+          {
+            id: "sein-haben",
+            name: { en: "Verbs sein and haben" },
+            iCan: { en: "I can conjugate sein and haben in the present tense." },
+            gradeBand: "5-6",
+          },
+        ],
+      },
+    ],
+  });
+  assert.equal(valid.success, true);
+  assert.deepEqual(valid.data.bandLabels, { "5-6": { en: "A1" }, "7-8": { en: "A2" }, "9-10": { en: "B1" } });
+
+  const badICan = Subject.safeParse({
+    ...valid.data,
+    strands: [
+      {
+        id: "grammatik",
+        name: { de: "Grammatik", en: "Grammar" },
+        competencies: [
+          {
+            id: "sein-haben",
+            name: { en: "Verbs sein and haben" },
+            iCan: { en: "Conjugate sein and haben." },
+            gradeBand: "5-6",
+          },
+        ],
+      },
+    ],
+  });
+  assert.equal(badICan.success, false);
+});

@@ -78,7 +78,7 @@ eleventyComputed:
         <tbody>
           {%- for row in subject.stepRows %}
           {%- if row.first %}
-          <tr class="map-band-row"><th scope="rowgroup" colspan="{{ subject.strands.length + 1 }}">{{ t.map.grade(row.band | band) }}</th></tr>
+          <tr class="map-band-row"><th scope="rowgroup" colspan="{{ subject.strands.length + 1 }}">{{ row.band | bandLabel(subject, lang) }}</th></tr>
           {%- endif %}
           <tr>
             <th scope="row">{{ P.row(row.bandStep) }}</th>
@@ -125,6 +125,7 @@ eleventyComputed:
 {#- What the script needs: the competencies with strand, requires, step and name, and its texts. #}
 <script type="application/json" id="map-steps-data">{{ subject | stepsData(lang) | safe }}</script>
 {%- set pageUrl = '' + (c.mapUrl(subject.id + '/c/{id}/') | trim) %}
-{%- set texts = { kind: P.chain.kind("{strand}", "{place}"), place: P.place("{band}", "{step}"), before: P.chain.before, after: P.chain.after, nothing: P.chain.nothing, page: P.chain.page, clear: P.chain.clear, pageUrl: pageUrl } %}
+{%- set placeTpl = ('{band} · ' + P.row('{step}')) if subject.bandLabels else P.place("{band}", "{step}") %}
+{%- set texts = { kind: P.chain.kind("{strand}", "{place}"), place: placeTpl, before: P.chain.before, after: P.chain.after, nothing: P.chain.nothing, page: P.chain.page, clear: P.chain.clear, pageUrl: pageUrl } %}
 <script type="application/json" id="map-steps-text">{{ texts | dump | safe }}</script>
 {{ c.mapDialog() }}

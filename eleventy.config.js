@@ -34,14 +34,17 @@ export default function (eleventyConfig) {
   });
 
   // A text of an entry in a language: a plain string is German, a map has the languages it has. A language
-  // without a translation shows the German text.
-  const tx = (text, lang = "de") => (typeof text === "string" ? text : (text[lang] ?? text.de));
+  // without a translation falls back to German, or to English for English-only map texts (e.g. DaF).
+  const tx = (text, lang = "de") => (typeof text === "string" ? text : (text[lang] ?? text.de ?? text.en));
   eleventyConfig.addFilter("tx", tx);
   eleventyConfig.addFilter("txAll", (list, lang = "de") => list.map((text) => tx(text, lang)));
-  // ' lang="de"' for a text that is shown in German on a page in another language, else nothing.
-  eleventyConfig.addFilter("fallbackLang", (text, lang = "de") =>
-    lang !== "de" && (typeof text === "string" || !(lang in text)) ? ' lang="de"' : "",
-  );
+  // ' lang="de"' (or ' lang="en"') for a text shown in another language than the page's, else nothing.
+  eleventyConfig.addFilter("fallbackLang", (text, lang = "de") => {
+    if (typeof text === "string") return lang !== "de" ? ' lang="de"' : "";
+    if (lang in text && text[lang] !== undefined) return "";
+    const fallback = text.de !== undefined ? "de" : "en";
+    return fallback !== lang ? ` lang="${fallback}"` : "";
+  });
   // The address of a page in a language: "/enter/" → "/en/enter/" (then the filter "url" adds the prefix).
   eleventyConfig.addFilter("inLang", (path, lang = "de") => (lang === "de" ? path : `/${lang}${path}`));
   // The address of a page of another site in a language: "/tooling/github/" → "/tooling/en/github/" (pathIn of the
@@ -50,6 +53,17 @@ export default function (eleventyConfig) {
 
   // The learning map (src/map*.njk): an item of a list by its id (a subject, strand, competency or curriculum).
   eleventyConfig.addFilter("byId", (list, id) => list.find((item) => item.id === id));
+  const bandShort = (band, subject, lang = "de") =>
+    subject?.bandLabels?.[band] ? tx(subject.bandLabels[band], lang) : String(band).replace("-", "/");
+  const bandLabel = (band, subject, lang = "de") =>
+    subject?.bandLabels?.[band] ? tx(subject.bandLabels[band], lang) : textsOf(lang).map.grade(String(band).replace("-", "/"));
+  const placeLabel = (band, step, subject, lang = "de") =>
+    subject?.bandLabels?.[band]
+      ? `${tx(subject.bandLabels[band], lang)} · ${textsOf(lang).map.steps.row(step)}`
+      : textsOf(lang).map.steps.place(String(band).replace("-", "/"), step);
+  eleventyConfig.addFilter("bandShort", bandShort);
+  eleventyConfig.addFilter("bandLabel", bandLabel);
+  eleventyConfig.addFilter("placeLabel", placeLabel);
   // The data of a subject for the script of the map by steps (assets/map-steps.js), as JSON safe inside <script>:
   // per strand its name, per competency its strand, requires, step, name and "Ich kann …" in the language.
   eleventyConfig.addFilter("stepsData", (subject, lang = "de") => {
@@ -61,7 +75,7 @@ export default function (eleventyConfig) {
         strand: strands.indexOf(c.strand),
         requires: c.requires,
         step: c.step,
-        band: String(c.gradeBand).replace("-", "/"),
+        band: bandShort(c.gradeBand, subject, lang),
         bandStep: c.place.step,
         name: tx(c.name, lang),
         iCan: tx(c.iCan, lang),
