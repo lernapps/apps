@@ -13,8 +13,9 @@ Stand: Drei Mockups (A Banner, B Zwei Spalten, C Schmale App-Leiste) liegen als 
 - Reihenfolge der Seite: Titel mit Strang und Richtstufe, App, Einordnung (Kette), Lehrplan eingeklappt, Quelle eingeklappt.
 - Jede App ist eine Karte (`panel panel-main`) mit Titel, Klassen, Knopf „Zur App“ und den Seiten, die den Baustein üben. Ohne App bleibt die gestrichelte Lücke mit Link zum Bauen.
 - Nicht übernommen: „Daten bleiben auf dem Gerät“ (kein Feld im Datenmodell), Vorschaubild (nicht im Datenmodell).
-- Der Prüfstatus des Fachs (Hinweis „Entwurf“) steht unter der App-Karte, nicht über dem Titel, weil er sonst zu dominant ist. Der Hinweis auf den Grundwortschatz bleibt auf der Seite.
-- Nutzer arbeitet autonom bis zum Pull Request: keine Stopps an den Phasengrenzen.
+- Der Prüfstatus des Fachs (Hinweis „Entwurf“) steht nicht auf der Baustein-Seite: Er steht schon auf der Karte des Fachs, auf der Baustein-Seite wäre er zu dominant. Der Hinweis auf den Grundwortschatz bleibt auf der Seite.
+- Kette: Links stehen unter der Zeitüberschrift, ein langer Name endet mit Ellipsis (voller Name als `title`).
+- Nutzer arbeitet autonom bis zum Pull Request und Merge: keine Stopps an den Phasengrenzen.
 
 ## Notes
 - Betroffen: `src/map-competency.njk`, Texte in `src/_data/de.js` und `src/_data/en.js` (Abschnitt `map.competency`), Test in `test/map.e2e.test.mjs`.

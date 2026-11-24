@@ -68,7 +68,7 @@ describe("the built pages", () => {
   });
 
   test("a draft map says so loudly on every page of its subject, on its card and in its JSON", () => {
-    for (const path of ["map/physik/index.html", "map/physik/c/index.html", "map/physik/elektrizitaetslehre/index.html", "map/physik/c/einfacher-stromkreis/index.html", "map/mathematik/he-gymnasium/index.html"]) {
+    for (const path of ["map/physik/index.html", "map/physik/c/index.html", "map/physik/elektrizitaetslehre/index.html", "map/mathematik/he-gymnasium/index.html"]) {
       assert.match(read(path), /class="map-status map-status-draft"[^]*?Diese Karte ist nur eine Idee, um das Prinzip zu zeigen/, path);
     }
     assert.match(read("en/map/physik/index.html"), /This map is only an idea to show the principle/);
@@ -133,7 +133,7 @@ describe("the built pages", () => {
     const at = (text) => page.indexOf(text);
     assert.ok(at('id="wer"') > 0 && at('id="wer"') < at('id="weg"'), "the app comes before the chain");
     assert.match(page, /<li class="panel panel-main[^"]*"[^]*?<a href="\/apps\/elektrizitaet\/" class="btn btn-primary btn-lg">Zur App/);
-    assert.ok(at('class="map-status ') > at('panel panel-main') && at('class="map-status ') < at('id="weg"'), "the status notice stands under the app card, not above the title");
+    assert.doesNotMatch(page, /class="map-status/, "the status of the map stays on the map pages, not on the page of a competency");
     assert.match(page, /<details class="panel">\s*<summary[^>]*>\s*<h2 id="wann"/);
     assert.match(page, /<details class="panel">\s*<summary[^>]*>\s*<h2 id="quelle"/);
     const gap = read("map/mathematik/c/zufall-laplace/index.html");

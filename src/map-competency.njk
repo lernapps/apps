@@ -64,7 +64,6 @@ eleventyComputed:
     {%- else %}
     <p class="m-0 p-4 rounded-lg map-chip-gap">{{ A["none"] }}</p>
     {%- endif %}
-    {{ c.mapStatus(subject) }}
     <p class="m-0 text-slate-700">{{ A.build }} <a href="{{ '/build/' | inLang(lang) | url }}" class="text-blue-700 underline underline-offset-2">{{ A.buildLink }}</a></p>
   </section>
 
