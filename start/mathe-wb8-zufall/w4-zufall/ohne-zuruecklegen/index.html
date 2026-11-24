@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Ziehen ohne Zurücklegen – Mathe-Wettbewerb 8: Wahrscheinlichkeit</title>
+    <meta name="description" content="Beim Ziehen ohne Zurücklegen die Wahrscheinlichkeiten der 2. Stufe anpassen – an der Urne vorher und nachher und im Baumdiagramm." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../w4-zufall/ohne-zuruecklegen/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../w4-zufall/">Wahlaufgabe W4: Zweistufige Zufallsversuche</a></li><li aria-current="page">Ziehen ohne Zurücklegen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Ziehen ohne Zurücklegen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../w4-zufall/ohne-zuruecklegen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧w4-zufall/ohne-zuruecklegen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-zufall","page":{"id":"ohne-zuruecklegen","title":"Ziehen ohne Zurücklegen","exercises":[{"id":"ohne-zuruecklegen-start","section":"start","numbered":false},{"id":"ohne-zuruecklegen-ast","section":"uebung","numbered":false},{"id":"ohne-zuruecklegen-zweimal-rot","section":"uebung","numbered":true},{"id":"ohne-zuruecklegen-lose","section":"uebung","numbered":true},{"id":"ohne-zuruecklegen-gummibaerchen","section":"uebung","numbered":false},{"id":"ohne-zuruecklegen-rueckwaerts","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"w4-zufall/ohne-zuruecklegen/tutor/","markdown":"w4-zufall/ohne-zuruecklegen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Die Urne verändert sich</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Der Nenner wird kleiner</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="4fd3912b" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann beim Ziehen ohne Zurücklegen die Wahrscheinlichkeiten anpassen. Du brauchst dafür das
+Baumdiagramm und die <a href="../../wahrscheinlichkeit/pfadregeln/">Pfadregeln</a> aus dem Kapitel Wahrscheinlichkeit. Dort
+wurde jede Kugel zurückgelegt.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="47156074" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="ohne-zuruecklegen-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ohne-zuruecklegen-start" data-id="ohne-zuruecklegen-start" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du ziehst aus dieser Urne eine rote Kugel und legst sie nicht zurück. Wie wahrscheinlich ist die zweite Kugel auch rot?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/w4-urne-start.svg" alt="Eine Urne mit 3 roten Kugeln (r) und 2 blauen Kugeln (b)." loading="lazy" decoding="async"><figcaption><p>So sieht die Urne vor dem 1. Zug aus.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-start" value="0"> <span>3/5</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-start" value="1"> <span>2/5</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-start" value="2"> <span>1/2</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-start" value="3"> <span>3/4</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3/5</strong></p><p>Die rote Kugel fehlt jetzt in der Urne.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>2/5</strong></p><p>2 rote stimmt, aber es sind nur noch 4 Kugeln da.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>1/2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Noch 4 Kugeln, 2 davon rot: 2/4 = 1/2.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>3/4</strong></p><p>3/4 passt, wenn zuerst eine blaue Kugel kam.</p></li>
+</ul>
+<p class="question-explanation">Übrig sind 2 rote und 2 blaue Kugeln: P(rot) = 2/4 = 1/2.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3/5</strong></p><p>Die rote Kugel fehlt jetzt in der Urne.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>2/5</strong></p><p>2 rote stimmt, aber es sind nur noch 4 Kugeln da.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>1/2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Noch 4 Kugeln, 2 davon rot: 2/4 = 1/2.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>3/4</strong></p><p>3/4 passt, wenn zuerst eine blaue Kugel kam.</p></li>
+</ul>
+<p class="question-explanation">Übrig sind 2 rote und 2 blaue Kugeln: P(rot) = 2/4 = 1/2.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ohne-zuruecklegen-start","text":"Du ziehst aus dieser Urne eine rote Kugel und legst sie nicht zurück. Wie wahrscheinlich ist die zweite Kugel auch rot?","explanation":"Übrig sind 2 rote und 2 blaue Kugeln: P(rot) = 2/4 = 1/2.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"material":[{"type":"figure","image":"images/w4-urne-start.svg","alt":"Eine Urne mit 3 roten Kugeln (r) und 2 blauen Kugeln (b).","caption":"So sieht die Urne vor dem 1. Zug aus.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"3/5","correct":false,"info":"Die rote Kugel fehlt jetzt in der Urne."},{"text":"2/5","correct":false,"info":"2 rote stimmt, aber es sind nur noch 4 Kugeln da."},{"text":"1/2","correct":true,"info":"Noch 4 Kugeln, 2 davon rot: 2/4 = 1/2."},{"text":"3/4","correct":false,"info":"3/4 passt, wenn zuerst eine blaue Kugel kam."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Die Urne verändert sich</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="c49c3537" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Nach dem 1. Zug fehlt eine Kugel: Es sind nur noch 4 Kugeln in der Urne, und eine rote weniger. Darum ist
+die Wahrscheinlichkeit für Rot im 2. Zug 2/4 = 1/2 – wie in der Aufgabe oben.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="a414633b" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/w4-urne-vorher-nachher.svg" alt="Links die Urne vor dem 1. Zug: 3 rote und 2 blaue Kugeln. In der Mitte die gezogene rote Kugel. Rechts die Urne vor dem 2. Zug: 2 rote und 2 blaue Kugeln." loading="lazy" decoding="async"><figcaption><p>Vergleiche die beiden Urnen. Was ist im 2. Zug anders – die Zahl aller Kugeln und die Zahl der roten?</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="7bd16aab" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>War die erste Kugel blau, sind danach 3 rote und 1 blaue Kugel übrig. Die 2. Stufe des Baums hängt also
+vom 1. Zug ab: Der Nenner ist überall um 1 kleiner. Der Zähler ist nur bei der Farbe kleiner, die schon
+gezogen wurde.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="56dd8a31" data-block-type="figure" data-block-order="6">
+<figure class="block-figure"><img src="../../images/w4-baum-ohne.svg" alt="Baumdiagramm: 1. Stufe r 3/5 und b 2/5. Nach r: r 2/4 und b 2/4. Nach b: r 3/4 und b 1/4. Unten stehen rr, rb, br und bb." loading="lazy" decoding="async"><figcaption><p>Unter r und unter b stehen verschiedene Brüche. An jedem Knoten ergeben die Äste zusammen 1.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="c8f31d9c" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>r</mi><mi>r</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>⋅</mo><mfrac><mn>2</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>6</mn><mn>20</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>10</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="b4d55817" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Mit Zurücklegen wäre <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>r</mi><mi>r</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>⋅</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>=</mo><mfrac><mn>9</mn><mn>25</mn></mfrac></mrow></math>. Die Pfadregeln bleiben
+gleich, nur die Brüche der 2. Stufe ändern sich.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="6ff507de" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Zwei Gewinne aus der Lostrommel</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="b5ebf9fd" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>In einer Lostrommel sind 10 Lose, 2 davon Gewinne. Du ziehst nacheinander zwei Lose. Wie
+wahrscheinlich sind zwei Gewinne? Nach dem ersten Gewinn sind noch 9 Lose da, aber nur 1 Gewinn. TT
+heißt: zweimal ein Treffer (Gewinnlos).</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="14bb6b97" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>T</mi><mi>T</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>10</mn></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mn>9</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>90</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>45</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="6d83160f" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Antwort – Die Wahrscheinlichkeit ist 1/45. Der Haken: Mit 2/10 · 2/10 = 1/25 wäre sie fast doppelt
+so groß. Ein gezogenes Los kommt aber nicht zurück in die Trommel.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Der Nenner wird kleiner</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="c328184c" data-block-type="note" data-block-order="13">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="aa73b73c" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Ohne Zurücklegen ist im 2. Zug der Nenner um 1 kleiner – und der Zähler der Farbe, die schon gezogen
+wurde, auch. Wer den alten Nenner behält, rechnet so, als läge die Kugel noch in der Urne. Prüfe an
+jedem Knoten: Die Äste ergeben zusammen 1.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="469df86e" data-block-type="single-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="ohne-zuruecklegen-ast">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ohne-zuruecklegen-ast" data-id="ohne-zuruecklegen-ast" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Aus einer Urne mit 4 roten und 3 blauen Kugeln ziehst du zweimal ohne Zurücklegen. Was gehört an den Ast mit dem Fragezeichen?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/w4-baum-frage.svg" alt="Baumdiagramm: 1. Stufe r 4/7 und b 3/7. Nach r: r 3/6 und b 3/6. Nach b steht am Ast r nichts, am Ast b ein Fragezeichen." loading="lazy" decoding="async"><figcaption><p>Der Ast mit dem Fragezeichen gehört zum Pfad bb.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-ast" value="0"> <span>3/7</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-ast" value="1"> <span>2/7</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-ast" value="2"> <span>1/2</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-ast" value="3"> <span>1/3</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3/7</strong></p><p>Es fehlt eine Kugel.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>2/7</strong></p><p>2 blaue stimmt, aber der Nenner ist auch kleiner.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1/2</strong></p><p>3/6 hieße: noch 3 blaue. Eine ist aber gezogen.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>1/3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Noch 2 blaue unter 6 Kugeln: 2/6 = 1/3.</p></li>
+</ul>
+<p class="question-explanation">Nach blau sind 4 rote und 2 blaue übrig: P(blau) = 2/6 = 1/3.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3/7</strong></p><p>Es fehlt eine Kugel.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>2/7</strong></p><p>2 blaue stimmt, aber der Nenner ist auch kleiner.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1/2</strong></p><p>3/6 hieße: noch 3 blaue. Eine ist aber gezogen.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>1/3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Noch 2 blaue unter 6 Kugeln: 2/6 = 1/3.</p></li>
+</ul>
+<p class="question-explanation">Nach blau sind 4 rote und 2 blaue übrig: P(blau) = 2/6 = 1/3.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ohne-zuruecklegen-ast","text":"Aus einer Urne mit 4 roten und 3 blauen Kugeln ziehst du zweimal ohne Zurücklegen. Was gehört an den Ast mit dem Fragezeichen?","explanation":"Nach blau sind 4 rote und 2 blaue übrig: P(blau) = 2/6 = 1/3.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"material":[{"type":"figure","image":"images/w4-baum-frage.svg","alt":"Baumdiagramm: 1. Stufe r 4/7 und b 3/7. Nach r: r 3/6 und b 3/6. Nach b steht am Ast r nichts, am Ast b ein Fragezeichen.","caption":"Der Ast mit dem Fragezeichen gehört zum Pfad bb.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"3/7","correct":false,"info":"Es fehlt eine Kugel."},{"text":"2/7","correct":false,"info":"2 blaue stimmt, aber der Nenner ist auch kleiner."},{"text":"1/2","correct":false,"info":"3/6 hieße: noch 3 blaue. Eine ist aber gezogen."},{"text":"1/3","correct":true,"info":"Noch 2 blaue unter 6 Kugeln: 2/6 = 1/3."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="e3f40802" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="ohne-zuruecklegen-zweimal-rot">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einer Urne liegen 5 rote und 3 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist zweimal rot?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Kugeln, wie viele rote sind nach dem 1. Zug noch da?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Zug rot: 5/8. Danach liegen noch 7 Kugeln in der Urne, 4 davon rot: 4/7.</li><li>Entlang des Pfades multiplizieren: 20/56, gekürzt 5/14.</li></ol><p><strong>Richtige Antwort:</strong> 5/14</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einer Urne liegen 4 rote und 3 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist zweimal rot?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Kugeln, wie viele rote sind nach dem 1. Zug noch da?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Zug rot: 4/7. Danach liegen noch 6 Kugeln in der Urne, 3 davon rot: 3/6.</li><li>Entlang des Pfades multiplizieren: 12/42, gekürzt 2/7.</li></ol><p><strong>Richtige Antwort:</strong> 2/7</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einer Urne liegen 6 rote und 2 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist zweimal rot?</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Kugeln, wie viele rote sind nach dem 1. Zug noch da?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Zug rot: 6/8. Danach liegen noch 7 Kugeln in der Urne, 5 davon rot: 5/7.</li><li>Entlang des Pfades multiplizieren: 30/56, gekürzt 15/28.</li></ol><p><strong>Richtige Antwort:</strong> 15/28</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"ohne-zuruecklegen-zweimal-rot","given":{"e":{"pick":1,"from":{"data":"urnen"}},"r":{"int":[0,3]}},"task":{"text":"In einer Urne liegen {{e.rot}} rote und {{e.blau}} blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist zweimal rot?"},"answer":{"value":"e.prr","compare":{"choice":"[[e.prr, e.prrMit, e.prrAlterNenner, e.prrZaehler], [e.prrMit, e.prr, e.prrAlterNenner, e.prrZaehler], [e.prrMit, e.prrAlterNenner, e.prr, e.prrZaehler], [e.prrMit, e.prrAlterNenner, e.prrZaehler, e.prr]][r]"}},"mistakes":[{"value":"e.prrMit","message":"Die erste rote Kugel liegt nicht mehr in der Urne."},{"value":"e.prrAlterNenner","message":"Du hast den alten Nenner behalten. Es liegt eine Kugel weniger in der Urne."},{"value":"e.prrZaehler","message":"Auch eine rote Kugel fehlt: Der Zähler wird kleiner."}],"hint":"Wie viele Kugeln, wie viele rote sind nach dem 1. Zug noch da?","steps":["1. Zug rot: {{e.rot}}/{{e.n}}. Danach liegen noch {{e.n1}} Kugeln in der Urne, {{e.rot1}} davon rot: {{e.rot1}}/{{e.n1}}.","Entlang des Pfades multiplizieren: {{e.zRR}}/{{e.nn}}, gekürzt {{answer}}."]},"templates":{"de":{"task":"In einer Urne liegen ⟦e.rot⟧ rote und ⟦e.blau⟧ blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist zweimal rot?","steps":["1. Zug rot: ⟦e.rot⟧/⟦e.n⟧. Danach liegen noch ⟦e.n1⟧ Kugeln in der Urne, ⟦e.rot1⟧ davon rot: ⟦e.rot1⟧/⟦e.n1⟧.","Entlang des Pfades multiplizieren: ⟦e.zRR⟧/⟦e.nn⟧, gekürzt ⟦answer⟧."],"hint":"Wie viele Kugeln, wie viele rote sind nach dem 1. Zug noch da?","messages":["Die erste rote Kugel liegt nicht mehr in der Urne.","Du hast den alten Nenner behalten. Es liegt eine Kugel weniger in der Urne.","Auch eine rote Kugel fehlt: Der Zähler wird kleiner."]}},"data":{"urnen":[{"rot":3,"blau":2,"n":5,"rot1":2,"blau1":1,"n1":4,"nn":20,"zRR":6,"zRB":6,"zGenau":12,"zBB":2,"prr":"3/10","prrMit":"9/25","prrAlterNenner":"6/25","prrZaehler":"9/20","pGenau":"3/5","pEinPfad":"3/10","pGenauMit":"12/25","pMind":"9/10","pKein":"1/10","pHoechstens":"7/10","pMindMit":"21/25","pHoechstensMit":"16/25"},{"rot":2,"blau":3,"n":5,"rot1":1,"blau1":2,"n1":4,"nn":20,"zRR":2,"zRB":6,"zGenau":12,"zBB":6,"prr":"1/10","prrMit":"4/25","prrAlterNenner":"2/25","prrZaehler":"1/5","pGenau":"3/5","pEinPfad":"3/10","pGenauMit":"12/25","pMind":"7/10","pKein":"3/10","pHoechstens":"9/10","pMindMit":"16/25","pHoechstensMit":"21/25"},{"rot":4,"blau":2,"n":6,"rot1":3,"blau1":1,"n1":5,"nn":30,"zRR":12,"zRB":8,"zGenau":16,"zBB":2,"prr":"2/5","prrMit":"4/9","prrAlterNenner":"1/3","prrZaehler":"8/15","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"4/9","pMind":"14/15","pKein":"1/15","pHoechstens":"3/5","pMindMit":"8/9","pHoechstensMit":"5/9"},{"rot":2,"blau":4,"n":6,"rot1":1,"blau1":3,"n1":5,"nn":30,"zRR":2,"zRB":8,"zGenau":16,"zBB":12,"prr":"1/15","prrMit":"1/9","prrAlterNenner":"1/18","prrZaehler":"2/15","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"4/9","pMind":"3/5","pKein":"2/5","pHoechstens":"14/15","pMindMit":"5/9","pHoechstensMit":"8/9"},{"rot":4,"blau":3,"n":7,"rot1":3,"blau1":2,"n1":6,"nn":42,"zRR":12,"zRB":12,"zGenau":24,"zBB":6,"prr":"2/7","prrMit":"16/49","prrAlterNenner":"12/49","prrZaehler":"8/21","pGenau":"4/7","pEinPfad":"2/7","pGenauMit":"24/49","pMind":"6/7","pKein":"1/7","pHoechstens":"5/7","pMindMit":"40/49","pHoechstensMit":"33/49"},{"rot":3,"blau":4,"n":7,"rot1":2,"blau1":3,"n1":6,"nn":42,"zRR":6,"zRB":12,"zGenau":24,"zBB":12,"prr":"1/7","prrMit":"9/49","prrAlterNenner":"6/49","prrZaehler":"3/14","pGenau":"4/7","pEinPfad":"2/7","pGenauMit":"24/49","pMind":"5/7","pKein":"2/7","pHoechstens":"6/7","pMindMit":"33/49","pHoechstensMit":"40/49"},{"rot":5,"blau":3,"n":8,"rot1":4,"blau1":2,"n1":7,"nn":56,"zRR":20,"zRB":15,"zGenau":30,"zBB":6,"prr":"5/14","prrMit":"25/64","prrAlterNenner":"5/16","prrZaehler":"25/56","pGenau":"15/28","pEinPfad":"15/56","pGenauMit":"15/32","pMind":"25/28","pKein":"3/28","pHoechstens":"9/14","pMindMit":"55/64","pHoechstensMit":"39/64"},{"rot":3,"blau":5,"n":8,"rot1":2,"blau1":4,"n1":7,"nn":56,"zRR":6,"zRB":15,"zGenau":30,"zBB":20,"prr":"3/28","prrMit":"9/64","prrAlterNenner":"3/32","prrZaehler":"9/56","pGenau":"15/28","pEinPfad":"15/56","pGenauMit":"15/32","pMind":"9/14","pKein":"5/14","pHoechstens":"25/28","pMindMit":"39/64","pHoechstensMit":"55/64"},{"rot":5,"blau":2,"n":7,"rot1":4,"blau1":1,"n1":6,"nn":42,"zRR":20,"zRB":10,"zGenau":20,"zBB":2,"prr":"10/21","prrMit":"25/49","prrAlterNenner":"20/49","prrZaehler":"25/42","pGenau":"10/21","pEinPfad":"5/21","pGenauMit":"20/49","pMind":"20/21","pKein":"1/21","pHoechstens":"11/21","pMindMit":"45/49","pHoechstensMit":"24/49"},{"rot":2,"blau":5,"n":7,"rot1":1,"blau1":4,"n1":6,"nn":42,"zRR":2,"zRB":10,"zGenau":20,"zBB":20,"prr":"1/21","prrMit":"4/49","prrAlterNenner":"2/49","prrZaehler":"2/21","pGenau":"10/21","pEinPfad":"5/21","pGenauMit":"20/49","pMind":"11/21","pKein":"10/21","pHoechstens":"20/21","pMindMit":"24/49","pHoechstensMit":"45/49"},{"rot":6,"blau":2,"n":8,"rot1":5,"blau1":1,"n1":7,"nn":56,"zRR":30,"zRB":12,"zGenau":24,"zBB":2,"prr":"15/28","prrMit":"9/16","prrAlterNenner":"15/32","prrZaehler":"9/14","pGenau":"3/7","pEinPfad":"3/14","pGenauMit":"3/8","pMind":"27/28","pKein":"1/28","pHoechstens":"13/28","pMindMit":"15/16","pHoechstensMit":"7/16"},{"rot":2,"blau":6,"n":8,"rot1":1,"blau1":5,"n1":7,"nn":56,"zRR":2,"zRB":12,"zGenau":24,"zBB":30,"prr":"1/28","prrMit":"1/16","prrAlterNenner":"1/32","prrZaehler":"1/14","pGenau":"3/7","pEinPfad":"3/14","pGenauMit":"3/8","pMind":"13/28","pKein":"15/28","pHoechstens":"27/28","pMindMit":"7/16","pHoechstensMit":"15/16"},{"rot":6,"blau":4,"n":10,"rot1":5,"blau1":3,"n1":9,"nn":90,"zRR":30,"zRB":24,"zGenau":48,"zBB":12,"prr":"1/3","prrMit":"9/25","prrAlterNenner":"3/10","prrZaehler":"2/5","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"12/25","pMind":"13/15","pKein":"2/15","pHoechstens":"2/3","pMindMit":"21/25","pHoechstensMit":"16/25"},{"rot":4,"blau":6,"n":10,"rot1":3,"blau1":5,"n1":9,"nn":90,"zRR":12,"zRB":24,"zGenau":48,"zBB":30,"prr":"2/15","prrMit":"4/25","prrAlterNenner":"3/25","prrZaehler":"8/45","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"12/25","pMind":"2/3","pKein":"1/3","pHoechstens":"13/15","pMindMit":"16/25","pHoechstensMit":"21/25"}]},"seeds":[1,2,3,4,5,9,10,11,12,13,14,15,16,17,18,21,23,24,27,28,29,31,34,35,36,40,41,43,45,49,56,59,60,63,66,67,70,71,74,77,79,83,86,96,98,104,113,118,121,156,161,172,175,190,200,253],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="f850f1cc" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="ohne-zuruecklegen-lose">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einer Schachtel liegen 5 Lose, 2 davon sind Gewinne. Du ziehst nacheinander 2 Lose ohne Zurücklegen. Wie wahrscheinlich sind zwei Gewinne? Gib die Antwort in Prozent an, sie geht auf.</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Lose und Gewinne sind nach dem ersten Gewinn noch da?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Los Gewinn: 2 von 5. Danach sind noch 5 − 1 Lose da, davon 2 − 1 Gewinne.</li><li><math><mrow><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>⋅</mo><mfrac><mrow><mn>2</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>5</mn><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math> ergibt 10 %.</li></ol><p><strong>Richtige Antwort:</strong> 10 %</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einer Schachtel liegen 5 Lose, 3 davon sind Gewinne. Du ziehst nacheinander 2 Lose ohne Zurücklegen. Wie wahrscheinlich sind zwei Gewinne? Gib die Antwort in Prozent an, sie geht auf.</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Lose und Gewinne sind nach dem ersten Gewinn noch da?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Los Gewinn: 3 von 5. Danach sind noch 5 − 1 Lose da, davon 3 − 1 Gewinne.</li><li><math><mrow><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>⋅</mo><mfrac><mrow><mn>3</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>5</mn><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math> ergibt 30 %.</li></ol><p><strong>Richtige Antwort:</strong> 30 %</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einer Schachtel liegen 10 Lose, 9 davon sind Gewinne. Du ziehst nacheinander 2 Lose ohne Zurücklegen. Wie wahrscheinlich sind zwei Gewinne? Gib die Antwort in Prozent an, sie geht auf.</p><details class="explainer-hint"><summary>Tipp</summary><p>Wie viele Lose und Gewinne sind nach dem ersten Gewinn noch da?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Los Gewinn: 9 von 10. Danach sind noch 10 − 1 Lose da, davon 9 − 1 Gewinne.</li><li><math><mrow><mfrac><mn>9</mn><mn>10</mn></mfrac><mo>⋅</mo><mfrac><mrow><mn>9</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>10</mn><mo>−</mo><mn>1</mn></mrow></mfrac></mrow></math> ergibt 80 %.</li></ol><p><strong>Richtige Antwort:</strong> 80 %</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"ohne-zuruecklegen-lose","given":{"n":{"oneOf":[4,5,10]},"g":{"int":[2,9]}},"where":["g \u003c n","decimals(100 * g * (g - 1) / (n * (n - 1))) == 0","decimals(100 * g * g / (n * n)) \u003c= 2","decimals(100 * g * (g - 1) / (n * n)) \u003c= 2","decimals(100 * g * g / (n * (n - 1))) \u003c= 2"],"task":{"text":"In einer Schachtel liegen {{n}} Lose, {{g}} davon sind Gewinne. Du ziehst nacheinander 2 Lose ohne Zurücklegen. Wie wahrscheinlich sind zwei Gewinne? Gib die Antwort in Prozent an, sie geht auf."},"answer":{"value":"100 * g * (g - 1) / (n * (n - 1))","compare":{"number":{"format":"percent","decimals":2}}},"mistakes":[{"value":"100 * g * g / (n * n)","message":"Das erste Los kommt nicht zurück."},{"value":"100 * g * (g - 1) / (n * n)","message":"Du hast den alten Nenner behalten. Es ist ein Los weniger da."},{"value":"100 * g * g / (n * (n - 1))","message":"Auch ein Gewinn fehlt: Der Zähler wird kleiner."}],"hint":"Wie viele Lose und Gewinne sind nach dem ersten Gewinn noch da?","steps":["1. Los Gewinn: {{g}} von {{n}}. Danach sind noch {{n}} − 1 Lose da, davon {{g}} − 1 Gewinne.","$\\frac{ {{g}} }{ {{n}} } \\cdot \\frac{ {{g}} - 1}{ {{n}} - 1}$ ergibt {{answer}} %."]},"templates":{"de":{"task":"In einer Schachtel liegen ⟦n⟧ Lose, ⟦g⟧ davon sind Gewinne. Du ziehst nacheinander 2 Lose ohne Zurücklegen. Wie wahrscheinlich sind zwei Gewinne? Gib die Antwort in Prozent an, sie geht auf.","steps":["1. Los Gewinn: ⟦g⟧ von ⟦n⟧. Danach sind noch ⟦n⟧ − 1 Lose da, davon ⟦g⟧ − 1 Gewinne.","\u003cmath>\u003cmrow>\u003cmfrac>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmtext>⟦n⟧\u003c/mtext>\u003c/mfrac>\u003cmo>⋅\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmo>−\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003cmrow>\u003cmtext>⟦n⟧\u003c/mtext>\u003cmo>−\u003c/mo>\u003cmn>1\u003c/mn>\u003c/mrow>\u003c/mfrac>\u003c/mrow>\u003c/math> ergibt ⟦answer⟧ %."],"hint":"Wie viele Lose und Gewinne sind nach dem ersten Gewinn noch da?","messages":["Das erste Los kommt nicht zurück.","Du hast den alten Nenner behalten. Es ist ein Los weniger da.","Auch ein Gewinn fehlt: Der Zähler wird kleiner."]}},"data":{},"seeds":[1,2,3,6,11],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="c625aa41" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="ohne-zuruecklegen-gummibaerchen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ohne-zuruecklegen-gummibaerchen" data-id="ohne-zuruecklegen-gummibaerchen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In einer Tüte sind 4 rote und 6 grüne Gummibärchen. Du nimmst ohne hinzusehen nacheinander zwei heraus und isst sie. Wie wahrscheinlich sind beide grün?</legend>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-gummibaerchen" value="0"> <span>9/25</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-gummibaerchen" value="1"> <span>1/3</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-gummibaerchen" value="2"> <span>3/10</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-zuruecklegen-gummibaerchen" value="3"> <span>2/5</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>9/25</strong></p><p>6/10 · 6/10 – als käme das erste zurück.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>1/3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst 6 von 10, dann 5 von 9.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>3/10</strong></p><p>6/10 · 5/10 – es sind aber nur noch 9 in der Tüte.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>2/5</strong></p><p>6/10 · 6/9 – es sind aber nur noch 5 grüne da.</p></li>
+</ul>
+<p class="question-explanation">6/10 · 5/9 = 30/90 = 1/3.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/189811/pfadregeln" rel="noopener" title="Pfadregeln (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Pfadregeln (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>9/25</strong></p><p>6/10 · 6/10 – als käme das erste zurück.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>1/3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst 6 von 10, dann 5 von 9.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>3/10</strong></p><p>6/10 · 5/10 – es sind aber nur noch 9 in der Tüte.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>2/5</strong></p><p>6/10 · 6/9 – es sind aber nur noch 5 grüne da.</p></li>
+</ul>
+<p class="question-explanation">6/10 · 5/9 = 30/90 = 1/3.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/189811/pfadregeln" rel="noopener" title="Pfadregeln (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Pfadregeln (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ohne-zuruecklegen-gummibaerchen","text":"In einer Tüte sind 4 rote und 6 grüne Gummibärchen. Du nimmst ohne hinzusehen nacheinander zwei heraus und isst sie. Wie wahrscheinlich sind beide grün?","explanation":"6/10 · 5/9 = 30/90 = 1/3.","links":[{"title":"Pfadregeln (Serlo)","url":"https://de.serlo.org/mathe/189811/pfadregeln"}],"type":"single-choice","options":[{"text":"9/25","correct":false,"info":"6/10 · 6/10 – als käme das erste zurück."},{"text":"1/3","correct":true,"info":"Erst 6 von 10, dann 5 von 9."},{"text":"3/10","correct":false,"info":"6/10 · 5/10 – es sind aber nur noch 9 in der Tüte."},{"text":"2/5","correct":false,"info":"6/10 · 6/9 – es sind aber nur noch 5 grüne da."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="575a9198" data-block-type="number" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="ohne-zuruecklegen-rueckwaerts">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ohne-zuruecklegen-rueckwaerts" data-id="ohne-zuruecklegen-rueckwaerts" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In einer Urne liegen 6 rote und blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Die Wahrscheinlichkeit für zweimal rot ist 1/5. Wie viele Kugeln sind rot?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-ohne-zuruecklegen-rueckwaerts" aria-describedby="frage-ohne-zuruecklegen-rueckwaerts-unit"> <span id="frage-ohne-zuruecklegen-rueckwaerts-unit">Kugeln</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3 Kugeln</p>
+<p class="question-explanation">3/6 · 2/5 = 6/30 = 1/5.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/189811/pfadregeln" rel="noopener" title="Pfadregeln (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Pfadregeln (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3 Kugeln</p>
+<p class="question-explanation">3/6 · 2/5 = 6/30 = 1/5.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/189811/pfadregeln" rel="noopener" title="Pfadregeln (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Pfadregeln (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ohne-zuruecklegen-rueckwaerts","text":"In einer Urne liegen 6 rote und blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Die Wahrscheinlichkeit für zweimal rot ist 1/5. Wie viele Kugeln sind rot?","explanation":"3/6 · 2/5 = 6/30 = 1/5.","links":[{"title":"Pfadregeln (Serlo)","url":"https://de.serlo.org/mathe/189811/pfadregeln"}],"hint":"Probiere aus: Bei r roten Kugeln ist P(rr) = r/6 · (r − 1)/5.","type":"number","answer":3,"tolerance":0,"unit":"Kugeln","mistakes":[{"answer":2,"message":"Dann wäre P(rr) = 2/6 · 1/5 = 1/15, zu klein."},{"answer":4,"message":"Dann wäre P(rr) = 4/6 · 3/5 = 2/5, zu groß."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="9bf54a10" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Als Nächstes übersetzt du Ereignisse wie „genau einmal rot“ oder „mindestens einmal rot“ in Pfade des Baums.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-zufall","app":"Mathe-Wettbewerb 8: Wahrscheinlichkeit","root":"../../","repository":"rdmueller/mathe-wb8-zufall","revision":"f4f3c21","page":{"title":"Ziehen ohne Zurücklegen","order":3}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../wahrscheinlichkeit/pfadregeln/">Zurück: Pfadregeln</a><a rel="next" href="../../w4-zufall/ereignisse-pfade/">Weiter: Ereignisse als Pfade</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

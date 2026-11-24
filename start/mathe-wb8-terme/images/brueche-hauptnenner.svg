@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" viewBox="0 0 340 200" font-family="sans-serif" font-size="14">
+  <title>Drei gleich lange Streifen: oben 2/3 blau, in der Mitte 1/4 orange, unten in 12 gleiche Teile geteilt, davon 8 blau und 3 orange</title>
+  <rect width="340" height="200" fill="#ffffff"/>
+  <!-- 2/3: drei Teile, zwei blau -->
+  <text x="14" y="46" fill="#1e3a8a" font-weight="bold">2/3</text>
+  <rect x="70" y="26" width="160" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="230" y="26" width="80" height="30" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="26" x2="150" y2="56" stroke="#2563eb" stroke-width="2"/>
+  <!-- 1/4: vier Teile, einer orange -->
+  <text x="14" y="101" fill="#9a3412" font-weight="bold">1/4</text>
+  <rect x="70" y="81" width="240" height="30" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+  <rect x="70" y="81" width="60" height="30" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <line x1="190" y1="81" x2="190" y2="111" stroke="#ea580c" stroke-width="2"/>
+  <line x1="250" y1="81" x2="250" y2="111" stroke="#ea580c" stroke-width="2"/>
+  <!-- Zwölftel: 8 blau, 3 orange -->
+  <text x="14" y="150" fill="#374151" font-weight="bold">12tel</text>
+  <rect x="70" y="136" width="160" height="30" fill="#dbeafe"/>
+  <rect x="230" y="136" width="60" height="30" fill="#ffedd5"/>
+  <rect x="70" y="136" width="240" height="30" fill="none" stroke="#374151" stroke-width="2"/>
+  <g stroke="#6b7280" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="90" y1="136" x2="90" y2="166"/>
+    <line x1="110" y1="136" x2="110" y2="166"/>
+    <line x1="130" y1="136" x2="130" y2="166"/>
+    <line x1="150" y1="136" x2="150" y2="166"/>
+    <line x1="170" y1="136" x2="170" y2="166"/>
+    <line x1="190" y1="136" x2="190" y2="166"/>
+    <line x1="210" y1="136" x2="210" y2="166"/>
+    <line x1="230" y1="136" x2="230" y2="166"/>
+    <line x1="250" y1="136" x2="250" y2="166"/>
+    <line x1="270" y1="136" x2="270" y2="166"/>
+    <line x1="290" y1="136" x2="290" y2="166"/>
+  </g>
+  <text x="150" y="188" text-anchor="middle" fill="#1e3a8a">8 Zwölftel</text>
+  <text x="262" y="188" text-anchor="middle" fill="#9a3412">3 Zwölftel</text>
+</svg>

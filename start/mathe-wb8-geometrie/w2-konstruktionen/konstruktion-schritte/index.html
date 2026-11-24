@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Schritte einer Konstruktion – Mathe-Wettbewerb 8: Geometrie</title>
+    <meta name="description" content="Eine Dreieckskonstruktion planen: womit du anfängst, wie du die dritte Ecke findest und was Höhe, Seitenhalbierende und Winkelhalbierende dabei tun." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../w2-konstruktionen/konstruktion-schritte/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../w2-konstruktionen/">Wahlaufgabe W2: Dreieckskonstruktionen und Kongruenzsätze</a></li><li aria-current="page">Schritte einer Konstruktion</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Schritte einer Konstruktion</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../w2-konstruktionen/konstruktion-schritte/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧w2-konstruktionen/konstruktion-schritte/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-geometrie","page":{"id":"konstruktion-schritte","title":"Schritte einer Konstruktion","exercises":[{"id":"konstruktion-schritte-start","section":"start","numbered":false},{"id":"konstruktion-schritte-zuerst","section":"uebung","numbered":true},{"id":"konstruktion-schritte-sws","section":"uebung","numbered":false},{"id":"konstruktion-schritte-ssw","section":"uebung","numbered":false},{"id":"konstruktion-schritte-linien","section":"uebung","numbered":false},{"id":"konstruktion-schritte-seitenhalbierende","section":"uebung","numbered":false},{"id":"konstruktion-schritte-winkelhalbierende","section":"uebung","numbered":false},{"id":"konstruktion-schritte-flaeche","section":"uebung","numbered":true}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"w2-konstruktionen/konstruktion-schritte/tutor/","markdown":"w2-konstruktionen/konstruktion-schritte/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Erst planen, dann zeichnen</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Drei Linien, drei Bedeutungen</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="49ff7cf1" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann die Schritte einer Konstruktion ordnen, auch mit Höhe, Seiten- oder Winkelhalbierender.
+Der <a href="../../w2-konstruktionen/kongruenzsaetze/">Kongruenzsatz</a> sagt dir, ob es klappt – hier planst du, wie.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="d4113bcd" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="konstruktion-schritte-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-konstruktion-schritte-start" data-id="konstruktion-schritte-start" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du sollst ein Dreieck mit c = 6 cm, α = 40° und β = 60° konstruieren. Was zeichnest du zuerst?</legend>
+<label class="question-option"><input type="radio" name="frage-konstruktion-schritte-start" value="0"> <span>die Seite a</span></label>
+<label class="question-option"><input type="radio" name="frage-konstruktion-schritte-start" value="1"> <span>den Winkel α</span></label>
+<label class="question-option"><input type="radio" name="frage-konstruktion-schritte-start" value="2"> <span>den Punkt C</span></label>
+<label class="question-option"><input type="radio" name="frage-konstruktion-schritte-start" value="3"> <span>die Seite c</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>die Seite a</strong></p><p>Die Länge von a ist nicht gegeben.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>den Winkel α</strong></p><p>Einen Winkel trägst du an einer Strecke an, die fehlt noch.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>den Punkt C</strong></p><p>C ist das Ergebnis der Konstruktion.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>die Seite c</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>α liegt bei A und β bei B – beide an c.</p></li>
+</ul>
+<p class="question-explanation">Fang mit der Seite an, an der die gegebenen Winkel liegen. Das ist hier c.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>die Seite a</strong></p><p>Die Länge von a ist nicht gegeben.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>den Winkel α</strong></p><p>Einen Winkel trägst du an einer Strecke an, die fehlt noch.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>den Punkt C</strong></p><p>C ist das Ergebnis der Konstruktion.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>die Seite c</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>α liegt bei A und β bei B – beide an c.</p></li>
+</ul>
+<p class="question-explanation">Fang mit der Seite an, an der die gegebenen Winkel liegen. Das ist hier c.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"konstruktion-schritte-start","text":"Du sollst ein Dreieck mit c = 6 cm, α = 40° und β = 60° konstruieren. Was zeichnest du zuerst?","explanation":"Fang mit der Seite an, an der die gegebenen Winkel liegen. Das ist hier c.","links":[{"title":"Dreiecke konstruieren (Serlo)","url":"https://de.serlo.org/mathe/1957/dreiecke-konstruieren"}],"type":"single-choice","options":[{"text":"die Seite a","correct":false,"info":"Die Länge von a ist nicht gegeben."},{"text":"den Winkel α","correct":false,"info":"Einen Winkel trägst du an einer Strecke an, die fehlt noch."},{"text":"den Punkt C","correct":false,"info":"C ist das Ergebnis der Konstruktion."},{"text":"die Seite c","correct":true,"info":"α liegt bei A und β bei B – beide an c."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Erst planen, dann zeichnen</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="aa07c569" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Die dritte Ecke findest du immer als <strong>Schnittpunkt</strong>: von zwei Kreisen, von zwei Schenkeln oder von einem
+Kreis und einem Schenkel. Darum zeichnest du zuerst eine gegebene Seite, an der möglichst viele gegebene
+Stücke liegen – wie c in der Aufgabe oben. An ihren Enden trägst du ab, was gegeben ist.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="e9ff439b" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/w2-konstruktion-sws.svg" alt="Konstruktion nach SWS: die blaue Seite c = 6 cm, bei A der blaue Winkel α = 50° mit gestricheltem freien Schenkel. Ein grauer Kreisbogen um A mit Radius 5 cm schneidet den Schenkel im orangen Punkt C." loading="lazy" decoding="async"><figcaption><p>SWS mit b = 5 cm, c = 6 cm, α = 50°: C ist der Schnittpunkt von Kreisbogen und Schenkel.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="b2117195" data-block-type="table" data-block-order="5">
+<div class="block-table" role="region" aria-label="Womit du anfängst und wo die dritte Ecke liegt" tabindex="0"><table><caption>Womit du anfängst und wo die dritte Ecke liegt</caption><thead><tr><th scope="col">Satz</th><th scope="col">zuerst</th><th scope="col">dritte Ecke als Schnittpunkt von</th></tr></thead><tbody><tr><td>SSS</td><td>eine Seite</td><td>zwei Kreisen</td></tr><tr><td>SWS</td><td>eine Seite am Winkel</td><td>Kreis und Schenkel</td></tr><tr><td>WSW</td><td>die Seite zwischen den Winkeln</td><td>zwei Schenkeln</td></tr><tr><td>SsW</td><td>die Seite am Winkel</td><td>Kreis und Schenkel</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="7de4709e" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Im Wettbewerb sind oft Linien gegeben, die keine Seite sind. Von C zur Seite c gehen drei: die <strong>Höhe</strong>
+<math><msub><mi>h</mi><mi>c</mi></msub></math>, die <strong>Seitenhalbierende</strong> <math><msub><mi>s</mi><mi>c</mi></msub></math> und die <strong>Winkelhalbierende</strong> <math><msub><mi>w</mi><mi>γ</mi></msub></math>.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="3d536c55" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><img src="../../images/w2-linien.svg" alt="Ein Dreieck ABC. Von C gehen drei Linien zur Seite c: die orange Höhe h_c im rechten Winkel, die lila Winkelhalbierende w_γ, die γ in zwei gleiche Teile teilt, und die graue Seitenhalbierende s_c zur Mitte M von c." loading="lazy" decoding="async"><figcaption><p>Die Höhe trifft c im rechten Winkel, die Seitenhalbierende in der Mitte M. Die Winkelhalbierende teilt γ in zwei gleiche Winkel.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="5b52e3d5" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>So helfen sie dir, C zu finden:</p>
+<ul>
+<li><math><msub><mi>h</mi><mi>c</mi></msub></math> gegeben: C ist <math><msub><mi>h</mi><mi>c</mi></msub></math> von c entfernt, liegt also auf der <strong>Parallelen zu c im Abstand</strong> <math><msub><mi>h</mi><mi>c</mi></msub></math>.</li>
+<li><math><msub><mi>s</mi><mi>c</mi></msub></math> gegeben: Konstruiere die Mitte M von c (Mittelsenkrechte). C liegt auf dem <strong>Kreis um M</strong> mit
+Radius <math><msub><mi>s</mi><mi>c</mi></msub></math>.</li>
+<li><math><msub><mi>w</mi><mi>γ</mi></msub></math> gegeben: Halbiere γ und trage <math><msub><mi>w</mi><mi>γ</mi></msub></math> auf der Winkelhalbierenden ab. Ihr Endpunkt liegt
+auf c.</li>
+</ul></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="905b1c9d" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Konstruktion mit c = 6 cm, α = 50° und der Höhe 4 cm</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="1948d628" data-block-type="text" data-block-order="10">
+<div class="block-text"><ol>
+<li>Planfigur skizzieren, c, α und <math><msub><mi>h</mi><mi>c</mi></msub></math> färben.</li>
+<li>c = 6 cm zeichnen, Endpunkte A und B.</li>
+<li>An A den Winkel α = 50° antragen.</li>
+<li>Die Parallele zu c im Abstand 4 cm zeichnen.</li>
+<li>Wo sie den freien Schenkel von α schneidet, liegt C. C mit B verbinden.</li>
+</ol></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="4cec472d" data-block-type="figure" data-block-order="11">
+<figure class="block-figure"><img src="../../images/w2-hoehe-konstruktion.svg" alt="Die blaue Seite c = 6 cm, bei A der blaue Winkel α = 50°. Eine graue gestrichelte Parallele zu c liegt 4 cm darüber. Sie schneidet den freien Schenkel von α im orangen Punkt C. Die blaue gestrichelte Höhe h_c (4 cm) geht von C senkrecht auf c." loading="lazy" decoding="async"><figcaption><p>Die Höhe selbst musst du nicht zeichnen – die Parallele zeigt dir, wo C liegen kann.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Drei Linien, drei Bedeutungen</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="5ea84fb8" data-block-type="note" data-block-order="12">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="11860128" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Höhe, Seitenhalbierende und Winkelhalbierende gehen alle von C zur Seite c, aber an verschiedene Stellen.
+Die <strong>Höhe</strong> trifft c im rechten Winkel, die <strong>Seitenhalbierende</strong> in der Mitte, die
+<strong>Winkelhalbierende</strong> teilt γ. Nur wenn a und b gleich lang sind, fallen alle drei zusammen.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="dd80f32b" data-block-type="generated" data-block-order="14">
+<div class="explainer-exercise explainer-generated" id="konstruktion-schritte-zuerst">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Gegeben sind b = 6 cm, c = 4 cm, α = 55°. Womit beginnst du die Konstruktion?</p><details class="explainer-hint"><summary>Tipp</summary><p>Skizziere die Planfigur. An welcher gegebenen Seite liegen die gegebenen Winkel?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>α liegt bei A. Dort treffen sich b und c: Der Winkel liegt zwischen den beiden Seiten.</li><li>Du zeichnest zuerst die Seite c.</li></ol><p><strong>Richtige Antwort:</strong> die Seite c</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Gegeben sind a = 5 cm, b = 7 cm, γ = 40°. Womit beginnst du die Konstruktion?</p><details class="explainer-hint"><summary>Tipp</summary><p>Skizziere die Planfigur. An welcher gegebenen Seite liegen die gegebenen Winkel?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>γ liegt bei C. Dort treffen sich a und b: Der Winkel liegt zwischen den beiden Seiten.</li><li>Du zeichnest zuerst die Seite a.</li></ol><p><strong>Richtige Antwort:</strong> die Seite a</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Gegeben sind b = 5 cm, α = 50°, γ = 60°. Womit beginnst du die Konstruktion?</p><details class="explainer-hint"><summary>Tipp</summary><p>Skizziere die Planfigur. An welcher gegebenen Seite liegen die gegebenen Winkel?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>α liegt bei A, γ bei C. Beide liegen an der Seite b = CA.</li><li>Du zeichnest zuerst die Seite b.</li></ol><p><strong>Richtige Antwort:</strong> die Seite b</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"konstruktion-schritte-zuerst","given":{"e":{"pick":1,"from":{"data":"kongruenzsaetze"}},"r":{"int":[0,2]}},"where":["e.zuerst != '–'"],"task":{"text":"Gegeben sind {{e.stuecke}}. Womit beginnst du die Konstruktion?"},"answer":{"value":"e.zuerst","compare":{"choice":"[[e.zuerst, e.zuerstFalsch1, e.zuerstFalsch2], [e.zuerstFalsch1, e.zuerst, e.zuerstFalsch2], [e.zuerstFalsch1, e.zuerstFalsch2, e.zuerst]][r]"}},"mistakes":[{"value":"e.zuerstFalsch1","message":"Einen Winkel trägst du an einer Strecke an. Fang mit einer Seite an."},{"value":"e.zuerstFalsch2","message":"Damit kannst du nicht anfangen. Nimm eine gegebene Seite, an der möglichst viele gegebene Stücke liegen."}],"hint":"Skizziere die Planfigur. An welcher gegebenen Seite liegen die gegebenen Winkel?","steps":["{{e.lage}}","Du zeichnest zuerst {{answer}}."]},"templates":{"de":{"task":"Gegeben sind ⟦e.stuecke⟧. Womit beginnst du die Konstruktion?","steps":["⟦e.lage⟧","Du zeichnest zuerst ⟦answer⟧."],"hint":"Skizziere die Planfigur. An welcher gegebenen Seite liegen die gegebenen Winkel?","messages":["Einen Winkel trägst du an einer Strecke an. Fang mit einer Seite an.","Damit kannst du nicht anfangen. Nimm eine gegebene Seite, an der möglichst viele gegebene Stücke liegen."]}},"data":{"kongruenzsaetze":[{"stuecke":"a = 5 cm, b = 7 cm, γ = 40°","satz":"SWS","lage":"γ liegt bei C. Dort treffen sich a und b: Der Winkel liegt zwischen den beiden Seiten.","verwechselt":"SsW","warum":"Prüfe, wo γ liegt: an der Ecke C. Welche Seiten treffen sich dort?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Zwei Seiten und der Winkel zwischen ihnen legen das Dreieck fest. Es gibt nur eine Möglichkeit.","winkel":"γ","ecke":"C","gegenueber":"c","anliegend":"a","zuerst":"die Seite a","zuerstFalsch1":"den Winkel γ","zuerstFalsch2":"die Seite c"},{"stuecke":"b = 6 cm, c = 4 cm, α = 55°","satz":"SWS","lage":"α liegt bei A. Dort treffen sich b und c: Der Winkel liegt zwischen den beiden Seiten.","verwechselt":"SsW","warum":"Prüfe, wo α liegt: an der Ecke A. Welche Seiten treffen sich dort?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Zwei Seiten und der Winkel zwischen ihnen legen das Dreieck fest. Es gibt nur eine Möglichkeit.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"b","zuerst":"die Seite c","zuerstFalsch1":"den Winkel α","zuerstFalsch2":"die Seite a"},{"stuecke":"a = 6 cm, c = 8 cm, β = 70°","satz":"SWS","lage":"β liegt bei B. Dort treffen sich a und c: Der Winkel liegt zwischen den beiden Seiten.","verwechselt":"SsW","warum":"Prüfe, wo β liegt: an der Ecke B. Welche Seiten treffen sich dort?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Zwei Seiten und der Winkel zwischen ihnen legen das Dreieck fest. Es gibt nur eine Möglichkeit.","winkel":"β","ecke":"B","gegenueber":"b","anliegend":"c","zuerst":"die Seite c","zuerstFalsch1":"den Winkel β","zuerstFalsch2":"die Seite b"},{"stuecke":"a = 4 cm, b = 5 cm, c = 6 cm","satz":"SSS","lage":"Gegeben sind drei Seiten. 4 cm + 5 cm sind länger als 6 cm, also gibt es das Dreieck.","verwechselt":"SWS","warum":"Zähle nach: Ist überhaupt ein Winkel gegeben?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Drei Seiten legen das Dreieck fest: Die zwei Kreise um A und B schneiden sich oberhalb von c nur einmal.","winkel":"–","ecke":"–","gegenueber":"–","anliegend":"–","zuerst":"die Seite c","zuerstFalsch1":"den Winkel γ","zuerstFalsch2":"den Punkt C"},{"stuecke":"a = 7 cm, b = 3 cm, c = 5 cm","satz":"SSS","lage":"Gegeben sind drei Seiten. 3 cm + 5 cm sind länger als 7 cm, also gibt es das Dreieck.","verwechselt":"SWS","warum":"Zähle nach: Ist überhaupt ein Winkel gegeben?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Drei Seiten legen das Dreieck fest: Die zwei Kreise um A und B schneiden sich oberhalb von c nur einmal.","winkel":"–","ecke":"–","gegenueber":"–","anliegend":"–","zuerst":"die Seite c","zuerstFalsch1":"den Winkel α","zuerstFalsch2":"den Punkt C"},{"stuecke":"c = 6 cm, α = 40°, β = 75°","satz":"WSW","lage":"α liegt bei A, β bei B. Beide liegen an der Seite c = AB.","verwechselt":"SWS","warum":"Zähle nach: Wie viele Seiten und wie viele Winkel sind gegeben?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Eine Seite und die zwei Winkel an ihr legen das Dreieck fest: Die freien Schenkel schneiden sich nur einmal.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"c","zuerst":"die Seite c","zuerstFalsch1":"den Winkel α","zuerstFalsch2":"die Seite a"},{"stuecke":"b = 5 cm, α = 50°, γ = 60°","satz":"WSW","lage":"α liegt bei A, γ bei C. Beide liegen an der Seite b = CA.","verwechselt":"SWS","warum":"Zähle nach: Wie viele Seiten und wie viele Winkel sind gegeben?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Eine Seite und die zwei Winkel an ihr legen das Dreieck fest: Die freien Schenkel schneiden sich nur einmal.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"b","zuerst":"die Seite b","zuerstFalsch1":"den Winkel α","zuerstFalsch2":"die Seite c"},{"stuecke":"a = 6 cm, β = 45°, γ = 80°","satz":"WSW","lage":"β liegt bei B, γ bei C. Beide liegen an der Seite a = BC.","verwechselt":"SWS","warum":"Zähle nach: Wie viele Seiten und wie viele Winkel sind gegeben?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Eine Seite und die zwei Winkel an ihr legen das Dreieck fest: Die freien Schenkel schneiden sich nur einmal.","winkel":"β","ecke":"B","gegenueber":"b","anliegend":"a","zuerst":"die Seite a","zuerstFalsch1":"den Winkel γ","zuerstFalsch2":"die Seite b"},{"stuecke":"c = 7 cm, α = 50°, γ = 70°","satz":"WSW","lage":"γ liegt nicht an c. Mit der Winkelsumme ist β = 180° − 50° − 70° = 60°. Dann liegen α und β an c.","verwechselt":"SWS","warum":"Rechne mit der Winkelsumme den dritten Winkel aus. Liegen dann zwei Winkel an der gegebenen Seite?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Mit der Winkelsumme kennst du alle drei Winkel, also auch die zwei an c. Das legt das Dreieck fest.","winkel":"γ","ecke":"C","gegenueber":"c","anliegend":"a","zuerst":"die Seite c","zuerstFalsch1":"den Winkel γ","zuerstFalsch2":"die Seite a"},{"stuecke":"a = 5 cm, α = 65°, β = 45°","satz":"WSW","lage":"α liegt nicht an a. Mit der Winkelsumme ist γ = 180° − 65° − 45° = 70°. Dann liegen β und γ an a.","verwechselt":"SWS","warum":"Rechne mit der Winkelsumme den dritten Winkel aus. Liegen dann zwei Winkel an der gegebenen Seite?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Mit der Winkelsumme kennst du alle drei Winkel, also auch die zwei an a. Das legt das Dreieck fest.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"b","zuerst":"die Seite a","zuerstFalsch1":"den Winkel α","zuerstFalsch2":"die Seite c"},{"stuecke":"a = 7 cm, b = 5 cm, α = 60°","satz":"SsW","lage":"α liegt a gegenüber, und a ist die längere der beiden Seiten.","verwechselt":"sSW","warum":"Prüfe, welcher Seite der Winkel gegenüberliegt: der längeren oder der kürzeren?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Der Winkel liegt der längeren Seite gegenüber. Dann schneidet der Kreis den freien Schenkel nur einmal.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"b","zuerst":"die Seite b","zuerstFalsch1":"den Winkel α","zuerstFalsch2":"die Seite a"},{"stuecke":"b = 8 cm, c = 6 cm, β = 50°","satz":"SsW","lage":"β liegt b gegenüber, und b ist die längere der beiden Seiten.","verwechselt":"sSW","warum":"Prüfe, welcher Seite der Winkel gegenüberliegt: der längeren oder der kürzeren?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Der Winkel liegt der längeren Seite gegenüber. Dann schneidet der Kreis den freien Schenkel nur einmal.","winkel":"β","ecke":"B","gegenueber":"b","anliegend":"c","zuerst":"die Seite c","zuerstFalsch1":"den Winkel β","zuerstFalsch2":"die Seite b"},{"stuecke":"a = 4 cm, c = 6 cm, γ = 70°","satz":"SsW","lage":"γ liegt c gegenüber, und c ist die längere der beiden Seiten.","verwechselt":"sSW","warum":"Prüfe, welcher Seite der Winkel gegenüberliegt: der längeren oder der kürzeren?","eindeutig":"eindeutig","gegenteil":"nicht eindeutig","begruendung":"Der Winkel liegt der längeren Seite gegenüber. Dann schneidet der Kreis den freien Schenkel nur einmal.","winkel":"γ","ecke":"C","gegenueber":"c","anliegend":"a","zuerst":"die Seite a","zuerstFalsch1":"den Winkel γ","zuerstFalsch2":"die Seite c"},{"stuecke":"a = 4 cm, b = 6 cm, α = 30°","satz":"sSW","lage":"α liegt a gegenüber, und a ist die kürzere der beiden Seiten.","verwechselt":"SsW","warum":"Prüfe, welcher Seite der Winkel gegenüberliegt: der längeren oder der kürzeren?","eindeutig":"nicht eindeutig","gegenteil":"eindeutig","begruendung":"Der Winkel liegt der kürzeren Seite gegenüber. Der Kreis um C kann den freien Schenkel zweimal schneiden.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"b","zuerst":"–","zuerstFalsch1":"–","zuerstFalsch2":"–"},{"stuecke":"b = 5 cm, c = 7 cm, β = 40°","satz":"sSW","lage":"β liegt b gegenüber, und b ist die kürzere der beiden Seiten.","verwechselt":"SsW","warum":"Prüfe, welcher Seite der Winkel gegenüberliegt: der längeren oder der kürzeren?","eindeutig":"nicht eindeutig","gegenteil":"eindeutig","begruendung":"Der Winkel liegt der kürzeren Seite gegenüber. Der Kreis um A kann den freien Schenkel zweimal schneiden.","winkel":"β","ecke":"B","gegenueber":"b","anliegend":"c","zuerst":"–","zuerstFalsch1":"–","zuerstFalsch2":"–"},{"stuecke":"a = 5 cm, c = 8 cm, α = 35°","satz":"sSW","lage":"α liegt a gegenüber, und a ist die kürzere der beiden Seiten.","verwechselt":"SsW","warum":"Prüfe, welcher Seite der Winkel gegenüberliegt: der längeren oder der kürzeren?","eindeutig":"nicht eindeutig","gegenteil":"eindeutig","begruendung":"Der Winkel liegt der kürzeren Seite gegenüber. Der Kreis um B kann den freien Schenkel zweimal schneiden.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"c","zuerst":"–","zuerstFalsch1":"–","zuerstFalsch2":"–"},{"stuecke":"α = 50°, β = 60°, γ = 70°","satz":"WWW","lage":"Gegeben sind nur Winkel, keine Seite.","verwechselt":"WSW","warum":"Zähle nach: Ist überhaupt eine Seite gegeben?","eindeutig":"nicht eindeutig","gegenteil":"eindeutig","begruendung":"Ohne eine Länge kann das Dreieck jede Größe haben. Die Form steht fest, die Größe nicht.","winkel":"α","ecke":"A","gegenueber":"a","anliegend":"b","zuerst":"–","zuerstFalsch1":"–","zuerstFalsch2":"–"},{"stuecke":"α = 30°, β = 60°, γ = 90°","satz":"WWW","lage":"Gegeben sind nur Winkel, keine Seite.","verwechselt":"WSW","warum":"Zähle nach: Ist überhaupt eine Seite gegeben?","eindeutig":"nicht eindeutig","gegenteil":"eindeutig","begruendung":"Ohne eine Länge kann das Dreieck jede Größe haben. Die Form steht fest, die Größe nicht.","winkel":"γ","ecke":"C","gegenueber":"c","anliegend":"b","zuerst":"–","zuerstFalsch1":"–","zuerstFalsch2":"–"}]},"seeds":[1,2,3,4,5,6,7,8,10,12,13,14,16,17,19,20,21,22,23,25,26,28,30,35,42,47,48,49,50,51,52,54,58,69,73,74,79,81,92],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="6225ecaa" data-block-type="ordering" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="konstruktion-schritte-sws">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-konstruktion-schritte-sws" data-id="konstruktion-schritte-sws" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Konstruiere das Dreieck mit b = 5 cm, c = 6 cm und α = 50° (SWS). Bring die Schritte in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>C mit B verbinden</span> <select name="frage-konstruktion-schritte-sws-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Kreis um A mit r = 5 cm: Er schneidet den freien Schenkel in C.</span> <select name="frage-konstruktion-schritte-sws-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>c = 6 cm zeichnen, Endpunkte A und B</span> <select name="frage-konstruktion-schritte-sws-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>an A den Winkel α = 50° antragen</span> <select name="frage-konstruktion-schritte-sws-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Planfigur skizzieren, b, c und α färben</span> <select name="frage-konstruktion-schritte-sws-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, b, c und α färben, 2. c = 6 cm zeichnen, Endpunkte A und B, 3. an A den Winkel α = 50° antragen, 4. Kreis um A mit r = 5 cm: Er schneidet den freien Schenkel in C., 5. C mit B verbinden</p>
+<p class="question-explanation">α liegt zwischen b und c. Nach c kommt α, dann trägst du b mit dem Zirkel auf dem freien Schenkel ab.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, b, c und α färben, 2. c = 6 cm zeichnen, Endpunkte A und B, 3. an A den Winkel α = 50° antragen, 4. Kreis um A mit r = 5 cm: Er schneidet den freien Schenkel in C., 5. C mit B verbinden</p>
+<p class="question-explanation">α liegt zwischen b und c. Nach c kommt α, dann trägst du b mit dem Zirkel auf dem freien Schenkel ab.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"konstruktion-schritte-sws","text":"Konstruiere das Dreieck mit b = 5 cm, c = 6 cm und α = 50° (SWS). Bring die Schritte in die richtige Reihenfolge.","explanation":"α liegt zwischen b und c. Nach c kommt α, dann trägst du b mit dem Zirkel auf dem freien Schenkel ab.","links":[{"title":"Dreiecke konstruieren (Serlo)","url":"https://de.serlo.org/mathe/1957/dreiecke-konstruieren"}],"type":"ordering","items":["Planfigur skizzieren, b, c und α färben","c = 6 cm zeichnen, Endpunkte A und B","an A den Winkel α = 50° antragen","Kreis um A mit r = 5 cm: Er schneidet den freien Schenkel in C.","C mit B verbinden"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="12f0e250" data-block-type="ordering" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="konstruktion-schritte-ssw">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-konstruktion-schritte-ssw" data-id="konstruktion-schritte-ssw" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Konstruiere das Dreieck mit a = 7 cm, b = 5 cm und α = 60° (SsW). Bring die Schritte in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Kreis um C mit r = 7 cm: Er schneidet den freien Schenkel in B.</span> <select name="frage-konstruktion-schritte-ssw-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>an A den Winkel α = 60° antragen</span> <select name="frage-konstruktion-schritte-ssw-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Planfigur skizzieren, a, b und α färben</span> <select name="frage-konstruktion-schritte-ssw-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>b = 5 cm zeichnen, Endpunkte A und C</span> <select name="frage-konstruktion-schritte-ssw-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>B mit C verbinden</span> <select name="frage-konstruktion-schritte-ssw-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, a, b und α färben, 2. b = 5 cm zeichnen, Endpunkte A und C, 3. an A den Winkel α = 60° antragen, 4. Kreis um C mit r = 7 cm: Er schneidet den freien Schenkel in B., 5. B mit C verbinden</p>
+<p class="question-explanation">α liegt an b, also fängst du mit b an. a = BC beginnt bei C – darum der Kreis um C.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, a, b und α färben, 2. b = 5 cm zeichnen, Endpunkte A und C, 3. an A den Winkel α = 60° antragen, 4. Kreis um C mit r = 7 cm: Er schneidet den freien Schenkel in B., 5. B mit C verbinden</p>
+<p class="question-explanation">α liegt an b, also fängst du mit b an. a = BC beginnt bei C – darum der Kreis um C.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"konstruktion-schritte-ssw","text":"Konstruiere das Dreieck mit a = 7 cm, b = 5 cm und α = 60° (SsW). Bring die Schritte in die richtige Reihenfolge.","explanation":"α liegt an b, also fängst du mit b an. a = BC beginnt bei C – darum der Kreis um C.","links":[{"title":"Dreiecke konstruieren (Serlo)","url":"https://de.serlo.org/mathe/1957/dreiecke-konstruieren"}],"type":"ordering","items":["Planfigur skizzieren, a, b und α färben","b = 5 cm zeichnen, Endpunkte A und C","an A den Winkel α = 60° antragen","Kreis um C mit r = 7 cm: Er schneidet den freien Schenkel in B.","B mit C verbinden"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="df559cc4" data-block-type="matching" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="konstruktion-schritte-linien">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-konstruktion-schritte-linien" data-id="konstruktion-schritte-linien" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was gilt für welche Linie von C zur Seite c?</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Höhe</span> <select name="frage-konstruktion-schritte-linien-0" data-left="0"><option value="">bitte wählen</option><option value="0">trifft c im rechten Winkel</option><option value="1">trifft c in der Mitte</option><option value="3">verläuft parallel zu c</option><option value="2">teilt γ in zwei gleiche Winkel</option></select></label></li>
+<li><label><span>Seitenhalbierende</span> <select name="frage-konstruktion-schritte-linien-1" data-left="1"><option value="">bitte wählen</option><option value="0">trifft c im rechten Winkel</option><option value="1">trifft c in der Mitte</option><option value="3">verläuft parallel zu c</option><option value="2">teilt γ in zwei gleiche Winkel</option></select></label></li>
+<li><label><span>Winkelhalbierende</span> <select name="frage-konstruktion-schritte-linien-2" data-left="2"><option value="">bitte wählen</option><option value="0">trifft c im rechten Winkel</option><option value="1">trifft c in der Mitte</option><option value="3">verläuft parallel zu c</option><option value="2">teilt γ in zwei gleiche Winkel</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Höhe – trifft c im rechten Winkel; Seitenhalbierende – trifft c in der Mitte; Winkelhalbierende – teilt γ in zwei gleiche Winkel</p>
+<p class="question-explanation">Alle drei beginnen bei C. Sie unterscheiden sich darin, wo und wie sie c treffen.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1913/seitenhalbierende" rel="noopener" title="Seitenhalbierende (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Seitenhalbierende (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Höhe – trifft c im rechten Winkel; Seitenhalbierende – trifft c in der Mitte; Winkelhalbierende – teilt γ in zwei gleiche Winkel</p>
+<p class="question-explanation">Alle drei beginnen bei C. Sie unterscheiden sich darin, wo und wie sie c treffen.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1913/seitenhalbierende" rel="noopener" title="Seitenhalbierende (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Seitenhalbierende (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"konstruktion-schritte-linien","text":"Was gilt für welche Linie von C zur Seite c?","explanation":"Alle drei beginnen bei C. Sie unterscheiden sich darin, wo und wie sie c treffen.","links":[{"title":"Seitenhalbierende (Serlo)","url":"https://de.serlo.org/mathe/1913/seitenhalbierende"}],"type":"matching","pairs":[{"left":"Höhe","right":"trifft c im rechten Winkel"},{"left":"Seitenhalbierende","right":"trifft c in der Mitte"},{"left":"Winkelhalbierende","right":"teilt γ in zwei gleiche Winkel"}],"distractors":["verläuft parallel zu c"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="95dd9507" data-block-type="ordering" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="konstruktion-schritte-seitenhalbierende">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-konstruktion-schritte-seitenhalbierende" data-id="konstruktion-schritte-seitenhalbierende" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Konstruiere das Dreieck mit c = 6 cm, b = 5 cm und der Seitenhalbierenden <math><mrow><msub><mi>s</mi><mi>c</mi></msub><mo>=</mo><mn>4</mn></mrow></math> cm. Bring die Schritte in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Schnittpunkt der Kreise oberhalb von c ist C; C mit A und B verbinden</span> <select name="frage-konstruktion-schritte-seitenhalbierende-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Kreis um M mit r = 4 cm und Kreis um A mit r = 5 cm zeichnen</span> <select name="frage-konstruktion-schritte-seitenhalbierende-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>die Mitte M von c mit der Mittelsenkrechten konstruieren</span> <select name="frage-konstruktion-schritte-seitenhalbierende-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>c = 6 cm zeichnen, Endpunkte A und B</span> <select name="frage-konstruktion-schritte-seitenhalbierende-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Planfigur skizzieren, c, b und die Seitenhalbierende färben</span> <select name="frage-konstruktion-schritte-seitenhalbierende-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, c, b und die Seitenhalbierende färben, 2. c = 6 cm zeichnen, Endpunkte A und B, 3. die Mitte M von c mit der Mittelsenkrechten konstruieren, 4. Kreis um M mit r = 4 cm und Kreis um A mit r = 5 cm zeichnen, 5. Schnittpunkt der Kreise oberhalb von c ist C; C mit A und B verbinden</p>
+<p class="question-explanation">Die Seitenhalbierende endet in der Mitte von c. Darum brauchst du M, bevor du den Kreis mit r = 4 cm zeichnen kannst.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1913/seitenhalbierende" rel="noopener" title="Seitenhalbierende (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Seitenhalbierende (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, c, b und die Seitenhalbierende färben, 2. c = 6 cm zeichnen, Endpunkte A und B, 3. die Mitte M von c mit der Mittelsenkrechten konstruieren, 4. Kreis um M mit r = 4 cm und Kreis um A mit r = 5 cm zeichnen, 5. Schnittpunkt der Kreise oberhalb von c ist C; C mit A und B verbinden</p>
+<p class="question-explanation">Die Seitenhalbierende endet in der Mitte von c. Darum brauchst du M, bevor du den Kreis mit r = 4 cm zeichnen kannst.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1913/seitenhalbierende" rel="noopener" title="Seitenhalbierende (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Seitenhalbierende (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"konstruktion-schritte-seitenhalbierende","text":"Konstruiere das Dreieck mit c = 6 cm, b = 5 cm und der Seitenhalbierenden $s_c = 4$ cm. Bring die Schritte in die richtige Reihenfolge.","explanation":"Die Seitenhalbierende endet in der Mitte von c. Darum brauchst du M, bevor du den Kreis mit r = 4 cm zeichnen kannst.","links":[{"title":"Seitenhalbierende (Serlo)","url":"https://de.serlo.org/mathe/1913/seitenhalbierende"}],"type":"ordering","items":["Planfigur skizzieren, c, b und die Seitenhalbierende färben","c = 6 cm zeichnen, Endpunkte A und B","die Mitte M von c mit der Mittelsenkrechten konstruieren","Kreis um M mit r = 4 cm und Kreis um A mit r = 5 cm zeichnen","Schnittpunkt der Kreise oberhalb von c ist C; C mit A und B verbinden"]},"rendered":{"Konstruiere das Dreieck mit c = 6 cm, b = 5 cm und der Seitenhalbierenden $s_c = 4$ cm. Bring die Schritte in die richtige Reihenfolge.":"Konstruiere das Dreieck mit c = 6 cm, b = 5 cm und der Seitenhalbierenden \u003cmath>\u003cmrow>\u003cmsub>\u003cmi>s\u003c/mi>\u003cmi>c\u003c/mi>\u003c/msub>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/math> cm. Bring die Schritte in die richtige Reihenfolge."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="180a98bd" data-block-type="ordering" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="konstruktion-schritte-winkelhalbierende">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-konstruktion-schritte-winkelhalbierende" data-id="konstruktion-schritte-winkelhalbierende" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wettbewerbsaufgabe: Konstruiere das Dreieck mit b = 5 cm, γ = 80° und der Winkelhalbierenden <math><mrow><msub><mi>w</mi><mi>γ</mi></msub><mo>=</mo><mn>4</mn></mrow></math> cm. Bring die Schritte in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Planfigur skizzieren, b, γ und die Winkelhalbierende färben</span> <select name="frage-konstruktion-schritte-winkelhalbierende-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>an C den Winkel γ = 80° antragen</span> <select name="frage-konstruktion-schritte-winkelhalbierende-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>γ halbieren und auf der Winkelhalbierenden von C aus 4 cm abtragen: Punkt D</span> <select name="frage-konstruktion-schritte-winkelhalbierende-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>Gerade von A durch D zeichnen: Sie schneidet den freien Schenkel von γ in B.</span> <select name="frage-konstruktion-schritte-winkelhalbierende-4" data-item="4"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+<li><label><span>b = 5 cm zeichnen, Endpunkte C und A</span> <select name="frage-konstruktion-schritte-winkelhalbierende-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option><option value="4">Platz 5</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, b, γ und die Winkelhalbierende färben, 2. b = 5 cm zeichnen, Endpunkte C und A, 3. an C den Winkel γ = 80° antragen, 4. γ halbieren und auf der Winkelhalbierenden von C aus 4 cm abtragen: Punkt D, 5. Gerade von A durch D zeichnen: Sie schneidet den freien Schenkel von γ in B.</p>
+<p class="question-explanation">Der Endpunkt D der Winkelhalbierenden liegt auf c = AB. Darum liegt B auf der Geraden durch A und D.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.wikipedia.org/wiki/Winkelhalbierende" rel="noopener" title="Winkelhalbierende (Wikipedia)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkelhalbierende (Wikipedia)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Planfigur skizzieren, b, γ und die Winkelhalbierende färben, 2. b = 5 cm zeichnen, Endpunkte C und A, 3. an C den Winkel γ = 80° antragen, 4. γ halbieren und auf der Winkelhalbierenden von C aus 4 cm abtragen: Punkt D, 5. Gerade von A durch D zeichnen: Sie schneidet den freien Schenkel von γ in B.</p>
+<p class="question-explanation">Der Endpunkt D der Winkelhalbierenden liegt auf c = AB. Darum liegt B auf der Geraden durch A und D.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.wikipedia.org/wiki/Winkelhalbierende" rel="noopener" title="Winkelhalbierende (Wikipedia)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkelhalbierende (Wikipedia)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"konstruktion-schritte-winkelhalbierende","text":"Wettbewerbsaufgabe: Konstruiere das Dreieck mit b = 5 cm, γ = 80° und der Winkelhalbierenden $w_\\gamma = 4$ cm. Bring die Schritte in die richtige Reihenfolge.","explanation":"Der Endpunkt D der Winkelhalbierenden liegt auf c = AB. Darum liegt B auf der Geraden durch A und D.","links":[{"title":"Winkelhalbierende (Wikipedia)","url":"https://de.wikipedia.org/wiki/Winkelhalbierende"}],"type":"ordering","items":["Planfigur skizzieren, b, γ und die Winkelhalbierende färben","b = 5 cm zeichnen, Endpunkte C und A","an C den Winkel γ = 80° antragen","γ halbieren und auf der Winkelhalbierenden von C aus 4 cm abtragen: Punkt D","Gerade von A durch D zeichnen: Sie schneidet den freien Schenkel von γ in B."]},"rendered":{"Wettbewerbsaufgabe: Konstruiere das Dreieck mit b = 5 cm, γ = 80° und der Winkelhalbierenden $w_\\gamma = 4$ cm. Bring die Schritte in die richtige Reihenfolge.":"Wettbewerbsaufgabe: Konstruiere das Dreieck mit b = 5 cm, γ = 80° und der Winkelhalbierenden \u003cmath>\u003cmrow>\u003cmsub>\u003cmi>w\u003c/mi>\u003cmi>γ\u003c/mi>\u003c/msub>\u003cmo>=\u003c/mo>\u003cmn>4\u003c/mn>\u003c/mrow>\u003c/math> cm. Bring die Schritte in die richtige Reihenfolge."}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="e2909c9f" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="konstruktion-schritte-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Du hast ein Dreieck mit c = 6 cm konstruiert. Die Höhe <math><msub><mi>h</mi><mi>c</mi></msub></math> ist 8 cm lang, die Seitenhalbierende <math><msub><mi>s</mi><mi>c</mi></msub></math> ist 11 cm lang. Zur Probe berechnest du den Flächeninhalt. Wie groß ist er?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche der beiden Linien steht im rechten Winkel auf c?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mo>⋅</mo><msub><mi>h</mi><mi>c</mi></msub></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>6</mn><mo>⋅</mo><mn>8</mn></mrow><mn>2</mn></mfrac></mrow></math> – die Seitenhalbierende ist keine Höhe.</li><li>Der Flächeninhalt ist 24 cm².</li></ol><p><strong>Richtige Antwort:</strong> 24 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Du hast ein Dreieck mit c = 8 cm konstruiert. Die Höhe <math><msub><mi>h</mi><mi>c</mi></msub></math> ist 10 cm lang, die Seitenhalbierende <math><msub><mi>s</mi><mi>c</mi></msub></math> ist 12 cm lang. Zur Probe berechnest du den Flächeninhalt. Wie groß ist er?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche der beiden Linien steht im rechten Winkel auf c?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mo>⋅</mo><msub><mi>h</mi><mi>c</mi></msub></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>8</mn><mo>⋅</mo><mn>10</mn></mrow><mn>2</mn></mfrac></mrow></math> – die Seitenhalbierende ist keine Höhe.</li><li>Der Flächeninhalt ist 40 cm².</li></ol><p><strong>Richtige Antwort:</strong> 40 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Du hast ein Dreieck mit c = 13 cm konstruiert. Die Höhe <math><msub><mi>h</mi><mi>c</mi></msub></math> ist 6 cm lang, die Seitenhalbierende <math><msub><mi>s</mi><mi>c</mi></msub></math> ist 7 cm lang. Zur Probe berechnest du den Flächeninhalt. Wie groß ist er?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche der beiden Linien steht im rechten Winkel auf c?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mo>⋅</mo><msub><mi>h</mi><mi>c</mi></msub></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>13</mn><mo>⋅</mo><mn>6</mn></mrow><mn>2</mn></mfrac></mrow></math> – die Seitenhalbierende ist keine Höhe.</li><li>Der Flächeninhalt ist 39 cm².</li></ol><p><strong>Richtige Antwort:</strong> 39 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"konstruktion-schritte-flaeche","given":{"c":{"int":[4,16]},"h":{"int":[2,10]},"s":{"int":[3,12]}},"where":["s > h"],"task":{"text":"Du hast ein Dreieck mit c = {{c}} cm konstruiert. Die Höhe $h_c$ ist {{h}} cm lang, die Seitenhalbierende $s_c$ ist {{s}} cm lang. Zur Probe berechnest du den Flächeninhalt. Wie groß ist er?"},"answer":{"value":"c * h / 2","compare":{"number":{"format":"decimal","decimals":1,"unit":"cm²"}}},"mistakes":[{"value":"c * s / 2","message":"Du hast die Seitenhalbierende genommen. Für den Flächeninhalt brauchst du die Höhe: Sie steht im rechten Winkel auf c."},{"value":"c * h","message":"Das ist das Rechteck um das Dreieck. Teile noch durch 2."}],"hint":"Welche der beiden Linien steht im rechten Winkel auf c?","steps":["$A = \\frac{c \\cdot h_c}{2} = \\frac{{{c}} \\cdot {{h}}}{2}$ – die Seitenhalbierende ist keine Höhe.","Der Flächeninhalt ist {{answer}} cm²."]},"templates":{"de":{"task":"Du hast ein Dreieck mit c = ⟦c⟧ cm konstruiert. Die Höhe \u003cmath>\u003cmsub>\u003cmi>h\u003c/mi>\u003cmi>c\u003c/mi>\u003c/msub>\u003c/math> ist ⟦h⟧ cm lang, die Seitenhalbierende \u003cmath>\u003cmsub>\u003cmi>s\u003c/mi>\u003cmi>c\u003c/mi>\u003c/msub>\u003c/math> ist ⟦s⟧ cm lang. Zur Probe berechnest du den Flächeninhalt. Wie groß ist er?","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmi>c\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmsub>\u003cmi>h\u003c/mi>\u003cmi>c\u003c/mi>\u003c/msub>\u003c/mrow>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mrow>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/mrow>\u003c/math> – die Seitenhalbierende ist keine Höhe.","Der Flächeninhalt ist ⟦answer⟧ cm²."],"hint":"Welche der beiden Linien steht im rechten Winkel auf c?","messages":["Du hast die Seitenhalbierende genommen. Für den Flächeninhalt brauchst du die Höhe: Sie steht im rechten Winkel auf c.","Das ist das Rechteck um das Dreieck. Teile noch durch 2."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/8" data-block-id="620a097d" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Als Nächstes prüfst du eine fertige Konstruktion – mit Rechnen und Nachmessen.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Geometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-geometrie","app":"Mathe-Wettbewerb 8: Geometrie","root":"../../","repository":"rdmueller/mathe-wb8-geometrie","revision":"a6c4104","page":{"title":"Schritte einer Konstruktion","order":12}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../w2-konstruktionen/kongruenzsaetze/">Zurück: Kongruenzsätze</a><a rel="next" href="../../w2-konstruktionen/winkel-pruefen/">Weiter: Winkel berechnen und Konstruktion prüfen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

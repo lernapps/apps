@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Achsen- und Punktsymmetrie erkennen – Mathe-Wettbewerb 8: Geometrie</title>
+    <meta name="description" content="Mit Falten und einer halben Drehung prüfen, ob eine Figur achsensymmetrisch oder punktsymmetrisch ist, und alle Symmetrieachsen finden." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../symmetrie/symmetrie-erkennen/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../symmetrie/">Symmetrie und Abbildungen</a></li><li aria-current="page">Achsen- und Punktsymmetrie erkennen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Achsen- und Punktsymmetrie erkennen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../symmetrie/symmetrie-erkennen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧symmetrie/symmetrie-erkennen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-geometrie","page":{"id":"symmetrie-erkennen","title":"Achsen- und Punktsymmetrie erkennen","exercises":[{"id":"symmetrie-erkennen-start","section":"start","numbered":false},{"id":"symmetrie-erkennen-nur-punkt","section":"uebung","numbered":false},{"id":"symmetrie-erkennen-art","section":"uebung","numbered":true},{"id":"symmetrie-erkennen-achsen","section":"uebung","numbered":true},{"id":"symmetrie-erkennen-vierecke","section":"uebung","numbered":false},{"id":"symmetrie-erkennen-quadrat","section":"uebung","numbered":false},{"id":"symmetrie-erkennen-woerter","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"symmetrie/symmetrie-erkennen/tutor/","markdown":"symmetrie/symmetrie-erkennen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Falten oder halb drehen</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Zwei verschiedene Tests</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="feefa8a5" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann Achsen- und Punktsymmetrie erkennen und alle Symmetrieachsen einer Figur finden. Du brauchst
+dafür nur zwei Handgriffe, die du von einem Blatt Papier kennst: falten und drehen.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="57e8c235" data-block-type="multiple-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="symmetrie-erkennen-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-symmetrie-erkennen-start" data-id="symmetrie-erkennen-start" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei welchen Großbuchstaben kannst du das Blatt so falten, dass die beiden Hälften des Buchstabens genau aufeinanderliegen?</legend>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-start" value="0"> <span>F</span></label>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-start" value="1"> <span>A</span></label>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-start" value="2"> <span>S</span></label>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-start" value="3"> <span>B</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>F</strong></p><p>Beim F passt keine Faltlinie, unten fehlt ein Querstrich.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>A</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim A faltest du senkrecht durch die Spitze.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>S</strong></p><p>Beim S passt keine Faltlinie. Es hat eine andere Symmetrie – mehr dazu gleich.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>B</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim B faltest du quer durch die Mitte.</p></li>
+</ul>
+<p class="question-explanation">A lässt sich senkrecht falten, B waagerecht.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35620/achsensymmetrie" rel="noopener" title="Achsensymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Achsensymmetrie (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>F</strong></p><p>Beim F passt keine Faltlinie, unten fehlt ein Querstrich.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>A</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim A faltest du senkrecht durch die Spitze.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>S</strong></p><p>Beim S passt keine Faltlinie. Es hat eine andere Symmetrie – mehr dazu gleich.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>B</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim B faltest du quer durch die Mitte.</p></li>
+</ul>
+<p class="question-explanation">A lässt sich senkrecht falten, B waagerecht.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35620/achsensymmetrie" rel="noopener" title="Achsensymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Achsensymmetrie (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"symmetrie-erkennen-start","text":"Bei welchen Großbuchstaben kannst du das Blatt so falten, dass die beiden Hälften des Buchstabens genau aufeinanderliegen?","explanation":"A lässt sich senkrecht falten, B waagerecht.","links":[{"title":"Achsensymmetrie (Serlo)","url":"https://de.serlo.org/mathe/35620/achsensymmetrie"}],"type":"multiple-choice","options":[{"text":"F","correct":false,"info":"Beim F passt keine Faltlinie, unten fehlt ein Querstrich."},{"text":"A","correct":true,"info":"Beim A faltest du senkrecht durch die Spitze."},{"text":"S","correct":false,"info":"Beim S passt keine Faltlinie. Es hat eine andere Symmetrie – mehr dazu gleich."},{"text":"B","correct":true,"info":"Beim B faltest du quer durch die Mitte."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Falten oder halb drehen</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="c9632858" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Das A aus der Aufgabe faltest du senkrecht, das B waagerecht. Die Faltlinie heißt <strong>Symmetrieachse</strong>. Eine
+Figur ist <strong>achsensymmetrisch</strong>, wenn sie mindestens eine Symmetrieachse hat: Die beiden Hälften sind
+Spiegelbilder voneinander. Eine Achse kann senkrecht, waagerecht oder schräg liegen, und eine Figur kann
+mehrere haben.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="65242ef9" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/symmetrie-achsen.svg" alt="Die Buchstaben A, B und H. Durch A geht eine senkrechte orange Symmetrieachse, durch B eine waagerechte, durch H beide." loading="lazy" decoding="async"><figcaption><p>Das H hat zwei Symmetrieachsen – du findest die zweite nur, wenn du auch waagerecht suchst.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="b7b6af85" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Das S kannst du nicht falten. Drehst du das Blatt aber eine halbe Drehung (180°) um die Mitte, steht wieder
+genau dasselbe S da. So eine Figur heißt <strong>punktsymmetrisch</strong>. Der Punkt, um den du drehst, heißt
+<strong>Symmetriezentrum</strong> Z. Beim N siehst du: Zu jedem Punkt P gehört ein Punkt P&#39; auf der anderen Seite von Z,
+gleich weit von Z entfernt, auf einer Geraden durch Z.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="0a75363b" data-block-type="figure" data-block-order="6">
+<figure class="block-figure"><img src="../../images/symmetrie-punkt.svg" alt="Der Buchstabe N mit seinem Mittelpunkt Z. Ein oranger Pfeil zeigt eine halbe Drehung um Z. Die Ecke P oben rechts und die Ecke P' unten links liegen auf einer gestrichelten Geraden durch Z." loading="lazy" decoding="async"><figcaption><p>Nach der halben Drehung landet P genau auf P&#39; – und das ganze N wieder auf sich selbst.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="2be39b17" data-block-type="table" data-block-order="7">
+<div class="block-table" role="region" aria-label="Zwei Symmetrien, zwei Tests" tabindex="0"><table><caption>Zwei Symmetrien, zwei Tests</caption><thead><tr><th scope="col">Symmetrie</th><th scope="col">So prüfst du</th></tr></thead><tbody><tr><td>achsensymmetrisch</td><td>falten: Die Hälften liegen genau aufeinander.</td></tr><tr><td>punktsymmetrisch</td><td>halb drehen (180°) um Z: Die Figur sieht gleich aus.</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="6a4f263b" data-block-type="example" data-block-order="8">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">H und Z genau geprüft</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="ad574d35" data-block-type="text" data-block-order="9">
+<div class="block-text"><p><strong>H:</strong> Senkrecht falten passt, waagerecht falten passt auch – das H hat 2 Symmetrieachsen. Nach einer
+halben Drehung steht es wieder genauso da: Es ist auch punktsymmetrisch.</p>
+<p><strong>Z:</strong> Senkrecht, waagerecht und schräg falten passt nicht – das Z hat keine Symmetrieachse. Nach einer
+halben Drehung steht aber wieder ein Z da.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="af1bd4c7" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Antwort – H ist achsen- und punktsymmetrisch, Z ist nur punktsymmetrisch.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Zwei verschiedene Tests</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="be390a99" data-block-type="note" data-block-order="11">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="3e8c681d" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Achsensymmetrisch heißt falten, punktsymmetrisch heißt halb drehen. Eine Figur kann das eine, beides
+oder keins davon sein. Suche Achsen nicht nur senkrecht, sondern auch waagerecht und schräg.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="f0c1092d" data-block-type="single-choice" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="symmetrie-erkennen-nur-punkt">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-symmetrie-erkennen-nur-punkt" data-id="symmetrie-erkennen-nur-punkt" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welcher Großbuchstabe ist punktsymmetrisch, hat aber keine Symmetrieachse?</legend>
+<label class="question-option"><input type="radio" name="frage-symmetrie-erkennen-nur-punkt" value="0"> <span>A</span></label>
+<label class="question-option"><input type="radio" name="frage-symmetrie-erkennen-nur-punkt" value="1"> <span>H</span></label>
+<label class="question-option"><input type="radio" name="frage-symmetrie-erkennen-nur-punkt" value="2"> <span>E</span></label>
+<label class="question-option"><input type="radio" name="frage-symmetrie-erkennen-nur-punkt" value="3"> <span>N</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>A</strong></p><p>Das A hat eine senkrechte Achse und steht nach einer halben Drehung auf dem Kopf.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>H</strong></p><p>Das H ist punktsymmetrisch, hat aber auch zwei Symmetrieachsen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>E</strong></p><p>Das E hat eine waagerechte Achse. Gedreht zeigen seine Querstriche nach links.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>N</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das N lässt sich nicht falten, sieht aber nach einer halben Drehung gleich aus.</p></li>
+</ul>
+<p class="question-explanation">Punktsymmetrisch ohne Achse sind zum Beispiel N, S und Z.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35721/punktsymmetrie" rel="noopener" title="Punktsymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Punktsymmetrie (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>A</strong></p><p>Das A hat eine senkrechte Achse und steht nach einer halben Drehung auf dem Kopf.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>H</strong></p><p>Das H ist punktsymmetrisch, hat aber auch zwei Symmetrieachsen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>E</strong></p><p>Das E hat eine waagerechte Achse. Gedreht zeigen seine Querstriche nach links.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>N</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Das N lässt sich nicht falten, sieht aber nach einer halben Drehung gleich aus.</p></li>
+</ul>
+<p class="question-explanation">Punktsymmetrisch ohne Achse sind zum Beispiel N, S und Z.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35721/punktsymmetrie" rel="noopener" title="Punktsymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Punktsymmetrie (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"symmetrie-erkennen-nur-punkt","text":"Welcher Großbuchstabe ist punktsymmetrisch, hat aber keine Symmetrieachse?","explanation":"Punktsymmetrisch ohne Achse sind zum Beispiel N, S und Z.","links":[{"title":"Punktsymmetrie (Serlo)","url":"https://de.serlo.org/mathe/35721/punktsymmetrie"}],"type":"single-choice","options":[{"text":"A","correct":false,"info":"Das A hat eine senkrechte Achse und steht nach einer halben Drehung auf dem Kopf."},{"text":"H","correct":false,"info":"Das H ist punktsymmetrisch, hat aber auch zwei Symmetrieachsen."},{"text":"E","correct":false,"info":"Das E hat eine waagerechte Achse. Gedreht zeigen seine Querstriche nach links."},{"text":"N","correct":true,"info":"Das N lässt sich nicht falten, sieht aber nach einer halben Drehung gleich aus."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="bf39b16f" data-block-type="generated" data-block-order="14">
+<div class="explainer-exercise explainer-generated" id="symmetrie-erkennen-art">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Welche Symmetrie hat der Großbuchstabe S in Druckschrift?</p><details class="explainer-hint"><summary>Tipp</summary><p>Mach beide Tests – falten und halb drehen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Falten beim S – Anzahl der Symmetrieachsen: 0.</li><li>Zusammen mit dem Drehtest: Der Buchstabe S ist nur punktsymmetrisch.</li></ol><p><strong>Richtige Antwort:</strong> nur punktsymmetrisch</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Welche Symmetrie hat der Großbuchstabe N in Druckschrift?</p><details class="explainer-hint"><summary>Tipp</summary><p>Mach beide Tests – falten und halb drehen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Falten beim N – Anzahl der Symmetrieachsen: 0.</li><li>Zusammen mit dem Drehtest: Der Buchstabe N ist nur punktsymmetrisch.</li></ol><p><strong>Richtige Antwort:</strong> nur punktsymmetrisch</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Welche Symmetrie hat der Großbuchstabe E in Druckschrift?</p><details class="explainer-hint"><summary>Tipp</summary><p>Mach beide Tests – falten und halb drehen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Falten beim E – Anzahl der Symmetrieachsen: 1.</li><li>Zusammen mit dem Drehtest: Der Buchstabe E ist nur achsensymmetrisch.</li></ol><p><strong>Richtige Antwort:</strong> nur achsensymmetrisch</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"symmetrie-erkennen-art","given":{"e":{"pick":1,"from":{"data":"figuren"}}},"where":["e.art != e.artVerwechselt"],"task":{"text":"Welche Symmetrie hat der Großbuchstabe {{e.zeichen}} in Druckschrift?"},"answer":{"value":"e.art","compare":{"choice":"['achsen- und punktsymmetrisch', 'nur achsensymmetrisch', 'nur punktsymmetrisch', 'weder noch']"}},"mistakes":[{"value":"e.artVerwechselt","message":"Du hast Falten und Drehen verwechselt: achsensymmetrisch heißt falten, punktsymmetrisch halb drehen."}],"hint":"Mach beide Tests – falten und halb drehen.","steps":["Falten beim {{e.zeichen}} – Anzahl der Symmetrieachsen: {{e.achsen}}.","Zusammen mit dem Drehtest: Der Buchstabe {{e.zeichen}} ist {{answer}}."]},"templates":{"de":{"task":"Welche Symmetrie hat der Großbuchstabe ⟦e.zeichen⟧ in Druckschrift?","steps":["Falten beim ⟦e.zeichen⟧ – Anzahl der Symmetrieachsen: ⟦e.achsen⟧.","Zusammen mit dem Drehtest: Der Buchstabe ⟦e.zeichen⟧ ist ⟦answer⟧."],"hint":"Mach beide Tests – falten und halb drehen.","messages":["Du hast Falten und Drehen verwechselt: achsensymmetrisch heißt falten, punktsymmetrisch halb drehen."]}},"data":{"figuren":[{"zeichen":"A","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"M","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"T","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"U","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"V","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"W","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"Y","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"B","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"C","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"D","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"E","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"H","achsen":2,"senkrecht":1,"punktsymmetrisch":true,"art":"achsen- und punktsymmetrisch","artVerwechselt":"achsen- und punktsymmetrisch"},{"zeichen":"I","achsen":2,"senkrecht":1,"punktsymmetrisch":true,"art":"achsen- und punktsymmetrisch","artVerwechselt":"achsen- und punktsymmetrisch"},{"zeichen":"N","achsen":0,"senkrecht":0,"punktsymmetrisch":true,"art":"nur punktsymmetrisch","artVerwechselt":"nur achsensymmetrisch"},{"zeichen":"S","achsen":0,"senkrecht":0,"punktsymmetrisch":true,"art":"nur punktsymmetrisch","artVerwechselt":"nur achsensymmetrisch"},{"zeichen":"Z","achsen":0,"senkrecht":0,"punktsymmetrisch":true,"art":"nur punktsymmetrisch","artVerwechselt":"nur achsensymmetrisch"},{"zeichen":"F","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"},{"zeichen":"L","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"},{"zeichen":"P","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"},{"zeichen":"R","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"}]},"seeds":[1,2,3,4,5,6,8,9,13,15,16,29,34,48],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="435d1ec2" data-block-type="generated" data-block-order="15">
+<div class="explainer-exercise explainer-generated" id="symmetrie-erkennen-achsen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Wie viele Symmetrieachsen hat der Großbuchstabe D in Druckschrift?</p><details class="explainer-hint"><summary>Tipp</summary><p>Falte gedanklich in alle Richtungen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Beim D passt die waagerechte Faltlinie durch die Mitte.</li><li>Mit allen Richtungen geprüft – Anzahl der Symmetrieachsen beim D: 1.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Wie viele Symmetrieachsen hat der Großbuchstabe I in Druckschrift?</p><details class="explainer-hint"><summary>Tipp</summary><p>Falte gedanklich in alle Richtungen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Beim I passt die waagerechte Faltlinie durch die Mitte.</li><li>Mit allen Richtungen geprüft – Anzahl der Symmetrieachsen beim I: 2.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Wie viele Symmetrieachsen hat der Großbuchstabe E in Druckschrift?</p><details class="explainer-hint"><summary>Tipp</summary><p>Falte gedanklich in alle Richtungen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Beim E passt die waagerechte Faltlinie durch die Mitte.</li><li>Mit allen Richtungen geprüft – Anzahl der Symmetrieachsen beim E: 1.</li></ol><p><strong>Richtige Antwort:</strong> 1</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"symmetrie-erkennen-achsen","given":{"e":{"pick":1,"from":{"data":"figuren"}}},"where":["e.achsen != e.senkrecht"],"task":{"text":"Wie viele Symmetrieachsen hat der Großbuchstabe {{e.zeichen}} in Druckschrift?"},"answer":{"value":"e.achsen","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"e.senkrecht","message":"Du hast nur senkrecht gefaltet. Probiere auch, quer durch die Mitte zu falten."}],"hint":"Falte gedanklich in alle Richtungen.","steps":["Beim {{e.zeichen}} passt die waagerechte Faltlinie durch die Mitte.","Mit allen Richtungen geprüft – Anzahl der Symmetrieachsen beim {{e.zeichen}}: {{answer}}."]},"templates":{"de":{"task":"Wie viele Symmetrieachsen hat der Großbuchstabe ⟦e.zeichen⟧ in Druckschrift?","steps":["Beim ⟦e.zeichen⟧ passt die waagerechte Faltlinie durch die Mitte.","Mit allen Richtungen geprüft – Anzahl der Symmetrieachsen beim ⟦e.zeichen⟧: ⟦answer⟧."],"hint":"Falte gedanklich in alle Richtungen.","messages":["Du hast nur senkrecht gefaltet. Probiere auch, quer durch die Mitte zu falten."]}},"data":{"figuren":[{"zeichen":"A","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"M","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"T","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"U","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"V","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"W","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"Y","achsen":1,"senkrecht":1,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"B","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"C","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"D","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"E","achsen":1,"senkrecht":0,"punktsymmetrisch":false,"art":"nur achsensymmetrisch","artVerwechselt":"nur punktsymmetrisch"},{"zeichen":"H","achsen":2,"senkrecht":1,"punktsymmetrisch":true,"art":"achsen- und punktsymmetrisch","artVerwechselt":"achsen- und punktsymmetrisch"},{"zeichen":"I","achsen":2,"senkrecht":1,"punktsymmetrisch":true,"art":"achsen- und punktsymmetrisch","artVerwechselt":"achsen- und punktsymmetrisch"},{"zeichen":"N","achsen":0,"senkrecht":0,"punktsymmetrisch":true,"art":"nur punktsymmetrisch","artVerwechselt":"nur achsensymmetrisch"},{"zeichen":"S","achsen":0,"senkrecht":0,"punktsymmetrisch":true,"art":"nur punktsymmetrisch","artVerwechselt":"nur achsensymmetrisch"},{"zeichen":"Z","achsen":0,"senkrecht":0,"punktsymmetrisch":true,"art":"nur punktsymmetrisch","artVerwechselt":"nur achsensymmetrisch"},{"zeichen":"F","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"},{"zeichen":"L","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"},{"zeichen":"P","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"},{"zeichen":"R","achsen":0,"senkrecht":0,"punktsymmetrisch":false,"art":"weder noch","artVerwechselt":"weder noch"}]},"seeds":[1,3,4,5,9,21],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="f0dcf8bc" data-block-type="matching" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="symmetrie-erkennen-vierecke">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-symmetrie-erkennen-vierecke" data-id="symmetrie-erkennen-vierecke" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Symmetrie hat welches Viereck?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/symmetrie-figuren.svg" alt="Drei blaue Vierecke: 1 ein schiefes Viereck mit zwei Paaren paralleler Seiten, 2 ein Viereck mit zwei parallelen Seiten verschiedener Länge und gleich langen Schrägseiten, 3 ein Rechteck." loading="lazy" decoding="async"><figcaption><p>Prüfe jedes Viereck mit beiden Tests.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Viereck 1</span> <select name="frage-symmetrie-erkennen-vierecke-0" data-left="0"><option value="">bitte wählen</option><option value="0">nur punktsymmetrisch</option><option value="3">weder noch</option><option value="1">nur achsensymmetrisch</option><option value="2">achsen- und punktsymmetrisch</option></select></label></li>
+<li><label><span>Viereck 2</span> <select name="frage-symmetrie-erkennen-vierecke-1" data-left="1"><option value="">bitte wählen</option><option value="0">nur punktsymmetrisch</option><option value="3">weder noch</option><option value="1">nur achsensymmetrisch</option><option value="2">achsen- und punktsymmetrisch</option></select></label></li>
+<li><label><span>Viereck 3</span> <select name="frage-symmetrie-erkennen-vierecke-2" data-left="2"><option value="">bitte wählen</option><option value="0">nur punktsymmetrisch</option><option value="3">weder noch</option><option value="1">nur achsensymmetrisch</option><option value="2">achsen- und punktsymmetrisch</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Viereck 1 – nur punktsymmetrisch; Viereck 2 – nur achsensymmetrisch; Viereck 3 – achsen- und punktsymmetrisch</p>
+<p class="question-explanation">Das Parallelogramm 1 hat keine Achse – auch die Diagonalen sind keine –, passt aber nach einer halben Drehung. Das Trapez 2 hat eine senkrechte Achse. Das Rechteck 3 hat zwei Achsen und ist punktsymmetrisch.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35721/punktsymmetrie" rel="noopener" title="Punktsymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Punktsymmetrie (Serlo)</span></a> <a class="question-more-link" href="https://de.serlo.org/mathe/35620/achsensymmetrie" rel="noopener" title="Achsensymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Achsensymmetrie (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Viereck 1 – nur punktsymmetrisch; Viereck 2 – nur achsensymmetrisch; Viereck 3 – achsen- und punktsymmetrisch</p>
+<p class="question-explanation">Das Parallelogramm 1 hat keine Achse – auch die Diagonalen sind keine –, passt aber nach einer halben Drehung. Das Trapez 2 hat eine senkrechte Achse. Das Rechteck 3 hat zwei Achsen und ist punktsymmetrisch.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35721/punktsymmetrie" rel="noopener" title="Punktsymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Punktsymmetrie (Serlo)</span></a> <a class="question-more-link" href="https://de.serlo.org/mathe/35620/achsensymmetrie" rel="noopener" title="Achsensymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Achsensymmetrie (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"symmetrie-erkennen-vierecke","text":"Welche Symmetrie hat welches Viereck?","explanation":"Das Parallelogramm 1 hat keine Achse – auch die Diagonalen sind keine –, passt aber nach einer halben Drehung. Das Trapez 2 hat eine senkrechte Achse. Das Rechteck 3 hat zwei Achsen und ist punktsymmetrisch.","links":[{"title":"Punktsymmetrie (Serlo)","url":"https://de.serlo.org/mathe/35721/punktsymmetrie"},{"title":"Achsensymmetrie (Serlo)","url":"https://de.serlo.org/mathe/35620/achsensymmetrie"}],"material":[{"type":"figure","image":"images/symmetrie-figuren.svg","alt":"Drei blaue Vierecke: 1 ein schiefes Viereck mit zwei Paaren paralleler Seiten, 2 ein Viereck mit zwei parallelen Seiten verschiedener Länge und gleich langen Schrägseiten, 3 ein Rechteck.","caption":"Prüfe jedes Viereck mit beiden Tests.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"matching","pairs":[{"left":"Viereck 1","right":"nur punktsymmetrisch"},{"left":"Viereck 2","right":"nur achsensymmetrisch"},{"left":"Viereck 3","right":"achsen- und punktsymmetrisch"}],"distractors":["weder noch"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="87322ced" data-block-type="number" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="symmetrie-erkennen-quadrat">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-symmetrie-erkennen-quadrat" data-id="symmetrie-erkennen-quadrat" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Symmetrieachsen hat ein Quadrat?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-symmetrie-erkennen-quadrat">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 4</p>
+<p class="question-explanation">4 Achsen: zwei Mittellinien und zwei Diagonalen.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35620/achsensymmetrie" rel="noopener" title="Achsensymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Achsensymmetrie (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 4</p>
+<p class="question-explanation">4 Achsen: zwei Mittellinien und zwei Diagonalen.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35620/achsensymmetrie" rel="noopener" title="Achsensymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Achsensymmetrie (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"symmetrie-erkennen-quadrat","text":"Wie viele Symmetrieachsen hat ein Quadrat?","explanation":"4 Achsen: zwei Mittellinien und zwei Diagonalen.","links":[{"title":"Achsensymmetrie (Serlo)","url":"https://de.serlo.org/mathe/35620/achsensymmetrie"}],"hint":"Falte gedanklich auch schräg.","type":"number","answer":4,"tolerance":0,"mistakes":[{"answer":2,"message":"Senkrecht und waagerecht stimmen. Probiere auch, über Eck zu falten."},{"answer":1,"message":"Probiere alle Richtungen."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="4635ec3d" data-block-type="multiple-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="symmetrie-erkennen-woerter">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-symmetrie-erkennen-woerter" data-id="symmetrie-erkennen-woerter" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Schriftzüge sehen nach einer halben Drehung um ihre Mitte wieder genauso aus?</legend>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-woerter" value="0"> <span>MOM</span></label>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-woerter" value="1"> <span>NUN</span></label>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-woerter" value="2"> <span>SOS</span></label>
+<label class="question-option"><input type="checkbox" name="frage-symmetrie-erkennen-woerter" value="3"> <span>XIX</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>MOM</strong></p><p>Gedreht steht WOW da. MOM ist achsensymmetrisch, mit einer senkrechten Achse durch das O.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>NUN</strong></p><p>Die N passen, aber das U steht dann auf dem Kopf.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>SOS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>S und O sind punktsymmetrisch, und SOS ist rückwärts gleich.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>XIX</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>X und I sind punktsymmetrisch, und XIX (die römische 19) ist rückwärts gleich.</p></li>
+</ul>
+<p class="question-explanation">Bei einer halben Drehung wird jeder Buchstabe gedreht, und die Reihenfolge kehrt sich um.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35721/punktsymmetrie" rel="noopener" title="Punktsymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Punktsymmetrie (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>MOM</strong></p><p>Gedreht steht WOW da. MOM ist achsensymmetrisch, mit einer senkrechten Achse durch das O.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>NUN</strong></p><p>Die N passen, aber das U steht dann auf dem Kopf.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>SOS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>S und O sind punktsymmetrisch, und SOS ist rückwärts gleich.</p></li>
+<li class="question-info question-info-right" data-option="3"><p class="question-info-head"><strong>XIX</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>X und I sind punktsymmetrisch, und XIX (die römische 19) ist rückwärts gleich.</p></li>
+</ul>
+<p class="question-explanation">Bei einer halben Drehung wird jeder Buchstabe gedreht, und die Reihenfolge kehrt sich um.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/35721/punktsymmetrie" rel="noopener" title="Punktsymmetrie (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Punktsymmetrie (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"symmetrie-erkennen-woerter","text":"Welche Schriftzüge sehen nach einer halben Drehung um ihre Mitte wieder genauso aus?","explanation":"Bei einer halben Drehung wird jeder Buchstabe gedreht, und die Reihenfolge kehrt sich um.","links":[{"title":"Punktsymmetrie (Serlo)","url":"https://de.serlo.org/mathe/35721/punktsymmetrie"}],"type":"multiple-choice","options":[{"text":"MOM","correct":false,"info":"Gedreht steht WOW da. MOM ist achsensymmetrisch, mit einer senkrechten Achse durch das O."},{"text":"NUN","correct":false,"info":"Die N passen, aber das U steht dann auf dem Kopf."},{"text":"SOS","correct":true,"info":"S und O sind punktsymmetrisch, und SOS ist rückwärts gleich."},{"text":"XIX","correct":true,"info":"X und I sind punktsymmetrisch, und XIX (die römische 19) ist rückwärts gleich."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="0960aaa2" data-block-type="text" data-block-order="19">
+<div class="block-text"><p>Als Nächstes erzeugst du selbst Bilder einer Figur – du spiegelst sie an einer Achse und drehst sie um einen Punkt.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Geometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-geometrie","app":"Mathe-Wettbewerb 8: Geometrie","root":"../../","repository":"rdmueller/mathe-wb8-geometrie","revision":"a6c4104","page":{"title":"Achsen- und Punktsymmetrie erkennen","order":8}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../winkel/geradenkreuzungen/">Zurück: Winkel an Geradenkreuzungen</a><a rel="next" href="../../symmetrie/spiegeln-drehen/">Weiter: Spiegeln und Drehen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

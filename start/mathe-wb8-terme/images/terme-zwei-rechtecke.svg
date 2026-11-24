@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" font-family="sans-serif" font-size="16">
+  <title>Eine Figur aus zwei Rechtecken: links x breit und 5 hoch, rechts daneben 3 breit und 2 hoch</title>
+  <rect width="320" height="200" fill="#ffffff"/>
+  <polygon points="50,30 200,30 200,105 275,105 275,155 50,155" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="200" y1="105" x2="200" y2="155" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="125" y="180" text-anchor="middle" fill="#1e3a8a" font-weight="bold">x</text>
+  <text x="36" y="98" text-anchor="end" fill="#1e3a8a" font-weight="bold">5</text>
+  <text x="237" y="180" text-anchor="middle" fill="#1e3a8a" font-weight="bold">3</text>
+  <text x="286" y="136" fill="#1e3a8a" font-weight="bold">2</text>
+</svg>

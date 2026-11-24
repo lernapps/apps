@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210" font-family="sans-serif" font-size="14">
+  <title>Links die Urne vor dem 1. Zug mit 3 roten und 2 blauen Kugeln. In der Mitte die gezogene rote Kugel mit einem Pfeil. Rechts die Urne vor dem 2. Zug mit 2 roten und 2 blauen Kugeln</title>
+  <defs><marker id="pfeil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker></defs>
+  <rect width="340" height="210" fill="#ffffff"/>
+  <path d="M 10 50 L 10 156 Q 10 170 24 170 L 112 170 Q 126 170 126 156 L 126 50" fill="#f9fafb" stroke="#6b7280" stroke-width="3"/>
+  <circle cx="34.0" cy="150" r="16" fill="#dc2626"/>
+  <text x="34.0" y="156" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">r</text>
+  <circle cx="68.0" cy="150" r="16" fill="#2563eb"/>
+  <text x="68.0" y="156" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">b</text>
+  <circle cx="102.0" cy="150" r="16" fill="#dc2626"/>
+  <text x="102.0" y="156" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">r</text>
+  <circle cx="51.0" cy="118" r="16" fill="#2563eb"/>
+  <text x="51.0" y="124" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">b</text>
+  <circle cx="85.0" cy="118" r="16" fill="#dc2626"/>
+  <text x="85.0" y="124" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">r</text>
+  <path d="M 214 50 L 214 156 Q 214 170 228 170 L 316 170 Q 330 170 330 156 L 330 50" fill="#f9fafb" stroke="#6b7280" stroke-width="3"/>
+  <circle cx="238.0" cy="150" r="16" fill="#dc2626"/>
+  <text x="238.0" y="156" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">r</text>
+  <circle cx="272.0" cy="150" r="16" fill="#2563eb"/>
+  <text x="272.0" y="156" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">b</text>
+  <circle cx="306.0" cy="150" r="16" fill="#2563eb"/>
+  <text x="306.0" y="156" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">b</text>
+  <circle cx="272.0" cy="118" r="16" fill="#dc2626"/>
+  <text x="272.0" y="124" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">r</text>
+  <g text-anchor="middle" font-weight="bold" fill="#111827">
+    <text x="68" y="24">vor dem 1. Zug</text>
+    <text x="272" y="24">vor dem 2. Zug</text>
+  </g>
+  <g text-anchor="middle" font-size="13" fill="#374151">
+    <text x="68" y="196">5 Kugeln, 3 rot</text>
+    <text x="272" y="196">4 Kugeln, 2 rot</text>
+  </g>
+  <circle cx="170" cy="90" r="16" fill="#dc2626"/>
+  <text x="170" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">r</text>
+  <line x1="140" y1="125" x2="200" y2="125" stroke="#6b7280" stroke-width="2" marker-end="url(#pfeil)"/>
+  <text x="170" y="148" text-anchor="middle" font-size="13" fill="#374151">gezogen,</text>
+  <text x="170" y="164" text-anchor="middle" font-size="13" fill="#374151">nicht zurück</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="300" viewBox="0 0 340 300" font-family="sans-serif" font-size="14">
+  <title>Vier Koordinatensysteme A bis D mit je einem blauen Graphen: A eine steigende Gerade aus dem Ursprung, B eine steigende Gerade, die die y-Achse oberhalb des Ursprungs trifft, C eine fallende Gerade, die beide Achsen trifft, D eine fallende gebogene Linie, die die Achsen nicht berührt</title>
+  <rect width="340" height="300" fill="#ffffff"/>
+  <line x1="170" y1="10" x2="170" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="10" y1="150" x2="330" y2="150" stroke="#e5e7eb" stroke-width="1"/>
+  <g stroke="#374151" stroke-width="1.5" fill="none">
+    <line x1="30" y1="130" x2="160" y2="130"/><polyline points="153,125 160,130 153,135"/>
+    <line x1="30" y1="130" x2="30" y2="28"/><polyline points="25,35 30,28 35,35"/>
+  </g>
+  <text x="150" y="147" fill="#111827">x</text><text x="12" y="40" fill="#111827">y</text>
+  <text x="52" y="24" fill="#1e3a8a" font-weight="bold" font-size="15">A</text>
+  <line x1="30" y1="130" x2="150" y2="40" stroke="#2563eb" stroke-width="2.5"/>
+  <g stroke="#374151" stroke-width="1.5" fill="none">
+    <line x1="200" y1="130" x2="330" y2="130"/><polyline points="323,125 330,130 323,135"/>
+    <line x1="200" y1="130" x2="200" y2="28"/><polyline points="195,35 200,28 205,35"/>
+  </g>
+  <text x="320" y="147" fill="#111827">x</text><text x="182" y="40" fill="#111827">y</text>
+  <text x="222" y="24" fill="#1e3a8a" font-weight="bold" font-size="15">B</text>
+  <line x1="200" y1="100" x2="320" y2="40" stroke="#2563eb" stroke-width="2.5"/>
+  <g stroke="#374151" stroke-width="1.5" fill="none">
+    <line x1="30" y1="280" x2="160" y2="280"/><polyline points="153,275 160,280 153,285"/>
+    <line x1="30" y1="280" x2="30" y2="178"/><polyline points="25,185 30,178 35,185"/>
+  </g>
+  <text x="150" y="297" fill="#111827">x</text><text x="12" y="190" fill="#111827">y</text>
+  <text x="52" y="174" fill="#1e3a8a" font-weight="bold" font-size="15">C</text>
+  <line x1="30" y1="195" x2="140" y2="280" stroke="#2563eb" stroke-width="2.5"/>
+  <g stroke="#374151" stroke-width="1.5" fill="none">
+    <line x1="200" y1="280" x2="330" y2="280"/><polyline points="323,275 330,280 323,285"/>
+    <line x1="200" y1="280" x2="200" y2="178"/><polyline points="195,185 200,178 205,185"/>
+  </g>
+  <text x="320" y="297" fill="#111827">x</text><text x="182" y="190" fill="#111827">y</text>
+  <text x="222" y="174" fill="#1e3a8a" font-weight="bold" font-size="15">D</text>
+  <polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="210,200.0 212,213.3 214,222.9 216,230.0 220,240.0 225,248.0 230,253.3 240,260.0 250,264.0 260,266.7 280,270.0 300,272.0 320,273.3"/>
+</svg>

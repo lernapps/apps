@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="215" viewBox="0 0 340 215" font-family="sans-serif" font-size="15">
+  <title>Ein Zahlenstrahl von −4 bis 4. Blaue Punkte bei −2 und 3, orange Punkte bei 2 und −3. Ein blauer Bogen oben führt von −2 nach 2, ein oranger Bogen unten von 3 nach −3. Oben steht −2 &lt; 3, unten 2 &gt; −3</title>
+  <rect width="340" height="215" fill="#ffffff"/>
+  <text x="20" y="24" fill="#1e3a8a" font-weight="bold" font-size="17">vorher: −2 &lt; 3</text>
+  <text x="20" y="204" fill="#9a3412" font-weight="bold" font-size="17">mal (−1): 2 &gt; −3</text>
+  <path d="M98,100 Q166,40 234,98" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="234,100 225,92 233,88" fill="#2563eb"/>
+  <path d="M268,144 Q166,190 64,144" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="64,142 74,148 67,154" fill="#ea580c"/>
+  <line x1="16" y1="110" x2="320" y2="110" stroke="#374151" stroke-width="2"/>
+  <polygon points="328,110 318,105 318,115" fill="#374151"/>
+  <g fill="#111827" text-anchor="middle">
+    <line x1="30" y1="104" x2="30" y2="116" stroke="#374151" stroke-width="1.5"/><text x="30" y="136">−4</text>
+    <line x1="64" y1="104" x2="64" y2="116" stroke="#374151" stroke-width="1.5"/><text x="64" y="136">−3</text>
+    <line x1="98" y1="104" x2="98" y2="116" stroke="#374151" stroke-width="1.5"/><text x="98" y="136">−2</text>
+    <line x1="132" y1="104" x2="132" y2="116" stroke="#374151" stroke-width="1.5"/><text x="132" y="136">−1</text>
+    <line x1="166" y1="104" x2="166" y2="116" stroke="#374151" stroke-width="1.5"/><text x="166" y="136">0</text>
+    <line x1="200" y1="104" x2="200" y2="116" stroke="#374151" stroke-width="1.5"/><text x="200" y="136">1</text>
+    <line x1="234" y1="104" x2="234" y2="116" stroke="#374151" stroke-width="1.5"/><text x="234" y="136">2</text>
+    <line x1="268" y1="104" x2="268" y2="116" stroke="#374151" stroke-width="1.5"/><text x="268" y="136">3</text>
+    <line x1="302" y1="104" x2="302" y2="116" stroke="#374151" stroke-width="1.5"/><text x="302" y="136">4</text>
+  </g>
+  <circle cx="98" cy="110" r="6" fill="#2563eb"/>
+  <circle cx="268" cy="110" r="6" fill="#2563eb"/>
+  <circle cx="234" cy="110" r="6" fill="#ea580c"/>
+  <circle cx="64" cy="110" r="6" fill="#ea580c"/>
+</svg>

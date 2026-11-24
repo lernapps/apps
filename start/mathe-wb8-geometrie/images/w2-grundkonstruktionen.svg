@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="300" viewBox="0 0 340 300" font-family="sans-serif" font-size="13">
+  <title>Vier Grundkonstruktionen: Kreis um einen Punkt, Mittelsenkrechte, Winkelhalbierende, Parallele im Abstand h</title>
+  <rect width="340" height="300" fill="#ffffff"/>
+  <line x1="170" y1="8" x2="170" y2="292" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="8" y1="150" x2="332" y2="150" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Kreis um M -->
+  <text x="10" y="20" fill="#374151">Kreis um M</text>
+  <circle cx="85" cy="88" r="45" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="85" y1="88" x2="130" y2="88" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="85" cy="88" r="3" fill="#1f2937"/>
+  <text x="70" y="85" fill="#1f2937" font-weight="bold">M</text>
+  <text x="103" y="82" fill="#1e3a8a" font-weight="bold">r</text>
+  <!-- Mittelsenkrechte -->
+  <text x="180" y="20" fill="#374151">Mittelsenkrechte</text>
+  <path d="M248 42 A75 75 0 0 1 248 148" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M262 42 A75 75 0 0 0 262 148" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="195" y1="95" x2="315" y2="95" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="255" y1="32" x2="255" y2="146" stroke="#ea580c" stroke-width="2"/>
+  <polyline points="255,87 263,87 263,95" fill="none" stroke="#ea580c" stroke-width="1.5"/>
+  <circle cx="195" cy="95" r="3" fill="#1f2937"/>
+  <circle cx="315" cy="95" r="3" fill="#1f2937"/>
+  <text x="185" y="115" fill="#1f2937" font-weight="bold">A</text>
+  <text x="314" y="115" fill="#1f2937" font-weight="bold">B</text>
+  <!-- Winkelhalbierende -->
+  <text x="10" y="170" fill="#374151">Winkelhalbierende</text>
+  <line x1="20" y1="280" x2="160" y2="280" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="20" y1="280" x2="110" y2="172.8" stroke="#2563eb" stroke-width="2.5"/>
+  <path d="M70 280 A50 50 0 0 0 52.1 241.7" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M100.6 254.3 A40 40 0 0 0 80.4 241.4" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M88.4 258.6 A40 40 0 0 0 91.2 233.4" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="20" y1="280" x2="148" y2="220.3" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="20" cy="280" r="3" fill="#1f2937"/>
+  <text x="8" y="296" fill="#1f2937" font-weight="bold">S</text>
+  <!-- Parallele -->
+  <text x="180" y="170" fill="#374151">Parallele im Abstand h</text>
+  <line x1="185" y1="270" x2="325" y2="270" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="205" y1="270" x2="205" y2="205" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="305" y1="270" x2="305" y2="205" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <polyline points="205,262 213,262 213,270" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+  <polyline points="305,262 297,262 297,270" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+  <line x1="185" y1="205" x2="325" y2="205" stroke="#ea580c" stroke-width="2"/>
+  <text x="211" y="243" fill="#374151" font-weight="bold">h</text>
+  <text x="311" y="243" fill="#374151" font-weight="bold">h</text>
+  <text x="250" y="289" fill="#1e3a8a" font-weight="bold">g</text>
+</svg>

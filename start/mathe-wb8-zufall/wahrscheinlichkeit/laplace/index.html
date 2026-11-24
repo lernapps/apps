@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Ergebnisraum und Laplace-Wahrscheinlichkeit – Mathe-Wettbewerb 8: Wahrscheinlichkeit</title>
+    <meta name="description" content="Alle Ergebnisse eines Zufallsversuchs aufschreiben, die günstigen zählen und die Wahrscheinlichkeit als Bruch angeben – und erkennen, wann das nicht geht." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../wahrscheinlichkeit/laplace/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../wahrscheinlichkeit/">Wahrscheinlichkeit</a></li><li aria-current="page">Ergebnisraum und Laplace-Wahrscheinlichkeit</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Ergebnisraum und Laplace-Wahrscheinlichkeit</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../wahrscheinlichkeit/laplace/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧wahrscheinlichkeit/laplace/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-zufall","page":{"id":"laplace","title":"Ergebnisraum und Laplace-Wahrscheinlichkeit","exercises":[{"id":"laplace-start","section":"start","numbered":false},{"id":"laplace-urne","section":"uebung","numbered":false},{"id":"laplace-ueben","section":"uebung","numbered":true},{"id":"laplace-augensumme","section":"uebung","numbered":false},{"id":"laplace-anzahl","section":"uebung","numbered":true},{"id":"laplace-vergleich","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"wahrscheinlichkeit/laplace/tutor/","markdown":"wahrscheinlichkeit/laplace/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Günstige durch alle</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Nicht jeder Versuch ist ein Laplace-Versuch</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="75fa1c9a" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann den Ergebnisraum aufschreiben und die Laplace-Wahrscheinlichkeit berechnen. Du brauchst
+dafür nur Brüche und das Kürzen – das kennst du aus Klasse 6; zum Wiederholen: Kapitel
+<a href="https://rdmueller.github.io/mathe-wb8-terme/brueche/plus-minus/" rel="noopener">Bruchrechnung</a>.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="8e2b7dc7" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="laplace-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-laplace-start" data-id="laplace-start" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du würfelst einmal mit einem normalen Spielwürfel. Du gewinnst, wenn eine Zahl größer als 4 fällt. Bei wie vielen der möglichen Augenzahlen gewinnst du?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-laplace-start">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 2</p>
+<p class="question-explanation">Ein Würfel zeigt 1, 2, 3, 4, 5 oder 6. Größer als 4 sind nur die 5 und die 6, also 2 Augenzahlen.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1501/ergebnismenge" rel="noopener" title="Ergebnismenge (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Ergebnismenge (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 2</p>
+<p class="question-explanation">Ein Würfel zeigt 1, 2, 3, 4, 5 oder 6. Größer als 4 sind nur die 5 und die 6, also 2 Augenzahlen.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1501/ergebnismenge" rel="noopener" title="Ergebnismenge (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Ergebnismenge (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"laplace-start","text":"Du würfelst einmal mit einem normalen Spielwürfel. Du gewinnst, wenn eine Zahl größer als 4 fällt. Bei wie vielen der möglichen Augenzahlen gewinnst du?","explanation":"Ein Würfel zeigt 1, 2, 3, 4, 5 oder 6. Größer als 4 sind nur die 5 und die 6, also 2 Augenzahlen.","links":[{"title":"Ergebnismenge (Serlo)","url":"https://de.serlo.org/mathe/1501/ergebnismenge"}],"hint":"Schreib alle Augenzahlen auf, die ein Würfel zeigen kann.","type":"number","answer":2,"tolerance":0,"mistakes":[{"answer":3,"message":"Prüfe die 4. „Größer als 4“ heißt: Die 4 selbst zählt nicht."},{"answer":1,"message":"Es gibt mehr als eine Augenzahl über 4. Geh alle Zahlen des Würfels durch."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Günstige durch alle</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="147949e2" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Würfeln ist ein <strong>Zufallsversuch</strong>: Du weißt vorher nicht, was herauskommt. Jeder mögliche Ausgang heißt
+<strong>Ergebnis</strong>. Alle Ergebnisse zusammen bilden den <strong>Ergebnisraum</strong> <math><mrow><mi mathvariant="normal">Ω</mi><mspace></mspace></mrow></math> (sprich „Omega“). Ein
+<strong>Ereignis</strong> <math><mi>E</mi></math> ist ein Teil davon, zum Beispiel „Zahl größer als 4“. Seine Ergebnisse heißen
+<strong>günstig</strong>.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="c0fd525c" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/wahrscheinlichkeit-wuerfel.svg" alt="Die sechs Seiten eines Würfels mit 1 bis 6 Augen in einer Reihe. Die Seiten mit 5 und 6 Augen sind orange umrandet." loading="lazy" decoding="async"><figcaption><p>Alle sechs Ergebnisse des Würfels. Orange sind die günstigen aus der Aufgabe oben: 2 von 6.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="f5b84742" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi mathvariant="normal">Ω</mi><mspace></mspace></mrow><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">{</mo><mn>1</mn><mo separator="true">;</mo><mn>2</mn><mo separator="true">;</mo><mn>3</mn><mo separator="true">;</mo><mn>4</mn><mo separator="true">;</mo><mn>5</mn><mo separator="true">;</mo><mn>6</mn><mo fence="true" form="postfix" stretchy="false">}</mo></mrow><mspace width="2em"></mspace><mi>E</mi><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">{</mo><mn>5</mn><mo separator="true">;</mo><mn>6</mn><mo fence="true" form="postfix" stretchy="false">}</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="ae465f40" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Jede Seite des Würfels fällt gleich oft, wenn du sehr oft würfelst. Ist das bei allen Ergebnissen so,
+heißt der Versuch <strong>Laplace-Versuch</strong>. Dann ist die Wahrscheinlichkeit <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow></mrow></math> der Anteil der günstigen an
+allen Ergebnissen – in der Aufgabe oben 2 von 6. P steht hier für Wahrscheinlichkeit (englisch
+probability), nicht für den Prozentwert aus dem Kapitel Prozentrechnung.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="f1c1d78a" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mtext>günstige</mtext><mtext>alle</mtext></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="ee7d00f8" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mtext>größer als 4</mtext><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/7" data-block-id="3abdbd1d" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Gib die Wahrscheinlichkeit als gekürzten Bruch an. Sie liegt immer zwischen 0 (unmöglich) und 1 (sicher).</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="828fafa3" data-block-type="example" data-block-order="10">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Glücksrad mit Primzahlen</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="ac4f20f0" data-block-type="figure" data-block-order="11">
+<figure class="block-figure"><img src="../../images/wahrscheinlichkeit-gluecksrad.svg" alt="Ein Glücksrad mit 8 gleich großen Feldern, beschriftet mit 1 bis 8, oben ein Zeiger." loading="lazy" decoding="async"><figcaption><p>Alle 8 Felder sind gleich groß, also ist jede Zahl gleich wahrscheinlich.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="de225ae6" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Du gewinnst bei einer Primzahl. Eine Primzahl hat genau zwei Teiler, 1 und sich selbst. Die 1 hat nur
+einen Teiler und ist darum keine Primzahl.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="7bbeb350" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi mathvariant="normal">Ω</mi><mspace></mspace></mrow><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">{</mo><mn>1</mn><mo separator="true">;</mo><mn>2</mn><mo separator="true">;</mo><mn>3</mn><mo separator="true">;</mo><mn>4</mn><mo separator="true">;</mo><mn>5</mn><mo separator="true">;</mo><mn>6</mn><mo separator="true">;</mo><mn>7</mn><mo separator="true">;</mo><mn>8</mn><mo fence="true" form="postfix" stretchy="false">}</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="a52c09ed" data-block-type="formula" data-block-order="14">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>E</mi><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">{</mo><mn>2</mn><mo separator="true">;</mo><mn>3</mn><mo separator="true">;</mo><mn>5</mn><mo separator="true">;</mo><mn>7</mn><mo fence="true" form="postfix" stretchy="false">}</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/5" data-block-id="1b4f348a" data-block-type="formula" data-block-order="15">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>4</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/6" data-block-id="9f4c32b2" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Antwort – Du gewinnst mit der Wahrscheinlichkeit 1/2, also in etwa jedem zweiten Spiel.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Nicht jeder Versuch ist ein Laplace-Versuch</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="40144877" data-block-type="note" data-block-order="17">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="f73eaf69" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>„Günstige durch alle“ gilt nur, wenn alle Ergebnisse gleich wahrscheinlich sind. Mit zwei Würfeln gibt
+es die Augensummen 2 bis 12. Die 7 entsteht aber auf 6 Arten (1 + 6, 2 + 5, …, 6 + 1), die 2 nur auf
+eine (1 + 1). Die 7 ist also viel wahrscheinlicher. Ebenso bei einer Urne mit 3 roten und 7 blauen
+Kugeln: Nimm als Ergebnisse die einzelnen Kugeln, nicht nur die Farben „rot“ und „blau“.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="db8ced1e" data-block-type="single-choice" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="laplace-urne">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-laplace-urne" data-id="laplace-urne" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du ziehst ohne hinzusehen eine Kugel aus dieser Urne. Wie groß ist die Wahrscheinlichkeit, eine rote Kugel zu ziehen?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/wahrscheinlichkeit-urne.svg" alt="Eine Urne mit 8 Kugeln. 3 Kugeln sind rot und mit r beschriftet, 5 sind blau und mit b beschriftet." loading="lazy" decoding="async"><figcaption><p>Die Kugeln sind gleich groß und fühlen sich gleich an. Nur die Farbe ist verschieden.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-laplace-urne" value="0"> <span>3/8</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-urne" value="1"> <span>1/2</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-urne" value="2"> <span>3/5</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-urne" value="3"> <span>5/8</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>3/8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>3 der 8 Kugeln sind rot.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1/2</strong></p><p>Die zwei Farben sind nicht gleich wahrscheinlich, denn es gibt mehr blaue Kugeln.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>3/5</strong></p><p>Das ist rote durch blaue. Im Nenner stehen alle Kugeln.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>5/8</strong></p><p>5/8 ist die Wahrscheinlichkeit für eine blaue Kugel.</p></li>
+</ul>
+<p class="question-explanation">Jede der 8 Kugeln ist gleich wahrscheinlich, 3 sind günstig: P(rot) = 3/8.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1755/laplace-experiment" rel="noopener" title="Laplace-Experiment (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Laplace-Experiment (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>3/8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>3 der 8 Kugeln sind rot.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1/2</strong></p><p>Die zwei Farben sind nicht gleich wahrscheinlich, denn es gibt mehr blaue Kugeln.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>3/5</strong></p><p>Das ist rote durch blaue. Im Nenner stehen alle Kugeln.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>5/8</strong></p><p>5/8 ist die Wahrscheinlichkeit für eine blaue Kugel.</p></li>
+</ul>
+<p class="question-explanation">Jede der 8 Kugeln ist gleich wahrscheinlich, 3 sind günstig: P(rot) = 3/8.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1755/laplace-experiment" rel="noopener" title="Laplace-Experiment (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Laplace-Experiment (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"laplace-urne","text":"Du ziehst ohne hinzusehen eine Kugel aus dieser Urne. Wie groß ist die Wahrscheinlichkeit, eine rote Kugel zu ziehen?","explanation":"Jede der 8 Kugeln ist gleich wahrscheinlich, 3 sind günstig: P(rot) = 3/8.","links":[{"title":"Laplace-Experiment (Serlo)","url":"https://de.serlo.org/mathe/1755/laplace-experiment"}],"material":[{"type":"figure","image":"images/wahrscheinlichkeit-urne.svg","alt":"Eine Urne mit 8 Kugeln. 3 Kugeln sind rot und mit r beschriftet, 5 sind blau und mit b beschriftet.","caption":"Die Kugeln sind gleich groß und fühlen sich gleich an. Nur die Farbe ist verschieden.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"3/8","correct":true,"info":"3 der 8 Kugeln sind rot."},{"text":"1/2","correct":false,"info":"Die zwei Farben sind nicht gleich wahrscheinlich, denn es gibt mehr blaue Kugeln."},{"text":"3/5","correct":false,"info":"Das ist rote durch blaue. Im Nenner stehen alle Kugeln."},{"text":"5/8","correct":false,"info":"5/8 ist die Wahrscheinlichkeit für eine blaue Kugel."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="fff51fe6" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="laplace-ueben">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Du drehst ein Glücksrad mit 5 gleich großen Feldern, beschriftet mit A, B, C, D und E. Wie groß ist die Wahrscheinlichkeit für das Ereignis „ein Vokal (A, E, I, O oder U)“?</p><details class="explainer-hint"><summary>Tipp</summary><p>Schreib zuerst alle Ergebnisse auf. Dann markiere die günstigen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Alle Ergebnisse: Ω = {A; B; C; D; E}. Das sind 5, alle gleich wahrscheinlich.</li><li>Günstig sind {A; E}, also 2 Ergebnisse.</li><li><math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></mrow></math>, gekürzt 2/5.</li></ol><p><strong>Richtige Antwort:</strong> 2/5</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Du drehst ein Glücksrad mit 8 gleich großen Feldern, beschriftet mit 1 bis 8. Wie groß ist die Wahrscheinlichkeit für das Ereignis „eine Zahl, die durch 3 teilbar ist“?</p><details class="explainer-hint"><summary>Tipp</summary><p>Schreib zuerst alle Ergebnisse auf. Dann markiere die günstigen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Alle Ergebnisse: Ω = {1; 2; 3; 4; 5; 6; 7; 8}. Das sind 8, alle gleich wahrscheinlich.</li><li>Günstig sind {3; 6}, also 2 Ergebnisse.</li><li><math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>8</mn></mfrac></mrow></math>, gekürzt 1/4.</li></ol><p><strong>Richtige Antwort:</strong> 1/4</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Du drehst ein Glücksrad mit 7 gleich großen Feldern, beschriftet mit 1 bis 7. Wie groß ist die Wahrscheinlichkeit für das Ereignis „eine gerade Zahl“?</p><details class="explainer-hint"><summary>Tipp</summary><p>Schreib zuerst alle Ergebnisse auf. Dann markiere die günstigen.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Alle Ergebnisse: Ω = {1; 2; 3; 4; 5; 6; 7}. Das sind 7, alle gleich wahrscheinlich.</li><li>Günstig sind {2; 4; 6}, also 3 Ergebnisse.</li><li><math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>E</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>7</mn></mfrac></mrow></math>, gekürzt 3/7.</li></ol><p><strong>Richtige Antwort:</strong> 3/7</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"laplace-ueben","given":{"e":{"pick":1,"from":{"data":"zufallsversuche"}},"r":{"int":[0,3]}},"task":{"text":"{{e.versuch}} Wie groß ist die Wahrscheinlichkeit für das Ereignis „{{e.ereignis}}“?"},"answer":{"value":"e.p","compare":{"choice":"[[e.p, e.fUngunstig, e.fRest, e.fEins], [e.fUngunstig, e.p, e.fRest, e.fEins], [e.fUngunstig, e.fRest, e.p, e.fEins], [e.fUngunstig, e.fRest, e.fEins, e.p]][r]"}},"mistakes":[{"value":"e.fUngunstig","message":"Das ist günstige durch ungünstige. Im Nenner stehen alle Ergebnisse."},{"value":"e.fRest","message":"Du hast die ungünstigen Ergebnisse gezählt. Zähle die günstigen."},{"value":"e.fEins","message":"Du hast nur ein günstiges Ergebnis gezählt."}],"hint":"Schreib zuerst alle Ergebnisse auf. Dann markiere die günstigen.","steps":["Alle Ergebnisse: {{e.omega}}. Das sind {{e.anzahl}}, alle gleich wahrscheinlich.","Günstig sind {{e.guenstigListe}}, also {{e.guenstig}} Ergebnisse.","$P(E) = \\frac{{{e.guenstig}}}{{{e.anzahl}}}$, gekürzt {{answer}}."]},"templates":{"de":{"task":"⟦e.versuch⟧ Wie groß ist die Wahrscheinlichkeit für das Ereignis „⟦e.ereignis⟧“?","steps":["Alle Ergebnisse: ⟦e.omega⟧. Das sind ⟦e.anzahl⟧, alle gleich wahrscheinlich.","Günstig sind ⟦e.guenstigListe⟧, also ⟦e.guenstig⟧ Ergebnisse.","\u003cmath>\u003cmrow>\u003cmi>P\u003c/mi>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"false\">(\u003c/mo>\u003cmi>E\u003c/mi>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"false\">)\u003c/mo>\u003c/mrow>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmtext>⟦e.guenstig⟧\u003c/mtext>\u003cmtext>⟦e.anzahl⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>, gekürzt ⟦answer⟧."],"hint":"Schreib zuerst alle Ergebnisse auf. Dann markiere die günstigen.","messages":["Das ist günstige durch ungünstige. Im Nenner stehen alle Ergebnisse.","Du hast die ungünstigen Ergebnisse gezählt. Zähle die günstigen.","Du hast nur ein günstiges Ergebnis gezählt."]}},"data":{"zufallsversuche":[{"name":"Würfel","versuch":"Du wirfst einen normalen Spielwürfel.","ereignis":"eine Zahl größer als 4","omega":"Ω = {1; 2; 3; 4; 5; 6}","anzahl":6,"guenstigListe":"{5; 6}","guenstig":2,"p":"1/3","fUngunstig":"1/2","fRest":"2/3","fEins":"1/6"},{"name":"Würfel","versuch":"Du wirfst einen normalen Spielwürfel.","ereignis":"eine Zahl, die durch 3 teilbar ist","omega":"Ω = {1; 2; 3; 4; 5; 6}","anzahl":6,"guenstigListe":"{3; 6}","guenstig":2,"p":"1/3","fUngunstig":"1/2","fRest":"2/3","fEins":"1/6"},{"name":"Glücksrad","versuch":"Du drehst ein Glücksrad mit 8 gleich großen Feldern, beschriftet mit 1 bis 8.","ereignis":"eine Zahl, die durch 3 teilbar ist","omega":"Ω = {1; 2; 3; 4; 5; 6; 7; 8}","anzahl":8,"guenstigListe":"{3; 6}","guenstig":2,"p":"1/4","fUngunstig":"1/3","fRest":"3/4","fEins":"1/8"},{"name":"Glücksrad","versuch":"Du drehst ein Glücksrad mit 8 gleich großen Feldern, beschriftet mit 1 bis 8.","ereignis":"eine Zahl größer als 5","omega":"Ω = {1; 2; 3; 4; 5; 6; 7; 8}","anzahl":8,"guenstigListe":"{6; 7; 8}","guenstig":3,"p":"3/8","fUngunstig":"3/5","fRest":"5/8","fEins":"1/8"},{"name":"Glücksrad","versuch":"Du drehst ein Glücksrad mit 7 gleich großen Feldern, beschriftet mit 1 bis 7.","ereignis":"eine gerade Zahl","omega":"Ω = {1; 2; 3; 4; 5; 6; 7}","anzahl":7,"guenstigListe":"{2; 4; 6}","guenstig":3,"p":"3/7","fUngunstig":"3/4","fRest":"4/7","fEins":"1/7"},{"name":"Glücksrad","versuch":"Du drehst ein Glücksrad mit 5 gleich großen Feldern, beschriftet mit A, B, C, D und E.","ereignis":"ein Vokal (A, E, I, O oder U)","omega":"Ω = {A; B; C; D; E}","anzahl":5,"guenstigListe":"{A; E}","guenstig":2,"p":"2/5","fUngunstig":"2/3","fRest":"3/5","fEins":"1/5"},{"name":"Urne","versuch":"In einer Urne liegen 3 rote und 7 blaue Kugeln, sonst gleich. Du ziehst ohne hinzusehen eine Kugel.","ereignis":"eine rote Kugel","omega":"jede der 10 Kugeln","anzahl":10,"guenstigListe":"die 3 roten Kugeln","guenstig":3,"p":"3/10","fUngunstig":"3/7","fRest":"7/10","fEins":"1/10"},{"name":"Urne","versuch":"In einer Urne liegen 4 rote und 6 blaue Kugeln, sonst gleich. Du ziehst ohne hinzusehen eine Kugel.","ereignis":"eine rote Kugel","omega":"jede der 10 Kugeln","anzahl":10,"guenstigListe":"die 4 roten Kugeln","guenstig":4,"p":"2/5","fUngunstig":"2/3","fRest":"3/5","fEins":"1/10"}]},"seeds":[1,2,3,4,5,6,7,8,12,16,17,18,20,23,25,27,28,31,33,36,44,45,47,48,51,53,59,64,77,78,96,163],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="2f7c3680" data-block-type="true-false" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="laplace-augensumme">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-laplace-augensumme" data-id="laplace-augensumme" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mit zwei Würfeln sind die Augensummen 2 bis 12 möglich, also 11 Ergebnisse. Darum ist P(Augensumme 12) = 1/11.</legend>
+<label class="question-option"><input type="radio" name="frage-laplace-augensumme" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-augensumme" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Die Augensummen sind nicht gleich wahrscheinlich: 12 gibt es nur als 6 + 6, die 7 auf sechs Arten.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1755/laplace-experiment" rel="noopener" title="Laplace-Experiment (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Laplace-Experiment (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Die Augensummen sind nicht gleich wahrscheinlich: 12 gibt es nur als 6 + 6, die 7 auf sechs Arten.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1755/laplace-experiment" rel="noopener" title="Laplace-Experiment (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Laplace-Experiment (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"laplace-augensumme","text":"Mit zwei Würfeln sind die Augensummen 2 bis 12 möglich, also 11 Ergebnisse. Darum ist P(Augensumme 12) = 1/11.","explanation":"Die Augensummen sind nicht gleich wahrscheinlich: 12 gibt es nur als 6 + 6, die 7 auf sechs Arten.","links":[{"title":"Laplace-Experiment (Serlo)","url":"https://de.serlo.org/mathe/1755/laplace-experiment"}],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="ba7e5317" data-block-type="generated" data-block-order="22">
+<div class="explainer-exercise explainer-generated" id="laplace-anzahl">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einer Urne liegen 10 Kugeln, rote und blaue. Die Wahrscheinlichkeit, eine rote zu ziehen, ist <math><mfrac><mn>1</mn><mn>5</mn></mfrac></math>. Wie viele rote Kugeln liegen in der Urne?</p><details class="explainer-hint"><summary>Tipp</summary><p>Erweitere den Bruch so, dass im Nenner 10 steht: Zähler und Nenner mit derselben Zahl malnehmen (kennst du aus Klasse 6).</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>P(rot) = rote Kugeln : 10 Kugeln.</li><li>Erweitere <math><mfrac><mn>1</mn><mn>5</mn></mfrac></math> auf den Nenner 10: Zähler 2.</li><li>In der Urne liegen 2 rote Kugeln.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einer Urne liegen 6 Kugeln, rote und blaue. Die Wahrscheinlichkeit, eine rote zu ziehen, ist <math><mfrac><mn>2</mn><mn>3</mn></mfrac></math>. Wie viele rote Kugeln liegen in der Urne?</p><details class="explainer-hint"><summary>Tipp</summary><p>Erweitere den Bruch so, dass im Nenner 6 steht: Zähler und Nenner mit derselben Zahl malnehmen (kennst du aus Klasse 6).</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>P(rot) = rote Kugeln : 6 Kugeln.</li><li>Erweitere <math><mfrac><mn>2</mn><mn>3</mn></mfrac></math> auf den Nenner 6: Zähler 4.</li><li>In der Urne liegen 4 rote Kugeln.</li></ol><p><strong>Richtige Antwort:</strong> 4</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einer Urne liegen 6 Kugeln, rote und blaue. Die Wahrscheinlichkeit, eine rote zu ziehen, ist <math><mfrac><mn>1</mn><mn>3</mn></mfrac></math>. Wie viele rote Kugeln liegen in der Urne?</p><details class="explainer-hint"><summary>Tipp</summary><p>Erweitere den Bruch so, dass im Nenner 6 steht: Zähler und Nenner mit derselben Zahl malnehmen (kennst du aus Klasse 6).</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>P(rot) = rote Kugeln : 6 Kugeln.</li><li>Erweitere <math><mfrac><mn>1</mn><mn>3</mn></mfrac></math> auf den Nenner 6: Zähler 2.</li><li>In der Urne liegen 2 rote Kugeln.</li></ol><p><strong>Richtige Antwort:</strong> 2</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"laplace-anzahl","given":{"n":{"oneOf":[6,8,9,10]},"d":{"oneOf":[3,4,5]},"z":{"int":[1,4]}},"where":["decimals(n / d) == 0","z \u003c d","n > d","not (d == 4 and z == 2)"],"task":{"text":"In einer Urne liegen {{n}} Kugeln, rote und blaue. Die Wahrscheinlichkeit, eine rote zu ziehen, ist $\\frac{ {{z}} }{ {{d}} }$. Wie viele rote Kugeln liegen in der Urne?"},"answer":{"value":"z * n / d","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"z","message":"Der Bruch ist gekürzt. Eigentlich stehen im Nenner alle {{n}} Kugeln."},{"value":"n - z * n / d","message":"Das sind die blauen Kugeln."}],"hint":"Erweitere den Bruch so, dass im Nenner {{n}} steht: Zähler und Nenner mit derselben Zahl malnehmen (kennst du aus Klasse 6).","steps":["P(rot) = rote Kugeln : {{n}} Kugeln.","Erweitere $\\frac{ {{z}} }{ {{d}} }$ auf den Nenner {{n}}: Zähler {{answer}}.","In der Urne liegen {{answer}} rote Kugeln."]},"templates":{"de":{"task":"In einer Urne liegen ⟦n⟧ Kugeln, rote und blaue. Die Wahrscheinlichkeit, eine rote zu ziehen, ist \u003cmath>\u003cmfrac>\u003cmtext>⟦z⟧\u003c/mtext>\u003cmtext>⟦d⟧\u003c/mtext>\u003c/mfrac>\u003c/math>. Wie viele rote Kugeln liegen in der Urne?","steps":["P(rot) = rote Kugeln : ⟦n⟧ Kugeln.","Erweitere \u003cmath>\u003cmfrac>\u003cmtext>⟦z⟧\u003c/mtext>\u003cmtext>⟦d⟧\u003c/mtext>\u003c/mfrac>\u003c/math> auf den Nenner ⟦n⟧: Zähler ⟦answer⟧.","In der Urne liegen ⟦answer⟧ rote Kugeln."],"hint":"Erweitere den Bruch so, dass im Nenner ⟦n⟧ steht: Zähler und Nenner mit derselben Zahl malnehmen (kennst du aus Klasse 6).","messages":["Der Bruch ist gekürzt. Eigentlich stehen im Nenner alle ⟦n⟧ Kugeln.","Das sind die blauen Kugeln."]}},"data":{},"seeds":[1,2,3,4,5,9,12,25,34,47],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="f6c52167" data-block-type="single-choice" data-block-order="23">
+<div class="explainer-exercise explainer-question" id="laplace-vergleich">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-laplace-vergleich" data-id="laplace-vergleich" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bei welchem Spiel hast du die größte Gewinnchance?</legend>
+<label class="question-option"><input type="radio" name="frage-laplace-vergleich" value="0"> <span>Würfel – Gewinn bei einer Zahl größer als 4</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-vergleich" value="1"> <span>Glücksrad mit 8 gleich großen Feldern, 3 davon gewinnen</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-vergleich" value="2"> <span>Urne mit 3 roten und 7 blauen Kugeln – Gewinn bei Rot</span></label>
+<label class="question-option"><input type="radio" name="frage-laplace-vergleich" value="3"> <span>Glücksrad mit 5 gleich großen Feldern, 1 davon gewinnt</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Würfel – Gewinn bei einer Zahl größer als 4</strong></p><p>P = 1/3 = 8/24.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Glücksrad mit 8 gleich großen Feldern, 3 davon gewinnen</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>P = 3/8 = 9/24, der größte Wert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Urne mit 3 roten und 7 blauen Kugeln – Gewinn bei Rot</strong></p><p>P = 3/10, weniger als 3/9 = 1/3.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Glücksrad mit 5 gleich großen Feldern, 1 davon gewinnt</strong></p><p>P = 1/5, die kleinste Chance.</p></li>
+</ul>
+<p class="question-explanation">Bringe 1/3, 3/8, 3/10 und 1/5 auf einen Nenner: 3/8 ist am größten.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1755/laplace-experiment" rel="noopener" title="Laplace-Experiment (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Laplace-Experiment (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Würfel – Gewinn bei einer Zahl größer als 4</strong></p><p>P = 1/3 = 8/24.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Glücksrad mit 8 gleich großen Feldern, 3 davon gewinnen</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>P = 3/8 = 9/24, der größte Wert.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Urne mit 3 roten und 7 blauen Kugeln – Gewinn bei Rot</strong></p><p>P = 3/10, weniger als 3/9 = 1/3.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Glücksrad mit 5 gleich großen Feldern, 1 davon gewinnt</strong></p><p>P = 1/5, die kleinste Chance.</p></li>
+</ul>
+<p class="question-explanation">Bringe 1/3, 3/8, 3/10 und 1/5 auf einen Nenner: 3/8 ist am größten.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1755/laplace-experiment" rel="noopener" title="Laplace-Experiment (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Laplace-Experiment (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"laplace-vergleich","text":"Bei welchem Spiel hast du die größte Gewinnchance?","explanation":"Bringe 1/3, 3/8, 3/10 und 1/5 auf einen Nenner: 3/8 ist am größten.","links":[{"title":"Laplace-Experiment (Serlo)","url":"https://de.serlo.org/mathe/1755/laplace-experiment"}],"type":"single-choice","options":[{"text":"Würfel – Gewinn bei einer Zahl größer als 4","correct":false,"info":"P = 1/3 = 8/24."},{"text":"Glücksrad mit 8 gleich großen Feldern, 3 davon gewinnen","correct":true,"info":"P = 3/8 = 9/24, der größte Wert."},{"text":"Urne mit 3 roten und 7 blauen Kugeln – Gewinn bei Rot","correct":false,"info":"P = 3/10, weniger als 3/9 = 1/3."},{"text":"Glücksrad mit 5 gleich großen Feldern, 1 davon gewinnt","correct":false,"info":"P = 1/5, die kleinste Chance."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="e83a4954" data-block-type="text" data-block-order="24">
+<div class="block-text"><p>Als Nächstes führst du zwei Zufallsversuche nacheinander aus und hältst alle Wahrscheinlichkeiten in einem Baumdiagramm fest.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-zufall","app":"Mathe-Wettbewerb 8: Wahrscheinlichkeit","root":"../../","repository":"rdmueller/mathe-wb8-zufall","revision":"f4f3c21","page":{"title":"Ergebnisraum und Laplace-Wahrscheinlichkeit","order":0}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="next" href="../../wahrscheinlichkeit/baumdiagramm/">Weiter: Baumdiagramm</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

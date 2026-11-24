@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Winkel berechnen und Konstruktion prüfen – Mathe-Wettbewerb 8: Geometrie</title>
+    <meta name="description" content="Den fehlenden Winkel mit 180° berechnen, mit der größten Seite gegenüber dem größten Winkel prüfen und eine fertige Konstruktion nachmessen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../w2-konstruktionen/winkel-pruefen/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../w2-konstruktionen/">Wahlaufgabe W2: Dreieckskonstruktionen und Kongruenzsätze</a></li><li aria-current="page">Winkel berechnen und Konstruktion prüfen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Winkel berechnen und Konstruktion prüfen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../w2-konstruktionen/winkel-pruefen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧w2-konstruktionen/winkel-pruefen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-geometrie","page":{"id":"winkel-pruefen","title":"Winkel berechnen und Konstruktion prüfen","exercises":[{"id":"winkel-pruefen-start","section":"start","numbered":false},{"id":"winkel-pruefen-wsw","section":"uebung","numbered":true},{"id":"winkel-pruefen-laengste","section":"uebung","numbered":false},{"id":"winkel-pruefen-messen","section":"uebung","numbered":false},{"id":"winkel-pruefen-hoehe","section":"uebung","numbered":true},{"id":"winkel-pruefen-wettbewerb","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"w2-konstruktionen/winkel-pruefen/tutor/","markdown":"w2-konstruktionen/winkel-pruefen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Erst rechnen, dann messen</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Messen und Rechnen müssen zusammenpassen</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="b4bd0e22" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann einen fehlenden Winkel berechnen und eine Konstruktion durch Nachmessen prüfen. Im
+Wettbewerb heißt es oft: „Konstruiere … und miss die fehlenden Stücke.“ Mit den
+<a href="../../w2-konstruktionen/konstruktion-schritte/">Schritten</a> hast du das Dreieck – jetzt prüfst du es.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="10ac507e" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="winkel-pruefen-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-pruefen-start" data-id="winkel-pruefen-start" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du hast ein Dreieck mit c = 7 cm, α = 40° und β = 65° konstruiert. Gleich misst du γ nach. Welcher Wert müsste herauskommen?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-winkel-pruefen-start" aria-describedby="frage-winkel-pruefen-start-unit"> <span id="frage-winkel-pruefen-start-unit">°</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 75 °</p>
+<p class="question-explanation">γ = 180° − 40° − 65° = 75°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 75 °</p>
+<p class="question-explanation">γ = 180° − 40° − 65° = 75°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-pruefen-start","text":"Du hast ein Dreieck mit c = 7 cm, α = 40° und β = 65° konstruiert. Gleich misst du γ nach. Welcher Wert müsste herauskommen?","explanation":"γ = 180° − 40° − 65° = 75°.","links":[{"title":"Winkel (Serlo)","url":"https://de.serlo.org/mathe/1707/winkel"}],"hint":"Alle drei Winkel zusammen ergeben 180°.","type":"number","answer":75,"tolerance":0,"unit":"°","mistakes":[{"answer":255,"message":"Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben zusammen 180°."},{"answer":105,"message":"Das sind α und β zusammen. Gefragt ist der dritte Winkel."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Erst rechnen, dann messen</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="52a96b7d" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wie in der Aufgabe oben weißt du schon <strong>vor</strong> dem Messen, was herauskommen muss. Den dritten Winkel
+rechnest du mit der Winkelsumme aus:</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="5d7a23f7" data-block-type="formula" data-block-order="4">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>γ</mi><mo>=</mo><msup><mn>180</mn><mo>∘</mo></msup><mo>−</mo><mi>α</mi><mo>−</mo><mi>β</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="b1a3be05" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Für die Seiten gibt es eine Faustregel: <strong>Die längste Seite liegt dem größten Winkel gegenüber</strong>, die
+kürzeste dem kleinsten. So prüfst du ohne Rechnung, ob deine Zeichnung passen kann.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="3508ab1a" data-block-type="figure" data-block-order="6">
+<figure class="block-figure"><img src="../../images/w2-groesste-seite.svg" alt="Ein Dreieck ABC. Der Winkel γ bei C ist der größte und orange markiert. Die Seite c gegenüber ist orange und die längste." loading="lazy" decoding="async"><figcaption><p>Der größte Winkel γ und die längste Seite c liegen einander gegenüber.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="1a0f957a" data-block-type="text" data-block-order="7">
+<div class="block-text"><p><strong>Nachmessen</strong> heißt: Du misst an deiner fertigen Zeichnung mit dem Geodreieck die Stücke, die nicht
+gegeben waren. Weicht ein Winkel um 1° bis 2° oder eine Seite um 1 mm bis 2 mm von der Rechnung ab, ist
+das Zeichenungenauigkeit. Bei mehr hast du dich vertan.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="aa9fec75" data-block-type="example" data-block-order="8">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Lea misst nach</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="8226d979" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Lea hat ein Dreieck mit c = 6 cm, α = 30° und β = 110° konstruiert. Erwartet:</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="921435d6" data-block-type="formula" data-block-order="10">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>γ</mi><mo>=</mo><msup><mn>180</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>30</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>110</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>40</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="32195144" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>β ist der größte Winkel, also muss b die längste Seite sein. Lea misst b = 8,8 cm und a = 4,7 cm –
+das passt. Für γ misst sie aber 140°. Das kann nicht sein, denn 30° + 110° + 140° sind mehr als 180°.
+Sie hat auf der falschen Skala des Geodreiecks abgelesen: Die zweite Skala zeigt 180° − 40° = 140°.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Messen und Rechnen müssen zusammenpassen</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="5f8aaad0" data-block-type="note" data-block-order="12">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="7692c105" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Im Dreieck sind es 180°, nicht 360°. Passt ein gemessener Winkel nicht zur Rechnung, prüfe zuerst die
+Skala: Das Geodreieck hat zwei, und sie ergeben zusammen immer 180°.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="e1cd6ebb" data-block-type="generated" data-block-order="14">
+<div class="explainer-exercise explainer-generated" id="winkel-pruefen-wsw">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Gegeben sind c = 6 cm, α = 105° und γ = 30°. Für WSW brauchst du den zweiten Winkel an c. Wie groß ist β?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle drei Winkel zusammen ergeben 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 105° und γ = 30°: β = 180° − 105° − 30°</li><li>β ist 45° groß. Jetzt liegen α und β an c.</li></ol><p><strong>Richtige Antwort:</strong> 45 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Gegeben sind c = 6 cm, α = 30° und γ = 105°. Für WSW brauchst du den zweiten Winkel an c. Wie groß ist β?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle drei Winkel zusammen ergeben 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 30° und γ = 105°: β = 180° − 30° − 105°</li><li>β ist 45° groß. Jetzt liegen α und β an c.</li></ol><p><strong>Richtige Antwort:</strong> 45 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Gegeben sind c = 6 cm, α = 65° und γ = 35°. Für WSW brauchst du den zweiten Winkel an c. Wie groß ist β?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle drei Winkel zusammen ergeben 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 65° und γ = 35°: β = 180° − 65° − 35°</li><li>β ist 80° groß. Jetzt liegen α und β an c.</li></ol><p><strong>Richtige Antwort:</strong> 80 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-pruefen-wsw","given":{"a":{"int":[20,110],"step":5},"g":{"int":[20,110],"step":5}},"where":["a + g \u003c= 160","a + g != 90"],"task":{"text":"Gegeben sind c = 6 cm, α = {{a}}° und γ = {{g}}°. Für WSW brauchst du den zweiten Winkel an c. Wie groß ist β?"},"answer":{"value":"180 - a - g","compare":{"number":{"format":"integer","unit":"°"}}},"mistakes":[{"value":"360 - a - g","message":"Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben zusammen 180°."},{"value":"a + g","message":"Das sind α und γ zusammen. Gefragt ist der dritte Winkel."}],"hint":"Alle drei Winkel zusammen ergeben 180°.","steps":["Mit α = {{a}}° und γ = {{g}}°: β = 180° − {{a}}° − {{g}}°","β ist {{answer}}° groß. Jetzt liegen α und β an c."]},"templates":{"de":{"task":"Gegeben sind c = 6 cm, α = ⟦a⟧° und γ = ⟦g⟧°. Für WSW brauchst du den zweiten Winkel an c. Wie groß ist β?","steps":["Mit α = ⟦a⟧° und γ = ⟦g⟧°: β = 180° − ⟦a⟧° − ⟦g⟧°","β ist ⟦answer⟧° groß. Jetzt liegen α und β an c."],"hint":"Alle drei Winkel zusammen ergeben 180°.","messages":["Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben zusammen 180°.","Das sind α und γ zusammen. Gefragt ist der dritte Winkel."]}},"data":{},"seeds":[1,2,3,4,5,6,7,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24,25,26,27,28,30,31,33,34,35,36,37,38,40,41,42,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,59,60,61,62,63,64,65,66,68,69,71,73,74,75,76],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="c3d183bf" data-block-type="single-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="winkel-pruefen-laengste">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-pruefen-laengste" data-id="winkel-pruefen-laengste" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Dreieck hat α = 35°, β = 80° und γ = 65°. Welche Seite ist am längsten?</legend>
+<label class="question-option"><input type="radio" name="frage-winkel-pruefen-laengste" value="0"> <span>a</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-pruefen-laengste" value="1"> <span>b</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-pruefen-laengste" value="2"> <span>c</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>a</strong></p><p>a liegt α gegenüber, dem kleinsten Winkel.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>b</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>b liegt β gegenüber, dem größten Winkel.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>c</strong></p><p>c liegt γ gegenüber, dem mittleren Winkel.</p></li>
+</ul>
+<p class="question-explanation">Der größte Winkel ist β = 80°, also ist b am längsten.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/78680/konstruierbare-dreiecke" rel="noopener" title="Konstruierbare Dreiecke (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Konstruierbare Dreiecke (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>a</strong></p><p>a liegt α gegenüber, dem kleinsten Winkel.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>b</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>b liegt β gegenüber, dem größten Winkel.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>c</strong></p><p>c liegt γ gegenüber, dem mittleren Winkel.</p></li>
+</ul>
+<p class="question-explanation">Der größte Winkel ist β = 80°, also ist b am längsten.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/78680/konstruierbare-dreiecke" rel="noopener" title="Konstruierbare Dreiecke (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Konstruierbare Dreiecke (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-pruefen-laengste","text":"Ein Dreieck hat α = 35°, β = 80° und γ = 65°. Welche Seite ist am längsten?","explanation":"Der größte Winkel ist β = 80°, also ist b am längsten.","links":[{"title":"Konstruierbare Dreiecke (Serlo)","url":"https://de.serlo.org/mathe/78680/konstruierbare-dreiecke"}],"type":"single-choice","options":[{"text":"a","correct":false,"info":"a liegt α gegenüber, dem kleinsten Winkel."},{"text":"b","correct":true,"info":"b liegt β gegenüber, dem größten Winkel."},{"text":"c","correct":false,"info":"c liegt γ gegenüber, dem mittleren Winkel."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="bca8e893" data-block-type="true-false" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="winkel-pruefen-messen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-pruefen-messen" data-id="winkel-pruefen-messen" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Tim berechnet γ = 50°. In seiner Zeichnung misst er 51°. Also ist seine Konstruktion falsch.</legend>
+<label class="question-option"><input type="radio" name="frage-winkel-pruefen-messen" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-winkel-pruefen-messen" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">1° Abweichung ist Zeichenungenauigkeit, die Konstruktion passt.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">1° Abweichung ist Zeichenungenauigkeit, die Konstruktion passt.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1957/dreiecke-konstruieren" rel="noopener" title="Dreiecke konstruieren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Dreiecke konstruieren (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-pruefen-messen","text":"Tim berechnet γ = 50°. In seiner Zeichnung misst er 51°. Also ist seine Konstruktion falsch.","explanation":"1° Abweichung ist Zeichenungenauigkeit, die Konstruktion passt.","links":[{"title":"Dreiecke konstruieren (Serlo)","url":"https://de.serlo.org/mathe/1957/dreiecke-konstruieren"}],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="9419f764" data-block-type="figure" data-block-order="17">
+<figure class="block-figure"><img src="../../images/w2-hoehe-winkel.svg" alt="Ein Dreieck ABC mit dem blauen Winkel α bei A und der grauen gestrichelten Höhe h_c von C senkrecht auf c. Bei C ist zwischen der Seite b und der Höhe ein oranger Winkel x markiert." loading="lazy" decoding="async"><figcaption><p>Zur nächsten Aufgabe: Die Höhe teilt das Dreieck. Links entsteht das Dreieck aus A, C und dem Fußpunkt der Höhe – dem Punkt, wo sie auf c trifft.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="1f791621" data-block-type="generated" data-block-order="18">
+<div class="explainer-exercise explainer-generated" id="winkel-pruefen-hoehe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Im Dreieck ist α = 65°. Die Höhe <math><msub><mi>h</mi><mi>c</mi></msub></math> steht senkrecht auf c. Wie groß ist der Winkel x zwischen der Seite b und der Höhe?</p><details class="explainer-hint"><summary>Tipp</summary><p>Im linken Teildreieck kennst du zwei Winkel. Wie groß ist der Winkel am Fußpunkt der Höhe?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Im linken Teildreieck: α = 65°, am Fußpunkt 90°. x = 180° − 90° − 65°</li><li>Der Winkel x ist 25° groß.</li></ol><p><strong>Richtige Antwort:</strong> 25 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Im Dreieck ist α = 20°. Die Höhe <math><msub><mi>h</mi><mi>c</mi></msub></math> steht senkrecht auf c. Wie groß ist der Winkel x zwischen der Seite b und der Höhe?</p><details class="explainer-hint"><summary>Tipp</summary><p>Im linken Teildreieck kennst du zwei Winkel. Wie groß ist der Winkel am Fußpunkt der Höhe?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Im linken Teildreieck: α = 20°, am Fußpunkt 90°. x = 180° − 90° − 20°</li><li>Der Winkel x ist 70° groß.</li></ol><p><strong>Richtige Antwort:</strong> 70 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Im Dreieck ist α = 60°. Die Höhe <math><msub><mi>h</mi><mi>c</mi></msub></math> steht senkrecht auf c. Wie groß ist der Winkel x zwischen der Seite b und der Höhe?</p><details class="explainer-hint"><summary>Tipp</summary><p>Im linken Teildreieck kennst du zwei Winkel. Wie groß ist der Winkel am Fußpunkt der Höhe?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Im linken Teildreieck: α = 60°, am Fußpunkt 90°. x = 180° − 90° − 60°</li><li>Der Winkel x ist 30° groß.</li></ol><p><strong>Richtige Antwort:</strong> 30 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkel-pruefen-hoehe","given":{"a":{"int":[20,80],"step":5}},"where":["a != 45"],"task":{"text":"Im Dreieck ist α = {{a}}°. Die Höhe $h_c$ steht senkrecht auf c. Wie groß ist der Winkel x zwischen der Seite b und der Höhe?"},"answer":{"value":"90 - a","compare":{"number":{"format":"integer","unit":"°"}}},"mistakes":[{"value":"180 - a","message":"Du hast den rechten Winkel am Fußpunkt der Höhe vergessen. Das linke Teildreieck hat bei A, unten und bei C drei Winkel."},{"value":"a","message":"x ist nicht so groß wie α. Rechne im linken Teildreieck: Zusammen sind es 180°."}],"hint":"Im linken Teildreieck kennst du zwei Winkel. Wie groß ist der Winkel am Fußpunkt der Höhe?","steps":["Im linken Teildreieck: α = {{a}}°, am Fußpunkt 90°. x = 180° − 90° − {{a}}°","Der Winkel x ist {{answer}}° groß."]},"templates":{"de":{"task":"Im Dreieck ist α = ⟦a⟧°. Die Höhe \u003cmath>\u003cmsub>\u003cmi>h\u003c/mi>\u003cmi>c\u003c/mi>\u003c/msub>\u003c/math> steht senkrecht auf c. Wie groß ist der Winkel x zwischen der Seite b und der Höhe?","steps":["Im linken Teildreieck: α = ⟦a⟧°, am Fußpunkt 90°. x = 180° − 90° − ⟦a⟧°","Der Winkel x ist ⟦answer⟧° groß."],"hint":"Im linken Teildreieck kennst du zwei Winkel. Wie groß ist der Winkel am Fußpunkt der Höhe?","messages":["Du hast den rechten Winkel am Fußpunkt der Höhe vergessen. Das linke Teildreieck hat bei A, unten und bei C drei Winkel.","x ist nicht so groß wie α. Rechne im linken Teildreieck: Zusammen sind es 180°."]}},"data":{},"seeds":[1,2,3,4,5,6,12,14,19,31,32,41],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="8d9d3ea8" data-block-type="number" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="winkel-pruefen-wettbewerb">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkel-pruefen-wettbewerb" data-id="winkel-pruefen-wettbewerb" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In einem Dreieck ABC ist α = 70° und β = 50°. Die Winkelhalbierende von γ trifft die Seite c im Punkt D. Wie groß ist der Winkel bei D zwischen DA und DC?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/w2-winkelhalbierende-aufgabe.svg" alt="Ein Dreieck ABC mit den blauen Winkeln α bei A und β bei B. Die lila Winkelhalbierende geht von C zum Punkt D auf c. Bei D ist zwischen DA und DC ein oranger Winkel mit Fragezeichen markiert." loading="lazy" decoding="async"><figcaption><p>Die Winkelhalbierende teilt γ in zwei gleiche Winkel. Das Bild ist nicht maßstäblich.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-winkel-pruefen-wettbewerb" aria-describedby="frage-winkel-pruefen-wettbewerb-unit"> <span id="frage-winkel-pruefen-wettbewerb-unit">°</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 80 °</p>
+<p class="question-explanation">γ = 180° − 70° − 50° = 60°, die Hälfte ist 30°. Im Dreieck ADC gilt: Winkel bei D = 180° − 70° − 30° = 80°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.wikipedia.org/wiki/Winkelhalbierende" rel="noopener" title="Winkelhalbierende (Wikipedia)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkelhalbierende (Wikipedia)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 80 °</p>
+<p class="question-explanation">γ = 180° − 70° − 50° = 60°, die Hälfte ist 30°. Im Dreieck ADC gilt: Winkel bei D = 180° − 70° − 30° = 80°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.wikipedia.org/wiki/Winkelhalbierende" rel="noopener" title="Winkelhalbierende (Wikipedia)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkelhalbierende (Wikipedia)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkel-pruefen-wettbewerb","text":"In einem Dreieck ABC ist α = 70° und β = 50°. Die Winkelhalbierende von γ trifft die Seite c im Punkt D. Wie groß ist der Winkel bei D zwischen DA und DC?","explanation":"γ = 180° − 70° − 50° = 60°, die Hälfte ist 30°. Im Dreieck ADC gilt: Winkel bei D = 180° − 70° − 30° = 80°.","links":[{"title":"Winkelhalbierende (Wikipedia)","url":"https://de.wikipedia.org/wiki/Winkelhalbierende"}],"hint":"Berechne zuerst γ. Dann schau dir das Dreieck aus A, D und C an.","material":[{"type":"figure","image":"images/w2-winkelhalbierende-aufgabe.svg","alt":"Ein Dreieck ABC mit den blauen Winkeln α bei A und β bei B. Die lila Winkelhalbierende geht von C zum Punkt D auf c. Bei D ist zwischen DA und DC ein oranger Winkel mit Fragezeichen markiert.","caption":"Die Winkelhalbierende teilt γ in zwei gleiche Winkel. Das Bild ist nicht maßstäblich.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"number","answer":80,"tolerance":0,"unit":"°","mistakes":[{"answer":60,"message":"Das ist γ. Gefragt ist der Winkel bei D."},{"answer":90,"message":"Die Winkelhalbierende steht nur dann senkrecht auf c, wenn a und b gleich lang sind."},{"answer":30,"message":"Das ist die Hälfte von γ. Sie gehört zum Dreieck ADC – rechne dort weiter."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="8a3b324d" data-block-type="text" data-block-order="20">
+<div class="block-text"><p>Damit hast du das Kapitel zur Wahlaufgabe W2 geschafft: Du planst, prüfst und begründest Konstruktionen.
+Das war die letzte Seite dieser App: Du hast Flächen und Körper, Winkel, Symmetrie und die Wahlaufgabe W2 wiederholt. Die anderen Themen des Wettbewerbs übst du in den Apps <a href="https://rdmueller.github.io/mathe-wb8-prozent/" rel="noopener">Zuordnungen und Prozent</a>, <a href="https://rdmueller.github.io/mathe-wb8-terme/" rel="noopener">Brüche, Terme und Gleichungen</a> und <a href="https://rdmueller.github.io/mathe-wb8-zufall/" rel="noopener">Wahrscheinlichkeit</a>.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Geometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-geometrie","app":"Mathe-Wettbewerb 8: Geometrie","root":"../../","repository":"rdmueller/mathe-wb8-geometrie","revision":"a6c4104","page":{"title":"Winkel berechnen und Konstruktion prüfen","order":13}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../w2-konstruktionen/konstruktion-schritte/">Zurück: Schritte einer Konstruktion</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

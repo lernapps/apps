@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Baumdiagramm – Mathe-Wettbewerb 8: Wahrscheinlichkeit</title>
+    <meta name="description" content="Zwei Zufallsversuche nacheinander als Baumdiagramm zeichnen, jeden Ast mit seiner Wahrscheinlichkeit beschriften und prüfen, ob die Äste zusammen 1 ergeben." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../wahrscheinlichkeit/baumdiagramm/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../wahrscheinlichkeit/">Wahrscheinlichkeit</a></li><li aria-current="page">Baumdiagramm</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Baumdiagramm</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../wahrscheinlichkeit/baumdiagramm/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧wahrscheinlichkeit/baumdiagramm/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-zufall","page":{"id":"baumdiagramm","title":"Baumdiagramm","exercises":[{"id":"baumdiagramm-start","section":"start","numbered":false},{"id":"baumdiagramm-ablesen","section":"uebung","numbered":false},{"id":"baumdiagramm-ergaenzen","section":"uebung","numbered":true},{"id":"baumdiagramm-summe","section":"uebung","numbered":false},{"id":"baumdiagramm-pfade","section":"uebung","numbered":true},{"id":"baumdiagramm-gluecksrad","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"wahrscheinlichkeit/baumdiagramm/tutor/","markdown":"wahrscheinlichkeit/baumdiagramm/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Ein Ast für jedes Ergebnis</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Zusammen immer 1</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="69617049" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann ein Baumdiagramm mit allen Wahrscheinlichkeiten zeichnen. Jeder Ast trägt eine
+Wahrscheinlichkeit, wie du sie auf der vorigen Seite berechnet hast.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="463e8251" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="baumdiagramm-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-baumdiagramm-start" data-id="baumdiagramm-start" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du wirfst eine Münze zweimal nacheinander und notierst K für Kopf und Z für Zahl, zum Beispiel KZ. Wie viele verschiedene Ergebnisse sind möglich?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-baumdiagramm-start">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 4</p>
+<p class="question-explanation">Möglich sind KK, KZ, ZK und ZZ, also 4 Ergebnisse.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 4</p>
+<p class="question-explanation">Möglich sind KK, KZ, ZK und ZZ, also 4 Ergebnisse.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"baumdiagramm-start","text":"Du wirfst eine Münze zweimal nacheinander und notierst K für Kopf und Z für Zahl, zum Beispiel KZ. Wie viele verschiedene Ergebnisse sind möglich?","explanation":"Möglich sind KK, KZ, ZK und ZZ, also 4 Ergebnisse.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"hint":"Schreib zuerst alle Ergebnisse auf, die mit K beginnen.","type":"number","answer":4,"tolerance":0,"mistakes":[{"answer":3,"message":"KZ und ZK sind verschieden: Einmal liegt beim ersten Wurf Kopf oben, einmal Zahl."},{"answer":2,"message":"Du hast nur einen Wurf betrachtet. Es sind zwei Würfe."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Ein Ast für jedes Ergebnis</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="36f5f33a" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Zwei Würfe nacheinander sind ein <strong>zweistufiger Zufallsversuch</strong>. Ein <strong>Baumdiagramm</strong> zeigt ihn von oben
+nach unten. Vom Startpunkt geht für jedes Ergebnis des 1. Wurfs ein <strong>Ast</strong> ab. Am Ende jedes Astes beginnt
+der 2. Wurf mit neuen Ästen. An jeden Ast schreibst du seine Wahrscheinlichkeit.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="1224c7d9" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/wahrscheinlichkeit-baum-muenze.svg" alt="Ein Baumdiagramm von oben nach unten. Vom Startpunkt gehen zwei Äste zu K und Z, von dort je zwei Äste zu K und Z. An jedem Ast steht 1/2. Unten stehen KK, KZ, ZK und ZZ." loading="lazy" decoding="async"><figcaption><p>Jeder Weg von oben nach unten heißt Pfad. Die 4 Pfade sind die 4 Ergebnisse aus der Aufgabe oben.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="2a89548f" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mrow><mi mathvariant="normal">Ω</mi><mspace></mspace></mrow><mo>=</mo><mrow><mo fence="true" form="prefix" stretchy="false">{</mo><mtext>KK</mtext><mo separator="true">;</mo><mtext>KZ</mtext><mo separator="true">;</mo><mtext>ZK</mtext><mo separator="true">;</mo><mtext>ZZ</mtext><mo fence="true" form="postfix" stretchy="false">}</mo></mrow></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="e232aeaf" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Ein Wurf endet sicher mit K oder mit Z. Darum ergeben die Äste, die von einem Punkt (einem <strong>Knoten</strong>)
+abgehen, zusammen 1:</p></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="f025a1c5" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>=</mo><mn>1</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="5537f26d" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Eine Wahrscheinlichkeit kannst du als Bruch, als Dezimalzahl oder in Prozent schreiben: 1/4 = 0,25 = 25 %. Zusammen 1 heißt dann zusammen 100 %.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="8e1d47d2" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Urne mit Zurücklegen</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="455dc4b1" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>In einer Urne liegen 3 rote (r) und 2 blaue (b) Kugeln. Du ziehst eine, legst sie zurück und ziehst
+noch einmal. Beim 1. Zug ist <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>r</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></math> und <math><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>b</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac></mrow></math>. Weil die Kugel zurückkommt,
+sieht die Urne beim 2. Zug genauso aus: An der 2. Stufe stehen wieder dieselben Brüche.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="1b74f9ed" data-block-type="figure" data-block-order="11">
+<figure class="block-figure"><img src="../../images/wahrscheinlichkeit-baum-urne.svg" alt="Ein Baumdiagramm mit zwei Stufen. An jedem Ast r steht 3/5, an jedem Ast b steht 2/5. Unten stehen rr, rb, br und bb." loading="lazy" decoding="async"><figcaption><p>An jedem Knoten gehen ein Ast r und ein Ast b ab.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="9439b6b3" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><mn>1</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="94d21021" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Probe – An jedem Knoten ergeben die Äste zusammen 1. Der Baum ist vollständig beschriftet.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Zusammen immer 1</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="424af38c" data-block-type="note" data-block-order="14">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="c0e288c5" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Prüfe an jedem Knoten: Die Wahrscheinlichkeiten der abgehenden Äste ergeben zusammen genau 1. Zwei
+Äste heißen nicht „je 1/2“ – das gilt nur, wenn beide Ergebnisse gleich wahrscheinlich sind. Und KZ und
+ZK sind zwei verschiedene Pfade.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="6549de67" data-block-type="single-choice" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="baumdiagramm-ablesen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-baumdiagramm-ablesen" data-id="baumdiagramm-ablesen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Aus einer Urne mit 2 roten und 3 blauen Kugeln wird zweimal mit Zurücklegen gezogen. Welche Wahrscheinlichkeit gehört an den Ast mit dem Fragezeichen?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/wahrscheinlichkeit-baum-frage.svg" alt="Ein Baumdiagramm mit zwei Stufen r und b. Am Ast b der 2. Stufe ganz rechts steht ein Fragezeichen, an den übrigen Ästen r 2/5 und b 3/5." loading="lazy" decoding="async"><figcaption><p>Der Ast mit dem Fragezeichen gehört zum Pfad bb.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-ablesen" value="0"> <span>2/5</span></label>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-ablesen" value="1"> <span>1/2</span></label>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-ablesen" value="2"> <span>3/5</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>2/5</strong></p><p>2/5 gehört zu Rot. Der Ast führt aber zu b.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1/2</strong></p><p>Es gibt mehr blaue als rote Kugeln, die Farben sind nicht gleich wahrscheinlich.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>3/5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Kugel wurde zurückgelegt, also sind wieder 3 von 5 Kugeln blau.</p></li>
+</ul>
+<p class="question-explanation">Mit Zurücklegen ist die Urne bei jedem Zug gleich, und 2/5 + 3/5 = 1.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>2/5</strong></p><p>2/5 gehört zu Rot. Der Ast führt aber zu b.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>1/2</strong></p><p>Es gibt mehr blaue als rote Kugeln, die Farben sind nicht gleich wahrscheinlich.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>3/5</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Kugel wurde zurückgelegt, also sind wieder 3 von 5 Kugeln blau.</p></li>
+</ul>
+<p class="question-explanation">Mit Zurücklegen ist die Urne bei jedem Zug gleich, und 2/5 + 3/5 = 1.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"baumdiagramm-ablesen","text":"Aus einer Urne mit 2 roten und 3 blauen Kugeln wird zweimal mit Zurücklegen gezogen. Welche Wahrscheinlichkeit gehört an den Ast mit dem Fragezeichen?","explanation":"Mit Zurücklegen ist die Urne bei jedem Zug gleich, und 2/5 + 3/5 = 1.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"material":[{"type":"figure","image":"images/wahrscheinlichkeit-baum-frage.svg","alt":"Ein Baumdiagramm mit zwei Stufen r und b. Am Ast b der 2. Stufe ganz rechts steht ein Fragezeichen, an den übrigen Ästen r 2/5 und b 3/5.","caption":"Der Ast mit dem Fragezeichen gehört zum Pfad bb.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"2/5","correct":false,"info":"2/5 gehört zu Rot. Der Ast führt aber zu b."},{"text":"1/2","correct":false,"info":"Es gibt mehr blaue als rote Kugeln, die Farben sind nicht gleich wahrscheinlich."},{"text":"3/5","correct":true,"info":"Die Kugel wurde zurückgelegt, also sind wieder 3 von 5 Kugeln blau."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="b1a173c3" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="baumdiagramm-ergaenzen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein geworfener Flaschendeckel landet mit der Wahrscheinlichkeit 90 % mit der Öffnung nach oben. Im Baumdiagramm gehen zwei Äste ab: „oben“ und „nicht oben“. Welche Wahrscheinlichkeit gehört an „nicht oben“? Gib sie in Prozent an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Äste an einem Knoten ergeben zusammen 1, also 100 %.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Am Ast „oben“ stehen 90 %. Beide Äste zusammen ergeben 100 %.</li><li>100 % − 90 % = 10 %</li></ol><p><strong>Richtige Antwort:</strong> 10 %</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein geworfener Flaschendeckel landet mit der Wahrscheinlichkeit 70 % mit der Öffnung nach oben. Im Baumdiagramm gehen zwei Äste ab: „oben“ und „nicht oben“. Welche Wahrscheinlichkeit gehört an „nicht oben“? Gib sie in Prozent an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Äste an einem Knoten ergeben zusammen 1, also 100 %.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Am Ast „oben“ stehen 70 %. Beide Äste zusammen ergeben 100 %.</li><li>100 % − 70 % = 30 %</li></ol><p><strong>Richtige Antwort:</strong> 30 %</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein geworfener Flaschendeckel landet mit der Wahrscheinlichkeit 20 % mit der Öffnung nach oben. Im Baumdiagramm gehen zwei Äste ab: „oben“ und „nicht oben“. Welche Wahrscheinlichkeit gehört an „nicht oben“? Gib sie in Prozent an.</p><details class="explainer-hint"><summary>Tipp</summary><p>Die Äste an einem Knoten ergeben zusammen 1, also 100 %.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Am Ast „oben“ stehen 20 %. Beide Äste zusammen ergeben 100 %.</li><li>100 % − 20 % = 80 %</li></ol><p><strong>Richtige Antwort:</strong> 80 %</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"baumdiagramm-ergaenzen","given":{"p":{"int":[10,90],"step":5}},"where":["p != 50"],"task":{"text":"Ein geworfener Flaschendeckel landet mit der Wahrscheinlichkeit {{p}} % mit der Öffnung nach oben. Im Baumdiagramm gehen zwei Äste ab: „oben“ und „nicht oben“. Welche Wahrscheinlichkeit gehört an „nicht oben“? Gib sie in Prozent an."},"answer":{"value":"100 - p","compare":{"number":{"format":"percent","decimals":0}}},"mistakes":[{"value":"p","message":"Das ist der Ast „oben“. Beide Äste zusammen ergeben 100 %."},{"value":"50","message":"Zwei Äste heißen nicht halb-halb. Rechne mit den {{p}} %."}],"hint":"Die Äste an einem Knoten ergeben zusammen 1, also 100 %.","steps":["Am Ast „oben“ stehen {{p}} %. Beide Äste zusammen ergeben 100 %.","100 % − {{p}} % = {{answer}} %"]},"templates":{"de":{"task":"Ein geworfener Flaschendeckel landet mit der Wahrscheinlichkeit ⟦p⟧ % mit der Öffnung nach oben. Im Baumdiagramm gehen zwei Äste ab: „oben“ und „nicht oben“. Welche Wahrscheinlichkeit gehört an „nicht oben“? Gib sie in Prozent an.","steps":["Am Ast „oben“ stehen ⟦p⟧ %. Beide Äste zusammen ergeben 100 %.","100 % − ⟦p⟧ % = ⟦answer⟧ %"],"hint":"Die Äste an einem Knoten ergeben zusammen 1, also 100 %.","messages":["Das ist der Ast „oben“. Beide Äste zusammen ergeben 100 %.","Zwei Äste heißen nicht halb-halb. Rechne mit den ⟦p⟧ %."]}},"data":{},"seeds":[1,2,4,5,6,9,12,13,16,19,24,26,37,44,48,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="79f80c3e" data-block-type="true-false" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="baumdiagramm-summe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-baumdiagramm-summe" data-id="baumdiagramm-summe" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">An den drei Ästen eines Knotens stehen 1/2, 1/3 und 1/4. Dieser Baum kann richtig beschriftet sein.</legend>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-summe" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-summe" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Zum Addieren bringst du die Brüche auf den Hauptnenner 12 (kennst du aus Klasse 6; zum Wiederholen: Seite „Brüche addieren und subtrahieren“ im Kapitel Bruchrechnung). 1/2 + 1/3 + 1/4 = 6/12 + 4/12 + 3/12 = 13/12. Das ist mehr als 1.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Zum Addieren bringst du die Brüche auf den Hauptnenner 12 (kennst du aus Klasse 6; zum Wiederholen: Seite „Brüche addieren und subtrahieren“ im Kapitel Bruchrechnung). 1/2 + 1/3 + 1/4 = 6/12 + 4/12 + 3/12 = 13/12. Das ist mehr als 1.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"baumdiagramm-summe","text":"An den drei Ästen eines Knotens stehen 1/2, 1/3 und 1/4. Dieser Baum kann richtig beschriftet sein.","explanation":"Zum Addieren bringst du die Brüche auf den Hauptnenner 12 (kennst du aus Klasse 6; zum Wiederholen: Seite „Brüche addieren und subtrahieren“ im Kapitel Bruchrechnung). 1/2 + 1/3 + 1/4 = 6/12 + 4/12 + 3/12 = 13/12. Das ist mehr als 1.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="a1a0f445" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="baumdiagramm-pfade">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Du wirfst eine Münze und drehst danach ein Glücksrad mit 4 gleich großen Feldern. Wie viele Pfade hat das vollständige Baumdiagramm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Zeichne die 1. Stufe. Wie viele Äste hängen an jedem ihrer Enden?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Stufe: 2 Äste (K und Z). An jedem Ende hängen 4 Äste für das Glücksrad.</li><li>2 · 4 = 8 Pfade.</li></ol><p><strong>Richtige Antwort:</strong> 8</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Du wirfst eine Münze und drehst danach ein Glücksrad mit 5 gleich großen Feldern. Wie viele Pfade hat das vollständige Baumdiagramm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Zeichne die 1. Stufe. Wie viele Äste hängen an jedem ihrer Enden?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Stufe: 2 Äste (K und Z). An jedem Ende hängen 5 Äste für das Glücksrad.</li><li>2 · 5 = 10 Pfade.</li></ol><p><strong>Richtige Antwort:</strong> 10</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Du wirfst eine Münze und drehst danach ein Glücksrad mit 8 gleich großen Feldern. Wie viele Pfade hat das vollständige Baumdiagramm?</p><details class="explainer-hint"><summary>Tipp</summary><p>Zeichne die 1. Stufe. Wie viele Äste hängen an jedem ihrer Enden?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1. Stufe: 2 Äste (K und Z). An jedem Ende hängen 8 Äste für das Glücksrad.</li><li>2 · 8 = 16 Pfade.</li></ol><p><strong>Richtige Antwort:</strong> 16</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"baumdiagramm-pfade","given":{"n":{"int":[3,8]}},"task":{"text":"Du wirfst eine Münze und drehst danach ein Glücksrad mit {{n}} gleich großen Feldern. Wie viele Pfade hat das vollständige Baumdiagramm?"},"answer":{"value":"2 * n","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"n + 2","message":"Du hast addiert. An jedem der 2 Münz-Äste hängen {{n}} Glücksrad-Äste."},{"value":"n","message":"So viele Äste hat nur ein Knoten. Die 2. Stufe beginnt an beiden Münz-Ästen."}],"hint":"Zeichne die 1. Stufe. Wie viele Äste hängen an jedem ihrer Enden?","steps":["1. Stufe: 2 Äste (K und Z). An jedem Ende hängen {{n}} Äste für das Glücksrad.","2 · {{n}} = {{answer}} Pfade."]},"templates":{"de":{"task":"Du wirfst eine Münze und drehst danach ein Glücksrad mit ⟦n⟧ gleich großen Feldern. Wie viele Pfade hat das vollständige Baumdiagramm?","steps":["1. Stufe: 2 Äste (K und Z). An jedem Ende hängen ⟦n⟧ Äste für das Glücksrad.","2 · ⟦n⟧ = ⟦answer⟧ Pfade."],"hint":"Zeichne die 1. Stufe. Wie viele Äste hängen an jedem ihrer Enden?","messages":["Du hast addiert. An jedem der 2 Münz-Äste hängen ⟦n⟧ Glücksrad-Äste.","So viele Äste hat nur ein Knoten. Die 2. Stufe beginnt an beiden Münz-Ästen."]}},"data":{},"seeds":[1,4,6,7,10,15],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="a48bd1f4" data-block-type="single-choice" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="baumdiagramm-gluecksrad">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-baumdiagramm-gluecksrad" data-id="baumdiagramm-gluecksrad" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Das Glücksrad wird zweimal gedreht. Du notierst nur T für Treffer, wenn die Zahl größer als 5 ist, sonst N für Niete. Wie ist der Baum richtig beschriftet?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/wahrscheinlichkeit-gluecksrad.svg" alt="Ein Glücksrad mit 8 gleich großen Feldern, beschriftet mit 1 bis 8, oben ein Zeiger." loading="lazy" decoding="async"><figcaption><p>Alle 8 Felder sind gleich groß.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-gluecksrad" value="0"> <span>An jedem Knoten T 3/8 und N 5/8</span></label>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-gluecksrad" value="1"> <span>An jedem Knoten T 1/2 und N 1/2</span></label>
+<label class="question-option"><input type="radio" name="frage-baumdiagramm-gluecksrad" value="2"> <span>1. Stufe T 3/8 und N 5/8, 2. Stufe T 3/16 und N 5/16</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>An jedem Knoten T 3/8 und N 5/8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Größer als 5 sind 6, 7 und 8: 3 von 8 Feldern, bei jedem Drehen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>An jedem Knoten T 1/2 und N 1/2</strong></p><p>T und N sind nicht gleich wahrscheinlich: N hat mehr Felder.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1. Stufe T 3/8 und N 5/8, 2. Stufe T 3/16 und N 5/16</strong></p><p>3/16 und 5/16 ergeben zusammen nur 1/2, nicht 1.</p></li>
+</ul>
+<p class="question-explanation">Jede Stufe ist „günstige durch alle“: T 3/8, N 5/8.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>An jedem Knoten T 3/8 und N 5/8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Größer als 5 sind 6, 7 und 8: 3 von 8 Feldern, bei jedem Drehen.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>An jedem Knoten T 1/2 und N 1/2</strong></p><p>T und N sind nicht gleich wahrscheinlich: N hat mehr Felder.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1. Stufe T 3/8 und N 5/8, 2. Stufe T 3/16 und N 5/16</strong></p><p>3/16 und 5/16 ergeben zusammen nur 1/2, nicht 1.</p></li>
+</ul>
+<p class="question-explanation">Jede Stufe ist „günstige durch alle“: T 3/8, N 5/8.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"baumdiagramm-gluecksrad","text":"Das Glücksrad wird zweimal gedreht. Du notierst nur T für Treffer, wenn die Zahl größer als 5 ist, sonst N für Niete. Wie ist der Baum richtig beschriftet?","explanation":"Jede Stufe ist „günstige durch alle“: T 3/8, N 5/8.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"material":[{"type":"figure","image":"images/wahrscheinlichkeit-gluecksrad.svg","alt":"Ein Glücksrad mit 8 gleich großen Feldern, beschriftet mit 1 bis 8, oben ein Zeiger.","caption":"Alle 8 Felder sind gleich groß.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"An jedem Knoten T 3/8 und N 5/8","correct":true,"info":"Größer als 5 sind 6, 7 und 8: 3 von 8 Feldern, bei jedem Drehen."},{"text":"An jedem Knoten T 1/2 und N 1/2","correct":false,"info":"T und N sind nicht gleich wahrscheinlich: N hat mehr Felder."},{"text":"1. Stufe T 3/8 und N 5/8, 2. Stufe T 3/16 und N 5/16","correct":false,"info":"3/16 und 5/16 ergeben zusammen nur 1/2, nicht 1."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="2c9e92b5" data-block-type="text" data-block-order="21">
+<div class="block-text"><p>Als Nächstes rechnest du mit den Ästen deines Baums die Wahrscheinlichkeit eines ganzen Pfades aus.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-zufall","app":"Mathe-Wettbewerb 8: Wahrscheinlichkeit","root":"../../","repository":"rdmueller/mathe-wb8-zufall","revision":"f4f3c21","page":{"title":"Baumdiagramm","order":1}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../wahrscheinlichkeit/laplace/">Zurück: Ergebnisraum und Laplace-Wahrscheinlichkeit</a><a rel="next" href="../../wahrscheinlichkeit/pfadregeln/">Weiter: Pfadregeln</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

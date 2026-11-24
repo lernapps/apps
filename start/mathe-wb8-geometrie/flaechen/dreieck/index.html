@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Flächeninhalt und Umfang des Dreiecks – Mathe-Wettbewerb 8: Geometrie</title>
+    <meta name="description" content="Die Dreiecksformel aus dem Rechteck herleiten, die Höhe finden – auch außen – und Fläche und Umfang berechnen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../flaechen/dreieck/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../flaechen/">Flächeninhalt, Umfang und Volumen</a></li><li aria-current="page">Flächeninhalt und Umfang des Dreiecks</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Flächeninhalt und Umfang des Dreiecks</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../flaechen/dreieck/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧flaechen/dreieck/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-geometrie","page":{"id":"dreieck","title":"Flächeninhalt und Umfang des Dreiecks","exercises":[{"id":"dreieck-start","section":"start","numbered":false},{"id":"dreieck-welche-hoehe","section":"uebung","numbered":false},{"id":"dreieck-drei-hoehen","section":"uebung","numbered":false},{"id":"dreieck-flaeche","section":"uebung","numbered":true},{"id":"dreieck-hoehe-aussen","section":"uebung","numbered":true},{"id":"dreieck-umfang","section":"uebung","numbered":true},{"id":"dreieck-rest","section":"uebung","numbered":true},{"id":"dreieck-rueckwaerts","section":"uebung","numbered":true}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"flaechen/dreieck/tutor/","markdown":"flaechen/dreieck/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Jedes Dreieck ist ein halbes Rechteck</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Die Höhe ist meist keine Seite</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="e28f3181" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann Flächeninhalt und Umfang von Dreiecken berechnen und die Höhe erkennen, auch wenn sie
+außen liegt. Du brauchst dafür nur die Rechteckformel <math><mrow><mi>A</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi></mrow></math>.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="51e7e120" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="dreieck-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-dreieck-start" data-id="dreieck-start" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Rechteck ist 6 cm lang und 4 cm breit. Eine Diagonale teilt es in zwei gleiche Dreiecke. Wie groß ist eines davon?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/flaechen-rechteck-halbiert.svg" alt="Ein Rechteck, 6 cm lang und 4 cm breit, durch eine Diagonale in zwei Dreiecke geteilt." loading="lazy" decoding="async"><figcaption><p>Die orange Diagonale teilt das Rechteck in zwei Dreiecke, die genau aufeinander passen.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-dreieck-start" aria-describedby="frage-dreieck-start-unit"> <span id="frage-dreieck-start-unit">cm²</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 12 cm²</p>
+<p class="question-explanation">Das Rechteck hat 6 · 4 = 24 cm². Die zwei Dreiecke sind gleich groß, also hat jedes 24 : 2 = 12 cm².</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/36520/flaechenformeln-ebener-figuren" rel="noopener" title="Flächenformeln ebener Figuren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Flächenformeln ebener Figuren (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 12 cm²</p>
+<p class="question-explanation">Das Rechteck hat 6 · 4 = 24 cm². Die zwei Dreiecke sind gleich groß, also hat jedes 24 : 2 = 12 cm².</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/36520/flaechenformeln-ebener-figuren" rel="noopener" title="Flächenformeln ebener Figuren (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Flächenformeln ebener Figuren (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"dreieck-start","text":"Ein Rechteck ist 6 cm lang und 4 cm breit. Eine Diagonale teilt es in zwei gleiche Dreiecke. Wie groß ist eines davon?","explanation":"Das Rechteck hat 6 · 4 = 24 cm². Die zwei Dreiecke sind gleich groß, also hat jedes 24 : 2 = 12 cm².","links":[{"title":"Flächenformeln ebener Figuren (Serlo)","url":"https://de.serlo.org/mathe/36520/flaechenformeln-ebener-figuren"}],"hint":"Rechne erst die Fläche des Rechtecks aus.","material":[{"type":"figure","image":"images/flaechen-rechteck-halbiert.svg","alt":"Ein Rechteck, 6 cm lang und 4 cm breit, durch eine Diagonale in zwei Dreiecke geteilt.","caption":"Die orange Diagonale teilt das Rechteck in zwei Dreiecke, die genau aufeinander passen.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"number","answer":12,"tolerance":0,"unit":"cm²","mistakes":[{"answer":24,"message":"24 cm² ist das ganze Rechteck. Gefragt ist eines der zwei gleichen Dreiecke."},{"answer":10,"message":"Du hast 6 + 4 gerechnet. Für eine Fläche multiplizierst du Länge und Breite."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Jedes Dreieck ist ein halbes Rechteck</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="d7c7a1a8" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Das Dreieck oben hat einen rechten Winkel. Der Trick klappt aber bei jedem Dreieck: Zeichne ein Rechteck
+mit derselben Grundseite <math><mi>g</mi></math> darum. Seine Breite ist die <strong>Höhe</strong> <math><mi>h</mi></math>, der Abstand der Spitze von der
+Grundseite, im rechten Winkel gemessen. Die Höhe teilt das Rechteck in zwei kleinere Rechtecke. Jedes wird
+von einer Dreiecksseite halbiert – genau wie in der Aufgabe oben.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="a2b75c9a" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/flaechen-dreieck-im-rechteck.svg" alt="Ein blaues Dreieck in einem gestrichelten Rechteck. Die orange gestrichelte Höhe h steht senkrecht auf der Grundseite g und teilt das Rechteck in Teil 1 und Teil 2." loading="lazy" decoding="async"><figcaption><p>Die Höhe teilt das Rechteck in Teil 1 und Teil 2. In jedem Teil ist genau die Hälfte blau.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="c92afed6" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>g</mi><mo>⋅</mo><mi>h</mi></mrow><mn>2</mn></mfrac><mspace width="2em"></mspace><mi>u</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="cd280312" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Der <strong>Umfang</strong> <math><mi>u</mi></math> ist wie beim Rechteck der Weg einmal um die Figur: alle drei Seiten zusammen.
+Jede der drei Seiten kann die Grundseite sein, darum hat jedes Dreieck <strong>drei Höhen</strong>. Hat das Dreieck
+einen stumpfen Winkel (größer als 90°), liegen zwei davon außen: Du verlängerst die Grundseite um ein Stück
+<math><mi>x</mi></math> und misst im rechten Winkel bis zur Spitze.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="6a369c8e" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><img src="../../images/flaechen-dreieck-hoehen.svg" alt="Links ein spitzwinkliges Dreieck, die Höhe h liegt innen. Rechts ein stumpfwinkliges Dreieck, die Grundseite g ist um das Stück x gestrichelt verlängert, die Höhe h liegt außen." loading="lazy" decoding="async"><figcaption><p>Rechts liegt die Höhe außen. Das blaue Dreieck ist das große rechtwinklige Dreieck über g + x minus das kleine über x.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="6e63fb09" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>g</mi><mo>+</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>⋅</mo><mi>h</mi></mrow><mn>2</mn></mfrac><mo>−</mo><mfrac><mrow><mi>x</mi><mo>⋅</mo><mi>h</mi></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mi>g</mi><mo>⋅</mo><mi>h</mi></mrow><mn>2</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/7" data-block-id="764b8aec" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Die Formel bleibt also dieselbe. Rückwärts gerechnet ergibt sie die Höhe, wenn <math><mi>A</mi></math> und <math><mi>g</mi></math> bekannt sind.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/8" data-block-id="b6c54af4" data-block-type="formula" data-block-order="10">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>A</mi></mrow><mi>g</mi></mfrac></mrow></math></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="8fe236af" data-block-type="example" data-block-order="11">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Ein Garten mit einer zu vielen Angabe</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="89ff1d17" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Ein dreieckiges Beet hat eine Seite von 4 m. Die Höhe zu dieser Seite ist 12 m und liegt außen. Die
+anderen Seiten sind 13 m und 15 m lang. Gesucht sind Fläche und Umfang. Die 13 m und 15 m sind schräg
+und keine Höhe: Du brauchst sie nur für den Umfang.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="c8a7ff49" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>4</mn><mo>⋅</mo><mn>12</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>24</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="62f48865" data-block-type="formula" data-block-order="14">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>u</mi><mo>=</mo><mn>4</mn><mo>+</mo><mn>13</mn><mo>+</mo><mn>15</mn><mo>=</mo><mn>32</mn></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="942bce8f" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Antwort – Das Beet hat 24 m² Fläche und 32 m Umfang.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Die Höhe ist meist keine Seite</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="7e729fe5" data-block-type="note" data-block-order="16">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="b67c80cf" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Nur im rechtwinkligen Dreieck ist eine Seite zugleich Höhe. Sonst ist eine schräge Seite nie die
+Höhe – auch wenn ihre Länge in der Aufgabe steht. Und „senkrecht“ heißt: im rechten Winkel zur
+Grundseite, nicht unbedingt nach unten.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="0b84b766" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="dreieck-welche-hoehe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-dreieck-welche-hoehe" data-id="dreieck-welche-hoehe" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die Seite c liegt der Ecke C gegenüber. Welche Strecke ist die Höhe zur Seite c?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/flaechen-welche-hoehe.svg" alt="Ein Dreieck ABC, die Seite c liegt schräg unten. Von C aus gehen drei gestrichelte Strecken 1, 2 und 3 zur Seite c." loading="lazy" decoding="async"><figcaption><p>Alle drei Strecken beginnen bei C und enden auf der Seite c.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-dreieck-welche-hoehe" value="0"> <span>Strecke 1</span></label>
+<label class="question-option"><input type="radio" name="frage-dreieck-welche-hoehe" value="1"> <span>Strecke 2</span></label>
+<label class="question-option"><input type="radio" name="frage-dreieck-welche-hoehe" value="2"> <span>Strecke 3</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Strecke 1</strong></p><p>Strecke 1 geht genau nach unten. Weil c schräg liegt, trifft sie c aber nicht im rechten Winkel.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Strecke 2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Strecke 2 trifft die Seite c im rechten Winkel. Sie ist der kürzeste Weg von C zur Seite c.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Strecke 3</strong></p><p>Strecke 3 endet in der Mitte von c, sie heißt Seitenhalbierende. Sie trifft c nicht im rechten Winkel.</p></li>
+</ul>
+<p class="question-explanation">Die Höhe zur Seite c ist die Strecke von C, die senkrecht auf c steht.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.wikipedia.org/wiki/H%C3%B6he_%28Geometrie%29" rel="noopener" title="Höhe (Geometrie) (Wikipedia)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Höhe (Geometrie) (Wikipedia)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Strecke 1</strong></p><p>Strecke 1 geht genau nach unten. Weil c schräg liegt, trifft sie c aber nicht im rechten Winkel.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Strecke 2</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Strecke 2 trifft die Seite c im rechten Winkel. Sie ist der kürzeste Weg von C zur Seite c.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Strecke 3</strong></p><p>Strecke 3 endet in der Mitte von c, sie heißt Seitenhalbierende. Sie trifft c nicht im rechten Winkel.</p></li>
+</ul>
+<p class="question-explanation">Die Höhe zur Seite c ist die Strecke von C, die senkrecht auf c steht.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.wikipedia.org/wiki/H%C3%B6he_%28Geometrie%29" rel="noopener" title="Höhe (Geometrie) (Wikipedia)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Höhe (Geometrie) (Wikipedia)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"dreieck-welche-hoehe","text":"Die Seite c liegt der Ecke C gegenüber. Welche Strecke ist die Höhe zur Seite c?","explanation":"Die Höhe zur Seite c ist die Strecke von C, die senkrecht auf c steht.","links":[{"title":"Höhe (Geometrie) (Wikipedia)","url":"https://de.wikipedia.org/wiki/H%C3%B6he_%28Geometrie%29"}],"material":[{"type":"figure","image":"images/flaechen-welche-hoehe.svg","alt":"Ein Dreieck ABC, die Seite c liegt schräg unten. Von C aus gehen drei gestrichelte Strecken 1, 2 und 3 zur Seite c.","caption":"Alle drei Strecken beginnen bei C und enden auf der Seite c.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"Strecke 1","correct":false,"info":"Strecke 1 geht genau nach unten. Weil c schräg liegt, trifft sie c aber nicht im rechten Winkel."},{"text":"Strecke 2","correct":true,"info":"Strecke 2 trifft die Seite c im rechten Winkel. Sie ist der kürzeste Weg von C zur Seite c."},{"text":"Strecke 3","correct":false,"info":"Strecke 3 endet in der Mitte von c, sie heißt Seitenhalbierende. Sie trifft c nicht im rechten Winkel."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="500d0e6a" data-block-type="true-false" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="dreieck-drei-hoehen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-dreieck-drei-hoehen" data-id="dreieck-drei-hoehen" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In einem stumpfwinkligen Dreieck liegen alle drei Höhen innen.</legend>
+<label class="question-option"><input type="radio" name="frage-dreieck-drei-hoehen" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-dreieck-drei-hoehen" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Bei einem stumpfen Winkel liegen zwei Höhen außen. Dafür verlängert man die Grundseite.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Bei einem stumpfen Winkel liegen zwei Höhen außen. Dafür verlängert man die Grundseite.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"dreieck-drei-hoehen","text":"In einem stumpfwinkligen Dreieck liegen alle drei Höhen innen.","explanation":"Bei einem stumpfen Winkel liegen zwei Höhen außen. Dafür verlängert man die Grundseite.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="16ed81d5" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="dreieck-flaeche">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Dreieck hat die Grundseite g = 10 cm und die Höhe h = 5 cm. Wie groß ist sein Flächeninhalt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst g · h. Das ist das Rechteck um das Dreieck.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>10</mn><mo>⋅</mo><mn>5</mn></mrow><mn>2</mn></mfrac></mrow></math></li><li>Das Dreieck hat einen Flächeninhalt von 25 cm².</li></ol><p><strong>Richtige Antwort:</strong> 25 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Dreieck hat die Grundseite g = 7 cm und die Höhe h = 6 cm. Wie groß ist sein Flächeninhalt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst g · h. Das ist das Rechteck um das Dreieck.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>7</mn><mo>⋅</mo><mn>6</mn></mrow><mn>2</mn></mfrac></mrow></math></li><li>Das Dreieck hat einen Flächeninhalt von 21 cm².</li></ol><p><strong>Richtige Antwort:</strong> 21 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Dreieck hat die Grundseite g = 14 cm und die Höhe h = 13 cm. Wie groß ist sein Flächeninhalt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne erst g · h. Das ist das Rechteck um das Dreieck.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>14</mn><mo>⋅</mo><mn>13</mn></mrow><mn>2</mn></mfrac></mrow></math></li><li>Das Dreieck hat einen Flächeninhalt von 91 cm².</li></ol><p><strong>Richtige Antwort:</strong> 91 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"dreieck-flaeche","given":{"g":{"int":[3,20]},"h":{"int":[3,20]}},"where":["decimals(g * h / 2) == 0"],"task":{"text":"Ein Dreieck hat die Grundseite g = {{g}} cm und die Höhe h = {{h}} cm. Wie groß ist sein Flächeninhalt?"},"answer":{"value":"g * h / 2","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"g * h","message":"Das ist das Rechteck um das Dreieck. Das Dreieck ist nur die Hälfte davon: Teile noch durch 2."},{"value":"(g + h) / 2","message":"Du hast g und h addiert. Für eine Fläche multiplizierst du Grundseite und Höhe."}],"hint":"Rechne erst g · h. Das ist das Rechteck um das Dreieck.","steps":["$A = \\frac{{{g}} \\cdot {{h}}}{2}$","Das Dreieck hat einen Flächeninhalt von {{answer}} cm²."]},"templates":{"de":{"task":"Ein Dreieck hat die Grundseite g = ⟦g⟧ cm und die Höhe h = ⟦h⟧ cm. Wie groß ist sein Flächeninhalt?","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦g⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mrow>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/mrow>\u003c/math>","Das Dreieck hat einen Flächeninhalt von ⟦answer⟧ cm²."],"hint":"Rechne erst g · h. Das ist das Rechteck um das Dreieck.","messages":["Das ist das Rechteck um das Dreieck. Das Dreieck ist nur die Hälfte davon: Teile noch durch 2.","Du hast g und h addiert. Für eine Fläche multiplizierst du Grundseite und Höhe."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,41,45,46,47,48,49,52,53,54,55,56,57,59,60,61,63,64,66,67,68,69,70,71,72,73,74,75,76,77],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="ad9836bc" data-block-type="generated" data-block-order="21">
+<div class="explainer-exercise explainer-generated" id="dreieck-hoehe-aussen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Dreieck hat einen stumpfen Winkel. Die Grundseite c ist 13 cm lang. Die Höhe zu c liegt außen und ist 2 cm lang. Die Seite b ist 13 cm lang. Wie groß ist der Flächeninhalt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche der Längen steht im rechten Winkel auf c?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>13</mn><mo>⋅</mo><mn>2</mn></mrow><mn>2</mn></mfrac></mrow></math> – die Seite b ist schräg und keine Höhe.</li><li>Der Flächeninhalt ist 13 cm².</li></ol><p><strong>Richtige Antwort:</strong> 13 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Dreieck hat einen stumpfen Winkel. Die Grundseite c ist 4 cm lang. Die Höhe zu c liegt außen und ist 6 cm lang. Die Seite b ist 8 cm lang. Wie groß ist der Flächeninhalt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche der Längen steht im rechten Winkel auf c?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>4</mn><mo>⋅</mo><mn>6</mn></mrow><mn>2</mn></mfrac></mrow></math> – die Seite b ist schräg und keine Höhe.</li><li>Der Flächeninhalt ist 12 cm².</li></ol><p><strong>Richtige Antwort:</strong> 12 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Dreieck hat einen stumpfen Winkel. Die Grundseite c ist 14 cm lang. Die Höhe zu c liegt außen und ist 11 cm lang. Die Seite b ist 13 cm lang. Wie groß ist der Flächeninhalt?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche der Längen steht im rechten Winkel auf c?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mn>14</mn><mo>⋅</mo><mn>11</mn></mrow><mn>2</mn></mfrac></mrow></math> – die Seite b ist schräg und keine Höhe.</li><li>Der Flächeninhalt ist 77 cm².</li></ol><p><strong>Richtige Antwort:</strong> 77 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"dreieck-hoehe-aussen","given":{"c":{"int":[4,16]},"h":{"int":[2,12]},"b":{"int":[3,15]}},"where":["decimals(c * h / 2) == 0","b > h"],"task":{"text":"Ein Dreieck hat einen stumpfen Winkel. Die Grundseite c ist {{c}} cm lang. Die Höhe zu c liegt außen und ist {{h}} cm lang. Die Seite b ist {{b}} cm lang. Wie groß ist der Flächeninhalt?"},"answer":{"value":"c * h / 2","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"c * b / 2","message":"Du hast die Seite b genommen. Sie ist schräg. Die Höhe steht im rechten Winkel auf c – auch wenn sie außen liegt."},{"value":"c * h","message":"Das ist doppelt so viel. Teile noch durch 2."}],"hint":"Welche der Längen steht im rechten Winkel auf c?","steps":["$A = \\frac{{{c}} \\cdot {{h}}}{2}$ – die Seite b ist schräg und keine Höhe.","Der Flächeninhalt ist {{answer}} cm²."]},"templates":{"de":{"task":"Ein Dreieck hat einen stumpfen Winkel. Die Grundseite c ist ⟦c⟧ cm lang. Die Höhe zu c liegt außen und ist ⟦h⟧ cm lang. Die Seite b ist ⟦b⟧ cm lang. Wie groß ist der Flächeninhalt?","steps":["\u003cmath>\u003cmrow>\u003cmi>A\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmtext>⟦c⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/mrow>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/mrow>\u003c/math> – die Seite b ist schräg und keine Höhe.","Der Flächeninhalt ist ⟦answer⟧ cm²."],"hint":"Welche der Längen steht im rechten Winkel auf c?","messages":["Du hast die Seite b genommen. Sie ist schräg. Die Höhe steht im rechten Winkel auf c – auch wenn sie außen liegt.","Das ist doppelt so viel. Teile noch durch 2."]}},"data":{},"seeds":[1,2,3,4,5,6,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,60,61,62,63,64,65,66,67,68,69,71],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="d2893997" data-block-type="generated" data-block-order="22">
+<div class="explainer-exercise explainer-generated" id="dreieck-umfang">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Dreieck hat die Seiten a = 14 cm, b = 11 cm und c = 7 cm. Wie groß ist sein Umfang?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Umfang ist der Weg einmal ganz um das Dreieck.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>u</mi><mo>=</mo><mn>14</mn><mo>+</mo><mn>11</mn><mo>+</mo><mn>7</mn></mrow></math></li><li>Der Umfang ist 32 cm.</li></ol><p><strong>Richtige Antwort:</strong> 32 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Dreieck hat die Seiten a = 8 cm, b = 10 cm und c = 14 cm. Wie groß ist sein Umfang?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Umfang ist der Weg einmal ganz um das Dreieck.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>u</mi><mo>=</mo><mn>8</mn><mo>+</mo><mn>10</mn><mo>+</mo><mn>14</mn></mrow></math></li><li>Der Umfang ist 32 cm.</li></ol><p><strong>Richtige Antwort:</strong> 32 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Dreieck hat die Seiten a = 8 cm, b = 14 cm und c = 10 cm. Wie groß ist sein Umfang?</p><details class="explainer-hint"><summary>Tipp</summary><p>Der Umfang ist der Weg einmal ganz um das Dreieck.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li><math><mrow><mi>u</mi><mo>=</mo><mn>8</mn><mo>+</mo><mn>14</mn><mo>+</mo><mn>10</mn></mrow></math></li><li>Der Umfang ist 32 cm.</li></ol><p><strong>Richtige Antwort:</strong> 32 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"dreieck-umfang","given":{"a":{"int":[3,15]},"b":{"int":[3,15]},"c":{"int":[3,15]}},"where":["a + b > c and a + c > b and b + c > a","a * b / 2 != a + b + c"],"task":{"text":"Ein Dreieck hat die Seiten a = {{a}} cm, b = {{b}} cm und c = {{c}} cm. Wie groß ist sein Umfang?"},"answer":{"value":"a + b + c","compare":{"number":{"format":"integer","unit":"cm"}}},"mistakes":[{"value":"a + b","message":"Du hast eine Seite vergessen. Der Umfang ist der Weg einmal ganz um das Dreieck herum."},{"value":"a * b / 2","message":"Das wäre ein Flächeninhalt. Für den Umfang addierst du alle drei Seiten."}],"hint":"Der Umfang ist der Weg einmal ganz um das Dreieck.","steps":["$u = {{a}} + {{b}} + {{c}}$","Der Umfang ist {{answer}} cm."]},"templates":{"de":{"task":"Ein Dreieck hat die Seiten a = ⟦a⟧ cm, b = ⟦b⟧ cm und c = ⟦c⟧ cm. Wie groß ist sein Umfang?","steps":["\u003cmath>\u003cmrow>\u003cmi>u\u003c/mi>\u003cmo>=\u003c/mo>\u003cmtext>⟦a⟧\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmtext>⟦b⟧\u003c/mtext>\u003cmo>+\u003c/mo>\u003cmtext>⟦c⟧\u003c/mtext>\u003c/mrow>\u003c/math>","Der Umfang ist ⟦answer⟧ cm."],"hint":"Der Umfang ist der Weg einmal ganz um das Dreieck.","messages":["Du hast eine Seite vergessen. Der Umfang ist der Weg einmal ganz um das Dreieck herum.","Das wäre ein Flächeninhalt. Für den Umfang addierst du alle drei Seiten."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="2a361de4" data-block-type="generated" data-block-order="23">
+<div class="explainer-exercise explainer-generated" id="dreieck-rest">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Eine rechteckige Platte ist 12 cm lang und 16 cm breit. An einer Ecke wird ein rechtwinkliges Dreieck abgeschnitten: 8 cm entlang der Länge und 3 cm entlang der Breite. Wie groß ist die restliche Fläche?</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne die ganze Platte aus und ziehe das Dreieck ab. Die zwei Schnittkanten sind seine Grundseite und seine Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Platte: 12 · 16 cm². Dreieck: <math><mfrac><mrow><mn>8</mn><mo>⋅</mo><mn>3</mn></mrow><mn>2</mn></mfrac></math> cm².</li><li>Rest: Platte minus Dreieck = 180 cm².</li></ol><p><strong>Richtige Antwort:</strong> 180 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Eine rechteckige Platte ist 8 cm lang und 12 cm breit. An einer Ecke wird ein rechtwinkliges Dreieck abgeschnitten: 2 cm entlang der Länge und 3 cm entlang der Breite. Wie groß ist die restliche Fläche?</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne die ganze Platte aus und ziehe das Dreieck ab. Die zwei Schnittkanten sind seine Grundseite und seine Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Platte: 8 · 12 cm². Dreieck: <math><mfrac><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow><mn>2</mn></mfrac></math> cm².</li><li>Rest: Platte minus Dreieck = 93 cm².</li></ol><p><strong>Richtige Antwort:</strong> 93 cm²</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Eine rechteckige Platte ist 16 cm lang und 14 cm breit. An einer Ecke wird ein rechtwinkliges Dreieck abgeschnitten: 9 cm entlang der Länge und 4 cm entlang der Breite. Wie groß ist die restliche Fläche?</p><details class="explainer-hint"><summary>Tipp</summary><p>Rechne die ganze Platte aus und ziehe das Dreieck ab. Die zwei Schnittkanten sind seine Grundseite und seine Höhe.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Platte: 16 · 14 cm². Dreieck: <math><mfrac><mrow><mn>9</mn><mo>⋅</mo><mn>4</mn></mrow><mn>2</mn></mfrac></math> cm².</li><li>Rest: Platte minus Dreieck = 206 cm².</li></ol><p><strong>Richtige Antwort:</strong> 206 cm²</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"dreieck-rest","given":{"a":{"int":[6,20]},"b":{"int":[4,16]},"x":{"int":[2,10]},"y":{"int":[2,10]}},"where":["x \u003c a","y \u003c b","decimals(x * y / 2) == 0"],"task":{"text":"Eine rechteckige Platte ist {{a}} cm lang und {{b}} cm breit. An einer Ecke wird ein rechtwinkliges Dreieck abgeschnitten: {{x}} cm entlang der Länge und {{y}} cm entlang der Breite. Wie groß ist die restliche Fläche?"},"answer":{"value":"a * b - x * y / 2","compare":{"number":{"format":"integer","unit":"cm²"}}},"mistakes":[{"value":"a * b - x * y","message":"Du hast ein ganzes Rechteck x · y abgezogen. Das abgeschnittene Dreieck ist nur die Hälfte davon."},{"value":"x * y / 2","message":"Das ist das abgeschnittene Dreieck. Gefragt ist, was von der Platte übrig bleibt."}],"hint":"Rechne die ganze Platte aus und ziehe das Dreieck ab. Die zwei Schnittkanten sind seine Grundseite und seine Höhe.","steps":["Platte: {{a}} · {{b}} cm². Dreieck: $\\frac{ {{x}} \\cdot {{y}} }{2}$ cm².","Rest: Platte minus Dreieck = {{answer}} cm²."]},"templates":{"de":{"task":"Eine rechteckige Platte ist ⟦a⟧ cm lang und ⟦b⟧ cm breit. An einer Ecke wird ein rechtwinkliges Dreieck abgeschnitten: ⟦x⟧ cm entlang der Länge und ⟦y⟧ cm entlang der Breite. Wie groß ist die restliche Fläche?","steps":["Platte: ⟦a⟧ · ⟦b⟧ cm². Dreieck: \u003cmath>\u003cmfrac>\u003cmrow>\u003cmtext>⟦x⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦y⟧\u003c/mtext>\u003c/mrow>\u003cmn>2\u003c/mn>\u003c/mfrac>\u003c/math> cm².","Rest: Platte minus Dreieck = ⟦answer⟧ cm²."],"hint":"Rechne die ganze Platte aus und ziehe das Dreieck ab. Die zwei Schnittkanten sind seine Grundseite und seine Höhe.","messages":["Du hast ein ganzes Rechteck x · y abgezogen. Das abgeschnittene Dreieck ist nur die Hälfte davon.","Das ist das abgeschnittene Dreieck. Gefragt ist, was von der Platte übrig bleibt."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="82acf7cc" data-block-type="generated" data-block-order="24">
+<div class="explainer-exercise explainer-generated" id="dreieck-rueckwaerts">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Dreieck hat den Flächeninhalt A = 20 cm². Die Grundseite ist g = 2 cm lang. Wie lang ist die Höhe h?</p><details class="explainer-hint"><summary>Tipp</summary><p>In der Formel steht A = g · h : 2. Rechne rückwärts: erst mal 2, dann durch g.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit A = 20 cm² und g = 2 cm: <math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>A</mi></mrow><mi>g</mi></mfrac></mrow></math></li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mn>20</mn></mrow><mn>2</mn></mfrac></mrow></math></li><li>Die Höhe ist 20 cm lang.</li></ol><p><strong>Richtige Antwort:</strong> 20 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Dreieck hat den Flächeninhalt A = 22 cm². Die Grundseite ist g = 4 cm lang. Wie lang ist die Höhe h?</p><details class="explainer-hint"><summary>Tipp</summary><p>In der Formel steht A = g · h : 2. Rechne rückwärts: erst mal 2, dann durch g.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit A = 22 cm² und g = 4 cm: <math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>A</mi></mrow><mi>g</mi></mfrac></mrow></math></li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mn>22</mn></mrow><mn>4</mn></mfrac></mrow></math></li><li>Die Höhe ist 11 cm lang.</li></ol><p><strong>Richtige Antwort:</strong> 11 cm</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Dreieck hat den Flächeninhalt A = 52 cm². Die Grundseite ist g = 8 cm lang. Wie lang ist die Höhe h?</p><details class="explainer-hint"><summary>Tipp</summary><p>In der Formel steht A = g · h : 2. Rechne rückwärts: erst mal 2, dann durch g.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit A = 52 cm² und g = 8 cm: <math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>A</mi></mrow><mi>g</mi></mfrac></mrow></math></li><li><math><mrow><mi>h</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mn>52</mn></mrow><mn>8</mn></mfrac></mrow></math></li><li>Die Höhe ist 13 cm lang.</li></ol><p><strong>Richtige Antwort:</strong> 13 cm</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"dreieck-rueckwaerts","given":{"A":{"int":[6,60]},"g":{"oneOf":[2,3,4,5,6,8,10,12]}},"where":["decimals(2 * A / g) == 0","2 * A / g \u003c= 20"],"task":{"text":"Ein Dreieck hat den Flächeninhalt A = {{A}} cm². Die Grundseite ist g = {{g}} cm lang. Wie lang ist die Höhe h?"},"answer":{"value":"2 * A / g","compare":{"number":{"format":"integer","unit":"cm"}}},"mistakes":[{"value":"A / g","message":"Du hast das „: 2“ der Formel vergessen. Nimm A erst mal 2, dann teile durch g."},{"value":"2 * A","message":"Das ist g · h. Teile noch durch die Grundseite g."}],"hint":"In der Formel steht A = g · h : 2. Rechne rückwärts: erst mal 2, dann durch g.","steps":["Mit A = {{A}} cm² und g = {{g}} cm: $h = \\frac{2 \\cdot A}{g}$","$h = \\frac{2 \\cdot {{A}}}{{{g}}}$","Die Höhe ist {{answer}} cm lang."]},"templates":{"de":{"task":"Ein Dreieck hat den Flächeninhalt A = ⟦A⟧ cm². Die Grundseite ist g = ⟦g⟧ cm lang. Wie lang ist die Höhe h?","steps":["Mit A = ⟦A⟧ cm² und g = ⟦g⟧ cm: \u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmi>A\u003c/mi>\u003c/mrow>\u003cmi>g\u003c/mi>\u003c/mfrac>\u003c/mrow>\u003c/math>","\u003cmath>\u003cmrow>\u003cmi>h\u003c/mi>\u003cmo>=\u003c/mo>\u003cmfrac>\u003cmrow>\u003cmn>2\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmtext>⟦A⟧\u003c/mtext>\u003c/mrow>\u003cmtext>⟦g⟧\u003c/mtext>\u003c/mfrac>\u003c/mrow>\u003c/math>","Die Höhe ist ⟦answer⟧ cm lang."],"hint":"In der Formel steht A = g · h : 2. Rechne rückwärts: erst mal 2, dann durch g.","messages":["Du hast das „: 2“ der Formel vergessen. Nimm A erst mal 2, dann teile durch g.","Das ist g · h. Teile noch durch die Grundseite g."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,30,31,33,34,36,37,38,39,41,42,43,44,45,52,54,55,56,59,60,61,64,65,66,67,68,69,79,82,83,85,87,89,90,91,92,93,96,98,102,106],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/8" data-block-id="55c89954" data-block-type="text" data-block-order="25">
+<div class="block-text"><p>Als Nächstes zerlegst du Parallelogramm und Trapez – mit demselben Trick.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Geometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-geometrie","app":"Mathe-Wettbewerb 8: Geometrie","root":"../../","repository":"rdmueller/mathe-wb8-geometrie","revision":"a6c4104","page":{"title":"Flächeninhalt und Umfang des Dreiecks","order":1}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../flaechen/quadrat-rechteck/">Zurück: Flächeninhalt und Umfang von Rechteck und Quadrat</a><a rel="next" href="../../flaechen/parallelogramm-trapez/">Weiter: Flächeninhalt und Umfang von Parallelogramm und Trapez</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

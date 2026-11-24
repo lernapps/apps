@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Ereignisse als Pfade – Mathe-Wettbewerb 8: Wahrscheinlichkeit</title>
+    <meta name="description" content="„Genau einmal“, „mindestens einmal“ und „höchstens einmal“ in Pfade des Baumdiagramms übersetzen und ihre Wahrscheinlichkeiten addieren." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../w4-zufall/ereignisse-pfade/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../w4-zufall/">Wahlaufgabe W4: Zweistufige Zufallsversuche</a></li><li aria-current="page">Ereignisse als Pfade</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Ereignisse als Pfade</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../w4-zufall/ereignisse-pfade/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧w4-zufall/ereignisse-pfade/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-zufall","page":{"id":"ereignisse-pfade","title":"Ereignisse als Pfade","exercises":[{"id":"ereignisse-pfade-start","section":"start","numbered":false},{"id":"ereignisse-pfade-zuordnen","section":"uebung","numbered":false},{"id":"ereignisse-pfade-hoechstens","section":"uebung","numbered":false},{"id":"ereignisse-pfade-genau","section":"uebung","numbered":true},{"id":"ereignisse-pfade-hoechstens-rot","section":"uebung","numbered":true},{"id":"ereignisse-pfade-gluecksrad","section":"uebung","numbered":false},{"id":"ereignisse-pfade-auslosen","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"w4-zufall/ereignisse-pfade/tutor/","markdown":"w4-zufall/ereignisse-pfade/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Wörter in Pfade übersetzen</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Genau einmal hat zwei Pfade</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="776007e1" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann „genau einmal“, „mindestens einmal“ und „höchstens einmal“ den Pfaden zuordnen. Du nutzt
+den Baum der <a href="../../w4-zufall/ohne-zuruecklegen/">vorigen Seite</a> und die 2. Pfadregel: Pfade eines Ereignisses
+werden addiert.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="6ca81272" data-block-type="multiple-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="ereignisse-pfade-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ereignisse-pfade-start" data-id="ereignisse-pfade-start" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Aus der Urne mit 3 roten und 2 blauen Kugeln ziehst du zweimal ohne Zurücklegen. Welche Pfade gehören zum Ereignis „genau einmal rot“?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/w4-baum-ohne.svg" alt="Baumdiagramm: 1. Stufe r 3/5 und b 2/5. Nach r: r 2/4 und b 2/4. Nach b: r 3/4 und b 1/4. Unten stehen rr, rb, br und bb." loading="lazy" decoding="async"><figcaption><p>Jeder Pfad endet unten bei einem Ergebnis aus zwei Buchstaben.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="checkbox" name="frage-ereignisse-pfade-start" value="0"> <span>rr</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ereignisse-pfade-start" value="1"> <span>rb</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ereignisse-pfade-start" value="2"> <span>br</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ereignisse-pfade-start" value="3"> <span>bb</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>rr</strong></p><p>Bei rr ist zweimal rot.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>rb</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst rot, dann blau.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>br</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst blau, dann rot.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>bb</strong></p><p>Bei bb ist keine rot.</p></li>
+</ul>
+<p class="question-explanation">Die rote Kugel kommt im 1. oder im 2. Zug: rb und br.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse" rel="noopener" title="Aufgaben zum Thema Ereignisse (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Aufgaben zum Thema Ereignisse (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>rr</strong></p><p>Bei rr ist zweimal rot.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>rb</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst rot, dann blau.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>br</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Erst blau, dann rot.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>bb</strong></p><p>Bei bb ist keine rot.</p></li>
+</ul>
+<p class="question-explanation">Die rote Kugel kommt im 1. oder im 2. Zug: rb und br.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse" rel="noopener" title="Aufgaben zum Thema Ereignisse (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Aufgaben zum Thema Ereignisse (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ereignisse-pfade-start","text":"Aus der Urne mit 3 roten und 2 blauen Kugeln ziehst du zweimal ohne Zurücklegen. Welche Pfade gehören zum Ereignis „genau einmal rot“?","explanation":"Die rote Kugel kommt im 1. oder im 2. Zug: rb und br.","links":[{"title":"Aufgaben zum Thema Ereignisse (Serlo)","url":"https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse"}],"material":[{"type":"figure","image":"images/w4-baum-ohne.svg","alt":"Baumdiagramm: 1. Stufe r 3/5 und b 2/5. Nach r: r 2/4 und b 2/4. Nach b: r 3/4 und b 1/4. Unten stehen rr, rb, br und bb.","caption":"Jeder Pfad endet unten bei einem Ergebnis aus zwei Buchstaben.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"multiple-choice","options":[{"text":"rr","correct":false,"info":"Bei rr ist zweimal rot."},{"text":"rb","correct":true,"info":"Erst rot, dann blau."},{"text":"br","correct":true,"info":"Erst blau, dann rot."},{"text":"bb","correct":false,"info":"Bei bb ist keine rot."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Wörter in Pfade übersetzen</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="0b519f24" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>„Genau einmal rot“ heißt: eine Kugel rot, die andere nicht. Die rote kann zuerst oder als zweite kommen –
+darum gehören zwei Pfade dazu, rb und br. So übersetzt du auch die anderen Wörter. „Mindestens einmal“
+heißt „einmal oder öfter“, „höchstens einmal“ heißt „einmal oder gar nicht“.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="0d73edf3" data-block-type="table" data-block-order="4">
+<div class="block-table" role="region" aria-label="Ereignisse beim zweimaligen Ziehen und ihre Pfade" tabindex="0"><table><caption>Ereignisse beim zweimaligen Ziehen und ihre Pfade</caption><thead><tr><th scope="col">Ereignis</th><th scope="col">Pfade</th><th scope="col">kurz</th></tr></thead><tbody><tr><td>genau einmal rot</td><td>rb, br</td><td>eine rot und eine blau</td></tr><tr><td>mindestens einmal rot</td><td>rr, rb, br</td><td>alle außer bb</td></tr><tr><td>höchstens einmal rot</td><td>rb, br, bb</td><td>alle außer rr</td></tr><tr><td>keinmal rot</td><td>bb</td><td>zweimal blau</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="9bab5b45" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Die Wahrscheinlichkeit eines Ereignisses ist die Summe seiner Pfade. Für „genau einmal rot“ mit dem Baum
+oben:</p></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="261bc978" data-block-type="formula" data-block-order="6">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>r</mi><mi>b</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mo>⋅</mo><mfrac><mn>2</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>6</mn><mn>20</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="0ccfd2f9" data-block-type="formula" data-block-order="7">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>b</mi><mi>r</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>⋅</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>6</mn><mn>20</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="4f7dc4ed" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>r</mi><mi>b</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>b</mi><mi>r</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>12</mn><mn>20</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></math></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="25926d19" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Mindestens ein Erdbeerbonbon</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="ff945ddd" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>In einer Tüte sind 4 Schokobonbons (s) und 2 Erdbeerbonbons (e). Du nimmst ohne hinzusehen zwei. Wie
+wahrscheinlich ist mindestens ein Erdbeerbonbon? Dazu gehören drei Pfade: se, es und ee.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="d87c90ba" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>s</mi><mi>e</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>4</mn><mn>6</mn></mfrac><mo>⋅</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><mfrac><mn>8</mn><mn>30</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="835a48db" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>e</mi><mi>s</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>⋅</mo><mfrac><mn>4</mn><mn>5</mn></mfrac><mo>=</mo><mfrac><mn>8</mn><mn>30</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="73a20679" data-block-type="formula" data-block-order="13">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>P</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>e</mi><mi>e</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mn>5</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>30</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/5" data-block-id="27555c03" data-block-type="formula" data-block-order="14">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mfrac><mn>8</mn><mn>30</mn></mfrac><mo>+</mo><mfrac><mn>8</mn><mn>30</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>30</mn></mfrac><mo>=</mo><mfrac><mn>18</mn><mn>30</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/6" data-block-id="4bda3fb3" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Antwort – Mit der Wahrscheinlichkeit 3/5 ist mindestens ein Erdbeerbonbon dabei. Der Haken: ee gehört
+auch dazu, denn zwei sind mindestens eins. Drei Pfade sind mühsam – auf der nächsten Seite geht es
+schneller.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Genau einmal hat zwei Pfade</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="e84b7859" data-block-type="note" data-block-order="16">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="64db30ca" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Bei zwei Zügen hat „genau einmal“ immer zwei Pfade: Das Gesuchte kommt im 1. oder im 2. Zug. Wer nur
+rb zählt, bekommt die halbe Wahrscheinlichkeit. „Mindestens einmal“ schließt „zweimal“ ein,
+„höchstens einmal“ schließt „keinmal“ ein.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="0bf26df1" data-block-type="matching" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="ereignisse-pfade-zuordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ereignisse-pfade-zuordnen" data-id="ereignisse-pfade-zuordnen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du ziehst zweimal aus einer Urne mit roten und blauen Kugeln. Welche Pfade gehören zu welchem Ereignis?</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>genau einmal rot</span> <select name="frage-ereignisse-pfade-zuordnen-0" data-left="0"><option value="">bitte wählen</option><option value="1">Pfade rr, rb und br</option><option value="2">Pfade rb, br und bb</option><option value="3">Pfade rr und bb</option><option value="4">nur der Pfad rb</option><option value="0">Pfade rb und br</option></select></label></li>
+<li><label><span>mindestens einmal rot</span> <select name="frage-ereignisse-pfade-zuordnen-1" data-left="1"><option value="">bitte wählen</option><option value="1">Pfade rr, rb und br</option><option value="2">Pfade rb, br und bb</option><option value="3">Pfade rr und bb</option><option value="4">nur der Pfad rb</option><option value="0">Pfade rb und br</option></select></label></li>
+<li><label><span>höchstens einmal rot</span> <select name="frage-ereignisse-pfade-zuordnen-2" data-left="2"><option value="">bitte wählen</option><option value="1">Pfade rr, rb und br</option><option value="2">Pfade rb, br und bb</option><option value="3">Pfade rr und bb</option><option value="4">nur der Pfad rb</option><option value="0">Pfade rb und br</option></select></label></li>
+<li><label><span>zweimal dieselbe Farbe</span> <select name="frage-ereignisse-pfade-zuordnen-3" data-left="3"><option value="">bitte wählen</option><option value="1">Pfade rr, rb und br</option><option value="2">Pfade rb, br und bb</option><option value="3">Pfade rr und bb</option><option value="4">nur der Pfad rb</option><option value="0">Pfade rb und br</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> genau einmal rot – Pfade rb und br; mindestens einmal rot – Pfade rr, rb und br; höchstens einmal rot – Pfade rb, br und bb; zweimal dieselbe Farbe – Pfade rr und bb</p>
+<p class="question-explanation">„Mindestens einmal“ nimmt rr dazu, „höchstens einmal“ nimmt bb dazu.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse" rel="noopener" title="Aufgaben zum Thema Ereignisse (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Aufgaben zum Thema Ereignisse (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> genau einmal rot – Pfade rb und br; mindestens einmal rot – Pfade rr, rb und br; höchstens einmal rot – Pfade rb, br und bb; zweimal dieselbe Farbe – Pfade rr und bb</p>
+<p class="question-explanation">„Mindestens einmal“ nimmt rr dazu, „höchstens einmal“ nimmt bb dazu.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse" rel="noopener" title="Aufgaben zum Thema Ereignisse (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Aufgaben zum Thema Ereignisse (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ereignisse-pfade-zuordnen","text":"Du ziehst zweimal aus einer Urne mit roten und blauen Kugeln. Welche Pfade gehören zu welchem Ereignis?","explanation":"„Mindestens einmal“ nimmt rr dazu, „höchstens einmal“ nimmt bb dazu.","links":[{"title":"Aufgaben zum Thema Ereignisse (Serlo)","url":"https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse"}],"type":"matching","pairs":[{"left":"genau einmal rot","right":"Pfade rb und br"},{"left":"mindestens einmal rot","right":"Pfade rr, rb und br"},{"left":"höchstens einmal rot","right":"Pfade rb, br und bb"},{"left":"zweimal dieselbe Farbe","right":"Pfade rr und bb"}],"distractors":["nur der Pfad rb"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="1ddb6cf4" data-block-type="single-choice" data-block-order="19">
+<div class="explainer-exercise explainer-question" id="ereignisse-pfade-hoechstens">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ereignisse-pfade-hoechstens" data-id="ereignisse-pfade-hoechstens" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was bedeutet „höchstens einmal blau“ beim zweimaligen Ziehen?</legend>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-hoechstens" value="0"> <span>genau einmal blau</span></label>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-hoechstens" value="1"> <span>ein- oder zweimal blau</span></label>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-hoechstens" value="2"> <span>kein- oder einmal blau</span></label>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-hoechstens" value="3"> <span>zweimal blau</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>genau einmal blau</strong></p><p>Das ist nur ein Teil. Keinmal blau gehört auch dazu.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>ein- oder zweimal blau</strong></p><p>Das ist „mindestens einmal blau“.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>kein- oder einmal blau</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Nicht öfter als einmal – keinmal gehört dazu.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>zweimal blau</strong></p><p>Zweimal blau ist gerade ausgeschlossen.</p></li>
+</ul>
+<p class="question-explanation">Dazu gehören rr, rb und br – alle Pfade außer bb.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse" rel="noopener" title="Aufgaben zum Thema Ereignisse (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Aufgaben zum Thema Ereignisse (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>genau einmal blau</strong></p><p>Das ist nur ein Teil. Keinmal blau gehört auch dazu.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>ein- oder zweimal blau</strong></p><p>Das ist „mindestens einmal blau“.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>kein- oder einmal blau</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Nicht öfter als einmal – keinmal gehört dazu.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>zweimal blau</strong></p><p>Zweimal blau ist gerade ausgeschlossen.</p></li>
+</ul>
+<p class="question-explanation">Dazu gehören rr, rb und br – alle Pfade außer bb.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse" rel="noopener" title="Aufgaben zum Thema Ereignisse (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Aufgaben zum Thema Ereignisse (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ereignisse-pfade-hoechstens","text":"Was bedeutet „höchstens einmal blau“ beim zweimaligen Ziehen?","explanation":"Dazu gehören rr, rb und br – alle Pfade außer bb.","links":[{"title":"Aufgaben zum Thema Ereignisse (Serlo)","url":"https://de.serlo.org/mathe/25615/aufgaben-zum-thema-ereignisse"}],"type":"single-choice","options":[{"text":"genau einmal blau","correct":false,"info":"Das ist nur ein Teil. Keinmal blau gehört auch dazu."},{"text":"ein- oder zweimal blau","correct":false,"info":"Das ist „mindestens einmal blau“."},{"text":"kein- oder einmal blau","correct":true,"info":"Nicht öfter als einmal – keinmal gehört dazu."},{"text":"zweimal blau","correct":false,"info":"Zweimal blau ist gerade ausgeschlossen."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="42ba76d6" data-block-type="generated" data-block-order="20">
+<div class="explainer-exercise explainer-generated" id="ereignisse-pfade-genau">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einer Urne liegen 4 rote und 3 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist genau eine rote Kugel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche zwei Pfade gehören zu „genau einmal rot“?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Pfad rb: 4/7 · 3/6 = 12/42. Pfad br: 3/7 · 4/6 = 12/42.</li><li>Beide Pfade addieren: 24/42, gekürzt 4/7.</li></ol><p><strong>Richtige Antwort:</strong> 4/7</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einer Urne liegen 6 rote und 2 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist genau eine rote Kugel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche zwei Pfade gehören zu „genau einmal rot“?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Pfad rb: 6/8 · 2/7 = 12/56. Pfad br: 2/8 · 6/7 = 12/56.</li><li>Beide Pfade addieren: 24/56, gekürzt 3/7.</li></ol><p><strong>Richtige Antwort:</strong> 3/7</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einer Urne liegen 3 rote und 5 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist genau eine rote Kugel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche zwei Pfade gehören zu „genau einmal rot“?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Pfad rb: 3/8 · 5/7 = 15/56. Pfad br: 5/8 · 3/7 = 15/56.</li><li>Beide Pfade addieren: 30/56, gekürzt 15/28.</li></ol><p><strong>Richtige Antwort:</strong> 15/28</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"ereignisse-pfade-genau","given":{"e":{"pick":1,"from":{"data":"urnen"}},"r":{"int":[0,3]}},"task":{"text":"In einer Urne liegen {{e.rot}} rote und {{e.blau}} blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist genau eine rote Kugel?"},"answer":{"value":"e.pGenau","compare":{"choice":"[[e.pGenau, e.pEinPfad, e.pGenauMit, e.pMind], [e.pEinPfad, e.pGenau, e.pGenauMit, e.pMind], [e.pEinPfad, e.pGenauMit, e.pGenau, e.pMind], [e.pEinPfad, e.pGenauMit, e.pMind, e.pGenau]][r]"}},"mistakes":[{"value":"e.pEinPfad","message":"Du hast nur rb gezählt. Auch br gehört dazu."},{"value":"e.pGenauMit","message":"So wäre es mit Zurücklegen."},{"value":"e.pMind","message":"Das ist „mindestens einmal rot“, mit rr."}],"hint":"Welche zwei Pfade gehören zu „genau einmal rot“?","steps":["Pfad rb: {{e.rot}}/{{e.n}} · {{e.blau}}/{{e.n1}} = {{e.zRB}}/{{e.nn}}. Pfad br: {{e.blau}}/{{e.n}} · {{e.rot}}/{{e.n1}} = {{e.zRB}}/{{e.nn}}.","Beide Pfade addieren: {{e.zGenau}}/{{e.nn}}, gekürzt {{answer}}."]},"templates":{"de":{"task":"In einer Urne liegen ⟦e.rot⟧ rote und ⟦e.blau⟧ blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist genau eine rote Kugel?","steps":["Pfad rb: ⟦e.rot⟧/⟦e.n⟧ · ⟦e.blau⟧/⟦e.n1⟧ = ⟦e.zRB⟧/⟦e.nn⟧. Pfad br: ⟦e.blau⟧/⟦e.n⟧ · ⟦e.rot⟧/⟦e.n1⟧ = ⟦e.zRB⟧/⟦e.nn⟧.","Beide Pfade addieren: ⟦e.zGenau⟧/⟦e.nn⟧, gekürzt ⟦answer⟧."],"hint":"Welche zwei Pfade gehören zu „genau einmal rot“?","messages":["Du hast nur rb gezählt. Auch br gehört dazu.","So wäre es mit Zurücklegen.","Das ist „mindestens einmal rot“, mit rr."]}},"data":{"urnen":[{"rot":3,"blau":2,"n":5,"rot1":2,"blau1":1,"n1":4,"nn":20,"zRR":6,"zRB":6,"zGenau":12,"zBB":2,"prr":"3/10","prrMit":"9/25","prrAlterNenner":"6/25","prrZaehler":"9/20","pGenau":"3/5","pEinPfad":"3/10","pGenauMit":"12/25","pMind":"9/10","pKein":"1/10","pHoechstens":"7/10","pMindMit":"21/25","pHoechstensMit":"16/25"},{"rot":2,"blau":3,"n":5,"rot1":1,"blau1":2,"n1":4,"nn":20,"zRR":2,"zRB":6,"zGenau":12,"zBB":6,"prr":"1/10","prrMit":"4/25","prrAlterNenner":"2/25","prrZaehler":"1/5","pGenau":"3/5","pEinPfad":"3/10","pGenauMit":"12/25","pMind":"7/10","pKein":"3/10","pHoechstens":"9/10","pMindMit":"16/25","pHoechstensMit":"21/25"},{"rot":4,"blau":2,"n":6,"rot1":3,"blau1":1,"n1":5,"nn":30,"zRR":12,"zRB":8,"zGenau":16,"zBB":2,"prr":"2/5","prrMit":"4/9","prrAlterNenner":"1/3","prrZaehler":"8/15","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"4/9","pMind":"14/15","pKein":"1/15","pHoechstens":"3/5","pMindMit":"8/9","pHoechstensMit":"5/9"},{"rot":2,"blau":4,"n":6,"rot1":1,"blau1":3,"n1":5,"nn":30,"zRR":2,"zRB":8,"zGenau":16,"zBB":12,"prr":"1/15","prrMit":"1/9","prrAlterNenner":"1/18","prrZaehler":"2/15","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"4/9","pMind":"3/5","pKein":"2/5","pHoechstens":"14/15","pMindMit":"5/9","pHoechstensMit":"8/9"},{"rot":4,"blau":3,"n":7,"rot1":3,"blau1":2,"n1":6,"nn":42,"zRR":12,"zRB":12,"zGenau":24,"zBB":6,"prr":"2/7","prrMit":"16/49","prrAlterNenner":"12/49","prrZaehler":"8/21","pGenau":"4/7","pEinPfad":"2/7","pGenauMit":"24/49","pMind":"6/7","pKein":"1/7","pHoechstens":"5/7","pMindMit":"40/49","pHoechstensMit":"33/49"},{"rot":3,"blau":4,"n":7,"rot1":2,"blau1":3,"n1":6,"nn":42,"zRR":6,"zRB":12,"zGenau":24,"zBB":12,"prr":"1/7","prrMit":"9/49","prrAlterNenner":"6/49","prrZaehler":"3/14","pGenau":"4/7","pEinPfad":"2/7","pGenauMit":"24/49","pMind":"5/7","pKein":"2/7","pHoechstens":"6/7","pMindMit":"33/49","pHoechstensMit":"40/49"},{"rot":5,"blau":3,"n":8,"rot1":4,"blau1":2,"n1":7,"nn":56,"zRR":20,"zRB":15,"zGenau":30,"zBB":6,"prr":"5/14","prrMit":"25/64","prrAlterNenner":"5/16","prrZaehler":"25/56","pGenau":"15/28","pEinPfad":"15/56","pGenauMit":"15/32","pMind":"25/28","pKein":"3/28","pHoechstens":"9/14","pMindMit":"55/64","pHoechstensMit":"39/64"},{"rot":3,"blau":5,"n":8,"rot1":2,"blau1":4,"n1":7,"nn":56,"zRR":6,"zRB":15,"zGenau":30,"zBB":20,"prr":"3/28","prrMit":"9/64","prrAlterNenner":"3/32","prrZaehler":"9/56","pGenau":"15/28","pEinPfad":"15/56","pGenauMit":"15/32","pMind":"9/14","pKein":"5/14","pHoechstens":"25/28","pMindMit":"39/64","pHoechstensMit":"55/64"},{"rot":5,"blau":2,"n":7,"rot1":4,"blau1":1,"n1":6,"nn":42,"zRR":20,"zRB":10,"zGenau":20,"zBB":2,"prr":"10/21","prrMit":"25/49","prrAlterNenner":"20/49","prrZaehler":"25/42","pGenau":"10/21","pEinPfad":"5/21","pGenauMit":"20/49","pMind":"20/21","pKein":"1/21","pHoechstens":"11/21","pMindMit":"45/49","pHoechstensMit":"24/49"},{"rot":2,"blau":5,"n":7,"rot1":1,"blau1":4,"n1":6,"nn":42,"zRR":2,"zRB":10,"zGenau":20,"zBB":20,"prr":"1/21","prrMit":"4/49","prrAlterNenner":"2/49","prrZaehler":"2/21","pGenau":"10/21","pEinPfad":"5/21","pGenauMit":"20/49","pMind":"11/21","pKein":"10/21","pHoechstens":"20/21","pMindMit":"24/49","pHoechstensMit":"45/49"},{"rot":6,"blau":2,"n":8,"rot1":5,"blau1":1,"n1":7,"nn":56,"zRR":30,"zRB":12,"zGenau":24,"zBB":2,"prr":"15/28","prrMit":"9/16","prrAlterNenner":"15/32","prrZaehler":"9/14","pGenau":"3/7","pEinPfad":"3/14","pGenauMit":"3/8","pMind":"27/28","pKein":"1/28","pHoechstens":"13/28","pMindMit":"15/16","pHoechstensMit":"7/16"},{"rot":2,"blau":6,"n":8,"rot1":1,"blau1":5,"n1":7,"nn":56,"zRR":2,"zRB":12,"zGenau":24,"zBB":30,"prr":"1/28","prrMit":"1/16","prrAlterNenner":"1/32","prrZaehler":"1/14","pGenau":"3/7","pEinPfad":"3/14","pGenauMit":"3/8","pMind":"13/28","pKein":"15/28","pHoechstens":"27/28","pMindMit":"7/16","pHoechstensMit":"15/16"},{"rot":6,"blau":4,"n":10,"rot1":5,"blau1":3,"n1":9,"nn":90,"zRR":30,"zRB":24,"zGenau":48,"zBB":12,"prr":"1/3","prrMit":"9/25","prrAlterNenner":"3/10","prrZaehler":"2/5","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"12/25","pMind":"13/15","pKein":"2/15","pHoechstens":"2/3","pMindMit":"21/25","pHoechstensMit":"16/25"},{"rot":4,"blau":6,"n":10,"rot1":3,"blau1":5,"n1":9,"nn":90,"zRR":12,"zRB":24,"zGenau":48,"zBB":30,"prr":"2/15","prrMit":"4/25","prrAlterNenner":"3/25","prrZaehler":"8/45","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"12/25","pMind":"2/3","pKein":"1/3","pHoechstens":"13/15","pMindMit":"16/25","pHoechstensMit":"21/25"}]},"seeds":[1,2,3,4,5,6,7,8,9,11,12,13,14,16,17,19,21,22,23,24,27,30,31,35,37,40,43,45,47,50,53,54,55,56,57,58,62,64,72,88,91,93,106,108,112,113,115,118,128,135,136,147,154,158,231,272],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="1e171c21" data-block-type="generated" data-block-order="21">
+<div class="explainer-exercise explainer-generated" id="ereignisse-pfade-hoechstens-rot">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einer Urne liegen 2 rote und 5 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist höchstens eine rote Kugel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche drei Pfade gehören zu „höchstens einmal rot“?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Pfade rb und br: je 10/42. Pfad bb: 5/7 · 4/6 = 20/42.</li><li>Die drei Pfade addieren und kürzen: 20/21.</li></ol><p><strong>Richtige Antwort:</strong> 20/21</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einer Urne liegen 2 rote und 4 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist höchstens eine rote Kugel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche drei Pfade gehören zu „höchstens einmal rot“?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Pfade rb und br: je 8/30. Pfad bb: 4/6 · 3/5 = 12/30.</li><li>Die drei Pfade addieren und kürzen: 14/15.</li></ol><p><strong>Richtige Antwort:</strong> 14/15</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einer Urne liegen 5 rote und 2 blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist höchstens eine rote Kugel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welche drei Pfade gehören zu „höchstens einmal rot“?</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Pfade rb und br: je 10/42. Pfad bb: 2/7 · 1/6 = 2/42.</li><li>Die drei Pfade addieren und kürzen: 11/21.</li></ol><p><strong>Richtige Antwort:</strong> 11/21</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"ereignisse-pfade-hoechstens-rot","given":{"e":{"pick":1,"from":{"data":"urnen"}},"r":{"int":[0,3]}},"task":{"text":"In einer Urne liegen {{e.rot}} rote und {{e.blau}} blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist höchstens eine rote Kugel?"},"answer":{"value":"e.pHoechstens","compare":{"choice":"[[e.pHoechstens, e.pGenau, e.pMind, e.pHoechstensMit], [e.pGenau, e.pHoechstens, e.pMind, e.pHoechstensMit], [e.pGenau, e.pMind, e.pHoechstens, e.pHoechstensMit], [e.pGenau, e.pMind, e.pHoechstensMit, e.pHoechstens]][r]"}},"mistakes":[{"value":"e.pGenau","message":"Du hast bb vergessen. Keinmal rot gehört auch dazu."},{"value":"e.pMind","message":"Das ist „mindestens einmal rot“."},{"value":"e.pHoechstensMit","message":"So wäre es mit Zurücklegen."}],"hint":"Welche drei Pfade gehören zu „höchstens einmal rot“?","steps":["Pfade rb und br: je {{e.zRB}}/{{e.nn}}. Pfad bb: {{e.blau}}/{{e.n}} · {{e.blau1}}/{{e.n1}} = {{e.zBB}}/{{e.nn}}.","Die drei Pfade addieren und kürzen: {{answer}}."]},"templates":{"de":{"task":"In einer Urne liegen ⟦e.rot⟧ rote und ⟦e.blau⟧ blaue Kugeln. Du ziehst zweimal ohne Zurücklegen. Wie wahrscheinlich ist höchstens eine rote Kugel?","steps":["Pfade rb und br: je ⟦e.zRB⟧/⟦e.nn⟧. Pfad bb: ⟦e.blau⟧/⟦e.n⟧ · ⟦e.blau1⟧/⟦e.n1⟧ = ⟦e.zBB⟧/⟦e.nn⟧.","Die drei Pfade addieren und kürzen: ⟦answer⟧."],"hint":"Welche drei Pfade gehören zu „höchstens einmal rot“?","messages":["Du hast bb vergessen. Keinmal rot gehört auch dazu.","Das ist „mindestens einmal rot“.","So wäre es mit Zurücklegen."]}},"data":{"urnen":[{"rot":3,"blau":2,"n":5,"rot1":2,"blau1":1,"n1":4,"nn":20,"zRR":6,"zRB":6,"zGenau":12,"zBB":2,"prr":"3/10","prrMit":"9/25","prrAlterNenner":"6/25","prrZaehler":"9/20","pGenau":"3/5","pEinPfad":"3/10","pGenauMit":"12/25","pMind":"9/10","pKein":"1/10","pHoechstens":"7/10","pMindMit":"21/25","pHoechstensMit":"16/25"},{"rot":2,"blau":3,"n":5,"rot1":1,"blau1":2,"n1":4,"nn":20,"zRR":2,"zRB":6,"zGenau":12,"zBB":6,"prr":"1/10","prrMit":"4/25","prrAlterNenner":"2/25","prrZaehler":"1/5","pGenau":"3/5","pEinPfad":"3/10","pGenauMit":"12/25","pMind":"7/10","pKein":"3/10","pHoechstens":"9/10","pMindMit":"16/25","pHoechstensMit":"21/25"},{"rot":4,"blau":2,"n":6,"rot1":3,"blau1":1,"n1":5,"nn":30,"zRR":12,"zRB":8,"zGenau":16,"zBB":2,"prr":"2/5","prrMit":"4/9","prrAlterNenner":"1/3","prrZaehler":"8/15","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"4/9","pMind":"14/15","pKein":"1/15","pHoechstens":"3/5","pMindMit":"8/9","pHoechstensMit":"5/9"},{"rot":2,"blau":4,"n":6,"rot1":1,"blau1":3,"n1":5,"nn":30,"zRR":2,"zRB":8,"zGenau":16,"zBB":12,"prr":"1/15","prrMit":"1/9","prrAlterNenner":"1/18","prrZaehler":"2/15","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"4/9","pMind":"3/5","pKein":"2/5","pHoechstens":"14/15","pMindMit":"5/9","pHoechstensMit":"8/9"},{"rot":4,"blau":3,"n":7,"rot1":3,"blau1":2,"n1":6,"nn":42,"zRR":12,"zRB":12,"zGenau":24,"zBB":6,"prr":"2/7","prrMit":"16/49","prrAlterNenner":"12/49","prrZaehler":"8/21","pGenau":"4/7","pEinPfad":"2/7","pGenauMit":"24/49","pMind":"6/7","pKein":"1/7","pHoechstens":"5/7","pMindMit":"40/49","pHoechstensMit":"33/49"},{"rot":3,"blau":4,"n":7,"rot1":2,"blau1":3,"n1":6,"nn":42,"zRR":6,"zRB":12,"zGenau":24,"zBB":12,"prr":"1/7","prrMit":"9/49","prrAlterNenner":"6/49","prrZaehler":"3/14","pGenau":"4/7","pEinPfad":"2/7","pGenauMit":"24/49","pMind":"5/7","pKein":"2/7","pHoechstens":"6/7","pMindMit":"33/49","pHoechstensMit":"40/49"},{"rot":5,"blau":3,"n":8,"rot1":4,"blau1":2,"n1":7,"nn":56,"zRR":20,"zRB":15,"zGenau":30,"zBB":6,"prr":"5/14","prrMit":"25/64","prrAlterNenner":"5/16","prrZaehler":"25/56","pGenau":"15/28","pEinPfad":"15/56","pGenauMit":"15/32","pMind":"25/28","pKein":"3/28","pHoechstens":"9/14","pMindMit":"55/64","pHoechstensMit":"39/64"},{"rot":3,"blau":5,"n":8,"rot1":2,"blau1":4,"n1":7,"nn":56,"zRR":6,"zRB":15,"zGenau":30,"zBB":20,"prr":"3/28","prrMit":"9/64","prrAlterNenner":"3/32","prrZaehler":"9/56","pGenau":"15/28","pEinPfad":"15/56","pGenauMit":"15/32","pMind":"9/14","pKein":"5/14","pHoechstens":"25/28","pMindMit":"39/64","pHoechstensMit":"55/64"},{"rot":5,"blau":2,"n":7,"rot1":4,"blau1":1,"n1":6,"nn":42,"zRR":20,"zRB":10,"zGenau":20,"zBB":2,"prr":"10/21","prrMit":"25/49","prrAlterNenner":"20/49","prrZaehler":"25/42","pGenau":"10/21","pEinPfad":"5/21","pGenauMit":"20/49","pMind":"20/21","pKein":"1/21","pHoechstens":"11/21","pMindMit":"45/49","pHoechstensMit":"24/49"},{"rot":2,"blau":5,"n":7,"rot1":1,"blau1":4,"n1":6,"nn":42,"zRR":2,"zRB":10,"zGenau":20,"zBB":20,"prr":"1/21","prrMit":"4/49","prrAlterNenner":"2/49","prrZaehler":"2/21","pGenau":"10/21","pEinPfad":"5/21","pGenauMit":"20/49","pMind":"11/21","pKein":"10/21","pHoechstens":"20/21","pMindMit":"24/49","pHoechstensMit":"45/49"},{"rot":6,"blau":2,"n":8,"rot1":5,"blau1":1,"n1":7,"nn":56,"zRR":30,"zRB":12,"zGenau":24,"zBB":2,"prr":"15/28","prrMit":"9/16","prrAlterNenner":"15/32","prrZaehler":"9/14","pGenau":"3/7","pEinPfad":"3/14","pGenauMit":"3/8","pMind":"27/28","pKein":"1/28","pHoechstens":"13/28","pMindMit":"15/16","pHoechstensMit":"7/16"},{"rot":2,"blau":6,"n":8,"rot1":1,"blau1":5,"n1":7,"nn":56,"zRR":2,"zRB":12,"zGenau":24,"zBB":30,"prr":"1/28","prrMit":"1/16","prrAlterNenner":"1/32","prrZaehler":"1/14","pGenau":"3/7","pEinPfad":"3/14","pGenauMit":"3/8","pMind":"13/28","pKein":"15/28","pHoechstens":"27/28","pMindMit":"7/16","pHoechstensMit":"15/16"},{"rot":6,"blau":4,"n":10,"rot1":5,"blau1":3,"n1":9,"nn":90,"zRR":30,"zRB":24,"zGenau":48,"zBB":12,"prr":"1/3","prrMit":"9/25","prrAlterNenner":"3/10","prrZaehler":"2/5","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"12/25","pMind":"13/15","pKein":"2/15","pHoechstens":"2/3","pMindMit":"21/25","pHoechstensMit":"16/25"},{"rot":4,"blau":6,"n":10,"rot1":3,"blau1":5,"n1":9,"nn":90,"zRR":12,"zRB":24,"zGenau":48,"zBB":30,"prr":"2/15","prrMit":"4/25","prrAlterNenner":"3/25","prrZaehler":"8/45","pGenau":"8/15","pEinPfad":"4/15","pGenauMit":"12/25","pMind":"2/3","pKein":"1/3","pHoechstens":"13/15","pMindMit":"16/25","pHoechstensMit":"21/25"}]},"seeds":[1,2,3,4,5,6,7,8,9,11,12,13,14,15,17,18,20,21,23,24,25,26,28,29,31,32,33,34,37,39,40,43,46,48,53,59,61,62,63,65,69,75,82,94,99,102,107,110,122,125,133,145,174,192,225,230],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="acaf493e" data-block-type="single-choice" data-block-order="22">
+<div class="explainer-exercise explainer-question" id="ereignisse-pfade-gluecksrad">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ereignisse-pfade-gluecksrad" data-id="ereignisse-pfade-gluecksrad" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Glücksrad hat 4 gleich große Felder, eines davon gewinnt. Du drehst zweimal. Wie wahrscheinlich ist genau ein Gewinn?</legend>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-gluecksrad" value="0"> <span>3/16</span></label>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-gluecksrad" value="1"> <span>3/8</span></label>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-gluecksrad" value="2"> <span>7/16</span></label>
+<label class="question-option"><input type="radio" name="frage-ereignisse-pfade-gluecksrad" value="3"> <span>1/2</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3/16</strong></p><p>Das ist nur der Pfad Gewinn – Niete.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>3/8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zwei Pfade mit je 3/16.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>7/16</strong></p><p>Das ist „mindestens ein Gewinn“.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>1/2</strong></p><p>1/4 + 1/4: Entlang eines Pfades wird multipliziert.</p></li>
+</ul>
+<p class="question-explanation">1/4 · 3/4 + 3/4 · 1/4 = 6/16 = 3/8. Beim Glücksrad bleibt jeder Dreh gleich.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/189811/pfadregeln" rel="noopener" title="Pfadregeln (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Pfadregeln (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>3/16</strong></p><p>Das ist nur der Pfad Gewinn – Niete.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>3/8</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Zwei Pfade mit je 3/16.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>7/16</strong></p><p>Das ist „mindestens ein Gewinn“.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>1/2</strong></p><p>1/4 + 1/4: Entlang eines Pfades wird multipliziert.</p></li>
+</ul>
+<p class="question-explanation">1/4 · 3/4 + 3/4 · 1/4 = 6/16 = 3/8. Beim Glücksrad bleibt jeder Dreh gleich.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/189811/pfadregeln" rel="noopener" title="Pfadregeln (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Pfadregeln (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ereignisse-pfade-gluecksrad","text":"Ein Glücksrad hat 4 gleich große Felder, eines davon gewinnt. Du drehst zweimal. Wie wahrscheinlich ist genau ein Gewinn?","explanation":"1/4 · 3/4 + 3/4 · 1/4 = 6/16 = 3/8. Beim Glücksrad bleibt jeder Dreh gleich.","links":[{"title":"Pfadregeln (Serlo)","url":"https://de.serlo.org/mathe/189811/pfadregeln"}],"type":"single-choice","options":[{"text":"3/16","correct":false,"info":"Das ist nur der Pfad Gewinn – Niete."},{"text":"3/8","correct":true,"info":"Zwei Pfade mit je 3/16."},{"text":"7/16","correct":false,"info":"Das ist „mindestens ein Gewinn“."},{"text":"1/2","correct":false,"info":"1/4 + 1/4: Entlang eines Pfades wird multipliziert."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="b1f4e1a9" data-block-type="number" data-block-order="23">
+<div class="explainer-exercise explainer-question" id="ereignisse-pfade-auslosen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ereignisse-pfade-auslosen" data-id="ereignisse-pfade-auslosen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Aus 3 Mädchen und 2 Jungen werden zwei Kinder für den Tafeldienst ausgelost. Wie wahrscheinlich sind ein Mädchen und ein Junge? Gib die Antwort in Prozent an, sie geht auf.</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-ereignisse-pfade-auslosen" aria-describedby="frage-ereignisse-pfade-auslosen-unit"> <span id="frage-ereignisse-pfade-auslosen-unit">%</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 60 %</p>
+<p class="question-explanation">MJ: 3/5 · 2/4 = 6/20, JM: 2/5 · 3/4 = 6/20. Zusammen 12/20 = 60 %.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 60 %</p>
+<p class="question-explanation">MJ: 3/5 · 2/4 = 6/20, JM: 2/5 · 3/4 = 6/20. Zusammen 12/20 = 60 %.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente" rel="noopener" title="Mehrstufige Zufallsexperimente (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Mehrstufige Zufallsexperimente (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ereignisse-pfade-auslosen","text":"Aus 3 Mädchen und 2 Jungen werden zwei Kinder für den Tafeldienst ausgelost. Wie wahrscheinlich sind ein Mädchen und ein Junge? Gib die Antwort in Prozent an, sie geht auf.","explanation":"MJ: 3/5 · 2/4 = 6/20, JM: 2/5 · 3/4 = 6/20. Zusammen 12/20 = 60 %.","links":[{"title":"Mehrstufige Zufallsexperimente (Serlo)","url":"https://de.serlo.org/mathe/156048/mehrstufige-zufallsexperimente"}],"hint":"Zeichne den Baum mit M und J. Welche Pfade passen?","type":"number","answer":60,"tolerance":0,"unit":"%","mistakes":[{"answer":30,"message":"Du hast nur einen Pfad gezählt. Es geht auch umgekehrt."},{"answer":48,"message":"So wäre es mit Zurücklegen. Danach sind nur noch 4 Kinder übrig."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="c5aea4a9" data-block-type="text" data-block-order="24">
+<div class="block-text"><p>Als Nächstes lernst du einen kürzeren Weg für „mindestens einmal“ kennen – über das Gegenereignis.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Wahrscheinlichkeit“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-zufall","app":"Mathe-Wettbewerb 8: Wahrscheinlichkeit","root":"../../","repository":"rdmueller/mathe-wb8-zufall","revision":"f4f3c21","page":{"title":"Ereignisse als Pfade","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../w4-zufall/ohne-zuruecklegen/">Zurück: Ziehen ohne Zurücklegen</a><a rel="next" href="../../w4-zufall/gegenereignis/">Weiter: Das Gegenereignis</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

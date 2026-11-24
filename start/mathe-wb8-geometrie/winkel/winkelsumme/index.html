@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-DFCgoBtp.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <title>Winkelsumme in Dreieck und Viereck – Mathe-Wettbewerb 8: Geometrie</title>
+    <meta name="description" content="Herleiten, warum die Winkel im Dreieck zusammen 180° und im Viereck 360° ergeben, und fehlende Winkel berechnen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../winkel/winkelsumme/" />
+  </head>
+  <body>
+    <nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../winkel/">Winkel: Winkelsumme und Geradenkreuzungen</a></li><li aria-current="page">Winkelsumme in Dreieck und Viereck</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Winkelsumme in Dreieck und Viereck</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../winkel/winkelsumme/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧winkel/winkelsumme/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-wb8-geometrie","page":{"id":"winkelsumme","title":"Winkelsumme in Dreieck und Viereck","exercises":[{"id":"winkelsumme-start","section":"start","numbered":false},{"id":"winkelsumme-dreieck","section":"uebung","numbered":true},{"id":"winkelsumme-viereck","section":"uebung","numbered":true},{"id":"winkelsumme-zwei-stumpfe","section":"uebung","numbered":false},{"id":"winkelsumme-basiswinkel","section":"uebung","numbered":true},{"id":"winkelsumme-doppelt","section":"uebung","numbered":false},{"id":"winkelsumme-viereck-teile","section":"uebung","numbered":false}],"sections":["start","regel","beispiel","merke","uebung"]},"tutor":"winkel/winkelsumme/tutor/","markdown":"winkel/winkelsumme/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#start">Probier zuerst</a></li><li><a href="#regel">Warum es immer 180° sind</a></li><li><a href="#beispiel">Ein Beispiel</a></li><li><a href="#merke">Dreieck 180°, Viereck 360°</a></li><li><a href="#uebung">Jetzt du</a></li></ol></nav>
+<div class="explainer-block" data-block="1" data-block-id="d17d6d37" data-block-type="text" data-block-order="1">
+<div class="block-text"><p><strong>Ziel:</strong> Ich kann fehlende Winkel mit der Winkelsumme im Dreieck und im Viereck berechnen. Winkel misst du im
+Heft mit dem Geodreieck in Grad (°); hier rechnest du sie aus. Du brauchst nur zwei Winkel, die du kennst: Eine
+Gerade bildet einen <strong>gestreckten Winkel</strong> von 180°, eine volle Drehung sind 360°.</p></div>
+</div>
+<section class="explainer-section">
+<h2 id="start">Probier zuerst</h2>
+<div class="explainer-block" data-block="start/1" data-block-id="55439e36" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="winkelsumme-start">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkelsumme-start" data-id="winkelsumme-start" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du reißt die drei Ecken eines Papierdreiecks ab und legst sie wie im Bild aneinander. Wie groß sind die drei Winkel zusammen?</legend>
+<div class="question-material"><figure class="block-figure"><img src="../../images/winkel-ecken.svg" alt="Links ein Dreieck ABC mit den Winkeln α bei A (blau), β bei B (lila) und γ bei C (grün). Rechts die drei abgerissenen Ecken, mit den Spitzen an einem Punkt aneinandergelegt, auf einer gestrichelten Geraden." loading="lazy" decoding="async"><figcaption><p>Achte darauf, wo die äußeren Kanten der drei Ecken liegen.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-winkelsumme-start" value="0"> <span>90°</span></label>
+<label class="question-option"><input type="radio" name="frage-winkelsumme-start" value="1"> <span>180°</span></label>
+<label class="question-option"><input type="radio" name="frage-winkelsumme-start" value="2"> <span>360°</span></label>
+<label class="question-option"><input type="radio" name="frage-winkelsumme-start" value="3"> <span>Das hängt vom Dreieck ab.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>90°</strong></p><p>90° ist ein rechter Winkel, wie die Ecke eines Blattes.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>180°</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die äußeren Kanten liegen auf einer Geraden. Das ist ein gestreckter Winkel.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>360°</strong></p><p>360° wären eine volle Drehung. Die Ecken füllen nur die obere Hälfte.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Das hängt vom Dreieck ab.</strong></p><p>Probiere es mit einem anderen Dreieck – es bleibt eine Gerade.</p></li>
+</ul>
+<p class="question-explanation">α, β und γ bilden zusammen einen gestreckten Winkel.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>90°</strong></p><p>90° ist ein rechter Winkel, wie die Ecke eines Blattes.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>180°</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die äußeren Kanten liegen auf einer Geraden. Das ist ein gestreckter Winkel.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>360°</strong></p><p>360° wären eine volle Drehung. Die Ecken füllen nur die obere Hälfte.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Das hängt vom Dreieck ab.</strong></p><p>Probiere es mit einem anderen Dreieck – es bleibt eine Gerade.</p></li>
+</ul>
+<p class="question-explanation">α, β und γ bilden zusammen einen gestreckten Winkel.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkelsumme-start","text":"Du reißt die drei Ecken eines Papierdreiecks ab und legst sie wie im Bild aneinander. Wie groß sind die drei Winkel zusammen?","explanation":"α, β und γ bilden zusammen einen gestreckten Winkel.","links":[{"title":"Winkel (Serlo)","url":"https://de.serlo.org/mathe/1707/winkel"}],"material":[{"type":"figure","image":"images/winkel-ecken.svg","alt":"Links ein Dreieck ABC mit den Winkeln α bei A (blau), β bei B (lila) und γ bei C (grün). Rechts die drei abgerissenen Ecken, mit den Spitzen an einem Punkt aneinandergelegt, auf einer gestrichelten Geraden.","caption":"Achte darauf, wo die äußeren Kanten der drei Ecken liegen.","source":"eigene Zeichnung","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"90°","correct":false,"info":"90° ist ein rechter Winkel, wie die Ecke eines Blattes."},{"text":"180°","correct":true,"info":"Die äußeren Kanten liegen auf einer Geraden. Das ist ein gestreckter Winkel."},{"text":"360°","correct":false,"info":"360° wären eine volle Drehung. Die Ecken füllen nur die obere Hälfte."},{"text":"Das hängt vom Dreieck ab.","correct":false,"info":"Probiere es mit einem anderen Dreieck – es bleibt eine Gerade."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="regel">Warum es immer 180° sind</h2>
+<div class="explainer-block" data-block="regel/1" data-block-id="db587270" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Das Abreißen geht auch ohne Schere. Zeichne durch C die Parallele zur Seite AB – eine Gerade, die überall
+gleich weit von AB entfernt ist. Links neben γ entsteht ein Winkel, der so groß ist wie α, rechts einer so
+groß wie β. Das sind die abgerissenen Ecken aus der Aufgabe, nur ohne Papier. Warum sie gleich groß sind,
+lernst du auf der nächsten Seite.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/2" data-block-id="ee16f768" data-block-type="figure" data-block-order="4">
+<figure class="block-figure"><img src="../../images/winkel-parallele.svg" alt="Ein Dreieck ABC. Durch C geht eine gestrichelte Parallele zu AB. Bei C liegen links ein blauer Winkel α, in der Mitte der grüne Winkel γ und rechts ein lila Winkel β nebeneinander auf der Parallelen." loading="lazy" decoding="async"><figcaption><p>Bei C liegen α, γ und β nebeneinander auf einer Geraden – in denselben Farben wie unten im Dreieck.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/3" data-block-id="57de2eeb" data-block-type="formula" data-block-order="5">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mi>γ</mi><mo>=</mo><msup><mn>180</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="regel/4" data-block-id="9d8696a4" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Ein Viereck teilt die Diagonale AC in zwei Dreiecke. Jedes hat 180°, zusammen sind es 360°.</p></div>
+</div>
+<div class="explainer-block" data-block="regel/5" data-block-id="f5a18ba2" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><img src="../../images/winkel-viereck.svg" alt="Ein Viereck ABCD mit den Winkeln α, β, γ und δ. Die gestrichelte Diagonale AC teilt es in ein blaues und ein lila Dreieck." loading="lazy" decoding="async"><figcaption><p>Die Diagonale teilt α und γ, aber alle Teile gehören zu genau einem der zwei Dreiecke.</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.</span></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="regel/6" data-block-id="2fd17692" data-block-type="formula" data-block-order="8">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mi>γ</mi><mo>+</mo><mi>δ</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><msup><mn>180</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>360</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Ein Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="e037c907" data-block-type="example" data-block-order="9">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Ein gleichschenkliges Dreieck</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="76ed1848" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Ein Dreieck ist <strong>gleichschenklig</strong>, wenn zwei Seiten gleich lang sind. Dann sind auch die zwei Winkel
+an der dritten Seite, der Basis, gleich groß. Ein Giebel hat oben an der Spitze γ = 40°. Wie groß sind
+die zwei Basiswinkel α und β?</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/2" data-block-id="c3525407" data-block-type="formula" data-block-order="11">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>=</mo><msup><mn>180</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>40</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>140</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/3" data-block-id="1c3b7adf" data-block-type="formula" data-block-order="12">
+<div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>α</mi><mo>=</mo><mi>β</mi><mo>=</mo><msup><mn>140</mn><mo>∘</mo></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><mn>2</mn><mo>=</mo><msup><mn>70</mn><mo>∘</mo></msup></mrow></math></div>
+</div>
+<div class="explainer-block" data-block="beispiel/1/4" data-block-id="7d514226" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Antwort – Beide Basiswinkel sind 70° groß. Probe – 70° + 70° + 40° = 180°.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="merke">Dreieck 180°, Viereck 360°</h2>
+<div class="explainer-block" data-block="merke/1" data-block-id="df2939ed" data-block-type="note" data-block-order="14">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="merke/1/1" data-block-id="61b38949" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Nur das Viereck hat 360°, das Dreieck hat 180°. Prüfe dein Ergebnis: Ein Winkel im Dreieck ist immer
+kleiner als 180°, und alle drei zusammen müssen genau 180° ergeben.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Jetzt du</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="f8621905" data-block-type="generated" data-block-order="16">
+<div class="explainer-exercise explainer-generated" id="winkelsumme-dreieck">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem Dreieck ist α = 20° und β = 65°. Wie groß ist γ?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle drei Winkel zusammen ergeben 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 20° und β = 65°: γ = 180° − 20° − 65°</li><li>γ ist 95° groß.</li></ol><p><strong>Richtige Antwort:</strong> 95 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem Dreieck ist α = 30° und β = 85°. Wie groß ist γ?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle drei Winkel zusammen ergeben 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 30° und β = 85°: γ = 180° − 30° − 85°</li><li>γ ist 65° groß.</li></ol><p><strong>Richtige Antwort:</strong> 65 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem Dreieck ist α = 55° und β = 85°. Wie groß ist γ?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle drei Winkel zusammen ergeben 180°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 55° und β = 85°: γ = 180° − 55° − 85°</li><li>γ ist 40° groß.</li></ol><p><strong>Richtige Antwort:</strong> 40 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkelsumme-dreieck","given":{"a":{"int":[20,110],"step":5},"b":{"int":[20,110],"step":5}},"where":["a + b \u003c= 160","a + b != 90"],"task":{"text":"In einem Dreieck ist α = {{a}}° und β = {{b}}°. Wie groß ist γ?"},"answer":{"value":"180 - a - b","compare":{"number":{"format":"integer","unit":"°"}}},"mistakes":[{"value":"360 - a - b","message":"Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben zusammen 180°."},{"value":"a + b","message":"Das sind α und β zusammen."}],"hint":"Alle drei Winkel zusammen ergeben 180°.","steps":["Mit α = {{a}}° und β = {{b}}°: γ = 180° − {{a}}° − {{b}}°","γ ist {{answer}}° groß."]},"templates":{"de":{"task":"In einem Dreieck ist α = ⟦a⟧° und β = ⟦b⟧°. Wie groß ist γ?","steps":["Mit α = ⟦a⟧° und β = ⟦b⟧°: γ = 180° − ⟦a⟧° − ⟦b⟧°","γ ist ⟦answer⟧° groß."],"hint":"Alle drei Winkel zusammen ergeben 180°.","messages":["Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben zusammen 180°.","Das sind α und β zusammen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,29,30,31,33,34,35,37,38,39,40,41,42,44,45,46,47,49,50,51,52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,70,71,72,73,75],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="140a82b7" data-block-type="generated" data-block-order="17">
+<div class="explainer-exercise explainer-generated" id="winkelsumme-viereck">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem Viereck ist α = 90°, β = 90° und γ = 65°. Wie groß ist δ?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle vier Winkel zusammen ergeben 360°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 90°, β = 90° und γ = 65°: δ = 360° − 90° − 90° − 65°</li><li>δ ist 115° groß.</li></ol><p><strong>Richtige Antwort:</strong> 115 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem Viereck ist α = 140°, β = 90° und γ = 70°. Wie groß ist δ?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle vier Winkel zusammen ergeben 360°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 140°, β = 90° und γ = 70°: δ = 360° − 140° − 90° − 70°</li><li>δ ist 60° groß.</li></ol><p><strong>Richtige Antwort:</strong> 60 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem Viereck ist α = 65°, β = 80° und γ = 110°. Wie groß ist δ?</p><details class="explainer-hint"><summary>Tipp</summary><p>Alle vier Winkel zusammen ergeben 360°.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit α = 65°, β = 80° und γ = 110°: δ = 360° − 65° − 80° − 110°</li><li>δ ist 105° groß.</li></ol><p><strong>Richtige Antwort:</strong> 105 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkelsumme-viereck","given":{"a":{"int":[50,140],"step":5},"b":{"int":[50,140],"step":5},"c":{"int":[50,140],"step":5}},"where":["a + b + c >= 210","a + b + c \u003c= 320"],"task":{"text":"In einem Viereck ist α = {{a}}°, β = {{b}}° und γ = {{c}}°. Wie groß ist δ?"},"answer":{"value":"360 - a - b - c","compare":{"number":{"format":"integer","unit":"°"}}},"mistakes":[{"value":"180 - a - b - c","message":"Du hast mit 180° gerechnet. Ein Viereck hat 360°."},{"value":"360 - a - b","message":"Du hast einen der drei Winkel vergessen."}],"hint":"Alle vier Winkel zusammen ergeben 360°.","steps":["Mit α = {{a}}°, β = {{b}}° und γ = {{c}}°: δ = 360° − {{a}}° − {{b}}° − {{c}}°","δ ist {{answer}}° groß."]},"templates":{"de":{"task":"In einem Viereck ist α = ⟦a⟧°, β = ⟦b⟧° und γ = ⟦c⟧°. Wie groß ist δ?","steps":["Mit α = ⟦a⟧°, β = ⟦b⟧° und γ = ⟦c⟧°: δ = 360° − ⟦a⟧° − ⟦b⟧° − ⟦c⟧°","δ ist ⟦answer⟧° groß."],"hint":"Alle vier Winkel zusammen ergeben 360°.","messages":["Du hast mit 180° gerechnet. Ein Viereck hat 360°.","Du hast einen der drei Winkel vergessen."]}},"data":{},"seeds":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="9e9b8256" data-block-type="true-false" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="winkelsumme-zwei-stumpfe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkelsumme-zwei-stumpfe" data-id="winkelsumme-zwei-stumpfe" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Dreieck kann zwei stumpfe Winkel haben, also zwei Winkel größer als 90°.</legend>
+<label class="question-option"><input type="radio" name="frage-winkelsumme-zwei-stumpfe" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-winkelsumme-zwei-stumpfe" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Zwei Winkel über 90° ergeben schon mehr als 180°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Zwei Winkel über 90° ergeben schon mehr als 180°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkelsumme-zwei-stumpfe","text":"Ein Dreieck kann zwei stumpfe Winkel haben, also zwei Winkel größer als 90°.","explanation":"Zwei Winkel über 90° ergeben schon mehr als 180°.","links":[{"title":"Winkel (Serlo)","url":"https://de.serlo.org/mathe/1707/winkel"}],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="ef082abd" data-block-type="generated" data-block-order="19">
+<div class="explainer-exercise explainer-generated" id="winkelsumme-basiswinkel">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">In einem gleichschenkligen Dreieck ist der Winkel an der Spitze 130° groß. Wie groß ist jeder der beiden Basiswinkel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Ziehe erst die Spitze von 180° ab.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit der Spitze 130°: Für die zwei Basiswinkel bleiben 180° − 130°.</li><li>Geteilt durch 2: Jeder Basiswinkel ist 25° groß.</li></ol><p><strong>Richtige Antwort:</strong> 25 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">In einem gleichschenkligen Dreieck ist der Winkel an der Spitze 60° groß. Wie groß ist jeder der beiden Basiswinkel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Ziehe erst die Spitze von 180° ab.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit der Spitze 60°: Für die zwei Basiswinkel bleiben 180° − 60°.</li><li>Geteilt durch 2: Jeder Basiswinkel ist 60° groß.</li></ol><p><strong>Richtige Antwort:</strong> 60 °</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">In einem gleichschenkligen Dreieck ist der Winkel an der Spitze 120° groß. Wie groß ist jeder der beiden Basiswinkel?</p><details class="explainer-hint"><summary>Tipp</summary><p>Ziehe erst die Spitze von 180° ab.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Mit der Spitze 120°: Für die zwei Basiswinkel bleiben 180° − 120°.</li><li>Geteilt durch 2: Jeder Basiswinkel ist 30° groß.</li></ol><p><strong>Richtige Antwort:</strong> 30 °</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"winkelsumme-basiswinkel","given":{"g":{"int":[20,140],"step":10}},"task":{"text":"In einem gleichschenkligen Dreieck ist der Winkel an der Spitze {{g}}° groß. Wie groß ist jeder der beiden Basiswinkel?"},"answer":{"value":"(180 - g) / 2","compare":{"number":{"format":"integer","unit":"°"}}},"mistakes":[{"value":"180 - g","message":"Das sind beide Basiswinkel zusammen. Teile noch durch 2."},{"value":"(360 - g) / 2","message":"Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben 180°."}],"hint":"Ziehe erst die Spitze von 180° ab.","steps":["Mit der Spitze {{g}}°: Für die zwei Basiswinkel bleiben 180° − {{g}}°.","Geteilt durch 2: Jeder Basiswinkel ist {{answer}}° groß."]},"templates":{"de":{"task":"In einem gleichschenkligen Dreieck ist der Winkel an der Spitze ⟦g⟧° groß. Wie groß ist jeder der beiden Basiswinkel?","steps":["Mit der Spitze ⟦g⟧°: Für die zwei Basiswinkel bleiben 180° − ⟦g⟧°.","Geteilt durch 2: Jeder Basiswinkel ist ⟦answer⟧° groß."],"hint":"Ziehe erst die Spitze von 180° ab.","messages":["Das sind beide Basiswinkel zusammen. Teile noch durch 2.","Du hast mit 360° gerechnet. Die Winkel im Dreieck ergeben 180°."]}},"data":{},"seeds":[1,2,3,5,6,7,8,15,19,25,32,70,85],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="aad89bf9" data-block-type="number" data-block-order="20">
+<div class="explainer-exercise explainer-question" id="winkelsumme-doppelt">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkelsumme-doppelt" data-id="winkelsumme-doppelt" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In einem gleichschenkligen Dreieck ist jeder Basiswinkel doppelt so groß wie der Winkel an der Spitze. Wie groß ist der Winkel an der Spitze?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-winkelsumme-doppelt" aria-describedby="frage-winkelsumme-doppelt-unit"> <span id="frage-winkelsumme-doppelt-unit">°</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 36 °</p>
+<p class="question-explanation">1 + 2 + 2 = 5 Teile = 180°, ein Teil ist 36°. Probe – 36° + 72° + 72° = 180°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 36 °</p>
+<p class="question-explanation">1 + 2 + 2 = 5 Teile = 180°, ein Teil ist 36°. Probe – 36° + 72° + 72° = 180°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkelsumme-doppelt","text":"In einem gleichschenkligen Dreieck ist jeder Basiswinkel doppelt so groß wie der Winkel an der Spitze. Wie groß ist der Winkel an der Spitze?","explanation":"1 + 2 + 2 = 5 Teile = 180°, ein Teil ist 36°. Probe – 36° + 72° + 72° = 180°.","links":[{"title":"Winkel (Serlo)","url":"https://de.serlo.org/mathe/1707/winkel"}],"hint":"Nenne die Spitze einen Teil. Wie viele Teile sind alle drei Winkel?","type":"number","answer":36,"tolerance":0,"unit":"°","mistakes":[{"answer":72,"message":"Das ist ein Basiswinkel. Gefragt ist der Winkel an der Spitze."},{"answer":60,"message":"Bei 60° wären alle drei Winkel gleich groß."},{"answer":45,"message":"Zähle die Teile noch einmal."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="0654ffdc" data-block-type="number" data-block-order="21">
+<div class="explainer-exercise explainer-question" id="winkelsumme-viereck-teile">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-winkelsumme-viereck-teile" data-id="winkelsumme-viereck-teile" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In einem Viereck ist α = 80° und β = 100°. Der Winkel γ ist doppelt so groß wie δ. Wie groß ist γ?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-winkelsumme-viereck-teile" aria-describedby="frage-winkelsumme-viereck-teile-unit"> <span id="frage-winkelsumme-viereck-teile-unit">°</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 120 °</p>
+<p class="question-explanation">γ + δ = 360° − 80° − 100° = 180° = 3 Teile, also δ = 60° und γ = 120°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 120 °</p>
+<p class="question-explanation">γ + δ = 360° − 80° − 100° = 180° = 3 Teile, also δ = 60° und γ = 120°.</p>
+<p class="question-more"><a class="question-more-link" href="https://de.serlo.org/mathe/1707/winkel" rel="noopener" title="Winkel (Serlo)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">Mehr dazu: Winkel (Serlo)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"winkelsumme-viereck-teile","text":"In einem Viereck ist α = 80° und β = 100°. Der Winkel γ ist doppelt so groß wie δ. Wie groß ist γ?","explanation":"γ + δ = 360° − 80° − 100° = 180° = 3 Teile, also δ = 60° und γ = 120°.","links":[{"title":"Winkel (Serlo)","url":"https://de.serlo.org/mathe/1707/winkel"}],"hint":"Wie viel bleibt für γ und δ zusammen?","type":"number","answer":120,"tolerance":0,"unit":"°","mistakes":[{"answer":60,"message":"Das ist δ. Gefragt ist γ, der doppelt so große Winkel."},{"answer":90,"message":"γ ist doppelt so groß wie δ, nicht gleich groß."},{"answer":0,"message":"Du hast mit 180° gerechnet. Ein Viereck hat 360°."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/7" data-block-id="b3bf22a9" data-block-type="text" data-block-order="22">
+<div class="block-text"><p>Als Nächstes schaust du dir an, welche Winkel an zwei sich kreuzenden Geraden gleich groß sind – und warum die Parallele durch C oben funktioniert.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Mathe-Wettbewerb 8: Geometrie“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-wb8-geometrie","app":"Mathe-Wettbewerb 8: Geometrie","root":"../../","repository":"rdmueller/mathe-wb8-geometrie","revision":"a6c4104","page":{"title":"Winkelsumme in Dreieck und Viereck","order":6}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../flaechen/formeln-umstellen/">Zurück: Formeln umstellen</a><a rel="next" href="../../winkel/geradenkreuzungen/">Weiter: Winkel an Geradenkreuzungen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>
