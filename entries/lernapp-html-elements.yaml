@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title:
+  de: "HTML-Elemente: was, wann und warum"
+  en: "HTML Elements: what, when and why"
+subject: { de: Informatik, en: Computer Science }
+grades: [9, 10, 11, 12, 13]
+summary:
+  de: >-
+    In diesem Quiz beantworten Lernende Fragen zu HTML-Elementen aus dem ganzen Spektrum: was ein Element tut, wann
+    man es benutzt und wann nicht, wie es die Barrierefreiheit beeinflusst (implizite ARIA-Rollen) und welchen
+    Baseline-Status es hat. Nach jeder Antwort lesen sie kurz zu jeder Möglichkeit und finden einen Link zu den
+    MDN-Dokumenten. Mit Positiv- und Negativbeispielen, für HTML-Lernende vom Anfang bis fortgeschritten.
+  en: >-
+    In this quiz, learners answer questions about HTML elements across the whole spectrum: what an element does,
+    when to use it and when not, its effect on accessibility (implicit ARIA roles), and its Baseline status. After
+    each answer they read a short note on every option and find a link to the MDN docs. With positive and negative
+    examples, for HTML learners from beginner to advanced.
+url: https://d-koppenhagen.github.io/lernapp-html-elements/
+topics:
+  - title: { de: "Semantik und Dokumentstruktur", en: "Semantics and document structure" }
+    path: "#frage-c1-main-01"
+  - title: { de: "Text-Ebene", en: "Text-level semantics" }
+    path: "#frage-c2-strong-vs-b-01"
+  - title: { de: "Formulare", en: "Forms" }
+    path: "#frage-c3-label-01"
+  - title: { de: "Interaktive und moderne Elemente", en: "Interactive and modern elements" }
+    path: "#frage-c4-details-01"
+  - title: { de: "Barrierefreiheit und ARIA", en: "Accessibility and ARIA" }
+    path: "#frage-c5-a-vs-button-01"
+  - title: { de: "Status und Baseline", en: "Status and Baseline" }
+    path: "#frage-c6-baseline-meaning-01"
+keywords:
+  - { de: HTML, en: HTML }
+  - { de: semantisches HTML, en: semantic HTML }
+  - { de: Barrierefreiheit, en: accessibility }
+  - { de: ARIA, en: ARIA }
+  - { de: HTML-Elemente, en: HTML elements }
+  - { de: Baseline, en: Baseline }
+creator:
+  name: Danny Koppenhagen
+  url: https://github.com/d-koppenhagen
+source: https://github.com/d-koppenhagen/lernapp-html-elements
+commit: 806067d3c93f043791f0a3564a91751c7c7561db
+fitness:
+  account: false
+  install: false
+  storage: none
+  thirdParty: none
+  checked: false
