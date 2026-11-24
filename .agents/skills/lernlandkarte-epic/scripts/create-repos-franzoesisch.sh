@@ -71,13 +71,15 @@ ensure_pages() {  # $1 = Repository: Branch gh-pages (zeigt zuerst auf main) und
 }
 
 # Schicht|Issue|Repository|Beschreibung
-# Die Schichten folgen den `requires` der Lernlandkarte Französisch (Längster-Pfad-Schichten der Explainer,
-# gruppiert in drei Wellen): https://lernapps.net/apps/map/franzoesisch/ und
+# Drei Wellen. An erster Stelle von Schicht 1 steht die Begrüßung als Geschichte — feste Wendungen vor der
+# Regel, wie #470 (hello-millbrook) im Englisch-Epic; Kapitel mit Grammatik-Bedarf bekommen Recap-Seiten.
+# Danach folgen die Explainer ohne Abhängigkeiten und die ersten Systeme nach den `requires` der Lernlandkarte
+# Französisch (Längster-Pfad der Explainer-Relationen): https://lernapps.net/apps/map/franzoesisch/ und
 # `node .agents/skills/map-explainers/scripts/check.mjs franzoesisch --relations --file map/franzoesisch/explainer.md`.
-# Schicht 1: Grundlagen ohne Abhängigkeiten und die ersten Systeme (Nomen/Begleiter, Verben, Zahlen, Laute/Schrift, Sätze).
-# Schicht 2: baut auf Schicht 1 auf (Zeiten, Pronomen, Brieffreundschaft, Werkzeuge für Wörter).
-# Schicht 3: Situationen und Texte (Stadt, Frankreich/Frankophonie, Geschichten, Bilder, Meinung, Schreibwerkstatt).
+# Schicht 2: Zeiten, Pronomen, Werkzeuge für Wörter. Schicht 3: Situationen und Texte (Stadt,
+# Frankreich/Frankophonie, Geschichten, Bilder, Meinung, Schreibwerkstatt).
 REPOS=(
+  "1|352|franzoesisch-salut|Salut! Eine Brieffreundschaft (Explainer Französisch)"
   "1|346|franzoesisch-nomen-und-begleiter|Nomen und ihre Begleiter (Explainer Französisch)"
   "1|347|franzoesisch-verben|Verben konjugieren (Explainer Französisch)"
   "1|355|franzoesisch-zahlen|Zahlen, Uhr und Kalender (Explainer Französisch)"
@@ -85,7 +87,6 @@ REPOS=(
   "1|349|franzoesisch-saetze-bauen|Sätze bauen (Explainer Französisch)"
   "2|348|franzoesisch-zeiten|Zeiten auf dem Zeitstrahl (Explainer Französisch)"
   "2|350|franzoesisch-pronomen|Pronomen als Stellvertreter (Explainer Französisch)"
-  "2|352|franzoesisch-salut|Salut! Eine Brieffreundschaft (Explainer Französisch)"
   "2|361|franzoesisch-woerter-werkzeuge|Werkzeuge für unbekannte Wörter (Explainer Französisch)"
   "3|354|franzoesisch-unterwegs-in-der-stadt|Unterwegs in der Stadt (Explainer Französisch)"
   "3|356|franzoesisch-frankreich-und-frankophonie|Eine Reise durch Frankreich und die Frankophonie (Explainer Französisch)"

@@ -10,6 +10,7 @@ einmal an alle Sessions.
 
 | Schicht | Issue | Repository | Explainer |
 |---|---|---|---|
+| 1 | #352 | franzoesisch-salut | Salut! Eine Brieffreundschaft |
 | 1 | #346 | franzoesisch-nomen-und-begleiter | Nomen und ihre Begleiter |
 | 1 | #347 | franzoesisch-verben | Verben konjugieren |
 | 1 | #355 | franzoesisch-zahlen | Zahlen, Uhr und Kalender |
@@ -17,7 +18,6 @@ einmal an alle Sessions.
 | 1 | #349 | franzoesisch-saetze-bauen | Sätze bauen |
 | 2 | #348 | franzoesisch-zeiten | Zeiten auf dem Zeitstrahl |
 | 2 | #350 | franzoesisch-pronomen | Pronomen als Stellvertreter |
-| 2 | #352 | franzoesisch-salut | Salut! Eine Brieffreundschaft |
 | 2 | #361 | franzoesisch-woerter-werkzeuge | Werkzeuge für unbekannte Wörter |
 | 3 | #354 | franzoesisch-unterwegs-in-der-stadt | Unterwegs in der Stadt |
 | 3 | #356 | franzoesisch-frankreich-und-frankophonie | Eine Reise durch Frankreich und die Frankophonie |
@@ -27,8 +27,14 @@ einmal an alle Sessions.
 | 3 | #360 | franzoesisch-schreibwerkstatt | Schreibwerkstatt: Texte nach Bauplan |
 
 - Die Schichten sind die Wellen: Schicht 1 zuerst, dann 2, dann 3 (so legt `scripts/create-repos-franzoesisch.sh`
-  die Repos an; Reihenfolge aus den `requires` der Karte). Höhere Stufen innerhalb eines Explainers sind Inkremente
-  auf `increment/*` im selben Repo mit eigenem Vorschau-PR; die veröffentlichte Version bleibt unberührt.
+  die Repos an). Höhere Stufen innerhalb eines Explainers sind Inkremente auf `increment/*` im selben Repo mit
+  eigenem Vorschau-PR; die veröffentlichte Version bleibt unberührt.
+- **Feste Wendungen vor der Regel (Vorbild Englisch-Epic #470, hello-millbrook):** #352 steht an erster Stelle.
+  Kapitel 1 („Bonjour! Sich begrüßen und vorstellen") erzählt die erste Begegnung von Lina und Hugo als Geschichte
+  — Begrüßung, la bise und Handschlag, die erste Nachricht — ohne Regeln. Die Regeln dazu liefern die
+  System-Explainer (#347 Subjektpronomen tu/vous, #346 Artikel im Steckbrief …); Kapitel von #352, die Grammatik
+  brauchen, beginnen mit der Sammel-Wiederholung („Das brauchst du hier"). Die Begrüßungs-Bausteine selbst haben
+  keine Grammatik-Voraussetzungen (`begruessen-und-vorstellen` ohne `requires`).
 - Ein Explainer ist eine App im Format 2: `strand: franzoesisch/<strang>` (System-Explainer) oder
   `subject: franzoesisch` (Einheiten-App über Stränge). Kapitel sind Ordner `src/<kapitel>/`, eine Seite ist
   `src/<kapitel>/<seite>.yaml` und nennt ihre Bausteine in `competencies: [<id>, …]`.
