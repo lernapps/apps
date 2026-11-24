@@ -63,12 +63,6 @@
   </ol>
 </nav>
 
-  
-<aside class="map-status map-status-draft" aria-labelledby="status-spanisch">
-  <p class="m-0"><strong id="status-spanisch" class="map-status-tag map-status-tag-draft">Draft</strong> This map is only an idea to show the principle. No teacher of the subject has checked it yet. Strands, building blocks and arrows may be wrong or missing.</p>
-  <p class="m-0 mt-1">Do you teach the subject? Look through the map and tell us what is missing or wrong: <a href="https://github.com/lernapps/apps/issues/new?title=Learning%20map%20Spanish%3A%20review" class="underline underline-offset-2 font-semibold">Help out</a> <span class="map-status-note">(GitHub issue, needs a GitHub account)</span></p>
-</aside>
-
 
   <div class="flex flex-col gap-3 items-start">
     <a href="/apps/en/map/#baustein" class="text-sm text-blue-700 underline underline-offset-2">Building block · what is that?</a>
@@ -77,9 +71,13 @@
     <dl class="map-facts w-full mt-2">
       <div><dt>Strand</dt><dd><a href="/apps/en/map/spanisch/grammatik/" class="text-blue-700 underline underline-offset-2">Grammar</a></dd></div>
       <div><dt>Grade band</dt><dd>Grade 5/6</dd></div>
-      <div><dt>Source</dt><dd lang="de"><a href="https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2023/2023_06_22-Bista-ESA-MSA-ErsteFremdsprache.pdf" class="text-blue-700 underline underline-offset-2">KMK, Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss, Beschluss vom 15.10.2004 und vom 04.12.2003 i.d.F. vom 22.06.2023 (Struktur; Inhalte aus den Lehrplänen Hessen, Bayern und NRW)</a></dd></div>
     </dl>
   </div>
+  <section aria-labelledby="wer" class="flex flex-col gap-3">
+    <h2 id="wer" class="m-0 text-xl font-bold text-slate-900">Which app practises it?</h2>
+    <p class="m-0 p-4 rounded-lg map-chip-gap">No app practises this building block yet. That is a gap.</p>
+    <p class="m-0 text-slate-700">Do you have an idea how to practise it? <a href="/apps/en/build/" class="text-blue-700 underline underline-offset-2">Build an app for this strand</a></p>
+  </section>
   <section class="panel" aria-labelledby="weg">
     <h2 id="weg" class="panel-title">The chain</h2>
     <p class="m-0 text-slate-600">What you need before and what comes after, step by step.</p>
@@ -89,13 +87,13 @@
         <dl class="map-chain-steps">
           <dt>Grade 5/6 · step 1</dt>
           <dd><ul><li>
-<a href="/apps/en/map/spanisch/c/artikel-und-genus/" class="text-blue-700 underline underline-offset-2"><span>Articles and gender</span></a>
+<a href="/apps/en/map/spanisch/c/artikel-und-genus/" class="text-blue-700 underline underline-offset-2" title="Articles and gender"><span>Articles and gender</span></a>
  <span class="map-direct">directly</span></li><li>
-<a href="/apps/en/map/spanisch/c/subjektpronomen/" class="text-blue-700 underline underline-offset-2"><span>Subject pronouns</span></a>
+<a href="/apps/en/map/spanisch/c/subjektpronomen/" class="text-blue-700 underline underline-offset-2" title="Subject pronouns"><span>Subject pronouns</span></a>
 </li></ul></dd>
           <dt>Grade 5/6 · step 2</dt>
           <dd><ul><li>
-<a href="/apps/en/map/spanisch/c/estar/" class="text-blue-700 underline underline-offset-2"><span>The verb estar</span></a>
+<a href="/apps/en/map/spanisch/c/estar/" class="text-blue-700 underline underline-offset-2" title="The verb estar"><span>The verb estar</span></a>
  <span class="map-direct">directly</span></li></ul></dd>
         </dl>
       </div>
@@ -110,9 +108,9 @@
         <dl class="map-chain-steps">
           <dt>Grade 5/6 · step 4</dt>
           <dd><ul><li>
-<a href="/apps/en/map/spanisch/c/wohnen/" class="text-blue-700 underline underline-offset-2"><span>Home</span></a> <span class="text-slate-600">· strand Vocabulary</span>
+<a href="/apps/en/map/spanisch/c/wohnen/" class="text-blue-700 underline underline-offset-2" title="Home"><span>Home</span></a> <span class="text-slate-600">· strand Vocabulary</span>
 </li><li>
-<a href="/apps/en/map/spanisch/c/bildbeschreibung/" class="text-blue-700 underline underline-offset-2"><span>Describing a picture</span></a> <span class="text-slate-600">· strand Vocabulary</span>
+<a href="/apps/en/map/spanisch/c/bildbeschreibung/" class="text-blue-700 underline underline-offset-2" title="Describing a picture"><span>Describing a picture</span></a> <span class="text-slate-600">· strand Vocabulary</span>
 </li></ul></dd>
         </dl>
         <p class="m-0 mt-3 text-slate-700">After that, 1 more building block builds on it in 1 further step.</p>
@@ -121,9 +119,9 @@
     <p class="m-0 mt-4"><a href="/apps/en/map/spanisch/c/#hay" class="text-blue-700 underline underline-offset-2">The whole chain in the map by grade and chain</a></p>
   </section>
 
-  <section class="panel" aria-labelledby="wann">
-    <h2 id="wann" class="panel-title">When is it taught?</h2>
-    <p class="m-0 text-slate-600">Each curriculum sets in which grade a building block is taught. Without a chosen curriculum, the map shows the grade band.</p>
+  <details class="panel">
+    <summary class="cursor-pointer"><h2 id="wann" class="inline m-0 text-xl font-bold text-slate-900">When is it taught?</h2></summary>
+    <p class="m-0 mt-3 text-slate-600">Each curriculum sets in which grade a building block is taught. Without a chosen curriculum, the map shows the grade band.</p>
     <div class="map-scroll mt-3" role="region" aria-labelledby="wann" tabindex="0">
       <table class="map-table">
         <thead>
@@ -146,13 +144,12 @@
       </table>
     </div>
     <p class="m-0 mt-3 text-sm text-slate-600">Other states, not captured yet: Baden-Württemberg, Bavaria, Berlin, Brandenburg, Bremen, Hamburg, Hesse, Mecklenburg-Western Pomerania, Lower Saxony, North Rhine-Westphalia, Rhineland-Palatinate, Saarland, Saxony, Saxony-Anhalt, Schleswig-Holstein, Thuringia</p>
-  </section>
+  </details>
 
-  <section class="panel" aria-labelledby="wer">
-    <h2 id="wer" class="panel-title">Which app practises it?</h2>
-    <p class="m-0 p-4 rounded-lg map-chip-gap">No app practises this building block yet. That is a gap.</p>
-    <p class="m-0 mt-4 text-slate-700">Do you have an idea how to practise it? <a href="/apps/en/build/" class="text-blue-700 underline underline-offset-2">Build an app for this strand</a></p>
-  </section>
+  <details class="panel">
+    <summary class="cursor-pointer"><h2 id="quelle" class="inline m-0 text-xl font-bold text-slate-900">Source</h2></summary>
+    <p class="m-0 mt-3" lang="de"><a href="https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2023/2023_06_22-Bista-ESA-MSA-ErsteFremdsprache.pdf" class="text-blue-700 underline underline-offset-2">KMK, Bildungsstandards für die erste Fremdsprache (Englisch/Französisch) für den Ersten Schulabschluss und den Mittleren Schulabschluss, Beschluss vom 15.10.2004 und vom 04.12.2003 i.d.F. vom 22.06.2023 (Struktur; Inhalte aus den Lehrplänen Hessen, Bayern und NRW)</a></p>
+  </details>
 </div>
 
   </main>
