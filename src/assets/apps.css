@@ -206,10 +206,16 @@ textarea.field { resize: vertical; font-size: .875rem; }
 .map-chain-item:hover { border-color: var(--la-control, #64748b); }
 .map-chain-item:focus-visible { outline: 3px solid #60a5fa; outline-offset: 2px; }
 /* The chain on the page of a competency (map-competency.njk). */
-.map-chain-steps { margin: .5rem 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .5rem .75rem; align-items: baseline; }
-.map-chain-steps dt { font-size: .8125rem; color: var(--la-muted, #475569); white-space: nowrap; }
-.map-chain-steps dd { margin: 0; }
+.map-chain-steps { margin: .5rem 0 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: .125rem; }
+.map-chain-steps dt { font-size: .8125rem; color: var(--la-muted, #475569); margin-top: .5rem; }
+.map-chain-steps dt:first-child { margin-top: 0; }
+.map-chain-steps dd { margin: 0; min-width: 0; }
 .map-chain-steps ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .25rem; }
+/* One line per link; a name or a strand that is too long ends in an ellipsis (the full name is the link's title). */
+.map-chain-steps li { display: flex; align-items: baseline; gap: .375rem; min-width: 0; }
+.map-chain-steps li > a, .map-chain-steps li > span:not(.map-direct) { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.map-chain-steps li > span:not(.map-direct) { flex: 0 10 auto; }
+.map-chain-steps li > .map-direct { flex: none; }
 .map-direct { font-size: .75rem; padding: .05rem .4rem; border-radius: 999px; background: #dbeafe; color: #1e3a8a; }
 
 /* How far a subject's map is reviewed (feat/map-status): a draft loudly, in amber; checked and reviewed quietly. */
