@@ -41,7 +41,7 @@ Befunde:
 Entwurf (zur Bestätigung):
 - `lib/map.js`: `positionOf(subject, ids)` liefert `{ from, to, bands: [erste, letzte], cuts }`; `from`/`to` als Anteile der Zeilen des Fachs (min..max der `steps` der geübten Bausteine); `cuts` die Grenzen zwischen den drei Richtstufen als Anteile, damit der Streifen die Richtstufen maßstäblich zeigt. Recap-Seiten zählen nicht (sie stehen nicht in `competencies`).
 - `src/_data/map.js`: `byApp[id].position`.
-- Karte: Streifen unter der Zusammenfassung (Variante B), darunter eine Textzeile "Lernweg: Anfang bis Mitte" und `role="img"` mit demselben Text. Namen der Richtstufen: Anfang, Mitte, Später (keine Zahlen). Eine kurze Erklärung ("So lesen") einmal über der Liste, nur wenn ein Fach mit Karte gezeigt wird.
+- Karte: Streifen unter der Zusammenfassung (Variante B). Entscheidung Nutzer: kein sichtbarer Text. Der Text "Lernweg: Anfang bis Mitte" steht nur als `aria-label` (`role="img"`) und als `title` (Tooltip) am Streifen; auch keine "So lesen"-Zeile über der Liste. Namen der Richtstufen: Anfang, Mitte, Später (keine Zahlen).
 - Pillen, `t.find.chips`, `.chip` entfernen.
 - Test: `positionOf` in `test/map.test.mjs` auf dem Fixture-Fach; Sicht-Test der Karte in `find.e2e`.
 
@@ -80,6 +80,13 @@ Eintritt: Plan ist vom Nutzer freigegeben.
 - [x] Englisch-Einträge anpassen (6 Einträge, Serie Millbrook, `of: 6`)
 - [x] Doku und Test (`docs/learning-map-contract.md`, `test/series.test.mjs`)
 - [x] Build und Tests laufen lassen (Build offline mit `LERNAPPS_PAGES=off`; Unit-Tests, Schema-Check und `find.e2e` grün)
+
+Feature 2:
+- [x] `lib/map.js`: `positionOf` und Test in `test/map.test.mjs`
+- [x] `src/_data/map.js`: `byApp[id].position`
+- [x] Karte: Streifen mit `aria-label`/`title`, Texte de/en, CSS (hell/dunkel)
+- [x] Pillen entfernen (`fitnessChips`, `t.find.chips`, `.chip`)
+- [x] Doku (`docs/learning-map-contract.md`), Build, Tests (map, series, find.e2e, map.e2e grün), Sicht-Prüfung hell und dunkel
 
 ### Completed
 *None yet*

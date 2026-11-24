@@ -167,3 +167,29 @@ describe("the build page takes the search", () => {
     await page.close();
   });
 });
+
+describe("the cards of the apps", () => {
+  test("have no pills for what every app meets, and no visible text of the learning path", async () => {
+    const page = await open("");
+    const text = await page.locator("[data-app]").allTextContents();
+    assert.ok(text.length > 0, "there are cards");
+    for (const t of text) assert.doesNotMatch(t, /Ohne Anmeldung|Ohne Installation|Kostenlos/);
+    assert.equal(await page.locator("[data-app] .chip").count(), 0);
+    // The strip comes from the pages of the explainers (lernapps-pages.json, over the network at build time): without
+    // them no card has one, which is no failure here.
+    for (const strip of await page.locator("[data-app] .path").all()) {
+      assert.equal(await strip.getAttribute("role"), "img");
+      assert.match(await strip.getAttribute("aria-label"), /^Lernweg: (Anfang|Mitte|später|von (Anfang|Mitte) bis (Mitte|später))$/);
+      assert.equal((await strip.textContent()).trim(), "", "no visible text");
+    }
+    await page.close();
+  });
+
+  test("the English page words the learning path in English", async () => {
+    const page = await open("en/");
+    for (const strip of await page.locator("[data-app] .path").all()) {
+      assert.match(await strip.getAttribute("aria-label"), /^Learning path: (the start|the middle|later|from (the start|the middle) to (the middle|later))$/);
+    }
+    await page.close();
+  });
+});

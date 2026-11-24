@@ -4,7 +4,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
-import { loadMap, checkApp, checkPages, recapsOf, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows } from "../lib/map.js";
+import { loadMap, checkApp, checkPages, recapsOf, coverage, rows, placedCount, ancestors, descendants, byStep, stepRows, positionOf } from "../lib/map.js";
 
 const fixture = (name) => fileURLToPath(new URL(`fixtures/map/${name}`, import.meta.url));
 const [subject] = loadMap(fixture("ok"));
@@ -194,4 +194,28 @@ test("the status of a map: draft by default in the files, checked with its revie
   assert.equal(checked.status, "checked");
   assert.deepEqual(checked.reviews, [{ date: "2026-11-01", role: "Lehrkraft Fach, Gymnasium, Hessen" }]);
   assert.throws(() => loadMap(fixture("status-missing-review")), /status reviewed needs at least 2 reviews/);
+});
+
+test("the position of an app: its rows as fractions of the subject, the band ends, the first and last band it touches", () => {
+  // The fixture has three rows, one per grade band: a1 and b1 in row 1, a2 and b2 in row 2, a3 in row 3.
+  const near = (actual, expected) => assert.ok(Math.abs(actual - expected) < 1e-9, `${actual} is not ${expected}`);
+  const across = positionOf(subject, ["a1", "a2"]);
+  near(across.from, 0);
+  near(across.to, 2 / 3);
+  assert.deepEqual([across.first, across.last], [0, 1]);
+  assert.equal(across.cuts.length, 2);
+  near(across.cuts[0], 1 / 3);
+  near(across.cuts[1], 2 / 3);
+  const middle = positionOf(subject, ["b2"]);
+  near(middle.from, 1 / 3);
+  near(middle.to, 2 / 3);
+  assert.deepEqual([middle.first, middle.last], [1, 1]);
+  const late = positionOf(subject, ["a3", "b2"]);
+  assert.deepEqual([late.first, late.last], [1, 2]);
+});
+
+test("the position leaves out ids that are no competency of the subject, and is none without any", () => {
+  assert.deepEqual(positionOf(subject, ["gibt-es-nicht", "a3"]), positionOf(subject, ["a3"]));
+  assert.equal(positionOf(subject, []), undefined);
+  assert.equal(positionOf(subject, ["gibt-es-nicht"]), undefined);
 });
