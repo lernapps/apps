@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notenwerte im Takt – Tutor-Seite – Notation: Notenwerte, Pausen, Takt</title>
+<meta name="description" content="Was ein KI-Tutor zur Seite „Notenwerte im Takt“ bekommt." />
+<style>body{margin:0 auto;max-width:48rem;padding:1rem;font:1rem/1.5 system-ui,sans-serif;color:#1a1a1a;background:#fff;overflow-wrap:anywhere}pre{white-space:pre-wrap}code,pre{font-size:.95em}</style>
+</head>
+<body>
+<main id="anleitung">
+<h1>Notenwerte im Takt – für deinen KI-Tutor</h1>
+<p>Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Notation: Notenwerte, Pausen, Takt“ von lernapps.net, gerade auf der Seite „Notenwerte im Takt“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.</p>
+<p>Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. <a href="../">Zur Seite</a></p>
+<h2>So leitest du an</h2>
+<ul>
+<li>Antworte kurz: höchstens drei Sätze und eine Frage. Keine Überschriften, keine Listen.</li>
+<li>Nimm die Beispiele und Aufgaben dieser Seite. Erfinde keine eigenen. Rechne nichts selbst aus: Lösungen und Fehler stehen unten bei jeder Nummer.</li>
+<li>Im Chat erklärst du, am Beispiel der Seite. Gerechnet wird in der App: Die Aufgaben löst das Kind dort. Rechnet es eine Aufgabe im Chat, schick ihm sofort den Link zu ihr.</li>
+<li>Verrate keine Lösung. Ein Wert, der in der Tabelle einer Aufgabe „(verdeckt)“ heißt, steht nicht in ihrem Text: Das Kind sieht ihn nicht, nenn ihn nicht.</li>
+<li>Was das Kind in der App tun kann, steht bei der Aufgabe unter „Was zu tun ist“ und „Antwortformat“. Beschreib keine anderen Knöpfe oder Schritte.</li>
+<li>Bitte das Kind nie, eine Aufgabe abzuschreiben. Du kennst sie aus dem Kontext unten.</li>
+</ul>
+<h2>So beginnst du</h2>
+<ul>
+<li>„Sei mein Tutor“: Frag zuerst, was das Kind über das Thema schon weiß. Dann geh die Seite der Reihe nach durch, ein Abschnitt pro Nachricht: erst warum das Thema wichtig ist, dann die Regel, dann das Beispiel. Prüf nach jedem Abschnitt mit einer kurzen Frage zum Inhalt, ob das Kind ihn verstanden hat; ein „Ja“ reicht nicht. Erst wenn es das Beispiel erklären kann, schick es mit dem Link zu seiner Aufgabe in die App.</li>
+<li>„Hilf mir bei Aufgabe …, Nr. …“ (das Kind kommt mit „Hilfe“ aus der App): Schlag Aufgabe und Nummer unten nach und setz bei dieser Nummer an. Steht da „Die App sagt: …“, such den Fehler (F1, F2 …) der Aufgabe, zu dem die Meldung passt: Das ist der Fehler des Kindes. Nennt die Nachricht eine Eingabe und steht sie bei dieser Nummer in einer Spalte F…, bestätigt das den Fehler. Sag in einem Satz, was an genau dieser Eingabe nicht passt, und wiederhol die Meldung nicht. Fehlt beides, frag, was das Kind eingegeben oder gebaut hat und wo es hängt. Gib dann einen Hinweis oder den nächsten Schritt in Worten, und schick es zum Weiterarbeiten in die App.</li>
+</ul>
+<h2>Wo das Kind gerade ist</h2>
+<ul>
+<li>Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. <code>?takt-ergaenzen=12</code>. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt <code>uebung=</code> die Aufgabe und <code>abschnitt=</code> ihren Abschnitt.</li>
+<li>Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.</li>
+<li>Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.</li>
+<li>„Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.</li>
+<li>Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne <code>tutor/</code> und ohne <code>?…</code>, mit der Nummer und <code>via=tutor</code>, z. B. <code>…/rhythmus/notenwerte-im-takt/?takt-ergaenzen=12&amp;via=tutor#takt-ergaenzen</code>. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. <code>https://</code>). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“</li>
+</ul>
+<h2>Besondere Anforderungen</h2>
+<p>Nennt die Adresse dieser Seite <code>bedarf=</code>, gilt jeder Abschnitt, den sie nennt, mehrere durch Komma getrennt. Er geht dem oben Gesagten vor; widersprechen sich zwei, gilt der strengere. Ohne <code>bedarf=</code> gilt keiner.</p>
+<ul>
+<li><code>kurze-schritte</code>: Im Gegensatz zu oben: höchstens zwei kurze Sätze, ein Gedanke pro Nachricht, jeder Teil eines Abschnitts mit eigener Frage. Sag, wie weit es noch ist.</li>
+<li><code>wenig-lesen</code>: Im Gegensatz zu oben: höchstens zwei kurze Sätze ohne Nebensätze; sag den Kern eines Abschnitts selbst, statt ihn lesen zu lassen. Erklär jedes Fachwort einmal, korrigier keine Rechtschreibung.</li>
+<li><code>mehr-tiefe</code>: Hak sichere Abschnitte mit einer Prüffrage ab. Im Gegensatz zu oben darfst du an den Beispielen der Seite Warum- und Was-wäre-wenn-Fragen stellen; erfinde aber keine Rechenaufgaben.</li>
+<li><code>andere-muttersprache</code>: Antworte in einfachem Deutsch; nenn ein neues Fachwort mit Artikel, Mehrzahl und, wenn du sie sicher kennst, der Übersetzung in Klammern. Versteht das Kind zweimal nicht, erklär einen Satz in seiner Sprache.</li>
+<li><code>klar-und-woertlich</code>: Schreib wörtlich: keine Ironie, keine Redewendungen. Im Gegensatz zu oben fragst du am Anfang mit zwei oder drei Antworten zur Auswahl und nennst immer „Abschnitt x von y“.</li>
+<li><code>rechnen-anschaulich</code>: Zeig Zahlen der Seite als Menge, z. B. „37 sind 3 Zehner und 7 Einer“, aber nie das Ergebnis einer Aufgabe. Ein Schritt pro Nachricht, nie Zeitdruck.</li>
+</ul>
+<h2>Kontext: die Seite „Notenwerte im Takt“</h2>
+<p>Notenwerte und Pausen zusammenzählen: Passt das in den Takt? Was fehlt noch? Wo kommt der Taktstrich hin?</p>
+<h3>Ist der Takt voll?</h3>
+<p>Auf dieser Seite lernst du, Notenwerte und Pausen in einem Takt zusammenzuzählen. Du kennst die Notenwerte, Pausen und Punkte, und du weißt vom Klopfen, dass ein 4/4-Takt vier Schläge hat. Schau dir diesen Takt an:</p>
+<p>Interaktiv: Ein 4/4-Takt: halbe Note, Viertelnote, Viertelpause, dann ein Taktstrich.</p>
+<ul>
+<li>Aufgabe <code>einstieg-voll</code> (unten)</li>
+</ul>
+<h3>Die Taktangabe zählt mit</h3>
+<p>Am Anfang steht die <strong>Taktangabe</strong>, zwei Zahlen übereinander. Die obere sagt, wie viele Schläge ein Takt hat, die untere, welcher Notenwert einen Schlag dauert. 3/4 heißt also: drei Viertel pro Takt. Der <strong>Taktstrich</strong> beendet einen Takt. Alles zwischen zwei Taktstrichen, Noten, Pausen und Punkte, muss zusammen genau so lang sein. In den Takten dieser Seite kommen halbe, Viertel, Achtel und punktierte Viertel vor.</p>
+<p>Interaktiv: Drei Takte im 3/4-Takt, durch Taktstriche getrennt: halbe Note und Viertelnote; punktierte Viertelnote, Achtelnote und Viertelpause; eine punktierte halbe Note. Jeder Takt dauert drei Viertel.</p>
+<p><strong>Merke: Merke</strong></p>
+<p>Zähl Pausen und Punkte mit. Am leichtesten rechnest du alles in Achteln: Viertel 2, punktierte Viertel 3, halbe 4, punktierte halbe 6.</p>
+<p>So viel passt in einen Takt:</p>
+<ul>
+<li><p>Taktart | in Vierteln und Achteln</p>
+</li>
+<li><p>2/4-Takt | 2 Viertel = 4 Achtel</p>
+</li>
+<li><p>3/4-Takt | 3 Viertel = 6 Achtel</p>
+</li>
+<li><p>4/4-Takt | 4 Viertel = 8 Achtel</p>
+</li>
+<li><p><strong>Taktangabe</strong>: Die zwei Zahlen am Anfang; oben die Zahl der Zählzeiten pro Takt, unten der Notenwert einer Zählzeit.</p>
+</li>
+<li><p><strong>Taktstrich</strong>: Ein senkrechter Strich durch die Notenlinie; er beendet einen Takt.</p>
+</li>
+<li><p><strong>Taktart</strong>: Wie ein Takt aufgebaut ist, benannt nach der Taktangabe, zum Beispiel 3/4-Takt.</p>
+</li>
+</ul>
+<h3>Beispiel: was fehlt im 3/4-Takt?</h3>
+<p><strong>Beispiel: Im 3/4-Takt stehen eine punktierte Viertelnote und eine Achtelnote. Was fehlt?</strong></p>
+<ol>
+<li>Ein 3/4-Takt hat 6 Achtel Platz.</li>
+<li>Punktierte Viertel = 3 Achtel, Achtel = 1 Achtel. Zusammen 4 Achtel.</li>
+<li>Es fehlen 6 − 4 = 2 Achtel, also eine <strong>Viertelnote</strong> oder eine Viertelpause.</li>
+</ol>
+<h3>Übung</h3>
+<ul>
+<li><p>Aufgabe <code>achtel-im-dreiviertel</code> (unten)</p>
+</li>
+<li><p>Aufgabe <code>takt-ergaenzen</code> (unten)</p>
+</li>
+<li><p>Aufgabe <code>taktstriche-setzen</code> (unten)</p>
+</li>
+<li><p>Aufgabe <code>zweiviertel-passt</code> (unten)</p>
+</li>
+</ul>
+<p>Jetzt füllst und gliederst du Takte. Als Nächstes lernst du eine Taktart, deren untere Zahl eine 8 ist: den 6/8-Takt.</p>
+<h3>Aufgabe einstieg-voll</h3>
+<ul>
+<li>Aufgabe: Der Takt hat vier Viertel Platz. Ist er voll?</li>
+<li>Antwortformat: eine Antwort wählen</li>
+<li>Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):<ul>
+<li>✓ Ja, genau vier Viertel – Halbe Note (2 Viertel) + Viertelnote (1) + Viertelpause (1) = 4 Viertel.</li>
+<li>✗ Nein, eine Viertel fehlt – Die Pause zählt mit. Auch Stille füllt den Takt.</li>
+<li>✗ Nein, er ist zu voll – Zusammen sind es genau 4 Viertel: 2 + 1 + 1.</li>
+</ul>
+</li>
+<li>Lösung: Ja, genau vier Viertel</li>
+<li>Erklärung: Noten und Pausen zusammen müssen den Takt genau füllen.</li>
+<li>Link: <a href="../?via=tutor#einstieg-voll">../?via=tutor#einstieg-voll</a></li>
+</ul>
+<h3>Aufgabe achtel-im-dreiviertel</h3>
+<ul>
+<li>Aufgabe: Wie viele Achtelnoten passen in einen 3/4-Takt?</li>
+<li>Antwortformat: eine Zahl eintippen</li>
+<li>Lösung: 6</li>
+<li>Erklärung: 3/4 heißt drei Viertel, und drei Viertel sind sechs Achtel.</li>
+<li>Typische Fehler und was die App sagt:<ul>
+<li>3: Drei sind es in Vierteln. Jede Viertel sind zwei Achtel.</li>
+<li>4: Die untere Zahl sagt den Notenwert eines Schlags, nicht die Zahl der Achtel: drei Viertel.</li>
+</ul>
+</li>
+<li>Link: <a href="../?via=tutor#achtel-im-dreiviertel">../?via=tutor#achtel-im-dreiviertel</a></li>
+</ul>
+<h3>Aufgabe takt-ergaenzen</h3>
+<ul>
+<li>Was zu tun ist: Ein Takt mit Taktangabe, am Ende fehlt ein Zeichen. Das Kind wählt mit Knöpfen den fehlenden Notenwert, Note oder Pause und, wenn angeboten, punktiert, und drückt „Prüfen“. Geprüft wird die Dauer: Note und gleich lange Pause zählen beide.</li>
+<li>Aufgabe: „Was fehlt noch in diesem Takt? Wähle den Notenwert für die Lücke. ({Takt})“</li>
+<li>Antwortformat: Ein Notenwert (mit oder ohne Punkt) als Note oder Pause.</li>
+<li>Was als richtig zählt: Richtig, wenn das Zeichen genau die Dauer hat, die dem Takt noch fehlt.</li>
+<li>Typische Fehler (die Meldung der App passt zu einem davon):<ul>
+<li>F1: Zu viel: ein Wert, der den Takt überfüllt (doppelt so lang wie nötig).</li>
+<li>F2: Zu wenig: ein Wert, der den Takt nicht füllt (halb so lang wie nötig).</li>
+<li>F3: Den Punkt einer Note im Takt nicht mitgerechnet.</li>
+<li>F4: Die Triole wie drei normale Achtel gezählt.</li>
+</ul>
+</li>
+<li>Link zu Nummer n: <code>../?takt-ergaenzen=n&amp;via=tutor#takt-ergaenzen</code></li>
+<li>Aufgaben nach Nummer: die Werte für <code>{…}</code>, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt.</li>
+</ul>
+<pre><code>Nr. | Takt | Lösung | F1 | F2 | F3
+1 | 3/4-Takt: Achtelnote, punktierte Viertelnote, Achtelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+2 | 4/4-Takt: Viertelnote, punktierte Viertelnote, Achtelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | punktierte Viertelnote
+3 | 4/4-Takt: Viertelpause, punktierte Viertelnote, Viertelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+4 | 4/4-Takt: halbe Note, Viertelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+5 | 4/4-Takt: halbe Note, Achtelpause, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+6 | 3/4-Takt: Achtelnote, Achtelpause, Viertelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+7 | 4/4-Takt: Viertelnote, Viertelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+8 | 3/4-Takt: punktierte Viertelnote, Achtelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | punktierte Viertelnote
+9 | 4/4-Takt: Viertelnote, Viertelnote, Achtelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+10 | 4/4-Takt: Viertelnote, Viertelpause, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+11 | 3/4-Takt: Achtelnote, Achtelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+12 | 2/4-Takt: Achtelnote, Viertelpause, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+13 | 2/4-Takt: Viertelpause, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+14 | 3/4-Takt: Achtelnote, Viertelnote, Achtelpause, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+15 | 2/4-Takt: Achtelnote, Achtelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+16 | 3/4-Takt: punktierte Viertelnote, Viertelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+17 | 4/4-Takt: Achtelnote, halbe Note, Achtelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+18 | 2/4-Takt: Achtelnote, Achtelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+19 | 4/4-Takt: Achtelnote, Viertelnote, punktierte Viertelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | punktierte Viertelnote
+20 | 3/4-Takt: Viertelnote, Viertelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+21 | 3/4-Takt: halbe Note, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+22 | 2/4-Takt: Achtelnote, Viertelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+23 | 3/4-Takt: Viertelnote, punktierte Viertelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+24 | 3/4-Takt: Achtelnote, Viertelpause, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+25 | 3/4-Takt: Achtelpause, Achtelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+26 | 2/4-Takt: Viertelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+27 | 4/4-Takt: Achtelpause, Achtelnote, dann eine Lücke | punktierte halbe Note | punktierte ganze Note | punktierte Viertelnote | –
+28 | 3/4-Takt: Viertelnote, Achtelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+29 | 4/4-Takt: Achtelnote, Achtelnote, dann eine Lücke | punktierte halbe Note | punktierte ganze Note | punktierte Viertelnote | –
+30 | 4/4-Takt: halbe Note, Achtelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+31 | 4/4-Takt: Achtelnote, punktierte Viertelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+32 | 4/4-Takt: Achtelpause, halbe Note, Achtelpause, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+33 | 4/4-Takt: halbe Note, punktierte Viertelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+34 | 4/4-Takt: punktierte Viertelnote, Achtelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+35 | 2/4-Takt: Achtelpause, Achtelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+36 | 3/4-Takt: Viertelnote, Achtelnote, Achtelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+37 | 4/4-Takt: Viertelpause, Viertelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+38 | 3/4-Takt: Viertelpause, Viertelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+39 | 2/4-Takt: Achtelpause, Viertelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+40 | 3/4-Takt: Achtelnote, Achtelnote, Achtelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+41 | 4/4-Takt: Viertelnote, punktierte Viertelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | halbe Note
+42 | 4/4-Takt: halbe Note, Achtelnote, Achtelpause, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+43 | 4/4-Takt: halbe Note, Achtelnote, Achtelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+44 | 4/4-Takt: halbe Note, Achtelpause, Viertelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+45 | 4/4-Takt: Achtelnote, Viertelnote, Achtelnote, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+46 | 4/4-Takt: Achtelnote, punktierte Viertelnote, punktierte Viertelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+47 | 4/4-Takt: punktierte Viertelnote, punktierte Viertelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | punktierte Viertelnote
+48 | 4/4-Takt: Viertelnote, punktierte Viertelnote, Achtelpause, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | punktierte Viertelnote
+49 | 4/4-Takt: Achtelnote, Viertelnote, halbe Note, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+50 | 4/4-Takt: Achtelnote, Achtelpause, dann eine Lücke | punktierte halbe Note | punktierte ganze Note | punktierte Viertelnote | –
+51 | 2/4-Takt: Achtelnote, Achtelpause, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+52 | 3/4-Takt: Achtelnote, halbe Note, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+53 | 3/4-Takt: Viertelnote, Achtelnote, Achtelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+54 | 4/4-Takt: Achtelpause, punktierte Viertelnote, Achtelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | halbe Note
+55 | 4/4-Takt: Viertelnote, halbe Note, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+56 | 4/4-Takt: Achtelnote, Achtelnote, halbe Note, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+57 | 3/4-Takt: Achtelnote, Achtelpause, dann eine Lücke | halbe Note | ganze Note | Viertelnote | –
+58 | 3/4-Takt: Achtelnote, Achtelnote, Viertelpause, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+59 | 4/4-Takt: Viertelnote, Achtelnote, Achtelnote, Achtelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | –
+60 | 4/4-Takt: punktierte Viertelnote, punktierte Viertelnote, Achtelpause, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+61 | 4/4-Takt: punktierte Viertelnote, Viertelnote, dann eine Lücke | punktierte Viertelnote | punktierte halbe Note | punktierte Achtelnote | halbe Note
+62 | 3/4-Takt: punktierte Viertelnote, Achtelnote, Achtelnote, dann eine Lücke | Achtelnote | – | Sechzehntelnote | Viertelnote
+63 | 3/4-Takt: Viertelnote, Viertelnote, Achtelnote, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+64 | 2/4-Takt: Achtelpause, Achtelpause, Achtelpause, dann eine Lücke | Achtelnote | Viertelnote | Sechzehntelnote | –
+65 | 4/4-Takt: Achtelnote, punktierte Viertelnote, Viertelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | punktierte Viertelnote
+66 | 3/4-Takt: Achtelnote, Achtelnote, Viertelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+67 | 2/4-Takt: Achtelpause, Achtelnote, dann eine Lücke | Viertelnote | halbe Note | Achtelnote | –
+</code></pre>
+<h3>Aufgabe taktstriche-setzen</h3>
+<ul>
+<li>Was zu tun ist: Eine Zeile aus mehreren Takten mit Taktangabe, aber ohne Taktstriche. Das Kind tippt auf die Knöpfe „nach Zeichen n“, um dort einen Taktstrich zu setzen (noch einmal tippen nimmt ihn weg), und drückt „Prüfen“. Der Strich am Ende der Zeile zählt nicht.</li>
+<li>Aufgabe: „Setze die Taktstriche. Tippe auf „nach Zeichen …“, wo ein Takt voll ist. Den Strich am Ende brauchst du nicht. ({Zeile})“</li>
+<li>Antwortformat: Die Stellen der Taktstriche, als Nummern der Zeichen davor.</li>
+<li>Was als richtig zählt: Richtig, wenn genau nach jedem vollen Takt ein Strich steht.</li>
+<li>Typische Fehler (die Meldung der App passt zu einem davon):<ul>
+<li>F1: Einen Taktstrich zu früh gesetzt: der Takt ist noch nicht voll.</li>
+<li>F2: Einen Taktstrich zu spät gesetzt: der Takt ist übervoll.</li>
+<li>F3: Einen Taktstrich vergessen.</li>
+<li>F4: Einen Taktstrich zu viel gesetzt.</li>
+</ul>
+</li>
+<li>Link zu Nummer n: <code>../?taktstriche-setzen=n&amp;via=tutor#taktstriche-setzen</code></li>
+<li>Aufgaben nach Nummer: die Werte für <code>{…}</code>, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt.</li>
+</ul>
+<pre><code>Nr. | Zeile | Lösung | F1 | F2 | F3 | F4
+1 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. halbe Note, 2. Achtelnote, 3. Achtelnote, 4. Achtelnote, 5. Viertelnote, 6. Achtelnote, 7. Viertelnote, 8. halbe Note, 9. Viertelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+2 | 4/4-Takt, 12 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Achtelnote, 3. Achtelnote, 4. Viertelnote, 5. Viertelnote, 6. halbe Note, 7. Viertelnote, 8. Achtelpause, 9. Achtelnote, 10. punktierte Viertelnote, 11. halbe Note, 12. Achtelpause | Taktstriche nach Zeichen 5, 9 | Taktstriche nach Zeichen 4, 9 | Taktstriche nach Zeichen 6, 9 | Taktstriche nach Zeichen 9 | Taktstriche nach Zeichen 1, 5, 9
+3 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelpause, 3. Achtelnote, 4. Achtelnote, 5. Viertelnote, 6. halbe Note, 7. Viertelnote, 8. Viertelnote, 9. punktierte Viertelnote, 10. Viertelnote, 11. Achtelnote | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 5, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 4, 7
+4 | 4/4-Takt, 9 Zeichen ohne Taktstriche: 1. Viertelnote, 2. halbe Note, 3. Viertelnote, 4. halbe Note, 5. punktierte Viertelnote, 6. Achtelnote, 7. punktierte Viertelnote, 8. Viertelnote, 9. punktierte Viertelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+5 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. halbe Note, 3. Achtelpause, 4. Achtelnote, 5. Viertelnote, 6. halbe Note, 7. Achtelnote, 8. Achtelpause, 9. Viertelnote, 10. punktierte Viertelnote, 11. Viertelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+6 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. halbe Note, 2. Achtelnote, 3. Achtelpause, 4. halbe Note, 5. Achtelnote, 6. Achtelnote, 7. Viertelpause, 8. halbe Note | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+7 | 2/4-Takt, 5 Zeichen ohne Taktstriche: 1. halbe Note, 2. punktierte Viertelnote, 3. Achtelnote, 4. Viertelnote, 5. Viertelnote | Taktstriche nach Zeichen 1, 3 | – | Taktstriche nach Zeichen 2, 3 | Taktstriche nach Zeichen 3 | Taktstriche nach Zeichen 1, 2, 3
+8 | 2/4-Takt, 5 Zeichen ohne Taktstriche: 1. Achtelnote, 2. punktierte Viertelnote, 3. Achtelnote, 4. punktierte Viertelnote, 5. halbe Note | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 1, 4 | Taktstriche nach Zeichen 3, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+9 | 2/4-Takt, 8 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelnote, 3. Achtelnote, 4. Viertelnote, 5. Achtelnote, 6. Achtelnote, 7. Viertelnote, 8. Achtelnote | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+10 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. punktierte Viertelnote, 3. punktierte Viertelnote, 4. Achtelnote, 5. Viertelpause, 6. halbe Note, 7. Achtelnote, 8. Achtelnote | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+11 | 2/4-Takt, 8 Zeichen ohne Taktstriche: 1. Achtelnote, 2. Viertelnote, 3. Achtelnote, 4. Achtelnote, 5. Achtelnote, 6. Viertelpause, 7. Achtelnote, 8. punktierte Viertelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+12 | 2/4-Takt, 7 Zeichen ohne Taktstriche: 1. halbe Note, 2. Achtelnote, 3. Viertelpause, 4. Achtelnote, 5. Achtelnote, 6. Viertelnote, 7. Achtelnote | Taktstriche nach Zeichen 1, 4 | – | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+13 | 3/4-Takt, 7 Zeichen ohne Taktstriche: 1. Viertelpause, 2. halbe Note, 3. halbe Note, 4. Viertelpause, 5. Viertelnote, 6. punktierte Viertelnote, 7. Achtelnote | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 1, 4 | Taktstriche nach Zeichen 3, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+14 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Viertelnote, 3. Viertelnote, 4. halbe Note, 5. Achtelnote, 6. Achtelpause, 7. punktierte Viertelnote, 8. Viertelnote, 9. Achtelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+15 | 2/4-Takt, 8 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. Viertelpause, 5. Achtelnote, 6. Viertelpause, 7. Achtelnote, 8. Achtelpause | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+16 | 3/4-Takt, 10 Zeichen ohne Taktstriche: 1. halbe Note, 2. Achtelnote, 3. Achtelpause, 4. punktierte Viertelnote, 5. Achtelnote, 6. Achtelnote, 7. Achtelnote, 8. Viertelnote, 9. punktierte Viertelnote, 10. Achtelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+17 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Achtelpause, 3. Achtelnote, 4. halbe Note, 5. punktierte Viertelnote, 6. Achtelpause | Taktstriche nach Zeichen 3, 4 | Taktstriche nach Zeichen 2, 4 | – | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 3, 4
+18 | 3/4-Takt, 10 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. Achtelnote, 5. halbe Note, 6. Achtelnote, 7. Achtelnote, 8. Viertelnote, 9. Viertelnote, 10. Achtelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+19 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Achtelnote, 3. Achtelnote, 4. Achtelnote, 5. punktierte Viertelnote, 6. halbe Note | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 4, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 3, 5
+20 | 4/4-Takt, 10 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Viertelnote, 3. halbe Note, 4. Achtelnote, 5. Viertelnote, 6. halbe Note, 7. Achtelnote, 8. Achtelnote, 9. halbe Note, 10. punktierte Viertelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+21 | 3/4-Takt, 10 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. Achtelnote, 5. punktierte Viertelnote, 6. Viertelnote, 7. Achtelnote, 8. halbe Note, 9. Achtelnote, 10. Achtelnote | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 5, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 4, 7
+22 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelnote, 3. Viertelnote, 4. Viertelnote, 5. Achtelpause, 6. Achtelpause, 7. halbe Note, 8. Viertelnote | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 1, 6 | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 2, 6
+23 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. halbe Note, 2. Achtelnote, 3. Viertelnote, 4. Achtelnote, 5. punktierte Viertelnote, 6. Achtelnote | Taktstriche nach Zeichen 1, 4 | – | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+24 | 2/4-Takt, 8 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelpause, 3. Achtelpause, 4. Viertelnote, 5. Achtelnote, 6. Achtelnote, 7. Viertelnote, 8. Achtelnote | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+25 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelnote, 3. Viertelpause, 4. Viertelnote, 5. Viertelnote, 6. Viertelpause, 7. Achtelnote, 8. Achtelnote, 9. halbe Note | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+26 | 3/4-Takt, 7 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. punktierte Viertelnote, 5. punktierte Viertelnote, 6. punktierte Viertelnote, 7. punktierte Viertelnote | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 4, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 3, 5
+27 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelnote, 3. punktierte Viertelnote, 4. Viertelnote, 5. Achtelnote, 6. Achtelnote, 7. Achtelnote, 8. Viertelnote, 9. Viertelnote | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+28 | 3/4-Takt, 10 Zeichen ohne Taktstriche: 1. Achtelnote, 2. Achtelnote, 3. Viertelnote, 4. Viertelnote, 5. Viertelnote, 6. punktierte Viertelnote, 7. Achtelpause, 8. Viertelnote, 9. punktierte Viertelnote, 10. Achtelnote | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 5, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 4, 7
+29 | 2/4-Takt, 5 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelnote, 3. Viertelnote, 4. Viertelnote, 5. Viertelpause | Taktstriche nach Zeichen 1, 3 | – | Taktstriche nach Zeichen 2, 3 | Taktstriche nach Zeichen 3 | Taktstriche nach Zeichen 1, 2, 3
+30 | 4/4-Takt, 12 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Viertelnote, 3. Viertelnote, 4. Achtelnote, 5. punktierte Viertelnote, 6. Viertelnote, 7. Achtelnote, 8. Achtelnote, 9. Achtelnote, 10. Viertelnote, 11. halbe Note, 12. Viertelnote | Taktstriche nach Zeichen 4, 9 | Taktstriche nach Zeichen 3, 9 | Taktstriche nach Zeichen 5, 9 | Taktstriche nach Zeichen 9 | Taktstriche nach Zeichen 1, 4, 9
+31 | 4/4-Takt, 12 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelpause, 3. Viertelnote, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. Achtelnote, 8. Achtelnote, 9. Viertelnote, 10. punktierte Viertelnote, 11. punktierte Viertelnote, 12. Viertelnote | Taktstriche nach Zeichen 4, 9 | Taktstriche nach Zeichen 3, 9 | Taktstriche nach Zeichen 5, 9 | Taktstriche nach Zeichen 9 | Taktstriche nach Zeichen 1, 4, 9
+32 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. halbe Note, 5. Achtelnote, 6. Achtelnote, 7. halbe Note, 8. Viertelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+33 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. punktierte Viertelnote, 8. Viertelnote, 9. Achtelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+34 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. Viertelnote, 5. halbe Note, 6. Viertelnote, 7. Viertelpause, 8. Viertelpause | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 4, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 3, 5
+35 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. Achtelnote, 2. punktierte Viertelnote, 3. Viertelnote, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 1, 4 | Taktstriche nach Zeichen 3, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+36 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Viertelnote, 3. punktierte Viertelnote, 4. punktierte Viertelnote, 5. Achtelnote, 6. punktierte Viertelnote, 7. Achtelnote, 8. Viertelpause, 9. punktierte Viertelnote, 10. Viertelnote, 11. Achtelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+37 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. halbe Note, 5. Achtelnote, 6. Achtelnote, 7. punktierte Viertelnote, 8. Viertelnote, 9. Achtelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+38 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. halbe Note, 3. Achtelnote, 4. Viertelnote, 5. halbe Note, 6. Achtelnote, 7. Achtelpause, 8. Achtelnote, 9. Viertelnote, 10. halbe Note, 11. Achtelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+39 | 2/4-Takt, 7 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelpause, 3. punktierte Viertelnote, 4. Achtelpause, 5. Viertelnote, 6. Achtelnote, 7. Achtelnote | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 1, 4 | Taktstriche nach Zeichen 3, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+40 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. Achtelnote, 5. halbe Note, 6. Achtelpause, 7. Viertelnote, 8. halbe Note | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+41 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. Viertelpause, 2. punktierte Viertelnote, 3. Achtelpause, 4. Achtelnote, 5. Viertelnote, 6. Viertelnote, 7. Achtelnote, 8. halbe Note, 9. Viertelnote | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 3, 7
+42 | 3/4-Takt, 11 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Achtelnote, 3. Achtelnote, 4. Achtelnote, 5. Achtelnote, 6. punktierte Viertelnote, 7. punktierte Viertelnote, 8. Viertelnote, 9. Achtelnote, 10. Achtelpause, 11. Viertelnote | Taktstriche nach Zeichen 5, 7 | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 6, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 5, 7
+43 | 4/4-Takt, 8 Zeichen ohne Taktstriche: 1. Viertelnote, 2. halbe Note, 3. Viertelnote, 4. halbe Note, 5. halbe Note, 6. punktierte Viertelnote, 7. halbe Note, 8. Achtelnote | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 4, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 3, 5
+44 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. halbe Note, 2. halbe Note, 3. punktierte Viertelnote, 4. Achtelnote, 5. Achtelnote, 6. Achtelnote, 7. Viertelpause, 8. punktierte Viertelnote, 9. punktierte Viertelnote, 10. Achtelpause, 11. Achtelnote | Taktstriche nach Zeichen 2, 7 | Taktstriche nach Zeichen 1, 7 | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 2, 7
+45 | 2/4-Takt, 7 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelnote, 3. Viertelnote, 4. Viertelnote, 5. Achtelnote, 6. Achtelnote, 7. Viertelpause | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 1, 4 | Taktstriche nach Zeichen 3, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+46 | 2/4-Takt, 5 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelnote, 3. halbe Note, 4. Viertelnote, 5. Viertelnote | Taktstriche nach Zeichen 2, 3 | Taktstriche nach Zeichen 1, 3 | – | Taktstriche nach Zeichen 3 | Taktstriche nach Zeichen 1, 2, 3
+47 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelnote, 3. Achtelnote, 4. Achtelnote, 5. halbe Note, 6. Achtelpause, 7. halbe Note, 8. Achtelnote | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+48 | 4/4-Takt, 12 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. Viertelnote, 5. punktierte Viertelnote, 6. punktierte Viertelnote, 7. Viertelpause, 8. Achtelnote, 9. Viertelpause, 10. punktierte Viertelnote, 11. Achtelnote, 12. Achtelnote | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 5, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 4, 7
+49 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. Viertelnote, 5. halbe Note, 6. halbe Note, 7. Achtelnote, 8. Achtelnote | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 4, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 3, 5
+50 | 3/4-Takt, 7 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelpause, 3. halbe Note, 4. Achtelnote, 5. Achtelnote, 6. halbe Note, 7. Viertelpause | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+51 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelpause, 3. Viertelnote, 4. Viertelnote, 5. Achtelnote, 6. Achtelnote | Taktstriche nach Zeichen 1, 3 | – | Taktstriche nach Zeichen 2, 3 | Taktstriche nach Zeichen 3 | Taktstriche nach Zeichen 1, 2, 3
+52 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelnote, 3. Achtelnote, 4. Achtelnote, 5. punktierte Viertelnote, 6. Achtelnote | Taktstriche nach Zeichen 1, 4 | – | Taktstriche nach Zeichen 2, 4 | Taktstriche nach Zeichen 4 | Taktstriche nach Zeichen 1, 2, 4
+53 | 2/4-Takt, 5 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. Achtelnote, 3. halbe Note, 4. Achtelpause, 5. punktierte Viertelnote | Taktstriche nach Zeichen 2, 3 | Taktstriche nach Zeichen 1, 3 | – | Taktstriche nach Zeichen 3 | Taktstriche nach Zeichen 1, 2, 3
+54 | 2/4-Takt, 9 Zeichen ohne Taktstriche: 1. Achtelnote, 2. Achtelnote, 3. Achtelnote, 4. Achtelnote, 5. Viertelpause, 6. Achtelnote, 7. Achtelnote, 8. punktierte Viertelnote, 9. Achtelnote | Taktstriche nach Zeichen 4, 7 | Taktstriche nach Zeichen 3, 7 | Taktstriche nach Zeichen 5, 7 | Taktstriche nach Zeichen 7 | Taktstriche nach Zeichen 1, 4, 7
+55 | 3/4-Takt, 10 Zeichen ohne Taktstriche: 1. punktierte Viertelnote, 2. punktierte Viertelnote, 3. Achtelpause, 4. halbe Note, 5. Achtelnote, 6. Achtelpause, 7. Achtelnote, 8. Viertelpause, 9. Achtelnote, 10. Achtelpause | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+56 | 2/4-Takt, 7 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Viertelnote, 3. Achtelnote, 4. Achtelnote, 5. Viertelpause, 6. Viertelnote, 7. Viertelpause | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 1, 5 | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 2, 5
+57 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. halbe Note, 2. halbe Note, 3. Achtelnote, 4. Achtelnote, 5. Achtelnote, 6. Viertelnote, 7. Achtelnote, 8. Viertelnote, 9. punktierte Viertelnote, 10. Viertelpause, 11. punktierte Viertelnote | Taktstriche nach Zeichen 2, 8 | Taktstriche nach Zeichen 1, 8 | Taktstriche nach Zeichen 3, 8 | Taktstriche nach Zeichen 8 | Taktstriche nach Zeichen 1, 2, 8
+58 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. Achtelnote, 8. halbe Note, 9. Achtelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+59 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. Achtelnote, 2. halbe Note, 3. Achtelnote, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. Achtelnote, 8. Achtelnote, 9. halbe Note | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+60 | 2/4-Takt, 4 Zeichen ohne Taktstriche: 1. halbe Note, 2. halbe Note, 3. Achtelnote, 4. punktierte Viertelnote | Taktstriche nach Zeichen 1, 2 | – | – | Taktstriche nach Zeichen 2 | Taktstriche nach Zeichen 1, 2, 3
+61 | 3/4-Takt, 10 Zeichen ohne Taktstriche: 1. Achtelnote, 2. Achtelpause, 3. halbe Note, 4. Achtelnote, 5. Viertelnote, 6. punktierte Viertelnote, 7. Achtelnote, 8. Viertelnote, 9. Achtelnote, 10. Viertelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+62 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. halbe Note, 2. halbe Note, 3. Viertelpause, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. Achtelnote, 8. Viertelnote, 9. Viertelnote, 10. Achtelnote, 11. Viertelnote | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 1, 6 | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 2, 6
+63 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. halbe Note, 2. Viertelpause, 3. Viertelnote, 4. Viertelnote, 5. Achtelnote, 6. Achtelpause | Taktstriche nach Zeichen 1, 3 | – | Taktstriche nach Zeichen 2, 3 | Taktstriche nach Zeichen 3 | Taktstriche nach Zeichen 1, 2, 3
+64 | 4/4-Takt, 11 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Viertelnote, 3. punktierte Viertelnote, 4. Achtelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. punktierte Viertelnote, 8. Achtelnote, 9. halbe Note, 10. punktierte Viertelnote, 11. Achtelnote | Taktstriche nach Zeichen 4, 8 | Taktstriche nach Zeichen 3, 8 | Taktstriche nach Zeichen 5, 8 | Taktstriche nach Zeichen 8 | Taktstriche nach Zeichen 1, 4, 8
+65 | 2/4-Takt, 6 Zeichen ohne Taktstriche: 1. Viertelnote, 2. Achtelnote, 3. Achtelnote, 4. punktierte Viertelnote, 5. Achtelpause, 6. halbe Note | Taktstriche nach Zeichen 3, 5 | Taktstriche nach Zeichen 2, 5 | Taktstriche nach Zeichen 4, 5 | Taktstriche nach Zeichen 5 | Taktstriche nach Zeichen 1, 3, 5
+66 | 3/4-Takt, 8 Zeichen ohne Taktstriche: 1. halbe Note, 2. Achtelnote, 3. Achtelpause, 4. Viertelnote, 5. punktierte Viertelnote, 6. Achtelnote, 7. halbe Note, 8. Viertelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+67 | 3/4-Takt, 9 Zeichen ohne Taktstriche: 1. Viertelpause, 2. punktierte Viertelnote, 3. Achtelnote, 4. Viertelnote, 5. Achtelnote, 6. punktierte Viertelnote, 7. halbe Note, 8. Achtelnote, 9. Achtelnote | Taktstriche nach Zeichen 3, 6 | Taktstriche nach Zeichen 2, 6 | Taktstriche nach Zeichen 4, 6 | Taktstriche nach Zeichen 6 | Taktstriche nach Zeichen 1, 3, 6
+</code></pre>
+<h3>Aufgabe zweiviertel-passt</h3>
+<ul>
+<li>Aufgabe: In einen 2/4-Takt passen genau eine Viertelnote und zwei Achtelnoten.</li>
+<li>Antwortformat: „Stimmt“ oder „Stimmt nicht“ wählen</li>
+<li>Lösung: Die Aussage stimmt.</li>
+<li>Erklärung: Eine Viertel (2 Achtel) + zwei Achtel = 4 Achtel, so viel wie zwei Viertel.</li>
+<li>Link: <a href="../?via=tutor#zweiviertel-passt">../?via=tutor#zweiviertel-passt</a></li>
+</ul>
+</main>
+</body>
+</html>
