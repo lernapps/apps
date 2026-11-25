@@ -37,7 +37,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du hier“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/musik/c/tondauer-hoeren/, https://lernapps.net/apps/map/musik/c/taktarten-unterscheiden/, https://lernapps.net/apps/map/musik/c/rhythmus-erklaeren/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/musik/c/tondauer-hoeren/, https://lernapps.net/apps/map/musik/c/taktarten-unterscheiden/, https://lernapps.net/apps/map/musik/c/rhythmus-erklaeren/
 
 Kurz wiederholt: lange und kurze Töne, 2/4-, 3/4- und 4/4-Takt, Rhythmus und Grundschlag.
 
