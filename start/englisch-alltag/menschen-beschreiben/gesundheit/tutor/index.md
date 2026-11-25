@@ -45,7 +45,7 @@ Peter hat Bauchweh, Mrs Parker geht mit ihm zum Arzt. Du lernst Körperteile und
 
 ### Peter hat Bauchweh
 
-Bild: Ein Wartezimmer. Eine Frau mit Dutt und ein Junge sitzen auf einer Bank. Rechts ist eine Tür mit einem grünen Kreuz. Bildunterschrift: Mrs Parker (roter Dutt) und Peter (gelbe Jacke) warten beim Arzt.
+Bild: Ein Wartezimmer. Eine Frau mit Dutt und ein Junge sitzen auf einer Bank. Rechts ist eine Tür mit einem grünen Kreuz. Bildunterschrift: Mrs Parker und Peter warten beim Arzt.
 
 Peter will sein Frühstück nicht essen. Mrs Parker geht mit ihm zum Arzt (doctor). Im Wartezimmer fragt sie ihn leise: „What’s the matter, Peter?“
 
@@ -59,13 +59,12 @@ Bild: Eine Figur von vorn, eine von hinten und ein großes Gesicht. Fünf Stelle
 
 Weitere Körperteile: **hand** (Hand), **leg** (Bein), **foot** (Fuß), **stomach** (Bauch, Magen), **back** (Rücken), **tooth** (Zahn), **neck** (Hals, außen) und **throat** (Hals innen, Rachen). Wenn etwas wehtut, sagst du: **My head hurts.** Bei mehreren Teilen fällt das -s weg: My legs hurt. Oder du sagst, was du hast: **I’ve got a stomachache** (Bauchschmerzen). So geht es auch mit **a headache** (Kopfschmerzen), **toothache** oder **a toothache** (Zahnschmerzen), **a cold** (Erkältung), **a cough** (Husten) und **a sore throat** (Halsschmerzen). I’ve got heißt I have got, du kennst es schon.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- stomach | Bauch / Magen
-- throat | Hals innen / Rachen
-- sore throat | Halsschmerzen
-- tooth | Zahn
-- cough | Husten
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- stomach – Bauch / Magen
+- throat – Hals innen / Rachen
+- sore throat – Halsschmerzen
+- tooth – Zahn
+- cough – Husten
 
 **Beispiel: Beim Arzt und in der Apotheke**
 
@@ -199,8 +198,8 @@ Du hast in diesem Kapitel Menschen beschrieben: die Familie mit has got und is, 
 - Antwortformat: die ganze Antwort auf Englisch schreiben
 - Wie die App Fehler der Form zählt: Groß- und Kleinschreibung richtig mit Hinweis, Akzente falsch, Bindestrich falsch, Apostroph falsch, Satzzeichen egal
 - Einträge (Vorgabe → Lösung):
-1. Audio → Amir has got a bad cold today. (auch richtig: Amir's got a bad cold today.; Amir has a bad cold today.)
-2. Audio → My arm and my hand hurt today.
+1. Audio → Amir has got a bad cold. (auch richtig: Amir's got a bad cold.; Amir has a bad cold.)
+2. Audio → My arm and my hand hurt.
 3. Audio → Please do not run today. (auch richtig: Please don't run today.)
 - Die Lernenden hören bei den Items mit Audio eine Datei mit einer KI-Stimme. Du kannst sie nicht abspielen; was gesprochen wird, steht in der Lösung.
 - So hilfst du: Die App prüft Wort für Wort gegen die Lösungen oben und nennt Fehler der Form (zum Beispiel Akzente) mit den Wörtern des Kindes. Sag nicht die Lösung vor: Frag nach der Regel (Endung, Geschlecht, Zeitform) oder nach einem ähnlichen Satz der Seite. Hält die App eine Fassung des Kindes für falsch, die du für richtig hältst, sag es dem Kind: Die App kennt nur die Fassungen oben.
@@ -212,8 +211,8 @@ Du hast in diesem Kapitel Menschen beschrieben: die Familie mit has got und is, 
 - Die Lernenden hören das Original, nehmen sich auf und bewerten selbst, wie ihre Aussprache klingt. Du kannst weder das Original noch die Aufnahme hören. Frage, welche Laute schwer waren, und beschreibe, wie man sie bildet.
 - Sätze:
 1. Audio → My head hurts and I feel tired today.
-2. Audio → Is your stomach better today?
-3. Audio → Please stay at home today.
+2. Audio → Is your stomach better now?
+3. Audio → Please stay at home.
 - Tipp der App: Hör den Satz zuerst. Sprich dann langsam nach.
 - Link: [../?via=tutor#gesundheit-nachsprechen](../?via=tutor#gesundheit-nachsprechen)
 
@@ -227,6 +226,6 @@ Du hast in diesem Kapitel Menschen beschrieben: die Familie mit has got und is, 
   - P3 (Inhalt) Ein Satz sagt als Befehl, was hilft (zum Beispiel Take a rest.). Quelle: [/menschen-beschreiben/gesundheit/#neu](../../../menschen-beschreiben/gesundheit/#neu)
   - P4 (Inhalt) Ein Satz sagt, dass du es einem Erwachsenen sagst, wenn etwas sehr wehtut (Tell an adult.). Quelle: [/menschen-beschreiben/gesundheit/#neu](../../../menschen-beschreiben/gesundheit/#neu)
   - P5 (Form) Es sind ganze Sätze mit einem Punkt am Ende.
-- Musterantwort: My stomach hurts. I've got a stomachache. Stay in bed. Drink water. Tell an adult. Oder: I've got a cold. My nose and my throat hurt. Stay at home. Drink tea. Tell an adult.
+- Musterantwort: My stomach hurts. I've got a stomachache. Stay in bed. Drink water. Tell an adult. Oder: I've got a cold. My nose and my throat hurt. Rest in bed. Drink tea. Tell an adult.
 - So hilfst du: Die App zeigt die Punkte erst nach der Antwort; das Kind hakt selbst ab, welche seine Antwort enthält, und „es fehlen P2, P4“ nennt die anderen. Fehlt dir die Antwort, bitte das Kind, sie einzufügen oder das Foto seines Blatts anzuhängen. Prüf Punkt für Punkt, auch die abgehakten, und sag zuerst, was gelungen ist. Zu einem fehlenden Punkt stell eine Frage, die dorthin führt, und nenn seine Quelle. Verrate die Musterantwort nicht, bevor das Kind es noch einmal versucht hat. Zu einem Punkt der Form zeig an einem Satz des Kindes, wie es besser geht.
 - Link: [../?via=tutor#gesundheit-profil](../?via=tutor#gesundheit-profil)

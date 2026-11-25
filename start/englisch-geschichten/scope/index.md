@@ -1,12 +1,12 @@
 # Geschichten lesen, erzählen und weiterschreiben
 
-Die App erklärt für Kinder im ersten und zweiten Lernjahr, wie man englische Geschichten liest, wiedergibt und schreibt. Zwei Bilder tragen sie. Die story map hat vier Felder (who, where, when, what). Der Geschichtenberg hat vier Stationen (beginning, build-up, climax, ending). Gelernt werden Figuren, Ort, Zeit und Handlung herausfinden, zusammenfassen, nacherzählen, Verbindungswörter beim Erzählen (first, then, after that, suddenly, finally), Bilder und Bildfolgen beschreiben, eine Geschichte schreiben und fortsetzen, ein Tagebuch schreiben, einen Dialog schreiben und Reime vortragen. Die Geschichten sind eigene kurze Texte im simple past mit den Figuren Sophie, Ellie, Peter und Amir. Offene Aufgaben haben Punkte und eine Musterlösung. Die App bewertet den Text nicht, die Kinder prüfen ihn an den Punkten.
+Die App erklärt für Kinder im ersten bis vierten Lernjahr (Stufe 5 bis 8), wie man englische Geschichten liest, wiedergibt und schreibt. Zwei Bilder tragen sie. Die story map hat vier Felder (who, where, when, what). Der Geschichtenberg hat vier Stationen (beginning, build-up, climax, ending). Gelernt werden Figuren, Ort, Zeit und Handlung herausfinden, zusammenfassen, nacherzählen, Verbindungswörter beim Erzählen (first, then, after that, suddenly, finally), Bilder und Bildfolgen beschreiben, eine Geschichte schreiben und fortsetzen, ein Tagebuch schreiben, einen Dialog schreiben und Reime vortragen. Ab Kapitel 5 kommen längere Lesestücke mit Randglossar, Aufgaben in vier Stufen, die Sicht einer Figur (Brille am Feld who) und die Stimmung (Fläche im Feld where) dazu. Die Geschichten sind eigene kurze Texte im simple past mit den Figuren Sophie, Ellie, Peter und Amir. Offene Aufgaben haben Punkte und eine Musterlösung. Die App bewertet den Text nicht, die Kinder prüfen ihn an den Punkten.
 
 ## Was passiert in der Geschichte?
 
 ### Das brauchst du hier
 
-Die Seite stellt die Figuren und die Geschichtenwoche kurz vor und wiederholt das simple past mit regelmäßigen Verben (-ed) und häufigen unregelmäßigen Verben (was, went, had, found, saw, took, ran, made, fell, lost, sat, drank, began, flew, hid, left, heard, brought, put, read). Sie sagt, dass Geschichten meist im simple past stehen. Nicht hier, weil es andere Seiten sind. Die Regeln der Zeitformen im Einzelnen, die story map, der Geschichtenberg, Zusammenfassen und Nacherzählen.
+Die Seite wiederholt das simple past mit regelmäßigen Verben (-ed) und häufigen unregelmäßigen Verben (was, went, had, found, saw, took, ran, made, fell, lost, sat, drank, began, flew, hid, left, heard, brought, put, read). Sie sagt, dass Geschichten meist im simple past stehen. Nicht hier, weil es andere Seiten sind. Die Regeln der Zeitformen im Einzelnen, die story map, der Geschichtenberg, Zusammenfassen und Nacherzählen.
 
 ### Wer, wo, wann, was: die story map
 
@@ -62,10 +62,20 @@ Die Seite zeigt, wie aus einer Station des Geschichtenbergs eine kurze Spielszen
 
 Die Seite zeigt, wie man Reimwörter findet und kurze Verse vorträgt. Zwei Wörter reimen sich, wenn sie am Ende gleich klingen. Die Schreibung hilft oft, aber nicht immer. Die App prüft den Klang nicht: Reimpaare werden nach Schreibung und Muster zugeordnet, der Klang kommt über das Hören und Nachsprechen ganzer Verse. Das Klatschen des Rhythmus ist eine Anleitung, die App prüft es nicht. Nicht hier: Gedichte und Lieder untersuchen, Strophenformen und Reimschemata, die Lautschrift. Die App bewertet den eigenen Zweizeiler nicht.
 
+## Anders erzählen
+
+### Wessen Sicht? Dieselbe Szene, eine andere Brille
+
+Die Seite zeigt, dass jede Geschichte aus der Sicht einer Figur erzählt wird. Die Brille am Feld who der story map sagt, wessen Sicht gemeint ist. Wer in der Ich-Form erzählt, weiß nur, was sie oder er selbst sieht, denkt und fühlt, und kann sich über die anderen irren. Beim Wechsel der Sicht ändern sich Pronomen, Wissen und Gefühl, das Geschehen und die Zeitform (simple past) bleiben. Das Lesestück ist ein eigener Text. Offene Aufgaben haben Punkte und eine Musterlösung, die App bewertet den Text nicht. Ort, Zeit und Stimmung stehen auf der nächsten Seite. Die Analyse von Kurzgeschichten gehört nicht hierher.
+
+### Wo und wann spielt es, und wie fühlt es sich an?
+
+Die Seite zeigt, dass eine Geschichte einen Ort (where) und eine Zeit (when) hat und dass die Wörter dazu eine Stimmung (mood) erzeugen. Die Stimmungsfläche im Feld where der story map sagt, wie sich der Ort anfühlt. Die Stimmung entsteht durch Wörter für Wetter, Licht und Geräusche. Man zeigt sie mit solchen Wörtern, statt sie nur zu behaupten. Das Lesestück ist ein eigener Text im simple past. Offene Aufgaben haben Punkte und eine Musterlösung, die App bewertet den Text nicht. Die Sicht einer Figur steht auf der vorigen Seite. Die Analyse von Kurzgeschichten gehört nicht hierher.
+
 ## Gehört nicht dazu
 
 - Die Zeitformen selbst (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Kurzgeschichten, Gedichte, Dramen und Filme untersuchen
 - Sachtexte, Bericht und Artikel
-- Eine Geschichte aus der Sicht einer anderen Figur erzählen und Stimmung durch Ort und Sprache (später)
+- Erzähler, Symbolik und Textanalyse literarischer Kurzgeschichten (Kapitel 5 bleibt bei Sicht und Stimmung in eigenen Texten)
 - Bewertung der Aussprache und der freien Texte durch die App

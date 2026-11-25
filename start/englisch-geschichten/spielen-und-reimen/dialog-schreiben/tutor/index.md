@@ -41,13 +41,13 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Eine Spielszene schreiben: Sprecher und Zeilen“
 
-Am Freitag spielen die Kinder Szenen aus dem Geschichtenberg. Du lernst, einen kurzen Dialog in Skriptform zu schreiben.
+Du lernst, aus einer Station des Geschichtenbergs einen kurzen Dialog in Skriptform zu schreiben.
 
-### Am Freitag spielen wir
+### Wir spielen eine Szene
 
-Bild: In der Geschichtenecke hängen an der Wand links ein Berg mit vier Fähnchen und rechts eine Tafel mit den vier Feldern who, where, when und what. Mr Hill steht rechts und sagt in einer Sprechblase: „Today we act!“ Davor stehen Sophie, Peter, Ellie und Amir. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). An der Wand hängen der Geschichtenberg und die story map.
+Bild: In der Geschichtenecke hängen an der Wand links ein Berg mit vier Fähnchen und rechts eine Tafel mit den vier Feldern who, where, when und what. Mr Hill steht rechts und sagt in einer Sprechblase: „Today we act!“ Davor stehen Sophie, Peter, Ellie und Amir. Bildunterschrift: An der Wand hängen der Geschichtenberg und die story map.
 
-Es ist Freitag in der Geschichtenwoche. Mr Hill sagt: „Today we act!“ Jede Gruppe macht aus einer Station des Geschichtenbergs eine kurze **Spielszene**. Dafür schreiben die Kinder einen **Dialog**: Figuren sprechen miteinander. Sophie hat für ihre Szene „The lost bag“ schon eine Zeile geschrieben.
+Mr Hill sagt: „Today we act!“ Jede Gruppe macht aus einer Station des Geschichtenbergs eine kurze **Spielszene**. Dafür schreiben die Kinder einen **Dialog**: Figuren sprechen miteinander. Sophie hat für ihre Szene „The lost bag“ schon eine Zeile geschrieben.
 
 - Aufgabe `dialog-start` (unten)
 
@@ -55,13 +55,12 @@ Es ist Freitag in der Geschichtenwoche. Mr Hill sagt: „Today we act!“ Jede G
 
 Diese Wörter sind neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- script | Text für ein Spiel mit allen Zeilen der Figuren
-- scene | Szene, ein kurzes Stück zum Spielen
-- line | Zeile, hier der Satz einer Figur
-- stage direction | Regieanweisung, sie sagt, was eine Figur tut
-- fox | Fuchs
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- script – Text für ein Spiel mit allen Zeilen der Figuren
+- scene – Szene, ein kurzes Stück zum Spielen
+- line – Zeile, hier der Satz einer Figur
+- stage direction – Regieanweisung, sie sagt, was eine Figur tut
+- fox – Fuchs
 
 ### So sieht ein Skript aus
 
@@ -99,7 +98,7 @@ Bild: Oben ein Blatt mit der Überschrift script und fünf Zeilen: vier Sprecher
 
 ### Wie es weitergeht
 
-Am Freitag spielen die Gruppen ihre Szenen vor der Klasse. Danach schließt Mr Hill die Woche mit einem Reim ab. Auf der nächsten Seite sammelst du Reimwörter und sprichst Verse.
+Danach spielen die Gruppen ihre Szenen vor der Klasse. Auf der nächsten Seite sammelst du Reimwörter und sprichst Verse.
 
 ### Aufgabe dialog-start
 

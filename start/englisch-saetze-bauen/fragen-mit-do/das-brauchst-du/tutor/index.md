@@ -62,4 +62,4 @@ Nicht sicher? Wiederhole es auf den Seiten der Lernlandkarte: [Simple present](h
 
 ### Wer fragt?
 
-Mr Hill hat am Montag die Satzleiste mit den bunten Karten aufgehängt. Jetzt fragen sich Sophie, Ellie, Peter und Amir gegenseitig aus. Mr Hill sagt: „Der gelbe Helfer hilft euch dabei.“
+Jetzt fragen sich Sophie, Ellie, Peter und Amir gegenseitig aus. Der gelbe Helfer hilft ihnen dabei.

@@ -45,9 +45,9 @@ Mr Hills Klasse ist einen Tag in London. Du lernst, was die Römer in Britannien
 
 ### Eine alte Stadt
 
-Bild: Ein Mann mit grauen Haaren und ein Mädchen stehen vor einer alten Steinmauer unter einem Schild mit dem Wort London. Bildunterschrift: Von links: Mr Hill (graue Haare) und Ellie (roter Pferdeschwanz).
+Bild: Ein Mann mit grauen Haaren und ein Mädchen stehen vor einer alten Steinmauer unter einem Schild mit dem Wort London. Bildunterschrift: Mr Hill und Ellie.
 
-Ein Tag in London. Mr Hills Klasse steht vor einer alten Mauer. Peter ist heute nicht dabei, Sophie schreibt ihm später eine Nachricht. Mr Hill sagt: „London is almost 2,000 years old.“ Das heißt: London ist fast 2000 Jahre alt. Die ersten, die hier eine Stadt bauten, waren die **Römer**. Sie nannten die Stadt **Londinium**.
+Die Klasse steht in London vor einer alten Mauer. Mr Hill sagt: „London is almost 2,000 years old.“ Das heißt: London ist fast 2000 Jahre alt. Die ersten, die hier eine Stadt bauten, waren die **Römer**. Sie nannten die Stadt **Londinium**.
 
 - Aufgabe `roemer-start` (unten)
 
@@ -67,14 +67,13 @@ Bild: Schemakarte von England mit Scotland im Norden und Wales im Westen. Eine L
 
 Von früher erzählst du im **Past Simple**. Regelmäßige Verben bekommen **-d** oder **-ed**: live → lived. Unregelmäßige Verben musst du lernen: **come → came**, **build → built**, **leave → left**. Zum Beispiel: Amir built a model castle. Ellie left her bag at home. Die Römer sind nicht die Wikinger und nicht die Normannen: Sie kamen viel früher.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- Roman | Römer / römisch
-- fort | Fort (Lager für Soldaten)
-- Britain | Britannien (die Insel Great Britain)
-- baths | Bäder
-- border | Grenze
-- Londinium | römischer Name der Stadt London
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- Roman – Römer / römisch
+- fort – Fort (Lager für Soldaten)
+- Britain – Britannien (die Insel Great Britain)
+- baths – Bäder
+- border – Grenze
+- Londinium – römischer Name der Stadt London
 
 ### Übung
 

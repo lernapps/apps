@@ -45,6 +45,24 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Could, might und should: vorschlagen, vermuten, raten“ · Aufgaben A3, A4
 - „Would like: höflich sagen, was du möchtest“ · Aufgaben A5, A6
 
+### Kapitel „to oder -ing?“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Have to, be able to, be allowed to: Ersatzformen“ · Aufgaben A7, A8
+- „Infinitiv mit to: wozu und wie“ · Aufgaben A9, A10
+- „Das Gerundium: enjoy, avoid und Hobbys“ · Aufgaben A11, A12
+- „Präposition + -ing: interested in und look forward to“ · Aufgaben A13, A14
+- „Gerundium oder Infinitiv: stop, remember, try“ · Aufgaben A15, A16
+
+### Kapitel „Das Passiv“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Das Passiv: is made, was made“ · Aufgaben A17, A18
+- „Das Passiv in weiteren Zeiten: has been, will be, can be“ · Aufgaben A19, A20
+- „Das Passiv mit zwei Objekten: I was given a book“ · Aufgaben A21, A22
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe can-must-sortieren der Seite „Can und must: Lok ohne Kupplung“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -53,3 +71,19 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A4: Aufgabe modalverben-wahl der Seite „Could, might und should: vorschlagen, vermuten, raten“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A5: Aufgabe would-like-sortieren der Seite „Would like: höflich sagen, was du möchtest“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A6: Aufgabe would-like-kupplung der Seite „Would like: höflich sagen, was du möchtest“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A7: Aufgabe ersatz-sortieren der Seite „Have to, be able to, be allowed to: Ersatzformen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A8: Aufgabe ersatz-wahl der Seite „Have to, be able to, be allowed to: Ersatzformen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A9: Aufgabe infinitiv-sortieren der Seite „Infinitiv mit to: wozu und wie“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A10: Aufgabe infinitiv-kupplung der Seite „Infinitiv mit to: wozu und wie“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A11: Aufgabe gerund-sortieren der Seite „Das Gerundium: enjoy, avoid und Hobbys“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A12: Aufgabe gerund-kupplung der Seite „Das Gerundium: enjoy, avoid und Hobbys“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A13: Aufgabe praeposition-sortieren der Seite „Präposition + -ing: interested in und look forward to“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A14: Aufgabe praeposition-kupplung der Seite „Präposition + -ing: interested in und look forward to“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A15: Aufgabe wahl-sortieren der Seite „Gerundium oder Infinitiv: stop, remember, try“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A16: Aufgabe wahl-kupplung der Seite „Gerundium oder Infinitiv: stop, remember, try“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A17: Aufgabe passiv-sortieren der Seite „Das Passiv: is made, was made“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A18: Aufgabe passiv-wahl der Seite „Das Passiv: is made, was made“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A19: Aufgabe zeiten-sortieren der Seite „Das Passiv in weiteren Zeiten: has been, will be, can be“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A20: Aufgabe zeiten-wahl der Seite „Das Passiv in weiteren Zeiten: has been, will be, can be“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A21: Aufgabe zwei-objekte-sortieren der Seite „Das Passiv mit zwei Objekten: I was given a book“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A22: Aufgabe zwei-objekte-wahl der Seite „Das Passiv mit zwei Objekten: I was given a book“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

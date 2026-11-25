@@ -67,6 +67,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Eine Spielszene schreiben: Sprecher und Zeilen“ · Aufgaben A22, A23
 - „Reime hören, finden und sprechen“ · Aufgaben A24, A25, A26
 
+### Kapitel „Anders erzählen“
+
+- Selbsteinschätzung des Kapitels
+- „Wessen Sicht? Dieselbe Szene, eine andere Brille“ · Aufgaben A27, A28
+- „Wo und wann spielt es, und wie fühlt es sich an?“ · Aufgaben A29, A30
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe figuren-start der Seite „Wer, wo, wann, was: die story map“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -95,3 +101,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A24: Aufgabe reime-paare der Seite „Reime hören, finden und sprechen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A25: Aufgabe reime-zeile der Seite „Reime hören, finden und sprechen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A26: Aufgabe reime-klang der Seite „Reime hören, finden und sprechen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A27: Aufgabe sicht-warum der Seite „Wessen Sicht? Dieselbe Szene, eine andere Brille“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A28: Aufgabe sicht-ellie der Seite „Wessen Sicht? Dieselbe Szene, eine andere Brille“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A29: Aufgabe ort-wo der Seite „Wo und wann spielt es, und wie fühlt es sich an?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A30: Aufgabe stimmung-sommer der Seite „Wo und wann spielt es, und wie fühlt es sich an?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

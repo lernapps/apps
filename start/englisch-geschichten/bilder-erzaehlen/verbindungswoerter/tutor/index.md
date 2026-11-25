@@ -45,9 +45,9 @@ Mr Hill bringt fünf Wegweiser für den Geschichtenberg mit. Du lernst, mit ihne
 
 ### Fünf Wegweiser für den Geschichtenberg
 
-Bild: In der Geschichtenecke hängen an der Wand der Geschichtenberg und die story map. Darunter liegen in einer Reihe fünf Schilder mit den Wörtern after that, first, finally, then und suddenly. Davor stehen Sophie, Peter, Ellie und Amir, rechts steht Mr Hill. Sophie sagt in einer Sprechblase: „Five signs!“. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). Unter dem Geschichtenberg und der story map liegen die fünf Wegweiser.
+Bild: In der Geschichtenecke hängen an der Wand der Geschichtenberg und die story map. Darunter liegen in einer Reihe fünf Schilder mit den Wörtern after that, first, finally, then und suddenly. Davor stehen Sophie, Peter, Ellie und Amir, rechts steht Mr Hill. Sophie sagt in einer Sprechblase: „Five signs!“. Bildunterschrift: Unter dem Geschichtenberg und der story map liegen die fünf Wegweiser.
 
-Es ist Dienstag in der Geschichtenwoche. Mr Hill hat fünf Schilder mitgebracht, die **Wegweiser**. Sie zeigen, in welcher Reihenfolge etwas passiert. Er liest den Anfang einer Geschichte vor, aber das erste Wort fehlt: „… Peter opened the box.“
+Mr Hill hat fünf Schilder mitgebracht, die **Wegweiser**. Sie zeigen, in welcher Reihenfolge etwas passiert. Er liest den Anfang einer Geschichte vor, aber das erste Wort fehlt: „… Peter opened the box.“
 
 - Aufgabe `verbindung-start` (unten)
 
@@ -83,7 +83,7 @@ Bild: Ein Berg mit vier Fähnchen: 1 beginning, 2 build-up, 3 climax am Gipfel, 
 
 ### Wie es weitergeht
 
-Am Mittwoch hängt Mr Hill ein neues Bild in die Geschichtenecke. Auf der nächsten Seite lernst du, ein Bild zu beschreiben und zu sagen, wo etwas ist.
+Auf der nächsten Seite lernst du, ein Bild zu beschreiben und zu sagen, wo etwas ist.
 
 ### Aufgabe verbindung-start
 

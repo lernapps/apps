@@ -56,7 +56,3 @@ Klassenzimmer-Poster · Das sagt dein Lehrer:
 - Sit down. | Setzt euch hin.
 
 Nicht sicher? Wiederhole es auf der [Seite zu den Classroom phrases](https://lernapps.net/apps/map/englisch/c/classroom-phrases/) der Lernlandkarte.
-
-### Wer legt die Karten?
-
-In der Millbrook School hängt neben dem Zeitstrahl bald eine Wand mit bunten Karten. **Sophie** (11) wohnt bei der Familie Parker. **Ellie Parker** (11) ist ihre Gastschwester, **Peter** (9) Ellies Bruder und **Amir** (11) ein Freund. **Mr Hill** ist der Englischlehrer. Sie legen damit Sätze. Das Klassenzimmer-Poster und der Schulkalender hängen noch an ihrem Platz.

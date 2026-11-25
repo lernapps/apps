@@ -20,7 +20,6 @@ Die Seite führt den Vergleich zweier Dinge ein. Nach der Steigerung steht than 
 
 - Häufigkeitsadverbien (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Wörter zum Beschreiben von Personen als Wortschatz (steht im Explainer „Alltag“)
-- Adjektive nach Sinnesverben, Stellung der Adverbien im Satz und Gradadverbien (spätere Version)
-- Das Stützwort one und Adjektive ohne Nomen wie the rich (spätere Version)
+- Steigerung mit Gradadverbien (much better), Adjektivreihenfolge und Nationalitäten als Adjektive (spätere Version)
 
 Die ganze App: [Scope der App](../../scope/)

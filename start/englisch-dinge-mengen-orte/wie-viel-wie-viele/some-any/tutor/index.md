@@ -45,24 +45,23 @@ Peter schaut nach, was noch im Regal liegt. Du lernst, dass auf Kisten und Gläs
 
 ### Peter schaut ins Regal
 
-Bild: Peter und Ellie stehen im Lagerraum und schauen auf das Regal. Dort stehen links eine Kiste, in der Mitte ein Glas und rechts noch eine Kiste. Bildunterschrift: Von links: Peter (gelbe Jacke) und Ellie (roter Pferdeschwanz). Sie schauen nach, was noch da ist.
+Bild: Peter und Ellie stehen im Lagerraum und schauen auf das Regal. Dort stehen links eine Kiste, in der Mitte ein Glas und rechts noch eine Kiste. Bildunterschrift: Von links: Peter (gelbe Jacke) und Ellie (roter Pferdeschwanz).
 
 Mrs Parker fragt Peter nach den Zutaten. Peter sieht im Regal nach und sagt: „I have some eggs.“ Das heißt: „Ich habe ein paar Eier.“ some steht vor etwas, das da ist.
 
 **Das kannst du danach:** Du sagst mit some, any und no, was da ist und was nicht, in Aussagen, Fragen und Verneinungen.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- some | ein paar, etwas
-- any | irgendein, irgendwelche
-- no | kein
-- pen | Stift
-- bread | Brot
-- cheese | Käse
-- juice | Saft
-- rice | Reis
-- apple | Apfel
-- egg | Ei
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- some – ein paar, etwas
+- any – irgendein, irgendwelche
+- no – kein
+- pen – Stift
+- bread – Brot
+- cheese – Käse
+- juice – Saft
+- rice – Reis
+- apple – Apfel
+- egg – Ei
 
 - Aufgabe `some-start` (unten)
 

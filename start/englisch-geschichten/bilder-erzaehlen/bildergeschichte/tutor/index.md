@@ -45,9 +45,9 @@ Mr Hill hängt vier Bilder zu einer Geschichte auf. Du lernst, zu jedem Bild Sä
 
 ### Vier Bilder erzählen eine Geschichte
 
-Bild: In der Geschichtenecke hängen an der Wand der Geschichtenberg und daneben vier noch leere Rahmen mit den Nummern 1 bis 4. Vor der Wand stehen Sophie, Peter, Ellie und Amir, rechts steht Mr Hill. Sophie sagt in einer Sprechblase: „Four pictures!“. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). Neben dem Geschichtenberg hängen vier Rahmen für die Bilder.
+Bild: In der Geschichtenecke hängen an der Wand der Geschichtenberg und daneben vier noch leere Rahmen mit den Nummern 1 bis 4. Vor der Wand stehen Sophie, Peter, Ellie und Amir, rechts steht Mr Hill. Sophie sagt in einer Sprechblase: „Four pictures!“. Bildunterschrift: Neben dem Geschichtenberg hängen vier Rahmen für die Bilder.
 
-Am Mittwoch hängt Mr Hill vier Bilder zu einer Geschichte auf. Das erste Bild passt zum Fähnchen beginning, das letzte zum Fähnchen ending. Amir zeigt auf ein Bild, auf dem Ellie zum Laden (englisch: shop) geht. Er erzählt es als Teil einer Geschichte.
+Mr Hill hängt vier Bilder zu einer Geschichte auf. Das erste Bild passt zum Fähnchen beginning, das letzte zum Fähnchen ending. Amir zeigt auf ein Bild, auf dem Ellie zum Laden (englisch: shop) geht. Er erzählt es als Teil einer Geschichte.
 
 - Aufgabe `folge-start` (unten)
 
@@ -55,7 +55,7 @@ Am Mittwoch hängt Mr Hill vier Bilder zu einer Geschichte auf. Das erste Bild p
 
 ### Ein Satz für jedes Bild
 
-Mr Hill zeigt diese Bilderfolge. Die Bilder haben keine Wörter, du erzählst sie selbst im [simple past](https://lernapps.net/apps/map/englisch/c/simple-past/), das du von Montag kennst.
+Mr Hill zeigt diese Bilderfolge. Die Bilder haben keine Wörter, du erzählst sie selbst im [simple past](https://lernapps.net/apps/map/englisch/c/simple-past/), das du schon kennst.
 
 Bild: Vier Bilder. Bild 1 zeigt zwei Jungen, die im Garten vor einem Haus mit einem Ball spielen. Auf Bild 2 tritt der Junge mit der Brille den Ball fest in Richtung Haus. Auf Bild 3 steckt der Ball im zerbrochenen Fenster und die Jungen reißen die Hände hoch. Auf Bild 4 stehen die Jungen vor der Haustür bei einer Frau mit rotem Dutt und türkiser Strickjacke. Bildunterschrift: Die Bilderfolge vom Ball und vom Fenster. Die Jungen sind Peter (gelbe Jacke) und Amir (Brille), die Frau an der Tür mit dem roten Dutt und der türkisen Strickjacke ist Mrs Parker.
 
@@ -85,11 +85,11 @@ Bild: Vier Bilder. Bild 1 zeigt einen Jungen mit Rucksack, der im Regen nach Hau
 
 - Aufgabe `folge-schreiben-frei` (unten)
 
-### Rückblick und Donnerstag
+### Rückblick und Ausblick
 
-Rückblick auf Dienstag und Mittwoch: Du hast Sätze mit Wegweisern geordnet, ein Bild mit seinen Plätzen beschrieben und zu vier Bildern eine Geschichte im simple past geschrieben.
+Rückblick: Du hast Sätze mit Wegweisern geordnet, ein Bild mit seinen Plätzen beschrieben und zu vier Bildern eine Geschichte im simple past geschrieben.
 
-Am Donnerstag gibt Mr Hill keine Bilder mehr aus. Du erzählst selbst eine Geschichte mit Anfang, Mitte und Ende.
+Auf der nächsten Seite gibt es keine Bilder mehr. Du erzählst selbst eine Geschichte mit Anfang, Mitte und Ende.
 
 ### Aufgabe folge-start
 

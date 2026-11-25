@@ -45,7 +45,7 @@ Peter fragt, Amir antwortet. Du lernst, wann die Stimme am Satzende steigt und w
 
 ### Peter fragt, Amir antwortet
 
-Bild: Im Klassenzimmer fragt Peter in einer Sprechblase „Is it big?“. Amir antwortet in einer Sprechblase „It is big.“. Mr Hill steht rechts. Bildunterschrift: Von links: Peter (gelbe Jacke) fragt, Amir (Brille) antwortet, rechts steht Mr Hill (graue Haare).
+Bild: Im Klassenzimmer fragt Peter in einer Sprechblase „Is it big?“. Amir antwortet in einer Sprechblase „It is big.“. Mr Hill steht rechts. Bildunterschrift: Von links: Peter fragt, Amir antwortet, rechts steht Mr Hill.
 
 Peter und Amir sprechen über ein Foto. Peter fragt: „Is it big?“ Amir antwortet: „It is big.“ Beide Sätze haben fast dieselben Wörter.
 

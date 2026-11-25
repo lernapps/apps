@@ -45,7 +45,7 @@ Ellie ruft That's my bag! Du lernst, wie zwei Wörter zu einer Kurzform verschme
 
 ### Ellie ruft etwas
 
-Bild: Im Klassenzimmer ruft Ellie in einer Sprechblase: „That's my bag!“ Neben ihr stehen Amir und Mr Hill. Bildunterschrift: Von links: Amir (Brille), Ellie (roter Pferdeschwanz) ruft etwas, rechts steht Mr Hill (graue Haare).
+Bild: Im Klassenzimmer ruft Ellie in einer Sprechblase: „That's my bag!“ Neben ihr stehen Amir und Mr Hill. Bildunterschrift: Von links: Amir hört zu, Ellie ruft „That's my bag!“, rechts steht Mr Hill.
 
 Ellie hat ihre Tasche gefunden und ruft: „That's my bag!“ Sie spricht **that's** wie ein einziges Wort. Aus Hello, Millbrook! kennst du schon I'm.
 
@@ -92,7 +92,7 @@ Klassenzimmer-Poster · Kurzformen:
 
 ### Wie es weitergeht
 
-Mr Hill sagt: „Wenn ihr sprecht, ändert sich nicht nur das Wort, sondern auch die Stimme. Sie geht rauf oder runter.“ Wie die Stimme bei einer Frage klingt und wie bei einer Aussage, hörst du auf der nächsten Seite.
+Beim Sprechen ändert sich nicht nur das Wort, sondern auch die Stimme: Sie geht rauf oder runter. Wie bei einer Frage und wie bei einer Aussage, hörst du auf der nächsten Seite.
 
 ### Aufgabe kurzformen-start
 

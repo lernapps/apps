@@ -45,7 +45,7 @@ Amir hält die Hand an den Hals und spricht zwei Wörter. Du lernst, dass Wörte
 
 ### Amir hält die Hand an den Hals
 
-Bild: Im Klassenzimmer hält Amir die Hand an den Hals und sagt in einer Sprechblase „bed . . . bet“. Peter steht neben ihm, Mr Hill rechts. Bildunterschrift: Von links: Amir (Brille) spricht zwei Wörter, Peter (gelbe Jacke) und Mr Hill (graue Haare) hören zu.
+Bild: Im Klassenzimmer hält Amir die Hand an den Hals und sagt in einer Sprechblase „bed . . . bet“. Peter steht neben ihm, Mr Hill rechts. Bildunterschrift: Von links: Amir spricht zwei Wörter, Peter und Mr Hill hören zu.
 
 Amir hält die Hand an den Hals und spricht zwei Wörter: **bed** („Bett“) und **bet** („Wette“). Im Deutschen klingen Wörter wie „Rad“ und „Rat“ am Ende gleich. Leg die Hand an den Hals: Bei manchen Lauten summt es.
 
@@ -92,7 +92,7 @@ Klassenzimmer-Poster · Wortenden:
 
 ### Wie es weitergeht
 
-Mr Hill sagt: „Jetzt hört ihr die Laute, aber manche Buchstaben sprecht ihr gar nicht.“ Welche Buchstaben das sind, lernst du auf der nächsten Seite.
+Jetzt hörst du die Laute, aber manche Buchstaben sprichst du gar nicht. Welche, lernst du auf der nächsten Seite.
 
 ### Aufgabe auslaute-start
 

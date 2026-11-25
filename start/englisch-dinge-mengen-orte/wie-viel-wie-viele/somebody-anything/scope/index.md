@@ -7,6 +7,5 @@ Die Seite führt die Zusammensetzungen mit some, any, no und every ein (somebody
 - Possessivbegleiter wie my und your (steht im Explainer „Pronomen“)
 - Adjektive und das Stützwort one (steht im Explainer „Adjektive und Adverbien“)
 - Phrasal verbs (steht im Explainer „Phrasal verbs“)
-- Gebrauch des bestimmten Artikels und Nomen wie news und police (Stufe 7-8, später)
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

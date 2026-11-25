@@ -1,6 +1,6 @@
 # Zu wem gehört es? his, her, its – für deinen KI-Tutor
 
-Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Pronomen: I, me, my“ von lernapps.net, gerade auf der Seite „Zu wem gehört es? his, her, its“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
+Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Pronomen: I, me, my, mine, myself“ von lernapps.net, gerade auf der Seite „Zu wem gehört es? his, her, its“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
 
 Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
@@ -45,9 +45,9 @@ Du lernst his, her und its und merkst dir, dass die Person das Wort bestimmt, zu
 
 ### Ellie, Peter und die Katze
 
-Bild: Ellie mit roter Jacke und Peter mit gelber Jacke stehen nebeneinander, rechts sitzt die Katze der Familie Parker. Bildunterschrift: Ellie (rote Jacke) und Peter (gelbe Jacke) mit der Katze der Familie Parker.
+Bild: Ellie mit roter Jacke und Peter mit gelber Jacke stehen nebeneinander, rechts sitzt eine Katze. Bildunterschrift: Ellie, Peter und die Katze.
 
-Mrs Parker, Ellies und Peters Mutter und Sophies Gastmutter, holt die Kinder ab. Sophie sagt: „Peter can see his hat.“ Das heißt: „Peter kann seinen Hut sehen.“ **brother** heißt „Bruder“, **sister** „Schwester“, **cat** „Katze“, **mother** „Mutter“, **pen** „Stift“, **cap** „Mütze“, **and** „und“ und **the** „der, die, das“.
+Mrs Parker holt die Kinder ab. Sophie sagt: „Peter can see his hat.“ Das heißt: „Peter kann seinen Hut sehen.“ **brother** heißt „Bruder“, **sister** „Schwester“, **cat** „Katze“, **mother** „Mutter“, **pen** „Stift“, **cap** „Mütze“, **and** „und“ und **the** „der, die, das“.
 
 **Das kannst du danach:** Du sagst auf Englisch, wem etwas gehört, auch mit his, her und its, und füllst die ganze Pronomen-Tabelle aus.
 
@@ -55,7 +55,7 @@ Mrs Parker, Ellies und Peters Mutter und Sophies Gastmutter, holt die Kinder ab.
 
 ### Die Person bestimmt das Wort
 
-Bei he, she und it brauchst du his, her und its. **his** heißt „sein“, **her** „ihr“ und **its** „sein“ für ein Ding oder Tier. Das Wort richtet sich nach der Person, zu der etwas gehört, **nicht nach der Person oder Sache, die dazugehört**. Mrs Parker ist die Mutter von Ellie und von Peter. Über Ellie sagt man „her mother“, über Peter sagt man „his mother“, obwohl es dieselbe Frau ist.
+Bei he, she und it brauchst du his, her und its. **his** heißt „sein“, **her** „ihr“ und **its** „sein“ für ein Ding oder Tier. Das Wort richtet sich nach der Person, zu der etwas gehört, **nicht nach der Person oder Sache, die dazugehört**. Ellie und Peter haben dieselbe Mutter. Über Ellie sagt man „her mother“, über Peter sagt man „his mother“, obwohl es dieselbe Frau ist.
 
 Bild: Zwei Zeilen. Oben zeigt ein Pfeil von Ellie zu einem roten Hut mit den Wörtern her hat. Unten zeigt ein Pfeil von Peter zu einem gelben Hut mit den Wörtern his hat. Bildunterschrift: Der Pfeil geht von der Person zu ihrem Hut. Das Wort über dem Pfeil richtet sich nach der Person am Anfang des Pfeils, nicht nach der Person oder Sache am Ende des Pfeils.
 

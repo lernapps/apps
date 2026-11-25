@@ -15,8 +15,8 @@ Die Seite zeigt die Satzmelodie am Satzende als Pfeil in der oberen Zeile der Kl
 ## Gehört nicht dazu
 
 - Die Formen mit -s und -ed selbst (stehen in den Explainern zu den Zeiten und zum Plural)
-- Betonung im Wort und im Satz, Bindungen und schwache Formen
+- Haltung und Gefühl in der Satzmelodie
 - Amerikanisches Englisch und andere Varietäten
-- Kommas und die Schreibung gleich klingender Wörter
+- Zeichensetzung außer dem Komma
 
 Die ganze App: [Scope der App](../../scope/)

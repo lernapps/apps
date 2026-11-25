@@ -45,7 +45,7 @@ Ellie ist größer als Peter. Du lernst, Adjektive auf der Treppe zu steigern, m
 
 ### Wer ist größer?
 
-Bild: Ellie und Peter stehen im Flur neben einer Messlatte an der Wand. Ellie ist deutlich größer als Peter. Sophie steht links, Amir rechts. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Peter (gelbe Jacke) und Amir (Brille).
+Bild: Ellie und Peter stehen im Flur neben einer Messlatte an der Wand. Ellie ist deutlich größer als Peter. Sophie steht links, Amir rechts. Bildunterschrift: Von links: Sophie, Ellie, Peter und Amir.
 
 Für die Ausstellung misst Mr Hill, wer wie groß ist. Peter steht neben der Messlatte, dann Ellie. Sophie sagt, was sie sieht. Ellie ist **tall** (groß), aber Peter ist es nicht so sehr.
 
@@ -73,28 +73,27 @@ Klassenzimmer-Poster · Die Treppe der Adjektive:
 
 **Eine Silbe** (tall) und **-y** (happy): **-er** und **-est**. Steht vor dem letzten Buchstaben ein Vokal und danach nur ein Konsonant, kommt er doppelt (big – bigger), bei cheap nicht. Aus y wird i (happier). **Zwei Silben ohne -y** (boring) und **drei Silben und mehr** (interesting): **more** und **the most**, das Wort selbst bleibt gleich. **good** und **bad** haben eigene Formen. Vor der Höchststufe steht immer **the**.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- small | klein
-- short | kurz / klein gewachsen
-- old | alt
-- cheap | billig
-- easy | leicht
-- hot | heiß
-- funny | lustig
-- difficult | schwierig
-- exciting | spannend
-- interesting | interessant
-- film | Film
-- boring | langweilig
-- beautiful | schön
-- boy | Junge
-- girl | Mädchen
-- day | Tag
-- game | Spiel
-- pizza | Pizza
-- bike | Fahrrad
-- this is | das ist
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- small – klein
+- short – kurz / klein gewachsen
+- old – alt
+- cheap – billig
+- easy – leicht
+- hot – heiß
+- funny – lustig
+- difficult – schwierig
+- exciting – spannend
+- interesting – interessant
+- film – Film
+- boring – langweilig
+- beautiful – schön
+- boy – Junge
+- girl – Mädchen
+- day – Tag
+- game – Spiel
+- pizza – Pizza
+- bike – Fahrrad
+- this is – das ist
 
 ### Übung
 

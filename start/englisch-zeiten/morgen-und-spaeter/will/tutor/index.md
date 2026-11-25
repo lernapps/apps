@@ -45,7 +45,7 @@ Amir und Ellie sprechen über morgen. Du lernst, mit will zu vermuten und sponta
 
 ### Was morgen wird
 
-Bild: Sophie, Peter, Ellie und Amir stehen im Klassenzimmer. Amir sagt in der oberen Sprechblase: „It will be sunny tomorrow.“ Ellie sagt in der unteren: „Maybe it will rain.“ Rechts steht eine gelbe Sonne. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz) und Amir (Brille). Ellie und Amir sprechen.
+Bild: Sophie, Peter, Ellie und Amir stehen im Klassenzimmer. Amir sagt in der oberen Sprechblase: „It will be sunny tomorrow.“ Ellie sagt in der unteren: „Maybe it will rain.“ Rechts steht eine gelbe Sonne. Bildunterschrift: Ellie (roter Pferdeschwanz) und Amir (Brille) sprechen.
 
 Mr Hill fragt die Klasse, wie das Wetter wird. Amir sagt: „It will be sunny tomorrow.“ Sunny heißt sonnig, tomorrow heißt morgen. Ellie sagt: „Maybe it will rain.“ Maybe heißt vielleicht, rain heißt regnen.
 
@@ -72,13 +72,12 @@ Klassenzimmer-Poster · will mit play:
 
 **Nach will kommt kein s und kein to.** Es heißt she will play, nicht she wills play und nicht she will to play. In Gesprächen hörst du oft die Kurzform **’ll**: I’ll help you heißt I will help you.
 
-Schulkalender · Zeitangaben:
-- Ausdruck | Bedeutung
-- tomorrow | morgen
-- next week | nächste Woche
-- soon | bald
-- I think | ich glaube
-- in two days | in zwei Tagen
+Vokabeln (Englisch – Deutsch): Schulkalender · Zeitangaben
+- tomorrow – morgen
+- next week – nächste Woche
+- soon – bald
+- I think – ich glaube
+- in two days – in zwei Tagen
 
 ### Übung
 
@@ -102,7 +101,7 @@ Schulkalender · Zeitangaben:
 
 ### Wie es weitergeht
 
-Am Zeitstrahl hängt rechts von now jetzt ein einzelner Punkt. Peter hat daneben etwas anderes aufgehängt: einen Pfeil, der schon bei now beginnt. Er hat seinen Geburtstag am 5. Mai geplant. Auf der nächsten Seite lernst du, was dieser Pfeil bedeutet.
+Am Zeitstrahl hängt rechts von now jetzt ein einzelner Punkt. Peter hat daneben etwas anderes aufgehängt: einen Pfeil, der schon bei now beginnt. Er plant eine Feier. Auf der nächsten Seite lernst du, was dieser Pfeil bedeutet.
 
 ### Aufgabe will-start
 

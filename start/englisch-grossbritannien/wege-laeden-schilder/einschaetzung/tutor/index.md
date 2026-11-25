@@ -61,6 +61,21 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Sehenswürdigkeiten in London“
 - „Menschen in Großbritannien“
 
+### Kapitel „Klassenfahrt nach London“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Zug und U-Bahn: Fahrkarten und Gleise“
+- „London heute: Ein Tag in der Großstadt“
+- „Klischees prüfen“
+
+### Kapitel „Von 1066 bis Westminster“
+
+- Selbsteinschätzung des Kapitels
+- „1066 und die Normannen“
+- „Henry VIII und Elizabeth I“
+- „König, Parlament und Premierminister“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe wege-plan der Seite „Den Weg beschreiben: Millbrook auf dem Plan“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

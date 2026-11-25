@@ -67,6 +67,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Eine Spielszene schreiben: Sprecher und Zeilen“ · Aufgaben A1, A2
 - „Reime hören, finden und sprechen“ · Aufgaben A3, A4, A5
 
+### Kapitel „Anders erzählen“
+
+- Selbsteinschätzung des Kapitels
+- „Wessen Sicht? Dieselbe Szene, eine andere Brille“
+- „Wo und wann spielt es, und wie fühlt es sich an?“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe dialog-ordnen der Seite „Eine Spielszene schreiben: Sprecher und Zeilen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

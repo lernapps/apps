@@ -41,7 +41,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/englisch/c/there-is-are/, https://lernapps.net/apps/map/englisch/c/present-progressive/, https://lernapps.net/apps/map/englisch/c/praepositionen-ort/
 
-Am Dienstag und Mittwoch erzählen die Kinder mit Schildern und Bildern. Wiederhole, was du dafür brauchst: there is und there are, das present progressive und Präpositionen des Ortes.
+Wiederhole, was du für Schilder und Bilder brauchst: there is und there are, das present progressive und Präpositionen des Ortes.
 
 Gestern hast du Geschichten nacherzählt, Station für Station am Geschichtenberg. Heute und morgen erzählen die Kinder mit Schildern und mit Bildern. Dafür brauchst du drei Dinge, die du schon kennst. Prüfe in Gedanken, ob du sie noch kannst.
 

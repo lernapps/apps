@@ -1,6 +1,6 @@
 # Zu wem gehört es? my, your, our, their – für deinen KI-Tutor
 
-Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Pronomen: I, me, my“ von lernapps.net, gerade auf der Seite „Zu wem gehört es? my, your, our, their“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
+Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Pronomen: I, me, my, mine, myself“ von lernapps.net, gerade auf der Seite „Zu wem gehört es? my, your, our, their“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
 
 Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
@@ -45,7 +45,7 @@ Du lernst die Wörter my, your, our und their, mit denen du sagst, wem etwas geh
 
 ### Taschen und Jacken im Flur
 
-Bild: Im Flur der Millbrook School stehen Sophie, Ellie, Peter und Amir. Vor jedem Kind steht eine Tasche. Bildunterschrift: Von links nach rechts Sophie, Ellie, Peter und Amir. Vor jedem Kind steht eine Tasche.
+Bild: Im Flur stehen vier Kinder. Vor jedem Kind steht eine Tasche. Bildunterschrift: Vor jedem Kind steht eine Tasche.
 
 Nach dem Training stehen die Kinder im Flur. Ihre Taschen stehen auf dem Boden. Ellie sagt: „I can see my phone.“ Das heißt: „Ich kann mein Handy sehen.“ **phone** heißt „Handy“, **bag** „Tasche“, **jacket** „Jacke“, **ball** „Ball“, **book** „Buch“, **hat** „Hut“, **bike** „Fahrrad“ und **dog** „Hund“. **your** heißt „dein“ oder „euer“, **our** „unser“ und **their** „ihr“, wenn es mehreren gehört.
 

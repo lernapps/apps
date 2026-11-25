@@ -1,0 +1,26 @@
+# Englisch weltweit
+
+## Das brauchst du hier
+
+Die Seite wiederholt zwei Bausteine, die dieses Kapitel braucht, und übt sie nicht neu. Das Vereinigte Königreich (UK) besteht aus England, Scotland, Wales und Northern Ireland mit den Hauptstädten London, Edinburgh, Cardiff und Belfast. Great Britain ist die große Insel mit England, Scotland und Wales; Ireland ist die Nachbarinsel, auf der auch Northern Ireland liegt. Dazu kommen höfliche Begrüßung, Anrede, Danken und Entschuldigen auf Englisch. Typische Fehler sind UK, Great Britain und England gleichzusetzen. Nicht hier: Australien, Varietäten des Englischen und Umgangsformen anderer Kulturen, sie stehen auf den folgenden Seiten.
+
+## Australien
+
+Die Seite stellt Australien vor. Australien ist ein Land und ein Kontinent, die Hauptstadt ist Canberra (nicht Sydney oder Melbourne, die größten Städte). Die meisten Menschen leben an der Küste, im Landesinneren ist es trocken. Die Aboriginal Australians und die Torres-Strait-Insulaner leben seit sehr langer Zeit dort. Die Aboriginal Australians sind kein einziges Volk, sondern viele Gruppen mit mehr als 250 Sprachen, die Torres-Strait-Insulaner sind ein eigenes Volk. Die Briten gründeten 1788 mit der First Fleet eine Strafkolonie in Sydney Cove, schlossen keine Verträge mit den Aboriginal Australians, und die Siedler nahmen den größten Teil des Landes. Ab 1886 nahmen Regierungen der Kolonien viele Aboriginal-Kinder aus ihren Familien, 2008 entschuldigte sich Premierminister Kevin Rudd im Bundesparlament dafür. 1901 vereinigten sich die sechs Kolonien. Ein Referendum 1967 und die Mabo-Entscheidung 1992 sind Schritte zu mehr Rechten. Der 26. Januar ist der Nationalfeiertag, für manche Aboriginal Australians ein Tag der Trauer. Geübt werden Lage auf der Karte, Zeitachse, zwei Sichtweisen auf dieselbe Geschichte und Sätze mit capital, coast und people. Typische Fehler sind Sydney als Hauptstadt, die Aboriginal Australians als ein Volk und Australien als leeres Land. Nicht hier: Politik der Gegenwart, Wirtschaft, einzelne Tierarten, Schulsystem.
+
+## Weitere Varietäten des Englischen
+
+Die Seite zeigt, dass Englisch in vielen Varietäten gesprochen wird, mit eigenen Merkmalen in Aussprache, Wortschatz, Schreibung und Grammatik. Eine Varietät ist kein falsches Englisch, viele Varietäten haben eine eigene Standardform. Australisches Englisch entstand nach 1788 aus den Sprechweisen der Siedler aus Großbritannien und Irland, ist im ganzen Land ähnlich, schreibt wie das britische Englisch (colour, realise), spricht den r am Silbenende nicht, hat Wörter wie mate, arvo, barbie, g'day und outback und übernahm Wörter aus Aboriginal-Sprachen (kangaroo, boomerang). Schottisches Englisch entstand nach dem 17. Jahrhundert aus dem Kontakt von Scots und dem Englisch Englands, spricht den r meist, hat Wörter wie wee, bairn, bonnie und kirk, und stay kann dort live bedeuten. Es gibt keine Hörproben der Varietäten, nur Text, Wortliste und Lesehilfe, die Hörsätze sprechen britisch oder amerikanisch. Typische Fehler sind Varietät gleich Dialekt gleich falsches Englisch und stay wörtlich als bleiben zu lesen. Nicht hier: Indisches Englisch und andere Varietäten, Aussprache von britisch und amerikanisch (Kapitel 2), Politik.
+
+## Kulturelle Umgangsformen
+
+Die Seite zeigt drei Gesprächsszenen zwischen neutralen Rollen (Host und Guest, Visitor und Colleague, Reader und Writer) und erklärt vier Dinge: Körpersprache gehört zur nonverbalen Kommunikation. Der Abstand zwischen Menschen heißt in der Forschung Proxemik, Edward T. Hall beschrieb 1963 vier Zonen (intimate, personal, social, public), die Werte sind Richtwerte. Wie viel Abstand angenehm ist, hängt von Kultur, Situation und Person ab, Durchschnitte verschiedener Länder unterscheiden sich, einzelne Menschen sind verschieden. Small Talk hat die Teile Gruß, Gespräch und Abschluss, sichere Themen sind Wetter, Sport und Fernsehen, Regeln und Themen sind je nach Kultur verschieden. Höfliche Kritik beginnt mit etwas Positivem und macht aus der Kritik einen Vorschlag (could, might, perhaps, I wonder if). Geübt werden das Verstehen der Szenen, eine angemessene Antwort mit Begründung, höfliche Sätze und ein eigener Dialog. Typische Fehler sind, Unterschiede als feste Regeln für ganze Völker zu lesen, I wonder if wörtlich zu verstehen oder eine höfliche Kritik als unhöflich zu hören. Nicht hier: Klischees über einzelne Völker, Politik, Schulsysteme, Bewerbungsgespräche.
+
+## Gehört nicht dazu
+
+- Großbritannien und London (eigener Explainer)
+- Schulsysteme mit Abschlüssen und Bewerbung
+- Politik als Thema für Diskussionen
+- Bevölkerungszahlen und Statistiken ohne Beleg
+
+Die ganze App: [Scope der App](../../scope/)

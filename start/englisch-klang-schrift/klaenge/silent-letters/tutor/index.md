@@ -45,7 +45,7 @@ Sophie liest ein Wort mit einem k vor, das man nicht spricht. Du lernst stumme B
 
 ### Warum lacht Amir?
 
-Bild: Im Klassenzimmer steht eine Tafel mit drei Zeilen. Sophie sagt in einer Sprechblase „k-nee?“, Amir lacht und sagt „Ha ha!“. Mr Hill steht rechts unter der Tafel. Bildunterschrift: Von links: Sophie (Zöpfe) liest ein Wort vor, Amir (Brille) lacht, rechts steht Mr Hill (graue Haare).
+Bild: Im Klassenzimmer steht eine Tafel mit drei Zeilen. Sophie sagt in einer Sprechblase „k-nee?“, Amir lacht und sagt „Ha ha!“. Mr Hill steht rechts unter der Tafel. Bildunterschrift: Von links: Sophie liest ein Wort vor, Amir lacht, rechts steht Mr Hill.
 
 Sophie liest das englische Wort **knee** („Knie“) vor, genau so, wie es geschrieben steht: „k-nee“. Amir lacht.
 
@@ -90,7 +90,7 @@ Klassenzimmer-Poster · Stumme Buchstaben:
 
 ### Wie es weitergeht
 
-Mr Hill zeigt auf die Klangpartitur: „Jetzt kennt ihr die Zeichen und die Buchstaben, die man nicht hört.“ Auf den nächsten Seiten hängen die Kinder Endungen an Wörter an, und es zeigt sich, was dabei mit der Schreibung und mit dem Klang passiert.
+Jetzt kennst du die Zeichen und die Buchstaben, die man nicht hört. Auf den nächsten Seiten werden Endungen an Wörter angehängt, und es zeigt sich, was dabei mit der Schreibung und dem Klang passiert.
 
 ### Aufgabe silent-letters-start
 

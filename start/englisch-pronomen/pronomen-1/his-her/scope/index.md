@@ -4,7 +4,6 @@ Die Seite ergänzt die dritte Spalte der Pronomen-Tabelle um die Zeilen he, she 
 
 ## Gehört nicht dazu
 
-- mine, yours, myself und each other (kommen in Kapitel 2)
 - this, that, some, any und ihre Zusammensetzungen
 - Relativpronomen
 - die Formen von to be

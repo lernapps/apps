@@ -17,7 +17,7 @@ Die Seite zeigt die Teile eines Tagebucheintrags. Das sind die Anrede Dear diary
 - Die Zeitformen selbst (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Kurzgeschichten, Gedichte, Dramen und Filme untersuchen
 - Sachtexte, Bericht und Artikel
-- Eine Geschichte aus der Sicht einer anderen Figur erzählen und Stimmung durch Ort und Sprache (später)
+- Erzähler, Symbolik und Textanalyse literarischer Kurzgeschichten (Kapitel 5 bleibt bei Sicht und Stimmung in eigenen Texten)
 - Bewertung der Aussprache und der freien Texte durch die App
 
 Die ganze App: [Scope der App](../../scope/)

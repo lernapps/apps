@@ -45,9 +45,9 @@ Peter spielt jeden Samstag Fußball. Du lernst, mit dem simple present von Gewoh
 
 ### Was Peter jeden Samstag tut
 
-Bild: Peter kickt auf einer Wiese einen Fußball. Sophie, Ellie und Amir stehen daneben und schauen zu. Ellie sagt in der Sprechblase: „Peter plays football every Saturday.“. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke). Ellie spricht.
+Bild: Peter kickt auf einer Wiese einen Fußball. Sophie, Ellie und Amir stehen daneben und schauen zu. Ellie sagt in der Sprechblase: „Peter plays football every Saturday.“. Bildunterschrift: Ellie spricht.
 
-Ellie erzählt Sophie von ihrem Bruder: „Peter plays football every Saturday.“ Saturday ist der Samstag, football der Fußball.
+Ellie sagt: „Peter plays football every Saturday.“ Saturday ist der Samstag, football der Fußball.
 
 - Aufgabe `simple-present-start` (unten)
 
@@ -55,7 +55,7 @@ Ellie erzählt Sophie von ihrem Bruder: „Peter plays football every Saturday.�
 
 ### Die Punktreihe und das -s
 
-Mr Hill hat einen langen Streifen an die Wand gehängt, den Zeitstrahl. Links liegt das Frühere, rechts das Spätere, und in der Mitte steht **now**, das heißt „jetzt“. Jeder Samstag, an dem Peter spielt, ist ein Punkt. Heute ist kein Samstag, darum liegt now zwischen zwei Punkten. Viele Samstage sind eine **Punktreihe**: Was sich so wiederholt, ist eine Gewohnheit. Die Zeitform dafür heißt **simple present**, und die Punktreihe ist ihr Zeichen.
+Auf dem Zeitstrahl liegt links das Frühere, rechts das Spätere, und in der Mitte steht **now**, das heißt „jetzt“. Jeder Samstag, an dem Peter spielt, ist ein Punkt. Heute ist kein Samstag, darum liegt now zwischen zwei Punkten. Viele Samstage sind eine **Punktreihe**: Was sich so wiederholt, ist eine Gewohnheit. Die Zeitform dafür heißt **simple present**, und die Punktreihe ist ihr Zeichen.
 
 Bild: Ein Zeitstrahl von links nach rechts. In der Mitte steht ein roter Strich mit der Beschriftung now. Links und rechts davon liegt eine gleichmäßige Reihe blauer Punkte. An einem Punkt hängt ein Fähnchen mit den Worten every Saturday. Bildunterschrift: Jeder Punkt ist ein Samstag. Die Punkte laufen links und rechts über now hinaus. Das Fähnchen sagt, wie oft es passiert.
 

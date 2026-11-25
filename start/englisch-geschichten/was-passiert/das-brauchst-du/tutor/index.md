@@ -43,7 +43,7 @@ Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon kön
 
 Geschichten stehen meist im simple past. Hier wiederholst du kurz, wie das geht.
 
-Heute ist Montag der Geschichtenwoche in der Millbrook School. **Sophie** (11) kommt aus Deutschland und wohnt bei den Parkers. **Ellie** (11) und **Peter** (9) sind Geschwister, **Mrs Parker** ist ihre Mutter und Sophies Gastmutter. **Amir** (11) ist ein Freund. **Mr Hill** ist der Englischlehrer. Mr Hill sagt: Geschichten stehen meist im **simple past**. Auf dem **Klassenzimmer-Poster** sammelt er die neuen Wörter und Formen.
+Mr Hill sagt: Geschichten stehen meist im **simple past**. Auf dem **Klassenzimmer-Poster** sammelt er die neuen Wörter und Formen.
 
 Kannst du das schon? *Ich kann im simple past mit regelmäßigen Verben (-ed) von abgeschlossenen Ereignissen erzählen.* Das heißt: Du erzählst von Dingen, die schon vorbei sind. Regelmäßige Verben bekommen die Endung **-ed**, zum Beispiel walk, walked. Endet das Verb auf **e**, kommt nur **d** dazu, zum Beispiel like, liked. Endet es auf Konsonant plus **y**, wird daraus **-ied**, zum Beispiel try, tried. Viele häufige Verben sind unregelmäßig. Ihre Form lernst du auswendig.
 

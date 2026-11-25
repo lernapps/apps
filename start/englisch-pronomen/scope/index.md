@@ -1,6 +1,6 @@
-# Pronomen: I, me, my
+# Pronomen: I, me, my, mine, myself
 
-Die App begleitet Kinder der Klassen 5 und 6. Kapitel 1 stellt die Pronomen-Tabelle vor. Spalte 1 „Wer tut es?“ hat I, you, he, she, it, we, they. Spalte 2 „Wen trifft es?“ hat me, you, him, her, it, us, them. Spalte 3 „Zu wem gehört es?“ hat my, your, his, her, its, our, their. Die Kinder lernen, dass man he oder she nach der Person wählt, it für Dinge und Tiere, und dass his und her sich nach der Person richten, zu der etwas gehört, nicht nach der Person oder Sache, die dazugehört.
+Die App begleitet Kinder der Klassen 5 bis 8. Kapitel 1 (Klasse 5-6) stellt die Pronomen-Tabelle vor. Spalte 1 „Wer tut es?“ hat I, you, he, she, it, we, they. Spalte 2 „Wen trifft es?“ hat me, you, him, her, it, us, them. Spalte 3 „Zu wem gehört es?“ hat my, your, his, her, its, our, their. Die Kinder lernen, dass man he oder she nach der Person wählt, it für Dinge und Tiere, und dass his und her sich nach der Person richten, zu der etwas gehört, nicht nach der Person oder Sache, die dazugehört. Kapitel 2 (Klasse 7-8) fügt zwei Spalten hinzu: „Gehört es mir, ohne Nomen?“ mit mine, yours, his, hers, ours, theirs und „Wer ist es selbst?“ mit myself, yourself, himself, herself, itself, ourselves, yourselves, themselves, dazu each other („einander“). Jede Seite hat ein Lesestück (Chat, Tagebuch, Dialog).
 
 ## Wer? Wen? Zu wem?
 
@@ -20,9 +20,22 @@ Die Seite führt die dritte Spalte der Pronomen-Tabelle ein, „Zu wem gehört e
 
 Die Seite ergänzt die dritte Spalte der Pronomen-Tabelle um die Zeilen he, she und it. his gehört einem Jungen oder Mann, her einem Mädchen oder einer Frau, its einem Ding oder Tier. Entscheidend ist die Person, zu der etwas gehört, nicht die Person oder Sache, die dazugehört. Mrs Parker ist für Ellie her mother und für Peter his mother. her steht auch in der zweiten Spalte, his nur in der dritten. its hat keinen Apostroph. Am Ende stehen die drei Spalten für alle sieben Zeilen. Typische Fehler sind her für ein weibliches Ding und it's statt its.
 
+## mine, myself und each other
+
+### mine, yours, hers: ohne Nomen
+
+Die Seite führt die Possessivpronomen ein: mine, yours, his, hers, ours und theirs stehen allein, ohne Nomen, und sagen, wem etwas gehört (The bag is mine.). Sie sind die vierte Spalte der Pronomen-Tabelle, „Gehört es mir, ohne Nomen?“, neben my, your, his, her, our und their aus Kapitel 1, die vor einem Nomen stehen. his bleibt his, its hat keine Form, hers, ours, yours und theirs schreibt man ohne Apostroph. Das Lesestück ist ein Chat über Fundsachen mit Wörtern am Rand. Typische Fehler sind mine bag, ein Apostroph (her's, your's, their's) und her statt hers.
+
+### myself: wenn es zurückzeigt
+
+Die Seite führt die Reflexivpronomen ein: myself, yourself, himself, herself, itself, ourselves, yourselves und themselves. Sie zeigen zur selben Person zurück, die etwas tut (Sophie hurt herself.), im Gegensatz zu einem Personalpronomen für eine andere Person (Sophie helped her.). Das Deutsche sagt „sich“ auch bei Verben, bei denen das Englische kein Reflexivpronomen hat: meet, hurry, sit down, feel, relax, decide. Das Lesestück ist ein Tagebucheintrag von Sophie. Typische Fehler sind meet ourselves, hurry myself, hisself, theirselves und him statt himself.
+
+### each other: hin und her
+
+Die Seite führt each other ein. each other heißt „einander“ oder „gegenseitig“: Zwei oder mehr Personen tun dasselbe füreinander, die Pfeile gehen hin und her (They help each other.). Ein Reflexivpronomen wie themselves geht dagegen von jeder Person zu ihr selbst zurück (They help themselves.). Beide sind verschieden, auch wenn das Deutsche „sich“ sagt (sie helfen sich). Das Lesestück ist ein Dialog nach einer Klettertour. Typische Fehler sind themselves statt each other, them statt each other und theirselves.
+
 ## Gehört nicht dazu
 
-- mine, yours, myself und each other (kommen in Kapitel 2)
 - this, that, some, any und ihre Zusammensetzungen
 - Relativpronomen
 - die Formen von to be

@@ -45,9 +45,9 @@ Sophie schreibt ihren Eltern, was die Kinder in der Woche machen. Du sprichst ü
 
 ### Wer macht was an welchem Tag?
 
-Bild: Ein Wochenplan mit vier Zeilen für vier Kinder und drei Spalten für drei Tage. In jedem Feld steht ein Hobby. Bildunterschrift: Der Wochenplan an Ellies Zimmertür. Von oben: Ellie (roter Pferdeschwanz), Peter (gelbe Jacke), Amir (Brille) und Sophie (Zöpfe).
+Bild: Ein Wochenplan mit vier Zeilen für vier Kinder und drei Spalten für drei Tage. In jedem Feld steht ein Hobby. Bildunterschrift: Der Wochenplan. Von oben: Ellie, Peter, Amir und Sophie.
 
-Ellie hat einen Wochenplan an ihre Tür gehängt: Jeder hat Hobbys (hobbies), das sind Dinge, die man gern in der Freizeit (free time) macht. Sophie will ihren Eltern schreiben, was die Kinder machen.
+Am Wochenplan siehst du Hobbys (hobbies): Das sind Dinge, die man gern in der Freizeit (free time) macht.
 
 - Aufgabe `freizeit-hobbys-start` (unten)
 
@@ -57,13 +57,12 @@ Ellie hat einen Wochenplan an ihre Tür gehängt: Jeder hat Hobbys (hobbies), da
 
 Ein Hobby nennst du mit einem Verb: **swim**, **read**, **draw**, **dance**, **ride a bike**. Bei **play** kommt es darauf an: Ein Spiel steht ohne the (**play tennis**), ein Instrument mit **the** (**play the piano**). Haustiere (pets) sind zum Beispiel a dog oder a horse. Du sagst: **I have got a dog.**
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- basketball | Basketball
-- violin | Geige
-- parrot | Papagei
-- hiking | Wandern
-- at the weekend | am Wochenende
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- basketball – Basketball
+- violin – Geige
+- parrot – Papagei
+- hiking – Wandern
+- at the weekend – am Wochenende
 
 Was magst du? **I like**, **I love** (ich liebe) und **I enjoy** (es macht mir Spaß) sagen, wie sehr dir ein Hobby gefällt. Danach kommt das Verb mit **-ing**: I like cooking. Bei dance fällt das e weg (dancing), bei sit und get kommt ein Buchstabe dazu (sitting, getting). Bei he, she, it hat like ein -s: she likes. Viele Sportarten sagst du mit **go** und -ing: go hiking.
 

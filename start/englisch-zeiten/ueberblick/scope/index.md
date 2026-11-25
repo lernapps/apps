@@ -1,0 +1,23 @@
+# Alle Zeiten im Überblick
+
+## Wie lange es schon dauerte: das past perfect progressive
+
+Die Seite führt das past perfect progressive ein, mit einem Sachtext über den Bau des Eiffelturms als Lesestück. Es sagt, wie lange etwas vor einem Zeitpunkt in der Vergangenheit schon dauerte. Auf dem Zeitstrahl ist es eine Welle, die in der Vergangenheit bis zu einem Punkt reicht, mit einem Bogen darüber. Die Form ist had been plus das Verb mit -ing, für alle Personen gleich. Dazu die Signalwörter for, since und all day. Der Unterschied zum simple past und zum past perfect wird gezeigt. Nicht hier, weil es spätere Seiten oder andere Kapitel sind. Used to und would, die Übersicht aller Zeiten, Fragen und Verneinung mit did.
+
+## Was früher war: used to
+
+Die Seite führt used to ein, mit einem Sachtext über die Concorde als Lesestück. Used to erzählt von Gewohnheiten und Zuständen der Vergangenheit, die heute nicht mehr gelten. Auf dem Zeitstrahl ist es eine graue Punktreihe in der Vergangenheit, die vor now endet. Die Form ist used to plus Grundform des Verbs, die Verneinung didn't use to und die Frage Did … use to …? Dazu der Vergleich mit would, das nur für wiederholte Handlungen steht, nicht für Zustände. Nicht hier, weil es andere Seiten sind. Die Wendung be used to (an etwas gewöhnt sein), die Übersicht aller Zeiten, das past perfect progressive.
+
+## Welche Zeit passt? Alle Zeiten im Überblick
+
+Die Seite bringt alle Zeiten der Kapitel 1 bis 7 zusammen und zeigt, wie man in einem Text für jede Aussage die passende Zeit wählt. Werkzeug ist der ganze Zeitstrahl mit 13 Zeichen, eine Zeile je Zeit, und ein Poster mit Zeichen, Zeit und Beispiel. Der Sachtext über den Eiffelturm und die Concorde nutzt simple present, simple past, present perfect, past progressive, past perfect progressive, used to, going to und will. Drei Fragen führen zur Zeit, nämlich wo es liegt, welches Zeichen es ist und welches Signalwort im Satz steht. Nicht hier, weil sie in früheren Kapiteln stehen. Die Bildung der einzelnen Zeiten im Einzelnen, Fragen und Verneinung mit do und did, Passiv und indirekte Rede.
+
+## Gehört nicht dazu
+
+- Fragen und Verneinung mit do und did (steht im Explainer „Sätze bauen“)
+- Bedingungssätze und indirekte Rede
+- Passiv
+- Aussprache von -s und -ed
+- Zeiten für Klasse 9 und 10 (alle Zeiten im Überblick, past perfect progressive, used to und would)
+
+Die ganze App: [Scope der App](../../scope/)

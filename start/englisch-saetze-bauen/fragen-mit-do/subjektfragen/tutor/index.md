@@ -68,30 +68,28 @@ Klassenzimmer-Poster · Subjekt oder Objekt?:
 
 **Wer tut etwas? Kein Helfer, das Verb mit -s: Who likes tea?** Was oder wen? Der Helfer bleibt, das Verb geht ohne Endung: What does Ellie like?
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- who | wer
-- what | was
-- play | spielen
-- like | mögen
-- live | wohnen
-- eat | essen
-- football | Fußball
-- tea | Tee
-- pizza | Pizza
-- here | hier
-- at school | in der Schule
-- at home | zu Hause
-- lunch | Mittagessen
-- read | lesen
-- watch | anschauen
-- film | Film
-- study | lernen
-- English | Englisch
-- Mr Hill | Mr Hill (der Englischlehrer)
-- with | mit / bei
-- in the park | im Park
-- on Saturday | am Samstag
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- who – wer
+- what – was
+- play – spielen
+- like – mögen
+- live – wohnen
+- eat – essen
+- football – Fußball
+- tea – Tee
+- pizza – Pizza
+- here – hier
+- at school – in der Schule
+- at home – zu Hause
+- lunch – Mittagessen
+- read – lesen
+- watch – anschauen
+- film – Film
+- study – lernen
+- English – Englisch
+- with – mit / bei
+- in the park – im Park
+- on Saturday – am Samstag
 
 ### Übung
 

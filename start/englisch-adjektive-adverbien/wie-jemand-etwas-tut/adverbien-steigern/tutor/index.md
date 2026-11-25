@@ -45,7 +45,7 @@ Peter rennt schneller als Amir. Du lernst, Adverbien zu steigern und damit Handl
 
 ### Wer rennt schneller?
 
-Bild: Peter rennt im Flur vor Amir her. Ellie und Sophie stehen rechts und schauen zu. Bildunterschrift: Von links: Amir (Brille), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz) und Sophie (Zöpfe).
+Bild: Peter rennt im Flur vor Amir her. Ellie und Sophie stehen rechts und schauen zu. Bildunterschrift: Von links: Amir, Peter, Ellie und Sophie.
 
 Die Kinder machen für die Ausstellung ein Wettrennen durch den Flur. Peter rennt, und Amir ist nur ein bisschen langsamer. Ellie sagt, wer vorn ist. Sie vergleicht keine Dinge, sondern **Handlungen**.
 
@@ -71,17 +71,16 @@ Klassenzimmer-Poster · Die Treppe der Adverbien:
 
 Wie bei den Adjektiven: **kurz** gibt **-er** und **-est**, **-ly** gibt **more** und **most**. Zwei Handlungen vergleichst du mit **than**: Peter runs **faster than** Amir. Vor der Höchststufe darfst du bei Adverbien das the weglassen (Sophie sings best). **early** endet auf -ly, ist aber kurz und steigt wie fast.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- slowly | langsam
-- loudly | laut
-- quietly | leise
-- early | früh
-- late | spät
-- badly | schlecht
-- speak | sprechen
-- sing | singen
-- work | arbeiten
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- slowly – langsam
+- loudly – laut
+- quietly – leise
+- early – früh
+- late – spät
+- badly – schlecht
+- speak – sprechen
+- sing – singen
+- work – arbeiten
 
 ### Übung
 
@@ -107,7 +106,7 @@ Klassenzimmer-Poster · Wörter dieser Seite:
 
 Du hast jetzt zwei Anhänger und die Treppe mit ihren zwei Seiten. Der blaue Anhänger beschreibt Dinge und Personen, der orangefarbene sagt, wie jemand etwas tut. Beide Seiten der Treppe steigen gleich: kurz mit -er und -est, lang mit more und most. Mr Hill hängt die Karten auf, und die Ausstellung „Our Millbrook“ kann beginnen.
 
-Schulkalender · Rückblick Kapitel 2:
+Schulkalender · Rückblick Wie jemand etwas tut:
 - Das willst du sagen | So geht es
 - wie jemand etwas tut | orangefarbener Anhänger am Verb, meist -ly
 - ein Ding oder eine Person | blauer Anhänger

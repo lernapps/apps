@@ -45,7 +45,7 @@ Peter fragt: What if it rains? Du lernst, mit if zu sagen, was unter einer Bedin
 
 ### Was ist, wenn es regnet?
 
-Bild: Im Klassenzimmer hängt ein Brett mit zwei weißen Streifen: „It rains.“ und „We stay in.“ Darunter hängen drei Karten: if, so und because. Peter fragt in einer Sprechblase: „What if it rains?“ Neben Peter stehen Sophie, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). Nächste Woche ist Elternabend. Mr Hill will einen Zettel für die Klassenzimmertür schreiben. Peter fragt.
+Bild: Im Klassenzimmer hängt ein Brett mit zwei weißen Streifen: „It rains.“ und „We stay in.“ Darunter hängen drei Karten: if, so und because. Peter fragt in einer Sprechblase: „What if it rains?“ Neben Peter stehen Sophie, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Nächste Woche ist Elternabend. Mr Hill will einen Zettel für die Klassenzimmertür schreiben. Peter fragt.
 
 Nächste Woche ist Elternabend. Mr Hill schreibt einen Zettel für die Tür. Peter fragt: „What if it rains?“ Das heißt: Was ist, wenn es regnet? Ellie hat die Streifen „It rains.“ und „We stay in.“ aufgehängt. **Stay in** heißt drinnen bleiben.
 
@@ -53,24 +53,23 @@ Nächste Woche ist Elternabend. Mr Hill schreibt einen Zettel für die Tür. Pet
 
 **Das kannst du danach:** Du sagst, was passiert, wenn etwas eintritt. Du weißt, welche Zeitform zu welchem Streifen passt.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- if | wenn / falls
-- outside | draußen
-- come | kommen
-- help | helfen
-- win | gewinnen
-- call | anrufen
-- answer | antworten
-- wait | warten
-- tomorrow | morgen
-- lunch | Mittagessen
-- warm | warm
-- cold | kalt
-- wear | tragen
-- walk | zu Fuß gehen
-- make | machen
-- bed | Bett
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- if – wenn / falls
+- outside – draußen
+- come – kommen
+- help – helfen
+- win – gewinnen
+- call – anrufen
+- answer – antworten
+- wait – warten
+- tomorrow – morgen
+- lunch – Mittagessen
+- warm – warm
+- cold – kalt
+- wear – tragen
+- walk – zu Fuß gehen
+- make – machen
+- bed – Bett
 
 ### Die Weiche bei if
 
@@ -136,9 +135,9 @@ Klassenzimmer-Poster · Alle Karten der Wand:
 - Aufgabe: Welcher Satz stellt die Weiche richtig?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ If Amir comes, we will win – Im Streifen mit if steht das simple present (comes), im anderen will plus Verb (will win).
   - ✗ If Amir will come, we will win – Im Streifen mit if steht kein will. Dort braucht es das simple present.
   - ✗ If Amir comes, we will wins – Nach will bleibt das Verb gleich.
+  - ✓ If Amir comes, we will win – Im Streifen mit if steht das simple present (comes), im anderen will plus Verb (will win).
 - Lösung: If Amir comes, we will win
 - Erklärung: Die Weiche stellt das simple present zum if-Streifen.
 - Link: [../?via=tutor#if-weiche](../?via=tutor#if-weiche)

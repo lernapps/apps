@@ -18,6 +18,6 @@ Die Seite zeigt question tags. Ein question tag ist eine kleine Frage am Ende ei
 - Nebensätze, indirekte Rede und indirekte Fragen
 - Die Satzmelodie der Frage
 - Die Stellung der Adverbien
-- Betonung mit do und Inversion (Klasse 9 bis 10)
+- Inversion in Bedingungssätzen, nach so und such und nach Ortsadverbien
 
 Die ganze App: [Scope der App](../../scope/)

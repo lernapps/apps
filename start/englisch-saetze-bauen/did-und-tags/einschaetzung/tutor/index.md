@@ -62,6 +62,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Did you play football yesterday?“ · Aufgaben A1, A2
 - „You like it, don't you?“ · Aufgaben A3, A4
 
+### Kapitel „Betonen und umstellen“
+
+- Selbsteinschätzung des Kapitels
+- „She did win: Betonung mit do“
+- „Umkehr nach never, hardly und not only“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe did-waehlen der Seite „Did you play football yesterday?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

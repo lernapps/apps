@@ -45,7 +45,7 @@ Vergleiche mit than und as … as noch einmal kurz, bevor Mr Hill die große Kar
 
 ### Das solltest du schon können
 
-Im Kapitel davor ging es um Millbrook. Jetzt zoomt die Karte heraus: Mr Hill hängt in der Klasse eine große Karte auf, und Sophie, Ellie und Amir stehen davor. Auf der Karte siehst du nicht mehr die Straßen, sondern ein ganzes Land. Am Ende des Kapitels vergleichen die Kinder Orte miteinander. Dafür brauchst du etwas, das du schon kennst.
+Jetzt zoomt die Karte heraus: Du siehst nicht mehr die Straßen, sondern ein ganzes Land. Am Ende des Kapitels vergleichst du Orte miteinander. Dafür brauchst du etwas, das du schon kennst.
 
 **Ich kann mit than, as … as und not as … as vergleichen.** Das ist der Baustein „Vergleiche: than, as … as“. Mit **than** zeigst du einen Unterschied, mit **as … as** sagst du, dass zwei Dinge gleich sind, und mit **not as … as**, dass eines weniger ist.
 

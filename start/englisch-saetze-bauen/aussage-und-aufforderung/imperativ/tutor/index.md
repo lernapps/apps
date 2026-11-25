@@ -69,26 +69,25 @@ Klassenzimmer-Poster · Aufforderung und Verbot:
 
 **Aufforderung: Verb am Anfang, keine Subjektkarte. Verbot: Don't und das Verb.** Mit **please** wird es höflich: Close the window, please. Don't ist die Kurzform von do not.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- open | öffnen / aufmachen
-- close | schließen / zumachen
-- run | rennen
-- talk | sprechen / reden
-- write | schreiben
-- listen | zuhören
-- listen to | zuhören bei
-- read | lesen
-- door | Tür
-- window | Fenster
-- book | Buch
-- name | Name
-- your | dein / euer
-- here | hier
-- in the classroom | im Klassenzimmer
-- please | bitte
-- stand up | aufstehen
-- sit down | sich hinsetzen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- open – öffnen / aufmachen
+- close – schließen / zumachen
+- run – rennen
+- talk – sprechen / reden
+- write – schreiben
+- listen – zuhören
+- listen to – zuhören bei
+- read – lesen
+- door – Tür
+- window – Fenster
+- book – Buch
+- name – Name
+- your – dein / euer
+- here – hier
+- in the classroom – im Klassenzimmer
+- please – bitte
+- stand up – aufstehen
+- sit down – sich hinsetzen
 
 ### Übung
 

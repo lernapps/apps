@@ -62,12 +62,11 @@ Sophie schreibt ihrer Familie: „Vieles ist bei den Parkers wie bei uns, vieles
 - **Ellie walks to school, but I take the bus.**
 - In my family, we have a garden. Ellie has a garden too.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- cereal | Müsli
-- packed lunch | Mittagessen von zu Hause zum Mitnehmen
-- at the Parkers' | bei den Parkers
-- everybody | alle
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- cereal – Müsli
+- packed lunch – Mittagessen von zu Hause zum Mitnehmen
+- at the Parkers' – bei den Parkers
+- everybody – alle
 
 **tea** und **packed lunch** kennst du von den Seiten davor: Bei den Parkers hat Ellie in der Schule ein packed lunch und um sechs Uhr tea. Das sagst du als „At the Parkers', …“ (mit Komma). Schreibe nicht „Everybody in England …“ (alle): Du kennst nicht alle Familien. Besser sind **many** (viele) oder **often** (oft). Über dich sagst du: In my family, we …
 

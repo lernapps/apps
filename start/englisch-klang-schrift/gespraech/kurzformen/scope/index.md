@@ -5,8 +5,8 @@ Die Seite zeigt Kurzformen mit be und not: I'm, you're, it's, they're, don't, is
 ## Gehört nicht dazu
 
 - Die Formen mit -s und -ed selbst (stehen in den Explainern zu den Zeiten und zum Plural)
-- Betonung im Wort und im Satz, Bindungen und schwache Formen
+- Haltung und Gefühl in der Satzmelodie
 - Amerikanisches Englisch und andere Varietäten
-- Kommas und die Schreibung gleich klingender Wörter
+- Zeichensetzung außer dem Komma
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

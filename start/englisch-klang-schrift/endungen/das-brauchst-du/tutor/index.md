@@ -63,4 +63,4 @@ In der Klangpartitur zeigt jede blaue **Karte** ein Wort in Lautschrift (siehe L
 
 ### Was jetzt kommt
 
-Mr Hill hat neben die Klangpartitur eine Werkstatt für Wörter gestellt. Peter und Ellie hängen Endungen an Wörter, und Sophie hört genau hin. Mr Hill sagt: „Eine Endung klingt nicht immer gleich, und vor einer Endung ändert sich manchmal die Schreibung.“
+Neben der Klangpartitur steht jetzt eine Werkstatt für Wörter: Endungen werden angehängt, und manchmal ändert sich vor einer Endung die Schreibung.

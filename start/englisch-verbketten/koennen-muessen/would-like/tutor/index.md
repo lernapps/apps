@@ -41,19 +41,18 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Would like: höflich sagen, was du möchtest“
 
-Sophie ist mit Mrs Parker im Café. Du lernst, wie du mit I'd like höflich bestellst und sagst, was du tun möchtest oder was jemand tun soll.
+Im Café bestellt jeder etwas. Du lernst, wie du mit I'd like höflich bestellst und sagst, was du tun möchtest oder was jemand tun soll.
 
 ### Im Café
 
-Bild: Peter, Mrs Parker und Sophie stehen an einem Tisch im Café. Mrs Parker fragt "What would you like?". Bildunterschrift: Von links nach rechts: Peter (der Kleine), Mrs Parker (rote Haare als Dutt, türkise Strickjacke) und Sophie (mit den Zöpfen). Mrs Parker fragt, was die Kinder möchten.
+Bild: Drei Personen stehen an einem Tisch im Café. Eine Frau fragt "What would you like?". Bildunterschrift: Im Café fragt eine Frau, was die Kinder möchten.
 
-Am Samstag hat es geregnet. Nach dem Kino nimmt Mrs Parker Peter und Sophie mit in ein Café. Sie ist Ellies Mutter und Sophies Gastmutter. Jeder bestellt etwas.
+Nach dem Kino geht es in ein Café. Mrs Parker fragt, was die Kinder möchten. Jeder bestellt etwas.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- banana | Banane
-- open the window | das Fenster öffnen
-- carry my bag | meine Tasche tragen
+Vokabeln (Englisch – Deutsch): Neue Wörter
+- a banana – Banane
+- open the window – das Fenster öffnen
+- carry my bag – meine Tasche tragen
 
 **Das kannst du danach:** Mit I'd like höflich bestellen und sagen, was du tun möchtest oder was jemand anderes tun möchte. Du lernst die erste Lok mit einer Kupplung kennen.
 
@@ -101,7 +100,7 @@ Klassenzimmer-Poster · Höfliche Wünsche:
 
 ### Zurück zur Verbkette
 
-Sophie denkt an die Verbkette. Bei can, must, could, might und should steht zwischen den Verben nichts. Bei would like sitzt das to dazwischen. Es gibt noch weitere Kupplungen. Welche, lernst du später.
+Zurück zur Verbkette: Bei can, must, could, might und should steht zwischen den Verben nichts. Bei would like sitzt das to dazwischen. Es gibt noch weitere Kupplungen. Welche, lernst du später.
 
 ### Aufgabe would-like-start
 

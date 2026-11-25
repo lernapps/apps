@@ -1,0 +1,30 @@
+# Für die Schülerzeitung
+
+## Das brauchst du hier
+
+Die Seite wiederholt vier Bausteine, die dieses Kapitel voraussetzt (simple past mit regelmäßigen Verben, Fragewörter, Alltagstexte, Figuren, Ort und Handlung), jeweils mit dem Ich-kann-Satz der Lernlandkarte und einer kurzen Erinnerung. Es gibt keine neue Regel. Eine einzige Übung prüft, ob das simple past mit der Endung -ed noch sitzt. Die Seiten danach üben Bericht, Interview, Sachtext und erfundener Text sowie Umwandeln.
+
+## Einen Bericht schreiben
+
+Die Seite zeigt, wie man für eine Schülerzeitung einen Bericht über ein Ereignis schreibt. Lesestück ist ein Chat mit Amirs Bericht über einen Büchertauschtag der Schule (headline in Zeile 3, Einleitung mit Wer, Was, Wo, Wann und Warum in Zeile 4, Einzelheiten in den Zeilen 5 und 6, Schluss in Zeile 7; Zeile 8 nennt die W-Fragen, Zeile 9 das simple past, Zeile 10 die fehlende Meinung). Der Bauplan Bericht hat headline und Einleitung (die fünf W-Fragen who, what, where, when, why), Hauptteil (Einzelheiten der Reihe nach) und Schluss (wie es endete oder was kommt). Der Bericht steht im simple past, regelmäßige Verben mit -ed, einige unregelmäßig (came, brought). Ein Bericht enthält Fakten und keine Meinung; Wörter wie wonderful oder boring zeigen eine Meinung. Für einen Artikel über ein Ereignis gilt derselbe Bauplan. Geübt werden W-Fragen den Satzteilen zuordnen, Sätze im simple past schreiben, einen Meinungssatz erkennen, Hören und Nachsprechen und zwei offene Aufgaben (eigene Meinung zum Tauschtag, ein Bericht über einen Sporttag aus Stichpunkten). Nicht hier sind Interview, Sachtext und Umwandeln.
+
+## Ein Interview vorbereiten und aufschreiben
+
+Die Seite zeigt, wie man ein Interview für die Schülerzeitung vorbereitet und als Text aufschreibt. Lesestück ist ein Chat mit Amirs Interview mit Mr Hill über die neue Zeitung (Thema in Zeile 4, fünf offene Fragen in den Zeilen 5, 7, 9, 11 und 13, Antworten in den Zeilen 6, 8, 10, 12 und 14, Dank in Zeile 15). Vorbereitung ist ein Thema und fünf offene Fragen. Eine offene Frage beginnt mit einem Fragewort (what, why, how, when, where, who) und lässt den Gast erzählen; eine Ja-Nein-Frage bringt wenig. Der Text hat einen Einstieg mit Thema und Gast, dann abwechselnd Q (Frage) und A (Antwort), am Ende den Dank. In der Frage steht nach dem Fragewort das Hilfsverb do, does oder did, dann die Person und das Verb. Geübt werden Ja-Nein-Fragen zu offenen Fragen umbauen, die Wortstellung einer Frage, Fragen und Antworten als Q und A aufschreiben, Hören und Nachsprechen und zwei offene Aufgaben (Lieblingsfrage, fünf Fragen für ein Interview mit dem Hausmeister). Nicht hier sind Bericht, Sachtext und Umwandeln.
+
+## Sachtext oder erfundener Text
+
+Die Seite zeigt, wie man Sachtexte und erfundene Texte unterscheidet. Lesestück ist ein Chat, in dem Peter in der Schulbibliothek zwei Texte über Bienen findet (Text A, ein Sachtext über Honigbienen mit Quelle, in den Zeilen 4 bis 8; Text B, eine erfundene Geschichte über die Biene Buzz mit wörtlicher Rede, in den Zeilen 9 bis 12; Zeilen 13 und 14 vergleichen). Ein Sachtext will informieren, nennt Fakten und oft eine Quelle und spricht von echten Dingen. Ein erfundener Text will unterhalten, hat eine Erzählstimme, erfundene Figuren und wörtliche Rede. Wo ein Text steht, sagt nicht, ob er wahr ist; auch in einer Zeitung kann ein erfundener Text stehen. Wörtliche Rede einer erfundenen Figur gehört nicht in einen Sachtext. Geübt werden Sätze den Merkmalen zuordnen, Merkmale an einem neuen Text ankreuzen, zwei Aussagen auf wahr oder falsch prüfen, Hören und Nachsprechen und zwei offene Aufgaben (welcher Text gefällt dir, eine Merkmalsliste). Nicht hier sind Bericht, Interview und Umwandeln.
+
+## Aus einer Geschichte einen Bericht machen
+
+Die Seite zeigt, wie man eine Geschichte in einen Zeitungsbericht umschreibt. Lesestück ist ein Chat mit Amirs erfundener Geschichte über seine Katze Mango auf dem Dach (Zeilen 3 bis 8) und dem Bericht, den die Zeitung daraus macht (headline in Zeile 9, Einleitung mit Wer, Wo, Wann und Was in Zeile 10, Ablauf mit indirekter Rede in Zeile 11, Schluss in Zeile 12; Zeilen 13 bis 15 sagen, was Amir geändert hat). Beim Umwandeln bleibt der Inhalt und die Form ändert sich. Der Erzählstil, die Gefühle und die Meinung fallen weg. Wer, Wo, Wann und Was kommen in die Einleitung, der Ablauf kommt der Reihe nach in den Hauptteil. Wörtliche Rede wird gestrichen oder zu indirekter Rede mit said that, das Verb rückt eine Zeit zurück (like wird liked). Die headline ist kurz. Ein kurzer Absatz erwähnt den Perspektivwechsel (aus ich wird der Name der Figur), ohne Übung. Geübt werden Sätze der Geschichte den Zeilen des Berichts zuordnen, wörtliche Rede in indirekte Rede umschreiben, Teile eines Berichts ordnen, Hören und Nachsprechen und zwei offene Aufgaben (welche Version gefällt dir, eigene Geschichte in einen Bericht umschreiben). Nicht hier sind Meinungstexte.
+
+## Gehört nicht dazu
+
+- Persönliche Briefe und Nachrichten (steht im Explainer „Alltag“)
+- Geschichten schreiben (steht im Explainer „Geschichten“)
+- Meinungstexte wie Leserbrief und Kommentar (kommt später)
+- Bewertung der Aussprache und der freien Texte durch die App
+
+Die ganze App: [Scope der App](../../scope/)

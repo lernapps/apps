@@ -1,0 +1,12 @@
+# Eine formelle E-Mail schreiben
+
+Die Seite zeigt, wie man eine formelle E-Mail oder einen formellen Brief schreibt, zum Beispiel um Informationen zu erfragen. Lesestück ist Sophies Anfrage an die Millbrook Library (Zeilen 1 bis 8, Betreff, Dear Mr Anderson, Anliegen mit Fragen zur Anzeige, Yours sincerely, Name), der Vergleich mit einer lockeren Nachricht an eine Freundin (Zeilen 9 bis 11) und die Antwort der Bücherei an Dear Ms Weber (Zeilen 12 bis 17). Der Bauplan hat Betreff (subject), Anrede, Anliegen, Gruß und Name. Die Anrede ist Dear mit Ms oder Mr und dem Nachnamen, Ms passt für jede Frau, ohne Namen schreibt man Dear Sir or Madam. Der Gruß passt zur Anrede, Yours sincerely nach einem Namen und Yours faithfully nach Dear Sir or Madam. Der Ton-Regler steht auf formal, das heißt keine Kurzformen, kein Hi, ein klarer Betreff und höfliche Ausdrücke wie I am writing to ask, Could you please, I would be grateful, I look forward to hearing from you. Geübt werden die Teile in die Reihenfolge bringen, Anrede und Gruß einsetzen, lockere Sätze formell umschreiben, feste Ausdrücke einsetzen, Hören und Nachsprechen, eine Meinung zu formell und locker und eine eigene formelle Anfrage. Nicht hier sind persönliche E-Mails, Lebenslauf und Bewerbung. Sophie hat Mr Anderson vorher schon über ihre Schule geschrieben; er bittet in seiner Antwort um einen CV und ein kurzes Anschreiben.
+
+## Gehört nicht dazu
+
+- Persönliche Briefe und Nachrichten (steht im Explainer „Alltag“)
+- Geschichten schreiben (steht im Explainer „Geschichten“)
+- Meinungstexte wie Leserbrief und Kommentar (kommt später)
+- Bewertung der Aussprache und der freien Texte durch die App
+
+Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

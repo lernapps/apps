@@ -45,7 +45,7 @@ Amir und Peter streiten um ein Spiel, Ellie hilft. Du sagst, wie du dich fühlst
 
 ### Amir und Peter streiten
 
-Bild: Zwei Jungen ziehen an einer Spielschachtel. Zwischen ihnen steht ein Mädchen mit Pferdeschwanz, rechts schaut ein Mädchen mit Zöpfen zu. Über den Jungen sind rote Blitze. Bildunterschrift: Von links: Amir (Brille, blaue Jacke), Ellie (roter Pferdeschwanz), Peter (gelbe Jacke), Sophie (Zöpfe).
+Bild: Zwei Jungen ziehen an einer Spielschachtel. Zwischen ihnen steht ein Mädchen mit Pferdeschwanz, rechts schaut ein Mädchen mit Zöpfen zu. Über den Jungen sind rote Blitze. Bildunterschrift: Von links: Amir, Ellie, Peter, Sophie.
 
 Amir und Peter wollen beide dasselbe Spiel (game) haben und ziehen beide an der Schachtel. Beide sind wütend. Ellie schaut besorgt zu und fragt Peter, wie es ihm geht.
 
@@ -59,14 +59,13 @@ Bild: Fünf Gesichter in einer Reihe, von fröhlich bis wütend, mit je einem en
 
 Auf die Frage **How are you?** (Wie geht es dir?) antwortest du: **I’m fine, thanks.** **OK** heißt „es geht so“. Genauer sagst du es mit **I feel** und einem Gefühlswort: I feel happy. Das Wort steht direkt nach feel, ohne me. Mit **I am** geht es auch: I am tired. Ein **friend** ist ein Freund oder eine Freundin, dein **best friend** ist dein bester Freund oder deine beste Freundin.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- sad / tired / angry | traurig / müde / wütend
-- excited | aufgeregt / voller Vorfreude
-- bored | gelangweilt
-- worried | besorgt
-- afraid | ängstlich
-- best friend | bester Freund / beste Freundin
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- sad / tired / angry – traurig / müde / wütend
+- excited – aufgeregt / voller Vorfreude
+- bored – gelangweilt
+- worried – besorgt
+- afraid – ängstlich
+- best friend – bester Freund / beste Freundin
 
 Bei Streit helfen kurze Sätze. Wenn jemand etwas tut, das du nicht magst: **Don’t do that.** (Lass das.) und **That’s not nice.** (Das ist nicht nett.). Wenn dir etwas leidtut: **I’m sorry.** Wenn der Streit vorbei ist: **Let’s be friends.** (Seien wir Freunde.)
 

@@ -45,9 +45,9 @@ Sophie schreibt ihren Eltern eine Postkarte. Du lernst Anrede, Text und Gruß f�
 
 ### Sophie schreibt nach Hause
 
-Bild: Eine Postkarte mit drei farbigen Teilen. Rechts neben der Karte steht zu jedem Teil eine Nummer und ein deutsches Wort. Bildunterschrift: Sophies Postkarte an ihre Eltern, geteilt in drei Teile.
+Bild: Eine Postkarte mit drei farbigen Teilen. Rechts neben der Karte steht zu jedem Teil eine Nummer und ein deutsches Wort. Bildunterschrift: Die Postkarte, geteilt in drei Teile.
 
-Amir hat Sophies Zusage bekommen. Jetzt schreibt Sophie ihren Eltern eine Postkarte (postcard) und erzählt von Millbrook. Auch eine Karte hat einen Bauplan.
+Sophie schreibt ihren Eltern eine Postkarte (postcard). Auch eine Karte hat einen Bauplan.
 
 - Aufgabe `email-postkarte-start` (unten)
 
@@ -69,12 +69,11 @@ Klassenzimmer-Poster · Anrede und Gruß:
 
 **Anrede:** Dear oder Hi + Name + Komma. **Gruß:** Love, / See you soon, / Write soon, an Familie und Freunde, Best wishes, an andere Erwachsene, dann dein Name. **Für Familie:** nie Yours. **Für Erwachsene:** nicht Hi.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- postcard | Postkarte
-- best wishes | herzliche Grüße
-- subject | Betreff
-- cold (hier: kalt) | kalt. Nicht: a cold, die Erkältung.
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- postcard – Postkarte
+- best wishes – herzliche Grüße
+- subject – Betreff
+- cold – kalt. Hinweis: Nicht: a cold, die Erkältung.
 
 ### Übung
 
@@ -211,7 +210,7 @@ Sophie wirft ihre Karte in den Briefkasten und schreibt ihren Eltern noch: „Hi
 - Sätze:
 1. Audio → Thank you for your lovely postcard.
 2. Audio → We play football in the park with Amir.
-3. Audio → Please write to me again.
+3. Audio → Please write to me soon.
 - Tipp der App: Hör den Satz zuerst. Sprich dann langsam nach.
 - Link: [../?via=tutor#email-postkarte-nachsprechen](../?via=tutor#email-postkarte-nachsprechen)
 

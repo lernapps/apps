@@ -24,9 +24,8 @@ Die Seite führt den if-Satz Typ 1 ein. Die Karte if hängt einen Streifen mit e
 
 - Die Zeitformen selbst (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Fragen im einfachen Satz (steht im Explainer „Sätze bauen“)
-- Infinitiv und Gerundium (steht im Explainer „Verbketten“)
+- Verbketten im Einzelnen (steht im Explainer „Verbketten“)
 - Verbindungswörter für Erzählung und Argumentation
-- Relativsätze ohne Relativpronomen, nicht notwendige Relativsätze, although und whereas
-- If-Sätze für Unwirkliches, I wish, indirekte Rede und indirekte Fragen
+- Gemischte if-Sätze und Inversion in if-Sätzen
 
 Die ganze App: [Scope der App](../../scope/)

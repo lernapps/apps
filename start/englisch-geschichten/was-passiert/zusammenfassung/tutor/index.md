@@ -45,7 +45,7 @@ Mr Hill gibt jedem Kind einen Zettel. Du lernst, das Wichtigste einer Geschichte
 
 ### Ein Zettel mit drei Sätzen
 
-Bild: Im Klassenzimmer sitzen Sophie, Peter, Ellie und Amir. Jedes Kind hat einen Zettel vor sich. Mr Hill steht rechts und sagt in einer Sprechblase: „Tell the story in three sentences.“. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). Jedes Kind hat den Zettel von Mr Hill.
+Bild: Im Klassenzimmer sitzen Sophie, Peter, Ellie und Amir. Jedes Kind hat einen Zettel vor sich. Mr Hill steht rechts und sagt in einer Sprechblase: „Tell the story in three sentences.“. Bildunterschrift: Jedes Kind hat den Zettel von Mr Hill.
 
 Mr Hill gibt jedem Kind einen **Zettel**. Darauf steht: „Tell the story in three sentences.“ Ellie flüstert: „Nur drei Sätze?“ Mr Hill lächelt. In einer Geschichte steht viel, aber du schreibst nur das Wichtige auf. Zuerst liest Sophie eine kurze Geschichte.
 
@@ -55,13 +55,12 @@ Mr Hill gibt jedem Kind einen **Zettel**. Darauf steht: „Tell the story in thr
 
 Diese Wörter sind neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- summary | Zusammenfassung
-- detail | Einzelheit
-- goldfish | Goldfisch
-- bowl | Schale
-- umbrella | Regenschirm
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- summary – Zusammenfassung
+- detail – Einzelheit
+- goldfish – Goldfisch
+- bowl – Schale
+- umbrella – Regenschirm
 
 ### Nur das, was am Geschichtenberg hängt
 

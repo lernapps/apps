@@ -8,6 +8,6 @@ Die Seite führt das simple past mit regelmäßigen Verben ein. Es erzählt von 
 - Bedingungssätze und indirekte Rede
 - Passiv
 - Aussprache von -s und -ed
-- Zeiten für Klasse 7 bis 10 (Erzählen, since und for, Zukunft mit Plänen, used to)
+- Zeiten für Klasse 9 und 10 (alle Zeiten im Überblick, past perfect progressive, used to und would)
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

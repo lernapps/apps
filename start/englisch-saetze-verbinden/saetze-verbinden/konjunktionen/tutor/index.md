@@ -45,7 +45,7 @@ Mr Hill hängt in Millbrook die Satzstreifen-Wand auf. Du lernst, mit and, but, 
 
 ### Zwei Streifen und eine Karte
 
-Bild: Im Klassenzimmer hängt ein Brett mit zwei weißen Streifen: „Peter likes football.“ und „Amir likes football.“ Darunter hängen drei Karten: and, but und because. Sophie fragt in einer Sprechblase: „Which card fits?“ Neben Sophie stehen Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). Peter und Amir haben die weißen Streifen geschrieben. Die bunten Karten sind Verbindungskarten. Sophie fragt.
+Bild: Im Klassenzimmer hängt ein Brett mit zwei weißen Streifen: „Peter likes football.“ und „Amir likes football.“ Darunter hängen drei Karten: and, but und because. Sophie fragt in einer Sprechblase: „Which card fits?“ Neben Sophie stehen Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Peter und Amir haben die weißen Streifen geschrieben. Die bunten Karten sind Verbindungskarten. Sophie fragt.
 
 An der **Satzstreifen-Wand** hängen heute zwei **Streifen**, auf jedem steht ein ganzer Satz. Peter hat geschrieben: „Peter likes football.“ Amir hat geschrieben: „Amir likes football.“ Like heißt mögen, football heißt Fußball. Sophie fragt: „Which card fits?“ Das heißt: Welche Karte passt? Darunter hängen bunte **Verbindungskarten**. Eine Karte soll die zwei Streifen zu einem Satz verbinden.
 
@@ -55,32 +55,31 @@ An der **Satzstreifen-Wand** hängen heute zwei **Streifen**, auf jedem steht ei
 
 Einfache Wörter wie read, play oder go kennst du schon. Diese Wörter sind neu auf dem Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Ausdruck | Bedeutung
-- tired | müde
-- hungry | hungrig
-- sandwich | belegtes Brot
-- early | früh
-- late | spät
-- sunny | sonnig
-- rain | regnen
-- stay at home | zu Hause bleiben
-- like | mögen
-- football | Fußball
-- tennis | Tennis
-- tea | Tee
-- milk | Milch
-- bike | Fahrrad
-- brother | Bruder
-- sister | Schwester
-- dog | Hund
-- rabbit | Kaninchen
-- every day | jeden Tag
-- happy | froh
-- sing | singen
-- smile | lächeln
-- Saturday | Samstag
-- doesn't | nicht (= does not)
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- tired – müde
+- hungry – hungrig
+- sandwich – belegtes Brot
+- early – früh
+- late – spät
+- sunny – sonnig
+- rain – regnen
+- stay at home – zu Hause bleiben
+- like – mögen
+- football – Fußball
+- tennis – Tennis
+- tea – Tee
+- milk – Milch
+- bike – Fahrrad
+- brother – Bruder
+- sister – Schwester
+- dog – Hund
+- rabbit – Kaninchen
+- every day – jeden Tag
+- happy – froh
+- sing – singen
+- smile – lächeln
+- Saturday – Samstag
+- doesn't – nicht (= does not)
 
 ### Die Verbindungskarten
 
@@ -130,9 +129,9 @@ An der Satzstreifen-Wand hängen jetzt lange Sätze. Ellie hängt einen neuen St
 - Aufgabe: Welche Karte verbindet die zwei Streifen zu einem Satz?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ and, wenn etwas dazukommt – Peter mag Fußball und Amir mag auch Fußball. Der zweite Streifen fügt etwas hinzu. Dafür steht and.
   - ✗ but, wenn der zweite Streifen etwas ganz anderes sagt – Beide Streifen sagen dasselbe. Ein Gegensatz würde zu but passen, zum Beispiel „Peter likes football, but Amir likes tennis.“
   - ✗ because, wenn der zweite Streifen einen Grund nennt – Dass Amir Fußball mag, ist kein Grund dafür, dass Peter Fußball mag. Because passt nur, wenn der zweite Streifen erklärt, warum der erste stimmt.
+  - ✓ and, wenn etwas dazukommt – Peter mag Fußball und Amir mag auch Fußball. Der zweite Streifen fügt etwas hinzu. Dafür steht and.
 - Lösung: and, wenn etwas dazukommt
 - Erklärung: Mit and kommt etwas dazu.
 - Link: [../?via=tutor#konjunktionen-start](../?via=tutor#konjunktionen-start)

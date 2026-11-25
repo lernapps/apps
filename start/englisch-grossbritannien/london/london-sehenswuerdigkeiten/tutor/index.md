@@ -45,9 +45,9 @@ Mr Hills Klasse macht einen Stadtrundgang an der Themse. Du lernst sechs wichtig
 
 ### Der Stadtrundgang
 
-Bild: Ein Mann mit grauen Haaren, ein Junge mit Brille und ein Mädchen mit Zöpfen gehen an einem Fluss entlang, hinter ihnen stehen Häuser. Bildunterschrift: Von links: Mr Hill (graue Haare), Amir (Brille, schwarze Locken) und Sophie (blonde Zöpfe).
+Bild: Ein Mann mit grauen Haaren, ein Junge mit Brille und ein Mädchen mit Zöpfen gehen an einem Fluss entlang, hinter ihnen stehen Häuser. Bildunterschrift: Mr Hill, Amir und Sophie.
 
-Heute macht die Klasse einen Stadtrundgang. Mr Hill hat eine **Schemakarte** von London dabei: eine einfache Karte, die nicht genau nach Maßstab ist. Sechs Halte sind nummeriert. Peter ist heute nicht dabei, deshalb schreibt Sophie ihm später eine Postkarte. Mr Hill sagt: „We walk along the River Thames.“
+Die Klasse macht einen Stadtrundgang. Mr Hill hat eine **Schemakarte** von London dabei: eine einfache Karte, die nicht genau nach Maßstab ist. Sechs Halte sind nummeriert. Mr Hill sagt: „We walk along the River Thames.“
 
 - Aufgabe `lon-start` (unten)
 
@@ -63,14 +63,13 @@ Der **Tower of London** ist eine Burg am Nordufer der Themse. Die **Tower Bridge
 
 So beschreibst du einen Ort: **It is a** … sagt, was es ist. **It has** … sagt, was es hat. **You can** … sagt, was du dort tun kannst. Vor einem Vokal-Laut steht **an**: an old church, aber a big church. Ein Ort direkt am Fluss liegt **on the river**, in der Nähe heißt **near**. Zum Beispiel: It is a big school in a park. It has a nice garden. You can play football there.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- bridge | Brücke
-- big wheel | Riesenrad
-- tower | Turm
-- castle | Burg
-- palace | Palast
-- Thames | Themse (Fluss in London)
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- bridge – Brücke
+- big wheel – Riesenrad
+- tower – Turm
+- castle – Burg
+- palace – Palast
+- Thames – Themse (Fluss in London)
 
 ### Übung
 

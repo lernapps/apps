@@ -45,9 +45,9 @@ Sophie kauft im clothes shop eine Mütze für Peter. Du lernst Kleidung zu benen
 
 ### Im clothes shop
 
-Bild: Zwei Mädchen stehen in einem Kleidungsgeschäft vor einer Stange mit Pullovern und Hemden. Auf einem Brett liegen zwei Mützen. Bildunterschrift: Von links: Sophie (blonde Zöpfe) und Ellie (roter Pferdeschwanz) im clothes shop.
+Bild: Zwei Mädchen stehen in einem Kleidungsgeschäft vor einer Stange mit Pullovern und Hemden. Auf einem Brett liegen zwei Mützen. Bildunterschrift: Sophie und Ellie im clothes shop.
 
-Peters Mütze ist alt. Sophie möchte ihm eine neue kaufen. Im clothes shop an der High Street gibt es viel Kleidung. Sophie nimmt eine Mütze (cap) und geht zur Verkäuferin, die im Laden arbeitet. **How much** heißt „wie viel“.
+Sophie möchte eine neue Mütze kaufen. Im clothes shop an der High Street gibt es viel Kleidung. Sophie nimmt eine Mütze (cap) und geht zur Verkäuferin, die im Laden arbeitet. **How much** heißt „wie viel“.
 
 - Aufgabe `kleid-einstieg` (unten)
 
@@ -63,13 +63,12 @@ Bild: Zwei Regalbretter. Auf dem oberen liegen ein Hemd, eine Jeans und eine Mü
 
 Bei einer Sache fragst du **How much is this shirt?** und hörst **It's nine pounds.** Bei mehreren Sachen fragst du **How much are these jeans?** und hörst **They're twenty pounds.** **Jeans**, **trousers** und **shoes** gibt es nur in der Mehrzahl, also these und are. Du kannst auch **a pair of** sagen (a pair of jeans). Ein Preis mit £ heißt pounds, nur bei eins heißt er **one pound**. Die Größen heißen **small**, **medium** und **large**, nicht „big“. Nach einer anderen Farbe fragst du so: **Have you got this in blue?** (Have you got heißt „Hast du“ oder „Haben Sie“.)
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- cap | Mütze
-- jumper | Pullover
-- shoes | Schuhe (immer Mehrzahl)
-- medium | mittelgroß
-- a pair of | ein Paar (a pair of jeans heißt eine Jeans)
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- cap – Mütze
+- jumper – Pullover
+- shoes – Schuhe (immer Mehrzahl)
+- medium – mittelgroß
+- a pair of – ein Paar (a pair of jeans heißt eine Jeans)
 
 ### Übung
 

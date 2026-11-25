@@ -45,29 +45,28 @@ Die Klasse stellt die Kisten im Lagerraum auf. Du lernst, mit in, on, under, nex
 
 ### Wo soll die Kiste stehen?
 
-Bild: Sophie, Amir und Peter stehen im Lagerraum. Rechts steht ein Tisch, auf dem eine Kiste steht. Bildunterschrift: Von links: Sophie (Zöpfe), Amir (Brille) und Peter (gelbe Jacke). Mr Hill zeigt, wo die Kisten hinsollen.
+Bild: Sophie, Amir und Peter stehen im Lagerraum. Rechts steht ein Tisch, auf dem eine Kiste steht. Bildunterschrift: Von links: Sophie (Zöpfe), Amir (Brille) und Peter (gelbe Jacke).
 
 Mr Hill sagt: „Jede Kiste braucht den richtigen Platz im Lagerraum.“ Dazu brauchst du kleine Wörter, die sagen, **wo** etwas ist. Sie heißen **Präpositionen**.
 
 **Das kannst du danach:** Du sagst mit in, on, under, next to und behind, wo etwas steht.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- table | Tisch
-- chair | Stuhl
-- shelf | Regal
-- door | Tür
-- floor | Boden
-- wall | Wand
-- room | Zimmer
-- window | Fenster
-- ball | Ball
-- green | grün
-- yellow | gelb
-- blue | blau
-- red | rot
-- is | ist
-- are | sind
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- table – Tisch
+- chair – Stuhl
+- shelf – Regal
+- door – Tür
+- floor – Boden
+- wall – Wand
+- room – Zimmer
+- window – Fenster
+- ball – Ball
+- green – grün
+- yellow – gelb
+- blue – blau
+- red – rot
+- is – ist
+- are – sind
 
 - Aufgabe `ort-start` (unten)
 

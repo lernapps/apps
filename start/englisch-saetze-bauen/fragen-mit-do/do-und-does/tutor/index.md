@@ -72,29 +72,28 @@ Klassenzimmer-Poster · Der Helfer im simple present:
 
 Zwei Namen zusammen sind **they**: Do Sophie and Ellie like tea? Bei **be** brauchst du keinen Helfer, hier springt is selbst nach vorn: Is Peter happy?
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- play | spielen
-- like | mögen
-- live | wohnen
-- eat | essen
-- study | lernen
-- watch | anschauen
-- teach | unterrichten
-- go | gehen
-- football | Fußball
-- pizza | Pizza
-- tea | Tee
-- film | Film
-- English | Englisch
-- happy | froh
-- here | hier
-- at home | zu Hause
-- home | nach Hause
-- at school | in der Schule
-- after school | nach der Schule
-- every Saturday | jeden Samstag
-- not | nicht
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- play – spielen
+- like – mögen
+- live – wohnen
+- eat – essen
+- study – lernen
+- watch – anschauen
+- teach – unterrichten
+- go – gehen
+- football – Fußball
+- pizza – Pizza
+- tea – Tee
+- film – Film
+- English – Englisch
+- happy – froh
+- here – hier
+- at home – zu Hause
+- home – nach Hause
+- at school – in der Schule
+- after school – nach der Schule
+- every Saturday – jeden Samstag
+- not – nicht
 
 ### Übung
 

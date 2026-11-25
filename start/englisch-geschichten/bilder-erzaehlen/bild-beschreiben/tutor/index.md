@@ -45,9 +45,9 @@ In der Geschichtenecke hängt ein Bild der Klasse. Du lernst, mit einem Raster z
 
 ### Ein Bild hängt in der Geschichtenecke
 
-Bild: In der Geschichtenecke hängt neben dem Geschichtenberg ein Bild mit einem Haus, einem Baum und der Sonne. Vor der Wand stehen Sophie, Peter, Ellie und Amir, rechts steht Mr Hill. Sophie fragt in einer Sprechblase: „Where do I start?“. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). Neben dem Geschichtenberg hängt das Bild der Klasse.
+Bild: In der Geschichtenecke hängt neben dem Geschichtenberg ein Bild mit einem Haus, einem Baum und der Sonne. Vor der Wand stehen Sophie, Peter, Ellie und Amir, rechts steht Mr Hill. Sophie fragt in einer Sprechblase: „Where do I start?“. Bildunterschrift: Neben dem Geschichtenberg hängt das Bild der Klasse.
 
-Es ist Mittwoch in der Geschichtenwoche. Seit heute früh hängt in der Geschichtenecke ein Bild der Klasse. Mr Hill sagt: „Describe the picture.“ Das ist nicht leicht, denn es gibt viel zu sehen. Mr Hill fragt zuerst nach dem Bild an der Wand: „Where is the tree?“
+In der Geschichtenecke hängt ein Bild der Klasse. Mr Hill sagt: „Describe the picture.“ Das ist nicht leicht, denn es gibt viel zu sehen. Mr Hill fragt zuerst nach dem Bild an der Wand: „Where is the tree?“
 
 - Aufgabe `bild-start` (unten)
 
@@ -55,13 +55,12 @@ Es ist Mittwoch in der Geschichtenwoche. Seit heute früh hängt in der Geschich
 
 Diese Wörter sind neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- foreground | Vordergrund
-- background | Hintergrund
-- sandcastle | Sandburg
-- kite | Drachen
-- umbrella | Schirm (Sonnenschirm oder Regenschirm)
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- foreground – Vordergrund
+- background – Hintergrund
+- sandcastle – Sandburg
+- kite – Drachen
+- umbrella – Schirm (Sonnenschirm oder Regenschirm)
 
 ### Das Raster zeigt jeden Platz
 

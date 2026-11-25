@@ -45,7 +45,7 @@ Ellie bringt einen fertigen Kuchen mit. Du lernst, mit have oder has und der 3. 
 
 ### Ellie bringt einen Kuchen mit
 
-Bild: Ellie steht neben einem Tisch mit einem Kuchen auf einem Teller. Peter und Sophie schauen zu. In der Sprechblase steht „I have made a cake.“. Bildunterschrift: Von links Sophie (Zöpfe), Peter (gelbe Jacke) und Ellie (roter Pferdeschwanz). Ellie spricht, rechts steht ihr Kuchen.
+Bild: Ellie steht neben einem Tisch mit einem Kuchen auf einem Teller. Peter und Sophie schauen zu. In der Sprechblase steht „I have made a cake.“. Bildunterschrift: Ellie (roter Pferdeschwanz) spricht. Rechts steht ihr Kuchen.
 
 Ellie kommt mit einem Kuchen in die Klasse: „I have made a cake.“ Der Kuchen ist fertig und steht jetzt auf dem Tisch.
 
@@ -68,13 +68,12 @@ Klassenzimmer-Poster · Das present perfect:
 
 Kleine Wörter zeigen dir den Bogen. Sie stehen zwischen have und der 3. Form: *I have never seen it.* Nur yet steht am Ende, meist in einer Frage. Die Frage beginnt mit have oder has: *Have you ever written a book?*
 
-Schulkalender · Signalwörter für das present perfect:
-- Signalwort | Bedeutung
-- already | schon
-- just | gerade eben
-- never | nie
-- ever | jemals
-- yet | schon (in Fragen)
+Vokabeln (Englisch – Deutsch): Schulkalender · Signalwörter für das present perfect
+- already – schon
+- just – gerade eben
+- never – nie
+- ever – jemals
+- yet – schon (in Fragen)
 
 **Merke: Merke**
 

@@ -63,6 +63,34 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Was du vorhast: going to“ · Aufgaben A21, A22
 - „Will oder going to: Pfeil oder Punkt?“ · Aufgaben A23, A24
 
+### Kapitel „Erzählen: Hintergrund, Handlung, vorher“
+
+- Selbsteinschätzung des Kapitels
+- „Was gerade im Gang war: das past progressive“ · Aufgaben A25, A26
+- „Was schon vorher geschehen war: das past perfect“ · Aufgaben A27, A28
+- „Wann passiert was? when, after, before, as soon as“ · Aufgaben A29, A30
+- „Punkt oder Bogen? present perfect oder simple past“ · Aufgaben A31, A32
+
+### Kapitel „Seit wann und wie lange?“
+
+- Selbsteinschätzung des Kapitels
+- „Seit wann und wie lange: since und for“ · Aufgaben A33, A34
+- „Was bis jetzt andauert: das present perfect progressive“ · Aufgaben A35, A36
+- „Verben ohne Welle: Zustandsverben“ · Aufgaben A37, A38
+
+### Kapitel „Pläne, Fahrpläne und Zeitpunkte“
+
+- Selbsteinschätzung des Kapitels
+- „Verabredungen und Fahrpläne: present tenses für die Zukunft“ · Aufgaben A39, A40
+- „Wo bist du nächsten Samstag um acht? will be doing und will have done“ · Aufgaben A41, A42
+
+### Kapitel „Alle Zeiten im Überblick“
+
+- Selbsteinschätzung des Kapitels
+- „Wie lange es schon dauerte: das past perfect progressive“ · Aufgaben A43, A44
+- „Was früher war: used to“ · Aufgaben A45, A46
+- „Welche Zeit passt? Alle Zeiten im Überblick“ · Aufgaben A47, A48
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe to-be-form der Seite „Wer bist du? Das Verb be“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -89,3 +117,27 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A22: Aufgabe going-to-bilden der Seite „Was du vorhast: going to“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A23: Aufgabe will-oder-going-to-form der Seite „Will oder going to: Pfeil oder Punkt?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A24: Aufgabe will-oder-going-to-bilden der Seite „Will oder going to: Pfeil oder Punkt?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A25: Aufgabe past-progressive-form der Seite „Was gerade im Gang war: das past progressive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A26: Aufgabe past-progressive-bilden der Seite „Was gerade im Gang war: das past progressive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A27: Aufgabe past-perfect-form der Seite „Was schon vorher geschehen war: das past perfect“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A28: Aufgabe past-perfect-bilden der Seite „Was schon vorher geschehen war: das past perfect“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A29: Aufgabe zeitenfolge-form der Seite „Wann passiert was? when, after, before, as soon as“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A30: Aufgabe zeitenfolge-bilden der Seite „Wann passiert was? when, after, before, as soon as“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A31: Aufgabe ppsp-form der Seite „Punkt oder Bogen? present perfect oder simple past“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A32: Aufgabe ppsp-bilden der Seite „Punkt oder Bogen? present perfect oder simple past“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A33: Aufgabe since-for-wahl der Seite „Seit wann und wie lange: since und for“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A34: Aufgabe since-for-bilden der Seite „Seit wann und wie lange: since und for“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A35: Aufgabe present-perfect-progressive-wahl der Seite „Was bis jetzt andauert: das present perfect progressive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A36: Aufgabe present-perfect-progressive-bilden der Seite „Was bis jetzt andauert: das present perfect progressive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A37: Aufgabe dynamic-stative-wahl der Seite „Verben ohne Welle: Zustandsverben“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A38: Aufgabe dynamic-stative-bilden der Seite „Verben ohne Welle: Zustandsverben“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A39: Aufgabe present-fuer-zukunft-form der Seite „Verabredungen und Fahrpläne: present tenses für die Zukunft“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A40: Aufgabe present-fuer-zukunft-bilden der Seite „Verabredungen und Fahrpläne: present tenses für die Zukunft“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A41: Aufgabe future-progressive-perfect-form der Seite „Wo bist du nächsten Samstag um acht? will be doing und will have done“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A42: Aufgabe future-progressive-perfect-bilden der Seite „Wo bist du nächsten Samstag um acht? will be doing und will have done“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A43: Aufgabe ppp-form der Seite „Wie lange es schon dauerte: das past perfect progressive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A44: Aufgabe ppp-bilden der Seite „Wie lange es schon dauerte: das past perfect progressive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A45: Aufgabe used-to-form der Seite „Was früher war: used to“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A46: Aufgabe used-to-bilden der Seite „Was früher war: used to“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A47: Aufgabe zeiten-ueberblick-waehlen der Seite „Welche Zeit passt? Alle Zeiten im Überblick“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A48: Aufgabe zeiten-ueberblick-bilden der Seite „Welche Zeit passt? Alle Zeiten im Überblick“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

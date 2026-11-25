@@ -45,7 +45,7 @@ Sophie liest walked in zwei Teilen, und Ellie schüttelt den Kopf. Du lernst, wi
 
 ### Sophie liest in zwei Teilen
 
-Bild: Im Klassenzimmer sagt Sophie in einer Sprechblase „walk-ed?“. Ellie antwortet in einer Sprechblase „Nope!“. Mr Hill steht rechts. Bildunterschrift: Von links: Sophie (Zöpfe) liest ein Wort in zwei Teilen, Ellie (roter Pferdeschwanz) schüttelt den Kopf, rechts steht Mr Hill (graue Haare).
+Bild: Im Klassenzimmer sagt Sophie in einer Sprechblase „walk-ed?“. Ellie antwortet in einer Sprechblase „Nope!“. Mr Hill steht rechts. Bildunterschrift: Von links: Sophie liest ein Wort in zwei Teilen, Ellie schüttelt den Kopf, rechts steht Mr Hill.
 
 Sophie liest das Wort **walked** („ging zu Fuß“) laut vor, genau wie es geschrieben steht: „walk-ed“. Ellie schüttelt den Kopf.
 
@@ -91,7 +91,7 @@ Klassenzimmer-Poster · Endungen:
 
 ### Wie es weitergeht
 
-Peter will die Wörter mit Endungen an die Wand schreiben, aber manchmal ändert sich dabei das Wort. Mr Hill sagt: „Das schauen wir uns in der Werkstatt an.“
+Manchmal ändert sich beim Anhängen einer Endung das Wort. Das zeigt die Werkstatt auf der nächsten Seite.
 
 ### Aufgabe endungen-start
 

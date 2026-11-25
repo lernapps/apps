@@ -43,11 +43,11 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 Peter plant seinen Geburtstag. Du lernst, mit going to über Pläne und Anzeichen zu sprechen, und siehst den Pfeil, der schon bei now beginnt.
 
-### Peters Plan für den 5. Mai
+### Peters Plan
 
-Bild: Sophie, Ellie, Amir und Peter stehen im Klassenzimmer. An der Wand hängt ein Kalenderblatt mit dem Datum 5 May. Peter sagt in der Sprechblase: „I am going to have a party.“. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke). Peter spricht.
+Bild: Sophie, Ellie, Amir und Peter stehen im Klassenzimmer. An der Wand hängt ein Kalenderblatt mit dem Datum 5 May. Peter sagt in der Sprechblase: „I am going to have a party.“. Bildunterschrift: Peter (gelbe Jacke) spricht.
 
-Peter hat am 5. Mai Geburtstag. Er erzählt der Klasse: „I am going to have a party.“ Party heißt Feier, have a party heißt eine Feier machen.
+Peter erzählt der Klasse: „I am going to have a party.“ Party heißt Feier, have a party heißt eine Feier machen.
 
 - Aufgabe `going-to-start` (unten)
 
@@ -107,7 +107,7 @@ Schulkalender · Geburtstage und Wörter:
 
 ### Wie es weitergeht
 
-Am Zeitstrahl hängen jetzt zwei Zeichen rechts von now: Amirs Punkt und Peters Pfeil. Ellie hat am 10. Juli Geburtstag und erzählt ihre Pläne. Amir hört zu und hat gleich eine Idee. Auf der nächsten Seite entscheidest du, wann du will und wann du going to nimmst.
+Am Zeitstrahl hängen jetzt zwei Zeichen rechts von now: Amirs Punkt und Peters Pfeil. Ellie erzählt ihre Pläne. Amir hört zu und hat gleich eine Idee. Auf der nächsten Seite entscheidest du, wann du will und wann du going to nimmst.
 
 ### Aufgabe going-to-start
 

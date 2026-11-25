@@ -62,6 +62,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Did you play football yesterday?“ · Aufgaben A15, A16
 - „You like it, don't you?“ · Aufgaben A17, A18
 
+### Kapitel „Betonen und umstellen“
+
+- Selbsteinschätzung des Kapitels
+- „She did win: Betonung mit do“ · Aufgaben A19, A20
+- „Umkehr nach never, hardly und not only“ · Aufgaben A21, A22
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe wortstellung-bilden der Seite „Wer tut was, wo und wann?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -82,3 +88,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A16: Aufgabe did-bilden der Seite „Did you play football yesterday?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A17: Aufgabe tags-waehlen der Seite „You like it, don't you?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A18: Aufgabe tags-bilden der Seite „You like it, don't you?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A19: Aufgabe emphase-waehlen der Seite „She did win: Betonung mit do“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A20: Aufgabe emphase-widerspruch der Seite „She did win: Betonung mit do“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A21: Aufgabe inversion-waehlen der Seite „Umkehr nach never, hardly und not only“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A22: Aufgabe inversion-bilden der Seite „Umkehr nach never, hardly und not only“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

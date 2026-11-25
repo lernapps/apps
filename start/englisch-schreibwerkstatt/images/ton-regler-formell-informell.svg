@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 356" role="img" aria-labelledby="t d">
+<title id="t">Ton-Regler</title>
+<desc id="d">Ein Regler mit drei Stationen: informal, neutral, formal. Unter jeder Station steht ein Beispielsatz.</desc>
+<defs>
+<linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#d9822b"/>
+<stop offset="0.5" stop-color="#7f8c8d"/>
+<stop offset="1" stop-color="#2c3e75"/>
+</linearGradient>
+</defs>
+<rect width="480" height="356" fill="#f4efe2"/>
+<rect x="40" y="22" width="400" height="14" rx="7" fill="url(#g)"/>
+<circle cx="52" cy="29" r="9" fill="#d9822b"/>
+<circle cx="240" cy="29" r="9" fill="#7f8c8d"/>
+<circle cx="428" cy="29" r="9" fill="#2c3e75"/>
+<circle cx="240" cy="29" r="17" fill="#fff" fill-opacity="0.35" stroke="#222" stroke-width="3"/>
+<rect x="30" y="64" width="420" height="76" rx="10" fill="#fff" fill-opacity="0.9"/>
+<rect x="30" y="64" width="12" height="76" rx="6" fill="#d9822b"/>
+<text x="56" y="88" font-family="sans-serif" font-size="18" font-weight="bold" fill="#8a4a0c">informal · an Freunde</text>
+<text x="56" y="116" font-family="sans-serif" font-size="16" fill="#222">Hey, what's the plan for Friday?</text>
+<rect x="30" y="148" width="420" height="76" rx="10" fill="#fff" fill-opacity="0.9"/>
+<rect x="30" y="148" width="12" height="76" rx="6" fill="#7f8c8d"/>
+<text x="56" y="172" font-family="sans-serif" font-size="18" font-weight="bold" fill="#4d5658">neutral · an Lehrer und Klasse</text>
+<text x="56" y="200" font-family="sans-serif" font-size="16" fill="#222">What is the plan for Friday, please?</text>
+<rect x="30" y="232" width="420" height="76" rx="10" fill="#fff" fill-opacity="0.9"/>
+<rect x="30" y="232" width="12" height="76" rx="6" fill="#2c3e75"/>
+<text x="56" y="254" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2c3e75">formal · an Büros und Fremde</text>
+<text x="56" y="278" font-family="sans-serif" font-size="16" fill="#222">I would like to ask about the</text>
+<text x="56" y="298" font-family="sans-serif" font-size="16" fill="#222">plan for Friday.</text>
+</svg>

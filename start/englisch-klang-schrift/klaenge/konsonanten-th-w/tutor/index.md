@@ -45,7 +45,7 @@ Sophie sagt Sank you, und Ellie wundert sich. Du lernst die Laute th, w, v und r
 
 ### Sophie sagt Sank you
 
-Bild: Im Klassenzimmer sagt Sophie in einer Sprechblase „Sank you!“. Ellie schaut mit der Sprechblase „Eh?“ zu ihr. Mr Hill steht rechts. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz) und rechts Mr Hill (graue Haare).
+Bild: Im Klassenzimmer sagt Sophie in einer Sprechblase „Sank you!“. Ellie schaut mit der Sprechblase „Eh?“ zu ihr. Mr Hill steht rechts. Bildunterschrift: Von links: Sophie sagt „Sank you!“, Ellie wundert sich, rechts steht Mr Hill.
 
 Sophie bedankt sich bei Ellie: „Sank you!“ In Hello, Millbrook! hat sie „fenk ju“ gelernt. Das war eine Hilfe für den Anfang, aber nicht genau. Heute spricht Sophie das th wie ein s, und Ellie wundert sich.
 
@@ -93,7 +93,7 @@ Lautkarten · th, w, v und r:
 
 ### Wie es weitergeht
 
-Sophie sagt noch einmal: „Thank you!“ Diesmal versteht Ellie sie sofort. Mr Hill sagt: „Jetzt hört genau auf das Ende der Wörter.“ Das hörst du auf der nächsten Seite.
+Sophie sagt noch einmal „Thank you!“ und Ellie versteht sie sofort. Als Nächstes hörst du auf das Ende der Wörter.
 
 ### Aufgabe konsonanten-start
 

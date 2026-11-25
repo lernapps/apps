@@ -45,9 +45,9 @@ Sophie plant ihre Geschichte erst am Berg und schreibt dann zu jeder Station ein
 
 ### Erst planen, dann schreiben
 
-Bild: In der Geschichtenecke hängen an der Wand zwei Tafeln. Links ein Berg mit vier nummerierten Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Sophie fragt in einer Sprechblase: „Plan first?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). An der Wand hängen links der Geschichtenberg und rechts die story map.
+Bild: In der Geschichtenecke hängen an der Wand zwei Tafeln. Links ein Berg mit vier nummerierten Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Sophie fragt in einer Sprechblase: „Plan first?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: An der Wand hängen links der Geschichtenberg und rechts die story map.
 
-Es ist Donnerstag in der Geschichtenwoche. Heute schreibt jedes Kind eine eigene Geschichte. Mr Hill sagt: „First the plan, then the story.“ Sophie nimmt ein Blatt mit einem leeren Geschichtenberg. Sie hat einen Zettel mit Stichwörtern: „Amir · on a farm · a hot Sunday“. Sie überlegt, wohin er gehört.
+Jedes Kind schreibt eine eigene Geschichte. Mr Hill sagt: „First the plan, then the story.“ Sophie nimmt ein Blatt mit einem leeren Geschichtenberg. Sie hat einen Zettel mit Stichwörtern: „Amir · on a farm · a hot Sunday“. Sie überlegt, wohin er gehört.
 
 - Aufgabe `schreiben-start` (unten)
 
@@ -55,9 +55,8 @@ Es ist Donnerstag in der Geschichtenwoche. Heute schreibt jedes Kind eine eigene
 
 Dieses Wort ist neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- kite | Drachen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- kite – Drachen
 
 ### Der Geschichtenberg als Plan
 

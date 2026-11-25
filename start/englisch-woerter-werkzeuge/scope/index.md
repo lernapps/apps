@@ -1,0 +1,45 @@
+# Werkzeuge für Wörter
+
+Die App zeigt, was Lernende tun können, wenn ihnen ein englisches Wort fehlt oder sie eines nicht kennen, und wo Englisch und Deutsch sich ähnlich oder täuschend verschieden sind. Jedes Werkzeug ist eine Karte im Werkzeugkoffer mit der Frage „Was tun, wenn …?“ und einem kurzen Vorgehen. Kapitel 1 umfasst das Umschreiben (a thing which …, a person who …, ein Gegenteil mit not) und die Wortfamilie (Stamm, Vorsilbe, Nachsilbe: help, helpful, helpless). Kapitel 2 umfasst phrasal verbs (Verb plus Teilchen, das den Sinn ändert, zum Beispiel give up), false friends (Wörter, die wie deutsche aussehen und etwas anderes bedeuten, zum Beispiel become und bekommen) und den Vergleich von Wortbildung, Wortstellung und Ausdruck in Englisch und Deutsch.
+
+## Wenn mir ein Wort fehlt
+
+Kapitel 1 stellt die ersten zwei Werkzeuge des Koffers vor. Mit dem Umschreiben sagen die Lernenden, was ein Ding oder eine Person ist oder tut, wenn ihnen das englische Wort fehlt. Mit der Wortfamilie erschließen sie ein unbekanntes Wort aus Stamm, Vorsilbe und Nachsilbe.
+
+### Das brauchst du hier
+
+Die Seite wiederholt nur die notwendigen Relativsätze mit who, which und that und die Fachbegriffe noun, verb, adjective, sentence und tense. Neue Inhalte gibt es nicht, auch keine Übung.
+
+### Werkzeug 1: Ein fehlendes Wort umschreiben
+
+Die Seite stellt das Werkzeug Umschreiben vor. Fehlt ein englisches Wort, sagt man, was es ist, und beschreibt es mit einem Relativsatz. Für eine Sache steht a thing which oder a thing that, für eine Person a person who oder a person that. Ein Wort lässt sich auch mit seinem Gegenteil mit not umschreiben (not cheap für expensive). Der Relativsatz kommt aus dem Baustein Notwendige Relativsätze. Nicht hier, weil es spätere Seiten sind. Wortfamilien, phrasal verbs und false friends.
+
+### Werkzeug 2: Ein unbekanntes Wort erschließen
+
+Die Seite stellt das Werkzeug Wortfamilie vor. Ein unbekanntes Wort wird in Vorsilbe, Stamm und Nachsilbe zerlegt. Der Stamm ist der Teil, den man schon kennt (help). Die Nachsilbe -ful heißt voller, -less heißt ohne, -er macht aus einem Verb die Person, die etwas tut (teach, teacher), und die Vorsilbe un- heißt nicht. So lassen sich helpful und helpless erschließen und neue Wörter bilden. Nicht hier, weil es spätere Seiten sind: phrasal verbs, false friends und der Sprachvergleich.
+
+## Englisch und Deutsch vergleichen
+
+Kapitel 2 stellt die Werkzeuge für den Vergleich vor. Phrasal verbs sind Verb plus Teilchen mit eigenem Sinn. False friends sind Wörter, die wie deutsche aussehen und etwas anderes bedeuten. Am Ende formulieren die Lernenden Vergleichsregeln zu Wortbildung, Wortstellung und Ausdruck.
+
+### Das brauchst du hier
+
+Die Seite wiederholt nur die Präpositionen des Ortes (in, on, under, next to, behind). Neue Inhalte gibt es nicht, auch keine Übung.
+
+### Werkzeug 3: Verben mit Teilchen
+
+Die Seite stellt das Werkzeug Teilchen vor. Ein phrasal verb besteht aus einem Verb und einem Teilchen. Der Sinn ergibt sich nicht aus den einzelnen Wörtern, deshalb liest man beide als eine Einheit (give up heißt aufgeben, look after heißt sich kümmern um, find out heißt herausfinden). Bei einem Objekt kann das Teilchen davor oder dahinter stehen (hand in the form, hand the form in). Ist das Objekt ein Pronomen, steht das Teilchen dahinter (hand it in). Nicht hier, weil es spätere Seiten sind: false friends und der Sprachvergleich.
+
+### Werkzeug 4: Das Warnschild für false friends
+
+Die Seite stellt das Werkzeug Warnschild vor. False friends sind Wörter, die einem Wort in einer anderen Sprache ähneln, aber etwas anderes bedeuten. Beispiele sind become (werden, nicht bekommen), chef (Koch, nicht Chef), sensible (vernünftig, nicht sensibel), eventually (schließlich, nicht eventuell), actual (tatsächlich, nicht aktuell) und gift (Geschenk, nicht Gift). Gift auf Deutsch heißt auf Englisch poison. Nicht hier, weil es spätere Seiten sind: phrasal verbs und der Sprachvergleich.
+
+### Werkzeug 5: Eigene Vergleichsregeln
+
+Die Seite stellt das Werkzeug Vergleichsregel vor. Lernende sammeln Beispielpaare in Deutsch und Englisch, suchen das gemeinsame Muster und prüfen die Regel an einem neuen Satz. Drei Bereiche werden verglichen. Wortstellung: Im deutschen Hauptsatz steht das Verb an zweiter Stelle, im deutschen Nebensatz am Ende, das Englische behält überwiegend die Reihenfolge Subjekt, Verb, Objekt. Wortbildung: Deutsch fügt Wörter oft zu einem langen Wort zusammen, Englisch schreibt Zusammensetzungen oft getrennt (school bus), manchmal zusammen (homework). Ausdruck: Bei manchen Wörtern benutzt das Deutsche haben und ein Nomen (ich habe Durst), das Englische be und ein Adjektiv (I am thirsty). Quellen für Wortstellung und Wortbildung sind Wikipedia, V2 word order und Compound (linguistics).
+
+## Gehört nicht dazu
+
+- Wortfelder zu Situationen (stehen in den Situations-Explainern)
+- Die Fachbegriffe noun und verb (stehen in Hello, Millbrook!)
+- Lautschrift und Aussprache (steht in Klang und Schrift)

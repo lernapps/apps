@@ -63,6 +63,34 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Was du vorhast: going to“
 - „Will oder going to: Pfeil oder Punkt?“
 
+### Kapitel „Erzählen: Hintergrund, Handlung, vorher“
+
+- Selbsteinschätzung des Kapitels
+- „Was gerade im Gang war: das past progressive“
+- „Was schon vorher geschehen war: das past perfect“
+- „Wann passiert was? when, after, before, as soon as“
+- „Punkt oder Bogen? present perfect oder simple past“
+
+### Kapitel „Seit wann und wie lange?“
+
+- Selbsteinschätzung des Kapitels
+- „Seit wann und wie lange: since und for“
+- „Was bis jetzt andauert: das present perfect progressive“
+- „Verben ohne Welle: Zustandsverben“
+
+### Kapitel „Pläne, Fahrpläne und Zeitpunkte“
+
+- Selbsteinschätzung des Kapitels
+- „Verabredungen und Fahrpläne: present tenses für die Zukunft“
+- „Wo bist du nächsten Samstag um acht? will be doing und will have done“
+
+### Kapitel „Alle Zeiten im Überblick“
+
+- Selbsteinschätzung des Kapitels
+- „Wie lange es schon dauerte: das past perfect progressive“
+- „Was früher war: used to“
+- „Welche Zeit passt? Alle Zeiten im Überblick“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe simple-past-form der Seite „Was gestern war: das simple past“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

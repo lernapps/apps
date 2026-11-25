@@ -45,9 +45,9 @@ Sophie liest, Ellie schreibt, Peter malt. Du lernst, mit be und der -ing-Form zu
 
 ### Was die Klasse gerade tut
 
-Bild: Im Klassenzimmer sitzen Sophie, Ellie, Amir und Peter an Tischen. Sophie hat ein Buch, Ellie schreibt auf ein Blatt, Amir sitzt am Computer und Peter malt ein Bild. Ellie sagt in der Sprechblase „Sophie is reading a book.“. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke). Ellie spricht.
+Bild: Im Klassenzimmer sitzen Sophie, Ellie, Amir und Peter an Tischen. Sophie hat ein Buch, Ellie schreibt auf ein Blatt, Amir sitzt am Computer und Peter malt ein Bild. Ellie sagt in der Sprechblase „Sophie is reading a book.“. Bildunterschrift: Ellie spricht.
 
-Im Klassenzimmer ist es ruhig. Ellie erzählt Mr Hill, was die anderen tun: „Sophie is reading a book.“ **Reading** heißt „liest“.
+Ellie sagt: „Sophie is reading a book.“ **Reading** heißt „liest“.
 
 - Aufgabe `present-progressive-start` (unten)
 

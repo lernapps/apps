@@ -45,9 +45,9 @@ Sophie zeigt ihren Eltern das Haus der Parkers und ihr kleines Zimmer. Du lernst
 
 ### Sophies Zimmer und das Haus der Parkers
 
-Bild: Zwei Mädchen in einem kleinen Zimmer. Eines hält ein Handy hoch. Bildunterschrift: Sophie (Zöpfe) macht ein Foto von ihrem Zimmer. Ellie (Pferdeschwanz) schaut zu.
+Bild: Zwei Mädchen in einem kleinen Zimmer. Eines hält ein Handy hoch. Bildunterschrift: Sophie macht ein Foto von ihrem Zimmer. Ellie schaut zu.
 
-Sophie schickt Mum and Dad ein Foto von ihrem Zimmer. Es ist klein, aber schön. Dann zeichnet sie das ganze Haus der Parkers: oben die Zimmer (rooms) zum Schlafen und das Bad, unten die Küche und das Wohnzimmer, draußen den Garten. Die kleinen Zeichen sind Möbel (furniture).
+Das Haus der Parkers hat oben die Zimmer (rooms) zum Schlafen und das Bad, unten die Küche und das Wohnzimmer, draußen den Garten. Die kleinen Zeichen sind Möbel (furniture).
 
 Bild: Querschnitt eines Hauses mit zwei Stockwerken und einem Garten. Die Zimmer haben Namen, die Möbel sind kleine Zeichen. Bildunterschrift: Das Haus der Parkers. Oben das Bad und vier Schlafzimmer (Ellie, Peter, Sophie, die Eltern), unten Küche und Wohnzimmer, rechts der Garten.
 
@@ -59,15 +59,14 @@ Bild: Querschnitt eines Hauses mit zwei Stockwerken und einem Garten. Die Zimmer
 
 Die Räume: **kitchen** (Küche), **living room** (Wohnzimmer), **bathroom** (Bad), **bedroom** (Schlafzimmer), **garden** (Garten). Ein Zimmer heißt **room**: Ellie’s room ist Ellies Zimmer. Die Möbel: **sofa**, **bed** (Bett), **table** (Tisch), **chair** (Stuhl), **desk** (Schreibtisch), **lamp** (Lampe). Was es gibt, sagst du mit **there is** und **there are**, wo es ist, mit **in** (in), **on** (auf), **under** (unter) und **next to** (neben, auch: **beside**): There is a cat in the box. There are shoes next to the door.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- wardrobe | Kleiderschrank
-- armchair | Sessel
-- cooker | Herd
-- sink | Waschbecken / Spüle
-- bookshelf | Bücherregal
-- bench | Gartenbank
-- toys | Spielsachen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- wardrobe – Kleiderschrank
+- armchair – Sessel
+- cooker – Herd
+- sink – Waschbecken / Spüle
+- bookshelf – Bücherregal
+- bench – Gartenbank
+- toys – Spielsachen
 
 **Merke: Merke**
 

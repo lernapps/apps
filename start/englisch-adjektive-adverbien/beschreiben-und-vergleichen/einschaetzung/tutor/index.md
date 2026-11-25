@@ -53,6 +53,21 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Blau oder orange? Adjektiv oder Adverb“
 - „Die Treppe, zweite Seite: Adverbien steigern“
 
+### Kapitel „Genauer beschreiben“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Es schmeckt gut: Adjektive nach look, sound, feel und taste“
+- „Wohin mit dem Adverb? Die Stellung im Satz“
+- „Wie sehr? Der Regler für very, quite und too“
+
+### Kapitel „Adjektive ohne Nomen“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Nicht noch einmal das Nomen: one und ones“
+- „The rich, the elderly: Adjektive für Gruppen von Menschen“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe adjektive-platz der Seite „Der blaue Anhänger: Adjektive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

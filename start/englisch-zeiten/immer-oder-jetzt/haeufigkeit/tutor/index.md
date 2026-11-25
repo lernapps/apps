@@ -45,9 +45,9 @@ Amir kommt nie zu spät, Peter manchmal. Du lernst die Häufigkeitswörter von a
 
 ### Wer kommt wann zur Schule?
 
-Bild: Sophie, Ellie, Amir und Peter stehen im Klassenzimmer. An der Wand hängen eine Uhr und ein leerer Rahmen. Ellie sagt in der Sprechblase „Amir is never late.“. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke). Ellie spricht.
+Bild: Sophie, Ellie, Amir und Peter stehen im Klassenzimmer. An der Wand hängen eine Uhr und ein leerer Rahmen. Ellie sagt in der Sprechblase „Amir is never late.“. Bildunterschrift: Ellie spricht.
 
-Der Schultag in Millbrook beginnt um Viertel vor neun. Ellie erzählt Sophie, wer wann kommt: „Amir is never late.“ **Late** heißt „zu spät“.
+Ellie sagt: „Amir is never late.“ **Late** heißt „zu spät“.
 
 - Aufgabe `haeufigkeit-start` (unten)
 
@@ -59,13 +59,12 @@ Wie oft etwas passiert, sagen die **Häufigkeitswörter**. Mr Hill zeichnet daf�
 
 Bild: Fünf Reihen aus je sieben Punkten für die Tage von Montag bis Sonntag. Bei always sind alle Punkte ausgefüllt, bei usually sechs, bei often vier, bei sometimes zwei und bei never keiner. Bildunterschrift: Jede Reihe ist eine Woche. Ein ausgefüllter Punkt heißt, dass die Person es an diesem Tag tut.
 
-Klassenzimmer-Poster · Wie oft?:
-- Ausdruck | Bedeutung
-- always | immer
-- usually | meistens
-- often | oft
-- sometimes | manchmal
-- never | nie
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wie oft?
+- always – immer
+- usually – meistens
+- often – oft
+- sometimes – manchmal
+- never – nie
 
 **Merke: Merke**
 

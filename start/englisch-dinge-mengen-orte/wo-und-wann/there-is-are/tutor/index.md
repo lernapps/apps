@@ -45,24 +45,23 @@ Mr Hill macht Inventur. Du lernst, mit there is und there are zu sagen, was es a
 
 ### Mr Hill macht Inventur
 
-Bild: Peter und Sophie stehen im Lagerraum. Auf dem Regalbrett über ihnen stehen vier Kisten. Bildunterschrift: Von links: Peter (gelbe Jacke) und Sophie (Zöpfe). Mr Hill zählt, was im Regal steht.
+Bild: Peter und Sophie stehen im Lagerraum. Auf dem Regalbrett über ihnen stehen vier Kisten. Bildunterschrift: Von links: Peter (gelbe Jacke) und Sophie (Zöpfe).
 
 Vor dem Schulfest macht Mr Hill Inventur. Das heißt, er schreibt auf, was es im Lagerraum gibt. Er sagt: „There is a box on the shelf.“
 
 **Das kannst du danach:** Du sagst mit there is und there are, was es an einem Ort gibt.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- there is | es gibt (ein Ding)
-- there are | es gibt (mehrere Dinge)
-- list | Liste
-- book | Buch
-- bag | Tasche
-- pen | Stift
-- apple | Apfel
-- key | Schlüssel
-- window | Fenster
-- one | eins, ein
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- there is – es gibt (ein Ding)
+- there are – es gibt (mehrere Dinge)
+- list – Liste
+- book – Buch
+- bag – Tasche
+- pen – Stift
+- apple – Apfel
+- key – Schlüssel
+- window – Fenster
+- one – eins, ein
 
 - Aufgabe `there-start` (unten)
 

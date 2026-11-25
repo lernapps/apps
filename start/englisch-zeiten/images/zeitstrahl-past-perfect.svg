@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img">
+  <title>Zeitstrahl mit zwei Punkten in der Vergangenheit, der linke geschah zuerst</title>
+  <rect width="480" height="200" fill="#f4efe2"/>
+  <line x1="20" y1="120" x2="458" y2="120" stroke="#333" stroke-width="3"/>
+  <polygon points="462,120 450,113 450,127" fill="#333"/>
+  <text x="24" y="190" font-family="sans-serif" font-size="16" fill="#333">früher</text>
+  <text x="456" y="190" text-anchor="end" font-family="sans-serif" font-size="16" fill="#333">später</text>
+  <line x1="390" y1="86" x2="390" y2="166" stroke="#c0392b" stroke-width="4"/>
+  <text x="390" y="186" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#c0392b">now</text>
+  <circle cx="120" cy="120" r="9" fill="#2c6fd8"/>
+  <circle cx="280" cy="120" r="9" fill="#2c6fd8"/>
+  <line x1="120" y1="111" x2="120" y2="70" stroke="#333" stroke-width="2"/>
+  <rect x="50" y="40" width="140" height="30" rx="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="120" y="61" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">had done</text>
+  <line x1="280" y1="111" x2="280" y2="70" stroke="#333" stroke-width="2"/>
+  <rect x="240" y="40" width="80" height="30" rx="4" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="280" y="61" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">did</text>
+  <path d="M 132 144 H 268" stroke="#777" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+  <text x="200" y="166" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555">zuerst, dann</text>
+</svg>

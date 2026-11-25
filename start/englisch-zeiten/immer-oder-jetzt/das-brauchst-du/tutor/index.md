@@ -39,13 +39,13 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du hier“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/englisch/c/personalpronomen/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/englisch/c/personalpronomen/
 
 Die englischen Pronomen noch einmal kurz, bevor Mr Hill den Zeitstrahl aufhängt.
 
 ### Das solltest du schon können
 
-Kannst du das schon? **Ich kann die Personalpronomen als Subjekt (I, he, they) und als Objekt (me, him, them) richtig verwenden.** Das ist der Baustein „Personalpronomen“. Du brauchst ihn gleich bei jedem Verb: Es kommt darauf an, ob jemand „ich“, „er“ oder „sie“ ist. Lies die Tabelle und prüfe in Gedanken, ob du alle Wörter kennst.
+Kannst du das schon? **Ich kann die Personalpronomen als Subjekt (I, he, they) und als Objekt (me, him, them) richtig verwenden.** Du brauchst es gleich bei jedem Verb. Lies die Tabelle und prüfe, ob du alle Wörter kennst.
 
 Klassenzimmer-Poster · Die Pronomen:
 - Pronomen | Bedeutung
@@ -61,14 +61,14 @@ Nicht sicher? Wiederhole es auf der [Seite zu den Personalpronomen](https://lern
 
 ### Wer hängt die Karten auf?
 
-Die Millbrook School ist eine Schule in einer englischen Kleinstadt. **Sophie** (11) kommt aus Deutschland und wohnt bei der Familie Parker. **Ellie Parker** (11) ist ihre Gastschwester, **Peter** (9) Ellies kleiner Bruder. **Amir** (11) ist ein Freund. **Mr Hill** ist der Englischlehrer.
+**Sophie** kommt aus Deutschland und wohnt bei der Familie Parker, mit **Ellie** und **Peter**. **Amir** ist ein Freund, **Mr Hill** der Englischlehrer.
 
-Im Klassenzimmer hängen zwei Dinge an der Wand. Das **Klassenzimmer-Poster** sammelt Wörter und Formen in Tabellen. Der **Schulkalender** sammelt Zeitangaben und Geburtstage.
+An der Wand hängen das **Klassenzimmer-Poster** (Wörter und Formen) und der **Schulkalender** (Zeitangaben und Geburtstage).
 
 ### Der leere Zeitstrahl
 
-Mr Hill hängt in der Millbrook School einen langen Streifen an die Wand. Das ist der **Zeitstrahl**. Links liegt das, was früher war, rechts das, was später kommt. In der Mitte steht **now**, das heißt „jetzt“.
+Mr Hill hängt einen langen Streifen an die Wand, den **Zeitstrahl**. Links liegt das, was früher war, rechts das, was später kommt. In der Mitte steht **now**, das heißt „jetzt“.
 
 Bild: Ein Zeitstrahl von links nach rechts. Links steht früher, rechts später, in der Mitte steht ein roter Strich mit now. Sonst ist der Strahl leer. Bildunterschrift: Der Strahl ist noch leer. Links früher, rechts später, in der Mitte now.
 
-Sophie, Ellie, Peter und Amir hängen jetzt Karten auf. Jede englische Zeitform bekommt dabei ein eigenes Zeichen. Die Zeichen lernst du Seite für Seite kennen.
+Die Kinder hängen jetzt Karten auf. Jede englische Zeitform bekommt ein eigenes Zeichen, das du Seite für Seite kennenlernst.

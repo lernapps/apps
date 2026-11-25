@@ -67,6 +67,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Eine Spielszene schreiben: Sprecher und Zeilen“
 - „Reime hören, finden und sprechen“
 
+### Kapitel „Anders erzählen“
+
+- Selbsteinschätzung des Kapitels
+- „Wessen Sicht? Dieselbe Szene, eine andere Brille“
+- „Wo und wann spielt es, und wie fühlt es sich an?“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe figuren-start der Seite „Wer, wo, wann, was: die story map“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

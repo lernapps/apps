@@ -61,6 +61,23 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Zwei Wörter, ein Klang“
 - „Wohin geht die Stimme?“
 
+### Kapitel „Richtig schreiben“
+
+- Selbsteinschätzung des Kapitels
+- „Ein Laut, mehrere Schreibungen“
+- „Das brauchst du hier“
+- „Wann steht ein Komma?“
+
+### Kapitel „Betonung, Rhythmus und Melodie“
+
+- Selbsteinschätzung des Kapitels
+- „Welche Silbe ist betont?“
+- „Wörter rutschen zusammen“
+- „Kleine Wörter sind leise“
+- „Klopfe den Rhythmus“
+- „Das brauchst du hier“
+- „Fragst du wirklich?“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe endungen-s-waehlen der Seite „Wie -s und -ed klingen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

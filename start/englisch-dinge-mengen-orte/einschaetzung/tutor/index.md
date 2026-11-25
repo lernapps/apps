@@ -62,6 +62,13 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Was gibt es im Lagerraum? There is und there are“ · Aufgaben A19, A20
 - „Wann ist das Schulfest? in, on und at“ · Aufgaben A21, A22
 
+### Kapitel „Ohne Etikett und Sonderfälle“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Kisten ohne Etikett: wann the wegfällt“ · Aufgaben A23, A24
+- „Glas oder Kistengruppe: news, advice und police“ · Aufgaben A25, A26
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe artikel-etikett der Seite „Eine Kiste, ein Etikett: a, an und the“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -86,3 +93,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A20: Aufgabe there-schreiben der Seite „Was gibt es im Lagerraum? There is und there are“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A21: Aufgabe zeit-wahl der Seite „Wann ist das Schulfest? in, on und at“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A22: Aufgabe zeit-schreiben der Seite „Wann ist das Schulfest? in, on und at“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A23: Aufgabe gebrauch-wahl der Seite „Kisten ohne Etikett: wann the wegfällt“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A24: Aufgabe gebrauch-schreiben der Seite „Kisten ohne Etikett: wann the wegfällt“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A25: Aufgabe kongruenz-wahl der Seite „Glas oder Kistengruppe: news, advice und police“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A26: Aufgabe kongruenz-schreiben der Seite „Glas oder Kistengruppe: news, advice und police“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

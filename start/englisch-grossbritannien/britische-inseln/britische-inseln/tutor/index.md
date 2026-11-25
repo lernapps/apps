@@ -45,9 +45,9 @@ Mr Hill hängt eine große Karte auf. Du lernst die Teile des Vereinigten König
 
 ### Mr Hill hängt eine Karte auf
 
-Bild: Ein Mann mit grauen Haaren steht neben einer großen Karte an der Klassenzimmerwand. Rechts davon stehen drei Kinder. Auf der Karte sind Inseln in verschiedenen Farben, aber ohne Namen. Schemakarte, nicht genau nach Maßstab. Bildunterschrift: Von links: Mr Hill (graue Haare), Amir (Brille), Sophie (blonde Zöpfe), Ellie (roter Pferdeschwanz). Die Karte an der Wand ist eine Schemakarte, nicht genau nach Maßstab.
+Bild: Ein Mann mit grauen Haaren steht neben einer großen Karte an der Klassenzimmerwand. Rechts davon stehen drei Kinder. Auf der Karte sind Inseln in verschiedenen Farben, aber ohne Namen. Schemakarte, nicht genau nach Maßstab. Bildunterschrift: Mr Hill, Amir, Sophie und Ellie. Die Karte an der Wand ist eine Schemakarte, nicht genau nach Maßstab.
 
-In der Millbrook School hängt Mr Hill eine große Karte an die Wand. Auf der Seite davor hast du Vergleiche wiederholt. Bisher kennst du nur den Plan von Millbrook, mit Straßen und Läden. Jetzt zoomt der Plan heraus: Millbrook ist nur noch ein kleiner Punkt auf einer **Karte** mit ganzen Ländern und Inseln. Eine Schemakarte zeigt nur das Wichtigste und ist nicht genau nach Maßstab. Mr Hill zeigt auf den Punkt und erklärt, wo er liegt.
+Mr Hill hängt eine große Karte an die Wand. Bisher kennst du nur den Plan von Millbrook, mit Straßen und Läden. Jetzt zoomt der Plan heraus: Millbrook ist nur noch ein kleiner Punkt auf einer **Karte** mit ganzen Ländern und Inseln. Eine Schemakarte zeigt nur das Wichtigste und ist nicht genau nach Maßstab. Mr Hill zeigt auf den Punkt und erklärt, wo er liegt.
 
 - Aufgabe `inseln-start` (unten)
 
@@ -67,15 +67,14 @@ Bild: Schemakarte der Britischen Inseln. Im Osten liegt eine große Insel mit dr
 - **Northern Ireland**: der Nordosten der Insel Ireland. Er ist ein Teil des UK.
 - **British Isles**: alle Inseln zusammen.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- capital | Hauptstadt
-- United Kingdom (UK) | Vereinigtes Königreich
-- Great Britain | die große Insel
-- island | Insel
-- Ireland | Irland (die Insel und der Staat)
-- Republic of Ireland | Republik Irland (der Staat)
-- British Isles | Britische Inseln
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- capital – Hauptstadt
+- United Kingdom (UK) – Vereinigtes Königreich
+- Great Britain – die große Insel
+- island – Insel
+- Ireland – Irland (die Insel und der Staat)
+- Republic of Ireland – Republik Irland (der Staat)
+- British Isles – Britische Inseln
 
 ### Übung
 
@@ -146,7 +145,7 @@ In den Herbstferien fahren die Parkers an die Küste. Peter fragt, wo das eigent
 
 ### Aufgabe inseln-uk-gb
 
-- Aufgabe: Peter (9) sagt: „Great Britain and the UK are the same.“ Stimmt das?
+- Aufgabe: Peter sagt: „Great Britain and the UK are the same.“ Stimmt das?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
   - ✓ Nein. Great Britain ist eine Insel, das UK ein Staat. Der Staat hat einen Teil mehr als die Insel. – Great Britain ist die Insel mit England, Scotland und Wales. Northern Ireland liegt auf der Nachbarinsel Ireland und gehört trotzdem zum UK.

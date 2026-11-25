@@ -45,9 +45,9 @@ Sophie schickt ihrer Familie ein Foto vom Frühstückstisch. Du nennst Mahlzeite
 
 ### Was steht auf dem Tisch?
 
-Bild: Drei Kinder sitzen hinter einem Tisch. Auf dem Tisch stehen eine Schale, eine Flasche, ein Teller, ein Glas mit rotem Deckel und ein Glas mit Saft. Bildunterschrift: Von links: Ellie (Pferdeschwanz), Sophie (Zöpfe) und Peter (gelbe Jacke) am Tisch der Parkers.
+Bild: Drei Kinder sitzen hinter einem Tisch. Auf dem Tisch stehen eine Schale, eine Flasche, ein Teller, ein Glas mit rotem Deckel und ein Glas mit Saft. Bildunterschrift: Von links: Ellie, Sophie und Peter am Tisch.
 
-Sophie schickt ihrer Familie ein Foto vom Tisch bei den Parkers. Dazu schreibt sie: „Hier gibt es viel zu probieren!“ Die Mahlzeiten (meals) heißen auf Englisch etwas anders als bei dir. Heute lernst du, wie sie heißen und wie du sagst, was du isst und was du magst.
+Auf dem Foto vom Tisch siehst du Essen und Trinken. Die Mahlzeiten (meals) heißen auf Englisch etwas anders als bei dir. Heute lernst du, wie sie heißen und wie du sagst, was du isst und was du magst.
 
 - Aufgabe `essen-trinken-start` (unten)
 
@@ -57,13 +57,12 @@ Sophie schickt ihrer Familie ein Foto vom Tisch bei den Parkers. Dazu schreibt s
 
 Die Mahlzeiten heißen **breakfast** (Frühstück), **lunch** (Mittagessen), **dinner** (die Hauptmahlzeit, oft am Abend) und **snack** (Zwischenmahlzeit). Dazu kommt **tea**: Das Wort heißt Tee, kann aber auch eine frühe Abendmahlzeit sein. Bei den Parkers ist tea um sechs Uhr abends. Ob tea ein Getränk oder eine Mahlzeit ist, erkennst du am Satz.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- cereal | Müsli
-- jam | Marmelade
-- yoghurt | Joghurt
-- vegetables | Gemüse
-- packed lunch | Mittagessen von zu Hause zum Mitnehmen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- cereal – Müsli
+- jam – Marmelade
+- yoghurt – Joghurt
+- vegetables – Gemüse
+- packed lunch – Mittagessen von zu Hause zum Mitnehmen
 
 Ein **packed lunch** bereitet man zu Hause vor und nimmt es mit, zum Beispiel in die Schule. Auch Ellie hat in der Schule ein packed lunch. Mit **have** sagst du, was du isst oder trinkst: I usually have juice and an egg for breakfast. Vor breakfast, lunch, dinner und tea steht kein **the**. Was du magst, sagst du mit **like**: I like bananas. Bei he, she, it bekommt das Verb ein -s: Peter **likes** bananas. Die Verneinung heißt **don't** (bei I, you, we, they) und **doesn't** (bei he, she, it), danach steht das Verb ohne -s: He **doesn't like** soup. Die Frage mit he, she, it beginnt mit **Does**: Does she like cheese? Yes, she does.
 

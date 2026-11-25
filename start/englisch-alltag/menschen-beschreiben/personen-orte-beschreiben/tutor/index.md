@@ -45,9 +45,9 @@ Sophie schreibt ihren Eltern einen Text über Mr Hill und über ihr Zimmer. Du l
 
 ### Sophie schreibt einen Text
 
-Bild: Ein Zimmer mit Fenster. Ein Mädchen mit Zöpfen hält ein Blatt. Bildunterschrift: Sophie (Zöpfe) in ihrem Zimmer bei den Parkers. Sie schreibt ihren Eltern.
+Bild: Ein Zimmer mit Fenster. Ein Mädchen mit Zöpfen hält ein Blatt. Bildunterschrift: Sophie in ihrem Zimmer.
 
-Sophies Eltern wollen mehr wissen: Wie ist ihr Englischlehrer Mr Hill? Und wie ist ihr Zimmer? Einzelne Sätze reichen dafür nicht. Sophie schreibt einen **Text**, in dem ein Satz zum nächsten passt. Schau zuerst auf ihr Zimmer.
+Wie ist Mr Hill? Und wie ist Sophies Zimmer? Einzelne Sätze reichen dafür nicht. Sophie schreibt einen **Text**, in dem ein Satz zum nächsten passt. Schau zuerst auf ihr Zimmer.
 
 - Aufgabe `personen-orte-beschreiben-start` (unten)
 
@@ -72,13 +72,12 @@ Klassenzimmer-Poster · Der Bauplan eines Textes:
 
 **Ein Ort:** This is Peter’s room. It is small. There is a bed and there are toys. There is a shelf, but there is no desk.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- wardrobe | Kleiderschrank
-- shelf | Regal
-- curly | lockig
-- quiet | ruhig
-- there is / there are | es gibt
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- wardrobe – Kleiderschrank
+- shelf – Regal
+- curly – lockig
+- quiet – ruhig
+- there is / there are – es gibt
 
 **Merke: Merke**
 
@@ -201,7 +200,7 @@ Sophie schickt den Text über Mr Hill und ihr Zimmer nach Hause. Ihre Mutter fra
 - Wie die App Fehler der Form zählt: Groß- und Kleinschreibung richtig mit Hinweis, Akzente falsch, Bindestrich falsch, Apostroph falsch, Satzzeichen egal
 - Einträge (Vorgabe → Lösung):
 1. Audio → Mr Hill is tall and friendly. (auch richtig: Mr Hill's tall and friendly.)
-2. Audio → There is a lamp on the table. (auch richtig: There's a lamp on the table.)
+2. Audio → There is a lamp on the desk. (auch richtig: There's a lamp on the desk.)
 3. Audio → He has got a brown jacket. (auch richtig: He's got a brown jacket.; He has a brown jacket.)
 - Die Lernenden hören bei den Items mit Audio eine Datei mit einer KI-Stimme. Du kannst sie nicht abspielen; was gesprochen wird, steht in der Lösung.
 - So hilfst du: Die App prüft Wort für Wort gegen die Lösungen oben und nennt Fehler der Form (zum Beispiel Akzente) mit den Wörtern des Kindes. Sag nicht die Lösung vor: Frag nach der Regel (Endung, Geschlecht, Zeitform) oder nach einem ähnlichen Satz der Seite. Hält die App eine Fassung des Kindes für falsch, die du für richtig hältst, sag es dem Kind: Die App kennt nur die Fassungen oben.
@@ -213,7 +212,7 @@ Sophie schickt den Text über Mr Hill und ihr Zimmer nach Hause. Ihre Mutter fra
 - Die Lernenden hören das Original, nehmen sich auf und bewerten selbst, wie ihre Aussprache klingt. Du kannst weder das Original noch die Aufnahme hören. Frage, welche Laute schwer waren, und beschreibe, wie man sie bildet.
 - Sätze:
 1. Audio → I like my English teacher.
-2. Audio → There are three books on the sofa.
+2. Audio → There are three books on the shelf.
 3. Audio → My new room has got a big window.
 - Tipp der App: Hör den Satz zuerst. Sprich dann langsam nach.
 - Link: [../?via=tutor#personen-orte-beschreiben-nachsprechen](../?via=tutor#personen-orte-beschreiben-nachsprechen)

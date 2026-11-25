@@ -1,6 +1,6 @@
 # Zeiten auf dem Zeitstrahl
 
-Die App erklärt die englischen Zeitformen auf einem Zeitstrahl für Kinder im ersten und zweiten Lernjahr. Jede Zeitform hat ein festes Zeichen, ein Signalwort und eine Bau-Karte. Gelernt werden to be, have got, simple present, Häufigkeitswörter, present progressive, simple past, unregelmäßige Verben, present perfect, will und going to. Beispiele stammen aus dem Alltag von Sophie, Ellie, Peter und Amir.
+Die App erklärt die englischen Zeitformen auf einem Zeitstrahl für Kinder im ersten bis vierten Lernjahr (Stufe 5-6 und 7-8). Jede Zeitform hat ein festes Zeichen, ein Signalwort und eine Bau-Karte. Gelernt werden to be, have got, simple present, Häufigkeitswörter, present progressive, simple past, unregelmäßige Verben, present perfect, will und going to, dazu past progressive, past perfect, Zeitenfolge, present perfect progressive, Zustandsverben und Zeiten für Pläne und Zeitpunkte der Zukunft. Beispiele stammen aus dem Alltag von Sophie, Ellie, Peter und Amir.
 
 ## Immer oder gerade jetzt?
 
@@ -40,7 +40,7 @@ Die Seite führt das simple past mit regelmäßigen Verben ein. Es erzählt von 
 
 ### Verben mit drei Formen: sing – sang – sung
 
-Die Seite zeigt, dass viele häufige Verben im simple past kein -ed bekommen. Jedes hat drei Formen, die Grundform, die Form im simple past und die dritte Form (go, went, gone). Die 38 häufigsten Verben stehen in Tabellen nach Klangmustern, zum Beispiel sing, sang, sung oder buy, bought, bought. Ziel ist, im simple past die zweite Form zu wählen und ein Muster auf ein neues Verb zu übertragen. Typische Fehler sind eine regelmäßige Form wie goed oder eated und die Verwechslung von went und gone. Die dritte Form wird hier gelernt und auf der nächsten Seite beim present perfect gebraucht. Nicht hier, weil es andere Seiten sind. Das present perfect, Fragen und Verneinung mit did und die Aussprache.
+Die Seite zeigt, dass viele häufige Verben im simple past kein -ed bekommen. Jedes hat drei Formen, die Grundform, die Form im simple past und die 3. Form (go, went, gone). Die 38 häufigsten Verben stehen in Tabellen nach Klangmustern, zum Beispiel sing, sang, sung oder buy, bought, bought. Ziel ist, im simple past die zweite Form zu wählen und ein Muster auf ein neues Verb zu übertragen. Typische Fehler sind eine regelmäßige Form wie goed oder eated und die Verwechslung von went und gone. Die 3. Form wird hier gelernt und auf der nächsten Seite beim present perfect gebraucht. Nicht hier, weil es andere Seiten sind. Das present perfect, Fragen und Verneinung mit did und die Aussprache.
 
 ### Was schon passiert ist: das present perfect
 
@@ -60,10 +60,66 @@ Die Seite führt going to ein. Es nennt Pläne, die schon feststehen, und Vorher
 
 Die Seite lässt zwischen will und going to wählen, in eindeutigen Fällen. Going to (Pfeil von now) steht für einen Plan, der schon feststeht, und für eine Vorhersage mit einem Anzeichen, das man jetzt sieht. Will (Punkt ohne Pfeil) steht für einen spontanen Entschluss im Moment des Sprechens und für eine bloße Vermutung. Auf der Seite stehen zwei Fragen, die bei der Wahl helfen. Am Ende ein Rückblick auf alle Zeichen des Zeitstrahls. Nicht hier, weil es spätere Seiten oder andere Explainer sind. Fälle, in denen beide Formen passen, Bedingungssätze und Fragen mit do.
 
+## Erzählen: Hintergrund, Handlung, vorher
+
+### Was gerade im Gang war: das past progressive
+
+Die Seite führt das past progressive ein, mit einem Lesestück als Tagebuch. Es sagt, was in der Vergangenheit gerade im Gang war, wenn etwas anderes passierte. Auf dem Zeitstrahl ist es eine Welle in der Vergangenheit, die ein Punkt (simple past) unterbricht. Die Form ist was oder were plus das Verb mit -ing. Dazu die Signalwörter when (ein Punkt unterbricht die Welle) und while (zwei Wellen laufen gleichzeitig). Nicht hier, weil es spätere Seiten sind. Das past perfect, since und for und alle Zeiten der Zukunft. Fragen und Verneinung mit did gehören nicht dazu.
+
+### Was schon vorher geschehen war: das past perfect
+
+Die Seite führt das past perfect ein, mit einem Chat als Lesestück. Es sagt, dass etwas vor einem anderen Ereignis in der Vergangenheit geschah. Auf dem Zeitstrahl rückt es einen Schritt nach links, es ist ein Punkt vor dem Punkt des simple past. Die Form ist had plus die 3. Form des Verbs, dazu die Verneinung hadn't und die Frage Had you …? Signalwörter sind already, before und when. Nicht hier, weil es spätere Seiten sind. Die Zeitenfolge in Sätzen mit after, before und as soon as, die Entscheidung zwischen present perfect und simple past und since und for.
+
+### Wann passiert was? when, after, before, as soon as
+
+Die Seite zeigt, wie die Zeiten in Sätzen mit when, after, before und as soon as zusammenpassen. Spricht der Satz über die Zukunft, steht im Nebensatz das simple present, nicht will, und im Hauptsatz will plus Grundform. Spricht der Satz über die Vergangenheit, steht nach after meist das past perfect für das frühere Ereignis und im Hauptsatz das simple past. Als Lesestück dient ein Interview. Nicht hier, weil es spätere Seiten oder andere Explainer sind. Bedingungssätze mit if, indirekte Rede, das Passiv und die Entscheidung zwischen present perfect und simple past.
+
+### Punkt oder Bogen? present perfect oder simple past
+
+Die Seite hilft bei der Wahl zwischen present perfect und simple past, mit einem Zeitungsartikel als Lesestück. Auf dem Zeitstrahl ist das simple past ein Punkt mit einer Zeitangabe in der Vergangenheit, das present perfect ein Bogen bis now, bei dem das Ergebnis jetzt zählt. Signalwörter für das simple past sind yesterday, last Monday, ago und on Monday. Signalwörter für das present perfect sind already, yet, just, ever und never. Nicht hier, weil es spätere Seiten sind. Since und for und das present perfect progressive. Fragen mit did gehören nicht dazu.
+
+## Seit wann und wie lange?
+
+### Seit wann und wie lange: since und for
+
+Die Seite führt since und for mit dem present perfect ein, mit einem Lesestück als Umfrage der Schülerzeitung. Since nennt den Startpunkt (ein Zeitpunkt, since Tuesday), for nennt die Länge (ein Zeitraum, for three days). Auf dem Zeitstrahl ist es der Bogen des present perfect von einem Startpunkt bis now, mit dem Fähnchen since am Anfang und einer Klammer for über der Länge. Die Form ist have oder has plus die 3. Form des Verbs. Mit since und for steht das present perfect, nicht das simple present. Dazu die Frage How long have you …? Nicht hier, weil es spätere Seiten sind. Das present perfect progressive und die Zustandsverben, die keine Verlaufsform bilden. Verneinung und Fragen mit do und did gehören nicht dazu.
+
+### Was bis jetzt andauert: das present perfect progressive
+
+Die Seite führt das present perfect progressive ein, mit einem Lesestück als Chat. Es sagt, dass eine Tätigkeit in der Vergangenheit begann und bis jetzt andauert (oder gerade erst aufgehört hat). Auf dem Zeitstrahl wird der Bogen des present perfect zur Welle, die an einem Startpunkt beginnt und bis now läuft. Die Form ist have oder has plus been plus das Verb mit -ing. Dazu since und for für Startpunkt und Länge und die Frage How long have you been …? Im Unterschied zum present perfect stehen die Tätigkeit selbst und ihre Dauer im Vordergrund, nicht das Ergebnis. Nicht hier, weil es spätere Seiten sind. Die Zustandsverben, die keine Verlaufsform bilden, und alle Zeiten der Zukunft. Verneinung und Fragen mit do und did gehören nicht dazu.
+
+### Verben ohne Welle: Zustandsverben
+
+Die Seite führt die Zustandsverben ein, mit einem Lesestück als Dialog. Zustandsverben beschreiben einen Zustand wie Wissen, Meinung, Gefühl, Wunsch und Besitz (know, understand, believe, remember, like, love, hate, want, need, prefer, belong, own) und bilden meist keine Verlaufsform. Auf dem Zeitstrahl endet die Welle an einem Stoppschild. Dagegen stehen Tätigkeitsverben (read, play, make) in der Verlaufsform, wenn etwas gerade läuft. Wie bei since und for steht auch das present perfect einfach (I have known him for years). Think ist eine Tätigkeit (nachdenken: I am thinking about it) oder ein Zustand (meinen: I think it is good). Nicht hier, weil es spätere Seiten sind. Alle Zeiten der Zukunft. Verneinung und Fragen mit do und did gehören nicht dazu.
+
+## Pläne, Fahrpläne und Zeitpunkte
+
+### Verabredungen und Fahrpläne: present tenses für die Zukunft
+
+Die Seite zeigt, dass man mit dem present progressive über feste Verabredungen in der Zukunft spricht (I am meeting a friend on Friday) und mit dem simple present über Fahrpläne und feste Programme (The train leaves at nine). Auf dem Zeitstrahl ist die Verabredung ein Kalendereintrag über einer Welle, der Fahrplan eine Punktreihe von Abfahrten mit einer hervorgehobenen Uhrzeit. Will klingt dafür oft nach einer Vermutung oder einem spontanen Entschluss. Nicht hier, weil es spätere Seiten sind. Will be doing, will have done und alle Zeiten der Vergangenheit.
+
+### Wo bist du nächsten Samstag um acht? will be doing und will have done
+
+Die Seite führt will be doing (future progressive) und will have done (future perfect) ein. Beide sprechen über einen genauen Zeitpunkt in der Zukunft. Will be + Verb mit -ing sagt, was zu diesem Zeitpunkt gerade läuft. Will have + 3. Form sagt, was bis dahin schon fertig ist. Auf dem Zeitstrahl ist das erste eine Welle um den Zeitpunkt, das zweite ein Bogen von now bis zum Zeitpunkt. Signalwörter sind at ... tomorrow, this time next ... und by ..., by then. Nicht hier, weil es spätere Seiten sind. Das past perfect progressive, used to und die Übersicht aller Zeiten.
+
+## Alle Zeiten im Überblick
+
+### Wie lange es schon dauerte: das past perfect progressive
+
+Die Seite führt das past perfect progressive ein, mit einem Sachtext über den Bau des Eiffelturms als Lesestück. Es sagt, wie lange etwas vor einem Zeitpunkt in der Vergangenheit schon dauerte. Auf dem Zeitstrahl ist es eine Welle, die in der Vergangenheit bis zu einem Punkt reicht, mit einem Bogen darüber. Die Form ist had been plus das Verb mit -ing, für alle Personen gleich. Dazu die Signalwörter for, since und all day. Der Unterschied zum simple past und zum past perfect wird gezeigt. Nicht hier, weil es spätere Seiten oder andere Kapitel sind. Used to und would, die Übersicht aller Zeiten, Fragen und Verneinung mit did.
+
+### Was früher war: used to
+
+Die Seite führt used to ein, mit einem Sachtext über die Concorde als Lesestück. Used to erzählt von Gewohnheiten und Zuständen der Vergangenheit, die heute nicht mehr gelten. Auf dem Zeitstrahl ist es eine graue Punktreihe in der Vergangenheit, die vor now endet. Die Form ist used to plus Grundform des Verbs, die Verneinung didn't use to und die Frage Did … use to …? Dazu der Vergleich mit would, das nur für wiederholte Handlungen steht, nicht für Zustände. Nicht hier, weil es andere Seiten sind. Die Wendung be used to (an etwas gewöhnt sein), die Übersicht aller Zeiten, das past perfect progressive.
+
+### Welche Zeit passt? Alle Zeiten im Überblick
+
+Die Seite bringt alle Zeiten der Kapitel 1 bis 7 zusammen und zeigt, wie man in einem Text für jede Aussage die passende Zeit wählt. Werkzeug ist der ganze Zeitstrahl mit 13 Zeichen, eine Zeile je Zeit, und ein Poster mit Zeichen, Zeit und Beispiel. Der Sachtext über den Eiffelturm und die Concorde nutzt simple present, simple past, present perfect, past progressive, past perfect progressive, used to, going to und will. Drei Fragen führen zur Zeit, nämlich wo es liegt, welches Zeichen es ist und welches Signalwort im Satz steht. Nicht hier, weil sie in früheren Kapiteln stehen. Die Bildung der einzelnen Zeiten im Einzelnen, Fragen und Verneinung mit do und did, Passiv und indirekte Rede.
+
 ## Gehört nicht dazu
 
 - Fragen und Verneinung mit do und did (steht im Explainer „Sätze bauen“)
 - Bedingungssätze und indirekte Rede
 - Passiv
 - Aussprache von -s und -ed
-- Zeiten für Klasse 7 bis 10 (Erzählen, since und for, Zukunft mit Plänen, used to)
+- Zeiten für Klasse 9 und 10 (alle Zeiten im Überblick, past perfect progressive, used to und would)

@@ -1,0 +1,12 @@
+# Australien
+
+Die Seite stellt Australien vor. Australien ist ein Land und ein Kontinent, die Hauptstadt ist Canberra (nicht Sydney oder Melbourne, die größten Städte). Die meisten Menschen leben an der Küste, im Landesinneren ist es trocken. Die Aboriginal Australians und die Torres-Strait-Insulaner leben seit sehr langer Zeit dort. Die Aboriginal Australians sind kein einziges Volk, sondern viele Gruppen mit mehr als 250 Sprachen, die Torres-Strait-Insulaner sind ein eigenes Volk. Die Briten gründeten 1788 mit der First Fleet eine Strafkolonie in Sydney Cove, schlossen keine Verträge mit den Aboriginal Australians, und die Siedler nahmen den größten Teil des Landes. Ab 1886 nahmen Regierungen der Kolonien viele Aboriginal-Kinder aus ihren Familien, 2008 entschuldigte sich Premierminister Kevin Rudd im Bundesparlament dafür. 1901 vereinigten sich die sechs Kolonien. Ein Referendum 1967 und die Mabo-Entscheidung 1992 sind Schritte zu mehr Rechten. Der 26. Januar ist der Nationalfeiertag, für manche Aboriginal Australians ein Tag der Trauer. Geübt werden Lage auf der Karte, Zeitachse, zwei Sichtweisen auf dieselbe Geschichte und Sätze mit capital, coast und people. Typische Fehler sind Sydney als Hauptstadt, die Aboriginal Australians als ein Volk und Australien als leeres Land. Nicht hier: Politik der Gegenwart, Wirtschaft, einzelne Tierarten, Schulsystem.
+
+## Gehört nicht dazu
+
+- Großbritannien und London (eigener Explainer)
+- Schulsysteme mit Abschlüssen und Bewerbung
+- Politik als Thema für Diskussionen
+- Bevölkerungszahlen und Statistiken ohne Beleg
+
+Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

@@ -45,9 +45,9 @@ Sophie vergleicht London, Millbrook und Cornwall. Du lernst, das Leben in einer 
 
 ### Ellie vergleicht
 
-Bild: Links eine Straße mit hohen Häusern und zwei Autos, davor ein Mädchen mit rotem Pferdeschwanz. Rechts grüne Hügel, ein Baum und ein kleines Haus, davor ein Mädchen mit blonden Zöpfen. Bildunterschrift: Links Ellie (roter Pferdeschwanz) in der Stadt, rechts Sophie (blonde Zöpfe) auf dem Land.
+Bild: Links eine Straße mit hohen Häusern und zwei Autos, davor ein Mädchen mit rotem Pferdeschwanz. Rechts grüne Hügel, ein Baum und ein kleines Haus, davor ein Mädchen mit blonden Zöpfen. Bildunterschrift: Links Ellie in der Stadt, rechts Sophie auf dem Land.
 
-Auf der Seite davor hat Peter nach Cornwall gefragt. Beim Abendessen erzählt Ellie von London und von Millbrook. Sophie denkt nach. Sie kennt den Ort Millbrook und hat von London und von Cornwall gehört. Wo ist mehr los, und wo ist es ruhiger? Sophie vergleicht.
+Beim Abendessen erzählt Ellie von London und von Millbrook. Wo ist mehr los, und wo ist es ruhiger? Sophie vergleicht.
 
 - Aufgabe `stadt-start` (unten)
 

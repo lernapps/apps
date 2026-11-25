@@ -1,6 +1,6 @@
 # Beschreiben und vergleichen: Adjektive und Adverbien
 
-Die App erklärt Kindern im ersten und zweiten Lernjahr Englisch, wie sie Personen, Dinge und Handlungen beschreiben und vergleichen. Blaue Adjektiv-Anhänger hängen am Nomen oder nach be, orange Adverb-Anhänger mit -ly hängen am Verb. Eine Treppe zeigt die Steigerung. Gelernt werden die Stellung der Adjektive, die Steigerung (-er/-est, more/most, good und bad), Vergleiche mit than und as … as, Adverbien der Art und Weise (auch well, fast, hard), die Frage Adjektiv oder Adverb und die Steigerung der Adverbien. Beispiele stammen aus dem Alltag von Sophie, Ellie, Peter und Amir.
+Die App erklärt Kindern im ersten bis dritten Lernjahr Englisch, wie sie Personen, Dinge und Handlungen beschreiben und vergleichen. Blaue Adjektiv-Anhänger hängen am Nomen oder nach be, orange Adverb-Anhänger mit -ly hängen am Verb. Eine Treppe zeigt die Steigerung. Gelernt werden die Stellung der Adjektive, die Steigerung (-er/-est, more/most, good und bad), Vergleiche mit than und as … as, Adverbien der Art und Weise (auch well, fast, hard), die Frage Adjektiv oder Adverb und die Steigerung der Adverbien. Dazu kommen in Stufe 7-8 Adjektive nach Sinnesverben, die Stellung der Adverbien im Satz, Gradadverbien (very, quite, too), das Stützwort one und Adjektive für Gruppen von Menschen (the rich). Beispiele stammen aus dem Alltag von Sophie, Ellie, Peter und Amir.
 
 ## Beschreiben und vergleichen
 
@@ -34,9 +34,40 @@ Die Seite lehrt die Entscheidung zwischen Adjektiv und Adverb. Beschreibt das Wo
 
 Die Seite führt die Steigerung der Adverbien ein. Kurze Adverbien wie fast, hard, early und late steigern mit -er und -est (fast – faster – the fastest, early – earlier – the earliest). Adverbien auf -ly steigern mit more und most (carefully – more carefully – the most carefully). well und badly haben eigene Formen (well – better – the best, badly – worse – the worst). Mit than werden zwei Handlungen verglichen (Peter runs faster than Amir). Nicht hier, weil es spätere Seiten sind. Die Stellung der Adverbien im Satz und Gradadverbien.
 
+## Genauer beschreiben
+
+### Das brauchst du hier
+
+Die Seite wiederholt nur die Wortstellung im Aussagesatz, also Subjekt – Verb – Objekt und Ortsangaben vor Zeitangaben. Neue Inhalte gibt es nicht, auch keine Übung.
+
+### Es schmeckt gut: Adjektive nach look, sound, feel und taste
+
+Die Seite lehrt, dass nach den Verben look, sound, feel, taste und smell das Adjektiv steht und das Subjekt beschreibt (The soup tastes sweet.), wie nach be. Beschreibt das Wort dagegen eine Handlung, steht das Adverb (She looks at the soup carefully.). Typische Fehler sind tastes well, looks happily und feels badly. Nicht hier, weil es spätere Seiten sind. Die Stellung der Adverbien, Gradadverbien, one und substantivierte Adjektive.
+
+### Wohin mit dem Adverb? Die Stellung im Satz
+
+Die Seite lehrt die Stellung der Adverbien der Art und Weise im Aussagesatz. Sie stehen am Anfang (mit Komma), in der Mitte vor dem Vollverb oder nach dem ersten Hilfsverb (can easily fix, had quietly come) oder am Ende nach dem Objekt. Zwischen Verb und Objekt stehen sie nie (nicht opened carefully the door). Nicht hier, weil es spätere Seiten sind. Gradadverbien, one und substantivierte Adjektive.
+
+### Wie sehr? Der Regler für very, quite und too
+
+Die Seite lehrt die Gradadverbien quite, rather, very, extremely und too. Sie stehen vor einem Adjektiv oder einem Adverb (very friendly, very quietly), nicht vor einem Verb (nicht I very like it, sondern I like it very much). too heißt zu, also mehr als gut. Nicht hier, weil es spätere Seiten sind. one und substantivierte Adjektive, Steigerung mit Gradadverbien.
+
+## Adjektive ohne Nomen
+
+### Das brauchst du hier
+
+Die Seite wiederholt nur die Artikel a, an und the. Neue Inhalte gibt es nicht, auch keine Übung.
+
+### Nicht noch einmal das Nomen: one und ones
+
+Die Seite lehrt das Stützwort one (Einzahl) und ones (Mehrzahl), das ein schon genanntes zählbares Nomen ersetzt, damit es nicht wiederholt wird (the red one, a big one, the old ones). Der Adjektiv-Anhänger bleibt vor one hängen. Nach a oder einem Adjektiv steht one, nie ein einzelnes Adjektiv (nicht I like the red). Nicht hier, weil es spätere Seiten sind. Substantivierte Adjektive wie the rich.
+
+### The rich, the elderly: Adjektive für Gruppen von Menschen
+
+Die Seite lehrt, dass ein Adjektiv mit the ohne Nomen eine ganze Gruppe von Menschen meint (the rich, the poor, the young, the old, the elderly). Es steht in der Mehrzahl mit dem Verb in der Mehrzahl (The elderly are alone), bekommt kein -s und steht nicht mit a. Nicht hier, weil es spätere Seiten sind. Nationalitäten und abstrakte Begriffe wie the unknown. Der Artikel der Schulzeitung ist erfunden, Zahlen und Namen sind ausgedacht.
+
 ## Gehört nicht dazu
 
 - Häufigkeitsadverbien (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Wörter zum Beschreiben von Personen als Wortschatz (steht im Explainer „Alltag“)
-- Adjektive nach Sinnesverben, Stellung der Adverbien im Satz und Gradadverbien (spätere Version)
-- Das Stützwort one und Adjektive ohne Nomen wie the rich (spätere Version)
+- Steigerung mit Gradadverbien (much better), Adjektivreihenfolge und Nationalitäten als Adjektive (spätere Version)

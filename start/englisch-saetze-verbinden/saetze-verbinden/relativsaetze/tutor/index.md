@@ -45,7 +45,7 @@ Peter fragt: Which boy? Du lernst, mit who, which, that und whose eine Person od
 
 ### Welcher Junge?
 
-Bild: Im Klassenzimmer hängt ein Brett mit zwei weißen Streifen: „Amir is the boy.“ und „He sits next to Sophie.“ Darunter hängen drei Karten: who, which und whose. Peter fragt in einer Sprechblase: „Which boy?“ Von links stehen Sophie, Amir, Peter und Ellie. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Amir (Brille), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz) und Mr Hill (graue Haare). Amir hat „Amir is the boy.“ aufgehängt, Ellie den zweiten Streifen. Peter fragt.
+Bild: Im Klassenzimmer hängt ein Brett mit zwei weißen Streifen: „Amir is the boy.“ und „He sits next to Sophie.“ Darunter hängen drei Karten: who, which und whose. Peter fragt in einer Sprechblase: „Which boy?“ Von links stehen Sophie, Amir, Peter und Ellie. Rechts steht Mr Hill. Bildunterschrift: Amir hat „Amir is the boy.“ aufgehängt, Ellie den zweiten Streifen. Peter fragt.
 
 Amir hat den Streifen „Amir is the boy.“ aufgehängt. Das heißt: Amir ist der Junge. Peter fragt: „Which boy?“ Welcher Junge? Der Streifen sagt nicht, welcher Junge gemeint ist. Ellie hat einen zweiten Streifen: „He sits next to Sophie.“ Er sitzt neben Sophie.
 
@@ -53,25 +53,24 @@ Amir hat den Streifen „Amir is the boy.“ aufgehängt. Das heißt: Amir ist d
 
 **Das kannst du danach:** Du sagst genauer, welche Person oder Sache du meinst. Dazu hängst du mit who, which, that oder whose einen zweiten Streifen an.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- boy | Junge
-- girl | Mädchen
-- man | Mann
-- friend | Freund / Freundin
-- teacher | Lehrer / Lehrerin
-- mother | Mutter
-- sit | sitzen
-- next to | neben
-- live | wohnen
-- teach | unterrichten
-- sing | singen
-- jacket | Jacke
-- bus | Bus
-- funny | lustig
-- nice | nett
-- small | klein
-- red / blue / green / yellow / purple | rot / blau / grün / gelb / lila
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- boy – Junge
+- girl – Mädchen
+- man – Mann
+- friend – Freund / Freundin
+- teacher – Lehrer / Lehrerin
+- mother – Mutter
+- sit – sitzen
+- next to – neben
+- live – wohnen
+- teach – unterrichten
+- sing – singen
+- jacket – Jacke
+- bus – Bus
+- funny – lustig
+- nice – nett
+- small – klein
+- red / blue / green / yellow / purple – rot / blau / grün / gelb / lila
 
 ### Die Karte ersetzt das Pronomen
 
@@ -117,9 +116,9 @@ Nächste Woche ist Elternabend, und Mr Hill schreibt einen Zettel für die Tür.
 - Aufgabe: Welcher Streifen sagt genauer, welcher Junge gemeint ist?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ He sits next to Sophie – Der Streifen sagt etwas über den Jungen. So erfährt Peter, welcher Junge gemeint ist.
   - ✗ We play football – Dieser Streifen sagt nichts über den Jungen. Er sagt, was wir tun.
   - ✗ It is red – It steht für eine Sache. Der Streifen sagt nichts über einen Jungen.
+  - ✓ He sits next to Sophie – Der Streifen sagt etwas über den Jungen. So erfährt Peter, welcher Junge gemeint ist.
 - Lösung: He sits next to Sophie
 - Erklärung: Ein zweiter Streifen kann sagen, welche Person gemeint ist.
 - Link: [../?via=tutor#relativ-start](../?via=tutor#relativ-start)

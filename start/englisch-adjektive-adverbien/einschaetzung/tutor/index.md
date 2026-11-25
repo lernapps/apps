@@ -53,6 +53,21 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Blau oder orange? Adjektiv oder Adverb“ · Aufgaben A9, A10
 - „Die Treppe, zweite Seite: Adverbien steigern“ · Aufgaben A11, A12
 
+### Kapitel „Genauer beschreiben“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Es schmeckt gut: Adjektive nach look, sound, feel und taste“ · Aufgaben A13, A14
+- „Wohin mit dem Adverb? Die Stellung im Satz“ · Aufgaben A15, A16
+- „Wie sehr? Der Regler für very, quite und too“ · Aufgaben A17, A18
+
+### Kapitel „Adjektive ohne Nomen“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Nicht noch einmal das Nomen: one und ones“ · Aufgaben A19, A20
+- „The rich, the elderly: Adjektive für Gruppen von Menschen“ · Aufgaben A21, A22
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe adjektive-platz der Seite „Der blaue Anhänger: Adjektive“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -67,3 +82,13 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A10: Aufgabe adjektiv-oder-adverb-bilden der Seite „Blau oder orange? Adjektiv oder Adverb“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A11: Aufgabe adverbien-steigern-wahl der Seite „Die Treppe, zweite Seite: Adverbien steigern“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A12: Aufgabe adverbien-steigern-bilden der Seite „Die Treppe, zweite Seite: Adverbien steigern“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A13: Aufgabe sinnesverben-bilden der Seite „Es schmeckt gut: Adjektive nach look, sound, feel und taste“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A14: Aufgabe sinnesverben-korrektur der Seite „Es schmeckt gut: Adjektive nach look, sound, feel und taste“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A15: Aufgabe adverbien-stellung-bilden der Seite „Wohin mit dem Adverb? Die Stellung im Satz“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A16: Aufgabe adverbien-stellung-korrektur der Seite „Wohin mit dem Adverb? Die Stellung im Satz“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A17: Aufgabe gradadverbien-bilden der Seite „Wie sehr? Der Regler für very, quite und too“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A18: Aufgabe gradadverbien-korrektur der Seite „Wie sehr? Der Regler für very, quite und too“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A19: Aufgabe stuetzwort-one-bilden der Seite „Nicht noch einmal das Nomen: one und ones“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A20: Aufgabe stuetzwort-one-korrektur der Seite „Nicht noch einmal das Nomen: one und ones“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A21: Aufgabe substantivierte-adjektive-bilden der Seite „The rich, the elderly: Adjektive für Gruppen von Menschen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A22: Aufgabe substantivierte-adjektive-korrektur der Seite „The rich, the elderly: Adjektive für Gruppen von Menschen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

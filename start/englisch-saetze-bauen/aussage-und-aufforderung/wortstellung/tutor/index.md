@@ -47,7 +47,7 @@ Sophie erzählt, was sie am Montag tut. Du lernst, einen englischen Satz in der 
 
 Bild: Sophie, Ellie, Amir und Peter stehen nebeneinander im Klassenzimmer. Sophie spricht in einer Sprechblase: „I eat lunch at school on Friday.“. Bildunterschrift: Von links: Sophie (Zöpfe) spricht, daneben Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke).
 
-Sophie (11) wohnt bei der Familie Parker, Ellie (11) ist ihre Gastschwester. Mr Hill ist ihr Englischlehrer. Sophie sagt, was sie am Freitag in der Schule isst: „I eat lunch at school on Friday.“
+Sophie sagt, was sie am Freitag in der Schule isst: „I eat lunch at school on Friday.“
 
 - Aufgabe `wortstellung-start` (unten)
 
@@ -71,29 +71,28 @@ Klassenzimmer-Poster · Die Satzkarten:
 
 **Subjekt, Verb, Objekt, Ort, Zeit.** Sophie studies English at home on Monday. Der Ort steht vor der Zeit. Im Deutschen darfst du die Wörter oft umstellen, im Englischen ist die Reihenfolge fester. Bei he, she und it hängt ein **s** am Verb: plays.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- play | spielen
-- eat | essen
-- watch | anschauen
-- read | lesen
-- teach | unterrichten
-- study | lernen
-- English | Englisch
-- football | Fußball
-- pizza | Pizza
-- lunch | Mittagessen
-- a book | ein Buch
-- a film | ein Film
-- in the park | im Park
-- at home | zu Hause
-- at school | in der Schule
-- in the classroom | im Klassenzimmer
-- on Monday | am Montag
-- on Friday | am Freitag
-- on Saturday | am Samstag
-- on Sunday | am Sonntag
-- every day | jeden Tag
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- play – spielen
+- eat – essen
+- watch – anschauen
+- read – lesen
+- teach – unterrichten
+- study – lernen
+- English – Englisch
+- football – Fußball
+- pizza – Pizza
+- lunch – Mittagessen
+- a book – ein Buch
+- a film – ein Film
+- in the park – im Park
+- at home – zu Hause
+- at school – in der Schule
+- in the classroom – im Klassenzimmer
+- on Monday – am Montag
+- on Friday – am Freitag
+- on Saturday – am Samstag
+- on Sunday – am Sonntag
+- every day – jeden Tag
 
 ### Übung
 

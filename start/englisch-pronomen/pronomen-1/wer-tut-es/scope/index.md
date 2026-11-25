@@ -4,7 +4,6 @@ Die Seite führt die erste Spalte der Pronomen-Tabelle ein, „Wer tut es?“. P
 
 ## Gehört nicht dazu
 
-- mine, yours, myself und each other (kommen in Kapitel 2)
 - this, that, some, any und ihre Zusammensetzungen
 - Relativpronomen
 - die Formen von to be

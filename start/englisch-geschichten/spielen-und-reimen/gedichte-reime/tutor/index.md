@@ -41,13 +41,13 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Reime hören, finden und sprechen“
 
-Mr Hill schließt die Geschichtenwoche mit einem Reim ab. Du lernst, Reimwörter zu finden und kurze Verse laut zu sprechen.
+Du lernst, Reimwörter zu finden und kurze Verse laut zu sprechen.
 
-### Ein Reim zum Wochenende
+### Ein Reim zum Schluss
 
-Bild: In der Geschichtenecke hängen an der Wand links ein Berg mit vier Fähnchen und rechts eine Tafel mit den vier Feldern who, where, when und what. Mr Hill steht rechts und sagt in einer Sprechblase: „Time to rhyme!“ Davor stehen Sophie, Peter, Ellie und Amir. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). An der Wand hängen der Geschichtenberg und die story map.
+Bild: In der Geschichtenecke hängen an der Wand links ein Berg mit vier Fähnchen und rechts eine Tafel mit den vier Feldern who, where, when und what. Mr Hill steht rechts und sagt in einer Sprechblase: „Time to rhyme!“ Davor stehen Sophie, Peter, Ellie und Amir. Bildunterschrift: An der Wand hängen der Geschichtenberg und die story map.
 
-Es ist Freitag, die Geschichtenwoche ist fast vorbei. Mr Hill schließt sie mit einem **Reim** ab (englisch: rhyme). Zwei Wörter reimen sich, wenn sie am Ende gleich **klingen**. Mr Hill sagt das Wort star. Amir sucht ein Reimwort.
+Mr Hill spricht einen **Reim** (englisch: rhyme). Zwei Wörter reimen sich, wenn sie am Ende gleich **klingen**. Mr Hill sagt das Wort star. Amir sucht ein Reimwort.
 
 - Aufgabe `reime-start` (unten)
 
@@ -55,11 +55,10 @@ Es ist Freitag, die Geschichtenwoche ist fast vorbei. Mr Hill schließt sie mit 
 
 Diese Wörter sind neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- rhyme | Reim
-- verse | Vers, hier eine Zeile eines Gedichts
-- rhythm | Rhythmus
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- rhyme – Reim
+- verse – Vers, hier eine Zeile eines Gedichts
+- rhythm – Rhythmus
 
 ### Reimwörter finden und Verse sprechen
 
@@ -93,18 +92,18 @@ Verse sprichst du laut. Hör zuerst zu und sprich dann ganze Verse nach, nicht e
 
 - Aufgabe `reime-schreiben` (unten)
 
-### Rückblick auf das Kapitel und die Woche
+### Rückblick auf das Kapitel und die App
 
 **Das Kapitel:** Du schreibst einen Dialog in Skriptform, mit Sprecher, Doppelpunkt und kurzen Sätzen. Du findest Reimwörter und sprichst Verse. Reime richten sich nach dem Klang, die Schreibung hilft oft.
 
-**Die Woche im Rückblick:**
+**Die App im Rückblick:**
 
-- Montag: Du liest und füllst die story map.
-- Dienstag und Mittwoch: Du erzählst Bilder.
-- Donnerstag: Du schreibst eine eigene Geschichte.
-- Freitag: Du spielst eine Szene und sprichst einen Reim.
+- Du liest und füllst die story map.
+- Du erzählst Bilder.
+- Du schreibst eine eigene Geschichte.
+- Du spielst eine Szene und sprichst einen Reim.
 
-Die Geschichtenwoche ist geschafft.
+Das hast du geschafft.
 
 ### Aufgabe reime-start
 

@@ -39,7 +39,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du hier“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/englisch/c/personalpronomen/, https://lernapps.net/apps/map/englisch/c/simple-present/, https://lernapps.net/apps/map/englisch/c/will-future/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/englisch/c/personalpronomen/, https://lernapps.net/apps/map/englisch/c/simple-present/, https://lernapps.net/apps/map/englisch/c/will-future/
 
 Pronomen, simple present und will noch einmal kurz, bevor Mr Hill die Satzstreifen-Wand aufhängt.
 
@@ -57,7 +57,7 @@ Nicht sicher? Hier kannst du es nachlesen: [Personalpronomen](https://lernapps.n
 
 ### Die Satzstreifen-Wand
 
-Mr Hill hängt in der Millbrook School ein Brett an die Rückwand des Klassenzimmers: die **Satzstreifen-Wand**. **Sophie** (11) kommt aus Deutschland und wohnt bei den Parkers, **Ellie** (11) ist ihre Gastschwester, **Peter** (9) Ellies kleiner Bruder, der auch in die Millbrook School geht, **Amir** (11) ein Freund. **Mr Hill** ist ihr Englischlehrer. Auf jeden Streifen kommt ein ganzer Satz. Mit bunten Karten verbinden die Kinder die Streifen.
+Mr Hill hängt ein Brett an die Rückwand des Klassenzimmers: die **Satzstreifen-Wand**. Auf jeden Streifen kommt ein ganzer Satz. Mit bunten Karten verbinden die Kinder die Streifen.
 
 Bild: Drei weiße Streifen untereinander. Auf dem ersten steht „I play football every day.“, auf dem zweiten „Ellie plays football on Saturday.“ und auf dem dritten „We will win tomorrow.“ Rechts daneben stehen kleine Hinweise: ich, sie mit -s und will. Bildunterschrift: Ein Satz, ein Streifen. Jeder Streifen hat ein Subjekt und ein Verb.
 

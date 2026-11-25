@@ -45,9 +45,9 @@ In der Mittagspause erzählen Kinder von ihren Familien. Du lernst zu beschreibe
 
 ### Familien in der Klasse
 
-Bild: Ein Junge mit Brille und ein Mädchen mit rotem Pferdeschwanz stehen links und rechts neben einem Plakat mit einem Haus und mehreren Personen. Bildunterschrift: Von links: Amir (Brille, schwarze Locken) und Ellie (roter Pferdeschwanz).
+Bild: Ein Junge mit Brille und ein Mädchen mit rotem Pferdeschwanz stehen links und rechts neben einem Plakat mit einem Haus und mehreren Personen. Bildunterschrift: Amir und Ellie.
 
-Mittagspause in London. Die Kinder sitzen im Park, Peter ist nicht dabei. Mr Hill fragt nach ihren Familien. Ellie hat Familie in Cornwall, Sophie wohnt bei den Parkers, und Amir erzählt, dass bei ihm zu Hause zwei Sprachen gesprochen werden. Mr Hill sagt: „The grandparents of many children in our class moved to a new town many years ago.“ In jeder Familie ist es anders.
+In der Mittagspause fragt Mr Hill nach den Familien der Kinder. Mr Hill sagt: „The grandparents of many children in our class moved to a new town many years ago.“ In jeder Familie ist es anders.
 
 - Aufgabe `viel-start` (unten)
 
@@ -61,13 +61,12 @@ Im Vereinigten Königreich leben Menschen mit vielen verschiedenen Herkünften. 
 
 Mit **live in** sagst du, wo jemand wohnt: My cousin lives in a flat. Mit **come from** sagst du, woher jemand oder die Familie kommt: Her family comes from a village. Nach **many different** und nach **two, three …** steht der Plural: many different animals, three books (nicht: three book). In Fragen mit **does** steht das Verb ohne -s: What does your sister play? Sag **people from many places**.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- grandparents | Großeltern
-- moved | zog um / zogen um (von move)
-- Welsh | Walisisch
-- Scottish Gaelic | schottisches Gälisch
-- Irish | Irisch
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- grandparents – Großeltern
+- moved – zog um / zogen um (von move)
+- Welsh – Walisisch
+- Scottish Gaelic – schottisches Gälisch
+- Irish – Irisch
 
 ### Übung
 

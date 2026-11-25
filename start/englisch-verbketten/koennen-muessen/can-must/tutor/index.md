@@ -41,20 +41,19 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Can und must: Lok ohne Kupplung“
 
-Sophie liest Schilder im Flur der Millbrook School. Du lernst, wie can, must und needn't vor einem zweiten Verb stehen und was sie bedeuten.
+Im Flur hängen zwei Schilder. Du lernst, wie can, must und needn't vor einem zweiten Verb stehen und was sie bedeuten.
 
 ### Zwei Schilder im Flur
 
-Bild: Sophie, Peter und Amir stehen im Flur der Millbrook School. An der Wand hängen zwei Schilder. Auf dem einen steht "You mustn't run here.", auf dem anderen "You must wear a uniform.". Bildunterschrift: Von links nach rechts: Sophie (mit den Zöpfen), Peter (der Kleine) und Amir (mit Brille). An der Wand hängen zwei Schilder.
+Bild: Drei Kinder stehen im Flur einer Schule. An der Wand hängen zwei Schilder. Auf dem einen steht "You mustn't run here.", auf dem anderen "You must wear a uniform.". Bildunterschrift: Drei Kinder im Flur. An der Wand hängen zwei Schilder.
 
-Sophie (11) läuft an ihrem ersten Tag durch den Flur der Millbrook School. Peter (9) rennt an ihr vorbei. Er ist der kleine Bruder von Ellie Parker (11), Sophies Gastschwester. Amir (11) zeigt auf die zwei Schilder an der Wand. Auf den Schildern stehen Wörter für etwas, das man tut, zum Beispiel *run* (rennen) und *wear* (tragen). Solche Wörter heißen Verben. Die Wörter in der Tabelle brauchst du in den Übungen.
+Im Flur hängen zwei Schilder. Peter rennt vorbei, Amir zeigt auf die Schilder. Auf den Schildern stehen Wörter für etwas, das man tut, zum Beispiel *run* (rennen) und *wear* (tragen). Solche Wörter heißen Verben. Die Wörter in der Tabelle brauchst du in den Übungen.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- run | rennen
-- wear | tragen
-- uniform | Uniform
-- coat | Mantel
+Vokabeln (Englisch – Deutsch): Neue Wörter
+- run – rennen
+- wear – tragen
+- a uniform – Uniform
+- a coat – Mantel
 
 **Das kannst du danach:** Mit can, can't, must, mustn't und needn't sagen, was jemand kann, was erlaubt oder verboten ist und was jemand tun muss oder nicht tun muss. Du siehst auch, wie das zweite Verb danach steht.
 
@@ -107,7 +106,7 @@ Im Deutschen verwechselt man „nicht müssen“ leicht mit „nicht dürfen“.
 
 ### Wie es weitergeht
 
-Sophie kennt jetzt die Regeln im Flur. Ellie fragt sie, was sie am Wochenende tun könnte. Auf der nächsten Seite sagst du, was möglich ist, was jemand sollte und was vielleicht passiert.
+Die Regeln im Flur sind klar. Jetzt geht es um das Wochenende. Auf der nächsten Seite sagst du, was möglich ist, was jemand sollte und was vielleicht passiert.
 
 ### Aufgabe can-must-start
 

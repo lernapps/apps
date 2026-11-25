@@ -70,26 +70,25 @@ Klassenzimmer-Poster · Der Helfer did:
 
 Einige Verben haben eine eigene Form, zum Beispiel ate (von eat) und went (von go). Auch dann geht das Verb nach did in die Grundform: Did Sophie go home? Nicht „went“. Die Kurzantwort nimmt did mit: Yes, I did. No, he didn't.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- play – played | spielen – spielte
-- watch – watched | anschauen – schaute an
-- study – studied | lernen – lernte
-- eat – ate | essen – aß
-- go – went | gehen – ging
-- yesterday | gestern
-- what | was
-- football | Fußball
-- pizza | Pizza
-- film | Film
-- English | Englisch
-- home | nach Hause
-- walk – walked | gehen – ging zu Fuß
-- at school | in der Schule
-- at home | zu Hause
-- a film | ein Film
-- after school | nach der Schule
-- did not | nicht (Vergangenheit)
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- play – played – spielen – spielte
+- watch – watched – anschauen – schaute an
+- study – studied – lernen – lernte
+- eat – ate – essen – aß
+- go – went – gehen – ging
+- yesterday – gestern
+- what – was
+- football – Fußball
+- pizza – Pizza
+- film – Film
+- English – Englisch
+- home – nach Hause
+- walk – walked – gehen – ging zu Fuß
+- at school – in der Schule
+- at home – zu Hause
+- a film – ein Film
+- after school – nach der Schule
+- did not – nicht (Vergangenheit)
 
 ### Übung
 
@@ -113,7 +112,7 @@ Klassenzimmer-Poster · Wörter dieser Seite:
 
 ### Wie es weitergeht
 
-Ellie hat gestern eine Zeichnung von der Millbrook School gemalt und zeigt sie Sophie. Sie sagt etwas mit einer kleinen Frage am Ende des Satzes. Wie sie gebaut ist, zeigt die nächste Seite.
+Ellie zeigt Sophie ihre Zeichnung und sagt etwas mit einer kleinen Frage am Ende des Satzes. Wie sie gebaut ist, zeigt die nächste Seite.
 
 ### Aufgabe did-start
 

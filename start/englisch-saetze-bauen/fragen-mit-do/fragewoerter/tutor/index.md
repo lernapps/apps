@@ -73,28 +73,27 @@ Klassenzimmer-Poster · Die sieben Fragewörter:
 
 **Fragewort, Helfer, Subjekt, Verb.** Das Verb geht ohne Endung: What does Ellie read? Bei be (is, are) steht be gleich hinter dem Fragewort: Who is he?
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- play | spielen
-- live | wohnen
-- here | hier
-- eat | essen
-- like | mögen
-- watch | anschauen
-- read | lesen
-- football | Fußball
-- tea | Tee
-- pizza | Pizza
-- film | Film
-- book | Buch
-- at school | in der Schule
-- in the park | im Park
-- on Friday | am Freitag
-- on Sunday | am Sonntag
-- this | dieses / das
-- at home | zu Hause
-- every day | jeden Tag
-- happy | froh
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- play – spielen
+- live – wohnen
+- here – hier
+- eat – essen
+- like – mögen
+- watch – anschauen
+- read – lesen
+- football – Fußball
+- tea – Tee
+- pizza – Pizza
+- film – Film
+- book – Buch
+- at school – in der Schule
+- in the park – im Park
+- on Friday – am Freitag
+- on Sunday – am Sonntag
+- this – dieses / das
+- at home – zu Hause
+- every day – jeden Tag
+- happy – froh
 
 ### Übung
 

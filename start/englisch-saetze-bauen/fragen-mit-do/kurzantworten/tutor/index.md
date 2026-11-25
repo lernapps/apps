@@ -69,21 +69,19 @@ Klassenzimmer-Poster · Frage und Kurzantwort:
 
 **Yes oder No, Subjekt, Helfer.** Die Antwort wiederholt den Helfer der Frage. Bei Fragen mit **be** wiederholst du is oder are. Aus Ellie wird she, aus Peter und Amir wird they.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- yes | ja
-- eat | essen
-- Mr Hill | Mr Hill (der Englischlehrer)
-- no | nein
-- like | mögen
-- play | spielen
-- tea | Tee
-- pizza | Pizza
-- football | Fußball
-- happy | froh
-- tired | müde
-- isn't | ist nicht
-- aren't | sind nicht
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- True – ja
+- eat – essen
+- False – nein
+- like – mögen
+- play – spielen
+- tea – Tee
+- pizza – Pizza
+- football – Fußball
+- happy – froh
+- tired – müde
+- isn't – ist nicht
+- aren't – sind nicht
 
 ### Übung
 

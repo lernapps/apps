@@ -45,7 +45,7 @@ Sophie schreibt am Abend ihren Tag in ein Tagebuch. Du lernst, einen Tagebuchein
 
 ### Ein Tagebuch für den Abend
 
-Bild: In der Geschichtenecke hängen an der Wand zwei Tafeln. Links ein Berg mit vier nummerierten Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Sophie fragt in einer Sprechblase: „A diary?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). An der Wand hängen der Geschichtenberg und die story map.
+Bild: In der Geschichtenecke hängen an der Wand zwei Tafeln. Links ein Berg mit vier nummerierten Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Sophie fragt in einer Sprechblase: „A diary?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: An der Wand hängen der Geschichtenberg und die story map.
 
 Sophie soll am Abend ein Tagebuch schreiben. Ein **diary** ist ein Tagebuch. Mr Hill schreibt drei Sätze an die Tafel. Die Kinder prüfen, welcher in einen Tagebucheintrag über den Tag passt.
 
@@ -55,15 +55,14 @@ Sophie soll am Abend ein Tagebuch schreiben. Ein **diary** ist ein Tagebuch. Mr 
 
 Dieses Wort ist neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- diary | Tagebuch
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- diary – Tagebuch
 
 ### So schreibt Sophie ihren Eintrag
 
 Sophie macht erst einen kleinen Berg über ihren Tag. Die vier Fähnchen heißen morning, lunch, best moment und evening. Sie sind wie beginning, build-up, climax und ending bei einer Geschichte, nur für einen Tag. Der best moment ist der Gipfel. Daraus schreibt sie ihren Eintrag.
 
-Bild: Ein kleiner Berg über einen Tag mit vier nummerierten Fähnchen: 1 morning, 2 lunch, 3 best moment am Gipfel und 4 evening. Darunter stehen vier Stichwörter, je eines zu jedem Fähnchen. Bildunterschrift: Sophies Berg über ihren Donnerstag. Der Gipfel ist der beste Moment des Tages.
+Bild: Ein kleiner Berg über einen Tag mit vier nummerierten Fähnchen: 1 morning, 2 lunch, 3 best moment am Gipfel und 4 evening. Darunter stehen vier Stichwörter, je eines zu jedem Fähnchen. Bildunterschrift: Sophies Berg über ihren Tag. Der Gipfel ist der beste Moment des Tages.
 
 Sophies Eintrag:
 
@@ -99,9 +98,9 @@ Sophie
 
 - Aufgabe `tagebuch-schreiben` (unten)
 
-### Rückblick und Freitag
+### Rückblick und Ausblick
 
-Das war dein Donnerstag in der Geschichtenwoche. Du hast eine Geschichte geplant und geschrieben, sie fortgesetzt oder anders enden lassen und einen Tagebucheintrag verfasst. Mr Hill sagt: „Tomorrow is Friday.“ Am Freitag spielen die Kinder eine Szene und sagen einen Reim auf.
+Du hast eine Geschichte geplant und geschrieben, sie fortgesetzt oder anders enden lassen und einen Tagebucheintrag verfasst. Auf der nächsten Seite spielst du eine Szene und sagst einen Reim auf.
 
 ### Aufgabe tagebuch-start
 

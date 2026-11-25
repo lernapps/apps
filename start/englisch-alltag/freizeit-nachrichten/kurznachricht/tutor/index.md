@@ -45,7 +45,7 @@ Amir lädt zu seinem Geburtstag ein, und Sophie antwortet. Du schreibst eine kur
 
 ### Amir lädt ein
 
-Bild: Eine Einladungskarte mit der Überschrift Party invitation und fünf Feldern, jedes mit einer kurzen Angabe. Bildunterschrift: Die Einladung von Amir (Brille, schwarze Locken) an Sophie, Ellie und Peter.
+Bild: Eine Einladungskarte mit der Überschrift Party invitation und fünf Feldern, jedes mit einer kurzen Angabe. Bildunterschrift: Amirs Einladung.
 
 Amir bringt eine Einladung (invitation) zu seiner Geburtstagsparty mit. **Dear** heißt „liebe/lieber“, **Love,** heißt „liebe Grüße“. Sophie liest die Karte genau: In fünf Feldern steht, was sie wissen muss.
 
@@ -57,12 +57,11 @@ Amir bringt eine Einladung (invitation) zu seiner Geburtstagsparty mit. **Dear**
 
 Eine Einladung hat einen **Bauplan**. Sie beginnt mit einer Anrede (Hi Peter,). Dann folgen **Who** (wer lädt ein?), **What** (was ist es?), **When** (wann?) und **Where** (wo?). Bei **Answer** bittest du um eine Antwort. Am Ende steht ein Gruß mit deinem Namen. Eine **Zusage** (ja) und eine **Absage** (nein) sind kurz. Eine **Notiz** (note) lässt Wörter weg: Wer weg ist, schreibt nur das Wichtige. Mit **can** sagst du „kann“, mit **can't** (oder **cannot**) „kann nicht“.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- invitation | Einladung
-- I'd love to come. | Ich komme sehr gern.
-- Back at six. | Bin um sechs zurück.
-- buy | kaufen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- invitation – Einladung
+- I'd love to come. – Ich komme sehr gern.
+- Back at six. – Bin um sechs zurück.
+- buy – kaufen
 
 **Merke: Merke**
 
@@ -193,7 +192,7 @@ Sophie sagt Amir zu und schreibt dann ihren Eltern: „Amir hat uns zu seiner Pa
 - Die Lernenden hören das Original, nehmen sich auf und bewerten selbst, wie ihre Aussprache klingt. Du kannst weder das Original noch die Aufnahme hören. Frage, welche Laute schwer waren, und beschreibe, wie man sie bildet.
 - Sätze:
 1. Audio → I'm in the garden with Ellie.
-2. Audio → Please write back tomorrow.
+2. Audio → Please write back soon.
 3. Audio → That sounds great. See you on Saturday.
 - Tipp der App: Hör den Satz zuerst. Sprich dann langsam nach.
 - Link: [../?via=tutor#kurznachricht-nachsprechen](../?via=tutor#kurznachricht-nachsprechen)

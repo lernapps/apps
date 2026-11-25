@@ -45,9 +45,9 @@ Sophie zeigt ihren Eltern Ellies Tag bei den Parkers. Du beschreibst Ellies Tag 
 
 ### Ellies Tag in sechs Bildern
 
-Bild: Sechs Bilder in zwei Reihen. Ein Mädchen mit rotem Pferdeschwanz macht in jedem Bild etwas anderes. Unter jedem Bild steht eine Uhrzeit. Bildunterschrift: Ellies Tag als Bildleiste: Ellie hat den roten Pferdeschwanz. Unter jedem Bild steht die Uhrzeit.
+Bild: Sechs Bilder in zwei Reihen. Ein Mädchen mit rotem Pferdeschwanz macht in jedem Bild etwas anderes. Unter jedem Bild steht eine Uhrzeit. Bildunterschrift: Ellies Tag als Bildleiste. Unter jedem Bild steht die Uhrzeit.
 
-Sophie schreibt Mum and Dad, wie ein Tag bei den Parkers aussieht. Dafür zeichnet sie Ellies Tag als Bildleiste mit sechs Bildern. Unter jedem Bild steht die Uhrzeit. Die Bilder zeigen: **have tea**, **get up** (aufstehen), **do homework** (Hausaufgaben machen), **have lunch** (zu Mittag essen), **go to school** (zur Schule gehen) und **have breakfast** (frühstücken). Bei den Parkers ist tea das Abendessen.
+Die Bildleiste zeigt Ellies Tag in sechs Bildern. Unter jedem Bild steht die Uhrzeit. Die Bilder zeigen: **have tea**, **get up** (aufstehen), **do homework** (Hausaufgaben machen), **have lunch** (zu Mittag essen), **go to school** (zur Schule gehen) und **have breakfast** (frühstücken). Bei den Parkers ist tea das Abendessen.
 
 - Aufgabe `tagesablauf-start` (unten)
 
@@ -57,13 +57,12 @@ Sophie schreibt Mum and Dad, wie ein Tag bei den Parkers aussieht. Dafür zeichn
 
 Mit der Uhrzeit sagst du **at**, das kennst du schon: at half past ten. Mit der Tageszeit sagst du **in**: **in the morning** (am Morgen), **in the afternoon** (am Nachmittag), **in the evening** (am Abend). Eine Ausnahme ist die Nacht: **at night**. Nach he und she bekommt das Verb ein -s: I walk, he walks. Drei Verben sind besonders: have wird **has** (She has a bath), go wird **goes** (He goes home) und do wird **does** (She does a puzzle).
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- get up | aufstehen
-- have tea | das Abendessen essen
-- do homework | Hausaufgaben machen
-- go home | nach Hause gehen
-- at night | in der Nacht
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- get up – aufstehen
+- have tea – das Abendessen essen
+- do homework – Hausaufgaben machen
+- go home – nach Hause gehen
+- at night – in der Nacht
 
 **Merke: Merke**
 

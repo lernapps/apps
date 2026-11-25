@@ -45,7 +45,7 @@ Sophies Lesehilfe für I'm klingt für Ellie falsch. Du lernst die ersten Zeiche
 
 ### Sophie liest laut
 
-Bild: Im Klassenzimmer hängt eine Tafel mit drei Zeilen: Melodie, Betonung und Laute. Mr Hill steht rechts unter der Tafel. Sophie sagt in einer Sprechblase „aim“, Ellie schaut mit der Sprechblase „Aim?“ zu ihr. Bildunterschrift: Von links: Sophie (Zöpfe) liest laut, Ellie (roter Pferdeschwanz) wundert sich, rechts steht Mr Hill (graue Haare) an der Klangpartitur.
+Bild: Im Klassenzimmer hängt eine Tafel mit drei Zeilen: Melodie, Betonung und Laute. Mr Hill steht rechts unter der Tafel. Sophie sagt in einer Sprechblase „aim“, Ellie schaut mit der Sprechblase „Aim?“ zu ihr. Bildunterschrift: Von links: Sophie liest laut, Ellie wundert sich, rechts steht Mr Hill an der Klangpartitur.
 
 Mr Hill hat eine **Klangpartitur** aufgehängt: eine Tafel mit drei Zeilen. Später tragen die Kinder dort Laute, Betonung und Melodie ein. Sophie liest den Ausdruck I'm („ich bin“) aus Hello, Millbrook! mit ihrer Lesehilfe vor: „aim“. Das ist die Aussprache in deutschen Buchstaben. Ellie sagt: „Aim ist ein englisches Wort. Ich spreche I'm anders aus.“
 
@@ -96,7 +96,7 @@ Lautkarten · Die ersten Zeichen:
 
 ### Wie es weitergeht
 
-Peter zeigt Mr Hill ein Foto. Mr Hill fragt etwas, und ein einziger Laut entscheidet. Mr Hill sagt: „Ein kleiner Laut macht aus einem Wort ein anderes.“ Welche Laute das sind und wie du sie unterscheidest, lernst du auf der nächsten Seite.
+Ein einziger Laut kann aus einem Wort ein anderes machen. Welche Laute das sind und wie du sie unterscheidest, lernst du auf der nächsten Seite.
 
 ### Aufgabe lautschrift-start
 

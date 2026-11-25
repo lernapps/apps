@@ -7,6 +7,5 @@ Die Seite wiederholt nur die Formen von be (am, is, are), die Wochentage und Mon
 - Possessivbegleiter wie my und your (steht im Explainer „Pronomen“)
 - Adjektive und das Stützwort one (steht im Explainer „Adjektive und Adverbien“)
 - Phrasal verbs (steht im Explainer „Phrasal verbs“)
-- Gebrauch des bestimmten Artikels und Nomen wie news und police (Stufe 7-8, später)
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

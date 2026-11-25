@@ -7,7 +7,7 @@ Die Seite zeigt zwei Wege, eine Geschichte weiterzuführen. Der erste ist ein zw
 - Die Zeitformen selbst (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Kurzgeschichten, Gedichte, Dramen und Filme untersuchen
 - Sachtexte, Bericht und Artikel
-- Eine Geschichte aus der Sicht einer anderen Figur erzählen und Stimmung durch Ort und Sprache (später)
+- Erzähler, Symbolik und Textanalyse literarischer Kurzgeschichten (Kapitel 5 bleibt bei Sicht und Stimmung in eigenen Texten)
 - Bewertung der Aussprache und der freien Texte durch die App
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

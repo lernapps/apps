@@ -63,4 +63,4 @@ Die **Klangpartitur** hat drei Zeilen. Die untere Zeile zeigt die Laute: Jede bl
 
 ### Was jetzt kommt
 
-Mr Hill sagt: „Im Gespräch sprechen wir nicht jedes Wort einzeln.“ Sophie, Ellie, Peter und Amir probieren aus, wie man zwei Wörter zu einem verschmilzt, zum Beispiel do not zu don't, und wie die Stimme bei einer Frage klingt.
+Im Gespräch spricht man nicht jedes Wort einzeln. Du lernst, wie zwei Wörter zu einem verschmelzen, zum Beispiel do not zu don't, und wie die Stimme bei einer Frage klingt.

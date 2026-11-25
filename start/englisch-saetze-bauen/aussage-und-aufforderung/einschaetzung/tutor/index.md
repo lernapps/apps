@@ -62,6 +62,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Did you play football yesterday?“
 - „You like it, don't you?“
 
+### Kapitel „Betonen und umstellen“
+
+- Selbsteinschätzung des Kapitels
+- „She did win: Betonung mit do“
+- „Umkehr nach never, hardly und not only“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe wortstellung-bilden der Seite „Wer tut was, wo und wann?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

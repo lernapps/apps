@@ -45,7 +45,7 @@ Peter hängt eine Endung an ein Wort und ist nicht sicher. Du lernst drei Handgr
 
 ### Peter ist unsicher
 
-Bild: Im Klassenzimmer überlegt Peter in einer Sprechblase: „plan + ed = ?“. Neben ihm stehen Ellie und Mr Hill. Bildunterschrift: Von links: Peter (gelbe Jacke) überlegt, Ellie (roter Pferdeschwanz) und Mr Hill (graue Haare) schauen zu.
+Bild: Im Klassenzimmer überlegt Peter in einer Sprechblase: „plan + ed = ?“. Neben ihm stehen Ellie und Mr Hill. Bildunterschrift: Von links: Peter überlegt, Ellie und Mr Hill schauen zu.
 
 Amir hat gestern die Party geplant. Peter will das aufschreiben und hängt die Endung -ed an das Wort **plan** („planen“). Er ist nicht sicher, wie es geschrieben wird.
 
@@ -83,7 +83,7 @@ Bild: Drei Reihen mit Karten. In jeder Reihe steht links ein grünes Wort, in de
 
 ### Rückblick und nächster Schritt
 
-In diesem Kapitel hast du gehört, wie -s und -ed klingen, und gesehen, was vor einer Endung mit dem Wort passiert. Peter schreibt seine Wörter jetzt richtig an die Werkstatttafel. Mr Hill sagt: „Jetzt sprechen wir wie im Gespräch.“ Dort kürzen wir Wörter ab, und die Stimme geht rauf und runter.
+In diesem Kapitel hast du gehört, wie -s und -ed klingen, und gesehen, was vor einer Endung mit dem Wort passiert. Im nächsten Kapitel sprechen wir wie im Gespräch: Wörter werden abgekürzt, und die Stimme geht rauf und runter.
 
 ### Aufgabe rechtschreibung-start
 

@@ -45,18 +45,17 @@ Ellie und Sophie planen das Wochenende. Du lernst, wie du mit could, may, might 
 
 ### Was machen wir am Samstag?
 
-Bild: Ellie und Sophie stehen nebeneinander und planen das Wochenende. Ellie sagt "We could go to the park.", Sophie antwortet "It might rain.". Bildunterschrift: Ellie (roter Pferdeschwanz) links und Sophie (mit den Zöpfen) rechts. Ihre Sprechblasen zeigen, was sie sagen.
+Bild: Zwei Kinder stehen nebeneinander und planen das Wochenende. Ellie sagt "We could go to the park.", Sophie antwortet "It might rain.". Bildunterschrift: Zwei Kinder planen das Wochenende. Die Sprechblasen zeigen, was sie sagen.
 
-Es ist Freitag nach der Schule. Ellie fragt Sophie, was sie am Samstag machen. Sophie schaut aus dem Fenster und sieht graue Wolken.
+Ellie fragt Sophie, was sie am Samstag machen. Sophie schaut aus dem Fenster und sieht graue Wolken.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- snow | schneien
-- hat | Mütze
-- stay at home | zu Hause bleiben
-- hungry | hungrig
-- be | sein
-- tired | müde
+Vokabeln (Englisch – Deutsch): Neue Wörter
+- snow – schneien
+- a hat – Mütze
+- stay at home – zu Hause bleiben
+- hungry – hungrig
+- be – sein
+- tired – müde
 
 **Das kannst du danach:** Mit could, may, might und should etwas vorschlagen, etwas vermuten und einen Rat geben. Wie bei can und must sitzt zwischen den beiden Verben keine Kupplung.
 
@@ -103,7 +102,7 @@ Auch could, may, might und should bekommen **nie ein -s**: *Amir may be late.* D
 
 ### Wie es weitergeht
 
-Am Ende sind sich die Kinder einig. Am Samstag gehen sie ins Kino, falls es regnet. Danach haben sie Hunger, und Ellies Mutter, Mrs Parker, nimmt sie mit in ein Café. Auf der nächsten Seite lernst du, wie du dort höflich bestellst.
+Am Ende sind sich die Kinder einig. Am Samstag gehen sie ins Kino, falls es regnet. Danach haben sie Hunger und gehen in ein Café. Auf der nächsten Seite lernst du, wie du dort höflich bestellst.
 
 ### Aufgabe modalverben-start
 
@@ -122,7 +121,7 @@ Am Ende sind sich die Kinder einig. Am Samstag gehen sie ins Kino, falls es regn
 
 - Aufgabe: Welcher englische Satz passt zu welcher Situation?
 - Antwortformat: jedem Eintrag links den passenden rechts zuordnen
-- Lösung: Amir macht einen Vorschlag für den Nachmittag. – We could play tennis.; Sophie vermutet, dass es heute Abend schneit. – It might snow.; Ellies Mutter, Mrs Parker, gibt Peter einen Rat, weil es kalt ist. – You should wear a hat.
+- Lösung: Amir macht einen Vorschlag für den Nachmittag. – We could play tennis.; Sophie vermutet, dass es heute Abend schneit. – It might snow.; Mrs Parker gibt Peter einen Rat, weil es kalt ist. – You should wear a hat.
 - Erklärung: Could schlägt vor, might sagt vielleicht, should gibt einen Rat.
 - Tipp der App: Frag dich, ob jemand etwas vorschlägt, vermutet oder rät.
 - Link: [../?via=tutor#modalverben-sortieren](../?via=tutor#modalverben-sortieren)

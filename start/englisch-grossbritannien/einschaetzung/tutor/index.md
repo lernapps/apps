@@ -61,6 +61,21 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Sehenswürdigkeiten in London“ · Aufgaben A15, A16
 - „Menschen in Großbritannien“ · Aufgaben A17, A18
 
+### Kapitel „Klassenfahrt nach London“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Zug und U-Bahn: Fahrkarten und Gleise“ · Aufgaben A19, A20
+- „London heute: Ein Tag in der Großstadt“ · Aufgaben A21, A22
+- „Klischees prüfen“ · Aufgaben A23, A24
+
+### Kapitel „Von 1066 bis Westminster“
+
+- Selbsteinschätzung des Kapitels
+- „1066 und die Normannen“ · Aufgaben A25, A26
+- „Henry VIII und Elizabeth I“ · Aufgaben A27, A28
+- „König, Parlament und Premierminister“ · Aufgaben A29, A30
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe wege-plan der Seite „Den Weg beschreiben: Millbrook auf dem Plan“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -81,3 +96,15 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A16: Aufgabe lon-ordnen der Seite „Sehenswürdigkeiten in London“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A17: Aufgabe viel-formen der Seite „Menschen in Großbritannien“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A18: Aufgabe viel-fragen der Seite „Menschen in Großbritannien“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A19: Aufgabe reisen-by der Seite „Zug und U-Bahn: Fahrkarten und Gleise“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A20: Aufgabe reisen-schalter der Seite „Zug und U-Bahn: Fahrkarten und Gleise“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A21: Aufgabe heute-vergleich der Seite „London heute: Ein Tag in der Großstadt“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A22: Aufgabe heute-schreiben der Seite „London heute: Ein Tag in der Großstadt“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A23: Aufgabe stereo-mengen der Seite „Klischees prüfen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A24: Aufgabe stereo-schreiben der Seite „Klischees prüfen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A25: Aufgabe nor-past der Seite „1066 und die Normannen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A26: Aufgabe nor-reihenfolge der Seite „1066 und die Normannen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A27: Aufgabe tud-jahre der Seite „Henry VIII und Elizabeth I“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A28: Aufgabe tud-reihenfolge der Seite „Henry VIII und Elizabeth I“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A29: Aufgabe politik-rollen der Seite „König, Parlament und Premierminister“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A30: Aufgabe politik-fragen der Seite „König, Parlament und Premierminister“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

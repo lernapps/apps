@@ -68,23 +68,22 @@ Klassenzimmer-Poster · Deutsch und Englisch:
 
 **Fragewort, Helfer, Subjekt, Verb, Präposition.** Auf Deutsch steht die Präposition vorn, im Englischen bleibt sie am Ende: Who do you talk to?
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- talk to | sprechen mit
-- play with | spielen mit
-- live with | wohnen bei
-- study with | lernen mit
-- eat with | essen mit
-- come from | kommen aus
-- for | für
-- who | wer / wen
-- where | wo / woher
-- book | Buch
-- this | dieses / das
-- at school | in der Schule
-- at | bei / an
-- English | Englisch
-- lunch | Mittagessen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- talk to – sprechen mit
+- play with – spielen mit
+- live with – wohnen bei
+- study with – lernen mit
+- eat with – essen mit
+- come from – kommen aus
+- for – für
+- who – wer / wen
+- where – wo / woher
+- book – Buch
+- this – dieses / das
+- at school – in der Schule
+- at – bei / an
+- English – Englisch
+- lunch – Mittagessen
 
 ### Übung
 

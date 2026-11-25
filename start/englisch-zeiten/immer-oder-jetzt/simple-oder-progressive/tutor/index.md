@@ -45,9 +45,9 @@ Peter spielt jeden Samstag Fußball, und gerade spielt er auch. Du lernst, mit S
 
 ### Peter spielt, immer und jetzt
 
-Bild: Sophie, Ellie, Amir und Peter stehen vor dem Wandbild. Auf dem Wandbild liegt ein Zeitstrahl mit blauen Punkten, einem roten Strich in der Mitte und einer violetten Welle über dem Strich. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke). Hinter ihnen hängt der Zeitstrahl von der Klasse.
+Bild: Sophie, Ellie, Amir und Peter stehen vor dem Wandbild. Auf dem Wandbild liegt ein Zeitstrahl mit blauen Punkten, einem roten Strich in der Mitte und einer violetten Welle über dem Strich. Bildunterschrift: Hinter den Kindern hängt der Zeitstrahl.
 
-Ellie zeigt auf den Zeitstrahl und sagt zwei Sätze über ihren Bruder: „Peter often plays football.“ und „Peter is playing football at the moment.“ **At the moment** heißt „im Moment“.
+Ellie zeigt auf den Zeitstrahl und sagt zwei Sätze über Peter: „Peter often plays football.“ und „Peter is playing football at the moment.“ **At the moment** heißt „im Moment“.
 
 - Aufgabe `simple-oder-progressive-start` (unten)
 

@@ -62,6 +62,13 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Was gibt es im Lagerraum? There is und there are“ · Aufgaben A3, A4
 - „Wann ist das Schulfest? in, on und at“ · Aufgaben A5, A6
 
+### Kapitel „Ohne Etikett und Sonderfälle“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Kisten ohne Etikett: wann the wegfällt“
+- „Glas oder Kistengruppe: news, advice und police“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe ort-bild der Seite „Wo steht die Kiste? in, on, under, next to, behind“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

@@ -1,6 +1,6 @@
 # Wen trifft es? me, you, him, her, it, us, them – für deinen KI-Tutor
 
-Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Pronomen: I, me, my“ von lernapps.net, gerade auf der Seite „Wen trifft es? me, you, him, her, it, us, them“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
+Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Pronomen: I, me, my, mine, myself“ von lernapps.net, gerade auf der Seite „Wen trifft es? me, you, him, her, it, us, them“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
 
 Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
@@ -47,7 +47,7 @@ Du lernst die Pronomen, mit denen du sagst, wen etwas trifft, und erkennst den U
 
 Bild: Auf dem Sportplatz wirft Sophie einen Ball im Bogen zu Peter. Ellie und Amir stehen in der Mitte. Bildunterschrift: Sophie (links) wirft den Ball zu Peter (rechts). Ellie und Amir stehen in der Mitte.
 
-Beim Üben für den Sports day stehen Sophie, Ellie, Peter und Amir auf dem Sportplatz. Peter ruft: „Sophie can see me.“ Das heißt: „Sophie kann mich sehen.“ **see** heißt „sehen“, **help** „helfen“ und **call** „rufen“, **find** „finden“ und **hear** „hören“. Auch **him** (ihn), **us** (uns) und **them** (sie, mehrere) lernst du gleich.
+Beim Üben für den Sports day ruft Peter: „Sophie can see me.“ Das heißt: „Sophie kann mich sehen.“ **see** heißt „sehen“, **help** „helfen“ und **call** „rufen“, **find** „finden“ und **hear** „hören“. Auch **him** (ihn), **us** (uns) und **them** (sie, mehrere) lernst du gleich.
 
 **Das kannst du danach:** Du sagst auf Englisch, wen oder was etwas trifft, und wählst me, you, him, her, it, us oder them.
 

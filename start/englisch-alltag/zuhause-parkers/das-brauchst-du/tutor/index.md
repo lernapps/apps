@@ -45,7 +45,7 @@ There is und there are mit in, on, under und next to, das simple present mit doe
 
 ### Das solltest du schon können
 
-Sophie will ihrer Familie zeigen, wie sie bei den Parkers wohnt, wie ihr Tag aussieht und was sie isst. Dafür braucht sie drei Bausteine. Kannst du sie schon? **Ich kann mit „there is“ und „there are“ sagen, was es an einem Ort gibt.** **Ich kann im simple present über Gewohnheiten und Tatsachen sprechen und das -s bei he, she, it anhängen.** **Ich kann die Präpositionen in, on und at bei Zeitangaben richtig verwenden (on Monday, at 6 o’clock, in July).** Lies die Tabellen und prüfe in Gedanken, ob du alles kennst.
+Für Zuhause, Tag und Essen brauchst du drei Bausteine. Kannst du sie schon? **Ich kann mit „there is“ und „there are“ sagen, was es an einem Ort gibt.** **Ich kann im simple present über Gewohnheiten und Tatsachen sprechen und das -s bei he, she, it anhängen.** **Ich kann die Präpositionen in, on und at bei Zeitangaben richtig verwenden (on Monday, at 6 o’clock, in July).** Lies die Tabellen und prüfe in Gedanken, ob du alles kennst.
 
 Klassenzimmer-Poster · There is und there are:
 - Wie viele | Beispiel

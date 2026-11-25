@@ -1,0 +1,31 @@
+# Gedicht, Szene und Film
+
+## Das brauchst du hier
+
+Die Seite wiederholt, was Kapitel 2 voraussetzt, und übt nichts Neues. Reime, Lieder und kurze Gedichte kann man vortragen, und man kann Reimwörter finden, die am Ende ähnlich klingen. Ein Dialog oder eine Spielszene hat Sprecher und ihre Zeilen. Nicht hier, weil es neue Seiten sind, nämlich Stilmittel, Strophe und Reimschema, Regieanweisungen und Kameraeinstellungen.
+
+## Stilmittel und ihre Wirkung
+
+Die Seite führt vier Stilmittel (stylistic devices) als Werkzeugkarten ein und übt sie an einer Rede. Eine Metapher (metaphor) nennt etwas mit dem Namen von etwas anderem, ohne Vergleichswort. Ein Vergleich (simile) verbindet zwei Dinge mit like oder as … as. Eine Wiederholung (repetition) betont durch wiederkehrende Wörter. Eine rhetorische Frage (rhetorical question) braucht keine Antwort und lässt die Zuhörer nachdenken. Zu jeder Karte gehören Leitfrage und Satzanfang. Wichtig ist nicht nur, das Stilmittel zu benennen, sondern seine Wirkung zu beschreiben, mit einer Zeile als Beleg. Nicht hier, weil es spätere Seiten sind, nämlich Strophe und Reimschema, Regieanweisungen und Kameraeinstellungen. Stilmittel kommen später in Texten über Meinung und Werbung wieder vor.
+
+## Ein Gedicht und einen Songtext untersuchen
+
+Die Seite zeigt, wie man ein Gedicht oder einen Songtext untersucht. Eine Strophe (stanza) ist eine Gruppe von Zeilen, eine Zeile heißt line. Das Reimschema (rhyme scheme) zeigt mit Buchstaben, welche Zeilenenden sich reimen, zum Beispiel ABAB (die erste und dritte, die zweite und vierte Zeile reimen sich) oder AABB. Der Reim hängt vom Klang ab, nicht von der Schreibung. Bilder sind zum Beispiel Metaphern und Vergleiche aus der Seite über Stilmittel. Die Wirkung von Reim, Bild und Wiederholung wird beschrieben und mit Zeilen belegt. Das Gedicht und der Songtext sind eigene Texte. Nicht hier, weil es spätere Seiten sind, nämlich Regieanweisungen und Kameraeinstellungen. Silben und Versmaß gehören nicht dazu.
+
+## Eine Dramenszene lesen und spielen
+
+Die Seite zeigt, wie man eine Dramenszene (drama scene) liest und vorspielt. Eine Szene besteht aus Dialog, bei dem vor jeder Zeile der Name der Figur in Großbuchstaben steht, und aus Regieanweisungen (stage directions). Regieanweisungen stehen in Klammern oder kursiv, werden nicht mitgesprochen und sagen, wie jemand spricht, was jemand tut, wie die Bühne aussieht und wann die Szene endet. Sie zeigen auch Gefühle, die der Text nicht ausspricht. Die Wirkung einer Regieanweisung wird mit der Zeile belegt. Beim Vorspielen helfen Pausen, Betonung und Bewegung. Die Szene ist ein eigener Text. Nicht hier, weil es eine spätere Seite ist, nämlich die Kameraeinstellungen im Film. Einen eigenen Dialog zu schreiben gehört in die Wiederholung.
+
+## Wie ein Film wirkt: Kamera, Schnitt, Musik
+
+Die Seite zeigt, wie man filmische Mittel erkennt und ihre Wirkung beschreibt, an der Szenenliste eines erfundenen Kurzfilms. Die Einstellungsgröße (shot) sagt, wie nah die Kamera ist: long shot (weit, zeigt den Ort), medium shot (halbnah, eine Person bis zur Hüfte), close-up (nah, Gesicht oder Einzelheit). Der Kamerawinkel (camera angle) sagt, von wo die Kamera schaut: high angle (von oben, die Person wirkt klein), low angle (von unten, die Person wirkt groß und mächtig). Der Schnitt (cut) wechselt von einem Bild zum nächsten. Die Musik (music) beeinflusst die Stimmung. Zu jeder Karte gehören Leitfrage und Satzanfang. Die Wirkung wird mit der Zeile der Szenenliste belegt. Am Ende steht eine begründete Empfehlung für die Lese- und Sehliste. Der Film ist erfunden, es gibt kein Standbild und keinen Filmdialog aus einem echten Film. Nicht hier, weil es keine weitere Seite gibt, nämlich Filmanalysen mit Kamerafahrten, Licht und Farbe.
+
+## Gehört nicht dazu
+
+- Zeitformen selbst (steht im Explainer über die Zeiten)
+- Zeitungstexte, Bericht und Werbung
+- Eine Erörterung oder einen Essay schreiben
+- Analyse echter Filme, Gedichte oder Songtexte aus geschützten Werken
+- Bewertung der Aussprache und der freien Texte durch die App
+
+Die ganze App: [Scope der App](../../scope/)

@@ -1,0 +1,77 @@
+# Meinung sagen und begründen
+
+Die App erklärt für Jugendliche, wie man auf Englisch seine Meinung sagt, sie begründet und Argumente abwägt. Der Argument-Burger trägt sie mit vier Schichten (Opinion, Reason, Example, Opinion). Gelernt werden Redemittel für Meinung, Zustimmung und Widerspruch, eine Meinung mit Grund und Beispiel begründen, über Sport, Musik, Fernsehen und soziale Medien sprechen, Gedanken mit however und therefore verbinden, über Umwelt und Technik sprechen, einen Leserbrief schreiben, über Konsum und Werbung sprechen, Jugendkulturen beschreiben, einen argumentativen Text mit Pro und Contra schreiben und Werbung untersuchen. Alle Lesestücke und Beispiele sind eigene Texte. Offene Aufgaben haben Punkte und eine Musterlösung; die App bewertet den Text nicht.
+
+## Was ich mag und was ich denke
+
+### Das brauchst du hier
+
+Die Seite wiederholt, was für das Kapitel nötig ist, und übt es nicht neu. Hobbys im simple present (I like, I play, I go, he likes), die Verbindungswörter and, but, or, because, when und so und der that-Satz (I think that …). Nicht hier, weil es andere Seiten sind, nämlich Redemittel für Meinung, Zustimmung und Widerspruch, der Argument-Burger und Themen wie Sport, Musik und Medien.
+
+### Meinung sagen, zustimmen und widersprechen
+
+Die Seite zeigt, wie man auf Englisch seine Meinung sagt, zustimmt und widerspricht. Meinung sagen mit In my opinion und I think that, zustimmen mit I agree und You are right, widersprechen mit I disagree und I do not agree, dazu I see your point und I am not sure. Ein Lesestück (ein Chat über die Mittagspause) zeigt die Ausdrücke im Gespräch. Gefragt wird, in welche Gruppe ein Ausdruck gehört, wo man sein Kärtchen auf das Meinungsbarometer stellt und wie man Sätze ohne die Fehler I am agree und I am thinking that bildet. Nicht hier, weil es andere Seiten sind, nämlich der Argument-Burger mit Grund und Beispiel, Themen wie Musik und Medien und Verbindungswörter wie however.
+
+### Meinung begründen: der Argument-Burger
+
+Die Seite zeigt, wie man auf Englisch eine Meinung begründet. Eine Meinung besteht aus vier Schichten, dem Argument-Burger. Ganz oben steht die Meinung (Opinion), dann der Grund (Reason) mit because, dann ein Beispiel (Example) mit for example, ganz unten die Meinung noch einmal mit So. Ein Lesestück (ein Chat über einen Filmabend) zeigt zwei Burger. Gefragt wird, welche Schicht fehlt, welche Zeile ein Beispiel hat und wie man Meinung, Grund und Beispiel in ganzen Sätzen bildet. Nicht hier, weil es andere Seiten sind, nämlich die Redemittel für Zustimmung und Widerspruch, Themen wie Musik und Medien, Verbindungswörter wie however und der Leserbrief.
+
+### Sport, Musik und Fernsehen
+
+Die Seite zeigt, wie man auf Englisch über Sport, Musik und Fernsehen spricht. Bei Sportarten steht play bei Ballspielen und Spielen, do bei Sportarten wie yoga und karate und go bei Sportarten mit -ing, zum Beispiel go swimming. Nach like, love und enjoy steht das Verb mit -ing, bei he und she steht likes. My favourite sport is football ist ein ganzer Satz. Ein Lesestück (ein Chat über Lieblingsmusik, eine Serie und Sport) zeigt die Wörter im Gespräch. Gefragt wird, welche Zeile ein Beispiel enthält, welches Verb zur Sportart passt, wie like mit -ing gebildet wird und wie ein Burger zu einem Lieblingsthema aussieht. Nicht hier, weil es andere Seiten sind, nämlich Redemittel für Zustimmung und Widerspruch, soziale Medien und Freizeit als Situation.
+
+### Medien und soziale Netzwerke
+
+Die Seite zeigt, wie man auf Englisch über Medien und soziale Netzwerke spricht, auch über Chancen und Gefahren. Wörter wie post, follow, share, comment, message, online, safe und private, der Ausdruck interested in (nicht interesting in), on the internet und on social media (nicht in), for und since bei einem Zeitraum oder einem Zeitpunkt und der Satz Some people say …, but I think …. Ein Lesestück (ein Chat über soziale Medien) zeigt mehrere Sichtweisen, ohne zu belehren. Gefragt wird, wer zustimmt, welche Zeile welches Thema hat, welches Wort passt und wie man eine eigene Meinung mit einem Gegenargument sagt. Nicht hier, weil es andere Seiten sind, nämlich Redemittel für Zustimmung und Widerspruch, Sport und Musik, Verbindungswörter wie however und Werbung.
+
+## Argumente verbinden
+
+### Das brauchst du hier
+
+Die Seite wiederholt knapp das Passiv im simple present und simple past auf Englisch. Gezeigt werden is, are, was und were mit dem Partizip, by für die Person und die Partizipien von invent, build, make, write und discover. Zwei kurze Aufgaben prüfen das Wissen. Nicht hier, weil es andere Seiten sind, nämlich die Verbindungswörter, Umwelt, Erfindungen und der Leserbrief.
+
+### Verbindungswörter: Burger mit einem Schild verbinden
+
+Die Seite zeigt, wie man zwei Gedanken auf Englisch mit einem Verbindungswort verknüpft. Zwei Argument-Burger werden gestapelt, dazwischen steht ein Schild mit dem Verbindungswort. However zeigt einen Gegensatz, therefore eine Folge, moreover eine Ergänzung, on the one hand … on the other hand zwei Seiten einer Sache. Ein Lesestück (ein Chat über den Schulweg zu Fuß, mit dem Rad oder mit dem Bus) zeigt alle vier. Gefragt wird, welche Beziehung ein Satz zeigt, welches Wort passt und wie man Sätze mit Punkt und Komma richtig verbindet. Nicht hier, weil es andere Seiten sind, nämlich Umwelt, Erfindungen und der Leserbrief.
+
+### Umwelt: Müll, Recycling und ein Vorschlag
+
+Die Seite handelt von Müll, Recycling und Nachhaltigkeit auf Englisch. Ein Artikel der Schülerzeitung über Plastikmüll nennt Zahlen zu Plastik und Recycling, die drei Wörter reduce, reuse und recycle und Vorschläge für die Schule. Gelernt werden Wörter wie waste, rubbish bin, environment und sustainable, Vorschläge mit should, der Unterschied zwischen should und must, much und many, less und fewer und nature ohne the. Gefragt wird, was im Artikel steht, in welcher Zeile es steht und wie man einen Vorschlag baut. Nicht hier, weil es andere Seiten sind, nämlich Erfindungen und der Leserbrief.
+
+### Technik und Fortschritt: was invented by …
+
+Die Seite handelt von Erfindungen und technischem Fortschritt auf Englisch. Ein Chat nennt Fakten zum World Wide Web, zum Papier, zu einem Verfahren für altes Papier und zum Fahrrad mit Kette. Gelernt werden Sätze im Passiv mit was invented by, was built in und is used for, die Partizipien invented, built, made und written, der Unterschied zwischen by und from und der vorsichtige Satz People say, wenn nicht klar ist, wer etwas erfunden hat. Gefragt wird, wann und von wem etwas erfunden wurde und wie man Passivsätze bildet. Nicht hier, weil es andere Seiten sind, nämlich Verbindungswörter, Umwelt und der Leserbrief.
+
+### Leserbrief: auf einen Artikel antworten
+
+Die Seite zeigt, wie man auf Englisch einen Leserbrief an eine Zeitung schreibt, der sich auf einen Artikel bezieht. Ein Leserbrief an die Schülerzeitung antwortet auf einen Artikel über Plastikmüll. Er hat vier Teile, die Anrede (Dear Editor), den Bezug zum Artikel (In your article about …), die Meinung als Argument-Burger und den Schluss (Yours faithfully, mit Namen Yours sincerely). Gefragt wird, welcher Teil in welcher Zeile steht, wie man den Bezug und die Meinung in ganzen Sätzen bildet und wie man Verbindungswörter einsetzt. Nicht hier, weil es andere Seiten sind, nämlich Verbindungswörter, Umwelt und Erfindungen.
+
+## Pro und contra
+
+### Das brauchst du hier
+
+Die Seite wiederholt knapp, was für Kapitel 3 gebraucht wird. Ich kann Kleidung benennen und beim Einkaufen nach Größe und Preis fragen. Gezeigt werden Wörter für Kleidung und drei feste Fragen und Antworten (How much is it?, Have you got this in a larger size?, It costs …). Zwei kurze Übungen prüfen das. Neue Inhalte gibt es hier nicht. Nicht hier, weil es andere Seiten sind, nämlich Konsum und Verbraucherrechte, Jugendkulturen, der argumentative Text und Werbung.
+
+### Konsum, Werbung und deine Rechte
+
+Die Seite zeigt, wie man auf Englisch über Konsum, Kleidung und die Rechte als Verbraucherin oder Verbraucher spricht. Ein Sachtext (Stand 24. November 2026, nach Wikipedia und gov.uk) nennt Zahlen zu fast fashion, zur Umwelt und zu Rechten beim Einkaufen in Großbritannien, jeweils mit mehreren Sichtweisen. Gelernt werden die Wörter consumer, refund, receipt, warranty, fast fashion, sustainable, second-hand und brand, der Unterschied von consumer und customer, buy und by, borrow und lend, much und many, und was ein Pro und ein Contra ist. Auch Werbung kommt kurz vor, als Teil des Konsums. Gefragt wird, in welchem Absatz eine Zahl steht, welches Recht zu welcher Lage passt und wie man eine Meinung zu einem Kauf mit Grund und Beispiel schreibt. Nicht hier, weil es andere Seiten sind, nämlich die Waage mit Pro und Contra in einem ganzen Text, die Analyse von Werbung und Jugendkulturen. Rechtsberatung gibt es nicht.
+
+### Jugendkulturen früher und heute
+
+Die Seite zeigt, wie man auf Englisch Jugendkulturen früher und heute beschreibt. Ein Sachtext (Stand 24. November 2026, nach Wikipedia) nennt Fakten zu Mods, Punks und Grime in Großbritannien, mit Jahrzehnten, Kleidung, Musik und Ideen. Gelernt werden das simple past für früher, das Präsens für heute, used to mit Grundform, in the 1960s mit s, die Wörter fashion (nicht mode) und listen to sowie Wörter für Kleidung und Musik. Gefragt wird, welche Zeitform passt, wie man früher und heute in ganzen Sätzen beschreibt, in welchem Absatz ein Fakt steht und was für und gegen die Zugehörigkeit durch Musik und Mode spricht. Nicht hier, weil es andere Seiten sind, nämlich der argumentative Text mit Waage, Werbung und Konsum. Die App bewertet keine freien Texte.
+
+### Kommentar: Pro und Contra auf der Waage
+
+Die Seite zeigt, wie man auf Englisch einen argumentativen Text (einen Kommentar) mit Pro und Contra schreibt. Ein Lesestück wägt ab, ob Schulen Handys verbieten sollen (Pro = für das Verbot, Contra = dagegen), mit Zahlen aus geöffneten Quellen (Hinweise der englischen Regierung, Wikipedia). Der Argument-Burger wird zur Waage: Jede Schale besteht aus Burgern (Opinion, Reason, Example), mit zwei Schalen Pro (rot) und Contra (blau); die Neigung der Waage ist die conclusion, die Schlussfolgerung. Die Gliederung wird knapp erklärt: Einleitung, Hauptteil mit einem Gedanken je Absatz (erst alle Pro-Absätze, dann alle Contra-Absätze) und Schluss mit Entscheidung ohne neues Argument. Dazu kommen Verbindungswörter (on the one hand … on the other hand, first of all, moreover, however, therefore, to sum up, in conclusion). Belegt wird mit Absatznummern. Gefragt wird, welche Argumente auf welche Schale gehören, wie Absätze geordnet werden, welches Verbindungswort passt und wie ein Schlusssatz lautet. Typische Fehler sind vermischte Seiten, ein Schluss ohne Entscheidung, neue Argumente im Schluss, eine Meinung ohne Beleg und eine zu persönliche I-Form. Nicht hier, weil es andere Seiten sind, nämlich Konsum und Werbung, Jugendkulturen, Stilmittel in der Werbung, die Gliederung von Zeitungstexten im Einzelnen und Politik.
+
+### Werbung untersuchen: Mittel und Wirkung
+
+Die Seite zeigt, wie man untersucht, mit welchen sprachlichen und bildlichen Mitteln eine Werbung wirken will. Alle Anzeigen und Marken auf der Seite sind erfunden. Ein Sachtext über Werbung und Jugendliche nennt Fakten aus Wikipedia (Ausgaben, Werbesprüche, Vorteile, Kritik, Regeln). Knapp erklärt werden sechs Mittel (repetition, rhetorical question, comparison, imperative, slogan, emotive words) und vier Wirkungen (attention, trust, curiosity, urgency), jeweils mit eigenem Beispiel. Die Seite trennt Information, die man prüfen kann, vom Werbeversprechen. Gefragt wird, welches Mittel ein Beispiel zeigt, welche Wirkung es hat, wie eine Anzeige in ganzen Sätzen untersucht wird und was eine rhetorical question von einer echten Frage unterscheidet. Am Ende blickt die Seite auf das Kapitel und auf die ganze App zurück (Burger, gestapelte Burger, Waage aus Burgern). Nicht hier, weil es andere Seiten sind, nämlich Stilmittel in der Literatur, Konsumrechte, Jugendkulturen, der argumentative Text und Politik.
+
+## Gehört nicht dazu
+
+- Freizeit und Hobbys als Situation (steht im Explainer „Alltag“)
+- Zeitungstexte und der Unterschied zwischen Information und Meinung
+- Stilmittel selbst, Demokratie und Menschenrechte
+- Politik und Religion
+- Bewertung der Aussprache und der freien Texte durch die App

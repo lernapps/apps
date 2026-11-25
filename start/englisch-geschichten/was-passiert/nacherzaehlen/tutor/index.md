@@ -45,7 +45,7 @@ Amir erzählt Ellie eine Geschichte nach. Du lernst, eine Geschichte Station fü
 
 ### Amir erzählt eine Geschichte nach
 
-Bild: In der Geschichtenecke hängen an der Wand ein Berg mit vier Fähnchen und eine Tafel mit vier leeren Feldern. Amir sagt in einer Sprechblase: „Listen, Ellie!“ Ellie und Sophie stehen neben ihm, Mr Hill steht rechts. Bildunterschrift: Von links: Amir (Brille), Ellie (roter Pferdeschwanz), Sophie (Zöpfe) und Mr Hill (graue Haare). An der Wand hängen der Geschichtenberg und die story map.
+Bild: In der Geschichtenecke hängen an der Wand ein Berg mit vier Fähnchen und eine Tafel mit vier leeren Feldern. Amir sagt in einer Sprechblase: „Listen, Ellie!“ Ellie und Sophie stehen neben ihm, Mr Hill steht rechts. Bildunterschrift: An der Wand hängen der Geschichtenberg und die story map.
 
 Mr Hill hat Amir eine kurze Geschichte gegeben. Amir erzählt sie jetzt Ellie **nach**, und Sophie hört zu. Er liest nicht vor und schreibt nichts ab. Er erzählt, was passiert ist, in eigenen Worten.
 
@@ -55,12 +55,11 @@ Mr Hill hat Amir eine kurze Geschichte gegeben. Amir erzählt sie jetzt Ellie **
 
 Diese Wörter sind neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- retell | nacherzählen
-- glove | Handschuh
-- fox | Fuchs
-- kitten | Kätzchen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- retell – nacherzählen
+- glove – Handschuh
+- fox – Fuchs
+- kitten – Kätzchen
 
 ### Den Berg Schritt für Schritt abgehen
 
@@ -99,9 +98,9 @@ Amir erzählt zu jedem Fähnchen einen Satz in eigenen Worten:
 
 ### Rückblick und Ausblick
 
-**Rückblick auf Montag:** An der Wand der Geschichtenecke hängen Berg und story map noch leer, aber du kannst sie jetzt füllen. Die Map sagt, wer, wo, wann und was passiert. Am Berg hängen die Hauptereignisse, so fasst du zusammen. Und Station für Station erzählst du eine Geschichte in eigenen Worten nach, im simple past.
+**Rückblick:** Berg und story map kannst du jetzt füllen. Die Map sagt, wer, wo, wann und was passiert. Am Berg hängen die Hauptereignisse, so fasst du zusammen. Und Station für Station erzählst du eine Geschichte in eigenen Worten nach, im simple past.
 
-Am **Dienstag** hängt Mr Hill fünf Wegweiser an den Berg und neue Bilder an die Wand. Zuerst wiederholst du kurz, was du zum Beschreiben von Bildern brauchst. Dann lernst du die Wegweiser kennen und erzählst mit Bildern.
+Als Nächstes kommen fünf Wegweiser am Berg und neue Bilder an der Wand. Zuerst wiederholst du kurz, was du zum Beschreiben von Bildern brauchst. Dann lernst du die Wegweiser kennen und erzählst mit Bildern.
 
 ### Aufgabe nacherzaehlen-start
 

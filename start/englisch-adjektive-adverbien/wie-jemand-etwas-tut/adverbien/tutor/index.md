@@ -45,7 +45,7 @@ Amir malt vorsichtig, Peter rennt schnell. Du lernst, mit -ly zu sagen, wie jema
 
 ### Wie malt Amir?
 
-Bild: Amir malt an einer Staffelei, Peter rennt rechts davon, Sophie und Ellie schauen zu. Bildunterschrift: Von links: Sophie (Zöpfe), Amir (Brille), Peter (gelbe Jacke) und Ellie (roter Pferdeschwanz).
+Bild: Amir malt an einer Staffelei, Peter rennt rechts davon, Sophie und Ellie schauen zu. Bildunterschrift: Von links: Sophie, Amir, Peter und Ellie.
 
 Zur Eröffnung der Ausstellung zeigen die Kinder etwas vor. Amir malt ein Bild, und zwar **slow** (langsam). Mr Hill will nicht wissen, was Amir tut. Er will wissen, **wie** er es tut.
 
@@ -73,32 +73,31 @@ Klassenzimmer-Poster · Der Adverb-Anhänger:
 
 Meist gilt: Adjektiv + **-ly** (quick – quickly). Bei **-y** wird aus y ein i (happy – happily). **fast**, **hard** und **late** bleiben gleich, **good** wird **well**. Achtung: **hardly** heißt „kaum“, nicht „hart“.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- quiet | leise
-- loud | laut
-- careful | vorsichtig
-- easy | leicht
-- run | rennen
-- speak | sprechen
-- draw | zeichnen / malen
-- sing | singen
-- play | spielen
-- work | arbeiten
-- read | lesen
-- write | schreiben
-- football | Fußball
-- book | Buch
-- walk | gehen / laufen
-- eat | essen
-- fast | schnell
-- late | spät
-- hard | hart / schwer arbeiten
-- hardly | kaum
-- happy | froh
-- quick | schnell
-- slow | langsam
-- good / well | gut
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- quiet – leise
+- loud – laut
+- careful – vorsichtig
+- easy – leicht
+- run – rennen
+- speak – sprechen
+- draw – zeichnen / malen
+- sing – singen
+- play – spielen
+- work – arbeiten
+- read – lesen
+- write – schreiben
+- football – Fußball
+- book – Buch
+- walk – gehen / laufen
+- eat – essen
+- fast – schnell
+- late – spät
+- hard – hart / schwer arbeiten
+- hardly – kaum
+- happy – froh
+- quick – schnell
+- slow – langsam
+- good / well – gut
 
 ### Übung
 

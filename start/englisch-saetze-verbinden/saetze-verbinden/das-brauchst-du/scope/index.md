@@ -6,9 +6,8 @@ Die Seite wiederholt nur, was die Satzstreifen brauchen, und führt sie ein. Wie
 
 - Die Zeitformen selbst (steht im Explainer „Zeiten auf dem Zeitstrahl“)
 - Fragen im einfachen Satz (steht im Explainer „Sätze bauen“)
-- Infinitiv und Gerundium (steht im Explainer „Verbketten“)
+- Verbketten im Einzelnen (steht im Explainer „Verbketten“)
 - Verbindungswörter für Erzählung und Argumentation
-- Relativsätze ohne Relativpronomen, nicht notwendige Relativsätze, although und whereas
-- If-Sätze für Unwirkliches, I wish, indirekte Rede und indirekte Fragen
+- Gemischte if-Sätze und Inversion in if-Sätzen
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

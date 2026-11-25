@@ -45,9 +45,9 @@ Mr Hill hängt in der Geschichtenecke einen Berg und eine story map auf. Du lern
 
 ### Ein Berg und vier Felder
 
-Bild: In der Geschichtenecke des Klassenzimmers hängen an der Wand zwei Tafeln. Links ein Berg mit vier kleinen Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Sophie fragt in einer Sprechblase: „A mountain?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). An der Wand hängen links der Geschichtenberg mit vier Fähnchen und rechts die story map mit vier noch leeren Feldern.
+Bild: In der Geschichtenecke des Klassenzimmers hängen an der Wand zwei Tafeln. Links ein Berg mit vier kleinen Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Sophie fragt in einer Sprechblase: „A mountain?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: An der Wand hängen links der Geschichtenberg mit vier Fähnchen und rechts die story map mit vier noch leeren Feldern.
 
-Es ist Montag in der **Geschichtenwoche**. Mr Hill hat in der Geschichtenecke zwei Bilder aufgehängt: einen **Geschichtenberg** (englisch: story mountain) und eine **story map** mit vier Feldern. Sophie fragt: „A mountain?“ Mr Hill nickt. Zuerst lesen die Kinder eine ganz kurze Geschichte.
+Mr Hill hat in der Geschichtenecke zwei Bilder aufgehängt: einen **Geschichtenberg** (englisch: story mountain) und eine **story map** mit vier Feldern. Sophie fragt: „A mountain?“ Mr Hill nickt. Zuerst lesen die Kinder eine ganz kurze Geschichte.
 
 - Aufgabe `figuren-start` (unten)
 
@@ -55,14 +55,13 @@ Es ist Montag in der **Geschichtenwoche**. Mr Hill hat in der Geschichtenecke zw
 
 Diese Wörter sind neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- character | Figur
-- build-up | Aufbau
-- climax | Höhepunkt
-- pond | Teich
-- shed | Schuppen
-- shelf | Regal
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- character – Figur
+- build-up – Aufbau
+- climax – Höhepunkt
+- pond – Teich
+- shed – Schuppen
+- shelf – Regal
 
 ### Die story map und der Geschichtenberg
 

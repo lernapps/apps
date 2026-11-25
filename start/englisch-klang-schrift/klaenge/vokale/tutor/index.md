@@ -45,7 +45,7 @@ Peter zeigt ein Foto, und ein einziger Laut macht aus einem Wort ein anderes. Du
 
 ### Schaf oder Schiff?
 
-Bild: Im Klassenzimmer zeigt Peter in einer Sprechblase „A sheep!“. Neben ihm steht Ellie. Mr Hill steht rechts und fragt in einer Sprechblase „Sheep or ship?“. Bildunterschrift: Von links: Peter (gelbe Jacke) zeigt ein Foto, Ellie (roter Pferdeschwanz) schaut zu, rechts steht Mr Hill (graue Haare).
+Bild: Im Klassenzimmer zeigt Peter in einer Sprechblase „A sheep!“. Neben ihm steht Ellie. Mr Hill steht rechts und fragt in einer Sprechblase „Sheep or ship?“. Bildunterschrift: Von links: Peter zeigt ein Foto, Ellie schaut zu, rechts steht Mr Hill.
 
 Peter zeigt ein Foto vom Bauernhof und sagt: „A sheep!“ Mr Hill fragt: „Sheep or ship?“ **Sheep** heißt „Schaf“, **ship** heißt „Schiff“. Beide Wörter klingen fast gleich.
 
@@ -92,7 +92,7 @@ Lautkarten · Vokale im Paar:
 
 ### Wie es weitergeht
 
-Mr Hill nickt: „Gut gehört.“ Sophie fällt etwas auf: Wenn sie Thank you sagt, klingt es noch deutsch. Welche anderen Laute Kinder aus Deutschland oft anders sprechen, hörst du auf der nächsten Seite.
+Gut gehört! Welche anderen Laute Kinder aus Deutschland oft anders sprechen, hörst du auf der nächsten Seite.
 
 ### Aufgabe vokale-start
 

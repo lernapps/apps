@@ -45,7 +45,7 @@ Have got, das Verb be und Adjektive noch einmal kurz, bevor Sophie ihre neue Fam
 
 ### Das solltest du schon können
 
-Sophie will ihren Eltern in Deutschland schreiben, wie die Parkers aussehen. Dafür braucht sie zwei Bausteine. Kannst du sie schon? **Ich kann mit „have got“ und „has got“ sagen, was jemand hat, und danach fragen.** Das ist der Baustein „Have got und has got“. **Ich kann Adjektive vor ein Nomen (a big house) und nach „be“ (The house is big.) stellen.** Das ist der Baustein „Stellung der Adjektive“. Ein Nomen ist ein Wort für ein Ding, eine Person oder ein Tier. Ein Adjektiv sagt, wie ein Ding oder eine Person ist. Das Verb **be** (sein) kennst du auch schon: I am, he is, we are. Lies die Tabellen und prüfe in Gedanken, ob du alles kennst.
+Um Menschen zu beschreiben, brauchst du zwei Bausteine. Kannst du sie schon? **Ich kann mit „have got“ und „has got“ sagen, was jemand hat, und danach fragen.** Das ist der Baustein „Have got und has got“. **Ich kann Adjektive vor ein Nomen (a big house) und nach „be“ (The house is big.) stellen.** Das ist der Baustein „Stellung der Adjektive“. Ein Nomen ist ein Wort für ein Ding, eine Person oder ein Tier. Ein Adjektiv sagt, wie ein Ding oder eine Person ist. Das Verb **be** (sein) kennst du auch schon: I am, he is, we are. Lies die Tabellen und prüfe in Gedanken, ob du alles kennst.
 
 Klassenzimmer-Poster · have got, has got und be:
 - Person | Form

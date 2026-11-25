@@ -58,7 +58,7 @@ Nicht sicher? Wiederhole es auf der [Seite zum Verb to be](https://lernapps.net/
 
 ### Die Ausstellung und die Anhänger
 
-**Sophie** (11) kommt aus Deutschland und wohnt bei der Familie Parker. **Ellie Parker** (11) ist ihre Gastschwester, **Peter** (9) ist Ellies kleiner Bruder. **Amir** (11) ist ein Freund. **Mr Hill** ist der Englischlehrer. Er baut im Flur der Millbrook School die Ausstellung „Our Millbrook“ auf.
+Mr Hill baut im Flur der Millbrook School die Ausstellung „Our Millbrook“ auf.
 
 Zum Beschriften gibt Mr Hill den Kindern zwei Sorten Anhänger. Die **blauen** beschreiben Dinge und Personen, sie heißen **Adjektiv-Anhänger**. Die **orangefarbenen** sagen, wie jemand etwas tut, sie heißen **Adverb-Anhänger**. Die Wörter lernst du bald. Dazu kommt eine **Treppe**, auf der du Wörter steigerst (zum Beispiel big – bigger). Auf den nächsten Seiten füllst du sie.
 

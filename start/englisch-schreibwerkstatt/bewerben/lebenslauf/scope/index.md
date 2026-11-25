@@ -1,0 +1,12 @@
+# Der Lebenslauf (CV)
+
+Die Seite zeigt, wie ein englischer Lebenslauf (CV) gebaut ist. Lesestück ist Sophies CV für die Stelle Summer Library Assistant der Millbrook Library (Zeilen 1 bis 14) und eine Nachricht von Mr Anderson mit zwei Rückfragen und Sophies Antwort (Zeilen 15 bis 20). Der CV hat feste Teile in fester Reihenfolge: Personal details, Education, Experience, Skills, Interests. Er besteht aus Stichpunkten, das Neueste steht zuerst, Zeiträume haben einen Strich („September 2026 – present“), Monate werden ausgeschrieben. Im Vereinigten Königreich und in den USA stehen im CV kein Foto, kein Geschlecht und kein Familienstand; ein CV ist meist ein bis zwei Seiten lang. Typische Fehler sind Foto, Alter und Familienstand, Fließtext statt Stichpunkten und ein Datum wie 01.02.2023. Geübt werden Angaben den Teilen zuordnen, Fehler in einem Entwurf finden, Zeilen mit Zeitraum schreiben, Hören und Nachsprechen und zwei offene Aufgaben (Meinung zum CV, eigener CV einer erfundenen Person). Nicht hier sind die Bewerbung (Anschreiben) und das Vorstellungsgespräch.
+
+## Gehört nicht dazu
+
+- Persönliche Briefe und Nachrichten (steht im Explainer „Alltag“)
+- Geschichten schreiben (steht im Explainer „Geschichten“)
+- Meinungstexte wie Leserbrief und Kommentar (kommt später)
+- Bewertung der Aussprache und der freien Texte durch die App
+
+Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

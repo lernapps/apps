@@ -1,0 +1,12 @@
+# Sklaverei und Bürgerkrieg
+
+Die Seite erklärt die Geschichte der Sklaverei in den USA und den Amerikanischen Bürgerkrieg in Grundzügen. Sklaverei war in den USA von 1776 bis 1865 vor allem im Süden erlaubt; 1860 waren etwa vier Millionen Menschen versklavt. Nach der Wahl Abraham Lincolns 1860 verließen sieben, später elf Südstaaten die Union und bildeten die Konföderation. Der Krieg begann am 12. April 1861 bei Fort Sumter und endete 1865 mit der Aufgabe General Lees bei Appomattox. Die Emancipation Proclamation vom 1. Januar 1863 galt für versklavte Menschen in den Staaten im Aufstand, der 13. Zusatzartikel (Dezember 1865) beendete die Sklaverei im ganzen Land, außer als Strafe für ein Verbrechen. Der Krieg hatte mehrere Ursachen und Sichtweisen: Für den Süden stand die Sklaverei im Zentrum, für den Norden war das Ziel zunächst, die Union zu erhalten, versklavte Menschen suchten selbst Freiheit. Geübt werden das Lesen eines Sachtextes mit Zeilenbeleg, die Zuordnung von Sichtweisen, das Ordnen von Ereignissen und das Lesen einer Karte. Typische Fehler sind nur eine Ursache des Krieges, Sklaverei sei 1776 oder erst in den 1950er-Jahren geendet, die Emancipation Proclamation habe sofort alle befreit und Union gleich Gewerkschaft. Nicht hier: Bürgerrechtsbewegung und Rassentrennung im 20. Jahrhundert, Demokratie und Menschenrechte, Migration.
+
+## Gehört nicht dazu
+
+- Großbritannien und London (eigener Explainer)
+- Schulsysteme mit Abschlüssen und Bewerbung
+- Politik als Thema für Diskussionen
+- Bevölkerungszahlen und Statistiken ohne Beleg
+
+Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

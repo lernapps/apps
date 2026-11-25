@@ -51,20 +51,19 @@ Im Lagerraum stehen jetzt viele Kisten. Mr Hill sagt: „Jede Kiste bekommt ein 
 
 **Das kannst du danach:** Du sagst mit ’s, mit s’ und mit of, wem etwas gehört.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- bike | Fahrrad
-- cap | Mütze
-- coat | Mantel
-- shoe | Schuh
-- door | Tür
-- window | Fenster
-- room | Zimmer
-- boy | Junge
-- girl | Mädchen
-- name | Name
-- where | wo
-- storeroom | Lagerraum
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- bike – Fahrrad
+- cap – Mütze
+- coat – Mantel
+- shoe – Schuh
+- door – Tür
+- window – Fenster
+- room – Zimmer
+- boy – Junge
+- girl – Mädchen
+- name – Name
+- where – wo
+- storeroom – Lagerraum
 
 - Aufgabe `genitiv-start` (unten)
 

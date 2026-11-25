@@ -45,7 +45,7 @@ Das alte Haus ist größer als das neue. Du lernst, zwei Dinge mit than und as �
 
 ### Das alte und das neue Haus
 
-Bild: Drei Kinder stehen im Flur vor zwei Fotos. Das linke Foto zeigt ein großes Haus, das rechte ein kleines Haus. Bildunterschrift: Von links: Sophie (Zöpfe), Amir (Brille) und Ellie (roter Pferdeschwanz).
+Bild: Drei Kinder stehen im Flur vor zwei Fotos. Das linke Foto zeigt ein großes Haus, das rechte ein kleines Haus. Bildunterschrift: Von links: Sophie, Amir und Ellie.
 
 Für die Ausstellung hängen zwei Fotos an der Wand, das alte Haus und das neue Haus. Das alte ist größer. Amir will das auf einer Karte sagen. Er braucht ein kleines Wort zwischen **bigger** und **the new house**.
 
@@ -69,25 +69,24 @@ Klassenzimmer-Poster · Vergleiche:
 
 Nach der Steigerung steht **than**, nie then. Bei **as … as** steht das Wort in der **Grundform**, nicht in der Steigerung: as tall as, nicht as taller as.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- than | als
-- as … as | so … wie
-- not as … as | nicht so … wie
-- rabbit | Kaninchen
-- hamster | Hamster
-- dog | Hund
-- bike | Fahrrad
-- cake | Kuchen
-- test | Test
-- expensive | teuer
-- boring | langweilig
-- film | Film
-- garden | Garten
-- pizza | Pizza
-- cheap | billig
-- easy | leicht
-- difficult | schwierig
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- than – als
+- as … as – so … wie
+- not as … as – nicht so … wie
+- rabbit – Kaninchen
+- hamster – Hamster
+- dog – Hund
+- bike – Fahrrad
+- cake – Kuchen
+- test – Test
+- expensive – teuer
+- boring – langweilig
+- film – Film
+- garden – Garten
+- pizza – Pizza
+- cheap – billig
+- easy – leicht
+- difficult – schwierig
 
 ### Übung
 
@@ -113,7 +112,7 @@ Klassenzimmer-Poster · Wörter dieser Seite:
 
 Das hast du jetzt am Wandbild hängen: den blauen Anhänger vor dem Nomen und nach be, die Treppe mit drei Stufen und die kleinen Wörter than und as … as. Damit beschreibst du Dinge und vergleichst sie. Mr Hill ist zufrieden. Als Nächstes gibt es orangefarbene Anhänger, die sagen, **wie** jemand etwas tut.
 
-Schulkalender · Rückblick Kapitel 1:
+Schulkalender · Rückblick Beschreiben und vergleichen:
 - Das willst du sagen | So geht es
 - ein Ding beschreiben | blauer Anhänger vor dem Nomen oder nach be
 - zwei Dinge vergleichen | Steigerung + than

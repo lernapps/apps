@@ -71,24 +71,23 @@ Klassenzimmer-Poster · Question tags:
 
 **Positiv, dann negativ. Negativ, dann positiv.** Der tag nimmt den Helfer der Aussage wieder auf (do, does, did) oder bei **be** das Wort be. Danach steht das Pronomen: Peter wird he, Ellie wird she.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Wort oder Ausdruck | Bedeutung
-- like | mögen
-- play | spielen
-- eat – ate | essen – aß
-- watch – watched | anschauen – schaute an
-- football | Fußball
-- pizza | Pizza
-- tea | Tee
-- film | Film
-- read | lesen
-- book | Buch
-- happy | froh
-- tired | müde
-- yesterday | gestern
-- lunch | Mittagessen
-- at school | in der Schule
-- question tag | kleine Frage am Satzende
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- like – mögen
+- play – spielen
+- eat – ate – essen – aß
+- watch – watched – anschauen – schaute an
+- football – Fußball
+- pizza – Pizza
+- tea – Tee
+- film – Film
+- read – lesen
+- book – Buch
+- happy – froh
+- tired – müde
+- yesterday – gestern
+- lunch – Mittagessen
+- at school – in der Schule
+- question tag – kleine Frage am Satzende
 
 ### Übung
 
@@ -114,9 +113,9 @@ Klassenzimmer-Poster · Wörter dieser Seite:
 
 Mr Hill hängt zum Schluss alle Karten noch einmal an die Wand. Du hast Aussage, Frage, Verneinung, Subjektfrage und question tag gesehen. Schau, welche Plätze es gibt:
 
-Bild: Fünf Reihen mit Satzkarten zu einem Satz mit Amir. Aussage, Frage mit gelbem Helfer vorn, Verneinung mit gelbem Helfer vor dem Verb, Subjektfrage mit türkisem Who und question tag am Ende. Bildunterschrift: Alle Plätze der Satzleiste. Der gelbe Helfer wandert: nach vorn, vor das Verb und ans Ende.
+Bild: Fünf Reihen mit Satzkarten zu einem Satz mit Amir. Aussage, Frage mit gelbem Helfer vorn, Verneinung mit gelbem Helfer vor dem Verb, Subjektfrage mit türkisem Who und question tag am Ende. Bildunterschrift: Die Plätze der Satzleiste bis jetzt. Der gelbe Helfer wandert: nach vorn, vor das Verb und ans Ende.
 
-Der gelbe Helfer fehlt in der Aussage, weil das simple present ihn dort nicht braucht, und bei der Subjektfrage, weil dort das Fragewort das Subjekt ersetzt. Sonst ist er in jeder Reihe, nur an verschiedenen Plätzen.
+Der gelbe Helfer fehlt in der Aussage, weil das simple present ihn dort nicht braucht, und bei der Subjektfrage, weil dort das Fragewort das Subjekt ersetzt. Sonst ist er in jeder Reihe, nur an verschiedenen Plätzen. Zwei weitere Plätze kommen im nächsten Kapitel: vor dem Verb zur Betonung und vor dem Subjekt nach einem Wort wie never.
 
 ### Aufgabe tags-start
 

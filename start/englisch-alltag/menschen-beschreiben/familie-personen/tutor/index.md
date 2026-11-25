@@ -45,9 +45,9 @@ Sophie schreibt ihren Eltern, wer zur Familie Parker gehört. Du lernst die Fami
 
 ### Wer sitzt am Küchentisch?
 
-Bild: Fünf Menschen sitzen an einem langen Tisch in einer Küche. Ein Kind hält ein Handy. Bildunterschrift: Von links: Mrs Parker, Ellie (Pferdeschwanz), Sophie (Zöpfe), Peter (gelbe Jacke), Mr Parker.
+Bild: Fünf Menschen sitzen an einem langen Tisch in einer Küche. Ein Kind hält ein Handy. Bildunterschrift: Von links: Mrs Parker, Ellie, Sophie, Peter, Mr Parker.
 
-Sophie wohnt jetzt bei den Parkers. Am Abend sitzt die Familie (family) in der Küche, Ellies und Sophies Freund Amir kommt oft zu Besuch. Mr heißt Herr und Mrs heißt Frau. Für ihre Eltern in Deutschland zeichnet Sophie einen Stammbaum: Linien führen von den Eltern zu den Kindern, die Linie nach oben zur Mutter von Mr Parker, die gestrichelte zu Sophie, die zu Gast ist.
+Am Abend sitzt die Familie (family) in der Küche. Mr heißt Herr und Mrs heißt Frau. Sophie zeichnet einen Stammbaum: Linien führen von den Eltern zu den Kindern, die Linie nach oben zur Mutter von Mr Parker, die gestrichelte zu Sophie, die zu Gast ist.
 
 Bild: Ein Stammbaum in drei Reihen. Oben eine ältere Frau mit grauem Dutt, in der Mitte zwei Erwachsene, unten drei Kinder. Links hängt ein kleines Foto, darunter steht ein Name. Bildunterschrift: Der Stammbaum der Parkers. Die gestrichelte orange Linie führt zu Sophie, die zu Gast ist. Das Foto zeigt ihre Eltern.
 
@@ -59,15 +59,14 @@ Bild: Ein Stammbaum in drei Reihen. Oben eine ältere Frau mit grauem Dutt, in d
 
 **Mum** und **dad** sind deine Mama und dein Papa, sie heißen auch **mother** und **father**. Zusammen sind sie deine **parents**. Dein Bruder ist dein **brother**, deine Schwester deine **sister**. Deine Oma ist deine **grandma**, dein Opa dein **grandpa**. Deine Tante ist deine **aunt**, dein Onkel dein **uncle**, ein Cousin oder eine Cousine dein **cousin**. Sophies Mama ist Sophie’s mum. Das ’s sagt, zu wem jemand gehört. Über dich sagst du **my** (mein), zu jemandem **your** (dein), über einen Jungen oder Mann **his** (sein), über ein Mädchen oder eine Frau **her** (ihr).
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- glasses | Brille
-- ponytail | Pferdeschwanz
-- kind | nett / freundlich
-- helpful | hilfsbereit
-- curly | lockig
-- short / long | kurz / lang
-- clever | klug
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- glasses – Brille
+- ponytail – Pferdeschwanz
+- kind – nett / freundlich
+- helpful – hilfsbereit
+- curly – lockig
+- short / long – kurz / lang
+- clever – klug
 
 Wie sieht jemand aus? Haare, eine Brille oder einen Bart **hat** man: Mrs Parker **has got** red hair. Größe und Alter **ist** man: Mrs Parker **is** tall. Der Charakter, also wie jemand ist, wird auch mit **is** gesagt: Mrs Parker **is** nice.
 
@@ -112,7 +111,7 @@ All about me · Meine Familie (Ellies Beispiel):
 
 ### Wie es weitergeht
 
-Sophie schickt den Stammbaum nach Hause. Ihre Eltern wollen mehr wissen: Wie ist ihr Englischlehrer Mr Hill? Und wie ist ihr Zimmer? Auf der nächsten Seite schreibt Sophie darüber einen Text, in dem ein Satz zum nächsten passt.
+Sophie schickt den Stammbaum nach Hause. Auf der nächsten Seite schreibt sie einen Text über Mr Hill und ihr Zimmer, in dem ein Satz zum nächsten passt.
 
 ### Aufgabe familie-personen-start
 
@@ -206,7 +205,7 @@ Sophie schickt den Stammbaum nach Hause. Ihre Eltern wollen mehr wissen: Wie ist
 - Einträge (Vorgabe → Lösung):
 1. Audio → Peter's grandma is old and funny. (auch richtig: Peter's grandma's old and funny.)
 2. Audio → My mum is kind and clever. (auch richtig: My mum's kind and clever.)
-3. Audio → Sophie's mum is tall and happy. (auch richtig: Sophie's mum's tall and happy.)
+3. Audio → Sophie's mum has got long hair. (auch richtig: Sophie's mum's got long hair.)
 - Die Lernenden hören bei den Items mit Audio eine Datei mit einer KI-Stimme. Du kannst sie nicht abspielen; was gesprochen wird, steht in der Lösung.
 - So hilfst du: Die App prüft Wort für Wort gegen die Lösungen oben und nennt Fehler der Form (zum Beispiel Akzente) mit den Wörtern des Kindes. Sag nicht die Lösung vor: Frag nach der Regel (Endung, Geschlecht, Zeitform) oder nach einem ähnlichen Satz der Seite. Hält die App eine Fassung des Kindes für falsch, die du für richtig hältst, sag es dem Kind: Die App kennt nur die Fassungen oben.
 - Link: [../?via=tutor#familie-personen-hoeren](../?via=tutor#familie-personen-hoeren)

@@ -4,7 +4,6 @@ Die Seite führt die zweite Spalte der Pronomen-Tabelle ein, „Wen trifft es?�
 
 ## Gehört nicht dazu
 
-- mine, yours, myself und each other (kommen in Kapitel 2)
 - this, that, some, any und ihre Zusammensetzungen
 - Relativpronomen
 - die Formen von to be

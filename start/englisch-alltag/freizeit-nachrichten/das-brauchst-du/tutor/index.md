@@ -45,15 +45,14 @@ Begrüßen, danken und sich entschuldigen noch einmal kurz, bevor Sophie Nachric
 
 ### Das solltest du schon können
 
-Sophie schreibt bald, was die Kinder in der Freizeit machen. Danach folgen eine Einladung, eine Postkarte und eine kurze E-Mail. Dafür braucht sie den Baustein „Begrüßung und Höflichkeit“. Kannst du ihn schon? **Ich kann Menschen auf Englisch angemessen begrüßen, anreden und mich höflich bedanken und entschuldigen.** Lies die Tabelle und prüfe in Gedanken, ob du alles kennst.
+Für Hobbys, Einladung und Postkarte brauchst du den Baustein „Begrüßung und Höflichkeit“. Kannst du ihn schon? **Ich kann Menschen auf Englisch angemessen begrüßen, anreden und mich höflich bedanken und entschuldigen.** Lies die Ausdrücke und prüfe in Gedanken, ob du alles kennst.
 
-Klassenzimmer-Poster · Höflich sein:
-- Wann | Ausdruck
-- grüßen | Hello. Hi. Good morning.
-- sich verabschieden | Goodbye. See you.
-- danken | Thank you. Thanks.
-- sich entschuldigen | Sorry. I'm sorry.
-- jemanden anreden | Mr Hill, Mrs Parker. Dear Mum,
-- einen Brief beenden | Love, Best wishes,
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Höflich sein
+- Hello. Hi. Good morning. – grüßen
+- Goodbye. See you. – sich verabschieden
+- Thank you. Thanks. – danken
+- Sorry. I'm sorry. – sich entschuldigen
+- Mr Hill, Mrs Parker. Dear Mum, – jemanden anreden
+- Love, Best wishes, – einen Brief beenden
 
-Nicht sicher? Wiederhole es auf der Seite [Begrüßung und Höflichkeit](https://lernapps.net/apps/map/englisch/c/gruss-hoeflichkeit/) der Lernlandkarte. Weiter geht es mit Sophies Freizeit: Sie schreibt ihren Eltern, welche Hobbys Ellie, Peter und Amir haben.
+Nicht sicher? Wiederhole es auf der Seite [Begrüßung und Höflichkeit](https://lernapps.net/apps/map/englisch/c/gruss-hoeflichkeit/) der Lernlandkarte. Weiter geht es mit den Hobbys.

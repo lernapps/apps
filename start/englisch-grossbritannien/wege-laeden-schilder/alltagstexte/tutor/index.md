@@ -45,9 +45,9 @@ Sophie und Ellie stehen vor der Bäckerei und lesen Schilder, Fahrpläne, Speise
 
 ### Ein Schild an der Tür
 
-Bild: Zwei Mädchen stehen vor einer Bäckerei. An der Tür hängt ein Zettel mit englischem Text. Über einem der Mädchen steht ein Fragezeichen. Bildunterschrift: Von links: Sophie (blonde Zöpfe) und Ellie (roter Pferdeschwanz) vor der bakery.
+Bild: Zwei Mädchen stehen vor einer Bäckerei. An der Tür hängt ein Zettel mit englischem Text. Über einem der Mädchen steht ein Fragezeichen. Bildunterschrift: Sophie und Ellie vor der bakery.
 
-Sophie und Ellie sind auf der High Street. An der Tür der bakery hängt ein kleiner Zettel. Sophie ist unsicher, ob sie alles versteht. Ellie sagt: „Du musst nicht jedes Wort verstehen. Schau erst, was für ein Text das ist.“
+An der Tür der bakery auf der High Street hängt ein kleiner Zettel. Sophie ist unsicher, ob sie alles versteht. Ellie sagt: „Du musst nicht jedes Wort verstehen. Schau erst, was für ein Text das ist.“
 
 - Aufgabe `alltag-einstieg` (unten)
 
@@ -63,15 +63,14 @@ Bild: Vier Kärtchen mit englischen Texten. Das erste ist ein Schild mit zwei Ze
 
 Ein **Schild** ist kurz und sagt, was man tun soll oder wie es ist. Ein **Fahrplan** ist eine Tabelle mit Uhrzeiten und Zielen. Eine **Speisekarte** zeigt Gerichte mit Preisen. Ein **Flyer** nennt einen Ort, einen Tag und eine Uhrzeit. Eine Uhrzeit hat einen Doppelpunkt (9:30), ein Preis hat das Zeichen £. Im Fahrplan ist **leaves** die Abfahrt und **arrives** die Ankunft.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- sign | Schild
-- timetable | Fahrplan
-- menu | Speisekarte
-- flyer | Flyer (ein Blatt mit Werbung)
-- closed | geschlossen (das Gegenteil von open)
-- half past | nach halb (half past two ist 2:30, nicht 1:30)
-- back at | zurück um
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- sign – Schild
+- timetable – Fahrplan
+- menu – Speisekarte
+- flyer – Flyer (ein Blatt mit Werbung)
+- closed – geschlossen (das Gegenteil von open)
+- half past – nach halb (half past two ist 2:30, nicht 1:30)
+- back at – zurück um
 
 ### Übung
 

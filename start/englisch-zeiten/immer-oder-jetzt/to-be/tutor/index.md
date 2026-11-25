@@ -45,7 +45,7 @@ Sophie hängt die ersten Karten an den Zeitstrahl. Du lernst am, is und are für
 
 ### Wer ist wer am Zeitstrahl?
 
-Bild: Sophie, Ellie, Amir und Peter stehen im Klassenzimmer. In einer Sprechblase über Sophie steht „I am Sophie. I am eleven.“. Bildunterschrift: Von links: Sophie (Zöpfe), Ellie (roter Pferdeschwanz), Amir (Brille) und Peter (gelbe Jacke). Sophie spricht.
+Bild: Sophie, Ellie, Amir und Peter stehen im Klassenzimmer. In einer Sprechblase über Sophie steht „I am Sophie. I am eleven.“. Bildunterschrift: Sophie spricht.
 
 Sophie hängt die erste Karte an den Zeitstrahl: „I am Sophie. I am eleven.“ Eleven ist die Zahl elf. Jede Karte sagt, wer jemand ist.
 
@@ -63,7 +63,7 @@ Klassenzimmer-Poster · Die Formen von be:
 - Person | Form | Beispiel
 - I | am | I am Sophie.
 - you | are | You are my friend.
-- he / she / it | is | Peter is my brother.
+- he / she / it | is | Peter is in my class.
 - we | are | We are in class five.
 - they | are | They are Ellie and Peter.
 
@@ -76,9 +76,8 @@ Klassenzimmer-Poster · Aussage, Verneinung, Frage:
 
 Die **Verneinung** hängt **not** hinter be. Die **Frage** entsteht, wenn be und die Person die Plätze tauschen. Bei be brauchst du kein do. Kurz sagst du auch **I'm**, **you're**, **he's**, **she's**, **we're** und **they're**.
 
-Klassenzimmer-Poster · Wörter dieser Seite:
-- Ausdruck | Bedeutung
-- in the classroom | im Klassenzimmer
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Wörter dieser Seite
+- in the classroom – im Klassenzimmer
 
 ### Übung
 

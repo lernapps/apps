@@ -47,23 +47,22 @@ Mr Hill ruft von der Tür, welche Kiste er meint. Du lernst, mit this und these 
 
 Bild: Sophie und Peter stehen vorn im Lagerraum, vor ihnen steht eine Kiste. Weit hinten stehen zwei Kisten auf einem Regal. Bildunterschrift: Von links: Sophie (Zöpfe) und Peter (gelbe Jacke). Hier vorn steht eine Kiste, dort drüben zwei.
 
-Mr Hill steht an der Tür. Er möchte, dass die Kinder eine Kiste tragen. Er sagt: „Look at that box.“ Look at heißt „sieh dir an“. Sophie und Peter schauen sich um.
+Mr Hill steht an der Tür und sagt: „Look at that box.“ Look at heißt „sieh dir an“.
 
 **Das kannst du danach:** Du zeigst auf Englisch auf Dinge hier und dort drüben, bei einem Ding und bei vielen.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- here | hier
-- there | dort
-- look at | ansehen
-- red | rot
-- brown | braun
-- blue | blau
-- key | Schlüssel
-- coat | Mantel
-- cap | Mütze
-- shoe | Schuh
-- bike | Fahrrad
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- here – hier
+- there – dort
+- look at – ansehen
+- red – rot
+- brown – braun
+- blue – blau
+- key – Schlüssel
+- coat – Mantel
+- cap – Mütze
+- shoe – Schuh
+- bike – Fahrrad
 
 - Aufgabe `demonstrativ-start` (unten)
 

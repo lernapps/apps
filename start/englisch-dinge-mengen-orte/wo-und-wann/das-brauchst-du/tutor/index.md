@@ -57,30 +57,28 @@ Klassenzimmer-Poster · Die Formen von be:
 
 **Ich kann Wochentage, Monate, Datum und Jahreszahlen sagen und schreiben.** Du brauchst das für den Schulkalender. Wiederhole es auf der [Seite zu Wochentagen, Monaten und Datum](https://lernapps.net/apps/map/englisch/c/datum/) der Lernlandkarte.
 
-Schulkalender · Wochentage:
-- Englisch | Deutsch
-- Monday | Montag
-- Tuesday | Dienstag
-- Wednesday | Mittwoch
-- Thursday | Donnerstag
-- Friday | Freitag
-- Saturday | Samstag
-- Sunday | Sonntag
+Vokabeln (Englisch – Deutsch): Schulkalender · Wochentage
+- Monday – Montag
+- Tuesday – Dienstag
+- Wednesday – Mittwoch
+- Thursday – Donnerstag
+- Friday – Freitag
+- Saturday – Samstag
+- Sunday – Sonntag
 
-Schulkalender · Monate:
-- Englisch | Deutsch
-- January | Januar
-- February | Februar
-- March | März
-- April | April
-- May | Mai
-- June | Juni
-- July | Juli
-- August | August
-- September | September
-- October | Oktober
-- November | November
-- December | Dezember
+Vokabeln (Englisch – Deutsch): Schulkalender · Monate
+- January – Januar
+- February – Februar
+- March – März
+- April – April
+- May – Mai
+- June – Juni
+- July – Juli
+- August – August
+- September – September
+- October – Oktober
+- November – November
+- December – Dezember
 
 **Ich kann die Uhrzeit sagen und nach ihr fragen (half past seven, a quarter to eight).** Du brauchst das für Zeitangaben mit at. Wiederhole es auf der [Seite zur Uhrzeit](https://lernapps.net/apps/map/englisch/c/uhrzeit/) der Lernlandkarte.
 

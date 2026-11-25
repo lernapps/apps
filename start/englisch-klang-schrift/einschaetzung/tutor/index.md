@@ -61,6 +61,23 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Zwei Wörter, ein Klang“ · Aufgaben A15, A16
 - „Wohin geht die Stimme?“ · Aufgaben A17, A18, A19
 
+### Kapitel „Richtig schreiben“
+
+- Selbsteinschätzung des Kapitels
+- „Ein Laut, mehrere Schreibungen“ · Aufgaben A20, A21, A22
+- „Das brauchst du hier“
+- „Wann steht ein Komma?“ · Aufgaben A23, A24
+
+### Kapitel „Betonung, Rhythmus und Melodie“
+
+- Selbsteinschätzung des Kapitels
+- „Welche Silbe ist betont?“ · Aufgaben A25, A26
+- „Wörter rutschen zusammen“ · Aufgaben A27, A28
+- „Kleine Wörter sind leise“ · Aufgaben A29, A30
+- „Klopfe den Rhythmus“ · Aufgaben A31, A32
+- „Das brauchst du hier“
+- „Fragst du wirklich?“ · Aufgaben A33, A34
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe lautschrift-zaehlen der Seite „Lautschrift lesen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
@@ -82,3 +99,18 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A17: Aufgabe intonation-satzart der Seite „Wohin geht die Stimme?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A18: Aufgabe intonation-waehlen der Seite „Wohin geht die Stimme?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A19: Aufgabe intonation-fragewort der Seite „Wohin geht die Stimme?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A20: Aufgabe laut-buchstabe-zuordnen der Seite „Ein Laut, mehrere Schreibungen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A21: Aufgabe laut-buchstabe-satz der Seite „Ein Laut, mehrere Schreibungen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A22: Aufgabe laut-buchstabe-schreiben der Seite „Ein Laut, mehrere Schreibungen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A23: Aufgabe komma-setzen der Seite „Wann steht ein Komma?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A24: Aufgabe komma-notwendig der Seite „Wann steht ein Komma?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A25: Aufgabe wortbetonung-zuordnen der Seite „Welche Silbe ist betont?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A26: Aufgabe wortbetonung-zaehlen der Seite „Welche Silbe ist betont?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A27: Aufgabe bindungen-erkennen der Seite „Wörter rutschen zusammen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A28: Aufgabe bindungen-zaehlen der Seite „Wörter rutschen zusammen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A29: Aufgabe schwache-formen-stark der Seite „Kleine Wörter sind leise“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A30: Aufgabe schwache-formen-zuordnen der Seite „Kleine Wörter sind leise“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A31: Aufgabe satzbetonung-markieren der Seite „Klopfe den Rhythmus“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A32: Aufgabe satzbetonung-zaehlen der Seite „Klopfe den Rhythmus“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A33: Aufgabe tag-zustimmung der Seite „Fragst du wirklich?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A34: Aufgabe tag-erkennen der Seite „Fragst du wirklich?“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

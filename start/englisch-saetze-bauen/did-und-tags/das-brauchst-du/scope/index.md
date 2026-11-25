@@ -8,6 +8,6 @@ Die Seite wiederholt nur das simple past mit regelmäßigen Verben (-ed) aus dem
 - Nebensätze, indirekte Rede und indirekte Fragen
 - Die Satzmelodie der Frage
 - Die Stellung der Adverbien
-- Betonung mit do und Inversion (Klasse 9 bis 10)
+- Inversion in Bedingungssätzen, nach so und such und nach Ortsadverbien
 
 Alle Seiten des Kapitels: [Scope des Kapitels](../../scope/)

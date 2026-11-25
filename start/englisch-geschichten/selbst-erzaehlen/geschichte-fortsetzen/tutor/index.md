@@ -45,7 +45,7 @@ Amir fragt: And then? Du lernst, an eine Geschichte einen zweiten Gipfel anzubau
 
 ### Die Geschichte geht weiter
 
-Bild: In der Geschichtenecke hängen an der Wand zwei Tafeln. Links ein Berg mit vier nummerierten Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Amir fragt in einer Sprechblase: „And then?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: Von links: Sophie (Zöpfe), Peter (gelbe Jacke), Ellie (roter Pferdeschwanz), Amir (Brille) und Mr Hill (graue Haare). An der Wand hängen der Geschichtenberg und die story map.
+Bild: In der Geschichtenecke hängen an der Wand zwei Tafeln. Links ein Berg mit vier nummerierten Fähnchen, rechts vier leere Felder mit den Wörtern who, where, when und what. Amir fragt in einer Sprechblase: „And then?“ Vor der Wand stehen Sophie, Peter, Ellie und Amir. Rechts steht Mr Hill. Bildunterschrift: An der Wand hängen der Geschichtenberg und die story map.
 
 Sophie liest Amir ihre Geschichte vom Drachen vor: „On a sunny Saturday Ellie and her grandpa were on the hill. They flew a kite. Suddenly the kite flew away. Finally a boy found it.“ Dann hört sie auf. Amir fragt: „And then?“ Die Geschichte soll weitergehen.
 
@@ -55,9 +55,8 @@ Sophie liest Amir ihre Geschichte vom Drachen vor: „On a sunny Saturday Ellie 
 
 Dieses Wort ist neu auf dem Klassenzimmer-Poster.
 
-Klassenzimmer-Poster · Neue Wörter:
-- Wort | Bedeutung
-- melt | schmelzen
+Vokabeln (Englisch – Deutsch): Klassenzimmer-Poster · Neue Wörter
+- melt – schmelzen
 
 ### Zweiter Gipfel oder anderes Ende
 
