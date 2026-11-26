@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CtncCkFd.css">
+    <title>Zeichen werden Zahlen – Daten darstellen und codieren</title>
+    <meta name="description" content="Wie Buchstaben mit einer Codetabelle wie ASCII oder Unicode als Binärzahlen gespeichert werden." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../texte/zeichen/" />
+    <link rel="alternate" hreflang="en" href="../../en/texte/zeichen/" />
+    <script type="module" crossorigin src="../../assets/islands-BlhrVoYe.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../texte/zeichen/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/texte/zeichen/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../texte/">Texte und Signale codieren</a></li><li aria-current="page">Zeichen werden Zahlen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row">
+<h1>Zeichen werden Zahlen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../texte/zeichen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧texte/zeichen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-daten-codieren","page":{"id":"zeichen","title":"Zeichen werden Zahlen","exercises":[{"id":"wie-gespeichert","section":"einstieg","numbered":false},{"id":"buchstabe-legen","section":"ausprobieren","numbered":true},{"id":"code-ueben","section":"uebung","numbered":true},{"id":"bytes-decodieren","section":"uebung","numbered":false},{"id":"bits-eines-worts","section":"uebung","numbered":false},{"id":"umlaut-ascii","section":"uebung","numbered":false}],"sections":["einstieg","idee","beispiel","ausprobieren","uebung","weiter"]},"tutor":"texte/zeichen/tutor/","markdown":"texte/zeichen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Eine Nachricht im Klassenchat</a></li><li><a href="#idee">Eine Codetabelle für Zeichen</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#ausprobieren">Ausprobieren</a></li><li><a href="#uebung">Übung</a></li><li><a href="#weiter">Und Ä, € oder 😀?</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Eine Nachricht im Klassenchat</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="53cc461f" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Ein Jahr später: Jona, Selin und Mia sind jetzt 12 und gehen in die 7b. Wieder geht es an den Seeberg.
+Im Klassenchat schreibt Selin, wie letztes Jahr:</p>
+<p><strong>Selin:</strong> TREFFEN MONTAG ACHT UHR AM BAHNHOF</p>
+<p><strong>Jona:</strong> Wie speichert mein Handy eigentlich Buchstaben? Es kennt doch nur 0 und 1.</p>
+<p>Auf dieser Seite findest du es heraus, mit den Bit-Karten aus Kapitel 2.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="a736c77d" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="wie-gespeichert">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-wie-gespeichert" data-id="wie-gespeichert" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was meinst du, wie speichert das Handy den Buchstaben A?</legend>
+<label class="question-option"><input type="radio" name="frage-wie-gespeichert" value="0"> <span>Als Zahl, die in einer Tabelle für A steht</span></label>
+<label class="question-option"><input type="radio" name="frage-wie-gespeichert" value="1"> <span>Als kleines Bild des Buchstabens</span></label>
+<label class="question-option"><input type="radio" name="frage-wie-gespeichert" value="2"> <span>Als ein einzelnes Bit</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Als Zahl, die in einer Tabelle für A steht</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Jedes Zeichen hat eine feste Nummer. Die Nummer speichert das Handy als Bits.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Als kleines Bild des Buchstabens</strong></p><p>Das Bild malt der Bildschirm erst beim Anzeigen, mit der Schrift. Gespeichert ist nur die Nummer.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Als ein einzelnes Bit</strong></p><p>Ein Bit hat nur zwei Werte. Damit kann man nicht 26 Buchstaben unterscheiden.</p></li>
+</ul>
+<p class="question-explanation">Computer speichern Zeichen als Zahlen. Wie das genau geht, zeigt der nächste Abschnitt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Als Zahl, die in einer Tabelle für A steht</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Jedes Zeichen hat eine feste Nummer. Die Nummer speichert das Handy als Bits.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Als kleines Bild des Buchstabens</strong></p><p>Das Bild malt der Bildschirm erst beim Anzeigen, mit der Schrift. Gespeichert ist nur die Nummer.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Als ein einzelnes Bit</strong></p><p>Ein Bit hat nur zwei Werte. Damit kann man nicht 26 Buchstaben unterscheiden.</p></li>
+</ul>
+<p class="question-explanation">Computer speichern Zeichen als Zahlen. Wie das genau geht, zeigt der nächste Abschnitt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wie-gespeichert","text":"Was meinst du, wie speichert das Handy den Buchstaben A?","explanation":"Computer speichern Zeichen als Zahlen. Wie das genau geht, zeigt der nächste Abschnitt.","links":[],"type":"single-choice","options":[{"text":"Als Zahl, die in einer Tabelle für A steht","correct":true,"info":"Jedes Zeichen hat eine feste Nummer. Die Nummer speichert das Handy als Bits."},{"text":"Als kleines Bild des Buchstabens","correct":false,"info":"Das Bild malt der Bildschirm erst beim Anzeigen, mit der Schrift. Gespeichert ist nur die Nummer."},{"text":"Als ein einzelnes Bit","correct":false,"info":"Ein Bit hat nur zwei Werte. Damit kann man nicht 26 Buchstaben unterscheiden."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Eine Codetabelle für Zeichen</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="7ce154ae" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Dafür gibt es <strong>Codetabellen</strong>. Die bekannteste heißt
+<strong>ASCII</strong>. Sie hat 128 Zeichen mit den Codes 0 bis 127: Großbuchstaben, Kleinbuchstaben, Ziffern,
+Satzzeichen und Steuerzeichen wie „neue Zeile“, keine Umlaute. A hat die Nummer 65, B die 66, C die 67 und so weiter
+bis Z mit 90. Das Leerzeichen hat die 32, das kleine a die 97. Selin braucht A bis Z und das Leerzeichen.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="bf1f5256" data-block-type="table" data-block-order="4">
+<div class="block-table" role="region" aria-label="Ein Teil der ASCII-Tabelle mit dem Byte zu jedem Code" tabindex="0"><table><caption>Ein Teil der ASCII-Tabelle mit dem Byte zu jedem Code</caption><thead><tr><th scope="col">Zeichen</th><th scope="col">Code</th><th scope="col">Byte</th></tr></thead><tbody><tr><td>Leerzeichen</td><td>32</td><td>00100000</td></tr><tr><td>A</td><td>65</td><td>01000001</td></tr><tr><td>B</td><td>66</td><td>01000010</td></tr><tr><td>C</td><td>67</td><td>01000011</td></tr><tr><td>Z</td><td>90</td><td>01011010</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="4a6a1dea" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-codetabelle"><a href="../../glossar/#codetabelle">Codetabelle</a></dfn></dt><dd><p>Eine Codetabelle legt fest, welche Zahl zu welchem Zeichen gehört. Die Zahl speichert der Computer als Binärzahl.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="f663cf4c" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/4/1" data-block-id="da984456" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Bei ASCII passt jedes Zeichen in <strong>ein Byte</strong>, also auf acht Bit-Karten. Die Codes gehen nur bis 127, die Karte 128 bleibt darum immer verdeckt. Ein Wort mit 5 Buchstaben braucht 5 Byte, das sind 40 Bit.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="4603a56d" data-block-type="example" data-block-order="8">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Das Wort JA als Bytes</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="65c2cff9" data-block-type="text" data-block-order="9">
+<div class="block-text"><ol>
+<li>Code von J: A = 65, B = 66 … J ist der 10. Buchstabe, also 65 + 9 = 74.</li>
+<li>74 = 64 + 8 + 2, als Byte 01001010.</li>
+<li>Code von A: 65 = 64 + 1, als Byte 01000001.</li>
+</ol>
+<p>JA wird gespeichert als 01001010 01000001, zwei Byte oder 16 Bit.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Ausprobieren</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="fe15f6d8" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Rechne zuerst den Code des Buchstabens aus, wie im Beispiel. Dann drehe die Karten um, bis sie den Code zeigen, und drücke „Prüfen“.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="cf2a9033" data-block-type="vue-component" data-block-order="11">
+<div class="explainer-component" id="buchstabe-legen" data-component="BitKarten" data-exercise data-seeds="[1,2,4,5,6,7,8,9,10,12,13,14,15,18,19,20,23,24,30,32,43,69,143]" data-checked>
+<p class="explainer-exercise-label">Aufgabe</p>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Aufgabe Nr. {n}">Aufgabe Nr. 1</span> <button type="button" class="explainer-new-task" title="Neue Aufgabe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">Neue Aufgabe</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="bit-karten" data-v-d86cb0ce><p data-v-d86cb0ce>Lege den Buchstaben Q als Byte.</p><div class="bit-karten-many bit-karten-row" data-v-d86cb0ce><!--[--><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>128</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 128: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>64</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 64: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>32</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 32: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>16</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 16: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>8</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 8: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>4</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 4: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>2</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 2: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><div class="bit-karten-place" data-v-d86cb0ce><span class="bit-karten-value" aria-hidden="true" data-v-d86cb0ce>1</span><button type="button" class="bit-karten-card" aria-pressed="false" aria-label="Karte 1: verdeckt" data-v-d86cb0ce><!----></button><span class="bit-karten-bit" aria-hidden="true" data-v-d86cb0ce>0</span></div><!--]--></div><p class="bit-karten-line" aria-live="polite" data-v-d86cb0ce>Byte: 00000000</p></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button> <button type="button" class="question-solve" hidden>Lösung</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Aufgabe Nr. 1</p><div class="explainer-task"><p>Lege den Buchstaben Q als Byte.</p></div><details class="explainer-solution"><summary>Lösung</summary><p>01010001: 64 + 16 + 1 = 81</p></details></div></div>
+<p class="question-feedback" data-right="Richtig!" data-wrong="Leider nicht richtig." data-incomplete="Bearbeite zuerst die Aufgabe."></p>
+<div class="explainer-component-solution" hidden tabindex="-1"><p class="explainer-component-solution-label">Lösung</p><div class="explainer-component-solution-text"></div></div>
+<template class="explainer-component-solutions"><div data-number="1"><p>01010001: 64 + 16 + 1 = 81</p></div><div data-number="2"><p>01010011: 64 + 16 + 2 + 1 = 83</p></div><div data-number="3"><p>01011000: 64 + 16 + 8 = 88</p></div><div data-number="4"><p>01010010: 64 + 16 + 2 = 82</p></div><div data-number="5"><p>01001111: 64 + 8 + 4 + 2 + 1 = 79</p></div><div data-number="6"><p>01000011: 64 + 2 + 1 = 67</p></div><div data-number="7"><p>01000110: 64 + 4 + 2 = 70</p></div><div data-number="8"><p>01000111: 64 + 4 + 2 + 1 = 71</p></div><div data-number="9"><p>01001110: 64 + 8 + 4 + 2 = 78</p></div><div data-number="10"><p>01001001: 64 + 8 + 1 = 73</p></div><div data-number="11"><p>01010000: 64 + 16 = 80</p></div><div data-number="12"><p>01001101: 64 + 8 + 4 + 1 = 77</p></div><div data-number="13"><p>01001000: 64 + 8 = 72</p></div><div data-number="14"><p>01001100: 64 + 8 + 4 = 76</p></div><div data-number="15"><p>01000100: 64 + 4 = 68</p></div><div data-number="16"><p>01010100: 64 + 16 + 4 = 84</p></div><div data-number="17"><p>01000101: 64 + 4 + 1 = 69</p></div><div data-number="18"><p>01001010: 64 + 8 + 2 = 74</p></div><div data-number="19"><p>01010110: 64 + 16 + 4 + 2 = 86</p></div><div data-number="20"><p>01001011: 64 + 8 + 2 + 1 = 75</p></div><div data-number="21"><p>01011001: 64 + 16 + 8 + 1 = 89</p></div><div data-number="22"><p>01010101: 64 + 16 + 4 + 1 = 85</p></div><div data-number="23"><p>01010111: 64 + 16 + 4 + 2 + 1 = 87</p></div></template>
+<script type="application/json" class="explainer-component-props">{"task":"Lege den Buchstaben {c} als Byte.","cards":8,"min":66,"max":90,"card":"Karte {v}","open":"offen","closed":"verdeckt","line":"Byte: {b}","mistakes":["Deine Karten zeigen {s}. Du hast von der falschen Seite gelegt: Die Karte 128 liegt links.","Deine Karten zeigen {s}, das ist weniger als der Code von {c}. Prüfe den Code (A = 65) und zähle deine Karten zusammen.","Deine Karten zeigen {s}, das ist mehr als der Code von {c}. Prüfe den Code (A = 65) und zähle deine Karten zusammen."]}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="c1b62c9f" data-block-type="generated" data-block-order="12">
+<div class="explainer-exercise explainer-generated" id="code-ueben">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Welchen Code hat der Buchstabe F in der ASCII-Tabelle?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welcher Buchstabe im Alphabet ist es? Der 1. hat 65.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>F ist der 6. Buchstabe. A = 65, also hat F den Code 65 + 6 − 1 = 70.</li><li>Als Byte: 01000110.</li></ol><p><strong>Richtige Antwort:</strong> 70</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Welchen Code hat der Buchstabe V in der ASCII-Tabelle?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welcher Buchstabe im Alphabet ist es? Der 1. hat 65.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>V ist der 22. Buchstabe. A = 65, also hat V den Code 65 + 22 − 1 = 86.</li><li>Als Byte: 01010110.</li></ol><p><strong>Richtige Antwort:</strong> 86</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Welchen Code hat der Buchstabe X in der ASCII-Tabelle?</p><details class="explainer-hint"><summary>Tipp</summary><p>Welcher Buchstabe im Alphabet ist es? Der 1. hat 65.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>X ist der 24. Buchstabe. A = 65, also hat X den Code 65 + 24 − 1 = 88.</li><li>Als Byte: 01011000.</li></ol><p><strong>Richtige Antwort:</strong> 88</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"code-ueben","given":{"e":{"pick":1,"from":{"data":"buchstaben"}}},"where":["e.code != 65"],"task":{"text":{"de":"Welchen Code hat der Buchstabe {{e.z}} in der ASCII-Tabelle?","en":"What is the code of the letter {{e.z}} in the ASCII table?"}},"answer":{"value":"e.code","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"e.code - 64","message":{"de":"Das ist die Stelle im Alphabet. In der Tabelle beginnt A aber mit 65.","en":"That is the place in the alphabet. But in the table, A starts at 65."}},{"value":"e.code - 65","message":{"de":"Du hast bei A mit 0 angefangen. A hat den Code 65.","en":"You started at 0 for A. A has the code 65."}},{"value":"e.code + 1","message":{"de":"A ist schon der 1. Buchstabe. Rechne 65 + Stelle − 1.","en":"A is already the 1st letter. Work out 65 + place − 1."}}],"hint":{"de":"Welcher Buchstabe im Alphabet ist es? Der 1. hat 65.","en":"Which letter of the alphabet is it? The 1st has 65."},"steps":[{"de":"{{e.z}} ist der {{e.stelle}}. Buchstabe. A = 65, also hat {{e.z}} den Code 65 + {{e.stelle}} − 1 = {{answer}}.","en":"{{e.z}} is letter number {{e.stelle}}. A = 65, so {{e.z}} has the code 65 + {{e.stelle}} − 1 = {{answer}}."},{"de":"Als Byte: {{e.bin}}.","en":"As a byte: {{e.bin}}."}]},"templates":{"de":{"task":"Welchen Code hat der Buchstabe ⟦e.z⟧ in der ASCII-Tabelle?","steps":["⟦e.z⟧ ist der ⟦e.stelle⟧. Buchstabe. A = 65, also hat ⟦e.z⟧ den Code 65 + ⟦e.stelle⟧ − 1 = ⟦answer⟧.","Als Byte: ⟦e.bin⟧."],"hint":"Welcher Buchstabe im Alphabet ist es? Der 1. hat 65.","messages":["Das ist die Stelle im Alphabet. In der Tabelle beginnt A aber mit 65.","Du hast bei A mit 0 angefangen. A hat den Code 65.","A ist schon der 1. Buchstabe. Rechne 65 + Stelle − 1."]}},"data":{"buchstaben":[{"z":"A","stelle":1,"code":65,"bin":"01000001"},{"z":"B","stelle":2,"code":66,"bin":"01000010"},{"z":"C","stelle":3,"code":67,"bin":"01000011"},{"z":"D","stelle":4,"code":68,"bin":"01000100"},{"z":"E","stelle":5,"code":69,"bin":"01000101"},{"z":"F","stelle":6,"code":70,"bin":"01000110"},{"z":"G","stelle":7,"code":71,"bin":"01000111"},{"z":"H","stelle":8,"code":72,"bin":"01001000"},{"z":"I","stelle":9,"code":73,"bin":"01001001"},{"z":"J","stelle":10,"code":74,"bin":"01001010"},{"z":"K","stelle":11,"code":75,"bin":"01001011"},{"z":"L","stelle":12,"code":76,"bin":"01001100"},{"z":"M","stelle":13,"code":77,"bin":"01001101"},{"z":"N","stelle":14,"code":78,"bin":"01001110"},{"z":"O","stelle":15,"code":79,"bin":"01001111"},{"z":"P","stelle":16,"code":80,"bin":"01010000"},{"z":"Q","stelle":17,"code":81,"bin":"01010001"},{"z":"R","stelle":18,"code":82,"bin":"01010010"},{"z":"S","stelle":19,"code":83,"bin":"01010011"},{"z":"T","stelle":20,"code":84,"bin":"01010100"},{"z":"U","stelle":21,"code":85,"bin":"01010101"},{"z":"V","stelle":22,"code":86,"bin":"01010110"},{"z":"W","stelle":23,"code":87,"bin":"01010111"},{"z":"X","stelle":24,"code":88,"bin":"01011000"},{"z":"Y","stelle":25,"code":89,"bin":"01011001"},{"z":"Z","stelle":26,"code":90,"bin":"01011010"}]},"seeds":[1,3,4,5,6,9,11,12,13,15,16,17,18,19,20,23,26,28,34,36,45,52,67,74,77],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="80ae6232" data-block-type="matching" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="bytes-decodieren">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-bytes-decodieren" data-id="bytes-decodieren" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia schickt einen Namen als Bytes. Rechne jedes Byte in eine Zahl um. Welcher Buchstabe ist es?</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>01001010</span> <select name="frage-bytes-decodieren-0" data-left="0"><option value="">bitte wählen</option><option value="3">A</option><option value="1">O</option><option value="4">Ä</option><option value="2">N</option><option value="0">J</option></select></label></li>
+<li><label><span>01001111</span> <select name="frage-bytes-decodieren-1" data-left="1"><option value="">bitte wählen</option><option value="3">A</option><option value="1">O</option><option value="4">Ä</option><option value="2">N</option><option value="0">J</option></select></label></li>
+<li><label><span>01001110</span> <select name="frage-bytes-decodieren-2" data-left="2"><option value="">bitte wählen</option><option value="3">A</option><option value="1">O</option><option value="4">Ä</option><option value="2">N</option><option value="0">J</option></select></label></li>
+<li><label><span>01000001</span> <select name="frage-bytes-decodieren-3" data-left="3"><option value="">bitte wählen</option><option value="3">A</option><option value="1">O</option><option value="4">Ä</option><option value="2">N</option><option value="0">J</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 01001010 – J; 01001111 – O; 01001110 – N; 01000001 – A</p>
+<p class="question-explanation">74 ist J, 79 ist O, 78 ist N und 65 ist A. Mia hat JONA geschickt. Ä hat keinen Code in ASCII.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 01001010 – J; 01001111 – O; 01001110 – N; 01000001 – A</p>
+<p class="question-explanation">74 ist J, 79 ist O, 78 ist N und 65 ist A. Mia hat JONA geschickt. Ä hat keinen Code in ASCII.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"bytes-decodieren","text":"Mia schickt einen Namen als Bytes. Rechne jedes Byte in eine Zahl um. Welcher Buchstabe ist es?","explanation":"74 ist J, 79 ist O, 78 ist N und 65 ist A. Mia hat JONA geschickt. Ä hat keinen Code in ASCII.","links":[],"type":"matching","pairs":[{"left":"01001010","right":"J"},{"left":"01001111","right":"O"},{"left":"01001110","right":"N"},{"left":"01000001","right":"A"}],"distractors":["Ä"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="bc51e153" data-block-type="number" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="bits-eines-worts">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-bits-eines-worts" data-id="bits-eines-worts" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Bit braucht das Wort SEEBERG, wenn jedes Zeichen als ein Byte gespeichert wird?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-bits-eines-worts" aria-describedby="frage-bits-eines-worts-unit"> <span id="frage-bits-eines-worts-unit">Bit</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 56 Bit</p>
+<p class="question-explanation">7 Buchstaben sind 7 Byte. 7 · 8 = 56 Bit.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 56 Bit</p>
+<p class="question-explanation">7 Buchstaben sind 7 Byte. 7 · 8 = 56 Bit.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"bits-eines-worts","text":"Wie viele Bit braucht das Wort SEEBERG, wenn jedes Zeichen als ein Byte gespeichert wird?","explanation":"7 Buchstaben sind 7 Byte. 7 · 8 = 56 Bit.","links":[],"type":"number","answer":56,"tolerance":0,"unit":"Bit","mistakes":[{"answer":7,"message":"7 ist die Zahl der Buchstaben, also der Byte. Jedes Byte hat 8 Bit."},{"answer":70,"message":"Ein Byte hat 8 Bit, nicht 10."},{"answer":49,"message":"ASCII-Codes passen zwar in 7 Bit, gespeichert wird aber immer ein ganzes Byte mit 8 Bit."},{"answer":8,"message":"Das ist ein Byte, also nur ein Buchstabe. SEEBERG hat 7."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="9b11fb22" data-block-type="true-false" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="umlaut-ascii">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-umlaut-ascii" data-id="umlaut-ascii" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Der Buchstabe Ä hat einen Code in der ASCII-Tabelle.</legend>
+<label class="question-option"><input type="radio" name="frage-umlaut-ascii" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-umlaut-ascii" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">ASCII kennt nur die Buchstaben ohne Umlaute. Für Ä, € und Emojis gibt es Unicode, mit mehr als 170 000 Zeichen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">ASCII kennt nur die Buchstaben ohne Umlaute. Für Ä, € und Emojis gibt es Unicode, mit mehr als 170 000 Zeichen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"umlaut-ascii","text":"Der Buchstabe Ä hat einen Code in der ASCII-Tabelle.","explanation":"ASCII kennt nur die Buchstaben ohne Umlaute. Für Ä, € und Emojis gibt es Unicode, mit mehr als 170 000 Zeichen.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="weiter">Und Ä, € oder 😀?</h2>
+<div class="explainer-block" data-block="weiter/1" data-block-id="ac4ffba0" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Für fast alle Schriften der Welt gibt es die Codetabelle <strong>Unicode</strong>. Sie hat heute mehr als 170 000 Zeichen.
+Die ersten 128 sind genau die ASCII-Zeichen. Mit einem Byte gibt es aber nur 256 verschiedene Zahlen. Für
+die anderen Zeichen braucht das Handy darum mehr Bits. Nach einer Regel namens <strong>UTF-8</strong> speichert es ein
+Zeichen in 1 bis 4 Byte: A in 1 Byte, Ä in 2, € in 3 und 😀 in 4 Byte.</p>
+<p>Jetzt kannst du Text in Bytes umrechnen. Auf der nächsten Seite schickt Mia eine Sprachnachricht. Wie wird
+aus ihrer Stimme etwas, das man in Bits speichern kann?</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Daten darstellen und codieren“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-daten-codieren","app":"Daten darstellen und codieren","root":"../../","repository":"lernapps/informatik-daten-codieren","revision":"154a09c","page":{"title":"Zeichen werden Zahlen","order":13}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../geheim/sicherheit/">Zurück: Wie sicher ist das?</a><a rel="next" href="../../texte/analog/">Weiter: Analog und digital</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

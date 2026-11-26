@@ -89,9 +89,9 @@ machst und es niemandem verrätst.
 
 - Aufgabe `verfahren-schluessel` (unten)
 
-Rückblick auf die ganze App: Die Klassenfahrt hast du als Zettel, Tabelle, Diagramm und Baum gesehen, als
-Zahl aus Bits, als Pixelbild und als Geheimschrift. Immer war es dieselbe Information, nur anders
-dargestellt. Und ein Computer speichert jede dieser Formen am Ende mit 0 und 1.
+Rückblick auf die Kapitel 1 bis 4: Die Klassenfahrt hast du als Zettel, Tabelle, Diagramm und Baum gesehen,
+als Zahl aus Bits, als Pixelbild und als Geheimschrift. Immer war es dieselbe Information, nur anders
+dargestellt. Im nächsten Kapitel, für die Klassen 7 und 8, werden auch Text und Stimme zu 0 und 1.
 
 ### Aufgabe caesar-knacken
 

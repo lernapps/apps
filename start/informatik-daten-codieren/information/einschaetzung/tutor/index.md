@@ -67,6 +67,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Die Caesar-Scheibe“
 - „Wie sicher ist das?“
 
+### Kapitel „Texte und Signale codieren“
+
+- Selbsteinschätzung des Kapitels
+- „Zeichen werden Zahlen“
+- „Analog und digital“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe weg-der-nachricht der Seite „Information und Daten“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CtncCkFd.css">
+    <title>Analog und digital – Daten darstellen und codieren</title>
+    <meta name="description" content="Den Unterschied zwischen analoger und digitaler Darstellung erklären und sehen, wie eine Stimme digitalisiert wird." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../texte/analog/" />
+    <link rel="alternate" hreflang="en" href="../../en/texte/analog/" />
+    <script type="module" crossorigin src="../../assets/islands-BlhrVoYe.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../texte/analog/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/texte/analog/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../texte/">Texte und Signale codieren</a></li><li aria-current="page">Analog und digital</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row">
+<h1>Analog und digital</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../texte/analog/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧texte/analog/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-daten-codieren","page":{"id":"analog","title":"Analog und digital","exercises":[{"id":"welche-uhr","section":"einstieg","numbered":false},{"id":"analog-oder-digital","section":"idee","numbered":false},{"id":"stufen-aus-bits","section":"uebung","numbered":true},{"id":"bits-pro-sekunde","section":"uebung","numbered":true},{"id":"mbit-und-mb","section":"uebung","numbered":false},{"id":"mehr-messpunkte","section":"uebung","numbered":false}],"sections":["einstieg","idee","ausprobieren","uebung"]},"tutor":"texte/analog/tutor/","markdown":"texte/analog/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Eine Sprachnachricht</a></li><li><a href="#idee">Messen und runden</a></li><li><a href="#ausprobieren">Ausprobieren</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Eine Sprachnachricht</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="b7dc8861" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Im Klassenchat der 7b schickt Mia eine Sprachnachricht: „Ich bringe den Ball mit!“</p>
+<p><strong>Jona:</strong> Text sind Bytes, das weiß ich jetzt. Aber wie kommt Mias Stimme in 0 und 1?</p>
+<p>Eine Stimme ist eine Schallwelle. Sie ändert sich stufenlos, ohne Sprünge. Auf dieser Seite siehst du, wie
+daraus Zahlen werden, die das Handy als Bits speichert.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="c1d5e823" data-block-type="single-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="welche-uhr">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-welche-uhr" data-id="welche-uhr" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Uhr zeigt die Zeit stufenlos, also auch jeden Augenblick zwischen zwei Minuten?</legend>
+<label class="question-option"><input type="radio" name="frage-welche-uhr" value="0"> <span>Eine Uhr mit Zeigern</span></label>
+<label class="question-option"><input type="radio" name="frage-welche-uhr" value="1"> <span>Eine Uhr mit Ziffern</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Eine Uhr mit Zeigern</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Stellung der Zeiger zeigt die Zeit als Winkel. Der Minutenzeiger steht auch zwischen zwei Minutenstrichen. Das nennt man analog.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Eine Uhr mit Ziffern</strong></p><p>Die Ziffern springen von einer Minute zur nächsten. Dazwischen zeigt sie nichts an. Das nennt man digital.</p></li>
+</ul>
+<p class="question-explanation">Analoge Anzeigen ändern sich stufenlos, digitale in Schritten, als Zahlen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Eine Uhr mit Zeigern</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Stellung der Zeiger zeigt die Zeit als Winkel. Der Minutenzeiger steht auch zwischen zwei Minutenstrichen. Das nennt man analog.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Eine Uhr mit Ziffern</strong></p><p>Die Ziffern springen von einer Minute zur nächsten. Dazwischen zeigt sie nichts an. Das nennt man digital.</p></li>
+</ul>
+<p class="question-explanation">Analoge Anzeigen ändern sich stufenlos, digitale in Schritten, als Zahlen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"welche-uhr","text":"Welche Uhr zeigt die Zeit stufenlos, also auch jeden Augenblick zwischen zwei Minuten?","explanation":"Analoge Anzeigen ändern sich stufenlos, digitale in Schritten, als Zahlen.","links":[],"type":"single-choice","options":[{"text":"Eine Uhr mit Zeigern","correct":true,"info":"Die Stellung der Zeiger zeigt die Zeit als Winkel. Der Minutenzeiger steht auch zwischen zwei Minutenstrichen. Das nennt man analog."},{"text":"Eine Uhr mit Ziffern","correct":false,"info":"Die Ziffern springen von einer Minute zur nächsten. Dazwischen zeigt sie nichts an. Das nennt man digital."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Messen und runden</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="75e54550" data-block-type="definition" data-block-order="3">
+<dl class="explainer-definition"><dt><dfn id="begriff-analog"><a href="../../glossar/#analog">analog</a></dfn></dt><dd><p>Analog heißt, ein Wert ändert sich stufenlos und kann jeden Zwischenwert haben, wie eine Schallwelle oder die Zeiger einer Uhr.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="ab076b08" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-digital"><a href="../../glossar/#digital">digital</a></dfn></dt><dd><p>Digital heißt, ein Wert wird nur zu einzelnen Zeitpunkten und in Stufen als Zahl festgehalten, im Computer als Binärzahl.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="05eefd9c" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Das Mikrofon im Handy macht aus dem Schall eine elektrische Spannung. Sie ändert sich stufenlos mit der
+Stimme, ist also noch analog. Beim <strong>Digitalisieren</strong> macht das Handy dann zwei Schritte:</p>
+<ol>
+<li><strong>Abtasten:</strong> Es misst die Spannung in gleichen Abständen, zum Beispiel 8000-mal in jeder Sekunde.</li>
+<li><strong>Runden:</strong> Jeden Messwert rundet es auf die nächste erlaubte Stufe und speichert deren Nummer als
+Binärzahl. Mit 2 Bit gibt es 4 Stufen (00, 01, 10, 11), mit 3 Bit schon 8.</li>
+</ol></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="8c8b2cc9" data-block-type="note" data-block-order="6">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/4/1" data-block-id="984b3120" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Zwischen zwei Messpunkten und zwischen zwei Stufen geht etwas verloren. Mehr Messpunkte und mehr Bit machen die digitale Stimme genauer, aber auch größer.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="232b64e5" data-block-type="multiple-choice" data-block-order="8">
+<div class="explainer-exercise explainer-question" id="analog-oder-digital">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-analog-oder-digital" data-id="analog-oder-digital" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was davon ist digital? Kreuze alle an.</legend>
+<label class="question-option"><input type="checkbox" name="frage-analog-oder-digital" value="0"> <span>Mias Sprachnachricht auf dem Handy</span></label>
+<label class="question-option"><input type="checkbox" name="frage-analog-oder-digital" value="1"> <span>Eine Uhr mit Ziffern</span></label>
+<label class="question-option"><input type="checkbox" name="frage-analog-oder-digital" value="2"> <span>Die Spannung im Mikrofon</span></label>
+<label class="question-option"><input type="checkbox" name="frage-analog-oder-digital" value="3"> <span>Eine Uhr mit Zeigern</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Mias Sprachnachricht auf dem Handy</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Sie besteht aus Messwerten, die als Bits gespeichert sind.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Eine Uhr mit Ziffern</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Sie springt von Minute zu Minute und zeigt Zahlen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Spannung im Mikrofon</strong></p><p>Sie ändert sich stufenlos mit dem Schall. Sie ist analog, auch in einem modernen Handy.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Eine Uhr mit Zeigern</strong></p><p>Der Minutenzeiger steht auch zwischen zwei Strichen. Sie ist analog.</p></li>
+</ul>
+<p class="question-explanation">Digital ist, was nur einzelne Werte in Stufen als Zahlen festhält. Analog ändert sich stufenlos.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Mias Sprachnachricht auf dem Handy</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Sie besteht aus Messwerten, die als Bits gespeichert sind.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Eine Uhr mit Ziffern</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Sie springt von Minute zu Minute und zeigt Zahlen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Spannung im Mikrofon</strong></p><p>Sie ändert sich stufenlos mit dem Schall. Sie ist analog, auch in einem modernen Handy.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Eine Uhr mit Zeigern</strong></p><p>Der Minutenzeiger steht auch zwischen zwei Strichen. Sie ist analog.</p></li>
+</ul>
+<p class="question-explanation">Digital ist, was nur einzelne Werte in Stufen als Zahlen festhält. Analog ändert sich stufenlos.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"analog-oder-digital","text":"Was davon ist digital? Kreuze alle an.","explanation":"Digital ist, was nur einzelne Werte in Stufen als Zahlen festhält. Analog ändert sich stufenlos.","links":[],"type":"multiple-choice","options":[{"text":"Mias Sprachnachricht auf dem Handy","correct":true,"info":"Sie besteht aus Messwerten, die als Bits gespeichert sind."},{"text":"Eine Uhr mit Ziffern","correct":true,"info":"Sie springt von Minute zu Minute und zeigt Zahlen."},{"text":"Die Spannung im Mikrofon","correct":false,"info":"Sie ändert sich stufenlos mit dem Schall. Sie ist analog, auch in einem modernen Handy."},{"text":"Eine Uhr mit Zeigern","correct":false,"info":"Der Minutenzeiger steht auch zwischen zwei Strichen. Sie ist analog."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Ausprobieren</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="5ef10eb2" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Die blaue Linie ist die Spannung im Mikrofon während eines kurzen Augenblicks, von links nach rechts. Jeder rote Punkt ist ein Messpunkt, die rote gestrichelte Treppe zeigt, was gespeichert wird. Die grauen Linien sind die erlaubten Stufen. Der Regler „Messpunkte“ gehört zum Abtasten, der Regler „Bit pro Messpunkt“ zum Runden. Schiebe sie, auch mit den Pfeiltasten, und beobachte, wie nah die Treppe der Welle kommt.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="925f3fa5" data-block-type="vue-component" data-block-order="10">
+<div class="explainer-component" data-component="Abtasten">
+<div class="explainer-island" hidden><div class="abtasten" data-v-6ee29d71><svg viewBox="0 0 320 160" class="abtasten-figure" aria-hidden="true" data-v-6ee29d71><rect x="0" y="0" width="320" height="160" fill="#fff" data-v-6ee29d71></rect><!--[--><line x1="10" x2="310" y1="150" y2="150" class="abtasten-level" data-v-6ee29d71></line><line x1="10" x2="310" y1="103.33333333333334" y2="103.33333333333334" class="abtasten-level" data-v-6ee29d71></line><line x1="10" x2="310" y1="56.66666666666667" y2="56.66666666666667" class="abtasten-level" data-v-6ee29d71></line><line x1="10" x2="310" y1="10" y2="10" class="abtasten-level" data-v-6ee29d71></line><!--]--><path d="M10.0 65.4 L12.5 58.7 L15.0 52.5 L17.5 46.8 L20.0 41.7 L22.5 37.4 L25.0 33.8 L27.5 31.0 L30.0 29.0 L32.5 27.7 L35.0 27.3 L37.5 27.6 L40.0 28.5 L42.5 30.1 L45.0 32.1 L47.5 34.6 L50.0 37.4 L52.5 40.4 L55.0 43.5 L57.5 46.5 L60.0 49.5 L62.5 52.2 L65.0 54.5 L67.5 56.5 L70.0 57.9 L72.5 58.8 L75.0 59.2 L77.5 58.9 L80.0 58.1 L82.5 56.6 L85.0 54.6 L87.5 52.0 L90.0 49.1 L92.5 45.7 L95.0 42.1 L97.5 38.2 L100.0 34.4 L102.5 30.5 L105.0 26.8 L107.5 23.4 L110.0 20.3 L112.5 17.8 L115.0 15.8 L117.5 14.4 L120.0 13.8 L122.5 14.0 L125.0 15.0 L127.5 16.9 L130.0 19.5 L132.5 23.0 L135.0 27.3 L137.5 32.3 L140.0 38.0 L142.5 44.2 L145.0 50.9 L147.5 58.0 L150.0 65.3 L152.5 72.7 L155.0 80.2 L157.5 87.5 L160.0 94.6 L162.5 101.3 L165.0 107.5 L167.5 113.2 L170.0 118.3 L172.5 122.6 L175.0 126.2 L177.5 129.0 L180.0 131.0 L182.5 132.3 L185.0 132.7 L187.5 132.4 L190.0 131.5 L192.5 129.9 L195.0 127.9 L197.5 125.4 L200.0 122.6 L202.5 119.6 L205.0 116.5 L207.5 113.5 L210.0 110.5 L212.5 107.8 L215.0 105.5 L217.5 103.5 L220.0 102.1 L222.5 101.2 L225.0 100.8 L227.5 101.1 L230.0 101.9 L232.5 103.4 L235.0 105.4 L237.5 108.0 L240.0 110.9 L242.5 114.3 L245.0 117.9 L247.5 121.8 L250.0 125.6 L252.5 129.5 L255.0 133.2 L257.5 136.6 L260.0 139.7 L262.5 142.2 L265.0 144.2 L267.5 145.6 L270.0 146.2 L272.5 146.0 L275.0 145.0 L277.5 143.1 L280.0 140.5 L282.5 137.0 L285.0 132.7 L287.5 127.7 L290.0 122.0 L292.5 115.8 L295.0 109.1 L297.5 102.0 L300.0 94.7 L302.5 87.3 L305.0 79.8 L307.5 72.5 L310.0 65.4" class="abtasten-curve" data-v-6ee29d71></path><path d="M10.0 10.0 L47.5 10.0 L47.5 56.7 L85.0 56.7 L85.0 10.0 L122.5 10.0 L122.5 56.7 L160.0 56.7 L160.0 150.0 L197.5 150.0 L197.5 103.3 L235.0 103.3 L235.0 150.0 L272.5 150.0 L272.5 103.3 L310.0 103.3" class="abtasten-stairs" data-v-6ee29d71></path><!--[--><circle cx="28.75" cy="10" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="66.25" cy="56.66666666666667" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="103.75" cy="10" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="141.25" cy="56.66666666666667" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="178.75" cy="150" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="216.25" cy="103.33333333333334" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="253.75" cy="150" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><circle cx="291.25" cy="103.33333333333334" r="3.5" class="abtasten-dot" data-v-6ee29d71></circle><!--]--></svg><p class="abtasten-legend" data-v-6ee29d71><span class="abtasten-item" data-v-6ee29d71><span class="abtasten-key abtasten-key-curve" data-v-6ee29d71></span>Schallwelle</span><span class="abtasten-item" data-v-6ee29d71><span class="abtasten-key abtasten-key-stored" data-v-6ee29d71></span>gespeicherte Werte</span></p><div class="abtasten-controls" data-v-6ee29d71><label class="abtasten-control" data-v-6ee29d71><span data-v-6ee29d71>Messpunkte: 8</span><input value="8" type="range" min="2" max="32" step="1" data-v-6ee29d71></label><label class="abtasten-control" data-v-6ee29d71><span data-v-6ee29d71>Bit pro Messpunkt: 2</span><input value="2" type="range" min="1" max="4" step="1" data-v-6ee29d71></label></div><p class="abtasten-line" aria-live="polite" data-v-6ee29d71>8 Messpunkte · 4 Stufen · 16 Bit zusammen</p></div></div>
+<div class="explainer-nojs"><p>Eine Schallwelle und darüber die gespeicherten Werte als Treppe. Zwei Regler stellen ein, wie oft gemessen
+wird (2 bis 32 Messpunkte) und wie viele Bit jeder Messwert hat (1 bis 4).</p>
+<ul>
+<li>4 Messpunkte, 1 Bit: 2 Stufen, 4 Bit zusammen. Die Treppe hat mit der Welle wenig zu tun.</li>
+<li>8 Messpunkte, 2 Bit: 4 Stufen, 16 Bit zusammen. Die Form der Welle ist grob zu erkennen.</li>
+<li>32 Messpunkte, 4 Bit: 16 Stufen, 128 Bit zusammen. Die Treppe liegt dicht an der Welle.</li>
+</ul></div>
+<script type="application/json" class="explainer-component-props">{"pointsLabel":"Messpunkte","bitsLabel":"Bit pro Messpunkt","line":"{n} Messpunkte · {s} Stufen · {b} Bit zusammen","curveLabel":"Schallwelle","storedLabel":"gespeicherte Werte"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="97fbea48" data-block-type="generated" data-block-order="11">
+<div class="explainer-exercise explainer-generated" id="stufen-aus-bits">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Jeder Messwert wird mit 3 Bit gespeichert. Wie viele verschiedene Stufen gibt es?</p><details class="explainer-hint"><summary>Tipp</summary><p>1 Bit: 2 Stufen, 2 Bit: 4 Stufen, 3 Bit: …</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Jedes Bit verdoppelt die Zahl der Stufen. Mit 3 Bit sind es 8 Stufen.</li></ol><p><strong>Richtige Antwort:</strong> 8</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Jeder Messwert wird mit 5 Bit gespeichert. Wie viele verschiedene Stufen gibt es?</p><details class="explainer-hint"><summary>Tipp</summary><p>1 Bit: 2 Stufen, 2 Bit: 4 Stufen, 3 Bit: …</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Jedes Bit verdoppelt die Zahl der Stufen. Mit 5 Bit sind es 32 Stufen.</li></ol><p><strong>Richtige Antwort:</strong> 32</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Jeder Messwert wird mit 6 Bit gespeichert. Wie viele verschiedene Stufen gibt es?</p><details class="explainer-hint"><summary>Tipp</summary><p>1 Bit: 2 Stufen, 2 Bit: 4 Stufen, 3 Bit: …</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Jedes Bit verdoppelt die Zahl der Stufen. Mit 6 Bit sind es 64 Stufen.</li></ol><p><strong>Richtige Antwort:</strong> 64</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"stufen-aus-bits","given":{"n":{"int":[3,8]}},"task":{"text":{"de":"Jeder Messwert wird mit {{n}} Bit gespeichert. Wie viele verschiedene Stufen gibt es?","en":"Each measured value is stored with {{n}} bits. How many different levels are there?"}},"answer":{"value":"pow(2, n)","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"2 * n","message":{"de":"Du hast {{n}} · 2 gerechnet. Jedes Bit mehr verdoppelt die Zahl der Stufen: 2 · 2 · … · 2, {{n}}-mal.","en":"You worked out {{n}} × 2. Each extra bit doubles the number of levels: 2 × 2 × … × 2, {{n}} times."}},{"value":"n","message":{"de":"Das ist die Zahl der Bit. Gefragt ist, wie viele Stufen man damit unterscheiden kann.","en":"That is the number of bits. The question is how many levels you can tell apart with them."}},{"value":"pow(2, n) - 1","message":{"de":"Das ist die Nummer der höchsten Stufe. Die Stufe 0 zählt aber mit.","en":"That is the number of the highest level. But level 0 counts too."}}],"hint":{"de":"1 Bit: 2 Stufen, 2 Bit: 4 Stufen, 3 Bit: …","en":"1 bit: 2 levels, 2 bits: 4 levels, 3 bits: …"},"steps":[{"de":"Jedes Bit verdoppelt die Zahl der Stufen. Mit {{n}} Bit sind es {{answer}} Stufen.","en":"Each bit doubles the number of levels. With {{n}} bits there are {{answer}} levels."}]},"templates":{"de":{"task":"Jeder Messwert wird mit ⟦n⟧ Bit gespeichert. Wie viele verschiedene Stufen gibt es?","steps":["Jedes Bit verdoppelt die Zahl der Stufen. Mit ⟦n⟧ Bit sind es ⟦answer⟧ Stufen."],"hint":"1 Bit: 2 Stufen, 2 Bit: 4 Stufen, 3 Bit: …","messages":["Du hast ⟦n⟧ · 2 gerechnet. Jedes Bit mehr verdoppelt die Zahl der Stufen: 2 · 2 · … · 2, ⟦n⟧-mal.","Das ist die Zahl der Bit. Gefragt ist, wie viele Stufen man damit unterscheiden kann.","Das ist die Nummer der höchsten Stufe. Die Stufe 0 zählt aber mit."]}},"data":{},"seeds":[1,2,4,5,6,17],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="ab8784ef" data-block-type="generated" data-block-order="12">
+<div class="explainer-exercise explainer-generated" id="bits-pro-sekunde">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Ein Gerät misst 8000-mal pro Sekunde und speichert jeden Messwert mit 16 Bit. Wie viele Bit sind das in einer Sekunde?</p><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>8000 Messwerte · 16 Bit = 128 000 Bit pro Sekunde.</li></ol><p><strong>Richtige Antwort:</strong> 128 000 Bit</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Ein Gerät misst 1000-mal pro Sekunde und speichert jeden Messwert mit 8 Bit. Wie viele Bit sind das in einer Sekunde?</p><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1000 Messwerte · 8 Bit = 8000 Bit pro Sekunde.</li></ol><p><strong>Richtige Antwort:</strong> 8000 Bit</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Ein Gerät misst 1000-mal pro Sekunde und speichert jeden Messwert mit 16 Bit. Wie viele Bit sind das in einer Sekunde?</p><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>1000 Messwerte · 16 Bit = 16 000 Bit pro Sekunde.</li></ol><p><strong>Richtige Antwort:</strong> 16 000 Bit</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"bits-pro-sekunde","given":{"m":{"oneOf":[100,500,1000,8000]},"b":{"oneOf":[4,8,16]}},"task":{"text":{"de":"Ein Gerät misst {{m}}-mal pro Sekunde und speichert jeden Messwert mit {{b}} Bit. Wie viele Bit sind das in einer Sekunde?","en":"A device measures {{m}} times per second and stores each measured value with {{b}} bits. How many bits is that in one second?"}},"answer":{"value":"m * b","compare":{"number":{"format":"integer","unit":{"de":"Bit","en":"bits"}}}},"mistakes":[{"value":"m + b","message":{"de":"Jeder der {{m}} Messwerte braucht {{b}} Bit. Rechne mal, nicht plus.","en":"Each of the {{m}} measured values needs {{b}} bits. Multiply, don't add."}},{"value":"m * b / 8","message":{"de":"Das sind Byte. Gefragt sind Bit.","en":"Those are bytes. The question is about bits."}}],"steps":[{"de":"{{m}} Messwerte · {{b}} Bit = {{answer}} Bit pro Sekunde.","en":"{{m}} measured values × {{b}} bits = {{answer}} bits per second."}]},"templates":{"de":{"task":"Ein Gerät misst ⟦m⟧-mal pro Sekunde und speichert jeden Messwert mit ⟦b⟧ Bit. Wie viele Bit sind das in einer Sekunde?","steps":["⟦m⟧ Messwerte · ⟦b⟧ Bit = ⟦answer⟧ Bit pro Sekunde."],"messages":["Jeder der ⟦m⟧ Messwerte braucht ⟦b⟧ Bit. Rechne mal, nicht plus.","Das sind Byte. Gefragt sind Bit."]}},"data":{},"seeds":[1,2,3,4,6,8,9,12,13,17,29,34],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="94aa53d2" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="mbit-und-mb">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-mbit-und-mb" data-id="mbit-und-mb" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia schickt ihre Sprachnachricht übers Internet. Es schafft 16 Mbit/s, also 16 Megabit pro Sekunde. Wie viele Megabyte sind das in einer Sekunde?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-mbit-und-mb" aria-describedby="frage-mbit-und-mb-unit"> <span id="frage-mbit-und-mb-unit">MB</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 2 MB</p>
+<p class="question-explanation">16 Mbit : 8 = 2 MB. Internet wird in Mbit/s angegeben, Speicher in MB.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 2 MB</p>
+<p class="question-explanation">16 Mbit : 8 = 2 MB. Internet wird in Mbit/s angegeben, Speicher in MB.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"mbit-und-mb","text":"Mia schickt ihre Sprachnachricht übers Internet. Es schafft 16 Mbit/s, also 16 Megabit pro Sekunde. Wie viele Megabyte sind das in einer Sekunde?","explanation":"16 Mbit : 8 = 2 MB. Internet wird in Mbit/s angegeben, Speicher in MB.","links":[],"type":"number","answer":2,"tolerance":0,"unit":"MB","mistakes":[{"answer":16,"message":"Mbit und MB sind nicht dasselbe: 1 Byte sind 8 Bit, also auch 1 MB = 8 Mbit."},{"answer":128,"message":"Von Bit zu Byte teilst du durch 8, du rechnest nicht mal 8."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="454eb213" data-block-type="true-false" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="mehr-messpunkte">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-mehr-messpunkte" data-id="mehr-messpunkte" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Misst das Handy doppelt so oft pro Sekunde, braucht die Sprachnachricht doppelt so viele Bit.</legend>
+<label class="question-option"><input type="radio" name="frage-mehr-messpunkte" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-mehr-messpunkte" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Jeder Messpunkt braucht gleich viele Bit. Doppelt so viele Messpunkte brauchen also doppelt so viele Bit.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt.</p>
+<p class="question-explanation">Jeder Messpunkt braucht gleich viele Bit. Doppelt so viele Messpunkte brauchen also doppelt so viele Bit.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"mehr-messpunkte","text":"Misst das Handy doppelt so oft pro Sekunde, braucht die Sprachnachricht doppelt so viele Bit.","explanation":"Jeder Messpunkt braucht gleich viele Bit. Doppelt so viele Messpunkte brauchen also doppelt so viele Bit.","links":[],"type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="7fddcf00" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Rückblick auf das Kapitel: Text wird mit einer Codetabelle zu Bytes, eine Stimme durch Messen und Runden
+zu Zahlen. Ob Zettel, Bild, Geheimschrift oder Sprachnachricht: Am Ende speichert der Computer alles mit
+0 und 1.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Daten darstellen und codieren“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-daten-codieren","app":"Daten darstellen und codieren","root":"../../","repository":"lernapps/informatik-daten-codieren","revision":"154a09c","page":{"title":"Analog und digital","order":14}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../texte/zeichen/">Zurück: Zeichen werden Zahlen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

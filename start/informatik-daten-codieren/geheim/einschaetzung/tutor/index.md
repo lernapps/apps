@@ -67,6 +67,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Die Caesar-Scheibe“ · Aufgaben A3, A4
 - „Wie sicher ist das?“ · Aufgaben A5, A6
 
+### Kapitel „Texte und Signale codieren“
+
+- Selbsteinschätzung des Kapitels
+- „Zeichen werden Zahlen“
+- „Analog und digital“
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe zeilen-zaehlen der Seite „Die Geheimschrift“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
