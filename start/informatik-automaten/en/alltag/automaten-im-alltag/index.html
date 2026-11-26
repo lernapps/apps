@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-DYVfKw6-.css">
+    <title>Automata in everyday life – Automata and states</title>
+    <meta name="description" content="A machine reacts to the same input in different ways: it depends on what it remembers, its state." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../alltag/automaten-im-alltag/" />
+    <link rel="alternate" hreflang="en" href="../../../en/alltag/automaten-im-alltag/" />
+    <script type="module" crossorigin src="../../../assets/islands-WTxZX3N9.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../alltag/automaten-im-alltag/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/alltag/automaten-im-alltag/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li aria-current="page">Automata in everyday life</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Automata in everyday life</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/alltag/automaten-im-alltag/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧alltag/automaten-im-alltag/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-automaten","page":{"id":"automaten-im-alltag","title":"Automata in everyday life","exercises":[{"id":"kein-saft","section":"einstieg","numbered":false},{"id":"immer-gleich","section":"idee","numbered":false},{"id":"was-passiert","section":"uebung","numbered":true},{"id":"zettel-am-ende","section":"uebung","numbered":true},{"id":"alltag-merken","section":"uebung","numbered":false},{"id":"zustand-oder-eingabe","section":"uebung","numbered":false}],"sections":["einstieg","ausprobieren","idee","mitmachen","uebung","ausblick"]},"tutor":"alltag/automaten-im-alltag/tutor/","markdown":"alltag/automaten-im-alltag/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">Mia's first juice</a></li><li><a href="#ausprobieren">Jona plays the machine</a></li><li><a href="#idee">What the machine remembers</a></li><li><a href="#mitmachen">Play the machine</a></li><li><a href="#uebung">Practice</a></li><li><a href="#ausblick">What comes next?</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Mia's first juice</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="4d95e910" data-block-type="figure" data-block-order="1">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/schulfest.svg" alt="Jona sits in a cardboard box with a coin slot, a red button and a drawer. Mia stands on the left with a coin, Selin on the right with a notepad." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing. Licence: CC-BY-4.0." aria-label="Source: own drawing. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Class 6b&#39;s juice machine. Jona sits in the box and is the machine, Mia buys, Selin takes notes.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="11f2aec6" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>It is class 6b&#39;s school fair. The class has built a juice machine out of a cardboard box. A juice costs €2, and the machine only takes €1 coins. Jona sits in the box and is the machine. Selin writes down what happens. Mia puts in a coin and presses the button. No juice comes out. On this page you find out why a machine reacts to the same button in one way at one time and in another way at another time.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="67b6b523" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="kein-saft">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-kein-saft" data-id="kein-saft" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Why does Mia not get a juice?</legend>
+<label class="question-option"><input type="radio" name="frage-kein-saft" value="0"> <span>Only €1 is in the machine.</span></label>
+<label class="question-option"><input type="radio" name="frage-kein-saft" value="1"> <span>The button is broken.</span></label>
+<label class="question-option"><input type="radio" name="frage-kein-saft" value="2"> <span>Mia pressed too softly.</span></label>
+<label class="question-option"><input type="radio" name="frage-kein-saft" value="3"> <span>You have to press the button twice.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Only €1 is in the machine.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A juice costs €2. With one coin only half is paid.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>The button is broken.</strong></p><p>The button works. Jona notices that it was pressed, but there is not enough money yet.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Mia pressed too softly.</strong></p><p>The machine does not care how hard you press. What matters is the money.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>You have to press the button twice.</strong></p><p>Pressing a second time does nothing either, as long as only €1 is inside.</p></li>
+</ul>
+<p class="question-explanation">The machine only gives a juice when €2 is inside. Mia has to put in one more coin.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Only €1 is in the machine.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A juice costs €2. With one coin only half is paid.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>The button is broken.</strong></p><p>The button works. Jona notices that it was pressed, but there is not enough money yet.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Mia pressed too softly.</strong></p><p>The machine does not care how hard you press. What matters is the money.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>You have to press the button twice.</strong></p><p>Pressing a second time does nothing either, as long as only €1 is inside.</p></li>
+</ul>
+<p class="question-explanation">The machine only gives a juice when €2 is inside. Mia has to put in one more coin.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"kein-saft","text":"Why does Mia not get a juice?","explanation":"The machine only gives a juice when €2 is inside. Mia has to put in one more coin.","links":[],"type":"single-choice","options":[{"text":"Only €1 is in the machine.","correct":true,"info":"A juice costs €2. With one coin only half is paid."},{"text":"The button is broken.","correct":false,"info":"The button works. Jona notices that it was pressed, but there is not enough money yet."},{"text":"Mia pressed too softly.","correct":false,"info":"The machine does not care how hard you press. What matters is the money."},{"text":"You have to press the button twice.","correct":false,"info":"Pressing a second time does nothing either, as long as only €1 is inside."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Jona plays the machine</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="0a0e75e7" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Here you play Mia. Press “coin” or “button”. The note in the box shows what Jona remembers right now. The drawer at the bottom shows what comes out. Press the button once at €1 and once at €2. Also try a third coin.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="b837851e" data-block-type="vue-component" data-block-order="5">
+<div class="explainer-component" data-component="AutomatSimulator">
+<div class="explainer-island" hidden><div class="automat-simulator" data-v-0711660d><div class="automat-simulator-kasten" aria-hidden="true" data-v-0711660d><span class="automat-simulator-schlitz" data-v-0711660d></span><span class="automat-simulator-zettel" data-v-0711660d>Jona remembers: €0 paid</span><span class="automat-simulator-fach" data-v-0711660d></span></div><div class="automat-simulator-inputs" role="group" aria-label="Inputs: coin or button" data-v-0711660d><!--[--><button type="button" data-v-0711660d>coin</button><button type="button" data-v-0711660d>button</button><!--]--></div><p class="automat-simulator-status automat-simulator-sr" aria-live="polite" data-v-0711660d><strong class="automat-simulator-now" data-v-0711660d>Jona remembers: €0 paid</strong><br data-v-0711660d><span class="automat-simulator-output" data-v-0711660d>Output: nothing</span></p><p class="automat-simulator-history" data-v-0711660d>So far: €0 paid</p><p class="automat-simulator-reset" data-v-0711660d><button type="button" data-v-0711660d>Start again</button></p></div></div>
+<div class="explainer-nojs"><p>A cardboard juice machine with Jona&#39;s note. At the start it says “€0 paid”. What happens:</p>
+<ul>
+<li>Coin at €0 or €1: Jona keeps it and remembers €1 more.</li>
+<li>Coin at €2: the coin comes back.</li>
+<li>Button at €0 or €1: nothing happens.</li>
+<li>Button at €2: a juice drops out, and afterwards Jona remembers “€0 paid”.</li>
+</ul>
+<p>With JavaScript you press “coin” and “button” yourself.</p></div>
+<script type="application/json" class="explainer-component-props">{"automata":[{"nr":0,"name":"Juice machine","start":0,"states":[{"name":"€0 paid","x":110,"y":170,"loop":-90},{"name":"€1 paid","x":310,"y":170,"loop":-90},{"name":"€2 paid","x":510,"y":170,"loop":-90}],"inputs":[{"name":"coin"},{"name":"button"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The machine is empty. You put in a coin. It stays inside the machine."},{"from":0,"input":1,"to":0,"bend":0,"text":"The machine is empty. You press the button. No juice comes out."},{"from":1,"input":0,"to":2,"bend":0,"text":"One coin is inside the machine. You put in another one. It stays inside too."},{"from":1,"input":1,"to":1,"bend":0,"text":"One coin is inside the machine. You press the button. No juice comes out, and the coin stays inside."},{"from":2,"input":0,"to":2,"bend":0,"text":"Two coins are inside the machine. You put in one more. It drops out again at the bottom."},{"from":2,"input":1,"to":0,"bend":55,"text":"Two coins are inside the machine. You press the button. A juice drops out. The two coins have now paid for it. For the next juice you have to pay again."}],"outputs":[{"from":2,"input":0,"text":"coin comes back"},{"from":2,"input":1,"text":"juice drops out"}]},{"nr":1,"name":"Lamp with a push button","start":0,"states":[{"name":"off","x":170,"y":150,"loop":-90},{"name":"on","x":430,"y":150,"loop":-90}],"inputs":[{"name":"button"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The room is dark. You press the button on the lamp. Afterwards you can see well in the room."},{"from":1,"input":0,"to":0,"bend":0,"text":"The room is bright. You press the button on the lamp. Afterwards the room is dark again."}],"outputs":[{"from":0,"input":0,"text":"light comes on"},{"from":1,"input":0,"text":"light goes out"}]},{"nr":2,"name":"Turnstile at the swimming pool","start":0,"states":[{"name":"locked","x":170,"y":160,"loop":-90},{"name":"open","x":430,"y":160,"loop":-90}],"inputs":[{"name":"token"},{"name":"push"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The turnstile is locked. You put in a token. Now it can turn."},{"from":0,"input":1,"to":0,"bend":0,"text":"The turnstile is locked. You push it without paying. It does not move."},{"from":1,"input":1,"to":0,"bend":0,"text":"You have paid and you go through. The next child cannot just follow you."},{"from":1,"input":0,"to":1,"bend":0,"text":"You have paid and you put in another token. The token drops out again. You can still go through."}],"outputs":[{"from":1,"input":0,"text":"token comes back"}]},{"nr":3,"name":"Lift with three floors","start":0,"states":[{"name":"bottom","x":300,"y":400,"loop":90},{"name":"middle","x":300,"y":230,"loop":0},{"name":"top","x":300,"y":60,"loop":-90}],"inputs":[{"name":"up"},{"name":"down"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The lift is at the very bottom. Someone presses “up”. It goes up one floor."},{"from":0,"input":1,"to":0,"bend":0,"text":"The lift is at the very bottom. Someone presses “down”. There is no floor below."},{"from":1,"input":0,"to":2,"bend":0,"text":"The lift is in the middle. Someone presses “up”. It goes up one floor."},{"from":1,"input":1,"to":0,"bend":0,"text":"The lift is in the middle. Someone presses “down”. It goes down one floor."},{"from":2,"input":0,"to":2,"bend":0,"text":"The lift is at the very top. Someone presses “up”. There is no floor above."},{"from":2,"input":1,"to":1,"bend":0,"text":"The lift is at the very top. Someone presses “down”. It goes down one floor."}],"outputs":[]},{"nr":4,"name":"Pedestrian crossing with a button","start":0,"states":[{"name":"green for cars","x":130,"y":230,"loop":90},{"name":"waiting","x":470,"y":230,"loop":90},{"name":"green man","x":300,"y":60,"loop":-90}],"inputs":[{"name":"button"},{"name":"time up"}],"transitions":[{"from":0,"input":0,"to":1,"bend":-22,"text":"The lights are green for cars. A child presses the button. The cars still drive, but the WAIT light comes on."},{"from":0,"input":1,"to":0,"bend":0,"text":"The lights are green for cars, and nobody has pressed. The time is up. The cars keep driving."},{"from":1,"input":0,"to":1,"bend":0,"text":"The WAIT light is already on. A child presses again. The cars still drive."},{"from":1,"input":1,"to":2,"bend":0,"text":"The WAIT light is on. The time is up. The cars stop, and the children may cross."},{"from":2,"input":0,"to":2,"bend":0,"text":"The green man is showing. A child presses the button. The children keep crossing."},{"from":2,"input":1,"to":0,"bend":0,"text":"The green man is showing. The time is up. The red man comes on, and the cars drive off."}],"outputs":[{"from":0,"input":0,"text":"WAIT light on"},{"from":1,"input":1,"text":"red for cars, green man"},{"from":2,"input":1,"text":"red man, green for cars"}]}],"automat":0,"view":"kasten","startWord":"Start","inputsLabel":"Inputs: coin or button","now":"Jona remembers: {state}","outputLine":"Output: {output}","noOutput":"nothing","historyWord":"So far:","reset":"Start again"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">What the machine remembers</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="f6f33cb8" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>The same button twice: once nothing comes out, once a juice. The difference is on Jona&#39;s note. The IPO picture shows what goes in and what comes out. If you look at the device as an <strong>automaton</strong> (a machine that remembers), what it remembers right now counts too. That is called its <strong>state</strong>. An input can change the state: after a coin, the note says €1 more.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="a1ae8e8a" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-automat"><a href="../../../en/glossar/#automat">automaton</a></dfn></dt><dd><p>An automaton (plural automata) reacts to inputs and remembers something as it does. What it does depends on the input and on what it has remembered.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="6eb64280" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-zustand"><a href="../../../en/glossar/#zustand">state</a></dfn></dt><dd><p>The state is what a machine remembers right now, for example “€1 paid”.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="419bdb97" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Remember</h3>
+<div class="explainer-block" data-block="idee/4/1" data-block-id="6541d907" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>What a machine does depends on two things, the input and its state. In the same state it always reacts to the same input in the same way.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="b70cdc5a" data-block-type="true-false" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="immer-gleich">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-immer-gleich" data-id="immer-gleich" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Someone says: “A machine always reacts to the same input in the same way, whatever it has remembered.” Is that true?</legend>
+<label class="question-option"><input type="radio" name="frage-immer-gleich" value="true"> <span>True</span></label>
+<label class="question-option"><input type="radio" name="frage-immer-gleich" value="false"> <span>False</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">In the juice machine the button gives a juice at €2 and nothing at €1. The reaction depends on the input and on the state. Only in the same state is it always the same.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">In the juice machine the button gives a juice at €2 and nothing at €1. The reaction depends on the input and on the state. Only in the same state is it always the same.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"immer-gleich","text":"Someone says: “A machine always reacts to the same input in the same way, whatever it has remembered.” Is that true?","explanation":"In the juice machine the button gives a juice at €2 and nothing at €1. The reaction depends on the input and on the state. Only in the same state is it always the same.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="mitmachen">Play the machine</h2>
+<div class="explainer-block" data-block="mitmachen/1" data-block-id="3ba8bc5d" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Play the juice machine in pairs, without a computer:</p>
+<ol>
+<li>One person is the machine. They have a note that says “€0 paid”.</li>
+<li>The other person buys. They say “coin” or “button”.</li>
+<li>The machine looks at its note, says what comes out and writes down the new amount.</li>
+<li>Swap after five inputs. Who makes a mistake?</li>
+</ol></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practice</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="932f1483" data-block-type="generated" data-block-order="13">
+<div class="explainer-exercise explainer-generated" id="was-passiert">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Three worked tasks, each with its solution:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Task no. 1</p><p class="explainer-task">Jona&#39;s note says “€2 paid”. Mia puts in a coin. What happens?</p><details class="explainer-hint"><summary>Hint</summary><p>First look at the note: how much money is inside already? Then at the input.</p></details><details class="explainer-solution"><summary>Solution</summary><ol class="explainer-steps"><li>There is already enough money inside. The coin comes back, and Jona still remembers “€2 paid”.</li></ol><p><strong>Right answer:</strong> The coin comes back.</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Task no. 2</p><p class="explainer-task">Jona&#39;s note says “€1 paid”. Mia presses the button. What happens?</p><details class="explainer-hint"><summary>Hint</summary><p>First look at the note: how much money is inside already? Then at the input.</p></details><details class="explainer-solution"><summary>Solution</summary><ol class="explainer-steps"><li>€1 is not enough for a juice. Jona still remembers “€1 paid”.</li></ol><p><strong>Right answer:</strong> Nothing happens.</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Task no. 3</p><p class="explainer-task">Jona&#39;s note says “€1 paid”. Mia puts in a coin. What happens?</p><details class="explainer-hint"><summary>Hint</summary><p>First look at the note: how much money is inside already? Then at the input.</p></details><details class="explainer-solution"><summary>Solution</summary><ol class="explainer-steps"><li>Jona keeps the coin and writes “€2 paid” on his note. The juice only comes with the button.</li></ol><p><strong>Right answer:</strong> Nothing comes out, Jona remembers more money.</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"en","spec":{"type":"generated","id":"was-passiert","given":{"s":{"pick":1,"from":{"data":"saft-situationen"}}},"task":{"text":{"de":"Auf Jonas Zettel steht „{{s.jetzt}}“. Mia {{s.tut}}. Was passiert?","en":"Jona's note says “{{s.jetzt}}”. Mia {{s.tut}}. What happens?"}},"answer":{"value":"s.reaktion","compare":{"choice":[{"de":"Ein Saft fällt heraus.","en":"A juice drops out."},{"de":"Nichts passiert.","en":"Nothing happens."},{"de":"Nichts kommt heraus, Jona merkt sich mehr Geld.","en":"Nothing comes out, Jona remembers more money."},{"de":"Die Münze kommt zurück.","en":"The coin comes back."}]}},"mistakes":[{"value":"s.falsch","message":{"de":"{{s.warum}}","en":"{{s.warum}}"}}],"hint":{"de":"Schau zuerst auf den Zettel: Wie viel Geld ist schon drin? Dann auf die Eingabe.","en":"First look at the note: how much money is inside already? Then at the input."},"steps":[{"de":"{{s.grund}}","en":"{{s.grund}}"}]},"templates":{"en":{"task":"Jona&#39;s note says “⟦s.jetzt⟧”. Mia ⟦s.tut⟧. What happens?","steps":["⟦s.grund⟧"],"hint":"First look at the note: how much money is inside already? Then at the input.","messages":["⟦s.warum⟧"]}},"data":{"saft-situationen":[{"jetzt":{"de":"0 € drin","en":"€0 paid"},"tut":{"de":"drückt den Knopf","en":"presses the button"},"reaktion":{"de":"Nichts passiert.","en":"Nothing happens."},"falsch":{"de":"Ein Saft fällt heraus.","en":"A juice drops out."},"warum":{"de":"Der Knopf allein reicht nicht. Jona schaut auf seinen Zettel: Es ist noch gar kein Geld drin.","en":"The button alone is not enough. Jona looks at his note: there is no money inside yet."},"grund":{"de":"Ohne Geld gibt es keinen Saft. Jona merkt sich weiter „0 € drin“.","en":"Without money there is no juice. Jona still remembers “€0 paid”."}},{"jetzt":{"de":"1 € drin","en":"€1 paid"},"tut":{"de":"drückt den Knopf","en":"presses the button"},"reaktion":{"de":"Nichts passiert.","en":"Nothing happens."},"falsch":{"de":"Ein Saft fällt heraus.","en":"A juice drops out."},"warum":{"de":"Der Knopf allein reicht nicht. Jona schaut auf seinen Zettel: Erst 1 € ist drin, ein Saft kostet 2 €.","en":"The button alone is not enough. Jona looks at his note: only €1 is inside, and a juice costs €2."},"grund":{"de":"1 € reicht nicht für einen Saft. Jona merkt sich weiter „1 € drin“.","en":"€1 is not enough for a juice. Jona still remembers “€1 paid”."}},{"jetzt":{"de":"2 € drin","en":"€2 paid"},"tut":{"de":"drückt den Knopf","en":"presses the button"},"reaktion":{"de":"Ein Saft fällt heraus.","en":"A juice drops out."},"falsch":{"de":"Nichts passiert.","en":"Nothing happens."},"warum":{"de":"Schau auf Jonas Zettel: 2 € sind drin. Das reicht für einen Saft.","en":"Look at Jona's note: €2 is inside. That is enough for a juice."},"grund":{"de":"2 € reichen. Ein Saft fällt heraus, und Jona merkt sich danach „0 € drin“.","en":"€2 is enough. A juice drops out, and afterwards Jona remembers “€0 paid”."}},{"jetzt":{"de":"0 € drin","en":"€0 paid"},"tut":{"de":"wirft eine Münze ein","en":"puts in a coin"},"reaktion":{"de":"Nichts kommt heraus, Jona merkt sich mehr Geld.","en":"Nothing comes out, Jona remembers more money."},"falsch":{"de":"Die Münze kommt zurück.","en":"The coin comes back."},"warum":{"de":"Der Automat ist leer. Er behält die Münze, denn ein Saft kostet 2 €.","en":"The machine is empty. It keeps the coin, because a juice costs €2."},"grund":{"de":"Jona behält die Münze und schreibt „1 € drin“ auf seinen Zettel.","en":"Jona keeps the coin and writes “€1 paid” on his note."}},{"jetzt":{"de":"1 € drin","en":"€1 paid"},"tut":{"de":"wirft eine Münze ein","en":"puts in a coin"},"reaktion":{"de":"Nichts kommt heraus, Jona merkt sich mehr Geld.","en":"Nothing comes out, Jona remembers more money."},"falsch":{"de":"Ein Saft fällt heraus.","en":"A juice drops out."},"warum":{"de":"Jetzt ist zwar genug Geld drin, aber den Saft gibt es erst, wenn Mia den Knopf drückt.","en":"Now there is enough money inside, but the juice only comes when Mia presses the button."},"grund":{"de":"Jona behält die Münze und schreibt „2 € drin“ auf seinen Zettel. Einen Saft gibt es erst beim Knopf.","en":"Jona keeps the coin and writes “€2 paid” on his note. The juice only comes with the button."}},{"jetzt":{"de":"2 € drin","en":"€2 paid"},"tut":{"de":"wirft eine Münze ein","en":"puts in a coin"},"reaktion":{"de":"Die Münze kommt zurück.","en":"The coin comes back."},"falsch":{"de":"Nichts kommt heraus, Jona merkt sich mehr Geld.","en":"Nothing comes out, Jona remembers more money."},"warum":{"de":"Mehr als 2 € braucht der Automat nie. Auf Jonas Zettel gibt es kein „3 € drin“.","en":"The machine never needs more than €2. There is no “€3 paid” on Jona's note."},"grund":{"de":"Es ist schon genug Geld drin. Die Münze kommt zurück, Jona merkt sich weiter „2 € drin“.","en":"There is already enough money inside. The coin comes back, and Jona still remembers “€2 paid”."}}]},"seeds":[1,2,3,5,6,22],"texts":{"newTask":"New task","practice":"Practise yourself, with new tasks each time:","hint":"Hint","solution":"Solution","taskNumber":"Task no. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="d9f18224" data-block-type="vue-component" data-block-order="14">
+<div class="explainer-component" id="zettel-am-ende" data-component="AutomatAufgabe" data-exercise data-seeds="[1,2,3,4,5,6,7,9,12,13,14,15,16,23,24,26,27,28,35,38,40,43,50,90,104,158,169,201]" data-checked>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Task no. {n}">Task no. 1</span> <button type="button" class="explainer-new-task" title="New task"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">New task</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="automat-aufgabe" data-v-af2e8254><!----><p data-v-af2e8254>At the start Jona&#39;s note shows “€0 paid”. Then come these inputs: coin, button, coin, coin, button. What does the note say at the end?</p><div class="automat-aufgabe-states" role="group" aria-label="The note says" data-v-af2e8254><!--[--><button type="button" aria-pressed="false" data-v-af2e8254>€0 paid</button><button type="button" aria-pressed="false" data-v-af2e8254>€1 paid</button><button type="button" aria-pressed="false" data-v-af2e8254>€2 paid</button><!--]--></div></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Task no. 1</p><div class="explainer-task"><p>At the start Jona&#39;s note shows “€0 paid”. Then come these inputs: coin, button, coin, coin, button. What does the note say at the end?</p>
+<p><strong>Juice machine</strong> (Start: €0 paid):</p>
+<ul>
+<li>€0 paid – coin → €1 paid</li>
+<li>€0 paid – button → €0 paid</li>
+<li>€1 paid – coin → €2 paid</li>
+<li>€1 paid – button → €1 paid</li>
+<li>€2 paid – coin → €2 paid (output: coin comes back)</li>
+<li>€2 paid – button → €0 paid (output: juice drops out)</li>
+</ul></div><details class="explainer-solution"><summary>Solution</summary><p>€0 paid: coin → €1 paid, button → €1 paid, coin → €2 paid, coin → €2 paid, button → €0 paid. → <strong>€0 paid</strong></p></details></div></div>
+<p class="question-feedback" data-right="Right!" data-wrong="Sorry, that is not right." data-incomplete="Answer first: choose, type or match everything."></p>
+<script type="application/json" class="explainer-component-props">{"automata":[{"nr":0,"name":"Juice machine","start":0,"states":[{"name":"€0 paid","x":110,"y":170,"loop":-90},{"name":"€1 paid","x":310,"y":170,"loop":-90},{"name":"€2 paid","x":510,"y":170,"loop":-90}],"inputs":[{"name":"coin"},{"name":"button"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The machine is empty. You put in a coin. It stays inside the machine."},{"from":0,"input":1,"to":0,"bend":0,"text":"The machine is empty. You press the button. No juice comes out."},{"from":1,"input":0,"to":2,"bend":0,"text":"One coin is inside the machine. You put in another one. It stays inside too."},{"from":1,"input":1,"to":1,"bend":0,"text":"One coin is inside the machine. You press the button. No juice comes out, and the coin stays inside."},{"from":2,"input":0,"to":2,"bend":0,"text":"Two coins are inside the machine. You put in one more. It drops out again at the bottom."},{"from":2,"input":1,"to":0,"bend":55,"text":"Two coins are inside the machine. You press the button. A juice drops out. The two coins have now paid for it. For the next juice you have to pay again."}],"outputs":[{"from":2,"input":0,"text":"coin comes back"},{"from":2,"input":1,"text":"juice drops out"}]},{"nr":1,"name":"Lamp with a push button","start":0,"states":[{"name":"off","x":170,"y":150,"loop":-90},{"name":"on","x":430,"y":150,"loop":-90}],"inputs":[{"name":"button"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The room is dark. You press the button on the lamp. Afterwards you can see well in the room."},{"from":1,"input":0,"to":0,"bend":0,"text":"The room is bright. You press the button on the lamp. Afterwards the room is dark again."}],"outputs":[{"from":0,"input":0,"text":"light comes on"},{"from":1,"input":0,"text":"light goes out"}]},{"nr":2,"name":"Turnstile at the swimming pool","start":0,"states":[{"name":"locked","x":170,"y":160,"loop":-90},{"name":"open","x":430,"y":160,"loop":-90}],"inputs":[{"name":"token"},{"name":"push"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The turnstile is locked. You put in a token. Now it can turn."},{"from":0,"input":1,"to":0,"bend":0,"text":"The turnstile is locked. You push it without paying. It does not move."},{"from":1,"input":1,"to":0,"bend":0,"text":"You have paid and you go through. The next child cannot just follow you."},{"from":1,"input":0,"to":1,"bend":0,"text":"You have paid and you put in another token. The token drops out again. You can still go through."}],"outputs":[{"from":1,"input":0,"text":"token comes back"}]},{"nr":3,"name":"Lift with three floors","start":0,"states":[{"name":"bottom","x":300,"y":400,"loop":90},{"name":"middle","x":300,"y":230,"loop":0},{"name":"top","x":300,"y":60,"loop":-90}],"inputs":[{"name":"up"},{"name":"down"}],"transitions":[{"from":0,"input":0,"to":1,"bend":0,"text":"The lift is at the very bottom. Someone presses “up”. It goes up one floor."},{"from":0,"input":1,"to":0,"bend":0,"text":"The lift is at the very bottom. Someone presses “down”. There is no floor below."},{"from":1,"input":0,"to":2,"bend":0,"text":"The lift is in the middle. Someone presses “up”. It goes up one floor."},{"from":1,"input":1,"to":0,"bend":0,"text":"The lift is in the middle. Someone presses “down”. It goes down one floor."},{"from":2,"input":0,"to":2,"bend":0,"text":"The lift is at the very top. Someone presses “up”. There is no floor above."},{"from":2,"input":1,"to":1,"bend":0,"text":"The lift is at the very top. Someone presses “down”. It goes down one floor."}],"outputs":[]},{"nr":4,"name":"Pedestrian crossing with a button","start":0,"states":[{"name":"green for cars","x":130,"y":230,"loop":90},{"name":"waiting","x":470,"y":230,"loop":90},{"name":"green man","x":300,"y":60,"loop":-90}],"inputs":[{"name":"button"},{"name":"time up"}],"transitions":[{"from":0,"input":0,"to":1,"bend":-22,"text":"The lights are green for cars. A child presses the button. The cars still drive, but the WAIT light comes on."},{"from":0,"input":1,"to":0,"bend":0,"text":"The lights are green for cars, and nobody has pressed. The time is up. The cars keep driving."},{"from":1,"input":0,"to":1,"bend":0,"text":"The WAIT light is already on. A child presses again. The cars still drive."},{"from":1,"input":1,"to":2,"bend":0,"text":"The WAIT light is on. The time is up. The cars stop, and the children may cross."},{"from":2,"input":0,"to":2,"bend":0,"text":"The green man is showing. A child presses the button. The children keep crossing."},{"from":2,"input":1,"to":0,"bend":0,"text":"The green man is showing. The time is up. The red man comes on, and the cars drive off."}],"outputs":[{"from":0,"input":0,"text":"WAIT light on"},{"from":1,"input":1,"text":"red for cars, green man"},{"from":2,"input":1,"text":"red man, green for cars"}]}],"use":[0],"mode":"folge","view":"kasten","task":"At the start Jona's note shows “{start}”. Then come these inputs: {inputs}. What does the note say at the end?","startWord":"Start","chooseLabel":"The note says","outputWord":"output","mistakes":["Did you count the last input “{last}”?","Go through the inputs in order and write down the new amount after each one.","The note does not stay as it was at the start. Every coin Jona keeps is added."],"other":"Go through the inputs one by one. Remember: a third coin comes back, and after a juice the machine is empty."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6c6d17ed" data-block-type="matching" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="alltag-merken">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-alltag-merken" data-id="alltag-merken" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Other machines in everyday life remember something too. What does each machine remember?</legend>
+<p class="question-hint">Choose the match for each entry.</p>
+<ul class="question-pairs">
+<li><label><span>pedestrian crossing with a button</span> <select name="frage-alltag-merken-0" data-left="0"><option value="">please choose</option><option value="3">whether the light is on</option><option value="1">the floor where you can get in right now</option><option value="2">whether someone has paid</option><option value="0">who has green and whether someone has pressed</option></select></label></li>
+<li><label><span>lift</span> <select name="frage-alltag-merken-1" data-left="1"><option value="">please choose</option><option value="3">whether the light is on</option><option value="1">the floor where you can get in right now</option><option value="2">whether someone has paid</option><option value="0">who has green and whether someone has pressed</option></select></label></li>
+<li><label><span>turnstile at the swimming pool</span> <select name="frage-alltag-merken-2" data-left="2"><option value="">please choose</option><option value="3">whether the light is on</option><option value="1">the floor where you can get in right now</option><option value="2">whether someone has paid</option><option value="0">who has green and whether someone has pressed</option></select></label></li>
+<li><label><span>lamp with a push button</span> <select name="frage-alltag-merken-3" data-left="3"><option value="">please choose</option><option value="3">whether the light is on</option><option value="1">the floor where you can get in right now</option><option value="2">whether someone has paid</option><option value="0">who has green and whether someone has pressed</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> pedestrian crossing with a button – who has green and whether someone has pressed; lift – the floor where you can get in right now; turnstile at the swimming pool – whether someone has paid; lamp with a push button – whether the light is on</p>
+<p class="question-explanation">Each of these machines reacts to the same input in different ways, depending on what it remembers. The button of the lamp switches it on when it is off, and off when it is on. You cannot see everything at the crossing: the lights remember that someone has pressed, even while the cars still have green.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> pedestrian crossing with a button – who has green and whether someone has pressed; lift – the floor where you can get in right now; turnstile at the swimming pool – whether someone has paid; lamp with a push button – whether the light is on</p>
+<p class="question-explanation">Each of these machines reacts to the same input in different ways, depending on what it remembers. The button of the lamp switches it on when it is off, and off when it is on. You cannot see everything at the crossing: the lights remember that someone has pressed, even while the cars still have green.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"alltag-merken","text":"Other machines in everyday life remember something too. What does each machine remember?","explanation":"Each of these machines reacts to the same input in different ways, depending on what it remembers. The button of the lamp switches it on when it is off, and off when it is on. You cannot see everything at the crossing: the lights remember that someone has pressed, even while the cars still have green.","links":[],"type":"matching","pairs":[{"left":"pedestrian crossing with a button","right":"who has green and whether someone has pressed"},{"left":"lift","right":"the floor where you can get in right now"},{"left":"turnstile at the swimming pool","right":"whether someone has paid"},{"left":"lamp with a push button","right":"whether the light is on"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="eb2bfcc7" data-block-type="single-choice" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="zustand-oder-eingabe">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-zustand-oder-eingabe" data-id="zustand-oder-eingabe" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Selin writes cards for the game: “put in a coin”, “€1 paid”, “press the button”, “juice drops out”. Which card names a state?</legend>
+<label class="question-option"><input type="radio" name="frage-zustand-oder-eingabe" value="0"> <span>“€1 paid”</span></label>
+<label class="question-option"><input type="radio" name="frage-zustand-oder-eingabe" value="1"> <span>“put in a coin”</span></label>
+<label class="question-option"><input type="radio" name="frage-zustand-oder-eingabe" value="2"> <span>“press the button”</span></label>
+<label class="question-option"><input type="radio" name="frage-zustand-oder-eingabe" value="3"> <span>“juice drops out”</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>“€1 paid”</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Jona remembers this on his note. It stays like this until the next input comes.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>“put in a coin”</strong></p><p>That is an input. It happens in a moment and can change the state.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>“press the button”</strong></p><p>That is an input, like the coin. What happens then depends on the state.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>“juice drops out”</strong></p><p>That is an output. It comes out when the machine reacts. The machine does not remember it.</p></li>
+</ul>
+<p class="question-explanation">A state is what the machine remembers. Inputs and outputs happen in a moment.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>“€1 paid”</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Jona remembers this on his note. It stays like this until the next input comes.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>“put in a coin”</strong></p><p>That is an input. It happens in a moment and can change the state.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>“press the button”</strong></p><p>That is an input, like the coin. What happens then depends on the state.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>“juice drops out”</strong></p><p>That is an output. It comes out when the machine reacts. The machine does not remember it.</p></li>
+</ul>
+<p class="question-explanation">A state is what the machine remembers. Inputs and outputs happen in a moment.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"zustand-oder-eingabe","text":"Selin writes cards for the game: “put in a coin”, “€1 paid”, “press the button”, “juice drops out”. Which card names a state?","explanation":"A state is what the machine remembers. Inputs and outputs happen in a moment.","links":[],"type":"single-choice","options":[{"text":"“€1 paid”","correct":true,"info":"Jona remembers this on his note. It stays like this until the next input comes."},{"text":"“put in a coin”","correct":false,"info":"That is an input. It happens in a moment and can change the state."},{"text":"“press the button”","correct":false,"info":"That is an input, like the coin. What happens then depends on the state."},{"text":"“juice drops out”","correct":false,"info":"That is an output. It comes out when the machine reacts. The machine does not remember it."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausblick">What comes next?</h2>
+<div class="explainer-block" data-block="ausblick/1" data-block-id="b4dd2894" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Well done: you now know why Mia got no juice the first time, and you can tell what machines in everyday life remember. But Jona will need a break soon. On the next page Selin writes a plan that any child can use to play the machine.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “Automata and states”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-automaten","app":"Automata and states","root":"../../../en/","repository":"lernapps/informatik-automaten","revision":"598fced","page":{"title":"Automata in everyday life","order":1}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/alltag/das-brauchst-du/">Back: What you need here</a><a rel="next" href="../../../en/alltag/zustandsdiagramm/">Next: State diagrams</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!-- Schulfest der 6b: Jona sitzt im Karton-Saftautomaten (Münzschlitz, Knopf, Ausgabefach), Mia steht davor mit einer
+     Münze, Selin daneben mit ihrem Notizblock. Eigene Zeichnung, CC-BY-4.0. Die Figuren (defs #jona, #selin, #mia)
+     sind kopiert aus lernapps/informatik-computer, src/images/klasse-6b.svg (Epic Informatik, lernapps/apps#509);
+     Aussehen nicht ändern. Kein Text im Bild. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" role="img">
+  <title>Jona im Karton-Saftautomaten, davor Mia mit einer Münze und Selin mit einem Notizblock</title>
+  <defs>
+    <!-- Jona: kurze rotblonde Haare, helle Haut, grüner Kapuzenpulli -->
+    <g id="jona" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#2e8b57"/>
+      <path d="M34 88 Q50 104 66 88" fill="none" stroke="#1f5e3b" stroke-width="3"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M20 50 Q16 16 50 14 Q84 16 80 50 Q76 32 60 30 Q44 26 34 32 Q24 36 20 50 Z" fill="#c8642a"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g>
+    <!-- Selin: lange dunkelbraune Haare mit Pferdeschwanz, orange Jacke -->
+    <g id="selin" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#e07b24"/>
+      <path d="M80 34 Q104 40 98 86 Q92 70 84 60 Z" fill="#3b2314"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#d9a27a"/>
+      <path d="M18 56 Q12 14 50 12 Q88 14 82 56 Q78 30 50 28 Q26 30 18 56 Z" fill="#3b2314"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+    <!-- Mia: schwarze Locken, runde Brille, lila Jacke -->
+    <g id="mia" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#7b4fb8"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#8d5a3b"/>
+      <path d="M16 58 Q8 30 24 18 Q34 6 50 12 Q66 4 78 16 Q94 30 84 58 Q82 36 66 30 Q50 34 34 30 Q20 38 16 58 Z" fill="#222"/>
+      <circle cx="39" cy="57" r="8" fill="none"/><circle cx="61" cy="57" r="8" fill="none"/><path d="M47 57 L53 57" fill="none"/>
+      <circle cx="39" cy="57" r="2.5" fill="#222"/><circle cx="61" cy="57" r="2.5" fill="#222"/>
+      <path d="M42 71 Q50 78 58 71" fill="none"/>
+    </g>
+  </defs>
+  <rect width="480" height="260" fill="#f4efe2"/>
+  <rect y="222" width="480" height="38" fill="#c9a77a"/>
+  <!-- Wimpelkette fürs Schulfest -->
+  <path d="M0 18 Q240 52 480 18" fill="none" stroke="#333" stroke-width="1.5"/>
+  <g stroke="#333" stroke-width="1">
+    <path d="M30 23 L50 27 L38 46 Z" fill="#e07b24"/>
+    <path d="M90 31 L110 34 L98 53 Z" fill="#2f5fb3"/>
+    <path d="M150 36 L170 38 L158 57 Z" fill="#2e8b57"/>
+    <path d="M210 38 L230 38 L220 58 Z" fill="#7b4fb8"/>
+    <path d="M270 38 L290 37 L282 57 Z" fill="#e07b24"/>
+    <path d="M330 36 L350 34 L342 54 Z" fill="#2f5fb3"/>
+    <path d="M390 31 L410 28 L402 48 Z" fill="#2e8b57"/>
+    <path d="M440 25 L460 21 L452 41 Z" fill="#7b4fb8"/>
+  </g>
+  <!-- Jona im Karton: nur der Kopf schaut oben heraus -->
+  <use href="#jona" transform="translate(190,26)"/>
+  <rect x="168" y="104" width="144" height="128" fill="#c8a46a" stroke="#333" stroke-width="2.5"/>
+  <path d="M168 104 L150 88 M312 104 L330 88" stroke="#333" stroke-width="2.5"/>
+  <path d="M150 88 L176 104 M330 88 L304 104" stroke="#333" stroke-width="2.5" fill="none"/>
+  <!-- Münzschlitz, Knopf, Ausgabefach -->
+  <rect x="270" y="126" width="26" height="7" rx="2" fill="#333"/>
+  <circle cx="283" cy="160" r="11" fill="#d23c3c" stroke="#333" stroke-width="2"/>
+  <rect x="190" y="190" width="70" height="28" rx="3" fill="#8a6a3d" stroke="#333" stroke-width="2"/>
+  <!-- Mia mit Münze -->
+  <use href="#mia" transform="translate(48,60)"/>
+  <circle cx="146" cy="140" r="9" fill="#e8c24a" stroke="#333" stroke-width="2"/>
+  <!-- Selin mit Notizblock -->
+  <use href="#selin" transform="translate(352,60)"/>
+  <rect x="330" y="150" width="34" height="44" fill="#fff" stroke="#333" stroke-width="2"/>
+  <path d="M336 162 H358 M336 171 H358 M336 180 H352" stroke="#666" stroke-width="1.5"/>
+</svg>

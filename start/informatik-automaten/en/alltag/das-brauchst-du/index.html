@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-DYVfKw6-.css">
+    <title>What you need here – Automata and states</title>
+    <meta name="description" content="A short reminder: the IPO model, shown with class 6b's juice machine, and what it does not tell you." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../alltag/das-brauchst-du/" />
+    <link rel="alternate" hreflang="en" href="../../../en/alltag/das-brauchst-du/" />
+    <script type="module" crossorigin src="../../../assets/islands-WTxZX3N9.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../alltag/das-brauchst-du/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/alltag/das-brauchst-du/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li aria-current="page">What you need here</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row explainer-title-row-recap">
+<h1>What you need here</h1>
+</div>
+<aside class="explainer-recap" aria-label="Recap">
+<p class="explainer-recap-label">Recap</p>
+<p>You need this for this chapter: <a href="https://lernapps.net/apps/map/informatik/c/eva-prinzip/" rel="noopener">informatik/eva-prinzip</a> <span class="explainer-recap-hint">(external page, the learning map on lernapps.net)</span>.</p>
+</aside>
+<div class="explainer-title-row explainer-title-row-recap">
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/alltag/das-brauchst-du/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧alltag/das-brauchst-du/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-automaten","page":{"id":"das-brauchst-du","title":"What you need here","exercises":[{"id":"eva-was-fehlt","numbered":false}],"sections":[]},"tutor":"alltag/das-brauchst-du/tutor/","markdown":"alltag/das-brauchst-du/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="1" data-block-id="8833cd50" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Can you do this already? “I can explain the IPO model (input, process, output) and sort devices and steps into its three stages.” Class 6b is planning a juice machine made from a cardboard box for their school fair. Jona, Selin and Mia are all eleven. Jona wants to sit in the box and be the machine, Mia wants to buy, and Selin writes everything down. A juice is going to cost €2. This is how the machine looks in the IPO picture:</p></div>
+</div>
+<div class="explainer-block" data-block="2" data-block-id="04ca6473" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" data-component="EvaBild" data-nojs="caption" data-caption="Text description">
+<div class="explainer-island" hidden><div class="eva-bild" aria-hidden="true" data-v-cb84f9bb><!--[--><!--[--><!----><div class="eva-bild-column" data-v-cb84f9bb><div class="eva-bild-box eva-bild-box-0" data-v-cb84f9bb><span class="eva-bild-letter" data-v-cb84f9bb>I</span><strong data-v-cb84f9bb>Input</strong><span class="eva-bild-item" data-v-cb84f9bb>put in a coin, press the button</span></div><!----></div><!--]--><!--[--><span class="eva-bild-arrow" data-v-cb84f9bb></span><div class="eva-bild-column" data-v-cb84f9bb><div class="eva-bild-box eva-bild-box-1" data-v-cb84f9bb><span class="eva-bild-letter" data-v-cb84f9bb>P</span><strong data-v-cb84f9bb>Process</strong><span class="eva-bild-item" data-v-cb84f9bb>Jona checks: is there enough money?</span></div><div class="eva-bild-drawer" data-v-cb84f9bb><span class="eva-bild-both" data-v-cb84f9bb>⇅</span><strong data-v-cb84f9bb>storage: keeps things</strong><span class="eva-bild-item" data-v-cb84f9bb>How much money is inside already?</span></div></div><!--]--><!--[--><span class="eva-bild-arrow" data-v-cb84f9bb></span><div class="eva-bild-column" data-v-cb84f9bb><div class="eva-bild-box eva-bild-box-2" data-v-cb84f9bb><span class="eva-bild-letter" data-v-cb84f9bb>O</span><strong data-v-cb84f9bb>Output</strong><span class="eva-bild-item" data-v-cb84f9bb>juice drops out</span></div><!----></div><!--]--><!--]--></div></div>
+<div class="explainer-nojs"><p>The IPO picture of the juice machine: three boxes with arrows. Box I “Input” (blue): put in a coin, press the button. Box P “Process” (green): Jona checks whether there is enough money. Box O “Output” (orange): juice drops out. A dashed drawer is attached to the box Process: “storage: keeps things”, with the question “How much money is inside already?”.</p></div>
+<script type="application/json" class="explainer-component-props">{"boxes":["Input","Process","Output"],"letters":["I","P","O"],"items":["put in a coin, press the button","Jona checks: is there enough money?","juice drops out"],"drawer":"storage: keeps things","drawerItem":"How much money is inside already?"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="3" data-block-id="a3a3b847" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>The IPO picture shows the way from input to output. But it does not tell you whether a juice really comes out when you press the button. For that, Jona has to know what has happened before: how much money is inside already. The IPO picture only has the box “storage” for that. It does not show how what is kept changes with each input. The next pages are about this memory.</p></div>
+</div>
+<div class="explainer-block" data-block="4" data-block-id="18c08eeb" data-block-type="single-choice" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="eva-was-fehlt">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-eva-was-fehlt" data-id="eva-was-fehlt" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia presses the button. What does the IPO picture tell you about whether a juice comes out?</legend>
+<label class="question-option"><input type="radio" name="frage-eva-was-fehlt" value="0"> <span>It depends on the money already inside.</span></label>
+<label class="question-option"><input type="radio" name="frage-eva-was-fehlt" value="1"> <span>A juice always comes out.</span></label>
+<label class="question-option"><input type="radio" name="frage-eva-was-fehlt" value="2"> <span>A juice never comes out.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>It depends on the money already inside.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The IPO picture only shows the way. Whether juice comes out depends on what was put in before.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>A juice always comes out.</strong></p><p>Without enough money the machine gives no juice, even when the button is pressed.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>A juice never comes out.</strong></p><p>When there is enough money inside, the button brings a juice.</p></li>
+</ul>
+<p class="question-explanation">The same button can bring a juice one time and nothing another time. What makes the difference is on the next page.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>It depends on the money already inside.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The IPO picture only shows the way. Whether juice comes out depends on what was put in before.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>A juice always comes out.</strong></p><p>Without enough money the machine gives no juice, even when the button is pressed.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>A juice never comes out.</strong></p><p>When there is enough money inside, the button brings a juice.</p></li>
+</ul>
+<p class="question-explanation">The same button can bring a juice one time and nothing another time. What makes the difference is on the next page.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"eva-was-fehlt","text":"Mia presses the button. What does the IPO picture tell you about whether a juice comes out?","explanation":"The same button can bring a juice one time and nothing another time. What makes the difference is on the next page.","links":[],"type":"single-choice","options":[{"text":"It depends on the money already inside.","correct":true,"info":"The IPO picture only shows the way. Whether juice comes out depends on what was put in before."},{"text":"A juice always comes out.","correct":false,"info":"Without enough money the machine gives no juice, even when the button is pressed."},{"text":"A juice never comes out.","correct":false,"info":"When there is enough money inside, the button brings a juice."}]},"rendered":{}}</script>
+</div>
+</div>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “Automata and states”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-automaten","app":"Automata and states","root":"../../../en/","repository":"lernapps/informatik-automaten","revision":"598fced","page":{"title":"What you need here","order":0}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="next" href="../../../en/alltag/automaten-im-alltag/">Next: Automata in everyday life</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>
