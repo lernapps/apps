@@ -51,6 +51,7 @@ strands:
 |---|---|---|
 | `name` | text | required |
 | `explainerFocus` | `strand` \| `competency` | optional, default `strand`; see below |
+| `bandLabels` | `{ "5-6", "7-8", "9-10" }` of text | optional; replaces the default `Klasse 5/6` / `Grade 5/6` labels in the UI, e.g. with CEFR levels `A1`, `A2`, `B1` |
 | `source.title`, `source.url` | string, https URL | required; `url` optional when the source has none online |
 | `strands[]` | list, at least one | |
 | `status` | `"draft"` \| `"checked"` \| `"reviewed"` | required; how far teachers of the subject reviewed strands, competencies and `requires`: `draft` (an idea to show the principle, no review yet), `checked` (at least one review), `reviewed` (at least two). Every page of the subject's map shows it; a draft is marked loudly |
@@ -59,8 +60,8 @@ strands:
 | `strands[].name` | text | required |
 | `strands[].competencies[]` | list, at least one | |
 | `competencies[].id` | id | unique in the **subject** (not only in the strand) |
-| `competencies[].name` | text | required; a short name of 2–5 words, shown where the competency is listed or linked |
-| `competencies[].iCan` | text | required; starts with "Ich kann" |
+| `competencies[].name` | text (or `{ en }`) | required; a short name of 2–5 words, shown where the competency is listed or linked |
+| `competencies[].iCan` | text (or `{ en }`) | required; starts with "Ich kann" (or "I can" when English-only) |
 | `competencies[].gradeBand` | `"5-6"` \| `"7-8"` \| `"9-10"` | required |
 | `competencies[].requires` | list of ids | optional; each an id of this subject; no cycles; not itself |
 

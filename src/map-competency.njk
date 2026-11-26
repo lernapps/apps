@@ -35,7 +35,7 @@ eleventyComputed:
     <p class="m-0 text-lg text-slate-700"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ K.quote(comp.iCan | tx(lang)) }}</p>
     <dl class="map-facts w-full mt-2">
       <div><dt>{{ K.strand }}</dt><dd><a href="{{ c.mapUrl(subject.id + '/' + strand.id + '/') | trim }}" class="text-blue-700 underline underline-offset-2"{{ strand.name | fallbackLang(lang) | safe }}>{{ strand.name | tx(lang) }}</a></dd></div>
-      <div><dt>{{ K.richtstufe }}</dt><dd>{{ t.map.grade(comp.gradeBand | band) }}</dd></div>
+      <div><dt>{{ K.richtstufe }}</dt><dd>{{ comp.gradeBand | bandLabel(subject, lang) }}</dd></div>
     </dl>
   </div>
 
@@ -79,7 +79,7 @@ eleventyComputed:
         {%- if comp.ancestorsByStep.length %}
         <dl class="map-chain-steps">
           {%- for group in comp.ancestorsByStep %}
-          <dt>{{ P.place(group.band | band, group.bandStep) }}</dt>
+          <dt>{{ group.band | placeLabel(group.bandStep, subject, lang) }}</dt>
           <dd><ul>{% for id in group.ids %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}{% if id in comp.requires %} <span class="map-direct">{{ P.direct }}</span>{% endif %}</li>{% endfor %}</ul></dd>
           {%- endfor %}
         </dl>
@@ -87,7 +87,7 @@ eleventyComputed:
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
       <div class="p-3 rounded-lg bg-blue-700 text-white">
-        <h3 class="m-0 text-sm font-semibold">{{ P.self }} · {{ P.place(comp.gradeBand | band, comp.place.step) }}</h3>
+        <h3 class="m-0 text-sm font-semibold">{{ P.self }} · {{ comp.gradeBand | placeLabel(comp.place.step, subject, lang) }}</h3>
         <p class="m-0 mt-1 font-bold"{{ comp.name | fallbackLang(lang) | safe }}>{{ label }}</p>
       </div>
       <span aria-hidden="true" class="hidden md:block text-2xl text-slate-500">→</span>
@@ -96,7 +96,7 @@ eleventyComputed:
         {%- if comp.childrenByStep.length %}
         <dl class="map-chain-steps">
           {%- for group in comp.childrenByStep %}
-          <dt>{{ P.place(group.band | band, group.bandStep) }}</dt>
+          <dt>{{ group.band | placeLabel(group.bandStep, subject, lang) }}</dt>
           <dd><ul>{% for id in group.ids %}<li>{{ c.mapCompetencyLink(subject, id, comp.strand) }}</li>{% endfor %}</ul></dd>
           {%- endfor %}
         </dl>
@@ -124,7 +124,7 @@ eleventyComputed:
         <tbody>
           <tr>
             <th scope="row">{{ W.richtstufe }}</th>
-            <td><strong>{{ comp.gradeBand | band }}</strong></td>
+            <td><strong>{{ comp.gradeBand | bandShort(subject, lang) }}</strong></td>
             <td class="text-slate-600">{{ W.standard }}</td>
             <td>{{ W.catalog }}</td>
           </tr>

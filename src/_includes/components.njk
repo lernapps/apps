@@ -181,10 +181,10 @@
   <div data-dialog-body>
     <p class="m-0"{{ comp.iCan | fallbackLang(lang) | safe }}>{{ comp.iCan | tx(lang) }}</p>
     <dl class="map-facts">
-      <div><dt>{{ D.richtstufe }}</dt><dd>{{ t.map.grade(comp.gradeBand | band) }}</dd></div>
+      <div><dt>{{ D.richtstufe }}</dt><dd>{{ comp.gradeBand | bandLabel(subject, lang) }}</dd></div>
       {%- for cu in (subject.curricula if not curriculum else [curriculum]) %}
       {%- set placed = cu.placements[comp.id] %}
-      <div><dt>{{ t.map.subject.when.curriculum(t.map.lands[cu.land], cu.schoolType | tx(lang)) }}</dt><dd>{% if placed %}{{ t.map.grade(placed.grades | join(", ")) }}{% else %}{{ D.unplaced(comp.gradeBand | band) }}{% endif %}</dd></div>
+      <div><dt>{{ t.map.subject.when.curriculum(t.map.lands[cu.land], cu.schoolType | tx(lang)) }}</dt><dd>{% if placed %}{{ t.map.grade(placed.grades | join(", ")) }}{% else %}{{ D.unplaced(comp.gradeBand | bandShort(subject, lang)) }}{% endif %}</dd></div>
       {%- endfor %}
       <div><dt>{{ D.requires }}</dt><dd>
         {%- if comp.requires.length %}<ul class="list-none p-0 m-0 flex flex-col gap-1">{% for id in comp.requires %}<li>{{ mapCompetencyLink(subject, id, comp.strand) }}</li>{% endfor %}</ul>

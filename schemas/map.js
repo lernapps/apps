@@ -16,16 +16,32 @@ const Source = z
 
 export const GRADE_BANDS = ["5-6", "7-8", "9-10"];
 
+// Text on the learning map: German (string or { de, en? }), or English-only ({ en }) for subjects like DaF.
+const MapText = z.union([
+  Text,
+  z.strictObject({
+    en: z.string().min(1).describe("English"),
+  }),
+]);
+
 const Competency = z
   .strictObject({
     id: Id.describe("Stable id, unique in the subject; never renamed once published"),
-    name: Text.describe("Short name of the competency, 2–5 words, e.g. Laplace-Formel; shown where it is listed"),
-    iCan: Text.refine((t) => (typeof t === "string" ? t : t.de).startsWith("Ich kann"), {
-      message: 'starts with "Ich kann"',
-    }).describe('What a learner can do, in plain German: "Ich kann …"'),
+    name: MapText.describe("Short name of the competency, 2–5 words, e.g. Laplace-Formel; shown where it is listed"),
+    iCan: MapText.refine(
+      (t) =>
+        typeof t === "string"
+          ? t.startsWith("Ich kann")
+          : "de" in t
+            ? t.de.startsWith("Ich kann")
+            : t.en.startsWith("I can"),
+      {
+        message: 'starts with "Ich kann" (or "I can" when English-only)',
+      },
+    ).describe('What a learner can do, in plain German ("Ich kann …") or English-only ("I can …")'),
     gradeBand: z
       .enum(GRADE_BANDS)
-      .describe("Roughly in which two school years it is taught; shown where no curriculum places it"),
+      .describe("Roughly in which two school years (or course stage) it is taught; shown where no curriculum places it"),
     requires: z.array(Id).optional().describe("Competencies of the same subject a learner needs first, any strand"),
   })
   .describe("A competency (Baustein): one thing a learner can learn");
@@ -74,6 +90,14 @@ export const Subject = z
           "several strands, because the strands are woven together (foreign languages, Deutsch); such an app names the " +
           "subject instead of a strand, each page stays in one strand, and its prerequisites come first in the app",
       ),
+    bandLabels: z
+      .strictObject({
+        "5-6": MapText,
+        "7-8": MapText,
+        "9-10": MapText,
+      })
+      .optional()
+      .describe("Optional labels for the three grade bands, e.g. CEFR levels A1, A2, B1"),
     strands: z.array(Strand).min(1),
   })
   .describe("A subject of the learning map: map/<subject>.yaml");

@@ -1,0 +1,1170 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/subject.v1.schema.json
+# Draft learning map for German as a Foreign Language (Deutsch als Fremdsprache, DaF), CEFR A1–B1.
+# Source abbreviations in comments:
+#   ZfA   = Rahmenplan „Deutsch als Fremdsprache“ für das Auslandsschulwesen (ZfA / KMK, 2009), Kap. 3
+#           (Bildungsabschnitt 1 = A1, 2 = A2, 3 = B1; 3.1 Kommunikative Teilkompetenzen, 3.2 Sprachliche Mittel,
+#           3.3 Texte und Medien, 3.4 Interkulturelle Kompetenzen).
+#   GI-A1 = Goethe-Institut / telc: Goethe-Zertifikat A1 (Start Deutsch 1 / Fit in Deutsch 1), Prüfungsziele, Testbeschreibung.
+#   GI-A2 = Goethe-Institut: Goethe-Zertifikat A2 (Fit in Deutsch 2 / A2), Prüfungsziele, Testbeschreibung.
+#   GI-B1 = Goethe-Institut / ÖSD / Universität Freiburg: Zertifikat B1, Prüfungsziele, Testbeschreibung (2013/2016).
+#   BAMF  = BAMF: Rahmencurriculum für Integrationskurse – Deutsch als Zweitsprache (2016), A1–B1.
+#   GER   = Europarat: Gemeinsamer europäischer Referenzrahmen für Sprachen (2001) & Begleitband (2020).
+# Band mapping (simpler mapping with custom bandLabels):
+#   "5-6" → A1 (ZfA Bildungsabschnitt 1)
+#   "7-8" → A2 (ZfA Bildungsabschnitt 2)
+#   "9-10" → B1 (ZfA Bildungsabschnitt 3, MSA / DSD I equivalent)
+# Full sources, rationale, and open points: .vibe/research-daf.md.
+name: { de: "Deutsch als Fremdsprache", en: "German as a Foreign Language" }
+source:
+  title: "ZfA / KMK, Rahmenplan „Deutsch als Fremdsprache“ für das Auslandsschulwesen (2009)"
+  url: https://www.auslandsschulwesen.de/resource/blob/2789274/febe196fc6737e2f3dc86448e997cceb/daf-rahmenplan-data.pdf
+explainerFocus: competency
+bandLabels:
+  "5-6": { en: "A1" }
+  "7-8": { en: "A2" }
+  "9-10": { en: "B1" }
+status: draft
+strands:
+  # ZfA 3.2.4 Grammatik (S. 27); GI-A1/A2/B1 Grammatik-Inventare; BAMF A1–B1
+  - id: grammatik
+    name: { de: Grammatik, en: Grammar }
+    competencies:
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Personalpronomen Nominativ); BAMF A1 | A1/A1/A1 → 5-6
+      - id: personalpronomen-nominativ
+        name: { en: "Personal pronouns (nominative)" }
+        iCan: { en: "I can use German nominative personal pronouns (ich, du, er, sie, es, wir, ihr, sie, Sie) as sentence subjects." }
+        gradeBand: "5-6"
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (sein, haben); BAMF A1 | A1/A1/A1 → 5-6
+      # requires personalpronomen-nominativ: Verb forms of sein and haben depend on the subject pronoun (GI-A1).
+      - id: praesens-sein-haben
+        name: { en: "Verbs sein and haben" }
+        iCan: { en: "I can conjugate sein and haben in the present tense to describe people, states, and possessions." }
+        gradeBand: "5-6"
+        requires: [personalpronomen-nominativ]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Präsens regelmäßiger Verben); BAMF A1 | A1/A1/A1 → 5-6
+      # requires personalpronomen-nominativ: Present-tense personal endings (-e, -st, -t, -en) match the subject pronoun (GI-A1).
+      - id: praesens-regelmaessig
+        name: { en: "Regular verbs in present tense" }
+        iCan: { en: "I can conjugate regular German verbs in the present tense." }
+        gradeBand: "5-6"
+        requires: [personalpronomen-nominativ]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Verben mit Vokalwechsel); BAMF A1 | A1/A1/A1 → 5-6
+      # requires praesens-regelmaessig: Stem vowel changes (e→i/ie, a→ä) modify the regular present-tense conjugation pattern (GI-A1).
+      - id: praesens-vokalwechsel
+        name: { en: "Stem-changing present verbs" }
+        iCan: { en: "I can conjugate common stem-changing verbs like sprechen, lesen, fahren, and schlafen in the present tense." }
+        gradeBand: "5-6"
+        requires: [praesens-regelmaessig]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Aussagesatz, Verbzweitstellung); BAMF A1 | A1/A1/A1 → 5-6
+      # requires praesens-regelmaessig: Building a main clause requires placing a conjugated finite verb in second position (GI-A1).
+      - id: verb-zweitstellung
+        name: { en: "Verb-second word order" }
+        iCan: { en: "I can build German statements with the conjugated verb in second position, including inversion after time or place." }
+        gradeBand: "5-6"
+        requires: [praesens-regelmaessig]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (W-Fragen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires verb-zweitstellung: W-questions keep the conjugated verb in second position right after the question word (GI-A1).
+      - id: w-fragen
+        name: { en: "W-questions" }
+        iCan: { en: "I can ask and answer W-questions using wer, was, wo, woher, wohin, wann, and wie." }
+        gradeBand: "5-6"
+        requires: [verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Ja-/Nein-Fragen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires verb-zweitstellung: Yes/no questions move the conjugated verb from second to first position (GI-A1).
+      - id: ja-nein-fragen
+        name: { en: "Yes/no questions" }
+        iCan: { en: "I can form yes/no questions by placing the conjugated verb in first position and answer with ja, nein, or doch." }
+        gradeBand: "5-6"
+        requires: [verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (bestimmter/unbestimmter Artikel, Genus); BAMF A1 | A1/A1/A1 → 5-6
+      - id: artikel-genus
+        name: { en: "Articles and noun gender" }
+        iCan: { en: "I can use definite (der, die, das) and indefinite (ein, eine) articles with masculine, feminine, and neuter nouns." }
+        gradeBand: "5-6"
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Pluralformen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires artikel-genus: Plural formation builds on singular noun forms and replaces singular articles with plural die (GI-A1).
+      - id: pluralbildung
+        name: { en: "Noun plurals" }
+        iCan: { en: "I can form common German noun plurals and use them with the plural article die." }
+        gradeBand: "5-6"
+        requires: [artikel-genus]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Negation mit nicht und kein); BAMF A1 | A1/A1/A1 → 5-6
+      # requires artikel-genus: Choosing kein/keine depends on noun gender and indefinite/zero articles (GI-A1).
+      # requires verb-zweitstellung: Placing nicht correctly depends on main-clause word order (GI-A1).
+      - id: negation-nicht-kein
+        name: { en: "Negation with nicht and kein" }
+        iCan: { en: "I can negate nouns with kein/keine and verbs, adjectives, or sentences with nicht." }
+        gradeBand: "5-6"
+        requires: [artikel-genus, verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Akkusativ); BAMF A1 | A1/A1/A1 → 5-6
+      # requires artikel-genus: Accusative changes masculine der/ein to den/einen while keeping feminine, neuter, and plural forms (GI-A1).
+      # requires verb-zweitstellung: Direct objects are identified in relation to the subject and verb in a clause (GI-A1).
+      - id: akkusativ-artikel
+        name: { en: "Accusative case and articles" }
+        iCan: { en: "I can use definite, indefinite, and negative articles in the accusative case for direct objects." }
+        gradeBand: "5-6"
+        requires: [artikel-genus, verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Personalpronomen Akkusativ); BAMF A1 | A1/A1/A1 → 5-6
+      # requires akkusativ-artikel: Accusative pronouns replace accusative noun phrases as direct objects (GI-A1).
+      # requires personalpronomen-nominativ: Accusative forms (mich, dich, ihn, sie, es) pair with nominative subject pronouns (GI-A1).
+      - id: akkusativ-pronomen
+        name: { en: "Accusative personal pronouns" }
+        iCan: { en: "I can use accusative personal pronouns (mich, dich, ihn, sie, es, uns, euch, sie, Sie) as direct objects." }
+        gradeBand: "5-6"
+        requires: [akkusativ-artikel, personalpronomen-nominativ]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Possessivartikel Nom/Akk); BAMF A1 | A1/A1/A1 → 5-6
+      # requires akkusativ-artikel: Possessive determiners take the same endings as ein/kein in nominative and accusative (GI-A1).
+      # requires personalpronomen-nominativ: Choosing mein, dein, sein, ihr, unser, euer, ihr depends on the owner pronoun (GI-A1).
+      - id: possessivartikel-nom-akk
+        name: { en: "Possessive determiners (nom./acc.)" }
+        iCan: { en: "I can use possessive determiners (mein, dein, sein, ihr, unser, euer, ihr, Ihr) in the nominative and accusative." }
+        gradeBand: "5-6"
+        requires: [akkusativ-artikel, personalpronomen-nominativ]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Modalverben, Satzklammer); BAMF A1 | A1/A1/A1 → 5-6
+      # requires verb-zweitstellung: Modal verbs introduce the German sentence bracket with the infinitive at the end (GI-A1).
+      - id: modalverben-praesens
+        name: { en: "Modal verbs in present tense" }
+        iCan: { en: "I can use modal verbs (können, müssen, wollen, dürfen, sollen, möchten) with an infinitive at the end of the clause." }
+        gradeBand: "5-6"
+        requires: [verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (trennbare Verben); BAMF A1 | A1/A1/A1 → 5-6
+      # requires verb-zweitstellung: Separable verbs split into conjugated stem in position 2 and prefix at the clause end (GI-A1).
+      - id: trennbare-verben
+        name: { en: "Separable prefix verbs" }
+        iCan: { en: "I can use separable verbs like aufstehen, einkaufen, and anrufen with the prefix at the end of a main clause." }
+        gradeBand: "5-6"
+        requires: [verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Imperativ); BAMF A1 | A1/A1/A1 → 5-6
+      # requires praesens-vokalwechsel: The du-imperative keeps e→i/ie stem changes and drops a→ä umlauts (GI-A1).
+      - id: imperativ
+        name: { en: "Imperative (du, ihr, Sie)" }
+        iCan: { en: "I can give instructions, advice, and polite requests using the imperative for du, ihr, and Sie." }
+        gradeBand: "5-6"
+        requires: [praesens-vokalwechsel]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Präteritum von sein und haben); BAMF A1 | A1/A1/A1 → 5-6
+      # requires praesens-sein-haben: Past forms war and hatte extend the present-tense paradigms of sein and haben (GI-A1).
+      - id: praeteritum-sein-haben
+        name: { en: "Past tense of sein and haben" }
+        iCan: { en: "I can talk about past states and possessions using the simple past forms of sein (war) and haben (hatte)." }
+        gradeBand: "5-6"
+        requires: [praesens-sein-haben]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Perfekt mit haben); BAMF A1 | A1/A1/A1 → 5-6
+      # requires praesens-sein-haben: The present perfect uses conjugated haben as its auxiliary (GI-A1).
+      # requires verb-zweitstellung: The auxiliary stands in position 2 while Partizip II closes the sentence bracket (GI-A1).
+      - id: perfekt-haben
+        name: { en: "Present perfect with haben" }
+        iCan: { en: "I can talk about past actions using the Perfekt with haben and regular or common irregular past participles." }
+        gradeBand: "5-6"
+        requires: [praesens-sein-haben, verb-zweitstellung]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Perfekt mit sein); BAMF A1 | A1/A1/A1 → 5-6
+      # requires perfekt-haben: Builds on Perfekt clause structure and contrasts movement/change verbs taking sein (GI-A1).
+      - id: perfekt-sein
+        name: { en: "Present perfect with sein" }
+        iCan: { en: "I can form the Perfekt with sein for verbs of movement and change of state like gehen, fahren, and bleiben." }
+        gradeBand: "5-6"
+        requires: [perfekt-haben]
+      # ZfA 3.2.4 (A1/A2); GI-A1/A2 Grammatik (Partizip II trennbarer/untrennbarer Verben); BAMF A1 | A1/A1/A1 → 5-6
+      # requires perfekt-haben: Extends Partizip II formation to prefixed and -ieren verbs (GI-A1/A2).
+      # requires trennbare-verben: Knowing which prefixes are separable determines whether ge- goes between prefix and stem (GI-A1/A2).
+      - id: perfekt-trennbar-untrennbar
+        name: { en: "Past participles with prefixes" }
+        iCan: { en: "I can form the Partizip II of separable verbs (eingekauft), inseparable verbs (verstanden), and -ieren verbs (studiert)." }
+        gradeBand: "5-6"
+        requires: [perfekt-haben, trennbare-verben]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (lokale Präpositionen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires artikel-genus: Contractions like im, zum, zur depend on noun gender and articles (GI-A1).
+      - id: praepositionen-lokal-a1
+        name: { en: "Basic local prepositions" }
+        iCan: { en: "I can say where people and places are or where I am going using in, aus, nach, zu, and bei." }
+        gradeBand: "5-6"
+        requires: [artikel-genus]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (temporale Präpositionen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires praepositionen-lokal-a1: Uses the same preposition-plus-article pattern (am, im) for time expressions (GI-A1).
+      - id: praepositionen-temporal-a1
+        name: { en: "Basic time prepositions" }
+        iCan: { en: "I can give times, days, and seasons using um, am, im, and von … bis." }
+        gradeBand: "5-6"
+        requires: [praepositionen-lokal-a1]
+      # ZfA 3.2.4 (A1); GI-A1 Grammatik (Konjunktionen Position 0); BAMF A1 | A1/A1/A1 → 5-6
+      # requires verb-zweitstellung: Coordinating conjunctions stand in position 0 and preserve main-clause verb-second order (GI-A1).
+      - id: konjunktionen-aduso
+        name: { en: "Coordinating conjunctions" }
+        iCan: { en: "I can connect main clauses with und, oder, aber, denn, and sondern without changing word order." }
+        gradeBand: "5-6"
+        requires: [verb-zweitstellung]
+
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Dativ Artikel); BAMF A2 | A2/A2/A2 → 7-8
+      # requires akkusativ-artikel: Dative adds the third case for indirect objects after nominative and accusative (GI-A2).
+      - id: dativ-artikel
+        name: { en: "Dative case and articles" }
+        iCan: { en: "I can use definite, indefinite, and negative articles in the dative case (dem, der, dem, den + -n)." }
+        gradeBand: "7-8"
+        requires: [akkusativ-artikel]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Personalpronomen Dativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-artikel: Dative pronouns replace dative noun phrases (GI-A2).
+      # requires akkusativ-pronomen: Learners distinguish dative pronouns (mir, dir, ihm, ihr) from accusative ones (GI-A2).
+      - id: dativ-pronomen
+        name: { en: "Dative personal pronouns" }
+        iCan: { en: "I can use dative personal pronouns (mir, dir, ihm, ihr, uns, euch, ihnen, Ihnen) in everyday sentences." }
+        gradeBand: "7-8"
+        requires: [dativ-artikel, akkusativ-pronomen]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Verben mit Dativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-pronomen: Common dative verbs like helfen, gefallen, and gehören take dative nouns or pronouns (GI-A2).
+      - id: verben-mit-dativ
+        name: { en: "Verbs with dative" }
+        iCan: { en: "I can use common dative verbs such as helfen, gefallen, gehören, danken, schmecken, and passen." }
+        gradeBand: "7-8"
+        requires: [dativ-pronomen]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Verben mit Dativ und Akkusativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-pronomen: Ordering recipient (dative) and thing (accusative) requires knowing both case forms (GI-A2).
+      - id: dativ-und-akkusativ
+        name: { en: "Dative and accusative objects" }
+        iCan: { en: "I can build sentences with both a dative and an accusative object in the right order (e.g. Ich gebe dir das Buch)." }
+        gradeBand: "7-8"
+        requires: [dativ-pronomen]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Wechselpräpositionen); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-artikel: Static location (Wo?) with two-way prepositions takes the dative case (GI-A2).
+      # requires praepositionen-lokal-a1: Expands basic local prepositions to all nine two-way prepositions (GI-A2).
+      - id: wechselpraepositionen
+        name: { en: "Two-way prepositions (Wo/Wohin)" }
+        iCan: { en: "I can choose between dative (Wo?) and accusative (Wohin?) after an, auf, hinter, in, neben, über, unter, vor, and zwischen." }
+        gradeBand: "7-8"
+        requires: [dativ-artikel, praepositionen-lokal-a1]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Präpositionen mit Akkusativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires akkusativ-artikel: Applying für, durch, gegen, ohne, um requires accusative article forms (GI-A2).
+      - id: praepositionen-akkusativ
+        name: { en: "Accusative prepositions" }
+        iCan: { en: "I can use prepositions that always take the accusative case (für, durch, gegen, ohne, um, bis)." }
+        gradeBand: "7-8"
+        requires: [akkusativ-artikel]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Präpositionen mit Dativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-artikel: Applying mit, nach, aus, zu, von, bei, seit requires dative article forms (GI-A2).
+      - id: praepositionen-dativ
+        name: { en: "Dative prepositions" }
+        iCan: { en: "I can use prepositions that always take the dative case (aus, bei, mit, nach, seit, von, zu, gegenüber)." }
+        gradeBand: "7-8"
+        requires: [dativ-artikel]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Possessivartikel Dativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-artikel: Possessive determiners in dative take the same -em/-er/-en endings as indefinite articles (GI-A2).
+      # requires possessivartikel-nom-akk: Extends the A1 possessive determiner paradigm to the dative case (GI-A2).
+      - id: possessivartikel-dativ
+        name: { en: "Possessive determiners (dative)" }
+        iCan: { en: "I can use possessive determiners (meinem, deiner, ihren, etc.) in the dative case." }
+        gradeBand: "7-8"
+        requires: [dativ-artikel, possessivartikel-nom-akk]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (reflexive Verben); BAMF A2 | A2/A2/A2 → 7-8
+      # requires akkusativ-pronomen: Most reflexive verbs use accusative reflexive pronouns (mich, dich, sich) (GI-A2).
+      # requires dativ-pronomen: With a second accusative object, reflexive pronouns shift to dative (mir, dir) (GI-A2).
+      - id: reflexive-verben
+        name: { en: "Reflexive verbs" }
+        iCan: { en: "I can use common reflexive verbs like sich freuen, sich treffen, and sich die Hände waschen." }
+        gradeBand: "7-8"
+        requires: [akkusativ-pronomen, dativ-pronomen]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Präteritum der Modalverben); BAMF A2 | A2/A2/A2 → 7-8
+      # requires modalverben-praesens: Uses the same modal-verb sentence bracket in the past (GI-A2).
+      # requires praeteritum-sein-haben: Builds on simple past endings already learnt with war and hatte (GI-A2).
+      - id: modalverben-praeteritum
+        name: { en: "Modal verbs in simple past" }
+        iCan: { en: "I can talk about past abilities, duties, and plans using konnte, musste, wollte, durfte, and sollte." }
+        gradeBand: "7-8"
+        requires: [modalverben-praesens, praeteritum-sein-haben]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Nebensätze mit weil und dass); BAMF A2 | A2/A2/A2 → 7-8
+      # requires konjunktionen-aduso: Contrasts subordinating verb-final order with coordinating position-0 conjunctions (GI-A2).
+      - id: nebensatz-weil-dass
+        name: { en: "Subordinate clauses: weil, dass" }
+        iCan: { en: "I can form subordinate clauses with weil and dass, placing the conjugated verb at the end." }
+        gradeBand: "7-8"
+        requires: [konjunktionen-aduso]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Nebensätze mit wenn und als); BAMF A2 | A2/A2/A2 → 7-8
+      # requires nebensatz-weil-dass: Uses the same verb-final subordinate-clause structure (GI-A2).
+      # requires praeteritum-sein-haben: Choosing als vs. wenn requires distinguishing single past events from repeated/present ones (GI-A2).
+      - id: nebensatz-wenn-als
+        name: { en: "Clauses with wenn and als" }
+        iCan: { en: "I can express conditions and time relationships using wenn (present, future, repeated past) and als (single past event)." }
+        gradeBand: "7-8"
+        requires: [nebensatz-weil-dass, praeteritum-sein-haben]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (indirekte Fragen); BAMF A2 | A2/A2/A2 → 7-8
+      # requires nebensatz-weil-dass: Indirect questions use subordinate verb-final word order (GI-A2).
+      # requires w-fragen: Indirect W-questions transform direct W-questions into embedded clauses (GI-A2).
+      # requires ja-nein-fragen: Indirect yes/no questions transform direct yes/no questions using ob (GI-A2).
+      - id: indirekte-fragen
+        name: { en: "Indirect questions (ob, W-words)" }
+        iCan: { en: "I can ask polite indirect questions using ob and question words with the verb at the end." }
+        gradeBand: "7-8"
+        requires: [nebensatz-weil-dass, w-fragen, ja-nein-fragen]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Adjektivdeklination nach bestimmtem Artikel); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-artikel: Weak adjective endings (-e/-en) depend on nominative, accusative, and dative case forms (GI-A2).
+      - id: adjektivdeklination-bestimmt
+        name: { en: "Adjective endings (definite article)" }
+        iCan: { en: "I can add the right adjective endings (-e or -en) after definite articles like der, die, das, and dieser." }
+        gradeBand: "7-8"
+        requires: [dativ-artikel]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Adjektivdeklination nach unbestimmtem Artikel); BAMF A2 | A2/A2/A2 → 7-8
+      # requires adjektivdeklination-bestimmt: Mixed endings extend weak endings where ein/kein/mein has no gender signal (GI-A2).
+      - id: adjektivdeklination-unbestimmt
+        name: { en: "Adjective endings (indefinite)" }
+        iCan: { en: "I can add the right adjective endings after ein, kein, and possessive determiners in nominative, accusative, and dative." }
+        gradeBand: "7-8"
+        requires: [adjektivdeklination-bestimmt]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Komparativ und Superlativ); BAMF A2 | A2/A2/A2 → 7-8
+      # requires adjektivdeklination-unbestimmt: Attributive comparatives and superlatives also take standard adjective endings (GI-A2).
+      - id: komparativ-superlativ
+        name: { en: "Comparative and superlative" }
+        iCan: { en: "I can compare people and things using the comparative, superlative (am …-sten), so … wie, and als." }
+        gradeBand: "7-8"
+        requires: [adjektivdeklination-unbestimmt]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Konjunktiv II für Höflichkeit und Wünsche); BAMF A2 | A2/A2/A2 → 7-8
+      # requires modalverben-praeteritum: Forms like könnte, hätte, wäre, and würde derive from simple past stems (GI-A2).
+      - id: konjunktiv2-hoeflichkeit
+        name: { en: "Polite Konjunktiv II" }
+        iCan: { en: "I can make polite requests, suggestions, and wishes using könnte, hätte, wäre, sollte, and würde + infinitive." }
+        gradeBand: "7-8"
+        requires: [modalverben-praeteritum]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Verben mit Präpositionen); BAMF A2 | A2/A2/A2 → 7-8
+      # requires praepositionen-akkusativ: Fixed prepositions govern a specific case (accusative or dative) (GI-A2).
+      # requires praepositionen-dativ: Many verb-preposition pairs take dative prepositions (e.g. träumen von, sprechen mit) (GI-A2).
+      # requires reflexive-verben: Frequent pairs are reflexive (sich freuen auf/über, sich interessieren für) (GI-A2).
+      - id: verben-mit-praepositionen
+        name: { en: "Verbs with fixed prepositions" }
+        iCan: { en: "I can use common verb-preposition combinations like warten auf, denken an, and sich interessieren für with the right case." }
+        gradeBand: "7-8"
+        requires: [praepositionen-akkusativ, praepositionen-dativ, reflexive-verben]
+      # ZfA 3.2.4 (A2/B1); GI-A2 Grammatik (Pronominaladverbien); BAMF A2 | A2/A2/A2 → 7-8
+      # requires verben-mit-praepositionen: Da(r)- and wo(r)- compounds replace preposition + thing in verb-preposition phrases (GI-A2).
+      - id: pronominaladverbien
+        name: { en: "Da- and wo-compounds" }
+        iCan: { en: "I can ask about and refer back to things with prepositions using worauf, womit, darauf, and darüber." }
+        gradeBand: "7-8"
+        requires: [verben-mit-praepositionen]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Demonstrativ- und Indefinitpronomen); BAMF A2 | A2/A2/A2 → 7-8
+      # requires dativ-artikel: Demonstrative and indefinite determiners decline across nominative, accusative, and dative (GI-A2).
+      - id: demonstrativ-indefinitpronomen
+        name: { en: "Demonstrative & indefinite pronouns" }
+        iCan: { en: "I can use dieser, welcher, jeder, man, jemand, niemand, etwas, and nichts accurately in context." }
+        gradeBand: "7-8"
+        requires: [dativ-artikel]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (Konjunktionaladverbien); BAMF A2 | A2/A2/A2 → 7-8
+      # requires verb-zweitstellung: Placing deshalb, trotzdem, or danach in position 1 triggers subject-verb inversion (GI-A2).
+      # requires nebensatz-weil-dass: Contrasts main-clause adverb connectors (deshalb) with subordinating clauses (weil) (GI-A2).
+      - id: konjunktionaladverbien
+        name: { en: "Conjunctive adverbs (deshalb, trotzdem)" }
+        iCan: { en: "I can link ideas with deshalb, trotzdem, danach, zuerst, and dann using verb-second inversion." }
+        gradeBand: "7-8"
+        requires: [verb-zweitstellung, nebensatz-weil-dass]
+      # ZfA 3.2.4 (A2); GI-A2 Grammatik (werden); BAMF A2 | A2/A2/A2 → 7-8
+      # requires modalverben-praesens: Uses the conjugated verb + infinitive bracket when expressing plans or changes (GI-A2).
+      - id: werden-funktionen
+        name: { en: "Uses of werden" }
+        iCan: { en: "I can conjugate werden to describe changes (es wird kalt) and prepare for future and passive structures." }
+        gradeBand: "7-8"
+        requires: [modalverben-praesens]
+
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Präteritum); BAMF B1 | B1/B1/B1 → 9-10
+      # requires perfekt-sein: Contrasts written narrative Präteritum with spoken Perfekt (GI-B1).
+      # requires modalverben-praeteritum: Extends simple past endings from modals and sein/haben to full verbs (GI-B1).
+      - id: praeteritum-verben
+        name: { en: "Simple past (Präteritum)" }
+        iCan: { en: "I can understand and use the Präteritum of regular and common irregular verbs in written reports and stories." }
+        gradeBand: "9-10"
+        requires: [perfekt-sein, modalverben-praeteritum]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Plusquamperfekt); BAMF B1 | B1/B1/B1 → 9-10
+      # requires praeteritum-verben: Plusquamperfekt expresses an event prior to another past event (GI-B1).
+      # requires perfekt-sein: Uses hatte/war + Partizip II following the same haben/sein choice as Perfekt (GI-B1).
+      - id: plusquamperfekt
+        name: { en: "Past perfect (Plusquamperfekt)" }
+        iCan: { en: "I can express that one past event happened before another using the Plusquamperfekt with hatte or war." }
+        gradeBand: "9-10"
+        requires: [praeteritum-verben, perfekt-sein]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Futur I); BAMF B1 | B1/B1/B1 → 9-10
+      # requires werden-funktionen: Futur I combines conjugated werden with a clause-final infinitive (GI-B1).
+      - id: futur1
+        name: { en: "Future tense (Futur I)" }
+        iCan: { en: "I can express plans, promises, forecasts, and assumptions using Futur I (werden + infinitive)." }
+        gradeBand: "9-10"
+        requires: [werden-funktionen]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Passiv Präsens); BAMF B1 | B1/B1/B1 → 9-10
+      # requires werden-funktionen: Process passive uses conjugated werden as auxiliary (GI-B1).
+      # requires perfekt-haben: Process passive combines werden with the past participle (Partizip II) (GI-B1).
+      - id: passiv-praesens
+        name: { en: "Present passive voice" }
+        iCan: { en: "I can describe processes and actions without naming the actor using the present passive (werden + Partizip II)." }
+        gradeBand: "9-10"
+        requires: [werden-funktionen, perfekt-haben]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Passiv Präteritum und mit Modalverben); BAMF B1 | B1/B1/B1 → 9-10
+      # requires passiv-praesens: Extends present passive to past tense (wurde) and modal constructions (muss gemacht werden) (GI-B1).
+      # requires modalverben-praeteritum: Modal passive combines modal verbs with Partizip II + werden (GI-B1).
+      - id: passiv-praeteritum-modal
+        name: { en: "Past and modal passive" }
+        iCan: { en: "I can form the past passive (wurde + Partizip II) and passive sentences with modal verbs (kann/muss … werden)." }
+        gradeBand: "9-10"
+        requires: [passiv-praesens, modalverben-praeteritum]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Genitiv und Genitivpräpositionen); BAMF B1 | B1/B1/B1 → 9-10
+      # requires dativ-artikel: Genitive completes the four-case system after nominative, accusative, and dative (GI-B1).
+      - id: genitiv-artikel
+        name: { en: "Genitive case & prepositions" }
+        iCan: { en: "I can use the genitive case (des, der, eines, einer) for possession and after wegen, trotz, während, and statt." }
+        gradeBand: "9-10"
+        requires: [dativ-artikel]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Adjektivdeklination ohne Artikel); BAMF B1 | B1/B1/B1 → 9-10
+      # requires adjektivdeklination-unbestimmt: Strong endings without an article carry the gender/case signal themselves (GI-B1).
+      - id: adjektivdeklination-nullartikel
+        name: { en: "Adjective endings (no article)" }
+        iCan: { en: "I can use strong adjective endings without an article (e.g. frisches Brot, mit kaltem Wasser, gute Freunde)." }
+        gradeBand: "9-10"
+        requires: [adjektivdeklination-unbestimmt]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Relativsätze Nom/Akk/Dat); BAMF B1 | B1/B1/B1 → 9-10
+      # requires nebensatz-weil-dass: Relative clauses are subordinate clauses with the verb at the end (GI-B1).
+      # requires dativ-artikel: Choosing der/den/dem/denen requires gender from the antecedent and case from the relative clause (GI-B1).
+      - id: relativsaetze-nom-akk-dat
+        name: { en: "Relative clauses (nom./acc./dat.)" }
+        iCan: { en: "I can describe people and things more precisely using relative clauses in nominative, accusative, and dative." }
+        gradeBand: "9-10"
+        requires: [nebensatz-weil-dass, dativ-artikel]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Relativsätze mit Präposition und Genitiv); BAMF B1 | B1/B1/B1 → 9-10
+      # requires relativsaetze-nom-akk-dat: Extends basic relative clauses to prepositional and genitive relative pronouns (GI-B1).
+      # requires genitiv-artikel: Genitive relative pronouns dessen/deren follow genitive gender/number rules (GI-B1).
+      # requires verben-mit-praepositionen: Prepositional relative clauses place the verb's preposition before the relative pronoun (GI-B1).
+      - id: relativsaetze-praeposition
+        name: { en: "Relative clauses (prep. & gen.)" }
+        iCan: { en: "I can form relative clauses with prepositions (auf den, mit der) and genitive relative pronouns (dessen, deren)." }
+        gradeBand: "9-10"
+        requires: [relativsaetze-nom-akk-dat, genitiv-artikel, verben-mit-praepositionen]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Infinitivsätze mit zu, um … zu); BAMF B1 | B1/B1/B1 → 9-10
+      # requires nebensatz-weil-dass: Infinitive clauses often alternate with dass-clauses when subjects match (GI-B1).
+      - id: infinitiv-mit-zu
+        name: { en: "Infinitive clauses (zu, um … zu)" }
+        iCan: { en: "I can use infinitive clauses with zu, um … zu, ohne … zu, and (an)statt … zu." }
+        gradeBand: "9-10"
+        requires: [nebensatz-weil-dass]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Konzessiv- und Temporalsätze); BAMF B1 | B1/B1/B1 → 9-10
+      # requires nebensatz-wenn-als: Extends temporal/conditional subordination to concessive and sequence clauses (GI-B1).
+      # requires plusquamperfekt: Clauses with nachdem pair with Plusquamperfekt to express sequence of past events (GI-B1).
+      - id: nebensatz-obwohl-waehrend
+        name: { en: "Clauses: obwohl, während, nachdem" }
+        iCan: { en: "I can connect ideas with obwohl, während, bevor, nachdem, seit(dem), and bis in subordinate clauses." }
+        gradeBand: "9-10"
+        requires: [nebensatz-wenn-als, plusquamperfekt]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Final- und Konsekutivsätze); BAMF B1 | B1/B1/B1 → 9-10
+      # requires nebensatz-weil-dass: Damit and sodass follow verb-final subordinate-clause syntax (GI-B1).
+      # requires infinitiv-mit-zu: Choosing damit vs. um … zu depends on whether the two clauses share the same subject (GI-B1).
+      - id: nebensatz-damit-sodass
+        name: { en: "Purpose & result: damit, sodass" }
+        iCan: { en: "I can express purpose with damit (different subjects) and results with sodass." }
+        gradeBand: "9-10"
+        requires: [nebensatz-weil-dass, infinitiv-mit-zu]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (zweiteilige Konnektoren); BAMF B1 | B1/B1/B1 → 9-10
+      # requires konjunktionen-aduso: Expands simple coordination to paired correlative connectors (GI-B1).
+      # requires komparativ-superlativ: The connector je … desto requires comparative adjective/adverb forms (GI-B1).
+      - id: zweiteilige-konnektoren
+        name: { en: "Two-part connectors" }
+        iCan: { en: "I can structure arguments using sowohl … als auch, weder … noch, nicht nur … sondern auch, zwar … aber, and je … desto." }
+        gradeBand: "9-10"
+        requires: [konjunktionen-aduso, komparativ-superlativ]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Konjunktiv II Irrealis); BAMF B1 | B1/B1/B1 → 9-10
+      # requires konjunktiv2-hoeflichkeit: Extends polite Konjunktiv II forms to hypothetical conditions and wishes (GI-B1).
+      # requires nebensatz-wenn-als: Unreal conditionals combine Konjunktiv II with wenn-clauses (GI-B1).
+      - id: konjunktiv2-irrealis
+        name: { en: "Unreal conditionals (Konjunktiv II)" }
+        iCan: { en: "I can express hypothetical situations and unreal wishes using wenn-clauses with Konjunktiv II." }
+        gradeBand: "9-10"
+        requires: [konjunktiv2-hoeflichkeit, nebensatz-wenn-als]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Konjunktiv II Vergangenheit); BAMF B1 | B1/B1/B1 → 9-10
+      # requires konjunktiv2-irrealis: Applies hypothetical reasoning to unrealized past events (GI-B1).
+      # requires perfekt-sein: Past Konjunktiv II uses hätte/wäre + Partizip II with the same haben/sein distinction (GI-B1).
+      - id: konjunktiv2-vergangenheit
+        name: { en: "Past hypotheticals (hätte/wäre)" }
+        iCan: { en: "I can express past regrets and unrealized past possibilities using hätte or wäre + Partizip II." }
+        gradeBand: "9-10"
+        requires: [konjunktiv2-irrealis, perfekt-sein]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Partizip I und II als Adjektiv); BAMF B1 | B1/B1/B1 → 9-10
+      # requires adjektivdeklination-nullartikel: Participles used attributively take full adjective declension endings (GI-B1).
+      # requires perfekt-haben: Past participles used as adjectives build on Partizip II formation (GI-B1).
+      - id: partizip-als-adjektiv
+        name: { en: "Participles as adjectives" }
+        iCan: { en: "I can use present participles (ein lachendes Kind) and past participles (ein gelesenes Buch) as declined adjectives." }
+        gradeBand: "9-10"
+        requires: [adjektivdeklination-nullartikel, perfekt-haben]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (n-Deklination); BAMF B1 | B1/B1/B1 → 9-10
+      # requires dativ-artikel: N-declension adds -n/-en to certain masculine nouns in all cases outside nominative singular (GI-B1).
+      - id: n-deklination
+        name: { en: "Weak masculine nouns (n-declension)" }
+        iCan: { en: "I can decline common weak masculine nouns like der Mensch, der Kollege, and der Student with -n/-en outside the nominative singular." }
+        gradeBand: "9-10"
+        requires: [dativ-artikel]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Satzbau, TeKaMoLo); BAMF B1 | B1/B1/B1 → 9-10
+      # requires dativ-und-akkusativ: Mittelfeld ordering coordinates objects with adverbials (GI-B1).
+      # requires konjunktionaladverbien: Combines adverbial positioning with clause-initial connectors (GI-B1).
+      - id: satzklammer-tekamolo
+        name: { en: "Word order in Mittelfeld (TeKaMoLo)" }
+        iCan: { en: "I can order time, cause, manner, and place adverbials naturally inside the German sentence bracket." }
+        gradeBand: "9-10"
+        requires: [dativ-und-akkusativ, konjunktionaladverbien]
+      # ZfA 3.2.4 (B1); GI-B1 Grammatik (Modalpartikeln); BAMF B1 | B1/B1/B1 → 9-10
+      # requires imperativ: Modal particles like mal and doch soften imperatives and everyday requests (GI-B1).
+      # requires konjunktiv2-hoeflichkeit: Combines modal particles with polite and pragmatic spoken nuances (GI-B1).
+      - id: modalpartikeln
+        name: { en: "Modal particles (doch, mal, ja)" }
+        iCan: { en: "I can recognize and use common modal particles (doch, mal, ja, eben, halt) to add tone in spoken German." }
+        gradeBand: "9-10"
+        requires: [imperativ, konjunktiv2-hoeflichkeit]
+
+  # ZfA 3.2.3 Wortschatz (S. 26); GI-A1/A2/B1 Themen & Wortlisten; BAMF Handlungsfelder A1–B1
+  - id: wortschatz
+    name: { de: Wortschatz, en: Vocabulary }
+    competencies:
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Person, Kontakt); BAMF A1 | A1/A1/A1 → 5-6
+      - id: begruessung-vorstellung
+        name: { en: "Greetings and introductions" }
+        iCan: { en: "I can greet people, say goodbye, and give basic personal details like my name, age, and country." }
+        gradeBand: "5-6"
+      # ZfA 3.2.3 (A1); GI-A1 Wortgruppen (Zahlen, Währungen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires begruessung-vorstellung: Numbers immediately extend personal information (age, phone number, address) (GI-A1).
+      - id: zahlen-preise
+        name: { en: "Numbers and prices" }
+        iCan: { en: "I can understand and say numbers, prices in euros and cents, and phone numbers." }
+        gradeBand: "5-6"
+        requires: [begruessung-vorstellung]
+      # ZfA 3.2.3 (A1); GI-A1 Wortgruppen (Uhrzeit, Wochentage, Monate, Datum); BAMF A1 | A1/A1/A1 → 5-6
+      # requires zahlen-preise: Telling time and dates builds directly on cardinal and ordinal numbers (GI-A1).
+      - id: zeit-datum-wochentage
+        name: { en: "Time, days, months, and dates" }
+        iCan: { en: "I can tell the time (formal and informal) and name days of the week, months, and dates." }
+        gradeBand: "5-6"
+        requires: [zahlen-preise]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Familie, Freunde); BAMF A1 | A1/A1/A1 → 5-6
+      # requires begruessung-vorstellung: Talking about family and friends extends introducing oneself (GI-A1).
+      - id: familie-freunde
+        name: { en: "Family and friends" }
+        iCan: { en: "I can name family members, friends, and basic marital/relationship words." }
+        gradeBand: "5-6"
+        requires: [begruessung-vorstellung]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Schule, Sprachen lernen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires begruessung-vorstellung: Classroom phrases and school words build on first contact vocabulary (ZfA 3.2.3).
+      - id: schule-unterricht
+        name: { en: "School and classroom phrases" }
+        iCan: { en: "I can name classroom objects and school subjects and use basic classroom phrases." }
+        gradeBand: "5-6"
+        requires: [begruessung-vorstellung]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Essen/Trinken, Einkaufen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires zahlen-preise: Shopping and ordering food require numbers, quantities, and prices (GI-A1).
+      - id: essen-trinken-einkaufen
+        name: { en: "Food, drinks, and shopping" }
+        iCan: { en: "I can name everyday foods, drinks, meals, and shops and ask for items and prices." }
+        gradeBand: "5-6"
+        requires: [zahlen-preise]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Wohnen, Räume, Möbel); BAMF A1 | A1/A1/A1 → 5-6
+      # requires familie-freunde: Describing where one lives builds on personal and family vocabulary (GI-A1).
+      - id: wohnen-zimmer
+        name: { en: "Home, rooms, and furniture" }
+        iCan: { en: "I can name rooms, furniture, and everyday household items to describe a home." }
+        gradeBand: "5-6"
+        requires: [familie-freunde]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Tagesablauf, Freizeit, Hobbys); BAMF A1 | A1/A1/A1 → 5-6
+      # requires zeit-datum-wochentage: Describing daily routines and weekly hobbies relies on times and days (GI-A1).
+      - id: tagesablauf-freizeit
+        name: { en: "Daily routine and hobbies" }
+        iCan: { en: "I can describe my daily routine, hobbies, and favorite free-time activities." }
+        gradeBand: "5-6"
+        requires: [zeit-datum-wochentage]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Körper, Gesundheit); BAMF A1 | A1/A1/A1 → 5-6
+      # requires familie-freunde: Builds on basic person vocabulary to name body parts and simple aches (GI-A1).
+      - id: koerper-gesundheit-a1
+        name: { en: "Body parts and basic health" }
+        iCan: { en: "I can name basic parts of the body and say when something hurts or I feel sick." }
+        gradeBand: "5-6"
+        requires: [familie-freunde]
+      # ZfA 3.2.3 (A1); GI-A1 Themen (Verkehr, Orientierung); BAMF A1 | A1/A1/A1 → 5-6
+      # requires wohnen-zimmer: Expands immediate surroundings from home to places in town and transport (GI-A1).
+      - id: stadt-verkehr-a1
+        name: { en: "Town, transport, and directions" }
+        iCan: { en: "I can name places in town and means of transport and understand simple directions." }
+        gradeBand: "5-6"
+        requires: [wohnen-zimmer]
+      # ZfA 3.2.3 (A1); GI-A1 Wortgruppen (Jahreszeiten, Farben, Wetter); BAMF A1 | A1/A1/A1 → 5-6
+      # requires zeit-datum-wochentage: Seasons and weather connect directly to months and calendar expressions (GI-A1).
+      - id: wetter-jahreszeiten
+        name: { en: "Weather, seasons, and colors" }
+        iCan: { en: "I can name colors, seasons, and basic weather conditions." }
+        gradeBand: "5-6"
+        requires: [zeit-datum-wochentage]
+
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Kleidung, Aussehen, Charakter); BAMF A2 | A2/A2/A2 → 7-8
+      # requires essen-trinken-einkaufen: Shopping for clothes builds on general shopping and price vocabulary (GI-A2).
+      # requires wetter-jahreszeiten: Describing clothes uses colors and seasonal weather words (GI-A2).
+      - id: kleidung-aussehen
+        name: { en: "Clothing and appearance" }
+        iCan: { en: "I can describe clothes, sizes, physical appearance, and basic personality traits." }
+        gradeBand: "7-8"
+        requires: [essen-trinken-einkaufen, wetter-jahreszeiten]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Reisen, Urlaub, Unterkunft); BAMF A2 | A2/A2/A2 → 7-8
+      # requires stadt-verkehr-a1: Travel and hotel vocabulary extends A1 transport and town words (GI-A2).
+      - id: reisen-urlaub
+        name: { en: "Travel and holidays" }
+        iCan: { en: "I can use vocabulary for booking trips, tickets, hotels, luggage, and holiday activities." }
+        gradeBand: "7-8"
+        requires: [stadt-verkehr-a1]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Arbeit, Beruf); BAMF A2 | A2/A2/A2 → 7-8
+      # requires schule-unterricht: Links school and learning to professions and workplaces (GI-A2).
+      # requires tagesablauf-freizeit: Describing a workday uses daily routine and time vocabulary (GI-A2).
+      - id: beruf-arbeitswelt-a2
+        name: { en: "Professions and workplace" }
+        iCan: { en: "I can name common professions, workplaces, and everyday work activities." }
+        gradeBand: "7-8"
+        requires: [schule-unterricht, tagesablauf-freizeit]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Gesundheit, Arzt, Apotheke); BAMF A2 | A2/A2/A2 → 7-8
+      # requires koerper-gesundheit-a1: Builds on A1 body parts and basic complaints for doctor and pharmacy visits (GI-A2).
+      - id: gesundheit-arztbesuch
+        name: { en: "Doctor visits and health" }
+        iCan: { en: "I can describe symptoms, understand simple advice at the doctor's or pharmacy, and talk about staying healthy." }
+        gradeBand: "7-8"
+        requires: [koerper-gesundheit-a1]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Feste, Einladungen, Glückwünsche); BAMF A2 | A2/A2/A2 → 7-8
+      # requires familie-freunde: Invitations and celebrations involve family and friends (GI-A2).
+      # requires zeit-datum-wochentage: Arranging parties and naming holidays uses dates and times (GI-A2).
+      - id: feste-einladungen
+        name: { en: "Celebrations and invitations" }
+        iCan: { en: "I can invite someone, accept or decline invitations, and express good wishes for birthdays and holidays." }
+        gradeBand: "7-8"
+        requires: [familie-freunde, zeit-datum-wochentage]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Medien, Kommunikation, Internet); BAMF A2 | A2/A2/A2 → 7-8
+      # requires schule-unterricht: Digital communication builds on basic study and everyday communication words (GI-A2).
+      - id: medien-digital-a2
+        name: { en: "Everyday media and internet" }
+        iCan: { en: "I can talk about using smartphones, computers, emails, apps, and television." }
+        gradeBand: "7-8"
+        requires: [schule-unterricht]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Gefühle, Meinung äußern); BAMF A2 | A2/A2/A2 → 7-8
+      # requires kleidung-aussehen: Extends descriptive adjectives to feelings, likes, and simple opinions (GI-A2).
+      - id: gefuehle-meinung-a2
+        name: { en: "Feelings and simple opinions" }
+        iCan: { en: "I can express feelings, preferences, agreement, and disagreement in everyday situations." }
+        gradeBand: "7-8"
+        requires: [kleidung-aussehen]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Natur, Tiere, Umwelt); BAMF A2 | A2/A2/A2 → 7-8
+      # requires wetter-jahreszeiten: Builds on A1 weather and seasons to talk about landscapes, animals, and recycling (GI-A2).
+      - id: natur-tiere-umwelt-a2
+        name: { en: "Nature, animals, and environment" }
+        iCan: { en: "I can name landscapes, animals, plants, and simple ways to protect the environment." }
+        gradeBand: "7-8"
+        requires: [wetter-jahreszeiten]
+      # ZfA 3.2.3 (A2); GI-A2 Themen (Dienstleistungen: Post, Bank, Behörden); BAMF A2 | A2/A2/A2 → 7-8
+      # requires stadt-verkehr-a1: Public services expand A1 places in town (GI-A2).
+      # requires essen-trinken-einkaufen: Service dialogues reuse basic transaction and payment vocabulary (GI-A2).
+      - id: dienstleistungen-aemter
+        name: { en: "Post office, bank, and services" }
+        iCan: { en: "I can handle everyday errands at the post office, bank, library, or lost-and-found office." }
+        gradeBand: "7-8"
+        requires: [stadt-verkehr-a1, essen-trinken-einkaufen]
+      # ZfA 3.2.3 (A2); GI-A2 Wortschatz (Komposita); BAMF A2 | A2/A2/A2 → 7-8
+      # requires artikel-genus: The last noun of a German compound determines its grammatical gender (GI-A2).
+      # requires wohnen-zimmer: Everyday household compounds (Schlafzimmer, Haustür) illustrate compound noun building (GI-A2).
+      - id: komposita-wortbildung-a2
+        name: { en: "Compound nouns (Komposita)" }
+        iCan: { en: "I can understand and form everyday German compound nouns and determine their article from the final noun." }
+        gradeBand: "7-8"
+        requires: [artikel-genus, wohnen-zimmer]
+
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Ausbildung, Bewerbung, Beruf); BAMF B1 | B1/B1/B1 → 9-10
+      # requires beruf-arbeitswelt-a2: Expands A2 workplace vocabulary to training, CVs, and job interviews (GI-B1).
+      - id: ausbildung-bewerbung
+        name: { en: "Education and job applications" }
+        iCan: { en: "I can use vocabulary for school qualifications, apprenticeships, CVs, and job interviews." }
+        gradeBand: "9-10"
+        requires: [beruf-arbeitswelt-a2]
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Umwelt, Klima, Energie); BAMF B1 | B1/B1/B1 → 9-10
+      # requires natur-tiere-umwelt-a2: Expands A2 nature words to climate, energy, and sustainability topics (GI-B1).
+      - id: umwelt-klima-nachhaltigkeit
+        name: { en: "Environment and sustainability" }
+        iCan: { en: "I can discuss environmental problems, climate protection, recycling, and sustainable habits." }
+        gradeBand: "9-10"
+        requires: [natur-tiere-umwelt-a2]
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Gesellschaft, Zusammenleben); BAMF B1 | B1/B1/B1 → 9-10
+      # requires dienstleistungen-aemter: Connects public institutions to civic life, rules, and community (GI-B1).
+      # requires feste-einladungen: Connects social interaction to volunteering and living together (GI-B1).
+      - id: gesellschaft-zusammenleben
+        name: { en: "Society and community life" }
+        iCan: { en: "I can talk about rules, rights, volunteering, and living together in a diverse society." }
+        gradeBand: "9-10"
+        requires: [dienstleistungen-aemter, feste-einladungen]
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Medien, Nachrichten, Werbung); BAMF B1 | B1/B1/B1 → 9-10
+      # requires medien-digital-a2: Expands A2 everyday media vocabulary to news, social networks, and advertising (GI-B1).
+      - id: medien-nachrichten-b1
+        name: { en: "News, social media, and ads" }
+        iCan: { en: "I can discuss news reports, social media, privacy, and advertising using B1 media vocabulary." }
+        gradeBand: "9-10"
+        requires: [medien-digital-a2]
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Kultur, Film, Musik, Literatur); BAMF B1 | B1/B1/B1 → 9-10
+      # requires medien-digital-a2: Builds on media vocabulary to discuss films, music, and books (GI-B1).
+      # requires feste-einladungen: Connects cultural events and outings to social plans (GI-B1).
+      - id: kultur-kunst-musik
+        name: { en: "Culture, film, music, and books" }
+        iCan: { en: "I can talk about films, concerts, books, exhibitions, and cultural events." }
+        gradeBand: "9-10"
+        requires: [medien-digital-a2, feste-einladungen]
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Konsum, Geld, Reklamation); BAMF B1 | B1/B1/B1 → 9-10
+      # requires dienstleistungen-aemter: Builds on bank and service vocabulary for contracts and accounts (GI-B1).
+      # requires kleidung-aussehen: Extends shopping vocabulary to online orders, exchanges, and complaints (GI-B1).
+      - id: konsum-geld
+        name: { en: "Shopping, money, and complaints" }
+        iCan: { en: "I can discuss spending habits, online shopping, warranties, and product complaints." }
+        gradeBand: "9-10"
+        requires: [dienstleistungen-aemter, kleidung-aussehen]
+      # ZfA 3.2.3 (B1); GI-B1 Themen (Ernährung, Fitness, Stress); BAMF B1 | B1/B1/B1 → 9-10
+      # requires gesundheit-arztbesuch: Expands doctor-visit vocabulary to nutrition, exercise, and stress management (GI-B1).
+      - id: gesundheit-ernaehrung-b1
+        name: { en: "Nutrition, fitness, and well-being" }
+        iCan: { en: "I can talk about balanced nutrition, exercise, stress, and healthcare." }
+        gradeBand: "9-10"
+        requires: [gesundheit-arztbesuch]
+      # ZfA 3.2.3 (B1); GI-B1 Sprachhandlungen (Meinung, Argumentation); BAMF B1 | B1/B1/B1 → 9-10
+      # requires gefuehle-meinung-a2: Expands A2 simple opinions to structured pros, cons, and compromise phrases (GI-B1).
+      - id: argumentieren-redemittel
+        name: { en: "Phrases for arguing and debating" }
+        iCan: { en: "I can use B1 phrases to state opinions, weigh pros and cons, give examples, and propose compromises." }
+        gradeBand: "9-10"
+        requires: [gefuehle-meinung-a2]
+      # ZfA 3.2.3 (B1); GI-B1 Wortbildung (Präfixe und Suffixe); BAMF B1 | B1/B1/B1 → 9-10
+      # requires komposita-wortbildung-a2: Extends noun compounding to derivation with common prefixes and suffixes (GI-B1).
+      - id: wortbildung-ableitung-b1
+        name: { en: "Word formation (prefixes & suffixes)" }
+        iCan: { en: "I can deduce and form words using common prefixes and suffixes such as un-, -ung, -heit/-keit, -lich, and -bar." }
+        gradeBand: "9-10"
+        requires: [komposita-wortbildung-a2]
+
+  # ZfA 3.2.1 Aussprache/Intonation (S. 24) & 3.2.2 Orthographie (S. 25); GER Begleitband Phonetik
+  - id: aussprache
+    name: { de: "Aussprache und Rechtschreibung", en: "Pronunciation and spelling" }
+    competencies:
+      # ZfA 3.2.1/3.2.2 (A1); GI-A1 (Alphabet, Buchstabieren); BAMF A1 | A1/A1/A1 → 5-6
+      - id: alphabet-buchstabieren
+        name: { en: "German alphabet and spelling" }
+        iCan: { en: "I can pronounce the German alphabet and spell out names and words clearly." }
+        gradeBand: "5-6"
+      # ZfA 3.2.1/3.2.2 (A1); GI-A1 (Umlaute, Diphthonge); BAMF A1 | A1/A1/A1 → 5-6
+      # requires alphabet-buchstabieren: Builds on basic letter-sound correspondences to distinguish ä, ö, ü and ei/ie/eu/au (ZfA 3.2.1).
+      - id: umlaute-diphthonge
+        name: { en: "Umlauts and diphthongs" }
+        iCan: { en: "I can pronounce and spell German umlauts (ä, ö, ü) and diphthongs (ei, eu/äu, au) accurately." }
+        gradeBand: "5-6"
+        requires: [alphabet-buchstabieren]
+      # ZfA 3.2.1/3.2.2 (A1); GI-A1 (Konsonantenverbindungen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires alphabet-buchstabieren: Builds on basic consonants to master German clusters ch, sch, sp, st, and z (ZfA 3.2.1).
+      - id: ch-sch-sp-st
+        name: { en: "Key consonant sounds (ch, sch, sp, st)" }
+        iCan: { en: "I can pronounce the ich- and ach-sounds (ch), sch, initial sp/st, and z/tz reliably." }
+        gradeBand: "5-6"
+        requires: [alphabet-buchstabieren]
+      # ZfA 3.2.1/3.2.2 (A1); GI-A1 (Vokallänge); BAMF A1 | A1/A1/A1 → 5-6
+      # requires umlaute-diphthonge: Vowel length applies across all German vowels including umlauts and ie (ZfA 3.2.2).
+      - id: vokallaenge-dehnung
+        name: { en: "Long and short vowels" }
+        iCan: { en: "I can hear, pronounce, and recognize spelling cues for long vowels (ie, silent h) and short vowels (double consonants)." }
+        gradeBand: "5-6"
+        requires: [umlaute-diphthonge]
+      # ZfA 3.2.2 (A1); GI-A1 (Großschreibung); BAMF A1 | A1/A1/A1 → 5-6
+      # requires alphabet-buchstabieren: Applies upper- and lower-case letter forms to German noun capitalization (ZfA 3.2.2).
+      - id: grossschreibung-nomen
+        name: { en: "Capitalization of nouns" }
+        iCan: { en: "I can capitalize sentence beginnings, all German nouns, and the formal pronoun Sie." }
+        gradeBand: "5-6"
+        requires: [alphabet-buchstabieren]
+      # ZfA 3.2.1 (A1); GI-A1 (Wortakzent, Satzmelodie); BAMF A1 | A1/A1/A1 → 5-6
+      # requires vokallaenge-dehnung: Stressed syllables carry vowel length and anchor statement/question intonation (ZfA 3.2.1).
+      - id: wortakzent-satzmelodie
+        name: { en: "Word stress and basic intonation" }
+        iCan: { en: "I can stress the main syllable of German words and use falling or rising intonation in statements and questions." }
+        gradeBand: "5-6"
+        requires: [vokallaenge-dehnung]
+
+      # ZfA 3.2.1 (A2); GER Phonetik A2 (Auslautverhärtung); BAMF A2 | A2/A2/A2 → 7-8
+      # requires ch-sch-sp-st: Builds on voiced vs. voiceless consonant contrasts at the end of syllables and words (ZfA 3.2.1).
+      - id: auslautverhaertung
+        name: { en: "Final consonant devoicing" }
+        iCan: { en: "I can pronounce final b, d, g as p, t, k (e.g. Tag, Kind, gelb) and still spell them correctly." }
+        gradeBand: "7-8"
+        requires: [ch-sch-sp-st]
+      # ZfA 3.2.1 (A2); GER Phonetik A2 (r-Laute, Endungen); BAMF A2 | A2/A2/A2 → 7-8
+      # requires wortakzent-satzmelodie: Distinguishes stressed initial r from vocalized r in unstressed -er endings (ZfA 3.2.1).
+      - id: r-laute-endungen
+        name: { en: "R-sounds and unstressed endings" }
+        iCan: { en: "I can pronounce German r-sounds and reduced unstressed endings (-er, -en, -el) naturally." }
+        gradeBand: "7-8"
+        requires: [wortakzent-satzmelodie]
+      # ZfA 3.2.1 (A2); GI-A2 (Wortakzent bei Präfixverben); BAMF A2 | A2/A2/A2 → 7-8
+      # requires wortakzent-satzmelodie: Applies word stress to distinguish separable (stressed) from inseparable (unstressed) prefixes (ZfA 3.2.1).
+      # requires trennbare-verben: Links prefix stress directly to whether the verb separates in a sentence (GI-A2).
+      - id: akzent-praefixverben
+        name: { en: "Stress on verb prefixes" }
+        iCan: { en: "I can stress separable verb prefixes (aufstehen, einkaufen) and leave inseparable prefixes (verstehen, beginnen) unstressed." }
+        gradeBand: "7-8"
+        requires: [wortakzent-satzmelodie, trennbare-verben]
+      # ZfA 3.2.2 (A2); GI-A2 (s, ss, ß); BAMF A2 | A2/A2/A2 → 7-8
+      # requires vokallaenge-dehnung: Choosing ss vs. ß depends on whether the preceding vowel is short or long (ZfA 3.2.2).
+      # requires ch-sch-sp-st: Distinguishes voiced s from voiceless ss/ß (ZfA 3.2.1).
+      - id: s-laute-ss-sz
+        name: { en: "Spelling s, ss, and ß" }
+        iCan: { en: "I can decide whether to write s, ss, or ß based on vowel length and voicing." }
+        gradeBand: "7-8"
+        requires: [vokallaenge-dehnung, ch-sch-sp-st]
+      # ZfA 3.2.2 (A2); GI-A2 (Zeichensetzung); BAMF A2 | A2/A2/A2 → 7-8
+      # requires grossschreibung-nomen: Extends basic A1 written conventions to commas in lists and simple subordinate clauses (ZfA 3.2.2).
+      - id: komma-aufzaehlung-nebensatz
+        name: { en: "Basic comma rules" }
+        iCan: { en: "I can place commas in lists and before subordinate clauses introduced by weil, dass, wenn, or als." }
+        gradeBand: "7-8"
+        requires: [grossschreibung-nomen]
+
+      # ZfA 3.2.1 (B1); GER Phonetik B1 (Satzakzent, Kontrast); BAMF B1 | B1/B1/B1 → 9-10
+      # requires wortakzent-satzmelodie: Extends word stress to sentence-level focus and contrast (ZfA 3.2.1).
+      # requires akzent-praefixverben: Combines lexical stress patterns with contrastive emphasis in connected speech (ZfA 3.2.1).
+      - id: satzakzent-kontrast
+        name: { en: "Sentence stress and emphasis" }
+        iCan: { en: "I can shift sentence stress to highlight new information or express contrast in conversation." }
+        gradeBand: "9-10"
+        requires: [wortakzent-satzmelodie, akzent-praefixverben]
+      # ZfA 3.2.1/3.2.2 (B1); GI-B1 (Fremdwörter); BAMF B1 | B1/B1/B1 → 9-10
+      # requires r-laute-endungen: Contrasts native German stress/endings with common loanword stress patterns (ZfA 3.2.1).
+      - id: fremdwoerter-aussprache
+        name: { en: "Pronouncing common loanwords" }
+        iCan: { en: "I can pronounce and stress common international loanwords in German (e.g. -tion, -ie, -ieren, -tät)." }
+        gradeBand: "9-10"
+        requires: [r-laute-endungen]
+      # ZfA 3.2.2 (B1); GI-B1 (Zeichensetzung bei Relativ- und Infinitivsätzen); BAMF B1 | B1/B1/B1 → 9-10
+      # requires komma-aufzaehlung-nebensatz: Extends A2 comma rules to embedded relative clauses and infinitive clauses (ZfA 3.2.2).
+      - id: komma-infinitiv-relativsatz
+        name: { en: "Commas in complex sentences" }
+        iCan: { en: "I can set commas accurately around relative clauses and infinitive clauses with um/ohne/statt … zu." }
+        gradeBand: "9-10"
+        requires: [komma-aufzaehlung-nebensatz]
+      # ZfA 3.2.2 (B1); GI-B1 (Zusammenschreibung, Nominalisierung); BAMF B1 | B1/B1/B1 → 9-10
+      # requires grossschreibung-nomen: Extends noun capitalization to nominalized verbs and adjectives (beim Lesen, etwas Gutes) (ZfA 3.2.2).
+      # requires s-laute-ss-sz: Applies B1 orthography checks across compound and derived words (ZfA 3.2.2).
+      - id: zusammen-getrenntschreibung
+        name: { en: "Compounds & nominalizations" }
+        iCan: { en: "I can write German compounds as single words and capitalize nominalized verbs and adjectives (das Lesen, alles Gute)." }
+        gradeBand: "9-10"
+        requires: [grossschreibung-nomen, s-laute-ss-sz]
+
+  # ZfA 3.4 Interkulturelle Kompetenzen (S. 30–31: D-A-CH Themenfelder, Haltungen, Begegnungssituationen); GER Soziolinguistik
+  - id: landeskunde
+    name: { de: "Länder und Kulturen", en: "Countries and cultures" }
+    competencies:
+      # ZfA 3.4.3 (A1); GI-A1 (Anrede du/Sie); BAMF A1 | A1/A1/A1 → 5-6
+      - id: duzen-siezen
+        name: { en: "Informal du vs. formal Sie" }
+        iCan: { en: "I can choose appropriately between informal du and formal Sie when addressing people in German-speaking countries." }
+        gradeBand: "5-6"
+      # ZfA 3.4.1 (A1: Regionen in Deutschland und weitere deutschsprachige Regionen); GI-A1 | A1/A1/A1 → 5-6
+      # requires duzen-siezen: Connects basic cultural orientation in D-A-CH with everyday social conventions (ZfA 3.4).
+      - id: dach-laender-geografie
+        name: { en: "D-A-CH countries and cities" }
+        iCan: { en: "I can locate Germany, Austria, and Switzerland and name their capitals and major cities." }
+        gradeBand: "5-6"
+        requires: [duzen-siezen]
+      # ZfA 3.4.3 (A1: Handeln in Begegnungssituationen); GI-A1; BAMF A1 | A1/A1/A1 → 5-6
+      # requires duzen-siezen: Everyday politeness routines depend on choosing du vs. Sie (ZfA 3.4.3).
+      - id: alltag-hoeflichkeit
+        name: { en: "Everyday politeness in D-A-CH" }
+        iCan: { en: "I can use typical greeting, thanking, and apologizing conventions in German-speaking everyday life." }
+        gradeBand: "5-6"
+        requires: [duzen-siezen]
+      # ZfA 3.4.1 (A1: Persönliche Lebensgestaltung); GI-A1; BAMF A1 | A1/A1/A1 → 5-6
+      # requires alltag-hoeflichkeit: Eating out and café visits rely on basic politeness conventions (ZfA 3.4.3).
+      - id: esskultur-mahlzeiten
+        name: { en: "Food culture and meals" }
+        iCan: { en: "I can describe typical meal times, bakeries, cafés, and restaurant customs (such as tipping and paying) in D-A-CH." }
+        gradeBand: "5-6"
+        requires: [alltag-hoeflichkeit]
+      # ZfA 3.4.1 (A1: Schule und Ausbildung); GI-A1 | A1/A1/A1 → 5-6
+      # requires dach-laender-geografie: Places school life in the context of German-speaking countries (ZfA 3.4.1).
+      - id: schulalltag-dach
+        name: { en: "School life in D-A-CH" }
+        iCan: { en: "I can compare a typical school day and school holidays in German-speaking countries with my own." }
+        gradeBand: "5-6"
+        requires: [dach-laender-geografie]
+      # ZfA 3.4.1 (A1: Kulturelles Leben); GI-A1; BAMF A1 | A1/A1/A1 → 5-6
+      # requires alltag-hoeflichkeit: Holiday greetings and traditions build on everyday social customs (ZfA 3.4.1).
+      - id: feiertage-braeuche-a1
+        name: { en: "Public holidays and traditions" }
+        iCan: { en: "I can name major public holidays and seasonal traditions in German-speaking countries (e.g. Weihnachten, Ostern, Silvester)." }
+        gradeBand: "5-6"
+        requires: [alltag-hoeflichkeit]
+
+      # ZfA 3.4.1 (A2: Mobilität, Alltag); GI-A2; BAMF A2 | A2/A2/A2 → 7-8
+      # requires dach-laender-geografie: Navigating trains and transit connects to D-A-CH geography (ZfA 3.4.1).
+      - id: oeffentlicher-nahverkehr
+        name: { en: "Public transport culture" }
+        iCan: { en: "I can navigate trains, S-Bahn, U-Bahn, buses, timetables, and ticket validation in D-A-CH." }
+        gradeBand: "7-8"
+        requires: [dach-laender-geografie]
+      # ZfA 3.4.1 (A2: Wohnen, Zusammenleben); GI-A2; BAMF A2 | A2/A2/A2 → 7-8
+      # requires alltag-hoeflichkeit: Neighborhood norms (Ruhezeiten, Hausordnung) build on everyday social rules (BAMF A2).
+      - id: wohnen-nachbarschaft
+        name: { en: "Housing and neighborhood norms" }
+        iCan: { en: "I can explain everyday housing norms in D-A-CH such as Hausordnung, quiet hours, and waste separation." }
+        gradeBand: "7-8"
+        requires: [alltag-hoeflichkeit]
+      # ZfA 3.4.1 (A2: Regionen und Feste); GI-A2 | A2/A2/A2 → 7-8
+      # requires feiertage-braeuche-a1: Builds on A1 holidays to explore regional customs (ZfA 3.4.1).
+      # requires dach-laender-geografie: Places regional festivals in Germany, Austria, and Switzerland (ZfA 3.4.1).
+      - id: feste-regionen
+        name: { en: "Regional festivals and customs" }
+        iCan: { en: "I can describe regional customs and festivals across Germany, Austria, and Switzerland (e.g. Karneval, Oktoberfest, Nationalfeiertage)." }
+        gradeBand: "7-8"
+        requires: [feiertage-braeuche-a1, dach-laender-geografie]
+      # ZfA 3.4.1 (A2: Freizeit, Vereine); GI-A2 | A2/A2/A2 → 7-8
+      # requires schulalltag-dach: Connects young people's after-school activities and Vereine to school life (ZfA 3.4.1).
+      - id: freizeit-vereine
+        name: { en: "Leisure and clubs (Vereine)" }
+        iCan: { en: "I can explain the role of sports and leisure clubs (Vereine) and free-time culture in D-A-CH." }
+        gradeBand: "7-8"
+        requires: [schulalltag-dach]
+      # ZfA 3.4.1 (A2: Ausbildung, Schule und Beruf); GI-A2; BAMF A2 | A2/A2/A2 → 7-8
+      # requires schulalltag-dach: Expands A1 school day knowledge to school types and dual apprenticeships (ZfA 3.4.1).
+      - id: bildungssystem-ueberblick
+        name: { en: "School and training system" }
+        iCan: { en: "I can describe the main school tracks and vocational training (Ausbildung) in German-speaking countries." }
+        gradeBand: "7-8"
+        requires: [schulalltag-dach]
+      # ZfA 2/3.4 (A2: Nationale Standardvarianten D-A-CH); GI-A2 | A2/A2/A2 → 7-8
+      # requires esskultur-mahlzeiten: Food and everyday words show the clearest D-A-CH regional variants (ZfA S. 8).
+      # requires dach-laender-geografie: Connects Austrian and Swiss vocabulary to the D-A-CH countries (ZfA S. 8).
+      - id: regionale-varietaeten-a2
+        name: { en: "Austrian & Swiss variants" }
+        iCan: { en: "I can recognize common Austrian and Swiss German everyday words (e.g. Grüezi, Servus, Jänner, Velo, Paradeiser)." }
+        gradeBand: "7-8"
+        requires: [esskultur-mahlzeiten, dach-laender-geografie]
+
+      # ZfA 3.4.1 (B1: Arbeitswelt); GI-B1; BAMF B1 | B1/B1/B1 → 9-10
+      # requires bildungssystem-ueberblick: Workplace conventions build on understanding education and Ausbildung (ZfA 3.4.1).
+      - id: arbeitskultur-bewerbung
+        name: { en: "Workplace culture in D-A-CH" }
+        iCan: { en: "I can explain key workplace norms in German-speaking countries such as punctuality, direct feedback, and application customs." }
+        gradeBand: "9-10"
+        requires: [bildungssystem-ueberblick]
+      # ZfA 3.4.1 (B1: Kulturelles Leben und Medien); GI-B1 | B1/B1/B1 → 9-10
+      # requires freizeit-vereine: Expands everyday leisure culture to public media and cultural life in D-A-CH (ZfA 3.4.1).
+      - id: medienlandschaft-dach
+        name: { en: "Media landscape in D-A-CH" }
+        iCan: { en: "I can name major German-language news outlets and public broadcasters and compare media habits." }
+        gradeBand: "9-10"
+        requires: [freizeit-vereine]
+      # ZfA 3.4.1 (B1: Wirtschaft, Technik, Umwelt); GI-B1; BAMF B1 | B1/B1/B1 → 9-10
+      # requires wohnen-nachbarschaft: Extends household recycling to wider environmental practices like Pfand (BAMF B1).
+      # requires oeffentlicher-nahverkehr: Connects public transport and cycling to sustainable mobility culture (ZfA 3.4.1).
+      - id: umwelt-alltagskultur
+        name: { en: "Sustainability in everyday life" }
+        iCan: { en: "I can explain everyday sustainability practices in D-A-CH such as bottle deposits (Pfand), recycling, and green mobility." }
+        gradeBand: "9-10"
+        requires: [wohnen-nachbarschaft, oeffentlicher-nahverkehr]
+      # ZfA 3.4.1 (B1: Gesellschaftliches Leben, Geschichte); GI-B1 | B1/B1/B1 → 9-10
+      # requires feste-regionen: Connects national holidays (e.g. Tag der Deutschen Einheit) to recent history (ZfA 3.4.1).
+      - id: geschichte-gegenwart-dach
+        name: { en: "Recent history and reunification" }
+        iCan: { en: "I can outline key milestones of post-war German history, the fall of the Berlin Wall, and European integration." }
+        gradeBand: "9-10"
+        requires: [feste-regionen]
+      # ZfA 3.4.2/3.4.3 (B1: Einsichten, Haltungen, Begegnungen); GER Begleitband | B1/B1/B1 → 9-10
+      # requires alltag-hoeflichkeit: Reflects critically on everyday politeness norms and cultural misunderstandings (ZfA 3.4.2).
+      # requires arbeitskultur-bewerbung: Compares communication styles across everyday and work contexts (ZfA 3.4.2).
+      - id: interkultureller-vergleich
+        name: { en: "Intercultural comparison" }
+        iCan: { en: "I can compare cultural norms, question stereotypes, and handle misunderstandings politely in intercultural encounters." }
+        gradeBand: "9-10"
+        requires: [alltag-hoeflichkeit, arbeitskultur-bewerbung]
+      # ZfA 2/3.5 (B1: Plurizentrik, Dialekte und Register); GER | B1/B1/B1 → 9-10
+      # requires regionale-varietaeten-a2: Deepens A2 D-A-CH vocabulary awareness to pluricentric standards, dialects, and registers (ZfA S. 8).
+      - id: plurizentrik-sprache
+        name: { en: "Standard varieties and registers" }
+        iCan: { en: "I can distinguish standard German, regional varieties (D-A-CH), colloquial speech, and formal register." }
+        gradeBand: "9-10"
+        requires: [regionale-varietaeten-a2]
+
+  # ZfA 3.1 Kommunikative Teilkompetenzen (S. 16–23) & 3.3 Texte und Medien (S. 28–29); GI-A1/A2/B1 Prüfungsformen
+  - id: texte
+    name: { de: "Texte und Medien", en: "Texts and media" }
+    competencies:
+      # ZfA 3.1.5/3.3 (A1); GI-A1 Schreiben Teil 1 (Formular); BAMF A1 | A1/A1/A1 → 5-6
+      # requires begruessung-vorstellung: Filling in personal forms requires basic personal-data vocabulary (GI-A1).
+      - id: formulare-ausfuellen
+        name: { en: "Filling in simple forms" }
+        iCan: { en: "I can understand and fill in simple registration or hotel forms with my personal details." }
+        gradeBand: "5-6"
+        requires: [begruessung-vorstellung]
+      # ZfA 3.1.4/3.3 (A1); GI-A1 Lesen Teil 2/3 (Schilder, Hinweise); BAMF A1 | A1/A1/A1 → 5-6
+      # requires formulare-ausfuellen: Builds on recognizing short labels and keywords in everyday written texts (GI-A1).
+      - id: schilder-hinweise-lesen
+        name: { en: "Reading signs and notices" }
+        iCan: { en: "I can extract key facts from short signs, opening hours, timetables, and public notices." }
+        gradeBand: "5-6"
+        requires: [formulare-ausfuellen]
+      # ZfA 3.1.4/3.3 (A1); GI-A1 Lesen Teil 1 (kurze Nachrichten); BAMF A1 | A1/A1/A1 → 5-6
+      # requires schilder-hinweise-lesen: Moves from single signs to short connected everyday messages (GI-A1).
+      - id: kurze-nachrichten-lesen
+        name: { en: "Reading short messages" }
+        iCan: { en: "I can understand short text messages, postcards, and simple personal notes." }
+        gradeBand: "5-6"
+        requires: [schilder-hinweise-lesen]
+      # ZfA 3.1.5/3.3 (A1); GI-A1 Schreiben Teil 2 (kurze Mitteilung); BAMF A1 | A1/A1/A1 → 5-6
+      # requires kurze-nachrichten-lesen: Writing short messages follows the model of messages already read (GI-A1).
+      # requires verb-zweitstellung: Writing simple sentences requires basic main-clause word order (GI-A1).
+      - id: kurze-nachrichten-schreiben
+        name: { en: "Writing short messages" }
+        iCan: { en: "I can write short messages, postcards, or simple emails to invite someone or ask for basic information." }
+        gradeBand: "5-6"
+        requires: [kurze-nachrichten-lesen, verb-zweitstellung]
+      # ZfA 3.1.1 (A1); GI-A1 Hören Teil 2/3 (Durchsagen, Anrufbeantworter); BAMF A1 | A1/A1/A1 → 5-6
+      # requires schilder-hinweise-lesen: Applies selective fact-finding (times, platforms, prices) to spoken announcements (GI-A1).
+      - id: durchsagen-verstehen-a1
+        name: { en: "Understanding short announcements" }
+        iCan: { en: "I can pick out key details like times, prices, and platform numbers from short announcements and voicemails." }
+        gradeBand: "5-6"
+        requires: [schilder-hinweise-lesen]
+      # ZfA 3.1.2 (A1); GI-A1 Sprechen Teil 2/3 (Alltagsgespräche); BAMF A1 | A1/A1/A1 → 5-6
+      # requires durchsagen-verstehen-a1: Interactive everyday dialogues require understanding short spoken prompts (GI-A1).
+      # requires w-fragen: Asking for items, prices, or directions relies on basic question forms (GI-A1).
+      - id: alltagsgespraeche-a1
+        name: { en: "Simple everyday dialogues" }
+        iCan: { en: "I can manage short everyday dialogues such as ordering food, shopping, and asking simple questions." }
+        gradeBand: "5-6"
+        requires: [durchsagen-verstehen-a1, w-fragen]
+      # ZfA 3.1.3 (A1); GI-A1 Sprechen Teil 1 (Sich vorstellen); BAMF A1 | A1/A1/A1 → 5-6
+      # requires formulare-ausfuellen: Turns personal details from forms into a short spoken self-introduction (GI-A1).
+      - id: sich-vorstellen-monolog
+        name: { en: "Introducing oneself aloud" }
+        iCan: { en: "I can introduce myself in a few simple connected sentences about my name, home, family, and hobbies." }
+        gradeBand: "5-6"
+        requires: [formulare-ausfuellen]
+      # ZfA 3.1.6 (A1: Sprachmittlung); GER Begleitband Mediation A1 | A1/A1/A1 → 5-6
+      # requires kurze-nachrichten-lesen: Relaying key facts starts from understanding short written notices or notes (ZfA 3.1.6).
+      - id: sprachmittlung-a1
+        name: { en: "Relaying simple information" }
+        iCan: { en: "I can pass on simple key facts (times, places, prices) from a short notice or message in another language." }
+        gradeBand: "5-6"
+        requires: [kurze-nachrichten-lesen]
+
+      # ZfA 3.1.5/3.3 (A2); GI-A2 Schreiben (persönliche E-Mails/Briefe); BAMF A2 | A2/A2/A2 → 7-8
+      # requires kurze-nachrichten-schreiben: Expands A1 short notes into structured informal emails with greeting and closing (GI-A2).
+      - id: emails-briefe-privat
+        name: { en: "Informal emails and letters" }
+        iCan: { en: "I can read and write informal emails and personal messages about everyday plans, news, and invitations." }
+        gradeBand: "7-8"
+        requires: [kurze-nachrichten-schreiben]
+      # ZfA 3.1.4/3.3 (A2); GI-A2 Lesen (Anzeigen, Flyer, Programme); BAMF A2 | A2/A2/A2 → 7-8
+      # requires schilder-hinweise-lesen: Expands A1 sign reading to longer flyers, ads, and schedules (GI-A2).
+      - id: anzeigen-flyer-verstehen
+        name: { en: "Reading ads and flyers" }
+        iCan: { en: "I can scan advertisements, flyers, menus, and event schedules to find specific details." }
+        gradeBand: "7-8"
+        requires: [schilder-hinweise-lesen]
+      # ZfA 3.1.4/3.3 (A2); GI-A2 Lesen (kurze Artikel, Blogs); BAMF A2 | A2/A2/A2 → 7-8
+      # requires anzeigen-flyer-verstehen: Moves from structured flyers to short continuous texts like blog posts (GI-A2).
+      - id: kurze-artikel-lesen
+        name: { en: "Reading short articles & blogs" }
+        iCan: { en: "I can understand the main points of short, simple articles and blog posts on familiar everyday topics." }
+        gradeBand: "7-8"
+        requires: [anzeigen-flyer-verstehen]
+      # ZfA 3.1.3/3.1.5 (A2); GI-A2 Sprechen/Schreiben (Erlebnisse berichten); BAMF A2 | A2/A2/A2 → 7-8
+      # requires emails-briefe-privat: Recounting past events often appears in personal messages and letters (GI-A2).
+      # requires sich-vorstellen-monolog: Extends short A1 spoken statements to narrating a weekend or trip (GI-A2).
+      # requires perfekt-haben: Talking about past experiences in everyday German requires the Perfekt tense (GI-A2).
+      - id: erlebnisse-berichten
+        name: { en: "Reporting past experiences" }
+        iCan: { en: "I can tell or write a short account of a weekend, trip, or past event in chronological order." }
+        gradeBand: "7-8"
+        requires: [emails-briefe-privat, sich-vorstellen-monolog, perfekt-haben]
+      # ZfA 3.1.2 (A2); GI-A2 Sprechen Teil 3 (etwas gemeinsam planen); BAMF A2 | A2/A2/A2 → 7-8
+      # requires alltagsgespraeche-a1: Extends A1 routine dialogues to negotiating times and plans (GI-A2).
+      # requires emails-briefe-privat: Appointments are arranged both in dialogue and by short email/message (GI-A2).
+      - id: termin-vereinbaren
+        name: { en: "Making appointments & plans" }
+        iCan: { en: "I can make, change, or cancel appointments and plan an activity together with someone." }
+        gradeBand: "7-8"
+        requires: [alltagsgespraeche-a1, emails-briefe-privat]
+      # ZfA 3.1.1 (A2); GI-A2 Hören (Alltagsgespräche, kurze Radiobeiträge); BAMF A2 | A2/A2/A2 → 7-8
+      # requires durchsagen-verstehen-a1: Moves from brief announcements to longer everyday dialogues and radio clips (GI-A2).
+      - id: hoertexte-alltag-a2
+        name: { en: "Understanding everyday audio" }
+        iCan: { en: "I can understand the main points and details of clear everyday conversations and short radio clips." }
+        gradeBand: "7-8"
+        requires: [durchsagen-verstehen-a1]
+      # ZfA 3.1.3 (A2); GI-A2 Sprechen (Bildbeschreibung); BAMF A2 | A2/A2/A2 → 7-8
+      # requires sich-vorstellen-monolog: Extends basic descriptive speaking from oneself to pictures and scenes (ZfA 3.1.3).
+      - id: bildbeschreibung-a2
+        name: { en: "Describing pictures simply" }
+        iCan: { en: "I can describe people, places, and activities shown in a picture using simple connected sentences." }
+        gradeBand: "7-8"
+        requires: [sich-vorstellen-monolog]
+      # ZfA 3.1.6 (A2: Sprachmittlung); GER Begleitband Mediation A2 | A2/A2/A2 → 7-8
+      # requires sprachmittlung-a1: Expands relaying single facts to summarizing practical details from flyers or messages (ZfA 3.1.6).
+      # requires anzeigen-flyer-verstehen: Requires extracting relevant details from everyday informational texts first (ZfA 3.1.6).
+      - id: sprachmittlung-a2
+        name: { en: "Mediating practical texts" }
+        iCan: { en: "I can summarize useful information from flyers, emails, or schedules for someone in another language." }
+        gradeBand: "7-8"
+        requires: [sprachmittlung-a1, anzeigen-flyer-verstehen]
+
+      # ZfA 3.1.5/3.3 (B1); GI-B1 Schreiben Teil 3 (formelle E-Mail/Brief); BAMF B1 | B1/B1/B1 → 9-10
+      # requires emails-briefe-privat: Adapts email structure to formal salutation, register, and closing (GI-B1).
+      # requires termin-vereinbaren: Formal emails frequently concern appointments, inquiries, or apologies (GI-B1).
+      # requires duzen-siezen: Formal correspondence requires consistent Sie register (GI-B1).
+      # requires konjunktiv2-hoeflichkeit: Polite formal requests rely on Konjunktiv II formulas (GI-B1).
+      - id: formelle-emails-briefe
+        name: { en: "Formal emails and letters" }
+        iCan: { en: "I can write semi-formal and formal emails or letters for inquiries, apologies, complaints, and applications." }
+        gradeBand: "9-10"
+        requires: [emails-briefe-privat, termin-vereinbaren, duzen-siezen, konjunktiv2-hoeflichkeit]
+      # ZfA 3.1.4/3.3 (B1); GI-B1 Lesen (Zeitungsartikel, Sachtexte); BAMF B1 | B1/B1/B1 → 9-10
+      # requires kurze-artikel-lesen: Extends A2 short-article reading to longer newspaper and factual texts (GI-B1).
+      - id: sachtexte-zeitung-lesen
+        name: { en: "Reading newspaper & factual texts" }
+        iCan: { en: "I can understand main ideas, structure, and key details in newspaper articles and factual texts on familiar topics." }
+        gradeBand: "9-10"
+        requires: [kurze-artikel-lesen]
+      # ZfA 3.1.4/3.1.5/3.3 (B1); GI-B1 Schreiben Teil 2 (Meinungsbeitrag); BAMF B1 | B1/B1/B1 → 9-10
+      # requires kurze-artikel-lesen: Responding to a forum prompt builds on reading short online texts (GI-B1).
+      # requires gefuehle-meinung-a2: Expressing a reasoned view builds on A2 opinion vocabulary (GI-B1).
+      # requires nebensatz-weil-dass: Giving reasons and stating views requires weil and dass clauses (GI-B1).
+      - id: meinungstexte-forum
+        name: { en: "Opinion posts and comments" }
+        iCan: { en: "I can read and write structured opinion posts in forums or blogs, giving reasons and personal examples." }
+        gradeBand: "9-10"
+        requires: [kurze-artikel-lesen, gefuehle-meinung-a2, nebensatz-weil-dass]
+      # ZfA 3.1.3/3.3 (B1); GI-B1 Sprechen Teil 2 (Präsentation); BAMF B1 | B1/B1/B1 → 9-10
+      # requires erlebnisse-berichten: Extends connected speaking from personal events to structured topic presentations (GI-B1).
+      # requires bildbeschreibung-a2: Reuses structured visual/topic description skills (GI-B1).
+      - id: kurzvortrag-halten
+        name: { en: "Giving a short presentation" }
+        iCan: { en: "I can prepare and deliver a short, structured presentation on a familiar topic with introduction, pros/cons, and conclusion." }
+        gradeBand: "9-10"
+        requires: [erlebnisse-berichten, bildbeschreibung-a2]
+      # ZfA 3.1.2 (B1); GI-B1 Sprechen Teil 1/3 (Diskussion, Kompromiss); BAMF B1 | B1/B1/B1 → 9-10
+      # requires termin-vereinbaren: Extends simple joint planning to negotiating and defending viewpoints (GI-B1).
+      # requires kurzvortrag-halten: Answering follow-up questions and reacting to others builds on presenting a viewpoint (GI-B1).
+      - id: diskussion-meinung-b1
+        name: { en: "Participating in discussions" }
+        iCan: { en: "I can take part in discussions on familiar topics, explain my point of view, and react to others' arguments." }
+        gradeBand: "9-10"
+        requires: [termin-vereinbaren, kurzvortrag-halten]
+      # ZfA 3.1.1/3.3 (B1); GI-B1 Hören (Interviews, Diskussionen, Nachrichten); BAMF B1 | B1/B1/B1 → 9-10
+      # requires hoertexte-alltag-a2: Extends A2 everyday listening to interviews, news reports, and short videos (GI-B1).
+      - id: hoer-sehverstehen-b1
+        name: { en: "Understanding interviews & videos" }
+        iCan: { en: "I can follow interviews, radio discussions, news items, and short videos on familiar topics in standard German." }
+        gradeBand: "9-10"
+        requires: [hoertexte-alltag-a2]
+      # ZfA 3.3 (B1: Umgang mit literarischen Texten); GER B1 | B1/B1/B1 → 9-10
+      # requires sachtexte-zeitung-lesen: Applies B1 reading strategies to simple short stories, dialogues, and song lyrics (ZfA 3.3).
+      - id: literarische-kurztexte
+        name: { en: "Reading short stories & songs" }
+        iCan: { en: "I can understand the plot, characters, and main message of simple German short stories and song lyrics." }
+        gradeBand: "9-10"
+        requires: [sachtexte-zeitung-lesen]
+      # ZfA 3.1.6 (B1: Sprachmittlung); GER Begleitband Mediation B1 | B1/B1/B1 → 9-10
+      # requires sprachmittlung-a2: Extends A2 practical mediation to summarizing main arguments and opinions (ZfA 3.1.6).
+      # requires sachtexte-zeitung-lesen: Mediating B1 texts requires grasping main points of articles first (ZfA 3.1.6).
+      - id: sprachmittlung-b1
+        name: { en: "Mediating articles & viewpoints" }
+        iCan: { en: "I can summarize the main points and opinions of a German article or discussion for someone in another language." }
+        gradeBand: "9-10"
+        requires: [sprachmittlung-a2, sachtexte-zeitung-lesen]
