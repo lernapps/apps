@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-DYVfKw6-.css">
+    <title>Finding a rule from examples – How machines learn from data</title>
+    <meta name="description" content="The card game with the training bag: dog or cat? Find a rule from examples and test it on new cards." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../lernen/regeln-aus-beispielen/" />
+    <link rel="alternate" hreflang="en" href="../../../en/lernen/regeln-aus-beispielen/" />
+    <script type="module" crossorigin src="../../../assets/islands-CU9sVtkY.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../lernen/regeln-aus-beispielen/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/lernen/regeln-aus-beispielen/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li aria-current="page">Finding a rule from examples</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Finding a rule from examples</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/lernen/regeln-aus-beispielen/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧lernen/regeln-aus-beispielen/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-ki","page":{"id":"regeln-aus-beispielen","title":"Finding a rule from examples","exercises":[{"id":"was-alle-katzen-haben","section":"einstieg","numbered":false},{"id":"jonas-regel-passt","section":"uebung","numbered":false},{"id":"was-jonas-regel-sagt","section":"uebung","numbered":false},{"id":"schritte-lernen","section":"uebung","numbered":false},{"id":"programmiert-oder-gelernt","section":"uebung","numbered":false}],"sections":["einstieg","idee","beispiel","uebung"]},"tutor":"lernen/regeln-aus-beispielen/tutor/","markdown":"lernen/regeln-aus-beispielen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">At the shelter: six cards in the bag</a></li><li><a href="#idee">The card game: how to play</a></li><li><a href="#beispiel">Jona's rule and Selin's rule</a></li><li><a href="#uebung">Practice</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">At the shelter: six cards in the bag</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="a040828a" data-block-type="figure" data-block-order="1">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/beutel-szene.svg" alt="Jona and Mia stand on the left, Selin on the right. In the middle there is a blue cloth bag with a yellow paw on a table. Two animal cards stick out of the top." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing. Licence: CC-BY-4.0." aria-label="Source: own drawing. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>From the left: Jona, Mia, the training bag and Selin.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="d879bc29" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>First, class 6b tries it themselves, with no computer. Mia leads the game. She puts six
+animal cards into a cloth bag, the <strong>training bag</strong>. Each card says whether the animal is a dog or a cat.</p>
+<p>Here you find a rule from examples yourself and test it.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="b0f5230d" data-block-type="vue-component" data-block-order="3">
+<div class="explainer-component" data-component="Tierkarten">
+<div class="explainer-island" hidden><ul class="tierkarten" data-v-1b9d95eb><!--[--><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Luna" katze="1" merkmale="pointed ears, short snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#9a9a9a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#9a9a9a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#9a9a9a" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Luna<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Mimi" katze="1" merkmale="pointed ears, short snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#e8a15a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#e8a15a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#e8a15a" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Mimi<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Tiger" katze="1" merkmale="pointed ears, short snout, big, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#c98b3c" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#c98b3c" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#c98b3c" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Tiger<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, big, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Bruno" katze="0" merkmale="floppy ears, long snout, big, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#8b5a2b" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#8b5a2b" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#8b5a2b" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Bruno<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, long snout, big, round pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Waldi" katze="0" merkmale="floppy ears, long snout, small, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#7a3e1d" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#7a3e1d" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#7a3e1d" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Waldi<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, long snout, small, round pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Otto" katze="0" merkmale="floppy ears, short snout, small, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#d9c3a0" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#d9c3a0" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#d9c3a0" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Otto<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, short snout, small, round pupils</span></span></li><!--]--></ul></div>
+<div class="explainer-nojs"><p>The six cards in the bag:</p>
+<ul>
+<li>Luna, cat: pointed ears, short snout, small, narrow pupils</li>
+<li>Mimi, cat: pointed ears, short snout, small, narrow pupils</li>
+<li>Tiger, cat: pointed ears, short snout, big, narrow pupils</li>
+<li>Bruno, dog: floppy ears, long snout, big, round pupils</li>
+<li>Waldi, dog: floppy ears, long snout, small, round pupils</li>
+<li>Otto, dog: floppy ears, short snout, small, round pupils</li>
+</ul></div>
+<script type="application/json" class="explainer-component-props">{"tiere":[{"name":"Luna","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":0},{"name":"Mimi","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":1},{"name":"Tiger","katze":1,"ohren":1,"schnauze":1,"groesse":0,"pupille":1,"merkmale":"pointed ears, short snout, big, narrow pupils","fell":2},{"name":"Flocke","katze":1,"ohren":0,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"floppy ears, short snout, small, narrow pupils","fell":3},{"name":"Minka","katze":1,"ohren":1,"schnauze":0,"groesse":1,"pupille":1,"merkmale":"pointed ears, long snout, small, narrow pupils","fell":4},{"name":"Bruno","katze":0,"ohren":0,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"floppy ears, long snout, big, round pupils","fell":5},{"name":"Rex","katze":0,"ohren":1,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"pointed ears, long snout, big, round pupils","fell":6},{"name":"Krümel","katze":0,"ohren":1,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"pointed ears, short snout, small, round pupils","fell":7},{"name":"Waldi","katze":0,"ohren":0,"schnauze":0,"groesse":1,"pupille":0,"merkmale":"floppy ears, long snout, small, round pupils","fell":8},{"name":"Otto","katze":0,"ohren":0,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"floppy ears, short snout, small, round pupils","fell":9},{"name":"Bella","katze":0,"ohren":0,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"floppy ears, short snout, big, round pupils","fell":10},{"name":"Sammy","katze":0,"ohren":1,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"pointed ears, short snout, big, round pupils","fell":11}],"nummern":[1,2,3,6,9,10],"etikett":true,"katze":"cat","hund":"dog"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/4" data-block-id="7a3a9db0" data-block-type="multiple-choice" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="was-alle-katzen-haben">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-was-alle-katzen-haben" data-id="was-alle-katzen-haben" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">What do all three cats have, but no dog?</legend>
+<label class="question-option"><input type="checkbox" name="frage-was-alle-katzen-haben" value="0"> <span>pointed ears</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-alle-katzen-haben" value="1"> <span>narrow pupils</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-alle-katzen-haben" value="2"> <span>a short snout</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-alle-katzen-haben" value="3"> <span>They are small.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>pointed ears</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Luna, Mimi and Tiger have pointed ears. Bruno, Waldi and Otto have floppy ears.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>narrow pupils</strong> <span class="question-badge question-badge-right">right answer</span></p><p>All three cats have narrow pupils, all three dogs have round ones.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>a short snout</strong></p><p>All the cats have a short snout. But so does Otto, a dog.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>They are small.</strong></p><p>Tiger is a cat and big. And Waldi, a dog, is small.</p></li>
+</ul>
+<p class="question-explanation">Two features separate the cats and dogs here.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>pointed ears</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Luna, Mimi and Tiger have pointed ears. Bruno, Waldi and Otto have floppy ears.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>narrow pupils</strong> <span class="question-badge question-badge-right">right answer</span></p><p>All three cats have narrow pupils, all three dogs have round ones.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>a short snout</strong></p><p>All the cats have a short snout. But so does Otto, a dog.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>They are small.</strong></p><p>Tiger is a cat and big. And Waldi, a dog, is small.</p></li>
+</ul>
+<p class="question-explanation">Two features separate the cats and dogs here.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"was-alle-katzen-haben","text":"What do all three cats have, but no dog?","explanation":"Two features separate the cats and dogs here.","links":[],"type":"multiple-choice","options":[{"text":"pointed ears","correct":true,"info":"Luna, Mimi and Tiger have pointed ears. Bruno, Waldi and Otto have floppy ears."},{"text":"narrow pupils","correct":true,"info":"All three cats have narrow pupils, all three dogs have round ones."},{"text":"a short snout","correct":false,"info":"All the cats have a short snout. But so does Otto, a dog."},{"text":"They are small.","correct":false,"info":"Tiger is a cat and big. And Waldi, a dog, is small."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">The card game: how to play</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="c5ca2fbc" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-merkmal"><a href="../../../en/glossar/#merkmal">feature</a></dfn></dt><dd><p>Something you can observe about an example, such as the shape of the ears.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="af2121e4" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-etikett"><a href="../../../en/glossar/#etikett">label</a></dfn></dt><dd><p>The right answer for an example; for us “dog” or “cat”.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="145dca9e" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Play in groups of three or four. You need a bag and twelve cards: the six above and the six below.</p>
+<ol>
+<li>Copy the cards onto paper. Write the <strong>label</strong> (dog or cat) on the back.</li>
+<li>One person leads the game. They put six cards into the bag. These are the examples.</li>
+<li>The others take the cards out and read the labels. Look for a rule with <strong>one question</strong> about a feature,
+for example: “Does the animal have pointed ears? Yes: cat. No: dog.” The rule must fit all six examples.</li>
+<li>The leader shows new cards with the label face down. Use your rule to say dog or cat. Then turn the card
+over.</li>
+<li>If it is wrong, look for a better one.</li>
+</ol></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="393f06f3" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-trainingsdaten"><a href="../../../en/glossar/#trainingsdaten">training data</a></dfn></dt><dd><p>The examples with labels that something learns from: for us, the cards in the training bag.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="9c0f21cc" data-block-type="vue-component" data-block-order="9">
+<div class="explainer-component" data-component="Tierkarten">
+<div class="explainer-island" hidden><ul class="tierkarten" data-v-1b9d95eb><!--[--><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Flocke" katze="1" merkmale="floppy ears, short snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#f2f0ea" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#f2f0ea" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#f2f0ea" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Flocke<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, short snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Minka" katze="1" merkmale="pointed ears, long snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#5a4636" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#5a4636" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#5a4636" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Minka<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, long snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Rex" katze="0" merkmale="pointed ears, long snout, big, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#6b4a2a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#6b4a2a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#6b4a2a" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Rex<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, long snout, big, round pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Krümel" katze="0" merkmale="pointed ears, short snout, small, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#e3c08d" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#e3c08d" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#e3c08d" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Krümel<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, small, round pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Bella" katze="0" merkmale="floppy ears, short snout, big, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#3b3b3b" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#3b3b3b" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#3b3b3b" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Bella<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, short snout, big, round pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Sammy" katze="0" merkmale="pointed ears, short snout, big, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#f4f1e8" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#f4f1e8" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#f4f1e8" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Sammy<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, big, round pupils</span></span></li><!--]--></ul></div>
+<div class="explainer-nojs"><p>The six new cards: Flocke and Minka are cats, Rex, Krümel, Bella and Sammy are dogs. Each card shows a drawn animal with four features: ears (pointed or floppy), snout (short or
+long), size (small or big) and pupils (narrow or round).</p></div>
+<script type="application/json" class="explainer-component-props">{"tiere":[{"name":"Luna","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":0},{"name":"Mimi","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":1},{"name":"Tiger","katze":1,"ohren":1,"schnauze":1,"groesse":0,"pupille":1,"merkmale":"pointed ears, short snout, big, narrow pupils","fell":2},{"name":"Flocke","katze":1,"ohren":0,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"floppy ears, short snout, small, narrow pupils","fell":3},{"name":"Minka","katze":1,"ohren":1,"schnauze":0,"groesse":1,"pupille":1,"merkmale":"pointed ears, long snout, small, narrow pupils","fell":4},{"name":"Bruno","katze":0,"ohren":0,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"floppy ears, long snout, big, round pupils","fell":5},{"name":"Rex","katze":0,"ohren":1,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"pointed ears, long snout, big, round pupils","fell":6},{"name":"Krümel","katze":0,"ohren":1,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"pointed ears, short snout, small, round pupils","fell":7},{"name":"Waldi","katze":0,"ohren":0,"schnauze":0,"groesse":1,"pupille":0,"merkmale":"floppy ears, long snout, small, round pupils","fell":8},{"name":"Otto","katze":0,"ohren":0,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"floppy ears, short snout, small, round pupils","fell":9},{"name":"Bella","katze":0,"ohren":0,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"floppy ears, short snout, big, round pupils","fell":10},{"name":"Sammy","katze":0,"ohren":1,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"pointed ears, short snout, big, round pupils","fell":11}],"nummern":[4,5,7,8,11,12],"etikett":true,"katze":"cat","hund":"dog"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Jona's rule and Selin's rule</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="b1a4220a" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Jona finds the rule: “Does the animal have pointed ears? Yes: cat. No: dog.” It fits all six cards in the
+bag. Then Mia shows the new card <strong>Rex</strong>: pointed ears, but a dog. Jona&#39;s rule says “cat”. It only fitted
+the examples in the bag.</p>
+<p>Selin uses another question: “Does the animal have narrow pupils? Yes: cat. No: dog.” This rule is right
+for all twelve cards.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="410ded1b" data-block-type="definition" data-block-order="11">
+<dl class="explainer-definition"><dt><dfn id="begriff-entscheidungsbaum"><a href="../../../en/glossar/#entscheidungsbaum">decision tree</a></dfn></dt><dd><p>A rule made of questions. Each answer leads to the next question or to a result. Selin&#39;s rule is a decision tree with one question and two branches.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="b41977b7" data-block-type="note" data-block-order="12">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Remember</h3>
+<div class="explainer-block" data-block="beispiel/3/1" data-block-id="3887d111" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>You found the rule from examples with labels; nobody gave it to you. AI systems learn like this too: they
+find patterns in example data, instead of someone programming every rule. Some turn them into a rule like
+you did, others compare with similar examples.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practice</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="74e67b3d" data-block-type="true-false" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="jonas-regel-passt">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-jonas-regel-passt" data-id="jonas-regel-passt" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Jona's rule “pointed ears means cat” fits all six cards that were in the bag at the start.</legend>
+<label class="question-option"><input type="radio" name="frage-jonas-regel-passt" value="true"> <span>True</span></label>
+<label class="question-option"><input type="radio" name="frage-jonas-regel-passt" value="false"> <span>False</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> The statement is true.</p>
+<p class="question-explanation">In the bag the cats have pointed ears and the dogs have floppy ones. Only the new card Rex does not fit.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> The statement is true.</p>
+<p class="question-explanation">In the bag the cats have pointed ears and the dogs have floppy ones. Only the new card Rex does not fit.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"jonas-regel-passt","text":"Jona's rule “pointed ears means cat” fits all six cards that were in the bag at the start.","explanation":"In the bag the cats have pointed ears and the dogs have floppy ones. Only the new card Rex does not fit.","links":[],"hint":"Look only at the ears of the six cards at the top.","type":"true-false","answer":true},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="82ebcac3" data-block-type="matching" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="was-jonas-regel-sagt">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-was-jonas-regel-sagt" data-id="was-jonas-regel-sagt" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">What does Jona's rule “pointed ears means cat” say about these new cards? And is it right?</legend>
+<p class="question-hint">Choose the match for each entry.</p>
+<ul class="question-pairs">
+<li><label><span>Rex (dog): pointed ears</span> <select name="frage-was-jonas-regel-sagt-0" data-left="0"><option value="">please choose</option><option value="0">says cat, wrong</option><option value="2">says dog, right</option><option value="1">says dog, wrong</option><option value="3">says cat, right</option></select></label></li>
+<li><label><span>Flocke (cat): floppy ears</span> <select name="frage-was-jonas-regel-sagt-1" data-left="1"><option value="">please choose</option><option value="0">says cat, wrong</option><option value="2">says dog, right</option><option value="1">says dog, wrong</option><option value="3">says cat, right</option></select></label></li>
+<li><label><span>Bella (dog): floppy ears</span> <select name="frage-was-jonas-regel-sagt-2" data-left="2"><option value="">please choose</option><option value="0">says cat, wrong</option><option value="2">says dog, right</option><option value="1">says dog, wrong</option><option value="3">says cat, right</option></select></label></li>
+<li><label><span>Minka (cat): pointed ears</span> <select name="frage-was-jonas-regel-sagt-3" data-left="3"><option value="">please choose</option><option value="0">says cat, wrong</option><option value="2">says dog, right</option><option value="1">says dog, wrong</option><option value="3">says cat, right</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> Rex (dog): pointed ears – says cat, wrong; Flocke (cat): floppy ears – says dog, wrong; Bella (dog): floppy ears – says dog, right; Minka (cat): pointed ears – says cat, right</p>
+<p class="question-explanation">The rule only looks at the ears. Rex is a dog with pointed ears and Flocke is a cat with floppy ears. So the rule gets both wrong.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> Rex (dog): pointed ears – says cat, wrong; Flocke (cat): floppy ears – says dog, wrong; Bella (dog): floppy ears – says dog, right; Minka (cat): pointed ears – says cat, right</p>
+<p class="question-explanation">The rule only looks at the ears. Rex is a dog with pointed ears and Flocke is a cat with floppy ears. So the rule gets both wrong.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"was-jonas-regel-sagt","text":"What does Jona's rule “pointed ears means cat” say about these new cards? And is it right?","explanation":"The rule only looks at the ears. Rex is a dog with pointed ears and Flocke is a cat with floppy ears. So the rule gets both wrong.","links":[],"hint":"Look only at the ears: for the rule, pointed means cat. Then compare with the label.","type":"matching","pairs":[{"left":"Rex (dog): pointed ears","right":"says cat, wrong"},{"left":"Flocke (cat): floppy ears","right":"says dog, wrong"},{"left":"Bella (dog): floppy ears","right":"says dog, right"},{"left":"Minka (cat): pointed ears","right":"says cat, right"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="66751c34" data-block-type="ordering" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="schritte-lernen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-schritte-lernen" data-id="schritte-lernen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In which order do you learn from examples? Put the steps in the right order.</legend>
+<p class="question-hint">Give each entry its place: 1 for the first.</p>
+<ul class="question-pairs">
+<li><label><span>Put examples with labels into the bag</span> <select name="frage-schritte-lernen-0" data-item="0"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>Test the rule on new cards</span> <select name="frage-schritte-lernen-2" data-item="2"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>Look for a rule that fits all the examples</span> <select name="frage-schritte-lernen-1" data-item="1"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>Improve the rule if it makes mistakes</span> <select name="frage-schritte-lernen-3" data-item="3"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 1. Put examples with labels into the bag, 2. Look for a rule that fits all the examples, 3. Test the rule on new cards, 4. Improve the rule if it makes mistakes</p>
+<p class="question-explanation">First the examples, then the rule, then the test with new cards. Mistakes in the test show that the rule needs to get better.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 1. Put examples with labels into the bag, 2. Look for a rule that fits all the examples, 3. Test the rule on new cards, 4. Improve the rule if it makes mistakes</p>
+<p class="question-explanation">First the examples, then the rule, then the test with new cards. Mistakes in the test show that the rule needs to get better.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"schritte-lernen","text":"In which order do you learn from examples? Put the steps in the right order.","explanation":"First the examples, then the rule, then the test with new cards. Mistakes in the test show that the rule needs to get better.","links":[],"hint":"Without examples there is no rule, and you can only test a rule that already exists.","type":"ordering","items":["Put examples with labels into the bag","Look for a rule that fits all the examples","Test the rule on new cards","Improve the rule if it makes mistakes"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="de6f2fa8" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="programmiert-oder-gelernt">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-programmiert-oder-gelernt" data-id="programmiert-oder-gelernt" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">A calculator works with rules that someone programmed. How did Selin's rule come about?</legend>
+<label class="question-option"><input type="radio" name="frage-programmiert-oder-gelernt" value="0"> <span>She worked it out from the example cards.</span></label>
+<label class="question-option"><input type="radio" name="frage-programmiert-oder-gelernt" value="1"> <span>Someone told her the rule beforehand.</span></label>
+<label class="question-option"><input type="radio" name="frage-programmiert-oder-gelernt" value="2"> <span>She guessed without looking at the cards.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>She worked it out from the example cards.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Selin compared cards with labels and found a feature that separates dogs and cats.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Someone told her the rule beforehand.</strong></p><p>Then the rule would be given, like in a calculator. But Selin found it herself.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>She guessed without looking at the cards.</strong></p><p>A guessed rule is rarely right for all twelve cards. Selin looked closely at the examples.</p></li>
+</ul>
+<p class="question-explanation">A rule from examples is learned. A rule that someone gives is programmed.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>She worked it out from the example cards.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Selin compared cards with labels and found a feature that separates dogs and cats.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Someone told her the rule beforehand.</strong></p><p>Then the rule would be given, like in a calculator. But Selin found it herself.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>She guessed without looking at the cards.</strong></p><p>A guessed rule is rarely right for all twelve cards. Selin looked closely at the examples.</p></li>
+</ul>
+<p class="question-explanation">A rule from examples is learned. A rule that someone gives is programmed.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"programmiert-oder-gelernt","text":"A calculator works with rules that someone programmed. How did Selin's rule come about?","explanation":"A rule from examples is learned. A rule that someone gives is programmed.","links":[],"type":"single-choice","options":[{"text":"She worked it out from the example cards.","correct":true,"info":"Selin compared cards with labels and found a feature that separates dogs and cats."},{"text":"Someone told her the rule beforehand.","correct":false,"info":"Then the rule would be given, like in a calculator. But Selin found it herself."},{"text":"She guessed without looking at the cards.","correct":false,"info":"A guessed rule is rarely right for all twelve cards. Selin looked closely at the examples."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="30709fd3" data-block-type="text" data-block-order="18">
+<div class="block-text"><p>On the next page a machine decides with the bag, but differently from you.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “How machines learn from data”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-ki","app":"How machines learn from data","root":"../../../en/","repository":"lernapps/informatik-ki","revision":"55ce8f1","page":{"title":"Finding a rule from examples","order":2}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/lernen/ki-im-alltag/">Back: AI in everyday life</a><a rel="next" href="../../../en/lernen/maschine-trainieren/">Next: Training the machine</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>

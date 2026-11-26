@@ -1,0 +1,39 @@
+<!-- Jona aus der Klasse 6b mit einem Smartphone, daneben der Trainingsbeutel. Eigene Zeichnung, © 2026 Oliver Jägle,
+     CC-BY-4.0. Jona (def #jona) ist kopiert aus lernapps/informatik-computer, Branch work, src/images/klasse-6b.svg;
+     der Trainingsbeutel (<g id="trainingsbeutel">) aus lernapps/informatik-ki, Branch work, src/images/beutel-szene.svg
+     (beide eigene Zeichnungen, CC-BY-4.0); Aussehen unverändert. Kein Text im Bild: Marker setzt die Seite. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img">
+  <title>Jona mit Smartphone und der Trainingsbeutel</title>
+  <defs>
+    <g id="jona" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#2e8b57"/>
+      <path d="M34 88 Q50 104 66 88" fill="none" stroke="#1f5e3b" stroke-width="3"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M20 50 Q16 16 50 14 Q84 16 80 50 Q76 32 60 30 Q44 26 34 32 Q24 36 20 50 Z" fill="#c8642a"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g>
+    <g id="trainingsbeutel" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="44" y="6" width="40" height="52" rx="5" fill="#fbf8f1" transform="rotate(-12 64 32)"/>
+      <path d="M52 22 L56 12 L62 20 M68 20 L74 12 L76 22" fill="none" transform="rotate(-12 64 32)"/>
+      <rect x="92" y="4" width="40" height="52" rx="5" fill="#fbf8f1" transform="rotate(10 112 30)"/>
+      <path d="M100 26 C94 30 96 40 102 40 M124 26 C130 30 128 40 122 40" fill="none" transform="rotate(10 112 30)"/>
+      <path d="M42 54 Q90 42 138 54 Q178 96 170 150 Q90 176 10 150 Q2 96 42 54 Z" fill="#3a8fa3"/>
+      <path d="M42 54 Q90 68 138 54" fill="none" stroke="#1f5e6b" stroke-width="5"/>
+      <path d="M134 60 Q150 82 142 100" fill="none" stroke="#1f5e6b" stroke-width="4"/>
+      <ellipse cx="90" cy="112" rx="16" ry="14" fill="#f4c542"/>
+      <circle cx="76" cy="92" r="6" fill="#f4c542"/><circle cx="90" cy="88" r="6" fill="#f4c542"/>
+      <circle cx="104" cy="92" r="6" fill="#f4c542"/>
+    </g>
+  </defs>
+  <rect width="420" height="240" fill="#f4efe2"/>
+  <rect y="210" width="420" height="30" fill="#c9a77a"/>
+  <use href="#jona" transform="translate(30,40)"/>
+  <!-- Smartphone in Jonas Hand -->
+  <g stroke="#333" stroke-width="2">
+    <rect x="104" y="118" width="40" height="66" rx="6" fill="#1f2a36"/>
+    <rect x="109" y="126" width="30" height="46" fill="#bfe3f2"/>
+    <circle cx="124" cy="178" r="2.5" fill="#bfe3f2"/>
+  </g>
+  <use href="#trainingsbeutel" transform="translate(220,44)"/>
+</svg>

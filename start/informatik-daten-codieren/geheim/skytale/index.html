@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-DYVfKw6-.css">
+    <title>Die Geheimschrift – Daten darstellen und codieren</title>
+    <meta name="description" content="Die Grundidee der Verschlüsselung an der Skytale: Klartext, Geheimtext, Verfahren und Schlüssel." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../geheim/skytale/" />
+    <link rel="alternate" hreflang="en" href="../../en/geheim/skytale/" />
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../geheim/skytale/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/geheim/skytale/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../geheim/">Geheime Botschaften</a></li><li aria-current="page">Die Geheimschrift</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Die Geheimschrift</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../geheim/skytale/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧geheim/skytale/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-daten-codieren","page":{"id":"skytale","title":"Die Geheimschrift","exercises":[{"id":"streifen-lesen","section":"einstieg","numbered":false},{"id":"begriffe","section":"uebung","numbered":false},{"id":"spalten-lesen","section":"uebung","numbered":false},{"id":"zeilen-zaehlen","section":"uebung","numbered":false},{"id":"entschluesseln","section":"uebung","numbered":false}],"sections":["einstieg","idee","uebung"]},"tutor":"geheim/skytale/tutor/","markdown":"geheim/skytale/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Die 6c darf das nicht lesen!</a></li><li><a href="#idee">Verfahren und Schlüssel</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Die 6c darf das nicht lesen!</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="6cfd12c6" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Die 6b plant eine Überraschung für die Parallelklasse 6c, die auch in der Jugendherberge wohnt. Jona will Selin schreiben, wo sie sich treffen.
+Aber die 6c soll die Nachricht nicht lesen können, auch wenn sie den Zettel findet. Selin hat eine Idee
+aus dem Geschichtsbuch: eine <strong>Skytale</strong>, einen Holzstab mit einem Streifen.</p>
+<p>Im Kapitel „Alles ist 0 und 1“ waren Codes für alle lesbar. Auf dieser Seite lernst du, wie man eine
+Nachricht <strong>verschlüsselt</strong>, damit nur Eingeweihte sie lesen.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="e8998f06" data-block-type="figure" data-block-order="2">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/szene-geheim.svg" alt="Jona und Selin. Zwischen ihnen liegt ein Holzstab, um den ein heller Streifen gewickelt ist." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Figuren aus dem Explainer „Informatiksysteme“ (lernapps/informatik-computer). Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Figuren aus dem Explainer „Informatiksysteme“ (lernapps/informatik-computer). Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Jona und Selin mit der Skytale</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="c7cfdb8c" data-block-type="figure" data-block-order="3">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/skytale.svg" alt="Ein Holzstab. Ein heller Streifen ist schräg um ihn gewickelt. Auf dem Streifen stehen Zeichen nebeneinander, Reihe für Reihe. Ein Ende des Streifens hängt lose herunter." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Eine Skytale. Um den Stab gewickelt, stehen die Buchstaben (hier als Kästchen gezeichnet) in Reihen. Abgewickelt sind sie durcheinander.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/4" data-block-id="0f850def" data-block-type="true-false" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="streifen-lesen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-streifen-lesen" data-id="streifen-lesen" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die 6c findet nur den abgewickelten Streifen. Sie kann die Nachricht sofort lesen.</legend>
+<label class="question-option"><input type="radio" name="frage-streifen-lesen" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-streifen-lesen" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Auf dem abgewickelten Streifen stehen die Buchstaben durcheinander. Lesbar werden sie erst wieder auf einem Stab mit der richtigen Dicke.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Auf dem abgewickelten Streifen stehen die Buchstaben durcheinander. Lesbar werden sie erst wieder auf einem Stab mit der richtigen Dicke.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"streifen-lesen","text":"Die 6c findet nur den abgewickelten Streifen. Sie kann die Nachricht sofort lesen.","explanation":"Auf dem abgewickelten Streifen stehen die Buchstaben durcheinander. Lesbar werden sie erst wieder auf einem Stab mit der richtigen Dicke.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Verfahren und Schlüssel</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="479a26f8" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Ohne Stab geht es auch mit Kästchen, nach derselben Idee: Die Buchstaben werden nach einer festen Regel
+vertauscht. Jona schreibt ZELT AM SEE ohne Leerzeichen in Zeilen mit je <strong>3</strong> Buchstaben. Dann liest er <strong>Spalte für
+Spalte</strong> von oben nach unten.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="4416a122" data-block-type="table" data-block-order="6">
+<div class="block-table" role="region" aria-label="Jonas Kästchen. Spalte für Spalte gelesen: ZTS EAE LME, also ZTSEAELME." tabindex="0"><table><caption>Jonas Kästchen. Spalte für Spalte gelesen: ZTS EAE LME, also ZTSEAELME.</caption><thead><tr><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th></tr></thead><tbody><tr><td>Z</td><td>E</td><td>L</td></tr><tr><td>T</td><td>A</td><td>M</td></tr><tr><td>S</td><td>E</td><td>E</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="81437405" data-block-type="definition" data-block-order="7">
+<dl class="explainer-definition"><dt><dfn id="begriff-verschluesselung"><a href="../../glossar/#verschluesselung">Verschlüsselung</a></dfn></dt><dd><p>Beim Verschlüsseln macht man aus dem lesbaren <strong>Klartext</strong> mit einem Verfahren und einem geheimen Schlüssel einen <strong>Geheimtext</strong>. Nur wer den Schlüssel kennt, soll ihn wieder lesen können.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="00561dcc" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-schluessel"><a href="../../glossar/#schluessel">Schlüssel</a></dfn></dt><dd><p>Der Schlüssel ist das Geheimnis, das man zum Ver- und Entschlüsseln braucht, zum Beispiel eine Zahl. Das Verfahren dürfen alle kennen, den Schlüssel nicht.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="a9ed1bab" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/5/1" data-block-id="397d12e2" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Das <strong>Verfahren</strong> ist die Regel, hier „in Zeilen schreiben, in Spalten lesen“. Der <strong>Schlüssel</strong> ist die Zahl, die man geheim hält, hier 3 Buchstaben pro Zeile. Zum Entschlüsseln schreibt Selin den Geheimtext wieder Spalte für Spalte in Kästchen mit 3 Spalten und liest die Zeilen.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="33b925f9" data-block-type="matching" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="begriffe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-begriffe" data-id="begriffe" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Wort sein Beispiel aus Jonas Nachricht zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Klartext</span> <select name="frage-begriffe-0" data-left="0"><option value="">bitte wählen</option><option value="3">der Zettel, auf dem die Nachricht steht</option><option value="2">3 Buchstaben pro Zeile</option><option value="1">ZTSEAELME</option><option value="0">ZELTAMSEE</option></select></label></li>
+<li><label><span>Geheimtext</span> <select name="frage-begriffe-1" data-left="1"><option value="">bitte wählen</option><option value="3">der Zettel, auf dem die Nachricht steht</option><option value="2">3 Buchstaben pro Zeile</option><option value="1">ZTSEAELME</option><option value="0">ZELTAMSEE</option></select></label></li>
+<li><label><span>Schlüssel</span> <select name="frage-begriffe-2" data-left="2"><option value="">bitte wählen</option><option value="3">der Zettel, auf dem die Nachricht steht</option><option value="2">3 Buchstaben pro Zeile</option><option value="1">ZTSEAELME</option><option value="0">ZELTAMSEE</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Klartext – ZELTAMSEE; Geheimtext – ZTSEAELME; Schlüssel – 3 Buchstaben pro Zeile</p>
+<p class="question-explanation">Der Klartext ist lesbar, der Geheimtext nicht. Der Schlüssel macht aus dem einen den anderen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Klartext – ZELTAMSEE; Geheimtext – ZTSEAELME; Schlüssel – 3 Buchstaben pro Zeile</p>
+<p class="question-explanation">Der Klartext ist lesbar, der Geheimtext nicht. Der Schlüssel macht aus dem einen den anderen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"begriffe","text":"Ordne jedem Wort sein Beispiel aus Jonas Nachricht zu.","explanation":"Der Klartext ist lesbar, der Geheimtext nicht. Der Schlüssel macht aus dem einen den anderen.","links":[],"type":"matching","pairs":[{"left":"Klartext","right":"ZELTAMSEE"},{"left":"Geheimtext","right":"ZTSEAELME"},{"left":"Schlüssel","right":"3 Buchstaben pro Zeile"}],"distractors":["der Zettel, auf dem die Nachricht steht"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="0056508a" data-block-type="ordering" data-block-order="12">
+<div class="explainer-exercise explainer-question" id="spalten-lesen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-spalten-lesen" data-id="spalten-lesen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Selin verschlüsselt BUS UM ACHT mit dem Schlüssel 3. Ihre Zeilen sind BUS, UMA, CHT. Ordne die Spalten so, wie sie gelesen werden.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>SAT (Spalte 3)</span> <select name="frage-spalten-lesen-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+<li><label><span>BUC (Spalte 1)</span> <select name="frage-spalten-lesen-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+<li><label><span>UMH (Spalte 2)</span> <select name="frage-spalten-lesen-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. BUC (Spalte 1), 2. UMH (Spalte 2), 3. SAT (Spalte 3)</p>
+<p class="question-explanation">Spalte für Spalte von links nach rechts, jede von oben nach unten. Der Geheimtext ist BUCUMHSAT.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. BUC (Spalte 1), 2. UMH (Spalte 2), 3. SAT (Spalte 3)</p>
+<p class="question-explanation">Spalte für Spalte von links nach rechts, jede von oben nach unten. Der Geheimtext ist BUCUMHSAT.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"spalten-lesen","text":"Selin verschlüsselt BUS UM ACHT mit dem Schlüssel 3. Ihre Zeilen sind BUS, UMA, CHT. Ordne die Spalten so, wie sie gelesen werden.","explanation":"Spalte für Spalte von links nach rechts, jede von oben nach unten. Der Geheimtext ist BUCUMHSAT.","links":[],"type":"ordering","items":["BUC (Spalte 1)","UMH (Spalte 2)","SAT (Spalte 3)"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="85d90dc3" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="zeilen-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zeilen-zaehlen" data-id="zeilen-zaehlen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Jona verschlüsselt eine Nachricht mit 12 Buchstaben. Der Schlüssel ist 4 Buchstaben pro Zeile. Wie viele Zeilen schreibt er?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-zeilen-zaehlen">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 3</p>
+<p class="question-explanation">12 Buchstaben, je 4 in einer Zeile, ergeben 12 : 4 = 3 Zeilen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 3</p>
+<p class="question-explanation">12 Buchstaben, je 4 in einer Zeile, ergeben 12 : 4 = 3 Zeilen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zeilen-zaehlen","text":"Jona verschlüsselt eine Nachricht mit 12 Buchstaben. Der Schlüssel ist 4 Buchstaben pro Zeile. Wie viele Zeilen schreibt er?","explanation":"12 Buchstaben, je 4 in einer Zeile, ergeben 12 : 4 = 3 Zeilen.","links":[],"type":"number","answer":3,"tolerance":0,"mistakes":[{"answer":4,"message":"4 ist die Zahl der Buchstaben in einer Zeile. Gefragt ist, wie viele Zeilen es werden."},{"answer":48,"message":"Du hast 12 · 4 gerechnet. Verteile die 12 Buchstaben auf Zeilen mit je 4."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="16d37675" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="entschluesseln">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-entschluesseln" data-id="entschluesseln" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Selin bekommt den Geheimtext TFMCRFSHEUES, 12 Buchstaben. Der Schlüssel ist 3 Buchstaben pro Zeile. Was ist der Klartext?</legend>
+<label class="question-option"><input type="radio" name="frage-entschluesseln" value="0"> <span>TREFFUMSECHS</span></label>
+<label class="question-option"><input type="radio" name="frage-entschluesseln" value="1"> <span>TCSUFRHEMFES</span></label>
+<label class="question-option"><input type="radio" name="frage-entschluesseln" value="2"> <span>SEUEHSFRCMFT</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>TREFFUMSECHS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>12 Buchstaben in 3 Spalten sind 4 Zeilen. Selin schreibt TFMC, RFSH und EUES als Spalten. Die Zeilen sind TRE, FFU, MSE, CHS: Treff um sechs.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>TCSUFRHEMFES</strong></p><p>Du hast den Geheimtext noch einmal verschlüsselt, also in Zeilen geschrieben. Zum Entschlüsseln schreibst du ihn in Spalten.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>SEUEHSFRCMFT</strong></p><p>Das ist der Geheimtext rückwärts gelesen. Die Skytale vertauscht die Buchstaben anders.</p></li>
+</ul>
+<p class="question-explanation">Zum Entschlüsseln schreibt man den Geheimtext Spalte für Spalte in Kästchen mit 3 Spalten und liest die Zeilen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>TREFFUMSECHS</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>12 Buchstaben in 3 Spalten sind 4 Zeilen. Selin schreibt TFMC, RFSH und EUES als Spalten. Die Zeilen sind TRE, FFU, MSE, CHS: Treff um sechs.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>TCSUFRHEMFES</strong></p><p>Du hast den Geheimtext noch einmal verschlüsselt, also in Zeilen geschrieben. Zum Entschlüsseln schreibst du ihn in Spalten.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>SEUEHSFRCMFT</strong></p><p>Das ist der Geheimtext rückwärts gelesen. Die Skytale vertauscht die Buchstaben anders.</p></li>
+</ul>
+<p class="question-explanation">Zum Entschlüsseln schreibt man den Geheimtext Spalte für Spalte in Kästchen mit 3 Spalten und liest die Zeilen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"entschluesseln","text":"Selin bekommt den Geheimtext TFMCRFSHEUES, 12 Buchstaben. Der Schlüssel ist 3 Buchstaben pro Zeile. Was ist der Klartext?","explanation":"Zum Entschlüsseln schreibt man den Geheimtext Spalte für Spalte in Kästchen mit 3 Spalten und liest die Zeilen.","links":[],"type":"single-choice","options":[{"text":"TREFFUMSECHS","correct":true,"info":"12 Buchstaben in 3 Spalten sind 4 Zeilen. Selin schreibt TFMC, RFSH und EUES als Spalten. Die Zeilen sind TRE, FFU, MSE, CHS: Treff um sechs."},{"text":"TCSUFRHEMFES","correct":false,"info":"Du hast den Geheimtext noch einmal verschlüsselt, also in Zeilen geschrieben. Zum Entschlüsseln schreibst du ihn in Spalten."},{"text":"SEUEHSFRCMFT","correct":false,"info":"Das ist der Geheimtext rückwärts gelesen. Die Skytale vertauscht die Buchstaben anders."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="e00ff8c6" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Jetzt kannst du mit einem Verfahren und einem Schlüssel ver- und entschlüsseln. Auf der nächsten Seite lernst du ein Verfahren, bei dem jeder Buchstabe ein anderer wird, die Caesar-Scheibe.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Daten darstellen und codieren“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-daten-codieren","app":"Daten darstellen und codieren","root":"../../","repository":"lernapps/informatik-daten-codieren","revision":"99f8566","page":{"title":"Die Geheimschrift","order":10}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../bilder/vektor/">Zurück: Pixel oder Vektor?</a><a rel="next" href="../../geheim/caesar/">Weiter: Die Caesar-Scheibe</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

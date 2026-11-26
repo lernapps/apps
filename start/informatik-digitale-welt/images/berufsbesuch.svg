@@ -1,0 +1,62 @@
+<!-- Berufsbesuch in der Klasse 6b: drei erfundene Gäste mit ihren Geräten. Eigene Zeichnung, © 2026 Oliver Jägle,
+     CC-BY-4.0. Stil der Klasse 6b (Kopf, runder Körper, Umriss #333, keine Arme oder Beine) aus
+     lernapps/informatik-computer, src/images/klasse-6b.svg. Kein Text im Bild: Marker und Namen setzt die Seite.
+     Links Herr Kaya, Bäcker (weiße Schürze, Bäckermütze), vor ihm eine Kasse mit Bildschirm und ein Brot.
+     Mitte Frau Schulte, Landwirtin (grüne Latzhose, Mütze), vor ihr ein Melkroboter (Kasten mit Arm) und eine Milchkanne.
+     Rechts Frau Nguyen, Informatikerin (blauer Pullover, Pferdeschwanz), vor ihr ein Laptop. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" role="img">
+  <title>Drei Gäste beim Berufsbesuch: Bäcker, Landwirtin, Informatikerin</title>
+  <rect width="600" height="260" fill="#f4efe2"/>
+  <rect y="200" width="600" height="60" fill="#c9a77a"/>
+  <g stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Herr Kaya, Bäcker -->
+    <g transform="translate(40,20)">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#f7f7f2"/>
+      <path d="M30 96 L70 96 L74 170 L26 170 Z" fill="#ffffff"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#c68a5c"/>
+      <path d="M22 34 Q20 6 50 8 Q80 6 78 34 Z" fill="#ffffff"/>
+      <rect x="22" y="30" width="56" height="10" rx="3" fill="#ffffff"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M38 72 Q50 66 62 72" fill="none" stroke="#3a2a1c" stroke-width="4"/>
+      <path d="M42 78 Q50 84 58 78" fill="none"/>
+    </g>
+    <!-- Kasse mit Bildschirm, Brot -->
+    <rect x="40" y="186" width="70" height="20" rx="3" fill="#6b7280"/>
+    <rect x="52" y="160" width="40" height="28" rx="3" fill="#1f2a36"/>
+    <rect x="56" y="164" width="32" height="20" fill="#9fd4b5"/>
+    <ellipse cx="135" cy="196" rx="24" ry="12" fill="#d39b52"/>
+    <path d="M120 192 L126 188 M132 192 L138 188 M144 194 L150 190" fill="none"/>
+
+    <!-- Frau Schulte, Landwirtin -->
+    <g transform="translate(250,20)">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#4f8a3a"/>
+      <path d="M32 100 L68 100 L72 170 L28 170 Z" fill="#3d6e2c"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#f1c9a5"/>
+      <path d="M18 56 Q14 22 50 18 Q86 22 82 56 Q80 40 66 44 Q50 34 34 44 Q20 40 18 56 Z" fill="#8a5a2b"/>
+      <path d="M20 36 Q50 6 80 36 Z" fill="#c0392b"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+    <!-- Melkroboter: Kasten mit Arm, Milchkanne -->
+    <rect x="222" y="150" width="54" height="56" rx="4" fill="#9aa4ae"/>
+    <rect x="230" y="158" width="22" height="14" fill="#1f2a36"/>
+    <path d="M276 172 L300 160 L314 176" fill="none" stroke-width="6"/>
+    <circle cx="316" cy="180" r="5" fill="#9aa4ae"/>
+    <path d="M330 206 L330 176 Q342 168 354 176 L354 206 Z" fill="#dfe6ec"/>
+    <rect x="334" y="166" width="16" height="8" rx="2" fill="#dfe6ec"/>
+
+    <!-- Frau Nguyen, Informatikerin -->
+    <g transform="translate(460,20)">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#2f6fb5"/>
+      <path d="M78 36 Q100 46 92 92 Q88 70 82 60 Z" fill="#1b1b1b"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#e9c39f"/>
+      <path d="M18 56 Q12 14 50 12 Q88 14 82 56 Q76 30 50 30 Q26 30 18 56 Z" fill="#1b1b1b"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+    <!-- Laptop -->
+    <path d="M440 204 L540 204 L548 212 L432 212 Z" fill="#6b7280"/>
+    <rect x="452" y="160" width="76" height="46" rx="3" fill="#1f2a36"/>
+    <path d="M462 172 L482 172 M462 182 L500 182 M470 192 L494 192" fill="none" stroke="#9fd4b5" stroke-width="3"/>
+  </g>
+</svg>

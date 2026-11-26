@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-DYVfKw6-.css">
+    <title>How secure is it? – Representing and encoding data</title>
+    <meta name="description" content="Comparing encryption methods and judging how secure they are: how many keys would someone have to try?" />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../geheim/sicherheit/" />
+    <link rel="alternate" hreflang="en" href="../../../en/geheim/sicherheit/" />
+    <script type="module" crossorigin src="../../../assets/islands-CVr_SBvR.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../geheim/sicherheit/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/geheim/sicherheit/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li><a href="../../../en/geheim/">Secret messages</a></li><li aria-current="page">How secure is it?</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>How secure is it?</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/geheim/sicherheit/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧geheim/sicherheit/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-daten-codieren","page":{"id":"sicherheit","title":"How secure is it?","exercises":[{"id":"caesar-knacken","section":"einstieg","numbered":true},{"id":"caesar-schluessel-zahl","section":"uebung","numbered":false},{"id":"verfahren-ordnen","section":"uebung","numbered":false},{"id":"geheimes-verfahren","section":"uebung","numbered":false},{"id":"am-besten-schuetzen","section":"uebung","numbered":false},{"id":"verfahren-schluessel","section":"uebung","numbered":false}],"sections":["einstieg","idee","uebung"]},"tutor":"geheim/sicherheit/tutor/","markdown":"geheim/sicherheit/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">Class 6c gives it a go</a></li><li><a href="#idee">Trying every key</a></li><li><a href="#uebung">Practice</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Class 6c gives it a go</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="0d52d9d4" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Class 6c has intercepted a word from 6b. They know that 6b encrypts with the Caesar disc. They just don&#39;t
+know the key. Play class 6c: turn the disc step by step until the letters on the outside, next to the
+secret letters on the inside, make a word. Then type in the key and press “Check”.</p>
+<p>On the page before you encrypted and decrypted with a key. On this page you judge how secure a method is.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="2d231c50" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" id="caesar-knacken" data-component="CaesarScheibe" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,22,24,25,26,27,28,29,30,31,32,35,36,38,39,41,42,43,44,45,50,51,53,54,55,56,57,58,60,62,64,65,67,68,74,80,81,84,85,87,88,89,90,95,97,99,100,102,103,109]" data-checked>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Task no. {n}">Task no. 1</span> <button type="button" class="explainer-new-task" title="New task"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">New task</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="caesar" data-v-c9141e5e><p data-v-c9141e5e>The secret word is ECTF. Find the key.</p><div class="caesar-disc" data-v-c9141e5e><svg viewBox="0 0 300 300" aria-hidden="true" data-v-c9141e5e><circle cx="150" cy="150" r="146" class="caesar-outer" data-v-c9141e5e></circle><circle cx="150" cy="150" r="112" class="caesar-inner" data-v-c9141e5e></circle><circle cx="150" cy="150" r="80" class="caesar-middle" data-v-c9141e5e></circle><!--[--><line x1="167.59835531727717" y1="5.064504381684117" x2="163.5001081885962" y2="38.81660610101795" class="caesar-tick" data-v-c9141e5e></line><line x1="201.7723135082102" y1="13.487628567929448" x2="189.71574734876398" y2="45.27818081923354" class="caesar-tick" data-v-c9141e5e></line><line x1="232.93745302274874" y1="29.844355579526166" x2="213.62325163388945" y2="57.825807019910485" class="caesar-tick" data-v-c9141e5e></line><line x1="259.2825692329808" y1="53.18409189684388" x2="233.8332037951633" y2="75.73026227703093" class="caesar-tick" data-v-c9141e5e></line><line x1="279.2765797453686" y1="82.15041688160979" x2="249.1710748731595" y2="97.95100473109792" class="caesar-tick" data-v-c9141e5e></line><line x1="291.7575053442036" y1="115.05991301401656" x2="258.7454835517178" y2="123.19664559979353" class="caesar-tick" data-v-c9141e5e></line><line x1="296" y1="150" x2="262" y2="150" class="caesar-tick" data-v-c9141e5e></line><line x1="291.75750534420365" y1="184.94008698598338" x2="258.7454835517178" y2="176.80335440020644" class="caesar-tick" data-v-c9141e5e></line><line x1="279.2765797453686" y1="217.8495831183902" x2="249.1710748731595" y2="202.04899526890208" class="caesar-tick" data-v-c9141e5e></line><line x1="259.2825692329808" y1="246.81590810315606" x2="233.83320379516334" y2="224.26973772296904" class="caesar-tick" data-v-c9141e5e></line><line x1="232.93745302274874" y1="270.15564442047383" x2="213.62325163388945" y2="242.17419298008952" class="caesar-tick" data-v-c9141e5e></line><line x1="201.77231350821023" y1="286.51237143207055" x2="189.715747348764" y2="254.72181918076643" class="caesar-tick" data-v-c9141e5e></line><line x1="167.59835531727717" y1="294.9354956183159" x2="163.5001081885962" y2="261.18339389898205" class="caesar-tick" data-v-c9141e5e></line><line x1="132.4016446827228" y1="294.9354956183159" x2="136.49989181140378" y2="261.18339389898205" class="caesar-tick" data-v-c9141e5e></line><line x1="98.2276864917898" y1="286.51237143207055" x2="110.28425265123602" y2="254.72181918076646" class="caesar-tick" data-v-c9141e5e></line><line x1="67.06254697725129" y1="270.1556444204739" x2="86.37674836611058" y2="242.17419298008954" class="caesar-tick" data-v-c9141e5e></line><line x1="40.71743076701928" y1="246.81590810315615" x2="66.1667962048367" y2="224.2697377229691" class="caesar-tick" data-v-c9141e5e></line><line x1="20.72342025463135" y1="217.84958311839017" x2="50.828925126840474" y2="202.04899526890205" class="caesar-tick" data-v-c9141e5e></line><line x1="8.242494655796406" y1="184.94008698598344" x2="41.254516448282175" y2="176.80335440020647" class="caesar-tick" data-v-c9141e5e></line><line x1="4" y1="150.00000000000003" x2="38" y2="150.00000000000003" class="caesar-tick" data-v-c9141e5e></line><line x1="8.242494655796378" y1="115.05991301401662" x2="41.25451644828216" y2="123.19664559979357" class="caesar-tick" data-v-c9141e5e></line><line x1="20.72342025463132" y1="82.15041688160987" x2="50.82892512684046" y2="97.95100473109798" class="caesar-tick" data-v-c9141e5e></line><line x1="40.71743076701924" y1="53.184091896843896" x2="66.16679620483669" y2="75.73026227703093" class="caesar-tick" data-v-c9141e5e></line><line x1="67.06254697725123" y1="29.844355579526166" x2="86.37674836611053" y2="57.825807019910485" class="caesar-tick" data-v-c9141e5e></line><line x1="98.22768649178975" y1="13.487628567929448" x2="110.28425265123597" y2="45.278180819233555" class="caesar-tick" data-v-c9141e5e></line><line x1="132.40164468272275" y1="5.064504381684117" x2="136.49989181140376" y2="38.81660610101795" class="caesar-tick" data-v-c9141e5e></line><!--]--><!--[--><text x="150" y="27" class="caesar-letter" data-v-c9141e5e>A</text><text x="180.87172069309494" y="30.74850555203929" class="caesar-letter" data-v-c9141e5e>B</text><text x="209.94928919364614" y="41.77617269073592" class="caesar-letter" data-v-c9141e5e>C</text><text x="235.5428229130626" y="59.44211348592796" class="caesar-letter" data-v-c9141e5e>D</text><text x="256.1649187002817" y="82.7196476716809" class="caesar-letter" data-v-c9141e5e>E</text><text x="270.6170953064185" y="110.2559695715129" class="caesar-letter" data-v-c9141e5e>F</text><text x="278.05944475864897" y="140.45076824706334" class="caesar-letter" data-v-c9141e5e>G</text><text x="278.05944475864897" y="171.54923175293666" class="caesar-letter" data-v-c9141e5e>H</text><text x="270.6170953064185" y="201.7440304284871" class="caesar-letter" data-v-c9141e5e>I</text><text x="256.1649187002817" y="229.28035232831908" class="caesar-letter" data-v-c9141e5e>J</text><text x="235.5428229130626" y="252.55788651407204" class="caesar-letter" data-v-c9141e5e>K</text><text x="209.94928919364617" y="270.22382730926404" class="caesar-letter" data-v-c9141e5e>L</text><text x="180.87172069309494" y="281.2514944479607" class="caesar-letter" data-v-c9141e5e>M</text><text x="150.00000000000003" y="285" class="caesar-letter" data-v-c9141e5e>N</text><text x="119.12827930690509" y="281.25149444796074" class="caesar-letter" data-v-c9141e5e>O</text><text x="90.05071080635392" y="270.2238273092641" class="caesar-letter" data-v-c9141e5e>P</text><text x="64.4571770869374" y="252.55788651407204" class="caesar-letter" data-v-c9141e5e>Q</text><text x="43.835081299718325" y="229.2803523283191" class="caesar-letter" data-v-c9141e5e>R</text><text x="29.382904693581494" y="201.74403042848712" class="caesar-letter" data-v-c9141e5e>S</text><text x="21.940555241351035" y="171.54923175293675" class="caesar-letter" data-v-c9141e5e>T</text><text x="21.940555241351035" y="140.4507682470633" class="caesar-letter" data-v-c9141e5e>U</text><text x="29.38290469358148" y="110.2559695715129" class="caesar-letter" data-v-c9141e5e>V</text><text x="43.8350812997183" y="82.71964767168093" class="caesar-letter" data-v-c9141e5e>W</text><text x="64.45717708693738" y="59.442113485928004" class="caesar-letter" data-v-c9141e5e>X</text><text x="90.05071080635388" y="41.776172690735905" class="caesar-letter" data-v-c9141e5e>Y</text><text x="119.12827930690504" y="30.74850555203929" class="caesar-letter" data-v-c9141e5e>Z</text><!--]--><!--[--><text x="150" y="59" class="caesar-letter caesar-secret" data-v-c9141e5e>A</text><text x="172.97430377160555" y="61.78958552709901" class="caesar-letter caesar-secret" data-v-c9141e5e>B</text><text x="194.61342451620177" y="69.99622153729185" class="caesar-letter caesar-secret" data-v-c9141e5e>C</text><text x="213.65977519111635" y="83.1429681755743" class="caesar-letter caesar-secret" data-v-c9141e5e>D</text><text x="229.00645112579102" y="100.46578431380904" class="caesar-letter caesar-secret" data-v-c9141e5e>E</text><text x="239.7615592977998" y="120.95793084391659" class="caesar-letter caesar-secret" data-v-c9141e5e>F</text><text x="245.3000519134132" y="143.428478695489" class="caesar-letter caesar-secret" data-v-c9141e5e>G</text><text x="245.3000519134132" y="166.571521304511" class="caesar-letter caesar-secret" data-v-c9141e5e>H</text><text x="239.7615592977998" y="189.04206915608341" class="caesar-letter caesar-secret" data-v-c9141e5e>I</text><text x="229.00645112579102" y="209.53421568619095" class="caesar-letter caesar-secret" data-v-c9141e5e>J</text><text x="213.65977519111635" y="226.85703182442572" class="caesar-letter caesar-secret" data-v-c9141e5e>K</text><text x="194.6134245162018" y="240.00377846270814" class="caesar-letter caesar-secret" data-v-c9141e5e>L</text><text x="172.97430377160555" y="248.210414472901" class="caesar-letter caesar-secret" data-v-c9141e5e>M</text><text x="150" y="251" class="caesar-letter caesar-secret" data-v-c9141e5e>N</text><text x="127.02569622839448" y="248.210414472901" class="caesar-letter caesar-secret" data-v-c9141e5e>O</text><text x="105.38657548379827" y="240.00377846270817" class="caesar-letter caesar-secret" data-v-c9141e5e>P</text><text x="86.34022480888365" y="226.8570318244257" class="caesar-letter caesar-secret" data-v-c9141e5e>Q</text><text x="70.99354887420898" y="209.53421568619098" class="caesar-letter caesar-secret" data-v-c9141e5e>R</text><text x="60.238440702200194" y="189.04206915608344" class="caesar-letter caesar-secret" data-v-c9141e5e>S</text><text x="54.699948086586815" y="166.57152130451107" class="caesar-letter caesar-secret" data-v-c9141e5e>T</text><text x="54.699948086586815" y="143.42847869548896" class="caesar-letter caesar-secret" data-v-c9141e5e>U</text><text x="60.23844070220018" y="120.95793084391659" class="caesar-letter caesar-secret" data-v-c9141e5e>V</text><text x="70.99354887420897" y="100.46578431380907" class="caesar-letter caesar-secret" data-v-c9141e5e>W</text><text x="86.34022480888363" y="83.14296817557432" class="caesar-letter caesar-secret" data-v-c9141e5e>X</text><text x="105.38657548379823" y="69.99622153729183" class="caesar-letter caesar-secret" data-v-c9141e5e>Y</text><text x="127.02569622839445" y="61.78958552709901" class="caesar-letter caesar-secret" data-v-c9141e5e>Z</text><!--]--><text x="150" y="157" class="caesar-key" data-v-c9141e5e>0</text></svg><p class="caesar-hidden" aria-live="polite" data-v-c9141e5e>The disc shows, outside and inside: A A, B B, C C, D D, E E, F F, G G, H H, I I, J J, K K, L L, M M, N N, O O, P P, Q Q, R R, S S, T T, U U, V V, W W, X X, Y Y, Z Z</p></div><div class="caesar-controls" data-v-c9141e5e><button type="button" class="caesar-button" data-v-c9141e5e>−1</button><span class="caesar-turned" data-v-c9141e5e>Turned by 0</span><button type="button" class="caesar-button" data-v-c9141e5e>+1</button></div><label class="caesar-field" data-v-c9141e5e><span data-v-c9141e5e>Key</span><input value="" inputmode="numeric" autocapitalize="characters" autocomplete="off" spellcheck="false" data-v-c9141e5e></label></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Task no. 1</p><div class="explainer-task"><p>The secret word is ECTF. Find the key.</p></div><details class="explainer-solution"><summary>Solution</summary><p>2 (CARD → ECTF, 2)</p></details></div></div>
+<p class="question-feedback" data-right="Right!" data-wrong="Sorry, that is not right." data-incomplete="Answer first: choose, type or match everything."></p>
+<script type="application/json" class="explainer-component-props">{"mode":"knacken","task":"The secret word is {geheim}. Find the key.","woerter":[{"wort":"TENT"},{"wort":"BUS"},{"wort":"LAKE"},{"wort":"BOAT"},{"wort":"TRAIN"},{"wort":"CASTLE"},{"wort":"CARD"},{"wort":"NIGHT"},{"wort":"SUN"},{"wort":"WOOD"}],"min":2,"max":11,"field":"Key","turned":"Turned by {k}","back":"−1","forward":"+1","mapping":"The disc shows, outside and inside: {list}","mistakes":["You counted the other way. The key is the number of places the letters move forwards when encrypting.","One place too far. Check one letter on the disc."]}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Trying every key</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="cad86efb" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>With Caesar there are only <strong>25</strong> keys, from 1 to 25. The key 26 would be like 0: nothing changes.
+Anyone who tries all 25 will definitely find the message, even without the key. With the scytale and 9
+letters there are even fewer sensible keys.</p>
+<p>A <strong>mixed alphabet</strong> is different: each letter gets any other letter, for example A becomes Q, B becomes M
+and so on. Then the key is the whole list. There are so many of these that the number has 27 digits. That is much more
+secure than Caesar, but still not secure: because each letter is always replaced by the same one, common
+letters such as E give away something about the text.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="a5104c90" data-block-type="table" data-block-order="4">
+<div class="block-table" role="region" aria-label="How many keys someone would have to try" tabindex="0"><table><caption>How many keys someone would have to try</caption><thead><tr><th scope="col">Method</th><th scope="col">Keys</th></tr></thead><tbody><tr><td>Morse code (not encryption)</td><td>none, everyone knows the table</td></tr><tr><td>Caesar</td><td>25</td></tr><tr><td>mixed alphabet</td><td>a number with 27 digits</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="7d451a42" data-block-type="note" data-block-order="5">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Remember</h3>
+<div class="explainer-block" data-block="idee/3/1" data-block-id="fd8e53c8" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>A secure method needs <strong>so many keys</strong> that nobody can try them all, and the <strong>key</strong> has to <strong>stay
+secret</strong>. That is needed, but not enough: the method must not have any other weak spot either. Everyone
+may know the method itself. Today computers encrypt with methods that experts have checked for a long
+time, and with huge keys. You protect yourself by making your password long and never telling it to anyone.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practice</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="c02941f0" data-block-type="number" data-block-order="7">
+<div class="explainer-exercise explainer-question" id="caesar-schluessel-zahl">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-caesar-schluessel-zahl" data-id="caesar-schluessel-zahl" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">What is the largest number of keys class 6c has to try with Caesar to crack any message?</legend>
+<label class="question-number">Your answer <input type="text" inputmode="decimal" autocomplete="off" name="frage-caesar-schluessel-zahl">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 25</p>
+<p class="question-explanation">The keys 1 to 25 each shift differently. After at most 25 tries the message can be read.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 25</p>
+<p class="question-explanation">The keys 1 to 25 each shift differently. After at most 25 tries the message can be read.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"caesar-schluessel-zahl","text":"What is the largest number of keys class 6c has to try with Caesar to crack any message?","explanation":"The keys 1 to 25 each shift differently. After at most 25 tries the message can be read.","links":[],"type":"number","answer":25,"tolerance":0,"mistakes":[{"answer":26,"message":"The key 26 turns the disc all the way round. Then nothing changes, so it does not count."},{"answer":1,"message":"Class 6c does not know the key. In the worst case they have to try every one."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="19222368" data-block-type="ordering" data-block-order="8">
+<div class="explainer-exercise explainer-question" id="verfahren-ordnen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-verfahren-ordnen" data-id="verfahren-ordnen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Put the methods in order of how secure they are, the least secure first.</legend>
+<p class="question-hint">Give each entry its place: 1 for the first.</p>
+<ul class="question-pairs">
+<li><label><span>Caesar with a key</span> <select name="frage-verfahren-ordnen-1" data-item="1"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option></select></label></li>
+<li><label><span>mixed alphabet</span> <select name="frage-verfahren-ordnen-2" data-item="2"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option></select></label></li>
+<li><label><span>Morse code (not encryption)</span> <select name="frage-verfahren-ordnen-0" data-item="0"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 1. Morse code (not encryption), 2. Caesar with a key, 3. mixed alphabet</p>
+<p class="question-explanation">Anyone can read Morse code. Caesar has 25 keys. The mixed alphabet has so many that nobody can try them all. But even it is not completely secure.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 1. Morse code (not encryption), 2. Caesar with a key, 3. mixed alphabet</p>
+<p class="question-explanation">Anyone can read Morse code. Caesar has 25 keys. The mixed alphabet has so many that nobody can try them all. But even it is not completely secure.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"verfahren-ordnen","text":"Put the methods in order of how secure they are, the least secure first.","explanation":"Anyone can read Morse code. Caesar has 25 keys. The mixed alphabet has so many that nobody can try them all. But even it is not completely secure.","links":[],"type":"ordering","items":["Morse code (not encryption)","Caesar with a key","mixed alphabet"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="38895a69" data-block-type="true-false" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="geheimes-verfahren">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-geheimes-verfahren" data-id="geheimes-verfahren" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">A method is secure if nobody knows how it works.</legend>
+<label class="question-option"><input type="radio" name="frage-geheimes-verfahren" value="true"> <span>True</span></label>
+<label class="question-option"><input type="radio" name="frage-geheimes-verfahren" value="false"> <span>False</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">Class 6c knew that 6b uses Caesar and still had a go. Whether a method is secure does not depend on whether people know it. It needs very many keys, and the key has to stay secret.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">Class 6c knew that 6b uses Caesar and still had a go. Whether a method is secure does not depend on whether people know it. It needs very many keys, and the key has to stay secret.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"geheimes-verfahren","text":"A method is secure if nobody knows how it works.","explanation":"Class 6c knew that 6b uses Caesar and still had a go. Whether a method is secure does not depend on whether people know it. It needs very many keys, and the key has to stay secret.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="fb6e01a7" data-block-type="single-choice" data-block-order="10">
+<div class="explainer-exercise explainer-question" id="am-besten-schuetzen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-am-besten-schuetzen" data-id="am-besten-schuetzen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Which of these three ways protects class 6b's next message best?</legend>
+<label class="question-option"><input type="radio" name="frage-am-besten-schuetzen" value="0"> <span>With a mixed alphabet, whose list they only pass on in person</span></label>
+<label class="question-option"><input type="radio" name="frage-am-besten-schuetzen" value="1"> <span>With Caesar and the key 25 instead of 3</span></label>
+<label class="question-option"><input type="radio" name="frage-am-besten-schuetzen" value="2"> <span>With the key written just below the message, so that Selin does not forget it</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>With a mixed alphabet, whose list they only pass on in person</strong> <span class="question-badge question-badge-right">right answer</span></p><p>There are very many keys, and the key does not get into the wrong hands.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>With Caesar and the key 25 instead of 3</strong></p><p>A different key does not help. Class 6c simply tries all 25.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>With the key written just below the message, so that Selin does not forget it</strong></p><p>Whoever finds the note then also has the key. The key must be kept separate and secret.</p></li>
+</ul>
+<p class="question-explanation">Of these three ways, this is the best. Many possible keys and a secret key are needed for a message to be secure.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>With a mixed alphabet, whose list they only pass on in person</strong> <span class="question-badge question-badge-right">right answer</span></p><p>There are very many keys, and the key does not get into the wrong hands.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>With Caesar and the key 25 instead of 3</strong></p><p>A different key does not help. Class 6c simply tries all 25.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>With the key written just below the message, so that Selin does not forget it</strong></p><p>Whoever finds the note then also has the key. The key must be kept separate and secret.</p></li>
+</ul>
+<p class="question-explanation">Of these three ways, this is the best. Many possible keys and a secret key are needed for a message to be secure.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"am-besten-schuetzen","text":"Which of these three ways protects class 6b's next message best?","explanation":"Of these three ways, this is the best. Many possible keys and a secret key are needed for a message to be secure.","links":[],"type":"single-choice","options":[{"text":"With a mixed alphabet, whose list they only pass on in person","correct":true,"info":"There are very many keys, and the key does not get into the wrong hands."},{"text":"With Caesar and the key 25 instead of 3","correct":false,"info":"A different key does not help. Class 6c simply tries all 25."},{"text":"With the key written just below the message, so that Selin does not forget it","correct":false,"info":"Whoever finds the note then also has the key. The key must be kept separate and secret."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="8e354b15" data-block-type="matching" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="verfahren-schluessel">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-verfahren-schluessel" data-id="verfahren-schluessel" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">How many keys does the method have? Match them.</legend>
+<p class="question-hint">Choose the match for each entry.</p>
+<ul class="question-pairs">
+<li><label><span>Caesar</span> <select name="frage-verfahren-schluessel-0" data-left="0"><option value="">please choose</option><option value="0">25</option><option value="2">none, it is not secret</option><option value="1">a number with 27 digits</option></select></label></li>
+<li><label><span>mixed alphabet</span> <select name="frage-verfahren-schluessel-1" data-left="1"><option value="">please choose</option><option value="0">25</option><option value="2">none, it is not secret</option><option value="1">a number with 27 digits</option></select></label></li>
+<li><label><span>Morse code (not encryption)</span> <select name="frage-verfahren-schluessel-2" data-left="2"><option value="">please choose</option><option value="0">25</option><option value="2">none, it is not secret</option><option value="1">a number with 27 digits</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> Caesar – 25; mixed alphabet – a number with 27 digits; Morse code (not encryption) – none, it is not secret</p>
+<p class="question-explanation">The more keys there are, the longer someone would have to try.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> Caesar – 25; mixed alphabet – a number with 27 digits; Morse code (not encryption) – none, it is not secret</p>
+<p class="question-explanation">The more keys there are, the longer someone would have to try.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"verfahren-schluessel","text":"How many keys does the method have? Match them.","explanation":"The more keys there are, the longer someone would have to try.","links":[],"type":"matching","pairs":[{"left":"Caesar","right":"25"},{"left":"mixed alphabet","right":"a number with 27 digits"},{"left":"Morse code (not encryption)","right":"none, it is not secret"}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="57a9cdfd" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Looking back on the whole app: you have seen the school trip as a note, a table, a chart and a tree, as a
+number made of bits, as a pixel picture and as secret writing. It was always the same information, just
+shown in a different way. And in the end, a computer stores every one of these forms with 0 and 1.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “Representing and encoding data”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-daten-codieren","app":"Representing and encoding data","root":"../../../en/","repository":"lernapps/informatik-daten-codieren","revision":"99f8566","page":{"title":"How secure is it?","order":12}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/geheim/caesar/">Back: The Caesar disc</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>

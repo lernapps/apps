@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-DYVfKw6-.css">
+    <title>Bilder aus Pixeln – Daten darstellen und codieren</title>
+    <meta name="description" content="Ein Bild als Raster aus Pixeln speichern: schwarz-weiß mit 0 und 1, farbig mit Farbnummern." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../bilder/pixel/" />
+    <link rel="alternate" hreflang="en" href="../../en/bilder/pixel/" />
+    <script type="module" crossorigin src="../../assets/islands-CVr_SBvR.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../bilder/pixel/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/bilder/pixel/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../bilder/">Bilder aus Punkten und Formen</a></li><li aria-current="page">Bilder aus Pixeln</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Bilder aus Pixeln</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../bilder/pixel/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧bilder/pixel/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-daten-codieren","page":{"id":"pixel","title":"Bilder aus Pixeln","exercises":[{"id":"pixel-zaehlen","section":"einstieg","numbered":false},{"id":"bild-malen","section":"ausprobieren","numbered":true},{"id":"zeile-decodieren","section":"uebung","numbered":false},{"id":"farbe-decodieren","section":"uebung","numbered":false},{"id":"bits-farbbild","section":"uebung","numbered":false},{"id":"bild-kennt-form","section":"uebung","numbered":false}],"sections":["einstieg","idee","ausprobieren","uebung"]},"tutor":"bilder/pixel/tutor/","markdown":"bilder/pixel/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Ein Logo für die Klassenfahrt</a></li><li><a href="#idee">Ein Pixel ist ein Bildpunkt</a></li><li><a href="#ausprobieren">Ausprobieren</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Ein Logo für die Klassenfahrt</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="bae9f641" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Selin malt ein Logo für die Klassenfahrt auf Karopapier: ein Zelt. Jedes Kästchen ist ganz schwarz oder
+ganz weiß. Neben jede Zeile schreibt sie, welche Kästchen schwarz sind: 1 für schwarz, 0 für weiß.</p>
+<p>Im letzten Kapitel hast du Zahlen mit Bits geschrieben. Auf dieser Seite siehst du, wie ein Bild aus Bits
+entsteht.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="92afbf4b" data-block-type="figure" data-block-order="2">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/szene-logo.svg" alt="Selin neben einem Blatt Karopapier. Auf dem Papier ist ein Zelt aus schwarzen Kästchen gemalt." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Figuren aus dem Explainer „Informatiksysteme“ (lernapps/informatik-computer). Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Figuren aus dem Explainer „Informatiksysteme“ (lernapps/informatik-computer). Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Selin und ihr Zelt-Logo</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="07a8036d" data-block-type="figure" data-block-order="3">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/zelt-pixel.svg" alt="Ein Raster aus 6 mal 6 Kästchen mit einem schwarzen Zelt. Neben den Zeilen steht von oben nach unten: 001100, 011110, 011110, 111111, 110011, 110011." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Selins Zelt. Jede Zeile des Bildes ist eine Bitfolge.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/4" data-block-id="b1f5135e" data-block-type="number" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="pixel-zaehlen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-pixel-zaehlen" data-id="pixel-zaehlen" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Aus wie vielen Kästchen besteht Selins Bild?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-pixel-zaehlen">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 36</p>
+<p class="question-explanation">6 Zeilen mit je 6 Kästchen sind 6 · 6 = 36 Kästchen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 36</p>
+<p class="question-explanation">6 Zeilen mit je 6 Kästchen sind 6 · 6 = 36 Kästchen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"pixel-zaehlen","text":"Aus wie vielen Kästchen besteht Selins Bild?","explanation":"6 Zeilen mit je 6 Kästchen sind 6 · 6 = 36 Kästchen.","links":[],"type":"number","answer":36,"tolerance":0,"mistakes":[{"answer":12,"message":"Du hast 6 + 6 gerechnet oder nur die weißen Kästchen gezählt. Das Bild hat 6 Zeilen mit je 6 Kästchen, also 6 · 6."},{"answer":24,"message":"Das sind nur die schwarzen Kästchen. Gefragt sind alle, auch die weißen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Ein Pixel ist ein Bildpunkt</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="6158e129" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-pixel"><a href="../../glossar/#pixel">Pixel</a></dfn></dt><dd><p>Ein Pixel ist der kleinste Punkt eines Bildes. Jedes Pixel hat genau eine Farbe.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="805ba055" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-pixelgrafik"><a href="../../glossar/#pixelgrafik">Pixelgrafik</a></dfn></dt><dd><p>Eine Pixelgrafik speichert ein Bild als Raster aus Zeilen und Spalten. Für jedes Pixel speichert sie seine Farbe als Zahl.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="bcb2ab43" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Für mehr als zwei Farben braucht jedes Pixel mehr als ein Bit. Mit zwei Bits hat jedes Pixel eine von vier <strong>Farbnummern</strong>.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="7b70c1c1" data-block-type="table" data-block-order="8">
+<div class="block-table" role="region" aria-label="Eine Farbtabelle mit zwei Bits je Pixel" tabindex="0"><table><caption>Eine Farbtabelle mit zwei Bits je Pixel</caption><thead><tr><th scope="col">Farbnummer</th><th scope="col">Farbe</th></tr></thead><tbody><tr><td>00</td><td>weiß</td></tr><tr><td>01</td><td>rot</td></tr><tr><td>10</td><td>blau</td></tr><tr><td>11</td><td>schwarz</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="c7c56609" data-block-type="note" data-block-order="9">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/5/1" data-block-id="d8a805dd" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Ein Pixelbild weiß nicht, dass es ein Zelt zeigt. Es kennt nur Pixel und ihre Farben, Zeile für Zeile von oben nach unten, jede Zeile von links nach rechts.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Ausprobieren</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="bb028a56" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Jetzt malst du selbst. Links steht der Code eines Bildes, Zeile für Zeile. Tippe auf ein Pixel, um es schwarz zu machen, noch einmal tippen macht es wieder weiß. „Alles weiß“ löscht das Bild. Dann drücke „Prüfen“.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="a78249cd" data-block-type="vue-component" data-block-order="12">
+<div class="explainer-component" id="bild-malen" data-component="PixelEditor" data-exercise data-seeds="[1,4,6,7,8,12,14,20]" data-checked>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Aufgabe Nr. {n}">Aufgabe Nr. 1</span> <button type="button" class="explainer-new-task" title="Neue Aufgabe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">Neue Aufgabe</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="pixel-editor" data-v-4bd6e8ff><p data-v-4bd6e8ff>Male das Bild nach dem Code. 1 heißt schwarz, 0 heißt weiß.</p><p class="pixel-editor-label" data-v-4bd6e8ff>Code</p><!----><div class="pixel-editor-work" data-v-4bd6e8ff><ul class="pixel-editor-lines" data-v-4bd6e8ff><!--[--><li data-v-4bd6e8ff>001100</li><li data-v-4bd6e8ff>011110</li><li data-v-4bd6e8ff>111111</li><li data-v-4bd6e8ff>011110</li><li data-v-4bd6e8ff>001100</li><li data-v-4bd6e8ff>001100</li><!--]--></ul><div class="pixel-editor-grid" data-v-4bd6e8ff><!--[--><!--[--><!--[--><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 1, Spalte 1: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 1, Spalte 2: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 1, Spalte 3: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 1, Spalte 4: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 1, Spalte 5: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 1, Spalte 6: weiß, </span><span data-v-4bd6e8ff>0</span></button><!--]--><!--]--><!--[--><!--[--><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 2, Spalte 1: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 2, Spalte 2: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 2, Spalte 3: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 2, Spalte 4: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 2, Spalte 5: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 2, Spalte 6: weiß, </span><span data-v-4bd6e8ff>0</span></button><!--]--><!--]--><!--[--><!--[--><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 3, Spalte 1: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 3, Spalte 2: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 3, Spalte 3: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 3, Spalte 4: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 3, Spalte 5: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 3, Spalte 6: weiß, </span><span data-v-4bd6e8ff>0</span></button><!--]--><!--]--><!--[--><!--[--><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 4, Spalte 1: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 4, Spalte 2: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 4, Spalte 3: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 4, Spalte 4: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 4, Spalte 5: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 4, Spalte 6: weiß, </span><span data-v-4bd6e8ff>0</span></button><!--]--><!--]--><!--[--><!--[--><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 5, Spalte 1: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 5, Spalte 2: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 5, Spalte 3: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 5, Spalte 4: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 5, Spalte 5: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 5, Spalte 6: weiß, </span><span data-v-4bd6e8ff>0</span></button><!--]--><!--]--><!--[--><!--[--><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 6, Spalte 1: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 6, Spalte 2: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 6, Spalte 3: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 6, Spalte 4: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 6, Spalte 5: weiß, </span><span data-v-4bd6e8ff>0</span></button><button type="button" class="pixel-editor-pixel" aria-pressed="false" data-v-4bd6e8ff><span class="pixel-editor-hidden" data-v-4bd6e8ff>Pixel Zeile 6, Spalte 6: weiß, </span><span data-v-4bd6e8ff>0</span></button><!--]--><!--]--><!--]--></div></div><div class="pixel-editor-actions" data-v-4bd6e8ff><button type="button" class="pixel-editor-reset" data-v-4bd6e8ff>Alles weiß</button></div></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Aufgabe Nr. 1</p><div class="explainer-task"><p>Male das Bild nach dem Code. 1 heißt schwarz, 0 heißt weiß.</p>
+<p>001100<br>011110<br>111111<br>011110<br>001100<br>001100</p></div><details class="explainer-solution"><summary>Lösung</summary><p>Das Bild zeigt: Baum.</p>
+<p>□□■■□□<br>□■■■■□<br>■■■■■■<br>□■■■■□<br>□□■■□□<br>□□■■□□</p></details></div></div>
+<p class="question-feedback" data-right="Richtig!" data-wrong="Leider nicht richtig." data-incomplete="Antworte zuerst: Wähle, tippe oder ordne alles zu."></p>
+<script type="application/json" class="explainer-component-props">{"task":"Male das Bild nach dem Code. 1 heißt schwarz, 0 heißt weiß.","code":"bits","bilder":[{"name":"Zelt","zeilen":[12,30,30,63,51,51]},{"name":"Haus","zeilen":[4,14,31,17,21,29]},{"name":"Boot","zeilen":[4,6,7,4,63,30]},{"name":"Fahne","zeilen":[48,60,63,48,32,32]},{"name":"Pfeil","zeilen":[4,6,63,63,6,4]},{"name":"Baum","zeilen":[12,30,63,30,12,12]},{"name":"Herz","zeilen":[0,27,63,30,12,0]},{"name":"Schlüssel","zeilen":[24,36,39,37,24,0]}],"codeLabel":"Code","cell":"Pixel Zeile {r}, Spalte {c}","black":"schwarz","white":"weiß","reset":"Alles weiß","shows":"Das Bild zeigt: {name}.","mistakes":["Dein Bild ist gespiegelt. Lies jede Zeile von links nach rechts.","Schwarz und Weiß sind vertauscht. 1 heißt schwarz, 0 heißt weiß.","Du hast jede Zeile des Codes als Spalte gemalt. Male Zeile 1 des Codes in die oberste Reihe."]}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="d58a1877" data-block-type="single-choice" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="zeile-decodieren">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-zeile-decodieren" data-id="zeile-decodieren" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Pixelzeile hat den Code 100001? (■ ist schwarz, □ ist weiß.)</legend>
+<label class="question-option"><input type="radio" name="frage-zeile-decodieren" value="0"> <span>■□□□□■</span></label>
+<label class="question-option"><input type="radio" name="frage-zeile-decodieren" value="1"> <span>□■■■■□</span></label>
+<label class="question-option"><input type="radio" name="frage-zeile-decodieren" value="2"> <span>■■□□□□</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>■□□□□■</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die erste und die letzte Ziffer sind 1, also sind nur das erste und das letzte Pixel schwarz.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>□■■■■□</strong></p><p>Hier sind Schwarz und Weiß vertauscht. Das wäre 011110.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>■■□□□□</strong></p><p>Das wäre 110000. Beim Code 100001 ist das zweite Pixel weiß.</p></li>
+</ul>
+<p class="question-explanation">Jede Ziffer ist ein Pixel, von links nach rechts. 1 ist schwarz, 0 ist weiß.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>■□□□□■</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die erste und die letzte Ziffer sind 1, also sind nur das erste und das letzte Pixel schwarz.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>□■■■■□</strong></p><p>Hier sind Schwarz und Weiß vertauscht. Das wäre 011110.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>■■□□□□</strong></p><p>Das wäre 110000. Beim Code 100001 ist das zweite Pixel weiß.</p></li>
+</ul>
+<p class="question-explanation">Jede Ziffer ist ein Pixel, von links nach rechts. 1 ist schwarz, 0 ist weiß.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"zeile-decodieren","text":"Welche Pixelzeile hat den Code 100001? (■ ist schwarz, □ ist weiß.)","explanation":"Jede Ziffer ist ein Pixel, von links nach rechts. 1 ist schwarz, 0 ist weiß.","links":[],"type":"single-choice","options":[{"text":"■□□□□■","correct":true,"info":"Die erste und die letzte Ziffer sind 1, also sind nur das erste und das letzte Pixel schwarz."},{"text":"□■■■■□","correct":false,"info":"Hier sind Schwarz und Weiß vertauscht. Das wäre 011110."},{"text":"■■□□□□","correct":false,"info":"Das wäre 110000. Beim Code 100001 ist das zweite Pixel weiß."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="9894b48a" data-block-type="matching" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="farbe-decodieren">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-farbe-decodieren" data-id="farbe-decodieren" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia malt eine Fahne mit der Farbtabelle. Welche Farbe hat welches Pixel? Ordne zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Pixel mit 01</span> <select name="frage-farbe-decodieren-0" data-left="0"><option value="">bitte wählen</option><option value="0">rot</option><option value="1">blau</option><option value="3">grün</option><option value="2">schwarz</option></select></label></li>
+<li><label><span>Pixel mit 10</span> <select name="frage-farbe-decodieren-1" data-left="1"><option value="">bitte wählen</option><option value="0">rot</option><option value="1">blau</option><option value="3">grün</option><option value="2">schwarz</option></select></label></li>
+<li><label><span>Pixel mit 11</span> <select name="frage-farbe-decodieren-2" data-left="2"><option value="">bitte wählen</option><option value="0">rot</option><option value="1">blau</option><option value="3">grün</option><option value="2">schwarz</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Pixel mit 01 – rot; Pixel mit 10 – blau; Pixel mit 11 – schwarz</p>
+<p class="question-explanation">Die Farbtabelle sagt für jede Farbnummer die Farbe. Grün hat in dieser Tabelle keine Nummer.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Pixel mit 01 – rot; Pixel mit 10 – blau; Pixel mit 11 – schwarz</p>
+<p class="question-explanation">Die Farbtabelle sagt für jede Farbnummer die Farbe. Grün hat in dieser Tabelle keine Nummer.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"farbe-decodieren","text":"Mia malt eine Fahne mit der Farbtabelle. Welche Farbe hat welches Pixel? Ordne zu.","explanation":"Die Farbtabelle sagt für jede Farbnummer die Farbe. Grün hat in dieser Tabelle keine Nummer.","links":[],"type":"matching","pairs":[{"left":"Pixel mit 01","right":"rot"},{"left":"Pixel mit 10","right":"blau"},{"left":"Pixel mit 11","right":"schwarz"}],"distractors":["grün"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="313d0678" data-block-type="number" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="bits-farbbild">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-bits-farbbild" data-id="bits-farbbild" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Bild hat 6 · 6 Pixel. Jedes Pixel hat eine Farbnummer mit 2 Bits. Wie viele Bits braucht das Bild?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-bits-farbbild" aria-describedby="frage-bits-farbbild-unit"> <span id="frage-bits-farbbild-unit">Bit</span> </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 72 Bit</p>
+<p class="question-explanation">6 · 6 = 36 Pixel, jedes mit 2 Bits. 36 · 2 = 72 Bits.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 72 Bit</p>
+<p class="question-explanation">6 · 6 = 36 Pixel, jedes mit 2 Bits. 36 · 2 = 72 Bits.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"bits-farbbild","text":"Ein Bild hat 6 · 6 Pixel. Jedes Pixel hat eine Farbnummer mit 2 Bits. Wie viele Bits braucht das Bild?","explanation":"6 · 6 = 36 Pixel, jedes mit 2 Bits. 36 · 2 = 72 Bits.","links":[],"type":"number","answer":72,"tolerance":0,"unit":"Bit","mistakes":[{"answer":36,"message":"36 Bit reichen nur für Schwarz-Weiß. Hier hat jedes Pixel 2 Bits."},{"answer":14,"message":"Du hast 6 + 6 + 2 gerechnet. Rechne erst die Zahl der Pixel aus und dann mal 2."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="f185a312" data-block-type="true-false" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="bild-kennt-form">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-bild-kennt-form" data-id="bild-kennt-form" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Pixelgrafik speichert, dass auf dem Bild ein Zelt ist.</legend>
+<label class="question-option"><input type="radio" name="frage-bild-kennt-form" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-bild-kennt-form" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Eine Pixelgrafik speichert nur die Farbe jedes Pixels. Dass es ein Zelt ist, siehst erst du.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Eine Pixelgrafik speichert nur die Farbe jedes Pixels. Dass es ein Zelt ist, siehst erst du.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"bild-kennt-form","text":"Eine Pixelgrafik speichert, dass auf dem Bild ein Zelt ist.","explanation":"Eine Pixelgrafik speichert nur die Farbe jedes Pixels. Dass es ein Zelt ist, siehst erst du.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="d137d170" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Jetzt kannst du ein Bild aus Pixeln codieren und decodieren. Jona und Selin machen für die Klassenfahrt ein großes Plakat. Was passiert, wenn man ein Pixelbild vergrößert? Das siehst du auf der nächsten Seite.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Daten darstellen und codieren“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-daten-codieren","app":"Daten darstellen und codieren","root":"../../","repository":"lernapps/informatik-daten-codieren","revision":"99f8566","page":{"title":"Bilder aus Pixeln","order":8}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../bits/bit-und-byte/">Zurück: Bit und Byte</a><a rel="next" href="../../bilder/vektor/">Weiter: Pixel oder Vektor?</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

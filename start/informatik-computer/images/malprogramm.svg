@@ -1,0 +1,45 @@
+<!-- Ein erfundenes Malprogramm (lernapps/informatik-computer, #490), eigene Zeichnung, CC-BY-4.0. Kein Screenshot
+     fremder Software, kein Text im Bild: Die Symbole der Leiste sind allgemein (Ordner, Diskette, Schere, zwei Blätter,
+     Klemmbrett, Pfeil zurück); ihre Namen stehen in der Legende des labelled-figure. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img">
+  <title>Ein Malprogramm mit sechs Knöpfen oben und einer Sonne auf der Malfläche</title>
+  <rect width="480" height="300" fill="#ffffff"/>
+  <!-- Fenster -->
+  <rect x="10" y="10" width="460" height="280" rx="8" fill="#f4f4f4" stroke="#333" stroke-width="3"/>
+  <rect x="10" y="10" width="460" height="22" rx="8" fill="#2b5d8a"/>
+  <circle cx="452" cy="21" r="5" fill="#ffffff"/>
+  <!-- Leiste mit sechs Knöpfen -->
+  <g fill="#ffffff" stroke="#333" stroke-width="2">
+    <rect x="24" y="42" width="44" height="40" rx="6"/><rect x="76" y="42" width="44" height="40" rx="6"/>
+    <rect x="148" y="42" width="44" height="40" rx="6"/><rect x="200" y="42" width="44" height="40" rx="6"/>
+    <rect x="252" y="42" width="44" height="40" rx="6"/><rect x="324" y="42" width="44" height="40" rx="6"/>
+  </g>
+  <!-- 1 Öffnen: Ordner -->
+  <path d="M33 56h10l4 4h12v16h-26z" fill="#e0b24a" stroke="#333" stroke-width="2"/>
+  <!-- 2 Speichern: Diskette -->
+  <rect x="86" y="50" width="24" height="24" rx="2" fill="#2f5fb3" stroke="#333" stroke-width="2"/>
+  <rect x="91" y="50" width="14" height="8" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+  <rect x="90" y="64" width="16" height="10" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+  <!-- 3 Ausschneiden: Schere -->
+  <g stroke="#333" stroke-width="2" fill="none">
+    <circle cx="162" cy="72" r="4"/><circle cx="178" cy="72" r="4"/>
+    <path d="M165 69l16 -18M175 69l-16 -18"/>
+  </g>
+  <!-- 4 Kopieren: zwei Blätter -->
+  <rect x="212" y="50" width="16" height="20" fill="#ffffff" stroke="#333" stroke-width="2"/>
+  <rect x="218" y="56" width="16" height="20" fill="#ffffff" stroke="#333" stroke-width="2"/>
+  <!-- 5 Einfügen: Klemmbrett mit Blatt -->
+  <rect x="263" y="50" width="22" height="26" rx="2" fill="#b07a3c" stroke="#333" stroke-width="2"/>
+  <rect x="269" y="47" width="10" height="6" rx="1" fill="#888" stroke="#333" stroke-width="1.5"/>
+  <rect x="268" y="58" width="12" height="14" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+  <!-- 6 Rückgängig: Pfeil zurück -->
+  <path d="M356 70 q0 -16 -16 -16 h-6" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M338 47l-8 7l8 7" fill="none" stroke="#333" stroke-width="3"/>
+  <!-- Malfläche mit Sonne, markiert -->
+  <rect x="24" y="94" width="432" height="182" fill="#ffffff" stroke="#999" stroke-width="2"/>
+  <g stroke="#e0a000" stroke-width="4" stroke-linecap="round">
+    <path d="M150 140v-16M150 216v16M112 178h-16M188 178h16M123 151l-11 -11M177 205l11 11M177 151l11 -11M123 205l-11 11"/>
+  </g>
+  <circle cx="150" cy="178" r="26" fill="#ffd23f" stroke="#e0a000" stroke-width="3"/>
+  <rect x="88" y="116" width="124" height="124" fill="none" stroke="#2b5d8a" stroke-width="2" stroke-dasharray="6 4"/>
+</svg>

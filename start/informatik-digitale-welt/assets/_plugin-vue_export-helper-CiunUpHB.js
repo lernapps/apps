@@ -1,0 +1,1 @@
+var e=[`#b5473a`,`#bf7537`,`#a67c2a`,`#7c9052`,`#2e7d6b`];function t(t){return e[Math.min(Math.max(Math.round(t),1),e.length)-1]}function n(e){return e.map((e,n)=>({nummer:n+1,wort:e,farbe:t(n+1)}))}var r=(e,t)=>{let n=e.__vccOpts||e;for(let[e,r]of t)n[e]=r;return n};export{n,r as t};

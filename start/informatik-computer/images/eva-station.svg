@@ -1,0 +1,54 @@
+<!-- Die Kinder der Klasse 6b im Epic Informatik (lernapps/apps#509): Jona, Selin und Mia, alle 11. Stil der Vorlage
+     story-characters.svg von lernapps/tooling (eigene Zeichnung, CC-BY-4.0). Andere Explainer des Epics dürfen die
+     defs kopieren; Aussehen nicht ändern. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img">
+  <title>Station EVA-Prinzip: Jona tippt auf einem großen Taschenrechner, Selin steht daneben</title>
+  <defs>
+    <!-- Jona: kurze rotblonde Haare, helle Haut, grüner Kapuzenpulli -->
+    <g id="jona" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#2e8b57"/>
+      <path d="M34 88 Q50 104 66 88" fill="none" stroke="#1f5e3b" stroke-width="3"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M20 50 Q16 16 50 14 Q84 16 80 50 Q76 32 60 30 Q44 26 34 32 Q24 36 20 50 Z" fill="#c8642a"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g>
+    <!-- Selin: lange dunkelbraune Haare mit Pferdeschwanz, orange Jacke -->
+    <g id="selin" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#e07b24"/>
+      <path d="M80 34 Q104 40 98 86 Q92 70 84 60 Z" fill="#3b2314"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#d9a27a"/>
+      <path d="M18 56 Q12 14 50 12 Q88 14 82 56 Q78 30 50 28 Q26 30 18 56 Z" fill="#3b2314"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+    <!-- Mia: schwarze Locken, runde Brille, lila Jacke -->
+    <g id="mia" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#7b4fb8"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#8d5a3b"/>
+      <path d="M16 58 Q8 30 24 18 Q34 6 50 12 Q66 4 78 16 Q94 30 84 58 Q82 36 66 30 Q50 34 34 30 Q20 38 16 58 Z" fill="#222"/>
+      <circle cx="39" cy="57" r="8" fill="none"/><circle cx="61" cy="57" r="8" fill="none"/><path d="M47 57 L53 57" fill="none"/>
+      <circle cx="39" cy="57" r="2.5" fill="#222"/><circle cx="61" cy="57" r="2.5" fill="#222"/>
+      <path d="M42 71 Q50 78 58 71" fill="none"/>
+    </g>
+  </defs>
+  <rect width="640" height="300" fill="#f4efe2"/>
+  <rect y="240" width="640" height="60" fill="#c9a77a"/>
+  <!-- Ausstellungstisch -->
+  <rect x="200" y="170" width="240" height="16" fill="#8a6a44" stroke="#333" stroke-width="2"/>
+  <rect x="215" y="186" width="12" height="60" fill="#8a6a44" stroke="#333" stroke-width="2"/>
+  <rect x="413" y="186" width="12" height="60" fill="#8a6a44" stroke="#333" stroke-width="2"/>
+  <!-- großer Taschenrechner aus Glas -->
+  <g stroke="#2b5d8a" stroke-width="3">
+    <rect x="270" y="40" width="100" height="130" rx="10" fill="#cfe6f7" fill-opacity="0.8"/>
+    <rect x="282" y="52" width="76" height="26" rx="3" fill="#e9f3e0"/>
+  </g>
+  <g fill="#ffffff" stroke="#2b5d8a" stroke-width="2">
+    <rect x="284" y="88" width="16" height="14" rx="2"/><rect x="304" y="88" width="16" height="14" rx="2"/><rect x="324" y="88" width="16" height="14" rx="2"/><rect x="344" y="88" width="12" height="14" rx="2"/>
+    <rect x="284" y="108" width="16" height="14" rx="2"/><rect x="304" y="108" width="16" height="14" rx="2"/><rect x="324" y="108" width="16" height="14" rx="2"/><rect x="344" y="108" width="12" height="14" rx="2"/>
+    <rect x="284" y="128" width="16" height="14" rx="2"/><rect x="304" y="128" width="16" height="14" rx="2"/><rect x="324" y="128" width="16" height="14" rx="2"/><rect x="344" y="128" width="12" height="34" rx="2"/>
+    <rect x="284" y="148" width="56" height="14" rx="2"/>
+  </g>
+  <use href="#jona" transform="translate(110,90) scale(.85)"/>
+  <use href="#selin" transform="translate(460,90) scale(.85)"/>
+</svg>

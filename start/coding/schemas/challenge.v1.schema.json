@@ -1,0 +1,614 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lernapps.net/coding/schemas/challenge.v1.schema.json",
+  "title": "Eine Challenge der Programmierwerkstatt (Format 1)",
+  "description": "Eine Aufgabe für die Programmierwerkstatt (lernapps.net/coding). Eine App schickt sie als Link: https://lernapps.net/coding/app/?c=<base64url(deflate-raw(JSON))>, höchstens 2000 Zeichen nach c=. Die Sprache der Werkstatt ist die Sprache der Seite: Ein deutscher Explainer verlinkt /coding/app/, ein englischer Explainer verlinkt /coding/en/app/. Die Werkstatt prüft jede Challenge beim Öffnen mit eigenem Code nach diesem Schema und prüft zusätzlich, was ein Schema nicht sagen kann (Labyrinth: gleich lange Zeilen, genau ein Start S, mindestens ein Ziel Z; Blöcke der Werkzeugkiste passen zur Welt). Mit dem Prüfskript https://lernapps.net/coding/tools/challenge-check.v1.mjs prüft eine App ihre Challenge und ihre Musterlösung zur Build-Zeit. Eine Welt-Version, die die Werkstatt nicht kennt, wird nicht ausgeführt; alte Versionen bleiben ausführbar.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "id",
+    "title",
+    "task",
+    "world",
+    "toolbox",
+    "start",
+    "limits",
+    "tests",
+    "checks",
+    "hints",
+    "view"
+  ],
+  "properties": {
+    "format": {
+      "const": 1,
+      "description": "Das Format dieser Datei; dieses Schema beschreibt Format 1."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 64,
+      "description": "Stabiler Name der Aufgabe; steht im Rückweg (#werkstatt=<id>:<status>) und in der Ergebniszeile."
+    },
+    "title": {
+      "$ref": "#/$defs/text80",
+      "description": "Titel der Aufgabe für Lernende."
+    },
+    "task": {
+      "$ref": "#/$defs/text400",
+      "description": "Was Lernende tun sollen, in einfacher Sprache, mit „du“ / „you“."
+    },
+    "world": {
+      "description": "Die Welt, ihre Version und ihre Einstellungen; Testfall 1 ist diese Einstellung selbst.",
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "version", "config"],
+          "properties": {
+            "type": {
+              "const": "labyrinth"
+            },
+            "version": {
+              "const": 1
+            },
+            "config": {
+              "$ref": "#/$defs/labyrinth-config-1"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "version", "config"],
+          "properties": {
+            "type": {
+              "const": "turtle"
+            },
+            "version": {
+              "const": 1
+            },
+            "config": {
+              "$ref": "#/$defs/turtle-config-1"
+            }
+          }
+        }
+      ]
+    },
+    "toolbox": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": {
+        "enum": [
+          "vorwaerts",
+          "links",
+          "rechts",
+          "wand-voraus",
+          "wand-links",
+          "wand-rechts",
+          "am-ziel",
+          "gehe",
+          "drehe-links-um",
+          "drehe-rechts-um",
+          "stift-hoch",
+          "stift-runter",
+          "farbe",
+          "wiederhole",
+          "solange",
+          "wenn",
+          "wenn-sonst",
+          "nicht"
+        ]
+      },
+      "description": "Die Blöcke, die Lernende bekommen. Labyrinth: vorwaerts, links, rechts, wand-voraus, wand-links, wand-rechts, am-ziel. Turtle: gehe, drehe-links-um, drehe-rechts-um, stift-hoch, stift-runter, farbe. Jede Welt: wiederhole, solange, wenn, wenn-sonst, nicht."
+    },
+    "start": {
+      "description": "Ein Programm, das schon in der Arbeitsfläche liegt, oder null.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/program"
+        }
+      ]
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "blocks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200,
+          "description": "Höchstens so viele Blöcke (Zahlenfelder zählen nicht)."
+        },
+        "steps": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000,
+          "description": "Schrittlimit je Testfall; ohne Angabe 1000. Jeder Befehl und jeder Steuerschritt zählt."
+        }
+      }
+    },
+    "tests": {
+      "type": "array",
+      "maxItems": 9,
+      "description": "Weitere Testfälle: ihre Einstellungen werden über world.config gelegt (flach). Das Programm muss in jedem bestehen.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["config"],
+        "properties": {
+          "config": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Prüfungen: der Welt (Labyrinth: ziel-erreicht; Turtle: bild-gleich) und der Werkstatt (hoechstens-bloecke, benutzt-block:<block>). limits.blocks gilt immer.",
+      "items": {
+        "type": "string",
+        "pattern": "^(ziel-erreicht|bild-gleich|hoechstens-bloecke|benutzt-block:[a-z-]+)$"
+      }
+    },
+    "hints": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/text200"
+      },
+      "description": "Hinweise, vom Allgemeinen zum Konkreten; Lernende öffnen sie einzeln."
+    },
+    "view": {
+      "const": "bloecke",
+      "description": "Die Ansicht; in Format 1 nur Blöcke."
+    },
+    "back": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "label"],
+      "description": "Der Rückweg. Die Werkstatt öffnet https://lernapps.net<url>#werkstatt=<id>:<geloest|offen>.",
+      "properties": {
+        "url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^/[a-z0-9/-]*/(\\?[a-z0-9=&-]*)?$"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["de"],
+              "properties": {
+                "de": {
+                  "type": "string",
+                  "pattern": "^/[a-z0-9/-]*/(\\?[a-z0-9=&-]*)?$"
+                },
+                "en": {
+                  "type": "string",
+                  "pattern": "^/[a-z0-9/-]*/(\\?[a-z0-9=&-]*)?$"
+                }
+              }
+            }
+          ],
+          "description": "Ein Pfad auf lernapps.net, mit / am Anfang und Ende, optional mit Query, ohne Fragment; oder ein Pfad je Sprache."
+        },
+        "label": {
+          "$ref": "#/$defs/text60"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "text80": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["de"],
+      "properties": {
+        "de": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "\\S"
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "text400": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["de"],
+      "properties": {
+        "de": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400,
+          "pattern": "\\S"
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "text200": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["de"],
+      "properties": {
+        "de": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "\\S"
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "text60": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["de"],
+      "properties": {
+        "de": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "pattern": "\\S"
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "labyrinth-config-1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["map", "facing"],
+      "properties": {
+        "map": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "string",
+            "pattern": "^[#.SZ]{1,12}$"
+          },
+          "description": "Zeilen von oben nach unten: # Wand, . Weg, S Start (genau einer), Z Ziel. Alle Zeilen gleich lang."
+        },
+        "facing": {
+          "enum": ["north", "east", "south", "west"],
+          "description": "Blickrichtung am Start."
+        }
+      }
+    },
+    "turtle-config-1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ziel"],
+      "properties": {
+        "ziel": {
+          "$ref": "#/$defs/program",
+          "description": "Das Zielbild als Programm dieser Welt (nur ihre Befehle)."
+        },
+        "start": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["x", "y", "winkel"],
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 200
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 200
+            },
+            "winkel": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 359,
+              "description": "0 ist oben, im Uhrzeigersinn."
+            }
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,31}$"
+    },
+    "program": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["main"],
+      "description": "Programm-IR v1.",
+      "properties": {
+        "main": {
+          "$ref": "#/$defs/block"
+        },
+        "procs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "params", "body"],
+            "properties": {
+              "name": {
+                "$ref": "#/$defs/name"
+              },
+              "params": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/name"
+                }
+              },
+              "body": {
+                "$ref": "#/$defs/block"
+              }
+            }
+          }
+        }
+      }
+    },
+    "block": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/stmt"
+      }
+    },
+    "stmt": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["s", "name", "args"],
+          "properties": {
+            "s": {
+              "enum": ["cmd", "call"]
+            },
+            "name": {
+              "$ref": "#/$defs/name"
+            },
+            "args": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/expr"
+              }
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["s", "times", "body"],
+          "properties": {
+            "s": {
+              "const": "repeat"
+            },
+            "times": {
+              "$ref": "#/$defs/expr"
+            },
+            "body": {
+              "$ref": "#/$defs/block"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["s", "cond", "body"],
+          "properties": {
+            "s": {
+              "const": "while"
+            },
+            "cond": {
+              "$ref": "#/$defs/expr"
+            },
+            "body": {
+              "$ref": "#/$defs/block"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["s", "cond", "then"],
+          "properties": {
+            "s": {
+              "const": "if"
+            },
+            "cond": {
+              "$ref": "#/$defs/expr"
+            },
+            "then": {
+              "$ref": "#/$defs/block"
+            },
+            "else": {
+              "$ref": "#/$defs/block"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["s", "name", "value"],
+          "properties": {
+            "s": {
+              "const": "set"
+            },
+            "name": {
+              "$ref": "#/$defs/name"
+            },
+            "value": {
+              "$ref": "#/$defs/expr"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "expr": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "value"],
+          "properties": {
+            "e": {
+              "const": "num"
+            },
+            "value": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e"],
+          "properties": {
+            "e": {
+              "const": "empty"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "name"],
+          "properties": {
+            "e": {
+              "const": "var"
+            },
+            "name": {
+              "$ref": "#/$defs/name"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "name", "args"],
+          "properties": {
+            "e": {
+              "const": "sense"
+            },
+            "name": {
+              "$ref": "#/$defs/name"
+            },
+            "args": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/expr"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "a"],
+          "properties": {
+            "e": {
+              "const": "not"
+            },
+            "a": {
+              "$ref": "#/$defs/expr"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "a", "b"],
+          "properties": {
+            "e": {
+              "enum": ["and", "or"]
+            },
+            "a": {
+              "$ref": "#/$defs/expr"
+            },
+            "b": {
+              "$ref": "#/$defs/expr"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "op", "a", "b"],
+          "properties": {
+            "e": {
+              "const": "cmp"
+            },
+            "op": {
+              "enum": ["<", "<=", "=", "!=", ">=", ">"]
+            },
+            "a": {
+              "$ref": "#/$defs/expr"
+            },
+            "b": {
+              "$ref": "#/$defs/expr"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["e", "op", "a", "b"],
+          "properties": {
+            "e": {
+              "const": "arith"
+            },
+            "op": {
+              "enum": ["+", "-", "*", "/", "%"]
+            },
+            "a": {
+              "$ref": "#/$defs/expr"
+            },
+            "b": {
+              "$ref": "#/$defs/expr"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

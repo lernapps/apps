@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img">
+  <!-- Drei Speicherorte für Mias Ordnerbaum: links Mias Tablet (türkise Hülle #2a9d8f, gelber Stern #f2c14e,
+       Bildschirm #1f2a36), in der Mitte ein USB-Stick, rechts eine Wolke mit Pfeil zu einem Haus voller Rechner
+       (Rechenzentrum einer Firma). Auf jedem Ort derselbe kleine Baum: Mias Dateien. Kein Text im Bild; die Namen
+       stehen in der Legende des labelled-figure. Unten 44 px frei. Eigene Zeichnung, CC BY 4.0. -->
+  <title>Mias Ordnerbaum auf Tablet, USB-Stick und in der Cloud</title>
+  <defs>
+    <!-- the small tree: root light blue, three nodes, leaves dashed, as in the folder tree -->
+    <g id="baum" stroke="#333" stroke-width="1.5">
+      <path d="M0 6 L-14 22 M0 6 L0 22 M0 6 L14 22" fill="none"/>
+      <rect x="-8" y="-4" width="16" height="10" rx="3" fill="#e8f0fb"/>
+      <rect x="-20" y="22" width="12" height="9" rx="2" fill="#fff" stroke-dasharray="3 2"/>
+      <rect x="-6" y="22" width="12" height="9" rx="2" fill="#fff" stroke-dasharray="3 2"/>
+      <rect x="8" y="22" width="12" height="9" rx="2" fill="#fff" stroke-dasharray="3 2"/>
+    </g>
+  </defs>
+  <rect width="360" height="250" fill="#fff"/>
+  <!-- 1 tablet -->
+  <g stroke="#333" stroke-width="2" stroke-linejoin="round">
+    <rect x="14" y="44" width="92" height="128" rx="10" fill="#2a9d8f"/>
+    <rect x="22" y="52" width="76" height="104" rx="4" fill="#1f2a36" stroke="#dfe8ee"/>
+    <path d="M96 160 l2 4.5 4.5 0 -3.5 3 1.3 4.5 -4.3 -2.6 -4.3 2.6 1.3 -4.5 -3.5 -3 4.5 0 z" fill="#f2c14e" stroke-width="1"/>
+  </g>
+  <rect x="32" y="80" width="56" height="48" rx="4" fill="#fff" stroke="#dfe8ee"/>
+  <use href="#baum" transform="translate(60,90)"/>
+  <!-- 2 USB stick -->
+  <g stroke="#333" stroke-width="2" stroke-linejoin="round">
+    <rect x="150" y="76" width="60" height="96" rx="8" fill="#5b6b7a"/>
+    <rect x="166" y="52" width="28" height="26" fill="#cfd5db"/>
+    <rect x="172" y="58" width="6" height="6" fill="#333" stroke="none"/>
+    <rect x="182" y="58" width="6" height="6" fill="#333" stroke="none"/>
+    <rect x="156" y="96" width="48" height="44" rx="4" fill="#fff"/>
+  </g>
+  <use href="#baum" transform="translate(180,106) scale(0.85)"/>
+  <!-- 3 cloud and data centre -->
+  <g stroke="#333" stroke-width="2" stroke-linejoin="round">
+    <path d="M262 74 C250 74 246 60 258 56 C258 42 278 38 284 48 C290 36 312 38 312 52 C326 52 330 72 316 74 Z" fill="#eef3f8"/>
+    <path d="M288 80 L288 112" fill="none" stroke-dasharray="4 3"/>
+    <path d="M282 106 L288 116 L294 106" fill="none"/>
+    <rect x="252" y="120" width="72" height="56" fill="#d9dde2"/>
+    <path d="M248 120 L288 102 L328 120 Z" fill="#b9c0c8"/>
+    <g fill="#5b6b7a">
+      <rect x="260" y="130" width="14" height="40"/>
+      <rect x="281" y="130" width="14" height="40"/>
+      <rect x="302" y="130" width="14" height="40"/>
+    </g>
+    <g fill="#7fd17f" stroke="none">
+      <circle cx="267" cy="137" r="2"/><circle cx="288" cy="137" r="2"/><circle cx="309" cy="137" r="2"/>
+      <circle cx="267" cy="147" r="2"/><circle cx="288" cy="147" r="2"/><circle cx="309" cy="147" r="2"/>
+    </g>
+  </g>
+  <use href="#baum" transform="translate(287,52) scale(0.8)"/>
+  <rect y="186" width="360" height="2" fill="#e5e5e5"/>
+</svg>

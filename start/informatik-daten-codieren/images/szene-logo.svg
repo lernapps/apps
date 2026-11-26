@@ -1,0 +1,41 @@
+<!-- Szene der Klassenfahrt. Die Figuren Jona, Selin und Mia (defs) sind kopiert aus lernapps/informatik-computer,
+     src/images/klasse-6b.svg (Epic lernapps/apps#509; Stil der Vorlage story-characters.svg, eigene Zeichnung,
+     CC-BY-4.0). Aussehen nicht ändern. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 284" role="img">
+  <title>Selin mit Karopapier, auf dem ein Zelt aus schwarzen Kästchen gemalt ist</title>
+  <defs>
+    <!-- Jona: kurze rotblonde Haare, helle Haut, grüner Kapuzenpulli -->
+    <g id="jona" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#2e8b57"/>
+      <path d="M34 88 Q50 104 66 88" fill="none" stroke="#1f5e3b" stroke-width="3"/>
+      <ellipse cx="50" cy="52" rx="30" ry="32" fill="#f3d2b3"/>
+      <path d="M20 50 Q16 16 50 14 Q84 16 80 50 Q76 32 60 30 Q44 26 34 32 Q24 36 20 50 Z" fill="#c8642a"/>
+      <circle cx="40" cy="56" r="3" fill="#222"/><circle cx="60" cy="56" r="3" fill="#222"/>
+      <path d="M42 68 Q50 75 58 68" fill="none"/>
+    </g>
+    <!-- Selin: lange dunkelbraune Haare mit Pferdeschwanz, orange Jacke -->
+    <g id="selin" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#e07b24"/>
+      <path d="M80 34 Q104 40 98 86 Q92 70 84 60 Z" fill="#3b2314"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#d9a27a"/>
+      <path d="M18 56 Q12 14 50 12 Q88 14 82 56 Q78 30 50 28 Q26 30 18 56 Z" fill="#3b2314"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+    <!-- Mia: schwarze Locken, runde Brille, lila Jacke -->
+    <g id="mia" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#7b4fb8"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#8d5a3b"/>
+      <path d="M16 58 Q8 30 24 18 Q34 6 50 12 Q66 4 78 16 Q94 30 84 58 Q82 36 66 30 Q50 34 34 30 Q20 38 16 58 Z" fill="#222"/>
+      <circle cx="39" cy="57" r="8" fill="none"/><circle cx="61" cy="57" r="8" fill="none"/><path d="M47 57 L53 57" fill="none"/>
+      <circle cx="39" cy="57" r="2.5" fill="#222"/><circle cx="61" cy="57" r="2.5" fill="#222"/>
+      <path d="M42 71 Q50 78 58 71" fill="none"/>
+    </g>
+  </defs>
+  <rect width="480" height="284" fill="#fff"/>
+  <rect width="480" height="240" fill="#f4efe2"/>
+  <rect y="200" width="480" height="40" fill="#c9a77a"/>
+  <use href="#selin" transform="translate(90,40)"/>
+  <rect x="236" y="56" width="124" height="124" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="250" y="70" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="266" y="70" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="282" y="70" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="298" y="70" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="314" y="70" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="330" y="70" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="250" y="86" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="266" y="86" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="282" y="86" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="298" y="86" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="314" y="86" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="330" y="86" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="250" y="102" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="266" y="102" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="282" y="102" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="298" y="102" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="314" y="102" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="330" y="102" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="250" y="118" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="266" y="118" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="282" y="118" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="298" y="118" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="314" y="118" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="330" y="118" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="250" y="134" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="266" y="134" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="282" y="134" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="298" y="134" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="314" y="134" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="330" y="134" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="250" y="150" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="266" y="150" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="282" y="150" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="298" y="150" width="16" height="16" fill="#fff" stroke="#9aa0a6"/><rect x="314" y="150" width="16" height="16" fill="#111" stroke="#9aa0a6"/><rect x="330" y="150" width="16" height="16" fill="#111" stroke="#9aa0a6"/>
+</svg>

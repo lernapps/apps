@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-DYVfKw6-.css">
+    <title>The IPO model – How a computer works</title>
+    <meta name="description" content="Input, process, output: sort devices and steps into the three IPO boxes." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../innen/eva-prinzip/" />
+    <link rel="alternate" hreflang="en" href="../../../en/innen/eva-prinzip/" />
+    <script type="module" crossorigin src="../../../assets/islands-j1WxmIyR.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../innen/eva-prinzip/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/innen/eva-prinzip/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li><a href="../../../en/innen/">A look inside: the IPO model</a></li><li aria-current="page">The IPO model</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>The IPO model</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/innen/eva-prinzip/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧innen/eva-prinzip/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-computer","page":{"id":"eva-prinzip","title":"The IPO model","exercises":[{"id":"woher-zahlen","section":"einstieg","numbered":false},{"id":"eva-sortieren","section":"uebung","numbered":true},{"id":"vorgang-ordnen","section":"uebung","numbered":true},{"id":"touchscreen","section":"uebung","numbered":false},{"id":"ausgabegeraete","section":"uebung","numbered":false},{"id":"foto-aufheben","section":"uebung","numbered":false}],"sections":["einstieg","idee","beispiel","uebung"]},"tutor":"innen/eva-prinzip/tutor/","markdown":"innen/eva-prinzip/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">Station 5: the big calculator</a></li><li><a href="#idee">Three boxes: input, process, output</a></li><li><a href="#beispiel">Join in: we are a computer</a></li><li><a href="#uebung">Practise at the station</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Station 5: the big calculator</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="ebac4b4e" data-block-type="figure" data-block-order="1">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/eva-station.svg" alt="Jona stands on the left next to a big glass calculator on a table. Selin stands on the right." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing. Licence: CC-BY-4.0." aria-label="Source: own drawing. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Jona and Selin at station 5 of the exhibition “The glass computer”.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="4886d902" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>At the last station you saw the parts inside the glass computer. Now you find out how they work together.
+Selin asks: “What does the calculator work out if nobody types anything?”</p>
+<p>On this page you learn the IPO model. Then you can sort devices and steps into three boxes.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="321e74d0" data-block-type="single-choice" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="woher-zahlen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-woher-zahlen" data-id="woher-zahlen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">How does the calculator know which numbers to work with?</legend>
+<label class="question-option"><input type="radio" name="frage-woher-zahlen" value="0"> <span>Someone types them in on the keys</span></label>
+<label class="question-option"><input type="radio" name="frage-woher-zahlen" value="1"> <span>It makes up the numbers by itself</span></label>
+<label class="question-option"><input type="radio" name="frage-woher-zahlen" value="2"> <span>The numbers are already on the display</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Someone types them in on the keys</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The numbers come into the calculator from outside.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>It makes up the numbers by itself</strong></p><p>It only works with what goes in.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The numbers are already on the display</strong></p><p>The display only shows what the calculator puts out. Nothing can go in through it.</p></li>
+</ul>
+<p class="question-explanation">First the numbers go in. Then the calculation happens. At the end the result comes out.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Someone types them in on the keys</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The numbers come into the calculator from outside.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>It makes up the numbers by itself</strong></p><p>It only works with what goes in.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The numbers are already on the display</strong></p><p>The display only shows what the calculator puts out. Nothing can go in through it.</p></li>
+</ul>
+<p class="question-explanation">First the numbers go in. Then the calculation happens. At the end the result comes out.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"woher-zahlen","text":"How does the calculator know which numbers to work with?","explanation":"First the numbers go in. Then the calculation happens. At the end the result comes out.","links":[],"type":"single-choice","options":[{"text":"Someone types them in on the keys","correct":true,"info":"The numbers come into the calculator from outside."},{"text":"It makes up the numbers by itself","correct":false,"info":"It only works with what goes in."},{"text":"The numbers are already on the display","correct":false,"info":"The display only shows what the calculator puts out. Nothing can go in through it."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Three boxes: input, process, output</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="eea4207f" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Jona types <strong>3 + 4 =</strong>. A moment later the display shows <strong>7</strong>. In between, the calculator works in three
+steps. In the picture each step is a box with its own colour and letter: I blue, P green, O orange. The
+arrows show the order in which the data travels.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="50bddd4b" data-block-type="vue-component" data-block-order="5">
+<div class="explainer-component" data-component="EvaBild" data-nojs="caption" data-caption="Text description">
+<div class="explainer-island" hidden><div class="eva-bild" aria-hidden="true" data-v-06c1f083><!--[--><!--[--><!----><div class="eva-bild-column" data-v-06c1f083><div class="eva-bild-box eva-bild-box-0" data-v-06c1f083><span class="eva-bild-letter" data-v-06c1f083>I</span><strong data-v-06c1f083>Input</strong><span class="eva-bild-item" data-v-06c1f083>keys: 3 + 4 =</span></div><!----></div><!--]--><!--[--><span class="eva-bild-arrow" data-v-06c1f083></span><div class="eva-bild-column" data-v-06c1f083><div class="eva-bild-box eva-bild-box-1" data-v-06c1f083><span class="eva-bild-letter" data-v-06c1f083>P</span><strong data-v-06c1f083>Process</strong><span class="eva-bild-item" data-v-06c1f083>processor works out 7, memory holds the numbers</span></div><div class="eva-bild-drawer" data-v-06c1f083><span class="eva-bild-both" data-v-06c1f083>⇅</span><strong data-v-06c1f083>storage – keeps</strong><span class="eva-bild-item" data-v-06c1f083>storage, a storage chip</span></div></div><!--]--><!--[--><span class="eva-bild-arrow" data-v-06c1f083></span><div class="eva-bild-column" data-v-06c1f083><div class="eva-bild-box eva-bild-box-2" data-v-06c1f083><span class="eva-bild-letter" data-v-06c1f083>O</span><strong data-v-06c1f083>Output</strong><span class="eva-bild-item" data-v-06c1f083>display: 7</span></div><!----></div><!--]--><!--]--></div></div>
+<div class="explainer-nojs"><p>The IPO picture: three boxes with arrows in this order. Box I “Input” (blue): the keys, 3 + 4 =. Box P “Process” (green): the processor works out 7, memory holds the numbers. Box O “Output” (orange): the display shows 7. A dashed drawer is attached to the box Process: “storage – keeps”, a storage chip. A double arrow shows that data goes into it and comes back out.</p></div>
+<script type="application/json" class="explainer-component-props">{"boxes":["Input","Process","Output"],"letters":["I","P","O"],"items":["keys: 3 + 4 =","processor works out 7, memory holds the numbers","display: 7"],"drawer":"storage – keeps","drawerItem":"storage, a storage chip"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="29b36413" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-eva-prinzip"><a href="../../../en/glossar/#eva-prinzip">IPO model</a></dfn></dt><dd><p>This is how every computer works: <strong>I</strong>nput (data goes in), <strong>P</strong>rocess (the processor works with the data in memory), <strong>O</strong>utput (the result comes out).</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="8aa8a90a" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>The calculator forgets the 7 straight away. A tablet wants to keep many things, for example a photo. For
+that the box Process has a drawer: storage. In the picture it says “storage – keeps”. That is why some books call it the IPOS model, with S for
+storage.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="95958e9b" data-block-type="note" data-block-order="8">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Remember</h3>
+<div class="explainer-block" data-block="idee/5/1" data-block-id="3142f50c" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Input means: <strong>into</strong> the computer. Output means: <strong>out of</strong> the computer, to you or to another part,
+for example to the drum of a washing machine. A loudspeaker brings
+sounds out of the computer. That is why it is an output device.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Join in: we are a computer</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="f8f8a5e5" data-block-type="note" data-block-order="10">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">A game for three or four children, without a computer</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="57cfa2b4" data-block-type="text" data-block-order="11">
+<div class="block-text"><ol>
+<li>Share out the roles <strong>input</strong>, <strong>process</strong> and <strong>output</strong>. Each role gets a sign.</li>
+<li>Input thinks of two small numbers, writes them on a note and passes it on.</li>
+<li>Process adds the numbers and writes only the result on a new note.</li>
+<li>Output calls out the result to the class.</li>
+<li>A fourth child can be <strong>storage</strong>: process hands them a copy of the result. They keep it in a box and
+give it back to process when asked.</li>
+<li>Swap roles. From input to output the notes only travel one way, like the arrows in the IPO picture.</li>
+</ol></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practise at the station</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="3033b87b" data-block-type="vue-component" data-block-order="12">
+<div class="explainer-component" id="eva-sortieren" data-component="EvaSortierer" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67]" data-checked>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Task no. {n}">Task no. 1</span> <button type="button" class="explainer-new-task" title="New task"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">New task</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="eva-sortierer" data-v-4dc79a58><p data-v-4dc79a58>Selin has signs for five devices and parts. Put each one into its box:</p><ul class="eva-sortierer-devices" data-v-4dc79a58><!--[--><li data-v-4dc79a58><span class="eva-sortierer-name" data-v-4dc79a58>keyboard</span><span class="eva-sortierer-choices" role="group" aria-label="keyboard" data-v-4dc79a58><!--[--><button type="button" class="eva-sortierer-box-0" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>I</span> Input</button><button type="button" class="eva-sortierer-box-1" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>P</span> Process</button><button type="button" class="eva-sortierer-box-2" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>O</span> Output</button><!--]--></span></li><li data-v-4dc79a58><span class="eva-sortierer-name" data-v-4dc79a58>projector</span><span class="eva-sortierer-choices" role="group" aria-label="projector" data-v-4dc79a58><!--[--><button type="button" class="eva-sortierer-box-0" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>I</span> Input</button><button type="button" class="eva-sortierer-box-1" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>P</span> Process</button><button type="button" class="eva-sortierer-box-2" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>O</span> Output</button><!--]--></span></li><li data-v-4dc79a58><span class="eva-sortierer-name" data-v-4dc79a58>printer</span><span class="eva-sortierer-choices" role="group" aria-label="printer" data-v-4dc79a58><!--[--><button type="button" class="eva-sortierer-box-0" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>I</span> Input</button><button type="button" class="eva-sortierer-box-1" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>P</span> Process</button><button type="button" class="eva-sortierer-box-2" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>O</span> Output</button><!--]--></span></li><li data-v-4dc79a58><span class="eva-sortierer-name" data-v-4dc79a58>camera</span><span class="eva-sortierer-choices" role="group" aria-label="camera" data-v-4dc79a58><!--[--><button type="button" class="eva-sortierer-box-0" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>I</span> Input</button><button type="button" class="eva-sortierer-box-1" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>P</span> Process</button><button type="button" class="eva-sortierer-box-2" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>O</span> Output</button><!--]--></span></li><li data-v-4dc79a58><span class="eva-sortierer-name" data-v-4dc79a58>memory</span><span class="eva-sortierer-choices" role="group" aria-label="memory" data-v-4dc79a58><!--[--><button type="button" class="eva-sortierer-box-0" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>I</span> Input</button><button type="button" class="eva-sortierer-box-1" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>P</span> Process</button><button type="button" class="eva-sortierer-box-2" aria-pressed="false" data-v-4dc79a58><span aria-hidden="true" class="eva-sortierer-letter" data-v-4dc79a58>O</span> Output</button><!--]--></span></li><!--]--></ul><div class="eva-sortierer-boxes" aria-hidden="true" data-v-4dc79a58><!--[--><div class="eva-sortierer-target eva-sortierer-box-0" data-v-4dc79a58><strong data-v-4dc79a58><span class="eva-sortierer-letter" data-v-4dc79a58>I</span> Input</strong><!--[--><!--]--><span class="eva-sortierer-empty" data-v-4dc79a58>still empty</span></div><div class="eva-sortierer-target eva-sortierer-box-1" data-v-4dc79a58><strong data-v-4dc79a58><span class="eva-sortierer-letter" data-v-4dc79a58>P</span> Process</strong><!--[--><!--]--><span class="eva-sortierer-empty" data-v-4dc79a58>still empty</span></div><div class="eva-sortierer-target eva-sortierer-box-2" data-v-4dc79a58><strong data-v-4dc79a58><span class="eva-sortierer-letter" data-v-4dc79a58>O</span> Output</strong><!--[--><!--]--><span class="eva-sortierer-empty" data-v-4dc79a58>still empty</span></div><!--]--></div><p class="eva-sortierer-reset" data-v-4dc79a58><button type="button" data-v-4dc79a58>Empty all boxes</button></p></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Task no. 1</p><div class="explainer-task"><p>Selin has signs for five devices and parts. Put each one into its box: keyboard, projector, printer, camera, memory</p></div><details class="explainer-solution"><summary>Solution</summary><p>keyboard → Input, projector → Output, printer → Output, camera → Input, memory → Process</p></details></div></div>
+<p class="question-feedback" data-right="Right!" data-wrong="Sorry, that is not right." data-incomplete="Answer first: choose, type or match everything."></p>
+<script type="application/json" class="explainer-component-props">{"task":"Selin has signs for five devices and parts. Put each one into its box:","devices":[{"name":"keyboard","phase":0,"grund":"With a keyboard you type letters and numbers into the computer."},{"name":"mouse","phase":0,"grund":"With a mouse you point and click. That is how you tell the computer what to do."},{"name":"microphone","phase":0,"grund":"The microphone picks up your voice and passes it to the computer."},{"name":"camera","phase":0,"grund":"The camera takes a picture and passes it to the computer."},{"name":"barcode scanner at the till","phase":0,"grund":"The scanner reads the barcode of an item and passes it to the till."},{"name":"buttons on a game controller","phase":0,"grund":"With the buttons you tell the game what your character should do."},{"name":"processor","phase":1,"grund":"The processor calculates with the data."},{"name":"memory","phase":1,"grund":"Memory holds everything the processor is working on right now."},{"name":"monitor","phase":2,"grund":"A monitor shows you pictures and text. You cannot tap on it."},{"name":"loudspeaker","phase":2,"grund":"The loudspeaker turns the data into sounds you can hear."},{"name":"headphones","phase":2,"grund":"Headphones play sounds right into your ears."},{"name":"printer","phase":2,"grund":"A printer puts text and pictures on paper."},{"name":"projector","phase":2,"grund":"A projector shows a big picture on the wall."}],"boxes":["Input","Process","Output"],"letters":["I","P","O"],"empty":"still empty","reset":"Empty all boxes","unplaced":"Not finished yet. First put every device into a box.","wrong":"One device is still in the wrong box: the {name}. {grund} Does something go in, is something worked on, or does something come out?","wrongMany":"{count} devices are still in the wrong box. Start with the {name}: {grund}"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="f0559c54" data-block-type="generated" data-block-order="13">
+<div class="explainer-exercise explainer-generated" id="vorgang-ordnen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Three worked tasks, each with its solution:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Task no. 1</p><p class="explainer-task">Jona works out 3 + 4 on the calculator. Put the three steps in the right order.</p><details class="explainer-hint"><summary>Hint</summary><p>For each step, ask: does something go in, is something worked on, or does something come out?</p></details><details class="explainer-solution"><summary>Solution</summary><ol class="explainer-steps"><li>Input, because something goes in here: Jona presses 3, +, 4 and = on the keys.</li><li>Process, because this is where the work is done: The processor works out 3 + 4 = 7.</li><li>Output, because the result comes out here: The display shows 7.</li></ol><p><strong>Right answer:</strong> 1. Jona presses 3, +, 4 and = on the keys, 2. The processor works out 3 + 4 = 7, 3. The display shows 7</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Task no. 2</p><p class="explainer-task">Jona listens to a voice message. Put the three steps in the right order.</p><details class="explainer-hint"><summary>Hint</summary><p>For each step, ask: does something go in, is something worked on, or does something come out?</p></details><details class="explainer-solution"><summary>Solution</summary><ol class="explainer-steps"><li>Input, because something goes in here: Jona taps “Play”.</li><li>Process, because this is where the work is done: The processor turns the message into sounds.</li><li>Output, because the result comes out here: The loudspeaker plays the message.</li></ol><p><strong>Right answer:</strong> 1. Jona taps “Play”, 2. The processor turns the message into sounds, 3. The loudspeaker plays the message</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Task no. 3</p><p class="explainer-task">Selin takes a photo with the tablet. Put the three steps in the right order.</p><details class="explainer-hint"><summary>Hint</summary><p>For each step, ask: does something go in, is something worked on, or does something come out?</p></details><details class="explainer-solution"><summary>Solution</summary><ol class="explainer-steps"><li>Input, because something goes in here: The camera takes the picture.</li><li>Process, because this is where the work is done: The processor makes the picture brighter and sharper.</li><li>Output, because the result comes out here: The screen shows the finished photo.</li></ol><p><strong>Right answer:</strong> 1. The camera takes the picture, 2. The processor makes the picture brighter and sharper, 3. The screen shows the finished photo</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"en","spec":{"type":"generated","id":"vorgang-ordnen","given":{"v":{"pick":1,"from":{"data":"vorgaenge"}}},"task":{"text":{"de":"{{v.vorgang}} Bring die drei Schritte in die richtige Reihenfolge.","en":"{{v.vorgang}} Put the three steps in the right order."}},"answer":{"value":"[v.eingabe, v.verarbeitung, v.ausgabe]","compare":"order"},"mistakes":[{"value":"[v.ausgabe, v.verarbeitung, v.eingabe]","message":{"de":"Du hast mit dem Ergebnis angefangen. Das Ergebnis kommt am Schluss heraus. Was kommt zuerst hinein?","en":"You started with the result. The result comes out at the end. What goes in first?"}},{"value":"[v.verarbeitung, v.eingabe, v.ausgabe]","message":{"de":"Der Computer kann erst arbeiten, wenn etwas hineingekommen ist. Was ist hier die Eingabe?","en":"The computer can only work once something has gone in. What is the input here?"}}],"hint":{"de":"Frag bei jedem Schritt: Kommt etwas hinein, wird etwas bearbeitet oder kommt etwas heraus?","en":"For each step, ask: does something go in, is something worked on, or does something come out?"},"steps":[{"de":"Eingabe, denn hier kommt etwas hinein: {{v.eingabe}}.","en":"Input, because something goes in here: {{v.eingabe}}."},{"de":"Verarbeitung, denn hier wird gerechnet: {{v.verarbeitung}}.","en":"Process, because this is where the work is done: {{v.verarbeitung}}."},{"de":"Ausgabe, denn hier kommt das Ergebnis heraus: {{v.ausgabe}}.","en":"Output, because the result comes out here: {{v.ausgabe}}."}]},"templates":{"en":{"task":"⟦v.vorgang⟧ Put the three steps in the right order.","steps":["Input, because something goes in here: ⟦v.eingabe⟧.","Process, because this is where the work is done: ⟦v.verarbeitung⟧.","Output, because the result comes out here: ⟦v.ausgabe⟧."],"hint":"For each step, ask: does something go in, is something worked on, or does something come out?","messages":["You started with the result. The result comes out at the end. What goes in first?","The computer can only work once something has gone in. What is the input here?"]}},"data":{"vorgaenge":[{"vorgang":{"de":"Selin macht mit dem Tablet ein Foto.","en":"Selin takes a photo with the tablet."},"eingabe":{"de":"Die Kamera nimmt das Bild auf","en":"The camera takes the picture"},"verarbeitung":{"de":"Der Prozessor macht das Bild heller und schärfer","en":"The processor makes the picture brighter and sharper"},"ausgabe":{"de":"Der Bildschirm zeigt das fertige Foto","en":"The screen shows the finished photo"}},{"vorgang":{"de":"Jona rechnet 3 + 4 mit dem Taschenrechner.","en":"Jona works out 3 + 4 on the calculator."},"eingabe":{"de":"Jona tippt 3, +, 4 und = auf den Tasten","en":"Jona presses 3, +, 4 and = on the keys"},"verarbeitung":{"de":"Der Prozessor rechnet 3 + 4 = 7","en":"The processor works out 3 + 4 = 7"},"ausgabe":{"de":"Die Anzeige zeigt die 7","en":"The display shows 7"}},{"vorgang":{"de":"An der Kasse wird ein Saft bezahlt.","en":"A juice is paid for at the till."},"eingabe":{"de":"Der Scanner liest den Strichcode des Safts","en":"The scanner reads the barcode of the juice"},"verarbeitung":{"de":"Die Kasse sucht den Preis und zählt ihn zur Summe dazu","en":"The till looks up the price and adds it to the total"},"ausgabe":{"de":"Die Anzeige zeigt den Preis und der Drucker druckt den Kassenbon","en":"The display shows the price and the printer prints the receipt"}},{"vorgang":{"de":"Jona hört eine Sprachnachricht ab.","en":"Jona listens to a voice message."},"eingabe":{"de":"Jona tippt auf „Abspielen“","en":"Jona taps “Play”"},"verarbeitung":{"de":"Der Prozessor macht aus der Nachricht Töne","en":"The processor turns the message into sounds"},"ausgabe":{"de":"Der Lautsprecher spielt die Nachricht ab","en":"The loudspeaker plays the message"}},{"vorgang":{"de":"Jona spielt ein Spiel an der Konsole.","en":"Jona plays a game on the console."},"eingabe":{"de":"Jona drückt einen Knopf am Controller","en":"Jona presses a button on the controller"},"verarbeitung":{"de":"Der Prozessor berechnet den Sprung der Spielfigur","en":"The processor works out the jump of the character"},"ausgabe":{"de":"Der Fernseher zeigt, wie die Figur springt","en":"The TV shows the character jumping"}},{"vorgang":{"de":"Die Smartwatch zählt Selins Schritte.","en":"The smartwatch counts Selin's steps."},"eingabe":{"de":"Ein Bewegungsmesser in der Uhr merkt jede Bewegung des Arms","en":"A motion detector in the watch notices every movement of the arm"},"verarbeitung":{"de":"Der Prozessor zählt die Bewegungen als Schritte zusammen","en":"The processor adds up the movements as steps"},"ausgabe":{"de":"Die Anzeige der Uhr zeigt die Zahl der Schritte","en":"The watch display shows the number of steps"}}]},"seeds":[1,2,4,5,7,8],"texts":{"newTask":"New task","practice":"Practise yourself, with new tasks each time:","hint":"Hint","solution":"Solution","taskNumber":"Task no. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="a5c278c8" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="touchscreen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-touchscreen" data-id="touchscreen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">On the tablet you tap a picture and it gets bigger. Which boxes does the touchscreen belong to?</legend>
+<label class="question-option"><input type="radio" name="frage-touchscreen" value="0"> <span>Only input</span></label>
+<label class="question-option"><input type="radio" name="frage-touchscreen" value="1"> <span>Only output</span></label>
+<label class="question-option"><input type="radio" name="frage-touchscreen" value="2"> <span>Both input and output</span></label>
+<label class="question-option"><input type="radio" name="frage-touchscreen" value="3"> <span>The process box</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Only input</strong></p><p>Your tap does go in. But afterwards the touchscreen also shows you the big picture.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Only output</strong></p><p>The touchscreen shows pictures. But it also notices where your finger taps.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Both input and output</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The touchscreen takes in your tap and shows the result. It is two devices in one.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>The process box</strong></p><p>The calculating happens in the processor inside the tablet, not in the screen.</p></li>
+</ul>
+<p class="question-explanation">A touchscreen is an input device and an output device at the same time.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>Only input</strong></p><p>Your tap does go in. But afterwards the touchscreen also shows you the big picture.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Only output</strong></p><p>The touchscreen shows pictures. But it also notices where your finger taps.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>Both input and output</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The touchscreen takes in your tap and shows the result. It is two devices in one.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>The process box</strong></p><p>The calculating happens in the processor inside the tablet, not in the screen.</p></li>
+</ul>
+<p class="question-explanation">A touchscreen is an input device and an output device at the same time.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"touchscreen","text":"On the tablet you tap a picture and it gets bigger. Which boxes does the touchscreen belong to?","explanation":"A touchscreen is an input device and an output device at the same time.","links":[],"type":"single-choice","options":[{"text":"Only input","correct":false,"info":"Your tap does go in. But afterwards the touchscreen also shows you the big picture."},{"text":"Only output","correct":false,"info":"The touchscreen shows pictures. But it also notices where your finger taps."},{"text":"Both input and output","correct":true,"info":"The touchscreen takes in your tap and shows the result. It is two devices in one."},{"text":"The process box","correct":false,"info":"The calculating happens in the processor inside the tablet, not in the screen."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="3b388760" data-block-type="multiple-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="ausgabegeraete">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-ausgabegeraete" data-id="ausgabegeraete" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Which parts of the till at the school fair are output devices?</legend>
+<label class="question-option"><input type="checkbox" name="frage-ausgabegeraete" value="0"> <span>The display with the price</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ausgabegeraete" value="1"> <span>The printer for the receipt</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ausgabegeraete" value="2"> <span>The barcode scanner</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ausgabegeraete" value="3"> <span>The processor in the till</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>The display with the price</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The display shows the customer the price. That is output.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>The printer for the receipt</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The printer puts the receipt on paper. That is output.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The barcode scanner</strong></p><p>The scanner reads in the barcode. Data goes in, so it is an input device.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>The processor in the till</strong></p><p>The processor adds up the prices. That is process.</p></li>
+</ul>
+<p class="question-explanation">Output devices bring the result out of the computer, for example as a picture, a sound or paper.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>The display with the price</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The display shows the customer the price. That is output.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>The printer for the receipt</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The printer puts the receipt on paper. That is output.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The barcode scanner</strong></p><p>The scanner reads in the barcode. Data goes in, so it is an input device.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>The processor in the till</strong></p><p>The processor adds up the prices. That is process.</p></li>
+</ul>
+<p class="question-explanation">Output devices bring the result out of the computer, for example as a picture, a sound or paper.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"ausgabegeraete","text":"Which parts of the till at the school fair are output devices?","explanation":"Output devices bring the result out of the computer, for example as a picture, a sound or paper.","links":[],"type":"multiple-choice","options":[{"text":"The display with the price","correct":true,"info":"The display shows the customer the price. That is output."},{"text":"The printer for the receipt","correct":true,"info":"The printer puts the receipt on paper. That is output."},{"text":"The barcode scanner","correct":false,"info":"The scanner reads in the barcode. Data goes in, so it is an input device."},{"text":"The processor in the till","correct":false,"info":"The processor adds up the prices. That is process."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="e2b77183" data-block-type="single-choice" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="foto-aufheben">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-foto-aufheben" data-id="foto-aufheben" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Selin takes a photo and saves it. The next day it is still there. Where did the tablet keep it?</legend>
+<label class="question-option"><input type="radio" name="frage-foto-aufheben" value="0"> <span>In the drawer, in storage</span></label>
+<label class="question-option"><input type="radio" name="frage-foto-aufheben" value="1"> <span>In memory</span></label>
+<label class="question-option"><input type="radio" name="frage-foto-aufheben" value="2"> <span>In the camera</span></label>
+<label class="question-option"><input type="radio" name="frage-foto-aufheben" value="3"> <span>In the screen</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>In the drawer, in storage</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Storage keeps data, even when the tablet is switched off.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>In memory</strong></p><p>Memory only holds what the processor is working on right now. Without power it forgets everything.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>In the camera</strong></p><p>The camera only takes the picture.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>In the screen</strong></p><p>The screen only shows the photo.</p></li>
+</ul>
+<p class="question-explanation">What a computer wants to keep, it puts into the drawer on the box Process, its storage.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>In the drawer, in storage</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Storage keeps data, even when the tablet is switched off.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>In memory</strong></p><p>Memory only holds what the processor is working on right now. Without power it forgets everything.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>In the camera</strong></p><p>The camera only takes the picture.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>In the screen</strong></p><p>The screen only shows the photo.</p></li>
+</ul>
+<p class="question-explanation">What a computer wants to keep, it puts into the drawer on the box Process, its storage.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"foto-aufheben","text":"Selin takes a photo and saves it. The next day it is still there. Where did the tablet keep it?","explanation":"What a computer wants to keep, it puts into the drawer on the box Process, its storage.","links":[],"type":"single-choice","options":[{"text":"In the drawer, in storage","correct":true,"info":"Storage keeps data, even when the tablet is switched off."},{"text":"In memory","correct":false,"info":"Memory only holds what the processor is working on right now. Without power it forgets everything."},{"text":"In the camera","correct":false,"info":"The camera only takes the picture."},{"text":"In the screen","correct":false,"info":"The screen only shows the photo."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/6" data-block-id="f0441e96" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>Well done: every device and part on Selin&#39;s signs now has its box: I, P or O. At the next station Mia
+arrives. She asks which device she should use for her report.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “How a computer works”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-computer","app":"How a computer works","root":"../../../en/","repository":"lernapps/informatik-computer","revision":"b3bd19b","page":{"title":"The IPO model","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/innen/bestandteile/">Back: Parts of a computer</a><a rel="next" href="../../../en/innen/geraet-auswaehlen/">Next: Choosing devices and programs</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>

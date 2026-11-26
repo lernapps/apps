@@ -1,0 +1,63 @@
+<!-- Selin und Mia aus der Klasse 6b am Plakat „Klassenfahrt zum Seeberg“. Eigene Zeichnung, © 2026 Oliver Jägle, CC-BY-4.0.
+     Die Kinder (defs #selin, #mia) sind kopiert aus lernapps/informatik-computer, Branch work,
+     src/images/klasse-6b.svg (eigene Zeichnung, CC-BY-4.0); Aussehen unverändert. Kein Text im Bild: Marker und
+     Namen setzt die Seite (labelled-figure). Links Selin mit dem Tablet und dem Seefoto aus der Bildersuche, in der
+     Mitte das Plakat mit einem leeren Rahmen für das Foto und Mias Zeichnung eines Zugs, rechts Mia. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" role="img">
+  <title>Selin und Mia am Plakat der Klassenfahrt</title>
+  <defs>
+    <g id="selin" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#e07b24"/>
+      <path d="M80 34 Q104 40 98 86 Q92 70 84 60 Z" fill="#3b2314"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#d9a27a"/>
+      <path d="M18 56 Q12 14 50 12 Q88 14 82 56 Q78 30 50 28 Q26 30 18 56 Z" fill="#3b2314"/>
+      <circle cx="40" cy="58" r="3" fill="#222"/><circle cx="60" cy="58" r="3" fill="#222"/>
+      <path d="M42 70 Q50 77 58 70" fill="none"/>
+    </g>
+    <g id="mia" stroke="#333" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M14 168 C8 120 22 88 50 84 C78 88 92 120 86 168 C70 178 30 178 14 168 Z" fill="#7b4fb8"/>
+      <ellipse cx="50" cy="54" rx="30" ry="32" fill="#8d5a3b"/>
+      <path d="M16 58 Q8 30 24 18 Q34 6 50 12 Q66 4 78 16 Q94 30 84 58 Q82 36 66 30 Q50 34 34 30 Q20 38 16 58 Z" fill="#222"/>
+      <circle cx="39" cy="57" r="8" fill="none"/><circle cx="61" cy="57" r="8" fill="none"/><path d="M47 57 L53 57" fill="none"/>
+      <circle cx="39" cy="57" r="2.5" fill="#222"/><circle cx="61" cy="57" r="2.5" fill="#222"/>
+      <path d="M42 71 Q50 78 58 71" fill="none"/>
+    </g>
+    <!-- das Seefoto: Himmel, Sonne, zwei Hügel, See -->
+    <g id="seefoto">
+      <rect width="60" height="40" fill="#bfe3f2"/>
+      <circle cx="47" cy="10" r="5" fill="#f4c542"/>
+      <path d="M0 26 Q15 10 30 24 Q42 14 60 24 V40 H0 Z" fill="#5c9e5a"/>
+      <path d="M0 30 Q30 26 60 30 V40 H0 Z" fill="#3a7fb0"/>
+    </g>
+  </defs>
+  <rect width="480" height="260" fill="#f4efe2"/>
+  <rect y="220" width="480" height="40" fill="#c9a77a"/>
+  <!-- Selin links, das Tablet vor sich -->
+  <use href="#selin" transform="translate(20,60)"/>
+  <g stroke="#333" stroke-width="2">
+    <rect x="86" y="128" width="82" height="58" rx="6" fill="#1f2a36"/>
+    <use href="#seefoto" transform="translate(97,137)"/>
+  </g>
+  <!-- das Plakat in der Mitte, auf einer Staffelei -->
+  <g stroke="#333" stroke-width="2" stroke-linecap="round">
+    <path d="M232 214 L250 40 M330 214 L312 40" fill="none"/>
+    <rect x="204" y="30" width="154" height="170" rx="4" fill="#fffdf6"/>
+    <!-- leerer Rahmen für ein Foto -->
+    <rect x="218" y="46" width="70" height="50" fill="none" stroke-dasharray="6 4"/>
+    <!-- Mias Zeichnung: ein Zug -->
+    <g transform="translate(222,128)">
+      <rect x="0" y="10" width="40" height="24" rx="3" fill="#e05a4a"/>
+      <rect x="44" y="14" width="36" height="20" rx="3" fill="#4a7fd0"/>
+      <rect x="84" y="14" width="36" height="20" rx="3" fill="#f2c14e"/>
+      <rect x="8" y="0" width="10" height="12" fill="#555"/>
+      <circle cx="10" cy="38" r="5" fill="#333"/><circle cx="30" cy="38" r="5" fill="#333"/>
+      <circle cx="54" cy="38" r="5" fill="#333"/><circle cx="72" cy="38" r="5" fill="#333"/>
+      <circle cx="94" cy="38" r="5" fill="#333"/><circle cx="112" cy="38" r="5" fill="#333"/>
+    </g>
+    <!-- Stifte vor dem Plakat -->
+    <path d="M300 60 L340 60 M300 72 L332 72 M300 84 L338 84" fill="none" stroke="#999" stroke-width="4"/>
+  </g>
+  <!-- Mia rechts, mit Stift -->
+  <use href="#mia" transform="translate(370,60)"/>
+  <path d="M378 170 L362 150" stroke="#7b4fb8" stroke-width="6" stroke-linecap="round"/>
+</svg>

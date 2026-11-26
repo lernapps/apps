@@ -1,0 +1,54 @@
+<!-- Der gläserne Computer (lernapps/informatik-computer, #490): ein Tablet aus Glas, in das man hineinschaut. Eigene
+     Zeichnung, CC-BY-4.0. Andere Explainer des Epics dürfen es kopieren; Farben und Teile nicht ändern. Kein Text im
+     Bild: die Namen stehen in der Legende des labelled-figure. Glas #cfe6f7, Rand #2b5d8a, Prozessor dunkelgrauer
+     Chip, Arbeitsspeicher grüner Riegel, Festspeicher oranges Kästchen. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<!-- Kopiert unverändert aus lernapps/informatik-computer (#490), src/images/glaeserner-computer.svg, Branch work. Eigene Zeichnung, CC BY 4.0. Nicht ändern ohne Rücksprache (Nachtrag 2 des Epics lernapps/apps#509). -->
+  <title>Der gläserne Computer: ein Tablet aus Glas mit Prozessor, Arbeitsspeicher und Festspeicher im Innern</title>
+  <rect width="400" height="300" fill="#ffffff"/>
+  <!-- Gehäuse aus Glas -->
+  <rect x="40" y="30" width="320" height="240" rx="22" fill="#cfe6f7" fill-opacity="0.85" stroke="#2b5d8a" stroke-width="6"/>
+  <!-- Bildschirmfläche (Touchscreen) -->
+  <rect x="62" y="58" width="276" height="184" rx="6" fill="#e8f3fb" fill-opacity="0.7" stroke="#2b5d8a" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- Finger-Tipp auf dem Touchscreen -->
+  <circle cx="92" cy="92" r="9" fill="none" stroke="#2b5d8a" stroke-width="2"/>
+  <circle cx="92" cy="92" r="3" fill="#2b5d8a"/>
+  <!-- Kamera -->
+  <circle cx="200" cy="44" r="6" fill="#333" stroke="#2b5d8a" stroke-width="2"/>
+  <!-- Mikrofon: drei kleine Löcher unten -->
+  <circle cx="192" cy="257" r="2.5" fill="#333"/><circle cx="200" cy="257" r="2.5" fill="#333"/><circle cx="208" cy="257" r="2.5" fill="#333"/>
+  <!-- Schallwellen: hinein ins Mikrofon (unten), heraus aus dem Lautsprecher (rechts) -->
+  <g fill="none" stroke="#7b4fb8" stroke-width="2.5" stroke-linecap="round">
+    <path d="M186 292 q14 -10 28 0"/><path d="M180 284 q20 -12 40 0"/>
+    <path d="M366 136 q10 14 0 28"/><path d="M374 128 q14 22 0 44"/>
+  </g>
+  <!-- Lautsprecher: Gitter rechts -->
+  <g stroke="#333" stroke-width="3" stroke-linecap="round">
+    <path d="M348 128v44"/><path d="M340 122v56"/>
+  </g>
+  <!-- Leiterbahnen im Innern -->
+  <g stroke="#8aa9c2" stroke-width="2" fill="none">
+    <path d="M190 160h40"/><path d="M190 148h40v-30"/><path d="M190 172h40v18"/>
+  </g>
+  <!-- Prozessor: dunkelgrauer Chip mit Beinchen -->
+  <g stroke="#333" stroke-width="2">
+    <g stroke-width="2.5">
+      <path d="M152 136v-8M162 136v-8M172 136v-8M182 136v-8"/>
+      <path d="M152 184v8M162 184v8M172 184v8M182 184v8"/>
+      <path d="M144 144h-8M144 154h-8M144 164h-8M144 174h-8"/>
+      <path d="M190 144h8M190 154h8M190 164h8M190 174h8"/>
+    </g>
+    <rect x="144" y="136" width="46" height="48" rx="4" fill="#555"/>
+  </g>
+  <!-- Arbeitsspeicher: grüner Riegel mit Chips -->
+  <g stroke="#333" stroke-width="2">
+    <rect x="230" y="104" width="74" height="22" rx="3" fill="#2e8b57"/>
+    <rect x="236" y="109" width="12" height="12" fill="#1f5e3b"/><rect x="254" y="109" width="12" height="12" fill="#1f5e3b"/>
+    <rect x="272" y="109" width="12" height="12" fill="#1f5e3b"/><rect x="290" y="109" width="10" height="12" fill="#1f5e3b"/>
+  </g>
+  <!-- Festspeicher: oranges Kästchen -->
+  <g stroke="#333" stroke-width="2">
+    <rect x="232" y="176" width="64" height="36" rx="4" fill="#e07b24"/>
+    <path d="M244 186h40M244 194h40M244 202h28" stroke="#8a4410"/>
+  </g>
+</svg>

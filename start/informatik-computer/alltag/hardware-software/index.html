@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-B8ecXKUy.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-DYVfKw6-.css">
+    <title>Hardware und Software – Wie ein Computer arbeitet</title>
+    <meta name="description" content="Hardware und Software unterscheiden und erklären, wie sie zusammenarbeiten." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../alltag/hardware-software/" />
+    <link rel="alternate" hreflang="en" href="../../en/alltag/hardware-software/" />
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../alltag/hardware-software/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/alltag/hardware-software/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../alltag/">Überall Informatiksysteme</a></li><li aria-current="page">Hardware und Software</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Hardware und Software</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../alltag/hardware-software/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧alltag/hardware-software/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-computer","page":{"id":"hardware-software","title":"Hardware und Software","exercises":[{"id":"was-anfassen","section":"einstieg","numbered":false},{"id":"spiel-hardware","section":"idee","numbered":false},{"id":"hardware-oder-software","section":"uebung","numbered":true},{"id":"wer-mit-wem","section":"uebung","numbered":false},{"id":"ohne-software","section":"uebung","numbered":false}],"sections":["einstieg","idee","beispiel","uebung"]},"tutor":"alltag/hardware-software/tutor/","markdown":"alltag/hardware-software/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Station 2: Was kannst du anfassen?</a></li><li><a href="#idee">Zum Anfassen und nicht zum Anfassen</a></li><li><a href="#beispiel">Beispiel: ein Foto machen</a></li><li><a href="#uebung">Üben an der Station</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Station 2: Was kannst du anfassen?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="e4bf064d" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>An Station 1 hast du Informatiksysteme gefunden. Jetzt klebt Jona Schilder auf das Tablet der Ausstellung.
+Er fragt: „Was davon kann ich eigentlich anfassen?“</p>
+<p>Auf dieser Seite lernst du, Hardware und Software zu unterscheiden. Und du siehst, warum ein Gerät beides
+braucht.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="cc51d811" data-block-type="multiple-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="was-anfassen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-was-anfassen" data-id="was-anfassen" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was am Tablet kannst du anfassen?</legend>
+<label class="question-option"><input type="checkbox" name="frage-was-anfassen" value="0"> <span>Den Bildschirm</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-anfassen" value="1"> <span>Die Kamera</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-anfassen" value="2"> <span>Die Mal-App</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-anfassen" value="3"> <span>Ein Spiel</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Den Bildschirm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Den Bildschirm kannst du berühren, zum Beispiel mit dem Finger.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Die Kamera</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Kamera ist ein kleines Teil im Gehäuse. Du kannst sie anfassen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Mal-App</strong></p><p>Die Mal-App siehst du auf dem Bildschirm. Anfassen kannst du aber nur den Bildschirm, nicht die App.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Ein Spiel</strong></p><p>Ein Spiel ist ein Programm. Du kannst es spielen, aber nicht in die Hand nehmen.</p></li>
+</ul>
+<p class="question-explanation">Bildschirm und Kamera sind Teile zum Anfassen. Apps und Spiele sind Programme.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Den Bildschirm</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Den Bildschirm kannst du berühren, zum Beispiel mit dem Finger.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Die Kamera</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Die Kamera ist ein kleines Teil im Gehäuse. Du kannst sie anfassen.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Mal-App</strong></p><p>Die Mal-App siehst du auf dem Bildschirm. Anfassen kannst du aber nur den Bildschirm, nicht die App.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Ein Spiel</strong></p><p>Ein Spiel ist ein Programm. Du kannst es spielen, aber nicht in die Hand nehmen.</p></li>
+</ul>
+<p class="question-explanation">Bildschirm und Kamera sind Teile zum Anfassen. Apps und Spiele sind Programme.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"was-anfassen","text":"Was am Tablet kannst du anfassen?","explanation":"Bildschirm und Kamera sind Teile zum Anfassen. Apps und Spiele sind Programme.","links":[],"type":"multiple-choice","options":[{"text":"Den Bildschirm","correct":true,"info":"Den Bildschirm kannst du berühren, zum Beispiel mit dem Finger."},{"text":"Die Kamera","correct":true,"info":"Die Kamera ist ein kleines Teil im Gehäuse. Du kannst sie anfassen."},{"text":"Die Mal-App","correct":false,"info":"Die Mal-App siehst du auf dem Bildschirm. Anfassen kannst du aber nur den Bildschirm, nicht die App."},{"text":"Ein Spiel","correct":false,"info":"Ein Spiel ist ein Programm. Du kannst es spielen, aber nicht in die Hand nehmen."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Zum Anfassen und nicht zum Anfassen</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="9fa002ac" data-block-type="labelled-figure" data-block-order="3">
+<figure class="block-figure block-labelled"><div class="block-labelled-image block-labelled-fill"><img src="../../images/hardware-software.svg" alt="Links hält eine Hand ein Tablet. Rechts schwebt eine gestrichelte Wolke mit drei App-Symbolen: Pinsel, Musiknote und Kamera. Zwei Pfeile gehen zwischen Tablet und Wolke hin und her." loading="lazy" decoding="async"><span class="block-marker" style="left: 8%; top: 14%" aria-hidden="true">1</span><span class="block-marker" style="left: 23%; top: 54%" aria-hidden="true">2</span><span class="block-marker" style="left: 28%; top: 19%" aria-hidden="true">3</span><span class="block-marker" style="left: 62%; top: 47%" aria-hidden="true">4</span><span class="block-marker" style="left: 77%; top: 34%" aria-hidden="true">5</span><span class="block-marker" style="left: 88%; top: 72%" aria-hidden="true">6</span><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><ol class="block-legend"><li>Gehäuse</li><li>Bildschirm</li><li>Kamera</li><li>Mal-App</li><li>Musik-App</li><li>Kamera-App</li></ol><figcaption><p>Links die Hardware: 1 bis 3 kannst du anfassen. Rechts in der Wolke die Software: 4 bis 6 nicht.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="b36e9702" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-hardware"><a href="../../glossar/#hardware">Hardware</a></dfn></dt><dd><p>Alle Teile eines Informatiksystems, die du anfassen kannst, zum Beispiel Bildschirm, Tastatur und Kamera.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="ef0d371f" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-software"><a href="../../glossar/#software">Software</a></dfn></dt><dd><p>Alle Programme eines Informatiksystems. Auf Tablet und Smartphone heißen sie oft Apps. Anfassen kannst du sie nicht.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="417afff6" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Die gestrichelte Wolke zeigt nur: nicht zum Anfassen. Die Apps stecken im Gerät. Die Pfeile im
+Bild zeigen: Beide brauchen einander. Die Software sagt der Hardware, was sie tun soll. Die
+Hardware führt es aus. Ohne Software tut die Hardware nichts Sinnvolles. Ohne Hardware kann die Software
+nirgends laufen.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="b9352ed5" data-block-type="note" data-block-order="7">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Merke</h3>
+<div class="explainer-block" data-block="idee/5/1" data-block-id="35f99d18" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Frag dich: <strong>Ist es ein Teil zum Anfassen?</strong> Dann ist es Hardware. <strong>Ist es ein Programm, eine App?</strong>
+Dann ist es Software. Der Bildschirm <em>zeigt</em> Software, ist aber selbst Hardware.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="26428000" data-block-type="true-false" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="spiel-hardware">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-spiel-hardware" data-id="spiel-hardware" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Stimmt das? Ein Spiel auf dem Smartphone ist Hardware, weil es im Smartphone steckt.</legend>
+<label class="question-option"><input type="radio" name="frage-spiel-hardware" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-spiel-hardware" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Falsch. Das Spiel ist ein Programm, also Software. Es läuft auf der Hardware, ist aber selbst nicht anfassbar.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Falsch. Das Spiel ist ein Programm, also Software. Es läuft auf der Hardware, ist aber selbst nicht anfassbar.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"spiel-hardware","text":"Stimmt das? Ein Spiel auf dem Smartphone ist Hardware, weil es im Smartphone steckt.","explanation":"Falsch. Das Spiel ist ein Programm, also Software. Es läuft auf der Hardware, ist aber selbst nicht anfassbar.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Beispiel: ein Foto machen</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="2e20495e" data-block-type="example" data-block-order="10">
+<div class="explainer-box explainer-example">
+<h3 class="explainer-box-title">Kamera und Kamera-App arbeiten zusammen</h3>
+<div class="explainer-block" data-block="beispiel/1/1" data-block-id="d5f30a7f" data-block-type="text" data-block-order="11">
+<div class="block-text"><ol>
+<li>Selin tippt auf das Symbol der Kamera-App. Die <strong>Software</strong> startet.</li>
+<li>Die Kamera-App sagt der <strong>Kamera</strong>: „Nimm jetzt ein Bild auf.“</li>
+<li>Die Kamera nimmt das Bild auf. Der Bildschirm zeigt es.</li>
+</ol>
+<p>Ohne Kamera-App weiß die Kamera nicht, wann sie ein Bild machen soll. Ohne Kamera hat die App kein Bild.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Üben an der Station</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="d2652490" data-block-type="generated" data-block-order="12">
+<div class="explainer-exercise explainer-generated" id="hardware-oder-software">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="explainer-live" hidden></div>
+<p class="explainer-worked-intro">Drei Beispielaufgaben, jede mit ihrer Lösung:</p>
+<ol class="explainer-worked"><li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 1</p><p class="explainer-task">Auf Jonas nächstem Schild steht: <strong>Akku</strong>. Ist das Hardware oder Software?</p><details class="explainer-hint"><summary>Tipp</summary><p>Hardware kannst du anfassen, Software nicht.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Den Akku kannst du anfassen, wenn man das Gerät öffnet. Antwort: Hardware.</li></ol><p><strong>Richtige Antwort:</strong> Hardware</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 2</p><p class="explainer-task">Auf Jonas nächstem Schild steht: <strong>Kopfhörer</strong>. Ist das Hardware oder Software?</p><details class="explainer-hint"><summary>Tipp</summary><p>Hardware kannst du anfassen, Software nicht.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Kopfhörer kannst du anfassen und aufsetzen. Antwort: Hardware.</li></ol><p><strong>Richtige Antwort:</strong> Hardware</p></details></li>
+<li class="explainer-worked-task"><p class="explainer-task-number">Aufgabe Nr. 3</p><p class="explainer-task">Auf Jonas nächstem Schild steht: <strong>Mal-App</strong>. Ist das Hardware oder Software?</p><details class="explainer-hint"><summary>Tipp</summary><p>Hardware kannst du anfassen, Software nicht.</p></details><details class="explainer-solution"><summary>Lösung</summary><ol class="explainer-steps"><li>Die Mal-App ist ein Programm. Du siehst sie auf dem Bildschirm, aber anfassen kannst du sie nicht. Antwort: Software.</li></ol><p><strong>Richtige Antwort:</strong> Software</p></details></li></ol>
+<script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"hardware-oder-software","given":{"e":{"pick":1,"from":{"data":"hardware-software"}}},"task":{"text":{"de":"Auf Jonas nächstem Schild steht: **{{e.name}}**. Ist das Hardware oder Software?","en":"Jona's next sign says: **{{e.name}}**. Is it hardware or software?"}},"answer":{"value":"e.art","compare":{"choice":["Hardware","Software"]}},"mistakes":[{"value":"e.gegenteil","message":{"de":"Mach die Probe: Kannst du es selbst in die Hand nehmen?","en":"Do the test: can you hold it in your own hand?"}}],"hint":{"de":"Hardware kannst du anfassen, Software nicht.","en":"You can touch hardware, but not software."},"steps":[{"de":"{{e.grund}} Antwort: {{answer}}.","en":"{{e.grund}} Answer: {{answer}}."}]},"templates":{"de":{"task":"Auf Jonas nächstem Schild steht: \u003cstrong>⟦e.name⟧\u003c/strong>. Ist das Hardware oder Software?","steps":["⟦e.grund⟧ Antwort: ⟦answer⟧."],"hint":"Hardware kannst du anfassen, Software nicht.","messages":["Mach die Probe: Kannst du es selbst in die Hand nehmen?"]}},"data":{"hardware-software":[{"name":{"de":"Tastatur","en":"keyboard"},"art":"Hardware","gegenteil":"Software","grund":{"de":"Die Tastatur kannst du anfassen und drücken.","en":"You can touch and press the keyboard."}},{"name":{"de":"Bildschirm","en":"screen"},"art":"Hardware","gegenteil":"Software","grund":{"de":"Den Bildschirm kannst du anfassen. Er zeigt Software an, ist aber selbst ein Teil zum Anfassen.","en":"You can touch the screen. It shows software, but is itself a part you can touch."}},{"name":{"de":"Kopfhörer","en":"headphones"},"art":"Hardware","gegenteil":"Software","grund":{"de":"Kopfhörer kannst du anfassen und aufsetzen.","en":"You can touch headphones and put them on."}},{"name":{"de":"Maus","en":"mouse"},"art":"Hardware","gegenteil":"Software","grund":{"de":"Die Maus kannst du anfassen und bewegen.","en":"You can touch the mouse and move it."}},{"name":{"de":"Akku","en":"battery"},"art":"Hardware","gegenteil":"Software","grund":{"de":"Den Akku kannst du anfassen, wenn man das Gerät öffnet.","en":"You can touch the battery when the device is opened."}},{"name":{"de":"Drucker","en":"printer"},"art":"Hardware","gegenteil":"Software","grund":{"de":"Den Drucker kannst du anfassen.","en":"You can touch the printer."}},{"name":{"de":"Mal-App","en":"drawing app"},"art":"Software","gegenteil":"Hardware","grund":{"de":"Die Mal-App ist ein Programm. Du siehst sie auf dem Bildschirm, aber anfassen kannst du sie nicht.","en":"The drawing app is a program. You see it on the screen, but you cannot touch it."}},{"name":{"de":"Spiel auf der Konsole","en":"game on the console"},"art":"Software","gegenteil":"Hardware","grund":{"de":"Das Spiel ist ein Programm. Auch wenn es auf einer Karte geliefert wird: Das Spiel selbst kannst du nicht anfassen.","en":"The game is a program. Even if it comes on a card: you cannot touch the game itself."}},{"name":{"de":"Taschenrechner-App","en":"calculator app"},"art":"Software","gegenteil":"Hardware","grund":{"de":"Die Taschenrechner-App ist ein Programm. Sie läuft auf dem Gerät, anfassen kannst du sie nicht.","en":"The calculator app is a program. It runs on the device, you cannot touch it."}},{"name":{"de":"Lern-App","en":"learning app"},"art":"Software","gegenteil":"Hardware","grund":{"de":"Die Lern-App ist ein Programm. Du kannst sie benutzen, aber nicht anfassen.","en":"The learning app is a program. You can use it, but you cannot touch it."}},{"name":{"de":"Wetter-App","en":"weather app"},"art":"Software","gegenteil":"Hardware","grund":{"de":"Die Wetter-App ist ein Programm. Anfassen kannst du nur das Gerät, auf dem sie läuft.","en":"The weather app is a program. You can only touch the device it runs on."}}]},"seeds":[1,2,4,5,7,11,15,20,24,30,32],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="d4759d7f" data-block-type="matching" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="wer-mit-wem">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-wer-mit-wem" data-id="wer-mit-wem" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Zu welcher Hardware passt welche App?</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Kamera</span> <select name="frage-wer-mit-wem-0" data-left="0"><option value="">bitte wählen</option><option value="3">Wetter-App</option><option value="0">Kamera-App</option><option value="1">Musik-App</option><option value="2">Sprachaufnahme-App</option></select></label></li>
+<li><label><span>Lautsprecher</span> <select name="frage-wer-mit-wem-1" data-left="1"><option value="">bitte wählen</option><option value="3">Wetter-App</option><option value="0">Kamera-App</option><option value="1">Musik-App</option><option value="2">Sprachaufnahme-App</option></select></label></li>
+<li><label><span>Mikrofon</span> <select name="frage-wer-mit-wem-2" data-left="2"><option value="">bitte wählen</option><option value="3">Wetter-App</option><option value="0">Kamera-App</option><option value="1">Musik-App</option><option value="2">Sprachaufnahme-App</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Kamera – Kamera-App; Lautsprecher – Musik-App; Mikrofon – Sprachaufnahme-App</p>
+<p class="question-explanation">Jede App braucht ein Stück Hardware, mit dem sie arbeitet: die Kamera-App die Kamera, Musik den Lautsprecher, Aufnahmen das Mikrofon. Die Wetter-App braucht vor allem den Bildschirm.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Kamera – Kamera-App; Lautsprecher – Musik-App; Mikrofon – Sprachaufnahme-App</p>
+<p class="question-explanation">Jede App braucht ein Stück Hardware, mit dem sie arbeitet: die Kamera-App die Kamera, Musik den Lautsprecher, Aufnahmen das Mikrofon. Die Wetter-App braucht vor allem den Bildschirm.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wer-mit-wem","text":"Zu welcher Hardware passt welche App?","explanation":"Jede App braucht ein Stück Hardware, mit dem sie arbeitet: die Kamera-App die Kamera, Musik den Lautsprecher, Aufnahmen das Mikrofon. Die Wetter-App braucht vor allem den Bildschirm.","links":[],"type":"matching","pairs":[{"left":"Kamera","right":"Kamera-App"},{"left":"Lautsprecher","right":"Musik-App"},{"left":"Mikrofon","right":"Sprachaufnahme-App"}],"distractors":["Wetter-App"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="5833370b" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="ohne-software">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ohne-software" data-id="ohne-software" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Tablet hat gar keine Software, nicht einmal ein Programm zum Starten. Was passiert beim Einschalten?</legend>
+<label class="question-option"><input type="radio" name="frage-ohne-software" value="0"> <span>Es tut nichts Sinnvolles</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-software" value="1"> <span>Es zeigt trotzdem Fotos</span></label>
+<label class="question-option"><input type="radio" name="frage-ohne-software" value="2"> <span>Es macht sich die Apps selbst</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Es tut nichts Sinnvolles</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Kein Programm sagt der Hardware, was sie tun soll. Darum bleibt das Tablet nutzlos.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Es zeigt trotzdem Fotos</strong></p><p>Um Fotos zu zeigen, braucht das Tablet ein Programm. Das fehlt hier.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Es macht sich die Apps selbst</strong></p><p>Apps schreiben Menschen. Hardware allein kann keine Programme erfinden.</p></li>
+</ul>
+<p class="question-explanation">Hardware braucht Software, sonst weiß sie nicht, was sie tun soll.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Es tut nichts Sinnvolles</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Kein Programm sagt der Hardware, was sie tun soll. Darum bleibt das Tablet nutzlos.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Es zeigt trotzdem Fotos</strong></p><p>Um Fotos zu zeigen, braucht das Tablet ein Programm. Das fehlt hier.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Es macht sich die Apps selbst</strong></p><p>Apps schreiben Menschen. Hardware allein kann keine Programme erfinden.</p></li>
+</ul>
+<p class="question-explanation">Hardware braucht Software, sonst weiß sie nicht, was sie tun soll.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ohne-software","text":"Ein Tablet hat gar keine Software, nicht einmal ein Programm zum Starten. Was passiert beim Einschalten?","explanation":"Hardware braucht Software, sonst weiß sie nicht, was sie tun soll.","links":[],"type":"single-choice","options":[{"text":"Es tut nichts Sinnvolles","correct":true,"info":"Kein Programm sagt der Hardware, was sie tun soll. Darum bleibt das Tablet nutzlos."},{"text":"Es zeigt trotzdem Fotos","correct":false,"info":"Um Fotos zu zeigen, braucht das Tablet ein Programm. Das fehlt hier."},{"text":"Es macht sich die Apps selbst","correct":false,"info":"Apps schreiben Menschen. Hardware allein kann keine Programme erfinden."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="d8b6b461" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Geschafft: Jedes Gerät hat jetzt ein Schild „Hardware“ und eine Liste seiner Software. An der nächsten
+Station bedient ihr selbst ein Programm: ein Malprogramm.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Wie ein Computer arbeitet“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-computer","app":"Wie ein Computer arbeitet","root":"../../","repository":"lernapps/informatik-computer","revision":"b3bd19b","page":{"title":"Hardware und Software","order":1}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../alltag/informatiksysteme/">Zurück: Informatiksysteme im Alltag</a><a rel="next" href="../../alltag/programme-bedienen/">Weiter: Programme bedienen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>
