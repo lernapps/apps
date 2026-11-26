@@ -1,0 +1,101 @@
+# Development Plan: apps (claude/brave-knuth-602d27 branch)
+
+*Generated on 2026-11-26 by Vibe Feature MCP*
+*Workflow: [epcc](https://codemcp.github.io/workflows/workflows/epcc)*
+
+## Goal
+Orchestrierung des Epics Informatik (lernapps/apps#509, 12 Explainer). Erster Schritt: Architektur für die
+reichhaltigen, interaktiven Umgebungen des Fachs klären (Programmierumgebung, Simulatoren, Tabelle, Editoren),
+bevor die erste Explainer-Session startet. Grundlage: Skill `lernlandkarte-epic`.
+
+## Key Decisions
+*Noch offen; Vorschlag siehe Notes, Entscheidung beim Menschen.*
+
+## Notes
+
+### Befund: Grenzen der Plattform (gelesen in lernapps/app-templates und lernapps/tooling, Stand 2026-11-26)
+- Explainer-Komponente: Vue-SFC, höchstens 20 kB gzip eigener Code (inkl. importierter Dateien des eigenen
+  Ordners, `plugin.ts`, Regel `vue-component-size`); Imports nur aus `vue`, Runtime, `@lernapps/tooling/storage`,
+  `i18n`, `a11y`, eigenem Ordner; kein Netz, kein `eval`/`new Function`, kein `innerHTML`/`v-html`.
+  Die Fehlermeldung nennt selbst den Ausweg „ask for a built-in block“.
+- Folge: Blockly, CodeMirror, sql.js und eine HTML-Live-Vorschau passen nicht in eine Explainer-Komponente.
+  Eigener kleiner Interpreter (Roboter-Sprache, Automat, Mini-Tabelle) passt.
+- Eine Übungskomponente gibt nur die Antwort ab; Prüfen macht das Logikmodul (`generate/check/solution/wrong`,
+  50 Seeds im Build). Das passt gut zu „Programm als Antwort, Prüfung durch Testfälle“.
+- Jede Seite braucht zusätzlich eine Frage oder eine generierte Übung; eine Komponente zählt nicht als Pflichtübung.
+- Apps teilen zur Laufzeit keinen Code (`con-frontend-only`); jede Kopie einer Komponente lebt im eigenen Repo.
+- Speicher: nur eigenes Präfix `lernapps:<id>:` (`dec-own-data-only`); geteilte Präfixe nur für Einstellungen.
+  Es gibt also keinen Rückkanal von einer App in eine andere.
+- Interaktive App (Archetyp `interactive`): eigene Bibliotheken mit offener Lizenz gebündelt, Routen `app/#<id>`
+  per Link öffnbar, 100 kB Speicher, Playthroughs; kein Tutor, keine Lernkarten-Seiten wie ein Explainer.
+
+### Befund: Umgebungen im Epic
+| Umgebung | Explainer | geteilt mit | passt in Komponente? |
+|---|---|---|---|
+| Programmierumgebung (Blöcke → Diagramm → Text, Roboter) | #495 | #496 (Feld) | Blöcke klein ja; Text-Ausführung nur mit eigenem Interpreter |
+| Bit-Karten, Pixel-Editor, Caesar-Scheibe, Abtastung | #491 | #492 (Baum, Byte) | ja |
+| Dateimanager, Passwort-Simulation | #492 | – | ja |
+| Klassifizierer-Simulation | #493 | – | ja |
+| Rechenblatt + Datenflussdiagramm | #494 | #498 (Tabelle) | Mini-Tabelle ja |
+| SQL auf Tabellen | #498 | – | nur Teilmenge mit eigenem Interpreter |
+| Automaten-Simulator | #500 | – | ja |
+| Netz-Simulator | #502 | – | ja |
+| HTML/CSS mit Vorschau | #504 | – | Vorschau nein (`v-html`-Verbot) |
+
+Der Schnitt des Epics („ein Modell, ein Explainer“) bündelt die Umgebungen schon weitgehend.
+Nur zwei Umgebungen überschreiten die Grenzen ernsthaft: Programmieren (#495, #496) und HTML/CSS (#504);
+SQL (#498) ist ein Grenzfall.
+
+### Optionen
+- A: Umgebung als Komponente im Explainer, Inhalte je Umgebung in einem Explainer (heutiger Schnitt). Für die
+  meisten Umgebungen ausreichend.
+- B: Externe Werkstatt-App (Archetyp `interactive`) je schwere Umgebung; Explainer verlinken Aufträge.
+- C: Eingebauter Block in der Explainer-Runtime (app-templates), z. B. `program`, nicht an das Budget gebunden,
+  für alle Explainer und Fächer nutzbar. Plattformänderung, aber eine Prüfung, Tutor-Seite und Selbsteinschätzung
+  wie bei jeder Übung.
+
+## Explore
+### Entrance Criteria
+- Epic #509 und Auftrag des Menschen liegen vor.
+
+### Tasks
+- [ ] Entscheidung des Menschen zu Optionen A/B/C und offenen Fragen einholen
+
+### Completed
+- [x] Created development plan file
+- [x] Skill `lernlandkarte-epic` gelesen
+- [x] Epic #509 und 12 Explainer-Issues gelesen (Kopien im Scratchpad `issues/`)
+- [x] Grenzen der Explainer-Komponenten, des Archetyps `interactive` und der Speicherregeln geprüft
+
+## Plan
+### Entrance Criteria
+- Der Mensch hat die Architektur der Umgebungen entschieden.
+
+### Tasks
+- [ ] *To be added when this phase becomes active*
+
+### Completed
+*None yet*
+
+## Code
+### Entrance Criteria
+- Gemeinsame Regeln, Session-Anweisung, Schichten und Berechtigungen sind festgelegt.
+
+### Tasks
+- [ ] *To be added when this phase becomes active*
+
+### Completed
+*None yet*
+
+## Commit
+### Entrance Criteria
+- Repos und Sessions sind angelegt bzw. Dokumente fertig.
+
+### Tasks
+- [ ] *To be added when this phase becomes active*
+
+### Completed
+*None yet*
+
+---
+*This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
