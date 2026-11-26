@@ -96,6 +96,153 @@
         "competency"
       ]
     },
+    "bandLabels": {
+      "description": "Optional labels for the three grade bands, e.g. CEFR levels A1, A2, B1",
+      "type": "object",
+      "properties": {
+        "5-6": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "de": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "German"
+                    },
+                    "en": {
+                      "description": "English",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "de"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "English"
+                }
+              },
+              "required": [
+                "en"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "7-8": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "de": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "German"
+                    },
+                    "en": {
+                      "description": "English",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "de"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "English"
+                }
+              },
+              "required": [
+                "en"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "9-10": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "de": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "German"
+                    },
+                    "en": {
+                      "description": "English",
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "de"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "en": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "English"
+                }
+              },
+              "required": [
+                "en"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "5-6",
+        "7-8",
+        "9-10"
+      ],
+      "additionalProperties": false
+    },
     "strands": {
       "minItems": 1,
       "type": "array",
@@ -148,25 +295,43 @@
                 "name": {
                   "anyOf": [
                     {
-                      "type": "string",
-                      "minLength": 1
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "de": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "German"
+                            },
+                            "en": {
+                              "description": "English",
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "de"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
                     },
                     {
                       "type": "object",
                       "properties": {
-                        "de": {
+                        "en": {
                           "type": "string",
                           "minLength": 1,
-                          "description": "German"
-                        },
-                        "en": {
-                          "description": "English",
-                          "type": "string",
-                          "minLength": 1
+                          "description": "English"
                         }
                       },
                       "required": [
-                        "de"
+                        "en"
                       ],
                       "additionalProperties": false
                     }
@@ -176,30 +341,48 @@
                 "iCan": {
                   "anyOf": [
                     {
-                      "type": "string",
-                      "minLength": 1
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "de": {
+                              "type": "string",
+                              "minLength": 1,
+                              "description": "German"
+                            },
+                            "en": {
+                              "description": "English",
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "de"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
                     },
                     {
                       "type": "object",
                       "properties": {
-                        "de": {
+                        "en": {
                           "type": "string",
                           "minLength": 1,
-                          "description": "German"
-                        },
-                        "en": {
-                          "description": "English",
-                          "type": "string",
-                          "minLength": 1
+                          "description": "English"
                         }
                       },
                       "required": [
-                        "de"
+                        "en"
                       ],
                       "additionalProperties": false
                     }
                   ],
-                  "description": "What a learner can do, in plain German: \"Ich kann …\""
+                  "description": "What a learner can do, in plain German (\"Ich kann …\") or English-only (\"I can …\")"
                 },
                 "gradeBand": {
                   "type": "string",
@@ -208,7 +391,7 @@
                     "7-8",
                     "9-10"
                   ],
-                  "description": "Roughly in which two school years it is taught; shown where no curriculum places it"
+                  "description": "Roughly in which two school years (or course stage) it is taught; shown where no curriculum places it"
                 },
                 "requires": {
                   "description": "Competencies of the same subject a learner needs first, any strand",
