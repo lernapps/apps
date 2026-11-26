@@ -99,3 +99,13 @@ SQL (#498) ist ein Grenzfall.
 
 ---
 *This plan is maintained by the LLM. Tool responses provide guidance on which section to focus on and what tasks to work on.*
+
+## Orchestrierung (laufend)
+### Antworten des Orchestrators in der Rolle des Menschen
+- #491: Skytale für Grundidee, Caesar eigene Seite; Klassenfahrt 6b, „TREFFEN MONTAG ACHT UHR AM BAHNHOF“.
+- #490: Festspeicher als Schublade „Speicher – hebt auf“ unter Verarbeitung (kein EVAS-Kasten).
+- Epic: gemeinsame Klasse 6b mit Jona, Selin, Mia (je 11); Aussehen legt #490 fest.
+
+### Funde für Sammel-Issues (noch nicht angelegt)
+- map-review: `informatiksystem-auswaehlen` in 5-6, GI 2025 IS-10 sagt 7-10 (NRW 5/6 deckt 5-6) – #490.
+- map-review: Karte nennt GI als Quelle für `eva-prinzip`, GI 2025 nennt EVA nicht wörtlich (NRW, BY-MS, HE schon) – #490.
