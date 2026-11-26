@@ -119,3 +119,6 @@ SQL (#498) ist ein Grenzfall.
 - Für Nachtrag 3 (Bilder): Kiko (coding, `public/kiko.svg`, orange #e8590c, Visier #1f2a44, gelbe Antennenlampe, Räder, gelbes Richtungsdreieck); Mias Tablet (#492, türkis #2a9d8f, gelber Stern #f2c14e); Trainingsbeutel (#493, Petrol #3a8fa3, gelbe Pfote #f4c542; verbindlich nach Musterseite); Automaten-Simulator (#500, Eingabe blau, Ausgabe orange; nach Musterseite).
 - app-templates (coding): Sprachumschalter verliert `?c=`; Routenleiste markiert bei params erste Route; h1 ohne Silbentrennung auf 360 px. → an #202-Session gegeben.
 - Offene Prüfungen: coding – echter Screenreader (NVDA/VoiceOver), echtes Handy.
+- tooling (coding): generischer e2e der Startseite verlangt genau einen Link je Route im main; `arc42 diff` nach `lernapps update` meldet Vorlagenteile; `create` schreibt LICENSE „Copyright (c) 2026 Claude“ (Rechteinhaber klären, betrifft vermutlich alle neuen Repos).
+- tooling (#493): `plan done` kann nachgetragene Aufgaben früherer Phasen nicht abhaken; Hook `plan-file` lehnt ersetzte `<archetype>`-Wörter ab.
+- Offene Prüfungen coding: Screenreader, echte Handys/Touch, Firefox/Safari, forced colors, 200 % Zoom.
