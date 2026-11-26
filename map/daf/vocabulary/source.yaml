@@ -1,0 +1,205 @@
+# The basic vocabulary of German as a foreign language (docs/learning-map-contract.md, section 6): which lexicon, which
+# levels, and the corrections for children's everyday life. scripts/vocabulary.mjs writes words.yaml from it and the
+# lexicon. Licence: CC BY-NC-SA 4.0, as DAFlex (LICENSE.md in this folder).
+language: de
+source:
+  title: "DAFlex with TreeTagger German (STTS) parts of speech (CEFRLex, CENTAL, UCLouvain)"
+  # Direct static TSV used to generate words.yaml: https://cental.uclouvain.be/cefrlex/static/resources/de/DAFlex.tsv
+  url: https://cental.uclouvain.be/cefrlex/daflex/download/
+  licence: CC BY-NC-SA 4.0
+  cite:
+    - "François, T., Kerres, P., De Meyere, D. & Suñer Muñoz, F. DAFlex: A CEFR-graded lexical resource for German as a foreign language. CENTAL / VALIBEL, UCLouvain. https://cental.uclouvain.be/cefrlex/daflex/ (reference article forthcoming)."
+levels: [A1, A2]
+# DAFlex has no single level per word, only frequencies and document counts per level (from textbooks and simplified
+# readers). A word is placed on the first level at which at least three documents of the corpus use it: at least 1
+# document gives A1 5087 and A2 4909 (many single-reader words); at least 2 gives A1 2393 and A2 1703; at least 3 gives
+# A1 1680 and A2 1039 (comparable to English ~2400 and French ~1930) while keeping core child vocabulary that at least 4
+# would drop (Bleistift, Rucksack, Bäckerei, Ohr, Bauch, Handy). scripts/vocabulary.mjs also leaves out lemmas with a
+# digit, an underscore, or no leading letter.
+minDocuments: 3
+# Corrections for children and young learners in their first years of German (Standard German / Bundesdeutsch). Each
+# correction names its reason. DAFlex lowercases the second part of hyphenated nouns (T-shirt, E-mail, S-bahn, U-bahn):
+# search in DAFlex's spelling before adding a word.
+level:
+  - word: tschüss
+    pos: ADJD
+    level: A1
+    reason: "Alltagsabschied unter Kindern und Freunden, vom ersten Tag an (Strang wortschatz: Begrüßung und Vorstellung)"
+  - word: "null"
+    pos: CARD
+    level: A1
+    reason: "die Zahl 0 in Telefonnummern, Spielständen und Temperaturen, von Anfang an (Strang wortschatz: Zahlen und Preise)"
+  - word: dreizehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); in Lehrwerken oft als Ziffer gedruckt"
+  - word: vierzehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); in Lehrwerken oft als Ziffer gedruckt"
+  - word: fünfzehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); in Lehrwerken oft als Ziffer gedruckt"
+  - word: siebzehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); in Lehrwerken oft als Ziffer gedruckt"
+  - word: achtzehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); in Lehrwerken oft als Ziffer gedruckt"
+  - word: vierzig
+    pos: CARD
+    level: A1
+    reason: "Zehnerzahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); zwanzig und dreißig stehen schon auf A1"
+  - word: fünfzig
+    pos: CARD
+    level: A1
+    reason: "Zehnerzahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); zwanzig und dreißig stehen schon auf A1"
+  - word: sechzig
+    pos: CARD
+    level: A1
+    reason: "Zehnerzahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); zwanzig und dreißig stehen schon auf A1"
+  - word: siebzig
+    pos: CARD
+    level: A1
+    reason: "Zehnerzahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); zwanzig und dreißig stehen schon auf A1"
+  - word: achtzig
+    pos: CARD
+    level: A1
+    reason: "Zehnerzahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); zwanzig und dreißig stehen schon auf A1"
+  - word: neunzig
+    pos: CARD
+    level: A1
+    reason: "Zehnerzahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); zwanzig und dreißig stehen schon auf A1"
+  - word: hundert
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 und Preise gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise)"
+  - word: Radiergummi
+    pos: NN
+    level: A1
+    reason: "Gegenstand im Federmäppchen, im Schulalltag vom ersten Tag an (Strang wortschatz: Schule und Unterricht)"
+  - word: Stundenplan
+    pos: NN
+    level: A1
+    reason: "Teil des Schulalltags, mit dem Kinder Fächer und Wochentage verbinden (Strang wortschatz: Schule und Unterricht)"
+  - word: Klassenzimmer
+    pos: NN
+    level: A1
+    reason: "Raum des täglichen Unterrichts (Strang wortschatz: Schule und Unterricht)"
+  - word: Mathe
+    pos: NN
+    level: A1
+    reason: "Alltagswort der Kinder für das Schulfach Mathematik im Stundenplan (Strang wortschatz: Schule und Unterricht)"
+  - word: Mittagessen
+    pos: NN
+    level: A1
+    reason: "Teil des Tagesablaufs neben Frühstück und Abendessen, die schon auf A1 stehen (Strang wortschatz: Essen und Trinken)"
+  - word: Haustier
+    pos: NN
+    level: A1
+    reason: "Kinder sprechen von Anfang an über ihre Haustiere (Strang wortschatz: Freizeit und Hobbys)"
+  - word: Hamster
+    pos: NN
+    level: A2
+    reason: "häufiges Kinderhaustier neben Hund und Katze (Strang wortschatz: Natur, Tiere und Umwelt)"
+  - word: Meerschweinchen
+    pos: NN
+    level: A2
+    reason: "häufiges Kinderhaustier neben Hund und Katze (Strang wortschatz: Natur, Tiere und Umwelt)"
+  - word: Kaninchen
+    pos: NN
+    level: A2
+    reason: "häufiges Kinderhaustier neben Hund und Katze (Strang wortschatz: Natur, Tiere und Umwelt)"
+  - word: Smartphone
+    pos: NN
+    level: A2
+    reason: "Alltagsgerät für digitale Kommunikation bei Kindern und Jugendlichen (Strang wortschatz: Medien und Internet)"
+  - word: Tablet
+    pos: NN
+    level: A2
+    reason: "Alltagsgerät in Schule und Freizeit (Strang wortschatz: Medien und Internet)"
+add:
+  - word: sechzehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); fehlt im Lexikon"
+  - word: neunzehn
+    pos: CARD
+    level: A1
+    reason: "Zahlen bis 100 gehören ins erste Jahr (Strang wortschatz: Zahlen und Preise); fehlt im Lexikon"
+  - word: Lineal
+    pos: NN
+    level: A1
+    reason: "Gegenstand im Federmäppchen, im Schulalltag vom ersten Tag an (Strang wortschatz: Schule und Unterricht)"
+  - word: Federmäppchen
+    pos: NN
+    level: A1
+    reason: "Gegenstand im Schulranzen, im Schulalltag vom ersten Tag an (Strang wortschatz: Schule und Unterricht)"
+  - word: Schultasche
+    pos: NN
+    level: A1
+    reason: "Alltagswort für die Tasche auf dem Schulweg (Strang wortschatz: Schule und Unterricht)"
+remove:
+  - word: Replaced-dns
+    pos: NN
+    reason: "Anonymisierungs-Platzhalter aus dem Korpus, kein deutsches Wort"
+  - word: Replaced-email
+    pos: NN
+    reason: "Anonymisierungs-Platzhalter aus dem Korpus, kein deutsches Wort"
+  - word: A
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: C
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: D
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: G
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: H
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: K
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: M
+    pos: NN
+    reason: "einzelner Buchstabe aus Aufgaben- oder Listeneinträgen des Korpus, kein Grundwortschatz-Wort"
+  - word: a
+    pos: FM
+    reason: "einzelner Buchstabe bzw. fremdsprachiges Korpus-Fragment, kein deutsches Wort"
+  - word: b
+    pos: ADJD
+    reason: "einzelner Buchstabe aus Aufgabenbezeichnungen (a, b, c) des Korpus, kein deutsches Wort"
+  - word: r
+    pos: FM
+    reason: "einzelner Buchstabe bzw. fremdsprachiges Korpus-Fragment, kein deutsches Wort"
+  - word: z
+    pos: ADJD
+    reason: "einzelner Buchstabe aus Abkürzungen (z. B.) im Korpus, kein eigenes Wort"
+  - word: z
+    pos: V
+    reason: "einzelner Buchstabe aus Tagging-Fehler bei Abkürzungen im Korpus, kein deutsches Verb"
+  - word: la
+    pos: FM
+    reason: "fremdsprachiges Fragment aus Korpustexten, kein deutsches Wort"
+  - word: of
+    pos: FM
+    reason: "englisches Fragment aus Korpustexten, kein deutsches Wort"
+  - word: Friedrich-schiller-universität
+    pos: NN
+    reason: "korpusspezifischer Eigenname aus Universitätstexten, kein Grundwortschatz für Kinder"
+  - word: Berlin-exkursion
+    pos: NN
+    reason: "korpusspezifisches Kompositum aus einzelnen Lehrwerkstexten, kein Grundwortschatz für Kinder"
+  - word: Ddr-bürger
+    pos: NN
+    reason: "korpusspezifisches historisches Kompositum aus Erwachsenentexten, kein Grundwortschatz auf A1/A2"
+  - word: D-a-ch
+    pos: NN
+    reason: "Lehrwerks-Abkürzung aus dem Korpus, kein Alltagswort für Kinder auf A1"

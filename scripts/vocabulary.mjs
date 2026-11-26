@@ -20,9 +20,11 @@ const isArtefact = (word) => /[_\d]/.test(word) || !/^\p{L}/u.test(word);
  * writes them): the first level a word is seen at. With the columns `nb_doc@a1` … and `minDocuments`, a word is only
  * seen at a level when at least that many documents of the lexicon's corpus use it there.
  */
+const unquote = (cell) => cell.trim().replace(/^"(.*)"$/, "$1");
+
 export function readLexicon(text, minDocuments = 1) {
   const [head = "", ...lines] = text.split(/\r?\n/).filter((line) => line.trim() !== "");
-  const columns = head.split("\t").map((name) => name.trim());
+  const columns = head.split("\t").map(unquote);
   const at = (name) => {
     const index = columns.indexOf(name);
     if (index === -1) throw new Error(`the lexicon has no column ${name}; its columns are ${columns.join(", ")}`);
@@ -39,7 +41,7 @@ export function readLexicon(text, minDocuments = 1) {
     throw new Error(`the lexicon has neither a column level nor columns freq_A1 …; its columns are ${columns.join(", ")}`);
   return lines
     .map((line) => {
-      const cells = line.split("\t").map((cell) => cell.trim());
+      const cells = line.split("\t").map(unquote);
       const seen = (index) => Number(cells[index]) > 0;
       const first =
         (documents.length > 0 && minDocuments > 1
