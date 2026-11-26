@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title:
+  de: Wie Maschinen aus Daten lernen
+  en: How machines learn from data
+subject: informatik
+strand: informatik/daten
+grades: [5, 6]
+summary:
+  de: >-
+    Du findest künstliche Intelligenz in deinem Alltag und trainierst selbst eine Maschine: Erst suchst du mit
+    Tierkarten eine Regel für Hund oder Katze, dann füllst du den Trainingsbeutel einer Maschine mit Beispielen. So
+    siehst du: Was in den Beutel kommt, bestimmt, was herauskommt.
+  en: >-
+    You find artificial intelligence in your everyday life and train a machine yourself: first you look for a rule
+    for dog or cat with animal cards, then you fill a machine's training bag with examples. You see: what goes into
+    the bag decides what comes out.
+url: https://lernapps.net/informatik-ki/
+keywords:
+  - { de: künstliche Intelligenz, en: artificial intelligence }
+  - { de: KI, en: AI }
+  - { de: maschinelles Lernen, en: machine learning }
+  - { de: Trainingsdaten, en: training data }
+  - { de: Klassifizierer, en: classifier }
+  - { de: nächster Nachbar, en: nearest neighbour }
+  - { de: Entscheidungsbaum, en: decision tree }
+  - { de: KI unplugged, en: AI unplugged }
+  - { de: Hund oder Katze, en: dog or cat }
+creator: { name: "Oliver (@mrsimpson)" }
+source: https://github.com/lernapps/informatik-ki
+commit: 55ce8f1fbd108d520ae1d85d0dde59f153e333f2
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
