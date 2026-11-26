@@ -112,3 +112,7 @@ SQL (#498) ist ein Grenzfall.
 - app-templates (explainer runtime, Funde #491): leere Antwort bei single-choice generisch; Rückfall-Meldung „Lies den Text über der Aufgabe“ passt nicht, wenn nur „Übung“ darüber steht; `generated` startet mit zufälliger Aufgabennummer; `ordering` erlaubt mehrfach „Platz 1“, Rückmeldung ohne Ort; Lizenz-Abzeichen überdeckt bei 360 px den Bildrand.
 - tooling/app-templates (Funde coding): Blockly lädt Medien von static.blockly.com (`no-request-before-click`), Blockly-ARIA im Flyout (upstream), `lernapps create` verlangt Plan in Phase code.
 - app-templates#201 angelegt (Parameter der Adresse für interactive); Session session_016NmpwboqaaxmBctiZ2xkeS autonom bis grüner PR.
+- map-review (#500): GI 2025 setzt Automaten (SA-3, SA-4) in 7-10; Karte setzt `automaten-im-alltag` und `zustandsdiagramm` in 5-6, nur durch NRW gedeckt.
+- map-review (#500): Issue #500 nennt `informatiksysteme-im-alltag` als Voraussetzung, die Karte `eva-prinzip` (Issue-Text, kein Kartenfehler).
+- app-templates (#491, #490): `image` nur eine Datei für alle Sprachen; Text im Bild nur über labelled-figure oder Anzeige-Komponente übersetzbar. Übungskomponente ohne „Lösung“-Knopf; Rückmeldung bleibt nach Änderung stehen; ohne JS zeigt generierte Ordnungsaufgabe keine Schritte.
+- Session-Setup: Auto-Modus lehnt `npx --yes @lernapps/tooling init` trotz Regel in `.claude/settings.json` ab (#500, #492); Mensch gibt je Session frei.
