@@ -99,7 +99,7 @@ eleventyComputed:
       <tbody>
         {%- for row in rows %}
         <tr{% if row.band %} class="map-band"{% endif %}>
-          <th scope="row">{{ t.map.grade(row.label) }}{% if row.band %}<span class="block mt-1 text-xs font-normal text-slate-600">{{ S.noGrade }}</span>{% endif %}</th>
+          <th scope="row">{{ row.key | bandLabel(subject, lang) if (subject.bandLabels and subject.bandLabels[row.key]) else t.map.grade(row.label) }}{% if row.band %}<span class="block mt-1 text-xs font-normal text-slate-600">{{ S.noGrade }}</span>{% endif %}</th>
           {%- for cell in row.cells %}
           <td>
             {%- if cell.competencies.length %}
