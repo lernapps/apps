@@ -116,3 +116,6 @@ SQL (#498) ist ein Grenzfall.
 - map-review (#500): Issue #500 nennt `informatiksysteme-im-alltag` als Voraussetzung, die Karte `eva-prinzip` (Issue-Text, kein Kartenfehler).
 - app-templates (#491, #490): `image` nur eine Datei für alle Sprachen; Text im Bild nur über labelled-figure oder Anzeige-Komponente übersetzbar. Übungskomponente ohne „Lösung“-Knopf; Rückmeldung bleibt nach Änderung stehen; ohne JS zeigt generierte Ordnungsaufgabe keine Schritte.
 - Session-Setup: Auto-Modus lehnt `npx --yes @lernapps/tooling init` trotz Regel in `.claude/settings.json` ab (#500, #492); Mensch gibt je Session frei.
+- Für Nachtrag 3 (Bilder): Kiko (coding, `public/kiko.svg`, orange #e8590c, Visier #1f2a44, gelbe Antennenlampe, Räder, gelbes Richtungsdreieck); Mias Tablet (#492, türkis #2a9d8f, gelber Stern #f2c14e); Trainingsbeutel (#493, Petrol #3a8fa3, gelbe Pfote #f4c542; verbindlich nach Musterseite); Automaten-Simulator (#500, Eingabe blau, Ausgabe orange; nach Musterseite).
+- app-templates (coding): Sprachumschalter verliert `?c=`; Routenleiste markiert bei params erste Route; h1 ohne Silbentrennung auf 360 px. → an #202-Session gegeben.
+- Offene Prüfungen: coding – echter Screenreader (NVDA/VoiceOver), echtes Handy.
