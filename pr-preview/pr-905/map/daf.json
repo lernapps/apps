@@ -1,0 +1,2994 @@
+{
+  "id": "daf",
+  "name": {
+    "de": "Deutsch als Fremdsprache",
+    "en": "German as a Foreign Language"
+  },
+  "source": {
+    "title": "ZfA / KMK, Rahmenplan „Deutsch als Fremdsprache“ für das Auslandsschulwesen (2009)",
+    "url": "https://www.auslandsschulwesen.de/resource/blob/2789274/febe196fc6737e2f3dc86448e997cceb/daf-rahmenplan-data.pdf"
+  },
+  "explainerFocus": "competency",
+  "bandLabels": {
+    "5-6": {
+      "en": "A1"
+    },
+    "7-8": {
+      "en": "A2"
+    },
+    "9-10": {
+      "en": "B1"
+    }
+  },
+  "status": "draft",
+  "reviews": [],
+  "strands": [
+    {
+      "id": "grammatik",
+      "name": {
+        "de": "Grammatik",
+        "en": "Grammar"
+      },
+      "competencies": [
+        {
+          "id": "personalpronomen-nominativ",
+          "name": {
+            "en": "Personal pronouns (nominative)"
+          },
+          "iCan": {
+            "en": "I can use German nominative personal pronouns (ich, du, er, sie, es, wir, ihr, sie, Sie) as sentence subjects."
+          },
+          "gradeBand": "5-6",
+          "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 70,
+          "practisedBy": []
+        },
+        {
+          "id": "praesens-sein-haben",
+          "name": {
+            "en": "Verbs sein and haben"
+          },
+          "iCan": {
+            "en": "I can conjugate sein and haben in the present tense to describe people, states, and possessions."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "personalpronomen-nominativ"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 20,
+          "practisedBy": []
+        },
+        {
+          "id": "praesens-regelmaessig",
+          "name": {
+            "en": "Regular verbs in present tense"
+          },
+          "iCan": {
+            "en": "I can conjugate regular German verbs in the present tense."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "personalpronomen-nominativ"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 67,
+          "practisedBy": []
+        },
+        {
+          "id": "praesens-vokalwechsel",
+          "name": {
+            "en": "Stem-changing present verbs"
+          },
+          "iCan": {
+            "en": "I can conjugate common stem-changing verbs like sprechen, lesen, fahren, and schlafen in the present tense."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "praesens-regelmaessig"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "verb-zweitstellung",
+          "name": {
+            "en": "Verb-second word order"
+          },
+          "iCan": {
+            "en": "I can build German statements with the conjugated verb in second position, including inversion after time or place."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "praesens-regelmaessig"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 64,
+          "practisedBy": []
+        },
+        {
+          "id": "w-fragen",
+          "name": {
+            "en": "W-questions"
+          },
+          "iCan": {
+            "en": "I can ask and answer W-questions using wer, was, wo, woher, wohin, wann, and wie."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "ja-nein-fragen",
+          "name": {
+            "en": "Yes/no questions"
+          },
+          "iCan": {
+            "en": "I can form yes/no questions by placing the conjugated verb in first position and answer with ja, nein, or doch."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "artikel-genus",
+          "name": {
+            "en": "Articles and noun gender"
+          },
+          "iCan": {
+            "en": "I can use definite (der, die, das) and indefinite (ein, eine) articles with masculine, feminine, and neuter nouns."
+          },
+          "gradeBand": "5-6",
+          "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 32,
+          "practisedBy": []
+        },
+        {
+          "id": "pluralbildung",
+          "name": {
+            "en": "Noun plurals"
+          },
+          "iCan": {
+            "en": "I can form common German noun plurals and use them with the plural article die."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "artikel-genus"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "negation-nicht-kein",
+          "name": {
+            "en": "Negation with nicht and kein"
+          },
+          "iCan": {
+            "en": "I can negate nouns with kein/keine and verbs, adjectives, or sentences with nicht."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "artikel-genus",
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "akkusativ-artikel",
+          "name": {
+            "en": "Accusative case and articles"
+          },
+          "iCan": {
+            "en": "I can use definite, indefinite, and negative articles in the accusative case for direct objects."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "artikel-genus",
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 25,
+          "practisedBy": []
+        },
+        {
+          "id": "akkusativ-pronomen",
+          "name": {
+            "en": "Accusative personal pronouns"
+          },
+          "iCan": {
+            "en": "I can use accusative personal pronouns (mich, dich, ihn, sie, es, uns, euch, sie, Sie) as direct objects."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "akkusativ-artikel",
+            "personalpronomen-nominativ"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 8,
+          "practisedBy": []
+        },
+        {
+          "id": "possessivartikel-nom-akk",
+          "name": {
+            "en": "Possessive determiners (nom./acc.)"
+          },
+          "iCan": {
+            "en": "I can use possessive determiners (mein, dein, sein, ihr, unser, euer, ihr, Ihr) in the nominative and accusative."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "akkusativ-artikel",
+            "personalpronomen-nominativ"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "modalverben-praesens",
+          "name": {
+            "en": "Modal verbs in present tense"
+          },
+          "iCan": {
+            "en": "I can use modal verbs (können, müssen, wollen, dürfen, sollen, möchten) with an infinitive at the end of the clause."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 13,
+          "practisedBy": []
+        },
+        {
+          "id": "trennbare-verben",
+          "name": {
+            "en": "Separable prefix verbs"
+          },
+          "iCan": {
+            "en": "I can use separable verbs like aufstehen, einkaufen, and anrufen with the prefix at the end of a main clause."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "imperativ",
+          "name": {
+            "en": "Imperative (du, ihr, Sie)"
+          },
+          "iCan": {
+            "en": "I can give instructions, advice, and polite requests using the imperative for du, ihr, and Sie."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "praesens-vokalwechsel"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "praeteritum-sein-haben",
+          "name": {
+            "en": "Past tense of sein and haben"
+          },
+          "iCan": {
+            "en": "I can talk about past states and possessions using the simple past forms of sein (war) and haben (hatte)."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "praesens-sein-haben"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 11,
+          "practisedBy": []
+        },
+        {
+          "id": "perfekt-haben",
+          "name": {
+            "en": "Present perfect with haben"
+          },
+          "iCan": {
+            "en": "I can talk about past actions using the Perfekt with haben and regular or common irregular past participles."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "praesens-sein-haben",
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 12,
+          "practisedBy": []
+        },
+        {
+          "id": "perfekt-sein",
+          "name": {
+            "en": "Present perfect with sein"
+          },
+          "iCan": {
+            "en": "I can form the Perfekt with sein for verbs of movement and change of state like gehen, fahren, and bleiben."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "perfekt-haben"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "perfekt-trennbar-untrennbar",
+          "name": {
+            "en": "Past participles with prefixes"
+          },
+          "iCan": {
+            "en": "I can form the Partizip II of separable verbs (eingekauft), inseparable verbs (verstanden), and -ieren verbs (studiert)."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "perfekt-haben",
+            "trennbare-verben"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "praepositionen-lokal-a1",
+          "name": {
+            "en": "Basic local prepositions"
+          },
+          "iCan": {
+            "en": "I can say where people and places are or where I am going using in, aus, nach, zu, and bei."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "artikel-genus"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "praepositionen-temporal-a1",
+          "name": {
+            "en": "Basic time prepositions"
+          },
+          "iCan": {
+            "en": "I can give times, days, and seasons using um, am, im, and von … bis."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "praepositionen-lokal-a1"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "konjunktionen-aduso",
+          "name": {
+            "en": "Coordinating conjunctions"
+          },
+          "iCan": {
+            "en": "I can connect main clauses with und, oder, aber, denn, and sondern without changing word order."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 14,
+          "practisedBy": []
+        },
+        {
+          "id": "dativ-artikel",
+          "name": {
+            "en": "Dative case and articles"
+          },
+          "iCan": {
+            "en": "I can use definite, indefinite, and negative articles in the dative case (dem, der, dem, den + -n)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "akkusativ-artikel"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 21,
+          "practisedBy": []
+        },
+        {
+          "id": "dativ-pronomen",
+          "name": {
+            "en": "Dative personal pronouns"
+          },
+          "iCan": {
+            "en": "I can use dative personal pronouns (mir, dir, ihm, ihr, uns, euch, ihnen, Ihnen) in everyday sentences."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-artikel",
+            "akkusativ-pronomen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 7,
+          "practisedBy": []
+        },
+        {
+          "id": "verben-mit-dativ",
+          "name": {
+            "en": "Verbs with dative"
+          },
+          "iCan": {
+            "en": "I can use common dative verbs such as helfen, gefallen, gehören, danken, schmecken, and passen."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-pronomen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "dativ-und-akkusativ",
+          "name": {
+            "en": "Dative and accusative objects"
+          },
+          "iCan": {
+            "en": "I can build sentences with both a dative and an accusative object in the right order (e.g. Ich gebe dir das Buch)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-pronomen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "wechselpraepositionen",
+          "name": {
+            "en": "Two-way prepositions (Wo/Wohin)"
+          },
+          "iCan": {
+            "en": "I can choose between dative (Wo?) and accusative (Wohin?) after an, auf, hinter, in, neben, über, unter, vor, and zwischen."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-artikel",
+            "praepositionen-lokal-a1"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "praepositionen-akkusativ",
+          "name": {
+            "en": "Accusative prepositions"
+          },
+          "iCan": {
+            "en": "I can use prepositions that always take the accusative case (für, durch, gegen, ohne, um, bis)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "akkusativ-artikel"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "praepositionen-dativ",
+          "name": {
+            "en": "Dative prepositions"
+          },
+          "iCan": {
+            "en": "I can use prepositions that always take the dative case (aus, bei, mit, nach, seit, von, zu, gegenüber)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-artikel"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "possessivartikel-dativ",
+          "name": {
+            "en": "Possessive determiners (dative)"
+          },
+          "iCan": {
+            "en": "I can use possessive determiners (meinem, deiner, ihren, etc.) in the dative case."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-artikel",
+            "possessivartikel-nom-akk"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "reflexive-verben",
+          "name": {
+            "en": "Reflexive verbs"
+          },
+          "iCan": {
+            "en": "I can use common reflexive verbs like sich freuen, sich treffen, and sich die Hände waschen."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "akkusativ-pronomen",
+            "dativ-pronomen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "modalverben-praeteritum",
+          "name": {
+            "en": "Modal verbs in simple past"
+          },
+          "iCan": {
+            "en": "I can talk about past abilities, duties, and plans using konnte, musste, wollte, durfte, and sollte."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "modalverben-praesens",
+            "praeteritum-sein-haben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 9,
+          "practisedBy": []
+        },
+        {
+          "id": "nebensatz-weil-dass",
+          "name": {
+            "en": "Subordinate clauses: weil, dass"
+          },
+          "iCan": {
+            "en": "I can form subordinate clauses with weil and dass, placing the conjugated verb at the end."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "konjunktionen-aduso"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 12,
+          "practisedBy": []
+        },
+        {
+          "id": "nebensatz-wenn-als",
+          "name": {
+            "en": "Clauses with wenn and als"
+          },
+          "iCan": {
+            "en": "I can express conditions and time relationships using wenn (present, future, repeated past) and als (single past event)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "nebensatz-weil-dass",
+            "praeteritum-sein-haben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "indirekte-fragen",
+          "name": {
+            "en": "Indirect questions (ob, W-words)"
+          },
+          "iCan": {
+            "en": "I can ask polite indirect questions using ob and question words with the verb at the end."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "nebensatz-weil-dass",
+            "w-fragen",
+            "ja-nein-fragen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "adjektivdeklination-bestimmt",
+          "name": {
+            "en": "Adjective endings (definite article)"
+          },
+          "iCan": {
+            "en": "I can add the right adjective endings (-e or -en) after definite articles like der, die, das, and dieser."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-artikel"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "adjektivdeklination-unbestimmt",
+          "name": {
+            "en": "Adjective endings (indefinite)"
+          },
+          "iCan": {
+            "en": "I can add the right adjective endings after ein, kein, and possessive determiners in nominative, accusative, and dative."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "adjektivdeklination-bestimmt"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 3
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "komparativ-superlativ",
+          "name": {
+            "en": "Comparative and superlative"
+          },
+          "iCan": {
+            "en": "I can compare people and things using the comparative, superlative (am …-sten), so … wie, and als."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "adjektivdeklination-unbestimmt"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "konjunktiv2-hoeflichkeit",
+          "name": {
+            "en": "Polite Konjunktiv II"
+          },
+          "iCan": {
+            "en": "I can make polite requests, suggestions, and wishes using könnte, hätte, wäre, sollte, and würde + infinitive."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "modalverben-praeteritum"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "verben-mit-praepositionen",
+          "name": {
+            "en": "Verbs with fixed prepositions"
+          },
+          "iCan": {
+            "en": "I can use common verb-preposition combinations like warten auf, denken an, and sich interessieren für with the right case."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "praepositionen-akkusativ",
+            "praepositionen-dativ",
+            "reflexive-verben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 4
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "pronominaladverbien",
+          "name": {
+            "en": "Da- and wo-compounds"
+          },
+          "iCan": {
+            "en": "I can ask about and refer back to things with prepositions using worauf, womit, darauf, and darüber."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "verben-mit-praepositionen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 5
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "demonstrativ-indefinitpronomen",
+          "name": {
+            "en": "Demonstrative & indefinite pronouns"
+          },
+          "iCan": {
+            "en": "I can use dieser, welcher, jeder, man, jemand, niemand, etwas, and nichts accurately in context."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dativ-artikel"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "konjunktionaladverbien",
+          "name": {
+            "en": "Conjunctive adverbs (deshalb, trotzdem)"
+          },
+          "iCan": {
+            "en": "I can link ideas with deshalb, trotzdem, danach, zuerst, and dann using verb-second inversion."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "verb-zweitstellung",
+            "nebensatz-weil-dass"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "werden-funktionen",
+          "name": {
+            "en": "Uses of werden"
+          },
+          "iCan": {
+            "en": "I can conjugate werden to describe changes (es wird kalt) and prepare for future and passive structures."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "modalverben-praesens"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "praeteritum-verben",
+          "name": {
+            "en": "Simple past (Präteritum)"
+          },
+          "iCan": {
+            "en": "I can understand and use the Präteritum of regular and common irregular verbs in written reports and stories."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "perfekt-sein",
+            "modalverben-praeteritum"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "plusquamperfekt",
+          "name": {
+            "en": "Past perfect (Plusquamperfekt)"
+          },
+          "iCan": {
+            "en": "I can express that one past event happened before another using the Plusquamperfekt with hatte or war."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "praeteritum-verben",
+            "perfekt-sein"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "futur1",
+          "name": {
+            "en": "Future tense (Futur I)"
+          },
+          "iCan": {
+            "en": "I can express plans, promises, forecasts, and assumptions using Futur I (werden + infinitive)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "werden-funktionen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "passiv-praesens",
+          "name": {
+            "en": "Present passive voice"
+          },
+          "iCan": {
+            "en": "I can describe processes and actions without naming the actor using the present passive (werden + Partizip II)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "werden-funktionen",
+            "perfekt-haben"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "passiv-praeteritum-modal",
+          "name": {
+            "en": "Past and modal passive"
+          },
+          "iCan": {
+            "en": "I can form the past passive (wurde + Partizip II) and passive sentences with modal verbs (kann/muss … werden)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "passiv-praesens",
+            "modalverben-praeteritum"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "genitiv-artikel",
+          "name": {
+            "en": "Genitive case & prepositions"
+          },
+          "iCan": {
+            "en": "I can use the genitive case (des, der, eines, einer) for possession and after wegen, trotz, während, and statt."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "dativ-artikel"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "adjektivdeklination-nullartikel",
+          "name": {
+            "en": "Adjective endings (no article)"
+          },
+          "iCan": {
+            "en": "I can use strong adjective endings without an article (e.g. frisches Brot, mit kaltem Wasser, gute Freunde)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "adjektivdeklination-unbestimmt"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "relativsaetze-nom-akk-dat",
+          "name": {
+            "en": "Relative clauses (nom./acc./dat.)"
+          },
+          "iCan": {
+            "en": "I can describe people and things more precisely using relative clauses in nominative, accusative, and dative."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "nebensatz-weil-dass",
+            "dativ-artikel"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "relativsaetze-praeposition",
+          "name": {
+            "en": "Relative clauses (prep. & gen.)"
+          },
+          "iCan": {
+            "en": "I can form relative clauses with prepositions (auf den, mit der) and genitive relative pronouns (dessen, deren)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "relativsaetze-nom-akk-dat",
+            "genitiv-artikel",
+            "verben-mit-praepositionen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "infinitiv-mit-zu",
+          "name": {
+            "en": "Infinitive clauses (zu, um … zu)"
+          },
+          "iCan": {
+            "en": "I can use infinitive clauses with zu, um … zu, ohne … zu, and (an)statt … zu."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "nebensatz-weil-dass"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "nebensatz-obwohl-waehrend",
+          "name": {
+            "en": "Clauses: obwohl, während, nachdem"
+          },
+          "iCan": {
+            "en": "I can connect ideas with obwohl, während, bevor, nachdem, seit(dem), and bis in subordinate clauses."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "nebensatz-wenn-als",
+            "plusquamperfekt"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 3
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "nebensatz-damit-sodass",
+          "name": {
+            "en": "Purpose & result: damit, sodass"
+          },
+          "iCan": {
+            "en": "I can express purpose with damit (different subjects) and results with sodass."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "nebensatz-weil-dass",
+            "infinitiv-mit-zu"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "zweiteilige-konnektoren",
+          "name": {
+            "en": "Two-part connectors"
+          },
+          "iCan": {
+            "en": "I can structure arguments using sowohl … als auch, weder … noch, nicht nur … sondern auch, zwar … aber, and je … desto."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "konjunktionen-aduso",
+            "komparativ-superlativ"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "konjunktiv2-irrealis",
+          "name": {
+            "en": "Unreal conditionals (Konjunktiv II)"
+          },
+          "iCan": {
+            "en": "I can express hypothetical situations and unreal wishes using wenn-clauses with Konjunktiv II."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "konjunktiv2-hoeflichkeit",
+            "nebensatz-wenn-als"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "konjunktiv2-vergangenheit",
+          "name": {
+            "en": "Past hypotheticals (hätte/wäre)"
+          },
+          "iCan": {
+            "en": "I can express past regrets and unrealized past possibilities using hätte or wäre + Partizip II."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "konjunktiv2-irrealis",
+            "perfekt-sein"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "partizip-als-adjektiv",
+          "name": {
+            "en": "Participles as adjectives"
+          },
+          "iCan": {
+            "en": "I can use present participles (ein lachendes Kind) and past participles (ein gelesenes Buch) as declined adjectives."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "adjektivdeklination-nullartikel",
+            "perfekt-haben"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "n-deklination",
+          "name": {
+            "en": "Weak masculine nouns (n-declension)"
+          },
+          "iCan": {
+            "en": "I can decline common weak masculine nouns like der Mensch, der Kollege, and der Student with -n/-en outside the nominative singular."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "dativ-artikel"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "satzklammer-tekamolo",
+          "name": {
+            "en": "Word order in Mittelfeld (TeKaMoLo)"
+          },
+          "iCan": {
+            "en": "I can order time, cause, manner, and place adverbials naturally inside the German sentence bracket."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "dativ-und-akkusativ",
+            "konjunktionaladverbien"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "modalpartikeln",
+          "name": {
+            "en": "Modal particles (doch, mal, ja)"
+          },
+          "iCan": {
+            "en": "I can recognize and use common modal particles (doch, mal, ja, eben, halt) to add tone in spoken German."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "imperativ",
+            "konjunktiv2-hoeflichkeit"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        }
+      ]
+    },
+    {
+      "id": "wortschatz",
+      "name": {
+        "de": "Wortschatz",
+        "en": "Vocabulary"
+      },
+      "competencies": [
+        {
+          "id": "begruessung-vorstellung",
+          "name": {
+            "en": "Greetings and introductions"
+          },
+          "iCan": {
+            "en": "I can greet people, say goodbye, and give basic personal details like my name, age, and country."
+          },
+          "gradeBand": "5-6",
+          "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 53,
+          "practisedBy": []
+        },
+        {
+          "id": "zahlen-preise",
+          "name": {
+            "en": "Numbers and prices"
+          },
+          "iCan": {
+            "en": "I can understand and say numbers, prices in euros and cents, and phone numbers."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "begruessung-vorstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 17,
+          "practisedBy": []
+        },
+        {
+          "id": "zeit-datum-wochentage",
+          "name": {
+            "en": "Time, days, months, and dates"
+          },
+          "iCan": {
+            "en": "I can tell the time (formal and informal) and name days of the week, months, and dates."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "zahlen-preise"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 14,
+          "practisedBy": []
+        },
+        {
+          "id": "familie-freunde",
+          "name": {
+            "en": "Family and friends"
+          },
+          "iCan": {
+            "en": "I can name family members, friends, and basic marital/relationship words."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "begruessung-vorstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 13,
+          "practisedBy": []
+        },
+        {
+          "id": "schule-unterricht",
+          "name": {
+            "en": "School and classroom phrases"
+          },
+          "iCan": {
+            "en": "I can name classroom objects and school subjects and use basic classroom phrases."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "begruessung-vorstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "essen-trinken-einkaufen",
+          "name": {
+            "en": "Food, drinks, and shopping"
+          },
+          "iCan": {
+            "en": "I can name everyday foods, drinks, meals, and shops and ask for items and prices."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "zahlen-preise"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 7,
+          "practisedBy": []
+        },
+        {
+          "id": "wohnen-zimmer",
+          "name": {
+            "en": "Home, rooms, and furniture"
+          },
+          "iCan": {
+            "en": "I can name rooms, furniture, and everyday household items to describe a home."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "familie-freunde"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 7,
+          "practisedBy": []
+        },
+        {
+          "id": "tagesablauf-freizeit",
+          "name": {
+            "en": "Daily routine and hobbies"
+          },
+          "iCan": {
+            "en": "I can describe my daily routine, hobbies, and favorite free-time activities."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "zeit-datum-wochentage"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "koerper-gesundheit-a1",
+          "name": {
+            "en": "Body parts and basic health"
+          },
+          "iCan": {
+            "en": "I can name basic parts of the body and say when something hurts or I feel sick."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "familie-freunde"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "stadt-verkehr-a1",
+          "name": {
+            "en": "Town, transport, and directions"
+          },
+          "iCan": {
+            "en": "I can name places in town and means of transport and understand simple directions."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "wohnen-zimmer"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "wetter-jahreszeiten",
+          "name": {
+            "en": "Weather, seasons, and colors"
+          },
+          "iCan": {
+            "en": "I can name colors, seasons, and basic weather conditions."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "zeit-datum-wochentage"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 7,
+          "practisedBy": []
+        },
+        {
+          "id": "kleidung-aussehen",
+          "name": {
+            "en": "Clothing and appearance"
+          },
+          "iCan": {
+            "en": "I can describe clothes, sizes, physical appearance, and basic personality traits."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "essen-trinken-einkaufen",
+            "wetter-jahreszeiten"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "reisen-urlaub",
+          "name": {
+            "en": "Travel and holidays"
+          },
+          "iCan": {
+            "en": "I can use vocabulary for booking trips, tickets, hotels, luggage, and holiday activities."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "stadt-verkehr-a1"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "beruf-arbeitswelt-a2",
+          "name": {
+            "en": "Professions and workplace"
+          },
+          "iCan": {
+            "en": "I can name common professions, workplaces, and everyday work activities."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "schule-unterricht",
+            "tagesablauf-freizeit"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "gesundheit-arztbesuch",
+          "name": {
+            "en": "Doctor visits and health"
+          },
+          "iCan": {
+            "en": "I can describe symptoms, understand simple advice at the doctor's or pharmacy, and talk about staying healthy."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "koerper-gesundheit-a1"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "feste-einladungen",
+          "name": {
+            "en": "Celebrations and invitations"
+          },
+          "iCan": {
+            "en": "I can invite someone, accept or decline invitations, and express good wishes for birthdays and holidays."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "familie-freunde",
+            "zeit-datum-wochentage"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "medien-digital-a2",
+          "name": {
+            "en": "Everyday media and internet"
+          },
+          "iCan": {
+            "en": "I can talk about using smartphones, computers, emails, apps, and television."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "schule-unterricht"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "gefuehle-meinung-a2",
+          "name": {
+            "en": "Feelings and simple opinions"
+          },
+          "iCan": {
+            "en": "I can express feelings, preferences, agreement, and disagreement in everyday situations."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "kleidung-aussehen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "natur-tiere-umwelt-a2",
+          "name": {
+            "en": "Nature, animals, and environment"
+          },
+          "iCan": {
+            "en": "I can name landscapes, animals, plants, and simple ways to protect the environment."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "wetter-jahreszeiten"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "dienstleistungen-aemter",
+          "name": {
+            "en": "Post office, bank, and services"
+          },
+          "iCan": {
+            "en": "I can handle everyday errands at the post office, bank, library, or lost-and-found office."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "stadt-verkehr-a1",
+            "essen-trinken-einkaufen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "komposita-wortbildung-a2",
+          "name": {
+            "en": "Compound nouns (Komposita)"
+          },
+          "iCan": {
+            "en": "I can understand and form everyday German compound nouns and determine their article from the final noun."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "artikel-genus",
+            "wohnen-zimmer"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "ausbildung-bewerbung",
+          "name": {
+            "en": "Education and job applications"
+          },
+          "iCan": {
+            "en": "I can use vocabulary for school qualifications, apprenticeships, CVs, and job interviews."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "beruf-arbeitswelt-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "umwelt-klima-nachhaltigkeit",
+          "name": {
+            "en": "Environment and sustainability"
+          },
+          "iCan": {
+            "en": "I can discuss environmental problems, climate protection, recycling, and sustainable habits."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "natur-tiere-umwelt-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "gesellschaft-zusammenleben",
+          "name": {
+            "en": "Society and community life"
+          },
+          "iCan": {
+            "en": "I can talk about rules, rights, volunteering, and living together in a diverse society."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "dienstleistungen-aemter",
+            "feste-einladungen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "medien-nachrichten-b1",
+          "name": {
+            "en": "News, social media, and ads"
+          },
+          "iCan": {
+            "en": "I can discuss news reports, social media, privacy, and advertising using B1 media vocabulary."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "medien-digital-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "kultur-kunst-musik",
+          "name": {
+            "en": "Culture, film, music, and books"
+          },
+          "iCan": {
+            "en": "I can talk about films, concerts, books, exhibitions, and cultural events."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "medien-digital-a2",
+            "feste-einladungen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "konsum-geld",
+          "name": {
+            "en": "Shopping, money, and complaints"
+          },
+          "iCan": {
+            "en": "I can discuss spending habits, online shopping, warranties, and product complaints."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "dienstleistungen-aemter",
+            "kleidung-aussehen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "gesundheit-ernaehrung-b1",
+          "name": {
+            "en": "Nutrition, fitness, and well-being"
+          },
+          "iCan": {
+            "en": "I can talk about balanced nutrition, exercise, stress, and healthcare."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "gesundheit-arztbesuch"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "argumentieren-redemittel",
+          "name": {
+            "en": "Phrases for arguing and debating"
+          },
+          "iCan": {
+            "en": "I can use B1 phrases to state opinions, weigh pros and cons, give examples, and propose compromises."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "gefuehle-meinung-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "wortbildung-ableitung-b1",
+          "name": {
+            "en": "Word formation (prefixes & suffixes)"
+          },
+          "iCan": {
+            "en": "I can deduce and form words using common prefixes and suffixes such as un-, -ung, -heit/-keit, -lich, and -bar."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "komposita-wortbildung-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        }
+      ]
+    },
+    {
+      "id": "aussprache",
+      "name": {
+        "de": "Aussprache und Rechtschreibung",
+        "en": "Pronunciation and spelling"
+      },
+      "competencies": [
+        {
+          "id": "alphabet-buchstabieren",
+          "name": {
+            "en": "German alphabet and spelling"
+          },
+          "iCan": {
+            "en": "I can pronounce the German alphabet and spell out names and words clearly."
+          },
+          "gradeBand": "5-6",
+          "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 14,
+          "practisedBy": []
+        },
+        {
+          "id": "umlaute-diphthonge",
+          "name": {
+            "en": "Umlauts and diphthongs"
+          },
+          "iCan": {
+            "en": "I can pronounce and spell German umlauts (ä, ö, ü) and diphthongs (ei, eu/äu, au) accurately."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "alphabet-buchstabieren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 8,
+          "practisedBy": []
+        },
+        {
+          "id": "ch-sch-sp-st",
+          "name": {
+            "en": "Key consonant sounds (ch, sch, sp, st)"
+          },
+          "iCan": {
+            "en": "I can pronounce the ich- and ach-sounds (ch), sch, initial sp/st, and z/tz reliably."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "alphabet-buchstabieren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "vokallaenge-dehnung",
+          "name": {
+            "en": "Long and short vowels"
+          },
+          "iCan": {
+            "en": "I can hear, pronounce, and recognize spelling cues for long vowels (ie, silent h) and short vowels (double consonants)."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "umlaute-diphthonge"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 7,
+          "practisedBy": []
+        },
+        {
+          "id": "grossschreibung-nomen",
+          "name": {
+            "en": "Capitalization of nouns"
+          },
+          "iCan": {
+            "en": "I can capitalize sentence beginnings, all German nouns, and the formal pronoun Sie."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "alphabet-buchstabieren"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "wortakzent-satzmelodie",
+          "name": {
+            "en": "Word stress and basic intonation"
+          },
+          "iCan": {
+            "en": "I can stress the main syllable of German words and use falling or rising intonation in statements and questions."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "vokallaenge-dehnung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "auslautverhaertung",
+          "name": {
+            "en": "Final consonant devoicing"
+          },
+          "iCan": {
+            "en": "I can pronounce final b, d, g as p, t, k (e.g. Tag, Kind, gelb) and still spell them correctly."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "ch-sch-sp-st"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "r-laute-endungen",
+          "name": {
+            "en": "R-sounds and unstressed endings"
+          },
+          "iCan": {
+            "en": "I can pronounce German r-sounds and reduced unstressed endings (-er, -en, -el) naturally."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "wortakzent-satzmelodie"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "akzent-praefixverben",
+          "name": {
+            "en": "Stress on verb prefixes"
+          },
+          "iCan": {
+            "en": "I can stress separable verb prefixes (aufstehen, einkaufen) and leave inseparable prefixes (verstehen, beginnen) unstressed."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "wortakzent-satzmelodie",
+            "trennbare-verben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "s-laute-ss-sz",
+          "name": {
+            "en": "Spelling s, ss, and ß"
+          },
+          "iCan": {
+            "en": "I can decide whether to write s, ss, or ß based on vowel length and voicing."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "vokallaenge-dehnung",
+            "ch-sch-sp-st"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "komma-aufzaehlung-nebensatz",
+          "name": {
+            "en": "Basic comma rules"
+          },
+          "iCan": {
+            "en": "I can place commas in lists and before subordinate clauses introduced by weil, dass, wenn, or als."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "grossschreibung-nomen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "satzakzent-kontrast",
+          "name": {
+            "en": "Sentence stress and emphasis"
+          },
+          "iCan": {
+            "en": "I can shift sentence stress to highlight new information or express contrast in conversation."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "wortakzent-satzmelodie",
+            "akzent-praefixverben"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "fremdwoerter-aussprache",
+          "name": {
+            "en": "Pronouncing common loanwords"
+          },
+          "iCan": {
+            "en": "I can pronounce and stress common international loanwords in German (e.g. -tion, -ie, -ieren, -tät)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "r-laute-endungen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "komma-infinitiv-relativsatz",
+          "name": {
+            "en": "Commas in complex sentences"
+          },
+          "iCan": {
+            "en": "I can set commas accurately around relative clauses and infinitive clauses with um/ohne/statt … zu."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "komma-aufzaehlung-nebensatz"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "zusammen-getrenntschreibung",
+          "name": {
+            "en": "Compounds & nominalizations"
+          },
+          "iCan": {
+            "en": "I can write German compounds as single words and capitalize nominalized verbs and adjectives (das Lesen, alles Gute)."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "grossschreibung-nomen",
+            "s-laute-ss-sz"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        }
+      ]
+    },
+    {
+      "id": "landeskunde",
+      "name": {
+        "de": "Länder und Kulturen",
+        "en": "Countries and cultures"
+      },
+      "competencies": [
+        {
+          "id": "duzen-siezen",
+          "name": {
+            "en": "Informal du vs. formal Sie"
+          },
+          "iCan": {
+            "en": "I can choose appropriately between informal du and formal Sie when addressing people in German-speaking countries."
+          },
+          "gradeBand": "5-6",
+          "requires": [],
+          "place": {
+            "band": "5-6",
+            "step": 1
+          },
+          "opens": 18,
+          "practisedBy": []
+        },
+        {
+          "id": "dach-laender-geografie",
+          "name": {
+            "en": "D-A-CH countries and cities"
+          },
+          "iCan": {
+            "en": "I can locate Germany, Austria, and Switzerland and name their capitals and major cities."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "duzen-siezen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 12,
+          "practisedBy": []
+        },
+        {
+          "id": "alltag-hoeflichkeit",
+          "name": {
+            "en": "Everyday politeness in D-A-CH"
+          },
+          "iCan": {
+            "en": "I can use typical greeting, thanking, and apologizing conventions in German-speaking everyday life."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "duzen-siezen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 9,
+          "practisedBy": []
+        },
+        {
+          "id": "esskultur-mahlzeiten",
+          "name": {
+            "en": "Food culture and meals"
+          },
+          "iCan": {
+            "en": "I can describe typical meal times, bakeries, cafés, and restaurant customs (such as tipping and paying) in D-A-CH."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "alltag-hoeflichkeit"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "schulalltag-dach",
+          "name": {
+            "en": "School life in D-A-CH"
+          },
+          "iCan": {
+            "en": "I can compare a typical school day and school holidays in German-speaking countries with my own."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "dach-laender-geografie"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "feiertage-braeuche-a1",
+          "name": {
+            "en": "Public holidays and traditions"
+          },
+          "iCan": {
+            "en": "I can name major public holidays and seasonal traditions in German-speaking countries (e.g. Weihnachten, Ostern, Silvester)."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "alltag-hoeflichkeit"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "oeffentlicher-nahverkehr",
+          "name": {
+            "en": "Public transport culture"
+          },
+          "iCan": {
+            "en": "I can navigate trains, S-Bahn, U-Bahn, buses, timetables, and ticket validation in D-A-CH."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "dach-laender-geografie"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "wohnen-nachbarschaft",
+          "name": {
+            "en": "Housing and neighborhood norms"
+          },
+          "iCan": {
+            "en": "I can explain everyday housing norms in D-A-CH such as Hausordnung, quiet hours, and waste separation."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "alltag-hoeflichkeit"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "feste-regionen",
+          "name": {
+            "en": "Regional festivals and customs"
+          },
+          "iCan": {
+            "en": "I can describe regional customs and festivals across Germany, Austria, and Switzerland (e.g. Karneval, Oktoberfest, Nationalfeiertage)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "feiertage-braeuche-a1",
+            "dach-laender-geografie"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "freizeit-vereine",
+          "name": {
+            "en": "Leisure and clubs (Vereine)"
+          },
+          "iCan": {
+            "en": "I can explain the role of sports and leisure clubs (Vereine) and free-time culture in D-A-CH."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "schulalltag-dach"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "bildungssystem-ueberblick",
+          "name": {
+            "en": "School and training system"
+          },
+          "iCan": {
+            "en": "I can describe the main school tracks and vocational training (Ausbildung) in German-speaking countries."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "schulalltag-dach"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "regionale-varietaeten-a2",
+          "name": {
+            "en": "Austrian & Swiss variants"
+          },
+          "iCan": {
+            "en": "I can recognize common Austrian and Swiss German everyday words (e.g. Grüezi, Servus, Jänner, Velo, Paradeiser)."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "esskultur-mahlzeiten",
+            "dach-laender-geografie"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "arbeitskultur-bewerbung",
+          "name": {
+            "en": "Workplace culture in D-A-CH"
+          },
+          "iCan": {
+            "en": "I can explain key workplace norms in German-speaking countries such as punctuality, direct feedback, and application customs."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "bildungssystem-ueberblick"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "medienlandschaft-dach",
+          "name": {
+            "en": "Media landscape in D-A-CH"
+          },
+          "iCan": {
+            "en": "I can name major German-language news outlets and public broadcasters and compare media habits."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "freizeit-vereine"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "umwelt-alltagskultur",
+          "name": {
+            "en": "Sustainability in everyday life"
+          },
+          "iCan": {
+            "en": "I can explain everyday sustainability practices in D-A-CH such as bottle deposits (Pfand), recycling, and green mobility."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "wohnen-nachbarschaft",
+            "oeffentlicher-nahverkehr"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "geschichte-gegenwart-dach",
+          "name": {
+            "en": "Recent history and reunification"
+          },
+          "iCan": {
+            "en": "I can outline key milestones of post-war German history, the fall of the Berlin Wall, and European integration."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "feste-regionen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "interkultureller-vergleich",
+          "name": {
+            "en": "Intercultural comparison"
+          },
+          "iCan": {
+            "en": "I can compare cultural norms, question stereotypes, and handle misunderstandings politely in intercultural encounters."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "alltag-hoeflichkeit",
+            "arbeitskultur-bewerbung"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "plurizentrik-sprache",
+          "name": {
+            "en": "Standard varieties and registers"
+          },
+          "iCan": {
+            "en": "I can distinguish standard German, regional varieties (D-A-CH), colloquial speech, and formal register."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "regionale-varietaeten-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        }
+      ]
+    },
+    {
+      "id": "texte",
+      "name": {
+        "de": "Texte und Medien",
+        "en": "Texts and media"
+      },
+      "competencies": [
+        {
+          "id": "formulare-ausfuellen",
+          "name": {
+            "en": "Filling in simple forms"
+          },
+          "iCan": {
+            "en": "I can understand and fill in simple registration or hotel forms with my personal details."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "begruessung-vorstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 2
+          },
+          "opens": 23,
+          "practisedBy": []
+        },
+        {
+          "id": "schilder-hinweise-lesen",
+          "name": {
+            "en": "Reading signs and notices"
+          },
+          "iCan": {
+            "en": "I can extract key facts from short signs, opening hours, timetables, and public notices."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "formulare-ausfuellen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 20,
+          "practisedBy": []
+        },
+        {
+          "id": "kurze-nachrichten-lesen",
+          "name": {
+            "en": "Reading short messages"
+          },
+          "iCan": {
+            "en": "I can understand short text messages, postcards, and simple personal notes."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "schilder-hinweise-lesen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 10,
+          "practisedBy": []
+        },
+        {
+          "id": "kurze-nachrichten-schreiben",
+          "name": {
+            "en": "Writing short messages"
+          },
+          "iCan": {
+            "en": "I can write short messages, postcards, or simple emails to invite someone or ask for basic information."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "kurze-nachrichten-lesen",
+            "verb-zweitstellung"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 6,
+          "practisedBy": []
+        },
+        {
+          "id": "durchsagen-verstehen-a1",
+          "name": {
+            "en": "Understanding short announcements"
+          },
+          "iCan": {
+            "en": "I can pick out key details like times, prices, and platform numbers from short announcements and voicemails."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "schilder-hinweise-lesen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 4
+          },
+          "opens": 6,
+          "practisedBy": []
+        },
+        {
+          "id": "alltagsgespraeche-a1",
+          "name": {
+            "en": "Simple everyday dialogues"
+          },
+          "iCan": {
+            "en": "I can manage short everyday dialogues such as ordering food, shopping, and asking simple questions."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "durchsagen-verstehen-a1",
+            "w-fragen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 3,
+          "practisedBy": []
+        },
+        {
+          "id": "sich-vorstellen-monolog",
+          "name": {
+            "en": "Introducing oneself aloud"
+          },
+          "iCan": {
+            "en": "I can introduce myself in a few simple connected sentences about my name, home, family, and hobbies."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "formulare-ausfuellen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 3
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "sprachmittlung-a1",
+          "name": {
+            "en": "Relaying simple information"
+          },
+          "iCan": {
+            "en": "I can pass on simple key facts (times, places, prices) from a short notice or message in another language."
+          },
+          "gradeBand": "5-6",
+          "requires": [
+            "kurze-nachrichten-lesen"
+          ],
+          "place": {
+            "band": "5-6",
+            "step": 5
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "emails-briefe-privat",
+          "name": {
+            "en": "Informal emails and letters"
+          },
+          "iCan": {
+            "en": "I can read and write informal emails and personal messages about everyday plans, news, and invitations."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "kurze-nachrichten-schreiben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 5,
+          "practisedBy": []
+        },
+        {
+          "id": "anzeigen-flyer-verstehen",
+          "name": {
+            "en": "Reading ads and flyers"
+          },
+          "iCan": {
+            "en": "I can scan advertisements, flyers, menus, and event schedules to find specific details."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "schilder-hinweise-lesen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 6,
+          "practisedBy": []
+        },
+        {
+          "id": "kurze-artikel-lesen",
+          "name": {
+            "en": "Reading short articles & blogs"
+          },
+          "iCan": {
+            "en": "I can understand the main points of short, simple articles and blog posts on familiar everyday topics."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "anzeigen-flyer-verstehen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 4,
+          "practisedBy": []
+        },
+        {
+          "id": "erlebnisse-berichten",
+          "name": {
+            "en": "Reporting past experiences"
+          },
+          "iCan": {
+            "en": "I can tell or write a short account of a weekend, trip, or past event in chronological order."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "emails-briefe-privat",
+            "sich-vorstellen-monolog",
+            "perfekt-haben"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "termin-vereinbaren",
+          "name": {
+            "en": "Making appointments & plans"
+          },
+          "iCan": {
+            "en": "I can make, change, or cancel appointments and plan an activity together with someone."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "alltagsgespraeche-a1",
+            "emails-briefe-privat"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "hoertexte-alltag-a2",
+          "name": {
+            "en": "Understanding everyday audio"
+          },
+          "iCan": {
+            "en": "I can understand the main points and details of clear everyday conversations and short radio clips."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "durchsagen-verstehen-a1"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "bildbeschreibung-a2",
+          "name": {
+            "en": "Describing pictures simply"
+          },
+          "iCan": {
+            "en": "I can describe people, places, and activities shown in a picture using simple connected sentences."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "sich-vorstellen-monolog"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "sprachmittlung-a2",
+          "name": {
+            "en": "Mediating practical texts"
+          },
+          "iCan": {
+            "en": "I can summarize useful information from flyers, emails, or schedules for someone in another language."
+          },
+          "gradeBand": "7-8",
+          "requires": [
+            "sprachmittlung-a1",
+            "anzeigen-flyer-verstehen"
+          ],
+          "place": {
+            "band": "7-8",
+            "step": 2
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "formelle-emails-briefe",
+          "name": {
+            "en": "Formal emails and letters"
+          },
+          "iCan": {
+            "en": "I can write semi-formal and formal emails or letters for inquiries, apologies, complaints, and applications."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "emails-briefe-privat",
+            "termin-vereinbaren",
+            "duzen-siezen",
+            "konjunktiv2-hoeflichkeit"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "sachtexte-zeitung-lesen",
+          "name": {
+            "en": "Reading newspaper & factual texts"
+          },
+          "iCan": {
+            "en": "I can understand main ideas, structure, and key details in newspaper articles and factual texts on familiar topics."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "kurze-artikel-lesen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 2,
+          "practisedBy": []
+        },
+        {
+          "id": "meinungstexte-forum",
+          "name": {
+            "en": "Opinion posts and comments"
+          },
+          "iCan": {
+            "en": "I can read and write structured opinion posts in forums or blogs, giving reasons and personal examples."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "kurze-artikel-lesen",
+            "gefuehle-meinung-a2",
+            "nebensatz-weil-dass"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "kurzvortrag-halten",
+          "name": {
+            "en": "Giving a short presentation"
+          },
+          "iCan": {
+            "en": "I can prepare and deliver a short, structured presentation on a familiar topic with introduction, pros/cons, and conclusion."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "erlebnisse-berichten",
+            "bildbeschreibung-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 1,
+          "practisedBy": []
+        },
+        {
+          "id": "diskussion-meinung-b1",
+          "name": {
+            "en": "Participating in discussions"
+          },
+          "iCan": {
+            "en": "I can take part in discussions on familiar topics, explain my point of view, and react to others' arguments."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "termin-vereinbaren",
+            "kurzvortrag-halten"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "hoer-sehverstehen-b1",
+          "name": {
+            "en": "Understanding interviews & videos"
+          },
+          "iCan": {
+            "en": "I can follow interviews, radio discussions, news items, and short videos on familiar topics in standard German."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "hoertexte-alltag-a2"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 1
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "literarische-kurztexte",
+          "name": {
+            "en": "Reading short stories & songs"
+          },
+          "iCan": {
+            "en": "I can understand the plot, characters, and main message of simple German short stories and song lyrics."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "sachtexte-zeitung-lesen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        },
+        {
+          "id": "sprachmittlung-b1",
+          "name": {
+            "en": "Mediating articles & viewpoints"
+          },
+          "iCan": {
+            "en": "I can summarize the main points and opinions of a German article or discussion for someone in another language."
+          },
+          "gradeBand": "9-10",
+          "requires": [
+            "sprachmittlung-a2",
+            "sachtexte-zeitung-lesen"
+          ],
+          "place": {
+            "band": "9-10",
+            "step": 2
+          },
+          "opens": 0,
+          "practisedBy": []
+        }
+      ]
+    }
+  ],
+  "curricula": []
+}
