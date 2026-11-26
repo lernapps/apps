@@ -109,3 +109,6 @@ SQL (#498) ist ein Grenzfall.
 ### Funde für Sammel-Issues (noch nicht angelegt)
 - map-review: `informatiksystem-auswaehlen` in 5-6, GI 2025 IS-10 sagt 7-10 (NRW 5/6 deckt 5-6) – #490.
 - map-review: Karte nennt GI als Quelle für `eva-prinzip`, GI 2025 nennt EVA nicht wörtlich (NRW, BY-MS, HE schon) – #490.
+- app-templates (explainer runtime, Funde #491): leere Antwort bei single-choice generisch; Rückfall-Meldung „Lies den Text über der Aufgabe“ passt nicht, wenn nur „Übung“ darüber steht; `generated` startet mit zufälliger Aufgabennummer; `ordering` erlaubt mehrfach „Platz 1“, Rückmeldung ohne Ort; Lizenz-Abzeichen überdeckt bei 360 px den Bildrand.
+- tooling/app-templates (Funde coding): Blockly lädt Medien von static.blockly.com (`no-request-before-click`), Blockly-ARIA im Flyout (upstream), `lernapps create` verlangt Plan in Phase code.
+- app-templates#201 angelegt (Parameter der Adresse für interactive); Session session_016NmpwboqaaxmBctiZ2xkeS autonom bis grüner PR.
