@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: { de: Programmierwerkstatt, en: Coding workshop }
+subject: informatik
+grades: [7, 8, 9, 10]
+summary:
+  de: >-
+    Du programmierst mit Blöcken und Kiko, ein Roboter, führt dein Programm aus. Er läuft durch Labyrinthe und
+    zeichnet Bilder; dabei lernst du Reihenfolge, Schleifen und Verzweigungen. Dein Programm muss jedes Rätsel einer
+    Aufgabe lösen, und die Rückmeldung sagt dir, wo es hakt.
+  en: >-
+    You program with blocks, and Kiko, a robot, runs your program. It walks through mazes and draws pictures; on the
+    way you learn about order, loops and choices. Your program has to solve every puzzle of a task, and the feedback
+    tells you where it goes wrong.
+url: https://lernapps.net/coding/
+topics:
+  - { title: { de: "Labyrinth 1: Um die Ecke", en: "Maze 1: Around the corner" }, path: "app/#labyrinth-1" }
+  - { title: { de: "Zeichnen 1: Ein Quadrat", en: "Drawing 1: A square" }, path: "app/#turtle-1" }
+  - { title: { de: "Labyrinth 2: Die Treppe", en: "Maze 2: The stairs" }, path: "app/#labyrinth-2" }
+  - { title: { de: "Zeichnen 2: Quadrat mit Wiederholung", en: "Drawing 2: Square with repeat" }, path: "app/#turtle-2" }
+  - { title: { de: "Zeichnen 3: Die Blume", en: "Drawing 3: The flower" }, path: "app/#turtle-3" }
+  - { title: { de: "Labyrinth 3: Der lange Gang", en: "Maze 3: The long corridor" }, path: "app/#labyrinth-3" }
+  - { title: { de: "Labyrinth 4: Geradeaus oder abbiegen?", en: "Maze 4: Straight on or turn?" }, path: "app/#labyrinth-4" }
+  - { title: { de: "Labyrinth 5: Immer dem Gang nach", en: "Maze 5: Follow the corridor" }, path: "app/#labyrinth-5" }
+  - { title: { de: "Eigene Aufgabe bauen (für Lehrkräfte)", en: "Build your own task (for teachers)" }, path: "app/#autoren" }
+keywords:
+  - { de: Programmieren, en: programming }
+  - { de: Blöcke, en: blocks }
+  - { de: Blockly, en: Blockly }
+  - { de: Roboter, en: robot }
+  - { de: Labyrinth, en: maze }
+  - { de: Turtle-Grafik, en: turtle graphics }
+  - { de: Schleife, en: loop }
+  - { de: Algorithmus, en: algorithm }
+strand: informatik/algorithmen
+competencies:
+  - sequenz
+  - visuelle-programmierung
+  - wiederholung-feste-anzahl
+  - wiederholung-mit-bedingung
+  - verzweigung
+creator: { name: "Oliver (@mrsimpson)" }
+source: https://github.com/lernapps/coding
+commit: 9f5303482ff03fdb3302f592cd8c87fc0a437d4b
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false

@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title:
+  de: "Meine Dateien: ordnen, speichern, schützen"
+  en: "My files: organise, store, protect"
+subject: informatik
+strand: informatik/informatiksysteme
+grades: [5, 6]
+summary:
+  de: >-
+    Du hilfst Mia, ihr Tablet aufzuräumen: Du legst Dateien in Ordner, baust den Ordnerbaum in einem Dateimanager
+    nach und findest Dateien über ihren Pfad wieder. Dann vergleichst du Tablet, USB-Stick und Cloud nach Platz,
+    Erreichbarkeit und Sicherheit und rechnest mit MB und GB.
+  en: >-
+    You help Mia tidy up her tablet: you put files into folders, rebuild the folder tree in a file manager and find
+    files again by their path. Then you compare the tablet, a USB stick and the cloud by space, access and safety,
+    and work with MB and GB.
+url: https://lernapps.net/informatik-dateien/
+source: https://github.com/lernapps/informatik-dateien
+commit: 1d51d1c8b0e82ec5a912bce751b8b1c50cd18c17
+creator:
+  name: "Oliver (@mrsimpson)"
+keywords:
+  - { de: Ordner und Dateien, en: files and folders }
+  - { de: Dateipfad, en: file path }
+  - { de: Dateimanager, en: file manager }
+  - { de: Dateiendung, en: file extension }
+  - { de: Speicherorte, en: storage locations }
+  - { de: Cloud-Speicher, en: cloud storage }
+  - { de: USB-Stick, en: USB stick }
+  - { de: Ordnerstruktur, en: folder structure }
+  - { de: Informatik Klasse 5 und 6, en: computing ages 10 to 12 }
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  checked: false
