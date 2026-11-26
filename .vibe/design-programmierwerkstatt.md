@@ -18,7 +18,7 @@ Rahmen der Plattform, der den Entwurf bestimmt:
 - Apps teilen zur Laufzeit keinen Code; jede speichert nur unter `lernapps:<id>:` (`dec-own-data-only`).
 - Explainer-Komponenten höchstens 20 kB gzip: Blockly (etwa 100 kB) gehört deshalb in eine eigene App.
 - Routen des Archetyps `interactive` sind heute feste ids aus `app.yaml` (`app/#<id>`); eine Challenge in der
-  Adresse braucht eine Erweiterung der Runtime (siehe 6).
+  Adresse braucht eine Erweiterung der Runtime (siehe 7).
 
 ## 2. Die zwei Arten von Erweiterung
 
