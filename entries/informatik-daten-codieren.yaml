@@ -4,16 +4,18 @@ title:
   en: Representing and encoding data
 subject: informatik
 strand: informatik/daten
-grades: [5, 6]
+grades: [5, 6, 7, 8]
 summary:
   de: >-
     Du begleitest die Klasse 6b auf ihrer Klassenfahrt und stellst dieselbe Information immer wieder neu dar: als
-    Tabelle, Diagramm und Baum, als Zahl aus Bits, als Pixelbild und als Geheimschrift. Mit Bit-Karten, einem
-    Pixel-Editor und einer Caesar-Scheibe probierst du selbst aus, wie ein Computer alles mit 0 und 1 speichert.
+    Tabelle, Diagramm und Baum, als Zahl aus Bits, als Pixelbild und als Geheimschrift. Ein Jahr später, in der 7b,
+    werden auch Text und Stimme zu Bytes. Mit Bit-Karten, Pixel-Editor, Caesar-Scheibe und einer Abtast-Simulation
+    probierst du selbst aus, wie ein Computer alles mit 0 und 1 speichert.
   en: >-
     You join class 6b on their school trip and show the same information in new ways again and again: as a table,
-    a chart and a tree, as a number made of bits, as a pixel picture and in secret writing. With bit cards, a pixel
-    editor and a Caesar disc you try out for yourself how a computer stores everything with 0 and 1.
+    a chart and a tree, as a number made of bits, as a pixel picture and in secret writing. One year later, in class
+    7b, text and voice become bytes too. With bit cards, a pixel editor, a Caesar disc and a sampling simulation you
+    try out for yourself how a computer stores everything with 0 and 1.
 url: https://lernapps.net/informatik-daten-codieren/
 keywords:
   - { de: Binärzahlen, en: binary numbers }
@@ -28,10 +30,15 @@ keywords:
   - { de: Verschlüsselung, en: encryption }
   - { de: Caesar-Verschlüsselung, en: Caesar cipher }
   - { de: Skytale, en: scytale }
+  - { de: Zeichencodierung, en: character encoding }
+  - { de: ASCII, en: ASCII }
+  - { de: Unicode, en: Unicode }
+  - { de: analog und digital, en: analog and digital }
+  - { de: Abtasten, en: sampling }
 creator:
   name: "Oliver (@mrsimpson)"
 source: https://github.com/lernapps/informatik-daten-codieren
-commit: 99f856690c11ca04713366e51da1d6affbb6b59d
+commit: 154a09cc20b775aa0080d7b001e8eaa4244a291b
 fitness:
   account: false
   install: false
