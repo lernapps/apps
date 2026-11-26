@@ -3,6 +3,7 @@
 # dazu main, Regel-Datei und Pages für die Programmierwerkstatt lernapps/coding (vom Menschen angelegt).
 # Aufruf: ./create-repos-informatik.sh       alle 13 (12 Explainer und coding)
 #         ./create-repos-informatik.sh 1     nur Welle 1 (ebenso 0 = coding, 2 und 3)
+#         ./create-repos-informatik.sh 2 3   Welle 2 und 3 in einem Lauf (beliebig viele Wellen)
 #         DRY=1 ./create-repos-informatik.sh     zeigt nur, was angelegt würde
 # Voraussetzung: gh angemeldet mit dem Recht, in lernapps Repositories anzulegen.
 # main entsteht mit der Regel-Datei .claude/settings.json; gh-pages (zeigt zuerst auf main) und Pages werden hier
@@ -87,11 +88,11 @@ REPOS=(
   "3|504|informatik-html-css|Sprachen für den Computer: HTML und CSS (Explainer Informatik)"
 )
 
-only="${1:-}"   # leer = alle; 0, 1, 2, 3 = Welle
+waves=" $* "   # leer = alle; sonst die genannten Wellen 0, 1, 2, 3
 
 for row in "${REPOS[@]}"; do
   IFS='|' read -r layer issue name desc <<<"$row"
-  [[ -n "$only" && "$only" != "$layer" ]] && continue
+  [[ "$waves" != "  " && "$waves" != *" $layer "* ]] && continue
   if [[ -z "$DRY" ]] && gh api "repos/$ORG/$name" --silent 2>/dev/null; then
     echo "vorhanden: $ORG/$name (Issue #$issue)"
     ensure_settings "$name"
