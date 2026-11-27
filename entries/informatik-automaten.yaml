@@ -4,16 +4,18 @@ title:
   en: Automata and states
 subject: informatik
 strand: informatik/sprachen-automaten
-grades: [5, 6]
+grades: [5, 6, 9, 10]
 summary:
   de: >-
     Du spielst mit der Klasse 6b einen Saftautomaten aus einem Karton und findest heraus, warum derselbe Knopf einmal
     einen Saft bringt und einmal nicht: Der Automat merkt sich etwas, seinen Zustand. Im Automaten-Simulator liest du
     Zustandsdiagramme mit Kreisen und Pfeilen, sagst voraus, wohin ein Automat springt, und ergänzt fehlende Pfeile.
+    In der 9. Klasse entwirfst du selbst Automaten wie eine Bedarfsampel und testest sie mit Eingabefolgen.
   en: >-
     You play a cardboard juice machine with class 6b and find out why the same button brings a juice one time and
     nothing another time: the machine remembers something, its state. In the automaton simulator you read state
     diagrams with circles and arrows, predict where a machine jumps and add missing arrows.
+    In Year 10 you design machines yourself, such as a pedestrian crossing light, and test them with input sequences.
 url: https://lernapps.net/informatik-automaten/
 keywords:
   - { de: Automat, en: automaton }
@@ -27,7 +29,7 @@ keywords:
 creator:
   name: "Oliver (@mrsimpson)"
 source: https://github.com/lernapps/informatik-automaten
-commit: 598fced8932b9e98b9c7f038bbcdbcc9568f6bee
+commit: 5a8e09ec63bd7f3d61676cbab8e6b327f1ccc4f1
 fitness:
   account: false
   install: false
