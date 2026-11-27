@@ -138,3 +138,5 @@ SQL (#498) ist ein Grenzfall.
 - tooling (coding): `arc42 diff` meldet Prosa über mehrere Bausteine und nach `lernapps update` den generischen Teil (06-runtime-view); Update sollte eigenen Teil ausnehmen. Regel `vue-component-no-html-injection` schlägt auch bei sandboxed `srcdoc`-Vorschau an (erlaubter Fall?).
 - Entscheidung: HTML/CSS-Welt in coding (`world.type: html`, Prüfung `dom-passt`, eigene Syntaxprüfung) für #504.
 - tooling (#502): Jede Vue-Datei in `src/components/` gilt als Block-Komponente; reine Hilfskomponenten müssen Prop-Typen selbst deklarieren, kein `string | undefined`.
+- #502-Retro: Aufgaben über den Seed der Reihe nach vergeben (sonst bei `start: first` dieselbe Aufgabe); Topologie/Geräte/Namen geteilter Karten einmal im Inhaltsleitfaden festlegen; SVG-Beschriftung messen; CI-Schrift breiter – lange URLs in matching/Optionen < 300 px Textbreite; `/** @verbatim */` für ids/Adressen.
+- #502-Eintrag (wartet auf Ja): strand informatik/informatiksysteme, grades 7,8; Kompetenzen internet-aufbau, client-und-server, ip-adresse-und-dns, url-aufbau, internetdienste, webseite-abrufen; Suchwörter de/en in Session-Nachricht 06:50.
