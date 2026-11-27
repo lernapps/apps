@@ -1,4 +1,4 @@
-// source: f961eccc4e7b13e3
+// source: c703dd3da960e0c9
 import { readFileSync } from "node:fs";
 import { deflateRawSync } from "node:zlib";
 // node_modules/@lernapps/tooling/dist/i18n.mjs
@@ -134,6 +134,7 @@ function programProblems(value, path = "program") {
   };
   const stmt = (v, at, depth) => {
     if (++nodes > MAX_NODES || depth > MAX_DEPTH || !isObject(v)) return bad(at);
+    if (v["locked"] !== void 0 && typeof v["locked"] !== "boolean") return bad(`${at}.locked`);
     switch (v["s"]) {
       case "cmd":
       case "call":
@@ -628,11 +629,13 @@ var labyrinth = {
     links: 0,
     rechts: 0,
   },
+  /** "weg-frei" is "wand-voraus" turned round, for beginners: no "nicht" needed. */
   sensors: {
     "wand-voraus": 0,
     "wand-links": 0,
     "wand-rechts": 0,
     "am-ziel": 0,
+    "weg-frei": 0,
   },
   checks: {
     "ziel-erreicht": (s, c) =>
@@ -684,6 +687,7 @@ var labyrinth = {
   },
   sense(s, c, name) {
     if (name === "am-ziel") return at(c, s.x, s.y) === "Z";
+    if (name === "weg-frei") return !wall(s, c, 0);
     return wall(s, c, name === "wand-links" ? -1 : name === "wand-rechts" ? 1 : 0);
   },
   describe: (s, c) => ({
@@ -695,7 +699,7 @@ var labyrinth = {
     },
   }),
 };
-var TOLERANCE = 2;
+var TOLERANCE$1 = 2;
 var MAX_LINES = 1e3;
 /** The grid of the comparison: one cell per unit, a margin of 50 around the sheet. */
 var MARGIN = 50;
@@ -732,8 +736,8 @@ function widen(grid) {
   for (let y = 0; y < GRID; y++)
     for (let x = 0; x < GRID; x++) {
       if (grid[y * GRID + x] !== 1) continue;
-      for (let dy = -2; dy <= TOLERANCE; dy++)
-        for (let dx = -2; dx <= TOLERANCE; dx++) {
+      for (let dy = -2; dy <= TOLERANCE$1; dy++)
+        for (let dx = -2; dx <= TOLERANCE$1; dx++) {
           const yy = y + dy;
           const xx = x + dx;
           if (yy >= 0 && yy < GRID && xx >= 0 && xx < GRID) out[yy * GRID + xx] = 1;
@@ -912,6 +916,155 @@ function worldOf(type, version) {
   return WORLDS[type]?.[version];
 }
 var newestVersion = (type) => Math.max(0, ...Object.keys(WORLDS[type] ?? {}).map(Number));
+/** Points of a line closer than this are the same (as the check "bild-gleich"). */
+var TOLERANCE = 2;
+/** The lines of a picture, without lines of length 0. */
+var linesOf = (run) => (run.world.lines ?? []).filter((l) => l[0] !== l[2] || l[1] !== l[3]);
+var point = (v) => Math.round(v);
+/** The run of the challenge's program on test case `n`. */
+function runOf(c, n, program = c.start) {
+  const world = worldOf(c.world.type, c.world.version);
+  if (world === void 0 || program === null) return null;
+  return runToEnd(program, world, configAt(c, n), c.limits.steps ?? 1e3);
+}
+var near = (a, b) =>
+  Math.hypot(a[0] - b[0], a[1] - b[1]) <= TOLERANCE && Math.hypot(a[2] - b[2], a[3] - b[3]) <= TOLERANCE;
+/** Compares the lines Kiko drew with the lines of the picture chosen. */
+function comparePicture(run, chosen) {
+  const drawn = linesOf(run);
+  const i = drawn.findIndex((l, k) => chosen[k] === void 0 || !near(l, chosen[k]));
+  const at = i < 0 ? (chosen.length > drawn.length ? drawn.length : -1) : i;
+  if (at < 0) return { ok: true };
+  const kiko = drawn[at];
+  const yours = chosen[at];
+  const ends = (l) => ({
+    x1: point(l[0]),
+    y1: point(l[1]),
+    x2: point(l[2]),
+    y2: point(l[3]),
+  });
+  if (kiko !== void 0 && yours !== void 0)
+    return {
+      ok: false,
+      why: {
+        key: at === 0 ? "fail-predict-line-first" : "fail-predict-line",
+        params: {
+          ok: at,
+          line: at + 1,
+          ...ends(kiko),
+          px: point(yours[2]),
+          py: point(yours[3]),
+        },
+      },
+    };
+  if (kiko !== void 0)
+    return {
+      ok: false,
+      why: {
+        key: "fail-predict-line-more",
+        params: {
+          ok: at,
+          line: at + 1,
+          ...ends(kiko),
+        },
+      },
+    };
+  return {
+    ok: false,
+    why: {
+      key: "fail-predict-line-less",
+      params: {
+        ok: at,
+        lines: drawn.length,
+      },
+    },
+  };
+}
+/** Problems of a challenge with the check "vorhersage" (after the general checks found none in its parts). */
+function predictionProblems(value, world, valid) {
+  const checks = Array.isArray(value["checks"]) ? value["checks"] : [];
+  const field = value["vorhersage"];
+  if (!checks.includes("vorhersage"))
+    return field === void 0
+      ? []
+      : [
+          {
+            path: "vorhersage",
+            key: "problem-predict-field",
+          },
+        ];
+  const p = [];
+  if (checks.length !== 1)
+    p.push({
+      path: "checks",
+      key: "problem-predict-checks",
+    });
+  const start = value["start"];
+  if (start === null || start === void 0 || programProblems(start).length > 0 || blocksOf(start).length === 0)
+    return [
+      ...p,
+      {
+        path: "start",
+        key: "problem-predict-start",
+      },
+    ];
+  if (world === void 0) return p;
+  if (world.id === "turtle") {
+    const bilder = isObject(field) ? field["bilder"] : void 0;
+    if (
+      !isObject(field) ||
+      Object.keys(field).some((k) => k !== "bilder") ||
+      !Array.isArray(bilder) ||
+      bilder.length < 2 ||
+      bilder.length > 3
+    )
+      return [
+        ...p,
+        {
+          path: "vorhersage",
+          key: "problem-predict-pictures",
+        },
+      ];
+    bilder.forEach((b, i) => {
+      const syntax = programProblems(b, `vorhersage.bilder[${i}]`);
+      p.push(...(syntax.length > 0 ? syntax : fitProblems(b, world, `vorhersage.bilder[${i}]`)));
+    });
+  } else if (field !== void 0)
+    p.push({
+      path: "vorhersage",
+      key: "problem-predict-field",
+    });
+  if (p.length > 0 || !valid) return p;
+  const c = value;
+  for (let n = 1; n <= testCount(c); n++) {
+    const run = runOf(c, n);
+    if (run === null || run.status !== "done") {
+      p.push({
+        path: "start",
+        key: "problem-predict-run",
+        params: { n },
+      });
+      continue;
+    }
+    if (world.id !== "turtle") continue;
+    (c.vorhersage?.bilder ?? []).forEach((b, i) => {
+      const wrong = runOf(c, n, b);
+      if (wrong === null || wrong.status !== "done" || linesOf(wrong).length > 200)
+        p.push({
+          path: `vorhersage.bilder[${i}]`,
+          key: "problem-target-lines",
+          params: { max: 200 },
+        });
+      else if (comparePicture(run, linesOf(wrong)).ok)
+        p.push({
+          path: `vorhersage.bilder[${i}]`,
+          key: "problem-predict-same",
+          params: { n },
+        });
+    });
+  }
+  return p;
+}
 // src/core/challenge.ts
 var LANGUAGES = ["de", "en"];
 var MAX_LINK = 2e3;
@@ -934,8 +1087,9 @@ var KEYS = [
   "hints",
   "view",
   "back",
+  "vorhersage",
 ];
-var WORKSHOP_CHECKS = ["hoechstens-bloecke"];
+var WORKSHOP_CHECKS = ["hoechstens-bloecke", "vorhersage"];
 function textProblems(value, path, max) {
   if (!isObject(value))
     return [
@@ -1137,6 +1291,7 @@ function challengeProblems(value) {
       });
     else p.push(...textProblems(back["label"], "back.label", 60));
   }
+  p.push(...predictionProblems(value, world, p.length === 0));
   return p;
 }
 /** Checks a finished run of test case `n` against the challenge's world checks. */
@@ -1246,8 +1401,8 @@ var de_default = {
   "hint-show": "Hinweis zeigen ({n} von {count})",
   hints: "Hinweise",
   "back-result": "Für deine Lehrkraft (oder einen KI-Tutor, wenn ihr einen benutzt)",
-  "result-solved": "Aufgabe „{title}“ ({id}): gelöst im {attempts}. Versuch",
-  "result-open": "Aufgabe „{title}“ ({id}): noch nicht gelöst, Versuche: {attempts}",
+  "result-solved": "Aufgabe „{title}“: gelöst im {attempts}. Versuch",
+  "result-open": "Aufgabe „{title}“: noch nicht gelöst, Versuche: {attempts}",
   copy: "Kopieren",
   copied: "Kopiert.",
   "problems-title": "Diese Aufgabe kann die Werkstatt nicht öffnen.",
@@ -1322,13 +1477,13 @@ var de_default = {
     "Diese Aufgabe hat {count} Rätsel: Varianten des Labyrinths oder Bildes. Dein Programm muss alle lösen. „Start“ probiert es in allen nacheinander aus. Mit den Reitern über dem Bild schaust du dir jedes Rätsel an.",
   help: "So funktioniert die Werkstatt",
   "help-blocks":
-    "Zieh Blöcke aus der Liste und häng sie unter den braunen Block „Programm“. Nur Blöcke, die dort hängen, laufen. Lose Blöcke sind blass (ein Screenreader sagt „ausgeschaltet“).",
+    "Zieh Blöcke aus der Liste und häng sie unter den braunen Block „Programm“. Nur Blöcke, die dort hängen, laufen. Legst du einen Block unter das Programm, hängt er sich unten an. Lose Blöcke sind blass und haben ein Warnzeichen (ein Screenreader sagt „ausgeschaltet“).",
   "help-robot":
     "Kiko ist ein Roboter. Das Dreieck an seinem Kreis zeigt, wohin er schaut. „links“ und „rechts“ gelten aus seiner Sicht, also vom Dreieck aus.",
   "help-run":
     "„Start“ führt dein Programm aus. „Ein Schritt“ führt nur einen Block aus. In der Arbeitsfläche ist der Block markiert, der gerade dran war.",
   "help-keys":
-    "Mit der Tastatur: Drück Tab, bis du in der Liste der Blöcke bist. Mit den Pfeiltasten gehst du durch die Liste (in einer Reihe mit Pfeil nach rechts). Enter nimmt einen Block. Mit den Pfeiltasten wählst du seinen Platz; ein Screenreader sagt dir, wohin er kommt. Enter legt ihn ab. Mit T kommst du zurück zur Liste. Eine Zahl in einem Block änderst du so: Pfeil nach rechts bis zur Zahl, Enter, Zahl tippen, Enter.",
+    "Mit der Tastatur: Drück Tab, bis du in der Liste der Blöcke bist. Mit den Pfeiltasten gehst du durch die Liste (in einer Reihe mit Pfeil nach rechts). Enter nimmt einen Block. Mit den Pfeiltasten wählst du seinen Platz; ein Screenreader sagt dir, wohin er kommt. Enter legt ihn ab; ohne gewählten Platz kommt er ans Ende des Programms. Mit T kommst du zurück zur Liste. Eine Zahl in einem Block änderst du so: Pfeil nach rechts bis zur Zahl, Enter, Zahl tippen, Enter.",
   "new-blocks": "Blöcke in dieser Aufgabe",
   "explain-wiederhole":
     "„wiederhole … mal“: Die Blöcke darin laufen so oft, wie die Zahl sagt. Ein Block, der andere Blöcke wiederholt, heißt Schleife. Die Zahl änderst du mit einem Klick darauf oder mit der Tastatur.",
@@ -1423,11 +1578,97 @@ var de_default = {
   "copy-missing": "Kopieren geht hier nicht. Markier den Text und kopier ihn selbst.",
   "problem-solution-block": "Die Musterlösung benutzt den Block „{name}“, der nicht in der Werkzeugkiste ist.",
   "solved-both": "Geschafft! Dein Programm löst beide Rätsel.",
-  "all-done": "Das war die letzte Aufgabe. Du hast alle Aufgaben der Werkstatt geschafft!",
+  "all-done": "Das war die letzte Aufgabe der Werkstatt.",
   "scroll-hint": "Wisch die Reihe der Blöcke zur Seite, dann siehst du alle.",
   "test-ok": "gelöst",
   "test-fail": "nicht gelöst",
   "running-test": "Kiko löst Rätsel {n} von {count}.",
+  "block-weg-frei": "Weg frei?",
+  "explain-weg-frei": "„Weg frei?“ fragt: Kann Kiko vorwärts gehen, ohne an eine Wand zu stoßen?",
+  "word-weg-frei": "Weg frei?",
+  "authoring-beginners":
+    'Für Einsteiger: „Weg frei?“ ist „Wand voraus?“ umgedreht und kommt ohne „nicht“ aus. Ein Befehl mit "locked": true im Startprogramm ist fest: Lernende füllen nur seine Lücken (Lückenaufgaben).',
+  "fail-predict-no-way": "Setz zuerst den Weg von Kiko: Feld für Feld, so wie Kiko geht.",
+  "fail-predict-no-picture": "Wähl zuerst das Bild, das Kiko malt.",
+  "fail-predict-step":
+    "Bis Schritt {ok} stimmt deine Vorhersage. In Schritt {step} geht Kiko auf Feld ({x}|{y}), du hast Feld ({px}|{py}) gesetzt.",
+  "fail-predict-step-first":
+    "Schon Schritt 1 ist anders: Kiko geht auf Feld ({x}|{y}), du hast Feld ({px}|{py}) gesetzt.",
+  "fail-predict-more":
+    "Bis Schritt {ok} stimmt deine Vorhersage. Dann geht Kiko weiter: In Schritt {step} geht er auf Feld ({x}|{y}).",
+  "fail-predict-less":
+    "Bis Schritt {ok} stimmt deine Vorhersage. Dann bleibt Kiko in Feld ({x}|{y}) stehen. Du hast danach noch Feld ({px}|{py}) gesetzt.",
+  "fail-predict-line":
+    "Bis Linie {ok} stimmt dein Bild. Linie {line} zeichnet Kiko von ({x1}|{y1}) nach ({x2}|{y2}), in deinem Bild geht sie nach ({px}|{py}).",
+  "fail-predict-line-first":
+    "Schon Linie 1 ist anders: Kiko zeichnet sie von ({x1}|{y1}) nach ({x2}|{y2}), in deinem Bild geht sie nach ({px}|{py}).",
+  "fail-predict-line-more":
+    "Bis Linie {ok} stimmt dein Bild. Dann zeichnet Kiko noch Linie {line}: von ({x1}|{y1}) nach ({x2}|{y2}).",
+  "fail-predict-line-less":
+    "Bis Linie {ok} stimmt dein Bild. Dann hört Kiko auf: Sein Bild hat {lines} Linien, deins hat mehr.",
+  "problem-predict-field": "„vorhersage“ gibt es nur mit der Prüfung „vorhersage“, und nur in der Welt Turtle.",
+  "problem-predict-checks": "Mit „vorhersage“ ist sie die einzige Prüfung.",
+  "problem-predict-start":
+    "Eine Vorhersage braucht ein Startprogramm mit Blöcken: Das ist das Programm, das Lernende lesen.",
+  "problem-predict-pictures":
+    'Turtle: „vorhersage“ ist { "bilder": [ … ] } mit 2 oder 3 Programmen für die falschen Bilder.',
+  "problem-predict-run":
+    "Rätsel {n}: Das Startprogramm läuft nicht bis zum Ende. Eine Vorhersage braucht einen Lauf ohne Fehler.",
+  "problem-predict-same": "Rätsel {n}: Dieses falsche Bild ist dasselbe wie das richtige.",
+  "field-name": "Feld ({x}|{y})",
+  "predict-title": "Deine Vorhersage",
+  "predict-from-start": "Kiko startet in {field}. Auf welches Feld geht er zuerst?",
+  "predict-from": "Zuletzt gesetzt: {field}. Auf welches Feld geht Kiko danach?",
+  "predict-next": "Nächstes Feld, auf der Karte gesehen",
+  "predict-dir-up": "nach oben",
+  "predict-dir-right": "nach rechts",
+  "predict-dir-down": "nach unten",
+  "predict-dir-left": "nach links",
+  "predict-wall": "Da ist eine Wand.",
+  "predict-empty": "Noch kein Feld gesetzt.",
+  "predict-undo": "Letztes Feld weg",
+  "predict-clear": "Alles löschen",
+  "predict-set": "Schritt {n}: {field}",
+  "predict-back": "Letztes Feld weg. Noch {n} Felder.",
+  "predict-cleared": "Vorhersage gelöscht.",
+  "program-text": "Das Programm als Text",
+  "phase-predict": "Setz den Weg von Kiko, dann drück „Start“.",
+  "phase-predict-picture": "Wähl ein Bild, dann drück „Start“.",
+  "help-predict-read":
+    "Das Programm ist fertig. Du kannst es lesen, aber nicht ändern. Es steht auch als Text da: „Das Programm als Text“.",
+  "help-predict-way":
+    "Setz die Felder, durch die Kiko geht, der Reihe nach: Klick auf ein Feld neben dem letzten, oder nimm die Pfeil-Knöpfe. Die Pfeile gelten für die Karte (oben ist oben), nicht für Kikos Blick.",
+  "help-predict-run":
+    "„Start“ lässt Kiko das Programm ausführen; der Block, der gerade dran ist, ist markiert. „Ein Befehl“ führt nur den nächsten Befehl aus: einmal gehen oder einmal drehen („wiederhole“ und „solange“ zählen nicht mit). Weicht Kiko von deiner Vorhersage ab, bleibt er dort stehen, und du liest, bei welchem Schritt. Der markierte Block zeigt, wo im Programm das war.",
+  "tests-explain-predict":
+    "Diese Aufgabe hat {count} Rätsel: verschiedene Karten, dasselbe Programm. Mit den Reitern über der Karte wechselst du; setz in jedem Rätsel den Weg.",
+  "solved-predict": "Richtig vorhergesagt! Kiko geht genau die Felder, die du gesetzt hast.",
+  "solved-predict-all": "Richtig vorhergesagt, in allen {count} Rätseln!",
+  "picture-name": "Bild {letter}",
+  "picture-line": "Linie {n}: von ({x1}|{y1}) nach ({x2}|{y2})",
+  "picture-chosen": "{name} gewählt.",
+  "picture-legend": "Welches Bild malt Kiko?",
+  "picture-describe": "Beschreibung: {count} Linien",
+  "help-predict-picture":
+    "Unter der Fläche stehen mehrere Bilder. Nur eines malt Kiko mit diesem Programm. Wähl es aus. Jedes Bild hat eine Beschreibung, Linie für Linie.",
+  "help-map-turtle-predict":
+    "Beim Zeichnen geht Kiko nicht über Felder: Er zeichnet auf einer Fläche von 200 × 200 Pixeln. Die Zahlen am Rand helfen dir, Stellen zu finden: (50|100) heißt 50 nach rechts, 100 nach unten. Zu Beginn steht Kiko in der Mitte und schaut nach oben.",
+  "step-command": "Ein Befehl",
+  "phase-running-predict": "Kiko führt das Programm aus.",
+  "phase-paused-predict": "Angehalten. Ausgeführte Befehle: {commands}. Der markierte Block war gerade dran.",
+  "predict-not-next": "Dieses Feld geht nicht: Kiko geht immer nur auf ein Feld neben dem letzten.",
+  "predict-not-wall": "Dieses Feld geht nicht: Da ist eine Wand.",
+  "help-predict-marks": "Kikos Weg ist orange. Das Feld, an dem deine Vorhersage abweicht, ist rot umrandet.",
+  "fail-predict-less-none": "Kiko bleibt auf seinem Startfeld ({x}|{y}). Du hast Feld ({px}|{py}) gesetzt.",
+  "solved-predict-picture": "Richtig vorhergesagt! Kiko malt genau dieses Bild.",
+  "loose-block": "Dieser Block hängt nicht am Programm und läuft nicht. Häng ihn unter den letzten Block.",
+  "loose-blocks":
+    "Lose Blöcke: {count}. Sie hängen nicht am Programm und laufen nicht. Du erkennst sie am Warnzeichen.",
+  "solved-predict-both": "Richtig vorhergesagt, in beiden Rätseln!",
+  "all-done-more": "Lust auf mehr? Bau eine eigene Aufgabe",
+  "explain-predict-wiederhole":
+    "„wiederhole … mal“: Die Blöcke darin laufen so oft, wie die Zahl sagt. Ein Block, der andere Blöcke wiederholt, heißt Schleife.",
+  "explain-predict-gehe": "„gehe … Pixel“: Kiko geht so viele Pixel nach vorn und zeichnet dabei eine Linie.",
 };
 var en_default = {
   app: "Coding workshop",
@@ -1457,8 +1698,8 @@ var en_default = {
   "hint-show": "Show a hint ({n} of {count})",
   hints: "Hints",
   "back-result": "For your teacher (or an AI tutor, if you use one)",
-  "result-solved": "Task “{title}” ({id}): solved on attempt {attempts}",
-  "result-open": "Task “{title}” ({id}): not solved yet, attempts: {attempts}",
+  "result-solved": "Task “{title}”: solved on attempt {attempts}",
+  "result-open": "Task “{title}”: not solved yet, attempts: {attempts}",
   copy: "Copy",
   copied: "Copied.",
   "problems-title": "The workshop cannot open this task.",
@@ -1533,13 +1774,13 @@ var en_default = {
     "This task has {count} puzzles: variants of the maze or picture. Your program has to solve them all. “Run” tries it in each one in turn. Use the tabs above the picture to look at each puzzle.",
   help: "How the workshop works",
   "help-blocks":
-    "Drag blocks from the list and hang them under the brown block “Program”. Only blocks that hang there will run. Loose blocks are pale (a screen reader says “disabled”).",
+    "Drag blocks from the list and hang them under the brown block “Program”. Only blocks that hang there will run. If you drop a block below the program, it hangs itself on at the end. Loose blocks are pale and have a warning sign (a screen reader says “disabled”).",
   "help-robot":
     "Kiko is a robot. The triangle on its circle shows where it is looking. “left” and “right” are from Kiko's point of view, so from the triangle.",
   "help-run":
     "“Run” runs your program. “One step” runs just one block. The block that just ran is marked in the work area.",
   "help-keys":
-    "With the keyboard: press Tab until you are in the list of blocks. Use the arrow keys to go through the list (in a row, the right arrow). Enter picks a block. Use the arrow keys to choose its place; a screen reader tells you where it goes. Enter puts it down. Press T to go back to the list. To change a number in a block: arrow right to the number, Enter, type the number, Enter.",
+    "With the keyboard: press Tab until you are in the list of blocks. Use the arrow keys to go through the list (in a row, the right arrow). Enter picks a block. Use the arrow keys to choose its place; a screen reader tells you where it goes. Enter puts it down; without a chosen place it goes to the end of the program. Press T to go back to the list. To change a number in a block: arrow right to the number, Enter, type the number, Enter.",
   "new-blocks": "Blocks in this task",
   "explain-wiederhole":
     "“repeat … times”: the blocks inside run as many times as the number says. A block that repeats other blocks is called a loop. Change the number by clicking it or with the keyboard.",
@@ -1634,11 +1875,96 @@ var en_default = {
   "copy-missing": "Copying does not work here. Select the text and copy it yourself.",
   "problem-solution-block": "The model solution uses the block “{name}”, which is not in the toolbox.",
   "solved-both": "Done! Your program solves both puzzles.",
-  "all-done": "That was the last task. You have done all the tasks of the workshop!",
+  "all-done": "That was the last task of the workshop.",
   "scroll-hint": "Swipe the row of blocks sideways to see them all.",
   "test-ok": "solved",
   "test-fail": "not solved",
   "running-test": "Kiko is solving puzzle {n} of {count}.",
+  "block-weg-frei": "way ahead clear?",
+  "explain-weg-frei": "“way ahead clear?” asks: can Kiko move forward without bumping into a wall?",
+  "word-weg-frei": "way ahead clear?",
+  "authoring-beginners":
+    'For beginners: “way ahead clear?” is “wall ahead?” turned round and needs no “not”. A command with "locked": true in the start program is fixed: learners only fill its gaps (gap tasks).',
+  "fail-predict-no-way": "First set Kiko's way: square by square, as Kiko goes.",
+  "fail-predict-no-picture": "First choose the picture Kiko draws.",
+  "fail-predict-step":
+    "Your prediction is right up to step {ok}. In step {step} Kiko goes to square ({x}, {y}), you set square ({px}, {py}).",
+  "fail-predict-step-first":
+    "Step 1 is already different: Kiko goes to square ({x}, {y}), you set square ({px}, {py}).",
+  "fail-predict-more":
+    "Your prediction is right up to step {ok}. Then Kiko goes on: in step {step} it goes to square ({x}, {y}).",
+  "fail-predict-less":
+    "Your prediction is right up to step {ok}. Then Kiko stops at square ({x}, {y}). After that you set square ({px}, {py}).",
+  "fail-predict-line":
+    "Your picture is right up to line {ok}. Kiko draws line {line} from ({x1}, {y1}) to ({x2}, {y2}), in your picture it goes to ({px}, {py}).",
+  "fail-predict-line-first":
+    "Line 1 is already different: Kiko draws it from ({x1}, {y1}) to ({x2}, {y2}), in your picture it goes to ({px}, {py}).",
+  "fail-predict-line-more":
+    "Your picture is right up to line {ok}. Then Kiko draws line {line} as well: from ({x1}, {y1}) to ({x2}, {y2}).",
+  "fail-predict-line-less":
+    "Your picture is right up to line {ok}. Then Kiko stops: its picture has {lines} lines, yours has more.",
+  "problem-predict-field": "“vorhersage” exists only with the check “vorhersage”, and only in the world turtle.",
+  "problem-predict-checks": "With “vorhersage” it is the only check.",
+  "problem-predict-start": "A prediction needs a start program with blocks: it is the program learners read.",
+  "problem-predict-pictures":
+    'Turtle: “vorhersage” is { "bilder": [ … ] } with 2 or 3 programs for the wrong pictures.',
+  "problem-predict-run":
+    "Puzzle {n}: the start program does not run to its end. A prediction needs a run without errors.",
+  "problem-predict-same": "Puzzle {n}: this wrong picture is the same as the right one.",
+  "field-name": "square ({x}, {y})",
+  "predict-title": "Your prediction",
+  "predict-from-start": "Kiko starts at {field}. Which square does it go to first?",
+  "predict-from": "Last set: {field}. Which square does Kiko go to next?",
+  "predict-next": "Next square, as seen on the map",
+  "predict-dir-up": "up",
+  "predict-dir-right": "right",
+  "predict-dir-down": "down",
+  "predict-dir-left": "left",
+  "predict-wall": "There is a wall.",
+  "predict-empty": "No square set yet.",
+  "predict-undo": "Remove last square",
+  "predict-clear": "Clear all",
+  "predict-set": "Step {n}: {field}",
+  "predict-back": "Last square removed. {n} squares left.",
+  "predict-cleared": "Prediction cleared.",
+  "program-text": "The program as text",
+  "phase-predict": "Set Kiko's way, then press “Run”.",
+  "phase-predict-picture": "Choose a picture, then press “Run”.",
+  "help-predict-read":
+    "The program is ready. You can read it but not change it. It is also written as text: “The program as text”.",
+  "help-predict-way":
+    "Set the squares Kiko goes through, one after the other: click a square next to the last one, or use the arrow buttons. The arrows are for the map (up is up), not for where Kiko looks.",
+  "help-predict-run":
+    "“Run” lets Kiko carry out the program; the block that is running is marked. “One command” carries out only the next command: one move or one turn (“repeat” and “while” do not count). If Kiko leaves your prediction, it stops there and you read at which step. The marked block shows where in the program that was.",
+  "tests-explain-predict":
+    "This task has {count} puzzles: different maps, the same program. Switch with the tabs above the map; set the way in each puzzle.",
+  "solved-predict": "Well predicted! Kiko goes exactly through the squares you set.",
+  "solved-predict-all": "Well predicted, in all {count} puzzles!",
+  "picture-name": "Picture {letter}",
+  "picture-line": "Line {n}: from ({x1}, {y1}) to ({x2}, {y2})",
+  "picture-chosen": "{name} chosen.",
+  "picture-legend": "Which picture does Kiko draw?",
+  "picture-describe": "Description: {count} lines",
+  "help-predict-picture":
+    "Below the sheet there are several pictures. Kiko draws only one of them with this program. Choose it. Each picture has a description, line by line.",
+  "help-map-turtle-predict":
+    "When drawing, Kiko does not move over squares: it draws on a sheet of 200 × 200 pixels. The numbers at the edge help you find places: (50, 100) means 50 to the right, 100 down. At the start Kiko stands in the middle and looks up.",
+  "step-command": "One command",
+  "phase-running-predict": "Kiko carries out the program.",
+  "phase-paused-predict": "Paused. Commands carried out: {commands}. The marked block was the last to run.",
+  "predict-not-next": "This square does not work: Kiko only ever goes to a square next to the last one.",
+  "predict-not-wall": "This square does not work: there is a wall.",
+  "help-predict-marks": "Kiko's way is orange. The square where your prediction differs has a red frame.",
+  "fail-predict-less-none": "Kiko stays on its start square ({x}, {y}). You set square ({px}, {py}).",
+  "solved-predict-picture": "Well predicted! Kiko draws exactly this picture.",
+  "loose-block": "This block does not hang on the program and does not run. Hang it under the last block.",
+  "loose-blocks":
+    "Loose blocks: {count}. They do not hang on the program and do not run. You can tell them by the warning sign.",
+  "solved-predict-both": "Well predicted, in both puzzles!",
+  "all-done-more": "Want more? Build your own task",
+  "explain-predict-wiederhole":
+    "“repeat … times”: the blocks inside run as often as the number says. A block that repeats other blocks is called a loop.",
+  "explain-predict-gehe": "“move … pixels”: Kiko moves forward that many pixels and draws a line.",
 };
 // src/tools/challenge-check.ts
 var BASE = "https://lernapps.net/coding/";

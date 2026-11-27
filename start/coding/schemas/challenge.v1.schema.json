@@ -88,6 +88,7 @@
           "wand-links",
           "wand-rechts",
           "am-ziel",
+          "weg-frei",
           "gehe",
           "drehe-links-um",
           "drehe-rechts-um",
@@ -101,10 +102,10 @@
           "nicht"
         ]
       },
-      "description": "Die Blöcke, die Lernende bekommen. Labyrinth: vorwaerts, links, rechts, wand-voraus, wand-links, wand-rechts, am-ziel. Turtle: gehe, drehe-links-um, drehe-rechts-um, stift-hoch, stift-runter, farbe. Jede Welt: wiederhole, solange, wenn, wenn-sonst, nicht."
+      "description": "Die Blöcke, die Lernende bekommen. Labyrinth: vorwaerts, links, rechts, wand-voraus, wand-links, wand-rechts, am-ziel, weg-frei (für Einsteiger: „Weg frei?“ ist „Wand voraus?“ umgedreht, ohne „nicht“). Turtle: gehe, drehe-links-um, drehe-rechts-um, stift-hoch, stift-runter, farbe. Jede Welt: wiederhole, solange, wenn, wenn-sonst, nicht."
     },
     "start": {
-      "description": "Ein Programm, das schon in der Arbeitsfläche liegt, oder null.",
+      "description": "Ein Programm, das schon in der Arbeitsfläche liegt, oder null. Ein Befehl mit \"locked\": true ist fest: Lernende können ihn nicht verschieben oder löschen, nur seine Lücken füllen (für Lückenaufgaben).",
       "oneOf": [
         {
           "type": "null"
@@ -150,10 +151,10 @@
     "checks": {
       "type": "array",
       "minItems": 1,
-      "description": "Prüfungen: der Welt (Labyrinth: ziel-erreicht; Turtle: bild-gleich) und der Werkstatt (hoechstens-bloecke, benutzt-block:<block>). limits.blocks gilt immer.",
+      "description": "Prüfungen: der Welt (Labyrinth: ziel-erreicht; Turtle: bild-gleich) und der Werkstatt (hoechstens-bloecke, benutzt-block:<block>). limits.blocks gilt immer. „vorhersage“ (allein): Lernende lesen das Startprogramm (fest) und sagen voraus, was Kiko tut, im Labyrinth den Weg Feld für Feld, bei Turtle das Bild unter mehreren; dann läuft das Programm zum Vergleich.",
       "items": {
         "type": "string",
-        "pattern": "^(ziel-erreicht|bild-gleich|hoechstens-bloecke|benutzt-block:[a-z-]+)$"
+        "pattern": "^(ziel-erreicht|bild-gleich|hoechstens-bloecke|vorhersage|benutzt-block:[a-z-]+)$"
       }
     },
     "hints": {
@@ -200,6 +201,22 @@
         },
         "label": {
           "$ref": "#/$defs/text60"
+        }
+      }
+    },
+    "vorhersage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bilder"],
+      "description": "Nur mit der Prüfung „vorhersage“ in der Welt Turtle: die Programme der falschen Bilder (2 oder 3, typische Fehler). Das richtige Bild ist der Lauf des Startprogramms; die Werkstatt mischt die Bilder.",
+      "properties": {
+        "bilder": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/program"
+          }
         }
       }
     }
@@ -400,6 +417,9 @@
             },
             "id": {
               "type": "string"
+            },
+            "locked": {
+              "type": "boolean"
             }
           }
         },
@@ -419,6 +439,9 @@
             },
             "id": {
               "type": "string"
+            },
+            "locked": {
+              "type": "boolean"
             }
           }
         },
@@ -438,6 +461,9 @@
             },
             "id": {
               "type": "string"
+            },
+            "locked": {
+              "type": "boolean"
             }
           }
         },
@@ -460,6 +486,9 @@
             },
             "id": {
               "type": "string"
+            },
+            "locked": {
+              "type": "boolean"
             }
           }
         },
@@ -479,6 +508,9 @@
             },
             "id": {
               "type": "string"
+            },
+            "locked": {
+              "type": "boolean"
             }
           }
         }
