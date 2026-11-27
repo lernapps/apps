@@ -124,3 +124,13 @@ SQL (#498) ist ein Grenzfall.
 - Offene Prüfungen coding: Screenreader, echte Handys/Touch, Firefox/Safari, forced colors, 200 % Zoom.
 - map-review (#494): Baustein `funktionen-verketten` – „verketten“ ist in Tabellenkalkulationen die Textfunktion VERKETTEN (CONCATENATE); fachlich gemeint ist „verschachteln“ (nest). Explainer schreibt „verschachteln“, id unverändert.
 - app-templates (coding): `markRoute` in interactive.ts setzt aria-current auf die erste Route ohne Hash, auch wenn `?c=` eine Challenge zeigt; Option „keine Route markieren“ gewünscht.
+
+### Retro-Punkte für Nachtrag 6 (gesammelt 2026-11-27)
+- #496: Eigenschaften erschöpfend prüfen (alle Antworten per Skript, < 1 min); Seed mischen (`Math.imul(seed, 2654435761)`), sonst sind Aufgabe 1–3 bei mulberry32 fast gleich.
+- #496: aufeinander aufbauende Definitionen früh fachlich prüfen lassen; Wörter mit Doppelsinn nach der Einführung meiden.
+- #496: Bild als `material` in die Frage statt daneben; unten rechts im SVG ~35 Einheiten frei für das Lizenz-Badge.
+- #496: Bauaufgaben brauchen eine Deutungsfrage; Regeltexte mit Zahl ohne Plural-Grammatik.
+- #496/#492: Figuren auf der ersten Seite einführen; Fachbegriffe beim ersten Vorkommen je Seite erklären (Seiten werden einzeln geöffnet).
+- #492: Einleitung/Klassenangabe in app.yaml bei jedem Inkrement mitziehen (Aufgabe im Inkrement-Plan).
+- #492: Simulationsstufen müssen die Beispiele der Seite unterscheiden; Geschichte kapitelweit auf Widersprüche prüfen; Textlast 350 Wörter knapp – nach jeder Prüferrunde `lernapps check`.
+- tooling (aus app-templates-Session): Engine-Größe in `lernapps check`/fitness melden; `no-request-before-click` für Worker-Anfragen prüfen; Doku zu `engines` in Skills.
