@@ -134,3 +134,6 @@ SQL (#498) ist ein Grenzfall.
 - #492: Einleitung/Klassenangabe in app.yaml bei jedem Inkrement mitziehen (Aufgabe im Inkrement-Plan).
 - #492: Simulationsstufen müssen die Beispiele der Seite unterscheiden; Geschichte kapitelweit auf Widersprüche prüfen; Textlast 350 Wörter knapp – nach jeder Prüferrunde `lernapps check`.
 - tooling (aus app-templates-Session): Engine-Größe in `lernapps check`/fitness melden; `no-request-before-click` für Worker-Anfragen prüfen; Doku zu `engines` in Skills.
+- coding-Retro (Vorhersagen): Prüfer nach jeder Aufgabe, nicht nur Musterseite; falsche Antworten per Test aus der richtigen ableiten und Platzhalter de/en prüfen; ein Begriff, eine Bedeutung (Terminology); bei zwei PRs auf denselben Dateien den kleineren zuerst; Message-JSON per Drei-Wege-Merge.
+- tooling (coding): `arc42 diff` meldet Prosa über mehrere Bausteine und nach `lernapps update` den generischen Teil (06-runtime-view); Update sollte eigenen Teil ausnehmen. Regel `vue-component-no-html-injection` schlägt auch bei sandboxed `srcdoc`-Vorschau an (erlaubter Fall?).
+- Entscheidung: HTML/CSS-Welt in coding (`world.type: html`, Prüfung `dom-passt`, eigene Syntaxprüfung) für #504.
