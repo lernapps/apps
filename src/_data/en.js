@@ -60,6 +60,8 @@ const en = {
       who: "Not a company, but people who care about digital education. Teachers, parents and others build the apps and offer them here to everyone. We earn nothing from you or your data. That is why there are no ads and no accounts here.",
     },
     cardLink: (title) => `More about ${title}`,
+    start: "Start",
+    details: "Details, fitness & QR code",
     // The series of an app (entry field series): "Millbrook 2/6", spoken "Series Millbrook, part 2 of 6".
     seriesMark: (part, of) => (of ? `${part}/${of}` : `Part ${part}`),
     seriesSpoken: (title, part, of) => `Series ${title}, part ${part}${of ? ` of ${of}` : ""}`,
@@ -76,7 +78,7 @@ const en = {
   app: {
     title: (name) => `${name} · lernapps.net`,
     by: "Built by",
-    open: "Open the app",
+    open: "Start",
     openHint: "Opens in a new tab. This page stays open.",
 
     topics: {

@@ -7,29 +7,31 @@
 {#- A card in the list of apps. The search (assets/finden.js) reads data-search, data-subject and
     data-grades, and shows the topics that match the query. -#}
 {% macro appCard(app) %}
-<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm"
+<li class="app-card bg-white rounded-xl border border-slate-200 shadow-sm p-5"
     data-app
     data-subject="{{ app.subject | tx("de") }}"
     data-grades="{{ app.grades | join(' ') }}"
     data-search="{{ [app.title | tx(lang), app.subject | tx(lang), app.summary | tx(lang), app.keywords | txAll(lang) | join(' '), app.creator.name, (app.series.title | tx(lang)) if app.series else ''] | join(' ') }}">
-  <a href="{{ ('/' + app.id + '/') | inLang(lang) | url }}" class="block p-5 no-underline text-inherit rounded-xl focus-visible:outline-3 focus-visible:outline-blue-500" aria-label="{{ t.find.cardLink(app.title | tx(lang)) }}">
-    <p class="m-0 text-sm text-slate-500"><span{{ app.subject | fallbackLang(lang) | safe }}>{{ app.subject | tx(lang) }}</span> · {{ app.grades | gradeLabel(lang) }}
-      {%- if app.series %} · <span class="font-semibold text-blue-800"><span class="sr-only">{{ t.find.seriesSpoken(app.series.title | tx(lang), app.series.part, app.series.of) }}</span><span aria-hidden="true"{{ app.series.title | fallbackLang(lang) | safe }}>{{ app.series.title | tx(lang) }} {{ t.find.seriesMark(app.series.part, app.series.of) }}</span></span>{% endif %}</p>
-    <h2 class="m-0 mt-1 text-xl font-bold text-slate-900"{{ app.title | fallbackLang(lang) | safe }}>{{ app.title | tx(lang) }}</h2>
-    <p class="m-0 mt-2 text-slate-700"{{ app.summary | fallbackLang(lang) | safe }}>{{ app.summary | tx(lang) }}</p>
-    {#- Where the app stands in the subject's chain (lib/map.js positionOf): a strip without visible text, read as aria-label. #}
-    {%- set pos = map.byApp[app.id].position if map.byApp[app.id] else undefined %}
-    {%- if pos %}
-    {%- set posNames = t.find.position.names %}
-    {%- set posText = t.find.position.one(posNames[pos.first]) if pos.first == pos.last else t.find.position.range(posNames[pos.first], posNames[pos.last]) %}
-    <div class="path mt-3" role="img" aria-label="{{ posText }}" title="{{ posText }}">
-      {%- for cut in pos.cuts %}<span class="path-cut" style="left: {{ (cut * 100) | round(1) }}%"></span>{% endfor %}
-      <span class="path-span" style="left: {{ (pos.from * 100) | round(1) }}%; width: {{ ((pos.to - pos.from) * 100) | round(1) }}%"></span>
-    </div>
-    {%- endif %}
-  </a>
+  <p class="m-0 text-sm text-slate-500"><span{{ app.subject | fallbackLang(lang) | safe }}>{{ app.subject | tx(lang) }}</span> · {{ app.grades | gradeLabel(lang) }}
+    {%- if app.series %} · <span class="font-semibold text-blue-800"><span class="sr-only">{{ t.find.seriesSpoken(app.series.title | tx(lang), app.series.part, app.series.of) }}</span><span aria-hidden="true"{{ app.series.title | fallbackLang(lang) | safe }}>{{ app.series.title | tx(lang) }} {{ t.find.seriesMark(app.series.part, app.series.of) }}</span></span>{% endif %}</p>
+  <h2 class="m-0 mt-1 text-xl font-bold text-slate-900"{{ app.title | fallbackLang(lang) | safe }}><a href="{{ ('/' + app.id + '/') | inLang(lang) | url }}" class="no-underline text-inherit hover:underline underline-offset-2">{{ app.title | tx(lang) }}</a></h2>
+  <p class="m-0 mt-2 text-slate-700"{{ app.summary | fallbackLang(lang) | safe }}>{{ app.summary | tx(lang) }}</p>
+  {#- Where the app stands in the subject's chain (lib/map.js positionOf): a strip without visible text, read as aria-label. #}
+  {%- set pos = map.byApp[app.id].position if map.byApp[app.id] else undefined %}
+  {%- if pos %}
+  {%- set posNames = t.find.position.names %}
+  {%- set posText = t.find.position.one(posNames[pos.first]) if pos.first == pos.last else t.find.position.range(posNames[pos.first], posNames[pos.last]) %}
+  <div class="path mt-3" role="img" aria-label="{{ posText }}" title="{{ posText }}">
+    {%- for cut in pos.cuts %}<span class="path-cut" style="left: {{ (cut * 100) | round(1) }}%"></span>{% endfor %}
+    <span class="path-span" style="left: {{ (pos.from * 100) | round(1) }}%; width: {{ ((pos.to - pos.from) * 100) | round(1) }}%"></span>
+  </div>
+  {%- endif %}
+  <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+    <a href="{{ app.startUrl | tx(lang) }}" target="_blank" rel="noopener" class="btn btn-primary" data-start data-la-count="app/{{ app.id }}">{{ t.find.start }} <span aria-hidden="true">→</span></a>
+    <a href="{{ ('/' + app.id + '/') | inLang(lang) | url }}" class="text-sm font-medium text-slate-600 hover:text-slate-900 underline underline-offset-2" aria-label="{{ t.find.cardLink(app.title | tx(lang)) }}">{{ t.find.details }}</a>
+  </div>
   {%- if app.topics.length %}
-  <div class="px-5 pb-5 -mt-2" data-topics hidden>
+  <div class="mt-3 pt-3 border-t border-slate-100" data-topics hidden>
     <p class="m-0 text-sm font-semibold text-slate-600">{{ t.find.matched }}</p>
     <ul class="list-none p-0 m-0 mt-1 flex flex-col gap-1">
       {%- for topic in app.topics %}
