@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CtncCkFd.css">
+    <title>Ein Graph aus Seiten – Netze und Reihen von Daten</title>
+    <meta name="description" content="Der Hypertext: Seiten und Verweise, Startseite und Linktext, Klickwege. Anders lesen als im Buch." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../netze/hypertext/" />
+    <link rel="alternate" hreflang="en" href="../../en/netze/hypertext/" />
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../netze/hypertext/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/netze/hypertext/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li aria-current="page">Ein Graph aus Seiten</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row">
+<h1>Ein Graph aus Seiten</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../netze/hypertext/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧netze/hypertext/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-datenstrukturen","page":{"id":"hypertext","title":"Ein Graph aus Seiten","exercises":[{"id":"klicks-schwimmbad","section":"einstieg","numbered":false},{"id":"teile-hypertext","section":"uebung","numbered":false},{"id":"klickweg","section":"uebung","numbered":false},{"id":"link-zurueck","section":"uebung","numbered":false},{"id":"buch-oder-hypertext","section":"uebung","numbered":false}],"sections":["einstieg","idee","uebung"]},"tutor":"netze/hypertext/tutor/","markdown":"netze/hypertext/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wie viele Klicks bis zum Schwimmbad?</a></li><li><a href="#idee">Seiten und Links</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wie viele Klicks bis zum Schwimmbad?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="ef93ef6a" data-block-type="note" data-block-order="1">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Klassenchat 7b</h3>
+<div class="explainer-block" data-block="einstieg/1/1" data-block-id="49d9c366" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Frau Berg:</strong> Unser Projekt: ein Stadtführer für die neuen Fünfer, mit fünf Seiten, die sich verlinken.</p>
+<p><strong>Selin:</strong> Ich mache die Seiten zum Bus und zum Schwimmbad!</p>
+<p><strong>Mia:</strong> Ich habe schon mal aufgezeichnet, wer auf wen verlinkt.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="3dadfabf" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="klicks-schwimmbad">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-klicks-schwimmbad" data-id="klicks-schwimmbad" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Du bist auf der Startseite. Wie viele Klicks brauchst du mindestens bis zur Seite Schwimmbad?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/stadtfuehrer-de.svg" alt="Fünf Kästchen. In der Mitte die Startseite, hellblau. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, von Bücherei und von Schwimmbad zurück zur Startseite." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Mias Plan des Stadtführers. Jedes Kästchen ist eine Seite, jeder Pfeil ein Link.</p></figcaption></figure></div>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-klicks-schwimmbad">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 2</p>
+<p class="question-explanation">Startseite → Bus → Schwimmbad: zwei Pfeile, also zwei Klicks. Jeder Klick folgt einem Link.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 2</p>
+<p class="question-explanation">Startseite → Bus → Schwimmbad: zwei Pfeile, also zwei Klicks. Jeder Klick folgt einem Link.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"klicks-schwimmbad","text":"Du bist auf der Startseite. Wie viele Klicks brauchst du mindestens bis zur Seite Schwimmbad?","explanation":"Startseite → Bus → Schwimmbad: zwei Pfeile, also zwei Klicks. Jeder Klick folgt einem Link.","links":[],"material":[{"type":"figure","image":"images/stadtfuehrer-de.svg","alt":"Fünf Kästchen. In der Mitte die Startseite, hellblau. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, von Bücherei und von Schwimmbad zurück zur Startseite.","caption":"Mias Plan des Stadtführers. Jedes Kästchen ist eine Seite, jeder Pfeil ein Link.","source":"eigene Zeichnung, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"number","answer":2,"tolerance":0,"mistakes":[{"answer":3,"message":"Du hast die Seiten gezählt, auch die Startseite. Ein Klick ist ein Pfeil."},{"answer":1,"message":"Von der Startseite führt kein Pfeil direkt zum Schwimmbad. Du musst über eine andere Seite."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Seiten und Links</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="381b2c08" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>Auf der Seite davor hast du Links als Pfeile gezeichnet. Auf dieser Seite lernst du, wie ein ganzer
+<strong>Hypertext</strong> aufgebaut ist.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="593a6f6b" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-hypertext"><a href="../../glossar/#hypertext">Hypertext</a></dfn></dt><dd><p>Ein Hypertext besteht aus Seiten, die durch Links verbunden sind. Als Graph sind die Seiten Knoten und die Links Pfeile.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="16168ab6" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-startseite"><a href="../../glossar/#startseite">Startseite</a></dfn></dt><dd><p>Die Startseite ist die Seite, auf der man einen Hypertext zu lesen beginnt. Von ihr aus erreichst du über Links die anderen Seiten.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="94092444" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/startseite-de.svg" alt="Die Startseite „Unser Viertel“. Text: Hallo, liebe Fünfer! Hier findet ihr den Weg zur Schule und den Busplan. Die Wörter Weg zur Schule und Busplan sind blau und unterstrichen." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>So sieht die Startseite im Browser aus. Die blauen, unterstrichenen Wörter sind die Linktexte.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="1c51de0e" data-block-type="definition" data-block-order="8">
+<dl class="explainer-definition"><dt><dfn id="begriff-linktext"><a href="../../glossar/#linktext">Linktext</a></dfn></dt><dd><p>Der Linktext ist das Wort, das du anklickst. Er sagt dir, wohin der Link führt.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="48b3744c" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Ein Buch liest du von vorn nach hinten. In einem Hypertext wählst du selbst, welchem Link du folgst.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="b29d0f43" data-block-type="matching" data-block-order="10">
+<div class="explainer-exercise explainer-question" id="teile-hypertext">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-teile-hypertext" data-id="teile-hypertext" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Teil des Stadtführers zu, was er im Graphen oder auf der Seite ist.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Seite</span> <select name="frage-teile-hypertext-0" data-left="0"><option value="">bitte wählen</option><option value="4">eine Linie ohne Richtung</option><option value="0">ein Knoten</option><option value="1">ein Pfeil</option><option value="2">der Knoten, bei dem man beginnt</option><option value="3">das Wort, das man anklickt</option></select></label></li>
+<li><label><span>Link</span> <select name="frage-teile-hypertext-1" data-left="1"><option value="">bitte wählen</option><option value="4">eine Linie ohne Richtung</option><option value="0">ein Knoten</option><option value="1">ein Pfeil</option><option value="2">der Knoten, bei dem man beginnt</option><option value="3">das Wort, das man anklickt</option></select></label></li>
+<li><label><span>Startseite</span> <select name="frage-teile-hypertext-2" data-left="2"><option value="">bitte wählen</option><option value="4">eine Linie ohne Richtung</option><option value="0">ein Knoten</option><option value="1">ein Pfeil</option><option value="2">der Knoten, bei dem man beginnt</option><option value="3">das Wort, das man anklickt</option></select></label></li>
+<li><label><span>Linktext</span> <select name="frage-teile-hypertext-3" data-left="3"><option value="">bitte wählen</option><option value="4">eine Linie ohne Richtung</option><option value="0">ein Knoten</option><option value="1">ein Pfeil</option><option value="2">der Knoten, bei dem man beginnt</option><option value="3">das Wort, das man anklickt</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Seite – ein Knoten; Link – ein Pfeil; Startseite – der Knoten, bei dem man beginnt; Linktext – das Wort, das man anklickt</p>
+<p class="question-explanation">Seiten sind die Knoten, Links die Pfeile. Die Startseite ist der Knoten, bei dem man beginnt, und der Linktext steht auf der Seite.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Seite – ein Knoten; Link – ein Pfeil; Startseite – der Knoten, bei dem man beginnt; Linktext – das Wort, das man anklickt</p>
+<p class="question-explanation">Seiten sind die Knoten, Links die Pfeile. Die Startseite ist der Knoten, bei dem man beginnt, und der Linktext steht auf der Seite.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"teile-hypertext","text":"Ordne jedem Teil des Stadtführers zu, was er im Graphen oder auf der Seite ist.","explanation":"Seiten sind die Knoten, Links die Pfeile. Die Startseite ist der Knoten, bei dem man beginnt, und der Linktext steht auf der Seite.","links":[],"type":"matching","pairs":[{"left":"Seite","right":"ein Knoten"},{"left":"Link","right":"ein Pfeil"},{"left":"Startseite","right":"der Knoten, bei dem man beginnt"},{"left":"Linktext","right":"das Wort, das man anklickt"}],"distractors":["eine Linie ohne Richtung"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="eece9e6a" data-block-type="ordering" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="klickweg">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-klickweg" data-id="klickweg" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Tom will von der Startseite zur Bücherei. Bringe die Seiten in die Reihenfolge, in der er sie öffnet.</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/stadtfuehrer-de.svg" alt="Fünf Kästchen, in der Mitte die Startseite. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, von Bücherei und Schwimmbad zur Startseite." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Mias Plan des Stadtführers.</p></figcaption></figure></div>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Bücherei</span> <select name="frage-klickweg-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+<li><label><span>Startseite</span> <select name="frage-klickweg-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+<li><label><span>Schule</span> <select name="frage-klickweg-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Startseite, 2. Schule, 3. Bücherei</p>
+<p class="question-explanation">Zur Bücherei führt nur ein Pfeil, und zwar von der Schule. Zur Schule kommt Tom von der Startseite.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Startseite, 2. Schule, 3. Bücherei</p>
+<p class="question-explanation">Zur Bücherei führt nur ein Pfeil, und zwar von der Schule. Zur Schule kommt Tom von der Startseite.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"klickweg","text":"Tom will von der Startseite zur Bücherei. Bringe die Seiten in die Reihenfolge, in der er sie öffnet.","explanation":"Zur Bücherei führt nur ein Pfeil, und zwar von der Schule. Zur Schule kommt Tom von der Startseite.","links":[],"hint":"Suche den Pfeil, der auf die Bücherei zeigt. Wo beginnt er?","material":[{"type":"figure","image":"images/stadtfuehrer-de.svg","alt":"Fünf Kästchen, in der Mitte die Startseite. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, von Bücherei und Schwimmbad zur Startseite.","caption":"Mias Plan des Stadtführers.","source":"eigene Zeichnung, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"ordering","items":["Startseite","Schule","Bücherei"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="4295d669" data-block-type="true-false" data-block-order="12">
+<div class="explainer-exercise explainer-question" id="link-zurueck">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-link-zurueck" data-id="link-zurueck" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Die Seite Bus hat einen Link zum Schwimmbad. Darum kommt man vom Schwimmbad mit einem Klick zum Bus.</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/stadtfuehrer-de.svg" alt="Fünf Kästchen, in der Mitte die Startseite. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, von Bücherei und Schwimmbad zur Startseite." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Mias Plan des Stadtführers.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-link-zurueck" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-link-zurueck" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Der Link steht auf der Seite Bus. Vom Schwimmbad führt nur ein Link zur Startseite, von dort geht es zum Bus.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Der Link steht auf der Seite Bus. Vom Schwimmbad führt nur ein Link zur Startseite, von dort geht es zum Bus.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"link-zurueck","text":"Die Seite Bus hat einen Link zum Schwimmbad. Darum kommt man vom Schwimmbad mit einem Klick zum Bus.","explanation":"Der Link steht auf der Seite Bus. Vom Schwimmbad führt nur ein Link zur Startseite, von dort geht es zum Bus.","links":[],"hint":"Auf welcher Seite steht der Link? Ein Pfeil gilt nur in eine Richtung.","material":[{"type":"figure","image":"images/stadtfuehrer-de.svg","alt":"Fünf Kästchen, in der Mitte die Startseite. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, von Bücherei und Schwimmbad zur Startseite.","caption":"Mias Plan des Stadtführers.","source":"eigene Zeichnung, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="3f340ab3" data-block-type="single-choice" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="buch-oder-hypertext">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-buch-oder-hypertext" data-id="buch-oder-hypertext" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was kannst du im Stadtführer tun, aber nicht in einem gedruckten Buch?</legend>
+<label class="question-option"><input type="radio" name="frage-buch-oder-hypertext" value="0"> <span>Mit einem Klick zu einer anderen Seite springen.</span></label>
+<label class="question-option"><input type="radio" name="frage-buch-oder-hypertext" value="1"> <span>Seiten mit Text und Bildern lesen.</span></label>
+<label class="question-option"><input type="radio" name="frage-buch-oder-hypertext" value="2"> <span>Bei der ersten Seite anfangen.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Mit einem Klick zu einer anderen Seite springen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ein Link führt sofort zu seiner Zielseite. Im Buch musst du selbst blättern.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Seiten mit Text und Bildern lesen.</strong></p><p>Auch ein Buch hat Seiten mit Text und Bildern. Das ist kein Unterschied.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Bei der ersten Seite anfangen.</strong></p><p>Ein Buch beginnt auch vorn. Der Stadtführer hat dafür die Startseite.</p></li>
+</ul>
+<p class="question-explanation">In einem Hypertext springst du über Links von Seite zu Seite und wählst selbst den Weg.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Mit einem Klick zu einer anderen Seite springen.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ein Link führt sofort zu seiner Zielseite. Im Buch musst du selbst blättern.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Seiten mit Text und Bildern lesen.</strong></p><p>Auch ein Buch hat Seiten mit Text und Bildern. Das ist kein Unterschied.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Bei der ersten Seite anfangen.</strong></p><p>Ein Buch beginnt auch vorn. Der Stadtführer hat dafür die Startseite.</p></li>
+</ul>
+<p class="question-explanation">In einem Hypertext springst du über Links von Seite zu Seite und wählst selbst den Weg.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"buch-oder-hypertext","text":"Was kannst du im Stadtführer tun, aber nicht in einem gedruckten Buch?","explanation":"In einem Hypertext springst du über Links von Seite zu Seite und wählst selbst den Weg.","links":[],"type":"single-choice","options":[{"text":"Mit einem Klick zu einer anderen Seite springen.","correct":true,"info":"Ein Link führt sofort zu seiner Zielseite. Im Buch musst du selbst blättern."},{"text":"Seiten mit Text und Bildern lesen.","correct":false,"info":"Auch ein Buch hat Seiten mit Text und Bildern. Das ist kein Unterschied."},{"text":"Bei der ersten Seite anfangen.","correct":false,"info":"Ein Buch beginnt auch vorn. Der Stadtführer hat dafür die Startseite."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/5" data-block-id="57d7ec6b" data-block-type="text" data-block-order="14">
+<div class="block-text"><p>Jetzt seid ihr dran: Auf der nächsten Seite baut die 7b ihren eigenen Stadtführer.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Netze und Reihen von Daten“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-datenstrukturen","app":"Netze und Reihen von Daten","root":"../../","repository":"lernapps/informatik-datenstrukturen","revision":"2a062a1","page":{"title":"Ein Graph aus Seiten","order":3}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../netze/pfeile/">Zurück: Kanten mit Richtung</a><a rel="next" href="../../netze/stadtfuehrer/">Weiter: Der Stadtführer der 7b</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

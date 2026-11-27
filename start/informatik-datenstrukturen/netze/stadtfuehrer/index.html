@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CtncCkFd.css">
+    <title>Der Stadtführer der 7b – Netze und Reihen von Daten</title>
+    <meta name="description" content="Einen Hypertext bauen: Seiten verlinken, Sackgassen vermeiden, durchklicken. Fremde Bilder mit Quellenangabe." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../netze/stadtfuehrer/" />
+    <link rel="alternate" hreflang="en" href="../../en/netze/stadtfuehrer/" />
+    <script type="module" crossorigin src="../../assets/islands-CQ804BUt.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../netze/stadtfuehrer/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/netze/stadtfuehrer/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li aria-current="page">Der Stadtführer der 7b</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row">
+<h1>Der Stadtführer der 7b</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../netze/stadtfuehrer/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧netze/stadtfuehrer/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-datenstrukturen","page":{"id":"stadtfuehrer","title":"Der Stadtführer der 7b","exercises":[{"id":"sackgasse","section":"einstieg","numbered":false},{"id":"stadtfuehrer-bauen","section":"bauen","numbered":true},{"id":"guter-linktext","section":"bauen","numbered":false},{"id":"quellenangabe-vollstaendig","section":"quelle","numbered":false},{"id":"teile-quellenangabe","section":"quelle","numbered":false}],"sections":["einstieg","bauen","quelle","galerie"]},"tutor":"netze/stadtfuehrer/tutor/","markdown":"netze/stadtfuehrer/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Wo geht es nicht weiter?</a></li><li><a href="#bauen">Baue den Stadtführer</a></li><li><a href="#quelle">Ein fremdes Bild im Stadtführer</a></li><li><a href="#galerie">Die Galerie wächst weiter</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Wo geht es nicht weiter?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="d3528227" data-block-type="note" data-block-order="1">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Klassenchat 7b</h3>
+<div class="explainer-block" data-block="einstieg/1/1" data-block-id="72328edb" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Jona:</strong> Hier ist mein Entwurf für unseren Stadtführer.</p>
+<p><strong>Mia:</strong> Auf einer Seite komme ich nicht mehr weiter. Da steht kein einziger Link!</p>
+<p><strong>Frau Berg:</strong> Das nennt man eine Sackgasse. Findet ihr sie?</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="1c87b424" data-block-type="definition" data-block-order="3">
+<dl class="explainer-definition"><dt><dfn id="begriff-sackgasse"><a href="../../glossar/#sackgasse">Sackgasse</a></dfn></dt><dd><p>Eine Sackgasse ist eine Seite ohne Link. Wer dort ist, kommt mit keinem Klick weiter.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="9c48ef2f" data-block-type="single-choice" data-block-order="4">
+<div class="explainer-exercise explainer-question" id="sackgasse">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-sackgasse" data-id="sackgasse" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Seite in Jonas Entwurf ist eine Sackgasse?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/entwurf-de.svg" alt="Fünf Kästchen, in der Mitte die Startseite. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, vom Schwimmbad zur Startseite und zum Bus." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Jonas Entwurf. Jeder Pfeil ist ein Link.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-sackgasse" value="0"> <span>Bücherei</span></label>
+<label class="question-option"><input type="radio" name="frage-sackgasse" value="1"> <span>Schwimmbad</span></label>
+<label class="question-option"><input type="radio" name="frage-sackgasse" value="2"> <span>Schule</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Bücherei</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ein Pfeil führt zur Bücherei, aber keiner weg. Wer dort ist, kommt mit keinem Link weiter.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Schwimmbad</strong></p><p>Vom Schwimmbad führen zwei Pfeile weg, zur Startseite und zum Bus.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Schule</strong></p><p>Von der Schule führt ein Pfeil zur Bücherei. Du kommst also weiter.</p></li>
+</ul>
+<p class="question-explanation">Als Graph ist eine Sackgasse ein Knoten, von dem kein Pfeil wegführt. Jona braucht einen Link auf der Seite Bücherei, zum Beispiel zur Startseite.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Bücherei</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ein Pfeil führt zur Bücherei, aber keiner weg. Wer dort ist, kommt mit keinem Link weiter.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Schwimmbad</strong></p><p>Vom Schwimmbad führen zwei Pfeile weg, zur Startseite und zum Bus.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Schule</strong></p><p>Von der Schule führt ein Pfeil zur Bücherei. Du kommst also weiter.</p></li>
+</ul>
+<p class="question-explanation">Als Graph ist eine Sackgasse ein Knoten, von dem kein Pfeil wegführt. Jona braucht einen Link auf der Seite Bücherei, zum Beispiel zur Startseite.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"sackgasse","text":"Welche Seite in Jonas Entwurf ist eine Sackgasse?","explanation":"Als Graph ist eine Sackgasse ein Knoten, von dem kein Pfeil wegführt. Jona braucht einen Link auf der Seite Bücherei, zum Beispiel zur Startseite.","links":[],"material":[{"type":"figure","image":"images/entwurf-de.svg","alt":"Fünf Kästchen, in der Mitte die Startseite. Pfeile führen von der Startseite zu Schule und Bus, von Schule zu Bücherei, von Bus zu Schwimmbad, vom Schwimmbad zur Startseite und zum Bus.","caption":"Jonas Entwurf. Jeder Pfeil ist ein Link.","source":"eigene Zeichnung, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"Bücherei","correct":true,"info":"Ein Pfeil führt zur Bücherei, aber keiner weg. Wer dort ist, kommt mit keinem Link weiter."},{"text":"Schwimmbad","correct":false,"info":"Vom Schwimmbad führen zwei Pfeile weg, zur Startseite und zum Bus."},{"text":"Schule","correct":false,"info":"Von der Schule führt ein Pfeil zur Bücherei. Du kommst also weiter."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="bauen">Baue den Stadtführer</h2>
+<div class="explainer-block" data-block="bauen/1" data-block-id="c6236b15" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Jetzt baust du den Stadtführer selbst. Auf dieser Seite erstellst du einen Hypertext nach Regeln. Jede Karte
+ist eine Seite. Wähle bei „Link auf“ eine andere Seite und tippe „Link anlegen“. Daneben oder darunter siehst du
+deinen Hypertext als Graph. Mit „Vorschau“ klickst du ihn durch wie später die Fünfer.</p></div>
+</div>
+<div class="explainer-block" data-block="bauen/2" data-block-id="ce2c389c" data-block-type="vue-component" data-block-order="6">
+<div class="explainer-component" id="stadtfuehrer-bauen" data-component="Hypertextbaukasten" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,12,13,17,19,24,25,34,35,39,43,50,62,64,113,150]" data-checked>
+<p class="explainer-exercise-label">Aufgabe</p>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Aufgabe Nr. {n}">Aufgabe Nr. 1</span> <button type="button" class="explainer-new-task" title="Neue Aufgabe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">Neue Aufgabe</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="hypertext" data-v-3de44688><p data-v-3de44688>Lege Links an, sodass diese Regeln gelten:</p><ul data-v-3de44688><!--[--><li data-v-3de44688>Klicks von der Startseite bis zu jeder Seite: höchstens 1</li><li data-v-3de44688>Jede andere Seite hat einen Link zurück zur Startseite.</li><li data-v-3de44688>Die Seite Schwimmbad hat einen Link zur Seite Bus.</li><!--]--></ul><div class="hypertext-work" data-v-3de44688><div class="hypertext-cards" data-v-3de44688><!--[--><div class="hypertext-home hypertext-card" data-v-3de44688><p class="hypertext-title" tabindex="-1" data-v-3de44688>Startseite</p><p class="hypertext-small" data-v-3de44688>Links auf dieser Seite:</p><p class="hypertext-small" data-v-3de44688>noch keine</p><div class="hypertext-add" data-v-3de44688><label data-v-3de44688>Link auf <select data-v-3de44688><!--[--><option value="1" data-v-3de44688 selected>Schule</option><option value="2" data-v-3de44688>Bus</option><option value="3" data-v-3de44688>Schwimmbad</option><option value="4" data-v-3de44688>Bücherei</option><!--]--></select></label><button type="button" class="hypertext-button" data-v-3de44688>Link anlegen</button></div></div><div class="hypertext-card" data-v-3de44688><p class="hypertext-title" tabindex="-1" data-v-3de44688>Schule</p><p class="hypertext-small" data-v-3de44688>Links auf dieser Seite:</p><p class="hypertext-small" data-v-3de44688>noch keine</p><div class="hypertext-add" data-v-3de44688><label data-v-3de44688>Link auf <select data-v-3de44688><!--[--><option value="0" data-v-3de44688 selected>Startseite</option><option value="2" data-v-3de44688>Bus</option><option value="3" data-v-3de44688>Schwimmbad</option><option value="4" data-v-3de44688>Bücherei</option><!--]--></select></label><button type="button" class="hypertext-button" data-v-3de44688>Link anlegen</button></div></div><div class="hypertext-card" data-v-3de44688><p class="hypertext-title" tabindex="-1" data-v-3de44688>Bus</p><p class="hypertext-small" data-v-3de44688>Links auf dieser Seite:</p><p class="hypertext-small" data-v-3de44688>noch keine</p><div class="hypertext-add" data-v-3de44688><label data-v-3de44688>Link auf <select data-v-3de44688><!--[--><option value="0" data-v-3de44688 selected>Startseite</option><option value="1" data-v-3de44688>Schule</option><option value="3" data-v-3de44688>Schwimmbad</option><option value="4" data-v-3de44688>Bücherei</option><!--]--></select></label><button type="button" class="hypertext-button" data-v-3de44688>Link anlegen</button></div></div><div class="hypertext-card" data-v-3de44688><p class="hypertext-title" tabindex="-1" data-v-3de44688>Schwimmbad</p><p class="hypertext-small" data-v-3de44688>Links auf dieser Seite:</p><p class="hypertext-small" data-v-3de44688>noch keine</p><div class="hypertext-add" data-v-3de44688><label data-v-3de44688>Link auf <select data-v-3de44688><!--[--><option value="0" data-v-3de44688 selected>Startseite</option><option value="1" data-v-3de44688>Schule</option><option value="2" data-v-3de44688>Bus</option><option value="4" data-v-3de44688>Bücherei</option><!--]--></select></label><button type="button" class="hypertext-button" data-v-3de44688>Link anlegen</button></div></div><div class="hypertext-card" data-v-3de44688><p class="hypertext-title" tabindex="-1" data-v-3de44688>Bücherei</p><p class="hypertext-small" data-v-3de44688>Links auf dieser Seite:</p><p class="hypertext-small" data-v-3de44688>noch keine</p><div class="hypertext-add" data-v-3de44688><label data-v-3de44688>Link auf <select data-v-3de44688><!--[--><option value="0" data-v-3de44688 selected>Startseite</option><option value="1" data-v-3de44688>Schule</option><option value="2" data-v-3de44688>Bus</option><option value="3" data-v-3de44688>Schwimmbad</option><!--]--></select></label><button type="button" class="hypertext-button" data-v-3de44688>Link anlegen</button></div></div><!--]--></div><svg class="hypertext-graph" viewBox="0 0 340 280" aria-hidden="true" data-v-3de44688><defs data-v-3de44688><marker id="hypertext-pfeil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" data-v-3de44688><path d="M0 0 L10 5 L0 10 Z" fill="#333" data-v-3de44688></path></marker></defs><rect width="340" height="280" fill="#fff" data-v-3de44688></rect><!--[--><!--]--><!--[--><g data-v-3de44688><rect x="124" y="4" width="92" height="44" rx="8" fill="#e8f0fb" stroke="#333" stroke-width="2" data-v-3de44688></rect><text x="170" y="31" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222" data-v-3de44688>Startseite</text></g><g data-v-3de44688><rect x="238" y="83" width="92" height="44" rx="8" fill="#fff" stroke="#333" stroke-width="2" data-v-3de44688></rect><text x="284" y="110" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222" data-v-3de44688>Schule</text></g><g data-v-3de44688><rect x="195" y="210" width="92" height="44" rx="8" fill="#fff" stroke="#333" stroke-width="2" data-v-3de44688></rect><text x="241" y="237" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222" data-v-3de44688>Bus</text></g><g data-v-3de44688><rect x="53" y="210" width="92" height="44" rx="8" fill="#fff" stroke="#333" stroke-width="2" data-v-3de44688></rect><text x="99" y="237" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222" data-v-3de44688>Schwimmbad</text></g><g data-v-3de44688><rect x="10" y="83" width="92" height="44" rx="8" fill="#fff" stroke="#333" stroke-width="2" data-v-3de44688></rect><text x="56" y="110" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#222" data-v-3de44688>Bücherei</text></g><!--]--></svg></div><p data-v-3de44688><button type="button" class="hypertext-button" data-v-3de44688>Vorschau</button></p><!----></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button> <button type="button" class="question-solve" hidden>Lösung</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Aufgabe Nr. 1</p><div class="explainer-task"><p>Lege Links an, sodass diese Regeln gelten:</p>
+<ul>
+<li>Klicks von der Startseite bis zu jeder Seite: höchstens 1</li>
+<li>Jede andere Seite hat einen Link zurück zur Startseite.</li>
+<li>Die Seite Schwimmbad hat einen Link zur Seite Bus.</li>
+</ul></div><details class="explainer-solution"><summary>Lösung</summary><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schwimmbad → Bus</p></details></div></div>
+<p class="question-feedback" data-right="Richtig!" data-wrong="Leider nicht richtig." data-incomplete="Bearbeite zuerst die Aufgabe."></p>
+<div class="explainer-component-solution" hidden tabindex="-1"><p class="explainer-component-solution-label">Lösung</p><div class="explainer-component-solution-text"></div></div>
+<template class="explainer-component-solutions"><div data-number="1"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schwimmbad → Bus</p></div><div data-number="2"><p>Eine mögliche Lösung: Startseite → Bücherei, Bücherei → Bus, Startseite → Schule, Schule → Schwimmbad, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="3"><p>Eine mögliche Lösung: Startseite → Bus, Bus → Schwimmbad, Startseite → Schule, Schule → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="4"><p>Eine mögliche Lösung: Startseite → Bücherei, Bücherei → Schwimmbad, Startseite → Schule, Schule → Bus, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="5"><p>Eine mögliche Lösung: Startseite → Schule, Schule → Bücherei, Startseite → Bus, Bus → Schwimmbad, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="6"><p>Eine mögliche Lösung: Startseite → Schule, Schule → Schwimmbad, Startseite → Bus, Bus → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="7"><p>Eine mögliche Lösung: Startseite → Bücherei, Bücherei → Schule, Startseite → Bus, Bus → Schwimmbad, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="8"><p>Eine mögliche Lösung: Startseite → Schwimmbad, Schwimmbad → Schule, Startseite → Bus, Bus → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="9"><p>Eine mögliche Lösung: Startseite → Schwimmbad, Schwimmbad → Bücherei, Startseite → Schule, Schule → Bus, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="10"><p>Eine mögliche Lösung: Startseite → Schule, Schule → Bus, Startseite → Schwimmbad, Schwimmbad → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="11"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schwimmbad → Bücherei</p></div><div data-number="12"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schule → Schwimmbad</p></div><div data-number="13"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Bücherei → Schule</p></div><div data-number="14"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Bücherei → Bus</p></div><div data-number="15"><p>Eine mögliche Lösung: Startseite → Bus, Bus → Bücherei, Startseite → Schule, Schule → Schwimmbad, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="16"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Bus → Schwimmbad</p></div><div data-number="17"><p>Eine mögliche Lösung: Startseite → Bus, Bus → Schule, Startseite → Schwimmbad, Schwimmbad → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="18"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Bus → Bücherei</p></div><div data-number="19"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Bus → Schule</p></div><div data-number="20"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schwimmbad → Schule</p></div><div data-number="21"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schule → Bus</p></div><div data-number="22"><p>Eine mögliche Lösung: Startseite → Schwimmbad, Schwimmbad → Bus, Startseite → Schule, Schule → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite</p></div><div data-number="23"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Schule → Bücherei</p></div><div data-number="24"><p>Eine mögliche Lösung: Startseite → Schule, Startseite → Bus, Startseite → Schwimmbad, Startseite → Bücherei, Schule → Startseite, Bus → Startseite, Schwimmbad → Startseite, Bücherei → Startseite, Bücherei → Schwimmbad</p></div></template>
+<script type="application/json" class="explainer-component-props">{"pages":["Startseite","Schule","Bus","Schwimmbad","Bücherei"],"task":"Lege Links an, sodass diese Regeln gelten:","ruleReach":"Klicks von der Startseite bis zu jeder Seite: höchstens {k}","ruleStart":"Links auf der Startseite: höchstens {m}","ruleBack":"Jede andere Seite hat einen Link zurück zur Startseite.","ruleMust":"Die Seite {a} hat einen Link zur Seite {b}.","linksOnPage":"Links auf dieser Seite:","none":"noch keine","linkTo":"Link auf","add":"Link anlegen","remove":"entfernen","removeLabel":"Link von {a} zu {b} entfernen","preview":"Vorschau","close":"Vorschau schließen","here":"Du bist hier: {a}","deadEnd":"Sackgasse: Auf dieser Seite steht kein Link.","restart":"Neu bei der Startseite beginnen","mistakes":["Die Seite {a} erreichst du von der Startseite aus nicht. Lege einen Link an, der zu ihr führt.","Bis zur Seite {a} brauchst du {n} Klicks. Erlaubt sind höchstens {k}.","Auf der Startseite stehen {n} Links. Erlaubt sind höchstens {m}. Lass andere Seiten weiterverlinken.","Von der Seite {a} führt kein Link zurück zur Startseite.","Es fehlt der Link von der Seite {a} zur Seite {b}."]}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="bauen/3" data-block-id="88dc91d2" data-block-type="single-choice" data-block-order="7">
+<div class="explainer-exercise explainer-question" id="guter-linktext">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-guter-linktext" data-id="guter-linktext" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Selin schreibt den Text der Seite Schule. Auf welches Wort setzt sie den Link zur Seite Bus?</legend>
+<label class="question-option"><input type="radio" name="frage-guter-linktext" value="0"> <span>„Busplan“</span></label>
+<label class="question-option"><input type="radio" name="frage-guter-linktext" value="1"> <span>„hier klicken“</span></label>
+<label class="question-option"><input type="radio" name="frage-guter-linktext" value="2"> <span>„Link“</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>„Busplan“</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Linktext sagt, was auf der Zielseite steht. So wissen die Fünfer vor dem Klick, wohin er führt.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>„hier klicken“</strong></p><p>Das sagt nur, dass man klicken kann, aber nicht, wohin der Link führt.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>„Link“</strong></p><p>Dass es ein Link ist, sieht man schon an der blauen, unterstrichenen Schrift. Wohin er führt, sagt das Wort nicht.</p></li>
+</ul>
+<p class="question-explanation">Ein guter Linktext nennt das Ziel des Links. Wer nur die Linktexte liest, findet trotzdem den Weg.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>„Busplan“</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Linktext sagt, was auf der Zielseite steht. So wissen die Fünfer vor dem Klick, wohin er führt.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>„hier klicken“</strong></p><p>Das sagt nur, dass man klicken kann, aber nicht, wohin der Link führt.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>„Link“</strong></p><p>Dass es ein Link ist, sieht man schon an der blauen, unterstrichenen Schrift. Wohin er führt, sagt das Wort nicht.</p></li>
+</ul>
+<p class="question-explanation">Ein guter Linktext nennt das Ziel des Links. Wer nur die Linktexte liest, findet trotzdem den Weg.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"guter-linktext","text":"Selin schreibt den Text der Seite Schule. Auf welches Wort setzt sie den Link zur Seite Bus?","explanation":"Ein guter Linktext nennt das Ziel des Links. Wer nur die Linktexte liest, findet trotzdem den Weg.","links":[],"type":"single-choice","options":[{"text":"„Busplan“","correct":true,"info":"Der Linktext sagt, was auf der Zielseite steht. So wissen die Fünfer vor dem Klick, wohin er führt."},{"text":"„hier klicken“","correct":false,"info":"Das sagt nur, dass man klicken kann, aber nicht, wohin der Link führt."},{"text":"„Link“","correct":false,"info":"Dass es ein Link ist, sieht man schon an der blauen, unterstrichenen Schrift. Wohin er führt, sagt das Wort nicht."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="quelle">Ein fremdes Bild im Stadtführer</h2>
+<div class="explainer-block" data-block="quelle/1" data-block-id="754d01ef" data-block-type="note" data-block-order="8">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Klassenchat 7b</h3>
+<div class="explainer-block" data-block="quelle/1/1" data-block-id="82400ab7" data-block-type="text" data-block-order="9">
+<div class="block-text"><p><strong>Selin:</strong> Für die Seite Schwimmbad habe ich ein Foto im Netz gefunden, auf example.org/freibad: „Freibad
+am Morgen“ von Kim Sander, mit der Lizenz CC BY 4.0.</p>
+<p><strong>Frau Berg:</strong> Dann gehört eine Quellenangabe unter das Bild.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="quelle/2" data-block-id="d88a4907" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Fremde Bilder und Texte darfst du nur mit Erlaubnis oder freier Lizenz nutzen, und immer mit
+<a href="https://lernapps.net/apps/map/informatik/c/urheberrecht/" rel="noopener">Quellenangabe</a>. Sie hat vier Teile: <strong>Titel</strong>,
+<strong>Urheber</strong>, <strong>Quelle</strong> (die Seite, auf der das Bild steht) und <strong>Lizenz</strong>.</p></div>
+</div>
+<div class="explainer-block" data-block="quelle/3" data-block-id="e8990f04" data-block-type="single-choice" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="quellenangabe-vollstaendig">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-quellenangabe-vollstaendig" data-id="quellenangabe-vollstaendig" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Welche Quellenangabe schreibt Selin unter das Foto?</legend>
+<label class="question-option"><input type="radio" name="frage-quellenangabe-vollstaendig" value="0"> <span>„Freibad am Morgen“, Kim Sander, example.org/freibad, CC BY 4.0</span></label>
+<label class="question-option"><input type="radio" name="frage-quellenangabe-vollstaendig" value="1"> <span>Foto: aus dem Internet</span></label>
+<label class="question-option"><input type="radio" name="frage-quellenangabe-vollstaendig" value="2"> <span>„Freibad am Morgen“, Kim Sander</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>„Freibad am Morgen“, Kim Sander, example.org/freibad, CC BY 4.0</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Titel, Urheber, Quelle und Lizenz sind alle da.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Foto: aus dem Internet</strong></p><p>Es fehlen Titel, Urheber und Lizenz. „Internet“ sagt nicht, auf welcher Seite das Foto steht.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>„Freibad am Morgen“, Kim Sander</strong></p><p>Titel und Urheber stimmen, aber Quelle und Lizenz fehlen.</p></li>
+</ul>
+<p class="question-explanation">Eine vollständige Quellenangabe hat vier Teile: Titel, Urheber, Quelle und Lizenz. Im Netz verlinkst du die Lizenz am besten.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>„Freibad am Morgen“, Kim Sander, example.org/freibad, CC BY 4.0</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Titel, Urheber, Quelle und Lizenz sind alle da.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Foto: aus dem Internet</strong></p><p>Es fehlen Titel, Urheber und Lizenz. „Internet“ sagt nicht, auf welcher Seite das Foto steht.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>„Freibad am Morgen“, Kim Sander</strong></p><p>Titel und Urheber stimmen, aber Quelle und Lizenz fehlen.</p></li>
+</ul>
+<p class="question-explanation">Eine vollständige Quellenangabe hat vier Teile: Titel, Urheber, Quelle und Lizenz. Im Netz verlinkst du die Lizenz am besten.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"quellenangabe-vollstaendig","text":"Welche Quellenangabe schreibt Selin unter das Foto?","explanation":"Eine vollständige Quellenangabe hat vier Teile: Titel, Urheber, Quelle und Lizenz. Im Netz verlinkst du die Lizenz am besten.","links":[],"type":"single-choice","options":[{"text":"„Freibad am Morgen“, Kim Sander, example.org/freibad, CC BY 4.0","correct":true,"info":"Titel, Urheber, Quelle und Lizenz sind alle da."},{"text":"Foto: aus dem Internet","correct":false,"info":"Es fehlen Titel, Urheber und Lizenz. „Internet“ sagt nicht, auf welcher Seite das Foto steht."},{"text":"„Freibad am Morgen“, Kim Sander","correct":false,"info":"Titel und Urheber stimmen, aber Quelle und Lizenz fehlen."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="quelle/4" data-block-id="c9b24275" data-block-type="matching" data-block-order="12">
+<div class="explainer-exercise explainer-question" id="teile-quellenangabe">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-teile-quellenangabe" data-id="teile-quellenangabe" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ordne jedem Teil der Quellenangabe Selins Angabe zu.</legend>
+<p class="question-hint">Wähle zu jedem Eintrag das Passende.</p>
+<ul class="question-pairs">
+<li><label><span>Titel</span> <select name="frage-teile-quellenangabe-0" data-left="0"><option value="">bitte wählen</option><option value="2">example.org/freibad</option><option value="4">Schwimmbad</option><option value="1">Kim Sander</option><option value="3">CC BY 4.0</option><option value="0">Freibad am Morgen</option></select></label></li>
+<li><label><span>Urheber</span> <select name="frage-teile-quellenangabe-1" data-left="1"><option value="">bitte wählen</option><option value="2">example.org/freibad</option><option value="4">Schwimmbad</option><option value="1">Kim Sander</option><option value="3">CC BY 4.0</option><option value="0">Freibad am Morgen</option></select></label></li>
+<li><label><span>Quelle</span> <select name="frage-teile-quellenangabe-2" data-left="2"><option value="">bitte wählen</option><option value="2">example.org/freibad</option><option value="4">Schwimmbad</option><option value="1">Kim Sander</option><option value="3">CC BY 4.0</option><option value="0">Freibad am Morgen</option></select></label></li>
+<li><label><span>Lizenz</span> <select name="frage-teile-quellenangabe-3" data-left="3"><option value="">bitte wählen</option><option value="2">example.org/freibad</option><option value="4">Schwimmbad</option><option value="1">Kim Sander</option><option value="3">CC BY 4.0</option><option value="0">Freibad am Morgen</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Titel – Freibad am Morgen; Urheber – Kim Sander; Quelle – example.org/freibad; Lizenz – CC BY 4.0</p>
+<p class="question-explanation">„Schwimmbad“ ist die Seite des Stadtführers, auf der das Bild steht, nicht die Quelle. Die Quelle ist die Seite im Netz, von der das Bild kommt.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Titel – Freibad am Morgen; Urheber – Kim Sander; Quelle – example.org/freibad; Lizenz – CC BY 4.0</p>
+<p class="question-explanation">„Schwimmbad“ ist die Seite des Stadtführers, auf der das Bild steht, nicht die Quelle. Die Quelle ist die Seite im Netz, von der das Bild kommt.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"teile-quellenangabe","text":"Ordne jedem Teil der Quellenangabe Selins Angabe zu.","explanation":"„Schwimmbad“ ist die Seite des Stadtführers, auf der das Bild steht, nicht die Quelle. Die Quelle ist die Seite im Netz, von der das Bild kommt.","links":[],"type":"matching","pairs":[{"left":"Titel","right":"Freibad am Morgen"},{"left":"Urheber","right":"Kim Sander"},{"left":"Quelle","right":"example.org/freibad"},{"left":"Lizenz","right":"CC BY 4.0"}],"distractors":["Schwimmbad"]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="galerie">Die Galerie wächst weiter</h2>
+<div class="explainer-block" data-block="galerie/1" data-block-id="806f95ca" data-block-type="figure" data-block-order="13">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/galerie-3.svg" alt="Vier Bilderrahmen: ein Baum, ein Graph mit Kreisen, ein Hypertext aus drei Seiten mit Pfeilen. Der vierte Rahmen ist leer, mit einem Fragezeichen." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Die Galerie der Datenstrukturen. Neu ist der Hypertext im dritten Rahmen.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="galerie/2" data-block-id="3b6cf280" data-block-type="table" data-block-order="14">
+<div class="block-table" role="region" aria-label="Wie finde ich ein Element?" tabindex="0"><table><caption>Wie finde ich ein Element?</caption><thead><tr><th scope="col">Struktur</th><th scope="col">So findest du ein Element</th></tr></thead><tbody><tr><td>Baum</td><td>Von der Wurzel aus nach unten: Es gibt genau einen Weg.</td></tr><tr><td>Graph</td><td>Von einem Knoten aus den Kanten folgen und merken, wo du schon warst, sonst läufst du im Kreis. Nimm den Weg mit den wenigsten Kanten.</td></tr><tr><td>Hypertext</td><td>Bei der Startseite beginnen und den Links in ihrer Richtung folgen.</td></tr></tbody></table></div>
+</div>
+<div class="explainer-block" data-block="galerie/3" data-block-id="6885b4b4" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Rückblick auf das Kapitel: Du hast aus dem Baum einen Graphen gemacht, Kanten Richtungen gegeben und einen
+Stadtführer als Hypertext gebaut. Der vierte Rahmen bleibt noch leer. Später kommt dort eine Reihe von
+Fächern hinein, in der jedes Element eine Nummer hat.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Netze und Reihen von Daten“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-datenstrukturen","app":"Netze und Reihen von Daten","root":"../../","repository":"lernapps/informatik-datenstrukturen","revision":"2a062a1","page":{"title":"Der Stadtführer der 7b","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../netze/hypertext/">Zurück: Ein Graph aus Seiten</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

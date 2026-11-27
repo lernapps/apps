@@ -1,0 +1,22 @@
+<!-- Stadtführer der 7b: Seiten als Knoten, Verweise als Pfeile, Startseite hellblau. Eigene Zeichnung, Oliver Jägle, CC-BY-4.0. Stil wie der Baum von lernapps/informatik-daten-codieren (images/baum-zimmer.svg). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 375" role="img">
+<defs><marker id="pfeil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<title>Town guide as a graph of five pages</title>
+<rect width="400" height="375" fill="#fff"/>
+<line x1="178.7" y1="150.0" x2="97.6" y2="74.0" stroke="#333" stroke-width="2" marker-end="url(#pfeil)"/>
+<line x1="221.3" y1="150.0" x2="302.4" y2="74.0" stroke="#333" stroke-width="2" marker-end="url(#pfeil)"/>
+<line x1="72.0" y1="70.0" x2="72.0" y2="266.0" stroke="#333" stroke-width="2" marker-end="url(#pfeil)"/>
+<line x1="328.0" y1="70.0" x2="328.0" y2="266.0" stroke="#333" stroke-width="2" marker-end="url(#pfeil)"/>
+<line x1="306.7" y1="270.0" x2="225.6" y2="194.0" stroke="#333" stroke-width="2" marker-end="url(#pfeil)"/>
+<line x1="93.3" y1="270.0" x2="174.4" y2="194.0" stroke="#333" stroke-width="2" marker-end="url(#pfeil)"/>
+<rect x="138.0" y="150.0" width="124" height="40" rx="8" fill="#e8f0fb" stroke="#333" stroke-width="2"/>
+<text x="200" y="175.9" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">Home page</text>
+<rect x="10.0" y="30.0" width="124" height="40" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="72" y="56.0" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">School</text>
+<rect x="266.0" y="30.0" width="124" height="40" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="328" y="56.0" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">Bus</text>
+<rect x="10.0" y="270.0" width="124" height="40" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="72" y="295.9" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">Library</text>
+<rect x="266.0" y="270.0" width="124" height="40" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="328" y="295.9" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">Pool</text>
+</svg>

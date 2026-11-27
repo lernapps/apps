@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-CtncCkFd.css">
+    <title>Edges with a direction – Networks and rows of data</title>
+    <meta name="description" content="The directed graph: linked pages as nodes, links as arrows. Paths follow the direction of the arrows." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../netze/pfeile/" />
+    <link rel="alternate" hreflang="en" href="../../../en/netze/pfeile/" />
+    <script type="module" crossorigin src="../../../assets/islands-CQ804BUt.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../netze/pfeile/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/netze/pfeile/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li aria-current="page">Edges with a direction</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row">
+<h1>Edges with a direction</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/netze/pfeile/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧netze/pfeile/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-datenstrukturen","page":{"id":"pfeile","title":"Edges with a direction","exercises":[{"id":"selin-zu-mia","section":"einstieg","numbered":false},{"id":"pfeile-lesen","section":"idee","numbered":false},{"id":"linknetz-bauen","section":"bauen","numbered":true},{"id":"pfeile-zu-selin","section":"uebung","numbered":false},{"id":"alle-erreichen","section":"uebung","numbered":false},{"id":"zurueck-zu-jona","section":"uebung","numbered":false}],"sections":["einstieg","idee","bauen","uebung"]},"tutor":"netze/pfeile/tutor/","markdown":"netze/pfeile/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">Can Selin get to Mia?</a></li><li><a href="#idee">Arrows instead of lines</a></li><li><a href="#bauen">A network of links on the computer</a></li><li><a href="#uebung">Practice</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Can Selin get to Mia?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="5d0b1c2c" data-block-type="note" data-block-order="1">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Class 7b chat</h3>
+<div class="explainer-block" data-block="einstieg/1/1" data-block-id="14289b29" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Mia:</strong> Now each of us has our own page on the school network. Mine has a link to Selin&#39;s page!</p>
+<p><strong>Selin:</strong> Thanks! On my page I only have a link to Jona.</p>
+<p><strong>Jona:</strong> And I link to Selin and Tom. Tom doesn&#39;t have any link yet.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="88862394" data-block-type="true-false" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="selin-zu-mia">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-selin-zu-mia" data-id="selin-zu-mia" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Selin can click from her page to Mia's page by following links.</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/pfeile.svg" alt="Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Each box is one child&#39;s page. An arrow points from the page with the link to the page the link leads to.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-selin-zu-mia" value="true"> <span>True</span></label>
+<label class="question-option"><input type="radio" name="frage-selin-zu-mia" value="false"> <span>False</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">No arrow points to Mia. Mia links to Selin, but no link leads back to Mia. A link only works in one direction.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">No arrow points to Mia. Mia links to Selin, but no link leads back to Mia. A link only works in one direction.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"selin-zu-mia","text":"Selin can click from her page to Mia's page by following links.","explanation":"No arrow points to Mia. Mia links to Selin, but no link leads back to Mia. A link only works in one direction.","links":[],"hint":"Only follow the arrow heads. Does any arrow point to Mia?","material":[{"type":"figure","image":"images/pfeile.svg","alt":"Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom.","caption":"Each box is one child's page. An arrow points from the page with the link to the page the link leads to.","source":"own drawing, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Arrows instead of lines</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="d865740d" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>On the page before, you had edges without a direction: you can take a bus route there and back. On this page
+you will get to know edges with a direction. This is how you show linked pages as a graph.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="0263f571" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-verweis-link"><a href="../../../en/glossar/#verweis-link">link</a></dfn></dt><dd><p>A link is a place on a page that leads to another page. It is only on one of the two pages.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="e4381774" data-block-type="definition" data-block-order="6">
+<dl class="explainer-definition"><dt><dfn id="begriff-gerichteter-graph"><a href="../../../en/glossar/#gerichteter-graph">directed graph</a></dfn></dt><dd><p>In a directed graph, every edge has a direction. You draw it as an arrow. A path may only use arrows in their direction.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/4" data-block-id="e248fd89" data-block-type="note" data-block-order="7">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Remember</h3>
+<div class="explainer-block" data-block="idee/4/1" data-block-id="51bbd423" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>An arrow from A to B means: page A has a link to page B. A way back needs its own arrow from B to A, like
+between Selin and Jona.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/5" data-block-id="373eed54" data-block-type="matching" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="pfeile-lesen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-pfeile-lesen" data-id="pfeile-lesen" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">What does each arrow mean?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/pfeile.svg" alt="Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>The links between the children&#39;s pages.</p></figcaption></figure></div>
+<p class="question-hint">Choose the match for each entry.</p>
+<ul class="question-pairs">
+<li><label><span>arrow from Mia to Selin</span> <select name="frage-pfeile-lesen-0" data-left="0"><option value="">please choose</option><option value="0">Mia's page has a link to Selin's page.</option><option value="3">Tom's page has a link to Jona's page.</option><option value="1">Selin's page has a link to Jona's page.</option><option value="2">Jona's page has a link to Tom's page.</option></select></label></li>
+<li><label><span>arrow from Selin to Jona</span> <select name="frage-pfeile-lesen-1" data-left="1"><option value="">please choose</option><option value="0">Mia's page has a link to Selin's page.</option><option value="3">Tom's page has a link to Jona's page.</option><option value="1">Selin's page has a link to Jona's page.</option><option value="2">Jona's page has a link to Tom's page.</option></select></label></li>
+<li><label><span>arrow from Jona to Tom</span> <select name="frage-pfeile-lesen-2" data-left="2"><option value="">please choose</option><option value="0">Mia's page has a link to Selin's page.</option><option value="3">Tom's page has a link to Jona's page.</option><option value="1">Selin's page has a link to Jona's page.</option><option value="2">Jona's page has a link to Tom's page.</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> arrow from Mia to Selin – Mia's page has a link to Selin's page.; arrow from Selin to Jona – Selin's page has a link to Jona's page.; arrow from Jona to Tom – Jona's page has a link to Tom's page.</p>
+<p class="question-explanation">The arrow starts at the page the link is on and points to the page it leads to. Tom has no link yet.</p>
+<p class="question-more"><a class="question-more-link" href="https://www.w3.org/History/1989/proposal.html" rel="noopener" title="Tim Berners-Lee: Information Management: A Proposal (1989)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">More on it: Tim Berners-Lee: Information Management: A Proposal (1989)</span></a></p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> arrow from Mia to Selin – Mia's page has a link to Selin's page.; arrow from Selin to Jona – Selin's page has a link to Jona's page.; arrow from Jona to Tom – Jona's page has a link to Tom's page.</p>
+<p class="question-explanation">The arrow starts at the page the link is on and points to the page it leads to. Tom has no link yet.</p>
+<p class="question-more"><a class="question-more-link" href="https://www.w3.org/History/1989/proposal.html" rel="noopener" title="Tim Berners-Lee: Information Management: A Proposal (1989)"><svg class="question-more-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="4.75" r="1" fill="currentColor"/><path d="M8 7v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="question-more-text">More on it: Tim Berners-Lee: Information Management: A Proposal (1989)</span></a></p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"pfeile-lesen","text":"What does each arrow mean?","explanation":"The arrow starts at the page the link is on and points to the page it leads to. Tom has no link yet.","links":[{"title":"Tim Berners-Lee: Information Management: A Proposal (1989)","url":"https://www.w3.org/History/1989/proposal.html"}],"material":[{"type":"figure","image":"images/pfeile.svg","alt":"Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom.","caption":"The links between the children's pages.","source":"own drawing, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"matching","pairs":[{"left":"arrow from Mia to Selin","right":"Mia's page has a link to Selin's page."},{"left":"arrow from Selin to Jona","right":"Selin's page has a link to Jona's page."},{"left":"arrow from Jona to Tom","right":"Jona's page has a link to Tom's page."}],"distractors":["Tom's page has a link to Jona's page."]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="idee/6" data-block-id="a4022069" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>The idea is older than you: in 1989, Tim Berners-Lee at the research centre CERN suggested linking notes and
+texts together as a network. He drew rings and arrows and called the rings nodes and the arrows links. This grew
+into the World Wide Web.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="bauen">A network of links on the computer</h2>
+<div class="explainer-block" data-block="bauen/1" data-block-id="a5d5e5d6" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>Now you draw links as arrows, from a list. First tap the page the link is on, then the page it leads to. The
+arrow points from the first name to the second.</p></div>
+</div>
+<div class="explainer-block" data-block="bauen/2" data-block-id="cd21a315" data-block-type="vue-component" data-block-order="12">
+<div class="explainer-component" id="linknetz-bauen" data-component="Netzbauer" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68]" data-checked>
+<p class="explainer-exercise-label">Exercise</p>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Task no. {n}">Task no. 1</span> <button type="button" class="explainer-new-task" title="New task"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">New task</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="netzbauer" data-v-22c0ccda><p data-v-22c0ccda>Add an arrow for each link:</p><ul data-v-22c0ccda><!--[--><li data-v-22c0ccda>Jona&#39;s page has a link to Mia&#39;s page.</li><li data-v-22c0ccda>Jona&#39;s page has a link to Tom&#39;s page.</li><li data-v-22c0ccda>Jona&#39;s page has a link to Lea&#39;s page.</li><li data-v-22c0ccda>Selin&#39;s page has a link to Tom&#39;s page.</li><li data-v-22c0ccda>Selin&#39;s page has a link to Lea&#39;s page.</li><li data-v-22c0ccda>Mia&#39;s page has a link to Lea&#39;s page.</li><!--]--></ul><div class="netzbauer-figure" data-v-22c0ccda><svg viewBox="0 0 340 280" aria-hidden="true" data-v-22c0ccda><defs data-v-22c0ccda><marker id="netzbauer-pfeil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto" data-v-22c0ccda><path d="M0 0 L10 5 L0 10 Z" fill="#333" data-v-22c0ccda></path></marker></defs><rect width="340" height="280" fill="#fff" data-v-22c0ccda></rect><!--[--><!--]--></svg><!--[--><button type="button" class="netzbauer-node" aria-pressed="false" style="left:36.470588235294116%;top:1.4285714285714286%;width:27.058823529411764%;height:15.714285714285714%;" data-v-22c0ccda>Jona</button><button type="button" class="netzbauer-node" aria-pressed="false" style="left:70%;top:29.642857142857142%;width:27.058823529411764%;height:15.714285714285714%;" data-v-22c0ccda>Selin</button><button type="button" class="netzbauer-node" aria-pressed="false" style="left:57.35294117647059%;top:75%;width:27.058823529411764%;height:15.714285714285714%;" data-v-22c0ccda>Mia</button><button type="button" class="netzbauer-node" aria-pressed="false" style="left:15.588235294117647%;top:75%;width:27.058823529411764%;height:15.714285714285714%;" data-v-22c0ccda>Tom</button><button type="button" class="netzbauer-node" aria-pressed="false" style="left:2.941176470588235%;top:29.642857142857142%;width:27.058823529411764%;height:15.714285714285714%;" data-v-22c0ccda>Lea</button><!--]--></div><p aria-live="polite" class="netzbauer-status" data-v-22c0ccda></p><p class="netzbauer-drawn" tabindex="-1" data-v-22c0ccda>Your arrows:</p><p data-v-22c0ccda>No arrows yet.</p></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Check</button> <button type="button" class="question-solve" hidden>Solution</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Task no. 1</p><div class="explainer-task"><p>Add an arrow for each link:</p>
+<ul>
+<li>Jona&#39;s page has a link to Mia&#39;s page.</li>
+<li>Jona&#39;s page has a link to Tom&#39;s page.</li>
+<li>Jona&#39;s page has a link to Lea&#39;s page.</li>
+<li>Selin&#39;s page has a link to Tom&#39;s page.</li>
+<li>Selin&#39;s page has a link to Lea&#39;s page.</li>
+<li>Mia&#39;s page has a link to Lea&#39;s page.</li>
+</ul></div><details class="explainer-solution"><summary>Solution</summary><p>Jona → Mia, Jona → Tom, Jona → Lea, Selin → Tom, Selin → Lea, Mia → Lea</p></details></div></div>
+<p class="question-feedback" data-right="Right!" data-wrong="That's not right." data-incomplete="Do the task first."></p>
+<div class="explainer-component-solution" hidden tabindex="-1"><p class="explainer-component-solution-label">Solution</p><div class="explainer-component-solution-text"></div></div>
+<template class="explainer-component-solutions"><div data-number="1"><p>Jona → Mia, Jona → Tom, Jona → Lea, Selin → Tom, Selin → Lea, Mia → Lea</p></div><div data-number="2"><p>Selin → Lea, Mia → Selin, Mia → Tom, Tom → Jona, Tom → Selin, Lea → Tom</p></div><div data-number="3"><p>Selin → Jona, Mia → Selin, Mia → Tom, Mia → Lea, Tom → Lea, Lea → Selin</p></div><div data-number="4"><p>Jona → Selin, Jona → Tom, Mia → Jona, Mia → Selin, Tom → Selin, Lea → Tom</p></div><div data-number="5"><p>Selin → Jona, Mia → Selin, Tom → Jona, Tom → Lea, Lea → Selin, Lea → Mia</p></div><div data-number="6"><p>Jona → Selin, Jona → Lea, Selin → Mia, Selin → Tom, Selin → Lea, Mia → Jona</p></div><div data-number="7"><p>Selin → Jona, Selin → Lea, Mia → Selin, Mia → Tom, Tom → Jona, Lea → Tom</p></div><div data-number="8"><p>Selin → Jona, Mia → Selin, Tom → Lea, Lea → Mia</p></div><div data-number="9"><p>Jona → Selin, Selin → Lea, Mia → Jona, Mia → Selin, Tom → Jona, Lea → Mia</p></div><div data-number="10"><p>Selin → Mia, Mia → Jona, Mia → Lea, Tom → Lea</p></div><div data-number="11"><p>Jona → Selin, Jona → Tom, Selin → Mia, Tom → Mia, Tom → Lea</p></div><div data-number="12"><p>Mia → Jona, Mia → Selin, Tom → Jona, Tom → Selin, Lea → Selin, Lea → Mia</p></div><div data-number="13"><p>Selin → Mia, Selin → Lea, Mia → Jona, Tom → Jona, Tom → Mia</p></div><div data-number="14"><p>Selin → Tom, Mia → Jona, Mia → Selin, Lea → Mia, Lea → Tom</p></div><div data-number="15"><p>Selin → Mia, Selin → Tom, Mia → Jona, Mia → Lea, Tom → Mia, Lea → Jona</p></div><div data-number="16"><p>Jona → Lea, Mia → Jona, Mia → Selin, Lea → Tom</p></div><div data-number="17"><p>Jona → Selin, Selin → Mia, Selin → Tom, Mia → Jona, Tom → Mia, Lea → Selin</p></div><div data-number="18"><p>Jona → Selin, Selin → Mia, Mia → Jona, Tom → Mia, Tom → Lea</p></div><div data-number="19"><p>Jona → Selin, Jona → Lea, Selin → Mia, Selin → Lea, Mia → Tom, Mia → Lea</p></div><div data-number="20"><p>Jona → Selin, Tom → Jona, Lea → Mia, Lea → Tom</p></div><div data-number="21"><p>Mia → Selin, Mia → Tom, Mia → Lea, Lea → Jona</p></div><div data-number="22"><p>Jona → Tom, Tom → Mia, Tom → Lea, Lea → Jona, Lea → Selin</p></div><div data-number="23"><p>Jona → Tom, Selin → Jona, Mia → Jona, Tom → Mia, Lea → Selin</p></div><div data-number="24"><p>Jona → Lea, Selin → Jona, Selin → Tom, Tom → Jona, Lea → Mia</p></div><div data-number="25"><p>Jona → Lea, Selin → Tom, Selin → Lea, Mia → Jona, Mia → Selin, Tom → Mia</p></div><div data-number="26"><p>Jona → Mia, Jona → Lea, Selin → Jona, Lea → Tom</p></div><div data-number="27"><p>Selin → Tom, Selin → Lea, Mia → Tom, Tom → Jona, Lea → Jona, Lea → Tom</p></div><div data-number="28"><p>Jona → Selin, Jona → Tom, Jona → Lea, Selin → Mia, Mia → Tom, Lea → Selin</p></div><div data-number="29"><p>Jona → Mia, Jona → Lea, Selin → Lea, Mia → Selin, Mia → Lea, Tom → Selin</p></div><div data-number="30"><p>Jona → Mia, Mia → Tom, Tom → Selin, Lea → Mia</p></div><div data-number="31"><p>Mia → Jona, Mia → Lea, Tom → Mia, Lea → Selin</p></div><div data-number="32"><p>Selin → Mia, Mia → Tom, Tom → Jona, Lea → Jona, Lea → Mia</p></div><div data-number="33"><p>Jona → Tom, Selin → Jona, Mia → Jona, Lea → Jona</p></div><div data-number="34"><p>Jona → Mia, Selin → Tom, Mia → Tom, Mia → Lea, Tom → Jona, Lea → Selin</p></div><div data-number="35"><p>Jona → Lea, Mia → Jona, Mia → Lea, Tom → Selin, Lea → Selin</p></div><div data-number="36"><p>Jona → Mia, Selin → Tom, Selin → Lea, Mia → Tom, Mia → Lea, Tom → Lea</p></div><div data-number="37"><p>Selin → Jona, Mia → Selin, Tom → Selin, Tom → Mia, Tom → Lea, Lea → Selin</p></div><div data-number="38"><p>Jona → Selin, Selin → Lea, Mia → Jona, Tom → Jona, Tom → Lea</p></div><div data-number="39"><p>Jona → Tom, Selin → Jona, Mia → Tom, Tom → Lea</p></div><div data-number="40"><p>Selin → Jona, Selin → Lea, Mia → Tom, Tom → Selin, Lea → Mia, Lea → Tom</p></div><div data-number="41"><p>Jona → Selin, Jona → Mia, Mia → Selin, Tom → Selin, Lea → Tom</p></div><div data-number="42"><p>Jona → Lea, Selin → Jona, Selin → Tom, Tom → Lea, Lea → Selin, Lea → Mia</p></div><div data-number="43"><p>Selin → Jona, Selin → Lea, Mia → Jona, Mia → Tom, Mia → Lea</p></div><div data-number="44"><p>Jona → Mia, Jona → Lea, Selin → Jona, Selin → Mia, Tom → Jona, Lea → Mia</p></div><div data-number="45"><p>Jona → Tom, Jona → Lea, Selin → Jona, Mia → Jona, Tom → Mia</p></div><div data-number="46"><p>Jona → Lea, Selin → Jona, Selin → Mia, Mia → Tom, Tom → Lea</p></div><div data-number="47"><p>Jona → Selin, Mia → Jona, Tom → Jona, Lea → Jona, Lea → Mia</p></div><div data-number="48"><p>Selin → Jona, Mia → Selin, Tom → Jona, Tom → Mia, Tom → Lea, Lea → Selin</p></div><div data-number="49"><p>Selin → Jona, Selin → Lea, Mia → Selin, Tom → Jona</p></div><div data-number="50"><p>Mia → Selin, Tom → Jona, Tom → Selin, Lea → Jona, Lea → Selin, Lea → Tom</p></div><div data-number="51"><p>Mia → Tom, Tom → Jona, Tom → Selin, Lea → Mia, Lea → Tom</p></div><div data-number="52"><p>Jona → Tom, Jona → Lea, Selin → Jona, Mia → Selin, Tom → Selin</p></div><div data-number="53"><p>Jona → Selin, Jona → Tom, Jona → Lea, Tom → Selin, Tom → Mia, Lea → Mia</p></div><div data-number="54"><p>Jona → Mia, Mia → Selin, Tom → Selin, Lea → Mia</p></div><div data-number="55"><p>Jona → Mia, Selin → Tom, Selin → Lea, Lea → Jona</p></div><div data-number="56"><p>Jona → Selin, Mia → Jona, Tom → Jona, Tom → Selin, Tom → Lea, Lea → Jona</p></div><div data-number="57"><p>Jona → Tom, Jona → Lea, Selin → Mia, Mia → Jona, Mia → Tom</p></div><div data-number="58"><p>Selin → Mia, Mia → Jona, Tom → Selin, Tom → Mia, Lea → Tom</p></div><div data-number="59"><p>Jona → Mia, Selin → Lea, Tom → Jona, Lea → Mia, Lea → Tom</p></div><div data-number="60"><p>Jona → Mia, Selin → Tom, Mia → Selin, Mia → Lea, Tom → Mia, Lea → Selin</p></div><div data-number="61"><p>Selin → Mia, Mia → Jona, Tom → Selin, Tom → Lea</p></div><div data-number="62"><p>Jona → Tom, Selin → Mia, Tom → Selin, Tom → Mia, Lea → Jona, Lea → Selin</p></div><div data-number="63"><p>Jona → Mia, Jona → Tom, Selin → Jona, Mia → Selin, Lea → Mia</p></div><div data-number="64"><p>Jona → Selin, Mia → Selin, Tom → Mia, Tom → Lea, Lea → Jona, Lea → Mia</p></div><div data-number="65"><p>Jona → Lea, Selin → Mia, Mia → Jona, Mia → Tom, Mia → Lea, Lea → Selin</p></div><div data-number="66"><p>Selin → Jona, Tom → Jona, Tom → Selin, Tom → Mia, Lea → Selin</p></div><div data-number="67"><p>Jona → Mia, Mia → Selin, Mia → Tom, Mia → Lea, Tom → Selin, Tom → Lea</p></div></template>
+<script type="application/json" class="explainer-component-props">{"names":["Jona","Selin","Mia","Tom","Lea"],"directed":true,"task":"Add an arrow for each link:","line":"{a}'s page has a link to {b}'s page.","chosen":"{a} is selected. Now tap the page the link leads to.","added":"Arrow {a} → {b} added.","removed":"Arrow {a} → {b} removed.","drawn":"Your arrows:","empty":"No arrows yet.","remove":"remove","removeLabel":"Remove arrow {a} → {b}","mistakes":["An arrow at {a} is still missing. Read every line of the list that has {a} in it.","The arrow {a} → {b} is not in the list. Remove it.","The arrow between {a} and {b} points the wrong way. It starts at the page the link is on."]}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practice</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="7f13d0ad" data-block-type="number" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="pfeile-zu-selin">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-pfeile-zu-selin" data-id="pfeile-zu-selin" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">How many arrows point to Selin's page?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/pfeile.svg" alt="Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>The links between the children&#39;s pages.</p></figcaption></figure></div>
+<label class="question-number">Your answer <input type="text" inputmode="decimal" autocomplete="off" name="frage-pfeile-zu-selin">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 2</p>
+<p class="question-explanation">Two arrow heads end at Selin: from Mia and from Jona. The arrow from Selin to Jona points away from her.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 2</p>
+<p class="question-explanation">Two arrow heads end at Selin: from Mia and from Jona. The arrow from Selin to Jona points away from her.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"pfeile-zu-selin","text":"How many arrows point to Selin's page?","explanation":"Two arrow heads end at Selin: from Mia and from Jona. The arrow from Selin to Jona points away from her.","links":[],"material":[{"type":"figure","image":"images/pfeile.svg","alt":"Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom.","caption":"The links between the children's pages.","source":"own drawing, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"number","answer":2,"tolerance":0,"mistakes":[{"answer":1,"message":"You counted the arrow that leaves Selin. Only count the arrow heads that end at Selin."},{"answer":3,"message":"You counted all the arrows at Selin's box. One of them leaves Selin."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="f03700f2" data-block-type="single-choice" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="alle-erreichen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-alle-erreichen" data-id="alle-erreichen" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">From which page can you reach all the other pages by following links?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/pfeile.svg" alt="Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>The links between the children&#39;s pages.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-alle-erreichen" value="0"> <span>Mia</span></label>
+<label class="question-option"><input type="radio" name="frage-alle-erreichen" value="1"> <span>Jona</span></label>
+<label class="question-option"><input type="radio" name="frage-alle-erreichen" value="2"> <span>Selin</span></label>
+<label class="question-option"><input type="radio" name="frage-alle-erreichen" value="3"> <span>Tom</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Mia</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Mia → Selin → Jona → Tom: that way you get to all three other pages.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Jona</strong></p><p>From Jona you get to Selin and Tom, but no arrow leads to Mia.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Selin</strong></p><p>From Selin you get to Tom via Jona, but not to Mia.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Tom</strong></p><p>Tom's page has no link yet. From there you cannot get anywhere.</p></li>
+</ul>
+<p class="question-explanation">Only from Mia does a path in the direction of the arrows lead to every other page.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Mia</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Mia → Selin → Jona → Tom: that way you get to all three other pages.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Jona</strong></p><p>From Jona you get to Selin and Tom, but no arrow leads to Mia.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Selin</strong></p><p>From Selin you get to Tom via Jona, but not to Mia.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Tom</strong></p><p>Tom's page has no link yet. From there you cannot get anywhere.</p></li>
+</ul>
+<p class="question-explanation">Only from Mia does a path in the direction of the arrows lead to every other page.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"alle-erreichen","text":"From which page can you reach all the other pages by following links?","explanation":"Only from Mia does a path in the direction of the arrows lead to every other page.","links":[],"material":[{"type":"figure","image":"images/pfeile.svg","alt":"Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom.","caption":"The links between the children's pages.","source":"own drawing, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"Mia","correct":true,"info":"Mia → Selin → Jona → Tom: that way you get to all three other pages."},{"text":"Jona","correct":false,"info":"From Jona you get to Selin and Tom, but no arrow leads to Mia."},{"text":"Selin","correct":false,"info":"From Selin you get to Tom via Jona, but not to Mia."},{"text":"Tom","correct":false,"info":"Tom's page has no link yet. From there you cannot get anywhere."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="3eed79e5" data-block-type="multiple-choice" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="zurueck-zu-jona">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-zurueck-zu-jona" data-id="zurueck-zu-jona" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Tom adds a new link. Which links would then get you from Tom's page to Jona's page? More than one is right.</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/pfeile.svg" alt="Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>The links between the children&#39;s pages.</p></figcaption></figure></div>
+<label class="question-option"><input type="checkbox" name="frage-zurueck-zu-jona" value="0"> <span>a link from Tom to Jona</span></label>
+<label class="question-option"><input type="checkbox" name="frage-zurueck-zu-jona" value="1"> <span>a link from Tom to Selin</span></label>
+<label class="question-option"><input type="checkbox" name="frage-zurueck-zu-jona" value="2"> <span>a link from Jona to Tom</span></label>
+<label class="question-option"><input type="checkbox" name="frage-zurueck-zu-jona" value="3"> <span>a link from Selin to Tom</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>a link from Tom to Jona</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The new arrow Tom → Jona leads straight to Jona.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>a link from Tom to Selin</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Tom → Selin, then Selin → Jona. That is a path of length 2.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>a link from Jona to Tom</strong></p><p>This link already exists. It leads from Jona to Tom, not back.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>a link from Selin to Tom</strong></p><p>This arrow points to Tom. You still could not leave Tom's page with it.</p></li>
+</ul>
+<p class="question-explanation">A path from Tom needs an arrow that starts at Tom. It can lead straight to Jona or go via Selin.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>a link from Tom to Jona</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The new arrow Tom → Jona leads straight to Jona.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>a link from Tom to Selin</strong> <span class="question-badge question-badge-right">right answer</span></p><p>Tom → Selin, then Selin → Jona. That is a path of length 2.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>a link from Jona to Tom</strong></p><p>This link already exists. It leads from Jona to Tom, not back.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>a link from Selin to Tom</strong></p><p>This arrow points to Tom. You still could not leave Tom's page with it.</p></li>
+</ul>
+<p class="question-explanation">A path from Tom needs an arrow that starts at Tom. It can lead straight to Jona or go via Selin.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"zurueck-zu-jona","text":"Tom adds a new link. Which links would then get you from Tom's page to Jona's page? More than one is right.","explanation":"A path from Tom needs an arrow that starts at Tom. It can lead straight to Jona or go via Selin.","links":[],"material":[{"type":"figure","image":"images/pfeile.svg","alt":"Four boxes: Mia, Selin, Jona and Tom. Arrows lead from Mia to Selin, from Selin to Jona, from Jona to Selin and from Jona to Tom.","caption":"The links between the children's pages.","source":"own drawing, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"multiple-choice","options":[{"text":"a link from Tom to Jona","correct":true,"info":"The new arrow Tom → Jona leads straight to Jona."},{"text":"a link from Tom to Selin","correct":true,"info":"Tom → Selin, then Selin → Jona. That is a path of length 2."},{"text":"a link from Jona to Tom","correct":false,"info":"This link already exists. It leads from Jona to Tom, not back."},{"text":"a link from Selin to Tom","correct":false,"info":"This arrow points to Tom. You still could not leave Tom's page with it."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="1adee080" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Next, Ms Berg presents a project: a whole town guide made of pages and links.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “Networks and rows of data”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-datenstrukturen","app":"Networks and rows of data","root":"../../../en/","repository":"lernapps/informatik-datenstrukturen","revision":"2a062a1","page":{"title":"Edges with a direction","order":2}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/netze/graph/">Back: From tree to graph</a><a rel="next" href="../../../en/netze/hypertext/">Next: A graph made of pages</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>

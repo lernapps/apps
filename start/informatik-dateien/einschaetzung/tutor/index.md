@@ -46,6 +46,15 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - „Dateipfad“ · Aufgaben A4, A5, A6
 - „Speicherorte vergleichen“ · Aufgaben A7, A8, A9
 
+### Kapitel „Daten sichern und schützen“
+
+- Selbsteinschätzung des Kapitels
+- „Das brauchst du hier“
+- „Datensicherung“ · Aufgaben A10, A11
+- „Sichere Passwörter“ · Aufgaben A12, A13
+- „Schadsoftware“ · Aufgaben A14, A15
+- „Schutzsoftware und Updates“ · Aufgaben A16, A17
+
 ## Die Aufgaben dieser Selbsteinschätzung
 
 - A1: Aufgabe ablegen der Seite „Ordner und Dateien“
@@ -57,3 +66,11 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A7: Aufgabe gb-in-mb der Seite „Speicherorte vergleichen“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
 - A8: Aufgabe wie-viele-passen der Seite „Speicherorte vergleichen“
 - A9: Aufgabe welcher-ort der Seite „Speicherorte vergleichen“
+- A10: Aufgabe noch-da der Seite „Datensicherung“
+- A11: Aufgabe verlorene-tage der Seite „Datensicherung“
+- A12: Aufgabe moeglichkeiten der Seite „Sichere Passwörter“
+- A13: Aufgabe am-schwersten der Seite „Sichere Passwörter“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A14: Aufgabe welcher-weg der Seite „Schadsoftware“
+- A15: Aufgabe arten der Seite „Schadsoftware“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)
+- A16: Aufgabe welcher-schutz der Seite „Schutzsoftware und Updates“
+- A17: Aufgabe einstellungen der Seite „Schutzsoftware und Updates“ (immer dieselbe Aufgabe, auch auf der Seite: richtig kann gemerkt sein)

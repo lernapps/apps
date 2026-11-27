@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CtncCkFd.css">
+    <title>Das brauchst du hier – Netze und Reihen von Daten</title>
+    <meta name="description" content="Kurz wiederholt: der Baum als Datenstruktur mit Wurzel, Knoten, Kanten und Blättern. Der Anfang der Galerie der Datenstrukturen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../netze/das-brauchst-du/" />
+    <link rel="alternate" hreflang="en" href="../../en/netze/das-brauchst-du/" />
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../netze/das-brauchst-du/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/netze/das-brauchst-du/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li aria-current="page">Das brauchst du hier</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row explainer-title-row-recap">
+<h1>Das brauchst du hier</h1>
+</div>
+<aside class="explainer-recap" aria-label="Wiederholung">
+<p class="explainer-recap-label">Wiederholung</p>
+<p>Das brauchst du für dieses Kapitel: <a href="https://lernapps.net/apps/map/informatik/c/baum/" rel="noopener">informatik/baum</a> <span class="explainer-recap-hint">(externe Seite, die Lernlandkarte auf lernapps.net)</span>.</p>
+</aside>
+<div class="explainer-title-row explainer-title-row-recap">
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../netze/das-brauchst-du/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧netze/das-brauchst-du/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-datenstrukturen","page":{"id":"das-brauchst-du","title":"Das brauchst du hier","exercises":[{"id":"weg-zu-mia","section":"beispiel","numbered":false}],"sections":["einstieg","beispiel","galerie"]},"tutor":"netze/das-brauchst-du/tutor/","markdown":"netze/das-brauchst-du/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+<section class="explainer-section">
+<h2 id="einstieg">Kannst du das schon?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="f32aa525" data-block-type="note" data-block-order="1">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Klassenchat 7b</h3>
+<div class="explainer-block" data-block="einstieg/1/1" data-block-id="d4f7be58" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Jona:</strong> Schaut mal, was ich gefunden habe: Frau Bergs Zimmerplan vom Seeberg, letztes Jahr in der 6b!</p>
+<p><strong>Mia:</strong> Haha, der Baum! Zimmer 22, Selin und ich.</p>
+<p><strong>Selin:</strong> Den brauchen wir bestimmt noch.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="04916413" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Jona, Selin und Mia sind 12 und gehen in die Klasse 7b. Frau Berg ist ihre Klassenlehrerin. Letztes Jahr,
+in der 6b, war die Klasse auf Klassenfahrt am Seeberg. In diesem Kapitel baust du Netze. Sie beginnen beim
+Baum. Prüfe dich kurz selbst:</p>
+<ul>
+<li><strong>Baum als Datenstruktur:</strong> Ich kann hierarchische Informationen als Baum mit Wurzel, Knoten, Kanten und
+Blättern darstellen.</li>
+</ul></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">Der Zimmerbaum vom Seeberg</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="1ab4155d" data-block-type="labelled-figure" data-block-order="4">
+<figure class="block-figure block-labelled"><div class="block-labelled-image block-labelled-fill"><img src="../../images/baum-zimmer.svg" alt="Ein Baum. Oben steht 6b. Drei Linien führen nach unten zu den Zimmern 13, 22 und 9. Unter Zimmer 13 stehen Jona und Tom, unter 22 Selin und Mia, unter 9 Ben und Ali. Die Kästchen ganz unten haben einen gestrichelten Rand." loading="lazy" decoding="async"><span class="block-marker" style="left: 66%; top: 12%" aria-hidden="true">1</span><span class="block-marker" style="left: 67%; top: 27%" aria-hidden="true">2</span><span class="block-marker" style="left: 5%; top: 38%" aria-hidden="true">3</span><span class="block-marker" style="left: 97%; top: 69%" aria-hidden="true">4</span><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle (aus „Daten darstellen und codieren“). Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle (aus „Daten darstellen und codieren“). Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><ol class="block-legend"><li>Wurzel: der oberste Knoten, hellblau</li><li>Kante: eine Linie zwischen zwei Knoten</li><li>Knoten: ein Kästchen im Baum</li><li>Blatt: ein Knoten ohne Knoten darunter, gestrichelt</li></ol><figcaption><p>Frau Bergs Zimmerplan als Baum. Die Zahlen 1 bis 4 zeigen die Teile des Baums.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="089385ac" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Jeder Knoten außer der Wurzel hängt an genau einem Knoten darüber. Darum führt von der Wurzel genau <strong>ein</strong>
+Weg zu jedem Knoten, und ein Baum hat immer eine Kante weniger als Knoten.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="bade3e41" data-block-type="single-choice" data-block-order="6">
+<div class="explainer-exercise explainer-question" id="weg-zu-mia">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-weg-zu-mia" data-id="weg-zu-mia" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie viele Wege führen im Zimmerbaum von der Wurzel 6b zu Mia?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/baum-zimmer.svg" alt="Ein Baum. Oben steht 6b, darunter die Zimmer 13, 22 und 9, ganz unten die Kinder: Jona und Tom, Selin und Mia, Ben und Ali." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Der Zimmerbaum vom Seeberg.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-weg-zu-mia" value="0"> <span>genau einer</span></label>
+<label class="question-option"><input type="radio" name="frage-weg-zu-mia" value="1"> <span>zwei</span></label>
+<label class="question-option"><input type="radio" name="frage-weg-zu-mia" value="2"> <span>drei</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>genau einer</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Von 6b zu Zimmer 22, von dort zu Mia. Einen anderen Weg gibt es nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>zwei</strong></p><p>Mia hängt nur an Zimmer 22, und Zimmer 22 nur an 6b. Ein zweiter Weg bräuchte eine weitere Kante.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>drei</strong></p><p>Drei Kanten gehen von 6b weg, aber nur eine führt zu Zimmer 22 und damit zu Mia.</p></li>
+</ul>
+<p class="question-explanation">Im Baum hängt jeder Knoten an genau einem Knoten darüber. Darum gibt es von der Wurzel zu jedem Knoten genau einen Weg.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>genau einer</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Von 6b zu Zimmer 22, von dort zu Mia. Einen anderen Weg gibt es nicht.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>zwei</strong></p><p>Mia hängt nur an Zimmer 22, und Zimmer 22 nur an 6b. Ein zweiter Weg bräuchte eine weitere Kante.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>drei</strong></p><p>Drei Kanten gehen von 6b weg, aber nur eine führt zu Zimmer 22 und damit zu Mia.</p></li>
+</ul>
+<p class="question-explanation">Im Baum hängt jeder Knoten an genau einem Knoten darüber. Darum gibt es von der Wurzel zu jedem Knoten genau einen Weg.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"weg-zu-mia","text":"Wie viele Wege führen im Zimmerbaum von der Wurzel 6b zu Mia?","explanation":"Im Baum hängt jeder Knoten an genau einem Knoten darüber. Darum gibt es von der Wurzel zu jedem Knoten genau einen Weg.","links":[],"material":[{"type":"figure","image":"images/baum-zimmer.svg","alt":"Ein Baum. Oben steht 6b, darunter die Zimmer 13, 22 und 9, ganz unten die Kinder: Jona und Tom, Selin und Mia, Ben und Ali.","caption":"Der Zimmerbaum vom Seeberg.","source":"eigene Zeichnung, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"genau einer","correct":true,"info":"Von 6b zu Zimmer 22, von dort zu Mia. Einen anderen Weg gibt es nicht."},{"text":"zwei","correct":false,"info":"Mia hängt nur an Zimmer 22, und Zimmer 22 nur an 6b. Ein zweiter Weg bräuchte eine weitere Kante."},{"text":"drei","correct":false,"info":"Drei Kanten gehen von 6b weg, aber nur eine führt zu Zimmer 22 und damit zu Mia."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="galerie">Die Galerie beginnt</h2>
+<div class="explainer-block" data-block="galerie/1" data-block-id="9da50e2d" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/galerie-1.svg" alt="Vier Bilderrahmen. Im ersten ein kleiner Baum mit hellblauer Wurzel und gestrichelten Blättern. Die anderen drei Rahmen sind leer, mit einem Fragezeichen." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0." aria-label="Quelle: eigene Zeichnung, Oliver Jägle. Lizenz: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>Die Galerie der Datenstrukturen. Der Baum hängt schon, die leeren Rahmen füllst du in dieser App.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="galerie/2" data-block-id="026d30b0" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Zu jeder Struktur der Galerie fragst du: <strong>Wie finde ich ein Element?</strong> Im Baum ist das leicht: Du gehst von
+der Wurzel aus nach unten, es gibt nur einen Weg. Aber was ist, wenn ein Weg im Kreis zurückführt? Das zeigt
+dir der Busplan auf der nächsten Seite.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Netze und Reihen von Daten“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-datenstrukturen","app":"Netze und Reihen von Daten","root":"../../","repository":"lernapps/informatik-datenstrukturen","revision":"2a062a1","page":{"title":"Das brauchst du hier","order":0}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="next" href="../../netze/graph/">Weiter: Vom Baum zum Graphen</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

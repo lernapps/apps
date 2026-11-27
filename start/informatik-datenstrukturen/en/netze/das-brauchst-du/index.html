@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-CtncCkFd.css">
+    <title>What you need here – Networks and rows of data</title>
+    <meta name="description" content="A short recap: the tree as a data structure with root, nodes, edges and leaves. The start of the gallery of data structures." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../netze/das-brauchst-du/" />
+    <link rel="alternate" hreflang="en" href="../../../en/netze/das-brauchst-du/" />
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../netze/das-brauchst-du/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/netze/das-brauchst-du/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li aria-current="page">What you need here</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite" data-task-start="first">
+<div class="explainer-title-row explainer-title-row-recap">
+<h1>What you need here</h1>
+</div>
+<aside class="explainer-recap" aria-label="Recap">
+<p class="explainer-recap-label">Recap</p>
+<p>You need this for this chapter: <a href="https://lernapps.net/apps/map/informatik/c/baum/" rel="noopener">informatik/baum</a> <span class="explainer-recap-hint">(external page, the learning map on lernapps.net)</span>.</p>
+</aside>
+<div class="explainer-title-row explainer-title-row-recap">
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/netze/das-brauchst-du/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧netze/das-brauchst-du/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-datenstrukturen","page":{"id":"das-brauchst-du","title":"What you need here","exercises":[{"id":"weg-zu-mia","section":"beispiel","numbered":false}],"sections":["einstieg","beispiel","galerie"]},"tutor":"netze/das-brauchst-du/tutor/","markdown":"netze/das-brauchst-du/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+<section class="explainer-section">
+<h2 id="einstieg">Can you do this already?</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="f32aa525" data-block-type="note" data-block-order="1">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Class 7b chat</h3>
+<div class="explainer-block" data-block="einstieg/1/1" data-block-id="d4f7be58" data-block-type="text" data-block-order="2">
+<div class="block-text"><p><strong>Jona:</strong> Look what I found: Ms Berg&#39;s room plan from Seeberg, last year in 6b!</p>
+<p><strong>Mia:</strong> Haha, the tree! Room 22, Selin and me.</p>
+<p><strong>Selin:</strong> I bet we&#39;ll need that again.</p></div>
+</div>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="04916413" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Jona, Selin and Mia are 12 and in class 7b. Ms Berg is their class teacher. Last year, in 6b, the class went
+on a school trip to Seeberg. In this chapter you build networks. They start with the tree. Check yourself
+quickly:</p>
+<ul>
+<li><strong>Trees:</strong> I can show hierarchical information as a tree with a root, nodes, edges and leaves.</li>
+</ul></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">The room tree from Seeberg</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="1ab4155d" data-block-type="labelled-figure" data-block-order="4">
+<figure class="block-figure block-labelled"><div class="block-labelled-image block-labelled-fill"><img src="../../../images/baum-zimmer.svg" alt="A tree. At the top it says 6b. Three lines lead down to the rooms 13, 22 and 9. Below room 13 are Jona and Tom, below 22 Selin and Mia, below 9 Ben and Ali. The boxes at the very bottom have a dashed border." loading="lazy" decoding="async"><span class="block-marker" style="left: 66%; top: 12%" aria-hidden="true">1</span><span class="block-marker" style="left: 67%; top: 27%" aria-hidden="true">2</span><span class="block-marker" style="left: 5%; top: 38%" aria-hidden="true">3</span><span class="block-marker" style="left: 97%; top: 69%" aria-hidden="true">4</span><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle (from “Representing and encoding data”). Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle (from “Representing and encoding data”). Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><ol class="block-legend"><li>root: the top node, light blue</li><li>edge: a line between two nodes</li><li>node: a box in the tree</li><li>leaf: a node with no nodes below it, dashed</li></ol><figcaption><p>Ms Berg&#39;s room plan as a tree. The numbers 1 to 4 show the parts of the tree.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="089385ac" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Every node except the root hangs from exactly one node above it. That is why exactly <strong>one</strong> path leads from
+the root to each node, and a tree always has one edge fewer than nodes.</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/3" data-block-id="bade3e41" data-block-type="single-choice" data-block-order="6">
+<div class="explainer-exercise explainer-question" id="weg-zu-mia">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-weg-zu-mia" data-id="weg-zu-mia" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">How many paths lead from the root 6b to Mia in the room tree?</legend>
+<div class="question-material"><figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/baum-zimmer.svg" alt="A tree. 6b is at the top, below it the rooms 13, 22 and 9, at the very bottom the children: Jona and Tom, Selin and Mia, Ben and Ali." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>The room tree from Seeberg.</p></figcaption></figure></div>
+<label class="question-option"><input type="radio" name="frage-weg-zu-mia" value="0"> <span>exactly one</span></label>
+<label class="question-option"><input type="radio" name="frage-weg-zu-mia" value="1"> <span>two</span></label>
+<label class="question-option"><input type="radio" name="frage-weg-zu-mia" value="2"> <span>three</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>exactly one</strong> <span class="question-badge question-badge-right">right answer</span></p><p>From 6b to room 22, and from there to Mia. There is no other path.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>two</strong></p><p>Mia only hangs from room 22, and room 22 only from 6b. A second path would need another edge.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>three</strong></p><p>Three edges leave 6b, but only one leads to room 22 and so to Mia.</p></li>
+</ul>
+<p class="question-explanation">In a tree, every node hangs from exactly one node above it. That is why there is exactly one path from the root to each node.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>exactly one</strong> <span class="question-badge question-badge-right">right answer</span></p><p>From 6b to room 22, and from there to Mia. There is no other path.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>two</strong></p><p>Mia only hangs from room 22, and room 22 only from 6b. A second path would need another edge.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>three</strong></p><p>Three edges leave 6b, but only one leads to room 22 and so to Mia.</p></li>
+</ul>
+<p class="question-explanation">In a tree, every node hangs from exactly one node above it. That is why there is exactly one path from the root to each node.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"weg-zu-mia","text":"How many paths lead from the root 6b to Mia in the room tree?","explanation":"In a tree, every node hangs from exactly one node above it. That is why there is exactly one path from the root to each node.","links":[],"material":[{"type":"figure","image":"images/baum-zimmer.svg","alt":"A tree. 6b is at the top, below it the rooms 13, 22 and 9, at the very bottom the children: Jona and Tom, Selin and Mia, Ben and Ali.","caption":"The room tree from Seeberg.","source":"own drawing, Oliver Jägle","licence":"CC-BY-4.0"}],"type":"single-choice","options":[{"text":"exactly one","correct":true,"info":"From 6b to room 22, and from there to Mia. There is no other path."},{"text":"two","correct":false,"info":"Mia only hangs from room 22, and room 22 only from 6b. A second path would need another edge."},{"text":"three","correct":false,"info":"Three edges leave 6b, but only one leads to room 22 and so to Mia."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="galerie">The gallery begins</h2>
+<div class="explainer-block" data-block="galerie/1" data-block-id="9da50e2d" data-block-type="figure" data-block-order="7">
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../../images/galerie-1.svg" alt="Four picture frames. The first holds a small tree with a light blue root and dashed leaves. The other three frames are empty, with a question mark." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0." aria-label="Source: own drawing, Oliver Jägle. Licence: CC-BY-4.0.">© CC-BY-4.0</span></div><figcaption><p>The gallery of data structures. The tree is already hanging; you will fill the empty frames in this app.</p></figcaption></figure>
+</div>
+<div class="explainer-block" data-block="galerie/2" data-block-id="026d30b0" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>For each structure in the gallery you ask: <strong>how do I find an element?</strong> In a tree that is easy: you go
+down from the root, and there is only one path. But what if a path leads back round in a loop? The bus map
+on the next page shows you.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “Networks and rows of data”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-datenstrukturen","app":"Networks and rows of data","root":"../../../en/","repository":"lernapps/informatik-datenstrukturen","revision":"2a062a1","page":{"title":"What you need here","order":0}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="next" href="../../../en/netze/graph/">Next: From tree to graph</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>
