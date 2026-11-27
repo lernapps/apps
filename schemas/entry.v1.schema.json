@@ -81,6 +81,34 @@
       "format": "uri",
       "description": "Link to the app at the creator's own address, where the listing check opens it"
     },
+    "start": {
+      "description": "Direct start path relative to url (or a map by language { de, en }), e.g. app/ for an interactive app. Format-2 explainers automatically start at their first non-recap page",
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "properties": {
+            "de": {
+              "type": "string",
+              "minLength": 1,
+              "description": "German"
+            },
+            "en": {
+              "description": "English",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "de"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
     "topics": {
       "description": "Single topics with a deep link into the app",
       "type": "array",
