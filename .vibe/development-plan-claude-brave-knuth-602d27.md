@@ -122,3 +122,5 @@ SQL (#498) ist ein Grenzfall.
 - tooling (coding): generischer e2e der Startseite verlangt genau einen Link je Route im main; `arc42 diff` nach `lernapps update` meldet Vorlagenteile; `create` schreibt LICENSE „Copyright (c) 2026 Claude“ (Rechteinhaber klären, betrifft vermutlich alle neuen Repos).
 - tooling (#493): `plan done` kann nachgetragene Aufgaben früherer Phasen nicht abhaken; Hook `plan-file` lehnt ersetzte `<archetype>`-Wörter ab.
 - Offene Prüfungen coding: Screenreader, echte Handys/Touch, Firefox/Safari, forced colors, 200 % Zoom.
+- map-review (#494): Baustein `funktionen-verketten` – „verketten“ ist in Tabellenkalkulationen die Textfunktion VERKETTEN (CONCATENATE); fachlich gemeint ist „verschachteln“ (nest). Explainer schreibt „verschachteln“, id unverändert.
+- app-templates (coding): `markRoute` in interactive.ts setzt aria-current auf die erste Route ohne Hash, auch wenn `?c=` eine Challenge zeigt; Option „keine Route markieren“ gewünscht.
