@@ -44,6 +44,24 @@ test("EFLLex: columns level_freq@a1 and nb_doc@a1; minDocuments sets the level, 
   assert.deepEqual(readLexicon(efllex, 2).map((w) => `${w.word}/${w.level}`), ["cat/A2", "dog/A1"]);
 });
 
+test("DAFlex: double-quoted TSV cells are unquoted before reading columns, tags and levels", () => {
+  const daflex = [
+    '"word"\t"tag"\t"level_freq@a1"\t"level_freq@a2"\t"level_freq@b1"\t"nb_doc@a1"\t"nb_doc@a2"\t"nb_doc@b1"',
+    '"Haus"\t"NN"\t"120"\t"90"\t"40"\t"12"\t"10"\t"8"',
+    '"Radiergummi"\t"NN"\t"4"\t"2"\t"0"\t"2"\t"1"\t"0"',
+    '"Stundenplan"\t"NN"\t"0"\t"5"\t"12"\t"0"\t"3"\t"4"',
+    '"12_test"\t"NN"\t"5"\t"0"\t"0"\t"5"\t"0"\t"0"',
+  ].join("\n");
+  assert.deepEqual(
+    readLexicon(daflex, 3),
+    [
+      { word: "Haus", pos: "NN", level: "A1" },
+      { word: "Radiergummi", pos: "NN", level: "" },
+      { word: "Stundenplan", pos: "NN", level: "A2" },
+    ],
+  );
+});
+
 test("the list: the levels taken, the corrections applied with their notes, by level then alphabet", () => {
   const source = {
     ...SOURCE,
