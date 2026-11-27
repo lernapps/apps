@@ -6,11 +6,11 @@ summary:
   de: >-
     Du programmierst mit Blöcken und Kiko, ein Roboter, führt dein Programm aus. Er läuft durch Labyrinthe und
     zeichnet Bilder; dabei lernst du Reihenfolge, Schleifen und Verzweigungen. Dein Programm muss jedes Rätsel einer
-    Aufgabe lösen, und die Rückmeldung sagt dir, wo es hakt.
+    Aufgabe lösen, und die Rückmeldung sagt dir, wo es hakt. Du liest auch Programme und sagst voraus, was Kiko tut.
   en: >-
     You program with blocks, and Kiko, a robot, runs your program. It walks through mazes and draws pictures; on the
     way you learn about order, loops and choices. Your program has to solve every puzzle of a task, and the feedback
-    tells you where it goes wrong.
+    tells you where it goes wrong. You also read programs and predict what Kiko will do.
 url: https://lernapps.net/coding/
 topics:
   - { title: { de: "Labyrinth 1: Um die Ecke", en: "Maze 1: Around the corner" }, path: "app/#labyrinth-1" }
@@ -21,6 +21,7 @@ topics:
   - { title: { de: "Labyrinth 3: Der lange Gang", en: "Maze 3: The long corridor" }, path: "app/#labyrinth-3" }
   - { title: { de: "Labyrinth 4: Geradeaus oder abbiegen?", en: "Maze 4: Straight on or turn?" }, path: "app/#labyrinth-4" }
   - { title: { de: "Labyrinth 5: Immer dem Gang nach", en: "Maze 5: Follow the corridor" }, path: "app/#labyrinth-5" }
+  - { title: { de: "Vorhersage 1: Wohin führt das Programm?", en: "Prediction 1: Where does the program lead?" }, path: "app/#vorhersage-1" }
   - { title: { de: "Eigene Aufgabe bauen (für Lehrkräfte)", en: "Build your own task (for teachers)" }, path: "app/#autoren" }
 keywords:
   - { de: Programmieren, en: programming }
@@ -38,9 +39,10 @@ competencies:
   - wiederholung-feste-anzahl
   - wiederholung-mit-bedingung
   - verzweigung
+  - algorithmus-ausfuehren
 creator: { name: "Oliver (@mrsimpson)" }
 source: https://github.com/lernapps/coding
-commit: 9f5303482ff03fdb3302f592cd8c87fc0a437d4b
+commit: 85501afa6f4fd20035881b30b1cab680b9849f23
 fitness:
   account: false
   install: false
