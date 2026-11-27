@@ -78,7 +78,7 @@ Two free licences and what you must do then:
 **Remember: In class or online?**
 
 **In class, and to show at your school,** you may use someone else's picture for your lessons. A law
-allows this, the German Copyright Act. Always give a credit, so everyone knows who made the picture.
+allows this, the German Copyright Act. It also says you must give a credit with the creator's name.
 
 **Online, where everyone can see it**, also on the school website, you need permission or a free licence. If you are not sure,
 ask your teacher.
