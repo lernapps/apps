@@ -42,6 +42,10 @@ export const Entry = z
     grades: z.array(z.int().min(1).max(13)).min(1).describe("Grades the app fits, e.g. [5, 6]"),
     summary: Text.describe("2–3 sentences in plain German (or a map by language): what do learners do?"),
     url: https.describe("Link to the app at the creator's own address, where the listing check opens it"),
+    start: Text.optional().describe(
+      "Direct start path relative to url (or a map by language { de, en }), e.g. app/ for an interactive app. " +
+        "Format-2 explainers automatically start at their first non-recap page",
+    ),
     topics: z
       .array(
         z.strictObject({

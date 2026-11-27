@@ -99,6 +99,15 @@ async function build() {
     // hand-written topics (KD-13).
     const own = await explainerPages(id, base);
     const pages = own?.pages.map((p) => ({ ...p, url: new URL(p.path, base).href }));
+    const firstLesson = pages?.find((p) => p.recap === undefined) ?? pages?.[0];
+    const resolveStart = (start) =>
+      typeof start === "string"
+        ? new URL(start, base).href
+        : {
+            de: new URL(start.de, base).href,
+            ...(start.en !== undefined ? { en: new URL(start.en, base).href } : {}),
+          };
+    const startUrl = entry.start !== undefined ? resolveStart(entry.start) : (firstLesson?.url ?? url);
     const strand = own ? (own.strand === undefined || own.strand === "none" ? undefined : own.strand) : entry.strand;
     if (own?.subject && own.subject !== entry.subject) {
       throw new Error(`entries/${id}.yaml:\n  - subject: the entry says ${entry.subject}, the app's src/app.yaml says ${own.subject}`);
@@ -108,6 +117,7 @@ async function build() {
       subject: subjectNames.get(entry.subject),
       subjectId: entry.subject,
       url,
+      startUrl,
       home: entry.url,
       copy: copy !== undefined,
       id,
