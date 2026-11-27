@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CtncCkFd.css">
+    <title>Eine Ampel entwerfen – Automaten und Zustände</title>
+    <meta name="description" content="Einen Automaten selbst entwerfen: Eingaben sammeln, Zustände finden, Übergänge festlegen, mit Testfolgen prüfen." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../entwerfen/ampel-entwerfen/" />
+    <link rel="alternate" hreflang="en" href="../../en/entwerfen/ampel-entwerfen/" />
+    <script type="module" crossorigin src="../../assets/islands-BDaup-JV.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Sprache"><ul><li><a href="../../entwerfen/ampel-entwerfen/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="../../en/entwerfen/ampel-entwerfen/" hreflang="en" lang="en">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="Du bist hier"><ol><li><a href="../../">Start</a></li><li><a href="../../entwerfen/">Einen Automaten entwerfen</a></li><li aria-current="page">Eine Ampel entwerfen</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Eine Ampel entwerfen</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Mit einem KI-Tutor lernen</summary>
+<p>Ein KI-Tutor erklärt dir diese Seite und hilft dir bei den Aufgaben. Wähl deinen Assistenten:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistent"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe lädt keine Webseiten, wenn der Link aus einem Knopf kommt. Darum kopieren wir den Satz mit dem Link für dich. Ein Klick auf „Mit Mistral Vibe lernen“ öffnet Mistral Vibe mit einer kurzen Nachricht. Füg danach den kopierten Satz ein (Strg+V, am Mac ⌘+V) und schick ihn ab.">Mistral Vibe</option><option value="copy">Ein anderer: Text kopieren</option></select> <button type="button" class="explainer-tutor-on">Einschalten</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Mit Claude öffnen</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Mit ChatGPT öffnen</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Mit Mistral Vibe öffnen</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">Du nutzt dein eigenes Konto beim Anbieter. Der Assistent ist kein Angebot von lernapps.net: lernapps liefert nur Inhalte und Aufgaben. Die Wahl gilt für alle Seiten, nur auf diesem Gerät.</p>
+<p><a class="explainer-tutor-guide" href="../../entwerfen/ampel-entwerfen/tutor/">Ansehen, was dein Tutor zu dieser Seite bekommt</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧entwerfen/ampel-entwerfen/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"informatik-automaten","page":{"id":"ampel-entwerfen","title":"Eine Ampel entwerfen","exercises":[{"id":"ampel-eingaben","section":"einstieg","numbered":false},{"id":"schritte-ordnen","section":"uebung","numbered":false},{"id":"warum-wartet","section":"uebung","numbered":false},{"id":"entwurf-neu","section":"uebung","numbered":true},{"id":"uhr-zustand","section":"uebung","numbered":false}],"sections":["einstieg","idee","ausprobieren","uebung","ausblick"]},"tutor":"entwerfen/ampel-entwerfen/tutor/","markdown":"entwerfen/ampel-entwerfen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Die Ampel vor der Schule</a></li><li><a href="#idee">In vier Schritten zum Automaten</a></li><li><a href="#ausprobieren">Die Bedarfsampel entwerfen</a></li><li><a href="#uebung">Übung</a></li><li><a href="#ausblick">Wie geht es weiter?</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">Die Ampel vor der Schule</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="f376c550" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Vor der Schule kommt eine Bedarfsampel. Die Technik-AG der 9b baut ein Modell davon, das ein kleiner Computer steuert. Dabei sind Jona, Selin und Mia, alle 14. Bevor sie programmieren, schreiben sie im Gruppenchat:</p>
+<p><strong>Selin:</strong> Erst der Plan, dann der Code. Was muss sich die Ampel merken?</p>
+<p><strong>Jona:</strong> Welche Farbe gerade leuchtet. Mehr nicht.</p>
+<p><strong>Mia:</strong> Und ob jemand gedrückt hat! Die Autos haben dann noch Grün, aber die Ampel weiß es schon.</p>
+<p><strong>Selin:</strong> Dann entwerfen wir sie als Automaten, wie damals unseren Saftautomaten in der 6.</p>
+<p>Auf dieser Seite entwirfst du selbst einen Automaten und testest ihn. Wie man ein Zustandsdiagramm liest, steht auf der Seite <a href="../../alltag/zustandsdiagramm/">Zustandsdiagramm</a>.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="eaa62519" data-block-type="multiple-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="ampel-eingaben">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-ampel-eingaben" data-id="ampel-eingaben" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was sind die Eingaben der Bedarfsampel?</legend>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="0"> <span>Jemand drückt den Knopf.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="1"> <span>Die Zeit ist um.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="2"> <span>Die Autos haben Grün.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="3"> <span>Das Wartesignal leuchtet auf.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Jemand drückt den Knopf.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Knopfdruck kommt von außen und passiert in einem Moment. Das ist eine Eingabe.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Die Zeit ist um.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ein Zeitgeber (Timer) meldet „Zeit um“. Für den Automaten ist das eine Eingabe wie der Knopf.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Autos haben Grün.</strong></p><p>Das bleibt eine Weile so. Das gehört zu einem Zustand, ist keine Eingabe.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Das Wartesignal leuchtet auf.</strong></p><p>Das macht die Ampel selbst, wenn jemand drückt. Das ist eine Ausgabe.</p></li>
+</ul>
+<p class="question-explanation">Eingaben kommen von außen und lösen einen Übergang aus. Hier sind es der Knopf und „Zeit um“.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Jemand drückt den Knopf.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Der Knopfdruck kommt von außen und passiert in einem Moment. Das ist eine Eingabe.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Die Zeit ist um.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Ein Zeitgeber (Timer) meldet „Zeit um“. Für den Automaten ist das eine Eingabe wie der Knopf.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Autos haben Grün.</strong></p><p>Das bleibt eine Weile so. Das gehört zu einem Zustand, ist keine Eingabe.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Das Wartesignal leuchtet auf.</strong></p><p>Das macht die Ampel selbst, wenn jemand drückt. Das ist eine Ausgabe.</p></li>
+</ul>
+<p class="question-explanation">Eingaben kommen von außen und lösen einen Übergang aus. Hier sind es der Knopf und „Zeit um“.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"ampel-eingaben","text":"Was sind die Eingaben der Bedarfsampel?","explanation":"Eingaben kommen von außen und lösen einen Übergang aus. Hier sind es der Knopf und „Zeit um“.","links":[],"type":"multiple-choice","options":[{"text":"Jemand drückt den Knopf.","correct":true,"info":"Der Knopfdruck kommt von außen und passiert in einem Moment. Das ist eine Eingabe."},{"text":"Die Zeit ist um.","correct":true,"info":"Ein Zeitgeber (Timer) meldet „Zeit um“. Für den Automaten ist das eine Eingabe wie der Knopf."},{"text":"Die Autos haben Grün.","correct":false,"info":"Das bleibt eine Weile so. Das gehört zu einem Zustand, ist keine Eingabe."},{"text":"Das Wartesignal leuchtet auf.","correct":false,"info":"Das macht die Ampel selbst, wenn jemand drückt. Das ist eine Ausgabe."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">In vier Schritten zum Automaten</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="976a5933" data-block-type="text" data-block-order="3">
+<div class="block-text"><ol>
+<li><strong>Eingaben sammeln:</strong> Was kommt von außen? Die Zeit zählt ein Zeitgeber (Timer) außerhalb des Automaten. Ist sie um, meldet er „Zeit um“.</li>
+<li><strong>Zustände finden:</strong> Was muss sich der Automat merken? Zwei Situationen, die für die Autos gleich aussehen, können zwei Zustände sein: „Autos grün“ und „jemand wartet“.</li>
+<li><strong>Übergänge festlegen:</strong> Für jeden Zustand und jede Eingabe: Wohin geht es? Ändert sich nichts, führt der Pfeil zurück zum selben Zustand.</li>
+<li><strong>Testen:</strong> Spiel Testfolgen durch und vergleiche, wo der Automat landet, mit der Aufgabe.</li>
+</ol>
+<p>Ausgaben wie „Wartesignal leuchtet auf“ kann man wie in Kapitel 1 an die Übergänge schreiben. Hier entwirfst du nur Zustände und Übergänge.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="1019dc6e" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-vollstaendig"><a href="../../glossar/#vollstaendig">vollständig</a></dfn></dt><dd><p>Ein Automat ist vollständig, wenn jeder Zustand für jede Eingabe einen Pfeil hat.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="c3d707fd" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-testfolge"><a href="../../glossar/#testfolge">Testfolge</a></dfn></dt><dd><p>Eine Testfolge ist eine Reihe von Eingaben ab dem Startzustand. Dazu gehört der Zustand, in dem der Automat laut Aufgabe am Ende sein soll.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Die Bedarfsampel entwerfen</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="220ed610" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Hier entwirfst du die Ampel der 9b, ohne Bewertung. Hak die Karten an, die Zustände sind. Wähl den Startzustand. Leg dann für jede Zeile das Ziel fest; das Diagramm zeichnet sich mit. „abspielen“ zeigt den Weg einer Testfolge Schritt für Schritt und wo sie endet: ✓ heißt wie verlangt, ✗ anders.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="c0b20feb" data-block-type="vue-component" data-block-order="7">
+<div class="explainer-component" data-component="AutomatWerkstatt" data-nojs="caption" data-caption="Beschreibung als Text">
+<div class="explainer-island" hidden><div class="automat-werkstatt" data-v-b101648a><p data-v-b101648a><strong data-v-b101648a>Bedarfsampel vor der Schule.</strong> Am Anfang haben die Autos Grün. Ohne Knopfdruck bleibt das so, auch wenn die Zeit um ist. Drückt jemand den Knopf, fahren die Autos weiter, bis die Zeit um ist. Dann kommt Gelb für die Autos, nach der nächsten Zeit Grün für die Fußgänger (die Autos haben dann Rot), danach Rot-Gelb für die Autos und wieder Grün. Bei Gelb, Fußgänger-Grün und Rot-Gelb ändert der Knopf nichts.</p><div class="automat-editor" data-v-b101648a data-v-83c13a4f><p class="automat-editor-inputs" data-v-83c13a4f><strong data-v-83c13a4f>Schritt 1 – Eingaben (stehen in der Aufgabe):</strong><!--[--><span class="automat-editor-input" data-v-83c13a4f>Knopf</span><span class="automat-editor-input" data-v-83c13a4f>Zeit um</span><!--]--></p><fieldset class="automat-editor-cards" data-v-83c13a4f><legend data-v-83c13a4f>Schritt 2 – Zustände finden: Was muss sich der Automat merken?</legend><!--[--><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Autos grün</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Knopf drücken</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> jemand wartet</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Autos gelb</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Wartesignal leuchtet auf</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Grün zum Gehen</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Autos rot-gelb</label><!--]--><!--[--><!--]--></fieldset><fieldset class="automat-editor-rows" data-v-83c13a4f><legend data-v-83c13a4f>Schritt 3 – Übergänge festlegen: für jeden Zustand jede Eingabe</legend><p class="automat-editor-note" data-v-83c13a4f>Wähl zuerst Zustände. Dann erscheinen Startzustand, Übergänge und Diagramm.</p></fieldset><!----><!----><!----><div class="automat-editor-tests" data-v-83c13a4f><p class="automat-editor-heading" data-v-83c13a4f>Schritt 4 – Testen</p><ul data-v-83c13a4f><!--[--><li data-v-83c13a4f><span data-v-83c13a4f>Zeit um, Zeit um → soll: <strong data-v-83c13a4f>Autos grün</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Knopf, Zeit um → soll: <strong data-v-83c13a4f>Autos gelb</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Knopf, Zeit um, Zeit um → soll: <strong data-v-83c13a4f>Grün zum Gehen</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Knopf, Zeit um, Zeit um, Zeit um, Zeit um → soll: <strong data-v-83c13a4f>Autos grün</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Knopf, Knopf, Zeit um → soll: <strong data-v-83c13a4f>Autos gelb</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><!--]--></ul><p class="automat-editor-note" data-v-83c13a4f>Hier gibt es kein „Prüfen“: Probier frei aus.</p></div></div><p class="automat-werkstatt-reset" data-v-b101648a><button type="button" data-v-b101648a>Alles leeren</button></p></div></div>
+<div class="explainer-nojs"><p>Der Entwurf der Bedarfsampel. Zustandskarten: Autos grün, Knopf drücken, jemand wartet, Autos gelb, Wartesignal leuchtet auf, Grün zum Gehen, Autos rot-gelb. Eingaben: Knopf, Zeit um. Testfolgen:</p>
+<ul>
+<li>Zeit um, Zeit um → Autos grün</li>
+<li>Knopf, Zeit um → Autos gelb</li>
+<li>Knopf, Zeit um, Zeit um → Grün zum Gehen</li>
+<li>Knopf, Zeit um, Zeit um, Zeit um, Zeit um → Autos grün</li>
+<li>Knopf, Knopf, Zeit um → Autos gelb</li>
+</ul>
+<p>Mit JavaScript wählst du Karten, den Startzustand und für jede Zeile das Ziel und spielst die Testfolgen ab.</p></div>
+<script type="application/json" class="explainer-component-props">{"aufgaben":[{"id":"ampel","name":"Bedarfsampel vor der Schule","text":"Am Anfang haben die Autos Grün. Ohne Knopfdruck bleibt das so, auch wenn die Zeit um ist. Drückt jemand den Knopf, fahren die Autos weiter, bis die Zeit um ist. Dann kommt Gelb für die Autos, nach der nächsten Zeit Grün für die Fußgänger (die Autos haben dann Rot), danach Rot-Gelb für die Autos und wieder Grün. Bei Gelb, Fußgänger-Grün und Rot-Gelb ändert der Knopf nichts.","inputs":[{"id":"knopf","name":"Knopf"},{"id":"zeit","name":"Zeit um"}],"cards":[{"id":"gruen","name":"Autos grün","art":"zustand","warum":"Die Autos fahren, niemand wartet.","x":110,"y":250,"loop":135},{"id":"druecken","name":"Knopf drücken","art":"eingabe","warum":"„Knopf drücken“ passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"wartet","name":"jemand wartet","art":"zustand","warum":"Die Autos haben noch Grün, aber die Ampel hat sich den Knopf gemerkt.","x":200,"y":70,"loop":-120},{"id":"gelb","name":"Autos gelb","art":"zustand","warum":"Die Autos sollen anhalten.","x":430,"y":70,"loop":-60},{"id":"signal","name":"Wartesignal leuchtet auf","art":"ausgabe","warum":"Das Aufleuchten passiert bei einem Übergang. Das ist eine Ausgabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"gehen","name":"Grün zum Gehen","art":"zustand","warum":"Die Fußgänger dürfen gehen.","x":520,"y":250,"loop":0},{"id":"rotgelb","name":"Autos rot-gelb","art":"zustand","warum":"Die Autos dürfen gleich wieder fahren.","x":380,"y":400,"loop":90}],"start":"gruen","loesung":[{"from":"gruen","input":"knopf","to":"wartet"},{"from":"gruen","input":"zeit","to":"gruen"},{"from":"wartet","input":"knopf","to":"wartet"},{"from":"wartet","input":"zeit","to":"gelb"},{"from":"gelb","input":"knopf","to":"gelb"},{"from":"gelb","input":"zeit","to":"gehen"},{"from":"gehen","input":"knopf","to":"gehen"},{"from":"gehen","input":"zeit","to":"rotgelb"},{"from":"rotgelb","input":"knopf","to":"rotgelb"},{"from":"rotgelb","input":"zeit","to":"gruen"}],"tests":[{"inputs":["zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["knopf","zeit","zeit"],"end":"gehen","hidden":false},{"inputs":["knopf","zeit","zeit","zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","knopf","zeit","knopf","zeit"],"end":"gehen","hidden":true},{"inputs":["knopf","zeit","zeit","knopf","zeit"],"end":"rotgelb","hidden":true},{"inputs":["knopf","knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["zeit"],"end":"gruen","hidden":true},{"inputs":["knopf"],"end":"wartet","hidden":true},{"inputs":["knopf","zeit","zeit","zeit","knopf"],"end":"rotgelb","hidden":true}]},{"id":"schranke","name":"Schranke an der Ausfahrt des Parkhauses","text":"Am Anfang ist die Schranke zu. Wer ein Ticket einsteckt, öffnet sie. Fährt ein Auto durch, geht sie wieder zu. Kommt ein Auto an die geschlossene Schranke, bleibt sie zu. Ein zweites Ticket bei offener Schranke ändert nichts.","inputs":[{"id":"ticket","name":"Ticket"},{"id":"auto","name":"Auto"}],"cards":[{"id":"zu","name":"Schranke zu","art":"zustand","warum":"Niemand kommt durch.","x":170,"y":160,"loop":-90},{"id":"offen","name":"Schranke offen","art":"zustand","warum":"Ein Auto darf durchfahren.","x":430,"y":160,"loop":-90},{"id":"hebt","name":"Schranke geht hoch","art":"ausgabe","warum":"Das Hochgehen passiert bei einem Übergang. Das ist eine Ausgabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"einstecken","name":"Ticket einstecken","art":"eingabe","warum":"Das Einstecken passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"ticket","to":"offen"},{"from":"zu","input":"auto","to":"zu"},{"from":"offen","input":"ticket","to":"offen"},{"from":"offen","input":"auto","to":"zu"}],"tests":[{"inputs":["ticket"],"end":"offen","hidden":false},{"inputs":["ticket","auto"],"end":"zu","hidden":false},{"inputs":["auto"],"end":"zu","hidden":false},{"inputs":["ticket","ticket","auto"],"end":"zu","hidden":true},{"inputs":["auto","ticket"],"end":"offen","hidden":true},{"inputs":["ticket","ticket"],"end":"offen","hidden":true}]},{"id":"schloss","name":"Zahlenschloss am Spind mit dem Code 2-7","text":"Am Anfang ist das Schloss zu. Es geht auf, wenn direkt nacheinander 2 und dann 7 getippt werden. Jede andere Ziffer nach der 2 macht den Anfang ungültig. Kommt nach der 2 noch eine 2, ist die neue 2 der Anfang. Ist das Schloss offen, bleibt es offen.","inputs":[{"id":"zwei","name":"2"},{"id":"sieben","name":"7"},{"id":"andere","name":"andere Ziffer"}],"cards":[{"id":"zu","name":"zu","art":"zustand","warum":"Noch nichts Richtiges getippt.","x":110,"y":170,"loop":-90},{"id":"halb","name":"2 getippt","art":"zustand","warum":"Das Schloss hat sich die 2 gemerkt.","x":330,"y":170,"loop":90},{"id":"offen","name":"offen","art":"zustand","warum":"Der Code war richtig.","x":550,"y":170,"loop":-90},{"id":"tippen","name":"7 tippen","art":"eingabe","warum":"Eine Ziffer tippen passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"klick","name":"Schloss klickt","art":"ausgabe","warum":"Das Klicken passiert bei einem Übergang. Das ist eine Ausgabe, kein Zustand.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"zwei","to":"halb"},{"from":"zu","input":"sieben","to":"zu"},{"from":"zu","input":"andere","to":"zu"},{"from":"halb","input":"zwei","to":"halb"},{"from":"halb","input":"sieben","to":"offen"},{"from":"halb","input":"andere","to":"zu"},{"from":"offen","input":"zwei","to":"offen"},{"from":"offen","input":"sieben","to":"offen"},{"from":"offen","input":"andere","to":"offen"}],"tests":[{"inputs":["zwei","sieben"],"end":"offen","hidden":false},{"inputs":["sieben","zwei"],"end":"halb","hidden":false},{"inputs":["zwei","andere","sieben"],"end":"zu","hidden":false},{"inputs":["zwei","zwei","sieben"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","andere"],"end":"offen","hidden":true},{"inputs":["andere"],"end":"zu","hidden":true},{"inputs":["zwei","zwei"],"end":"halb","hidden":true},{"inputs":["zwei","sieben","zwei"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","sieben"],"end":"offen","hidden":true}]},{"id":"handy","name":"Sperre eines Handys","text":"Am Anfang ist das Handy gesperrt. Ein richtiger Code entsperrt es. Nach einem falschen Code darf man noch einmal probieren; nach dem zweiten falschen Code in Folge ist das Handy blockiert und nimmt keinen Code mehr an. Ist es entsperrt, bleibt es entsperrt.","inputs":[{"id":"richtig","name":"Code richtig"},{"id":"falsch","name":"Code falsch"}],"cards":[{"id":"gesperrt","name":"gesperrt","art":"zustand","warum":"Noch kein falscher Versuch.","x":100,"y":120,"loop":-90},{"id":"einmal","name":"1 Fehler","art":"zustand","warum":"Das Handy hat sich einen Fehlversuch gemerkt.","x":400,"y":120,"loop":-90},{"id":"blockiert","name":"blockiert","art":"zustand","warum":"Zweimal falsch, jetzt geht nichts mehr.","x":400,"y":370,"loop":0},{"id":"entsperrt","name":"entsperrt","art":"zustand","warum":"Der Code war richtig.","x":100,"y":370,"loop":90},{"id":"eingeben","name":"Code eingeben","art":"eingabe","warum":"Einen Code eingeben passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0}],"start":"gesperrt","loesung":[{"from":"gesperrt","input":"richtig","to":"entsperrt"},{"from":"gesperrt","input":"falsch","to":"einmal"},{"from":"einmal","input":"richtig","to":"entsperrt"},{"from":"einmal","input":"falsch","to":"blockiert"},{"from":"blockiert","input":"richtig","to":"blockiert"},{"from":"blockiert","input":"falsch","to":"blockiert"},{"from":"entsperrt","input":"richtig","to":"entsperrt"},{"from":"entsperrt","input":"falsch","to":"entsperrt"}],"tests":[{"inputs":["richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["falsch","falsch","richtig"],"end":"blockiert","hidden":true},{"inputs":["richtig","falsch"],"end":"entsperrt","hidden":true},{"inputs":["falsch","falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["richtig","richtig"],"end":"entsperrt","hidden":true}]}],"aufgabe":"ampel","labels":{"inputs":"Schritt 1 – Eingaben (stehen in der Aufgabe):","states":"Schritt 2 – Zustände finden: Was muss sich der Automat merken?","start":"Startzustand","arrows":"Schritt 3 – Übergänge festlegen: für jeden Zustand jede Eingabe","choose":"– bitte wählen –","diagram":"Diagramm","tests":"Schritt 4 – Testen","play":"abspielen","expected":"soll:","endsAt":"endet bei:","startWord":"Start","empty":"Wähl zuerst Zustände. Dann erscheinen Startzustand, Übergänge und Diagramm.","needStart":"Wähl zuerst den Startzustand, dann kann die Testfolge loslaufen.","hiddenNote":"Hier gibt es kein „Prüfen“: Probier frei aus."},"reset":"Alles leeren"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Übung</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="27403203" data-block-type="ordering" data-block-order="8">
+<div class="explainer-exercise explainer-question" id="schritte-ordnen">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-schritte-ordnen" data-id="schritte-ordnen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Bring die vier Schritte beim Entwerfen in die richtige Reihenfolge.</legend>
+<p class="question-hint">Gib jedem Eintrag seinen Platz: 1 für den ersten.</p>
+<ul class="question-pairs">
+<li><label><span>Übergänge festlegen</span> <select name="frage-schritte-ordnen-2" data-item="2"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Eingaben sammeln</span> <select name="frage-schritte-ordnen-0" data-item="0"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Zustände finden</span> <select name="frage-schritte-ordnen-1" data-item="1"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+<li><label><span>Mit Testfolgen testen</span> <select name="frage-schritte-ordnen-3" data-item="3"><option value="">bitte wählen</option><option value="0">Platz 1</option><option value="1">Platz 2</option><option value="2">Platz 3</option><option value="3">Platz 4</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> 1. Eingaben sammeln, 2. Zustände finden, 3. Übergänge festlegen, 4. Mit Testfolgen testen</p>
+<p class="question-explanation">Ohne Eingaben weiß man nicht, wofür Pfeile nötig sind. Ohne Zustände gibt es keine Pfeile. Testfolgen mit ihrem Soll-Ende kann man schon aus der Aufgabe aufschreiben; abspielen kann man sie erst am fertigen Entwurf.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> 1. Eingaben sammeln, 2. Zustände finden, 3. Übergänge festlegen, 4. Mit Testfolgen testen</p>
+<p class="question-explanation">Ohne Eingaben weiß man nicht, wofür Pfeile nötig sind. Ohne Zustände gibt es keine Pfeile. Testfolgen mit ihrem Soll-Ende kann man schon aus der Aufgabe aufschreiben; abspielen kann man sie erst am fertigen Entwurf.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"schritte-ordnen","text":"Bring die vier Schritte beim Entwerfen in die richtige Reihenfolge.","explanation":"Ohne Eingaben weiß man nicht, wofür Pfeile nötig sind. Ohne Zustände gibt es keine Pfeile. Testfolgen mit ihrem Soll-Ende kann man schon aus der Aufgabe aufschreiben; abspielen kann man sie erst am fertigen Entwurf.","links":[],"type":"ordering","items":["Eingaben sammeln","Zustände finden","Übergänge festlegen","Mit Testfolgen testen"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="c95a2e9b" data-block-type="single-choice" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="warum-wartet">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-warum-wartet" data-id="warum-wartet" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Jona sagt: „Für die Autos ist ‚jemand wartet‘ doch dasselbe wie ‚Autos grün‘. Ein Zustand reicht.“ Was passiert, wenn die 9b nur einen Zustand nimmt?</legend>
+<label class="question-option"><input type="radio" name="frage-warum-wartet" value="0"> <span>Die Ampel vergisst den Knopfdruck oder schaltet auch ohne ihn auf Gelb.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-wartet" value="1"> <span>Nichts, die Lichter sind ja dieselben.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-wartet" value="2"> <span>Die Ampel zeigt Rot für alle.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Die Ampel vergisst den Knopfdruck oder schaltet auch ohne ihn auf Gelb.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei „Zeit um“ muss die Ampel wissen, ob jemand gedrückt hat. Das kann sie sich nur in einem eigenen Zustand merken.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Nichts, die Lichter sind ja dieselben.</strong></p><p>Die Lichter sind gleich, aber was danach passiert, ist verschieden. Ein Zustand ist, was sich der Automat merkt, nicht, was man sieht.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Ampel zeigt Rot für alle.</strong></p><p>Dafür gibt es in der Aufgabe keinen Grund. Das Problem ist das fehlende Gedächtnis für den Knopf.</p></li>
+</ul>
+<p class="question-explanation">Zwei Situationen, nach denen bei derselben Eingabe Verschiedenes passiert, sind zwei Zustände, auch wenn sie für die Autos gleich aussehen.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Die Ampel vergisst den Knopfdruck oder schaltet auch ohne ihn auf Gelb.</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei „Zeit um“ muss die Ampel wissen, ob jemand gedrückt hat. Das kann sie sich nur in einem eigenen Zustand merken.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Nichts, die Lichter sind ja dieselben.</strong></p><p>Die Lichter sind gleich, aber was danach passiert, ist verschieden. Ein Zustand ist, was sich der Automat merkt, nicht, was man sieht.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Die Ampel zeigt Rot für alle.</strong></p><p>Dafür gibt es in der Aufgabe keinen Grund. Das Problem ist das fehlende Gedächtnis für den Knopf.</p></li>
+</ul>
+<p class="question-explanation">Zwei Situationen, nach denen bei derselben Eingabe Verschiedenes passiert, sind zwei Zustände, auch wenn sie für die Autos gleich aussehen.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"warum-wartet","text":"Jona sagt: „Für die Autos ist ‚jemand wartet‘ doch dasselbe wie ‚Autos grün‘. Ein Zustand reicht.“ Was passiert, wenn die 9b nur einen Zustand nimmt?","explanation":"Zwei Situationen, nach denen bei derselben Eingabe Verschiedenes passiert, sind zwei Zustände, auch wenn sie für die Autos gleich aussehen.","links":[],"type":"single-choice","options":[{"text":"Die Ampel vergisst den Knopfdruck oder schaltet auch ohne ihn auf Gelb.","correct":true,"info":"Bei „Zeit um“ muss die Ampel wissen, ob jemand gedrückt hat. Das kann sie sich nur in einem eigenen Zustand merken."},{"text":"Nichts, die Lichter sind ja dieselben.","correct":false,"info":"Die Lichter sind gleich, aber was danach passiert, ist verschieden. Ein Zustand ist, was sich der Automat merkt, nicht, was man sieht."},{"text":"Die Ampel zeigt Rot für alle.","correct":false,"info":"Dafür gibt es in der Aufgabe keinen Grund. Das Problem ist das fehlende Gedächtnis für den Knopf."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="acf0174d" data-block-type="vue-component" data-block-order="10">
+<div class="explainer-component" id="entwurf-neu" data-component="AutomatEntwurf" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,27,28,29,30,32,35,36,37,38,39,40,41,42,43,45,46,48,50,51,52,54,55,56,58,60,63,64,65,67,68,69,71,74,75,77,78,79,80,81,85,86,88,90]" data-checked>
+<p class="explainer-exercise-label">Aufgabe</p>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Aufgabe Nr. {n}">Aufgabe Nr. 1</span> <button type="button" class="explainer-new-task" title="Neue Aufgabe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">Neue Aufgabe</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="automat-entwurf"><p>Entwirf einen Automaten für diese Aufgabe und spiel die Testfolgen ab. Geprüft werden auch weitere Testfolgen, die du hier nicht siehst.</p><p><strong>Sperre eines Handys.</strong> Am Anfang ist das Handy gesperrt. Ein richtiger Code entsperrt es. Nach einem falschen Code darf man noch einmal probieren; nach dem zweiten falschen Code in Folge ist das Handy blockiert und nimmt keinen Code mehr an. Ist es entsperrt, bleibt es entsperrt.</p><div class="automat-editor" data-v-83c13a4f><p class="automat-editor-inputs" data-v-83c13a4f><strong data-v-83c13a4f>Schritt 1 – Eingaben (stehen in der Aufgabe):</strong><!--[--><span class="automat-editor-input" data-v-83c13a4f>Code richtig</span><span class="automat-editor-input" data-v-83c13a4f>Code falsch</span><!--]--></p><fieldset class="automat-editor-cards" data-v-83c13a4f><legend data-v-83c13a4f>Schritt 2 – Zustände finden: Was muss sich der Automat merken?</legend><!--[--><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> Code eingeben</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> blockiert</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> gesperrt</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> entsperrt</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> 1 Fehler</label><!--]--><!--[--><!--]--></fieldset><fieldset class="automat-editor-rows" data-v-83c13a4f><legend data-v-83c13a4f>Schritt 3 – Übergänge festlegen: für jeden Zustand jede Eingabe</legend><p class="automat-editor-note" data-v-83c13a4f>Wähl zuerst Zustände. Dann erscheinen Startzustand, Übergänge und Diagramm.</p></fieldset><!----><!----><!----><div class="automat-editor-tests" data-v-83c13a4f><p class="automat-editor-heading" data-v-83c13a4f>Schritt 4 – Testen</p><ul data-v-83c13a4f><!--[--><li data-v-83c13a4f><span data-v-83c13a4f>Code richtig → soll: <strong data-v-83c13a4f>entsperrt</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Code falsch, Code richtig → soll: <strong data-v-83c13a4f>entsperrt</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Code falsch, Code falsch → soll: <strong data-v-83c13a4f>blockiert</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>Code falsch, Code falsch, Code falsch → soll: <strong data-v-83c13a4f>blockiert</strong></span><button type="button" data-v-83c13a4f>abspielen</button><!----><!----></li><!--]--></ul><p class="automat-editor-note" data-v-83c13a4f>Geprüft werden noch weitere Folgen.</p></div></div></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button> <button type="button" class="question-solve" hidden>Lösung</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Aufgabe Nr. 1</p><div class="explainer-task"><p><strong>Sperre eines Handys.</strong> Am Anfang ist das Handy gesperrt. Ein richtiger Code entsperrt es. Nach einem falschen Code darf man noch einmal probieren; nach dem zweiten falschen Code in Folge ist das Handy blockiert und nimmt keinen Code mehr an. Ist es entsperrt, bleibt es entsperrt.</p>
+<p>„Code eingeben“ · „blockiert“ · „gesperrt“ · „entsperrt“ · „1 Fehler“</p>
+<p>„Code richtig“ · „Code falsch“</p>
+<ul>
+<li>Code richtig → „entsperrt“</li>
+<li>Code falsch, Code richtig → „entsperrt“</li>
+<li>Code falsch, Code falsch → „blockiert“</li>
+<li>Code falsch, Code falsch, Code falsch → „blockiert“</li>
+</ul></div><details class="explainer-solution"><summary>Lösung</summary><p>„blockiert“ · „gesperrt“ · „entsperrt“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></details></div></div>
+<p class="question-feedback" data-right="Richtig!" data-wrong="Leider nicht richtig." data-incomplete="Wähl zuerst die Karten, die Zustände sind."></p>
+<div class="explainer-component-solution" hidden tabindex="-1"><p class="explainer-component-solution-label">Lösung</p><div class="explainer-component-solution-text"></div></div>
+<template class="explainer-component-solutions"><div data-number="1"><p>„blockiert“ · „gesperrt“ · „entsperrt“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="2"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="3"><p>„blockiert“ · „entsperrt“ · „gesperrt“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="4"><p>„offen“ · „2 getippt“ · „zu“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="5"><p>„zu“ · „2 getippt“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="6"><p>„2 getippt“ · „zu“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="7"><p>„1 Fehler“ · „gesperrt“ · „entsperrt“ · „blockiert“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="8"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="9"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="10"><p>„offen“ · „zu“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="11"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="12"><p>„offen“ · „zu“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="13"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="14"><p>„offen“ · „zu“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="15"><p>„offen“ · „2 getippt“ · „zu“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="16"><p>„zu“ · „2 getippt“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="17"><p>„entsperrt“ · „gesperrt“ · „blockiert“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="18"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="19"><p>„2 getippt“ · „offen“ · „zu“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="20"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="21"><p>„2 getippt“ · „zu“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="22"><p>„entsperrt“ · „blockiert“ · „1 Fehler“ · „gesperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="23"><p>„zu“ · „offen“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="24"><p>„gesperrt“ · „blockiert“ · „entsperrt“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="25"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="26"><p>„gesperrt“ · „blockiert“ · „1 Fehler“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="27"><p>„1 Fehler“ · „blockiert“ · „gesperrt“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="28"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="29"><p>„offen“ · „zu“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="30"><p>„offen“ · „zu“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="31"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="32"><p>„entsperrt“ · „gesperrt“ · „blockiert“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="33"><p>„2 getippt“ · „zu“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="34"><p>„zu“ · „offen“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="35"><p>„1 Fehler“ · „entsperrt“ · „blockiert“ · „gesperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="36"><p>„2 getippt“ · „offen“ · „zu“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="37"><p>„offen“ · „2 getippt“ · „zu“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="38"><p>„zu“ · „offen“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="39"><p>„entsperrt“ · „gesperrt“ · „blockiert“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="40"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="41"><p>„gesperrt“ · „entsperrt“ · „blockiert“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="42"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="43"><p>„blockiert“ · „entsperrt“ · „gesperrt“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="44"><p>„1 Fehler“ · „gesperrt“ · „entsperrt“ · „blockiert“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="45"><p>„1 Fehler“ · „gesperrt“ · „blockiert“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="46"><p>„gesperrt“ · „entsperrt“ · „blockiert“ · „1 Fehler“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="47"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="48"><p>„2 getippt“ · „zu“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="49"><p>„zu“ · „offen“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="50"><p>„gesperrt“ · „1 Fehler“ · „entsperrt“ · „blockiert“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="51"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="52"><p>„zu“ · „offen“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="53"><p>„entsperrt“ · „1 Fehler“ · „blockiert“ · „gesperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="54"><p>„offen“ · „2 getippt“ · „zu“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="55"><p>„offen“ · „zu“ · „2 getippt“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="56"><p>„1 Fehler“ · „blockiert“ · „gesperrt“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="57"><p>„blockiert“ · „gesperrt“ · „1 Fehler“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="58"><p>„blockiert“ · „1 Fehler“ · „gesperrt“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="59"><p>„entsperrt“ · „blockiert“ · „1 Fehler“ · „gesperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="60"><p>„entsperrt“ · „blockiert“ · „1 Fehler“ · „gesperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="61"><p>„Schranke offen“ · „Schranke zu“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="62"><p>„zu“ · „2 getippt“ · „offen“</p>
+<p>Start: „zu“</p>
+<ul>
+<li>„zu“ – 2 → „2 getippt“</li>
+<li>„zu“ – 7 → „zu“</li>
+<li>„zu“ – andere Ziffer → „zu“</li>
+<li>„2 getippt“ – 2 → „2 getippt“</li>
+<li>„2 getippt“ – 7 → „offen“</li>
+<li>„2 getippt“ – andere Ziffer → „zu“</li>
+<li>„offen“ – 2 → „offen“</li>
+<li>„offen“ – 7 → „offen“</li>
+<li>„offen“ – andere Ziffer → „offen“</li>
+</ul></div><div data-number="63"><p>„1 Fehler“ · „blockiert“ · „gesperrt“ · „entsperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="64"><p>„gesperrt“ · „1 Fehler“ · „entsperrt“ · „blockiert“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="65"><p>„Schranke zu“ · „Schranke offen“</p>
+<p>Start: „Schranke zu“</p>
+<ul>
+<li>„Schranke zu“ – Ticket → „Schranke offen“</li>
+<li>„Schranke zu“ – Auto → „Schranke zu“</li>
+<li>„Schranke offen“ – Ticket → „Schranke offen“</li>
+<li>„Schranke offen“ – Auto → „Schranke zu“</li>
+</ul></div><div data-number="66"><p>„gesperrt“ · „entsperrt“ · „1 Fehler“ · „blockiert“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div><div data-number="67"><p>„1 Fehler“ · „blockiert“ · „entsperrt“ · „gesperrt“</p>
+<p>Start: „gesperrt“</p>
+<ul>
+<li>„gesperrt“ – Code richtig → „entsperrt“</li>
+<li>„gesperrt“ – Code falsch → „1 Fehler“</li>
+<li>„1 Fehler“ – Code richtig → „entsperrt“</li>
+<li>„1 Fehler“ – Code falsch → „blockiert“</li>
+<li>„blockiert“ – Code richtig → „blockiert“</li>
+<li>„blockiert“ – Code falsch → „blockiert“</li>
+<li>„entsperrt“ – Code richtig → „entsperrt“</li>
+<li>„entsperrt“ – Code falsch → „entsperrt“</li>
+</ul></div></template>
+<script type="application/json" class="explainer-component-props">{"aufgaben":[{"id":"ampel","name":"Bedarfsampel vor der Schule","text":"Am Anfang haben die Autos Grün. Ohne Knopfdruck bleibt das so, auch wenn die Zeit um ist. Drückt jemand den Knopf, fahren die Autos weiter, bis die Zeit um ist. Dann kommt Gelb für die Autos, nach der nächsten Zeit Grün für die Fußgänger (die Autos haben dann Rot), danach Rot-Gelb für die Autos und wieder Grün. Bei Gelb, Fußgänger-Grün und Rot-Gelb ändert der Knopf nichts.","inputs":[{"id":"knopf","name":"Knopf"},{"id":"zeit","name":"Zeit um"}],"cards":[{"id":"gruen","name":"Autos grün","art":"zustand","warum":"Die Autos fahren, niemand wartet.","x":110,"y":250,"loop":135},{"id":"druecken","name":"Knopf drücken","art":"eingabe","warum":"„Knopf drücken“ passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"wartet","name":"jemand wartet","art":"zustand","warum":"Die Autos haben noch Grün, aber die Ampel hat sich den Knopf gemerkt.","x":200,"y":70,"loop":-120},{"id":"gelb","name":"Autos gelb","art":"zustand","warum":"Die Autos sollen anhalten.","x":430,"y":70,"loop":-60},{"id":"signal","name":"Wartesignal leuchtet auf","art":"ausgabe","warum":"Das Aufleuchten passiert bei einem Übergang. Das ist eine Ausgabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"gehen","name":"Grün zum Gehen","art":"zustand","warum":"Die Fußgänger dürfen gehen.","x":520,"y":250,"loop":0},{"id":"rotgelb","name":"Autos rot-gelb","art":"zustand","warum":"Die Autos dürfen gleich wieder fahren.","x":380,"y":400,"loop":90}],"start":"gruen","loesung":[{"from":"gruen","input":"knopf","to":"wartet"},{"from":"gruen","input":"zeit","to":"gruen"},{"from":"wartet","input":"knopf","to":"wartet"},{"from":"wartet","input":"zeit","to":"gelb"},{"from":"gelb","input":"knopf","to":"gelb"},{"from":"gelb","input":"zeit","to":"gehen"},{"from":"gehen","input":"knopf","to":"gehen"},{"from":"gehen","input":"zeit","to":"rotgelb"},{"from":"rotgelb","input":"knopf","to":"rotgelb"},{"from":"rotgelb","input":"zeit","to":"gruen"}],"tests":[{"inputs":["zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["knopf","zeit","zeit"],"end":"gehen","hidden":false},{"inputs":["knopf","zeit","zeit","zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","knopf","zeit","knopf","zeit"],"end":"gehen","hidden":true},{"inputs":["knopf","zeit","zeit","knopf","zeit"],"end":"rotgelb","hidden":true},{"inputs":["knopf","knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["zeit"],"end":"gruen","hidden":true},{"inputs":["knopf"],"end":"wartet","hidden":true},{"inputs":["knopf","zeit","zeit","zeit","knopf"],"end":"rotgelb","hidden":true}]},{"id":"schranke","name":"Schranke an der Ausfahrt des Parkhauses","text":"Am Anfang ist die Schranke zu. Wer ein Ticket einsteckt, öffnet sie. Fährt ein Auto durch, geht sie wieder zu. Kommt ein Auto an die geschlossene Schranke, bleibt sie zu. Ein zweites Ticket bei offener Schranke ändert nichts.","inputs":[{"id":"ticket","name":"Ticket"},{"id":"auto","name":"Auto"}],"cards":[{"id":"zu","name":"Schranke zu","art":"zustand","warum":"Niemand kommt durch.","x":170,"y":160,"loop":-90},{"id":"offen","name":"Schranke offen","art":"zustand","warum":"Ein Auto darf durchfahren.","x":430,"y":160,"loop":-90},{"id":"hebt","name":"Schranke geht hoch","art":"ausgabe","warum":"Das Hochgehen passiert bei einem Übergang. Das ist eine Ausgabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"einstecken","name":"Ticket einstecken","art":"eingabe","warum":"Das Einstecken passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"ticket","to":"offen"},{"from":"zu","input":"auto","to":"zu"},{"from":"offen","input":"ticket","to":"offen"},{"from":"offen","input":"auto","to":"zu"}],"tests":[{"inputs":["ticket"],"end":"offen","hidden":false},{"inputs":["ticket","auto"],"end":"zu","hidden":false},{"inputs":["auto"],"end":"zu","hidden":false},{"inputs":["ticket","ticket","auto"],"end":"zu","hidden":true},{"inputs":["auto","ticket"],"end":"offen","hidden":true},{"inputs":["ticket","ticket"],"end":"offen","hidden":true}]},{"id":"schloss","name":"Zahlenschloss am Spind mit dem Code 2-7","text":"Am Anfang ist das Schloss zu. Es geht auf, wenn direkt nacheinander 2 und dann 7 getippt werden. Jede andere Ziffer nach der 2 macht den Anfang ungültig. Kommt nach der 2 noch eine 2, ist die neue 2 der Anfang. Ist das Schloss offen, bleibt es offen.","inputs":[{"id":"zwei","name":"2"},{"id":"sieben","name":"7"},{"id":"andere","name":"andere Ziffer"}],"cards":[{"id":"zu","name":"zu","art":"zustand","warum":"Noch nichts Richtiges getippt.","x":110,"y":170,"loop":-90},{"id":"halb","name":"2 getippt","art":"zustand","warum":"Das Schloss hat sich die 2 gemerkt.","x":330,"y":170,"loop":90},{"id":"offen","name":"offen","art":"zustand","warum":"Der Code war richtig.","x":550,"y":170,"loop":-90},{"id":"tippen","name":"7 tippen","art":"eingabe","warum":"Eine Ziffer tippen passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0},{"id":"klick","name":"Schloss klickt","art":"ausgabe","warum":"Das Klicken passiert bei einem Übergang. Das ist eine Ausgabe, kein Zustand.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"zwei","to":"halb"},{"from":"zu","input":"sieben","to":"zu"},{"from":"zu","input":"andere","to":"zu"},{"from":"halb","input":"zwei","to":"halb"},{"from":"halb","input":"sieben","to":"offen"},{"from":"halb","input":"andere","to":"zu"},{"from":"offen","input":"zwei","to":"offen"},{"from":"offen","input":"sieben","to":"offen"},{"from":"offen","input":"andere","to":"offen"}],"tests":[{"inputs":["zwei","sieben"],"end":"offen","hidden":false},{"inputs":["sieben","zwei"],"end":"halb","hidden":false},{"inputs":["zwei","andere","sieben"],"end":"zu","hidden":false},{"inputs":["zwei","zwei","sieben"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","andere"],"end":"offen","hidden":true},{"inputs":["andere"],"end":"zu","hidden":true},{"inputs":["zwei","zwei"],"end":"halb","hidden":true},{"inputs":["zwei","sieben","zwei"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","sieben"],"end":"offen","hidden":true}]},{"id":"handy","name":"Sperre eines Handys","text":"Am Anfang ist das Handy gesperrt. Ein richtiger Code entsperrt es. Nach einem falschen Code darf man noch einmal probieren; nach dem zweiten falschen Code in Folge ist das Handy blockiert und nimmt keinen Code mehr an. Ist es entsperrt, bleibt es entsperrt.","inputs":[{"id":"richtig","name":"Code richtig"},{"id":"falsch","name":"Code falsch"}],"cards":[{"id":"gesperrt","name":"gesperrt","art":"zustand","warum":"Noch kein falscher Versuch.","x":100,"y":120,"loop":-90},{"id":"einmal","name":"1 Fehler","art":"zustand","warum":"Das Handy hat sich einen Fehlversuch gemerkt.","x":400,"y":120,"loop":-90},{"id":"blockiert","name":"blockiert","art":"zustand","warum":"Zweimal falsch, jetzt geht nichts mehr.","x":400,"y":370,"loop":0},{"id":"entsperrt","name":"entsperrt","art":"zustand","warum":"Der Code war richtig.","x":100,"y":370,"loop":90},{"id":"eingeben","name":"Code eingeben","art":"eingabe","warum":"Einen Code eingeben passiert in einem Moment. Das ist eine Eingabe, kein Zustand.","x":0,"y":0,"loop":0}],"start":"gesperrt","loesung":[{"from":"gesperrt","input":"richtig","to":"entsperrt"},{"from":"gesperrt","input":"falsch","to":"einmal"},{"from":"einmal","input":"richtig","to":"entsperrt"},{"from":"einmal","input":"falsch","to":"blockiert"},{"from":"blockiert","input":"richtig","to":"blockiert"},{"from":"blockiert","input":"falsch","to":"blockiert"},{"from":"entsperrt","input":"richtig","to":"entsperrt"},{"from":"entsperrt","input":"falsch","to":"entsperrt"}],"tests":[{"inputs":["richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["falsch","falsch","richtig"],"end":"blockiert","hidden":true},{"inputs":["richtig","falsch"],"end":"entsperrt","hidden":true},{"inputs":["falsch","falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["richtig","richtig"],"end":"entsperrt","hidden":true}]}],"use":["schranke","schloss","handy"],"mode":"neu","intro":"Entwirf einen Automaten für diese Aufgabe und spiel die Testfolgen ab. Geprüft werden auch weitere Testfolgen, die du hier nicht siehst.","labels":{"inputs":"Schritt 1 – Eingaben (stehen in der Aufgabe):","states":"Schritt 2 – Zustände finden: Was muss sich der Automat merken?","start":"Startzustand","arrows":"Schritt 3 – Übergänge festlegen: für jeden Zustand jede Eingabe","choose":"– bitte wählen –","diagram":"Diagramm","tests":"Schritt 4 – Testen","play":"abspielen","expected":"soll:","endsAt":"endet bei:","startWord":"Start","empty":"Wähl zuerst Zustände. Dann erscheinen Startzustand, Übergänge und Diagramm.","needStart":"Wähl zuerst den Startzustand, dann kann die Testfolge loslaufen.","hiddenNote":"Geprüft werden noch weitere Folgen."},"noStates":"Wähl zuerst die Karten, die Zustände sind.","noStart":"Du hast Zustände gewählt, aber noch keinen Startzustand. Womit fängt der Automat laut Aufgabe an?","wrongStart":"Der Automat fängt nicht bei „{start}“ an. Lies den ersten Satz der Aufgabe noch einmal.","incomplete":"Dein Entwurf ist noch nicht vollständig: Bei „{state}“ fehlt das Ziel für „{input}“. Ändert sich nichts, führt der Pfeil zurück zum selben Zustand.","testFails":"Die Testfolge {inputs} endet bei „{actual}“, soll aber bei „{expected}“ enden. Spiel sie ab und folge ihrem Weg.","hiddenFails":"Eine weitere Testfolge scheitert: {inputs} endet bei „{actual}“, soll aber bei „{expected}“ enden. Prüf, was der Automat bei jeder Eingabe tun soll."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="3f6c3adf" data-block-type="true-false" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="uhr-zustand">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-uhr-zustand" data-id="uhr-zustand" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia meint: „Für jede Sekunde Wartezeit braucht die Ampel einen eigenen Zustand.“ Stimmt das für unseren Entwurf?</legend>
+<label class="question-option"><input type="radio" name="frage-uhr-zustand" value="true"> <span>Stimmt</span></label>
+<label class="question-option"><input type="radio" name="frage-uhr-zustand" value="false"> <span>Stimmt nicht</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Die Zeit zählt ein Zeitgeber (Timer) außerhalb des Automaten. Ist sie um, meldet er „Zeit um“, und das ist für den Automaten eine Eingabe. So bleibt der Entwurf klein.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<p><strong>Richtige Antwort:</strong> Die Aussage stimmt nicht.</p>
+<p class="question-explanation">Die Zeit zählt ein Zeitgeber (Timer) außerhalb des Automaten. Ist sie um, meldet er „Zeit um“, und das ist für den Automaten eine Eingabe. So bleibt der Entwurf klein.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"uhr-zustand","text":"Mia meint: „Für jede Sekunde Wartezeit braucht die Ampel einen eigenen Zustand.“ Stimmt das für unseren Entwurf?","explanation":"Die Zeit zählt ein Zeitgeber (Timer) außerhalb des Automaten. Ist sie um, meldet er „Zeit um“, und das ist für den Automaten eine Eingabe. So bleibt der Entwurf klein.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausblick">Wie geht es weiter?</h2>
+<div class="explainer-block" data-block="ausblick/1" data-block-id="c652995d" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>Du kannst jetzt einen Automaten in vier Schritten entwerfen. Mia hat ihren Entwurf schon fertig, aber beim Test lässt er die Fußgänger nie gehen. Auf der nächsten Seite sucht die 9b solche Fehler und verbessert Entwürfe.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Fehler gefunden oder eine Idee für diese App?</span> <button type="button" class="explainer-feedback-switch">Feedback zu „Automaten und Zustände“ geben</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Hilfe</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Leiste einklappen" title="Leiste einklappen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feedback-Leiste ausklappen</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">So gibst du Feedback</h3>
+<ol><li>Geh die Seiten durch. Bei jedem Absatz, jeder Abbildung und jeder Aufgabe erscheint „Notiz“.</li><li>Markierst du vorher Text im Block, steht er als Zitat in der Notiz.</li><li>Bist du fertig, wähl „Issue auf GitHub öffnen“. Die App kopiert dabei deine Notizen, und du fügst sie im Issue ein. Dafür brauchst du ein GitHub-Konto.</li></ol>
+<p class="explainer-feedback-privacy">Deine Notizen bleiben nur in diesem Browser, auf diesem Gerät. Die App sendet nichts. Wenn du die Browserdaten löschst, sind die Notizen weg.</p>
+<p><button type="button" class="explainer-feedback-help-done">Verstanden</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">Neue Notiz zu</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Deine Notiz</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Speichern</button> <button type="button" class="explainer-feedback-cancel">Abbrechen</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Kopieren</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Issue auf GitHub öffnen</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text zum Kopieren" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Alle löschen …</button>
+<span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
+<button type="button" class="explainer-feedback-off">Beenden</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-automaten","app":"Automaten und Zustände","root":"../../","repository":"lernapps/informatik-automaten","revision":"5a8e09e","page":{"title":"Eine Ampel entwerfen","order":3}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../alltag/zustandsdiagramm/">Zurück: Zustandsdiagramm</a><a rel="next" href="../../entwerfen/entwurf-testen/">Weiter: Entwürfe testen und verbessern</a></nav>
+<footer class="page-footer"><p>Eine Erklär-App auf lernapps.net · <a href="https://lernapps.net/imprint/">Impressum</a> · <a href="https://lernapps.net/privacy/">Datenschutz</a></p></footer>
+  </body>
+</html>

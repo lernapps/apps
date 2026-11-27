@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-CtncCkFd.css">
+    <title>Designing traffic lights – Automata and states</title>
+    <meta name="description" content="Design an automaton yourself: collect the inputs, find the states, set the transitions, check with test sequences." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../entwerfen/ampel-entwerfen/" />
+    <link rel="alternate" hreflang="en" href="../../../en/entwerfen/ampel-entwerfen/" />
+    <script type="module" crossorigin src="../../../assets/islands-BDaup-JV.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../entwerfen/ampel-entwerfen/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/entwerfen/ampel-entwerfen/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li><a href="../../../en/entwerfen/">Designing an automaton</a></li><li aria-current="page">Designing traffic lights</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Designing traffic lights</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/entwerfen/ampel-entwerfen/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧entwerfen/ampel-entwerfen/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-automaten","page":{"id":"ampel-entwerfen","title":"Designing traffic lights","exercises":[{"id":"ampel-eingaben","section":"einstieg","numbered":false},{"id":"schritte-ordnen","section":"uebung","numbered":false},{"id":"warum-wartet","section":"uebung","numbered":false},{"id":"entwurf-neu","section":"uebung","numbered":true},{"id":"uhr-zustand","section":"uebung","numbered":false}],"sections":["einstieg","idee","ausprobieren","uebung","ausblick"]},"tutor":"entwerfen/ampel-entwerfen/tutor/","markdown":"entwerfen/ampel-entwerfen/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">The crossing outside the school</a></li><li><a href="#idee">Four steps to an automaton</a></li><li><a href="#ausprobieren">Design the crossing</a></li><li><a href="#uebung">Practice</a></li><li><a href="#ausblick">What comes next?</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">The crossing outside the school</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="f376c550" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>A pedestrian crossing with a button is coming outside the school. The tech club of class 9b builds a model of it, controlled by a small computer. Jona, Selin and Mia, all 14, are in it. Before they write any code, they chat in their group:</p>
+<p><strong>Selin:</strong> Plan first, code second. What do the lights have to remember?</p>
+<p><strong>Jona:</strong> Which colour is on. Nothing else.</p>
+<p><strong>Mia:</strong> And whether someone has pressed! The cars still have green then, but the lights already know.</p>
+<p><strong>Selin:</strong> Then we design them as an automaton, like our juice machine back in year 6.</p>
+<p>On this page you design an automaton yourself and test it. How to read a state diagram is on the page <a href="../../../en/alltag/zustandsdiagramm/">State diagrams</a>.</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="eaa62519" data-block-type="multiple-choice" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="ampel-eingaben">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-ampel-eingaben" data-id="ampel-eingaben" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">What are the inputs of the crossing?</legend>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="0"> <span>Someone presses the button.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="1"> <span>The time is up.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="2"> <span>The cars have green.</span></label>
+<label class="question-option"><input type="checkbox" name="frage-ampel-eingaben" value="3"> <span>The WAIT light comes on.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Someone presses the button.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The button press comes from outside and happens in a moment. That is an input.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>The time is up.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A small timer reports “time up”. For the automaton this is an input like the button.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The cars have green.</strong></p><p>That stays like this for a while. It is part of a state, not an input.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>The WAIT light comes on.</strong></p><p>The lights do this themselves when someone presses. That is an output.</p></li>
+</ul>
+<p class="question-explanation">Inputs come from outside and set off a transition. Here they are the button and “time up”.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Someone presses the button.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>The button press comes from outside and happens in a moment. That is an input.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>The time is up.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A small timer reports “time up”. For the automaton this is an input like the button.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The cars have green.</strong></p><p>That stays like this for a while. It is part of a state, not an input.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>The WAIT light comes on.</strong></p><p>The lights do this themselves when someone presses. That is an output.</p></li>
+</ul>
+<p class="question-explanation">Inputs come from outside and set off a transition. Here they are the button and “time up”.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"ampel-eingaben","text":"What are the inputs of the crossing?","explanation":"Inputs come from outside and set off a transition. Here they are the button and “time up”.","links":[],"type":"multiple-choice","options":[{"text":"Someone presses the button.","correct":true,"info":"The button press comes from outside and happens in a moment. That is an input."},{"text":"The time is up.","correct":true,"info":"A small timer reports “time up”. For the automaton this is an input like the button."},{"text":"The cars have green.","correct":false,"info":"That stays like this for a while. It is part of a state, not an input."},{"text":"The WAIT light comes on.","correct":false,"info":"The lights do this themselves when someone presses. That is an output."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Four steps to an automaton</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="976a5933" data-block-type="text" data-block-order="3">
+<div class="block-text"><ol>
+<li><strong>Collect the inputs:</strong> what comes from outside? A small timer outside the automaton counts the time. When it is up, it reports “time up”.</li>
+<li><strong>Find the states:</strong> what does the automaton have to remember? Two situations that look the same to the cars can be two states: “cars green” and “someone waiting”.</li>
+<li><strong>Set the transitions:</strong> for every state and every input: where does it go? If nothing changes, the arrow goes back to the same state.</li>
+<li><strong>Test:</strong> play test sequences and compare where the automaton ends with what the task says.</li>
+</ol>
+<p>Outputs such as “WAIT light comes on” can be written at the transitions, as in chapter 1. Here you design only states and transitions.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="1019dc6e" data-block-type="definition" data-block-order="4">
+<dl class="explainer-definition"><dt><dfn id="begriff-vollstaendig"><a href="../../../en/glossar/#vollstaendig">complete</a></dfn></dt><dd><p>An automaton is complete when every state has an arrow for every input.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="c3d707fd" data-block-type="definition" data-block-order="5">
+<dl class="explainer-definition"><dt><dfn id="begriff-testfolge"><a href="../../../en/glossar/#testfolge">test sequence</a></dfn></dt><dd><p>A test sequence is a series of inputs, starting at the start state. It comes with the state the task says the automaton should end in.</p></dd></dl>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Design the crossing</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="220ed610" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Here you design class 9b&#39;s lights, without a score. Tick the cards that are states. Choose the start state. Then set the target of every row; the diagram draws itself. “Play” shows the way of a test sequence step by step and where it ends: ✓ means as asked, ✗ means somewhere else.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="c0b20feb" data-block-type="vue-component" data-block-order="7">
+<div class="explainer-component" data-component="AutomatWerkstatt" data-nojs="caption" data-caption="Text description">
+<div class="explainer-island" hidden><div class="automat-werkstatt" data-v-b101648a><p data-v-b101648a><strong data-v-b101648a>Pedestrian crossing outside the school.</strong> At the start the cars have green. If nobody presses the button, it stays like this, even when the time is up. If someone presses the button, the cars keep driving until the time is up. Then the cars get amber; when the time is up again, the green man shows (the cars have red then), then the cars get red and amber, and then green again. During amber, the green man and red and amber, the button changes nothing.</p><div class="automat-editor" data-v-b101648a data-v-83c13a4f><p class="automat-editor-inputs" data-v-83c13a4f><strong data-v-83c13a4f>Step 1 – inputs (given by the task):</strong><!--[--><span class="automat-editor-input" data-v-83c13a4f>button</span><span class="automat-editor-input" data-v-83c13a4f>time up</span><!--]--></p><fieldset class="automat-editor-cards" data-v-83c13a4f><legend data-v-83c13a4f>Step 2 – find the states: what does the automaton have to remember?</legend><!--[--><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> cars green</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> press the button</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> someone waiting</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> cars amber</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> WAIT light comes on</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> green man</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> cars red and amber</label><!--]--><!--[--><!--]--></fieldset><fieldset class="automat-editor-rows" data-v-83c13a4f><legend data-v-83c13a4f>Step 3 – set the transitions: every input for every state</legend><p class="automat-editor-note" data-v-83c13a4f>Choose states first. Then the start state, the transitions and the diagram appear.</p></fieldset><!----><!----><!----><div class="automat-editor-tests" data-v-83c13a4f><p class="automat-editor-heading" data-v-83c13a4f>Step 4 – test</p><ul data-v-83c13a4f><!--[--><li data-v-83c13a4f><span data-v-83c13a4f>time up, time up → should be: <strong data-v-83c13a4f>cars green</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>button, time up → should be: <strong data-v-83c13a4f>cars amber</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>button, time up, time up → should be: <strong data-v-83c13a4f>green man</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>button, time up, time up, time up, time up → should be: <strong data-v-83c13a4f>cars green</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>button, button, time up → should be: <strong data-v-83c13a4f>cars amber</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><!--]--></ul><p class="automat-editor-note" data-v-83c13a4f>There is no “Check” here: try things out freely.</p></div></div><p class="automat-werkstatt-reset" data-v-b101648a><button type="button" data-v-b101648a>Clear everything</button></p></div></div>
+<div class="explainer-nojs"><p>The design of the crossing. State cards: cars green, press the button, someone waiting, cars amber, WAIT light comes on, green man, cars red and amber. Inputs: button, time up. Test sequences:</p>
+<ul>
+<li>time up, time up → cars green</li>
+<li>button, time up → cars amber</li>
+<li>button, time up, time up → green man</li>
+<li>button, time up, time up, time up, time up → cars green</li>
+<li>button, button, time up → cars amber</li>
+</ul>
+<p>With JavaScript you choose the cards, the start state and the target of every row, and play the test sequences.</p></div>
+<script type="application/json" class="explainer-component-props">{"aufgaben":[{"id":"ampel","name":"Pedestrian crossing outside the school","text":"At the start the cars have green. If nobody presses the button, it stays like this, even when the time is up. If someone presses the button, the cars keep driving until the time is up. Then the cars get amber; when the time is up again, the green man shows (the cars have red then), then the cars get red and amber, and then green again. During amber, the green man and red and amber, the button changes nothing.","inputs":[{"id":"knopf","name":"button"},{"id":"zeit","name":"time up"}],"cards":[{"id":"gruen","name":"cars green","art":"zustand","warum":"The cars drive and nobody is waiting.","x":110,"y":250,"loop":135},{"id":"druecken","name":"press the button","art":"eingabe","warum":"“Press the button” happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0},{"id":"wartet","name":"someone waiting","art":"zustand","warum":"The cars still have green, but the lights have remembered the button.","x":200,"y":70,"loop":-120},{"id":"gelb","name":"cars amber","art":"zustand","warum":"The cars should stop.","x":430,"y":70,"loop":-60},{"id":"signal","name":"WAIT light comes on","art":"ausgabe","warum":"The light coming on happens during a transition. That is an output, not a state.","x":0,"y":0,"loop":0},{"id":"gehen","name":"green man","art":"zustand","warum":"People on foot may cross.","x":520,"y":250,"loop":0},{"id":"rotgelb","name":"cars red and amber","art":"zustand","warum":"The cars may drive again soon.","x":380,"y":400,"loop":90}],"start":"gruen","loesung":[{"from":"gruen","input":"knopf","to":"wartet"},{"from":"gruen","input":"zeit","to":"gruen"},{"from":"wartet","input":"knopf","to":"wartet"},{"from":"wartet","input":"zeit","to":"gelb"},{"from":"gelb","input":"knopf","to":"gelb"},{"from":"gelb","input":"zeit","to":"gehen"},{"from":"gehen","input":"knopf","to":"gehen"},{"from":"gehen","input":"zeit","to":"rotgelb"},{"from":"rotgelb","input":"knopf","to":"rotgelb"},{"from":"rotgelb","input":"zeit","to":"gruen"}],"tests":[{"inputs":["zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["knopf","zeit","zeit"],"end":"gehen","hidden":false},{"inputs":["knopf","zeit","zeit","zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","knopf","zeit","knopf","zeit"],"end":"gehen","hidden":true},{"inputs":["knopf","zeit","zeit","knopf","zeit"],"end":"rotgelb","hidden":true},{"inputs":["knopf","knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["zeit"],"end":"gruen","hidden":true},{"inputs":["knopf"],"end":"wartet","hidden":true},{"inputs":["knopf","zeit","zeit","zeit","knopf"],"end":"rotgelb","hidden":true}]},{"id":"schranke","name":"Barrier at the car park exit","text":"At the start the barrier is closed. Putting in a ticket opens it. When a car drives through, it closes again. If a car comes to the closed barrier, it stays closed. A second ticket while the barrier is open changes nothing.","inputs":[{"id":"ticket","name":"ticket"},{"id":"auto","name":"car"}],"cards":[{"id":"zu","name":"barrier closed","art":"zustand","warum":"Nobody can get through.","x":170,"y":160,"loop":-90},{"id":"offen","name":"barrier open","art":"zustand","warum":"One car may drive through.","x":430,"y":160,"loop":-90},{"id":"hebt","name":"barrier goes up","art":"ausgabe","warum":"Going up happens during a transition. That is an output, not a state.","x":0,"y":0,"loop":0},{"id":"einstecken","name":"put in a ticket","art":"eingabe","warum":"Putting it in happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"ticket","to":"offen"},{"from":"zu","input":"auto","to":"zu"},{"from":"offen","input":"ticket","to":"offen"},{"from":"offen","input":"auto","to":"zu"}],"tests":[{"inputs":["ticket"],"end":"offen","hidden":false},{"inputs":["ticket","auto"],"end":"zu","hidden":false},{"inputs":["auto"],"end":"zu","hidden":false},{"inputs":["ticket","ticket","auto"],"end":"zu","hidden":true},{"inputs":["auto","ticket"],"end":"offen","hidden":true},{"inputs":["ticket","ticket"],"end":"offen","hidden":true}]},{"id":"schloss","name":"Combination lock on a locker, code 2-7","text":"At the start the lock is locked. It opens when 2 and then 7 are typed one right after the other. Any other digit after the 2 means starting again. If you type 2 again, that 2 is the new start of the code. Once the lock is open, it stays open.","inputs":[{"id":"zwei","name":"2"},{"id":"sieben","name":"7"},{"id":"andere","name":"other digit"}],"cards":[{"id":"zu","name":"locked","art":"zustand","warum":"Nothing right typed yet.","x":110,"y":170,"loop":-90},{"id":"halb","name":"2 typed","art":"zustand","warum":"The lock has remembered the 2.","x":330,"y":170,"loop":90},{"id":"offen","name":"open","art":"zustand","warum":"The code was right.","x":550,"y":170,"loop":-90},{"id":"tippen","name":"type 7","art":"eingabe","warum":"Typing a digit happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0},{"id":"klick","name":"lock clicks","art":"ausgabe","warum":"The click happens during a transition. That is an output, not a state.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"zwei","to":"halb"},{"from":"zu","input":"sieben","to":"zu"},{"from":"zu","input":"andere","to":"zu"},{"from":"halb","input":"zwei","to":"halb"},{"from":"halb","input":"sieben","to":"offen"},{"from":"halb","input":"andere","to":"zu"},{"from":"offen","input":"zwei","to":"offen"},{"from":"offen","input":"sieben","to":"offen"},{"from":"offen","input":"andere","to":"offen"}],"tests":[{"inputs":["zwei","sieben"],"end":"offen","hidden":false},{"inputs":["sieben","zwei"],"end":"halb","hidden":false},{"inputs":["zwei","andere","sieben"],"end":"zu","hidden":false},{"inputs":["zwei","zwei","sieben"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","andere"],"end":"offen","hidden":true},{"inputs":["andere"],"end":"zu","hidden":true},{"inputs":["zwei","zwei"],"end":"halb","hidden":true},{"inputs":["zwei","sieben","zwei"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","sieben"],"end":"offen","hidden":true}]},{"id":"handy","name":"Phone lock screen","text":"At the start the phone is locked. A right code unlocks it. After one wrong code you may try once more; after the second wrong code in a row the phone is blocked and takes no more codes. Once it is unlocked, it stays unlocked.","inputs":[{"id":"richtig","name":"right code"},{"id":"falsch","name":"wrong code"}],"cards":[{"id":"gesperrt","name":"locked","art":"zustand","warum":"No wrong try yet.","x":100,"y":120,"loop":-90},{"id":"einmal","name":"1 mistake","art":"zustand","warum":"The phone has remembered one wrong try.","x":400,"y":120,"loop":-90},{"id":"blockiert","name":"blocked","art":"zustand","warum":"Wrong twice, now nothing works.","x":400,"y":370,"loop":0},{"id":"entsperrt","name":"unlocked","art":"zustand","warum":"The code was right.","x":100,"y":370,"loop":90},{"id":"eingeben","name":"type the code","art":"eingabe","warum":"Typing a code happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0}],"start":"gesperrt","loesung":[{"from":"gesperrt","input":"richtig","to":"entsperrt"},{"from":"gesperrt","input":"falsch","to":"einmal"},{"from":"einmal","input":"richtig","to":"entsperrt"},{"from":"einmal","input":"falsch","to":"blockiert"},{"from":"blockiert","input":"richtig","to":"blockiert"},{"from":"blockiert","input":"falsch","to":"blockiert"},{"from":"entsperrt","input":"richtig","to":"entsperrt"},{"from":"entsperrt","input":"falsch","to":"entsperrt"}],"tests":[{"inputs":["richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["falsch","falsch","richtig"],"end":"blockiert","hidden":true},{"inputs":["richtig","falsch"],"end":"entsperrt","hidden":true},{"inputs":["falsch","falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["richtig","richtig"],"end":"entsperrt","hidden":true}]}],"aufgabe":"ampel","labels":{"inputs":"Step 1 – inputs (given by the task):","states":"Step 2 – find the states: what does the automaton have to remember?","start":"Start state","arrows":"Step 3 – set the transitions: every input for every state","choose":"– please choose –","diagram":"Diagram","tests":"Step 4 – test","play":"play","expected":"should be:","endsAt":"ends at:","startWord":"Start","empty":"Choose states first. Then the start state, the transitions and the diagram appear.","needStart":"Choose the start state first, then the test sequence can run.","hiddenNote":"There is no “Check” here: try things out freely."},"reset":"Clear everything"}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practice</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="27403203" data-block-type="ordering" data-block-order="8">
+<div class="explainer-exercise explainer-question" id="schritte-ordnen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-schritte-ordnen" data-id="schritte-ordnen" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Put the four steps of designing in the right order.</legend>
+<p class="question-hint">Give each entry its place: 1 for the first.</p>
+<ul class="question-pairs">
+<li><label><span>set the transitions</span> <select name="frage-schritte-ordnen-2" data-item="2"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>collect the inputs</span> <select name="frage-schritte-ordnen-0" data-item="0"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>find the states</span> <select name="frage-schritte-ordnen-1" data-item="1"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>test with test sequences</span> <select name="frage-schritte-ordnen-3" data-item="3"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 1. collect the inputs, 2. find the states, 3. set the transitions, 4. test with test sequences</p>
+<p class="question-explanation">Without the inputs you do not know which arrows are needed. Without states there are no arrows. You can write down test sequences with their expected end from the task already; you can only play them on a finished design.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 1. collect the inputs, 2. find the states, 3. set the transitions, 4. test with test sequences</p>
+<p class="question-explanation">Without the inputs you do not know which arrows are needed. Without states there are no arrows. You can write down test sequences with their expected end from the task already; you can only play them on a finished design.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"schritte-ordnen","text":"Put the four steps of designing in the right order.","explanation":"Without the inputs you do not know which arrows are needed. Without states there are no arrows. You can write down test sequences with their expected end from the task already; you can only play them on a finished design.","links":[],"type":"ordering","items":["collect the inputs","find the states","set the transitions","test with test sequences"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="c95a2e9b" data-block-type="single-choice" data-block-order="9">
+<div class="explainer-exercise explainer-question" id="warum-wartet">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-warum-wartet" data-id="warum-wartet" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Jona says: “For the cars, ‘someone waiting’ is just the same as ‘cars green’. One state is enough.” What happens if class 9b uses only one state?</legend>
+<label class="question-option"><input type="radio" name="frage-warum-wartet" value="0"> <span>The lights forget the button press or switch to amber without it.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-wartet" value="1"> <span>Nothing, the lights are the same.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-wartet" value="2"> <span>The lights show red for everyone.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>The lights forget the button press or switch to amber without it.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>At “time up” the lights must know whether someone pressed. They can only remember that in a state of their own.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Nothing, the lights are the same.</strong></p><p>The lights are the same, but what happens next is different. A state is what the automaton remembers, not what you see.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The lights show red for everyone.</strong></p><p>The task gives no reason for that. The problem is the missing memory of the button.</p></li>
+</ul>
+<p class="question-explanation">If the same input leads to different things in two situations, they are two states, even if they look the same to the cars.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>The lights forget the button press or switch to amber without it.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>At “time up” the lights must know whether someone pressed. They can only remember that in a state of their own.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Nothing, the lights are the same.</strong></p><p>The lights are the same, but what happens next is different. A state is what the automaton remembers, not what you see.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>The lights show red for everyone.</strong></p><p>The task gives no reason for that. The problem is the missing memory of the button.</p></li>
+</ul>
+<p class="question-explanation">If the same input leads to different things in two situations, they are two states, even if they look the same to the cars.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"warum-wartet","text":"Jona says: “For the cars, ‘someone waiting’ is just the same as ‘cars green’. One state is enough.” What happens if class 9b uses only one state?","explanation":"If the same input leads to different things in two situations, they are two states, even if they look the same to the cars.","links":[],"type":"single-choice","options":[{"text":"The lights forget the button press or switch to amber without it.","correct":true,"info":"At “time up” the lights must know whether someone pressed. They can only remember that in a state of their own."},{"text":"Nothing, the lights are the same.","correct":false,"info":"The lights are the same, but what happens next is different. A state is what the automaton remembers, not what you see."},{"text":"The lights show red for everyone.","correct":false,"info":"The task gives no reason for that. The problem is the missing memory of the button."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="acf0174d" data-block-type="vue-component" data-block-order="10">
+<div class="explainer-component" id="entwurf-neu" data-component="AutomatEntwurf" data-exercise data-seeds="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,27,28,29,30,32,35,36,37,38,39,40,41,42,43,45,46,48,50,51,52,54,55,56,58,60,63,64,65,67,68,69,71,74,75,77,78,79,80,81,85,86,88,90]" data-checked>
+<p class="explainer-exercise-label">Exercise</p>
+<p class="explainer-task-controls" hidden><span class="explainer-task-number" tabindex="-1" data-template="Task no. {n}">Task no. 1</span> <button type="button" class="explainer-new-task" title="New task"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg><span class="explainer-new-task-text">New task</span></button></p>
+<form class="explainer-component-form" novalidate><div class="explainer-island" hidden><div class="automat-entwurf"><p>Design an automaton for this task and play the test sequences. More test sequences that you cannot see here are checked too.</p><p><strong>Phone lock screen.</strong> At the start the phone is locked. A right code unlocks it. After one wrong code you may try once more; after the second wrong code in a row the phone is blocked and takes no more codes. Once it is unlocked, it stays unlocked.</p><div class="automat-editor" data-v-83c13a4f><p class="automat-editor-inputs" data-v-83c13a4f><strong data-v-83c13a4f>Step 1 – inputs (given by the task):</strong><!--[--><span class="automat-editor-input" data-v-83c13a4f>right code</span><span class="automat-editor-input" data-v-83c13a4f>wrong code</span><!--]--></p><fieldset class="automat-editor-cards" data-v-83c13a4f><legend data-v-83c13a4f>Step 2 – find the states: what does the automaton have to remember?</legend><!--[--><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> type the code</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> blocked</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> locked</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> unlocked</label><label class="automat-editor-card" data-v-83c13a4f><input type="checkbox" data-v-83c13a4f> 1 mistake</label><!--]--><!--[--><!--]--></fieldset><fieldset class="automat-editor-rows" data-v-83c13a4f><legend data-v-83c13a4f>Step 3 – set the transitions: every input for every state</legend><p class="automat-editor-note" data-v-83c13a4f>Choose states first. Then the start state, the transitions and the diagram appear.</p></fieldset><!----><!----><!----><div class="automat-editor-tests" data-v-83c13a4f><p class="automat-editor-heading" data-v-83c13a4f>Step 4 – test</p><ul data-v-83c13a4f><!--[--><li data-v-83c13a4f><span data-v-83c13a4f>right code → should be: <strong data-v-83c13a4f>unlocked</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>wrong code, right code → should be: <strong data-v-83c13a4f>unlocked</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>wrong code, wrong code → should be: <strong data-v-83c13a4f>blocked</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><li data-v-83c13a4f><span data-v-83c13a4f>wrong code, wrong code, wrong code → should be: <strong data-v-83c13a4f>blocked</strong></span><button type="button" data-v-83c13a4f>play</button><!----><!----></li><!--]--></ul><p class="automat-editor-note" data-v-83c13a4f>More sequences are checked too.</p></div></div></div></div><p class="question-actions" hidden><button type="submit" class="question-check">Check</button> <button type="button" class="question-solve" hidden>Solution</button></p></form>
+<div class="explainer-nojs"><div class="explainer-described"><p class="explainer-task-number">Task no. 1</p><div class="explainer-task"><p><strong>Phone lock screen.</strong> At the start the phone is locked. A right code unlocks it. After one wrong code you may try once more; after the second wrong code in a row the phone is blocked and takes no more codes. Once it is unlocked, it stays unlocked.</p>
+<p>“type the code” · “blocked” · “locked” · “unlocked” · “1 mistake”</p>
+<p>“right code” · “wrong code”</p>
+<ul>
+<li>right code → “unlocked”</li>
+<li>wrong code, right code → “unlocked”</li>
+<li>wrong code, wrong code → “blocked”</li>
+<li>wrong code, wrong code, wrong code → “blocked”</li>
+</ul></div><details class="explainer-solution"><summary>Solution</summary><p>“blocked” · “locked” · “unlocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></details></div></div>
+<p class="question-feedback" data-right="Right!" data-wrong="That's not right." data-incomplete="First choose the cards that are states."></p>
+<div class="explainer-component-solution" hidden tabindex="-1"><p class="explainer-component-solution-label">Solution</p><div class="explainer-component-solution-text"></div></div>
+<template class="explainer-component-solutions"><div data-number="1"><p>“blocked” · “locked” · “unlocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="2"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="3"><p>“blocked” · “unlocked” · “locked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="4"><p>“open” · “2 typed” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="5"><p>“locked” · “2 typed” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="6"><p>“2 typed” · “locked” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="7"><p>“1 mistake” · “locked” · “unlocked” · “blocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="8"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="9"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="10"><p>“open” · “locked” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="11"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="12"><p>“open” · “locked” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="13"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="14"><p>“open” · “locked” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="15"><p>“open” · “2 typed” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="16"><p>“locked” · “2 typed” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="17"><p>“unlocked” · “locked” · “blocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="18"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="19"><p>“2 typed” · “open” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="20"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="21"><p>“2 typed” · “locked” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="22"><p>“unlocked” · “blocked” · “1 mistake” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="23"><p>“locked” · “open” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="24"><p>“locked” · “blocked” · “unlocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="25"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="26"><p>“locked” · “blocked” · “1 mistake” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="27"><p>“1 mistake” · “blocked” · “locked” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="28"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="29"><p>“open” · “locked” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="30"><p>“open” · “locked” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="31"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="32"><p>“unlocked” · “locked” · “blocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="33"><p>“2 typed” · “locked” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="34"><p>“locked” · “open” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="35"><p>“1 mistake” · “unlocked” · “blocked” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="36"><p>“2 typed” · “open” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="37"><p>“open” · “2 typed” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="38"><p>“locked” · “open” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="39"><p>“unlocked” · “locked” · “blocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="40"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="41"><p>“locked” · “unlocked” · “blocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="42"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="43"><p>“blocked” · “unlocked” · “locked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="44"><p>“1 mistake” · “locked” · “unlocked” · “blocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="45"><p>“1 mistake” · “locked” · “blocked” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="46"><p>“locked” · “unlocked” · “blocked” · “1 mistake”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="47"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="48"><p>“2 typed” · “locked” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="49"><p>“locked” · “open” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="50"><p>“locked” · “1 mistake” · “unlocked” · “blocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="51"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="52"><p>“locked” · “open” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="53"><p>“unlocked” · “1 mistake” · “blocked” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="54"><p>“open” · “2 typed” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="55"><p>“open” · “locked” · “2 typed”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="56"><p>“1 mistake” · “blocked” · “locked” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="57"><p>“blocked” · “locked” · “1 mistake” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="58"><p>“blocked” · “1 mistake” · “locked” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="59"><p>“unlocked” · “blocked” · “1 mistake” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="60"><p>“unlocked” · “blocked” · “1 mistake” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="61"><p>“barrier open” · “barrier closed”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="62"><p>“locked” · “2 typed” · “open”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – 2 → “2 typed”</li>
+<li>“locked” – 7 → “locked”</li>
+<li>“locked” – other digit → “locked”</li>
+<li>“2 typed” – 2 → “2 typed”</li>
+<li>“2 typed” – 7 → “open”</li>
+<li>“2 typed” – other digit → “locked”</li>
+<li>“open” – 2 → “open”</li>
+<li>“open” – 7 → “open”</li>
+<li>“open” – other digit → “open”</li>
+</ul></div><div data-number="63"><p>“1 mistake” · “blocked” · “locked” · “unlocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="64"><p>“locked” · “1 mistake” · “unlocked” · “blocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="65"><p>“barrier closed” · “barrier open”</p>
+<p>Start: “barrier closed”</p>
+<ul>
+<li>“barrier closed” – ticket → “barrier open”</li>
+<li>“barrier closed” – car → “barrier closed”</li>
+<li>“barrier open” – ticket → “barrier open”</li>
+<li>“barrier open” – car → “barrier closed”</li>
+</ul></div><div data-number="66"><p>“locked” · “unlocked” · “1 mistake” · “blocked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div><div data-number="67"><p>“1 mistake” · “blocked” · “unlocked” · “locked”</p>
+<p>Start: “locked”</p>
+<ul>
+<li>“locked” – right code → “unlocked”</li>
+<li>“locked” – wrong code → “1 mistake”</li>
+<li>“1 mistake” – right code → “unlocked”</li>
+<li>“1 mistake” – wrong code → “blocked”</li>
+<li>“blocked” – right code → “blocked”</li>
+<li>“blocked” – wrong code → “blocked”</li>
+<li>“unlocked” – right code → “unlocked”</li>
+<li>“unlocked” – wrong code → “unlocked”</li>
+</ul></div></template>
+<script type="application/json" class="explainer-component-props">{"aufgaben":[{"id":"ampel","name":"Pedestrian crossing outside the school","text":"At the start the cars have green. If nobody presses the button, it stays like this, even when the time is up. If someone presses the button, the cars keep driving until the time is up. Then the cars get amber; when the time is up again, the green man shows (the cars have red then), then the cars get red and amber, and then green again. During amber, the green man and red and amber, the button changes nothing.","inputs":[{"id":"knopf","name":"button"},{"id":"zeit","name":"time up"}],"cards":[{"id":"gruen","name":"cars green","art":"zustand","warum":"The cars drive and nobody is waiting.","x":110,"y":250,"loop":135},{"id":"druecken","name":"press the button","art":"eingabe","warum":"“Press the button” happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0},{"id":"wartet","name":"someone waiting","art":"zustand","warum":"The cars still have green, but the lights have remembered the button.","x":200,"y":70,"loop":-120},{"id":"gelb","name":"cars amber","art":"zustand","warum":"The cars should stop.","x":430,"y":70,"loop":-60},{"id":"signal","name":"WAIT light comes on","art":"ausgabe","warum":"The light coming on happens during a transition. That is an output, not a state.","x":0,"y":0,"loop":0},{"id":"gehen","name":"green man","art":"zustand","warum":"People on foot may cross.","x":520,"y":250,"loop":0},{"id":"rotgelb","name":"cars red and amber","art":"zustand","warum":"The cars may drive again soon.","x":380,"y":400,"loop":90}],"start":"gruen","loesung":[{"from":"gruen","input":"knopf","to":"wartet"},{"from":"gruen","input":"zeit","to":"gruen"},{"from":"wartet","input":"knopf","to":"wartet"},{"from":"wartet","input":"zeit","to":"gelb"},{"from":"gelb","input":"knopf","to":"gelb"},{"from":"gelb","input":"zeit","to":"gehen"},{"from":"gehen","input":"knopf","to":"gehen"},{"from":"gehen","input":"zeit","to":"rotgelb"},{"from":"rotgelb","input":"knopf","to":"rotgelb"},{"from":"rotgelb","input":"zeit","to":"gruen"}],"tests":[{"inputs":["zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["knopf","zeit","zeit"],"end":"gehen","hidden":false},{"inputs":["knopf","zeit","zeit","zeit","zeit"],"end":"gruen","hidden":false},{"inputs":["knopf","knopf","zeit","knopf","zeit"],"end":"gehen","hidden":true},{"inputs":["knopf","zeit","zeit","knopf","zeit"],"end":"rotgelb","hidden":true},{"inputs":["knopf","knopf","zeit"],"end":"gelb","hidden":false},{"inputs":["zeit"],"end":"gruen","hidden":true},{"inputs":["knopf"],"end":"wartet","hidden":true},{"inputs":["knopf","zeit","zeit","zeit","knopf"],"end":"rotgelb","hidden":true}]},{"id":"schranke","name":"Barrier at the car park exit","text":"At the start the barrier is closed. Putting in a ticket opens it. When a car drives through, it closes again. If a car comes to the closed barrier, it stays closed. A second ticket while the barrier is open changes nothing.","inputs":[{"id":"ticket","name":"ticket"},{"id":"auto","name":"car"}],"cards":[{"id":"zu","name":"barrier closed","art":"zustand","warum":"Nobody can get through.","x":170,"y":160,"loop":-90},{"id":"offen","name":"barrier open","art":"zustand","warum":"One car may drive through.","x":430,"y":160,"loop":-90},{"id":"hebt","name":"barrier goes up","art":"ausgabe","warum":"Going up happens during a transition. That is an output, not a state.","x":0,"y":0,"loop":0},{"id":"einstecken","name":"put in a ticket","art":"eingabe","warum":"Putting it in happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"ticket","to":"offen"},{"from":"zu","input":"auto","to":"zu"},{"from":"offen","input":"ticket","to":"offen"},{"from":"offen","input":"auto","to":"zu"}],"tests":[{"inputs":["ticket"],"end":"offen","hidden":false},{"inputs":["ticket","auto"],"end":"zu","hidden":false},{"inputs":["auto"],"end":"zu","hidden":false},{"inputs":["ticket","ticket","auto"],"end":"zu","hidden":true},{"inputs":["auto","ticket"],"end":"offen","hidden":true},{"inputs":["ticket","ticket"],"end":"offen","hidden":true}]},{"id":"schloss","name":"Combination lock on a locker, code 2-7","text":"At the start the lock is locked. It opens when 2 and then 7 are typed one right after the other. Any other digit after the 2 means starting again. If you type 2 again, that 2 is the new start of the code. Once the lock is open, it stays open.","inputs":[{"id":"zwei","name":"2"},{"id":"sieben","name":"7"},{"id":"andere","name":"other digit"}],"cards":[{"id":"zu","name":"locked","art":"zustand","warum":"Nothing right typed yet.","x":110,"y":170,"loop":-90},{"id":"halb","name":"2 typed","art":"zustand","warum":"The lock has remembered the 2.","x":330,"y":170,"loop":90},{"id":"offen","name":"open","art":"zustand","warum":"The code was right.","x":550,"y":170,"loop":-90},{"id":"tippen","name":"type 7","art":"eingabe","warum":"Typing a digit happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0},{"id":"klick","name":"lock clicks","art":"ausgabe","warum":"The click happens during a transition. That is an output, not a state.","x":0,"y":0,"loop":0}],"start":"zu","loesung":[{"from":"zu","input":"zwei","to":"halb"},{"from":"zu","input":"sieben","to":"zu"},{"from":"zu","input":"andere","to":"zu"},{"from":"halb","input":"zwei","to":"halb"},{"from":"halb","input":"sieben","to":"offen"},{"from":"halb","input":"andere","to":"zu"},{"from":"offen","input":"zwei","to":"offen"},{"from":"offen","input":"sieben","to":"offen"},{"from":"offen","input":"andere","to":"offen"}],"tests":[{"inputs":["zwei","sieben"],"end":"offen","hidden":false},{"inputs":["sieben","zwei"],"end":"halb","hidden":false},{"inputs":["zwei","andere","sieben"],"end":"zu","hidden":false},{"inputs":["zwei","zwei","sieben"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","andere"],"end":"offen","hidden":true},{"inputs":["andere"],"end":"zu","hidden":true},{"inputs":["zwei","zwei"],"end":"halb","hidden":true},{"inputs":["zwei","sieben","zwei"],"end":"offen","hidden":true},{"inputs":["zwei","sieben","sieben"],"end":"offen","hidden":true}]},{"id":"handy","name":"Phone lock screen","text":"At the start the phone is locked. A right code unlocks it. After one wrong code you may try once more; after the second wrong code in a row the phone is blocked and takes no more codes. Once it is unlocked, it stays unlocked.","inputs":[{"id":"richtig","name":"right code"},{"id":"falsch","name":"wrong code"}],"cards":[{"id":"gesperrt","name":"locked","art":"zustand","warum":"No wrong try yet.","x":100,"y":120,"loop":-90},{"id":"einmal","name":"1 mistake","art":"zustand","warum":"The phone has remembered one wrong try.","x":400,"y":120,"loop":-90},{"id":"blockiert","name":"blocked","art":"zustand","warum":"Wrong twice, now nothing works.","x":400,"y":370,"loop":0},{"id":"entsperrt","name":"unlocked","art":"zustand","warum":"The code was right.","x":100,"y":370,"loop":90},{"id":"eingeben","name":"type the code","art":"eingabe","warum":"Typing a code happens in a moment. That is an input, not a state.","x":0,"y":0,"loop":0}],"start":"gesperrt","loesung":[{"from":"gesperrt","input":"richtig","to":"entsperrt"},{"from":"gesperrt","input":"falsch","to":"einmal"},{"from":"einmal","input":"richtig","to":"entsperrt"},{"from":"einmal","input":"falsch","to":"blockiert"},{"from":"blockiert","input":"richtig","to":"blockiert"},{"from":"blockiert","input":"falsch","to":"blockiert"},{"from":"entsperrt","input":"richtig","to":"entsperrt"},{"from":"entsperrt","input":"falsch","to":"entsperrt"}],"tests":[{"inputs":["richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","richtig"],"end":"entsperrt","hidden":false},{"inputs":["falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["falsch","falsch","richtig"],"end":"blockiert","hidden":true},{"inputs":["richtig","falsch"],"end":"entsperrt","hidden":true},{"inputs":["falsch","falsch","falsch"],"end":"blockiert","hidden":false},{"inputs":["richtig","richtig"],"end":"entsperrt","hidden":true}]}],"use":["schranke","schloss","handy"],"mode":"neu","intro":"Design an automaton for this task and play the test sequences. More test sequences that you cannot see here are checked too.","labels":{"inputs":"Step 1 – inputs (given by the task):","states":"Step 2 – find the states: what does the automaton have to remember?","start":"Start state","arrows":"Step 3 – set the transitions: every input for every state","choose":"– please choose –","diagram":"Diagram","tests":"Step 4 – test","play":"play","expected":"should be:","endsAt":"ends at:","startWord":"Start","empty":"Choose states first. Then the start state, the transitions and the diagram appear.","needStart":"Choose the start state first, then the test sequence can run.","hiddenNote":"More sequences are checked too."},"noStates":"First choose the cards that are states.","noStart":"You have chosen states, but no start state yet. Where does the automaton begin, according to the task?","wrongStart":"The automaton does not begin at “{start}”. Read the first sentence of the task again.","incomplete":"Your design is not complete yet: at “{state}” the target for “{input}” is missing. If nothing changes, the arrow goes back to the same state.","testFails":"The test sequence {inputs} ends at “{actual}”, but should end at “{expected}”. Play it and follow its way.","hiddenFails":"Another test sequence fails: {inputs} ends at “{actual}”, but should end at “{expected}”. Check what the automaton should do with each input."}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="3f6c3adf" data-block-type="true-false" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="uhr-zustand">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-uhr-zustand" data-id="uhr-zustand" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Mia thinks: “The lights need a state of their own for every second of waiting.” Is that true for our design?</legend>
+<label class="question-option"><input type="radio" name="frage-uhr-zustand" value="true"> <span>True</span></label>
+<label class="question-option"><input type="radio" name="frage-uhr-zustand" value="false"> <span>False</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">A small timer outside the automaton counts the time. When it is up, it reports “time up”, and for the automaton that is an input. That keeps the design small.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">A small timer outside the automaton counts the time. When it is up, it reports “time up”, and for the automaton that is an input. That keeps the design small.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"uhr-zustand","text":"Mia thinks: “The lights need a state of their own for every second of waiting.” Is that true for our design?","explanation":"A small timer outside the automaton counts the time. When it is up, it reports “time up”, and for the automaton that is an input. That keeps the design small.","links":[],"type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausblick">What comes next?</h2>
+<div class="explainer-block" data-block="ausblick/1" data-block-id="c652995d" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>You can now design an automaton in four steps. Mia has finished her design already, but in the test it never lets the pedestrians cross. On the next page class 9b looks for such mistakes and improves designs.</p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “Automata and states”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-automaten","app":"Automata and states","root":"../../../en/","repository":"lernapps/informatik-automaten","revision":"5a8e09e","page":{"title":"Designing traffic lights","order":3}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/alltag/zustandsdiagramm/">Back: State diagrams</a><a rel="next" href="../../../en/entwerfen/entwurf-testen/">Next: Testing and improving designs</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>

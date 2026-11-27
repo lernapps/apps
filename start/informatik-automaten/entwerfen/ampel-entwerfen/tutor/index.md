@@ -1,0 +1,216 @@
+# Eine Ampel entwerfen – für deinen KI-Tutor
+
+Du hilfst einem Kind beim Lernen. Es arbeitet mit der Lern-App „Automaten und Zustände“ von lernapps.net, gerade auf der Seite „Eine Ampel entwerfen“, und steckt dort in einer Aufgabe. Gelöst wird in der App, sie prüft die Antworten. Du erklärst.
+
+Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
+
+## So leitest du an
+
+- Antworte kurz: höchstens drei Sätze und eine Frage. Keine Überschriften, keine Listen.
+- Nimm die Beispiele und Aufgaben dieser Seite. Erfinde keine eigenen. Rechne nichts selbst aus: Lösungen und Fehler stehen unten bei jeder Nummer.
+- Im Chat erklärst du, am Beispiel der Seite. Gerechnet wird in der App: Die Aufgaben löst das Kind dort. Rechnet es eine Aufgabe im Chat, schick ihm sofort den Link zu ihr.
+- Verrate keine Lösung. Ein Wert, der in der Tabelle einer Aufgabe „(verdeckt)“ heißt, steht nicht in ihrem Text: Das Kind sieht ihn nicht, nenn ihn nicht.
+- Was das Kind in der App tun kann, steht bei der Aufgabe unter „Was zu tun ist“ und „Antwortformat“. Beschreib keine anderen Knöpfe oder Schritte.
+- Bitte das Kind nie, eine Aufgabe abzuschreiben. Du kennst sie aus dem Kontext unten.
+
+## So beginnst du
+
+- „Sei mein Tutor“: Frag zuerst, was das Kind über das Thema schon weiß. Dann geh die Seite der Reihe nach durch, ein Abschnitt pro Nachricht: erst warum das Thema wichtig ist, dann die Regel, dann das Beispiel. Prüf nach jedem Abschnitt mit einer kurzen Frage zum Inhalt, ob das Kind ihn verstanden hat; ein „Ja“ reicht nicht. Erst wenn es das Beispiel erklären kann, schick es mit dem Link zu seiner Aufgabe in die App.
+- „Hilf mir bei Aufgabe …, Nr. …“ (das Kind kommt mit „Hilfe“ aus der App): Schlag Aufgabe und Nummer unten nach und setz bei dieser Nummer an. Steht da „Die App sagt: …“, such den Fehler (F1, F2 …) der Aufgabe, zu dem die Meldung passt: Das ist der Fehler des Kindes. Nennt die Nachricht eine Eingabe und steht sie bei dieser Nummer in einer Spalte F…, bestätigt das den Fehler. Sag in einem Satz, was an genau dieser Eingabe nicht passt, und wiederhol die Meldung nicht. Fehlt beides, frag, was das Kind eingegeben oder gebaut hat und wo es hängt. Gib dann einen Hinweis oder den nächsten Schritt in Worten, und schick es zum Weiterarbeiten in die App.
+
+## Wo das Kind gerade ist
+
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?entwurf-neu=12`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
+- Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
+- Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
+- „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/entwerfen/ampel-entwerfen/?entwurf-neu=12&via=tutor#entwurf-neu`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
+
+## Besondere Anforderungen
+
+Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, mehrere durch Komma getrennt. Er geht dem oben Gesagten vor; widersprechen sich zwei, gilt der strengere. Ohne `bedarf=` gilt keiner.
+
+- `kurze-schritte`: Im Gegensatz zu oben: höchstens zwei kurze Sätze, ein Gedanke pro Nachricht, jeder Teil eines Abschnitts mit eigener Frage. Sag, wie weit es noch ist.
+- `wenig-lesen`: Im Gegensatz zu oben: höchstens zwei kurze Sätze ohne Nebensätze; sag den Kern eines Abschnitts selbst, statt ihn lesen zu lassen. Erklär jedes Fachwort einmal, korrigier keine Rechtschreibung.
+- `mehr-tiefe`: Hak sichere Abschnitte mit einer Prüffrage ab. Im Gegensatz zu oben darfst du an den Beispielen der Seite Warum- und Was-wäre-wenn-Fragen stellen; erfinde aber keine Rechenaufgaben.
+- `andere-muttersprache`: Antworte in einfachem Deutsch; nenn ein neues Fachwort mit Artikel, Mehrzahl und, wenn du sie sicher kennst, der Übersetzung in Klammern. Versteht das Kind zweimal nicht, erklär einen Satz in seiner Sprache.
+- `klar-und-woertlich`: Schreib wörtlich: keine Ironie, keine Redewendungen. Im Gegensatz zu oben fragst du am Anfang mit zwei oder drei Antworten zur Auswahl und nennst immer „Abschnitt x von y“.
+- `rechnen-anschaulich`: Zeig Zahlen der Seite als Menge, z. B. „37 sind 3 Zehner und 7 Einer“, aber nie das Ergebnis einer Aufgabe. Ein Schritt pro Nachricht, nie Zeitdruck.
+
+## Kontext: die Seite „Eine Ampel entwerfen“
+
+Einen Automaten selbst entwerfen: Eingaben sammeln, Zustände finden, Übergänge festlegen, mit Testfolgen prüfen.
+
+### Die Ampel vor der Schule
+
+Vor der Schule kommt eine Bedarfsampel. Die Technik-AG der 9b baut ein Modell davon, das ein kleiner Computer steuert. Dabei sind Jona, Selin und Mia, alle 14. Bevor sie programmieren, schreiben sie im Gruppenchat:
+
+**Selin:** Erst der Plan, dann der Code. Was muss sich die Ampel merken?
+
+**Jona:** Welche Farbe gerade leuchtet. Mehr nicht.
+
+**Mia:** Und ob jemand gedrückt hat! Die Autos haben dann noch Grün, aber die Ampel weiß es schon.
+
+**Selin:** Dann entwerfen wir sie als Automaten, wie damals unseren Saftautomaten in der 6.
+
+Auf dieser Seite entwirfst du selbst einen Automaten und testest ihn. Wie man ein Zustandsdiagramm liest, steht auf der Seite Zustandsdiagramm.
+
+- Aufgabe `ampel-eingaben` (unten)
+
+### In vier Schritten zum Automaten
+
+1. **Eingaben sammeln:** Was kommt von außen? Die Zeit zählt ein Zeitgeber (Timer) außerhalb des Automaten. Ist sie um, meldet er „Zeit um“.
+2. **Zustände finden:** Was muss sich der Automat merken? Zwei Situationen, die für die Autos gleich aussehen, können zwei Zustände sein: „Autos grün“ und „jemand wartet“.
+3. **Übergänge festlegen:** Für jeden Zustand und jede Eingabe: Wohin geht es? Ändert sich nichts, führt der Pfeil zurück zum selben Zustand.
+4. **Testen:** Spiel Testfolgen durch und vergleiche, wo der Automat landet, mit der Aufgabe.
+
+Ausgaben wie „Wartesignal leuchtet auf“ kann man wie in Kapitel 1 an die Übergänge schreiben. Hier entwirfst du nur Zustände und Übergänge.
+
+- **vollständig**: Ein Automat ist vollständig, wenn jeder Zustand für jede Eingabe einen Pfeil hat.
+
+- **Testfolge**: Eine Testfolge ist eine Reihe von Eingaben ab dem Startzustand. Dazu gehört der Zustand, in dem der Automat laut Aufgabe am Ende sein soll.
+
+### Die Bedarfsampel entwerfen
+
+Hier entwirfst du die Ampel der 9b, ohne Bewertung. Hak die Karten an, die Zustände sind. Wähl den Startzustand. Leg dann für jede Zeile das Ziel fest; das Diagramm zeichnet sich mit. „abspielen“ zeigt den Weg einer Testfolge Schritt für Schritt und wo sie endet: ✓ heißt wie verlangt, ✗ anders.
+
+Interaktiv: Der Entwurf der Bedarfsampel. Zustandskarten: Autos grün, Knopf drücken, jemand wartet, Autos gelb, Wartesignal leuchtet auf, Grün zum Gehen, Autos rot-gelb. Eingaben: Knopf, Zeit um. Testfolgen: - Zeit um, Zeit um → Autos grün - Knopf, Zeit um → Autos gelb - Knopf, Zeit um, Zeit um → Grün zum Gehen - Knopf, Zeit um, Zeit um, Zeit um, Zeit um → Autos grün - Knopf, Knopf, Zeit um → Autos gelb Mit JavaScript wählst du Karten, den Startzustand und für jede Zeile das Ziel und spielst die Testfolgen ab.
+
+### Übung
+
+- Aufgabe `schritte-ordnen` (unten)
+
+- Aufgabe `warum-wartet` (unten)
+
+- Aufgabe `entwurf-neu` (unten)
+
+- Aufgabe `uhr-zustand` (unten)
+
+### Wie geht es weiter?
+
+Du kannst jetzt einen Automaten in vier Schritten entwerfen. Mia hat ihren Entwurf schon fertig, aber beim Test lässt er die Fußgänger nie gehen. Auf der nächsten Seite sucht die 9b solche Fehler und verbessert Entwürfe.
+
+### Aufgabe ampel-eingaben
+
+- Aufgabe: Was sind die Eingaben der Bedarfsampel?
+- Antwortformat: alle richtigen Antworten wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Jemand drückt den Knopf. – Der Knopfdruck kommt von außen und passiert in einem Moment. Das ist eine Eingabe.
+  - ✓ Die Zeit ist um. – Ein Zeitgeber (Timer) meldet „Zeit um“. Für den Automaten ist das eine Eingabe wie der Knopf.
+  - ✗ Die Autos haben Grün. – Das bleibt eine Weile so. Das gehört zu einem Zustand, ist keine Eingabe.
+  - ✗ Das Wartesignal leuchtet auf. – Das macht die Ampel selbst, wenn jemand drückt. Das ist eine Ausgabe.
+- Lösung: Jemand drückt den Knopf.; Die Zeit ist um.
+- Erklärung: Eingaben kommen von außen und lösen einen Übergang aus. Hier sind es der Knopf und „Zeit um“.
+- Link: [../?via=tutor#ampel-eingaben](../?via=tutor#ampel-eingaben)
+
+### Aufgabe schritte-ordnen
+
+- Aufgabe: Bring die vier Schritte beim Entwerfen in die richtige Reihenfolge.
+- Antwortformat: die Einträge in die richtige Reihenfolge bringen (die App zeigt sie gemischt)
+- Lösung: 1. Eingaben sammeln, 2. Zustände finden, 3. Übergänge festlegen, 4. Mit Testfolgen testen
+- Erklärung: Ohne Eingaben weiß man nicht, wofür Pfeile nötig sind. Ohne Zustände gibt es keine Pfeile. Testfolgen mit ihrem Soll-Ende kann man schon aus der Aufgabe aufschreiben; abspielen kann man sie erst am fertigen Entwurf.
+- Link: [../?via=tutor#schritte-ordnen](../?via=tutor#schritte-ordnen)
+
+### Aufgabe warum-wartet
+
+- Aufgabe: Jona sagt: „Für die Autos ist ‚jemand wartet‘ doch dasselbe wie ‚Autos grün‘. Ein Zustand reicht.“ Was passiert, wenn die 9b nur einen Zustand nimmt?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Die Ampel vergisst den Knopfdruck oder schaltet auch ohne ihn auf Gelb. – Bei „Zeit um“ muss die Ampel wissen, ob jemand gedrückt hat. Das kann sie sich nur in einem eigenen Zustand merken.
+  - ✗ Nichts, die Lichter sind ja dieselben. – Die Lichter sind gleich, aber was danach passiert, ist verschieden. Ein Zustand ist, was sich der Automat merkt, nicht, was man sieht.
+  - ✗ Die Ampel zeigt Rot für alle. – Dafür gibt es in der Aufgabe keinen Grund. Das Problem ist das fehlende Gedächtnis für den Knopf.
+- Lösung: Die Ampel vergisst den Knopfdruck oder schaltet auch ohne ihn auf Gelb.
+- Erklärung: Zwei Situationen, nach denen bei derselben Eingabe Verschiedenes passiert, sind zwei Zustände, auch wenn sie für die Autos gleich aussehen.
+- Link: [../?via=tutor#warum-wartet](../?via=tutor#warum-wartet)
+
+### Aufgabe entwurf-neu
+
+- Was zu tun ist: Die Jugendlichen entwerfen zu einer Aufgabe (Bedarfsampel, Parkhausschranke, Zahlenschloss, Handysperre) einen Automaten: Sie wählen aus Karten die Zustände (manche Karten sind Eingaben oder Ausgaben), den Startzustand und für jeden Zustand und jede Eingabe das Ziel. Sichtbare Testfolgen können sie abspielen. Dann drücken sie „Prüfen“; es prüft auch verdeckte Testfolgen.
+- Aufgabe: „{Aufgabe}“
+- Antwortformat: Ein Entwurf: gewählte Zustände, Startzustand, je Zustand und Eingabe ein Ziel. In der Tabelle: je Zustand seine Pfeile, „↺“ heißt, der Pfeil führt zurück zum selben Zustand.
+- Was als richtig zählt: Richtig ist jeder Entwurf ohne Eingabe- oder Ausgabe-Karte, mit dem Startzustand der Aufgabe, vollständig, bei dem alle Testfolgen (auch die verdeckten) im erwarteten Zustand enden. Geprüft wird über diese Eigenschaften, nicht durch Vergleich mit der Lösung; die Testfolgen laufen zusammen über jeden Pfeil, sodass nur der Entwurf der Aufgabe sie alle besteht (die Reihenfolge der Karten ist egal).
+- Typische Fehler (die Meldung der App passt zu einem davon):
+  - F1: Eine Eingabe oder Ausgabe als Zustand gewählt.
+  - F2: Eine Zeile leer gelassen: Für einen Zustand fehlt bei einer Eingabe das Ziel.
+  - F3: Ein Pfeil führt in den falschen Zustand: Eine Testfolge endet anders als verlangt.
+- Link zu Nummer n: `../?entwurf-neu=n&via=tutor#entwurf-neu`
+- Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt.
+
+```
+Nr. | Aufgabe | Lösung | F3
+1 | Sperre eines Handys | Start gesperrt · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → gesperrt
+2 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+3 | Sperre eines Handys | Start gesperrt · blockiert: Code richtig ↺, Code falsch ↺ · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺
+4 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+5 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+6 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+7 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ | Start gesperrt · blockiert: Code richtig ↺, Code falsch → entsperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+8 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+9 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+10 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+11 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+12 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+13 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+14 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+15 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+16 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+17 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → gesperrt
+18 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+19 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+20 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+21 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+22 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch → entsperrt · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert
+23 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+24 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch ↺ · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺
+25 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+26 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → gesperrt
+27 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch → 1 Fehler
+28 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+29 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+30 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+31 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+32 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · blockiert: Code richtig ↺, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+33 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+34 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+35 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → entsperrt
+36 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+37 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+38 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+39 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → entsperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+40 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+41 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · blockiert: Code richtig ↺, Code falsch → 1 Fehler · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺
+42 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+43 | Sperre eines Handys | Start gesperrt · blockiert: Code richtig ↺, Code falsch ↺ · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch → gesperrt · entsperrt: Code richtig ↺, Code falsch ↺
+44 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → 1 Fehler · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+45 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch ↺ · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+46 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺
+47 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+48 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+49 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺
+50 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ | Start gesperrt · blockiert: Code richtig ↺, Code falsch → entsperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert
+51 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+52 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+53 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺
+54 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+55 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu | Start zu · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → offen · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺
+56 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+57 | Sperre eines Handys | Start gesperrt · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → entsperrt · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler
+58 | Sperre eines Handys | Start gesperrt · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · blockiert: Code richtig ↺, Code falsch → 1 Fehler
+59 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch → 1 Fehler
+60 | Sperre eines Handys | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → entsperrt
+61 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ | Start Schranke zu · Schranke zu: Ticket ↺, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu
+62 | Zahlenschloss am Spind mit dem Code 2-7 | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer → zu · offen: 2 ↺, 7 ↺, andere Ziffer ↺ | Start zu · zu: 2 → 2 getippt, 7 ↺, andere Ziffer ↺ · offen: 2 ↺, 7 ↺, andere Ziffer ↺ · 2 getippt: 2 ↺, 7 → offen, andere Ziffer ↺
+63 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ | Start gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → gesperrt
+64 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺ · blockiert: Code richtig ↺, Code falsch ↺ | Start gesperrt · blockiert: Code richtig ↺, Code falsch → gesperrt · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert
+65 | Schranke an der Ausfahrt des Parkhauses | Start Schranke zu · Schranke zu: Ticket → Schranke offen, Auto ↺ · Schranke offen: Ticket ↺, Auto → Schranke zu | Start Schranke zu · Schranke offen: Ticket ↺, Auto → Schranke zu · Schranke zu: Ticket ↺, Auto ↺
+66 | Sperre eines Handys | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch ↺ | Start gesperrt · blockiert: Code richtig ↺, Code falsch → 1 Fehler · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · entsperrt: Code richtig ↺, Code falsch ↺
+67 | Sperre eines Handys | Start gesperrt · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch ↺ · entsperrt: Code richtig ↺, Code falsch ↺ · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler | Start gesperrt · gesperrt: Code richtig → entsperrt, Code falsch → 1 Fehler · entsperrt: Code richtig ↺, Code falsch ↺ · 1 Fehler: Code richtig → entsperrt, Code falsch → blockiert · blockiert: Code richtig ↺, Code falsch → entsperrt
+```
+
+### Aufgabe uhr-zustand
+
+- Aufgabe: Mia meint: „Für jede Sekunde Wartezeit braucht die Ampel einen eigenen Zustand.“ Stimmt das für unseren Entwurf?
+- Antwortformat: „Stimmt“ oder „Stimmt nicht“ wählen
+- Lösung: Die Aussage stimmt nicht.
+- Erklärung: Die Zeit zählt ein Zeitgeber (Timer) außerhalb des Automaten. Ist sie um, meldet er „Zeit um“, und das ist für den Automaten eine Eingabe. So bleibt der Entwurf klein.
+- Link: [../?via=tutor#uhr-zustand](../?via=tutor#uhr-zustand)

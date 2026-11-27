@@ -137,16 +137,18 @@ Nr. | s.jetzt | s.tut | s.grund | s.warum | Zur Wahl | Lösung | F1
 
 ### Aufgabe zettel-am-ende
 
-- Was zu tun ist: folge: Ein Automat ist als Zustandsdiagramm (oder als Kasten mit Zettel) zu sehen, dazu ein Startzustand und 3 bis 5 Eingaben. Das Kind wählt den Zustand am Ende. pfeil: Ein Pfeil des Diagramms fehlt, ein Satz sagt, was passiert; das Kind wählt, wohin der Pfeil führt. Dann drückt es „Prüfen“.
+- Was zu tun ist: folge: Ein Automat ist als Zustandsdiagramm (oder als Kasten mit Zettel) zu sehen, dazu ein Startzustand und 3 bis 5 Eingaben. Das Kind wählt den Zustand am Ende. pfeil: Ein Pfeil des Diagramms fehlt, ein Satz sagt, was passiert; das Kind wählt, wohin der Pfeil führt. fehler: Ein Pfeil ist falsch gezeichnet, eine Testfolge endet deshalb woanders als verlangt; die Jugendlichen wählen den falschen Pfeil. Dann drücken sie „Prüfen“.
 - Aufgabe: „Jonas Zettel zeigt am Anfang „{start}“. Dann kommen diese Eingaben: {inputs}. Was steht am Ende auf dem Zettel?“
-- Antwortformat: Ein Zustand: ein Knopf unter dem Diagramm oder ein Kreis.
-- Was als richtig zählt: folge: der Zustand, in dem der Automat nach der letzten Eingabe ist, wenn er beim Startzustand beginnt und bei jeder Eingabe dem Pfeil mit diesem Wort folgt. pfeil: der Zustand, zu dem der fehlende Pfeil führt.
+- Antwortformat: Ein Zustand: ein Knopf unter dem Diagramm oder ein Kreis. fehler: ein Pfeil, ein Knopf je Pfeil.
+- Was als richtig zählt: folge: der Zustand, in dem der Automat nach der letzten Eingabe ist, wenn er beim Startzustand beginnt und bei jeder Eingabe dem Pfeil mit diesem Wort folgt. pfeil: der Zustand, zu dem der fehlende Pfeil führt. fehler: der einzige Pfeil auf dem Weg der Testfolge, der richtig gesetzt die Folge im verlangten Zustand enden lässt.
 - Typische Fehler (die Meldung der App passt zu einem davon):
   - F1: folge: Die letzte Eingabe vergessen.
   - F2: folge: Pfeile rückwärts gelesen, von der Spitze zum Anfang.
   - F3: folge: Beim Startzustand stehen geblieben.
   - F4: pfeil: Der Pfeil führt zurück zum selben Kreis, obwohl sich laut Satz etwas ändert.
   - F5: pfeil: Der Pfeil führt zu einem anderen Kreis, obwohl sich laut Satz nichts ändert.
+  - F6: fehler: Einen Pfeil gewählt, über den die Testfolge gar nicht läuft.
+  - F7: fehler: Einen Pfeil auf dem Weg gewählt, der richtig ist; geändert endet die Folge trotzdem nicht wie verlangt.
 - Link zu Nummer n: `../?zettel-am-ende=n&via=tutor#zettel-am-ende`
 - Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt.
 

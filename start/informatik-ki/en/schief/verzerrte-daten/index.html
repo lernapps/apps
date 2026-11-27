@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" crossorigin src="../../../assets/index-D9mjBk7h.js"></script>
+    <link rel="modulepreload" crossorigin href="../../../assets/tasks-C8F2Wlxx-cG9osHbD.js">
+    <link rel="stylesheet" crossorigin href="../../../assets/index-CtncCkFd.css">
+    <title>Skewed training data – How machines learn from data</title>
+    <meta name="description" content="One-sided training data leads to the same mistakes again and again: finding the fault in the data." />
+    <meta name="lernapps-archetype" content="explainer" />
+    <link rel="alternate" hreflang="de" href="../../../schief/verzerrte-daten/" />
+    <link rel="alternate" hreflang="en" href="../../../en/schief/verzerrte-daten/" />
+    <script type="module" crossorigin src="../../../assets/islands-Dka4F-bQ.js"></script>
+  </head>
+  <body>
+    <header class="page-header"><nav class="page-languages" aria-label="Language"><ul><li><a href="../../../schief/verzerrte-daten/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../../../en/schief/verzerrte-daten/" hreflang="en" lang="en" aria-current="page">English</a></li></ul></nav></header>
+<nav class="explainer-breadcrumbs" aria-label="You are here"><ol><li><a href="../../../en/">Start</a></li><li><a href="../../../en/schief/">When the data is skewed (bias)</a></li><li aria-current="page">Skewed training data</li></ol></nav>
+<main class="explainer" id="inhalt-der-seite">
+<div class="explainer-title-row">
+<h1>Skewed training data</h1>
+<div class="explainer-tutor explainer-tutor-page">
+<details class="explainer-tutor-off">
+<summary>Learn with an AI tutor</summary>
+<p>An AI tutor explains this page to you and helps you with the exercises. Choose your assistant:</p>
+<p class="explainer-tutor-actions"><span class="explainer-tutor-way" hidden><select class="explainer-tutor-select" aria-label="Assistant"><option value="Claude">Claude</option><option value="ChatGPT">ChatGPT</option><option value="Mistral Vibe" data-hint="Mistral Vibe does not load web pages when the link comes from a button. So we copy the sentence with the link for you. A click on “Learn with Mistral Vibe” opens Mistral Vibe with a short message. Then paste the copied sentence (Ctrl+V, ⌘+V on a Mac) and send it.">Mistral Vibe</option><option value="copy">Another one: copy the text</option></select> <button type="button" class="explainer-tutor-on">Switch on</button></span> <span class="explainer-tutor-plain"><a class="explainer-tutor-provider" href="https://claude.ai/new" rel="noopener" target="_blank">Open with Claude</a> <a class="explainer-tutor-provider" href="https://chatgpt.com/" rel="noopener" target="_blank">Open with ChatGPT</a> <a class="explainer-tutor-provider" href="https://chat.mistral.ai/chat" rel="noopener" target="_blank">Open with Mistral Vibe</a></span></p>
+<p class="explainer-tutor-hint" role="status" aria-live="polite" hidden></p>
+<p class="explainer-tutor-note">You use your own account with the provider. The assistant is not offered by lernapps.net: lernapps only provides the content and the exercises. The choice holds for all pages, on this device only.</p>
+<p><a class="explainer-tutor-guide" href="../../../en/schief/verzerrte-daten/tutor/">See what your tutor gets for this page</a></p>
+</details>
+<p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
+<p class="explainer-tutor-status" role="status" aria-live="polite"></p>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Load ⟦base⟧schief/verzerrte-daten/tutor/⟦query⟧ and be my tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../../en/","storage":"informatik-ki","page":{"id":"verzerrte-daten","title":"Skewed training data","exercises":[{"id":"kruemel-luna","section":"einstieg","numbered":false},{"id":"was-trennt-im-beutel","section":"ausprobieren","numbered":false},{"id":"warum-katze","section":"ausprobieren","numbered":false},{"id":"mehr-karten","section":"uebung","numbered":false},{"id":"was-fehlt","section":"uebung","numbered":false},{"id":"datenfehler-finden","section":"uebung","numbered":false},{"id":"was-ergaenzen","section":"uebung","numbered":false}],"sections":["einstieg","ausprobieren","idee","beispiel","uebung","rueckblick"]},"tutor":"schief/verzerrte-daten/tutor/","markdown":"schief/verzerrte-daten/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"I need help with a learning unit. I will tell you in a moment what it is about.","go":"Learn with {name}","done":"✓ Copied – now paste it into {name}","copy":"Copy the text","copied":"The prompt is copied. Paste it into the chat of your AI assistant.","failed":"Copying did not work. Try again."}</script>
+</div>
+</div>
+
+<nav class="explainer-toc" aria-label="On this page"><p class="explainer-toc-title">On this page</p><ol><li><a href="#einstieg">In the class chat: the machine gets it wrong</a></li><li><a href="#ausprobieren">Try it: testing Krümel and Otto</a></li><li><a href="#idee">Bias: the fault is in the data</a></li><li><a href="#beispiel">In real systems too</a></li><li><a href="#uebung">Practice</a></li><li><a href="#rueckblick">Looking back</a></li></ol></nav>
+<section class="explainer-section">
+<h2 id="einstieg">In the class chat: the machine gets it wrong</h2>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="4e786b01" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Jona, Selin and Mia are now 14 and in Year 10. The shelter now has a “nearest neighbour” machine. A volunteer filled its training bag, in other words its <strong>training data</strong>:
+example cards with labels that the machine learns from.</p>
+<p><strong>Selin:</strong> The shelter has messaged us: the machine thinks Krümel is a cat. Otto too!</p>
+<p><strong>Jona:</strong> Is the program broken? It&#39;s the same as our bag program from Year 7.</p>
+<p><strong>Mia:</strong> The volunteer used photos from the shelter&#39;s cat section and from a dog training class. Here is the bag.</p>
+<p>Where do the mistakes come from?</p></div>
+</div>
+<div class="explainer-block" data-block="einstieg/2" data-block-id="9618092b" data-block-type="vue-component" data-block-order="2">
+<div class="explainer-component" data-component="Tierkarten">
+<div class="explainer-island" hidden><ul class="tierkarten" data-v-1b9d95eb><!--[--><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Luna" katze="1" merkmale="pointed ears, short snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#9a9a9a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#9a9a9a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#9a9a9a" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Luna<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Mimi" katze="1" merkmale="pointed ears, short snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#e8a15a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#e8a15a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#e8a15a" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Mimi<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, short snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Flocke" katze="1" merkmale="floppy ears, short snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#f2f0ea" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#f2f0ea" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#f2f0ea" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Flocke<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, short snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Minka" katze="1" merkmale="pointed ears, long snout, small, narrow pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#5a4636" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#5a4636" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#5a4636" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Minka<!--[--> · cat<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, long snout, small, narrow pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Bruno" katze="0" merkmale="floppy ears, long snout, big, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#8b5a2b" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#8b5a2b" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#8b5a2b" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Bruno<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>floppy ears, long snout, big, round pupils</span></span></li><li data-v-1b9d95eb><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Rex" katze="0" merkmale="pointed ears, long snout, big, round pupils" data-v-1b9d95eb data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#6b4a2a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#6b4a2a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#6b4a2a" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="tierkarten-text" data-v-1b9d95eb><span class="tierkarten-name" data-v-1b9d95eb>Rex<!--[--> · dog<!--]--></span><span class="tierkarten-merkmale" data-v-1b9d95eb>pointed ears, long snout, big, round pupils</span></span></li><!--]--></ul></div>
+<div class="explainer-nojs"><p>The six cards in the shelter&#39;s bag:</p>
+<ul>
+<li>Luna, cat: pointed ears, short snout, small, narrow pupils</li>
+<li>Mimi, cat: pointed ears, short snout, small, narrow pupils</li>
+<li>Flocke, cat: floppy ears, short snout, small, narrow pupils</li>
+<li>Minka, cat: pointed ears, long snout, small, narrow pupils</li>
+<li>Bruno, dog: floppy ears, long snout, big, round pupils</li>
+<li>Rex, dog: pointed ears, long snout, big, round pupils</li>
+</ul></div>
+<script type="application/json" class="explainer-component-props">{"tiere":[{"name":"Luna","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":0},{"name":"Mimi","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":1},{"name":"Tiger","katze":1,"ohren":1,"schnauze":1,"groesse":0,"pupille":1,"merkmale":"pointed ears, short snout, big, narrow pupils","fell":2},{"name":"Flocke","katze":1,"ohren":0,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"floppy ears, short snout, small, narrow pupils","fell":3},{"name":"Minka","katze":1,"ohren":1,"schnauze":0,"groesse":1,"pupille":1,"merkmale":"pointed ears, long snout, small, narrow pupils","fell":4},{"name":"Bruno","katze":0,"ohren":0,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"floppy ears, long snout, big, round pupils","fell":5},{"name":"Rex","katze":0,"ohren":1,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"pointed ears, long snout, big, round pupils","fell":6},{"name":"Krümel","katze":0,"ohren":1,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"pointed ears, short snout, small, round pupils","fell":7},{"name":"Waldi","katze":0,"ohren":0,"schnauze":0,"groesse":1,"pupille":0,"merkmale":"floppy ears, long snout, small, round pupils","fell":8},{"name":"Otto","katze":0,"ohren":0,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"floppy ears, short snout, small, round pupils","fell":9},{"name":"Bella","katze":0,"ohren":0,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"floppy ears, short snout, big, round pupils","fell":10},{"name":"Sammy","katze":0,"ohren":1,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"pointed ears, short snout, big, round pupils","fell":11}],"nummern":[1,2,4,5,6,7],"etikett":true,"katze":"cat","hund":"dog"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="einstieg/3" data-block-id="be98134c" data-block-type="number" data-block-order="3">
+<div class="explainer-exercise explainer-question" id="kruemel-luna">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-kruemel-luna" data-id="kruemel-luna" data-type="number">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Krümel is a dog: pointed ears, short snout, small, round pupils. How many features does Krümel have in common with Luna?</legend>
+<label class="question-number">Your answer <input type="text" inputmode="decimal" autocomplete="off" name="frage-kruemel-luna">  </label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 3</p>
+<p class="question-explanation">Ears, snout and size are the same, only the pupils are not: 3 of 4.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 3</p>
+<p class="question-explanation">Ears, snout and size are the same, only the pupils are not: 3 of 4.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"kruemel-luna","text":"Krümel is a dog: pointed ears, short snout, small, round pupils. How many features does Krümel have in common with Luna?","explanation":"Ears, snout and size are the same, only the pupils are not: 3 of 4.","links":[],"type":"number","answer":3,"tolerance":0,"mistakes":[{"answer":1,"message":"You counted the features that are different. The question asks for the ones in common."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="ausprobieren">Try it: testing Krümel and Otto</h2>
+<div class="explainer-block" data-block="ausprobieren/1" data-block-id="46a5382a" data-block-type="text" data-block-order="4">
+<div class="block-text"><p>At <strong>New animal</strong>, choose Krümel first, then Otto, and read the table: which card is most similar? Then use <strong>Put in bag</strong> to add Otto and test
+Krümel again.</p></div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/2" data-block-id="0f9c9307" data-block-type="vue-component" data-block-order="5">
+<div class="explainer-component" data-component="BeutelSimulation">
+<div class="explainer-island" hidden><div class="beutel-sim" data-v-030633f0><p class="beutel-sim-titel" data-v-030633f0>All animal cards with their labels</p><ul class="beutel-sim-karten" data-v-030633f0><!--[--><li class="beutel-sim-drin" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Luna" katze="1" merkmale="pointed ears, short snout, small, narrow pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#9a9a9a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#9a9a9a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#9a9a9a" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Luna · cat</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, short snout, small, narrow pupils</span></span><button type="button" aria-pressed="true" data-v-030633f0>Take out<span class="sr-name" data-v-030633f0>Luna</span></button></li><li class="beutel-sim-drin" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Mimi" katze="1" merkmale="pointed ears, short snout, small, narrow pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#e8a15a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#e8a15a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#e8a15a" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Mimi · cat</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, short snout, small, narrow pupils</span></span><button type="button" aria-pressed="true" data-v-030633f0>Take out<span class="sr-name" data-v-030633f0>Mimi</span></button></li><li class="" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Tiger" katze="1" merkmale="pointed ears, short snout, big, narrow pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#c98b3c" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#c98b3c" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#c98b3c" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Tiger · cat</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, short snout, big, narrow pupils</span></span><button type="button" aria-pressed="false" data-v-030633f0>Put in bag<span class="sr-name" data-v-030633f0>Tiger</span></button></li><li class="beutel-sim-drin" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Flocke" katze="1" merkmale="floppy ears, short snout, small, narrow pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#f2f0ea" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#f2f0ea" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#f2f0ea" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Flocke · cat</span><span class="beutel-sim-merkmale" data-v-030633f0>floppy ears, short snout, small, narrow pupils</span></span><button type="button" aria-pressed="true" data-v-030633f0>Take out<span class="sr-name" data-v-030633f0>Flocke</span></button></li><li class="beutel-sim-drin" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Minka" katze="1" merkmale="pointed ears, long snout, small, narrow pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#5a4636" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#5a4636" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#5a4636" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#c9c23a" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="2.2" ry="9" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Minka · cat</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, long snout, small, narrow pupils</span></span><button type="button" aria-pressed="true" data-v-030633f0>Take out<span class="sr-name" data-v-030633f0>Minka</span></button></li><li class="beutel-sim-drin" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Bruno" katze="0" merkmale="floppy ears, long snout, big, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#8b5a2b" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#8b5a2b" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#8b5a2b" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Bruno · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>floppy ears, long snout, big, round pupils</span></span><button type="button" aria-pressed="true" data-v-030633f0>Take out<span class="sr-name" data-v-030633f0>Bruno</span></button></li><li class="beutel-sim-drin" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Rex" katze="0" merkmale="pointed ears, long snout, big, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#6b4a2a" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#6b4a2a" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#6b4a2a" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Rex · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, long snout, big, round pupils</span></span><button type="button" aria-pressed="true" data-v-030633f0>Take out<span class="sr-name" data-v-030633f0>Rex</span></button></li><li class="" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Krümel" katze="0" merkmale="pointed ears, short snout, small, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#e3c08d" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#e3c08d" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#e3c08d" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Krümel · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, short snout, small, round pupils</span></span><span class="beutel-sim-istneu" data-v-030633f0>is the new animal right now</span></li><li class="" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Waldi" katze="0" merkmale="floppy ears, long snout, small, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#7a3e1d" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#7a3e1d" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#7a3e1d" data-v-cea452c7></ellipse><ellipse cx="60" cy="88" rx="15" ry="20" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="100" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Waldi · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>floppy ears, long snout, small, round pupils</span></span><button type="button" aria-pressed="false" data-v-030633f0>Put in bag<span class="sr-name" data-v-030633f0>Waldi</span></button></li><li class="" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Otto" katze="0" merkmale="floppy ears, short snout, small, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#d9c3a0" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#d9c3a0" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#d9c3a0" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Otto · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>floppy ears, short snout, small, round pupils</span></span><button type="button" aria-pressed="false" data-v-030633f0>Put in bag<span class="sr-name" data-v-030633f0>Otto</span></button></li><li class="" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Bella" katze="0" merkmale="floppy ears, short snout, big, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M34 36 C14 36 10 70 20 84 C30 90 38 70 40 46 Z" fill="#3b3b3b" data-v-cea452c7></path><path d="M86 36 C106 36 110 70 100 84 C90 90 82 70 80 46 Z" fill="#3b3b3b" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#3b3b3b" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Bella · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>floppy ears, short snout, big, round pupils</span></span><button type="button" aria-pressed="false" data-v-030633f0>Put in bag<span class="sr-name" data-v-030633f0>Bella</span></button></li><li class="" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Sammy" katze="0" merkmale="pointed ears, short snout, big, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(1) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#f4f1e8" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#f4f1e8" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#f4f1e8" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span class="beutel-sim-text" data-v-030633f0><span class="beutel-sim-name" data-v-030633f0>Sammy · dog</span><span class="beutel-sim-merkmale" data-v-030633f0>pointed ears, short snout, big, round pupils</span></span><button type="button" aria-pressed="false" data-v-030633f0>Put in bag<span class="sr-name" data-v-030633f0>Sammy</span></button></li><!--]--></ul><div class="beutel-sim-beutel" data-v-030633f0><p class="beutel-sim-titel" data-v-030633f0>In the shelter&#39;s training bag</p><ul class="beutel-sim-liste" data-v-030633f0><!--[--><li data-v-030633f0>Luna (cat)</li><li data-v-030633f0>Mimi (cat)</li><li data-v-030633f0>Flocke (cat)</li><li data-v-030633f0>Minka (cat)</li><li data-v-030633f0>Bruno (dog)</li><li data-v-030633f0>Rex (dog)</li><!--]--></ul></div><label class="beutel-sim-wahl" data-v-030633f0><span data-v-030633f0>New animal:</span><select data-v-030633f0><!--[--><option value="Tiger" data-v-030633f0>Tiger</option><option value="Krümel" data-v-030633f0 selected>Krümel</option><option value="Waldi" data-v-030633f0>Waldi</option><option value="Otto" data-v-030633f0>Otto</option><option value="Bella" data-v-030633f0>Bella</option><option value="Sammy" data-v-030633f0>Sammy</option><!--]--></select></label><div class="beutel-sim-neu" data-v-030633f0><svg class="tier-bild" viewbox="0 0 120 120" aria-hidden="true" focusable="false" name="Krümel" katze="0" merkmale="pointed ears, short snout, small, round pupils" data-v-030633f0 data-v-cea452c7><rect x="1" y="1" width="118" height="118" rx="10" class="tier-bild-grund" data-v-cea452c7></rect><g transform="translate(60 64) scale(0.62) translate(-60 -64)" stroke="#333" stroke-width="2.5" stroke-linejoin="round" data-v-cea452c7><!--[--><path d="M30 46 L36 12 L56 34 Z" fill="#e3c08d" data-v-cea452c7></path><path d="M90 46 L84 12 L64 34 Z" fill="#e3c08d" data-v-cea452c7></path><!--]--><ellipse cx="60" cy="62" rx="32" ry="30" fill="#e3c08d" data-v-cea452c7></ellipse><ellipse cx="60" cy="80" rx="13" ry="9" fill="#f6eee4" data-v-cea452c7></ellipse><circle cx="46" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><circle cx="74" cy="55" r="10" fill="#8a5a2b" data-v-cea452c7></circle><ellipse cx="46" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="74" cy="55" rx="5.5" ry="5.5" fill="#111" stroke="none" data-v-cea452c7></ellipse><ellipse cx="60" cy="76" rx="5" ry="3.5" fill="#333" stroke="none" data-v-cea452c7></ellipse></g></svg><span data-v-030633f0>Krümel: pointed ears, short snout, small, round pupils</span></div><table class="beutel-sim-tabelle" data-v-030633f0><thead data-v-030633f0><tr data-v-030633f0><!--[--><th scope="col" data-v-030633f0>Card in the bag</th><th scope="col" data-v-030633f0>Label</th><th scope="col" data-v-030633f0>features in common</th><!--]--></tr></thead><tbody data-v-030633f0><!--[--><tr class="beutel-sim-best" data-v-030633f0><th scope="row" data-v-030633f0>Luna<span data-v-030633f0> ★ most similar example</span></th><td data-v-030633f0>cat</td><td data-v-030633f0>3</td></tr><tr class="beutel-sim-best" data-v-030633f0><th scope="row" data-v-030633f0>Mimi<span data-v-030633f0> ★ most similar example</span></th><td data-v-030633f0>cat</td><td data-v-030633f0>3</td></tr><tr class="" data-v-030633f0><th scope="row" data-v-030633f0>Flocke<!----></th><td data-v-030633f0>cat</td><td data-v-030633f0>2</td></tr><tr class="" data-v-030633f0><th scope="row" data-v-030633f0>Minka<!----></th><td data-v-030633f0>cat</td><td data-v-030633f0>2</td></tr><tr class="" data-v-030633f0><th scope="row" data-v-030633f0>Bruno<!----></th><td data-v-030633f0>dog</td><td data-v-030633f0>1</td></tr><tr class="" data-v-030633f0><th scope="row" data-v-030633f0>Rex<!----></th><td data-v-030633f0>dog</td><td data-v-030633f0>2</td></tr><!--]--></tbody></table><p class="beutel-sim-antwort" aria-live="polite" data-v-030633f0>The machine says about Krümel: cat.</p><p data-v-030633f0>The shelter knows what Krümel really is: dog.</p><p data-v-030633f0><button type="button" data-v-030633f0>Back to the shelter&#39;s bag</button></p></div></div>
+<div class="explainer-nojs"><p>With JavaScript you can change the shelter&#39;s bag here and test new animals. The bag holds Luna, Mimi,
+Flocke and Minka (cats, all small) and Bruno and Rex (dogs, both big). Krümel (dog: pointed ears, short
+snout, small, round pupils) has 3 features in common with Luna and with Mimi, and 2 with Rex: the machine
+says “cat”. Otto (dog: floppy ears, short snout, small, round pupils) has 3 in common with Flocke: “cat”
+again. If you put Otto into the bag, Luna, Mimi and Otto each have 3 features in common with Krümel: the
+machine does not know.</p></div>
+<script type="application/json" class="explainer-component-props">{"tiere":[{"name":"Luna","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":0},{"name":"Mimi","katze":1,"ohren":1,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"pointed ears, short snout, small, narrow pupils","fell":1},{"name":"Tiger","katze":1,"ohren":1,"schnauze":1,"groesse":0,"pupille":1,"merkmale":"pointed ears, short snout, big, narrow pupils","fell":2},{"name":"Flocke","katze":1,"ohren":0,"schnauze":1,"groesse":1,"pupille":1,"merkmale":"floppy ears, short snout, small, narrow pupils","fell":3},{"name":"Minka","katze":1,"ohren":1,"schnauze":0,"groesse":1,"pupille":1,"merkmale":"pointed ears, long snout, small, narrow pupils","fell":4},{"name":"Bruno","katze":0,"ohren":0,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"floppy ears, long snout, big, round pupils","fell":5},{"name":"Rex","katze":0,"ohren":1,"schnauze":0,"groesse":0,"pupille":0,"merkmale":"pointed ears, long snout, big, round pupils","fell":6},{"name":"Krümel","katze":0,"ohren":1,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"pointed ears, short snout, small, round pupils","fell":7},{"name":"Waldi","katze":0,"ohren":0,"schnauze":0,"groesse":1,"pupille":0,"merkmale":"floppy ears, long snout, small, round pupils","fell":8},{"name":"Otto","katze":0,"ohren":0,"schnauze":1,"groesse":1,"pupille":0,"merkmale":"floppy ears, short snout, small, round pupils","fell":9},{"name":"Bella","katze":0,"ohren":0,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"floppy ears, short snout, big, round pupils","fell":10},{"name":"Sammy","katze":0,"ohren":1,"schnauze":1,"groesse":0,"pupille":0,"merkmale":"pointed ears, short snout, big, round pupils","fell":11}],"start":["Luna","Mimi","Flocke","Minka","Bruno","Rex"],"neu":"Krümel","katze":"cat","hund":"dog","kartenTitel":"All animal cards with their labels","beutelTitel":"In the shelter's training bag","hinein":"Put in bag","heraus":"Take out","leer":"The bag is empty.","neuTitel":"New animal:","spalten":["Card in the bag","Label","features in common"],"naechste":"most similar example","antwort":"The machine says about {tier}: {antwort}.","weissNicht":"The machine says: I don't know. The most similar cat and the most similar dog are equally similar to {tier}.","antwortLeer":"The machine says nothing: with no examples in the bag it cannot compare anything.","wahrheit":"The shelter knows what {tier} really is: {sorte}.","istNeu":"is the new animal right now","zuruecksetzen":"Back to the shelter's bag"}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/3" data-block-id="62c6fdbe" data-block-type="multiple-choice" data-block-order="6">
+<div class="explainer-exercise explainer-question" id="was-trennt-im-beutel">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-was-trennt-im-beutel" data-id="was-trennt-im-beutel" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Krümel and Otto became cats. Which features separate all the cats from all the dogs in the bag?</legend>
+<label class="question-option"><input type="checkbox" name="frage-was-trennt-im-beutel" value="0"> <span>the size</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-trennt-im-beutel" value="1"> <span>the pupils</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-trennt-im-beutel" value="2"> <span>the ears</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-trennt-im-beutel" value="3"> <span>the snout</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>the size</strong> <span class="question-badge question-badge-right">right answer</span></p><p>All four cats in the bag are small, both dogs are big.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>the pupils</strong> <span class="question-badge question-badge-right">right answer</span></p><p>All the cats in the bag have narrow pupils, both dogs have round ones.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>the ears</strong></p><p>No: Flocke is a cat with floppy ears, Rex is a dog with pointed ears.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>the snout</strong></p><p>No: Minka is a cat with a long snout, like the dogs.</p></li>
+</ul>
+<p class="question-explanation">Krümel and Otto match the dogs in their pupils and the cats in their size.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>the size</strong> <span class="question-badge question-badge-right">right answer</span></p><p>All four cats in the bag are small, both dogs are big.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>the pupils</strong> <span class="question-badge question-badge-right">right answer</span></p><p>All the cats in the bag have narrow pupils, both dogs have round ones.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>the ears</strong></p><p>No: Flocke is a cat with floppy ears, Rex is a dog with pointed ears.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>the snout</strong></p><p>No: Minka is a cat with a long snout, like the dogs.</p></li>
+</ul>
+<p class="question-explanation">Krümel and Otto match the dogs in their pupils and the cats in their size.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"was-trennt-im-beutel","text":"Krümel and Otto became cats. Which features separate all the cats from all the dogs in the bag?","explanation":"Krümel and Otto match the dogs in their pupils and the cats in their size.","links":[],"hint":"Do all the cats have one value and all the dogs the other?","type":"multiple-choice","options":[{"text":"the size","correct":true,"info":"All four cats in the bag are small, both dogs are big."},{"text":"the pupils","correct":true,"info":"All the cats in the bag have narrow pupils, both dogs have round ones."},{"text":"the ears","correct":false,"info":"No: Flocke is a cat with floppy ears, Rex is a dog with pointed ears."},{"text":"the snout","correct":false,"info":"No: Minka is a cat with a long snout, like the dogs."}]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="ausprobieren/4" data-block-id="baddaf45" data-block-type="single-choice" data-block-order="7">
+<div class="explainer-exercise explainer-question" id="warum-katze">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-warum-katze" data-id="warum-katze" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Which of these two separations only holds in this bag, but not for real dogs and cats?</legend>
+<label class="question-option"><input type="radio" name="frage-warum-katze" value="0"> <span>Cats are small, dogs are big.</span></label>
+<label class="question-option"><input type="radio" name="frage-warum-katze" value="1"> <span>Cats have narrow pupils, dogs round ones.</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Cats are small, dogs are big.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>There are lots of small dogs. Here all the dogs are big because of where the photos came from.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Cats have narrow pupils, dogs round ones.</strong></p><p>No: this holds for all twelve cards, and house cats really do have slit pupils.</p></li>
+</ul>
+<p class="question-explanation">Size only separates the kinds in this bag. The machine still counts it.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Cats are small, dogs are big.</strong> <span class="question-badge question-badge-right">right answer</span></p><p>There are lots of small dogs. Here all the dogs are big because of where the photos came from.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>Cats have narrow pupils, dogs round ones.</strong></p><p>No: this holds for all twelve cards, and house cats really do have slit pupils.</p></li>
+</ul>
+<p class="question-explanation">Size only separates the kinds in this bag. The machine still counts it.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"warum-katze","text":"Which of these two separations only holds in this bag, but not for real dogs and cats?","explanation":"Size only separates the kinds in this bag. The machine still counts it.","links":[],"hint":"Think of dogs you know. Are they all big?","type":"single-choice","options":[{"text":"Cats are small, dogs are big.","correct":true,"info":"There are lots of small dogs. Here all the dogs are big because of where the photos came from."},{"text":"Cats have narrow pupils, dogs round ones.","correct":false,"info":"No: this holds for all twelve cards, and house cats really do have slit pupils."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="idee">Bias: the fault is in the data</h2>
+<div class="explainer-block" data-block="idee/1" data-block-id="44258e34" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>The program counts correctly, but the bag is one-sided: cats only small, dogs only
+big. The machine takes on this pattern and makes <strong>the same mistake again and again</strong>: small dogs with a
+short snout become cats.</p>
+<p>With Otto in the bag, the machine is only unsure about Krümel.
+It only gets Krümel right if the bag holds a dog that looks just like Krümel: small, pointed ears, short snout. The shelter has no such card yet.</p></div>
+</div>
+<div class="explainer-block" data-block="idee/2" data-block-id="795912c6" data-block-type="definition" data-block-order="9">
+<dl class="explainer-definition"><dt><dfn id="begriff-verzerrung-bias"><a href="../../../en/glossar/#verzerrung-bias">bias</a></dfn></dt><dd><p>The training data shows the world in a one-sided, skewed way. The system takes on a pattern that only holds in the data.</p></dd></dl>
+</div>
+<div class="explainer-block" data-block="idee/3" data-block-id="5e1a08dc" data-block-type="note" data-block-order="10">
+<div class="explainer-box explainer-note">
+<h3 class="explainer-box-title">Remember</h3>
+<div class="explainer-block" data-block="idee/3/1" data-block-id="95921351" data-block-type="text" data-block-order="11">
+<div class="block-text"><p>If a learning system keeps making the same mistake, look at the training data first. Which examples are missing, and which were chosen one-sidedly?</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="beispiel">In real systems too</h2>
+<div class="explainer-block" data-block="beispiel/1" data-block-id="acf2f4ab" data-block-type="text" data-block-order="12">
+<div class="block-text"><p>In 2018, Joy Buolamwini and Timnit Gebru studied three commercial programs that work out a person&#39;s gender
+from a photo. In two widely used collections of face photos for testing such programs, 79.6% and 86.2% of
+the people had lighter skin. So they tested with their own balanced collection. The error rate was up to 34.7% for women with darker skin (about one photo in three for the
+worst program), and at most 0.8% for men with lighter skin. The study does not name their training data. (<a href="https://proceedings.mlr.press/v81/buolamwini18a.html" rel="noopener">Gender Shades, 2018</a>)</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="uebung">Practice</h2>
+<div class="explainer-block" data-block="uebung/1" data-block-id="7a21049b" data-block-type="true-false" data-block-order="13">
+<div class="explainer-exercise explainer-question" id="mehr-karten">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-mehr-karten" data-id="mehr-karten" data-type="true-false">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">If you simply put more cards into the bag, the bias goes away.</legend>
+<label class="question-option"><input type="radio" name="frage-mehr-karten" value="true"> <span>True</span></label>
+<label class="question-option"><input type="radio" name="frage-mehr-karten" value="false"> <span>False</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">More cards of the same kind change nothing: the pattern stays.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> The statement is false.</p>
+<p class="question-explanation">More cards of the same kind change nothing: the pattern stays.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"mehr-karten","text":"If you simply put more cards into the bag, the bias goes away.","explanation":"More cards of the same kind change nothing: the pattern stays.","links":[],"hint":"What changes if you put ten more small cats into the bag?","type":"true-false","answer":false},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/2" data-block-id="89098520" data-block-type="matching" data-block-order="14">
+<div class="explainer-exercise explainer-question" id="was-fehlt">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-was-fehlt" data-id="was-fehlt" data-type="matching">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">These cases are made up. Which examples are missing from the training data?</legend>
+<p class="question-hint">Choose the match for each entry.</p>
+<ul class="question-pairs">
+<li><label><span>A photo app is bad at recognising dogs in snow.</span> <select name="frage-was-fehlt-0" data-left="0"><option value="">please choose</option><option value="1">recordings of speakers under twelve</option><option value="4">a faster computer</option><option value="2">pictures outside the flowering season</option><option value="0">pictures from the cold season</option><option value="3">dogs the size of cats</option></select></label></li>
+<li><label><span>A voice assistant is bad at understanding children.</span> <select name="frage-was-fehlt-1" data-left="1"><option value="">please choose</option><option value="1">recordings of speakers under twelve</option><option value="4">a faster computer</option><option value="2">pictures outside the flowering season</option><option value="0">pictures from the cold season</option><option value="3">dogs the size of cats</option></select></label></li>
+<li><label><span>A plant app does not recognise plants without flowers.</span> <select name="frage-was-fehlt-2" data-left="2"><option value="">please choose</option><option value="1">recordings of speakers under twelve</option><option value="4">a faster computer</option><option value="2">pictures outside the flowering season</option><option value="0">pictures from the cold season</option><option value="3">dogs the size of cats</option></select></label></li>
+<li><label><span>The shelter's machine thinks small dogs with a short snout are cats.</span> <select name="frage-was-fehlt-3" data-left="3"><option value="">please choose</option><option value="1">recordings of speakers under twelve</option><option value="4">a faster computer</option><option value="2">pictures outside the flowering season</option><option value="0">pictures from the cold season</option><option value="3">dogs the size of cats</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> A photo app is bad at recognising dogs in snow. – pictures from the cold season; A voice assistant is bad at understanding children. – recordings of speakers under twelve; A plant app does not recognise plants without flowers. – pictures outside the flowering season; The shelter's machine thinks small dogs with a short snout are cats. – dogs the size of cats</p>
+<p class="question-explanation">In each case one kind of example is missing.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> A photo app is bad at recognising dogs in snow. – pictures from the cold season; A voice assistant is bad at understanding children. – recordings of speakers under twelve; A plant app does not recognise plants without flowers. – pictures outside the flowering season; The shelter's machine thinks small dogs with a short snout are cats. – dogs the size of cats</p>
+<p class="question-explanation">In each case one kind of example is missing.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"was-fehlt","text":"These cases are made up. Which examples are missing from the training data?","explanation":"In each case one kind of example is missing.","links":[],"hint":"What did the system never see?","type":"matching","pairs":[{"left":"A photo app is bad at recognising dogs in snow.","right":"pictures from the cold season"},{"left":"A voice assistant is bad at understanding children.","right":"recordings of speakers under twelve"},{"left":"A plant app does not recognise plants without flowers.","right":"pictures outside the flowering season"},{"left":"The shelter's machine thinks small dogs with a short snout are cats.","right":"dogs the size of cats"}],"distractors":["a faster computer"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/3" data-block-id="6c98f968" data-block-type="ordering" data-block-order="15">
+<div class="explainer-exercise explainer-question" id="datenfehler-finden">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-datenfehler-finden" data-id="datenfehler-finden" data-type="ordering">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">In which order do you find and fix a fault in the training data?</legend>
+<p class="question-hint">Give each entry its place: 1 for the first.</p>
+<ul class="question-pairs">
+<li><label><span>Add examples and test again</span> <select name="frage-datenfehler-finden-3" data-item="3"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>Search the training data for gaps</span> <select name="frage-datenfehler-finden-2" data-item="2"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>Collect the animals that were wrongly identified</span> <select name="frage-datenfehler-finden-0" data-item="0"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+<li><label><span>Look for what the mistakes have in common</span> <select name="frage-datenfehler-finden-1" data-item="1"><option value="">please choose</option><option value="0">Place 1</option><option value="1">Place 2</option><option value="2">Place 3</option><option value="3">Place 4</option></select></label></li>
+</ul>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<p><strong>Right answer:</strong> 1. Collect the animals that were wrongly identified, 2. Look for what the mistakes have in common, 3. Search the training data for gaps, 4. Add examples and test again</p>
+<p class="question-explanation">Only the pattern of the mistakes shows which examples are missing.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<p><strong>Right answer:</strong> 1. Collect the animals that were wrongly identified, 2. Look for what the mistakes have in common, 3. Search the training data for gaps, 4. Add examples and test again</p>
+<p class="question-explanation">Only the pattern of the mistakes shows which examples are missing.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"datenfehler-finden","text":"In which order do you find and fix a fault in the training data?","explanation":"Only the pattern of the mistakes shows which examples are missing.","links":[],"hint":"First the mistakes, then their pattern, then the data.","type":"ordering","items":["Collect the animals that were wrongly identified","Look for what the mistakes have in common","Search the training data for gaps","Add examples and test again"]},"rendered":{}}</script>
+</div>
+</div>
+<div class="explainer-block" data-block="uebung/4" data-block-id="b6d87fe0" data-block-type="multiple-choice" data-block-order="16">
+<div class="explainer-exercise explainer-question" id="was-ergaenzen">
+<p class="explainer-exercise-label">Exercise</p>
+<div class="question" id="frage-was-ergaenzen" data-id="was-ergaenzen" data-type="multiple-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Which cards would break the pattern “small means cat, big means dog” if they went into the bag?</legend>
+<label class="question-option"><input type="checkbox" name="frage-was-ergaenzen" value="0"> <span>Waldi, a small dog</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-ergaenzen" value="1"> <span>Tiger, a big cat</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-ergaenzen" value="2"> <span>Bella, a big dog</span></label>
+<label class="question-option"><input type="checkbox" name="frage-was-ergaenzen" value="3"> <span>Sammy, a big dog</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Waldi, a small dog</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A small dog.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Tiger, a big cat</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A big cat.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Bella, a big dog</strong></p><p>No: Bella is big and a dog, so she fits the pattern.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Sammy, a big dog</strong></p><p>No: Sammy is big and a dog too.</p></li>
+</ul>
+<p class="question-explanation">Cards like these stop size from deciding.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Check</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Solution</summary>
+<ul class="question-infos">
+<li class="question-info question-info-right" data-option="0"><p class="question-info-head"><strong>Waldi, a small dog</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A small dog.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>Tiger, a big cat</strong> <span class="question-badge question-badge-right">right answer</span></p><p>A big cat.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>Bella, a big dog</strong></p><p>No: Bella is big and a dog, so she fits the pattern.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>Sammy, a big dog</strong></p><p>No: Sammy is big and a dog too.</p></li>
+</ul>
+<p class="question-explanation">Cards like these stop size from deciding.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"en","question":{"id":"was-ergaenzen","text":"Which cards would break the pattern “small means cat, big means dog” if they went into the bag?","explanation":"Cards like these stop size from deciding.","links":[],"hint":"You are looking for animals whose size does not match their label in the pattern.","type":"multiple-choice","options":[{"text":"Waldi, a small dog","correct":true,"info":"A small dog."},{"text":"Tiger, a big cat","correct":true,"info":"A big cat."},{"text":"Bella, a big dog","correct":false,"info":"No: Bella is big and a dog, so she fits the pattern."},{"text":"Sammy, a big dog","correct":false,"info":"No: Sammy is big and a dog too."}]},"rendered":{}}</script>
+</div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="rueckblick">Looking back</h2>
+<div class="explainer-block" data-block="rueckblick/1" data-block-id="dfe60a1d" data-block-type="text" data-block-order="17">
+<div class="block-text"><p>If the examples are chosen one-sidedly, a learning system keeps getting things wrong in the same way.
+<strong>What goes into the bag decides what comes out.</strong></p></div>
+</div>
+</section>
+<p class="explainer-feedback-invite" hidden><span>Found a mistake or have an idea for this app?</span> <button type="button" class="explainer-feedback-switch">Give feedback on “How machines learn from data”</button></p>
+</main>
+<template class="explainer-feedback-template">
+<aside class="explainer-feedback" aria-labelledby="feedback-titel" hidden>
+<div class="explainer-feedback-head">
+<h2 id="feedback-titel">Feedback</h2>
+<button type="button" class="explainer-feedback-help-open" aria-expanded="false" aria-controls="feedback-hilfe">Help</button>
+<button type="button" class="explainer-feedback-collapse" aria-expanded="true" aria-controls="feedback-inhalt" aria-label="Collapse the bar" title="Collapse the bar"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+<button type="button" class="explainer-feedback-expand" hidden><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Expand the feedback bar</span></button>
+<div class="explainer-feedback-body" id="feedback-inhalt">
+<section class="explainer-feedback-help" id="feedback-hilfe" aria-labelledby="feedback-hilfe-titel" hidden>
+<h3 id="feedback-hilfe-titel">How to give feedback</h3>
+<ol><li>Go through the pages. Every paragraph, figure and exercise shows “Note”.</li><li>If you mark text in the block first, the note quotes it.</li><li>When you are done, choose “Open an issue on GitHub”. The app copies your notes, and you paste them into the issue. You need a GitHub account for this.</li></ol>
+<p class="explainer-feedback-privacy">Your notes stay in this browser on this device only. The app sends nothing. If you clear the browser's data, the notes are gone.</p>
+<p><button type="button" class="explainer-feedback-help-done">Got it</button></p>
+</section>
+<form class="explainer-feedback-form" hidden>
+<p class="explainer-feedback-new">New note on</p>
+<p class="explainer-feedback-where"></p>
+<blockquote class="explainer-feedback-quote" hidden></blockquote>
+<label for="feedback-text">Your note</label>
+<textarea id="feedback-text" class="explainer-feedback-text" rows="5" required></textarea>
+<p class="explainer-feedback-buttons"><button type="submit" class="explainer-feedback-save">Save</button> <button type="button" class="explainer-feedback-cancel">Cancel</button></p>
+</form>
+<p class="explainer-feedback-status" role="status" aria-live="polite"></p>
+<section class="explainer-feedback-notes" aria-labelledby="feedback-notizen">
+<h3 id="feedback-notizen" class="explainer-feedback-count"></h3>
+<p class="explainer-feedback-actions"><button type="button" class="explainer-feedback-copy">Copy</button> <a class="explainer-feedback-issue" href="#" target="_blank" rel="noopener">Open an issue on GitHub</a></p>
+<textarea class="explainer-feedback-export" readonly rows="6" aria-label="Text to copy" hidden></textarea>
+<div class="explainer-feedback-list"></div>
+</section>
+</div>
+<div class="explainer-feedback-foot">
+<button type="button" class="explainer-feedback-delete-all">Delete all …</button>
+<span class="explainer-feedback-local">Kept in this browser only</span>
+<button type="button" class="explainer-feedback-off">End</button>
+</div>
+<script type="application/json" class="explainer-feedback-data">{"storage":"informatik-ki","app":"How machines learn from data","root":"../../../en/","repository":"lernapps/informatik-ki","revision":"ed41be5","page":{"title":"Skewed training data","order":4}}</script>
+</aside>
+</template>
+<nav class="explainer-pager" aria-label="Page through"><a rel="prev" href="../../../en/lernen/maschine-trainieren/">Back: Training the machine</a></nav>
+<footer class="page-footer"><p>An explainer on lernapps.net · <a href="https://lernapps.net/imprint/">Imprint</a> · <a href="https://lernapps.net/privacy/">Privacy</a></p></footer>
+  </body>
+</html>
