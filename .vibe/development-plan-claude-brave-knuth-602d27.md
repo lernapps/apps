@@ -137,3 +137,4 @@ SQL (#498) ist ein Grenzfall.
 - coding-Retro (Vorhersagen): Prüfer nach jeder Aufgabe, nicht nur Musterseite; falsche Antworten per Test aus der richtigen ableiten und Platzhalter de/en prüfen; ein Begriff, eine Bedeutung (Terminology); bei zwei PRs auf denselben Dateien den kleineren zuerst; Message-JSON per Drei-Wege-Merge.
 - tooling (coding): `arc42 diff` meldet Prosa über mehrere Bausteine und nach `lernapps update` den generischen Teil (06-runtime-view); Update sollte eigenen Teil ausnehmen. Regel `vue-component-no-html-injection` schlägt auch bei sandboxed `srcdoc`-Vorschau an (erlaubter Fall?).
 - Entscheidung: HTML/CSS-Welt in coding (`world.type: html`, Prüfung `dom-passt`, eigene Syntaxprüfung) für #504.
+- tooling (#502): Jede Vue-Datei in `src/components/` gilt als Block-Komponente; reine Hilfskomponenten müssen Prop-Typen selbst deklarieren, kein `string | undefined`.
