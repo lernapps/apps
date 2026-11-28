@@ -139,7 +139,7 @@ jobs:
           echo "status=$status" >> "$GITHUB_OUTPUT"
           jq -n --arg id "$ID" --arg source "$SOURCE" --arg owner "$OWNER" --arg repo "$REPO" --arg status "$status" \
             '{id: $id, source: $source, owner: $owner, repo: $repo, status: $status}' > "$RUNNER_TEMP/res/result.json"
-      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+      - uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
         id: app
         if: steps.update.outputs.status == 'changed'
         continue-on-error: true
